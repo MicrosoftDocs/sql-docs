@@ -17,7 +17,7 @@ This article describes known problems or limitations with the Python and R compo
 
 ## Setup and configuration issues
 
-For a description of processes and common questions that are related to initial setup and configuration, see [Upgrade and installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md). It contains information about upgrades, side-by-side installation, and installation of new R or Python components.
+For a description of processes and common questions that are related to initial setup and configuration, see [Upgrade and installation FAQ](upgrade-and-installation-faq-sql-server-r-services.md). It contains information about upgrades, side-by-side installation, and installation of new R or Python components.
 
 ### 1. Inconsistent results in MKL computations due to missing environment variable
 
@@ -702,6 +702,22 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 **Applies to:** SQL Server 2019 on Linux
 
+### 9. Cannot install **tensorflow** package using **sqlmlutils**
+
+The [sqlmlutils package](package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) is used to install Python packages in SQL Server 2019. However, the package **tensorflow** cannot be installed using sqlmlutils. The tensorflow package depends on a newer version of numpy than the version installed in SQL Server. However, numpy is a preinstalled system package that sqlmlutils cannot update when trying to install tensorflow.
+
+**Workaround**
+
+Using a command prompt in administrator mode, run the following command, replacing "MSSQLSERVER" with the name of your SQL instance:
+
+   ```cmd
+   "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\python.exe" -m pip install --upgrade tensorflow
+   ```
+
+   If you get a "TLS/SSL" error, see [7. Unable to install Python packages using pip](#7-unable-to-install-python-packages-using-pip-after-installing-sql-server-2019-on-windows) earlier in this article.
+
+**Applies to:** SQL Server 2019 on Windows
+
 ## Revolution R Enterprise and Microsoft R Open
 
 This section lists issues specific to R connectivity, development, and performance tools that are provided by Revolution Analytics. These tools were provided in earlier pre-release versions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
@@ -724,4 +740,4 @@ Revision 0.92 of the SQLite ODBC driver is incompatible with RevoScaleR. Revisio
 
 ## Next steps
 
-[Troubleshooting machine learning in SQL Server](machine-learning-troubleshooting-faq.md)
+[Troubleshooting machine learning in SQL Server](machine-learning-troubleshooting-overview.md)

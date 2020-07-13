@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 USER_NAME ( [ id ] )  
 ```  
   
@@ -56,7 +56,7 @@ USER_NAME ( [ id ] )
 ### A. Using USER_NAME  
  The following example returns the user name for user ID `13`.  
   
-```  
+```sql  
 SELECT USER_NAME(13);  
 GO  
 ```  
@@ -64,7 +64,7 @@ GO
 ### B. Using USER_NAME without an ID  
  The following example finds the name of the current user without specifying an ID.  
   
-```  
+```sql  
 SELECT USER_NAME();  
 GO  
 ```  
@@ -81,7 +81,7 @@ dbo
 ### C. Using USER_NAME in the WHERE clause  
  The following example finds the row in `sysusers` in which the name is equal to the result of applying the system function `USER_NAME` to user identification number `1`.  
   
-```  
+```sql  
 SELECT name FROM sysusers WHERE name = USER_NAME(1);  
 GO  
 ```  
@@ -99,7 +99,7 @@ dbo
 ### D. Calling USER_NAME during impersonation with EXECUTE AS  
  The following example shows how `USER_NAME` behaves during impersonation.  
   
-```  
+```sql  
 SELECT USER_NAME();  
 GO  
 EXECUTE AS USER = 'Zelig';  
@@ -125,7 +125,7 @@ DBO
 ### E. Using USER_NAME without an ID  
  The following example finds the name of the current user without specifying an ID.  
   
-```  
+```sql  
 SELECT USER_NAME();  
 ```  
   
@@ -139,7 +139,7 @@ User7
 ### F. Using USER_NAME in the WHERE clause  
  The following example finds the row in `sysusers` in which the name is equal to the result of applying the system function `USER_NAME` to user identification number `1`.  
   
-```  
+```sql  
 SELECT name FROM sysusers WHERE name = USER_NAME(1);  
 ```  
   

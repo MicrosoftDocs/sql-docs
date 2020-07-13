@@ -36,7 +36,10 @@ ALTER REMOTE SERVICE BINDING binding_name
 [ ; ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *binding_name*  
  The name of the remote service binding to change. Server, database, and schema names cannot be specified.  
   

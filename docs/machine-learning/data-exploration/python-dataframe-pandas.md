@@ -68,7 +68,12 @@ To install these packages:
 
 ## Insert SQL data into dataframe
 
-1. Use the following script to select data from Person.CountryRegion table and insert it into a dataframe. Edit the connection string variables 'server', 'database', 'username', and 'password' to connect to SQL Server.
+Use the following script to select data from Person.CountryRegion table and insert it into a dataframe. Edit the connection string variables 'server', 'database', 'username', and 'password' to connect to SQL Server.
+
+To create a new notebook:
+1. In Azure Data Studio, select **File**, select **New Notebook**.
+2. In the notebook, select kernel **Python3**, select the **+code**.
+3. Paste code in notebook, select **Run All**.
 
 ```python
 import pyodbc 
@@ -89,13 +94,6 @@ df = pd.read_sql(query, cnxn)
 print(df.head(26))
 ```
 
-2. Copy the python script into **Azure Data Studio**.
-   
-To create a new notebook:
-1. In Azure Data Studio, select **File**, select **New Notebook**.
-2. In the notebook, select kernel **Python3**, select the **+code**.
-3. Paste code in notebook, select **Run All**.
-  
 **Output**
 The `print` command in the preceding script displays the rows of data from the **pandas** dataframe `df`.
 

@@ -77,7 +77,7 @@ For example, to remove the R 3.5 folder from the instance MSSQLSERVER01:
 ```
 
 > [!NOTE]
-> You can remove a version only if it's not configured as the default and if it’s not currently being used to run RegisterRext.
+> You can remove a version only if it's not configured as the default and if it’s not currently being used to run **RegisterRext.exe**.
 
 ## Next steps
 

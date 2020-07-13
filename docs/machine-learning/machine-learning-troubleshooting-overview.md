@@ -1,6 +1,6 @@
 ---
-title: Troubleshooting
-description: Provides a starting point for working through known issues.
+title: Troubleshoot machine learning in SQL Server
+description: Provides a starting point for working through issues in SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning-services
 
@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Troubleshoot machine learning in SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
-Use this article as a starting point for working through known issues.
+Use this article as a starting point for troubleshooting issues you encounter when using SQL Server machine learning.
 
 ## Known issues
 
@@ -24,6 +24,7 @@ The following articles describe known issues with the current and previous relea
 + [Known issues for R Services](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
 + [SQL Server 2016 release notes](../sql-server/sql-server-2016-release-notes.md)
 + [SQL Server 2017 release notes](../sql-server/sql-server-2017-release-notes.md)
++ [SQL Server 2019 release notes](../sql-server/sql-server-version-15-release-notes.md)
 
 ## How to gather system information
 
@@ -42,7 +43,7 @@ Start here if you have not set up machine learning with SQL Server, or if you wa
 
 ### Configuration
 
-The following articles contain information about defaults, and how to customize the configuration for machine learning on an instance:
+The following articles contain information about defaults, and how to customize the configuration for machine learning on a SQL instance:
 
 + [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](administration/scale-concurrent-execution-external-scripts.md)   
 + [How to create a resource pool](administration/create-external-resource-pool.md)

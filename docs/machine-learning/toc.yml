@@ -361,19 +361,25 @@
       href: ../machine-learning/r/ref-r-sqlrutils.md
 - name: Resources
   items:
-  - name: Release notes >
+  - name: Release notes 2019 >
+    href: ../sql-server/sql-server-ver15-release-notes.md?toc=../toc.json
+  - name: Release notes 2017 >
     href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
+  - name: Release notes 2016 >
+    href: ../sql-server/sql-server-2016-release-notes.md?toc=../toc.json
+  - name: Release notes 2014 >
+    href: ../sql-server/sql-server-2014-release-notes.md?toc=../toc.json
   - name: Troubleshooting
     items:
     - name: Troubleshooting overview
-      href: ../machine-learning/machine-learning-troubleshooting-faq.md
+      href: ../machine-learning/machine-learning-troubleshooting-overview.md
     - name: Known issues
       href: ../machine-learning/known-issues-for-sql-server-machine-learning-services.md
-    - name: Data collection
+    - name: Collect data for troubleshooting
       href: ../machine-learning/data-collection-ml-troubleshooting-process.md
-    - name: Install and upgrade errors
+    - name: Installation and upgrade FAQ
       href: ../machine-learning/r/upgrade-and-installation-faq-sql-server-r-services.md
     - name: Launchpad and external script execution errors
       href: ../machine-learning/common-issues-external-script-execution.md
-    - name: R scripting errors
+    - name: Common R scripting errors
       href: ../machine-learning/r-script-execution-errors.md

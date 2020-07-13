@@ -1,6 +1,6 @@
 ---
-title: Troubleshoot data collection
-description: Learn data collection methods you should use when attempting to resolve problems on your own or with the help of Microsoft customer support.
+title: Collect data for troubleshooting SQL machine learning
+description: Learn how to collect the data you need when attempting to resolve problems on your own or with the help of Microsoft customer support.
 ms.prod: sql
 ms.technology: machine-learning-services
 
@@ -11,11 +11,11 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Troubleshoot data collection for machine learning
+# Collect data to troubleshoot SQL machine learning
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
-This article describes data collection methods you should use when attempting to resolve problems on your own or with the help of Microsoft customer support.
+This article describes how to collect the data you need when you're attempting to resolve problems in SQL machine learning. This data can be useful whether you're resolving problems on your own or with the help of Microsoft customer support.
 
 ## SQL Server version and edition
 
@@ -298,4 +298,4 @@ Because it might not be possible to exclude all folders that are needed by the S
 
 ## See also
 
-[Troubleshoot machine learning in SQL Server](machine-learning-troubleshooting-faq.md)
+[Troubleshoot machine learning in SQL Server](machine-learning-troubleshooting-overview.md)

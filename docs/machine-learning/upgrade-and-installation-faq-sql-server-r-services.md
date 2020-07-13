@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Installation and upgrade FAQ for SQL Server machine learning or R Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../includes/applies-to-version/sqlserver.md)]
 
 This article provides answers to some common questions about installing machine learning features in SQL Server. It also covers common questions about upgrades.
 
@@ -27,13 +27,13 @@ Depending on the build of SQL Server that you are installing, some of the follow
 
 - In early versions of SQL Server 2016 R Services, 8dot3 notation was required on the drive that contains the working directory. If you installed a pre-release version, upgrading to SQL Server 2016 Service Pack 1 should fix this issue. This requirement does not apply to releases after SP1.
 
-- You cannot install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a failover cluster in SQL Server 2016. However, SQL Server 2019 does provide failover support. For more information, see [What's New](../what-s-new-in-sql-server-machine-learning-services.md).
+- You cannot install [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] on a failover cluster in SQL Server 2016. However, SQL Server 2019 does provide failover support. For more information, see [What's New](what-s-new-in-sql-server-machine-learning-services.md).
 
 - On an Azure VM, some additional configuration might be necessary. For example, you might need to create a firewall exception to support remote access.
 
 - Side-by-side installation with another version of R, or with other releases from Revolution Analytics, is not supported.
 
-- Disable virus scanning before beginning setup. After setup is completed, we recommend suspending virus scanning on the folders used by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. Preferably, suspend scanning on the entire [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] tree.
+- Disable virus scanning before beginning setup. After setup is completed, we recommend suspending virus scanning on the folders used by [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)]. Preferably, suspend scanning on the entire [!INCLUDE[ssnoversion](../includes/ssnoversion-md.md)] tree.
 
  - Installing Microsoft R Server on an instance of SQL Server installed on Windows Core. In the RTM version of SQL Server 2016, there was a known issue when adding Microsoft R Server to an instance on Windows Server Core edition. This has been fixed. If you encounter this issue, you can apply the fix described in [KB3164398](https://support.microsoft.com/kb/3164398) to add the R feature to the existing instance on Windows Server Core. For more information, see [Can't install Microsoft R Server Standalone on a Windows Server Core operating system](https://support.microsoft.com/kb/3168691).
 
@@ -47,7 +47,7 @@ Early-release versions of SQL Server 2016 failed to install locale-specific .cab
 
 ## Pre-release versions: support policies, upgrade, and known issues
 
-New installations of any pre-release version of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] is no longer supported. If you are using a pre-release version, upgrade as soon as possible.
+New installations of any pre-release version of [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] is no longer supported. If you are using a pre-release version, upgrade as soon as possible.
 
 This section contains detailed instructions for specific upgrade scenarios.
 
@@ -55,11 +55,11 @@ This section contains detailed instructions for specific upgrade scenarios.
 
 You can upgrade your version of SQL Server by re-running the setup wizard.
 
-+ [Upgrade SQL Server](../../database-engine/install-windows/upgrade-sql-server.md)
-+ [Upgrade SQL Server Using the Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
++ [Upgrade SQL Server](../database-engine/install-windows/upgrade-sql-server.md)
++ [Upgrade SQL Server Using the Installation Wizard](../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 You can upgrade just the machine learning components by using a process called binding: 
-+ [Use SqlBindR to upgrade machine learning components](../install/upgrade-r-and-python.md)
++ [Use SqlBindR to upgrade machine learning components](install/upgrade-r-and-python.md)
 
 ### End of support for in-place upgrades from prerelease versions
 
@@ -138,7 +138,7 @@ If you have an earlier version of Microsoft R Server and need to ensure compatib
 
 You might encounter this error if you have an older installation of the Revolution Analytics products, or a pre-release version of SQL Server R Services. You must uninstall any previous versions before you can install a newer version of Microsoft R Server. Side-by-side installation with other versions of the Revolution Enterprise tools is not supported.
 
-However, side-by-side installs are supported when using R Server Standalone with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] or SQL Server 2016.
+However, side-by-side installs are supported when using R Server Standalone with [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)] or SQL Server 2016.
 
 ## Registry cleanup to uninstall older components
 
@@ -160,6 +160,6 @@ If you have problems removing an older version, you might need to edit the regis
 
 ## See also
 
- [SQL Server Machine Learning Services (In-Database)](../r/sql-server-r-services.md)
+ [SQL Server Machine Learning Services (In-Database)](r/sql-server-r-services.md)
 
- [SQL Server Machine Learning Server (Standalone)](../r/r-server-standalone.md)
+ [SQL Server Machine Learning Server (Standalone)](r/r-server-standalone.md)

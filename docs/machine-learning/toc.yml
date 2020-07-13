@@ -377,8 +377,8 @@
       href: ../machine-learning/known-issues-for-sql-server-machine-learning-services.md
     - name: Collect data for troubleshooting
       href: ../machine-learning/data-collection-ml-troubleshooting-process.md
-    - name: Installation and upgrade FAQ
-      href: ../machine-learning/r/upgrade-and-installation-faq-sql-server-r-services.md
+    - name: Install and upgrade errors
+      href: ../machine-learning/upgrade-and-installation-faq-sql-server-r-services.md
     - name: Launchpad and external script execution errors
       href: ../machine-learning/common-issues-external-script-execution.md
     - name: Common R scripting errors

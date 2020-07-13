@@ -526,11 +526,12 @@ GO
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], certain permissions are set on the data and log files of each database. The following permissions are set whenever the following operations are applied to a database:
 
-|||
-|-|-|
-|Created|Modified to add a new file|
-|Attached|Backed up|
-|Detached|Restored|
+- Attached
+- Backed up
+- Created
+- Detached
+- Modified to add a new file
+- Restored
 
 The permissions prevent the files from being accidentally tampered with if they reside in a directory that has open permissions.
 
@@ -988,7 +989,7 @@ Specifies the maximum size of the database. MAXSIZE must be valid for the specif
 **DTU model for single and pooled databases on a SQL Database server**
 
 |**MAXSIZE**|**Basic**|**S0-S2**|**S3-S12**|**P1-P6**| **P11-P15** |
-|-----------------|---------------|------------------|-----------------|-----------------|-----------------|-----------------|
+|:---|:---|:---|:---|:---|:---|
 |100 MB|√|√|√|√|√|
 |250 MB|√|√|√|√|√|
 |500 MB|√|√|√|√|√|

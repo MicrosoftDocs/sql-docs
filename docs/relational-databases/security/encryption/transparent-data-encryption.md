@@ -300,7 +300,7 @@ To view the state of the database, use the [sys.dm_database_encryption_keys](../
 
 Wait for decryption to finish before removing the database encryption key by using [DROP DATABASE ENCRYPTION KEY](../../../t-sql/statements/drop-database-encryption-key-transact-sql.md).
 
-> [!IMPORTANT]  	```
+> [!IMPORTANT]
 > Back up the master key and certificate that are used for TDE to a safe location. The master key and certificate are required to restore backups that were taken when the database was encrypted with TDE. After you remove the database encryption key, take a log backup followed by a fresh full backup of the decrypted database. 
 
 ## TDE and buffer pool extension

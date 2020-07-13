@@ -4,7 +4,7 @@ description: Learn how to change the default version of the R runtime used by a 
 ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/07/2020
+ms.date: 07/13/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
@@ -19,7 +19,7 @@ This article describes how to change the default version of R used by a SQL inst
 
 The following lists the versions of the R runtime that are included in SQL Server 2016 R Services.
 
-| SQL Server version | Default R runtime versions |
+| SQL Server Version | R runtime versions |
 |-|-|
 | SQL Server 2016 RTM - SP2 CU15 | 3.2.2 |
 | SQL Server 2016 SP2 CU16 and later | 3.2.2 and 3.5.2 |
@@ -39,14 +39,14 @@ For example, if you install a CU containing R 3.5, a new `R_SERVICES` folder is 
 
 `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES.3.5`
 
-Each SQL instance uses one of these versions as the default version of R. You can change the default version by using the **RegisterRExt.exe** command-line utility. The utility is located under the R folder in each SQL instance:
+Each SQL instance uses one of these versions as the default version of R. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is located under the R folder in each SQL instance:
 
-*&lt;SQL instance path&gt;*\R_SERVICES.n.n\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe
+*&lt;SQL instance path&gt;*\R_SERVICES.n.n\library\RevoScaleR\rxLibs\x64\RegisterRext.exe
 
 > [!Note]
-> The functionality described in this article is available only with the copy of **RegisterRExt.exe** included in SQL CUs. Don't use the copy that came with the original SQL installation.
+> The functionality described in this article is available only with the copy of **RegisterRext.exe** included in SQL CUs. Don't use the copy that came with the original SQL installation.
 
-**RegisterRExt.exe** accepts these command-line arguments:
+**RegisterRext.exe** accepts these command-line arguments:
 
 - `/configure` - Required, specifies that you're configuring the default R version.
 
@@ -54,30 +54,30 @@ Each SQL instance uses one of these versions as the default version of R. You ca
 
 - `/rhome:`*&lt;path to the R_SERVICES[n.n] folder&gt;* - Optional, the version you want to set as the default R version.
 
-  If you don't specify /rhome, the path used is the path under which **RegisterRExt.exe** is located.
+  If you don't specify /rhome, the path used is the path under which **RegisterRext.exe** is located.
 
 For example, to configure R 3.5 as the default version of R for the instance MSSQLSERVER01:
 
 ```cmd
-cd "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER01\R_SERVICES.3.5\library\RevoScaleR\rxLibs\x64"
+cd "C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES.3.5\library\RevoScaleR\rxLibs\x64"
 
-.\RegisterRExt.exe /configure /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER01\R_SERVICES.3.5" /instance:MSSQLSERVER01
+.\RegisterRext.exe /configure /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES.3.5" /instance:MSSQLSERVER01
 ```
 
-In this example, you don't need to include the `/rhome` argument since you're specifying the same folder where **RegisterRExt.exe** is located.
+In this example, you don't need to include the `/rhome` argument since you're specifying the same folder where **RegisterRext.exe** is located.
 
 ## Remove a runtime version
 
-To remove a version of R, use **RegisterRExt.exe** with the `/cleanup` command-line argument, using the same `/rhome` and `/instance` arguments described previously.
+To remove a version of R, use **RegisterRext.exe** with the `/cleanup` command-line argument, using the same `/rhome` and `/instance` arguments described previously.
 
 For example, to remove the R 3.5 folder from the instance MSSQLSERVER01:
 
 ```cmd
-.\RegisterRExt.exe /cleanup /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES.3.5" /instance:MSSQLSERVER01
+.\RegisterRext.exe /cleanup /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES" /instance:MSSQLSERVER01
 ```
 
 > [!NOTE]
-> You can remove a version only if it's not configured as the default.
+> You can remove a version only if it's not configured as the default and if it’s not currently being used to run RegisterRext.
 
 ## Next steps
 

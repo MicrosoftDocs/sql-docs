@@ -37,6 +37,8 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
+## Current SSMS release
+
 ### 18.6
 
 - Download: [Download SSMS 18.5.1](download-sql-server-management-studio-ssms.md)
@@ -55,19 +57,14 @@ SSMS 18.6 is the latest general availability (GA) release of SSMS. If you need a
 
 | New Item | Details |
 |----------|---------|
-| Analysis Services | Improved performance when expanding the list of databases while connected to AS Azure or Power BI servers. |
-| Analysis Services | Fixed an issue where an error would occur trying to open the Synchronize Database Wizard of an Analysis Services server. |
-| Analysis Services | Fixed an issue preventing users from querying SSAS 2017 and earlier versions with cell data permissions. |
-| General SSMS | [Table Designer - Fixed beep when trying to TAB in a Table Designer grid](https://feedback.azure.com/forums/908035/suggestions/40318435) |
+Import Flat File | Added Support for Fixed Width files and file type detection for .csv/.tsv files to ensure they are parsed as csv/tsv files respectively.
 
 #### Known issues (18.6)
 
 | New Item | Details | Workaround |
-|----------|---------||-----------|
-| General SSMS | There is a known bug with Diagram Design that causes your existing diagrams to get corrupted. For example, you create a Diagram Design with SSMS 17.9.1, then update/save it with SSMS 18.x, and then later try to open it with 17.9.1. See [UserVoice 37992649](https://feedback.azure.com/forums/908035/suggestions/37992649) for more details. | N/A |
-| General SSMS | New Server Audit Specification dialog may cause SSMS to crash with an access violation error. | N/A ||
-| SMO/Scripting | SSMS Extensions using SMO need to be recompiled targeting the new SMO v160. | N/A |
-| Integration Services | When importing or exporting packages in Integration Services or exporting packages in Azure-SSIS Integration Runtime, scripts are lost for packages containing script tasks/components. Workaround: | Remove folder "C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\CommonExtensions\MSBuild". |
+|----------|---------|------------|
+
+
 
 You can reference [UserVoice](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 

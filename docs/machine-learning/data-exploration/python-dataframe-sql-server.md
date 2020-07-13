@@ -33,21 +33,20 @@ This article describes how to insert data into a SQL database from a `pandas` da
 ## Restore the sample database
 
 The sample database used in this article has been saved to a **.bak** database backup file for you to download and use.
-
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions"
 1. Follow the instructions in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#download-bak-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
-
 1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
+   - Import from the **AdventureWorks.bak** file - you downloaded.
+   - Name the target database "AdventureWorks."
 ::: moniker-end   
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 1. Follow the instructions in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#download-bak-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
-
 1. Follow the directions in [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
+   - Import from the **AdventureWorks.bak** file - you downloaded.
+   - Name the target database "AdventureWorks."
 ::: moniker-end
 
-- Import from the **AdventureWorks.bak** file - you downloaded.
-- Name the target database "AdventureWorks."
-1. You can verify that the restored database exists by querying the **HumanResources.Department** table:
+You can verify that the restored database exists by querying the **HumanResources.Department** table:
 
 ```sql
 USE AdventureWorks;
@@ -112,7 +111,7 @@ DepartmentID,Name,GroupName,
  
 2. Edit path for CSV file. 
  
- ## Load dataframe from CSV file
+## Load dataframe from CSV file
 
 1. Use the Python `pandas` package to create a dataframe and load the CS file. Connect to SQL Server to load dataframe into the new SQL table, HumanResources.DepartmentTest.
 

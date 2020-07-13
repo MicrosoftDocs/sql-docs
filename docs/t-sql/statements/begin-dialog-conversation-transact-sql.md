@@ -55,7 +55,9 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **@** _dialog_handle_  
  Is a variable used to store the system-generated dialog handle for the new dialog that is returned by the BEGIN DIALOG CONVERSATION statement. The variable must be of type **uniqueidentifier**.  
   

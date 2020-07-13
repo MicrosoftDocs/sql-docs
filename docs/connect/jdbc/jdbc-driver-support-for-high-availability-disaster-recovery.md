@@ -92,8 +92,8 @@ The driver will return an error if database mirroring is used on the primary dat
 When using the Microsoft JDBC Driver for SQL Server in combination with a connection pooling library, you should consider the following points:
 
 - If you have read-only routing configured and a pool of read-only servers that you want to distribute load over, connection pooling will reduce the number of opportunities for new connections to spread over the target servers.
-- To avoid a higher load on any single server in a pool, choose pool options which encourage an even distribution of connections across the pool.
-- Make sure your connection pool is configured with a connection lifetime. In the event a read-only replica is unavailable when a read-only connection is first made, this should ensure that those connections will eventually be closed and re-established to a read-only replica when one becomes available again.
+- To avoid a higher load on any single server in a pool, choose pool options that encourage an even distribution of connections across the pool.
+- Make sure your connection pool is configured with a connection lifetime. In the event a read-only replica is unavailable when a read-only connection is made, the configuration should ensure that connection is eventually closed and re-established to a read-only replica when one becomes available again.
 
 ## New methods supporting multiSubnetFailover and applicationIntent  
 

@@ -1,5 +1,5 @@
 ---
-title: "xml Data Type Methods | Microsoft Docs"
+title: xml Data Type Methods
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

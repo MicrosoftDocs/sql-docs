@@ -44,7 +44,9 @@ column_name AS computed_column_expression
 ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *column_name*  
  Is the name of the column to be altered, added, or dropped. *column_name* can be 1 through 128 characters. For new columns, *column_name* can be omitted for columns created with a **timestamp** data type. If no *column_name* is specified for a **timestamp** data type column, the name **timestamp** is used.  
   

@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_11001
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   

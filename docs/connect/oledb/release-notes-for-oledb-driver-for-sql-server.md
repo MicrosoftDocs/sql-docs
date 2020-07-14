@@ -11,7 +11,7 @@ ms.author: v-makmie
 ---
 # Release notes for the Microsoft OLE DB Driver for SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This page discusses what was added in each version of the Microsoft OLE DB Driver for SQL Server.
 

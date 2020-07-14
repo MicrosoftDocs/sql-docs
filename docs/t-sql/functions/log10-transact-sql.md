@@ -18,12 +18,12 @@ helpviewer_keywords:
   - "base-10 logarithms"
   - "logarithm of expression"
 ms.assetid: 1eb7fb34-1937-4a39-a936-f5c0c7c7e06f
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LOG10 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the base-10 logarithm of the specified **float** expression.  
   
@@ -51,9 +51,9 @@ LOG10 ( float_expression )
  The following example calculates the `LOG10` of the specified variable.  
   
 ```  
-DECLARE @var float;  
+DECLARE @var FLOAT;  
 SET @var = 145.175643;  
-SELECT 'The LOG10 of the variable is: ' + CONVERT(varchar,LOG10(@var));  
+SELECT 'The LOG10 of the variable is: ' + CONVERT(VARCHAR,LOG10(@var));  
 GO  
 ```  
   

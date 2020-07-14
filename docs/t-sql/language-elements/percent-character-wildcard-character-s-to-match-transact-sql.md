@@ -24,7 +24,7 @@ author: rothja
 ms.author: jroth
 ---
 # Percent character (Wildcard - Character(s) to Match) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Matches any string of zero or more characters. This wildcard character can be used as either a prefix or a suffix.  
   

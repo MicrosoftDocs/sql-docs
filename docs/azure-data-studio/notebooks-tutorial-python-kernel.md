@@ -5,15 +5,15 @@ author: garyericson
 ms.author: garye
 ms.reviewer: mikeray, alayu, maghan
 ms.topic: tutorial
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.custom: ""
 ms.date: 04/27/2020
 ---
 
 # Create and run a Python notebook
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This tutorial demonstrates how to create and run a notebook in Azure Data Studio using the Python kernel.
 

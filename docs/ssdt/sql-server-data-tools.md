@@ -1,5 +1,6 @@
 ---
 title: SQL Server Data Tools
+description: View resources on database development tasks that you can accomplish with SQL Server Data Tools, such as designing tables and creating feature extensions.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

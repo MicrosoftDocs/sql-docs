@@ -23,7 +23,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Replication Agent Security Model
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections: A different account can be specified for each agent. For more information about how to specify accounts, see [Identity and access control for replication](../../../relational-databases/replication/security/identity-and-access-control-replication.md).  
 
 The replication agent security model is a little bit different for Azure SQL Database managed instances, as there are no Windows accounts under which the agents will run. Instead, everything must be done through SQL Server authentication. 

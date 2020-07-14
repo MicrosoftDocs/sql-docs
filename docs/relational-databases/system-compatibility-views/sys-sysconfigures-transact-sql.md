@@ -22,7 +22,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # sys.sysconfigures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each configuration option set by a user. **sysconfigures** contains the configuration options that are defined before the most recent startup of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], plus any dynamic configuration options set since then.  
   

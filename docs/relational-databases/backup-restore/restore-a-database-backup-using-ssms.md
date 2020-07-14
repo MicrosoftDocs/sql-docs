@@ -22,7 +22,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Restore a Database Backup Using SSMS
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic explains how to restore a full database backup using SQL Server Management Studio.    
        

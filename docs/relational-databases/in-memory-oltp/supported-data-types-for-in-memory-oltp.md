@@ -1,5 +1,6 @@
 ---
 title: "Supported Data Types for In-Memory OLTP | Microsoft Docs"
+description: Learn about data types that are unsupported for the In-Memory OLTP features memory-optimized tables and natively compiled T-SQL modules.
 ms.custom: ""
 ms.date: "06/19/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Supported Data Types for In-Memory OLTP
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   This article lists the data types that are unsupported for the In-Memory OLTP features of:  
   

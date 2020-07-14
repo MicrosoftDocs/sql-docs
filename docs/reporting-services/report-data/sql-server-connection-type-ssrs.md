@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Connection Type | Microsoft Docs"
+description: Learn about the SQL Server connection type and including data from a SQL Server database in your report.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -15,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Peer-to-Peer - Conflict Detection in Peer-to-Peer Replication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Peer-to-peer transactional replication lets you insert, update, or delete data at any node in a topology and have data changes propagated to the other nodes. Because you can change data at any node, data changes at different nodes could conflict with each other. If a row is modified at more than one node, it can cause a conflict or even a lost update when the row is propagated to other nodes.  
   
  Peer-to-peer replication in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)] and later versions provides the option to enable conflict detection across a peer-to-peer topology. This option would help prevent the issues that are caused by undetected conflicts, including inconsistent application behavior and lost updates. With this option enabled, by default a conflicting change is treated as a critical error that causes the failure of the Distribution Agent. In the event of a conflict, the topology remains in an inconsistent state until the conflict is resolved and the data is made consistent across the topology.  

@@ -15,7 +15,7 @@ ms.reviewer:
 
 ---
 # Table-Valued Object (Column) Properties (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 These properties appear when you select a column in a table-valued object in the **Diagram** pane of Query and View Designer.  
   
 > [!NOTE]  

@@ -23,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.conversation_priorities (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains a row for each conversation priority created in the current database, as shown in the following table: 
   

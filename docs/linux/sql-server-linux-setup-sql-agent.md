@@ -12,7 +12,7 @@ ms.assetid: 77f16adc-e6cb-4a57-82f3-7b9780369868
 
 # Install SQL Server Agent on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article describes how to enable or install the SQL Server Agent on Linux.
 

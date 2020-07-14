@@ -238,7 +238,7 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
   
  A partial list of the output demonstrates the default values.  
   
-| Output | Default values|  
+| Output | Default value|  
 |-|-|  
 |`start_value`|`-9223372036854775808`|  
 |`increment`|`1`|  

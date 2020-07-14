@@ -231,6 +231,14 @@
         href: ../machine-learning/r/how-to-create-mdx-queries-using-olapr.md
   - name: Data exploration and modeling
     items:
+    - name: Python
+      items:
+      - name: Plot Histogram in Python
+        href: ../machine-learning/data-exploration/python-plot-histogram.md 
+      - name: Import data into Pandas dataframe
+        href: ../machine-learning/data-exploration/python-dataframe-pandas.md 
+      - name: Insert dataframe into SQL
+        href: ../machine-learning/data-exploration/python-dataframe-sql-server.md
     - name: R
       items:
       - name: Load R objects using ODBC

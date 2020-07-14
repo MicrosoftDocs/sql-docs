@@ -44,7 +44,9 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
     | DECRYPTION BY PASSWORD = 'oldPassword'  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Asym_Key_Name*  
  Is the name by which the asymmetric key is known in the database.  
   

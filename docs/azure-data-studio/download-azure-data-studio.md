@@ -22,9 +22,9 @@ Download and install the latest release:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2132305)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2131971)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2131970) | July 15, 2020 | 1.20.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2131972) | July 15, 2020 | 1.20.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2131973)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2131974)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2132306) | July 15, 2020| 1.20.0 |
+| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2135512)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2135513)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2135514) | July 15, 2020 | 1.20.0 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2135266) | July 15, 2020 | 1.20.0 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267) | July 15, 2020| 1.20.0 |
 
 For details about the latest release, see the [release notes](release-notes.md).
 
@@ -36,32 +36,32 @@ The *user installer* is recommended because it does not require administrator pr
 
 **User Installer** (recommended)
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2132305).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2135512).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 **System Installer**
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2131971).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2135513).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 **.zip file**
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2131970).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2135514).
 2. Browse to the downloaded file and extract it.
 3. Run `\azuredatastudio-windows\azuredatastudio.exe`
 
 ## Get Azure Data Studio for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2131972).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2135266).
 2. To expand the contents of the zip, double-click it.
 3. To make Azure Data Studio available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
 
 ## Get Azure Data Studio for Linux
 
 1. Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux by using one of the installers or the tar.gz archive:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2131973)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2131974)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2132306)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267)
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
    **Debian Installation:**

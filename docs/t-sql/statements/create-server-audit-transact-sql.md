@@ -67,7 +67,9 @@ CREATE SERVER AUDIT audit_name
     event_field_name { = | < > | ! = | > | > = | < | < = | LIKE } { number | ' string ' }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR } 
  Determines the location of the audit target. The options are a binary file, The Windows Application log, or the Windows Security log. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot write to the Windows Security log without configuring additional settings in Windows. For more information, see [Write SQL Server Audit Events to the Security Log](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
 

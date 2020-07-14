@@ -101,7 +101,9 @@ FOR DATABASE_MIRRORING (
 )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *endPointName*  
  Is the assigned name for the endpoint you are creating. Use when updating or deleting the endpoint.  
   

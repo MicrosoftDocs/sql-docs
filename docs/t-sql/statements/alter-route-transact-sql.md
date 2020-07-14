@@ -46,7 +46,10 @@ WITH
   
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *route_name*  
  Is the name of the route to change. Server, database, and schema names cannot be specified.  
   

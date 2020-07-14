@@ -1,5 +1,6 @@
 ---
 title: "Data Compression | Microsoft Docs"
+description: Learn how SQL Server and Azure SQL Database support row and page compression and columnstore and columnstore archival compression.
 ms.custom: ""
 ms.date: "08/31/2017"
 ms.prod: sql

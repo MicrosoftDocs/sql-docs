@@ -1,5 +1,5 @@
 ---
-description: This article describes the modifying registry entries for SQL Connector.
+description: This article describes the modifying registry entries for SQL Server Connector.
 title: SQL Connector error and information logging
 ms.date: 07/17/2020
 ms.localizationpriority: medium
@@ -13,7 +13,7 @@ ms.author: arupp
 
 # SQL Connector error and information logging
 
-This article describes the modifying registry entires to enable SQL Connector error and information logging.
+This article describes the modifying registry entires to enable SQL Server Connector error and information logging.
 
 ## SQL Server Connector for Microsoft Azure Key Vault
 
@@ -23,7 +23,7 @@ An organization can use SQL Server encryption to protect sensitive data. SQL Ser
 
 Azure Key Vault helps safeguard cryptographic keys and secrets used by cloud applications and services. By using Azure Key Vault, you can encrypt keys and secrets (such as authentication keys, storage account keys, data encryption keys, .PFX files, and passwords) by using keys that are protected by hardware security modules (HSMs). For added assurance, you can import or generate keys in HSMs (keys never leave the HSM boundary). HSMs are certified to FIPS 140-2 level 2.
 
-The download consists of the SQL Server Connector as well as Sample Scripts to enable a SQL Server Administrator learn how to configure the Connector and enable SQL Server Encryption scenarios. For more information, review the topic [Extensible key management using Key Vault (SQL Server)](https://go.microsoft.com/fwlink/p/?LinkId=521690)
+The download consists of the SQL Server Connector as well as Sample Scripts to enable a SQL Server Administrator learn how to configure the SQL Server Connector and enable SQL Server Encryption scenarios. For more information, review the topic [Extensible key management using Key Vault (SQL Server)](https://go.microsoft.com/fwlink/p/?LinkId=521690)
 
 Use the [Azure Key Vault forum](https://social.msdn.microsoft.com/Forums/en-US/AzureKeyVault) to ask questions, share insights and discuss the SQL Server Connector.
 

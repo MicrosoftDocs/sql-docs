@@ -4,7 +4,7 @@ description: Learn how to change the default version of the R runtime used by a 
 ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/13/2020
+ms.date: 07/14/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
@@ -70,10 +70,23 @@ In this example, you don't need to include the `/rhome` argument since you're sp
 
 To remove a version of R, use **RegisterRext.exe** with the `/cleanup` command-line argument, using the same `/rhome` and `/instance` arguments described previously.
 
-For example, to remove the R 3.5 folder from the instance MSSQLSERVER01:
+For example, to remove the **R 3.2** folder from the instance MSSQLSERVER01:
 
 ```cmd
 .\RegisterRext.exe /cleanup /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES" /instance:MSSQLSERVER01
+```
+
+**RegisterRext.exe** will ask you to confirm the clean up of the specified R runtime. To confirm, answer `Y` or press enter.
+
+```
+Are you sure you want to permanently delete the given runtime
+alongwith all the packages installed on it? [Yes(Y)/No(N)/Default(Yes)]:
+```
+
+Alternatively, you can skip this prompt by passing in `/y` or `/Yes` to the `/cleanup` option command line itself. For example:
+
+```cmd
+.\RegisterRext.exe /cleanup /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES" /instance:MSSQLSERVER01 /y
 ```
 
 > [!NOTE]

@@ -76,11 +76,11 @@ For example, to remove the **R 3.2** folder from the instance MSSQLSERVER01:
 .\RegisterRext.exe /cleanup /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES" /instance:MSSQLSERVER01
 ```
 
-**RegisterRext.exe** will ask you to confirm the clean up of the specified R runtime. To confirm, answer `Y` or press enter.
+**RegisterRext.exe** will ask you to confirm the clean up of the specified R runtime:
 
 > *Are you sure you want to permanently delete the given runtime along with all the packages installed on it? \[Yes(Y)/No(N)/Default(Yes)\]:*
 
-Alternatively, you can skip this prompt by passing in `/y` or `/Yes` along the `/cleanup` option. For example:
+To confirm, answer `Y` or press enter. Alternatively, you can skip this prompt by passing in `/y` or `/Yes` along the `/cleanup` option. For example:
 
 ```cmd
 .\RegisterRext.exe /cleanup /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES" /instance:MSSQLSERVER01 /y

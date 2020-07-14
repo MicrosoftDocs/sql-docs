@@ -29,7 +29,7 @@ To connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utilit
 
 3. Select **View** and then **Utility Explorer**.
 
-4. In the Utility Explorer navigation pane, select ![Connect to Utility](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Connect to Utility**.
+4. In the Utility Explorer navigation pane, select :::image type="icon" source="media/connect-to-utility.gif" border="false"::: **Connect to Utility**.
 
 5. In the **Connect to Server** dialog box, specify the UCP instance name, then select **Connect**.
 

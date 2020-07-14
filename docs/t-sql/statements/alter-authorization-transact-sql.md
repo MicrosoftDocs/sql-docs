@@ -115,7 +115,9 @@ ALTER AUTHORIZATION ON
 }    
 ```    
     
-## Arguments    
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 \<class_type>
  Is the securable class of the entity for which the owner is being changed. OBJECT is the default.    
     

@@ -1,18 +1,18 @@
 ---
-title: Insert Python dataFrame into SQL Server 
-description: How to insert data from a dataframe into SQL Server 
+title: Insert Python dataframe into SQL table 
+description: How to insert data from a dataframe into SQL table
 author: cawrites
 ms.author: chadam
-ms.date: 07/01/2020
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
 ---
-# Insert Python dataFrame into SQL Server
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# Insert Python dataFrame into SQL table
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-This article describes how to insert data into a SQL database from a `pandas` dataframe using the `pyodbc` package in Python. For more information, see the [pyodbc documentation](../../connect/python/pyodbc/python-sql-driver-pyodbc.md). By establishing a connection with SQL Server using Python `pandas`, data can be sent directly to a SQL table.
+This article describes how to insert data into a SQL database from a `pandas` dataframe using the `pyodbc` package in Python. For more information, see the [pyodbc documentation](../../connect/python/pyodbc/python-sql-driver-pyodbc.md). By establishing a connection with SQL using Python `pandas`, data can be sent directly to a SQL table.
 
 ## Prerequisites:
 
@@ -125,8 +125,7 @@ To create a new notebook:
 3. Paste code in notebook, select **Run All**.
 
  ```Python
-import pyodbc 
-import pandas
+import pyodbc
 import pandas as pd
 # insert data from csv file into dataframe.
 # working directory for csv file: type "pwd" in Azure Data Studio or Linux

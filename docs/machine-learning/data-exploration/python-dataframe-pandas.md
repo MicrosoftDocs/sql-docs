@@ -4,13 +4,14 @@ titleSuffix: SQL machine learning
 description: Learn how to read data from a SQL database and insert it into a pandas dataframe using Python.
 author: cawrites
 ms.author: chadam
-ms.date: 07/01/2020
+ms.date: 07/14/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
 ---
 # Insert data from a SQL table into a Python pandas dataframe
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article describes how to insert data from a SQL database a `pandas` dataframe using the `pyodbc` package in Python. The dataframe can be used for further data exploration. For more information, see the [pyodbc documentation](../../connect/python/pyodbc/python-sql-driver-pyodbc.md).
 
@@ -80,7 +81,6 @@ To create a new notebook:
 
 ```python
 import pyodbc 
-import pandas
 import pandas as pd
 # Some other example server values are
 # server = 'localhost\sqlexpress' # for a named instance

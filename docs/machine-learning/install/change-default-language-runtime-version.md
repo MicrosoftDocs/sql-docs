@@ -83,7 +83,7 @@ Are you sure you want to permanently delete the given runtime
 alongwith all the packages installed on it? [Yes(Y)/No(N)/Default(Yes)]:
 ```
 
-Alternatively, you can skip this prompt by passing in `/y` or `/Yes` to the `/cleanup` option command line itself. For example:
+Alternatively, you can skip this prompt by passing in `/y` or `/Yes` along the `/cleanup` option. For example:
 
 ```cmd
 .\RegisterRext.exe /cleanup /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES" /instance:MSSQLSERVER01 /y

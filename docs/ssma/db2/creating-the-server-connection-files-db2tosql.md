@@ -13,7 +13,7 @@ ms.author: "alexiva"
 
 # Creating the Server Connection Files (DB2ToSQL)
 
-Server information can be specified either in the servers section of the script file or in a separate server connection file. The command line parameter for the server connection file is, `-c <serverconnectionfile>`. If the same server id is present in both the script file and server connection file, then the server definition in the script file is considered.
+Server information can be specified either in the servers section of the script file or in a separate server connection file. The command line parameter for the server connection file is, `-c <serverconnectionfile>`. If the same server ID is present in both the script file and server connection file, then the server definition in the script file is considered.
 
 **Example: 1**
 

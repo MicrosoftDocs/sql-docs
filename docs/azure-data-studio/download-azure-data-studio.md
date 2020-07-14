@@ -160,11 +160,10 @@ Azure Data Studio runs on Windows, macOS, and Linux, and is supported on the fol
 
 ## Recommended System Requirements
 
-|             | CPU Cores | Memory/RAM |
-|:-----------|:---------|:----------|
-| Recommended |     4     |      8 GB    |
-|   Minimum   |     2     |      4 GB     |
-|             |           |            |
+| Recommended/Minimum | CPU Cores | Memory/RAM |
+|---------------------|-----------|------------|
+| Recommended         |     4     |   8 GB     |
+|   Minimum           |     2     |   4 GB     |
 
 ## Check for updates
 

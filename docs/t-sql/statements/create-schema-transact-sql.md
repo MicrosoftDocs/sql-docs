@@ -59,7 +59,9 @@ CREATE SCHEMA schema_name_clause [ <schema_element> [ ...n ] ]
 CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name by which the schema is identified within the database.  
   

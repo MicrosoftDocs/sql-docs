@@ -23,7 +23,7 @@ An organization can use SQL Server encryption to protect sensitive data. SQL Ser
 
 Azure Key Vault helps safeguard cryptographic keys and secrets used by cloud applications and services. By using Azure Key Vault, you can encrypt keys and secrets (such as authentication keys, storage account keys, data encryption keys, .PFX files, and passwords) by using keys that are protected by hardware security modules (HSMs). For added assurance, you can import or generate keys in HSMs (keys never leave the HSM boundary). HSMs are certified to FIPS 140-2 level 2.
 
-The download consists of the SQL Server Connector as well as Sample Scripts to enable a SQL Server Administrator learn how to configure the Connector and enable SQL Server Encryption scenarios. For more information, review the topic [Extensible key management using Key Vault (SQL Server)](http://go.microsoft.com/fwlink/p/?LinkId=521690)
+The download consists of the SQL Server Connector as well as Sample Scripts to enable a SQL Server Administrator learn how to configure the Connector and enable SQL Server Encryption scenarios. For more information, review the topic [Extensible key management using Key Vault (SQL Server)](https://go.microsoft.com/fwlink/p/?LinkId=521690)
 
 Use the [Azure Key Vault forum](https://social.msdn.microsoft.com/Forums/en-US/AzureKeyVault) to ask questions, share insights and discuss the SQL Server Connector.
 
@@ -46,7 +46,7 @@ Use the [Azure Key Vault forum](https://social.msdn.microsoft.com/Forums/en-US/A
 - SQL Server 2012 SP1 CU6 Enterprise 64-bit
 - SQL Server 2008 R2 SP2 CU8 Enterprise 64-bit
 
-On SQL Server 2008 and 2012 versions lower than the ones listed above, the patch specified in the following kb article needs to be installed:  [http://support2.microsoft.com/kb/2859713](http://support2.microsoft.com/kb/2859713)
+On SQL Server 2008 and 2012 versions lower than the ones listed above, the patch specified in the following kb article needs to be installed:  [https://support2.microsoft.com/kb/2859713](https://support2.microsoft.com/kb/2859713)
 
 The SQL Server Connector for Microsoft Azure Key Vault also requires .NET Version 4.5.1 on the Microsoft SQL Server Virtual Machine on Azure. This library should be installed before you install the SQL Connector.
 

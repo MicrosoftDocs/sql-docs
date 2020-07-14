@@ -43,9 +43,9 @@ This section covers the various contribution points that are defined in the pack
 
 The IntelliSense is supported inside azuredatastudio.
 
-## Contributes dashboard
+### Dashboard contribution points
 
-Contribute tab, container, insight widget to the dashboard.
+Contribute a tab, container, and/or insight widget to the dashboard.
 
 ![Dashboard](media/extensibility/dashboard-page.png)
 

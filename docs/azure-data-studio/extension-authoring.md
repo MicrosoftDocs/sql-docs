@@ -1,6 +1,6 @@
 ---
 title: Create extensions
-description: Learn about creating and adding extensions to Azure Data Studio
+description: Learn about creating and publishing extensions to Azure Data Studio
 ms.prod: azure-data-studio
 ms.technology: 
 ms.topic: conceptual
@@ -26,14 +26,14 @@ If you're interested in extending Azure Data Studio, you can create your own ext
 
 ***Prerequisites***
 
-To develop an extension you need Node.js installed and available in your $PATH. Node.js includes npm, the Node.js Package Manager, which will be used to install the extension generator.
+To develop an extension you need [Node.js](https://nodejs.org/) installed and available in your `$PATH`. Node.js includes npm, the Node.js Package Manager, which will be used to install the extension generator.
 
-To start your new extension, you can use the Azure Data Studio Extension generator. The Yeoman [extension generator](https://www.npmjs.com/package/generator-azuredatastudio) makes it very easy to create simple extension projects. To Launch the generator, type the following in a command prompt:
+To create your new extension, you can use the Azure Data Studio Extension Generator. The Yeoman [Extension Generator](https://www.npmjs.com/package/generator-azuredatastudio) is a beneficial starting point for extension projects. To launch the generator, type the following in a command prompt:
 
-`npm install -g yo generator-azuredatastudio`
-
+`npm install -g yo generator-azuredatastudio # Install the generator`
 `yo azuredatastudio`
 
+For an in-depth guide on how to get started with your extension template, refer to [Creating an Extension](https://docs.microsoft.com/en-us/sql/azure-data-studio/tutorial-create-extension?view=sql-server-ver15), which will walk you through the creation of a keymap extension.
 
 **Extensibility References**
 
@@ -53,11 +53,14 @@ Steps
 
 ## Create an extension package
 
-After writing your extension, you need to create a VSIX package to be able to install it in Azure Data Studio. You can use [vsce](https://github.com/Microsoft/vscode-vsce) to create the VSIX package.
+After writing your extension, you need to create a VSIX package to be able to install it in Azure Data Studio. You can use [vsce](https://github.com/Microsoft/vscode-vsce) (Visual Studio Code Extensions) to create the VSIX package. 
 
 `npm install -g vsce`
-
+`cd myExtensionName`
 `vsce package`
+`# The myExtensionName.vsix file has now been generated`
+
+With a VSIX package, you can share your extension locally and privately by sharing the `.vsix` file and using the command **Extensions: Install From VSIX File** from the Command Palette to install the extension into Azure Data Studio.
 
 
 ## Publish an extension

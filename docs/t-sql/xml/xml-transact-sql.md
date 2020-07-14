@@ -1,5 +1,5 @@
 ---
-title: "xml (Transact-SQL) | Microsoft Docs"
+title: xml (Transact-SQL)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
@@ -31,7 +31,9 @@ ms.author: genemi
 xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  CONTENT  
  Restricts the **xml** instance to be a well-formed XML fragment. The XML data can contain multiple zero or more elements at the top level. Text nodes are also allowed at the top level.  
   

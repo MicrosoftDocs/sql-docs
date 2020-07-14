@@ -317,12 +317,6 @@ The following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements aren't allo
 
 Additionally, the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statements aren't allowed inside the body of a DML trigger when it's used against the table or view that's the target of the triggering action.  
   
-||||  
-|-|-|-|  
-|CREATE INDEX (including CREATE SPATIAL INDEX and CREATE XML INDEX)|ALTER INDEX|DROP INDEX|  
-|DBCC DBREINDEX|ALTER PARTITION FUNCTION|DROP TABLE|  
-|ALTER TABLE when used to do the following:<br /><br /> Add, modify, or drop columns.<br /><br /> Switch partitions.<br /><br /> Add or drop PRIMARY KEY or UNIQUE constraints.|||  
-
 - CREATE INDEX (including CREATE SPATIAL INDEX and CREATE XML INDEX)
 - ALTER INDEX
 - DROP INDEX

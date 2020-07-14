@@ -19,11 +19,14 @@ This article describes how to insert data from a SQL database a `pandas` datafra
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 * SQL Server. For how to install, see [SQL Server for Windows](../../database-engine/install-windows/install-sql-server.md) or [for Linux](../../linux/sql-server-linux-overview.md).
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 * Azure SQL Database. For how to sign up, see [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-get-started-portal)
 ::: moniker-end
+
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 * Azure SQL Managed Instance. For how to sign up, see [Azure SQL Managed Instance](https://docs.microsoft.com/azure/azure-sql/managed-instance/instance-create-quickstart).
+
 * [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) for restoring the sample database to Azure SQL Managed Instance.
 ::: moniker-end
 

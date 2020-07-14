@@ -23,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Estimates the reduction in the average size of rows if you enable vardecimal storage format on a table. Use this number to estimate the overall reduction in the size of the table. Since the statistical sampling is used to compute the average reduction in the rowsize, regard it as an estimate only. In rare cases, rowsize may increase after enabling the vardecimal storage format.  
   

@@ -36,7 +36,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # XML Indexes (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   XML indexes can be created on **xml** data type columns. They index all tags, values and paths over the XML instances in the column and benefit query performance. Your application may benefit from an XML index in the following situations:  
   
 -   Queries on XML columns are common in your workload. XML index maintenance cost during data modification must be considered.  

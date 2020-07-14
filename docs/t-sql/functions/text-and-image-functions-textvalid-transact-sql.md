@@ -24,7 +24,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Text and Image Functions - TEXTVALID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A **text**, **ntext**, or **image** function that checks whether a specific text pointer is valid.  
   

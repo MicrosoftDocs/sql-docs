@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "iterations [Integration Services]"
   - "For Loop containers"
 ms.assetid: eb3a7494-88ae-4165-9d0f-58715eb1734a
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Add Iteration to a Control Flow
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes the For Loop container, a control flow element that makes it simple to include looping that conditionally repeats a control flow in a package. For more information, see [For Loop Container](control-flow/for-loop-container.md).  

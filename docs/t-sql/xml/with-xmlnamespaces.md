@@ -1,5 +1,5 @@
 ---
-title: "WITH XMLNAMESPACES (Transact-SQL) | Microsoft Docs"
+title: WITH XMLNAMESPACES (Transact-SQL)
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
@@ -22,7 +22,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # WITH XMLNAMESPACES
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Declares one or more XML namespaces.  
   
@@ -54,7 +54,9 @@ DEFAULT <xml_namespace_uri>
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *xml_namespace_uri*  
  A Uniform Resource Identifier (URI) that identifies the XML namespace that is being declared. *xml_namespace_uri* is an SQL string.  
   

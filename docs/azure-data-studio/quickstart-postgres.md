@@ -3,8 +3,8 @@ title: "Quickstart: Connect and query PostgreSQL"
 description: This quickstart shows how to use Azure Data Studio to connect to PostgreSQL and run a query
 ms.custom: "seodec18"
 ms.date: "09/18/2019"
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.reviewer: "alayu, maghan, sstein"
 ms.topic: "quickstart"
 author: "rachel-msft"

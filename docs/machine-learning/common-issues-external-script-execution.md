@@ -1,5 +1,5 @@
 ---
-title: Common issues with Launchpad
+title: Troubleshoot issues with Launchpad service
 description: This article provides troubleshooting guidance for many issues that prevent the SQL Server Trusted Launchpad service from starting, including configuration problems or changes, or missing network protocols.
 ms.prod: sql
 ms.technology: machine-learning-services
@@ -10,12 +10,12 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Common issues with Launchpad service and external script execution in SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# Troubleshoot issues with Launchpad service and external script execution in SQL Server
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
-SQL Server Trusted Launchpad service supports external script execution for R and Python. 
+This article provides troubleshooting guidance for issues involving the SQL Server Trusted Launchpad service. The Launchpad service supports external script execution for R and Python. Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols.  
 
-Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols. This article provides troubleshooting guidance for many issues. For any we missed, you can post questions to the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR).
+If you encounter issues not covered here, you can post questions to the [Machine Learning Server forum](https://social.msdn.microsoft.com/Forums/home?category=MicrosoftR).
 
 ## Determine whether Launchpad is running
 
@@ -231,10 +231,10 @@ As a workaround, you can enable the 8dot3 notation on the volume where SQL Serve
 
 ## Next steps
 
-[Machine Learning Services troubleshooting and known issues](machine-learning-troubleshooting-faq.md)
+[Machine Learning Services troubleshooting and known issues](machine-learning-troubleshooting-overview.md)
 
 [Data collection for troubleshooting machine learning](data-collection-ml-troubleshooting-process.md)
 
-[Upgrade and installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md)
+[Upgrade and installation FAQ](upgrade-and-installation-faq-sql-server-r-services.md)
 
 [Troubleshoot database engine connections](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

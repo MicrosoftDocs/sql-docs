@@ -1,5 +1,6 @@
 ---
 title: Specify Pre or Post deployment Scripts
+description: Find out how to use pre-deployment and post-deployment scripts to execute Transact-SQL statements before and after the main deployment script runs.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

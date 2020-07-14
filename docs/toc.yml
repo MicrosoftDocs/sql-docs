@@ -294,6 +294,10 @@
         href: big-data-cluster/notebooks-manage-bdc.md
       - name: Run a notebook with Spark
         href: big-data-cluster/notebooks-tutorial-spark.md
+    - name: Performance
+      items:
+        - name: Tuning guide
+          href: big-data-cluster/performance-guidelines-tuned.md
     - name: Secure
       items:
       - name: Kubernetes RBAC for BDC
@@ -308,6 +312,8 @@
         href: big-data-cluster/active-directory-deployment-background.md
       - name: Auto-generated AD objects
         href: big-data-cluster/active-directory-objects.md
+      - name: AD DNS reconciliation
+        href: big-data-cluster/active-directory-dns-reconciliation.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio
@@ -1919,12 +1925,13 @@
       - name: Interoperability
         href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
   - name: Triggers
-    href: relational-databases/triggers/logon-triggers.md
     items:
-    - name: Capture Logon Trigger Event Data
-      href: relational-databases/triggers/capture-logon-trigger-event-data.md
-    - name: Manage Trigger Security
-      href: relational-databases/triggers/manage-trigger-security.md
+    - name: Logon Triggers
+      items:
+      - name: Logon Triggers
+        href: relational-databases/triggers/logon-triggers.md
+      - name: Capture Logon Trigger Event Data
+        href: relational-databases/triggers/capture-logon-trigger-event-data.md
     - name: DDL Triggers
       href: relational-databases/triggers/ddl-triggers.md
       items:
@@ -1959,6 +1966,8 @@
         href: relational-databases/triggers/get-information-about-dml-triggers.md
       - name: Delete or Disable DML Triggers
         href: relational-databases/triggers/delete-or-disable-dml-triggers.md
+    - name: Manage Trigger Security
+      href: relational-databases/triggers/manage-trigger-security.md
   - name: User-defined functions
     href: relational-databases/user-defined-functions/user-defined-functions.md
     items:
@@ -2217,8 +2226,6 @@
   - name: Data tier applications
     href: relational-databases/data-tier-applications/data-tier-applications.md
     items:
-    - name: DAC Support For SQL Server Objects & Versions
-      href: relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md
     - name: Delete
       href: relational-databases/data-tier-applications/delete-a-data-tier-application.md
     - name: Deploy
@@ -4513,6 +4520,8 @@
         href: database-engine/configure-windows/affinity64-mask-server-configuration-option.md
       - name: Agent XPs
         href: database-engine/configure-windows/agent-xps-server-configuration-option.md
+      - name: allow polybase export
+        href: database-engine/configure-windows/allow-polybase-export.md
       - name: allow updates
         href: database-engine/configure-windows/allow-updates-server-configuration-option.md
       - name: backup checksum default
@@ -10109,14 +10118,10 @@
   items:
   - name: Database samples
     items:
-    - name: Samples Overview
+    - name: Overview
       href: samples/sql-samples-where-are.md
-    - name: All GitHub Samples >>
-      href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
     - name: AdventureWorks
-      items:
-      - name: Install & configure
-        href: samples/adventureworks-install-configure.md
+      href: samples/adventureworks-install-configure.md
     - name: Wide World Importers
       items:
       - name: Overview
@@ -10141,6 +10146,8 @@
         href: samples/wide-world-importers-generate-data.md
       - name: ETL workflow
         href: samples/wide-world-importers-perform-etl.md
+    - name: All GitHub Samples >>
+      href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
   - name: Errors & events
     href: relational-databases/errors-events/errors-and-events-reference-database-engine.md
     items:

@@ -36,7 +36,7 @@ The following file formats are supported:
   
 -   Parquet
 
--   JSON 
+-   JSON - Applies to Azure SQL Edge only.
 
 
 To create an External Table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).

@@ -13,35 +13,17 @@ ms.technology: big-data-cluster
 
 # How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 A SQL Server big data cluster is deployed as docker containers on a Kubernetes cluster. This is an overview of the setup and configuration steps:
 
-- Set up a Kubernetes cluster on a single VM, cluster of VMs, or in Azure Kubernetes Service (AKS).
+- Set up a Kubernetes cluster on a single VM, cluster of VMs, in Azure Kubernetes Service (AKS), Red Hat OpenShift or in Azure Red Hat OpenShift (ARO).
 - Install the cluster configuration tool `azdata` on your client machine.
 - Deploy a SQL Server big data cluster in a Kubernetes cluster.
 
-
 ## Supported platforms
 
-This section explains platforms that are supported with BDC.
-
-### Kubernetes platforms
-
-|Platform|Supported versions|
-|---------|---------|
-|Kubernetes|BDC requires Kubernetes version minimum 1.13 for both server and client (kubectl). See [Kubernetes version and version skew support policy](https://kubernetes.io/docs/setup/release/version-skew-policy/) for Kubernetes version support policy.|
-|Azure Kubernetes Service (AKS)|BDC requires AKS version minimum 1.13.<br/>See [Supported Kubernetes versions in AKS](/azure/aks/supported-kubernetes-versions) for version support policy.|
-
-> [!NOTE]
-> Note that the client and server Kubernetes versions should be within +1 or -1 minor version. For more information, see [Kubernetes release notes and version skew SKU policy)](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew).
-
-### Host OS for Kubernetes
-
-|Platform|Supported versions|
-|---------|---------|
-|Red Hat Enterprise Linux|7.3, 7.4, 7.5, 7.6|
-|Ubuntu|16.04|
+See [Supported platforms](release-notes-big-data-cluster.md#supported-platforms) for a complete list of the various Kubernetes platforms validated for deploying SQL Server Big Data Clusters.
 
 ### SQL Server Editions
 
@@ -50,8 +32,6 @@ This section explains platforms that are supported with BDC.
 |Enterprise<br/>Standard<br/>Developer| Big Data Cluster edition is determined by the edition of SQL Server master instance. At deployment time Developer edition is deployed by default. You can change the edition after deployment. See [Configure SQL Server master instance](../big-data-cluster/configure-sql-server-master-instance.md). |
 
 ## <a id="prereqs"></a> Kubernetes
-
-
 
 ### <a id="kubernetes"></a> Kubernetes cluster setup
 

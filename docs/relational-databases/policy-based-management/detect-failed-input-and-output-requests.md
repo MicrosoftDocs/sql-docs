@@ -14,7 +14,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Detect Failed Input and Output Requests
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks the system event log for EventId 50. This error is caused by a failed I/O request.  
   
 ## Best Practices Recommendations  

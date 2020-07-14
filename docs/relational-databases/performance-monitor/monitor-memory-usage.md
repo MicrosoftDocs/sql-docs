@@ -26,7 +26,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Monitor Memory Usage
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodically to confirm that memory usage is within typical ranges.  
   
  To monitor for a low-memory condition, use the following object counters:  

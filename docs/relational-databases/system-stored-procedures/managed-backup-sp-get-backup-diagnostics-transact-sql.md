@@ -22,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # managed_backup.sp_get_backup_diagnostics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Returns the Extended Events logged by Smart Admin.  
   

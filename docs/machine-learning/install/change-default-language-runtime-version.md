@@ -4,7 +4,7 @@ description: Learn how to change the default version of the R runtime used by a 
 ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/13/2020
+ms.date: 07/14/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
@@ -21,19 +21,19 @@ The following lists the versions of the R runtime that are included in SQL Serve
 
 | SQL Server Version | R runtime versions |
 |-|-|
-| SQL Server 2016 RTM - SP2 CU15 | 3.2.2 |
-| SQL Server 2016 SP2 CU16 and later | 3.2.2 and 3.5.2 |
+| SQL Server 2016 RTM - SP2 CU13 | 3.2.2 |
+| SQL Server 2016 SP2 CU14 and later | 3.2.2 and 3.5.2 |
 
 ## Prerequisites
 
-You need to install Cumulative Update (CU) 16 or later for SQL Server 2016 Services Pack (SP) 2 to change the default R runtime. To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
+You need to install **Cumulative Update (CU) 14 or later for SQL Server 2016 Services Pack (SP) 2** to change the default R runtime. To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
 
 > [!NOTE]
-> If you slipstream CU16 or later with a new installation of SQL Server 2016 SP2, only the newest version of the R runtime will be installed.
+> If you slipstream CU14 or later with a new installation of SQL Server 2016 SP2, only the newest version of the R runtime will be installed.
 
 ## Change runtime version
 
-If you have installed Cumulative Update (CU) 16 or later for SQL Server 2016 SP2, you may have multiple versions of R in a SQL instance. Each version is contained in a subfolder of the instance folder with the name `R_SERVICES.`*&lt;major&gt;*.*&lt;minor&gt;* (the folder from the original installation may not have a version number appended to the folder name).
+If you have installed CU14 or later for SQL Server 2016 SP2, you may have multiple versions of R in a SQL instance. Each version is contained in a subfolder of the instance folder with the name `R_SERVICES.`*&lt;major&gt;*.*&lt;minor&gt;* (the folder from the original installation may not have a version number appended to the folder name).
 
 For example, if you install a CU containing R 3.5, a new `R_SERVICES` folder is created:
 
@@ -56,7 +56,7 @@ Each SQL instance uses one of these versions as the default version of R. You ca
 
   If you don't specify /rhome, the path used is the path under which **RegisterRext.exe** is located.
 
-For example, to configure R 3.5 as the default version of R for the instance MSSQLSERVER01:
+For example, to configure **R 3.5** as the default version of R for the instance MSSQLSERVER01:
 
 ```cmd
 cd "C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES.3.5\library\RevoScaleR\rxLibs\x64"
@@ -70,10 +70,20 @@ In this example, you don't need to include the `/rhome` argument since you're sp
 
 To remove a version of R, use **RegisterRext.exe** with the `/cleanup` command-line argument, using the same `/rhome` and `/instance` arguments described previously.
 
-For example, to remove the R 3.5 folder from the instance MSSQLSERVER01:
+For example, to remove the **R 3.2** folder from the instance MSSQLSERVER01:
 
 ```cmd
 .\RegisterRext.exe /cleanup /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES" /instance:MSSQLSERVER01
+```
+
+**RegisterRext.exe** will ask you to confirm the clean up of the specified R runtime:
+
+> *Are you sure you want to permanently delete the given runtime along with all the packages installed on it? \[Yes(Y)/No(N)/Default(Yes)\]:*
+
+To confirm, answer `Y` or press enter. Alternatively, you can skip this prompt by passing in `/y` or `/Yes` along the `/cleanup` option. For example:
+
+```cmd
+.\RegisterRext.exe /cleanup /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES" /instance:MSSQLSERVER01 /y
 ```
 
 > [!NOTE]

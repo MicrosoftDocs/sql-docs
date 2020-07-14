@@ -4,7 +4,7 @@ titleSuffix:
 description: R Services is a feature in SQL Server 2016 that gives the ability to run R scripts with relational data. You can use open-source packages and frameworks, and the Microsoft R packages for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/07/2020
+ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -59,10 +59,10 @@ The following lists the versions of the R runtime that are included in SQL Serve
 
 SQL Server version | Default R runtime versions |
 |-|-|
-| SQL Server 2016 RTM - SP2 CU15 | 3.2.2 |
-| SQL Server 2016 SP2 CU16 and later | 3.2.2 and 3.5.2 |
+| SQL Server 2016 RTM - SP2 CU13 | 3.2.2 |
+| SQL Server 2016 SP2 CU14 and later | 3.2.2 and 3.5.2 |
 
-Cumulative Update (CU) 16 for SQL Server 2016 Service Pack (SP) 2 and later include newer R runtimes. For more information, see [Change the default language runtime version](../install/change-default-language-runtime-version.md).
+Cumulative Update (CU) 14 for SQL Server 2016 Service Pack (SP) 2 and later include newer R runtimes. For more information, see [Change the default language runtime version](../install/change-default-language-runtime-version.md).
 
 For other versions of R, or to run Python, use [Machine Learning Services for SQL Server 2017 and later](../sql-server-machine-learning-services.md).
 

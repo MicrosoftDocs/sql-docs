@@ -1,5 +1,6 @@
 ---
-title: "sqlsrv_fetch_array | Microsoft Docs"
+title: "sqlsrv_fetch_array"
+description: "API reference for the sqlsrv_fetch_array function in the Driver for PHP for SQL Server."
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql

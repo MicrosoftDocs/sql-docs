@@ -1,5 +1,6 @@
 ---
-title: "executeUpdate Method (java.lang.String) (SQLServerStatement) | Microsoft Docs"
+title: "executeUpdate Method (java.lang.String) (SQLServerStatement)"
+description: "API reference page for the executeUpdate method in the JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

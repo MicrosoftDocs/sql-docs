@@ -1,5 +1,6 @@
 ---
-title: "Understanding encryption support | Microsoft Docs"
+title: "Understanding encryption support"
+description: "Learn how to ensure the JDBC driver uses TLS encryption to secure connections to a SQL database."
 ms.custom: ""
 ms.date: "09/12/2019"
 ms.prod: sql

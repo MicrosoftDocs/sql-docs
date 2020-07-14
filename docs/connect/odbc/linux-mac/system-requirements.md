@@ -1,5 +1,6 @@
 ---
-title: "System Requirements (ODBC Driver for SQL Server) | Microsoft Docs"
+title: "System Requirements (ODBC Driver for SQL Server)"
+description: "This lists the system requirements for the ODBC Driver for SQL Server on Linux and macOS operating systems."
 ms.custom: ""
 ms.date: "03/18/2020"
 ms.prod: sql

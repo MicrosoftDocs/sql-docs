@@ -15,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Create New Condition or Open Condition Dialog Box, General Page
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to create or change a Policy-Based Management condition. A condition is a Boolean expression that specifies a set of allowed states of a Policy-Based Management managed target with regard to facets. The properties that can be selected in the **Expression/Field** box depend upon the facet that is used. For more information about how conditions relate to facets and policies, see [Administer Servers by Using Policy-Based Management](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md).  
   
 ## Options  

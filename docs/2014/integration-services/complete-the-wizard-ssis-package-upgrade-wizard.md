@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.is.upgradewizard.completewizard.f1"
 ms.assetid: e07bd68e-4dc8-41f0-acfe-059e77688cfa
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Complete the Wizard (SSIS Package Upgrade Wizard)
   Use the **Complete the Wizard** page to review and confirm the package upgrade options that you have selected. This is the last wizard page from which you can go back and change options for this session of the wizard.  

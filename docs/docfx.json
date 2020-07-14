@@ -194,7 +194,7 @@
         "data-quality-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "database-engine/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "dmx/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
-        "integration-services/**/*.md": ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions",
+        "integration-services/**/*.md": ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=sqlallproducts-allversions",
         "linux/**/*.md": ">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "master-data-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "mdx/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
@@ -233,7 +233,6 @@
     },
 
     "xref":[
-      "mref/sql130.zip",
       "mref/System.Reflection.Assembly.Load.yml",
       "mref/System.Web.UI.WebControls.WebParts.IWebPartRow.yml",
 

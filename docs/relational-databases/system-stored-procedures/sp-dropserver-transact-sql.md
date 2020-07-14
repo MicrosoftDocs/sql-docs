@@ -20,7 +20,7 @@ ms.author: carlrab
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sp_dropserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Removes a server from the list of known remote and linked servers on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

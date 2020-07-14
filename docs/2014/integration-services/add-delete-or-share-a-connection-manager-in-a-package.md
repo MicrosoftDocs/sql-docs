@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "connection managers [Integration Services], adding"
   - "adding connection managers"
 ms.assetid: 6f2ba4ea-10be-4c40-9e80-7efcf6ee9655
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Add, Delete, or Share a Connection Manager in a Package
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes a variety of connection managers for connecting to different data sources, such as relational databases, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] databases, and files in CSV and XML formats. A connection manager can be created at the package level or at the project level. The connection manager created at the project level is available all the packages in the project. Whereas, connection manager created at the package level is available to that specific package.  

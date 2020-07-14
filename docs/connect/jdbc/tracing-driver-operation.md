@@ -1,5 +1,6 @@
 ---
-title: "Tracing driver operation | Microsoft Docs"
+title: "Tracing driver operation"
+description: "Learn how to use tracing to log details and resolve issues and problems when using the JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

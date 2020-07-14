@@ -39,7 +39,7 @@ ms.author: "pamela"
 manager: amitban
 ---
 # DBCC CLONEDATABASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Generates a schema-only clone of a database by using DBCC CLONEDATABASE in order to investigate performance issues related to the query optimizer.
 

@@ -15,7 +15,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Database Properties (Files Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to create a new database, or view or modify properties for the selected database. This topic applies to the **Database Properties (Files Page)** for existing databases, and to the **New Database (General Page)**.  
   
 ## UI element list  

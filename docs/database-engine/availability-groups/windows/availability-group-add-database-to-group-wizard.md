@@ -17,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Add a database to an Always On availability group with the 'Availability Group Wizard'
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Use the Add Database to Availability Group Wizard to help you add one or more databases to an existing Always On availability group.  
   
 > [!NOTE]  

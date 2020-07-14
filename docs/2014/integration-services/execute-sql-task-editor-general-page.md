@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Execute SQL Task Editor"
 ms.assetid: beb39086-28ce-46af-b6d8-f7b4fb8d9069
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Execute SQL Task Editor (General Page)
   Use the **General** page of the **Execute SQL Task Editor** dialog box to configure the Execute SQL task and provide the SQL statement that the task runs.  

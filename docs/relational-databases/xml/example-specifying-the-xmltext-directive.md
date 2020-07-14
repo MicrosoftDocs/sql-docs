@@ -15,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Example: Specifying the XMLTEXT Directive
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This example illustrates how data in the overflow column is addressed by using the **XMLTEXT** directive in a `SELECT` statement using EXPLICIT mode.  
   
  Consider the `Person` table. This table has an `Overflow` column that stores the unconsumed part of the XML document.  

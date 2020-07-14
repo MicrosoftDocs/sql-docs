@@ -18,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Functions Related to QNames - namespace-uri-from-QName
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns a string representing the namespace uri of the QName specified by *$arg*. The result is the empty sequence if *$arg* is the empty sequence.  
   

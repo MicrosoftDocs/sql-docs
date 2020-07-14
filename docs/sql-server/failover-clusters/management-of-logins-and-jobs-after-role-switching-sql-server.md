@@ -15,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Management of Logins and Jobs After Role Switching (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   When deploying a high-availability or disaster-recovery solution for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, it is important to reproduce relevant information that is stored for the database in the **master** or **msdb** databases. Typically, the relevant information includes the jobs of the primary/principal database and the logins of users or processes that need to connect to the database. You should duplicate this information on any instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts a secondary/mirror database. If possible after roles are switched, it is best to programmatically reproduce the information on the new primary/principal database.  
   
 ## Logins  

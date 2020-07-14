@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 ---
 # Broker:Remote Message Ack Event Class
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a **Broker:Remote Message Ack** event when [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends or receives a message acknowledgement.  
   

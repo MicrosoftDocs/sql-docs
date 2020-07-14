@@ -1,8 +1,8 @@
 ---
-title: "Database Detach and Attach (SQL Server) | Microsoft Docs"
+title: "Database Detach and Attach (SQL Server)"
 description: You can detach and reattach data and transaction log files of a SQL Server database to change the database to a different instance or to move the database.
 ms.custom: ""
-ms.date: "11/26/2018"
+ms.date: "06/30/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -30,7 +30,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Database Detach and Attach (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The data and transaction log files of a database can be detached and then reattached to the same or another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Detaching and attaching a database is useful if you want to change the database to a different instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the same computer or to move the database.  
   
   
@@ -57,7 +57,13 @@ You cannot detach a database if any of the following are true:
   
     > [!NOTE]  
     > A database snapshot cannot be detached or attached.  
+
+-   The database is part of an Always On availability group.  
   
+    The database cannot be detached until it is removed from the availability group. For more information, see [Remove a primary database from an Always On availability group](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).
+  
+
+
 -   The database is being mirrored in a database mirroring session.  
   
     The database cannot be detached unless the session is terminated. For more information, see [Removing Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  

@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Fuzzy Lookup Transformation Editor"
 ms.assetid: aaf45327-79e9-4760-9b4d-546ace91b5b4
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Fuzzy Lookup Transformation Editor (Columns Tab)
   Use the **Columns** tab of the **Fuzzy Lookup Transformation Editor** dialog box to set properties for input and output columns.  

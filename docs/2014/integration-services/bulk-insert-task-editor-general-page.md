@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Bulk Insert Task Editor"
 ms.assetid: b6eb576f-7a56-4fa0-a97c-5f7ab9d0f44d
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Bulk Insert Task Editor (General Page)
   Use the **General** page of the **Bulk Insert Task Editor** dialog box to name and describe the Bulk Insert task.  

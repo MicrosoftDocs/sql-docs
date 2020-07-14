@@ -11,7 +11,7 @@ ms.custom: seo-lt-2019
 monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Scale concurrent execution of external scripts in SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Learn about worker accounts for SQL Server Machine Learning Services and how to change the default configuration to scale the number of concurrent execution of external scripts.
 

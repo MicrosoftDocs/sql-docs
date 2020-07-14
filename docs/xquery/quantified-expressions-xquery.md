@@ -25,7 +25,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Quantified Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Existential and universal quantifiers specify different semantics for Boolean operators that are applied to two sequences. This is shown in the following table.  
   

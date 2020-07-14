@@ -15,7 +15,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 ---
 # sys.dm_pdw_exec_requests (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Holds information about all requests currently or recently active in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. It lists one row per request/query.  
   
@@ -46,18 +46,18 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 
  The result_cache_hit is a bitmask of a query's use of result set cache.  This column can be the [| (Bitwise OR)](../../t-sql/language-elements/bitwise-or-transact-sql.md) product of one or more of these values:  
   
-|Value|Description|  
+|Value Hex (Decimal)|Description|  
 |-----------|-----------------|  
 |**1**|Result set cache hit|  
-|-**0x00**|Result set cache miss|  
-|-**0x01**|Result set caching is disabled on the database.|  
-|-**0x02**|Result set caching is disabled on the session. | 
-|-**0x04**|Result set caching is disabled due to no data sources for the query.|  
-|-**0x08**|Result set caching is disabled due to row level security predicates.|  
-|-**0x10**|Result set caching is disabled due to the use of system table, temporary table, or external table in the query.|  
-|-**0x20**|Result set caching is disabled because the query contains runtime constants, user-defined functions, or non-deterministic functions.|  
-|-**0x40**|Result set caching is disabled due to estimated result set size is >10GB.|  
-|-**0x80**|Result set caching is disabled because the result set contains rows with large size (>64kb).|  
+|**0x00** (**0**)|Result set cache miss|  
+|-**0x01** (**-1**)|Result set caching is disabled on the database.|  
+|-**0x02** (**-2**)|Result set caching is disabled on the session. | 
+|-**0x04** (**-4**)|Result set caching is disabled due to no data sources for the query.|  
+|-**0x08** (**-8**)|Result set caching is disabled due to row level security predicates.|  
+|-**0x10** (**-16**)|Result set caching is disabled due to the use of system table, temporary table, or external table in the query.|  
+|-**0x20** (**-32**)|Result set caching is disabled because the query contains runtime constants, user-defined functions, or non-deterministic functions.|  
+|-**0x40** (**-64**)|Result set caching is disabled due to estimated result set size is >10GB.|  
+|-**0x80** (**-128**)|Result set caching is disabled because the result set contains rows with large size (>64kb).|  
   
 ## Permissions
 

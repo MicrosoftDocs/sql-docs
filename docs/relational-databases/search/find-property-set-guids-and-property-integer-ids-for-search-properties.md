@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ms.custom: "seo-lt-2019"
 ---
 # Find property set GUIDs and property integer IDs for Search properties
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic discusses how to obtain the values that are required before you can add a property to a search property list and make it searchable by full-text search. These values include the property set GUID and property integer identifier of a document property.  
   
  Document properties that are extracted by IFilters from binary data - that is, from data stored in a **varbinary**, **varbinary(max)** (including **FILESTREAM**), or **image** data type column - can be made available for full-text search. To make an extracted property searchable, the property must be manually added to a search property list. The search property list must also be associated with one or more full-text indexes. For more information, see [Search Document Properties with Search Property Lists](../../relational-databases/search/search-document-properties-with-search-property-lists.md).  

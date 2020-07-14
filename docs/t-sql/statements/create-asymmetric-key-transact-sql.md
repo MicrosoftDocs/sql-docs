@@ -25,7 +25,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CREATE ASYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates an asymmetric key in the database.  
   
@@ -63,7 +63,9 @@ CREATE ASYMMETRIC KEY asym_key_name
     PASSWORD = 'password'   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *asym_key_name*  
  Is the name for the asymmetric key in the database. Asymmetric key names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md) and must be unique within the database.  
 

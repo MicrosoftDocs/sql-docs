@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Multiple Flat Files Connection Manager Editor"
 ms.assetid: ad0cb668-0df2-4d4e-9a20-d20692a0b67a
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Multiple Flat Files Connection Manager Editor (Columns Page)
   Use the **Columns** node of the **Multiple Flat Files Connection Manager Editor** dialog box to specify the row and column information, and to preview the first selected file.  

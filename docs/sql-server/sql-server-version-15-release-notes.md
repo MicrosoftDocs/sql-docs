@@ -12,7 +12,7 @@ ms.author: mikeray
 monikerRange: "= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] release notes
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes limitations and known issues for the [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]. For related information, see:
 

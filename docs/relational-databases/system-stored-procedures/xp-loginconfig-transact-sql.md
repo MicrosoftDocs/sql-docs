@@ -19,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # xp_loginconfig (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reports the login security configuration of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

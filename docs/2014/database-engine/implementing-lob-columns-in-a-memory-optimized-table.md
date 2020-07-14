@@ -19,7 +19,7 @@ ms.author: sstein
   
  The following example splits a binary LOB value into multiple rows and inserts the rows into a memory-optimized table:  
   
-<pre><code>tsql  
+```sql  
 create table BlobTable_inmem (  
    BlobId binary(16) not null,  
    SegmentationId int not null,  
@@ -69,7 +69,8 @@ where BlobId = @BlobId
 order by SegmentationId  
   
 select @Blob  
-go</code></pre>  
+go
+```
   
  Alternatively, you can define a disk-based table for the LOB column(s). Each row in the memory-optimized table would have a corresponding row in the disk-based table with all the LOB values for that row. In the following example, data about employees is stored in a memory-optimized table, while the photo of each employee is stored in a disk-based table.  
   

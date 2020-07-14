@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "precedence constraints [Integration Services], multiple"
   - "constrained executables [Integration Services]"
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Multiple Precedence Constraints
   A precedence constraint connects two executables: two tasks, two containers, or one of each. They are known as the precedence executable and the constrained executable. A constrained executable can have multiple precedence constraints. For more information, see [Precedence Constraints](control-flow/precedence-constraints.md).  

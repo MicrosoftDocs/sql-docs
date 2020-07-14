@@ -15,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Guest Permissions on User Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule determines whether the guest user has permission to access the database. This rule applies to user databases only.  
   
 ## Best Practices Recommendations  

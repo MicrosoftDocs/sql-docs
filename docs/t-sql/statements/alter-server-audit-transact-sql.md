@@ -22,7 +22,7 @@ ms.author: vanto
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER SERVER AUDIT  (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Alters a server audit object using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit feature. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
 
@@ -67,9 +67,11 @@ ALTER SERVER AUDIT audit_name
 <predicate_factor>::=   
     event_field_name { = | < > | ! = | > | > = | < | < = } { number | ' string ' }  
 ```  
-  
-## Arguments  
- TO { FILE | APPLICATION_LOG | SECURITY |URL}  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+ TO { FILE \| APPLICATION_LOG \| SECURITY \|URL}  
  Determines the location of the audit target. The options are a binary file, the Windows application log, or the Windows security log.  
 
 > [!IMPORTANT]

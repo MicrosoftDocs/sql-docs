@@ -117,15 +117,14 @@ END CATCH;
 ```sql  
 EXEC sys.sp_addmessage  
      @msgnum   = 60000  
-,@severity = 16  
-,@msgtext  = N'This is a test message with one numeric parameter (%d), one string parameter (%s), and another string parameter (%s).'  
+    ,@severity = 16  
+    ,@msgtext  = N'This is a test message with one numeric parameter (%d), one string parameter (%s), and another string parameter (%s).'  
     ,@lang = 'us_english';   
 GO  
   
 DECLARE @msg NVARCHAR(2048) = FORMATMESSAGE(60000, 500, N'First string', N'second string');   
   
 THROW 60000, @msg, 1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

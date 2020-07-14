@@ -38,7 +38,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The [!INCLUDE[tsql](../../includes/tsql-md.md)] programming language provides DBCC statements that act as Database Console Commands for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
   

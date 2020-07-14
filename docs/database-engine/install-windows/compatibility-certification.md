@@ -23,7 +23,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 # Compatibility Certification
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Compatibility certification allows businesses to upgrade and modernize a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database on-premises, in the cloud, and on the edge, eliminating risks of application compatibility. 
 

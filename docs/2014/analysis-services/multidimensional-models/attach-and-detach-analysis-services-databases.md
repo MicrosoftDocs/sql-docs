@@ -51,7 +51,7 @@ ms.author: owend
   
 ## See Also  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft.AnalysisServices.Database.Detach*](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Move an Analysis Services Database](move-an-analysis-services-database.md)   
  [Database ReadWriteModes](database-readwritemodes.md)   
  [Switch an Analysis Services database between ReadOnly and ReadWrite modes](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   

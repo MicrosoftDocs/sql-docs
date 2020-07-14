@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # MSmerge_settingshistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSmerge_settingshistory** table is used to maintain a history of changes made to article and publication properties for merge replication, with one row for each change made to a merge replication topology. This table also stores information about when the initial property settings were made. This table is stored in the publication and subscription databases.  
   

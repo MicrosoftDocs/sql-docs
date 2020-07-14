@@ -22,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # REVOKE Database Principal Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Revokes permissions granted or denied on a database user, database role, or application role.  
   

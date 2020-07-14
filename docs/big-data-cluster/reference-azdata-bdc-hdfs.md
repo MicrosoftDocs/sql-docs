@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # azdata bdc hdfs
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md)
 
@@ -64,7 +64,7 @@ azdata bdc hdfs ls --path -p
 ### Examples
 List Status
 ```bash
-azdata bdc hdfs ls --path "tmp/"
+azdata bdc hdfs ls --path tmp/
 ```
 ### Required Parameters
 #### `--path -p`
@@ -87,9 +87,9 @@ azdata bdc hdfs exists --path -p
                        
 ```
 ### Examples
-Check for file or directory existance.
+Check for file or directory existence.
 ```bash
-azdata bdc hdfs exists --path "tmp/"
+azdata bdc hdfs exists --path tmp/
 ```
 ### Required Parameters
 #### `--path -p`
@@ -114,7 +114,7 @@ azdata bdc hdfs mkdir --path -p
 ### Examples
 Make directory.
 ```bash
-azdata bdc hdfs mkdir --path "tmp/"
+azdata bdc hdfs mkdir --path tmp/
 ```
 ### Required Parameters
 #### `--path -p`
@@ -139,7 +139,7 @@ azdata bdc hdfs mv --source-path -s
 ### Examples
 Move file or directory.
 ```bash
-azdata bdc hdfs mv --source-path "tmp/" --target-path "dest/"
+azdata bdc hdfs mv --source-path tmp/ --target-path "dest/"
 ```
 ### Required Parameters
 #### `--source-path -s`
@@ -224,7 +224,7 @@ azdata bdc hdfs rm --path -p
 ### Examples
 Remove a file or directory.
 ```bash
-azdata bdc hdfs rm --path "tmp/"
+azdata bdc hdfs rm --path tmp/
 ```
 ### Required Parameters
 #### `--path -p`
@@ -249,7 +249,7 @@ azdata bdc hdfs rmr --path -p
 ### Examples
 Recursive remove directory.
 ```bash
-azdata bdc hdfs rmr --path "tmp/"
+azdata bdc hdfs rmr --path tmp/
 ```
 ### Required Parameters
 #### `--path -p`

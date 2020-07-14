@@ -16,7 +16,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, Buffer Manager Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **Buffer Manager** object provides counters to monitor how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses:  
   
 -   Memory to store data pages.  

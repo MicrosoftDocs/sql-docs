@@ -9,8 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.adonetsource.columns.f1"
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # ADO NET Source Editor (Columns Page)
   Use the **Columns** page of the **ADO NET Source Editor** dialog box to map an output column to each external (source) column.  

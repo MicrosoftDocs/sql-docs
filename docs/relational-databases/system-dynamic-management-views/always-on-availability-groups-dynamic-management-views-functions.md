@@ -15,7 +15,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Always On Availability Groups Dynamic Management Views - Functions
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section contains the dynamic management views and functions that are related to [!INCLUDE[ssHADR](../../includes/sshadr-md.md)].  
   

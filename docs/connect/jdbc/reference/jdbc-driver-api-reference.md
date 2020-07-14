@@ -1,5 +1,6 @@
 ---
-title: "JDBC Driver API Reference | Microsoft Docs"
+title: "JDBC Driver API Reference"
+description: "The technical API reference for the JDBC classes in the JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "07/19/2018"
 ms.prod: sql

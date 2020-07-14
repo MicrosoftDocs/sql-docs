@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sys.linked_logins (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row per linked-server-login mapping, for use by RPC and distributed queries from local server to the corresponding linked server.  
   

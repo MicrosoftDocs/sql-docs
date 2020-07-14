@@ -19,7 +19,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Register a Service Principal Name for Kerberos Connections
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   To use Kerberos authentication with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires both the following conditions to be true:  
   
 -   The client and server computers must be part of the same Windows domain, or in trusted domains.  

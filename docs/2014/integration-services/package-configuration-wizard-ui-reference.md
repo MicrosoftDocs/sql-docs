@@ -12,8 +12,8 @@ f1_keywords:
   - "sql12.dts.configwizard.finishdtsconfiguration.f1"
   - "sql12.dts.configwizard.welcome.f1"
 ms.assetid: adca6938-6d5a-40ec-950e-dceb79d044fe
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Package Configuration Wizard UI Reference
   Use the **Package Configuration Wizard** to create configurations that update the properties of an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package and its objects at run time. This wizard runs when you add a new configuration or modify an existing one in the **Package Configurations Organizer** dialog box. To open the **Package Configurations Organizer** dialog box, select **Package Configurations** on the **SSIS** menu in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. For more information, see [Create Package Configurations](../../2014/integration-services/create-package-configurations.md).  

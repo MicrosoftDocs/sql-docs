@@ -22,7 +22,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # managed_backup.sp_backup_config_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Configures automated or custom scheduling options for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
     

@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Percentage Sampling Transformation Editor"
 ms.assetid: 2c40d804-26a3-4d35-809b-bc923d83d451
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Percentage Sampling Transformation Editor
   Use the **Percentage Sampling Transformation Editor** dialog box to split part of an input into a sample using a specified percentage of rows. This transformation divides the input into two separate outputs.  

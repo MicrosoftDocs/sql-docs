@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # ReorientObject (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **geography** instance with interchanged interior regions and exterior regions.  
   

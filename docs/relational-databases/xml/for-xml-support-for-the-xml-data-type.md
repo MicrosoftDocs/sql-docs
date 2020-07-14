@@ -16,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # FOR XML Support for the xml Data Type
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   If a FOR XML query specifies a column of **xml** type in the SELECT clause, column values are mapped as elements in the returned XML, regardless of whether you specify the ELEMENTS directive. Any XML declaration in the **xml** type column is not serialized.  
   
  For example, the following query retrieves customer contact information such as the `BusinessEntityID`, `FirstName`, and `LastName` columns, and the telephone numbers from the `AdditionalContactInfo` column of **xml** type.  

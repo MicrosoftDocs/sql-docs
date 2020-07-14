@@ -1,7 +1,7 @@
 ---
 title: "MSSQLSERVER_17204 | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/03/2020
+ms.date: 07/10/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -13,7 +13,7 @@ author: PijoCoder
 ms.author: mathoma
 ---
 # MSSQLSERVER_17207
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
@@ -97,7 +97,7 @@ The operating system error information printed in these error messages is the ro
         Impersonating: DomainName\UserName
         ```
   
-1. If you are getting ```The system cannot find the file specified``` OS error = 3:
+1. If you are getting `The system cannot find the file specified` OS error = 3:
    - Review the complete path from the error message.
    - Ensure the disk drive and the folder path is visible and accessible from Windows Explorer.
    - Review the Windows Event log to find out if any problems exist with this disk drive.
@@ -107,7 +107,7 @@ The operating system error information printed in these error messages is the ro
      - If the file that produced the error is a transaction log file, review the information under the sections "FOR ATTACH" and "FOR ATTACH_REBUILD_LOG" of the topic [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) to understand how you can recreate the missing transaction log files.
    - Ensure that any disk or network location [like iSCSI drive] is available before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attempts to access the database files on these locations. If needed create the required dependencies in Cluster Administrator or Service Control Manager.
 
-1. If you're getting the ```The process cannot access the file because it is being used by another process``` operating system error = 32:
+1. If you're getting the `The process cannot access the file because it is being used by another process` operating system error = 32:
    - Use a tool like [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer) or [Handle](https://docs.microsoft.com/sysinternals/downloads/handle) from Windows Sysinternals to find out if another process or service has acquired exclusive lock on this database file.
    - Stop that process from accessing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database files. Common examples include anti-virus programs (see guidance for file exclusions in the following [KB article](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)).
    - In a cluster environment, make sure that the sqlservr.exe process from the previous owning node has actually released the handles to the database files. Normally this doesn't occur, but misconfigurations of the cluster or I/O paths can lead to such issues.

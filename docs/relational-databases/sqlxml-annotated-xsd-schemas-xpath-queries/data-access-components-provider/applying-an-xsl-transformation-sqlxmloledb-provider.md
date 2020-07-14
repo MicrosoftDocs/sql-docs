@@ -20,7 +20,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Applying an XSL Transformation (SQLXMLOLEDB Provider)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   In this sample ADO application, an SQL query is executed, and an XSL transformation is applied to the result. Setting the ClientSideXML property to True enforces the processing of the rowset on the client side. The command dialect is set to {5d531cb2-e6ed-11d2-b252-00c04f681b71}, because the SQL query is specified in a template and this dialect must be specified when executing a template. The xsl property specifies the XSL file to use to apply the transformation. The value of Base Path property is used to search for the XSL file. If you specify a path in the value of the xsl property, the path is relative to the path that is specified in the Base Path property.  
   
  This example shows how to use the following SQLXMLOLEDB Provider-specific properties:  

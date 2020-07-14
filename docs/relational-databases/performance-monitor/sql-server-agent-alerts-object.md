@@ -16,7 +16,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server Agent, Alerts Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The SQL Server Agent **Alerts** performance object contains performance counters that report information about SQL Server Agent alerts. The table below lists the counters that this object contains.  
   
  The table below contains the **SQLAgent:Alerts** counters.  

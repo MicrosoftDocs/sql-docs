@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "OLE DB Destination Editor"
 ms.assetid: 8cfddd4d-f605-4913-9648-66e8e41417e1
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # OLE DB Destination Editor (Mappings Page)
   Use the **Mappings** page of the **OLE DB Destination Editor** dialog box to map input columns to destination columns.  

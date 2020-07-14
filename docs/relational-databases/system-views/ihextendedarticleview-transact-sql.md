@@ -19,7 +19,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # IHextendedArticleView (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHextendedArticleView** view exposes information on articles in a non-SQL Server publication. This view is stored in the **distribution** database.  
   

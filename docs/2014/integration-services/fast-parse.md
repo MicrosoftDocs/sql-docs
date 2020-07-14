@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "fast parse [Integration Services]"
 ms.assetid: 6688707d-3c5b-404e-aa2f-e13092ac8d95
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Fast Parse
   Fast parse provides a fast, simple set of routines for parsing data. These routines are not locale-sensitive and they support only a subset of date, time, and integer formats.  

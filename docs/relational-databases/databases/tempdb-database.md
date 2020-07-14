@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # TempDB Database
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The **TempDB** system database is a global resource that is available to all users connected to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or connected to SQL Database. Tempdb is used to hold:  
   

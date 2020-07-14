@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Query Builder dialog box"
 ms.assetid: 780752c9-6e3c-4f44-aaff-4f4d5e5a45c5
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Query Builder
   Use the **Query Builder** dialog box to create a query for use in the Execute SQL task, the OLE DB source and the OLE DB destination, and the Lookup transformation.  

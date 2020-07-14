@@ -10,8 +10,8 @@ f1_keywords:
   - "sql12.ssdqs.designer.cleansing.f1"
   - "SQL12.SSDQS.DESIGNER.DQCONNECTION.F1"
 ms.assetid: 07e79641-71ee-45d0-a9ba-ed6f9f68f333
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # DQS Cleansing Transformation Editor Dialog Box
   Use the **DQS Cleansing Transformation Editor** dialog box to correct data using Data Quality Services (DQS). For more information, see [Data Quality Services Concepts](../../2014/data-quality-services/data-quality-services-concepts.md).  

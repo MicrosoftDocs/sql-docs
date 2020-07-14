@@ -41,7 +41,10 @@ ALTER PARTITION SCHEME partition_scheme_name
 NEXT USED [ filegroup_name ] [ ; ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *partition_scheme_name*  
  Is the name of the partition scheme to be altered.  
   

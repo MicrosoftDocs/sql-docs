@@ -99,6 +99,8 @@ ON { SERVER | DATABASE }
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 *event_session_name*

@@ -1,5 +1,6 @@
 ---
-title: "How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support | Microsoft Docs"
+title: "How to: Send and Retrieve UTF-8 Data Using Built-In UTF-8 Support"
+description: "Learn how to send and retrieve UTF-8 encoded data using UTF-8 support built in to the drivers for PHP."
 ms.custom: ""
 ms.date: "03/23/2018"
 ms.prod: sql

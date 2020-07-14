@@ -17,13 +17,9 @@ This article describes the modifying registry entires to enable SQL Server Conne
 
 ## SQL Server Connector for Microsoft Azure Key Vault
 
-The SQL Server Connector for Microsoft Azure Key Vault enables SQL Server encryption to use the Microsoft Azure Key Vault as an extensible key management (EKM) provider to protect its encryption keys.
+The [SQL Server Connector for Microsoft Azure Key Vault](https://www.microsoft.com/download/details.aspx?id=45344) enables SQL Server encryption to use the Microsoft Azure Key Vault as an extensible key management (EKM) provider to protect its encryption keys.
 
-An organization can use SQL Server encryption to protect sensitive data. SQL Server encryption includes Transparent Data Encryption (TDE), Column Level Encryption (CLE), and Backup Encryption. In all of these cases the data is encrypted using a symmetric data encryption key. The symmetric data encryption key is further protected by wrapping (encrypting) it with an asymmetric key. The EKM provider architecture lets Microsoft SQL Server leverage the security of the Azure Key Vault as an external cryptographic provider to store and manage the asymmetric keys and perform data encryption key wrapping and unwrapping functions.
-
-Azure Key Vault helps safeguard cryptographic keys and secrets used by cloud applications and services. By using Azure Key Vault, you can encrypt keys and secrets (such as authentication keys, storage account keys, data encryption keys, .PFX files, and passwords) by using keys that are protected by hardware security modules (HSMs). For added assurance, you can import or generate keys in HSMs (keys never leave the HSM boundary). HSMs are certified to FIPS 140-2 level 2.
-
-The download consists of the SQL Server Connector as well as Sample Scripts to enable a SQL Server Administrator learn how to configure the SQL Server Connector and enable SQL Server Encryption scenarios. For more information, review the topic [Extensible key management using Key Vault (SQL Server)](https://go.microsoft.com/fwlink/p/?LinkId=521690)
+The [download](https://www.microsoft.com/download/details.aspx?id=45344) consists of the SQL Server Connector as well as Sample Scripts to enable a SQL Server Administrator learn how to configure the SQL Server Connector and enable SQL Server Encryption scenarios. For more information, review the topic [Extensible key management using Key Vault (SQL Server)](https://go.microsoft.com/fwlink/p/?LinkId=521690)
 
 Use the [Azure Key Vault forum](https://social.msdn.microsoft.com/Forums/en-US/AzureKeyVault) to ask questions, share insights and discuss the SQL Server Connector.
 

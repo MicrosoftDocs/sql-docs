@@ -761,7 +761,7 @@ For **SWITCH** restriction when using replication, see [Replicate Partitioned Ta
 
 Nonclustered columnstore indexes built for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 CTP1, and for SQL Database before version V12 were in a read-only format. You must rebuild Nonclustered columnstore indexes to the current format (which is updatable) before any PARTITION operations can be run.
 
-SET **(** FILESTREAM_ON = { *partition_scheme_name* | *filestream_filegroup_name* | **"**default**"** | **"**NULL**"** }**)**  
+SET **(** FILESTREAM_ON = { *partition_scheme_name* \| *filestream_filegroup_name* \| **"**default**"** \| **"**NULL**"** }**)**  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]doesn't support `FILESTREAM`.
 
 Specifies where FILESTREAM data is stored.

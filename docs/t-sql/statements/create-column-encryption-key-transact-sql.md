@@ -54,7 +54,9 @@ WITH VALUES
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 _key\_name_  
 Is the name by which the column encryption key will be known in the database.  
   

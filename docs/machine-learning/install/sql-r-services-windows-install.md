@@ -184,7 +184,7 @@ On disconnected servers, extra steps are required. For more information, see [In
 1. Continue through the wizard, accepting the licensing terms for the R distribution.
 
 > [!NOTE]
-> Cumulative Update (CU) 16 and later for SQL Server 2016 SP2 include a newer version of the R runtime. For more information, see [Change the default language runtime version](change-default-language-runtime-version.md).
+> Cumulative Update (CU) 14 and later for SQL Server 2016 SP2 include a newer version of the R runtime. For more information, see [Change the default language runtime version](change-default-language-runtime-version.md).
 
 <a name="bkmk_FollowUp"></a>
 

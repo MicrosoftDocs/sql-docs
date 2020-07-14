@@ -19,21 +19,21 @@ This article describes how to change the default version of R used by a SQL inst
 
 The following lists the versions of the R runtime that are included in SQL Server 2016 R Services.
 
-| SQL Server version | Default R runtime versions |
+| SQL Server version | R runtime versions |
 |-|-|
-| SQL Server 2016 RTM - SP2 CU15 | 3.2.2 |
-| SQL Server 2016 SP2 CU16 and later | 3.2.2 and 3.5.2 |
+| SQL Server 2016 RTM - SP2 CU13 | 3.2.2 |
+| SQL Server 2016 SP2 CU14 and later | 3.2.2 and 3.5.2 |
 
 ## Prerequisites
 
-You need to install Cumulative Update (CU) 16 or later for SQL Server 2016 Services Pack (SP) 2 to change the default R runtime. To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
+You need to install Cumulative Update (CU) 14 or later for SQL Server 2016 Services Pack (SP) 2 to change the default R runtime. To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
 
 > [!NOTE]
-> If you slipstream CU16 or later with a new installation of SQL Server 2016 SP2, only the newest version of the R runtime will be installed.
+> If you slipstream CU14 or later with a new installation of SQL Server 2016 SP2, only the newest version of the R runtime will be installed.
 
 ## Change runtime version
 
-If you have installed Cumulative Update (CU) 16 or later for SQL Server 2016 SP2, you may have multiple versions of R in a SQL instance. Each version is contained in a subfolder of the instance folder with the name `R_SERVICES.`*&lt;major&gt;*.*&lt;minor&gt;* (the folder from the original installation may not have a version number appended to the folder name).
+If you have installed Cumulative Update (CU) 14 or later for SQL Server 2016 SP2, you may have multiple versions of R in a SQL instance. Each version is contained in a subfolder of the instance folder with the name `R_SERVICES.`*&lt;major&gt;*.*&lt;minor&gt;* (the folder from the original installation may not have a version number appended to the folder name).
 
 For example, if you install a CU containing R 3.5, a new `R_SERVICES` folder is created:
 

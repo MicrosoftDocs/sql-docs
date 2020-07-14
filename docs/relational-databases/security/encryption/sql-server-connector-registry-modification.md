@@ -21,7 +21,7 @@ This article describes the modifying registry entires to enable SQL Connector er
 > Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 > [!NOTE]
-> **Enhanced registry setting for logging error and information messages in teh Appliaction Event Log  are only valid for SQL Connector version: 1.0.6.0 and greater**
+> **Enhanced registry setting for logging error and information messages in the Application Event Log  are only valid for SQL Connector version: 1.0.6.0 and greater**
 
 > [!NOTE] 
   > Versions 1.0.0.440 and older have been replaced and are no longer supported in production environments. Upgrade to version 1.0.1.0 or later by visiting the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344) and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under "Upgrade of SQL Server Connector."
@@ -79,4 +79,4 @@ The registry entries described in this article are found under this key:
 ## Related articles
 
 [Extensible Key Management (EKM)](extensible-key-management-ekm.md)  
-[Extensible Key Management using Azure Key Vault](extensible-key-management-using-azure-key-vault-sql-server.md) 
+[Extensible Key Management using Azure Key Vault](extensible-key-management-using-azure-key-vault-sql-server.md)

@@ -1,5 +1,6 @@
 ---
-title: "Diagnosing problems with the JDBC driver | Microsoft Docs"
+title: "Diagnosing problems with the JDBC driver"
+description: "Learn how to diagnose and troubleshoot problems like error handling, checking the driver version and tracing."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

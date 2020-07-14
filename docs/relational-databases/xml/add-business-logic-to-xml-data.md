@@ -15,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Add Business Logic to XML Data
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Your business logic can be added to XML data in several ways:  
   
 -   You can write row or column constraints to enforce domain-specific constraints during insertion and modification of XML data.  

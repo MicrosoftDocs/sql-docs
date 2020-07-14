@@ -1,5 +1,5 @@
 ---
-title: "xml Data Type Methods | Microsoft Docs"
+title: xml Data Type Methods
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -16,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # xml Data Type Methods
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   You can use the **xml** data type methods to query an XML instance stored in a variable or column of **xml** type. The topics in this section describe how to use the **xml** data type methods.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Natively compiled stored procedures - data access applications"
+description: Find guidance for calling natively compiled stored procedures from data access applications, with an example that uses the SQL Server Native Client ODBC driver.
 ms.custom: seo-dt-2019
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Calling Natively Compiled Stored Procedures from Data Access Applications
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This topic discusses guidance on calling natively compiled stored procedures from data access applications.
 

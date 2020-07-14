@@ -25,7 +25,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Accessing User-Defined Types - Updating UDT Columns with DataAdapters
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   User-defined types (UDTs) are supported by using a **System.Data.DataSet** and a **System.Data.SqlClient.SqlDataAdapter** to retrieve and modify data.  
   
 ## Populating a Dataset  

@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "MSMQ Connection Manager Editor"
 ms.assetid: ef842cb4-82da-4550-85fe-9bedbc1e77c7
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # MSMQ Connection Manager Editor
   Use the **MSMQ Connection Manager** dialog box to specify the path to a Message Queuing (also known as MSMQ) message queue.  

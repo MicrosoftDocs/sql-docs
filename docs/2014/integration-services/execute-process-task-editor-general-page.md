@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Execute Process Task Editor"
 ms.assetid: 39651a0a-3a83-40f4-b8eb-b8b869607a94
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Execute Process Task Editor (General Page)
   Use the **General** pageof the **Execute Process Task Editor** dialog box to name and describe the Execute Process task.  

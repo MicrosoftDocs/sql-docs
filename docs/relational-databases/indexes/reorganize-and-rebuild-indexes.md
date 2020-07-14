@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Resolve index fragmentation by reorganizing or rebuilding indexes
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This article describes how index defragmentation occurs and discusses its impact on query performance. Once you determine the [amount of fragmentation that exists for an index](#detecting-the-amount-of-fragmentation), you can defragment an index by either [reorganizing an index](#reorganize-an-index) or [rebuilding an index](#rebuild-an-index) by running Transact-SQL commands in your tool of choice or by using SQL Server Management Studio.
 

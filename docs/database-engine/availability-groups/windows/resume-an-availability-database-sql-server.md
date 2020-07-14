@@ -1,6 +1,6 @@
 ---
 title: "Resume an availability group database"
-description: Steps to resume a database that's been paused within an Always On availability group using either SQL Server Management Studio (SSMS), Transact-SQL (T-SQL), or SQL PowerShell. 
+description: Resume a suspended availability database in Always On availability groups by using SQL Server Management Studio, Transact-SQL, or PowerShell in SQL Server.
 ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -19,7 +19,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Resume an Availability Database (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   You can resume a suspended availability database in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Resuming a suspended database puts the database into the SYNCHRONIZING state. Resuming the primary database also resumes any of its secondary databases that were suspended as the result of suspending the primary database. If any secondary database was suspended locally, from the server instance that hosts the secondary replica, that secondary database must be resumed locally. Once a given secondary database and the corresponding primary database are in the SYNCHRONIZING state, data synchronization resumes on the secondary database.  
   
 > [!NOTE]  

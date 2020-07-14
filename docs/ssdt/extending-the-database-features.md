@@ -1,5 +1,6 @@
 ---
 title: Extending the Database Features
+description: Find out how to extend database features. View information on custom test conditions, build and deployment contributors, and other feature extensions.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Flat File Source Editor"
 ms.assetid: c50500e7-0c74-42a0-865f-301f03feffab
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Flat File Source Editor (Error Output Page)
   Use the **Error Output** page of the **Flat File Source Editor** dialog box to select error-handling options and to set properties on error output columns.\  

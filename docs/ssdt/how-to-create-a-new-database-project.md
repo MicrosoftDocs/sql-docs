@@ -1,5 +1,6 @@
 ---
 title: Create a New Database Project
+description: Find out how to create a new database project. See how to import the schema from an existing database into the new project.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

@@ -1,5 +1,6 @@
 ---
 title: Outline and Add Snippets to Transact-SQL Script
+description: Learn about code snippets that SSDT provides. See how to insert snippets into applications, and find out how to hide and expand code in the Transact-SQL Editor.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

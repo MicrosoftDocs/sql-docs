@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "technical reference [Integration Services]"
   - "Integration Services, technical reference"
 ms.assetid: 69fe35ef-58df-4138-b0a5-9b1fb8c862d7
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Technical Reference (Integration Services)
   Find the tools, languages, and programming reference documentation for [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

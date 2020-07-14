@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "connection managers [Integration Services], modifying"
   - "modifying connection managers"
 ms.assetid: 54793114-2198-4d80-8091-e241d5a5d13c
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Set the Properties of a Connection Manager
   All connection managers can be configured using the **Properties** window.  

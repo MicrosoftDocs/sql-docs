@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Z (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The Z (elevation) value of the instance. The semantics of the elevation value are user-defined.
   

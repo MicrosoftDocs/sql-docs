@@ -11,8 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Derived Column Transformation Editor"
 ms.assetid: ff73923e-d245-43d8-bf24-af3bdc942e51
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Derived Column Transformation Editor
   Use the **Derived Column Transformation Editor** dialog box to create expressions that populate new or replacement columns.  

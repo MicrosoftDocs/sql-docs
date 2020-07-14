@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "packages [Integration Services], deploying"
   - "SSIS packages, deploying"
 ms.assetid: 0f5fc7be-e37e-4ecd-ba99-697c8ae3436f
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Package Deployment (SSIS)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes tools and wizards that make it simple to deploy packages from the development computer to the production server or to other computers.  

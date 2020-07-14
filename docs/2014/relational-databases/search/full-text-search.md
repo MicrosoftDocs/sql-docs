@@ -143,7 +143,7 @@ ms.author: mikeray
  [In This Topic](#top)
 
 ##  <a name="components"></a> Linguistic Components and Language Support in Full-Text Search
- Full-text search supports almost 50 diverse languages, such as English, Spanish, Chinese, Japanese, Arabic, Bengali, and Hindi. For a complete list of the supported full-text languages, see [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql). Each of the columns contained in the full-text index is associated with a Microsoft Windows locale identifier (LCID) that equates to a language that is supported by full-text search. For example, LCID 1033 equates to U.S English, and LCID 2057 equates to British English. For each supported full-text language, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides linguistic components that support indexing and querying full-text data that is stored in that language.
+ Full-text search supports almost 50 diverse languages, such as English, Spanish, Chinese, Japanese, Arabic, Bangla, and Hindi. For a complete list of the supported full-text languages, see [sys.fulltext_languages &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql). Each of the columns contained in the full-text index is associated with a Microsoft Windows locale identifier (LCID) that equates to a language that is supported by full-text search. For example, LCID 1033 equates to U.S English, and LCID 2057 equates to British English. For each supported full-text language, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides linguistic components that support indexing and querying full-text data that is stored in that language.
 
  Language-specific components include the following:
 
@@ -228,5 +228,3 @@ ms.author: mikeray
 -   [Full-Text Search DDL, Functions, Stored Procedures, and Views](../views/views.md)
 
  [In This Topic](#top)
-
-

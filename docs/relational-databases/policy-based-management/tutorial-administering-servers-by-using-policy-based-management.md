@@ -16,7 +16,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Tutorial: Managing servers using Policy-Based Management
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Welcome to the Administering Servers by Using Policy-Based Management Policies tutorial. This tutorial is intended for users who are familiar with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] but new to the Policy-Based Management.  
   
 ## What You Will Learn  

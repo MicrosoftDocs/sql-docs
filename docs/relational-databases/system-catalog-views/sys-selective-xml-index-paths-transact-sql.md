@@ -21,7 +21,7 @@ ms.author: pelopes
 ms.reviewer: mikeray
 ---
 # sys.selective_xml_index_paths (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Available beginning in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] Service Pack 1, each row in sys.selective_xml_index_paths represents one promoted path for particular selective xml index.  
   

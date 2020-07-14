@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "SSIS packages, property expressions"
   - "property expressions [Integration Services]"
 ms.assetid: cd0e171a-08be-45d6-81dc-ed94f37698b8
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Data Flow Properties that Can Be Set by Using Expressions
   The values of certain properties of data flow objects can be specified by using property expressions available on the Data Flow task container.  

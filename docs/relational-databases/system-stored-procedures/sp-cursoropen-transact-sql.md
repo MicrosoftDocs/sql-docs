@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_cursoropen (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Opens a cursor. sp_cursoropen defines the SQL statement associated with the cursor and cursor options, and then populates the cursor. sp_cursoropen is equivalent to the combination of the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements DECLARE_CURSOR and OPEN. This procedure is invoked by specifying ID =2 in a tabular data stream (TDS) packet.  
   

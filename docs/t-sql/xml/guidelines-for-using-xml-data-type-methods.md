@@ -1,5 +1,5 @@
 ---
-title: "Guidelines for Using xml Data Type Methods | Microsoft Docs"
+title: Guidelines for Using xml Data Type Methods
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -18,7 +18,7 @@ ms.author: genemi
 
 # Guidelines for Using xml Data Type Methods
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes guidelines for using the **xml** data type methods.
 

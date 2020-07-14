@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "components [Integration Services], data flow"
   - "expressions [Integration Services], data flow components"
 ms.assetid: 9181b998-d24a-41fb-bb3c-14eee34f910d
-author: janinezhang
-ms.author: janinez
+author: chugugrace
+ms.author: chugu
 ---
 # Use an Expression in a Data Flow Component
   This procedure describes how to add an expression to the Conditional Split transformation or to the Derived Column transformation. The Conditional Split transformation uses expressions to define the conditions that direct data rows to a transformation output, and the Derived Column transformation uses expressions to define values assigned to columns.  

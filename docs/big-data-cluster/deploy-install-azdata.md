@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Install `azdata`
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 `azdata` is a command-line utility written in Python to bootstrap and manage the big data cluster via REST APIs. 
 

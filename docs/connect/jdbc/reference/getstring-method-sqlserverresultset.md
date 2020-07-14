@@ -1,5 +1,6 @@
 ---
-title: "getString Method (SQLServerResultSet) | Microsoft Docs"
+title: "getString Method (SQLServerResultSet)"
+description: "API reference for the getString method of SQLServerResultSet in the JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

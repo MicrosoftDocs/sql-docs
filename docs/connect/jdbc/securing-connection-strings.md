@@ -1,5 +1,6 @@
 ---
-title: "Securing connection strings | Microsoft Docs"
+title: "Securing connection strings"
+description: "Learn how to secure connection string information when using the JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

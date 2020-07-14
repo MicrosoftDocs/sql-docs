@@ -1,7 +1,8 @@
 ---
 title: "Features for natively compiled T-SQL modules"
+description: Learn about T-SQL surface area and supported features in the body of natively compiled T-SQL modules, like stored procedures and scalar user-defined functions.
 ms.custom: seo-dt-2019
-ms.date: "10/23/2017"
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -13,28 +14,12 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Supported Features for Natively Compiled T-SQL Modules
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
   This topic contains a list of T-SQL surface area and supported features in the body of natively compiled T-SQL modules, such as stored procedures ([CREATE PROCEDURE (Transact-SQL)](../../t-sql/statements/create-procedure-transact-sql.md)), scalar user-defined functions, inline table-valued functions, and triggers.  
 
  For supported features around the definition of native modules, see [Supported DDL for Natively Compiled T-SQL modules](../../relational-databases/in-memory-oltp/supported-ddl-for-natively-compiled-t-sql-modules.md).  
-
--   [Query Surface Area in Native Modules](#qsancsp)  
-
--   [Data Modification](#dml)  
-
--   [Control-of-flow language](#cof)  
-
--   [Supported Operators](#so)  
-
--   [Built-in Functions in Natively Compiled Modules](#bfncsp)  
-
--   [Auditing](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#auditing)  
-
--   [Table and Query Hints](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#tqh)  
-
--   [Limitations on Sorting](../../relational-databases/in-memory-oltp/supported-features-for-natively-compiled-t-sql-modules.md#los)  
 
  For complete information about unsupported constructs, and for information about how to work around some of the unsupported features in natively compiled modules, see [Migration Issues for Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/migration-issues-for-natively-compiled-stored-procedures.md). For more information about unsupported features, see [Transact-SQL Constructs Not Supported by In-Memory OLTP](../../relational-databases/in-memory-oltp/transact-sql-constructs-not-supported-by-in-memory-oltp.md).  
 
@@ -60,7 +45,7 @@ SELECT clause:
     - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
       Beginning with [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the DISTINCT operator is supported in natively compiled modules.
 
-              DISTINCT aggregates are not supported.  
+        - DISTINCT aggregates are not supported.  
 
 -   UNION and UNION ALL
     - **Applies to:** [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)].
@@ -163,7 +148,7 @@ The following DML statements are supported.
 
 -   [TRY...CATCH &#40;Transact-SQL&#41;](../../t-sql/language-elements/try-catch-transact-sql.md)  
 
-               To achieve optimal performance, use a single TRY/CATCH block for an entire natively compiled T-SQL module.  
+    - To achieve optimal performance, use a single TRY/CATCH block for an entire natively compiled T-SQL module.  
 
 -   [THROW &#40;Transact-SQL&#41;](../../t-sql/language-elements/throw-transact-sql.md)  
 
@@ -178,7 +163,7 @@ The following DML statements are supported.
 
 -   Binary operators (*, /, +, -, % (modulo)).  
 
-               The plus operator (+) is supported on both numbers and strings.  
+    - The plus operator (+) is supported on both numbers and strings.  
 
 -   Logical operators (AND, OR, NOT).  
 

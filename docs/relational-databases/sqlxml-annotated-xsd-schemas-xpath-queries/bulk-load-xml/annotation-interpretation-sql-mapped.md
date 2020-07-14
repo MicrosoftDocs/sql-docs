@@ -21,7 +21,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Annotation Interpretation - sql:mapped
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   XML Bulk Load processes the **sql:mapped** annotation in the XSD schema as expected-that is, if the mapping schema specifies **sql:mapped="false"** for any element or attribute, XML Bulk Load does not attempt to store the associated data in the corresponding column.  
   
  XML Bulk Load ignores elements and attributes that are not mapped (either because they are not described in the schema, or because they are annotated in the XSD schema with **sql:mapped="false"**). All unmapped data goes into the overflow column, if such a column is specified by using **sql:overflow-field**.  

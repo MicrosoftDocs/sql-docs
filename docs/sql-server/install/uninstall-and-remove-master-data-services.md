@@ -12,7 +12,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Uninstall and Remove Master Data Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   To uninstall the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] feature from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], follow the steps in [Uninstall an Existing Instance of SQL Server &#40;Setup&#41;](../../sql-server/install/uninstall-an-existing-instance-of-sql-server-setup.md) and specify [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] as a feature to remove on the **Select Features** page. The uninstall process removes [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] folders and files, and uninstalls [!INCLUDE[ssMDScfgmgr](../../includes/ssmdscfgmgr-md.md)] from the local computer.  
   

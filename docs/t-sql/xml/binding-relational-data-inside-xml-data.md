@@ -1,5 +1,5 @@
 ---
-title: "Binding Relational Data Inside XML Data | Microsoft Docs"
+title: Binding Relational Data Inside XML Data
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
@@ -20,7 +20,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Binding Relational Data Inside XML Data
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   You can specify [xml Data Type Methods](../../t-sql/xml/xml-data-type-methods.md) against an **xml** data type variable or column. For example, the [query&#40;&#41; Method &#40;xml Data Type&#41;](../../t-sql/xml/query-method-xml-data-type.md) executes the specified XQuery against an XML instance. When you construct XML in this manner, you may want to bring in a value from a non-XML type column or a Transact-SQL variable. This process is referred to as binding relational data inside XML.  
   

@@ -24,7 +24,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Path Expressions - Specifying Axis
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   An axis step in a path expression includes the following components:  
   

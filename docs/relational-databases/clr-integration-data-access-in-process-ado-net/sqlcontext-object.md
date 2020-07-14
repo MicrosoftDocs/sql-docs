@@ -17,7 +17,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # SqlContext Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You invoke managed code in the server when you call a procedure or function, when you call a method on a common language runtime (CLR) user-defined type, or when your action fires a trigger defined in any of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework languages. Because execution of this code is requested as part of a user connection, access to the context of the caller from the code running in the server is required. In addition, certain data access operations may only be valid if run under the context of the caller. For example, access to inserted and deleted pseudo-tables used in trigger operations is only valid under the context of the caller.  
   
  The context of the caller is abstracted in a **SqlContext** object. For more information about the **SqlTriggerContext** methods and properties, see the **Microsoft.SqlServer.Server.SqlTriggerContext** class reference documentation in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SDK.  

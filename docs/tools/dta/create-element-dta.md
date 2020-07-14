@@ -19,7 +19,7 @@ ms.date: 03/01/2017
 
 # Create Element (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Contains information about the indexes, statistics, or heap structures in a user-specified configuration.  
   

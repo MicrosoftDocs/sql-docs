@@ -35,8 +35,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 ## Syntax  
   
 ```  
-  
-IDENTITY [ (seed , increment) ]  
+IDENTITY [ (seed , increment) ]
 ```  
   
 ## Arguments  

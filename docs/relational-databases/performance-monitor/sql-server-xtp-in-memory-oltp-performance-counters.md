@@ -13,7 +13,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server XTP (In-Memory OLTP) Performance Counters
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides objects and counters that can be used by Performance Monitor to monitor In-Memory OLTP activity. The objects and counters are shared across all instances of a given version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the machine, starting in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  
   

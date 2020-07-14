@@ -1,5 +1,6 @@
 ---
 title: "Migrating Computed Columns | Microsoft Docs"
+description: Learn how to simulate computed columns in memory-optimized tables. Evaluate whether computed column functionality is necessary after migration.
 ms.custom: ""
 ms.date: "12/17/2016"
 ms.prod: sql
@@ -14,7 +15,7 @@ monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Migrating Computed Columns
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Computed columns are not supported in memory-optimized tables. However, you can simulate a computed column.
 

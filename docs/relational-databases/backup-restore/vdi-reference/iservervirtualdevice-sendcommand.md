@@ -13,7 +13,7 @@ ms.author: mathoma
 
 # IServerVirtualDevice::SendCommand (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 The **SendCommand** function sends a command to the client by using a virtual device object returned from IServerVirtualDeviceSet2::OpenDevice.
 

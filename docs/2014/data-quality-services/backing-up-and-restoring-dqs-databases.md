@@ -55,12 +55,11 @@ ms.author: lle
   
 11. In the Query Editor window, copy the following SQL statements, and replace *\<PASSWORD>* with the password that you provided during the DQS installation for the database master key:  
   
-    ```  
+    ```sql  
     USE [DQS_MAIN]  
     GO  
     EXECUTE [internal_core].[RestoreDQDatabases] '<PASSWORD>'  
     GO  
-  
     ```  
   
 12. Press F5 to execute the statements. Check the **Results** pane to verify that the statements have executed successfully.  

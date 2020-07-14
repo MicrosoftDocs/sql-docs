@@ -70,16 +70,16 @@ If the format of *path* isn't valid, **JSON_QUERY** returns an error.
   
 ```json  
 {
-	"info": {
-		"type": 1,
-		"address": {
-			"town": "Bristol",
-			"county": "Avon",
-			"country": "England"
-		},
-		"tags": ["Sport", "Water polo"]
-	},
-	"type": "Basic"
+   "info": {
+      "type": 1,
+      "address": {
+         "town": "Bristol",
+         "county": "Avon",
+         "country": "England"
+      },
+      "tags": ["Sport", "Water polo"]
+   },
+   "type": "Basic"
 } 
 ```  
   
@@ -127,5 +127,5 @@ FOR JSON PATH
   
 ## See also
 
- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

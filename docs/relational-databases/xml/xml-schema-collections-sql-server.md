@@ -24,7 +24,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # XML Schema Collections (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   As described in the topic, [xml &#40;Transact-SQL&#41;](../../t-sql/xml/xml-transact-sql.md), SQL Server provides native storage of XML data through the **xml** data type. You can optionally associate XSD schemas with a variable or a column of **xml** type through an XML schema collection. The XML schema collection stores the imported XML schemas and is then used to do the following:  
   
 -   Validate XML instances  

@@ -1,5 +1,6 @@
 ---
 title: Use Transact-SQL Editor to Edit and Execute Scripts
+description: Become familiar with the Transact-SQL Editor. Learn how to open the editor, see what information its panes display, and view resources on its features.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

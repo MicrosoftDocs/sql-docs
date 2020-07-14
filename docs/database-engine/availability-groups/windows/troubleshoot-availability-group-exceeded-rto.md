@@ -12,7 +12,7 @@ author: rothja
 ms.author: jroth
 ---
 # Troubleshoot: Availability group exceeded RTO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   After an automatic failover or a planned manual failover without data loss on an availability group, you may find that the failover time exceeds your recovery time objective (RTO). Or, when you estimate the failover time of a synchronous-commit secondary replica (such as an automatic failover partner) using the method in [Monitor performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md), you find that it exceeds your RTO.  
   
  If your automatic failover still has not completed, see [Troubleshooting automatic failover problems in SQL Server 2012 Always On environments](https://support.microsoft.com/kb/2833707).  

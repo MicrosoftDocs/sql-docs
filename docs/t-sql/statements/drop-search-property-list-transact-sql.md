@@ -34,7 +34,9 @@ DROP SEARCH PROPERTY LIST property_list_name
 ;  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *property_list_name*  
  Is the name of the search property list to be dropped. *property_list_name* is an identifier.  
   

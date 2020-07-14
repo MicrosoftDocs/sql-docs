@@ -64,7 +64,7 @@ Installing SQL Server Connector needs **Local Administrator** privileges otherwi
 Modify registry entries to enable SQL Server Connector logging error and information events in the Windows Application Event Log.
 
 > [!CAUTION]
-Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
+> Follow the steps in this section carefully. Serious problems might occur if you modify the registry incorrectly. Before you modify it, [back up the registry for restoration](https://support.microsoft.com/help/322756) in case problems occur.
 
 1. There are two ways to open Registry Editor in Windows 10:
     - In the search box on the taskbar, type regedit. Then, select the top result for Registry Editor (Desktop app).

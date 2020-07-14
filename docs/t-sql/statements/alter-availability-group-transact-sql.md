@@ -150,7 +150,10 @@ ALTER AVAILABILITY GROUP group_name
   
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *group_name*  
  Specifies the name of the new availability group. *group_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifier, and it must be unique across all availability groups in the WSFC cluster.  
   

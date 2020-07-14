@@ -65,7 +65,9 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
       )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *certname*  
  Is the name of the certificate to backup.
 

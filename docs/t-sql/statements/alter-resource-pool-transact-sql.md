@@ -52,7 +52,10 @@ ALTER RESOURCE POOL { pool_name | "default" }
 {NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID}[,...n]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  { *pool_name* | **"default"** }  
  Is the name of an existing user-defined resource pool or the default resource pool that is created when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
   

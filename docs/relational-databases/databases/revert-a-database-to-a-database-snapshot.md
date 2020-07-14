@@ -15,7 +15,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Revert a Database to a Database Snapshot
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   If data in an online database becomes damaged, in some cases, reverting the database to a database snapshot that predates the damage might be an appropriate alternative to restoring the database from a backup. For example, reverting a database might be useful for reverse a recent serious user error, such as a dropped table. However, all changes made after the snapshot was created are lost.  
   
 -   **Before you begin:**  

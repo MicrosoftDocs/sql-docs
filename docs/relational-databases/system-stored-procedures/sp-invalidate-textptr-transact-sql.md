@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_invalidate_textptr (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Invalidates the specified in-row text pointer, or all in-row text pointers, in the transaction. **sp_invalidate_textptr** can be used only on in-row text pointers. These pointers are from tables that have the **text in row** option enabled.  
   

@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Quickstart: Extended events in SQL Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Extended events is a lightweight performance monitoring system that enables users to collect data needed to monitor and troubleshoot problems in SQL Server. See [Extended events overview](extended-events.md) to learn more about the extended events architecture.  This article aims to help the SQL developer who is new to extended events, and who wants create an event session in just a few minutes. By using extended events, you can see details about the inner operations of the SQL system and your application. When you create an extended event session, you tell the system:
 

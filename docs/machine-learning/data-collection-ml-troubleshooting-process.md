@@ -1,21 +1,21 @@
 ---
-title: Troubleshoot data collection
-description: Learn data collection methods you should use when attempting to resolve problems on your own or with the help of Microsoft customer support.
+title: Collect data for troubleshooting SQL machine learning
+description: Learn how to collect the data you need when attempting to resolve problems on your own or with the help of Microsoft customer support.
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 07/30/2019
+ms.date: 07/01/2020
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Troubleshoot data collection for machine learning
+# Collect data to troubleshoot SQL machine learning
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
-This article describes data collection methods you should use when attempting to resolve problems on your own or with the help of Microsoft customer support.
+This article describes how to collect the data you need when you're attempting to resolve problems in SQL machine learning. This data can be useful whether you're resolving problems on your own or with the help of Microsoft customer support.
 
 ## SQL Server version and edition
 
@@ -41,7 +41,7 @@ It's possible to upgrade the R Server components separately from the SQL Server 
 The easiest way to determine the R version is to get the runtime properties by running a statement such as the following:
 
 ```sql
-exec sp_execute_external_script
+EXECUTE sp_execute_external_script
        @language = N'R'
        , @script = N'
 # Transform R version properties to data.frame
@@ -57,7 +57,6 @@ OutputDataSet <- rbind(OutputDataSet, data.frame(
 )
 '
 WITH RESULT SETS ((PropertyName nvarchar(100), PropertyValue nvarchar(4000)));
-
 ```
 
 > [!TIP]
@@ -85,13 +84,15 @@ To get the R version and RevoScaleR versions, open an R command prompt, or open 
 
 The R console displays the version information on startup. For example, the following version represents the default configuration for SQL Server 2017:
 
-    *Microsoft R Open 3.3.3*
+```console
+*Microsoft R Open 3.3.3*
 
-    *The enhanced R distribution from Microsoft*
+*The enhanced R distribution from Microsoft*
 
-    *Microsoft packages Copyright (C) 2017 Microsoft*
+*Microsoft packages Copyright (C) 2017 Microsoft*
 
-    *Loading Microsoft R Server packages, version 9.1.0.*
+*Loading Microsoft R Server packages, version 9.1.0.*
+```
 
 ## Python versions
 
@@ -297,4 +298,4 @@ Because it might not be possible to exclude all folders that are needed by the S
 
 ## See also
 
-[Troubleshoot machine learning in SQL Server](machine-learning-troubleshooting-faq.md)
+[Troubleshoot machine learning in SQL Server](machine-learning-troubleshooting-overview.md)

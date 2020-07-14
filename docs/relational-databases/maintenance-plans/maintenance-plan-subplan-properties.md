@@ -15,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Maintenance Plan (Subplan Properties)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the **Maintenance Plan (Subplan Properties)** dialog box to specify a name, description, and schedule for a maintenance plan subplan. Click **Subplan Properties** on the maintenance plan **Design** tab or double-click a subplan in the designer grid to display this dialog box.  
   
 ## Options  

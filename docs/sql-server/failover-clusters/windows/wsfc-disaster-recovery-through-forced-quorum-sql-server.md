@@ -16,7 +16,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # WSFC Disaster Recovery through Forced Quorum (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Quorum failure is usually caused by a systemic disaster, or a persistent communications failure, or a misconfiguration involving several nodes in the WSFC cluster.  Manual intervention is required to recovery from a quorum failure.  
   
 -   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  

@@ -19,7 +19,7 @@ ms.date: 03/01/2017
 
 # Name Element for Server (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Contains the name of the server where the databases you want to tune reside.  
   

@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # xp_cmdshell (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Spawns a Windows command shell and passes in a string for execution. Any output is returned as rows of text.  
   

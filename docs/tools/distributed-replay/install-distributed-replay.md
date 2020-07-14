@@ -15,7 +15,7 @@ ms.date: 03/14/2017
 
 # Install Distributed Replay
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 You can install Distributed Replay in one of three ways:  
   

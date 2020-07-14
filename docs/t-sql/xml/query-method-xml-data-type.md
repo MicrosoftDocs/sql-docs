@@ -1,5 +1,5 @@
 ---
-title: "query() Method (xml Data Type) | Microsoft Docs"
+title: query() Method (xml Data Type)
 ms.custom: ""
 ms.date: 04/16/2020
 ms.prod: sql
@@ -16,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # query() Method (xml Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies an XQuery against an instance of the **xml** data type. The result is of **xml** type. The method returns an instance of untyped XML.  
   
@@ -27,7 +27,9 @@ Specifies an XQuery against an instance of the **xml** data type. The result is 
 query ('XQuery')  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 XQuery  
 Is a string, an XQuery expression, that queries for XML nodes, such as elements and attributes, in an XML instance.  
   

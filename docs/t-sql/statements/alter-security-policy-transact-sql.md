@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ALTER SECURITY POLICY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Alters a security policy.  
   
@@ -49,7 +49,10 @@ ALTER SECURITY POLICY schema_name.security_policy_name
     | { BEFORE { UPDATE | DELETE } } ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 security_policy_name  
 The name of the security policy. Security policy names must fulfill the rules for identifiers and must be unique within the database and to its schema.  
   

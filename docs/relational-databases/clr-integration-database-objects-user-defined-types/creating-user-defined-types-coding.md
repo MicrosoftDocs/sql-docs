@@ -33,7 +33,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Creating User-Defined Types - Coding
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   When coding your user-defined type (UDT) definition, you must implement various features, depending on whether you are implementing the UDT as a class or a structure, as well as on the format and serialization options you have chosen.  
   
  The example in this section illustrates implementing a **Point** UDT as a **struct** (or **Structure** in Visual Basic). The **Point** UDT consists of X and Y coordinates implemented as property procedures.  

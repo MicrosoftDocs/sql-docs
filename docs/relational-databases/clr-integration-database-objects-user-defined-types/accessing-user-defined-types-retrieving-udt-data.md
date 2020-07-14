@@ -24,7 +24,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Accessing User-Defined Types - Retrieving UDT Data
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In order to create a user-defined type (UDT) on the client, the assembly that was registered as a UDT in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database must be available to the client application. The UDT assembly can be placed in the same directory with the application, or in the Global Assembly Cache (GAC). You can also set a reference to the assembly in your project.  
   
 ## Requirements for Using UDTs in ADO.NET  

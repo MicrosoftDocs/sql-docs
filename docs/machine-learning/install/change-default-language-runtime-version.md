@@ -56,7 +56,7 @@ Each SQL instance uses one of these versions as the default version of R. You ca
 
   If you don't specify /rhome, the path used is the path under which **RegisterRext.exe** is located.
 
-For example, to configure R 3.5 as the default version of R for the instance MSSQLSERVER01:
+For example, to configure **R 3.5** as the default version of R for the instance MSSQLSERVER01:
 
 ```cmd
 cd "C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES.3.5\library\RevoScaleR\rxLibs\x64"

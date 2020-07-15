@@ -3,7 +3,7 @@ title: Known issues for Python and R
 description: This article describes known problems or limitations with the Python and R components that are provided in SQL Server Machine Learning Services and SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/14/2020
+ms.date: 07/15/2020
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
@@ -530,10 +530,10 @@ SQL Server 2019 contains a regression that effects R scripts that use parallel e
 
 ### 23. Precision loss for money/numeric/decimal/bigint data types
 
-Executing an R script with `sp_execute_external_scripts` allows money, numeric, decimal, and bigint data types as input data. However, because they are converted to float internally, they suffer a precision loss with values that are very high or have decimal point values.
+Executing an R script with `sp_execute_external_script` allows money, numeric, decimal, and bigint data types as input data. However, because they are converted to R's numeric type, they suffer a precision loss with values that are very high or have decimal point values.
 
 + **money**: Sometimes cent values would be imprecise and a warning would be issued: *Warning: unable to precisely represent cents values*.  
-+ **numeric/decimal**: `sp_execute_external_scripts` with an R script does not support the full range of those data types and would alter the last few decimal digits especially those with fraction.
++ **numeric/decimal**: `sp_execute_external_script` with an R script does not support the full range of those data types and would alter the last few decimal digits especially those with fraction.
 + **bigint**: R only support up to 53-bit integers and then it will start to have precision loss.
 
 ## Python script execution issues

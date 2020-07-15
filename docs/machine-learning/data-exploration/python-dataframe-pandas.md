@@ -4,13 +4,14 @@ titleSuffix: SQL machine learning
 description: Learn how to read data from a SQL database and insert it into a pandas dataframe using Python.
 author: cawrites
 ms.author: chadam
-ms.date: 07/01/2020
+ms.date: 07/14/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
 ---
 # Insert data from a SQL table into a Python pandas dataframe
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article describes how to insert data from a SQL database a `pandas` dataframe using the `pyodbc` package in Python. The dataframe can be used for further data exploration. For more information, see the [pyodbc documentation](../../connect/python/pyodbc/python-sql-driver-pyodbc.md).
 
@@ -39,13 +40,13 @@ The sample database used in this article has been saved to a **.bak** database b
 1. Follow the instructions in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#download-bak-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
 1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
    - Import from the **AdventureWorks.bak** file - you downloaded.
-   - Name the target database "AdventureWorks."
+   - Name the target database "AdventureWorks".
 ::: moniker-end   
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 1. Follow the instructions in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#download-bak-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
 1. Follow the directions in [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
    - Import from the **AdventureWorks.bak** file - you downloaded.
-   - Name the target database "AdventureWorks."
+   - Name the target database "AdventureWorks".
 ::: moniker-end
 
 You can verify that the restored database exists by querying the **Person.CountryRegion** table:
@@ -71,7 +72,7 @@ To install these packages:
 
 ## Insert SQL data into dataframe
 
-Use the following script to select data from Person.CountryRegion table and insert it into a dataframe. Edit the connection string variables 'server', 'database', 'username', and 'password' to connect to SQL Server.
+Use the following script to select data from Person.CountryRegion table and insert into a dataframe. Edit the connection string variables: 'server', 'database', 'username', and 'password' to connect to SQL.
 
 To create a new notebook:
 1. In Azure Data Studio, select **File**, select **New Notebook**.
@@ -80,7 +81,6 @@ To create a new notebook:
 
 ```python
 import pyodbc 
-import pandas
 import pandas as pd
 # Some other example server values are
 # server = 'localhost\sqlexpress' # for a named instance
@@ -129,5 +129,3 @@ CountryRegionCode                 Name
 24                BT               Bhutan
 25                BO              Bolivia
 ```
-
-

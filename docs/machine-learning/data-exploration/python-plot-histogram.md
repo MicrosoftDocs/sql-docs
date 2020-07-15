@@ -3,7 +3,7 @@ title: Plot a histogram for data exploration with Python
 description: Learn how to create a histogram to visualize data 
 author: cawrites
 ms.author: chadam
-ms.date: 07/01/2020
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
@@ -11,9 +11,9 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 ---
 
 # Plot histograms in Python 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-This article describes how to plot data using the Python package [Matplotlib](https://matplotlib.org/). A histogram displays data intervals that have consecutive, non-overlapping values.
+This article describes how to plot data using the Python package [pandas'.hist()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.hist.html). A SQL database is the source used to visualize the histogram data intervals that have consecutive, non-overlapping values.
 
 ## Prerequisites:
 
@@ -37,21 +37,21 @@ This article describes how to plot data using the Python package [Matplotlib](ht
 
 The sample database used in this article has been saved to a **.bak** database backup file for you to download and use.
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions"
-1. Follow the instructions in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#download-bak-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
+1. Follow the instructions in [AdventureWorksDW sample databases](../../samples/adventureworks-install-configure.md#download-bak-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
 1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
-   - Import from the **AdventureWorks.bak** file - you downloaded.
-   - Name the target database "AdventureWorks."
+   - Import from the **AdventureWorksDW.bak** file - you downloaded.
+   - Name the target database "AdventureWorks".
 ::: moniker-end   
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-1. Follow the instructions in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#download-bak-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
+1. Follow the instructions in [AdventureWorksDW sample databases](../../samples/adventureworks-install-configure.md#download-bak-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
 1. Follow the directions in [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
-   - Import from the **AdventureWorks.bak** file - you downloaded.
-   - Name the target database "AdventureWorks."
+   - Import from the **AdventureWorksDW.bak** file - you downloaded.
+   - Name the target database "AdventureWorks".
 ::: moniker-end
 
 You can verify that the restored database exists by querying the **Person.CountryRegion** table:
 ```sql
-USE AdventureWorks;
+USE AdventureWorksDW;
 SELECT * FROM Person.CountryRegion;
 ```
   
@@ -61,7 +61,6 @@ Install the following Python packages using [Azure Data Studio notebook with a P
 
   * pyodbc
   * pandas
-  * matplotlib
 
 To install these packages:
 1. In your Azure Data Studio notebook, select **Manage Packages**.
@@ -73,7 +72,7 @@ As an alternative, you can open a **Command Prompt**, change to the installation
 ## Plot histogram 
 
 The distributed data displayed in the histogram is based on a SQL query from AdventureWorksDW. The histogram visualizes data and the frequency of data values. 
-Edit the connection string variables 'server', 'database', 'username', and 'password' to connect to SQL Server.
+Edit the connection string variables: 'server', 'database', 'username', and 'password' to connect to SQL database.
    
 To create a new notebook:
 1. In Azure Data Studio, select **File**, select **New Notebook**.
@@ -82,15 +81,12 @@ To create a new notebook:
 
 ```python
 import pyodbc 
-import pandas
-import pandas as pd
-import matplotlib
-import matplotlib.pyplot as plt
+import pandas as plt
 # Some other example server values are
 # server = 'localhost\sqlexpress' # for a named instance
 # server = 'myserver,port' # to specify an alternate port
 server = 'servername' 
-database = 'AdventureWorks' 
+database = 'AdventureWorksDW' 
 username = 'yourusername' 
 password = 'databasename'  
 cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
@@ -102,6 +98,6 @@ df.hist(bins=10)
 
 The display shows the age distribution of customers in the FactInternetSales table.
 
-![Matplotlib Histogram](./media/python-histogram.png)
+![Pandas Histogram](./media/python-histogram.png)
 
 

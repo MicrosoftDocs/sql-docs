@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_tables [ [ @table_name = ] 'name' ]   
@@ -90,14 +90,14 @@ sp_tables [ [ @table_name = ] 'name' ]
 ### A. Returning a list of objects that can be queried in the current environment  
  The following example returns a list of objects that can be queries in the current environment.  
   
-```  
+```sql  
 EXEC sp_tables ;  
 ```  
   
 ### B. Returning information about the tables in a specified schema  
  The following example returns information about the tables that belong to the `Person` schema in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_tables   
@@ -111,14 +111,14 @@ EXEC sp_tables
 ### C. Returning a list of objects that can be queried in the current environment  
  The following example returns a list of objects that can be queries in the current environment.  
   
-```  
+```sql  
 EXEC sp_tables ;  
 ```  
   
 ### D. Returning information about the tables in a specified schema  
  The following example returns information about the dimension tables in the `AdventureWorksPDW201` database.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_tables   

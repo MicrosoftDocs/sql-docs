@@ -72,7 +72,7 @@ As an alternative, you can open a **Command Prompt**, change to the installation
 ## Plot histogram 
 
 The distributed data displayed in the histogram is based on a SQL query from AdventureWorksDW. The histogram visualizes data and the frequency of data values. 
-Edit the connection string variables 'server', 'database', 'username', and 'password' to connect to SQL Server.
+Edit the connection string variables: 'server', 'database', 'username', and 'password' to connect to SQL Server.
    
 To create a new notebook:
 1. In Azure Data Studio, select **File**, select **New Notebook**.

@@ -26,7 +26,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_unprepare handle           
@@ -40,9 +40,9 @@ sp_unprepare handle
  The following example prepares, executes, and unprepares a simple statement.  
   
 ```SQL  
-DECLARE @P1 int;  
-EXEC sp_prepare @P1 output,   
-    N'@P1 nvarchar(128), @P2 nvarchar(100)',  
+DECLARE @P1 INT;  
+EXEC sp_prepare @P1 OUTPUT,   
+    N'@P1 NVARCHAR(128), @P2 NVARCHAR(100)',  
     N'SELECT database_id, name FROM sys.databases WHERE name = @P1 AND state_desc = @P2';  
 EXEC sp_execute @P1, N'tempdb', N'ONLINE';  
 EXEC sp_unprepare @P1;  
@@ -52,9 +52,9 @@ EXEC sp_unprepare @P1;
  The following example prepares, executes, and unprepares a simple statement.  
   
 ```SQL  
-DECLARE @P1 int;  
-EXEC sp_prepare @P1 output,   
-    N'@P1 nvarchar(128), @P2 nvarchar(100)',  
+DECLARE @P1 INT;  
+EXEC sp_prepare @P1 OUTPUT,   
+    N'@P1 NVARCHAR(128), @P2 NVARCHAR(100)',  
     N'SELECT database_id, name FROM sys.databases WHERE name = @P1 AND state_desc = @P2';  
 EXEC sp_execute @P1, N'tempdb', N'ONLINE';  
 EXEC sp_unprepare @P1;  

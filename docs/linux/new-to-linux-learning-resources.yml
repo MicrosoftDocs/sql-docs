@@ -1,11 +1,11 @@
 ### YamlMime:Landing
 
-title: "New to SQL Server: Learning resources"
-summary: Tutorials, quickstarts, and other educational resources meant to teach you to work with SQL Server on Linux for users who are familiar with Linux. 
+title: "New to Linux: Learning resources"
+summary: Tutorials, quickstarts, and other educational resources meant to teach you to work with SQL Server on Linux for users who are familiar with SQL Server but new to Linux. 
 
 metadata:
   title: Educational SQL resources 
-  description: A collection of resources meant to teach you to use SQL Server on Linux for Linux users. 
+  description: A collection of resources meant to teach you to use SQL Server on Linux for new-to-Linux users. 
   ms.prod: sql
   ms.topic: landing-page
   author: MashaMSFT
@@ -13,106 +13,88 @@ metadata:
   ms.date: 07/25/2020  
 
 landingContent:
-  - title: "Module 1: Basics of SQL Server"
+  - title: "Module 1: Introduction to Linux"
     linkLists:
     - linkListType: learn
       links:
-      - text: Tools
-        url: https://docs.microsoft.com/en-us/sql/tools/overview-sql-tools?view=sql-server-ver15      
-      - text: What is a database? 
-        url: https://docs.microsoft.com/en-us/sql/relational-databases/databases/databases?view=sql-server-ver15
-      - text: System databases
-        url: https://docs.microsoft.com/en-us/sql/relational-databases/databases/system-databases?view=sql-server-ver15
-      - text: Database files
-        url: https://docs.microsoft.com/en-us/sql/relational-databases/databases/database-files-and-filegroups?view=sql-server-ver15
-      - text: What is a table? 
-        url: https://docs.microsoft.com/en-us/sql/relational-databases/tables/tables?view=sql-server-ver15
-      - text: Indexes
-        url: https://docs.microsoft.com/en-us/sql/relational-databases/indexes/indexes?view=sql-server-ver15
+      - text: What is Linux? 
+        url: https://www.linux.org/threads/introduction-to-linux.4105/
+      - text: Select a Linux distribution
+        url: https://www.linux.org/threads/selecting-a-linux-distribution.4117/
+      - text: Linux directories
+        url: https://www.linux.org/threads/getting-around-in-linux-directories.4120/
+      - text: Choosing access strategy
+        url: https://www.linux.org/threads/when-to-work-as-root-when-to-work-as-a-system-user.4136/
+      - text: File systems and permissions 
+        url: https://www.linux.org/threads/linux-file-systems.4123/
+      - text: Admin commands
+        url: https://www.linux.org/threads/commands-for-system-administration.4126/
 
 
-  - title: "Module 2: Planning SQL Server on Linux"
+  - title: "Module 2: Introduction to SQL Server on Linux"
     linkLists:
     - linkListType: learn
       links:
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
+      - text: Overview
+        url: https://docs.microsoft.com/en-us/learn/modules/introduction-sql-server-linux/
+      - text: Channel9 - the How
+        url: https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-on-Linux-The-HOW?term=sql%20server%20on%20Linux&lang-en=true
+      - text: Channel9 - overview
+        url: https://channel9.msdn.com/events/Connect/2016/101?term=sql%20server%20on%20Linux&lang-en=true 
 
-  - title: "Module 2: Planning SQL Server on Linux"
+
+  - title: "Module 3: Planning SQL Server on Linux"
     linkLists:
     - linkListType: learn
       links:
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
+      - text: Editions and components
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-editions-and-components-2019?view=sql-server-ver15
+      - text: Supported platforms
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes-2019?view=sql-server-ver15
+      - text: Frequently asked questions
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-faq?view=sql-server-ver15 
+      - text: Migrate
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-migrate-restore-database?view=sql-server-ver15
 
-  - title: "Module 2: Planning SQL Server on Linux"
+  - title: "Module 4: Install & connect"
     linkLists:
     - linkListType: learn
       links:
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
+      - text: Redhat
+        url: https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-red-hat?view=sql-server-ver15
+      - text: SUSE
+        url: https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-suse?view=sql-server-ver15
+      - text: Ubuntu
+        url: https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver15
+      - text: Docker
+        url: https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-docker?view=sql-server-ver15&pivots=cs1-bash
+      - text: Azure Data Studio (Tool)
+        url: https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is?view=sql-server-ver15
+      - text: Channel9 resources
+        url: https://channel9.msdn.com/events/Connect/2016/173?term=SQL%20on%20linux&lang-en=true
 
 
-  - title: "Module 2: Planning SQL Server on Linux"
+  - title: "Module 5: Configure SQL Server on Linux"
     linkLists:
     - linkListType: learn
       links:
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
+      - text: Change default port
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-configure-mssql-conf?view=sql-server-ver15#tcpport
+      - text: Change default paths
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-configure-mssql-conf?view=sql-server-ver15#datadir
+      - text: Set traceflags 
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-configure-mssql-conf?view=sql-server-ver15#traceflags
+      - text: Join domain
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-active-directory-authentication?view=sql-server-ver15
 
-  - title: "Module 2: Planning SQL Server on Linux"
+
+  - title: "Module 6: Configure business continuity"
     linkLists:
     - linkListType: learn
       links:
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
+      - text: Choose an option
+        url:  https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-business-continuity-dr?view=sql-server-ver15
+      - text: Deploy Pacemaker Cluster
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-deploy-pacemaker-cluster?view=sql-server-ver15
+      - text: Configure availability group
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-create-availability-group?view=sql-server-ver15

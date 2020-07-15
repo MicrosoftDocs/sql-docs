@@ -36,79 +36,68 @@ landingContent:
     - linkListType: learn
       links:
       - text: Editions and features
-        url: 
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-editions-and-components-2019?view=sql-server-ver15
       - text: Supported platforms
-        url: 
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes-2019?view=sql-server-ver15
       - text: Frequently asked questions 
-        url: 
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-faq?view=sql-server-ver15 
 
   - title: "Module 3: Install & connect"
     linkLists:
     - linkListType: learn
       links:
       - text: Redhat
-        url: 
+        url: https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-red-hat?view=sql-server-ver15
       - text: SUSE
-        url: 
+        url: https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-suse?view=sql-server-ver15
       - text: Ubuntu
-        url: 
+        url: https://docs.microsoft.com/en-us/sql/linux/quickstart-install-connect-ubuntu?view=sql-server-ver15
       - text: Azure Data Studio (Tool)
-        url: 
+        url: https://docs.microsoft.com/en-us/sql/azure-data-studio/what-is?view=sql-server-ver15
       - text: Write basic Transact-SQL (T-SQL)
-        url: 
+        url: https://docs.microsoft.com/en-us/sql/t-sql/tutorial-writing-transact-sql-statements?view=sql-server-ver15
       - text: Channel 9 resources
-        url: 
+        url: https://channel9.msdn.com/events/Connect/2016/173?term=SQL%20on%20linux&lang-en=true
 
   - title: "Module 4: Configure SQL Server on Linux"
     linkLists:
     - linkListType: learn
       links:
       - text: Change default port
-        url: 
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-configure-mssql-conf?view=sql-server-ver15#tcpport
       - text: Set default paths
-        url: 
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-configure-mssql-conf?view=sql-server-ver15#datadir
       - text: Set trace flags
-        url: 
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-configure-mssql-conf?view=sql-server-ver15#traceflags 
       - text: Join domain
-        url: 
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-active-directory-authentication?view=sql-server-ver15
       - text: Load sample data 
-        url: 
+        url: https://docs.microsoft.com/en-us/sql/samples/adventureworks-install-configure?view=sql-server-2017&tabs=ssms
       - text: Write basic Transact-SQL (T-SQL)
-        url: 
-      - text: Write basic Transact-SQL (T-SQL)
-        url:        
+        url: https://docs.microsoft.com/en-us/sql/t-sql/tutorial-writing-transact-sql-statements?view=sql-server-ver15 
 
 
-  - title: "Module 5: Configure business con"
+  - title: "Module 5: Configure business continuity"
     linkLists:
     - linkListType: learn
       links:
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
+      - text: Choose an option
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-business-continuity-dr?view=sql-server-ver15
+      - text: Deploy Pacemaker Cluster
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-deploy-pacemaker-cluster?view=sql-server-ver15
+      - text: Configure availability group
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-create-availability-group?view=sql-server-ver15
 
-  - title: "Module 2: Planning SQL Server on Linux"
+
+  - title: "Module 6: Monitor and tune"
     linkLists:
     - linkListType: learn
       links:
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
-      - text: 
-        url: 
+      - text: Performance dashboard 
+        url: https://www.youtube.com/watch?v=cVdfhBVmeig
+      - text: Query store
+        url: https://docs.microsoft.com/en-us/sql/relational-databases/performance/monitoring-performance-by-using-the-query-store?view=sql-server-ver15
+      - text: DMVs
+        url: https://docs.microsoft.com/en-us/sql/relational-databases/system-dynamic-management-views/system-dynamic-management-views?view=sql-server-ver15
+      - text: Additional resources
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-performance-get-started?view=sql-server-ver15

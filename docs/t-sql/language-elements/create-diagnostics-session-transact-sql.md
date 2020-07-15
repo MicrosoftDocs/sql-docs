@@ -98,7 +98,7 @@ DROP DIAGNOSTICS SESSION diagnostics_name ;
 ### A. Creating a diagnostics session  
  This example creates a diagnostics session to record metrics of the database engine performance. The example creates a diagnostics session that listens for Engine Query running/end events and a blocking DMS event. What is returned is the command text, machine name, request id (query id) and the session that the event was created on.  
   
-```  
+```sql  
 CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'  
 <Session>  
    <MaxItemCount>100</MaxItemCount>  
@@ -122,13 +122,13 @@ CREATE DIAGNOSTICS SESSION MYDIAGSESSION AS N'
   
  After creation of the diagnostics session, run a query.  
   
-```  
+```sql  
 SELECT COUNT(EmployeeKey) FROM AdventureWorksPDW2012..FactSalesQuota;  
 ```  
   
  Then view the diagnostics session results by selecting from the sysdiag schema.  
   
-```  
+```sql  
 SELECT * FROM master.sysdiag.MYDIAGSESSION;  
 ```  
   
@@ -138,14 +138,14 @@ SELECT * FROM master.sysdiag.MYDIAGSESSION;
   
  When you are finished with the diagnostics session, drop it using the **DROP DIAGNOSTICS** command.  
   
-```  
+```sql  
 DROP DIAGNOSTICS SESSION MYDIAGSESSION;  
 ```  
   
 ### B. Alternative diagnostic session  
  A second example with slightly different properties.  
   
-```  
+```sql  
 -- Determine the session_id of your current session  
 SELECT TOP 1 session_id();  
 -- Replace \<*session_number*> in the code below with the numbers in your session_id  
@@ -176,7 +176,7 @@ CREATE DIAGNOSTICS SESSION PdwOptimizationDiagnostics AS N'
   
  Run a query, such as:  
   
-```  
+```sql  
 USE ssawPDW;  
 GO  
 SELECT * FROM dbo.FactFinance;  
@@ -184,7 +184,7 @@ SELECT * FROM dbo.FactFinance;
   
  The following query returns the authorization timing:  
   
-```  
+```sql  
 SELECT *   
 FROM master.sysdiag.PdwOptimizationDiagnostics   
 ORDER BY DateTimePublished;  
@@ -192,7 +192,7 @@ ORDER BY DateTimePublished;
   
  When you are finished with the diagnostics session, drop it using the **DROP DIAGNOSTICS** command.  
   
-```  
+```sql  
 DROP DIAGNOSTICS SESSION PdwOptimizationDiagnostics;  
 ```  
   

@@ -8,7 +8,7 @@
   href: legal-notice-mysqltosql.md
 - name: Conversion Settings
   href: conversion-settings-mysqltosql.md
-- name: Installing SSMA for MySQL Client
+- name: Installing SSMA for MySQL client
   href: installing-ssma-for-mysql-client-mysqltosql.md
 - name: Executing the SSMA Console
   href: executing-the-ssma-console-mysqltosql.md

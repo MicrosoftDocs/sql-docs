@@ -136,7 +136,7 @@ df = pd.read_csv("c:\\user\\username\department.csv")
 # server = 'myserver,port' # to specify an alternate port
 server = 'yourservername' 
 database = 'AdventureWorks' 
-username = 'sa' 
+username = 'username' 
 password = 'yourpassword' 
 cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()

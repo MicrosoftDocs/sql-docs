@@ -62,7 +62,7 @@ SQL Server and Python use different data types in some cases. For a list of mapp
 
 | Function | Description |
 |----------|-------------|
-|[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import) | Import data into an .xdf file or data frame.|
+|[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import) | Import data into a .xdf file or data frame.|
 |[rx_data_step](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-data-step) | Transform data from an input data set to an output data set.|
 
 <a name="bkmk_algorithms"></a>
@@ -103,7 +103,7 @@ Inputs and outputs must be **pandas** data frames. When this is done, you can ca
 
 ### Using revoscalepy with microsoftml
 
-The Python functions for [microsoftml](ref-py-microsoftml.md) are integrated with the compute contexts and data sources that are provided in revoscalepy. When calling functions from microsoftml, for example when defining and training a model, use the revoscalepy functions to execute the Python code either locally or in a SQl Server remote compute context.
+The Python functions for [microsoftml](ref-py-microsoftml.md) are integrated with the compute contexts and data sources that are provided in revoscalepy. When calling functions from microsoftml, for example when defining and training a model, use the revoscalepy functions to execute the Python code either locally or in a SQL Server remote compute context.
 
 The following example shows the syntax for importing modules in your Python code. You  can then reference the individual functions you need.
 

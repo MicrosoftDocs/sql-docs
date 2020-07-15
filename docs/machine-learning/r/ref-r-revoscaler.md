@@ -1,6 +1,6 @@
 ---
 title: RevoScaleR R package
-description: RevoScaleR is an R package from Microsoft that supports distributed computing, remote compute contexts, and high-performance data science algorithms. It also supports data import, data transformation, summarization, visualization, and analysis.The package is included in SQL Server Machine Learning Services and SQL Server 2016 R Services.
+description: RevoScaleR is an R package from Microsoft that supports distributed computing, remote compute contexts, and high-performance data science algorithms. It also supports data import, data transformation, summarization, visualization, and analysis. The package is included in SQL Server Machine Learning Services and SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
@@ -15,9 +15,9 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 **RevoScaleR** is an R package from Microsoft that supports distributed computing, remote compute contexts, and high-performance data science algorithms. It also supports data import, data transformation, summarization, visualization, and analysis. The package is included in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](sql-server-r-services.md).
 
-In contrast with base R functions, RevoScaleR operations can be performed against very large datasets, in parallel, and on distributed file systems. Functions can operate over datasets that do not fit in memory by using chunking and by reassembling results when operations are complete.
+In contrast with base R functions, RevoScaleR operations can be performed against large datasets, in parallel, and on distributed file systems. Functions can operate over datasets that do not fit in memory by using chunking and by reassembling results when operations are complete.
 
-RevoScaleR functions are denoted with an **rx** or **Rx** prefix to make them easy to identify.
+RevoScaleR functions are denoted with a rx** or **Rx** prefix to make them easy to identify.
 
 RevoScaleR serves as a platform for distributed data science. For example, you can use the RevoScaleR compute contexts and transformations with the state-of-the-art algorithms in [MicrosoftML](https://docs.microsoft.com/machine-learning-server/r/concept-what-is-the-microsoftml-package). You can also use [rxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec) to run base R functions in parallel.
 
@@ -85,7 +85,7 @@ After you have created a data source object, you can use the object to load data
 |---------------|-------------|
 |[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)  |Creates a histogram from data. | 
 |[rxLinePlot](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlineplot) |Creates a line plot from data. | 
-|[rxLorenz](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlorenz)  |Computes a Lorenz curve which can be plotted. | 
+|[rxLorenz](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlorenz)  |Computes a Lorenz curve, which can be plotted. | 
 |[rxRocCurve](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxroc)  |Computes and plots ROC curves from actual and predicted data. | 
 
 <a name="statistics-functions"></a>

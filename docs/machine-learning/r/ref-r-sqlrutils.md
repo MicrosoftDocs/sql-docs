@@ -19,7 +19,7 @@ By converting your R code to run within a single stored procedure, you can make 
 The **sqlrutils** package performs these tasks:
 
 - Saves the generated T-SQL script as a string inside an R data structure
-- Optionally, generates a .sql file for the T-SQL script, which you can edit or run to create a stored procedure
+- Optionally, generate a .sql file for the T-SQL script, which you can edit or run to create a stored procedure
 - Registers the newly created stored procedure with the SQL Server instance from your R development environment
 
 You can also execute the stored procedure from an R environment, by passing well-formed parameters and processing the results. Or, you can use the stored procedure from SQL Server to support common database integration scenarios such as ETL, model training, and high-volume scoring.

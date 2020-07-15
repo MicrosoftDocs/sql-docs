@@ -48,7 +48,7 @@ ms.author: "sstein"
   
 1.  Select the **View/Object Explorer** menu.  
   
-2.  Connect to the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]from the Object Explorer pane.  
+2.  Connect to the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from the Object Explorer pane.  
   
 3.  Select the **View/Object Explorer Details** menu.  
   

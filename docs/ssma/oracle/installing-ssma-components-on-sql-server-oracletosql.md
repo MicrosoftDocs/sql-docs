@@ -64,9 +64,9 @@ To install the extension pack:
    > [!IMPORTANT]
    > Remote option should only be used when installing Extension Pack on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on Linux or when targeting [!INCLUDE[ssAzureMi](../../includes/ssazuremi_md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installations running on Windows should always have Extension Pack installed locally. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] and Azure SQL Data Warehouse do not support Extension Pack.
 
-   - If you are installing the Extension Pack on a local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, then next page will allow you to choose a local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which you'll be migrating Oracle schemas. Choose an instance in the drop-down, and then select **Next**.
+   If you are installing the Extension Pack on a local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, then next page will allow you to choose a local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which you'll be migrating Oracle schemas. Choose an instance in the drop-down, and then select **Next**.
 
-     The default instance has the same name as the computer. Named instances will be followed by a backslash and the instance name.
+   The default instance has the same name as the computer. Named instances will be followed by a backslash and the instance name.
 
 9. On the connection page, select the authentication method and then select **Next**.
 

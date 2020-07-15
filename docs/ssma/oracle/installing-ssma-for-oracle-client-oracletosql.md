@@ -1,5 +1,5 @@
 ---
-title: "Installing SSMA for Oracle Client (OracleToSQL) | Microsoft Docs"
+title: "Installing SSMA for Oracle client (OracleToSQL) | Microsoft Docs"
 description: Learn about installation prerequisites for the SQL Server Migration Assistant (SSMA) for Oracle client and how to install.
 ms.prod: sql
 ms.custom: ""
@@ -12,7 +12,7 @@ author: "nahk-ivanov"
 ms.author: "alexiva"
 ---
 
-# Installing SSMA for Oracle Client (OracleToSQL)
+# Installing SSMA for Oracle client (OracleToSQL)
 
 The SSMA client consists of the program files that perform the following tasks:  
   
@@ -37,7 +37,7 @@ Before you install SSMA, make sure that the computer meets the following require
 - Access to and sufficient permissions on the computer that hosts the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] where you will be migrating database objects and data. For more information, see [Connecting to SQL Server &#40;OracleToSQL&#41;](../../ssma/oracle/connecting-to-sql-server-oracletosql.md).
 - 4 GB RAM recommended.  
   
-## Installing the SSMA for Oracle Client
+## Installing the SSMA for Oracle client
 
 SSMA is a Web download. To download the latest version, see the [SQL Server Migration Assistant download page](https://aka.ms/ssmafororacle).
 
@@ -59,7 +59,7 @@ The default installation location is `C:\Program Files\Microsoft SQL Server Migr
 
 In addition to the SSMA program files, you must also install the SSMA for Oracle Extension Pack on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Installing SSMA Components on SQL Server](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md).
 
-## See Also
+## See also
 
 - [Installing SSMA Components on SQL Server](../../ssma/oracle/installing-ssma-components-on-sql-server-oracletosql.md)
 - [Migrating Oracle Databases to SQL Server](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)

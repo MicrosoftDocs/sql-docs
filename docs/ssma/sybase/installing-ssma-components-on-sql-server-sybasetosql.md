@@ -1,5 +1,5 @@
 ---
-title: "Installing SSMA Components on SQL Server (SybaseToSQL) | Microsoft Docs"
+title: "Installing SSMA components on SQL Server (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/14/2020"
 ms.prod: sql
@@ -11,11 +11,11 @@ author: "nahk-ivanov"
 ms.author: "alexiva"
 ---
 
-# Installing SSMA Components on SQL Server (SybaseToSQL)
+# Installing SSMA components on SQL Server (SybaseToSQL)
 
 In addition to installing SSMA, for using Server side data migration, you must also install components on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These components include the SSMA extension pack, which supports data migration, and Sybase providers to enable server-to-server connectivity.
 
-## SSMA for Sybase Extension Pack
+## SSMA for Sybase extension pack
 
 The SSMA extension pack adds the databases, **sysdb** and **ssmatesterdb_syb**, to the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The **sysdb** database contains the tables and stored procedures that are required to migrate data. The **ssmatester_syb** database contains the schema **ssma_sybase_utilities**, in which the objects (Tables, Triggers, Views) used by the SSMA tester component are created.
 
@@ -34,7 +34,7 @@ Before you install the SSMA for Sybase server components on [!INCLUDE[ssNoVersio
   > [!NOTE]
   > If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service is running, but you still do not see a list of instances in Setup, you must unblock UDP port 1434. You can use Windows Firewall to temporarily unblock the port, or you can temporarily disable Windows Firewall. You might also have to temporarily disable antivirus software. Make sure to enable firewalls and antivirus software after installation.
 
-### Installing the Extension Pack
+### Installing the extension pack
 
 You can install the extension pack any time before you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -71,7 +71,7 @@ To install the extension pack:
 
 12. Once installation is complete, a prompt will appear asking if you want to install Utilities Database on another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Yes**, and then select **Next**, or to exit the wizard, select **No** and then select **Exit**.
 
-### SQL Server Database Objects
+### SQL Server database objects
 
 After you install the extension pack, you will a see a **ssma_syb.bcp_migration_packages** table in the **sysdb** database. You will also see the following stored procedures:
 
@@ -88,11 +88,11 @@ After you install the extension pack, you will a see a **ssma_syb.bcp_migration_
 
 Every time that you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], SSMA creates a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job. These jobs are named **ssma_syb data migration package {GUID}**, and are visible in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent node of [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] in the Jobs folder.  
 
-## Sybase Providers
+## Sybase providers
 
 When you use server-side data migration to move data from SAP ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the data migrates directly between SAP ASE and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It does not go through SSMA because this would slow down the data migration.
 
-### Installing the Sybase Providers
+### Installing the Sybase providers
 
 The following instructions provide the basic installation steps for installing Sybase providers. The exact instructions will differ depending on the version of the Sybase Setup program.
 
@@ -104,7 +104,7 @@ The following instructions provide the basic installation steps for installing S
 3. On the feature selection page, select the ODBC, OLE DB and ADO.NET data providers.
 4. Verify the selected features, and then click **Finish** to install the data provider.
 
-## See Also
+## See also
 
 - [Installing SSMA  for Sybase Client](../../ssma/sybase/installing-ssma-for-sybase-client-sybasetosql.md)
 - [Migrating Sybase ASE Databases to SQL Server - Azure SQL DB](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

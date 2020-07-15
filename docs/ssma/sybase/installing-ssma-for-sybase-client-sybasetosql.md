@@ -1,5 +1,5 @@
 ---
-title: "Installing SSMA for SAP ASE Client (SybaseToSQL) | Microsoft Docs"
+title: "Installing SSMA for SAP ASE client (SybaseToSQL) | Microsoft Docs"
 description: Learn about installation prerequisites for SQL Server Migration Assistant (SSMA) for SAP Adaptive Server Enterprise (ASE) and how to install.
 ms.custom: ""
 ms.date: "07/14/2020"
@@ -12,7 +12,7 @@ author: "nahk-ivanov"
 ms.author: "alexiva"
 ---
 
-# Installing SSMA for SAP ASE Client (SybaseToSQL)
+# Installing SSMA for SAP ASE client (SybaseToSQL)
 
 The SSMA client consists of the program files that are used to connect to a SAP Adaptive Server Enterprise (ASE) database server and an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], convert ASE database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] syntax, load the objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], and then migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].
 
@@ -31,7 +31,7 @@ Before you install SSMA, make sure that the computer meets the following require
 - Access to and sufficient permissions on the computer that hosts the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] where you will be migrating database objects and data. For more information, see [Connecting to SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)/[Connecting to Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md).
 - 4 GB RAM recommended.
 
-## Installing the SSMA for Sybase Client
+## Installing the SSMA for Sybase client
 
 SSMA is a Web download. To download the latest version, see the [SQL Server Migration Assistant download page](https://aka.ms/ssmaforsybase).
 
@@ -53,7 +53,7 @@ The default installation location is `C:\Program Files\Microsoft SQL Server Migr
 
 In addition to the SSMA program files, you must also install the SSMA for Sybase Extension Pack on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For more information, see [Installing SSMA Components on SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md).
 
-## See Also
+## See also
 
 - [Installing SSMA Components on SQL Server](../../ssma/sybase/installing-ssma-components-on-sql-server-sybasetosql.md)  
 - [Migrating Sybase ASE Databases to SQL Server - Azure SQL DB](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)

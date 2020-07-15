@@ -1,5 +1,5 @@
 ---
-title: "Installing SSMA for MySQL Client (MySQLToSQL) | Microsoft Docs"
+title: "Installing SSMA for MySQL client (MySQLToSQL) | Microsoft Docs"
 description: Learn about installation prerequisites for the SQL Server Migration Assistant (SSMA) for MySQL client and how to install.
 ms.prod: sql
 ms.custom: ""
@@ -14,7 +14,7 @@ author: "nahk-ivanov"
 ms.author: "alexiva"
 ---
 
-# Installing SSMA for MySQL Client (MySQLToSQL)
+# Installing SSMA for MySQL client (MySQLToSQL)
 
 The SSMA for MySQL client consists of the program files that perform the following tasks:
 
@@ -40,7 +40,7 @@ Before you install SSMA, make sure that the computer meets the following require
 - In case of [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] projects, access to and sufficient permissions to the instance of [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] where you will be migrating database objects and data. For more information, see [Connecting to Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md).
 - 4 GB RAM recommended.
 
-## Installing SSMA for MySQL Client
+## Installing SSMA for MySQL client
 
 SSMA is a Web download. To download the latest version, see the [SQL Server Migration Assistant download page](https://aka.ms/ssmaformysql).
 
@@ -60,6 +60,6 @@ To install the SSMA client:
 
 The default installation location is `C:\Program Files\Microsoft SQL Server Migration Assistant for MySQL`.
 
-## See Also
+## See also
 
 - [Migrating MySQL Databases to SQL Server - Azure SQL DB](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  

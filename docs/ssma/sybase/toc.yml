@@ -10,7 +10,7 @@
   href: legal-notice-ssma-for-sybase.md
 - name: What's New in SSMA
   href: what-s-new-in-ssma-for-sybase-sybasetosql.md
-- name: Installing SSMA for Sybase Client
+- name: Installing SSMA for Sybase client
   href: installing-ssma-for-sybase-client-sybasetosql.md
 - name: New GUI Features in SSMA
   href: new-gui-features-in-ssma-for-sybase-sybasetosql.md
@@ -74,7 +74,7 @@
   href: troubleshooting-sybasetosql.md
 - name: Mapping Sybase ASE & SQL Server Data Types
   href: mapping-sybase-ase-and-sql-server-data-types-sybasetosql.md
-- name: Installing SSMA Components on SQL Server
+- name: Installing SSMA components on SQL Server
   href: installing-ssma-components-on-sql-server-sybasetosql.md
 - name: Migrating Sybase ASE Data into Azure SQL DB
   href: migrating-sybase-ase-data-into-sql-server-azure-sql-db-sybasetosql.md

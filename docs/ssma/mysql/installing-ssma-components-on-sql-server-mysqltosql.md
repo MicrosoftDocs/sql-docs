@@ -1,5 +1,5 @@
 ---
-title: "Installing SSMA Components on SQL Server (MySQLToSql) | Microsoft Docs"
+title: "Installing SSMA components on SQL Server (MySQLToSql) | Microsoft Docs"
 description: Install components on the server that runs SQL Server to support MySQL database conversion with SSMA, including the SSMA extension pack and MySQL providers.
 ms.prod: sql
 ms.custom: ""
@@ -14,11 +14,11 @@ author: "nahk-ivanov"
 ms.author: "alexiva"
 ---
 
-# Installing SSMA Components on SQL Server (MySQLToSql)
+# Installing SSMA components on SQL Server (MySQLToSql)
 
 In addition to installing SSMA, you must also install components on the computer that is running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These components include the SSMA extension pack, which supports data migration, and MySQL providers to enable server-to-server connectivity.
 
-## SSMA for MySQL Extension Pack
+## SSMA for MySQL extension pack
 
 The SSMA extension pack adds a database, **sysdb**, to the specified instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This database contains the tables and stored procedures that are required to migrate data.
 
@@ -36,7 +36,7 @@ Before you install the SSMA for MySQL server components on [!INCLUDE[ssNoVersion
   > [!NOTE]
   > If the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service is running, but you still do not see a list of instances in Setup, you must unblock UDP port 1434. You can use Windows Firewall to temporarily unblock the port, or you can temporarily disable Windows Firewall. You might also have to temporarily disable antivirus software. Make sure to enable firewalls and antivirus software after installation.
 
-### Installing the Extension Pack
+### Installing the extension pack
 
 You can install the extension pack any time before you migrate data to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -71,7 +71,7 @@ To install the extension pack:
 
 12. To install the utilities to another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Yes**, and then click **Next**. Or, to exit the wizard, click **No**.
 
-## See Also
+## See also
 
 - [Installing SSMA for MySQL Client](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)
 - [Migrating MySQL Databases to SQL Server - Azure SQL DB](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)

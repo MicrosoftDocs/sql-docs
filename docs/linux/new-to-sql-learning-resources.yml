@@ -1,0 +1,114 @@
+### YamlMime:Landing
+
+title: "New to SQL Server: Learning resources"
+summary: Tutorials, quickstarts, and other educational resources meant to teach you to work with SQL Server on Linux for users who are familiar with Linux. 
+
+metadata:
+  title: Educational SQL resources 
+  description: A collection of resources meant to teach you to use SQL Server on Linux for Linux users. 
+  ms.prod: sql
+  ms.topic: landing-page
+  author: MashaMSFT
+  ms.author: mathoma
+  ms.date: 07/25/2020  
+
+landingContent:
+  - title: "Module 1: Basics of SQL Server"
+    linkLists:
+    - linkListType: learn
+      links:
+      - text: Tools
+        url: https://docs.microsoft.com/en-us/sql/tools/overview-sql-tools?view=sql-server-ver15      
+      - text: What is a database? 
+        url: https://docs.microsoft.com/en-us/sql/relational-databases/databases/databases?view=sql-server-ver15
+      - text: System databases
+        url: https://docs.microsoft.com/en-us/sql/relational-databases/databases/system-databases?view=sql-server-ver15
+      - text: Database files
+        url: https://docs.microsoft.com/en-us/sql/relational-databases/databases/database-files-and-filegroups?view=sql-server-ver15
+      - text: What is a table? 
+        url: https://docs.microsoft.com/en-us/sql/relational-databases/tables/tables?view=sql-server-ver15
+      - text: Indexes
+        url: https://docs.microsoft.com/en-us/sql/relational-databases/indexes/indexes?view=sql-server-ver15
+
+
+  - title: "Module 2: Plan SQL Server on Linux"
+    linkLists:
+    - linkListType: learn
+      links:
+      - text: Editions and features
+        url: 
+      - text: Supported platforms
+        url: 
+      - text: Frequently asked questions 
+        url: 
+
+  - title: "Module 3: Install & connect"
+    linkLists:
+    - linkListType: learn
+      links:
+      - text: Redhat
+        url: 
+      - text: SUSE
+        url: 
+      - text: Ubuntu
+        url: 
+      - text: Azure Data Studio (Tool)
+        url: 
+      - text: Write basic Transact-SQL (T-SQL)
+        url: 
+      - text: Channel 9 resources
+        url: 
+
+  - title: "Module 4: Configure SQL Server on Linux"
+    linkLists:
+    - linkListType: learn
+      links:
+      - text: Change default port
+        url: 
+      - text: Set default paths
+        url: 
+      - text: Set trace flags
+        url: 
+      - text: Join domain
+        url: 
+      - text: Load sample data 
+        url: 
+      - text: Write basic Transact-SQL (T-SQL)
+        url: 
+      - text: Write basic Transact-SQL (T-SQL)
+        url:        
+
+
+  - title: "Module 5: Configure business con"
+    linkLists:
+    - linkListType: learn
+      links:
+      - text: 
+        url: 
+      - text: 
+        url: 
+      - text: 
+        url: 
+      - text: 
+        url: 
+      - text: 
+        url: 
+      - text: 
+        url: 
+
+  - title: "Module 2: Planning SQL Server on Linux"
+    linkLists:
+    - linkListType: learn
+      links:
+      - text: 
+        url: 
+      - text: 
+        url: 
+      - text: 
+        url: 
+      - text: 
+        url: 
+      - text: 
+        url: 
+      - text: 
+        url: 

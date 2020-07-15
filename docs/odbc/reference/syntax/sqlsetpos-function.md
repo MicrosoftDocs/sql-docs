@@ -65,7 +65,7 @@ SQLRETURN SQLSetPos(
   
  For more information, see "Comments."  
   
- **Returns**  
+## Returns  
   
  SQL_SUCCESS, SQL_SUCCESS_WITH_INFO, SQL_NEED_DATA, SQL_STILL_EXECUTING, SQL_ERROR, or SQL_INVALID_HANDLE.  
   

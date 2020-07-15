@@ -25,10 +25,12 @@ ms.assetid: a3d55df7-b4e4-43f3-a14b-056cba36ab98
 author: "MikeRayMSFT"
 ms.author: "mikeray"
 ---
+
 # CREATE AVAILABILITY GROUP (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Creates a new availability group, if the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is enabled for the [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature.  
+Creates a new availability group, if the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is enabled for the [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] feature.  
   
 > [!IMPORTANT]  
 >  Execute CREATE AVAILABILITY GROUP on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that you intend to use as the initial primary replica of your new availability group. This server instance must reside on a Windows Server Failover Clustering (WSFC) node.  
@@ -107,11 +109,14 @@ CREATE AVAILABILITY GROUP group_name
   
 ```  
   
-## Arguments  
- *group_name*  
- Specifies the name of the new availability group. *group_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][identifier](../../relational-databases/databases/database-identifiers.md), and it must be unique across all availability groups in the WSFC cluster. The maximum length for an availability group name is 128 characters.  
-  
- AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY | SECONDARY_ONLY| SECONDARY | NONE }  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+
+*group_name*  
+Specifies the name of the new availability group. *group_name* must be a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][identifier](../../relational-databases/databases/database-identifiers.md), and it must be unique across all availability groups in the WSFC cluster. The maximum length for an availability group name is 128 characters.  
+
+AUTOMATED_BACKUP_PREFERENCE **=** { PRIMARY \| SECONDARY_ONLY \| SECONDARY \| NONE }  
  Specifies a preference about how a backup job should evaluate the primary replica when choosing where to perform backups. You can script a given backup job to take the automated backup preference into account. It is important to understand that the preference is not enforced by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], so it has no impact on ad-hoc backups.  
   
  The supported values are as follows:  
@@ -137,7 +142,7 @@ CREATE AVAILABILITY GROUP group_name
 > [!NOTE]  
 >  To view the automated backup preference of an existing availability group, select the **automated_backup_preference** or **automated_backup_preference_desc** column of the [sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md) catalog view. Additionally, [sys.fn_hadr_backup_is_preferred_replica  &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql.md) can be used to determine the preferred backup replica.  This function returns 1 for at least one of the replicas, even when `AUTOMATED_BACKUP_PREFERENCE = NONE`.  
   
- FAILURE_CONDITION_LEVEL **=** { 1 | 2 | **3** | 4 | 5 }  
+ FAILURE_CONDITION_LEVEL **=** { 1 \| 2 \| **3** \| 4 \| 5 }  
  Specifies what failure conditions trigger an automatic failover for this availability group. FAILURE_CONDITION_LEVEL is set at the group level but is relevant only on availability replicas that are configured for synchronous-commit availability mode (AVAILABILITY_MODE **=** SYNCHRONOUS_COMMIT). Furthermore, failure conditions can trigger an automatic failover only if both the primary and secondary replicas are configured for automatic failover mode (FAILOVER_MODE **=** AUTOMATIC) and the secondary replica is currently synchronized with the primary replica.  
   
  The failure-condition levels (1-5) range from the least restrictive, level 1, to the most restrictive, level 5. A given condition level encompasses all the less restrictive levels. Thus, the strictest condition level, 5, includes the four less restrictive condition levels (1-4), level 4 includes levels 1-3, and so forth. The following table describes the failure-condition that corresponds to each level.  

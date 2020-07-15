@@ -3,8 +3,7 @@ title: Convert R and SQL data types
 description: Review the implicit and explicit data type conversions between R and SQL Server in data science and machine learning solutions.
 ms.prod: sql
 ms.technology: machine-learning-services
-
-ms.date: 08/08/2019
+ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -39,7 +38,7 @@ The following table shows the changes in data types and values when data from [!
 |**bigint**|`numeric`|**float**||
 |**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Only allowed as input parameter and output|
 |**bit**|`logical`|**bit**||
-|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
+|**char(n)**<br /><br /> n <= 8000|`factor`|**varchar(max)**||
 |**datetime**|`POSIXct`|**datetime**|Represented as GMT|
 |**date**|`POSIXct`|**datetime**|Represented as GMT|
 |**decimal(p,s)**|`numeric`|**float**||
@@ -55,8 +54,7 @@ The following table shows the changes in data types and values when data from [!
 |**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Only allowed as input parameter and output|
 |**varbinary(max)**|`raw`|**varbinary(max)**|Only allowed as input parameter and output|
-|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
-
+|**varchar(n)**<br /><br /> n <= 8000|`factor`|**varchar(max)**||
 
 ## Data types not supported by R
 

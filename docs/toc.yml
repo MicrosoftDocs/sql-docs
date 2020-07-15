@@ -9837,9 +9837,9 @@
       href: linux/quickstart-install-connect-clouds.md
   - name: Tutorials
     items:
-    - name: New to SQL Server
+    - name: New to SQL Server docs
       href: linux/new-to-sql-learning-resources.yml
-    - name: New to Linux
+    - name: New to Linux docs
       href: linux/new-to-linux-learning-resources.yml
     - name: Migrate from Windows
       href: linux/sql-server-linux-migrate-restore-database.md

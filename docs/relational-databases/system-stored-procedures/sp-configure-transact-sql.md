@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlal
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server  
   
 sp_configure [ [ @configname = ] 'option_name'   

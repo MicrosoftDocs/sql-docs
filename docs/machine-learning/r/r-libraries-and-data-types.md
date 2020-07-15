@@ -35,17 +35,17 @@ The following table shows the changes in data types and values when data from [!
 
 |SQL type|R class|RESULT SET type|Comments|
 |-|-|-|-|
-|**bigint**|`numeric`|**float**||
+|**bigint**|`numeric`|**float**|Executing an R script with `sp_execute_external_scripts` allows bigint data type as input data. However, because they are converted to float internally, it suffers a precision loss with values that are very high or have decimal point values. R only support up to 53-bit integers and then it will start to have precision loss.|
 |**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Only allowed as input parameter and output|
 |**bit**|`logical`|**bit**||
 |**char(n)**<br /><br /> n <= 8000|`factor`|**varchar(max)**||
 |**datetime**|`POSIXct`|**datetime**|Represented as GMT|
 |**date**|`POSIXct`|**datetime**|Represented as GMT|
-|**decimal(p,s)**|`numeric`|**float**||
+|**decimal(p,s)**|`numeric`|**float**|Executing an R script with `sp_execute_external_scripts` allows decimal data type as input data. However, because they are converted to float internally, it suffers a precision loss with values that are very high or have decimal point values. `sp_execute_external_scripts` with an R script does not support the full range of the data type and would alter the last few decimal digits especially those with fraction.|
 |**float**|`numeric`|**float**||
 |**int**|`integer`|**int**||
-|**money**|`numeric`|**float**||
-|**numeric(p,s)**|`numeric`|**float**||
+|**money**|`numeric`|**float**|Executing an R script with `sp_execute_external_scripts` allows money data type as input data. However, because they are converted to float internally, it suffers a precision loss with values that are very high or have decimal point values. Sometimes cent values would be imprecise and a warning would be issued: *Warning: unable to precisely represent cents values*.  |
+|**numeric(p,s)**|`numeric`|**float**|Executing an R script with `sp_execute_external_scripts` allows numeric data type as input data. However, because they are converted to float internally, it suffers a precision loss with values that are very high or have decimal point values. `sp_execute_external_scripts` with an R script does not support the full range of the data type and would alter the last few decimal digits especially those with fraction.|
 |**real**|`numeric`|**float**||
 |**smalldatetime**|`POSIXct`|**datetime**|Represented as GMT|
 |**smallint**|`integer`|**int**||

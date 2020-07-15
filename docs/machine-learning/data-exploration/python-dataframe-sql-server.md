@@ -110,14 +110,13 @@ DepartmentID,Name,GroupName,
 
 ## Connect to SQL using Python
 
-1. Edit the connection string variables 'server','database','username' and 'password' to connect to SQL.
+1. Edit the connection string variables 'server','database','username' and 'password' to connect to SQL database.
  
 2. Edit path for CSV file.
  
 ## Load dataframe from CSV file
 
 Use the Python `pandas` package to create a dataframe and load the CSV file. Connect to SQL to load dataframe into the new SQL table, HumanResources.DepartmentTest.
-Edit the connection string variables: 'server', 'database', 'username', and 'password' to connect to SQL.
 
 To create a new notebook:
 1. In Azure Data Studio, select **File**, select **New Notebook**.

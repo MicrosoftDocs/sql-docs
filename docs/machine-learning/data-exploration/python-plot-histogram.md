@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 # Plot histograms in Python 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-This article describes how to plot data using the Python package [pandas'.hist()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.hist.html). A SQL Server database is used as the source to visualize the histogram intervals that have consecutive, non-overlapping data values.
+This article describes how to plot data using the Python package [pandas'.hist()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.hist.html). A SQL database is the source used to visualize the histogram data intervals that have consecutive, non-overlapping values.
 
 ## Prerequisites:
 
@@ -72,7 +72,7 @@ As an alternative, you can open a **Command Prompt**, change to the installation
 ## Plot histogram 
 
 The distributed data displayed in the histogram is based on a SQL query from AdventureWorksDW. The histogram visualizes data and the frequency of data values. 
-Edit the connection string variables: 'server', 'database', 'username', and 'password' to connect to SQL Server.
+Edit the connection string variables: 'server', 'database', 'username', and 'password' to connect to SQL database.
    
 To create a new notebook:
 1. In Azure Data Studio, select **File**, select **New Notebook**.

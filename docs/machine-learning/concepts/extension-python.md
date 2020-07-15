@@ -1,22 +1,26 @@
 ---
 title: Python language extension
-description: Learn about Python code execution and built-in Python libraries in SQL Server Machine Learning Services.
+description: Learn about the Python extension for running external Python scripts with SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-
-ms.date: 11/04/2019
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Python language extension in SQL Server
+# Python language extension in SQL Server Machine Learning Services
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-The Python extension is part of the SQL Server Machine Learning Services add-on to the relational database engine. It adds a Python execution environment, Anaconda distribution with the Python 3.5 runtime and interpreter, standard libraries and tools, and the Microsoft product libraries for Python: [revoscalepy](../python/ref-py-revoscalepy.md) for analytics at scale and [microsoftml](../python/ref-py-microsoftml.md) for machine learning algorithms. 
+This article describes the Python extension for running external Python scripts with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). The extension adds:
 
-Python integration is installed as [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
+- A Python execution environment
+- Anaconda distribution with the Python 3.5 runtime and interpreter
+- Standard libraries and tools
+- Microsoft Python packages:
+  - [revoscalepy](../python/ref-py-revoscalepy.md) for analytics at scale.
+  - [microsoftml](../python/ref-py-microsoftml.md) for machine learning algorithms.
 
 Installation of the Python 3.5 runtime and interpreter ensures near-complete compatibility with standard Python solutions. Python runs in a separate process from SQL Server, to guarantee that database operations are not compromised.
 

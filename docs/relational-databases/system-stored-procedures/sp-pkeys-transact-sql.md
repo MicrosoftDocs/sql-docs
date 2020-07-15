@@ -85,7 +85,7 @@ EXEC sp_pkeys @table_name = N'Department'
 ```sql  
 -- Uses AdventureWorks  
   
-EXEC sp_pkeys @table_name = N'DimAccount;  
+EXEC sp_pkeys @table_name = N'DimAccount';  
 ```  
   
 ## See Also  

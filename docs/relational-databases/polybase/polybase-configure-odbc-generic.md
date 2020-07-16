@@ -114,7 +114,7 @@ The following Transact-SQL commands are used in this section:
      ;
    ```
 
-> [!NOTE]
+   > [!NOTE]
    > Note you can re-use the dependent objects for all external tables using this external data source.
 
 1. **Optional:** Create statistics on an external table.

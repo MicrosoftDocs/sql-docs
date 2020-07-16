@@ -223,7 +223,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |SQL Server change tracking|Yes|Yes|Yes|Yes|Yes| 
 |Transactional replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|   
 |Transactional replication to Azure|Yes|Yes|No|No|No|   
-|Transactional replication updateable subscription|Yes|No|No|No|No|  
+|Transactional replication updateable subscription|Yes|Yes|No|No|No|  
   
 ##  <a name="SSMS"></a> Management Tools  
   

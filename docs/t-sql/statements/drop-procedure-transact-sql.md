@@ -24,11 +24,10 @@ helpviewer_keywords:
 ms.assetid: 1c2d7235-7b9b-4336-8f17-429e7d82c2c3
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP PROCEDURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Removes one or more stored procedures or procedure groups from the current database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -36,13 +35,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```sql  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP { PROC | PROCEDURE } [ IF EXISTS ] { [ schema_name. ] procedure } [ ,...n ]  
 ```  
   
-```sql  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }  

@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: bec845a1-d10c-4d45-9acf-0a302adfee47
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create a Cube using a Data Source View
   Use this method of building a new cube if you intend to use an existing data source view. With this method, you specify the data source view and select fact and dimension tables that you want to use in the data source view. You then choose the dimensions and measures that you want to include in the cube.  

@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.contentviewer.f1"
 ms.assetid: 751b4393-f6fd-48c1-bcef-bdca589ce34c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Microsoft Generic Content Tree Viewer (Data Mining)
   The **Microsoft Generic Content Tree Viewer** displays detailed information about the contents of a data mining mode in a standardized HTML table format. This view is useful because it exposes the underlying structure of the model, as well details about coefficients, the distribution of values, and much more.  

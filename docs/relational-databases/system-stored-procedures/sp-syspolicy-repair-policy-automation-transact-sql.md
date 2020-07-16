@@ -17,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: d81682e3-2444-4d66-ad00-1cf628632e8b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_syspolicy_repair_policy_automation (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Repairs policy automation in Policy-Based Management. For example, you can use this stored procedure to repair triggers and jobs that are associated with policies that are configured to use "On schedule" or "On change" evaluation modes.  
   

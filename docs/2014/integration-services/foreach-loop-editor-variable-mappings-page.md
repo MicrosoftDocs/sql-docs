@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.foreachloopcontainer.mapping.f1"
 ms.assetid: aa847b87-f391-48a5-9849-eeda2d6b00b9
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Foreach Loop Editor (Variable Mappings Page)
   Use the **Variables Mappings** page of the **Foreach Loop Editor** dialog box to map variables to the collection value. The value of the variable is updated with the collection values on each iteration of the loop.  

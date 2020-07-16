@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental load [Integration Services],processing data"
 ms.assetid: 13a84d21-2623-4efe-b442-4125a7a2d690
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Process Inserts, Updates, and Deletes
   In the data flow of an Integration Services package that performs an incremental load of change data, the second task is to separate inserts, updates, and deletes. Then, you can use appropriate commands to apply them to the destination.  

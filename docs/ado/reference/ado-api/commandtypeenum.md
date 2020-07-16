@@ -13,9 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "CommandTypeEnum enumeration [ADO]"
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # CommandTypeEnum
 Specifies how a command argument should be interpreted.  

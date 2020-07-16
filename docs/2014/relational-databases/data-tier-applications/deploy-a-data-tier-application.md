@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: c117af35-aa53-44a5-8034-fa8715dc735f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Deploy a Data-tier Application
   You can deploy a data-tier application (DAC) from a DAC package to an existing instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] or [!INCLUDE[ssSDS](../../includes/sssds-md.md)] by using a wizard or a PowerShell script. The deployment process registers a DAC instance by storing the DAC definition in the **msdb** system database (**master** in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]), creates a database, and then populates the database with all the database objects defined in the DAC.  
@@ -198,10 +197,10 @@ manager: craigg
 ### Example (PowerShell)  
  The following example deploys a DAC named MyApplication on a default instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], using a DAC definition from a MyApplication.dacpac package.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -229,5 +228,3 @@ $fileStream.Close()
  [Data-tier Applications](data-tier-applications.md)   
  [Extract a DAC From a Database](extract-a-dac-from-a-database.md)   
  [Database Identifiers](../databases/database-identifiers.md)  
-  
-  

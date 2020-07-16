@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "custom foreach enumerators [Integration Services], creating"
 ms.assetid: 050e8455-2ed0-4b6d-b3ea-4e80e6c28487
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Creating a Custom Foreach Enumerator
   The steps involved in creating a custom foreach enumerator are similar to the steps for creating any other custom object for [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  

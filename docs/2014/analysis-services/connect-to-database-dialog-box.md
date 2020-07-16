@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.connecttodatabase.f1"
 ms.assetid: e2c62d4b-27d9-4ee0-9d90-a6dd4ca2906d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect To Database Dialog Box
   Use the **Connect To Database** dialog box to connect to an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database.  

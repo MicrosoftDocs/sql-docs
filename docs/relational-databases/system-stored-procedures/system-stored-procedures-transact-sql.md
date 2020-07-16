@@ -21,11 +21,10 @@ helpviewer_keywords:
 ms.assetid: a5c4d5b8-5a24-4a2d-99b4-d003b546ee3a
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System Stored Procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], many administrative and informational activities can be performed by using system stored procedures. The system stored procedures are grouped into the categories shown in the following table.  
   

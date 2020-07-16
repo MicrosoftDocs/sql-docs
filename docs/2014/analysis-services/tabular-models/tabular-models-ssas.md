@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 80027288-c203-4667-a3e1-40fa572b4975
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Tabular Modeling (SSAS Tabular)
   Tabular models are in-memory databases in Analysis Services. Using state-of-the-art compression algorithms and multi-threaded query processor, the xVelocity in-memory analytics engine (VertiPaq) delivers fast access to tabular model objects and data by reporting client applications such as Microsoft Excel and Microsoft [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)].  

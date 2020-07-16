@@ -14,9 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "CursorLocation property [ADO]"
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # CursorLocation Property (ADO)
 Indicates the location of the cursor service.  

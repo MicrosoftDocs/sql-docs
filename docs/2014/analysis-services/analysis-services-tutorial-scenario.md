@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 2f5b1a42-b814-4d7d-b603-5383d9ac66b9
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Analysis Services Tutorial Scenario
   This tutorial is based on [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)], a fictitious company. [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] is a large, multinational manufacturing company that produces and distributes metal and composite bicycles to commercial markets in North America, Europe, and Asia. The headquarters for [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] is Bothell, Washington, where the company employs 500 workers. Additionally, [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] employs several regional sales teams throughout its market base.  
@@ -22,7 +20,7 @@ manager: craigg
 ## Current Analysis Environment  
  To support the data analysis needs of the sales and marketing teams and of senior management, the company currently takes transactional data from the [!INCLUDE[ssSampleDBnormal](../includes/sssampledbnormal-md.md)] database, and non-transactional information such as sales quotas from spreadsheets, and consolidates this information into the **AdventureWorksDW2012** relational data warehouse. However, the relational data warehouse presents the following challenges:  
   
--   Reports are static. Users have no way to interactively explore the data in the reports to obtain more detailed information, such as they could do with a [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel pivot table. Although the existing set of predefined reports is sufficient for many users, more advanced users need direct query access to the database for interactive queries and specialized reports. However, because of the complexity of the **AdventureWorksDW2012** database, too much time is needed for such users to master how to create effective queries.  
+-   Reports are static. Users have no way to interactively explore the data in the reports to obtain more detailed information, such as they could do with a [!INCLUDE[msCoName](../includes/msconame-md.md)] Office Excel pivot table. Although the existing set of predefined reports is sufficient for many users, more advanced users need direct query access to the database for interactive queries and specialized reports. However, because of the complexity of the **AdventureWorksDW2012** database, too much time is needed for such users to learn how to create effective queries.  
   
 -   Query performance is widely variable. For example, some queries return results very quickly, in only a few seconds, while other queries take several minutes to return.  
   

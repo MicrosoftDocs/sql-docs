@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Install SQL Server 2014 Using SysPrep
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep related setup actions can be accessed through the Installation Center. The **Advanced** Page of the **Installation Center** has two options - **Image preparation of a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** and **Image completion of a prepared stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. The [Prepare](#prepare) and [Complete](#complete) sections describe the installation process in detail. For more information, see [Considerations for Installing SQL Server Using SysPrep](considerations-for-installing-sql-server-using-sysprep.md).  
@@ -42,9 +41,9 @@ manager: craigg
   
 -   [Remove features from a prepared instance of SQL Server](#RemoveFeatures)  
   
--   [Uninstalling a Prepared Instance](install-sql-server-using-sysprep.md#uninstall)  
+-   [Uninstalling a Prepared Instance](install-sql-server-using-sysprep.md#Uninstall)  
   
--   [Modifying or Uninstalling a Completed Instance of SQL Server.](install-sql-server-using-sysprep.md#bk_modifying_uninstalling)  
+-   [Modifying or Uninstalling a Completed Instance of SQL Server.](install-sql-server-using-sysprep.md#bk_Modifying_Uninstalling)  
   
 ##  <a name="sysprep"></a> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep Cluster Support  
  Beginning in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], SysPrep supports clustered [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances in command line installations. For more information, see [What is Sysprep?](https://msdn.microsoft.com/library/cc721940\(v=WS.10\).aspx).  
@@ -319,5 +318,3 @@ manager: craigg
 ## See Also  
  [What is Windows SysPrep](https://go.microsoft.com/fwlink/?LinkId=143546)   
  [How does Windows SysPrepWork](https://go.microsoft.com/fwlink/?LinkId=143547)  
-  
-  

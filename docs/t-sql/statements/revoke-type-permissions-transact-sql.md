@@ -14,12 +14,11 @@ helpviewer_keywords:
   - "permissions [SQL Server], types"
   - "type permissions [SQL Server]"
 ms.assetid: 3969c7e9-ca10-4c67-971b-25d2dfccf650
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # REVOKE Type Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Revokes permissions on a type.  
   
@@ -27,7 +26,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON TYPE :: [ schema_name ]. type_name   
@@ -78,27 +77,27 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
  Specifies a database role.  
   
  *Application_role*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)]
   
  Specifies an application role.  
   
  *Database_user_mapped_to_Windows_User*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
  Specifies a database user mapped to a Windows user.  
   
  *Database_user_mapped_to_Windows_Group*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
  Specifies a database user mapped to a Windows group.  
   
  *Database_user_mapped_to_certificate*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
  Specifies a database user mapped to a certificate.  
   
  *Database_user_mapped_to_asymmetric_key*  
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
  Specifies a database user mapped to an asymmetric key.  
   

@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.cacheconnection.f1"
 ms.assetid: 0d8f9324-0c35-4eea-b06d-da3cc2426d2c
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Cache Connection Manager Editor
   The Cache connection manager reads a reference dataset from the Cache transform or from a cache file (.caw), and can save the data to a cache file. The data is always stored in memory.  

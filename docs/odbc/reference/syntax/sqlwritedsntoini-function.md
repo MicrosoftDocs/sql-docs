@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLWriteDSNToIni [ODBC]"
 ms.assetid: dc7018b2-18d4-4657-96d0-086479a47474
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLWriteDSNToIni Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLWriteDSNToIni(  
      LPCSTR   lpszDSN,  

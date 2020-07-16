@@ -1,5 +1,6 @@
 ---
 title: "Surface Area Configuration | Microsoft Docs"
+description: Learn how to change feature defaults for SQL Server installation and selectively enable or disable features of a running instance of SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: f741169c-1453-4ad2-830b-bf2be27d712f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Surface Area Configuration
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In the default configuration of new installations of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], many features are not enabled. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] selectively installs and starts only key services and features, to minimize the number of features that can be attacked by a malicious user. A system administrator can change these defaults at installation time and also selectively enable or disable features of a running instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Additionally, some components may not be available when connecting from other computers until protocols are configured.  
   
 > [!NOTE]  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Income property"
@@ -24,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 580cf0aa-7425-4d48-aa8d-128f5b488fcd
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Filestore Properties
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the filestore server properties listed in the following tables. These are all advanced properties that you should not change, except under the guidance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] support. For more information about additional server properties and how to set them, see [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  

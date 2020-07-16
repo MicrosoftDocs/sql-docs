@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor Report Viewer"
@@ -17,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 7f47c9b3-88d3-43d6-837e-f157b49a55ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Running Upgrade Advisor (User Interface)
   You can run Upgrade Advisor to analyze local or remote components during upgrade planning. Upgrade Advisor produces a report for each component and instance that is analyzed.  

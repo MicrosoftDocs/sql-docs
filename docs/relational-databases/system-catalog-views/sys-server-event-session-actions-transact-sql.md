@@ -18,12 +18,11 @@ helpviewer_keywords:
   - "sys.server_event_session_actions catalog view"
   - "xe"
 ms.assetid: 1d8c604e-4361-4846-8661-14cfd1c44f63
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.server_event_session_actions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each action on each event of an event session.  
   

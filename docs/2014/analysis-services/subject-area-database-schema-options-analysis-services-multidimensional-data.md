@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.schemagenwizard.subjectareaschemaopts.f1"
 ms.assetid: 4c109bb8-e19d-412b-908f-bfdd7f872439
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Subject Area Database Schema Options (Schema Generation Wizard) (Analysis Services - Multidimensional Data)
   Use the **Subject Area Database Schema Options** page to control how the schema is generated, as well as to define how data is preserved.  

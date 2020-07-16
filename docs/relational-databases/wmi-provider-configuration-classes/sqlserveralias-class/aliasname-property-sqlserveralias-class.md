@@ -1,6 +1,6 @@
 ---
-title: "AliasName Property (SqlServerAlias Class) | Microsoft Docs"
-ms.custom: ""
+title: "AliasName Property (SqlServerAlias)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -16,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 5c4c88f3-c1cf-471a-9d91-f47657933e2f
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # AliasName Property (SqlServerAlias Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the name of the server connection alias.  
   
 ## Syntax  

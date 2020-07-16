@@ -1,5 +1,6 @@
 ---
 title: "Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
+description: "The Microsoft Drivers for PHP for SQL Server enable integration with SQL Server for PHP applications via PHP extensions."
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql
@@ -8,9 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9e78bbf3-9e9a-426d-99d3-6fa2cb33ff6b
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # Microsoft Drivers for PHP for SQL Server
 
@@ -34,7 +34,7 @@ The Microsoft Drivers for PHP for SQL Server enable integration with SQL Server 
 * [Support Resources for the Microsoft Drivers for PHP for SQL Server](support-resources-for-the-php-sql-driver.md)
   
 ## Download  
-* ![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download drivers for PHP for SQL](download-drivers-php-sql-server.md)
+* ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[To download drivers for PHP for SQL](download-drivers-php-sql-server.md)
   
 ## Samples  
 * [Code Samples for the Microsoft Drivers for PHP for SQL Server](code-samples-for-php-sql-driver.md)

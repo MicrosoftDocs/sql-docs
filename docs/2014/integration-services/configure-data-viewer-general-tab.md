@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.configuredataviewer.general.f1"
 helpviewer_keywords: 
   - "Configure Data Viewer dialog box"
 ms.assetid: 7f60ff18-9ad6-4169-af62-edcb04525b0e
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Configure Data Viewer (General Tab)
   A data viewer displays the data as it moves through the path that connects two data flow components during package execution.  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "properties [Analysis Services], attributes"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 7f83d1cb-4732-424f-adc5-2449c1dd1008
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Dimension Attribute Properties Reference
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], there are many properties that determine how dimensions and dimension attributes function. The following table lists and describes each of these attribute properties.  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.ssms.isenvprop.variables.f1"
@@ -13,9 +12,8 @@ f1_keywords:
   - "sql12.ssis.ssms.isenvprop.permissions.f1"
   - "sql12.ssis.ssms.isenvprop.general.f1"
 ms.assetid: b1cbb697-713f-48e4-b234-b23724d87451
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Create and Map a Server Environment
   You create a server environment to specify runtime values for packages contained in a project you've deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. You can then map the environment variables to parameters, for a specific package, for entry-point packages, or for all the packages in a given project. An entry-point package is typically a parent package that executes a child package.  

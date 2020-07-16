@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: daac41fe-7d0b-4f14-84c2-62952ad8cbfa
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrade a SQL Server Failover Cluster
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] supports upgrade of the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] and [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] from [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../../includes/sskilimanjaro-md.md)], and [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] failover clusters separately on all failover cluster nodes.  
@@ -34,7 +33,7 @@ manager: craigg
   
     -   You cannot downgrade a failover cluster node to a stand-alone instance.  
   
--   For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](always-on-failover-cluster-instances-sql-server.md).  
+-   For more information, see [AlwaysOn Failover Cluster Instances (SQL Server)](always-on-failover-cluster-instances-sql-server.md).  
   
 ## Upgrading a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Multi-Subnet Failover Cluster  
  You cannot directly upgrade a non-multi-subnet [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster to a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster. For more information, see [Upgrade a SQL Server Failover Cluster Instance &#40;Setup&#41;](upgrade-a-sql-server-failover-cluster-instance-setup.md).  

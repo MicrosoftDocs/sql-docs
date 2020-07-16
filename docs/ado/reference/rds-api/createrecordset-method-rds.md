@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "CreateRecordset method [RDS]"
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # CreateRecordset Method (RDS)
 Creates an empty, disconnected [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

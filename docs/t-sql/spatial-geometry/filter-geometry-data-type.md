@@ -16,12 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Filter method"
 ms.assetid: 3d629a39-157e-4159-a3ca-a3c2e0ed4160
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # Filter (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 A method that offers a fast, index-only intersection method to determine if a **geometry** instance intersects another **geometry** instance, assuming an index is available.
   

@@ -1,5 +1,6 @@
 ---
 title: "Choose an Encryption Algorithm | Microsoft Docs"
+description: Use this guidance to choose an encryption algorithm to help secure an instance of SQL Server, which supports several common algorithms.
 ms.custom: ""
 ms.date: "08/14/2018"
 ms.prod: sql
@@ -13,13 +14,12 @@ helpviewer_keywords:
   - "security [SQL Server], encryption"
   - "algorithms [SQL Server encryption]"
 ms.assetid: 8227028c-a9c9-489d-bd27-fbf8242634ae
-author: aliceku
-ms.author: aliceku
-manager: craigg
+author: jaszymas
+ms.author: jaszymas
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Choose an Encryption Algorithm
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Encryption is one of several defenses-in-depth that are available to the administrator who wants to secure an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
  Encryption algorithms define data transformations that cannot be easily reversed by unauthorized users. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] allows administrators and developers to choose from among several algorithms, including DES, Triple DES, TRIPLE_DES_3KEY, RC2, RC4, 128-bit RC4, DESX, 128-bit AES, 192-bit AES, and 256-bit AES.  
@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 -   Long, complex passwords are stronger than short passwords.  
 
--   Symmetric encryption is generally recommended when they key is only stored locally, assymmetric encryption is recommended when keys need to be shared across the wire.
+-   Symmetric encryption is generally recommended when they key is only stored locally, asymmetric encryption is recommended when keys need to be shared across the wire.
   
 -   If you are encrypting lots of data, you should encrypt the data using a symmetric key, and encrypt the symmetric key with an asymmetric key.  
   

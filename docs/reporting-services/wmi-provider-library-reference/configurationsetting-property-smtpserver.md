@@ -2,7 +2,7 @@
 title: "SMTPServer Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "SMTPServer property"
 ms.assetid: 8bcceeba-e1a0-44ef-bda1-600c6925e1db
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Property - SMTPServer
   Gets the SMTP server property from the report server configuration file. Read-only.  

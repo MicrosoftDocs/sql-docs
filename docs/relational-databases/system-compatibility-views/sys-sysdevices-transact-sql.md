@@ -20,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: ac5bcaf4-8fb6-4855-8856-d7643f469361
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.sysdevices (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each disk backup file, tape backup file, and database file.  
   

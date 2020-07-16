@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Mining Model Viewer [Analysis Services], types"
 ms.assetid: 3e5fb89d-3ab8-4d2e-9926-feeb38c02d3f
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select a Mining Model and a Data Mining Viewer
   You can explore a mining model by using one of the viewers on the **Mining Model Viewer** tab of Data Mining Designer. You can easily switch between models, or change the viewer that is used.  

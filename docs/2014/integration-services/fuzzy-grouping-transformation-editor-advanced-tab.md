@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.fuzzygroupingtransformation.advanced.f1"
 helpviewer_keywords: 
   - "Fuzzy Grouping Transformation Editor"
 ms.assetid: dd820d75-b8a7-4515-aea4-3553ba5b442e
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Fuzzy Grouping Transformation Editor (Advanced Tab)
   Use the **Advanced** tab of the **Fuzzy Grouping Transformation Editor** dialog box to specify input and output columns, set similarity thresholds, and define delimiters.  

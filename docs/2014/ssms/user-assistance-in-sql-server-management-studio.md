@@ -1,7 +1,7 @@
 ---
 title: "User Assistance in SQL Server Management Studio | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/07/2017"
+ms.date: 11/25/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: ssms
@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3c33a474-e507-4712-86fe-ae40e8370319
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # User Assistance in SQL Server Management Studio
   User assistance is available in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] through the Help menu and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. The Help menu in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] offers several different routes to information about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. It also provides access to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] community and MSDN Online resources not previously available from within the Help environment. In addition, the Help environment is now configurable to launch either within the [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] environment or in an associated external window of its own.  
@@ -38,7 +37,7 @@ manager: craigg
   
      Stores user topic bookmarks for easy access later.  
   
- Help on Help ([!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer Help) links users to the documentation about the Help Viewer, but the topics are in a collection separate from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. For information about the Help Viewer, select **Help on Help** from the Help menu of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. For information about adding the Help on Help collection of topics to the Books Online collection, see [Add or Remove Product Documentation for SQL Server](../2014-toc/books-online-for-sql-server-2014.md).  
+ Help on Help ([!INCLUDE[msCoName](../includes/msconame-md.md)] Document Explorer Help) links users to the documentation about the Help Viewer, but the topics are in a collection separate from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. For information about the Help Viewer, select **Help on Help** from the Help menu of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Books Online. For information about adding the Help on Help collection of topics to the Books Online collection, see [Add or Remove Product Documentation for SQL Server](../2014-toc/index.yml).  
   
 ## MSDN Online and SQL Server Communities  
  Help in [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] also provides users ways to contact MSDN Online and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]-focused communities on the Web for information. You can:  

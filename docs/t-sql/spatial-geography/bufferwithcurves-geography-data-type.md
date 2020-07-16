@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "BufferWithCurves method (geography)"
 ms.assetid: abf0a11c-c99c-4faa-bf80-3ae8e04d7bfb
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # BufferWithCurves (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a **geography** instance that represents the set of all points whose distance from the calling **geography** instance is less than or equal to the *distance* parameter.  
   

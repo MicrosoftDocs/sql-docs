@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "time data type [SQL Server], UDTs"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 48f109af-b1d1-4f03-a7e3-8a0b05ed94e8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Remove UDT&#39;s named after the reserved DATE and TIME data types
   Upgrade Advisor detected a user-defined type (UDT) that is named after a term reserved for either the `date` or the `time` data types.  

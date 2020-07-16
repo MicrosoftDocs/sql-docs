@@ -3,14 +3,12 @@ title: "sys.pdw_health_component_groups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.prod_service: "pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual
 ms.assetid: 5ba27432-7a29-4420-b73d-def621c0b3ac
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.pdw_health_component_groups (Transact-SQL)

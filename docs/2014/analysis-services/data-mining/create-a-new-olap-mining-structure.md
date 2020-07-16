@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures [Analysis Services], OLAP"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 368f4273-a016-4748-bcb6-505a3e745af3
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create a New OLAP Mining Structure
   You can use the Data Mining Wizard in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to create a mining structure that uses data from a multidimensional model. Mining models that are based on OLAP cubes can use the column and values in fact tables, dimensions, and measure groups as attributes for analysis.  
@@ -98,7 +96,7 @@ manager: craigg
   
     -   **Filter Expression**: Type a value or expression to serve as the filter condition, or use the dropdown list to select a value from the list of members at the specified level of the hierarchy.  
   
-         For example, if you selected [Geography] as the dimension and [Region Country Name] as the hierarchy level, the dropdown list contains all the valid countries that you can use as a filter condition. You can make multiple selections. As a result, the data in the mining structure will be limited to cube data from these geographical areas.  
+         For example, if you selected [Geography] as the dimension and [Region Country Name] as the hierarchy level, the dropdown list contains all the valid countries/regions that you can use as a filter condition. You can make multiple selections. As a result, the data in the mining structure will be limited to cube data from these geographical areas.  
   
     -   **Parameters**: Ignore this check box. This dialog box supports multiple cube filtering scenarios and this option is not relevant to building a mining structure.  
   
@@ -126,5 +124,3 @@ manager: craigg
   
 ## See Also  
  [Mining Structure Tasks and How-tos](mining-structure-tasks-and-how-tos.md)  
-  
-  

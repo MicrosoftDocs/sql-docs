@@ -20,13 +20,12 @@ helpviewer_keywords:
   - "names [SQL Server], database users"
   - "database usernames [SQL Server]"
 ms.assetid: 82bbbd94-870c-4c43-9ed9-d9abc767a6be
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # USER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Allows a system-supplied value for the database user name of the current user to be inserted into a table when no default value is specified.  
   
@@ -39,7 +38,7 @@ USER
 ```  
   
 ## Return Types  
- **char**  
+ **nvarchar(128)**  
   
 ## Remarks  
  USER provides the same functionality as the USER_NAME system function.  

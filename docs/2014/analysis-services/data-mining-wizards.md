@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Data Mining Wizard"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: f949a5f0-d8f5-4da1-a9f8-200b918e29ff
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Mining Wizards
   [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides wizards for use in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

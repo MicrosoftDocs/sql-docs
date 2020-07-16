@@ -1,5 +1,6 @@
 ---
 title: "Example: Specifying the ELEMENT Directive | Microsoft Docs"
+description: View an example of how to specify the ELEMENT directive in an SQL query to generate element-centric XML.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -10,12 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ELEMENT directive"
 ms.assetid: 80dd5d1f-fa90-4f97-a186-8fa3f460a7f3
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Example: Specifying the ELEMENT Directive
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This retrieves employee information and generates element-centric XML as shown in the following:  
   
 ```  

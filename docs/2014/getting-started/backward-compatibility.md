@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Surface Area Configuration Tool"
@@ -23,9 +22,8 @@ helpviewer_keywords:
   - "compatibility [Reporting Services]"
   - "earlier versions [SQL Server], (See also backward compatibility)"
 ms.assetid: 15d9117e-e2fa-4985-99ea-66a117c1e9fd
-author: mightypen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Backward Compatibility
   The following sections contain backward compatibility information for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components. This content includes information about deprecated features, discontinued features, breaking changes, and behavior changes.  

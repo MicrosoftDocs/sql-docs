@@ -12,10 +12,9 @@ dev_langs:
 ms.assetid: cca96a8f-7737-42d2-bbcc-03d5f858dcc1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ALTER INDEX (Selective XML Indexes)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifies an existing selective XML index. The ALTER INDEX statement changes one or more of the following items:  
   
@@ -31,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 ALTER INDEX index_name  
     ON <table_object>   
     [WITH XMLNAMESPACES ( <xmlnamespace_list> )]  
@@ -39,7 +38,7 @@ ALTER INDEX index_name
     [WITH ( <index_options> )]  
   
 <table_object> ::=   
-{ [database_name. [schema_name ] . | schema_name. ] table_name }  
+{ database_name.schema_name.table_name | schema_name.table_name | table_name }  
 <promoted_node_path_action_list> ::=   
 <promoted_node_path_action_item> [, <promoted_node_path_action_list>]  
   

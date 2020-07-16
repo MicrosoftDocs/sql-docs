@@ -1,9 +1,15 @@
-- name: Azure Data Studio
-  href: what-is.md
-- name: Install
-  href: download.md
+- name: Azure Data Studio documentation
+  href: ../azure-data-studio/index.yml
+
+- name: Download Azure Data Studio
+  href: download-azure-data-studio.md
 - name: Release notes
-  href: release-notes.md
+  href: release-notes-azure-data-studio.md
+
+- name: Overview
+  items:
+  - name: Azure Data Studio
+    href: what-is.md
 - name: Quickstarts
   items:
   - name: Connect & query SQL Server
@@ -12,6 +18,8 @@
     href: quickstart-sql-database.md
   - name: Connect & query Azure SQL Data Warehouse
     href: quickstart-sql-dw.md
+  - name: Connect & query PostgreSQL
+    href: quickstart-postgres.md
 - name: Tutorials
   items:
   - name: T-SQL Editor
@@ -22,61 +30,111 @@
     href: tutorial-table-space-sql-server.md
   - name: Build a custom insight
     href: tutorial-build-custom-insight-sql-server.md
-  - name: Backup and restore
+  - name: Backup & restore
     href: tutorial-backup-restore-sql-server.md
-- name: How-to guides
+- name: Concepts
   items:
-  - name: Dashboards & insight widgets
-    href: insight-widgets.md
-  - name: Code snippets
-    href: code-snippets.md
+  - name: Extensions
+    items:
+    - name: Extensions
+      href: extensions.md
+    - name: Machine Learning extension
+      items:
+      - name: Machine Learning extension overview
+        href: machine-learning-extension.md
+      - name: Manage packages in database
+        href: machine-learning-extension-manage-packages.md
+      - name: Make predictions
+        href: machine-learning-extension-predictions.md
+      - name: Import and view models
+        href: machine-learning-extension-import-view-models.md
+    - name: PostgreSQL extension
+      href: postgres-extension.md
+    - name: Data Virtualization extension
+      href: data-virtualization-extension.md
+    - name: SQL Database Projects extension
+      items:
+      - name: SQL Database Projects extension overview
+        href: sql-database-project-extension.md
+      - name: Build and Publish a Project
+        href: sql-database-project-extension-build.md
+    - name: SQL Server Agent
+      href: sql-server-agent-extension.md
+    - name: SQL Server Central Management Servers extension
+      href: sql-server-cms-extension.md        
+    - name: SQL Server dacpac extension
+      href: sql-server-dacpac-extension.md
+    - name: SQL Server Import
+      href: sql-server-import-extension.md
+    - name: SQL Server Profiler
+      href: sql-server-profiler-extension.md
+    - name: Schema Compare extension
+      href: schema-compare-extension.md        
+    - name: PowerShell extension
+      href: powershell-extension.md        
+    - name: Managed Instance extension
+      href: azure-sql-managed-instance-extension.md        
+    - name: SandDance extension
+      href: sanddance-extension.md
+  - name: Extension Authoring
+    items:
+    - name: Extensibility overview
+      href: extensibility.md
+    - name: Extension authoring
+      href: extension-authoring.md
+    - name: Create an extension
+      href: tutorial-create-extension.md
+    - name: Extensibility APIs
+      href: extensibility-apis.md
   - name: Integrated terminal (PowerShell, Bash)
     href: integrated-terminal.md
   - name: Keyboard shortcuts
     href: keyboard-shortcuts.md
-  - name: Explorer Azure SQL resources
-    href: azure-resource-explorer.md
   - name: Server groups
     href: server-groups.md
   - name: Source control
     href: source-control.md
+- name: How-to guides
+  items:
+  - name: Notebooks
+    items:
+    - name: Notebooks overview
+      href: notebooks-guidance.md
+    - name: Use SQL Kernel
+      href: notebooks-tutorial-sql-kernel.md
+    - name: Use Python Kernel
+      href: notebooks-tutorial-python-kernel.md
+    - name: Kqlmagic
+      href: notebooks-kqlmagic.md
+    - name: Manage a notebook
+      href: notebooks-manage-sql-server.md
+  - name: Dashboards & insight widgets
+    href: insight-widgets.md
+  - name: Code snippets
+    href: code-snippets.md
+  - name: Explorer Azure SQL resources
+    href: azure-resource-explorer.md
+  - name: Usage data collection
+    href: usage-data-collection.md
   - name: Workspace & user settings
     href: settings.md
   - name: Windows authentication (Kerberos)
     href: enable-kerberos.md
   - name: Usage data collection
     href: usage-data-collection.md
-- name: Extensions
+- name: References
   items:
-  - name: Overview
-    href: extensions.md
-  - name: SQL Server 2019 (preview)
-    href: sql-server-2019-extension.md
-  - name: SQL Server Agent (preview)
-    href: sql-server-agent-extension.md
-  - name: SQL Server Import (preview)
-    href: sql-server-import-extension.md
-  - name: SQL Server Profiler (preview)
-    href: sql-server-profiler-extension.md
-- name: Extension Authoring
-  items:
-  - name: Extensibility overview
-    href: extensibility.md
-  - name: Extension authoring
-    href: extension-authoring.md
-  - name: Create an extension  
-    href: tutorial-create-extension.md
-  - name: Extensibility APIs
-    href: extensibility-apis.md
+  - name: SQL tools
+    href: ../tools/overview-sql-tools.md
+  - name: Azure Developer tools
+    href: https://docs.microsoft.com/azure/?product=developer-tools
 - name: Resources
   items:
-  - name: Transact-SQL Reference
-    href: ../t-sql/language-reference.md
-  - name: Azure Data Studio GitHub repo
+  - name: FAQ
+    href: faq.md
+  - name: Azure Data Studio GitHub repo >
     href: https://www.github.com/Microsoft/azuredatastudio
-  - name: SQL Server Blog
-    href: https://blogs.technet.microsoft.com/dataplatforminsider/
-- name: FAQ
-  href: faq.md
-- name: Report issues & make suggestions
-  href: https://github.com/microsoft/azuredatastudio/issues
+  - name: Report issues & make suggestions >
+    href: https://github.com/microsoft/azuredatastudio/issues
+  - name: SQL Server documentation >
+    href: ../sql-server/index.yml

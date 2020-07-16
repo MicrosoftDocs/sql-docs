@@ -13,11 +13,10 @@ helpviewer_keywords:
 ms.assetid: dcd97ac1-1c85-4142-9594-9182e62f6832
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Row Compression Implementation
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   This topic summarizes how [!INCLUDE[ssDE](../../includes/ssde-md.md)] implements row compression. This summary provides basic information to help you plan the storage space that you need for your data.  
   

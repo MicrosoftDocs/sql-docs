@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 42c896ee-e5ee-4017-b66e-31d1fe66d369
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create Drillthrough Queries using DMX
   For all models that support drillthrough, you can retrieve case data and structure data by creating a DMX query in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or any other client that supports DMX.  

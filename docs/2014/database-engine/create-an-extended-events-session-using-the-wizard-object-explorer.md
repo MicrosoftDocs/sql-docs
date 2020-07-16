@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "Sql12.ssms.XeWizard.Summary.f1"
@@ -31,7 +30,6 @@ helpviewer_keywords:
 ms.assetid: 80c0456f-17c0-41d8-b2aa-502a2f3bb6de
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Create an Extended Events Session Using the Wizard (Object Explorer)
   To help you select and capture events on your server, Extended Events includes a New Session Wizard that guides you through the steps to create an Extended Events session. The New Session Wizard exposes most of the Extended Events functionality. The [New Session dialog](../../2014/database-engine/create-an-extended-events-session-using-the-new-session-dialog.md) also lets you define an Extended Events session that captures, displays, and analyzes your data. The New Session dialog exposes all Extended Events functionality.  

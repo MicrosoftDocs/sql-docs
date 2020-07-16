@@ -4,16 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], getting assistance"
   - "F1 Help [SQL Server Database Engine]"
 ms.assetid: 2ed7a37f-4640-4379-84a1-e4e97335ef33
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Feature Reference (Database Engine)
   The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] includes several tools and applications that you can use to create, manage, and view database objects and data. In addition, there are tools that you can use to monitor and troubleshoot server and database performance and enable and disable features, services, and network protocols. This section provides specific topics describing the dialog boxes of these tools and applications.  

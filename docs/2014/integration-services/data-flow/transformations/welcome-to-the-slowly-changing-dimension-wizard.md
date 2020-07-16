@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.loaddimwizard.welcome.f1"
 ms.assetid: 8363bd6b-555e-4d16-be0e-37f77811f1b1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Welcome to the Slowly Changing Dimension Wizard
   Use the **Slowly Changing Dimension Wizard** to configure the loading of data into various types of slowly changing dimensions.  

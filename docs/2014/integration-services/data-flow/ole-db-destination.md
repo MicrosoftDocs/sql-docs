@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "fast load data access mode [Integration Services]"
   - "inserting data"
 ms.assetid: 873a2fa0-2a02-41fc-a80a-ec9767f36a8a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # OLE DB Destination
   The OLE DB destination loads data into a variety of OLE DB-compliant databases using a database table or view or an SQL command. For example, the OLE DB source can load data into tables in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  

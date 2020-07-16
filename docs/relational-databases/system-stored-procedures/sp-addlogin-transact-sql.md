@@ -17,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 030f19c3-a5e3-4b53-bfc4-de4bfca0fddc
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_addlogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login that allows a user to connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication.  
   

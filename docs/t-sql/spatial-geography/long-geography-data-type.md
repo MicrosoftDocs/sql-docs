@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Long method"
 ms.assetid: bedbeced-70b8-4569-84f3-f86bfb04ce50
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # Long (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   The longitude property of the **geography** instance.  
   

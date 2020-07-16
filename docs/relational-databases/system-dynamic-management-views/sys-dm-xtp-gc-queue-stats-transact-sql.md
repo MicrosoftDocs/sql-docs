@@ -16,12 +16,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_xtp_gc_stats dynamic management view"
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
+monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 # sys.dm_xtp_gc_queue_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Outputs information about each garbage collection worker queue on the server, and various statistics about each. There is one queue per logical CPU.  
   

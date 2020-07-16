@@ -23,12 +23,11 @@ helpviewer_keywords:
   - "switching execution context"
   - "functions [SQL Server], execution context"
 ms.assetid: bd517aa3-f06e-4356-87d8-70de5df4494a
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # EXECUTE AS Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you can define the execution context of the following user-defined modules: functions (except inline table-valued functions), procedures, queues, and triggers.  
   
@@ -38,7 +37,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- SQL Server Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
 { EXEC | EXECUTE } AS { CALLER | SELF | OWNER | 'user_name' }   
@@ -53,9 +52,9 @@ Queues
 { EXEC | EXECUTE } AS { SELF | OWNER | 'user_name' }   
 ```  
   
-```  
+```syntaxsql
   
--- Windows Azure SQL Database Syntax  
+-- Azure SQL Database Syntax  
 Functions (except inline table-valued functions), Stored Procedures, and DML Triggers  
   
 { EXEC | EXECUTE } AS { CALLER | SELF | OWNER | 'user_name' }   

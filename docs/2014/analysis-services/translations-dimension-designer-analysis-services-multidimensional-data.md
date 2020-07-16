@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensiondesigner.translations.translationspane.f1"
 ms.assetid: 7104cc5f-f3c9-468c-8567-d78c7d84e60b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Translations (Dimension Designer) (Analysis Services - Multidimensional Data)
   Use the **Translations** tab in Dimension Designer to define and manage translations for the dimension, as well as the hierarchies and attributes for the dimension.  

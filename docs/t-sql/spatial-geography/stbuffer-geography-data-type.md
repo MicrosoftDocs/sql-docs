@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STBuffer (geography Data Type)"
 ms.assetid: cb4deab8-642b-44d9-b3d9-85114d64021e
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STBuffer (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a geography object that represents the union of all points whose distance from a **geography** instance is less than or equal to a specified value.  
   

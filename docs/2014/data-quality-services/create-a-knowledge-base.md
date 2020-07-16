@@ -10,9 +10,8 @@ f1_keywords:
   - "sql12.dqs.kb.selectkb.f1"
   - "sql12.dqs.kb.newkb.f1"
 ms.assetid: 2733a284-975f-4650-abcc-cc2aad074cab
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Create a Knowledge Base
   This topic describes how to create a knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS), and prepare it for domain management, knowledge discovery, or adding a matching policy.  

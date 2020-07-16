@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.asprocessingtask.general.f1"
 helpviewer_keywords: 
   - "Analysis Services Processing Task Editor"
 ms.assetid: ce79d133-fbd9-4037-a033-e75cbf28a22d
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Analysis Services Processing Task Editor (General Page)
   Use the **General** pageof the **Analysis Services Processing Task Editor** dialog box to name and describe the Analysis Services Processing task.  

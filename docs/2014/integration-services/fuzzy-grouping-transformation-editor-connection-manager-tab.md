@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.fuzzygroupingtransformation.connection.f1"
 helpviewer_keywords: 
   - "Fuzzy Grouping Transformation Editor"
 ms.assetid: 47b1446d-5331-473c-9cb5-a98b1f55bf5f
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Fuzzy Grouping Transformation Editor (Connection Manager Tab)
   Use the **Connection Manager** tab of the **Fuzzy Grouping Transformation Editor** dialog box to select an existing connection or create a new one.  

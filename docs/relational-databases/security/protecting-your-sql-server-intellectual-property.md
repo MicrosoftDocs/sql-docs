@@ -1,5 +1,6 @@
 ---
 title: "Protecting Your SQL Server Intellectual Property | Microsoft Docs"
+description: Understand your options for protecting the intellectual property in a SQL Server data application that is distributed to customers. 
 ms.custom: ""
 ms.date: "01/31/2017"
 ms.prod: sql
@@ -13,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: 174a646a-d65c-4074-8249-d783e91be2dd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Protecting Your SQL Server Intellectual Property
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Software developers often ask how to distribute their [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] data application to customers, and yet prevent customers from analyzing and deconstructing their application. The key principal here, is that protecting your intellectual property, is a legal issue, and the protection rests in your license agreement. When [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] is installed on a computer that others administer, you inherently lose some aspects of control. 
 

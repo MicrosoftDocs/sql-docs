@@ -1,23 +1,24 @@
 ---
 title: "SQL Server privacy supplement | Microsoft Docs"
-ms.date: 4/25/2018
+ms.date: 01/19/2019
 ms.prod: sql
-ms.reviewer: ""
+ms.technology: release-landing
+ms.reviewer: "mikeray"
 ms.custom: ""
 ms.topic: conceptual
 f1_keywords: 
 helpviewer_keywords: 
-author: MikeRayMSFT
-ms.author: mikeray
-manager: craigg
+author: jaszymas
+ms.author: jaszymas
 ---
 # SQL Server privacy supplement
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-This article summarizes the behavior of different data objects used within SQL Server and how the objects are used to pass information of a personal or confidential manner. This article serves as an addendum to the overall [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839). The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+
+This article summarizes Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SQL Server may collect standard computer information and data about usage and performance may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of the product. If you install SQL Server in a virtual machine on the Microsoft Azure service, environment information may be sent to Microsoft so that Microsoft can register your SQL Server virtual machine resource with the resource provider within your Azure subscription, as further described [here](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider). As part of registering the SQL Server virtual machine resource, the SQL Server IaaS Agent Extension may be installed on your virtual machine as further described [here](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension). This article serves as an addendum to the overall [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839). The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
 
 - Azure SQL Database
-- SQL Server Management Studio (SSMS)
+- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - Database Migration Assistant
@@ -37,12 +38,13 @@ Credential-related information used to secure logins, users, or accounts within 
 
 ### Permitted usage scenarios
 
-|Scenario  |Access restrictions  |Retention requirements |
+|Scenario |Access restrictions |Retention requirements |
 |---------|---------|---------|
-|These credentials never leave the user machine via Usage Feedback.     |-         |-         |
-|Crash Dumps may contain Access Control Data.     |-         |Crash Dumps: Maximum 30 days.         |
-|These credentials never leave the user machine via User Feedback unless customer injects it manually    |Limit to Microsoft internal use with no third-party access.         |User Feedback: Max 1 year         |
- |
+|These credentials never leave the user machine via Usage and Diagnostics Data. |- |- |
+|Crash Dumps may contain Access Control Data. |- |Crash Dumps: Maximum 30 days. |
+|These credentials never leave the user machine via User Feedback unless customer injects it manually |Limit to Microsoft internal use with no third-party access. |User Feedback: Max 1 year|
+|&nbsp;|&nbsp;|&nbsp;|
+
 ## Customer content
 
 Customer content is defined as data stored within user tables, directly or indirectly. The data includes statistics or user literals within query texts that might be stored within user tables.
@@ -54,9 +56,10 @@ Customer content is defined as data stored within user tables, directly or indir
 - Query texts containing literal values.
 
 ### Permitted usage scenarios
+
 |Scenario  |Access restrictions  |Retention requirements |
 |---------|---------|---------|
-|This data does not leave the user machine via Usage Feedback. |- |- |
+|This data does not leave the user machine via Usage and Diagnostics Data. |- |- |
 |Crash Dumps may contain Customer Content and be emitted to Microsoft. |- |Crash Dumps: Max 30 days. |
 |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 
@@ -79,7 +82,7 @@ Data received from a user, or generated from their use of the product.
 
 |Scenario  |Access restrictions  |Retention requirements|
 |---------|---------|---------|
-|This data does not leave the user machine via Usage Feedback. |- |- |
+|This data does not leave the user machine via Usage and Diagnostics Data. |- |- |
 |Crash dumps may contain EUII and be emitted to Microsoft. |- |Crash dumps: Max 30 days |
 |Customer identification ID may be emitted to Microsoft to deliver new hybrid and cloud features that the users have subscribed to. |- |Currently no such hybrid or cloud features exist.|
 |Customers with their consent can send User Feedback that contains customer content to Microsoft.|Limit to Microsoft internal use with no third-party access. Microsoft can expose the data to the original customer. |User feedback: Max 1 year |
@@ -111,7 +114,7 @@ Data generated in the course of running the server.  The data does not contain c
 
 ### Examples of system metadata
 
-The following are considered system metadata when they do not inlcude customer content, customer access control, or EUII:
+The following are considered system metadata when they do not inlcude customer content, object metadata, customer access control data, or EUII:
 
 - Database GUID
 - Hash of machine name
@@ -132,8 +135,8 @@ Microsoft does examine application name values set by other programs that use SQ
 |---------|---------|---------|
 |May be used by Microsoft to improve features and or fix bugs in current features.|Limit to Microsoft internal use with no third-party access. |Min 90 days - Max 3 years |
 |May be used to make suggestions to the customer.  For example, "Based on your usage of the product, consider using feature *X* since it would perform better." |Microsoft can expose the data to the original customer, for example through dashboards. |Customer Data Security Logs: Min 3 years - Max 6 years |
-May be used by Microsoft for future product planning. |Microsoft may share this information with other hardware and software vendors to improve how their products run with Microsoft software. |Min 90 days - Max 3 years|
-|May be used by Microsoft to provide cloud-based services based on emitted Usage Feedback. For example, a customer dashboard showing feature usage across all SQL Server installations in an organization. |Microsoft can expose the data to the original customer, for example, through dashboards. |Min 90 days - Max 3 years |
+|May be used by Microsoft for future product planning. |Microsoft may share this information with other hardware and software vendors to improve how their products run with Microsoft software. |Min 90 days - Max 3 years|
+|May be used by Microsoft to provide cloud-based services based on emitted Usage and Diagnostics Data. For example, a customer dashboard showing feature usage across all SQL Server installations in an organization. |Microsoft can expose the data to the original customer, for example, through dashboards. |Min 90 days - Max 3 years |
 |Customers with their consent can send User Feedback that contains Customer Content to Microsoft. |Limit to Microsoft internal with no third-party access. Microsoft can expose the data to the original customer. |User Feedback: Max 1 year |
 |May use database name and application name to categorize databases and applications into known categories, for example, those that may be running software provided by Microsoft or other companies.|Limit to Microsoft internal with no third-party access.|Min 90 days - Max 3 years |
 
@@ -148,6 +151,10 @@ Data that describes or is used to configure servers, databases, tables, and othe
 - Statistics names
 
 ### Permitted usage scenarios
+
+> [!NOTE]
+> All object metadata values are hashed before collection.
+>
 
 |Scenario  |Access restrictions  |Retention requirements|
 |---------|---------|---------|

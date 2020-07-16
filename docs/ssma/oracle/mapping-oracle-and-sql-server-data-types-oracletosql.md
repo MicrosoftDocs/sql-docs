@@ -1,5 +1,6 @@
 ---
 title: "Mapping Oracle and SQL Server Data Types (OracleToSQL) | Microsoft Docs"
+description: Learn how to customize SSMA for Oracle mappings between Oracle data types and SQL Server or accept the default.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 05da1495-63b9-47b7-86e2-6746394a2d8a
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "v-thobro"
+manager: shamikg
 ---
 # Mapping Oracle and SQL Server Data Types (OracleToSQL)
 Oracle database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database types. When you convert Oracle database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects, you must specify how to map data types from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can accept the default data type mappings, or you can customize the mappings as shown in the following sections.  

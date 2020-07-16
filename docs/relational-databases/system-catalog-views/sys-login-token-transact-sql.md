@@ -21,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: 86e06938-9d0a-44e5-99e2-55c8ef5f2f84
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sys.login_token (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns one row for every server principal that is part of the login token.  
   

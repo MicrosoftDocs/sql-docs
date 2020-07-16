@@ -4,7 +4,22 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
+ms.topic: conceptual
+helpviewer_keywords: 
+  - "definitions [SQL Server]"
+  - "glossary [SQL Server]"
+  - "terminology [SQL Server]"
+ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
+author: heidisteen
+ms.author: heidist
+---
+# Glossary
+
+<!--
+Metadata 'ms.technology:' is restricted to a maximum of one value.
+So I am erasing all the values shown below.  (GeneMi , 2019/04/19)
+
+ms.technology:
   - "analysis-services"
   - "analysis-services/data-mining"
   - "analysis-services/multidimensional-tabular"
@@ -15,19 +30,8 @@ ms.technology:
   - "replication"
   - "reporting-services-native"
   - "reporting-services-sharepoint"
-ms.topic: conceptual
-helpviewer_keywords: 
-  - "definitions [SQL Server]"
-  - "glossary [SQL Server]"
-  - "terminology [SQL Server]"
-ms.assetid: 0e8a7967-b407-4e01-b8c4-3eabe2820df5
-author: heidisteen
-ms.author: heidist
-manager: craigg
----
-# Glossary
-  
-  
+-->
+
 ## Terms  
   
 |Term|Definition|  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.dataprofileviewer.f1"
@@ -13,9 +12,8 @@ helpviewer_keywords:
   - "Data Profile Viewer [Integration Services]"
   - "Data Profiling task [Integration Services], viewer"
 ms.assetid: 3469c60a-8f4f-46ba-999a-cb9070197fea
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Profile Viewer F1 Help
   Use the Data Profile Viewer to view the output of the Data Profiling task.  

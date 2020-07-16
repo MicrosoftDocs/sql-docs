@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining model content, decision tree models"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ac358399-10f8-4238-be32-a914a2e49048
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Mining Model Content for Decision Tree Models (Analysis Services - Data Mining)
   This topic describes mining model content that is specific to models that use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Decision Trees algorithm. For a general explanation of mining model content for all model types, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](mining-model-content-analysis-services-data-mining.md). It is important to remember that The Microsoft Decision Trees algorithm is a hybrid algorithm that can create models with very different functions: a decision tree can represent associations, rules, or even linear regression. The structure of the tree is essentially the same, but how you interpret the information will depend on the purpose for which you created the model.  

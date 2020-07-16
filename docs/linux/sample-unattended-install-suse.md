@@ -2,18 +2,16 @@
 title: Unattended install for SQL Server on SUSE Linux Enterprise Server
 titleSuffix: SQL Server
 description: SQL Server Script Sample - Unattended Install on SUSE Linux Enterprise Server
-author: rothja
-ms.author: jroth
-manager: craigg
-ms.date: 10/02/2017
+author: VanMSFT 
+ms.author: vanto
+ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ---
 # Sample: Unattended SQL Server installation script for SUSE Linux Enterprise Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This sample Bash script installs SQL Server 2017 on SUSE Linux Enterprise Server (SLES) v12 SP2 without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
@@ -83,6 +81,7 @@ sudo ACCEPT_EULA=Y zypper install -y mssql-tools unixODBC-devel
 echo Adding SQL Server tools to your path...
 echo PATH="$PATH:/opt/mssql-tools/bin" >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
 
 # Optional SQL Server Agent installation:
 if [ ! -z $SQL_INSTALL_AGENT ]
@@ -171,7 +170,7 @@ To run the script
    ```
 
 ### Understanding the script
-The first thing the Bash script does is set a few variables. These can be either scripting variables, like the sample, or environment variables. The variable ``` MSSQL_SA_PASSWORD ``` is **required** by SQL Server installation, the others are custom variables created for the script. The sample script performs the following steps:
+The first thing the Bash script does is set a few variables. These can be either scripting variables, like the sample, or environment variables. The variable `MSSQL_SA_PASSWORD` is **required** by SQL Server installation, the others are custom variables created for the script. The sample script performs the following steps:
 
 1. Import the public Microsoft GPG keys.
 

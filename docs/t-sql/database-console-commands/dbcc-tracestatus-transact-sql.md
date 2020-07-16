@@ -22,12 +22,11 @@ helpviewer_keywords:
   - "session trace flags [SQL Server]"
   - "displaying trace flag status"
 ms.assetid: 9be51199-78b4-4b87-ae6e-557246b7e29a
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC TRACESTATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Displays the status of trace flags.
   
@@ -35,7 +34,7 @@ Displays the status of trace flags.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )   
 [ WITH NO_INFOMSGS ]  
 ```  

@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: d40e3f05-54e8-4c4b-807a-0b06f446079b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Delete Relationships (SSAS Tabular)
   You can delete existing relationships by using the model designer in Diagram View or by using the Manage Relationships dialog box. For information about how relationships are used in tabular models, see [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  

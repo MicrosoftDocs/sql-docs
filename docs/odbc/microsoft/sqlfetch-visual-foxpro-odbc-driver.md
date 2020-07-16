@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLFetch function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 6198a006-6f25-4328-8403-2aba29b7041f
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLFetch (Visual FoxPro ODBC Driver)
 > [!NOTE]  

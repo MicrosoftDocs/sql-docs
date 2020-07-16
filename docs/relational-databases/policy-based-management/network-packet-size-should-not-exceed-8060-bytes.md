@@ -12,10 +12,9 @@ helpviewer_keywords:
 ms.assetid: 86db5da1-afe4-4fbb-8bf8-33cedc7e4361
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Network Packet Size Should Not Exceed 8060 Bytes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   If the value specified for sp_configure 'network packet size' or if the network packet size of any logged-in user is more than 8060 bytes, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performs different memory allocation operations. This can cause an increase in the process virtual address space that is not reserved for the buffer pool.  
   
 ## Best Practices Recommendations  

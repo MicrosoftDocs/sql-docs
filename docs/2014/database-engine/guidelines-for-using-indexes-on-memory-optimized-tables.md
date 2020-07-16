@@ -11,12 +11,11 @@ helpviewer_keywords:
 ms.assetid: 16ef63a4-367a-46ac-917d-9eebc81ab29b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Guidelines for Using Indexes on Memory-Optimized Tables
   Indexes are used for efficiently accessing data in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tables. Specifying the right indexes can dramatically improve query performance. Consider, for example, the query:  
   
-```tsql  
+```sql  
 SELECT c1, c2 FROM t WHERE c1 = 1;  
 ```  
   
@@ -87,7 +86,7 @@ SELECT c1, c2 FROM t WHERE c1 = 1;
 ## Creating a Memory-Optimized Index: Code Samples  
  Column level hash index:  
   
-```tsql  
+```sql  
 CREATE TABLE t1   
    (c1 INT NOT NULL INDEX idx HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -95,7 +94,7 @@ CREATE TABLE t1
   
  Table level hash index:  
   
-```tsql  
+```sql  
 CREATE TABLE t1_1   
    (c1 INT NOT NULL,   
    INDEX IDX HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -104,7 +103,7 @@ CREATE TABLE t1_1
   
  Column level primary key hash index:  
   
-```tsql  
+```sql  
 CREATE TABLE t2   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT = 100))   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -112,7 +111,7 @@ CREATE TABLE t2
   
  Table level primary key hash index:  
   
-```tsql  
+```sql  
 CREATE TABLE t2_2   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED HASH (c1) WITH (BUCKET_COUNT = 100))   
@@ -121,7 +120,7 @@ CREATE TABLE t2_2
   
  Column level nonclustered index:  
   
-```tsql  
+```sql  
 CREATE TABLE t3   
    (c1 INT NOT NULL INDEX ID)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_ONLY)  
@@ -129,7 +128,7 @@ CREATE TABLE t3
   
  Table level nonclustered  index:  
   
-```tsql  
+```sql  
 CREATE TABLE t3_3   
    (c1 INT NOT NULL,   
    INDEX IDX NONCLUSTERED (c1))   
@@ -138,7 +137,7 @@ CREATE TABLE t3_3
   
  Column level primary key nonclustered  index:  
   
-```tsql  
+```sql  
 CREATE TABLE t4   
    (c1 INT NOT NULL PRIMARY KEY NONCLUSTERED)   
    WITH (MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA)  
@@ -146,7 +145,7 @@ CREATE TABLE t4
   
  Table level primary key nonclustered index:  
   
-```tsql  
+```sql  
 CREATE TABLE t4_4   
    (c1 INT NOT NULL,   
    PRIMARY KEY NONCLUSTERED (c1))   
@@ -155,7 +154,7 @@ CREATE TABLE t4_4
   
  Multicolumn index defined after columns are defined:  
   
-```tsql  
+```sql  
 create table t (  
        a int not null constraint ta primary key nonclustered,  
        b int not null,  

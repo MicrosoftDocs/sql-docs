@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_targetservergroup"
 ms.assetid: ec3a4a68-b591-431c-9518-053ede522d0c
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_help_targetservergroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists all target servers in the specified group. If no group is specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns information about all target server groups.  
   
@@ -35,7 +34,7 @@ sp_help_targetservergroup
 ```  
   
 ## Argument  
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  Is the name of the target server group for which to return information. *name* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

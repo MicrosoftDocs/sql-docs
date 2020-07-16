@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b0478836-4123-4357-969a-c5784fc28be5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 ---
 # ADO Glossary Terms
 This topic defines terms relevant to ADO.
@@ -75,7 +74,7 @@ This topic defines terms relevant to ADO.
  A mapping of a set of characters to their numeric values. For example, Unicode is a 16-bit character set capable of encoding all known characters and used as a worldwide character-encoding standard.
 
  child
- The dependant side of a hierarchical relationship. A child is a node in a hierarchical structure that has another node above it (closer to the root). See also *child-alias*, *parent-child relationship*, *parent*.
+ The dependent side of a hierarchical relationship. A child is a node in a hierarchical structure that has another node above it (closer to the root). See also *child-alias*, *parent-child relationship*, *parent*.
 
  child-alias
  An alias that refers to the child. See also *alias*, *child*.

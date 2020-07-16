@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 66437b45-4686-4fc7-a91b-ebde45e0f1b0
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # New Project (DB2ToSQL)
 Use the **New Project** dialog box to create a new SSMA project. To access the **New Project** dialog box, on the **File** menu, click **New Project**.  

@@ -1,7 +1,7 @@
 ---
 title: "Replication Distribution Agent | Microsoft Docs"
 ms.custom: ""
-ms.date: "29/10/2018"
+ms.date: 10/29/2018
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: replication
@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Replication Distribution Agent
   The Replication Distribution Agent is an executable that moves the snapshot (for snapshot replication and transactional replication) and the transactions held in the distribution database tables (for transactional replication) to the destination tables at the Subscribers.  

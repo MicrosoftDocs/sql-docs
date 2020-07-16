@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLCreateDataSource function [ODBC]"
 ms.assetid: 76ee851a-dca9-40cc-8e9e-eb3f74e560ee
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLCreateDataSource Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLCreateDataSource(  
      HWND    hwnd,  

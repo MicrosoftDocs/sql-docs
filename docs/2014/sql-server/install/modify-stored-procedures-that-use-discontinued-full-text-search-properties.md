@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "discontinued properties [Full-Text Search]"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8d9392d9-a9ba-4378-84e4-59f516b67ddb
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Modify stored procedures that use discontinued Full-Text Search properties
   To ensure that your stored procedures perform correctly, you should edit existing procedures and remove those full-text related properties and settings that have been removed or deprecated.  

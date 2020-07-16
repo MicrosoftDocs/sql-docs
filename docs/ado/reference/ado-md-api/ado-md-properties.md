@@ -11,11 +11,11 @@ helpviewer_keywords:
   - "ADO MD, properties"
   - "properties [ADO MD]"
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # ADO MD Properties
+
 |||  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Indicates to which ADO **Connection** object the current cellset or catalog currently belongs.|  

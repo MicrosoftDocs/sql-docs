@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 ms.assetid: 49a17ff3-94e9-4969-84fc-37d49e63933b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Extending OLAP functionality
   As a programmer, you can extend Analysis Services by writing assemblies, personalized extensions, and stored procedures that provide functionality you want to use and repurpose in multiple database applications. Assemblies are used to extend multidimensional models functionality by adding new procedures and functions to the MDX language or by means of the personalization addin.  

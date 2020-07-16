@@ -1,18 +1,18 @@
 ---
-title: "Using Table-Valued Parameters | Microsoft Docs"
+title: "Using table-valued parameters"
+description: "Table-valued parameters provide an efficient way to send multiple rows of data from a client to SQL Server in a single parameterized command."
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "11/19/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
-# Using Table-Valued Parameters
+# Using table-valued parameters
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -33,7 +33,7 @@ Column values in table-valued parameters can be accessed using standard Transact
 | [User-Defined Table Types](https://go.microsoft.com/fwlink/?LinkId=98364) in SQL Server Books Online                  | Describes user-defined table types that are used to declare table-valued parameters |
 | The [Microsoft SQL Server Database Engine](https://go.microsoft.com/fwlink/?LinkId=120507) section of CodePlex        | Contains samples that demonstrate how to use SQL Server features and functionality  |
   
-## Passing Multiple Rows in Previous Versions of SQL Server  
+## Passing multiple rows in previous versions of SQL Server  
 
 Before table-valued parameters were introduced to SQL Server 2008, the options for passing multiple rows of data to a stored procedure or a parameterized SQL command were limited. A developer could choose from the following options for passing multiple rows to the server:  
   
@@ -43,9 +43,9 @@ Before table-valued parameters were introduced to SQL Server 2008, the options f
   
 - Create a series of individual SQL statements for data modifications that affect multiple rows. Changes can be submitted to the server individually or batched into groups. However, even when submitted in batches that contain multiple statements, each statement is executed separately on the server.  
   
-- Use the bcp utility program or the [SQLServerBulkCopy](https://msdn.microsoft.com/library/system.data.sqlclient.sqlbulkcopy(v=vs.110).aspx) object to load many rows of data into a table. Although this technique is very efficient, it does not support server-side processing unless the data is loaded into a temporary table or table variable.  
+- Use the bcp utility program or [SQLServerBulkCopy](using-bulk-copy-with-the-jdbc-driver.md) to load many rows of data into a table. Although this technique is very efficient, it does not support server-side processing unless the data is loaded into a temporary table or table variable.
   
-## Creating Table-Valued Parameter Types  
+## Creating table-valued parameter types  
 
 Table-valued parameters are based on strongly-typed table structures that are defined by using Transact-SQL `CREATE TYPE` statements. You have to create a table type and define the structure in SQL Server before you can use table-valued parameters in your client applications. For more information about creating table types, see [User-Defined Table Types](https://go.microsoft.com/fwlink/?LinkID=98364) in SQL Server Books Online.  
 
@@ -61,7 +61,7 @@ CREATE PROCEDURE usp_UpdateCategories
     (@tvpNewCategories dbo.CategoryTableType READONLY)  
 ```
 
-## Modifying Data with Table-Valued Parameters (Transact-SQL)  
+## Modifying data with table-valued parameters (Transact-SQL)  
 
 Table-valued parameters can be used in set-based data modifications that affect multiple rows by executing a single statement. For example, you can select all the rows in a table-valued parameter and insert them into a database table, or you can create an update statement by joining a table-valued parameter to the table you want to update.  
   
@@ -81,7 +81,7 @@ INSERT INTO dbo.Categories (CategoryID, CategoryName)
     SELECT nc.CategoryID, nc.CategoryName FROM @tvpNewCategories AS nc;  
 ```
 
-## Limitations of Table-Valued Parameters
+## Limitations of table-valued parameters
 
 There are several limitations to table-valued parameters:  
   
@@ -95,7 +95,7 @@ There are several limitations to table-valued parameters:
 
 - You can stream large objects in a table-valued parameter.  
   
-## Configuring a Table-Valued Parameter
+## Configuring a table-valued parameter
 
 Beginning with Microsoft JDBC Driver 6.0 for SQL Server, table-valued parameters are supported with a parameterized statement or a parameterized stored procedure. Table-valued parameters can be populated from a SQLServerDataTable, from a ResultSet or from a user provided implementation of the ISQLServerDataRecord interface. When setting a table-valued parameter for a prepared query, you must specify a type name which must match the name of a compatible type previously created on the server.  
   
@@ -120,9 +120,9 @@ pStmt.execute();
 > [!NOTE]  
 > See Section **Table-Valued Parameter API for the JDBC Driver** below for a complete list of APIs available for setting the table-valued parameter.  
   
-## Passing a Table-Valued Parameter as a SQLServerDataTable Object  
+## Passing a table-valued parameter as a SQLServerDataTable object  
 
-Beginning with Microsoft JDBC Driver 6.0 for SQL Server, the SQLServerDataTable class represents an in-memory table of relational data. This example demonstrates how to construct a table-valued parameter from in-memory data using the SQLServerDataTable object. The code first creates a SQLServerDataTable object, defines its schema and populates the table with data. The code then configures a SQLServerPreparedStatement that passes this data table as a table-valued parameter to SQL Server.  
+Beginning with Microsoft JDBC Driver 6.0 for SQL Server, the SQLServerDataTable class represents an in-memory table of relational data. This example demonstrates how to construct a table-valued parameter from in-memory data using the SQLServerDataTable object. First, the code creates a SQLServerDataTable object, defines its schema, and populates the table with data. The code then configures a SQLServerPreparedStatement that passes this data table as a table-valued parameter to SQL Server.  
 
 ```java
 /* Assumes connection is an active Connection object. */
@@ -149,9 +149,9 @@ pStmt.execute();
 > [!NOTE]  
 > See Section **Table-Valued Parameter API for the JDBC Driver** below for a complete list of APIs available for setting the table-valued parameter.  
   
-## Passing a Table-Valued Parameter as a ResultSet Object  
+## Passing a table-valued parameter as a ResultSet object  
 
-This example demonstrates how to stream rows of data from a ResultSet to a table-valued parameter. The code first retrieves data from a source table in a creates a SQLServerDataTable object, defines its schema and populates the table with data. The code then configures a SQLServerPreparedStatement that passes this data table as a table-valued parameter to SQL Server.  
+This example demonstrates how to stream rows of data from a ResultSet to a table-valued parameter. First, the code retrieves data from a source table in a SQLServerDataTable object, defines its schema, and populates the table with data. The code then configures a SQLServerPreparedStatement that passes this data table as a table-valued parameter to SQL Server.  
 
 ```java
 /* Assumes connection is an active Connection object. */
@@ -170,7 +170,7 @@ pStmt.execute();
 > [!NOTE]  
 > See Section **Table-Valued Parameter API for the JDBC Driver** below for a complete list of APIs available for setting the table-valued parameter.  
 
-## Passing a Table-Valued Parameter as an ISQLServerDataRecord Object  
+## Passing a table-valued parameter as an ISQLServerDataRecord object  
 
 Beginning with Microsoft JDBC Driver 6.0 for SQL Server, a new interface ISQLServerDataRecord is available for streaming data (depending on how the user provides the implementation for it) using a table-valued parameter. The following example demonstrates how to implement the ISQLServerDataRecord interface and how to pass it as a table-valued parameter. For simplicity, the following example passes just one row with hardcoded values to the table-valued parameter. Ideally, the user would implement this interface to stream rows from any source, for example from text files.  
 
@@ -224,9 +224,9 @@ pStmt.execute();
 ```
 
 > [!NOTE]  
-> See Section **Table-Valued Parameter API for the JDBC Driver** below for a complete list of APIs available for setting the table-valued parameter.
+> See Section **Table-valued parameter API for the JDBC driver** below for a complete list of APIs available for setting the table-valued parameter.
 
-## Table-Valued Parameter API for the JDBC Driver
+## Table-valued parameter API for the JDBC driver
 
 ### SQLServerMetaData
 
@@ -236,6 +236,7 @@ This class represents metadata for a column. It is used in the ISQLServerDataRec
 | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | public SQLServerMetaData(String columnName, int sqlType, int precision, int scale, boolean useServerDefault, boolean isUniqueKey, SQLServerSortOrder sortOrder, int sortOrdinal) | Initializes a new instance of SQLServerMetaData with the specified column name, sql type, precision, scale and server default. This form of the constructor supports table-valued parameters by allowing you to specify if the column is unique in the table-valued parameter, the sort order for the column, and the ordinal of the sort column. <br/><br/>useServerDefault - specifies if this column should use the default server value; Default value is false.<br>isUniqueKey - indicates if the column in the table-valued parameter is unique; Default value is false.<br>sortOrder  - indicates the sort order for a column; Default value is SQLServerSortOrder.Unspecified.<br>sortOrdinal - specifies ordinal of the sort column; sortOrdinal starts from 0; Default value is -1. |
 | public SQLServerMetaData( String columnName, int sqlType)                                                                                                                        | Initializes a new instance of SQLServerMetaData using the column name and the sql type.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| public SQLServerMetaData( String columnName, int sqlType, int length)                                                                                                                        | Initializes a new instance of SQLServerMetaData using the column name, the sql type and the length (for String data). The length is used to differentiate large strings from strings with length less than 4000 characters. Introduced in the version 7.2 of the JDBC driver.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | public SQLServerMetaData( String columnName, int sqlType, int precision, int scale)                                                                                              | Initializes a new instance of SQLServerMetaData using the column name, sql type, precision and scale.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | Public SQLServerMetaData(SQLServerMetaData sqlServerMetaData)                                                                                                                    | Initializes a new instance of SQLServerMetaData from another SQLServerMetaData object.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | public String getColumName()                                                                                                                                                     | Retrieves the column name.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
@@ -245,7 +246,7 @@ This class represents metadata for a column. It is used in the ISQLServerDataRec
 | public SQLServerSortOrder getSortOrder()                                                                                                                                         | Retrieves the sort order.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
 | public int getSortOrdinal()                                                                                                                                                      | Retrieves the sort ordinal.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | public boolean isUniqueKey()                                                                                                                                                     | Returns whether the column is unique.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| public boolean useServerDefault()                                                                                                                                                | Returns wheher the column uses the default server value.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
+| public boolean useServerDefault()                                                                                                                                                | Returns whether the column uses the default server value.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |
   
 ### SQLServerSortOrder
 
@@ -292,9 +293,9 @@ The following methods have been added to this class to support passing of table-
 
 | Name                                                                                                    | Description                                                                                                                                                                                                                                                                                                |
 | ------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| public final void setStructured(int parameterIndex, String tvpName, SQLServerDataTable tvpDataTable)    | Populates a table valued parameter with a data table. parameterIndex is the parameter index, tvpName is the name of the table-valued parameter, and tvpDataTable is the source data table object.                                                                                                          |
-| public final void setStructured(int parameterIndex, String tvpName, ResultSet tvpResultSet)             | Populates a table valued parameter with a ResultSet retrieved from anther table. parameterIndex is the parameter index, tvpName is the name of the table-valued parameter, and tvpResultSet is the source result set object.                                                                               |
-| public final void setStructured(int parameterIndex, String tvpName, ISQLServerDataRecord tvpDataRecord) | Populates a table valued parameter with an ISQLServerDataRecord object. ISQLServerDataRecord is used for streaming data and the user decides how to use it. parameterIndex is the parameter index, tvpName is the name of the table-valued parameter, and tvpDataRecord is an ISQLServerDataRecord object. |
+| public final void setStructured(int parameterIndex, String tvpName, SQLServerDataTable tvpDataTable)    | Populates a table-valued parameter with a data table. parameterIndex is the parameter index, tvpName is the name of the table-valued parameter, and tvpDataTable is the source data table object.                                                                                                          |
+| public final void setStructured(int parameterIndex, String tvpName, ResultSet tvpResultSet)             | Populates a table-valued parameter with a ResultSet retrieved from another table. parameterIndex is the parameter index, tvpName is the name of the table-valued parameter, and tvpResultSet is the source result set object.                                                                               |
+| public final void setStructured(int parameterIndex, String tvpName, ISQLServerDataRecord tvpDataRecord) | Populates a table-valued parameter with an ISQLServerDataRecord object. ISQLServerDataRecord is used for streaming data and the user decides how to use it. parameterIndex is the parameter index, tvpName is the name of the table-valued parameter, and tvpDataRecord is an ISQLServerDataRecord object. |
   
 ### SQLServerCallableStatement
 
@@ -302,10 +303,10 @@ The following methods have been added to this class to support passing of table-
   
 | Name                                                                                                        | Description                                                                                                                                                                                                                                                                                                                      |
 | ----------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| public final void setStructured(String paratemeterName, String tvpName, SQLServerDataTable tvpDataTable)    | Populates a table valued parameter passed to a stored procedure with a data table. paratemeterName is the name of the parameter, tvpName is the name of the type TVP, and tvpDataTable is the data table object.                                                                                                                 |
-| public final void setStructured(String paratemeterName, String tvpName, ResultSet tvpResultSet)             | Populates a table valued parameter passed to a stored procedure with a ResultSet retrieved from another table. paratemeterName is the name of the parameter, tvpName is the name of the type TVP, and tvpResultSet is the source result set object.                                                                              |
-| public final void setStructured(String paratemeterName, String tvpName, ISQLServerDataRecord tvpDataRecord) | Populates a table valued parameter passed to a stored procedure with an ISQLServerDataRecord object. ISQLServerDataRecord is used for streaming data and the user decides how to use it. paratemeterName is the name of the parameter, tvpName is the name of the type TVP, and tvpDataRecord is an ISQLServerDataRecord object. |
+| public final void setStructured(String paratemeterName, String tvpName, SQLServerDataTable tvpDataTable)    | Populates a table-valued parameter passed to a stored procedure with a data table. paratemeterName is the name of the parameter, tvpName is the name of the type TVP, and tvpDataTable is the data table object.                                                                                                                 |
+| public final void setStructured(String paratemeterName, String tvpName, ResultSet tvpResultSet)             | Populates a table-valued parameter passed to a stored procedure with a ResultSet retrieved from another table. paratemeterName is the name of the parameter, tvpName is the name of the type TVP, and tvpResultSet is the source result set object.                                                                              |
+| public final void setStructured(String paratemeterName, String tvpName, ISQLServerDataRecord tvpDataRecord) | Populates a table-valued parameter passed to a stored procedure with an ISQLServerDataRecord object. ISQLServerDataRecord is used for streaming data and the user decides how to use it. paratemeterName is the name of the parameter, tvpName is the name of the type TVP, and tvpDataRecord is an ISQLServerDataRecord object. |
 
-## See Also
+## See also
 
-[Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)  

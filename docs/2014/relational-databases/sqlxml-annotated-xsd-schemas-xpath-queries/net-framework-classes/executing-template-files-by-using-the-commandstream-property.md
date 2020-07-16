@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "templates [SQLXML], SQLXML Managed Classes"
   - "CommandStream property"
 ms.assetid: 55c564e3-56d1-4d85-bcaa-703e2905dd57
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Executing Template Files by Using the CommandStream Property
   This example illustrates how template files that consist of SQL or XPath queries can be specified by using the CommandStream property of the SqlXmlCommand object. In this application, a FileStreamobject is opened for a command file, and the file stream is assigned as the CommandStream that is executed.  

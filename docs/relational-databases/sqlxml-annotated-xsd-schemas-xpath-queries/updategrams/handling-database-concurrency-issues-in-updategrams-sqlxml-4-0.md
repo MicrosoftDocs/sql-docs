@@ -1,6 +1,6 @@
 ---
-title: "Handling Database Concurrency Issues in Updategrams (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Database concurrency issues in Updategrams (SQLXML)"
+description: Learn how to use the Optimistic Concurrency Control mechanism in updategrams (SQLXML 4.0) to handle database concurrency issues.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -18,13 +18,13 @@ helpviewer_keywords:
   - "concurrency [SQLXML]"
   - "intermediate concurrency protection [SQLXML]"
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Handling Database Concurrency Issues in Updategrams (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Like other database update mechanisms, updategrams must deal with concurrent updates to data in a multiuser environment. Updategrams use the Optimistic Concurrency Control, which uses comparison of select field data as snapshots to ensure that the data to be updated has not been altered by another user application since it was read from the database. Updategrams include these snapshot values in the **\<before>** block of the updategrams. Before updating the database, the updategram checks the values that are specified in the **\<before>** block against the values currently in the database to ensure that the update is valid.  
   
  The Optimistic Concurrency Control offers three levels of protection in an updategram: low (none), intermediate, and high. You can decide what level of protection you need by specifying the updategram accordingly.  
@@ -122,7 +122,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 3.  Copy the following XSD schema and paste it into Notepad. Save it as ConcurrencySampleSchema.xml:  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
       <xsd:element name="Customer" sql:relation="Customer" >  
        <xsd:complexType>  

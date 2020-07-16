@@ -8,7 +8,6 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # Identifiers (MDX)
 
@@ -119,7 +118,7 @@ manager: kfile
   
 ## See Also  
  [MDX Language Reference &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)   
- [MDX Query Fundamentals &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)   
+ [MDX Query Fundamentals &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services)   
  [MDX Syntax Elements &#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

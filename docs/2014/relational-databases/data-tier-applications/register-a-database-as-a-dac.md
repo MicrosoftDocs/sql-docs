@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 08e52aa6-12f3-41dd-a793-14b99a083fd5
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Register a Database As a DAC
   Use either the **Register Data-tier Application Wizard** or a Windows PowerShell script to build a data-tier application (DAC) definition that describes the objects in an existing database, and register the DAC definition in the `msdb` system database (**master** in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]).  
@@ -137,10 +136,10 @@ manager: craigg
 ### Example (PowerShell)  
  The following example registers a database named MyDB as a DAC.  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Specify the database to register as a DAC.  
 $dbname = "MyDB"  
@@ -158,5 +157,3 @@ $registerunit.Register()
   
 ## See Also  
  [Data-tier Applications](data-tier-applications.md)  
-  
-  

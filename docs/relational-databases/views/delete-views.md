@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 6823c7f8-06ca-4bda-8482-7092f03d52a0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Delete Views

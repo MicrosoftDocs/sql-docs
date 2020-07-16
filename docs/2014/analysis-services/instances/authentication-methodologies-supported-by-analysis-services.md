@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: b7aee903-d33a-4c20-86c2-aa013a50949f
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Authentication methodologies supported by Analysis Services
   Connections from a client application to an Analysis Services instance require Windows authentication (integrated). You can provide a Windows user identity using any of the following methods:  

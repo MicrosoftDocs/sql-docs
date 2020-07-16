@@ -1,10 +1,7 @@
 ---
-title: "View SQL Server Agent Error Log (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: View SQL Server Agent Error Log
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,13 +11,17 @@ helpviewer_keywords:
   - "SQL Server Agent, errors"
   - "errors [SQL Server Agent]"
 ms.assetid: de920425-fa44-469f-b83d-49e3f97e97f4
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# View SQL Server Agent Error Log (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+# View SQL Server Agent Error Log
+
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
@@ -28,16 +29,6 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 This topic describes how to view the  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent error log in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 Log File Viewer displays log information from many different components. When Log File Viewer is open, use the **Select logs** pane to select the logs you want to display. Each log displays columns appropriate to that kind of log. The logs that are available depend on how Log File Viewer is opened.  
-  
-**In This Topic**  
-  
--   **Before you begin:**  
-  
-    [Limitations and Restrictions](#Restrictions)  
-  
-    [Security](#Security)  
-  
--   [To view the SQL Server Agent error log, using SQL Server Management Studio](#SSMSProcedure)  
   
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   
@@ -71,7 +62,7 @@ For more information about the Windows permissions required for the [!INCLUDE[ss
   
 4.  Right-click the error log you want to view and select **View Agent Log**.  
   
-    The following options are available in the **Log File Viewer -***server_name* dialog box:  
+    The following options are available in the **Log File Viewer -**_server_name_ dialog box:  
   
     **Load Log**  
     Open a dialog box where you can specify a log file to load.  

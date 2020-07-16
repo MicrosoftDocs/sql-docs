@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.smoconnection.f1"
 helpviewer_keywords: 
   - "SMO Connection Manager Editor"
 ms.assetid: bed52d80-ed2a-4bf4-bf7c-481b6e228ca4
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # SMO Connection Manager Editor
   Use the **SMO Connection Manager Editor** to configure a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] connection for use by the various tasks that transfer [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects.  

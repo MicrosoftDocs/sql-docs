@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 48a9a0a3-930f-477b-bd0f-e82e77999ecc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Creating a Memory-Optimized Table and a Natively Compiled Stored Procedure
   This topic contains a sample that introduces you to the syntax for In-Memory OLTP.  
@@ -30,7 +29,7 @@ manager: craigg
   
  The following code sample requires a directory called c:\Data.  
   
-```tsql  
+```sql  
 -- create a database with a memory-optimized filegroup and a container.  
 CREATE DATABASE imoltp   
 GO  

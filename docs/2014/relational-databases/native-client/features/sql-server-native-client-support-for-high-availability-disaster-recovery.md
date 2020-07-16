@@ -1,15 +1,14 @@
 ---
 title: "SQL Server Native Client Support for High Availability, Disaster Recovery | Microsoft Docs"
 ms.custom: ""
-ms.date: "2016-08-31"
+ms.date: 08/31/2016
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 2b06186b-4090-4728-b96b-90d6ebd9f66f
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SQL Server Native Client Support for High Availability, Disaster Recovery
   This topic discusses [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client support (added in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]) for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. For more information about [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], see [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../../database-engine/listeners-client-connectivity-application-failover.md), [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failover Clustering and AlwaysOn Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), and [Active Secondaries: Readable Secondary Replicas (AlwaysOn Availability Groups)](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  

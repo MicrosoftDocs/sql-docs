@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.acctintelligence.addcustomaggregation.selectdimension.f1"
 ms.assetid: 0c8ce9ce-f5ce-4bea-830d-05836ea17112
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify a Unary Operator (Dimension) (Business Intelligence Wizard)
   Use the **Specify a Unary Operator** page to select a dimension that has a parent attribute defined and to which the Business Intelligence Wizard will apply unary operators. For more information about parent attributes, see [Attributes and Attribute Hierarchies](multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md).  

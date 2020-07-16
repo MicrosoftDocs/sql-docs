@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "models [Master Data Services], about models"
   - "models [Master Data Services]"
 ms.assetid: 9f862a3d-25ab-41e9-b833-1db99959e825
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Models (Master Data Services)
   Models are the highest level of data organization in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. A model defines the structure of data in your master data management solution. A model contains the following objects:  

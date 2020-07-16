@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_startpublication_snapshot"
 ms.assetid: 2cf568ee-0679-4d19-a394-27210bff61e5
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_startpublication_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Used to start the Snapshot Agent job that generates the initial snapshot for a publication. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -33,10 +32,10 @@ sp_startpublication_snapshot [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@publisher=** ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher. *publisher* is **sysname**, with a default value of NULL. You should not specify this parameter for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
 ## Return Code Values  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: f5de748d-1c55-4714-9661-38fe62e5095f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Configure the remote access Server Configuration Option
   This topic describes how to configure the **remote access** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **remote access** option controls the execution of stored procedures from local or remote servers on which instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are running. This default value for this option is 1. This grants permission to run local stored procedures from remote servers or remote stored procedures from the local server. To prevent local stored procedures from being run from a remote server or remote stored procedures from being run on the local server, set the option to 0.  
@@ -66,7 +65,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) to set the value of the `remote access` option to `0`.  
   
-```tsql  
+```sql  
 EXEC sp_configure 'remote access', 0 ;  
 GO  
 RECONFIGURE ;  

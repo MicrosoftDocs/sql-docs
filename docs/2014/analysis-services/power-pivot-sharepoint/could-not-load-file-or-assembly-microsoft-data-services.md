@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 6e350b67-5e18-4b90-8fb7-a0109cbb27b7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Could not load file or assembly &#39;Microsoft.AnalysisServices.SharePoint.Integration&#39;
   In SharePoint 2010 environments that have PowerPivot for SharePoint, this error will occur if the application-level solution for PowerPivot did not deploy correctly.  

@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "address book application scenario [ADO]"
   - "RDS scenarios [ADO]"
 ms.assetid: 409b3f8b-0ced-4867-acbe-b245dcdf6702
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Running the Address Book SQL Script
 > [!IMPORTANT]

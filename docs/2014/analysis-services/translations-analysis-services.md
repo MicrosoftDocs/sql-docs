@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Business Intelligence Development Studio, translations [Analysis Services]"
@@ -17,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 018471e0-3c82-49ec-aa16-467fb58a6d5f
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Translations (Analysis Services)
   **[!INCLUDE[applies](../includes/applies-md.md)]**  Multidimensional only  

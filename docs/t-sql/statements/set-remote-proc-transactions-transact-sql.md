@@ -23,10 +23,9 @@ helpviewer_keywords:
 ms.assetid: 4d284ae9-3f5f-465a-b0dd-1328a4832a03
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Specifies that when a local transaction is active, executing a remote stored procedure starts a [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction managed by [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC).  
   
@@ -37,7 +36,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET REMOTE_PROC_TRANSACTIONS { ON | OFF }   
 ```  

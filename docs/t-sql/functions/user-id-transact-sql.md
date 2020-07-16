@@ -20,12 +20,11 @@ helpviewer_keywords:
   - "database IDs [SQL Server]"
   - "identification numbers [SQL Server], databases"
 ms.assetid: 67fd29bc-eda9-4d4d-b148-5d3659181a43
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # USER_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the identification number for a database user.  
   

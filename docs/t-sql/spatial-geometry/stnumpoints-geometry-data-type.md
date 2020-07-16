@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STNumPoints (geometry Data Type)"
 ms.assetid: a19520fc-7f91-4a2c-856f-4d8b99a7e496
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STNumPoints (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the sum of the number of points in each of the figures in a **geometry** instance.  
   

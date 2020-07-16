@@ -1,5 +1,6 @@
 ---
 title: "Deny Permissions on an XML Schema Collection | Microsoft Docs"
+description: Learn how to deny permissions to either create a new XML schema collection or use an existing one. 
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -10,12 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "denying permissions [SQL Server], XML server collections"
 ms.assetid: e2b300b0-e734-4c43-a4da-c78e6e5d4fba
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Deny Permissions on an XML Schema Collection
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Permission can be denied to either create a new XML schema collection or use an existing one.  
   
 ## Denying Permission to Create an XML Schema Collection  
@@ -72,7 +72,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myOtherDBSchema.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  
@@ -89,7 +89,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myOtherDBSchema.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  
@@ -136,7 +136,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myOtherDBSchema.myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="telephone" type="xsd:string" />  
 </xsd:schema>'  

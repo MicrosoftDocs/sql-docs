@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "instances of Analysis Services, renaming"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 87494741-4a2e-4fed-8061-418fd1e111c3
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Rename an Analysis Services Instance
   You can rename an existing instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] by using the **Rename Instance** dialog box.  

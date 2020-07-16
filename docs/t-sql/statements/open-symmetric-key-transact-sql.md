@@ -16,12 +16,11 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], opening"
   - "OPEN SYMMETRIC KEY statement"
 ms.assetid: ff019a7c-c373-46c7-ac43-ffb7e2ee60b3
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # OPEN SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Decrypts a symmetric key and makes it available for use.  
   
@@ -29,7 +28,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>  
   

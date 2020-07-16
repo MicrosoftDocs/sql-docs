@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.datasourcewizard.specifyobject.f1"
 ms.assetid: e6ef6dea-9db8-45c4-8959-f9febd7caf7b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data sources from existing objects (Data Source Wizard) (Analysis Services)
   Use the **Data sources from existing objects** page to specify an existing data source or project on which to base the new data source.  

@@ -20,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ALTER SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes an existing service.  
   
@@ -31,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER SERVICE service_name   
    [ ON QUEUE [ schema_name . ]queue_name ]   
@@ -42,7 +41,10 @@ ALTER SERVICE service_name
    ADD CONTRACT contract_name | DROP CONTRACT contract_name  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *service_name*  
  Is the name of the service to change. Server, database, and schema names cannot be specified.  
   

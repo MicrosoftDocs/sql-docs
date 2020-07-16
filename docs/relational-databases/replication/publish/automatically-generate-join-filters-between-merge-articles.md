@@ -1,6 +1,7 @@
 ---
-title: "Automatically Generate Join Filters Between Merge Articles | Microsoft Docs"
-ms.custom: ""
+title: "Automatically generate join filters (Merge)"
+description: Describes how to automatically generate a set of join filters on the 'Filter Table Rows' page of the 'New Publication Wizard' for a Merge Publicaton in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: 7ef419f4-c17f-42a5-9068-174a3ec08941
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Automatically Generate Join Filters Between Merge Articles
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Automatically generate a set of join filters on the **Filter Table Rows** page of the New Publication Wizard or the **Filter Rows** page of the **Publication Properties - \<Publication>** dialog box. For more information about using the wizard and accessing the dialog box, see [Create a Publication](../../../relational-databases/replication/publish/create-a-publication.md) and [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md).  
   
 > [!NOTE]  

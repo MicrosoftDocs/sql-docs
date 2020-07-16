@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining [Analysis Services], about data mining"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 84f6548d-ebb0-4e10-9b29-66253fa0a04a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Mining Solutions
   A data mining solution is an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] solution that contains one or more data mining projects.  

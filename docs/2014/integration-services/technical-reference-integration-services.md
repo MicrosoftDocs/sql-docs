@@ -4,16 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "technical reference [Integration Services]"
   - "Integration Services, technical reference"
 ms.assetid: 69fe35ef-58df-4138-b0a5-9b1fb8c862d7
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Technical Reference (Integration Services)
   Find the tools, languages, and programming reference documentation for [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

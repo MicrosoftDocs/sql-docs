@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 4ed9692e-5170-47d4-8b0b-028c967d47ff
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Clear Query Results (Visual Database Tools)
   After running a query in the **Query and View Designer**, you can clear the Results pane. This procedure applies to queries created by using the **Open View** or **Open Table** options from Object Explorer. In[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], after running a query in the Query Editor, the Results pane cannot be cleared except by closing the Query Editor window or running another query.  

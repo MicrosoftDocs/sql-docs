@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "batches [ODBC]"
   - "ODBC CALL escape sequence"
 ms.assetid: b7f53e11-15f0-4602-8134-b166160888f0
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Batching Stored Procedure Calls
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver automatically batches stored procedure calls to the server when appropriate. The driver only does this when the ODBC CALL escape sequence is used; it does not do this for the [!INCLUDE[tsql](../../includes/tsql-md.md)] EXECUTE statement. Batching stored procedure calls can reduce the number of round trips to the server and significantly increase performance.  

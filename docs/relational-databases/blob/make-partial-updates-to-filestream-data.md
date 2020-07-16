@@ -1,5 +1,6 @@
 ---
 title: "Make Partial Updates to FILESTREAM Data | Microsoft Docs"
+description: Discover how to use the FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT value to make partial updates to FILESTREAM BLOB data. View an example of a partial update.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,12 +12,11 @@ helpviewer_keywords:
   - "FILESTREAM [SQL Server], FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT"
   - "FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT"
 ms.assetid: d6f7661e-6c14-4d31-9541-4520ca0f82b2
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Make Partial Updates to FILESTREAM Data
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   An application uses FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT to make partial updates to FILESTREAM BLOB data. The [DeviceIoControl](https://go.microsoft.com/fwlink/?LinkId=105527) function passes this value and the handle that is returned from [OpenSqlFilestream](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md) to the FILESTREAM driver. The driver then forces a server-side copy of the current FILESTREAM data into the file that is referenced by the handle. If the application issues the FSCTL_SQL_FILESTREAM_FETCH_OLD_CONTENT value after the handle has been written to, the last write operation persists and previous write operations that were made to the handle are lost.  
   
 > [!NOTE]  

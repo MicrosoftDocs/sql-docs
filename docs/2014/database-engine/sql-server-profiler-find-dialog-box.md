@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.find.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: dfaeec04-93d3-4214-9fc1-38b80179b36b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Profiler - Find Dialog Box
   Use the **Find** dialog box to search a trace for specific characters or words. To cancel a search in progress, press ESC.  

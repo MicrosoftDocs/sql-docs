@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "objects [Analysis Services], naming"
 ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Object Naming Rules (Analysis Services)
   This topic describes object naming conventions, as well as the reserved words and characters that cannot be used in any object name, in code or script in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].  
@@ -65,10 +62,10 @@ manager: craigg
 |Object|Invalid characters|  
 |------------|------------------------|  
 |`Server`|Follow Windows server naming conventions when naming a server object. See [Naming Conventions (Windows)](/windows/desktop/DNS/naming-conventions) for details.|  
-|`DataSource`|: / \ * &#124; ? " () [] {} <>|  
-|`Level` or `Attribute`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = [] {} \< >|  
-|`Dimension` or `Hierarchy`|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \<,>|  
-|All other objects|. , ; ' ` : / \ * &#124; ? " & % $ ! + = () [] {} \< >|  
+|`DataSource`| `: / \ * \| ? " () [] {} <>` |  
+|`Level` or `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension` or `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|All other objects|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
  **Exceptions: When Reserved Characters are Allowed**  
   
@@ -85,7 +82,7 @@ manager: craigg
   
 ## See Also  
  [MDX Reserved Words](/sql/mdx/mdx-reserved-words)   
- [Translations &#40;Analysis Services&#41;](../../../analysis-services/translations-analysis-services.md)   
+ [Translations &#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
  [XML for Analysis Compliance &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
   
   

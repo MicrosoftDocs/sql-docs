@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.customfilterdb.f1"
@@ -14,7 +13,6 @@ f1_keywords:
 ms.assetid: 3223059d-f525-4835-bf88-ebc195d9dbdc
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Filter Data in a Table (SSAS Tabular)
   You can apply filters when you import data to control the rows that are loaded into a table. After you have imported the data, you cannot delete individual rows. However, you can apply custom filters to control the way that rows are displayed. Rows that do not meet the filtering criteria are hidden. You can filter by one or more columns. Filters are additive, which means that each additional filter is based on the current filter and further reduces the subset of data.  

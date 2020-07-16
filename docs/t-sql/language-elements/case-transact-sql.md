@@ -1,6 +1,6 @@
 ---
 title: "CASE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the CASE expression. CASE evaluates a list of conditions to return specific results."
 ms.date: "06/28/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -18,16 +18,12 @@ helpviewer_keywords:
   - "comparing expressions"
   - "searched CASE expression"
 ms.assetid: 658039ec-8dc2-4251-bc82-30ea23708cee
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Evaluates a list of conditions and returns one of multiple possible result expressions.  
   
@@ -45,7 +41,7 @@ Evaluates a list of conditions and returns one of multiple possible result expre
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 Simple CASE expression:   
@@ -60,7 +56,7 @@ CASE
 END  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CASE  

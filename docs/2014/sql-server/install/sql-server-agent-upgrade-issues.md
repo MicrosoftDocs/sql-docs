@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading SQL Server Agent"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 77e303ff-febd-4103-ae5d-6e5b85bc8009
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Agent Upgrade Issues
   The following topics describe the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent issues that might affect an upgrade. The topics describe actions that you can take to help reduce the effect of these changes on your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment.  
@@ -37,7 +35,7 @@ manager: craigg
 -   [Upgrading will change the SQL Server Agent User Proxy Account to the temporary UpgradedProxyAccount](../../../2014/sql-server/install/upgrading-changes-sql-server-agent-user-proxy-account-to-temporary-account.md)  
   
 ## See Also  
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)   
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)   
  [Resolving Upgrade Issues](../../../2014/sql-server/install/resolving-upgrade-issues.md)  
   
   

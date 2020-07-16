@@ -4,20 +4,18 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.QueryExecution.SqlServer.SqlExecutionAnsi"
 ms.assetid: 0f4c6887-0562-417e-806c-b5cffb1e7c5c
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Options (Query Execution-SQL Server-ANSI Page)
   Together, these ANSI (ISO) standard SET options define the query processing environment for the duration of the user's query, a running trigger, or a stored procedure. These SET options, however, do not include all of the options required to conform to the ISO standard. Use this page to specify that [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] will run the queries using all or a portion of the settings specified in the ISO standard. Changes to these options are applied only to new [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] queries. To change the options for the current queries, click **Query Options** on the **Query** menu, or right-click in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Query window and select **Query Options**. In the **Query Options** dialog box, under **Execution**, click **ANSI**.  
   
-## UIElement List  
+## UI element list  
  **SET ANSI_DEFAULTS**  
  Select this check box to select all of the default ISO settings. Not all ISO options are selected by default.  
   

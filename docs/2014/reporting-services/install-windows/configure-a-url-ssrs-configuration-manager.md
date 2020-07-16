@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "URL access [Reporting Services], syntax"
 ms.assetid: 851e163a-ad2a-491e-bc1e-4df92327092f
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Configure a URL  (SSRS Configuration Manager)
   Before you can use Report Manager or the Report Server Web service, you must configure at least one URL for each application. Configuring the URLs is mandatory if you installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in "files-only" mode (that is, by selecting the **Install but do not configure the server** option on the Report Server Installation Options page in the Installation Wizard). If you installed [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] in the default configuration, URLs are already configured for each application. If you have a report server that is configured to use SharePoint Integrated mode and you update the Report Server Web Service URL by using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool, you must also update the URL in SharePoint Central Administration.  
@@ -111,9 +110,9 @@ manager: craigg
 ## Setting Advanced Properties to Specify Additional URLs  
  You can reserve multiple URLs for the Report Server Web service or Report Manager by specifying different ports or host names (either an IP address or a host header name that a domain name server can resolve to an IP address assigned to the computer). By creating multiple URLs, you can set up different access paths to the same report server instance. For example, to enable intranet and extranet access to a report server, you might use the default URL for access across the intranet, and an additional fully qualified host name for extranet access:  
   
--   http://myserver01/reportserver  
+-   `http://myserver01/reportserver`
   
--   http://www.adventure-works.com/reportserver  
+-   `http://www.adventure-works.com/reportserver`  
   
  You cannot set multiple virtual directory names for the same application instance. Each [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] application instance is mapped to a single virtual directory name. If you have multiple instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on the same computer, the virtual directory name for an application should include the instance name to ensure that each request reaches its intended target.  
   
@@ -145,9 +144,9 @@ manager: craigg
   
 -   http://sales01:8080/reportserver  
   
--   https://sales.adventure-works.com/reportserver  
+-   `https://sales.adventure-works.com/reportserver`  
   
--   https://www.adventure-works.com:8080/reportserver01  
+-   `https://www.adventure-works.com:8080/reportserver01`  
   
  URLs that you use to access Report Manager share a similar format and are typically created under the same Web site that hosts the report server. The only difference is the virtual directory name (in this case, it is **reports** but you can configure it to use whatever name that you want):  
   
@@ -159,9 +158,9 @@ manager: craigg
   
 -   http://sales01:8080/reports  
   
--   https://sales.adventure-works.com/reports  
+-   `https://sales.adventure-works.com/reports`  
   
--   https://www.adventure-works.com:8080/reports  
+-   `https://www.adventure-works.com:8080/reports`  
   
 ## See Also  
  [Reporting Services Configuration Manager &#40;Native Mode&#41;](../../sql-server/install/reporting-services-configuration-manager-native-mode.md)   

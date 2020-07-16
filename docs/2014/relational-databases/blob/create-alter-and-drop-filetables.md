@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "FileTables [SQL Server], dropping"
   - "FileTables [SQL Server], creating"
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Create, Alter, and Drop FileTables
   Describes how to create a new FileTable, or alter or drop an existing FileTable.  
@@ -61,7 +60,7 @@ manager: craigg
   
  The following example creates a new FileTable and specifies user-defined values for both **FILETABLE_DIRECTORY** and **FILETABLE_COLLATE_FILENAME**.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable  
     WITH (   
           FileTable_Directory = 'DocumentTable',  
@@ -72,7 +71,7 @@ GO
   
  The following example also creates a new FileTable. Since user-defined values are not specified, the value of **FILETABLE_DIRECTORY** becomes the name of the FileTable, the value of **FILETABLE_COLLATE_FILENAME** becomes database_default, and the primary key and unique contraints receive system-generated names.  
   
-```tsql  
+```sql  
 CREATE TABLE DocumentStore AS FileTable;  
 GO  
 ```  
@@ -107,7 +106,7 @@ GO
   
  **Example**  
   
-```tsql  
+```sql  
 ALTER TABLE filetable_name  
     SET ( FILETABLE_DIRECTORY = N'directory_name' );  
 GO  
@@ -138,7 +137,7 @@ GO
 ##  <a name="BasicsOtherObjects"></a> Other Database Objects Are Created When You Create a FileTable  
  When you create a new FileTable, some system-defined indexes and constraints are also created. You cannot alter or drop these objects; they disappear only when the FileTable itself is dropped. To see the list of these objects, query the catalog view [sys.filetable_system_defined_objects &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-filetable-system-defined-objects-transact-sql).  
   
-```tsql  
+```sql  
 --View all objects for all filetables, unsorted  
 SELECT * FROM sys.filetable_system_defined_objects;  
 GO  
@@ -156,9 +155,9 @@ GO
 |||  
 |-|-|  
 |**Columns**|**Index type**|  
-|[path_locator] ASC|Primary Key, non-clustered|  
-|[parent_path_locator] ASC,<br /><br /> [name] ASC|Unique, non-clustered|  
-|[stream_id] ASC|Unique, non-clustered|  
+|[path_locator] ASC|Primary Key, nonclustered|  
+|[parent_path_locator] ASC,<br /><br /> [name] ASC|Unique, nonclustered|  
+|[stream_id] ASC|Unique, nonclustered|  
   
  **Constraints that are created when you create a new FileTable**  
  When you create a new FileTable, the following system-defined constraints are also created:  
@@ -169,7 +168,7 @@ GO
 |Check constraints|The system-defined check constraints enforce the following requirements:<br /><br /> Valid filenames.<br /><br /> Valid file attributes.<br /><br /> Parent object must be a directory.<br /><br /> Namespace hierarchy is locked during file manipulation.|  
   
  **Naming convention for the system-defined constraints**  
- The system-defined constaints described above are named in the format **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** where:  
+ The system-defined constraints described above are named in the format **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** where:  
   
 -   *<constraint_type>* is CK (check constraint), DF (default constraint), FK (foreign key), PK (primary key), or UQ (unique constraint).  
   

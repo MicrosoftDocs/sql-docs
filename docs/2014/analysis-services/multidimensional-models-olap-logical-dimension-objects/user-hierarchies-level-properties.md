@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "user hierarchies [Analysis Services]"
@@ -14,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: dabb7335-887b-442a-b67c-4901ba1242b7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Level Properties 
   The following table lists and describes the properties of a level in a user-defined hierarchy.  

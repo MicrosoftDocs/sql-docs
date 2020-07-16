@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "query-based subscriptions [Reporting Services]"
@@ -13,9 +12,9 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], data-driven"
   - "data-driven subscriptions"
 ms.assetid: 0ba2093e-9393-4eb6-af06-9da10988cfaf
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Create, Modify, and Delete a Data-Driven Subscription
   A data-driven subscription is a query-based subscription that gets the data values used for processing the subscription at run time. When the subscription is triggered, a query is processed to get up-to-date information about recipients, report delivery options, rendering formats, and parameter settings. The query results are combined with the subscription definition to create a dynamic subscription that uses data you already maintain in an employee database, a customer database, or any other database that contains information that can be used as subscriber data.  

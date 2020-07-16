@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "ODBC, bulk copy operations"
   - "bulk copy [ODBC], data files"
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Using Data Files and Format Files
   The simplest bulk copy program does the following:  

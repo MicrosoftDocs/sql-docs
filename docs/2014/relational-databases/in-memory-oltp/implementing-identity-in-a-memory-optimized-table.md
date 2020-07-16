@@ -7,16 +7,15 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c0a704a3-3a31-4c2c-b967-addacda62ef8
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Implementing IDENTITY in a Memory-Optimized Table
   IDENTITY(1, 1) is supported on a memory-optimized table. However, identity columns with definition of IDENTITY(x, y) where x != 1 or y != 1 are not supported on memory-optimized tables. The workaround for IDENTITY values uses the SEQUENCE object ([Sequence Numbers](../sequence-numbers/sequence-numbers.md)).  
   
  First remove the IDENTITY property from the table you are converting to In-Memory OLTP. Then, define a new SEQUENCE object for the column in the table. SEQUENCE objects as identity columns rely on the ability to create DEFAULT values for columns that use the NEXT VALUE FOR syntax to get a new identity value. Since DEFAULTs are not supported in In-Memory OLTP, you need to pass the newly-generated SEQUENCE value either to the INSERT statement or to a natively compiled stored procedure that does the insert. The following example demonstrates this pattern.  
   
-```tsql  
+```sql  
 -- Create a new In-Memory OLTP table to simulate IDENTITY insert  
 -- Here the column C1 was the identity column in the original table  
 --  

@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "permissions [Master Data Services], assigning member permissions"
   - "members [Master Data Services], assigning permissions"
 ms.assetid: e1b8b46a-7cd1-4a7d-9345-dd7df081e145
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Assign Hierarchy Member Permissions (Master Data Services)
   Assign permissions to hierarchy members to give users or groups access to view data in the **Explorer** functional area of [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)].  

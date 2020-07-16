@@ -4,16 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "parameters [Integration Services]"
   - "OLE DB Command transformation"
 ms.assetid: c800f167-3d2e-4c10-8ba3-a02f1872ccea
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Configure the OLE DB Command Transformation
   To add and configure an OLE DB Command transformation, the package must already include at least one Data Flow task and a source such as a Flat File source or an OLE DB source. This transformation is typically used for running parameterized queries.  

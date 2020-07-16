@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_ivindexhasnullcols"
 ms.assetid: ed2cde63-37e1-43cf-b6ba-3b6114a0f797
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_ivindexhasnullcols (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Validates that the clustered index of the indexed view is unique, and does not contain any column that can be null when the indexed view is going to be used to create a transactional publication. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -33,10 +32,10 @@ sp_ivindexhasnullcols [ @viewname = ] 'view_name'
 ```  
   
 ## Arguments  
- [ **@viewname**= ] **'***view_name***'**  
+`[ @viewname = ] 'view_name'`
  Is the name of the view to verify. *view_name* is **sysname**, with no default.  
   
- [ **@fhasnullcols**= ] *field_has_null_columns* OUTPUT  
+`[ @fhasnullcols = ] field_has_null_columns OUTPUT`
  Is the flag indicating whether the view index has columns that allow NULL. *view_name* is **sysname**, with no default. Returns a value of **1** if the view index has columns that allow NULL. Returns a value of **0** if the view does not contain columns that allow NULLS.  
   
 > [!NOTE]  

@@ -12,10 +12,10 @@ f1_keywords:
 ms.assetid: 1b77a466-479c-4356-b539-a644cec507b5
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Publication Type
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Replication provides the following types of publications:  
   
 -   Snapshot publication  

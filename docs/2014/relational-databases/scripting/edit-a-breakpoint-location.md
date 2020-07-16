@@ -1,18 +1,16 @@
 ---
-title: "Edit a Breakpoint Location | Microsoft Docs"
-ms.custom: ""
+title: Edit a Breakpoint Location
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint location"
 ms.assetid: 5c28e411-0377-4210-a7ce-2a5c13dcdf74
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Edit a Breakpoint Location
   The breakpoint location specifies the line and character where the breakpoint resides in a [!INCLUDE[tsql](../../includes/tsql-md.md)] script file. You can edit the breakpoint location to move the breakpoint to another location in the script, or to a different script.  

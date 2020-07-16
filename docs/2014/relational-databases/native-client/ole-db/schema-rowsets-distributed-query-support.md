@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "OLE DB rowsets, schema"
   - "rowsets [OLE DB], schema"
 ms.assetid: 11354bb6-be42-4d8d-854c-42dd3dc38656
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Distributed Query Support in Schema Rowsets
   To support [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distributed queries, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB provider **IDBSchemaRowset** interface returns metadata on linked servers.  

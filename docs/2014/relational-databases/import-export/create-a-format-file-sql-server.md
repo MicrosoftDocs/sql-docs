@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "format files [SQL Server], creating"
 ms.assetid: f680b4a0-630f-4052-9c79-d348c1076f7b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Create a Format File (SQL Server)
   When you bulk import into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table or bulk export data from a table, you can use a format file to a flexible system for writing data files that requires little or no editing to comply with other data formats or to read data files from other software programs.  
@@ -28,7 +27,7 @@ manager: craigg
 ## Creating a Non-XML Format File  
  To use a **bcp** command to create a format file, specify the **format** argument and use **nul** instead of a data-file path. The **format** option also requires the **-f** option, such as:  
   
- **bcp** _table_or_view_ **format** nul **-f***format_file_name*  
+ **bcp** _table_or_view_ **format** nul **-f**_format_file_name_  
   
 > [!NOTE]  
 >  To distinguish a non-XML format file, we recommend that you use .fmt as the file name extension, for example, MyTable.fmt.  

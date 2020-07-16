@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Configure the network packet size Server Configuration Option
   This topic describes how to configure the `network packet size` server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The `network packet size` option sets the packet size (in bytes) that is used across the whole network. Packets are the fixed-size chunks of data that transfer requests and results between clients and servers. The default packet size is 4,096 bytes.  
@@ -83,7 +82,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) to set the value of the `network packet size` option to `6500` bytes.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  

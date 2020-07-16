@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "IDSOShapeExtensions interface [ADO]"
 ms.assetid: ad4ba313-1161-4bc7-b8f6-4083305bc81e
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # IDSOShapeExtensions Interface
 Gets the underlying OLE DB Data Source object for the SHAPE provider.  

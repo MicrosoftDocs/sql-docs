@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "many-to-many relationships [Analysis Services]"
 ms.assetid: edb5f61a-a581-467a-a367-134b7f9b849f
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define a Many-to-Many Relationship and Many-to-Many Relationship Properties
   This topic explains many-to-many dimensions in Analysis Services, including when to use them and how to create them.  
@@ -174,7 +172,7 @@ manager: craigg
 ##  <a name="bkmk_Learn"></a> Learn more  
  Use the following links to get additional information that helps you master the concepts.  
   
- [How do I define a many-to-many dimension in Analysis Services](https://go.microsoft.com/fwlink/?LinkId=324759)  
+ [How do I define a many-to-many dimension in Analysis Services](../lesson-5-3-defining-a-many-to-many-relationship.md)  
   
  [The many-to-many Revolution 2.0](https://go.microsoft.com/fwlink/?LinkId=324760)  
   

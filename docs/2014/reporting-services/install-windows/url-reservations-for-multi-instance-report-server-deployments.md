@@ -4,15 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "URL reservations"
 ms.assetid: f67c83c0-1f74-42bb-bfc1-e50c38152d3d
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # URL Reservations for Multi-Instance Report Server Deployments  (SSRS Configuration Manager)
   If you install multiple instances of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] on the same computer, you must consider how you will define the URL reservations for each instance. Within each instance, the Report Server Web service and Report Manager must have at least one URL reservation each. The entire set of reservations must be unique in HTTP.SYS.  
@@ -37,7 +36,7 @@ manager: craigg
 |Report Server default instance (MSSQLSERVER)|ReportServer_MyNamedInstance|Uniqueness|  
 |----------------------------------------------------|-----------------------------------|----------------|  
 |http://+:80/reportserver|http://+:8888/reportserver|Each instance listens on a different port.|  
-|http://www.contoso.com/reportserver|http://SRVR-46/reportserver|Each instance responds to different server names (fully qualified domain name, and machine name).|  
+|`http://www.contoso.com/reportserver`|`http://SRVR-46/reportserver`|Each instance responds to different server names (fully qualified domain name, and machine name).|  
   
 ## Uniqueness Requirements  
  The underlying technologies used by [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] impose requirements around unique names. HTTP.SYS requires that all URLs within its repository be unique. You can vary the port, host name, or virtual directory name to create a unique URL. [!INCLUDE[vstecasp](../../includes/vstecasp-md.md)] requires that application identities be unique within the same process. This requirement affects the virtual directory names. It specifies that you cannot duplicate a virtual directory name within the same report server instance.  

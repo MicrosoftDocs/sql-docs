@@ -4,16 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "viewing packages"
   - "connections [Integration Services], packages"
 ms.assetid: 783e653c-0f1f-45ed-b3ef-5ba07b019f27
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # View Integration Services Packages in SQL Server Management Studio (SSIS Service)
     

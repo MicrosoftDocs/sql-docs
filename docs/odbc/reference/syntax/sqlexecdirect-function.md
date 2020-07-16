@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLExecDirect function [ODBC]"
 ms.assetid: 985fcee1-f204-425c-bdd1-deb0e7d7bbd9
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLExecDirect Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLExecDirect(  
      SQLHSTMT     StatementHandle,  

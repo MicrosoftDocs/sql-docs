@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "SQL property [ADO], VBScript example"
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SQL Property Example (VBScript)
 > [!IMPORTANT]

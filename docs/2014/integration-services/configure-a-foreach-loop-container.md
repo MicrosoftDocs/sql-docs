@@ -4,16 +4,14 @@ ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Foreach Loop containers"
   - "containers [Integration Services], Foreach Loop"
 ms.assetid: 519c6f96-5e1f-47d2-b96a-d49946948c25
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Configure a Foreach Loop Container
   This procedure describes how to configure a Foreach Loop container, including property expressions at the enumerator and container levels.  

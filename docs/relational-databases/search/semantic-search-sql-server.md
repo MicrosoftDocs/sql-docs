@@ -1,10 +1,8 @@
 ---
 title: "Semantic Search (SQL Server) | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,12 +11,12 @@ helpviewer_keywords:
   - "statistical semantic search [SQL Server]"
   - "statistical semantic search [SQL Server], overview"
 ms.assetid: cd8faa9d-07db-420d-93f4-a2ea7c974b97
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 ---
 # Semantic Search (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Statistical Semantic Search provides deep insight into unstructured documents stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases by extracting and indexing statistically relevant *key phrases*. Then it uses these key phrases to identify and index *documents that are similar or related*.  
   
 ##  <a name="whatcanido"></a> What can you do with Semantic Search?  

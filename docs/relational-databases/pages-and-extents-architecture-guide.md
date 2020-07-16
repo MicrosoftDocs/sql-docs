@@ -1,7 +1,7 @@
 ---
 title: "Pages and Extents Architecture Guide | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/23/2018"
+ms.date: "03/12/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -13,11 +13,10 @@ helpviewer_keywords:
 ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Pages and Extents Architecture Guide
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The page is the fundamental unit of data storage in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. An extent is a collection of eight physically contiguous pages. Extents help efficiently manage pages. This guide describes the data structures that are used to manage pages and extents in all versions of SQL Server. Understanding the architecture of pages and extents is important for designing and developing databases that perform efficiently.
 
@@ -25,11 +24,13 @@ The page is the fundamental unit of data storage in [!INCLUDE[ssNoVersion](../in
 
 The fundamental unit of data storage in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is the page. The disk space allocated to a data file (.mdf or .ndf) in a database is logically divided into pages numbered contiguously from 0 to n. Disk I/O operations are performed at the page level. That is, SQL Server reads or writes whole data pages.
 
-Extents are a collection of eight physically contiguous pages and are used to efficiently manage the pages. All pages are stored in extents.
+Extents are a collection of eight physically contiguous pages and are used to efficiently manage the pages. All pages are organized into extents.
 
 ### Pages
 
-In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the page size is 8-KB. This means [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases have 128 pages per megabyte. Each page begins with a 96-byte header that is used to store system information about the page. This information includes the page number, page type, the amount of free space on the page, and the allocation unit ID of the object that owns the page.
+Take a regular book: all content in it is written on pages. Similar to a book, in SQL Server all the data rows are written on pages. In a book, all pages are the same physical size. Similarly, in SQL Server all data pages are the same size - 8 kilobytes. In a book most pages contain the data - the main content of the book - and some pages contain metadata about the content - for example table of contents and index. Again, SQL Server is not different: most pages contain actual rows of data which were stored by users; these are called Data pages and text/image pages (for special cases). The Index pages contain index references about where the data is and finally there are system pages that store variety of metadata about the organization of the data (PFS, GAM, SGAM, IAM, DCM, BCM pages). See table below for page types and their description.
+
+As mentioned, in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the page size is 8-KB. This means [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases have 128 pages per megabyte. Each page begins with a 96-byte header that is used to store system information about the page. This information includes the page number, page type, the amount of free space on the page, and the allocation unit ID of the object that owns the page.
 
 The following table shows the page types used in the data files of a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.
 
@@ -47,7 +48,7 @@ The following table shows the page types used in the data files of a [!INCLUDE[s
 > [!NOTE]
 > Log files do not contain pages; they contain a series of log records.
 
-Data rows are put on the page serially, starting immediately after the header. A row offset table starts at the end of the page, and each row offset table contains one entry for each row on the page. Each entry records how far the first byte of the row is from the start of the page. The entries in the row offset table are in reverse sequence from the sequence of the rows on the page.
+Data rows are put on the page serially, starting immediately after the header. A row offset table starts at the end of the page, and each row offset table contains one entry for each row on the page. Each row offset entry records how far the first byte of the row is from the start of the page. Thus, the function of the row offset table is to help SQL Server locate rows on a page very quickly. The entries in the row offset table are in reverse sequence from the sequence of the rows on the page.
 
 ![page_architecture](../relational-databases/media/page-architecture.gif)
 
@@ -58,6 +59,19 @@ Rows cannot span pages, however portions of the row may be moved off the row's p
 This restriction is relaxed for tables that contain varchar, nvarchar, varbinary, or sql_variant columns. When the total row size of all fixed and variable columns in a table exceeds the 8,060-byte limitation, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dynamically moves one or more variable length columns to pages in the ROW_OVERFLOW_DATA allocation unit, starting with the column with the largest width. 
 
 This is done whenever an insert or update operation increases the total size of the row beyond the 8,060-byte limit. When a column is moved to a page in the ROW_OVERFLOW_DATA allocation unit, a 24-byte pointer on the original page in the IN_ROW_DATA allocation unit is maintained. If a subsequent operation reduces the row size, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] dynamically moves the columns back to the original data page. 
+
+##### Row-Overflow Considerations 
+
+As mentioned earlier, a row cannot reside on multiple pages and can overflow if the combined size of variable-length data-type fields exceeds the 8060-byte limit. To illustrate, a table may be created with two columns: one varchar(7000) and another varchar (2000). Individually neither column exceeds the 8060-byte, but combined they could do so, if the entire width of each column is filled. SQL Server may dynamically move the varchar(7000) variable length column to pages in the ROW_OVERFLOW_DATA allocation unit. When you combine varchar, nvarchar, varbinary, sql_variant, or CLR user-defined type columns that exceed 8,060 bytes per row, consider the following:
+-  Moving large records to another page occurs dynamically as records are lengthened based on update operations. Update operations that shorten records may cause records to be moved back to the original page in the IN_ROW_DATA allocation unit. 
+   Querying and performing other select operations, such as sorts or joins on large records that contain row-overflow data slows processing time, because these records are processed synchronously instead of asynchronously.   
+   Therefore, when you design a table with multiple varchar, nvarchar, varbinary, sql_variant, or CLR user-defined type columns, consider the percentage of rows that are likely to flow over and the frequency with which this overflow data is likely to be queried. If there are likely to be frequent queries on many rows of row-overflow data, consider normalizing the table so that some columns are moved to another table. This can then be queried in an asynchronous JOIN operation. 
+-  The length of individual columns must still fall within the limit of 8,000 bytes for varchar, nvarchar, varbinary, sql_variant, and CLR user-defined type columns. Only their combined lengths can exceed the 8,060-byte row limit of a table.
+-  The sum of other data type columns, including char and nchar data, must fall within the 8,060-byte row limit. Large object data is also exempt from the 8,060-byte row limit. 
+-  The index key of a clustered index cannot contain varchar columns that have existing data in the ROW_OVERFLOW_DATA allocation unit. If a clustered index is created on a varchar column and the existing data is in the IN_ROW_DATA allocation unit, subsequent insert or update actions on the column that would push the data off-row will fail. For more information about allocation units, see Table and Index Organization.
+-  You can include columns that contain row-overflow data as key or nonkey columns of a nonclustered index.
+-  The record-size limit for tables that use sparse columns is 8,018 bytes. When the converted data plus existing record data exceeds 8,018 bytes, [MSSQLSERVER ERROR 576](../relational-databases/errors-events/database-engine-events-and-errors.md) is returned. When columns are converted between sparse and nonsparse types, Database Engine keeps a copy of the current record data. This temporarily doubles the storage that is required for the record.
+-  To obtain information about tables or indexes that might contain row-overflow data, use the [sys.dm_db_index_physical_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md) dynamic management function.
 
 ### Extents 
 
@@ -118,7 +132,7 @@ The algorithms that are actually used internally by the [!INCLUDE[ssDEnoversion]
 
 After an extent has been allocated to an object, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] uses the PFS pages to record which pages in the extent are allocated or free. This information is used when the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] has to allocate a new page. The amount of free space in a page is only maintained for heap and Text/Image pages. It is used when the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] has to find a page with free space available to hold a newly inserted row. Indexes do not require that the page free space be tracked, because the point at which to insert a new row is set by the index key values.
 
-A PFS page is the first page after the file header page in a data file (page ID 1). This is followed by a GAM page (page ID 2), and then an SGAM page (page ID 3). There is a new PFS page approximately 8,000 pages after the first PFS page, and additional PFS pages in subsequent 8,000 page intervals. There is another GAM page 64,000 extents after the first GAM page on page 2, another SGAM page 64,000 extents after the first SGAM page on page 3, and additional GAM and SGAM pages in subsequent 64,000 extent intervals. The following illustration shows the sequence of pages used by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] to allocate and manage extents.
+A new PFS, GAM or SGAM page is added in the data file for every additional range that it keeps track of. Thus, there is a new PFS page 8,088 pages after the first PFS page, and additional PFS pages in subsequent 8,088 page intervals. To illustrate, page ID 1 is a PFS page, page ID 8088 is a PFS page, page ID 16176 is a PFS page, and so on. There is a new GAM page 64,000 extents after the first GAM page and it keeps track of the 64,000-extents following it; the sequence continues at 64,000-extent intervals. Similarly, there is a new SGAM page 64,000 extents after the first SGAM page and additional SGAM pages in subsequent 64,000 extent intervals. The following illustration shows the sequence of pages used by the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] to allocate and manage extents.
 
 ![manage_extents](../relational-databases/media/manage-extents.gif)
 
@@ -144,7 +158,7 @@ An IAM page covers a 4-GB range in a file and is the same coverage as a GAM or S
 IAM pages are allocated as required for each allocation unit and are located randomly in the file. The system view, sys.system_internals_allocation_units, points to the first IAM page for an allocation unit. All the IAM pages for that allocation unit are linked in a chain.
 
 > [!IMPORTANT]
-> The `sys.system_internals_allocation_units` system view is for internal use only and is subject to change. Compatibility is not guaranteed.
+> The `sys.system_internals_allocation_units` system view is for internal use only and is subject to change. Compatibility is not guaranteed. This view is not available in Azure SQL Database. 
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  
@@ -175,4 +189,6 @@ The interval between DCM pages and BCM pages is the same as the interval between
 
 ## See Also
 [sys.allocation_units &#40;Transact-SQL&#41;](../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)     
-[Heaps &#40;Tables without Clustered Indexes&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)    
+[Heaps &#40;Tables without Clustered Indexes&#41;](../relational-databases/indexes/heaps-tables-without-clustered-indexes.md#heap-structures)       
+[Reading Pages](../relational-databases/reading-pages.md)   
+[Writing Pages](../relational-databases/writing-pages.md)   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data preparation"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 714845a9-4c27-461a-9ba3-149e1e818386
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Explore Data (SQL Server Data Mining Add-ins)
   ![Explore Data wizard](media/dmc-explore.gif "Explore Data wizard")  

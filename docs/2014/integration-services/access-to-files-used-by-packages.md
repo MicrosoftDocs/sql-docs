@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SSIS packages, security"
@@ -17,9 +16,8 @@ helpviewer_keywords:
   - "files [Integration Services], security"
   - "SQL Server Integration Services packages, security"
 ms.assetid: 2e3ddea9-5289-4289-a70e-11c018f34977
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Access to Files Used by Packages
   The package protection level does not protect files that are stored outside the package. These files include the following:  

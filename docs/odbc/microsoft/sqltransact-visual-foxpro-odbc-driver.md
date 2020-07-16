@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLTransact function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 92cf86c0-f7a8-44d7-b59f-a1342677440b
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLTransact (Visual FoxPro ODBC Driver)
 > [!NOTE]  

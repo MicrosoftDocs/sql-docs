@@ -1,11 +1,9 @@
 ---
-title: "Firewall Rules Stored Procedures (Azure SQL Database) | Microsoft Docs"
-ms.custom: ""
+title: "Firewall Rules Stored Procedures"
+titleSuffix: Azure SQL Database
 ms.date: "07/28/2016"
-ms.prod: ""
-ms.prod_service: "sql-database, sql-data-warehouse"
+ms.service: sql-database
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
@@ -17,7 +15,7 @@ helpviewer_keywords:
 ms.assetid: 3d4c2585-00de-46b5-8eee-0efb71cb3aea
 author: VanMSFT
 ms.author: vanto
-manager: craigg
+ms.custom: seo-dt-2019
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # Firewall Rules Stored Procedures (Azure SQL Database)

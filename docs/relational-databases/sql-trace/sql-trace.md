@@ -10,10 +10,9 @@ ms.topic: conceptual
 ms.assetid: 83c6d1d9-19ce-43fe-be9a-45aaa31f20cb
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # SQL Trace
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 In SQL Trace, events are gathered if they are instances of event classes listed in the trace definition. These events can be filtered out of the trace or queued for their destination. The destination can be a file or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO), which can use the trace information in applications that manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 > [!IMPORTANT]

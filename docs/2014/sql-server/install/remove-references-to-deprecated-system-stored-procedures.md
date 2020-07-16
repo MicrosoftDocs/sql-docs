@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "undocumented system stored procedures [SQL Server]"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 487d24fc-41d5-495e-843c-0ac974ec472f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Remove references to deprecated system stored procedures
   Upgrade Advisor detected statements that reference undocumented system stored procedures and extended stored procedures that are no longer available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Statements that reference these objects will fail. Do not use undocumented system objects or APIs as the functionality might change or be removed without notification in a future release.  
@@ -98,6 +96,6 @@ manager: craigg
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

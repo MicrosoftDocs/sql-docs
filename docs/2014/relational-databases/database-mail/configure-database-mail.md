@@ -38,7 +38,6 @@ f1_keywords:
 ms.assetid: 7edc21d4-ccf3-42a9-84c0-3f70333efce6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Configure Database Mail
   This topic describes how to enable and configure Database Mail using the Database Mail Configuration Wizard, and create a Database Mail Configuration script using templates.  
@@ -61,7 +60,7 @@ manager: craigg
   
 2.  Expand the **Management** node.  
   
-3.  Tight-click **Database Mail**, and then click **Configure Database Mail**.  
+3.  Right-click **Database Mail**, and then click **Configure Database Mail**.  
   
 4.  Complete the Wizard dialogs  
   

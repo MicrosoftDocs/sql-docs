@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dropmessage"
 ms.assetid: 17287a15-cdde-43d1-bb18-9f920bc15db8
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_dropmessage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a specified user-defined error message from an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. User-defined messages can be viewed using the **sys.messages** catalog view.  
   
@@ -35,10 +34,10 @@ sp_dropmessage [ @msgnum = ] message_number
 ```  
   
 ## Arguments  
- [ **@msgnum =** ] *message_number*  
+`[ @msgnum = ] message_number`
  Is the message number to drop. *message_number* must be a user-defined message that has a message number greater than 50000. *message_number* is **int**, with a default of NULL.  
   
- [ **@lang =** ] **'**_language_**'**  
+`[ @lang = ] 'language'`
  Is the language of the message to drop. If **all** is specified, all language versions of *message_number* are dropped. *language* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

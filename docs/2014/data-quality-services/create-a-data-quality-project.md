@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "create,data quality project"
   - "data quality project,create"
 ms.assetid: 19c52d2b-d28e-4449-ab59-5fe0dc326cd9
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Create a Data Quality Project
   This topic describes how to create a data quality project by using [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)]. A data quality project is used to run the cleansing or matching activity in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  

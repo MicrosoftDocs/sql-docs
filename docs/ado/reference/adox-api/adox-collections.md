@@ -11,11 +11,11 @@ helpviewer_keywords:
   - "ADOX, collections"
   - "collections [ADOX]"
 ms.assetid: c0c90ba9-0471-4381-96f1-376de22fa2ee
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # ADOX Collections
+
 |||  
 |-|-|  
 |[Columns](../../../ado/reference/adox-api/columns-collection-adox.md)|Contains all **Column** objects of a table, index, or key.|  

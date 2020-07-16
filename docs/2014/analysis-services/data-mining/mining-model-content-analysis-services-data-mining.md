@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "algorithms [data mining]"
@@ -20,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: e7c039f6-3266-4d84-bfbd-f99b6858acf4
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Mining Model Content (Analysis Services - Data Mining)
   After you have designed and processed a mining model using data from the underlying mining structure, the mining model is complete and contains *mining model content*. You can use this content to make predictions or analyze your data.  
@@ -227,7 +225,7 @@ manager: craigg
 |17|Other|Represents a custom value defined by the algorithm.|  
 |18|Prerendered string|Represents a custom value that the algorithm renders as a string. No formatting was applied by the object model.|  
   
- The value types are derived from the ADMOMD.NET enumeration. For more information, see <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
+ The value types are derived from the ADMOMD.NET enumeration. For more information, see [Microsoft.AnalysisServices.AdomdServer.MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120)).  
   
 ### Node Score  
  The meaning of the node score differs depending on the model type, and can be specific to the node type as well. For information about how NODE_SCORE is calculated for each model and node type, see [Mining Model Content by Algorithm Type](#bkmk_AlgoType).  

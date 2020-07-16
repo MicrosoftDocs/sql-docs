@@ -30,7 +30,6 @@ helpviewer_keywords:
 ms.assetid: 1e5b43b3-4971-45ee-a591-3f535e2ac722
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Coding User-Defined Types
   When coding your user-defined type (UDT) definition, you must implement various features, depending on whether you are implementing the UDT as a class or a structure, as well as on the format and serialization options you have chosen.  
@@ -614,7 +613,7 @@ public void Rotate(double anglex, double angley, double anglez)
   
  The purpose of the padding is to ensure that the culture is completely separated from the currency value, so that when one UDT is compared against another in [!INCLUDE[tsql](../../includes/tsql-md.md)] code, culture bytes are compared against culture bytes, and currency byte values are compared against currency byte values.  
   
- For the complete code listing for the `Currency` UDT, follow the directions for installing the CLR samples in [SQL Server Database Engine Samples](http://msftengprodsamples.codeplex.com/).  
+ For the complete code listing for the `Currency` UDT, follow the directions for installing the CLR samples in [SQL Server Database Engine Samples](https://msftengprodsamples.codeplex.com/).  
   
 ### Currency Attributes  
  The `Currency` UDT is defined with the following attributes.  
@@ -738,9 +737,8 @@ public void Read(System.IO.BinaryReader r)
 }  
 ```  
   
- For the complete code listing for the `Currency` UDT, see [SQL Server Database Engine Samples](http://msftengprodsamples.codeplex.com/).  
+ For the complete code listing for the `Currency` UDT, see [SQL Server Database Engine Samples](https://msftengprodsamples.codeplex.com/).  
   
 ## See Also  
  [Creating a User-Defined Type](creating-user-defined-types.md)  
-  
   

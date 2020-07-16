@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.flatfiledestadapter.connection.f1"
 helpviewer_keywords: 
   - "Flat File Destination Editor"
 ms.assetid: b01571fa-bc19-4742-8eed-ac163172a919
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Flat File Destination Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **Flat File Destination Editor** dialog box to select the flat file connection for the destination, and to specify whether to overwrite or append to the existing destination file. The flat file destination writes data to a text file. This text file can be in delimited, fixed width, fixed width with row delimiter, or ragged right format.  

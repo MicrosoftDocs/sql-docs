@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 8d050831-8305-48a8-bd22-207932111040
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # setClientInfo Method (java.lang.String, java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +31,7 @@ public void setClientInfo (java.lang.String name,
   
  *value*  
   
- A String that contains the value to set the client infomation property to.  
+ A String that contains the value to set the client information property to.  
   
 ## Exceptions  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

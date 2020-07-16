@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "metadata [Analysis Services]"
@@ -15,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 075548ef-08a3-413c-8ee0-4a074c276fcc
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Database Dimension Properties
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], the characteristics of a dimension are defined by the metadata for the dimension, based on the settings of various dimension properties, and on the attributes or hierarchies that are contained by the dimension. The following table describes the dimension properties in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  

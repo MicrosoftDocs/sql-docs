@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_attach_single_file_db"
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_attach_single_file_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Attaches a database that has only one data file to the current server. **sp_attach_single_file_db** cannot be used with multiple data files.  
   
@@ -41,10 +40,10 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ```  
   
 ## Arguments  
- [ **@dbname=** ] **'***dbname***'**  
+`[ @dbname = ] 'dbname'`
  Is the name of the database to be attached to the server. The name must be unique. *dbname* is **sysname**, with a default of NULL.  
   
- [ **@physname=** ] **'***physical_name***'**  
+`[ @physname = ] 'physical_name'`
  Is the physical name, including path, of the database file. *physical_name* is **nvarchar(260)**, with a default of NULL.  
   
 > [!NOTE]  

@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cubes [Analysis Services], defining"
 ms.assetid: 579ca818-f33d-4060-906d-c8bfee93bf99
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Cube Attribute Properties
   Cube attribute properties enable you to specify unique settings for dimension attributes in cube dimensions based on the same database dimension. The following table describes the properties of a cube attribute.  

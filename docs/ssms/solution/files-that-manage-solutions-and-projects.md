@@ -1,6 +1,6 @@
 ---
-title: "Files That Manage Solutions and Projects | Microsoft Docs"
-ms.custom: ""
+title: "Files That Manage Solutions and Projects"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -16,12 +16,11 @@ helpviewer_keywords:
   - ".sqlsuo files"
   - "files [SQL Server Management Studio], projects"
 ms.assetid: e19d2859-0b97-4727-ac27-c4c226d86b2f
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Files That Manage Solutions and Projects
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
  This topic describes the file types that are specific to [!INCLUDE[msCoName](../../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. By default, all solutions and their projects are created in \My Documents\SQL Server Management Studio Projects.  
 
 

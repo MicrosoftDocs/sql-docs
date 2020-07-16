@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 23029395-3e93-4c29-b7d6-e5a47a3526ff
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # View or Configure the backup compression default Server Configuration Option
   This topic describes how to view or configure the **backup compression default** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **backup compression default** option determines whether the server instance creates compressed backups by default. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed, the **backup compression default** option is off.  
@@ -80,7 +79,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example queries the [sys.configurations](/sql/relational-databases/system-catalog-views/sys-configurations-transact-sql) catalog view to determine the value for `backup compression default`. A value of 0 means that backup compression is off, and a value of 1 means that backup compression is enabled.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT value   
@@ -98,7 +97,7 @@ GO
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) to configure the server instance to create compressed backups by default.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_configure 'backup compression default', 1 ;  

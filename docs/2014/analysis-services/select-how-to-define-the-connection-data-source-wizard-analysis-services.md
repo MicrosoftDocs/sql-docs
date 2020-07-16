@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.datasourcewizard.selectdataconnection.f1"
 ms.assetid: 425b2172-93a1-4f93-8945-cdeaa3e8bd67
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select how to define the connection (Data Source Wizard) (Analysis Services)
   Use the **Select how to define the connection** page to create or select the data connection for a data source.  

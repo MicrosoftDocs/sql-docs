@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [data mining]"
@@ -22,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 8826d5ce-9ba8-4490-981b-39690ace40a4
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Modeling Flags (Data Mining)
   You can use modeling flags in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to provide additional information to a data mining algorithm about the data that is defined in a case table. The algorithm can use this information to build a more accurate data mining model.  

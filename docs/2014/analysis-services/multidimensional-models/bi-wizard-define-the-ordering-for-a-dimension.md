@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "OrderBy property"
@@ -17,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: c42fbd58-244d-4e0a-b715-6f919cbc3ad9
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define the Ordering for a Dimension
   Add the attribute ordering enhancement to a cube or dimension to specify how the members of an attribute are ordered. Members can be ordered by the name or the key of the attribute, or by the name or the key of another attribute (based on an attribute relationship). By default, members are ordered by the name. This enhancement changes the `OrderBy` and `OrderByAttributeID` property settings for attributes in a dimension.  

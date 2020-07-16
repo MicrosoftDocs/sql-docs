@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dqs.dm.cdvaluerelations.f1"
 ms.assetid: 5ee468f0-8538-4620-90e8-63f466c9000e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Use Value Relations in a Composite Domain
   This topic describes how to view value combinations found for the composite domain during the knowledge discovery process in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). This page shows the number of occurrences of the value combinations. Value management is not supported for composite domains, so you cannot perform any operations on these values.  

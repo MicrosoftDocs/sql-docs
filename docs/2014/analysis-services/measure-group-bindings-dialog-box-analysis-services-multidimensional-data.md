@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.dimensionusage.definerelationship.measuregroupbindings.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ed642780-5350-438e-af73-b9ceab3f876d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Measure Group Bindings Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Measure Group Bindings** dialog box to create and modify direct relationships between non-granularity attributes in a cube dimension and columns in a measure group for a regular dimension relationship, as well as to specify null processing options for any attribute in a cube dimension, from the **Define Relationship** dialog box.  

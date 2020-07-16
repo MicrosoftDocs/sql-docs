@@ -21,12 +21,11 @@ helpviewer_keywords:
   - "overwriting data"
   - "data updates [SQL Server], WRITETEXT statement"
 ms.assetid: 80c252fd-a8b8-4a2e-888a-059081ed4109
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # WRITETEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Permits minimally logged, interactive updating of an existing **text**, **ntext**, or **image** column. WRITETEXT overwrites any existing data in the column it affects. WRITETEXT cannot be used on **text**, **ntext**, and **image** columns in views.  
   
@@ -37,7 +36,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 WRITETEXT [BULK]  
   { table.column text_ptr }  

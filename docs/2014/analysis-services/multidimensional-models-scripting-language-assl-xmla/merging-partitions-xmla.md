@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "merging partitions [XMLA]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 657e1d4d-6d50-40f8-a771-7b20c9d865f8
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Merging Partitions (XMLA)
   If partitions have the same aggregation design and structure, you can merge the partition by using the [MergePartitions](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/mergepartitions-element-xmla) command in XML for Analysis (XMLA). Merging partitions is an important action to perform when you manage partitions, especially those partitions that contain historical data partitioned by date.  

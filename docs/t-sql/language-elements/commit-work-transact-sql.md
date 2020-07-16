@@ -20,12 +20,11 @@ helpviewer_keywords:
   - "marking end of transactions [SQL Server]"
   - "COMMIT WORK statement"
 ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # COMMIT WORK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Marks the end of a transaction.  
   
@@ -33,7 +32,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 COMMIT [ WORK ]  
 [ ; ]  

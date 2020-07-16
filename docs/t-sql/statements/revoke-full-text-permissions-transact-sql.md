@@ -14,12 +14,11 @@ helpviewer_keywords:
   - "full-text catalogs [SQL Server], permissions"
   - "full-text stoplist [SQL Server], permissions"
 ms.assetid: ef617436-1e86-4573-900a-702e27a202b9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # REVOKE Full-Text Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Revokes permissions on a full-text catalog or full-text stoplist.  
   
@@ -27,7 +26,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON  
     FULLTEXT   

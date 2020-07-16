@@ -4,20 +4,19 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10427"
 ms.assetid: 423360de-9bed-462e-921f-60a5abab004f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Report Builder Options Dialog Box, Settings (Report Builder)
   Click the **Report Builder** button and then click **Options** to set options for showing recent files and connections. You can also change the default report server, or add one if you don't have a default.  
   
-## UIElement List  
+## UI element list  
  **Use this report server or SharePoint site by default**  
  Your administrator may have configured this. The value can be a well-formed URL starting with http:// or https://. This setting determines which data source connections appear by default in the Table/Matrix and Chart wizards. In addition, your reports will be processed on this server and you can reference resources from this server.  
   

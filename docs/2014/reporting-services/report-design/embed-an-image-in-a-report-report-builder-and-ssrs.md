@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.embeddedimages.f1"
@@ -13,7 +12,7 @@ f1_keywords:
 ms.assetid: aed77345-5eeb-41f0-96c9-db6b4a11ec6f
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Embed an Image in a Report (Report Builder and SSRS)
   A report can include an embedded image. Embedding an image ensures that the image is always available to a report, but can affect the size of the report definition, the file that defines the report. The images embedded in a report are listed in the Report Data pane.  

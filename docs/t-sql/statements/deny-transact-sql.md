@@ -24,13 +24,12 @@ helpviewer_keywords:
   - "database-level securables [SQL Server]"
   - "denying permissions [SQL Server]"
 ms.assetid: c32d1e01-9ee9-4665-a516-fcfece58078e
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DENY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Denies a permission to a principal. Prevents that principal from inheriting the permission through its group or role memberships. DENY takes precedence over all permissions, except that DENY does not apply to object owners or members of the sysadmin fixed server role.
   **Security Note** Members of the sysadmin fixed server role and object owners cannot be denied permissions."
@@ -39,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 -- Simplified syntax for DENY  
@@ -57,7 +56,7 @@ DENY   { ALL [ PRIVILEGES ] }
 { see the tables below }  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 DENY   
@@ -122,7 +121,8 @@ DENY
  Indicates that the permission is denied to the specified principal and to all other principals to which the principal granted the permission. Required when the principal has the permission with GRANT OPTION.  
   
  AS *principal*  
-  Use the AS principal clause to indicate that the principal recorded as the denier of the permission should be a principal other than the person executing the statement. For example, presume that user Mary is principal_id 12 and user Raul is principal 15. Mary executes `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` Now the sys.database_permissions table will indicate that the grantor_prinicpal_id of the deny statement was 15 (Raul) even though the statement was actually executed by user 13 (Mary).
+ Specifies the principal from which the principal executing this query derives its right to deny the permission.
+ Use the AS principal clause to indicate that the principal recorded as the denier of the permission should be a principal other than the person executing the statement. For example, presume that user Mary is principal_id 12 and user Raul is principal 15. Mary executes `DENY SELECT ON OBJECT::X TO Steven WITH GRANT OPTION AS Raul;` Now the sys.database_permissions table will indicate that the grantor_prinicpal_id of the deny statement was 15 (Raul) even though the statement was actually executed by user 13 (Mary).
   
 The use of AS in this statement does not imply the ability to impersonate another user.  
   

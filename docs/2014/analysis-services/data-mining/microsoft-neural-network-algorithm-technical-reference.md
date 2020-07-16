@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "HIDDEN_NODE_RATIO parameter"
@@ -28,7 +27,6 @@ helpviewer_keywords:
 ms.assetid: b8fac409-e3c0-4216-b032-364f8ea51095
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Microsoft Neural Network Algorithm Technical Reference
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Neural Network uses a *Multilayer Perceptron* network, also called a *Back-Propagated Delta Rule network*, composed of up to three layers of neurons, or *perceptrons*. These layers are an input layer, an optional hidden layer, and an output layer.  

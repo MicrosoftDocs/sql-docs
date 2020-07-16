@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 56283497-624c-45b5-8a0d-036b0e331d22
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Autoexists
   The concept of *autoexists* limits the cube space to those cells that actually exist in the cube in contraposition to those that might exist as a result of creating all possible combinations of attribute hierarchy members from the same hierarchy. This is because members of one attribute hierarchy cannot exist with members of another attribute hierarchy in the same dimension. When two or more attribute hierarchies of the same dimension are used in a SELECT statement, Analysis Services evaluates the attributes' expressions to make sure that the members of those attributes are properly confined to meet the criteria of all other attributes.  

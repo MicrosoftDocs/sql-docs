@@ -1,23 +1,22 @@
 ---
-title: "Job Activity Monitor | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Job Activity Monitor"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.ag.jobactivitymonitor.alljobs.f1"
   - "SQL13.SWB.ACTIVITYMON.F1"
 ms.assetid: 11f2182c-5f71-46f8-8d2b-74f0fc48f2d6
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Job Activity Monitor
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.

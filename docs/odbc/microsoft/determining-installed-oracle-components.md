@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC driver for Oracle [ODBC], determining installed components"
 ms.assetid: 3b018f6a-9db0-4aa1-8ec4-afc5f76d7cad
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # Determining Installed Oracle Components
 > [!IMPORTANT]  

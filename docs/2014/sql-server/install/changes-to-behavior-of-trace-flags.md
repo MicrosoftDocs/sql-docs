@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "trace flags [SQL Server], behavior changes"
 ms.assetid: d739df96-2659-4383-8e10-194657632526
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Changes to behavior of trace flags
   Global trace flags set by a session take effect in other sessions immediately. Some trace flags from [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] do not exist in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
@@ -29,6 +27,6 @@ manager: craigg
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

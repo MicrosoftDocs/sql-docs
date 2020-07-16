@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "bucketing target [SQL Server extended events]"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2ea39141-7eb0-4c74-abf8-114c2c106a19
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Histogram Target
   The histogram target groups occurrences of a specific event type based on event data. The groupings of events are counted based on a specified event column or action. You can use the histogram target to troubleshoot performance issues. By identifying which events are occurring most frequently, you can find "hotspots" that indicate a potential cause of a performance problem.  

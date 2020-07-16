@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 ms.assetid: 16a233fb-f83b-4ca1-acb5-6186eca0a62c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Database Representation(Tabular)
   In Tabular Mode, the database is the container for all objects in the tabular model.  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server data processing extension [Reporting Services]"
@@ -18,9 +17,9 @@ helpviewer_keywords:
   - "ODBC data processing extension"
   - "Reporting Services, data sources"
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Data Sources Supported by Reporting Services (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] retrieves report data from data sources through a modular and extensible data layer that uses data processing extensions. To retrieve report data from a data source, you must select a data processing extension that supports the type of data source, the version of software running on the data source, and the data source platform (32-bit or 64-bit [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]).  
@@ -103,7 +102,7 @@ manager: craigg
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational database|[Microsoft SQL Server](#MicrosoftSQLServer)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Extends System.Data.SqlClient|Y|Y|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later.|Y|Y|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational database|[OLEDB](#OLEDBSQL)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Extends System.Data.OledbClient|Y|Y|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later.|Y|Y|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational database|[ODBC](#ODBC)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Extends System.Data.OdbcClient|Y|Y|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later.|Y|Y|  
-|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Windows Azure SQL Database](#Azure)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Extends System.Data.SqlClient|N/A|N/A|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Y|Y|  
+|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|[Azure SQL Database](#Azure)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Extends System.Data.SqlClient|N/A|N/A|[!INCLUDE[ssSDS](../../includes/sssds-md.md)]|Y|Y|  
 |[!INCLUDE[ssDW](../../includes/ssdw-md.md)] appliance|[Microsoft Parallel Data Warehouse](#PWD)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|N/A|N/A|N/A|[!INCLUDE[ssDWfull](../../includes/ssdwfull-md.md)]|Y|Y|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional database|[Microsoft SQL Server Analysis Services](#AnalysisServices)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Uses ADOMD.NET|Y|Y|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and later<br /><br /> [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] and later|Y|Y|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] multidimensional database|[OLEDB](#OLEDBAS9)|Built-in [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] data processing extension|Extends System.Data.OledbClient<br /><br /> Version 10.0|Y|Y|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|Y|Y|  
@@ -150,7 +149,7 @@ manager: craigg
   
  [Return to Data sources table](#DataSourcesTable)  
   
-###  <a name="Azure"></a> Windows Azure SQL Database Processing Extension  
+###  <a name="Azure"></a> Azure SQL Database Processing Extension  
  The data source type **[!INCLUDE[ssSDS](../../includes/sssds-md.md)]** wraps and extends the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Data Provider for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  In [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)], the graphical query designer associated with this data extension is the [Relational Query Designer User Interface](../relational-query-designer-user-interface.md), not the [Visual Database Tool Designer](../../ssms/visual-db-tools/visual-database-tool-designers.md) that you use with the **Microsoft SQL Server** data source type.  

@@ -19,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: 6160f15d-1b68-411e-ab6d-491ec288f264
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_setutype (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  
@@ -64,7 +63,7 @@ user_type
  The **srv_setutype** function can be called any time that *column* has been defined with **srv_describe** and before the last row has been sent.  
   
 > [!IMPORTANT]  
->  You should thoroughly review the source code of extended stored procedures, and you should test the compiled DLLs before you install them on a production server. For information about security review and testing, see this [Microsoft Web site](https://www.microsoft.com/en-us/msrc?rtc=1).  
+>  You should thoroughly review the source code of extended stored procedures, and you should test the compiled DLLs before you install them on a production server. For information about security review and testing, see this [Microsoft Web site](https://www.microsoft.com/msrc?rtc=1).  
   
 ## See Also  
  [srv_describe &#40;Extended Stored Procedure API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-describe-extended-stored-procedure-api.md)  

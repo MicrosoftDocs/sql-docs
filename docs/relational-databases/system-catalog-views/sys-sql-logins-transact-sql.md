@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 0d9c5b09-86fe-40ff-baab-00b7c051402f
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sql_logins (Transact-SQL)
@@ -34,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||>=sql-server-2016||=sqlallpr
 |**is_expiration_checked**|**bit**|Password expiration is checked.|  
 |**password_hash**|**varbinary(256)**|Hash of SQL login password. Beginning with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], stored password information is calculated using SHA-512 of the salted password.|  
   
- For a list of columns that this view inherits, see [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  
+ For a list of columns that this view inherits, see [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md). The columns `owning_principal_id` and `is_fixed_role` is not inherited from sys.server_principals.
   
 ## Remarks  
  To view both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] authentication logins and Windows authentication logins, see [sys.server_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md).  

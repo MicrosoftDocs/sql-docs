@@ -20,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: ba9a9a88-55d2-41a7-b09b-342e8b9a54c5
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.syspermissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains information about permissions granted and denied to users, groups, and roles in the database.  
   

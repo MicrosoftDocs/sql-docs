@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 9fe6454e-8c0e-4b50-937b-d9871b20fd13
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Add a Collection Item to a Collection Set (Transact-SQL)
   You can add a collection item to an existing collection set using the stored procedures that are provided with the data collector.  
@@ -23,7 +22,7 @@ manager: craigg
   
 1.  Stop the collection set that you want to add the item to by running the **sp_syscollector_stop_collection_set** stored procedure. For example, to stop a collection set that is named "Test Collection Set", run the following statements:  
   
-    ```tsql  
+    ```sql  
     USE msdb  
     DECLARE @csid int  
     SELECT @csid = collection_set_id  
@@ -38,7 +37,7 @@ manager: craigg
   
 2.  Declare the collection set that you want to add the collection item to. The following code provides an example of how to declare the collection set ID.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collection_set_id_1 int  
     SELECT @collection_set_id_1 = collection_set_id FROM [msdb].[dbo].[syscollector_collection_sets]  
     WHERE name = N'Test Collection Set'; -- name of collection set  
@@ -46,7 +45,7 @@ manager: craigg
   
 3.  Declare the collector type. The following code provides an example of how to declare the Generic T-SQL Query collector type.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collector_type_uid_1 uniqueidentifier  
     SELECT @collector_type_uid_1 = collector_type_uid FROM [msdb].[dbo].[syscollector_collector_types]   
        WHERE name = N'Generic T-SQL Query Collector Type';  
@@ -54,7 +53,7 @@ manager: craigg
   
      You can run the following code to obtain a list of the installed collector types:  
   
-    ```tsql  
+    ```sql  
     USE msdb  
     SELECT * from syscollector_collector_types  
     GO  
@@ -62,7 +61,7 @@ manager: craigg
   
 4.  Run the **sp_syscollector_create_collection_item** stored procedure to create the collection item. You must declare the schema for the collection item so that it maps to the required schema for the desired collector type. The following example uses the Generic T-SQL Query input schema.  
   
-    ```tsql  
+    ```sql  
     DECLARE @collection_item_id int;  
     EXEC [msdb].[dbo].[sp_syscollector_create_collection_item]   
     @name=N'OS Wait Stats', --name of collection item  

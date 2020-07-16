@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Create an Analysis Services Job Step
   This topic describes how to create and define [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] that execute [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Analysis Services commands and queries by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)] or SQL Server Management Objects.  
@@ -36,7 +35,7 @@ manager: craigg
   
 -   If the job step uses an Analysis Services command, the command statement must be an XML for Analysis Services **Execute** method. The statement may not contain a complete Simple Object Access Protocol (SOAP) envelope or an XML for Analysis **Discover** method. While [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] supports complete SOAP envelopes and the **Discover** method, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps do not. For more information about XML for Analysis Services, see [XML for Analysis Overview (XMLA)](https://msdn.microsoft.com/library/ms187190.aspx).  
   
--   If the job step uses an Analysis Services query, the query statement must be a multidimensional expressions (MDX) query. For more information about MDX, see [MDX Query Fundamentals &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md).  
+-   If the job step uses an Analysis Services query, the query statement must be a multidimensional expressions (MDX) query. For more information about MDX, see [MDX Query Fundamentals &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services).  
   
 ###  <a name="Security"></a> Security  
   
@@ -100,9 +99,8 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
-  
-              -- Creates a job step that uses XMLA to create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database  
+    ```sql
+    -- Creates a job step that uses XMLA to create a relational data source that references the AdventureWorks2012 Microsoft SQL Server database  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  
@@ -139,9 +137,8 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
-  
-              -- Creates a job step that uses MDX to return data  
+    ```sql
+    -- Creates a job step that uses MDX to return data  
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  
@@ -163,5 +160,3 @@ manager: craigg
  **To create a PowerShell Script job step**  
   
  Use the `JobStep` class by using a programming language that you choose, such as XMLA or MDX. For more information, see [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

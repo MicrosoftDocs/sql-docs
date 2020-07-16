@@ -1,14 +1,14 @@
 ---
-title: Telemetry feedback - Analytics Platform System | Microsoft Docs
+title: Telemetry feedback
 description: Send telemetry feedback to Microsoft for Analytics Platform System.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Send telemetry feedback to Microsoft for Analytics Platform System

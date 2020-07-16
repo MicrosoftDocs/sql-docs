@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], database objects"
 ms.assetid: 182f395f-3168-48a4-b723-ef4403544f9f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Semantic Search DDL, Functions, Stored Procedures, and Views
   Lists the Transact-SQL statements and the database objects that support statistical semantic search in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

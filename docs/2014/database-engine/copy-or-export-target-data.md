@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 3c44b821-7a0e-4c96-8994-cba4e6337bdc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Copy or Export Target Data
   You can copy your target data and you can also export your target data to a .CSV file.  

@@ -14,10 +14,9 @@ f1_keywords:
 ms.assetid: 6d20d4d4-5b3f-454a-8a05-f0aac803c5ad
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Maintenance Plan (Design Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the **Maintenance Plan (Design Tab)** to specify the properties of a maintenance plan and its subplans. Drag tasks from the Toolbox to the plan designer. Right-click groups of tasks to create branching execution paths. Maintenance plans are saved as [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages that are run by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs.  
   
 ## Options  

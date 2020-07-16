@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "hidden characters"
   - "OPENROWSET function, BCP guidelines"
 ms.assetid: a82ef43c-d006-4c71-bfca-f001a3ba1ba0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Prepare to Bulk Import Data (SQL Server)
   You can use the **bcp** command, BULK INSERT statement, or OPENROWSET(BULK) function to bulk import data from a data file only.  

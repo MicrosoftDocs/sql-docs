@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_validate_redirected_publisher"
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_validate_redirected_publisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Verifies that the current host for the publishing database is capable of supporting replication. Must be run from a distribution database. This procedure is called by **sp_get_redirected_publisher**.  
   
@@ -35,13 +34,13 @@ manager: craigg
 ```  
   
 ## Arguments  
- [ **@original_publisher** = ] **'***original_publisher***'**  
+`[ @original_publisher = ] 'original_publisher'`
  The name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that originally published the database. *original_publisher* is **sysname**, with no default.  
   
- [ **@publisher_db** = ] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  The name of the database being published. *publisher_db* is **sysname**, with no default.  
   
- [ **@redirected_publisher** = ] **'***redirected_publisher***'**  
+`[ @redirected_publisher = ] 'redirected_publisher'`
  The target of redirection specified when **sp_redirect_publisher** was called for the publisher/database pair. *redirected_publisher* is **sysname**, with no default.  
   
 ## Return Code Values  
@@ -51,7 +50,7 @@ manager: craigg
  None.  
   
 ## Remarks  
- If no entry exists for the publisher and the publishing database, **sp_validate_redirected_publisher** returns null in the output parameter *@redirected_publisher*. If an entry exists, it is returned in the output parameter in both success and failure cases.  
+ If no entry exists for the publisher and the publishing database, **sp_validate_redirected_publisher** returns null in the output parameter *\@redirected_publisher*. If an entry exists, it is returned in the output parameter in both success and failure cases.  
   
  If the validation succeeds, **sp_validate_redirected_publisher** returns a success indication.  
   

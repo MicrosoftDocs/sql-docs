@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql.asvs.roledesignerdialog.rowfilters.imbi.f1"
 ms.assetid: 7f7a6759-82b8-44d9-9cca-a61ba214eb22
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Row Filters (Role Designer)(Tabular Model)
   Use the **Row Filters** page of the Role Designer to define row level filters for the associated role. Row filters can be defined only for roles with Read and Read and Process permissions.  

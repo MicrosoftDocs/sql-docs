@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining [Analysis Services], objects"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: f7331261-6f1c-4986-b2c7-740f4b92ca44
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Processing Requirements and Considerations (Data Mining)
   This topic describes some technical considerations to keep in mind when processing data mining objects. For a general explanation of what processing is, and how it applies to data mining, see [Processing Data Mining Objects](processing-data-mining-objects.md).  

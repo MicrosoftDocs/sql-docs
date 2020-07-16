@@ -13,14 +13,13 @@ helpviewer_keywords:
   - "DefinedSize property [ADO], Visual Basic example"
   - "ActualSize property [ADO], Visual Basic example"
 ms.assetid: bff2c273-b535-4b32-83b3-0336a406859c
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # ActualSize and DefinedSize Properties Example (VB)
 This example uses the [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) and [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) properties to display the defined size and actual size of a field.  
   
-```  
+```vb
 'BeginActualSizeVB  
   
     'To integrate this code  

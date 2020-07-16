@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Implement a Custom Conflict Resolver for a Merge Article
   This topic describes how to implement custom conflict resolver for a merge article in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)] or a [COM-based custom resolver](merge/advanced-merge-replication-conflict-com-based-custom-resolvers.md).  
@@ -112,7 +111,7 @@ manager: craigg
   
 #### Viewing a Sample Custom Resolver  
   
-1.  A sample is available in the SQL Server 2000 sample files. Download the **sql2000samples.cab** from [Updated Samples for SQL Server 2000 Service Pack 3](https://www.microsoft.com/download/details.aspx?id=8560). This downloads 8 files amounting to 6.9 MB.  
+1.  A sample is available in the SQL Server 2000 sample files. Download the [**sql2000samples.zip**](https://github.com/Microsoft/sql-server-samples/blob/master/samples/tutorials/Miscellaneous/sql2000samples.zip). This downloads 3 files amounting to 6.9 MB.  
   
 2.  Extract the files from downloaded compressed .cab file.  
   

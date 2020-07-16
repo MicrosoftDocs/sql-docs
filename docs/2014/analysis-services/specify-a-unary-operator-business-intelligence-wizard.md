@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.acctintelligence.addcustomaggregation.customrollups.f1"
 ms.assetid: 07e4a56c-37b3-43bf-a404-bf22b2b8cfca
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify a Unary Operator (Business Intelligence Wizard)
   Use the **Specify a Unary Operator** page to identify the parent-child relationship for the column that contains either a unary operator (for regular aggregations) or a value representing a weight factor (for weighted aggregations.) For more information about regular and weighted aggregations, see [Aggregations and Aggregation Designs](multidimensional-models-olap-logical-cube-objects/aggregations-and-aggregation-designs.md).  

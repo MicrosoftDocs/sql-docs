@@ -19,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: 0e6202a1-e872-4f53-99d7-c16b6f712efc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # sys.fn_hadr_distributed_ag_database_replica (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Used to  map a database in a distributed availability group to the database in the local availability group.  
    

@@ -1,9 +1,10 @@
 ---
-title: "Client Protocols - TCP IP Properties (Protocol Tab) | Microsoft Docs"
-ms.custom: ""
+title: "Client Protocols - TCP IP Properties (Protocol Tab)"
+description: Learn how to specify TCP/IP options in Microsoft SQL Server Configuration Manager, such as the keep alive parameter and the default port number.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "TCP/IP [SQL Server], client protocols"
   - "client protocols [SQL Server]"
 ms.assetid: d04f1bce-069c-4a02-b561-c87c3282be36
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Client Protocols - TCP IP Properties (Protocol Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, use the **Protocol** tab on the **TCP/IP Properties** dialog box to view or specify the following options. To connect to a different port, type the port number in the **Default Port** box. For more information about connection strings, see [Creating a Valid Connection String Using TCP IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md).  
   
 ## Options  

@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 15358811-22a6-43b1-b1a7-9c974e8367b9
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Tabular Model Projects (SSAS Tabular)
   To create a new tabular model, you must first create a new tabular model project in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. When you install [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)], three new Business Intelligence project templates are provided for creating tabular model projects. Each project template provides a framework on which you can begin authoring your model. Topics in this section describe how to create a new tabular model project by using the project templates.  

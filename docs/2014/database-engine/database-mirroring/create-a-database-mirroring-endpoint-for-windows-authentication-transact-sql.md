@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: baf1a4b1-6790-4275-b261-490bca33bdb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Create a Database Mirroring Endpoint for Windows Authentication (Transact-SQL)
   This topic describes how to create a database mirroring endpoint that uses Windows Authentication in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. To support database mirroring or [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires a database mirroring endpoint. A server instance can have only one database mirroring endpoint, which has a single port. A database mirroring endpoint can use any port that is available on the local system when the endpoint is created. All database mirroring sessions on a server instance listen on that port, and all incoming connections for database mirroring use that port.  
@@ -50,8 +49,8 @@ manager: craigg
   
 3.  Determine if a database mirroring endpoint already exists by using the following statement:  
   
-    ```  
-    SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;   
+    ```sql
+    SELECT name, role_desc, state_desc FROM sys.database_mirroring_endpoints;
     ```  
   
     > [!IMPORTANT]  
@@ -147,7 +146,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  Each server instance can have only one endpoint. Therefore, if you want a server instance to be a partner in some sessions and the witness in others, specify ROLE=ALL.  
   
-```  
+```sql
 --Endpoint for initial principal server instance, which  
 --is the only server instance running on SQLHOST01.  
 CREATE ENDPOINT endpoint_mirroring  
@@ -172,7 +171,8 @@ GO
 ```  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
- **To Configure a Database Mirroring Endpoint**  
+
+### To Configure a Database Mirroring Endpoint
   
 -   [Create a Database Mirroring Endpoint for AlwaysOn Availability Groups &#40;SQL Server PowerShell&#41;](../availability-groups/windows/database-mirroring-always-on-availability-groups-powershell.md)  
   
@@ -197,5 +197,3 @@ GO
  [Specify a Server Network Address &#40;Database Mirroring&#41;](specify-a-server-network-address-database-mirroring.md)   
  [Example: Setting Up Database Mirroring Using Windows Authentication &#40;Transact-SQL&#41;](example-setting-up-database-mirroring-using-windows-authentication-transact-sql.md)   
  [The Database Mirroring Endpoint &#40;SQL Server&#41;](the-database-mirroring-endpoint-sql-server.md)  
-  
-  

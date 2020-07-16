@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "annotated XSD schemas, IDREF type attribute"
   - "ID relationships [SQLXML]"
 ms.assetid: 1c7f77d3-81f3-4820-bb63-c4aaa4ea9aa1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Creating Valid ID, IDREF, and IDREFS Type Attributes Using sql:prefix (SQLXML 4.0)
   An attribute can be specified to be an ID type attribute. Attributes specified as IDREF or IDREFS can then be used to refer to the ID type attributes, enabling links between documents.  

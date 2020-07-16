@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: "database-engine"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "AllowPartiallyTrustedCallers attribute"
@@ -16,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 20b0248f-36da-4fc3-97d2-3789fcf6e084
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Allowing Partially Trusted Callers
   Sharing code libraries is a common scenario with common language runtime (CLR) integration, where an assembly containing a user-defined type, stored procedure, user-defined function, user-defined aggregate, trigger, or utility class is often accessed by another assembly or application. Code libraries that are to be shared by multiple applications must be signed with a strong name.  

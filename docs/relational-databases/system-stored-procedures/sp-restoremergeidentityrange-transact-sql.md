@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_restoremergeidentityrange"
 ms.assetid: 7923e422-2748-40c0-b5a8-6410c48d5b70
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_restoremergeidentityrange (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This stored procedure is used to update identity range assignments. It ensures that automatic identity range management functions properly after a Publisher has been restored from a backup. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -33,10 +32,10 @@ sp_restoremergeidentityrange [ [ @publication = ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication** = ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with default value of **all**. When specified, only identity ranges for that publication are restored.  
   
- [ **@article** = ] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of the article. *article* is **sysname**, with a default value of **all**. When specified, only identity ranges for that article are restored.  
   
 ## Return Code Values  

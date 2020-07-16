@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Mining Accuracy Chart [Analysis Services], mining structures"
 ms.assetid: aa3d052f-58a9-4417-8e7a-5e6feb562af0
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create a Lift Chart, Profit Chart, or Classification Matrix
   You can create an accuracy chart for an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] data mining model in five basic steps:  

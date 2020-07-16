@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: reporting-services-native
 ms.topic: conceptual
 ms.assetid: a81c87f1-7977-4b30-b6ac-b38b3e2b6398
-author: craigg-msft
-ms.author: douglasl
-manager: craigg
+author: markingmyname
+ms.author: maghan
+manager: kfile
 ---
 # Lesson 2: Generate Classes from the RDL Schema using the xsd Tool
   After you have created your [!INCLUDE[vsprvs](../includes/vsprvs-md.md)] project, the next step is to retrieve a local copy of the report definition schema and run the XML Schema Definition Tool (Xsd.exe).  

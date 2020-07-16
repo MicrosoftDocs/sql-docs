@@ -9,10 +9,13 @@ ms.custom: ""
 ms.technology: integration-services
 author: swinarko
 ms.author: sawinark
-ms.reviewer: douglasl
-manager: craigg
+ms.reviewer: maghan
 ---
 # Validate SQL Server Integration Services (SSIS) packages deployed to Azure
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 
 When you deploy a SQL Server Integration Services (SSIS) project to the SSIS Catalog (SSISDB) on an Azure server, the Package Deployment Wizard adds an additional validation step after the **Review** page. This validation step checks the packages in the project for known issues that may prevent the packages from running as expected in the Azure SSIS Integration Runtime. Then the wizard displays any applicable warnings on the **Validate** page.
 
@@ -26,7 +29,7 @@ For more info about the Package Deployment Wizard, see [Deploy Integration Servi
 The wizard checks certain connection managers for the following issues, which may cause the connection to fail:
 - **Windows authentication**. If a connection string uses Windows authentication, validation raises a warning. Windows authentication requires additional configuration steps. For more info, see [Connect to data and file shares with Windows Authentication](ssis-azure-connect-with-windows-auth.md).
 - **File path**. If a connection string contains a hard-coded local file path like `C:\\...`, validation raises a warning. Packages that contain an absolute path may fail.
-- **UNC path**. If a connection string contains a UNC pathif a connection string contains a UNC path, validation raises a warning. Packages that contain a UNC path may fail, typically because a UNC path requires Windows authentication to access.
+- **UNC path**. If a connection string contains a UNC path, validation raises a warning. Packages that contain a UNC path may fail, typically because a UNC path requires Windows authentication to access.
 - **Host name**. If a server property contains host name instead of IP address, validation raises a warning. Packages that contain host name may fail, typically because the Azure virtual network requires the correct DNS configuration to support DNS name resolution.
 - **Provider or driver**. If a provider or driver is not supported, validation raises a warning. Only a small number of built-in providers and drivers are supported at this time.
 
@@ -34,23 +37,23 @@ The wizard does the following validation checks for the connection managers in t
 
 | Connection Manager | Windows authentication | File path | UNC path | Host name | Provider or driver |
 |--------------------|----------|-----------|-----|-----------|-------------------|
-| Ado                | ✓        |           |     | ✓         | ✓                 |
-| AdoNet             | ✓        |           |     | ✓         | ✓                 |
-| Cache              |          | ✓         | ✓   |           |                   |
-| Excel              |          | ✓         | ✓   |           |                   |
-| File               |          | ✓         | ✓   |           |                   |
-| FlatFile           |          | ✓         | ✓   |           |                   |
-| Ftp                |          |           |     | ✓         |                   |
-| MsOLAP100          |          |           |     | ✓         | ✓                 |
-| MultiFile          |          | ✓         | ✓   |           |                   |
-| MultiFlatFile      |          | ✓         | ✓   |           |                   |
-| OData              | ✓        |           |     | ✓         |                   |
-| Odbc               | ✓        |           |     | ✓         | ✓                 |
-| OleDb              | ✓        |           |     | ✓         | ✓                 |
-| SmoServer          | ✓        |           |     | ✓         |                   |
-| Smtp               | ✓        |           |     | ✓         |                   |
-| SqlMobile          |          | ✓         | ✓   |           |                   |
-| Wmi                | ✓        |           |     |           |                   |
+| Ado                | âœ“        |           |     | âœ“         | âœ“                 |
+| AdoNet             | âœ“        |           |     | âœ“         | âœ“                 |
+| Cache              |          | âœ“         | âœ“   |           |                   |
+| Excel              |          | âœ“         | âœ“   |           |                   |
+| File               |          | âœ“         | âœ“   |           |                   |
+| FlatFile           |          | âœ“         | âœ“   |           |                   |
+| Ftp                |          |           |     | âœ“         |                   |
+| MsOLAP100          |          |           |     | âœ“         | âœ“                 |
+| MultiFile          |          | âœ“         | âœ“   |           |                   |
+| MultiFlatFile      |          | âœ“         | âœ“   |           |                   |
+| OData              | âœ“        |           |     | âœ“         |                   |
+| Odbc               | âœ“        |           |     | âœ“         | âœ“                 |
+| OleDb              | âœ“        |           |     | âœ“         | âœ“                 |
+| SmoServer          | âœ“        |           |     | âœ“         |                   |
+| Smtp               | âœ“        |           |     | âœ“         |                   |
+| SqlMobile          |          | âœ“         | âœ“   |           |                   |
+| Wmi                | âœ“        |           |     |           |                   |
 |||||||
 
 ## Validate sources and destinations

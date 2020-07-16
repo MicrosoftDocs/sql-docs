@@ -7,9 +7,8 @@ ms.technology: filestream
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 6038697b-36a9-49e8-a02a-2ad9e2e60e5a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Compare Options for Storing Blobs (SQL Server)
   Discusses and compares the options that are available for storing files and documents in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0137971b-fb48-4a3e-822a-3df2b9bb09d7
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Enable or Disable Data Collection
   This topic describes how to enable or disable data collection in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -60,7 +59,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_syscollector_enable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql) to enable the data collector.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC dbo.sp_syscollector_enable_collector ;  
@@ -74,7 +73,7 @@ EXEC dbo.sp_syscollector_enable_collector ;
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example uses [sp_syscollector_disable_collector](/sql/relational-databases/system-stored-procedures/sp-syscollector-disable-collector-transact-sql) to disable the data collector.  
   
-```tsql  
+```sql  
 USE msdb;  
 GO  
 EXEC dbo.sp_syscollector_disable_collector;  

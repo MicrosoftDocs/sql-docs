@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "objects [Analysis Services], maximum number"
@@ -14,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 49fe1673-b908-4c7a-88ff-415efd294d27
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Maximum Capacity Specifications (Analysis Services)
   The following tables specify the maximum sizes and numbers of various objects defined in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] components under different server deployment modes.  

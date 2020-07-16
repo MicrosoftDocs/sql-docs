@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: b1e0f1d4-0b87-4ad3-8172-f746fe2f16a2
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect from client applications (Analysis Services)
   If you are new to Analysis Services, use the information in this topic to connect to an existing instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] using common tools and applications. This topic also explains how to connect under different user identities for testing purposes.  

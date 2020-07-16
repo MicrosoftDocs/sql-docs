@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "database master key [SQL Server], exporting"
 ms.assetid: 7ad9a0a0-6e4f-4f7b-8801-8c1b9d49c4d8
-author: aliceku
-ms.author: aliceku
-manager: craigg
+author: jaszymas
+ms.author: jaszymas
 ---
 # Back Up a Database Master Key
   This topic describes how to back up a database master key in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)]. The database master key is used to encrypt other keys and certificates inside a database. If it is deleted or corrupted, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] may be unable to decrypt those keys, and the data encrypted using them will be effectively lost. For this reason, you should back up the database master key and store the backup in a secure off-site location.  

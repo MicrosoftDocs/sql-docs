@@ -1,5 +1,6 @@
 ---
-title: "System Settings (Master Data Services) | Microsoft Docs"
+title: System Settings
+description: Learn how to configure the system settings for all web applications and web services associated with a Master Data Services database.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "Master Data Services, system settings"
   - "system settings [Master Data Services]"
 ms.assetid: 83075cdf-f059-4646-8ba2-19be8202f130
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # System Settings (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   For all web applications and web services associated with a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database, you can configure system settings.  
   
@@ -124,6 +124,7 @@ manager: craigg
 ||**SecurityMemberProcessInterval**|In the [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] **User and Group Permissions** functional area, the frequency, in seconds, that user and group permissions set on the **Hierarchy Members** tab are applied. The default value is **3600** seconds (60 minutes).|  
 
 ##  <a name="Performance"></a> Performance Settings  
+
 |Configuration Manager Setting|System Setting|Description|  
 |-----------------------------------|--------------------|-----------------|  
 |**Enable performance improvement setting**|**PerformanceImprovementEnable**|We default to enable this setting (**Set to 1**) that load permission related page will have a good performance. But in this situation create/modify entities, attributes, users, or groups will have a low performance. To avoid this, you can disable this setting (**Set to 0**). After change this setting. You must run command "**EXEC [mdm].[udpPerformanceToggleSwitch];**" to make sure that the view and data is correct.|  

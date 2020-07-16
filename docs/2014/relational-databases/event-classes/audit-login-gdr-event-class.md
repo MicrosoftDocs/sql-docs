@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cc0560d9-bbb9-4263-a1f3-827c80167f8c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Audit Login GDR Event Class
   The **Audit Login GDR** event class occurs whenever a [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows login right is added or removed. This event class is for the **sp_grantlogin**, **sp_revokelogin**, and **sp_denylogin** stored procedures.  

@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "deleting models [Master Data Services]"
   - "models [Master Data Services], deleting models"
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete a Model (Master Data Services)
   Delete a model to remove the model and all of its data from [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].  

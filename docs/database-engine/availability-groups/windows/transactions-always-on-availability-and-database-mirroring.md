@@ -1,6 +1,7 @@
 ---
-title: "Transactions - Always On availability groups and database mirroring | Microsoft Docs"
-ms.custom: ""
+title: "Transactions: availability groups & database mirroring"
+descripton: Learn about cross-database and distributed transaction support for SQL Server Always On availability groups and database mirroring. 
+ms.custom: seo-lt-2019
 ms.date: "12/11/2018"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Transactions - availability groups and database mirroring
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 This article describes cross-database and distributed transactions support for Always On availability groups and database mirroring.  
 

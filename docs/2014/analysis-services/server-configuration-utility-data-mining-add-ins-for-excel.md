@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 28435f86-5cec-4a1e-9b7d-b2069c1ddddb
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Server Configuration Utility (Data Mining Add-ins for Excel)
   When you install the Data Mining Add-ins for Excel, a Server Configuration Utility is also installed, and will run the first time you open the add-ins. This topic describes how to use the utility to connect to an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] and set up a database for working with data mining models.  

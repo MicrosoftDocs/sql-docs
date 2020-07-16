@@ -2,8 +2,8 @@
 title: "sys.dm_pdw_waits (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -11,11 +11,10 @@ dev_langs:
 ms.assetid: 5130e498-1c77-4ae3-a80b-9aae396494e9
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_waits (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Holds information about all wait states encountered during execution of a request or query, including locks, waits on transmission queues, and so on.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Database Mirroring Operating Modes | Microsoft Docs"
+description: Learn about the synchronous and asynchronous operating modes for database mirroring sessions in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Database Mirroring Operating Modes
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes the synchronous and asynchronous operating modes for database mirroring sessions.  
   
 > [!NOTE]  

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "properties [Analysis Services], multilevel hierarchy"
@@ -15,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 344af8f8-12f3-48c0-b934-4503779d37ff
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # User Hierarchy Properties
   The following table describes the properties of a user-defined hierarchy.  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "actions [Analysis Services], creating"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b9fee2b9-05a5-4077-848d-d8457326dc27
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Actions in Multidimensional Models
   An action is an end user-initiated operation upon a selected cube or portion of a cube. The operation can start an application with the selected item as a parameter, or it can retrieve information about the selected item. For more information about actions, see [Actions &#40;Analysis Services - Multidimensional Data&#41;](actions-analysis-services-multidimensional-data.md).  

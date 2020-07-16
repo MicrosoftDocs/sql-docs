@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "expressions [Integration Services], string padding"
   - "string padding"
 ms.assetid: d3fed73d-e0d4-4c67-9355-fb7083a72dd6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # String Padding (SSIS)
   The expression evaluator does not check if a string contains leading and trailing spaces, and it does not pad strings to make them the same length before it compares them. If expressions requires string padding, you can use the + operator to concatenate column values and blank strings. For more information, see [+ &#40;Concatenate&#41; &#40;SSIS Expression&#41;](concatenate-ssis-expression.md).  
@@ -24,6 +23,7 @@ manager: craigg
 >  The LEN function includes leading and trailing blanks in its count.  
   
 ## Related Content  
- Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), on pragmaticworks.com  
+ Technical article, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet
+), on pragmaticworks.com  
   
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Execute DDL Task [Analysis Services]"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e960a9a2-80b4-45da-9369-bc560ecdccac
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Automate Analysis Services Administrative Tasks with SSIS
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] enables you to automate execution of DDL scripts, cube and mining model processing tasks, and data mining query tasks. [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] can be thought of as a collection of control flow and maintenance tasks, which can be linked to form sequential and parallel data processing jobs.  

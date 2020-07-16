@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_denylogin"
 ms.assetid: db80f152-e8af-4303-95b6-3a3a7b664374
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_denylogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Prevents a Windows user or Windows group from connecting to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -37,7 +36,7 @@ sp_denylogin [ @loginame = ] 'login'
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'**_login_ **'**  
+`[ @loginame = ] 'login_ '`
  Is the name of a Windows user or group. *login* is **sysname**, with no default.  
   
 ## Return Code Values  

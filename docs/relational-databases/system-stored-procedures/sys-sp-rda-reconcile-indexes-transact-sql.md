@@ -14,12 +14,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_reconcile_indexes stored procedure"
 ms.assetid: 96b31ab9-bf84-46d6-9990-81f5c51f885a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.sp_rda_reconcile_indexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Queues a schema task to reconcile indexes on the remote table. After this task finishes successfully, the remote table has the same indexes that exist on the local Stretch-enabled table.  
   

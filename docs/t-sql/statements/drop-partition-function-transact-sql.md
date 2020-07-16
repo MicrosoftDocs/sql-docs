@@ -21,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: a4bb055a-a538-4db9-a6fb-550d1eabfa18
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # DROP PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Removes a partition function from the current database. Partition functions are created by using CREATE PARTITION FUNCTION and modified by using ALTER PARTITION FUNCTION.  
   
@@ -32,7 +31,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP PARTITION FUNCTION partition_function_name [ ; ]  
 ```  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 47f160ce-f8f2-489e-9c3a-690c9fa25259
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Customizing Calls Order (SybaseToSQL)
 At this step you select the order in which the objects to test will be invoked.  

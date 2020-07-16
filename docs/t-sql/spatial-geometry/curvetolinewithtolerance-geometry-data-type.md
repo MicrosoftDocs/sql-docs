@@ -12,12 +12,11 @@ dev_langs:
 helpviewer_keywords: 
   - "CurveToLineWithTolerance method (geometry)"
 ms.assetid: 96871075-1998-4cd9-86b1-3fc55577aee4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # CurveToLineWithTolerance (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a polygonal approximation of a **geometry** instance that contains circular arc segments.
   

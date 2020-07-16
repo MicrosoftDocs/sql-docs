@@ -28,10 +28,9 @@ helpviewer_keywords:
 ms.assetid: 98fe0fff-1a2e-4ca2-b37f-83a06fdf098e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a new message type. A message type defines the name of a message and the validation that [!INCLUDE[ssSB](../../includes/sssb-md.md)] performs on messages that have that name. Both sides of a conversation must define the same message types.  
   
@@ -39,7 +38,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE MESSAGE TYPE message_type_name  
     [ AUTHORIZATION owner_name ]  
     [ VALIDATION = {  NONE  
@@ -50,7 +49,9 @@ CREATE MESSAGE TYPE message_type_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *message_type_name*  
  Is the name of the message type to create. A new message type is created in the current database and owned by the principal specified in the AUTHORIZATION clause. Server, database, and schema names cannot be specified. The *message_type_name* can be up to 128 characters.  
   
@@ -103,7 +104,7 @@ CREATE MESSAGE TYPE
 ```  
 CREATE XML SCHEMA COLLECTION ExpenseReportSchema AS  
 N'<?xml version="1.0" encoding="UTF-16" ?>  
-  <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+  <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
      targetNamespace="https://Adventure-Works.com/schemas/expenseReport"  
      xmlns:expense="https://Adventure-Works.com/schemas/expenseReport"  
      elementFormDefault="qualified"  

@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "variables [Integration Services], about variables"
   - "values [Integration Services]"
 ms.assetid: c1e81ad6-628b-46d4-9b09-d2866517b6ca
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services (SSIS) Variables
   Variables store values that a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package and its containers, tasks, and event handlers can use at run time. The scripts in the Script task and the Script component can also use variables. The precedence constraints that sequence tasks and containers into a workflow can use variables when their constraint definitions include expressions.  

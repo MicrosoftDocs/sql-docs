@@ -1,6 +1,6 @@
 ---
-title: "Manage Objects by Using Object Explorer | Microsoft Docs"
-ms.custom: ""
+title: "Manage Objects by Using Object Explorer"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -14,12 +14,11 @@ helpviewer_keywords:
   - "OE F1 Help"
   - "OE Help"
 ms.assetid: e60367a7-3fdd-40b8-82bb-9e819d78de5a
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Manage Objects by Using Object Explorer
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can use Object Explorer to manage objects such as databases, tables and stored procedures.  
   
 ## Viewing Objects in Object Explorer  

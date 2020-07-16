@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 05515013-28b5-4ccf-9a54-ae861448945b
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Supported Constructs in Natively Compiled Stored Procedures
   This topic contains a list of supported features for natively compiled stored procedures ([CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)):  
@@ -136,7 +135,7 @@ manager: craigg
   
      You can obtain results greater than 8,192 by storing the number of rows in a variable:  
   
-    ```tsql  
+    ```sql  
     DECLARE @v INT = 9000  
     SELECT TOP (@v) ... FROM ... ORDER BY ...  
     ```  
@@ -174,7 +173,7 @@ manager: craigg
   
  Example with TOP N = 8192: Compiles  
   
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -187,7 +186,7 @@ GO
   
  Example with TOP N > 8192: Fails to compile.  
   
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  
@@ -202,7 +201,7 @@ GO
   
  Example using a variable: Compiles  
   
-```tsql  
+```sql  
 CREATE PROCEDURE testTop  
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION  
   AS  

@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "spatial storage [SQL Server]"
   - "geodetic spatial data [SQL Server], designing"
 ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 ---
 # Spatial Data (SQL Server)
   Spatial data represents information about the physical location and shape of geometric objects. These objects can be point locations or more complex objects such as countries, roads, or lakes.  

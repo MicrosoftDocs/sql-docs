@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], design and implementation"
 ms.assetid: 97509274-c3f8-43e5-a37c-52f1ffe0961a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Binary Large Object (Blob) Data (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides solutions for storing files and documents in the database or on remote storage devices.  

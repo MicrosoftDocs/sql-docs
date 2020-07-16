@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: ca0c5040-40bb-4cb7-bc2b-5bcbe73858bb
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Add a Border Frame to a Chart (Report Builder and SSRS)
   To give a chart more visual impact, consider using a border frame around the outside of the chart. You can select a border frame by using the **Chart Properties** dialog box or by using the Properties pane. The chart border frames cannot be applied to any other data region.  

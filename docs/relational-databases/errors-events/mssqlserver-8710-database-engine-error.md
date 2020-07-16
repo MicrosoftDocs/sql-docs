@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: 78b9f9da-5489-4be0-94df-f065d86ed18c
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_8710
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|MSSQLSERVER|  
 |Event ID|8710|  
 |Event Source|MSSQLSERVER|  

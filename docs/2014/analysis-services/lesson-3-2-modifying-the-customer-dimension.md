@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 5b5aed99-1760-4bc7-b248-52ecb0b97ebc
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Modifying the Customer Dimension
   There are many different ways that you can increase the usability and functionality of the dimensions in a cube. In the tasks in this topic, you modify the Customer dimension.  

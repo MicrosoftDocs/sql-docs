@@ -1,5 +1,6 @@
 ---
 title: "General XQuery Use Cases | Microsoft Docs"
+description: View several examples of general XQuery use including searching, retrieving, and listing specific data from a product catalog.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
@@ -14,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 5187c97b-6866-474d-8bdb-a082634039cc
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # General XQuery Use Cases
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   This topic provides general examples of XQuery use.  
   
@@ -211,9 +211,9 @@ WHERE ProductModelID=19
   <p2:Maintenance>...  </p2:Maintenance>  
   <p3:wheel xmlns:p3="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p3:wheel>  
   <p4:saddle xmlns:p4="https://www.adventure-works.com/schemas/OtherFeatures">  
-    <p5:i xmlns:p5="https://www.w3.org/1999/xhtml">Anatomic design</p5:i> and made from durable leather for a full-day of riding in comfort.</p4:saddle>  
+    <p5:i xmlns:p5="http://www.w3.org/1999/xhtml">Anatomic design</p5:i> and made from durable leather for a full-day of riding in comfort.</p4:saddle>  
   <p6:pedal xmlns:p6="https://www.adventure-works.com/schemas/OtherFeatures">  
-    <p7:b xmlns:p7="https://www.w3.org/1999/xhtml">Top-of-the-line</p7:b> clipless pedals with adjustable tension.</p6:pedal>  
+    <p7:b xmlns:p7="http://www.w3.org/1999/xhtml">Top-of-the-line</p7:b> clipless pedals with adjustable tension.</p6:pedal>  
    ...  
 ```  
   
@@ -307,7 +307,7 @@ ProductModelID Result
 -------------- ------------------------------------------  
 28     <Prod ProductModelID="28">  
         <pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">  
-       <p1:p xmlns:p1="https://www.w3.org/1999/xhtml">  
+       <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">  
          A TRUE multi-sport bike that offers streamlined riding and a  
          revolutionary design. Aerodynamic design lets you ride with the   
          pros, and the gearing will conquer hilly roads.</p1:p>  

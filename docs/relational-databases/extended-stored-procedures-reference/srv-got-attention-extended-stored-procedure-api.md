@@ -19,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: 805e68e1-d17f-41bd-8b9f-a27283bb6fbe
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_got_attention (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

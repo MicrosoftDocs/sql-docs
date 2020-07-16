@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetDriverConnectInfo function [ODBC]"
 ms.assetid: bfd4dfc2-fbca-4ef3-81e5-2706f2389256
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetDriverConnectInfo Function
 **Conformance**  
@@ -23,7 +22,8 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp
+  
 SQLRETURN SQLSetDriverConnectInfo(  
                 SQLHDBC_INFO_TOKEN   hDbcInfoToken,  
                 WCHAR *              InConnectionString,  

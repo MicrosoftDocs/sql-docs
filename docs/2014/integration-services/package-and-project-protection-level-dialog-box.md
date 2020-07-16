@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.packageprotectionlevel.f1"
@@ -13,9 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Package Protection Level dialog box"
 ms.assetid: 023af8d3-aea0-45a9-ac32-554634bf4b9a
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Package and Project Protection Level Dialog Box
   Use the **Package Protection Level** dialog box to update the protection level of a package. The protection level determines the protection method, the password or user key, and the scope of package protection. Protection can include all data or sensitive data only.  

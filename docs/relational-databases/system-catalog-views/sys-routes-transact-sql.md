@@ -17,13 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.routes catalog view"
 ms.assetid: 8fc65915-8bd6-425b-95d9-6a8468cb1e48
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sys.routes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   This catalog views contains one row per route. Service Broker uses routes to locate the network address for a service.   
 

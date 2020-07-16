@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_jobs_in_schedule"
 ms.assetid: 1168aa2c-136b-4ba3-b18e-9070d95a26fa
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_help_jobs_in_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about the jobs that a particular schedule is attached to.  
   
@@ -36,10 +35,10 @@ sp_help_jobs_in_schedule
 ```  
   
 ## Arguments  
- [ **@schedule_id =** ] *schedule_id*  
+`[ @schedule_id = ] schedule_id`
  The identifier of the schedule to list information for. *schedule_id* is **int**, with no default. Either *schedule_id* or *schedule_name* may be specified.  
   
- [ **@schedule_name =** ] **'***schedule_name***'**  
+`[ @schedule_name = ] 'schedule_name'`
  The name of the schedule to list information for. *schedule_name* is **sysname**, with no default. Either *schedule_id* or *schedule_name* may be specified.  
   
 ## Return Code Values  

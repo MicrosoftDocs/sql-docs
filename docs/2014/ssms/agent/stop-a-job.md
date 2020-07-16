@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4249328a-24d8-4284-9d1d-7d04ed90e3d7
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Stop a Job
   This topic describes how to stop a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job. A job is a specified series of actions that SQL Server Agent performs.  
@@ -55,7 +54,7 @@ manager: craigg
   
 ##  <a name="TSQL"></a> Using Transact-SQL  
   
-#### To stop a job  
+### To stop a job  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
@@ -63,7 +62,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql
     -- stops a job named Weekly Sales Data Backup  
     USE msdb ;  
     GO  
@@ -76,8 +75,7 @@ manager: craigg
  For more information, see [sp_stop_job &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-stop-job-transact-sql).  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
- **To stop a job**  
+
+### To stop a job
   
  Call the `Stop` method of the `Job` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

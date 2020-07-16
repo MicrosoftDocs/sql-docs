@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: bc5bcd87-663f-41d9-bb7b-b3e083cd63df
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # Import the Policies to a Single Instance
   In this task, you will import the best practices policies that you want to schedule into Policy-Based Management on a single instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  

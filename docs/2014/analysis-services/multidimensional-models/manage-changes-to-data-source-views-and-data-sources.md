@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying data sources"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 928c9f63-365a-43fd-9bbd-78828cc7e54d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Manage Changes to Data Source Views and Data Sources
   When the Schema Generation Wizard is rerun, it reuses the same data source and data source view that it used for the original generation. If you add a data source or a data source view, the wizard does not use it. If you delete the original data source or data source view after the initial generation, you must run the wizard from the beginning. All previous settings in the wizard are also deleted. Any existing objects in an underlying database that were bound to a deleted data source or data source view are treated as user-created objects the next time you run the Schema Generation Wizard.  

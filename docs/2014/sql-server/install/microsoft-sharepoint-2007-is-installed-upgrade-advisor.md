@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 6f1da295-d9b7-4948-99d3-ebd3587337c6
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Microsoft SharePoint 2007 is Installed (Upgrade Advisor)
   Upgrade Advisor detected an unsupported version of a SharePoint product or technology.  

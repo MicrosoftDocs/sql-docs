@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "cursor library [ODBC], cache"
   - "cache [ODBC]"
 ms.assetid: 240d6162-4da6-4b1f-96c7-f379f4ecb16f
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # Location of Cache
 > [!IMPORTANT]  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "log shipping [SQL Server Agent]"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ef05ce53-c6ce-42ec-9df8-46c951626424
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Agent log shipping job category causes upgrade to fail
   The upgrade process will fail if a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job category named Log Shipping exists.  

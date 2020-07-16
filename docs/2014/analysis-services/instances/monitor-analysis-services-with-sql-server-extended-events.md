@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: b57cc2fe-52dc-4fa9-8554-5a866e25c6d7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Use SQL Server Extended Events (XEvents) to Monitor Analysis Services
   Analysis Services provides tracing capabilities through the usage of [Extended Events](../../relational-databases/extended-events/extended-events.md).  

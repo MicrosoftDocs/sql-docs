@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "databases [Analysis Services], storage location"
 ms.assetid: cf88c62e-581e-42f2-846f-a9bf1d7c3292
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Database Storage Location
   There are often situations when an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database administrator (dba) wants a certain database to reside outside of the server data folder. These situations are often driven by business needs, such as improving performance or expanding storage. For these situations, the `DbStorageLocation` database property enables the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba to specify the database location in a local disk or network device.  
@@ -37,7 +35,7 @@ manager: craigg
 >  You should not change the database storage location by using an `Alter` command. Instead, we recommend that you use a sequence of `Detach`/`Attach` database commands (see [Move an Analysis Services Database](move-an-analysis-services-database.md), [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)).  
   
 ## See Also  
- <xref:Microsoft.AnalysisServices.Database.DbStorageLocation%2A>   
+ [Microsoft.AnalysisServices.Database.DbStorageLocation*](/dotnet/api/microsoft.analysisservices.core.database.dbstoragelocation)   
  [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)   
  [Move an Analysis Services Database](move-an-analysis-services-database.md)   
  [DbStorageLocation Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   

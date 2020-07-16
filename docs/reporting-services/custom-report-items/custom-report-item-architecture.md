@@ -1,5 +1,6 @@
 ---
 title: "Custom Report Item Architecture | Microsoft Docs"
+description: Learn how the custom report item architecture is an extension that allows developers to add functionality that isn't natively supported in the RDL.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -10,8 +11,8 @@ ms.topic: reference
 helpviewer_keywords: 
   - "custom report items, architecture"
 ms.assetid: 2a88ea46-c9f8-4dd7-aad1-16de11da4f06
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Custom Report Item Architecture
   A custom report item is an extension to the Report Definition Language (RDL) that allows developers to add functionality that's not natively supported in RDL or extend the functionality of existing controls. There are two main components to a custom report item: the run-time component and the design-time component. These components are implemented as [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] assemblies, and can be written in any CLS-compliant language.  

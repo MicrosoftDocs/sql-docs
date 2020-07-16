@@ -1,8 +1,9 @@
 ---
-title: "Bar Charts (Report Builder and SSRS) | Microsoft Docs"
+title: "Bar Charts (Report Builder) | Microsoft Docs"
+description: Display data horizontally with a bar chart to represent data with a finite start and end date in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

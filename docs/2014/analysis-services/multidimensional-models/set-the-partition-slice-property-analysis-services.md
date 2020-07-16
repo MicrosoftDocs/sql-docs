@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "08/05/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "partitions [Analysis Services], data slices"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 507b91e5-7f85-4c22-be97-4d7a676e6667
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Set the Partition Slice Property (Analysis Services)
   A data slice is an important optimization feature that helps direct queries to the data of the appropriate partitions. Explicitly setting the Slice property can improve query performance by overriding default slices generated for MOLAP and HOLAP partitions. Additionally, the Slice property provides an extra validation check when processing the partition.  

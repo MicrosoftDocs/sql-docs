@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLValidDSN [ODBC]"
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLValidDSN Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLValidDSN(  
      LPCSTR    lpszDSN);  

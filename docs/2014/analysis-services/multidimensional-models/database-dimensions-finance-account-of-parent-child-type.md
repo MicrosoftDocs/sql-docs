@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dimensions [Analysis Services], account"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2ba74e81-5b4b-407e-acdf-deb2f6accf0a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create a Finance Account of parent-child type Dimension
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], an account type dimension is a dimension whose attributes represent a chart of accounts for financial reporting purposes.  

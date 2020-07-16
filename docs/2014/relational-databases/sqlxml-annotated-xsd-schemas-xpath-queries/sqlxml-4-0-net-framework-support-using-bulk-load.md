@@ -12,9 +12,8 @@ helpviewer_keywords:
   - ".NET Framework [SQLXML], XML Bulk Load"
   - "bulk load [SQLXML], .NET environment"
 ms.assetid: b85df83b-ba56-43bf-bcdf-b2a6fca43276
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Using SQLXML Bulk Load in the .NET Environment
   This topic explains how the XML Bulk Load functionality can be used in the .NET environment. For detailed information about XML Bulk Load, see [Performing Bulk Load of XML Data &#40;SQLXML 4.0&#41;](bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  

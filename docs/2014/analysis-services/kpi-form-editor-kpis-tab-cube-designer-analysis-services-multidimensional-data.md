@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.kpidefinitionpane.f1"
 ms.assetid: 45c6453a-bbe2-4ca5-836e-c7ef11cfcb65
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # KPI Form Editor (KPIs Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **KPI Form Editor** pane on the **KPIs** tab in Cube Designer to create or modify the selected Key Performance Indicator (KPI).  

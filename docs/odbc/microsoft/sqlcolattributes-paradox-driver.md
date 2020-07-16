@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "SQLColAttribute function [ODBC], Paradox Driver"
   - "Paradox driver [ODBC], SQLColAttributes"
 ms.assetid: bbeef024-d470-4d28-b61b-26997ef41007
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLColAttributes (Paradox Driver)
 > [!NOTE]  

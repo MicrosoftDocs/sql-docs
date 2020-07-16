@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 48230cc0-4037-4f99-8360-dadf4bc169bd
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # PowerPivot Authentication and Authorization
   A PowerPivot for SharePoint deployment that runs within a SharePoint 2010 farm uses the authentication subsystem and authorization model provided by SharePoint servers. SharePoint security infrastructure extends to PowerPivot content and operations because all PowerPivot-related content is stored in SharePoint content databases and all PowerPivot-related operations are performed by PowerPivot shared services in the farm. Users who request a workbook that contains PowerPivot data are authenticated using a SharePoint user identity that is based on their Windows user identity. View permissions on the workbook determine whether the request is granted or denied.  
@@ -109,6 +107,6 @@ manager: craigg
  [Configure PowerPivot Service Accounts](configure-power-pivot-service-accounts.md)   
  [Configure the PowerPivot Unattended Data Refresh Account &#40;PowerPivot for SharePoint&#41;](../configure-unattended-data-refresh-account-powerpivot-sharepoint.md)   
  [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
- [PowerPivot Securtiy Architecture](https://go.microsoft.com/fwlink/?linkID=220970)  
+ [PowerPivot Security Architecture](https://go.microsoft.com/fwlink/?linkID=220970)  
   
   

@@ -1,5 +1,6 @@
 ---
 title: "XQuery Language Reference (SQL Server) | Microsoft Docs"
+description: Learn about the XQuery language for SQL Server and view a complete language reference.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -16,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 8a69344f-2990-4357-8160-cb26aac95b91
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # XQuery Language Reference (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[tsql](../includes/tsql-md.md)] supports a subset of the XQuery language that is used for querying the **xml** data type. This XQuery implementation is aligned with the July 2004 Working Draft of XQuery. The language is under development by the World Wide Web Consortium (W3C), with the participation of all major database vendors and also Microsoft. Because the W3C specifications may undergo future revisions before becoming a W3C recommendation, this implementation may be different from the final recommendation. This topic outlines the semantics and syntax of the subset of XQuery that is supported in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
@@ -60,7 +60,7 @@ WHERE ProductModelID=7
 |||  
   
 > [!NOTE]  
->  The organization of this section is based on the World Wide Web Consortium (W3C) XQuery working draft specification. Some of the diagrams provided in this section are taken from that specification. This section compares the Microsoft XQuery implementation to the W3C specification, describes how Microsoft XQuery is different from the W3C and indicates what W3C features are not supported. The W3C specification is available at [https://www.w3.org/TR/2004/WD-xquery-20040723](https://go.microsoft.com/fwlink/?LinkId=48846).  
+>  The organization of this section is based on the World Wide Web Consortium (W3C) XQuery working draft specification. Some of the diagrams provided in this section are taken from that specification. This section compares the Microsoft XQuery implementation to the W3C specification, describes how Microsoft XQuery is different from the W3C and indicates what W3C features are not supported. The W3C specification is available at [http://www.w3.org/TR/2004/WD-xquery-20040723](https://go.microsoft.com/fwlink/?LinkId=48846).  
   
 ## In This Section  
   

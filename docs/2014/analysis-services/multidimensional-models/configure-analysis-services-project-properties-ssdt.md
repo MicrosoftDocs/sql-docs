@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "VS.TOOLSOPTIONSPAGES.BUSINESS_INTELLIGENCE_DESIGNERS.ANALYSIS_SERVICES_DESIGNERS.GENERAL"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d9786c66-7d8c-48e3-950d-3f25044b4ce2
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Configure Analysis Services Project Properties (SSDT)
   In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project is defined with certain default properties that affect building and deploying the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project.  

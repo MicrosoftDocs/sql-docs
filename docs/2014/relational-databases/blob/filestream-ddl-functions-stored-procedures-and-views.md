@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: filestream
 ms.topic: conceptual
 ms.assetid: 9ecb49ee-f64e-4d30-a803-e4064a21950a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # FILESTREAM DDL, Functions, Stored Procedures, and Views
   Lists the Transact-SQL statements and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database objects that support FILESTREAM.  

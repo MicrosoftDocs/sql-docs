@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.findtabledialog.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 133d28e8-55eb-4783-bb8b-d3776a95ebda
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Find Table Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Find Table** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to locate a table in the data source view associated with a dimension, cube, or mining structure. You can display this dialog box in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] by:  

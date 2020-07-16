@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replcmds"
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_replcmds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the commands for transactions marked for replication. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -35,7 +34,7 @@ sp_replcmds [ @maxtrans = ] maxtrans
 ```  
   
 ## Arguments  
- [ **@maxtrans=**]  *maxtrans*  
+`[ @maxtrans = ] maxtrans`
  Is the number of transactions to return information about. *maxtrans* is **int**, with a default of **1**, which specifies the next transaction waiting for distribution.  
   
 ## Result Sets  

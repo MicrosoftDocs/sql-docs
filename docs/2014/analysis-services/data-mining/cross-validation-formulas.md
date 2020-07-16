@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: fd1ea582-29a1-4154-8de2-47bab3539b4d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Cross-Validation Formulas
   When you generate a cross-validation report, it contains accuracy measures for each model, depending on the type of mining model (that is, the algorithm that was used to create the model), the data type of the predictable attribute, and the predictable attribute value, if any.  

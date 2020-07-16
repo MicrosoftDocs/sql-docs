@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "traces [SQL Server], logs"
 ms.assetid: e1b3072c-8daf-49a7-9895-c8cccd2adb95
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Correlate a Trace with Windows Performance Log Data (SQL Server Profiler)
   [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] can correlate Microsoft Windows System Monitor counters with [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] events. Windows System Monitor logs system activity for specified counters in performance logs.  

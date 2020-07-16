@@ -20,12 +20,11 @@ helpviewer_keywords:
   - "deleting credentials"
   - "dropping credentials"
 ms.assetid: df22c826-317d-45a6-b078-186acb65f71e
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DROP CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes a credential from the server.  
   

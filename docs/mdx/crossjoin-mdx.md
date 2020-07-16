@@ -8,7 +8,6 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # Crossjoin (MDX)
 
@@ -41,7 +40,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
  (x2, y*n*),..., (x*n*, y1), (x*n*, y2),..., (xn, y*n*)}  
   
 > [!IMPORTANT]  
->  If the sets in the cross join are composed of tuples from different attribute hierarchies in the same dimension, this function will return only those tuples that actually exist. For more information, see [Key Concepts in MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md).  
+>  If the sets in the cross join are composed of tuples from different attribute hierarchies in the same dimension, this function will return only those tuples that actually exist. For more information, see [Key Concepts in MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services).  
   
 ## Examples  
  The following query shows simple examples of the use of the Crossjoin function on the Columns and Rows axis of a query:  

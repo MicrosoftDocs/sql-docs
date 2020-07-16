@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "fact tables [Analysis Services]"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5508312f-8e46-4802-9362-6688ca03d098
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Change a partition source to use a different fact table
   When you create a partition for a cube, you can choose to use a different fact table. Different tables may be from a single data source view, from different data source views, or from different data sources. A data source view may also contain different tables from more than one data source.  

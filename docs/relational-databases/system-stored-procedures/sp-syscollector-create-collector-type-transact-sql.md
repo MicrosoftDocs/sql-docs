@@ -16,12 +16,11 @@ helpviewer_keywords:
   - "sp_syscollector_create_collector_type"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 568e9119-b9b0-4284-9cef-3878c691de5f
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_syscollector_create_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a collector type for the data collector. A collector type is a logical wrapper around the [!INCLUDE[ssIS](../../includes/ssis-md.md)] packages that provide the actual mechanism for collecting data and uploading it to the management data warehouse.  
   
@@ -73,7 +72,7 @@ EXEC sp_syscollector_create_collector_type
 @collector_type_uid = '302E93D1-3424-4be7-AA8E-84813ECF2419',  
 @name = 'Generic T-SQL Query Collector Type',  
 @parameter_schema = '<?xml version="1.0" encoding="utf-8"?>  
-  <xs:schema xmlns:xs="https://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
+  <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="DataCollectorType">  
     <xs:element name="TSQLQueryCollector">  
       <xs:complexType>  
         <xs:sequence>  

@@ -1,5 +1,6 @@
 ---
 title: "Install SQL Server Using SysPrep | Microsoft Docs"
+description: This article describes how to prepare and complete images by using SysPrep in SQL Server installation.
 ms.custom: ""
 ms.date: "09/07/2017"
 ms.prod: sql
@@ -10,11 +11,10 @@ ms.assetid: 11f4ed8a-aaa9-417b-bdd5-204f551c6bb6
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Install SQL Server with SysPrep
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SysPrep related setup actions can be accessed through the Installation Center. The **Advanced** Page of the **Installation Center** has two options - **Image preparation of a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]** and **Image completion of a prepared stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]**. The [Prepare](#prepare) and [Complete](#complete) sections describe the installation process in detail. For more information, see [Considerations for Installing SQL Server Using SysPrep](../../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md). 
   

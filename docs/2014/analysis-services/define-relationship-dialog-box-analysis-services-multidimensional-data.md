@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.dimensionusage.definerelationship.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 0fcee7f1-f138-4c2e-ae8c-245395ee0fe8
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Relationship Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Define Relationship** dialog box to define a relationship between a cube dimension and a measure group in Cube Designer. You can display the **Define Relationship** dialog box by clicking **...** on a cell in the **Grid** pane on the **Dimension Usage** tab in Cube Designer.  

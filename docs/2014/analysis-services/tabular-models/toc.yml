@@ -149,7 +149,7 @@
   - name: Create and Manage Partitions in the Workspace Database
     href: create-and-manage-partitions-in-the-workspace-database-ssas-tabular.md
   - name: Process Partitions in the Workspace Database
-    href: process-partitions-in-the-workspace-databse-ssas-tabular.md
+    href: process-partitions-in-the-workspace-database-ssas-tabular.md
 - name: Perspectives
   href: perspectives-ssas-tabular.md
   items:
@@ -166,7 +166,7 @@
   - name: Analyze a Tabular Model in Excel
     href: analyze-a-tabular-model-in-excel-ssas-tabular.md
 - name: Tabular Model Solution Deployment
-  href: tabular-model-solution-deployment-ssas-tabular.md
+  href: https://docs.microsoft.com/analysis-services/deployment/tabular-model-solution-deployment
   items:
   - name: Deploy From SQL Server Data Tools
     href: deploy-from-sql-server-data-tools-ssas-tabular.md

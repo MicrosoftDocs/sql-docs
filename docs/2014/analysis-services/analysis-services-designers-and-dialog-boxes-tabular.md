@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: cd2af1f3-cd8b-4651-9e4d-7c4c94353d7e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Analysis Services Designers and Dialog Boxes (Tabular)
   The tabular project authoring environment in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and the tabular model management tools in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] include numerous dialog boxes, property pages, and Wizard pages. You can click on the Help button or press F1 to learn more.  

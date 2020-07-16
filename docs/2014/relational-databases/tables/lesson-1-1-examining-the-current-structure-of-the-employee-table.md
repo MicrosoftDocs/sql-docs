@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "examining the current structure of the employee"
 ms.assetid: d546a820-105a-417d-ac35-44a6d1d70ac6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Examining the Current Structure of the Employee Table
   The sample [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database contains an **Employee** table in the **HumanResources** schema. To avoid changing the original table, this step makes a copy of the **Employee** table named **EmployeeDemo**. To simplify the example, you only copy five columns from the original table. Then, you query the **HumanResources.EmployeeDemo** table to review how the data is structured in a table without using the `hierarchyid` data type.  

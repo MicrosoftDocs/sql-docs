@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.excelsourceadapter.connection.f1"
 helpviewer_keywords: 
   - "Excel Source Editor"
 ms.assetid: 428e04e0-ad98-45d0-8345-12ec1b67b2eb
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Excel Source Editor (Connection Manager Page)
   Use the **Connection Manager** node of the **Excel Source Editor** dialog box to select the [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] workbook for the source to use. The Excel source reads data from a worksheet or named range in an existing workbook.  

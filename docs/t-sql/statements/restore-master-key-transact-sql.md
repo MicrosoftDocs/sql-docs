@@ -23,12 +23,11 @@ helpviewer_keywords:
   - "transferring Database Master Keys"
   - "RESTORE MASTER KEY statement"
 ms.assetid: 70ceb951-31a2-4fc4-a0c1-e6c18eeb3ae7
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # RESTORE MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Imports a database master key from a backup file.  
   

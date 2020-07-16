@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining [Analysis Services], tutorials"
@@ -15,7 +14,7 @@ helpviewer_keywords:
 ms.assetid: 651eef38-772e-4d97-af51-075b1b27fc5a
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Lesson 3: Building a Market Basket Scenario (Intermediate Data Mining Tutorial)
   The marketing department of [!INCLUDE[ssSampleDBCoFull](../includes/sssampledbcofull-md.md)] wants to improve the company Web site to promote cross-selling. As part of the site update, they would like the ability to predict products that a customer might want to purchase, based on the other products that are already in the customer's online shopping basket. The marketing department also wants to understand customer purchasing behavior better, so that they can design the Web site so that the items that tend to be purchased together appear together. They have learned that data mining is especially useful for this kind of *market basket analysis* and have asked you to develop a data mining model.  

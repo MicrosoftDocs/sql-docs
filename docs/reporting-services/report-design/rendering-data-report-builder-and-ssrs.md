@@ -1,8 +1,9 @@
 ---
-title: "Rendering Data (Report Builder and SSRS) | Microsoft Docs"
+title: "Rendering Data (Report Builder) | Microsoft Docs"
+description: Find out how to use data renderers to import data into a database or Excel, to XSLT transformations, or data exchange/EDI in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

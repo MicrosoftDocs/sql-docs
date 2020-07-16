@@ -1,6 +1,7 @@
 ---
-title: "Design Considerations and Limitations for Oracle Publishers | Microsoft Docs"
-ms.custom: ""
+title: "Considerations & limitations (Oracle Publishers)"
+description: Describes the design considerations & limitations when configuring a SQL Server subscriber with an Oracle Publisher. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -12,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: 8d9dcc59-3de8-4d36-a61f-bc3ca96516b6
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Design Considerations and Limitations for Oracle Publishers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Publishing from an Oracle database is designed to work nearly identically to publishing from a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database. However, you should be aware of the following limitations and issues:  
   
 -   The Oracle Gateway option provides improved performance over the Oracle Complete option; however, this option cannot be used to publish the same table in multiple transactional publications. A table can appear in at most one transactional publication and any number of snapshot publications. If you need to publish the same table in multiple transactional publications, choose the Oracle Complete option.  
@@ -115,7 +115,7 @@ manager: craigg
   
 -   Standard transactional publications support tables of up to 1000 columns. Oracle transactional publications support 995 columns (replication adds five columns to each published table).  
   
--   Collate clauses are added to the CREATE TABLE statements to enable case sensitive comparisons, which is important for primary keys and unique constraints. This behavior is controlled with the schema option 0x1000, which is specified with the **@schema_option** parameter of [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
+-   Collate clauses are added to the CREATE TABLE statements to enable case sensitive comparisons, which is important for primary keys and unique constraints. This behavior is controlled with the schema option 0x1000, which is specified with the `@schema_option` parameter of [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md).  
   
 -   If you use stored procedures to configure or maintain an Oracle Publisher, do not put the procedures inside an explicit transaction. This is not supported over the linked server used to connect to the Oracle Publisher.  
   
@@ -145,7 +145,7 @@ manager: craigg
   
 -   The account under which the Snapshot Agent and Log Reader Agent make connections from the Distributor to the Publisher is specified through one of the following methods:  
   
-    -   The **@security_mode** parameter of [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) (you also specify values for **@login** and **@password** if Oracle Authentication is used)  
+    -   The `@security_mode` parameter of [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md) (you also specify values for `@login` and `@password` if Oracle Authentication is used)  
   
     -   In the **Connect to Server** dialog box in SQL Server Management Studio, which you use when you configure the Oracle Publisher at the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Distributor.  
   
@@ -153,11 +153,11 @@ manager: craigg
   
 -   The account under which the Snapshot Agent and Log Reader Agent make connections cannot be changed with [sp_changedistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md) or through a property sheet, but the password can be changed.  
   
--   If you specify a value of 1 (Windows Integrated Authentication) for the **@security_mode** parameter of [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md):  
+-   If you specify a value of 1 (Windows Integrated Authentication) for the `@security_mode` parameter of [sp_adddistpublisher &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md):  
   
-    -   The process account and password used for both the Snapshot Agent and Log Reader Agent (the **@job_login** and **@job_password** parameters of [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) and [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)) must be the same as the account and password used to connect to the Oracle Publisher.  
+    -   The process account and password used for both the Snapshot Agent and Log Reader Agent (the `@job_login` and `@job_password` parameters of [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) and [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)) must be the same as the account and password used to connect to the Oracle Publisher.  
   
-    -   You cannot change the **@job_login** parameter through [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) or [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), but the password can be changed.  
+    -   You cannot change the `@job_login` parameter through [sp_changepublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) or [sp_changelogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md), but the password can be changed.  
   
  For more information about replication security, see [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   

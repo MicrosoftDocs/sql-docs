@@ -5,19 +5,10 @@ ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
-  - "analysis-services"
-  - "data-quality-services"
-  - "database-engine"
-  - "integration-services"
-  - "master-data-services"
-  - "replication"
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
 ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Tutorials for SQL Server 2014
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] introduces many new technologies and features.  
@@ -33,9 +24,9 @@ manager: craigg
     > [!NOTE]  
     >  [!INCLUDE[ssCrescent](../includes/sscrescent-md.md)] is a feature of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)][!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] Add-in for [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[SPS2010](../includes/sps2010-md.md)] Enterprise Edition.  
   
--   To download [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] versions of [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, go to [Adventure Works 2014 Sample Databases](http://msftdbprodsamples.codeplex.com/releases/view/125550) on CodePlex.  
+-   To download [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] versions of [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, go to [Adventure Works 2014 Sample Databases](https://msftdbprodsamples.codeplex.com/releases/view/125550) on CodePlex.  
   
--   To download [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] versions of [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, go to [Adventure Works for SQL Server 2012](http://msftdbprodsamples.codeplex.com/releases/view/55330) on CodePlex.  
+-   To download [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] versions of [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] databases, go to [Adventure Works for SQL Server 2012](https://msftdbprodsamples.codeplex.com/releases/view/55330) on CodePlex.  
   
 -   To see a list of [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] tutorials, go to [Tutorials](https://msdn.microsoft.com/library/ms167593.aspx) in MSDN library.  
   
@@ -44,11 +35,10 @@ manager: craigg
   
 |Technology|Description|  
 |----------------|-----------------|  
-|[Analysis Services Tutorials &#40;SSAS&#41;](../analysis-services/analysis-services-tutorials-ssas.md)|Learn how to develop and deploy [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tabular or multidimensional models. Also learn how to use tools such as PowerPivot to analyze the data in the models.|  
+|[Analysis Services Tutorials &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|Learn how to develop and deploy [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] tabular or multidimensional models. Also learn how to use tools such as PowerPivot to analyze the data in the models.|  
 |[Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services/reporting-services-tutorials-ssrs.md)|Learn how to create basic reports and subscriptions.|  
 |[Integration Services Tutorials](../integration-services/integration-services-tutorials.md)|Learn how to create and deploy [!INCLUDE[ssIS](../includes/ssis-md.md)] packages.|  
 |[Database Engine Tutorials](../relational-databases/database-engine-tutorials.md)|Learn how to connect to an instance of the database engine and then build and run Transact-SQL statements.|  
 |[Replication Tutorials](../relational-databases/replication/replication-tutorials.md)|Learn how to set up and run replication topologies using [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].|  
 |[Enterprise Information Management Tutorials](../../2014/tutorials/enterprise-information-management-tutorials.md)|Learn how to manage information in an enterprise using Microsoft EIM technologies.|  
-  
   

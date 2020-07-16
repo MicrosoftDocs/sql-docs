@@ -8,12 +8,15 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 07a9a163-4787-40f7-b371-ac5c6cb4b095
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
-# catalog.execution_component_phases
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# catalog.execution_component_phases 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays the time spent by a data flow component in each execution phase.  
   

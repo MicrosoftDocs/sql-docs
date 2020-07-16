@@ -1,10 +1,9 @@
 ---
-title: "Specifying a Target Namespace Using the targetNamespace Attribute (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Specify a target namespace with targetNamespace (SQLXML)"
+description: Learn how to specify a target namespace in an XSD schema by using the targetNamespace attribute in SQLXML 4.0. 
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,13 +16,14 @@ helpviewer_keywords:
   - "elementFormDefault attribute"
   - "target namespaces [SQLXML]"
 ms.assetid: f3df9877-6672-4444-8245-2670063c9310
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.reviewer: ""
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying a Target Namespace Using the targetNamespace Attribute (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In writing XSD schemas, you can use the XSD **targetNamespace** attribute to specify a target namespace. This topic describes how the XSD **targetNamespace**, **elementFormDefault**, and **attributeFormDefault** attributes work, how they affect the XML instance that is generated, and how XPath queries are specified with namespaces.  
   
  You can use the **xsd:targetNamespace** attribute to place elements and attributes from the default namespace into a different namespace. You can also specify whether the locally declared elements and attributes of the schema should appear qualified by a namespace, either explicitly by using a prefix or implicitly by default. You can use the **elementFormDefault** and **attributeFormDefault** attributes on the **\<xsd:schema>** element to globally specify the qualification of local elements and attributes, or you can use the **form** attribute to specify individual elements and attributes separately.  
@@ -35,7 +35,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  The following XSD schema specifies a target namespace by using the **xsd:targetNamespace** attribute. The schema also sets the **elementFormDefault** and **attributeFormDefault** attribute values to **"unqualified"** (the default value for these attributes). This is a global declaration and affects all the local elements (**\<Order>** in the schema) and attributes (**CustomerID**, **ContactName**, and **OrderID** in the schema).  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
             xmlns:CO="urn:MyNamespace"   
             targetNamespace="urn:MyNamespace" >  

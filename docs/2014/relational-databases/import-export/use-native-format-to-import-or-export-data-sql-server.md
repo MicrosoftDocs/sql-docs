@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "native data format [SQL Server]"
   - "data formats [SQL Server], native"
 ms.assetid: eb279b2f-0f1f-428f-9b8f-2a7fc495b79f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Use Native Format to Import or Export Data (SQL Server)
   Native format is recommended when you bulk transfer data between multiple instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using a data file that does not contain any extended/double-byte character set (DBCS) characters.  

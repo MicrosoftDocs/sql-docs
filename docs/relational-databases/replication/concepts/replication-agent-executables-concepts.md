@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-
+ms.technology: replication
 ms.topic: "reference"
 helpviewer_keywords: 
   - "programming interfaces [SQL Server replication]"
@@ -17,10 +16,10 @@ helpviewer_keywords:
 ms.assetid: cba476df-d4ea-44c9-bb86-81488971e328
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Replication Agent Executables Concepts
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   Replication agents can be controlled programmatically in the following ways:  
   

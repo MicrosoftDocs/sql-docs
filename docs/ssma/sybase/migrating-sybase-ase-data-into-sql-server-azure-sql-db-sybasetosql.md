@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 54a39f5e-9250-4387-a3ae-eae47c799811
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Migrating Sybase ASE Data into SQL Server - Azure SQL DB  (SybaseToSQL)
 After you have successfully loaded the Sybase Adaptive Server Enterprise (ASE) database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL DB, you can migrate data from ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL DB.  

@@ -27,9 +27,8 @@ helpviewer_keywords:
   - "starting point marked for transactions"
   - "starting transactions"
 ms.assetid: c6258df4-11f1-416a-816b-54f98c11145e
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BEGIN TRANSACTION (Transact-SQL)
@@ -41,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 --Applies to SQL Server and Azure SQL Database
  
 BEGIN { TRAN | TRANSACTION }   
@@ -51,7 +50,7 @@ BEGIN { TRAN | TRANSACTION }
 [ ; ]  
 ```  
  
-```  
+```syntaxsql
 --Applies to Azure SQL Data Warehouse and Parallel Data Warehouse
  
 BEGIN { TRAN | TRANSACTION }   

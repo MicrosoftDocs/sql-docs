@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Integration Services], custom"
@@ -13,9 +12,8 @@ helpviewer_keywords:
   - "SSIS packages, logs"
   - "custom messages for logging [Integration Services]"
 ms.assetid: 3c74bba9-02b7-4bf5-bad5-19278b680730
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Custom Messages for Logging
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides a rich set of custom events for writing log entries for packages and many tasks. You can use these entries to save detailed information about execution progress, results, and problems by recording predefined events or user-defined messages for later analysis. For example, you can record when a bulk insert begins and ends to identify performance issues when the package runs.  
@@ -253,12 +251,8 @@ manager: craigg
   
 |Log entry|Description|  
 |---------------|-----------------|  
-|`XMLOperation`|Provides information about the operation that the task performs|  
-  
-## Related Content  
- Blog entry, [Logging custom events for Integration Services tasks](https://go.microsoft.com/fwlink/?LinkId=150580), on dougbert.com.  
+|`XMLOperation`|Provides information about the operation that the task performs|   
   
 ## See Also  
  [Integration Services &#40;SSIS&#41; Logging](performance/integration-services-ssis-logging.md)  
-  
   

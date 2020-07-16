@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Incompatible Database Engine Server Collation (Upgrade Advisor)
   Upgrade Advisor detected [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] is using an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] that is configured to use an incompatible server collation.  

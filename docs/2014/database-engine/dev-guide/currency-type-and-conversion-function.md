@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: "database-engine"
 ms.topic: "reference"
 ms.assetid: df516567-8689-45c2-b418-16473f8d43e4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Currency Type and Conversion Function
   This example defines a Currency user-defined data type by using C#. This user-defined data type encapsulates both an amount and a culture that helps to determine the correct way to render the amount as a currency value in that culture. This example also provides a currency conversion function that returns an instance of the Currency user-defined data type. If the AdventureWorks database has a conversion rate from U.S. dollars (USD) to the currency that is associated with the specified culture, the conversion function returns a Currency user-defined data type with the converted rate and a culture that matches the culture requested. Otherwise, a Currency user-defined data type is returned with the original amount, which should be in USD, with the `en-us` culture. The example also demonstrates how to unregister and register common language runtime (CLR) methods and assemblies by using Transact-SQL.  
@@ -22,7 +19,7 @@ manager: craigg
 ## Prerequisites  
  To create and run this project the following the following software must be installed:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](https://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](https://www.microsoft.com/sql-server/sql-server-editions-express)  
   
 -   The AdventureWorks database that is available at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer [Web site](https://go.microsoft.com/fwlink/?linkid=62796)  
   

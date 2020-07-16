@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "04/19/2015"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 08828eec-4f8c-4f34-a145-e442f7b7031d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # PowerPivot BI Semantic Model Connection (.bism)
   A BI semantic model connection (.bism) is a portable connection that connects Excel or [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] reports to an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular model database or an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance in multidimensional mode. If you are familiar with office data connection (.odc) files, you will notice a similarity in how a .bism connection file is defined and used.  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Windows collations [Analysis Services]"
@@ -18,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 666cf8a7-223b-4be5-86c0-7fe2bcca0d09
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Languages and Collations (Analysis Services)
   [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] supports the languages and collations provided by [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows operating systems. `Language` and `Collation` properties are initially set at the instance level during installation, but can be changed afterwards at different levels of the object hierarchy.  
@@ -88,7 +86,7 @@ manager: craigg
   
 -   0x0416 or 1046 for **Portuguese (Brazil)**.  
   
- To view a longer list, see [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx). For more background, see [Encoding and Code Pages](https://msdn.microsoft.com/goglobal/bb688114.aspx).  
+ To view a longer list, see [Locale IDs Assigned by Microsoft](https://msdn.microsoft.com/goglobal/bb964664.aspx). For more background, see [Code Pages](/windows/desktop/Intl/code-pages).  
   
 > [!NOTE]  
 >  The `Language` property does not determine the language for returning system messages, or which strings appear in the user interface. Errors, warnings, and messages are localized into all languages supported in Office and Office 365 and are used automatically when the client connection specifies one of the supported locales.  

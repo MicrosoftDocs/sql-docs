@@ -8,12 +8,15 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 91319b0b-5536-4ab4-a403-9559ed9dd177
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
-# catalog.create_execution_dump
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# catalog.create_execution_dump 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Causes a running package to pause and create a dump file. The file is stored in the *\<drive>*:\Program Files\Microsoft SQL Server\130\Shared\ErrorDumps folder.  
   

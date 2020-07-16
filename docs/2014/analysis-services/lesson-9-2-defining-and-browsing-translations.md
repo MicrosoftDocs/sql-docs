@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 0e60be99-3768-499c-a22c-a4ec37e61887
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Defining and Browsing Translations
   A translation is a representation of the names of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects in a specific language. Objects include measure groups, measures, dimensions, attributes, hierarchies, KPIs, actions, and calculated members. Translations provide server support for client applications that can support multiple languages. By using such a client, the client passes the locale identifier (LCID) to the instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], which uses the LCID to determine which set of translations to use when it provides metadata for [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects. If an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] object does not contain a translation for that language, or does not contain a translation for a specified object, the default language is used in returning the object metadata back to the client. For example, if a business user in France accesses a cube from a workstation that has a French locale setting, the business user will see the member captions and member property values in French if a French translation exists. However, if a business user in Germany accesses the same cube from a workstation that has a German locale setting, the business user will see the captions names and member property values in German. For more information, see [Dimension Translations](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md), [Cube Translations](multidimensional-models-olap-logical-cube-objects/cube-translations.md), [Translations &#40;Analysis Services&#41;](translations-analysis-services.md).  
@@ -118,7 +116,7 @@ manager: craigg
      Notice that the month names now appear in French and that the measure name now also appears in French.  
   
 ## Next Lesson  
- [Lesson 10: Defining Administrative Roles](../analysis-services/lesson-10-defining-administrative-roles.md)  
+ [Lesson 10: Defining Administrative Roles](lesson-10-defining-administrative-roles.md)  
   
 ## See Also  
  [Dimension Translations](multidimensional-models-olap-logical-dimension-objects/dimension-translations.md)   

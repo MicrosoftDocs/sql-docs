@@ -1,5 +1,6 @@
 ---
 title: "true Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery function true() that returns the Boolean value True.
 ms.custom: ""
 ms.date: "08/10/2016"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 318e370d-0444-4812-afe4-307df7ef9f3b
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Boolean Constructor Functions - true (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Returns the xs:boolean value True. This is equivalent to `xs:boolean("1")`.  
   
@@ -57,7 +57,7 @@ go
 DROP XML SCHEMA COLLECTION SC  
 go  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"  
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  
 targetNamespace="QNameXSD" >  
       <element name="ROOT" type="boolean" nillable="true"/>  
 </schema>'  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.datasourceproperties.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: bf8b600f-5b99-4f7d-908b-8a391721e9dd
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Set Data Source Properties (SSAS Multidimensional)
   In [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], a data source object specifies a connection to an external data warehouse or relational database that provides data to a multidimensional model. Properties on the data source determine the connection string, a timeout interval, maximum number of connections, and the transaction isolation level.  

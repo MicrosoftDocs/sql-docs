@@ -13,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: 225b5e2d-4a78-4178-b2b6-b419df83c4aa
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server Agent, Jobs Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The SQL Server Agent **Jobs** performance object contains performance counters that report information about SQL Server Agent jobs. The table below lists the counters that this object contains.  
   
  The table below contains the **SQLAgent:Jobs** counters.  

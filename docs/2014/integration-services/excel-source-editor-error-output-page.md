@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.excelsourceadapter.erroroutput.f1"
 helpviewer_keywords: 
   - "Excel Source Editor"
 ms.assetid: 8d14019e-cb60-4bc1-b71e-7f2326de8317
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Excel Source Editor (Error Output Page)
   Use the **Error Output** page of the **Excel Source Editor** dialog box to select error handling options and to set properties on error output columns.  

@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetTypeInfo function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 5f25e20b-a4ef-42da-aeb6-00e0510fb1cc
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetTypeInfo (Visual FoxPro ODBC Driver)
 > [!NOTE]  

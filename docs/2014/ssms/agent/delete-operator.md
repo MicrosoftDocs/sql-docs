@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 68402a69-24c4-4304-a1db-7409c42c51dc
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Delete Operator
   Use this page to delete an operator.  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Analysis Services deployments, planning"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7259c201-ff54-43e8-bda5-a6d51474e0e6
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Multidimensional Model Solution Deployment
   After you have completed the development of an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project, you can deploy the database to an Analysis Services server. Analysis Services provides six possible deployment methods that can be used to move the database to a test or production server. The methods are listed here in order of advantage: AMO Automation, XMLA, Deployment Wizard, Deployment Utility, Synchronize Wizard, Backup and Restore.  

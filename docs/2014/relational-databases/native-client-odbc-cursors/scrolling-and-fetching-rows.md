@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "fetching [ODBC]"
   - "ODBC cursors, scrolling rows"
 ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Scrolling and Fetching Rows
   To use a scrollable cursor, an ODBC application must:  

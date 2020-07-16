@@ -22,12 +22,11 @@ helpviewer_keywords:
   - "encryption [SQL Server], Service Master Key"
   - "service master key [SQL Server], modifying"
 ms.assetid: a1e9be0e-4115-47d8-9d3a-3316d876a35e
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # ALTER SERVICE MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the service master key of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -35,7 +34,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER SERVICE MASTER KEY   
     [ { <regenerate_option> | <recover_option> } ] [;]  
@@ -49,7 +48,10 @@ ALTER SERVICE MASTER KEY
     { WITH NEW_ACCOUNT = 'account_name' , NEW_PASSWORD = 'password' }  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  FORCE  
  Indicates that the service master key should be regenerated, even at the risk of data loss. For more information, see [Changing the SQL Server Service Account](#_changing) later in this topic.  
   

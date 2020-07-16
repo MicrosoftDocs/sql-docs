@@ -1,7 +1,7 @@
 ---
-title: "Introduction to Annotated XSD Schemas (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
+title: "Introduction to Annotated XSD Schemas (SQLXML)"
+description: Learn about creating XML views of relational data using the XML Schema Definition (XSD) language (SQLXML 4.0).
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -19,13 +19,13 @@ helpviewer_keywords:
   - "annotated XSD schemas, examples"
   - "XML views [SQLXML]"
 ms.assetid: 15282db1-65c4-43be-bdb7-e9ef49cb33a2
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Introduction to Annotated XSD Schemas (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   You can create XML views of relational data by using the XML Schema Definition (XSD) language. These views can then be queried by using XML Path language (XPath) queries. This is similar to creating views by using CREATE VIEW statements and then specifying SQL queries against the view.  
   
  An XML schema describes the structure of an XML document and also describes the various constraints on the data in the document. When you specify XPath queries against the schema, the structure of the XML document returned is determined by the schema against which the XPath query is executed.  
@@ -35,13 +35,13 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  A valid XSD schema must contain the **\<xsd:schema>** element defined as follows:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <!-- additional schema definitions here -->  
 </xsd:schema>  
 ```  
   
- The **\<xsd:schema>** element is derived from the XML Schema namespace specification at https://www.w3.org/2001/XMLSchema.  
+ The **\<xsd:schema>** element is derived from the XML Schema namespace specification at http://www.w3.org/2001/XMLSchema.  
   
 ## Annotations to the XSD Schema  
  You can use an XSD schema with annotations that describe the mapping to a database, query the database, and return the results in the form of an XML document. Annotations are provided to map an XSD schema to database tables and columns. XPath queries can be specified against the XML view created by the XSD schema to query the database and obtain results as an XML.  
@@ -55,7 +55,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  In an XSD schema, annotations are specified by using the namespace **urn:schemas-microsoft-com:mapping-schema**. As shown in the following example, the easiest way to specify the namespace is to specify it in the **\<xsd:schema>** tag.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 ...  
 </xsd:schema>  
@@ -67,7 +67,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  In the following example, the XSD schema consists of an **\<Person.Contact>** element. The **\<Employee>** element has a **ContactID** attribute and **\<FirstName>** and **\<LastName>** child elements:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema">  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">  
   <xsd:element name="Contact" >  
    <xsd:complexType>  
      <xsd:sequence>  
@@ -85,7 +85,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  Annotations are added to this XSD schema to map its elements and attributes to the database tables and columns:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Contact" sql:relation="Person.Contact" >  
    <xsd:complexType>  

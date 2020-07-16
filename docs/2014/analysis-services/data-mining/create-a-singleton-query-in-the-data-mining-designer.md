@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "singleton queries [Analysis Services]"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 6cdca8a0-cf16-46eb-a652-0bff820625ab
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create a Singleton Query in the Data Mining Designer
   A singleton query is useful if you want to create a prediction for a single case. For more information about singleton queries, see [Data Mining Queries](data-mining-queries.md).  

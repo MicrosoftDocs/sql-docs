@@ -20,13 +20,12 @@ helpviewer_keywords:
   - "IN keyword"
   - "8632 (Database Engine error)"
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # IN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Determines whether a specified value matches any value in a subquery or a list.  
   
@@ -34,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 test_expression [ NOT ] IN   
     ( subquery | expression [ ,...n ]  
     )   

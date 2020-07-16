@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 594eeb1f-16d5-49ea-9b29-ccf029b58928
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Distributed Replay Controller Configuration
   Use the **Distributed Replay Controller Configuration** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to specify the users you want to grant administrative permissions to for the Distributed Replay controller service.  

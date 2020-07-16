@@ -17,12 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_start_job"
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
-author: rothja
-ms.author: jroth
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.sp_cdc_start_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Starts a change data capture cleanup or capture job for the current database.  
   
@@ -36,7 +35,7 @@ sys.sp_cdc_start_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## Arguments  
- [ [ **@job_type=** ] **'**_job_type_**'** ]  
+`[ [ @job_type = ] 'job_type' ]`
  Type of job to add. *job_type* is **nvarchar(20)** with a default of **capture**. Valid inputs are **capture** and **cleanup**.  
   
 ## Return Code Values  

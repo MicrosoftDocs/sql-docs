@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Business Intelligence enhancements [Analysis Services]"
 ms.assetid: 12d995d1-75ca-4890-bf4b-a2656910b8d0
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Use the Business Intelligence Wizard to Enhance Dimensions
   In addition to modifying dimension and dimension object properties directly, you can also use the Business Intelligence Wizard to configure and enhance dimensions.  

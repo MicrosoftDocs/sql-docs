@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: dfb4ed77-90e5-4273-b690-89a945508ed2
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Backup and Restore Reporting Services SharePoint Service Applications
   This topic describes how to backup and restore a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] services application using SharePoint Central Administration or PowerShell. The topic contains:  
@@ -117,7 +116,7 @@ manager: craigg
   
  [Restore a service application (SharePoint Foundation 2010)](https://msdn.microsoft.com/library/ee748615.aspx).  
   
- [Restore a service application (SharePoint Server 2010)](ttp://technet.microsoft.com/library/ee428305.aspx).  
+ [Restore a service application (SharePoint Server 2010)](https://technet.microsoft.com/library/ee428305.aspx).  
   
 ### Restore the Encryption Keys using Central Administration  
  For information on restoring the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] encryption keys, see the "Encryption Keys" section of [Manage a Reporting Services SharePoint Service Application](../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md).  

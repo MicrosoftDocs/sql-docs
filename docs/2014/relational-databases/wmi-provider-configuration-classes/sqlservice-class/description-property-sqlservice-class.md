@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 0baf050e-7dde-496e-a8b6-da43e6448a09
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Description Property (SqlService Class)
   Gets a description of the referenced service.  

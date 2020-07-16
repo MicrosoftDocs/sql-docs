@@ -19,12 +19,11 @@ helpviewer_keywords:
   - "servers [SQL Server], permissions"
   - "logins [SQL Server], denying access"
 ms.assetid: 859affa7-0567-47d1-9490-57c1abbd619b
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DENY Server Principal Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Denies permissions granted on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
@@ -33,7 +32,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ] }   
     ON   
     { [ LOGIN :: SQL_Server_login ]  

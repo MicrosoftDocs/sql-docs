@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetConfigMode function [ODBC]"
 ms.assetid: b96ab3b8-08d5-4fea-9ffe-e03043efbf2d
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetConfigMode Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLGetConfigMode(  
      UWORD *   pwConfigMode);  

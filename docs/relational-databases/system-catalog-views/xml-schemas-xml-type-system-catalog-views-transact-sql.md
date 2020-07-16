@@ -13,12 +13,11 @@ helpviewer_keywords:
   - "catalog views [SQL Server], XML schemas"
   - "XML schemas [SQL Server], catalog views"
 ms.assetid: e92304ae-f920-4b28-8f63-6324973ba359
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # XML Schemas (XML Type System) Catalog Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section contains the following catalog views.  
   

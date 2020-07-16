@@ -14,9 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Save method [ADO]"
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Save Method
 Saves the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in a file or [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

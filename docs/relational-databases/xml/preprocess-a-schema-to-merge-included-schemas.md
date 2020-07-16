@@ -1,5 +1,6 @@
 ---
 title: "Preprocess a Schema to Merge Included Schemas | Microsoft Docs"
+description: Learn how XML schemas containing the xsd:include directive can be preprocessed to copy and merge the contents of any included schemas into a single schema.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -17,12 +18,11 @@ helpviewer_keywords:
   - "preprocessor tool [XML schemas]"
   - "XML schemas [SQL Server]"
 ms.assetid: cde1de5f-077a-4a6d-8a81-1ecb6e10d549
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Preprocess a Schema to Merge Included Schemas
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The W3C XSD **include** element provides support for schema modularity in which an XML schema can be partitioned into more than one physical file. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] currently does not support this element. XML schemas that include this element will be rejected by the server.  
   
  As a solution, XML schemas that include the \<xsd:include> directive can be preprocessed to copy and merge the contents of any included schemas into a single schema for uploading to the server. The following C# code can be used for the preprocessing. The comments in the early part of the code provide information about how to use it.  
@@ -189,7 +189,7 @@ public class XmlSchemaIncludeNormalizer
 ### books_common.xsd  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
      xmlns="bookstore-schema"  
      elementFormDefault="qualified" >  
   <xsd:element name="publisher" type="xsd:string"/>  
@@ -199,7 +199,7 @@ public class XmlSchemaIncludeNormalizer
 ### books.xsd  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
      xmlns="bookstore-schema"  
      elementFormDefault="qualified"  
      targetNamespace="bookstore-schema">  

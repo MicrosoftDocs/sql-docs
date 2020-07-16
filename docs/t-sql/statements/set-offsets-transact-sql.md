@@ -22,10 +22,9 @@ helpviewer_keywords:
 ms.assetid: c7bcc697-0930-4630-acae-d8ccbfa4414c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SET OFFSETS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the offset (position relative to the start of a statement) of specified keywords in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to DB-Library applications.  
   
@@ -36,7 +35,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET OFFSETS keyword_list { ON | OFF }  
 ```  

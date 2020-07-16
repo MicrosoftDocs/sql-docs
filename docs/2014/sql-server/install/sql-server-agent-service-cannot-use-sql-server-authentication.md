@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "authentication [SQL Server Agent]"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c39f3ec3-fc2c-4c12-940f-60d8d3d17660
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Agent Service cannot use SQL Server Authentication
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent only supports Windows Authentication when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service connects to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

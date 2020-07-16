@@ -1,7 +1,7 @@
 ---
-title: "Specify Availability Group Options Page (Availability Group Wizard) - SQL Server | Microsoft Docs"
-ms.description: "Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio."
-ms.custom: "seodec18"
+title: "Availability group wizard: Specify availability group options"
+description: "Describes the options found on the 'Specify Availability Group Name' page of the Availability Group Wizard within SQL Server Management Studio."
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -13,10 +13,9 @@ f1_keywords:
 ms.assetid: dcb6374d-becb-4c6c-b88c-5a8273f8aa38
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Specify Availability Group Options Page for an Always On Availability Group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes the options of the **Specify Availability Group Name** page. This topic is used by both the [!INCLUDE[ssAoNewAgWiz](../../../includes/ssaonewagwiz-md.md)] and [!INCLUDE[ssAoAddDbWiz](../../../includes/ssaoadddbwiz-md.md)] of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 ##  <a name="PageOptions"></a> Specify Availability Group Options  

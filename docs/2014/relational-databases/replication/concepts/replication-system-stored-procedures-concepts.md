@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "replication"
+ms.technology: "database-engine"
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -19,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Replication System Stored Procedures Concepts
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], programmatic access to all of the user-configurable functionality in a replication topology is provided by system stored procedures. While stored procedures may be executed individually using the [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the sqlcmd command-line utility, it may be beneficial to write [!INCLUDE[tsql](../../../includes/tsql-md.md)] script files that can be executed to perform a logical sequence of replication tasks.  

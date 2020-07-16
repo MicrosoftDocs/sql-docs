@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "extended events [SQL Server], ADD TARGET argument"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 08454543-c5c8-4ca3-9af9-f1d82264471c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Get the Configurable Parameters for the ADD TARGET Argument
   Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  

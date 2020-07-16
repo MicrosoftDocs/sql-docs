@@ -1,22 +1,22 @@
 ---
-title: "Create an Analysis Services Job Step | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: "Create an Analysis Services Job Step"
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "job steps [Analysis Services]"
 ms.assetid: 03d4bb86-514b-4a55-97b9-c2c0fa08b428
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Create an Analysis Services Job Step
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
@@ -123,8 +123,8 @@ This topic describes how to create and define [!INCLUDE[ssNoVersion](../../inclu
             <DatabaseID>AdventureWorks2012</DatabaseID>  
         </ParentObject>  
         <ObjectDefinition>  
-            <DataSource xmlns:xsd="https://www.w3.org/2001/XMLSchema"
-                xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"
+            <DataSource xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
                 xsi:type="RelationalDataSource">  
                 <ID>AdventureWorks2012</ID>  
                 <Name>Adventure Works 2012</Name>  

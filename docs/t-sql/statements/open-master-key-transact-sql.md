@@ -26,13 +26,12 @@ helpviewer_keywords:
   - "OPEN MASTER KEY statement"
   - "database master key [SQL Server], opening"
 ms.assetid: 1674753e-ca1e-4913-9ba4-b442e7106121
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OPEN MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Opens the Database Master Key of the current database.  
   

@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 5a0abfda-912a-4dfc-acf7-0e0a6cae15c5
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Global Settings (Editor) (AccessToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

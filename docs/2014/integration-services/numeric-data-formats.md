@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "integer data types [Integration Services]"
@@ -13,9 +12,8 @@ helpviewer_keywords:
   - "locale-sensitive parsing [Integration Services]"
   - "fast parse [Integration Services]"
 ms.assetid: fa3975ce-9d21-408a-857d-f85e30af27b0
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Numeric Data Formats
   Fast parse provides a fast, simple, locale-insensitive set of routines for parsing data. Fast parse supports only a limited set of formats for integer data types.  

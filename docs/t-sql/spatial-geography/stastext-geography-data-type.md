@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STAsText method"
 ms.assetid: d3d2635d-ca6c-4205-9d6c-eb939ee314fd
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STAsText (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation of a **geography** instance. This text will not contain any Z (elevation) or M (measure) values carried by the instance.  
   

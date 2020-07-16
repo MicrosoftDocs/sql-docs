@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpfilegroup"
 ms.assetid: 619716b5-95dc-4538-82ae-4b90b9da8ebc
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_helpfilegroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the names and attributes of filegroups associated with the current database.  
   
@@ -34,7 +33,7 @@ sp_helpfilegroup [ [ @filegroupname = ] 'name' ]
 ```  
   
 ## Arguments  
- [ **@filegroupname =** ] **'***name***'**  
+`[ @filegroupname = ] 'name'`
  Is the logical name of any filegroup in the current database. *name* is **sysname**, with a default of NULL. If *name* is not specified, all filegroups in the current database are listed and only the first result set shown in the Result Sets section is displayed.  
   
 ## Return Code Values  

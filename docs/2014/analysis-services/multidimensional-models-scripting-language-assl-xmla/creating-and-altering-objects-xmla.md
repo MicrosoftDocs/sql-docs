@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "objects [XML for Analysis]"
@@ -19,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a2080867-e130-440c-92eb-f768869f34a8
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Creating and Altering Objects (XMLA)
   Major objects can be independently created, altered, and deleted. Major objects include the following objects:  

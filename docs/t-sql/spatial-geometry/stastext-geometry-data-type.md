@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STAsText (geometry Data Type)"
 ms.assetid: e0decf5e-2858-4c56-b61a-6123f47fb51c
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STAsText (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation of a **geometry** instance. This text will not contain any Z (elevation) or M (measure) values carried by the instance.
   

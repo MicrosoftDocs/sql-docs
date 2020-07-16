@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: cff3b662-7876-4445-9bdd-96be35b3ca0c
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Task 8: Creating a Composite Domain Rule
   In this task, you create a rule for the **Address Validation** composite domain. You define a cross-domain rule: if **City** is **Los Angeles**, **State** must be **CA** where **City** and **State** are two domains.  

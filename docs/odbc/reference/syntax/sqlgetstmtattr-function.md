@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetStmtAttr function [ODBC]"
 ms.assetid: e321d460-e997-4527-aee6-207cf5a498e9
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetStmtAttr Function
 **Conformance**  
@@ -33,7 +32,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetStmtAttr(  
      SQLHSTMT        StatementHandle,  

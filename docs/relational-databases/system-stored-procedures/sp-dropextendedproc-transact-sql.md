@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dropextendedproc"
 ms.assetid: dd93af2c-1b7d-4e39-af23-2d21d270a381
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_dropextendedproc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops an extended stored procedure.  
   
@@ -37,7 +36,7 @@ sp_dropextendedproc [ @functname = ] 'procedure'
 ```  
   
 ## Arguments  
- [ **@functname =**] **'***procedure***'**  
+`[ @functname = ] 'procedure'`
  Is the name of the extended stored procedure to drop. *procedure* is **nvarchar(517)**, with no default.  
   
 ## Return Code Values  

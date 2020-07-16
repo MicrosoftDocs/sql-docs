@@ -1,14 +1,14 @@
 ---
-title: Launch Configuration Manager - Analytics Platform System | Microsoft Docs
+title: Launch Configuration Manager
 description: Instructions for launching the Configuration Manager tool for the Analytics Platform System appliance.  
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Launch the Configuration Manager in Analytics Platform System

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "hybrid OLAP"
@@ -20,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 422660b2-4d80-4165-b1c9-3963bcde556b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Proactive Caching (Partitions)
   Proactive caching provides automatic MOLAP cache creation and management for OLAP objects. The cubes immediately incorporate changes that are made to the data in the database, based upon notifications received from the database. The goal of proactive caching is to provide the performance of traditional MOLAP, while retaining the immediacy and ease of management offered by ROLAP.  

@@ -8,12 +8,11 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # MDX Data Definition - CREATE GLOBAL CUBE
 
 
-  Creates and populates a locally persisted cube, based on a subcube from a cube on the server. A connection to the server is not required to connect to the locally persisted cube. For more information about local cubes, see [Local Cubes &#40;Analysis Services - Multidimensional Data&#41;](../analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data.md).  
+  Creates and populates a locally persisted cube, based on a subcube from a cube on the server. A connection to the server is not required to connect to the locally persisted cube. For more information about local cubes, see [Local Cubes &#40;Analysis Services - Multidimensional Data&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/olap-physical/local-cubes-analysis-services-multidimensional-data).  
   
 ## Syntax  
   

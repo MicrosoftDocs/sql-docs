@@ -1,5 +1,6 @@
 ---
 title: "Remote Blob Store (RBS) (SQL Server) | Microsoft Docs"
+description: SQL Server Remote BLOB Store (RBS) stores binary large objects in commodity storage instead of on the main database server. Learn about this add-on component.
 ms.custom: ""
 ms.date: "11/03/2016"
 ms.prod: sql
@@ -11,16 +12,24 @@ helpviewer_keywords:
   - "Remote Blob Store (RBS) [SQL Server]"
   - "RBS (Remote Blob Store) [SQL Server]"
 ms.assetid: 31c947cf-53e9-4ff4-939b-4c1d034ea5b1
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Remote Blob Store (RBS) (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Remote BLOB Store (RBS) is an optional add-on component that lets database administrators store binary large objects in commodity storage solutions instead of directly on the main database server.  
   
- RBS is included on the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] installation media, but is not installed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program.  
+ RBS is included on the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media, but is not installed by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program. Search for RBS.msi on the installation media to locate the setup file.
+
+ If you do not have [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation media, you can download RBS at one of the following locations:
+
+| [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version | RBS download location |
+|:---|:---|
+| [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] | [[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=56833) |
+| [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] | [[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992) |
+| [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] | [[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] RBS download page](https://go.microsoft.com/fwlink/?linkid=2109005) |
+| &nbsp; | &nbsp; |
   
  
   

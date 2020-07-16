@@ -24,12 +24,11 @@ helpviewer_keywords:
   - "remote servers [SQL Server], distributed transactions"
   - "starting transactions"
 ms.assetid: c3bc2716-39d3-4061-8c6a-8734899231ac
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # BEGIN DISTRIBUTED TRANSACTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Specifies the start of a [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction managed by [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC).  
     
@@ -38,7 +37,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 BEGIN DISTRIBUTED { TRAN | TRANSACTION }   
      [ transaction_name | @tran_name_variable ]   

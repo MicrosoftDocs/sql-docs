@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "system functions [SQL Server]"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3cb54053-ef65-4558-ae96-8686b6b22f4f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # User-defined functions are not allowed in system_function_schema
   The Upgrade Advisor detected user-defined functions that are owned by the undocumented user **system_function_schema**. You cannot create a user-defined system function by specifying this user. The **system_function_schema** user name does not exist, and the user ID that is associated with this name (UID = 4) is reserved for the **sys** schema and is restricted to internal use only.  
@@ -49,7 +47,7 @@ manager: craigg
   
 4.  Replace references to **system_function_schema** with **dbo** in all scripts that contain user-defined function DDL statements.  
   
-5.  Modify scripts that invoke these functions to use either the two-part name dbo**.***function_name*, or the three-part name *database_name***.**dbo.*function_name*.  
+5.  Modify scripts that invoke these functions to use either the two-part name dbo**.**_function_name_, or the three-part name _database_name_**.**dbo.*function_name*.  
   
  For more information, see the following topics in SQL Server Books Online:  
   
@@ -60,7 +58,7 @@ manager: craigg
 -   "Resource Database"  
   
 ## See Also  
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)   
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)   
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
  [Remove statements that modify system objects](../../../2014/sql-server/install/remove-statements-that-modify-system-objects.md)   
  [Remove statements that drop system objects](../../../2014/sql-server/install/remove-statements-that-drop-system-objects.md)  

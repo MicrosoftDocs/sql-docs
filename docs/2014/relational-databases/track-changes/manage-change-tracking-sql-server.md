@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 94a8d361-e897-4d6d-9a8f-1bb652e7a850
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Manage Change Tracking (SQL Server)
   This topic describes how to manage change tracking. It also describes how to configure security and determine the effects on storage and performance when change tracking is used.  
@@ -90,7 +89,7 @@ manager: craigg
   
  As with other internal tables, you can determine the space used for the change tracking tables by using the [sp_spaceused](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql) stored procedure. The names of the internal tables can be obtained by using the [sys.internal_tables](/sql/relational-databases/system-catalog-views/sys-internal-tables-transact-sql) catalog view, as shown in the following example.  
   
-```tsql  
+```sql  
 sp_spaceused 'sys.change_tracking_309576141'  
 sp_spaceused 'sys.syscommittab'  
 ```  

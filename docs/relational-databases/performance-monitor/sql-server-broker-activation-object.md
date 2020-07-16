@@ -13,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: cd9b6880-c924-42c7-b333-09c303317c0b
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, Broker Activation Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **SQLServer:BrokerActivation** performance object contains performance counters that report information on stored procedure activation. The table below lists the counters that this object contains.  
   
 |SQL Server Broker Activation counters|Description|  

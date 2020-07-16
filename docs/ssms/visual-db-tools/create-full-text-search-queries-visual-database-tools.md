@@ -1,10 +1,9 @@
 ---
-title: "Create Full-Text Search Queries (Visual Database Tools) | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Create Full-Text Search Queries
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -12,14 +11,14 @@ helpviewer_keywords:
   - "queries [full-text search], creating"
   - "full-text queries [SQL Server], creating"
 ms.assetid: 537fa556-390e-4c88-9b8e-679848d94abc
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.reviewer: 
 
 ---
 # Create Full-Text Search Queries (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-Full-text searches use the CONTAINS predicate to locate rows that have specified text in a given column. Full-Text searches are only possible on columns that have active full-text indexes. If you attempt to use the CONTAINS clause on a column that does not have a currently active full-text index, you will receive an error. For more information on full-text indexes and the CONTAINS clause, see [Full-Text Search (SQL Server)](https://msdn.microsoft.com/a0ce315d-f96d-4e5d-b4eb-ff76811cab75) and [CONTAINS (Transact-SQL)](https://msdn.microsoft.com/996c72fc-b1ab-4c96-bd12-946be9c18f84).  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+Full-text searches use the CONTAINS predicate to locate rows that have specified text in a given column. Full-Text searches are only possible on columns that have active full-text indexes. If you attempt to use the CONTAINS clause on a column that does not have a currently active full-text index, you will receive an error. For more information on full-text indexes and the CONTAINS clause, see [Full-Text Search (SQL Server)](../../relational-databases/search/full-text-search.md) and [CONTAINS (Transact-SQL)](https://msdn.microsoft.com/996c72fc-b1ab-4c96-bd12-946be9c18f84).  
   
 ### To create a full-text search query  
   

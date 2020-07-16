@@ -1,16 +1,14 @@
 ---
-title: "View Spatial Data in Object Explorer | Microsoft Docs"
-ms.custom: ""
+title: View Spatial Data in Object Explorer
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 59cca562-e3f5-4257-b868-adcbcc0142cc
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # View Spatial Data in Object Explorer
   The **Spatial results** window in Query Editor provides visual mapping tools for viewing spatial data results in addition to the data displayed in grid format in the **Results** window. To display spatial data in the **Spatial Results** window, your query results must contain at least one spatial data column with either geometry or geography data.  

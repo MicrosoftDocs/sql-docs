@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.datasourceviewwizard.selectdatasource.f1"
 ms.assetid: 51282270-8ca8-42cf-8538-a6baf0006656
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select a Data Source (Data Source View Wizard) (Analysis Services)
   Use the **Select a Data Source** page to select a data source for the data source view.  

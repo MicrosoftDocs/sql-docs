@@ -13,11 +13,10 @@ helpviewer_keywords:
 ms.assetid: a7c0cd60-3bec-42be-ad5e-473bd26a06d9
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CLR Event Category
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **CLR** event category includes event classes that are produced by the execution of [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] common language runtime (CLR) objects inside [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
  
  ## Assembly Load Event Class 

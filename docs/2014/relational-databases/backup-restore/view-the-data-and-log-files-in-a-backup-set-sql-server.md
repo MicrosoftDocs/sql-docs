@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: abb6420c-f809-426e-aeb4-d0a74989cf39
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # View the Data and Log Files in a Backup Set (SQL Server)
   This topic describes how to view the data and log files in a backup set in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -65,7 +64,7 @@ manager: craigg
   
 3.  Use the [RESTORE FILELISTONLY](/sql/t-sql/statements/restore-statements-filelistonly-transact-sql) statement. This example returns information about the second backup set (`FILE=2`) on the `AdventureWorksBackups` backup device.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 RESTORE FILELISTONLY FROM AdventureWorksBackups   
    WITH FILE=2;  

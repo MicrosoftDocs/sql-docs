@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "SYMKEYPROPERTY"
 ms.assetid: 3d1f7075-3a3c-4660-8cd0-ed938b86fecd
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # SYMKEYPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the algorithm of a symmetric key created from an EKM module.  
   

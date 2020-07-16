@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "license terms"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 08dd739d-5817-4418-bcff-74ab7f8bbd33
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Accept License Terms
   Use the **Accept License Terms** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to accept the license terms for this release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

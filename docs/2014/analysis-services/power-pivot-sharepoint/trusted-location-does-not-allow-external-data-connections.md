@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: dc0cedfd-a7d0-40ef-bdd6-ea508130640a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # The trusted location where the workbook is stored does not allow external data connections. The following connections failed to refresh: PowerPivot Data
   For Excel workbooks that contain PowerPivot data, Excel Services returns this error if it cannot connect to embedded data sources.  

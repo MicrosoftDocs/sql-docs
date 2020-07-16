@@ -15,9 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_colfmt function"
 ms.assetid: 5c3b6299-80c7-4e84-8e69-4ff33009548e
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # bcp_colfmt
   Specifies the source or target format of the data in a user file. When used as a source format, **bcp_colfmt** specifies the format of an existing data file used as the source of data in a bulk copy to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. When used as a target format, the data file is created using the column formats specified with **bcp_colfmt**.  

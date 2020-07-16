@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STDifference (geography Data Type)"
 ms.assetid: 1cde5054-b91a-41bb-812a-08c9308738af
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STDifference (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns an object that represents the point set from one **geography** instance that lies outside another **geography** instance.  
   

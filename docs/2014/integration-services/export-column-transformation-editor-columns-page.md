@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.fileextractortransformation.columns.f1"
 helpviewer_keywords: 
   - "Export Column Transformation Editor"
 ms.assetid: b659a5c2-5509-4b5b-9c82-136c971d5c7f
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Export Column Transformation Editor (Columns Page)
   Use the **Columns** page of the **Export Column Transformation Editor** dialog box to specify columns in the data flow to extract to files. You can specify whether the Export Column transformation appends data to a file or overwrites an existing file.  

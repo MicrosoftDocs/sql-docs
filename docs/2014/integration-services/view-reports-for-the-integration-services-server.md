@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 ms.assetid: dd81edf9-58a9-425a-91ac-2873606e820a
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # View Reports for the Integration Services Server
   In the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects that have been deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server.  For more information about the reports, see [Reports for the Integration Services Server](../../2014/integration-services/reports-for-the-integration-services-server.md).  

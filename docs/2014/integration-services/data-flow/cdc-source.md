@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.cdcsource.f1"
 ms.assetid: 99775608-e177-44ed-bb44-aaccb0f4f327
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # CDC Source
   The CDC source reads a range of change data from [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] change tables and delivers the changes downstream to other SSIS components.  
@@ -119,6 +118,6 @@ use <cdc-enabled-database-name>
   
 ## Related Content  
   
--   Blog entry, [Processing Modes for the CDC Source](https://go.microsoft.com/fwlink/?LinkId=242541), on mattmasson.com.  
+-   Blog entry, [Processing Modes for the CDC Source](https://www.mattmasson.com/2012/01/processing-modes-for-the-cdc-source/), on mattmasson.com.  
   
   

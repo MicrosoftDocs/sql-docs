@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.sendmailtask.mail.f1"
 helpviewer_keywords: 
   - "Send Mail Task Editor"
 ms.assetid: adb385d5-ef24-4d18-b9ea-b39e00a7075e
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Send Mail Task Editor (Mail Page)
   Use the **Mail** page of the **Send Mail Task Editor** dialog box to specify recipients, message type, and priority for a message. You can also attach files to the message. The message text can be a string you provide, a file connection to a file that contains the text, or the name of a variable that contains the text.  

@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Parameters collection [ADO], members"
 ms.assetid: 63b3f9a3-1c36-4d06-a6b0-49b5eb5adf06
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Parameters Collection Properties, Methods, and Events
 ## Properties  

@@ -2,7 +2,7 @@
 title: "Secure Shared Data Source Items | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: security
 
 
@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "data sources [Reporting Services], shared"
   - "security [Reporting Services], data sources"
 ms.assetid: 7299e498-0a1a-4821-a22a-5199bb773ce0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Secure Shared Data Source Items
   You can set security on a shared data source item to enable or disable access to it.  

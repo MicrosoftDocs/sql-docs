@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "SSIS, SSIS Designer"
   - "Integration Services, SSIS Designer"
 ms.assetid: d2c48cff-46f4-4c70-b1f3-c88f9b8757f3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services User Interface
   In addition to the design surfaces on the [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer tabs, the user interface provides access to the following windows and dialog boxes for adding features to packages and configuring the properties of package objects:  

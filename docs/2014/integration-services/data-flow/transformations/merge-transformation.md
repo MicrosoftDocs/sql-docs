@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "combining datasets"
   - "datasets [Integration Services], merging"
 ms.assetid: cff8690c-07ac-46a0-aab5-20bd4848c677
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Merge Transformation
   The Merge transformation combines two sorted datasets into a single dataset. The rows from each dataset are inserted into the output based on values in their key columns.  

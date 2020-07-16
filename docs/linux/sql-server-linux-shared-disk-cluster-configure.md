@@ -1,19 +1,19 @@
 ---
-title: Configure failover cluster instance - SQL Server on Linux (RHEL) | Microsoft Docs
-description: 
-author: MikeRayMSFT 
-ms.author: mikeray 
-manager: craigg
+title: Configure FCI - SQL Server on Linux (RHEL)
+description: Learn to configure a failover cluster instance (FCI) on Red Hat Enterprise Linux (RHEL) for SQL Server. 
+ms.custom: seo-lt-2019
+author: MikeRayMSFT
+ms.author: mikeray
+ms.reviewer: vanto
 ms.date: 08/28/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85 
 ---
 # Configure failover cluster instance - SQL Server on Linux (RHEL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 A SQL Server two-node shared disk failover cluster instance provides server-level redundancy for high availability. In this tutorial, you learn how to create a two-node failover cluster instance of SQL Server on Linux. The specific steps that you will complete include:
 
@@ -266,10 +266,12 @@ This example will create an FCI in the group NewLinFCIGrp. The name of the resou
 9.	Finally, fail the FCI back to the original node and remove the colocation constraint.
 
 <!---
+
 |Distribution |Topic 
 |----- |-----
 |**Red Hat Enterprise Linux with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-red-hat-7-configure.md)<br/>[Operate](sql-server-linux-shared-disk-cluster-red-hat-7-operate.md)
 |**SUSE Linux Enterprise Server with HA add-on** |[Configure](sql-server-linux-shared-disk-cluster-sles-configure.md)
+
 -->
 ## Summary
 

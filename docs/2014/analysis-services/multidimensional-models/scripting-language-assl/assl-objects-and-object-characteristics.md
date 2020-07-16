@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "reference exceptions [Analysis Services Scripting Language]"
@@ -20,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 6e5c28b5-c0bc-4ccd-82e5-e174bbb71386
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # ASSL Objects and Object Characteristics
   Objects in Analysis Services Scripting Language (ASSL) follow specific guidelines in regards to object groups, inheritance, naming, expansion, and processing.  

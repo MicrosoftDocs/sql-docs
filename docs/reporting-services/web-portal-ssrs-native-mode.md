@@ -1,14 +1,14 @@
 ---
-title: "The web portal of a report server (SSRS Native Mode) | Microsoft Docs"
-ms.date: 12/05/2018
+title: "The web portal of a report server (Native Mode) | Microsoft Docs"
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
-ms.description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
+description: The web portal of a Reporting Services report server is a web-based experience for viewing reports, mobile reports, KPIs, and navigating through the elements in your report server instance.
 ms.topic: conceptual
 ms.assetid: 7349e626-6ed5-4d21-b05f-cf042ad9ad70
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # The web portal of a report server (SSRS Native Mode)
 
@@ -24,7 +24,7 @@ You can use the web portal to perform the following tasks:
 
 - View, search, print, and subscribe to reports.
 - Create, secure, and maintain the folder hierarchy to organize items on the server.
-- Configure role-based security that determines access to items and operations.
+- Configure role-based security that determines access to items and operations. See [Role definitions - predefined roles](security/role-definitions-predefined-roles.md) for details.
 - Configure report execution properties, report history, and report parameters.
 - Create shared schedules and shared data sources to make schedules and data source connections more manageable.
 - Create data-driven subscriptions that role out reports to a large recipient list.
@@ -45,7 +45,7 @@ Some web portal features are only available in specified editions of [!INCLUDE[s
 On a new installation, only local administrators have sufficient permissions to work with content and settings. To grant permissions to other users, a local administrator must create role assignments that provide access to the report server. The application pages and tasks that a user can subsequently access will depend on the role assignments for that user. For more information, see [Grant User Access to a Report Server](security/grant-user-access-to-a-report-server-report-manager.md)
 
 > [!NOTE]
-> If you are browsing to the web portal on the local machine that the server is running on, you may see a message indicating that you are not allowed to view this folder. This is due to Universal Access Control (UAC) and that you are not running the browser as an admin. You are not able to run Edge as an admin. You will need to use Internet Explorer. You can either browser to the server remotely, or launch Internet Explorer as admin and browser to the web portal. If you want to use the web portal remotely, you will need to give your account content manager rights on the folder.  
+> If you are browsing to the web portal on the local machine that the server is running on, you may see a message indicating that you are not allowed to view this folder. This is due to Universal Access Control (UAC) and that you are not running the browser as an admin. You are not able to run Microsoft Edge as an admin. You will need to use Internet Explorer. You can either browser to the server remotely, or launch Internet Explorer as admin and browser to the web portal. If you want to use the web portal remotely, you will need to give your account content manager rights on the folder.  
 
 ## Start and use the web portal
 

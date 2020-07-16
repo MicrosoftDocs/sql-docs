@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 3a5f4592-3c61-4b4d-9ceb-39716aeeba41
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Replication
   Replication is a set of technologies for copying and distributing data and database objects from one database to another and then synchronizing between databases to maintain consistency. Using replication, you can distribute data to different locations and to remote or mobile users over local and wide area networks, dial-up connections, wireless connections, and the Internet.  
@@ -120,13 +119,13 @@ For backward compatibility information see, [Replication Backward Compatibility]
 -   [Administer a Peer-to-Peer Topology](administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)    
 -   [Quiesce a Replication Topology](administration/quiesce-a-replication-topology-replication-transact-sql-programming.md)    
 -   [Configure the Transaction Set Job for an Oracle Publisher](administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
--   [Upgrade Replication Scripts ](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
+-   [Upgrade Replication Scripts](administration/upgrade-replication-scripts-replication-transact-sql-programming.md)  
   
 ## Monitor
   
 -   [Allow Non-Administrators to Use Replication Monitor](monitor/allow-non-administrators-to-use-replication-monitor.md)    
 -   [Programmatically Monitor Replication](monitor/programmatically-monitor-replication.md)    
--   [View Replicated Commands and Other Information in the Distribution Database ](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
--   [View Conflict Information for Merge Publications ](view-conflict-information-for-merge-publications.md) 
+-   [View Replicated Commands and Other Information in the Distribution Database](monitor/view-replicated-commands-and-information-in-distribution-database.md)    
+-   [View Conflict Information for Merge Publications](view-conflict-information-for-merge-publications.md) 
 -   [Measure Latency and Validate Connections for Transactional Replication](monitor/measure-latency-and-validate-connections-for-transactional-replication.md)  
   

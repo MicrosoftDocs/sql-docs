@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.tracetableproperties.general.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 16de6d72-0605-4264-891c-e275cd005a37
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Trace Table Properties (General Tab)
   Use the **General** tab of the **Trace Table Properties** dialog box to view the properties of a trace table.  

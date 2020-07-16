@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 201a3fda-f162-45d7-bf39-74dcb92fd0e6
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Configure Disk Space Usage (PowerPivot for SharePoint)
   A PowerPivot for SharePoint deployment uses the disk space of the host computer to cache PowerPivot databases for faster reloads. Every PowerPivot database that is loaded in memory is first cached to disk so that it can be quickly reloaded later to service new requests. By default, PowerPivot for SharePoint uses all available disk space to cache its databases, but can modify this behavior by setting properties that limit how much disk space is used.  

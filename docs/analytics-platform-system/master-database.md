@@ -1,14 +1,14 @@
 ---
-title: Master database - Parallel Data Warehouse | Microsoft Docs
+title: Master database
 description: Learn about the master database in Parallel Data Warehouse.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Master database - Parallel Data Warehouse

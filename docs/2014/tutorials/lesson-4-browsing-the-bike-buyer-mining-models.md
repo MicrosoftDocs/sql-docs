@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 8de3c500-f881-42da-a096-b6c03300d58d
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Lesson 4: Browsing the Bike Buyer Mining Models
   In this lesson, you will use the [SELECT (DMX)](/sql/dmx/select-dmx) statement to explore the content in the decision tree and clustering mining models that you created in [Lesson 2: Adding Mining Models to the Predictive Mining Structure](../../2014/tutorials/lesson-2-adding-mining-models-to-the-bike-buyer-mining-structure.md).  

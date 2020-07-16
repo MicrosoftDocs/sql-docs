@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6786bd1e-ad97-430a-8dfb-d4ba952d6c4d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Enable or Disable Backup Checksums During Backup or Restore (SQL Server)
   This topic describes how to enable or disable backup checksums when you are backing up or restoring a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -63,7 +62,7 @@ manager: craigg
   
 3.  To enable backup checksums in a [BACKUP](/sql/t-sql/statements/backup-transact-sql) statement, specify the WITH CHECKSUM option. To disable backup checksums, specify the WITH NO_CHECKSUM option. This is the default behavior, except for a compressed backup. The following example specifies that checksums be performed.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  
@@ -78,7 +77,7 @@ GO
   
 3.  To enable backup checksums in a [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) statement, specify the WITH CHECKSUM option. This is the default behavior for a compressed backup. To disable backup checksums, specify the WITH NO_CHECKSUM option. This is the default behavior, except for a compressed backup. The following example specifies that backup checksums be performed.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM;  

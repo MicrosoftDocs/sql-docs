@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 22b82b2d-867f-4ebf-9288-79d1cdd62f18
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Use Dynamic Management Views (DMVs) to Monitor Analysis Services
   Analysis Services Dynamic Management Views (DMV) are query structures that expose information about local server operations and server health. The query structure is an interface to schema rowsets that return metadata and monitoring information about an Analysis Services instance.  
@@ -103,7 +101,7 @@ ORDER BY TABLE_NAME ASC
 |[DBSCHEMA_TABLES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db/dbschema-tables-rowset)|Returns a list of all the tables in the current database. You can use this list to construct a DMV query.|  
 |[DISCOVER_CALC_DEPENDENCY Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)|Returns a list of the columns and tables used in a model that have dependencies on other columns and tables.|  
 |[DISCOVER_COMMAND_OBJECTS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-command-objects-rowset)|Provides resource usage and activity information about objects in use by the referenced command.|  
-|[DISCOVER_COMMANDS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-commands-rowset)|Provides resource usage and activity information about currently executing command.|  
+|[DISCOVER_COMMANDS Rowset](https://docs.microsoft.com/analysis-services/instances/analysis-services-schema-rowsets)|Provides resource usage and activity information about currently executing command.|  
 |[DISCOVER_CONNECTIONS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-connections-rowset)|Provides resource usage and activity information about open connections to Analysis Services.|  
 |[DISCOVER_CSDL_METADATA Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)|Returns information about a tabular model.<br /><br /> Requires the addition of SYSTEMRESTRICTSCHEMA and additional parameters.|  
 |[DISCOVER_DB_CONNECTIONS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-db-connections-rowset)|Provides resource usage and activity information about open connections from Analysis Services to external data sources, for example during processing or importing.|  
@@ -150,9 +148,9 @@ ORDER BY TABLE_NAME ASC
 |[MDSCHEMA_INPUT_DATASOURCES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-input-datasources-rowset)|Returns information about the data source objects that are defined in the current database.|  
 |[MDSCHEMA_KPIS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-kpis-rowset)|Returns information about the KPIs that are defined in the current database.|  
 |[MDSCHEMA_LEVELS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-levels-rowset)|Returns information about the levels within the hierarchies that are defined in the current database.|  
-|[MDSCHEMA_MEASUREGROUP_DIMENSIONS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroup-dimensions-rowset)|Lists the dimension of measure groups.|  
+|[MDSCHEMA_MEASUREGROUP_DIMENSIONS Rowset](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/e6399481-a289-41f3-94d2-e081bf29e094)|Lists the dimension of measure groups.|  
 |[MDSCHEMA_MEASUREGROUPS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measuregroups-rowset)|Returns a list of measure groups in the current connection.|  
-|[MDSCHEMA_MEASURES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-measures-rowset)|Returns a list of measures in the current connection.|  
+|[MDSCHEMA_MEASURES Rowset](https://docs.microsoft.com/openspecs/sql_server_protocols/ms-ssas/ab8e721f-9b9c-4ba1-b105-37a5f200d67c)|Returns a list of measures in the current connection.|  
 |[MDSCHEMA_MEMBERS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-members-rowset)|Returns a list of all members in the current connection, listed by database, cube, and dimension.|  
 |[MDSCHEMA_PROPERTIES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-properties-rowset)|Returns a fully qualified name of each property, along with property type, data type, and other metadata.|  
 |[MDSCHEMA_SETS Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-sets-rowset)|Returns a list of set that are defined in the current connection.|  

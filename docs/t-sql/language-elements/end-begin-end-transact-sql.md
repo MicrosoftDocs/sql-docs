@@ -18,13 +18,12 @@ helpviewer_keywords:
   - "BEGIN...END keyword"
   - "END (BEGIN...END) keyword"
 ms.assetid: 354c4935-1375-4141-8195-61326662f4d2
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # END (BEGIN...END) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Encloses a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that will execute as a group. BEGIN...END blocks can be nested.  
   
@@ -32,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 BEGIN   
      { sql_statement | statement_block }   
 END   

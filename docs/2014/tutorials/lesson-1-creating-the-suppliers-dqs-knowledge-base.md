@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 78825ccb-30fc-463c-8140-435532e2ecd2
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Lesson 1: Creating the Suppliers DQS Knowledge Base
   In this lesson, you create a DQS knowledge base named **Suppliers** with the knowledge (metadata) about supplier data. You use the knowledge base to perform the cleansing and matching activities on input supplier data. The cleansing activity identifies incorrect/invalid data, corrects the incorrect data, proposes corrections/suggestions, standardizes the data, and enriches the data with more information. The matching activity compares data and identifies similar records (but slightly different) in the data that helps you remove duplicates on the data.  
@@ -35,7 +31,7 @@ manager: craigg
   
 -   Create a composite domain named Address Validation that comprises Address line, City, State, and Zip domains. A composite domain is a domain that consists of one or more single domains. It lets you create a rule that involves multiple domains. For example, you can define a rule: if City is Los Angeles, State must be CA, where City and State are two separate domains.  
   
--   Configure and use a reference data service. The Reference Data Service feature in Data Quality Services (DQS) enables you to subscribe to third-party reference data providers, and to cleanse and enrich your business data by validating it against their high-quality data. You can use services from leading DQS providers from within DQS to standardize, correct, or enrich your data during the cleansing process. In this tutorial, you learn how to configure your DQS environment to use a reference data service on Windows Azure Marketplace and use the service associated with the Address Validation composite domain to cleanse address data.  
+-   Configure and use a reference data service. The Reference Data Service feature in Data Quality Services (DQS) enables you to subscribe to third-party reference data providers, and to cleanse and enrich your business data by validating it against their high-quality data. You can use services from leading DQS providers from within DQS to standardize, correct, or enrich your data during the cleansing process. In this tutorial, you learn how to configure your DQS environment to use a reference data service on Azure Marketplace and use the service associated with the Address Validation composite domain to cleanse address data.  
   
 -   Publish the knowledge base so that the knowledge base can be used in cleansing and matching activities.  
   

@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "Integration Services packages, about packages"
   - "Integration Services packages"
 ms.assetid: 9266bc64-7e1a-4e78-913b-a8deaa9843bf
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services (SSIS) Packages
   A package is an organized collection of connections, control flow elements, data flow elements, event handlers, variables, parameters, and configurations, that you assemble using either the graphical design tools that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides, or build programmatically.  You then save the completed package to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Store, or the file system, or you can deploy the ssISnoversion project to the [!INCLUDE[ssIS](../includes/ssis-md.md)] server. The package is the unit of work that is retrieved, executed, and saved.  
@@ -106,11 +105,6 @@ manager: craigg
 -   [Create Packages in SQL Server Data Tools](create-packages-in-sql-server-data-tools.md)  
   
 -   See **Building Packages Programmatically** section in the Developer Guide.  
-  
-## Related Content  
-  
--   [Implementing SQL Server Integration Services with Microsoft Dynamics Mobile](https://msdn.microsoft.com/library/cc563950)  
-  
--   [How to: Configure SQL Server Integration Services Package for Microsoft Dynamics AX](https://msdn.microsoft.com/library/bb986852)  
+
   
   

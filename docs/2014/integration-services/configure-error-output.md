@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.configureerroroutput.f1"
 ms.assetid: 5f8da390-fab5-44f8-b268-d8fa313ce4b9
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Configure Error Output
   Use the **Configure Error Output** dialog box to configure error handling options for data flow transformations that support an error output.  

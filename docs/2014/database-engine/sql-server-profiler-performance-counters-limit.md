@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.performancecounterlimit.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d10140ef-36c4-449c-b365-1cff1b2524e4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Profiler - Performance Counters Limit
   Use the Performance Counters Limit dialog box to limit the information from a System Monitor performance log file when correlating it with a [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] trace. You can use this dialog box to select counters that should be displayed and used for correlation.  

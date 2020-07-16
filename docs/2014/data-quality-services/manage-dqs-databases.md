@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 655a67aa-d662-42f2-b982-c6217125ada8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Manage DQS Databases
   This section provides information about database management activities that can be performed on the DQS databases such as backup/restore or detach/attach.  

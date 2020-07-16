@@ -12,10 +12,9 @@ helpviewer_keywords:
 ms.assetid: b08df7be-d8be-4184-a661-38ec0ac85cd1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Use Database Mail Instead of SQL Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks the sys.configurations catalog view to determine whether the SQL Mail XPs server-wide configuration option is set to ON.  
   
 ## Best Practices Recommendations  

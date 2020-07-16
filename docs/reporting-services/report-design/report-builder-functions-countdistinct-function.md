@@ -1,8 +1,9 @@
 ---
-title: "CountDistinct Function (Report Builder and SSRS) | Microsoft Docs"
+title: "CountDistinct Function (Report Builder) | Microsoft Docs"
+description: Get a count of all distinct non-null values that are specified by an expression in the context of a given scope. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

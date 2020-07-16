@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 918574b3-c62e-4937-9e5f-37310dedc8f9
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Sparse Columns Support (OLE DB)
   This topic provides information about [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client OLE DB support for sparse columns. For more information about sparse columns, see [Sparse Columns Support in SQL Server Native Client](../features/sparse-columns-support-in-sql-server-native-client.md). For a sample, see [Display Column and Catalog Metadata for Sparse Columns &#40;OLE DB&#41;](../../native-client-ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md).  

@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLBindCol function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 984d6605-39ba-4d33-ac94-22625bfa6107
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLBindCol (Visual FoxPro ODBC Driver)
 > [!NOTE]  

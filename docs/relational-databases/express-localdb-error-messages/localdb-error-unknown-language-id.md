@@ -9,10 +9,9 @@ ms.topic: "reference"
 ms.assetid: fa082dca-bf88-46e7-b61e-7ac8835a3493
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## Details  
   

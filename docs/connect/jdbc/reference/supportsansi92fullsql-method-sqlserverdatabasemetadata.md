@@ -13,9 +13,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 8877dc8c-26cd-4374-8ae8-ff7d20621130
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # supportsANSI92FullSQL Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "errors [XML for Analysis]"
@@ -22,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: a65b3249-303d-49c6-98af-6ac6eed11a03
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Processing Objects (XMLA)
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], processing is the step or series of steps that turn data into information for business analysis. Processing is different depending on the type of object, but processing is always part of turning data into information.  

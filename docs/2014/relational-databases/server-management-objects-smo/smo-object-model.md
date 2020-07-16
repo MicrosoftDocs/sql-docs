@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: bd6e59b6-ca46-42c0-adb2-c9d64cf6e00b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # SMO Object Model
   The SMO object model is made up of a hierarchy of objects. The <xref:Microsoft.SqlServer.Management.Smo.Server> object is the top level object and all instance class objects reside under the <xref:Microsoft.SqlServer.Management.Smo.Server> object.  

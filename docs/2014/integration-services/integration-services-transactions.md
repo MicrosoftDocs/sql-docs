@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "tasks [Integration Services], transactions"
   - "transactions [Integration Services]"
 ms.assetid: 3c78bb26-ddce-4831-a5f8-09d4f4fd53cc
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services Transactions
   Packages use transactions to bind the database actions that tasks perform into atomic units, and by doing this maintain data integrity. All [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] container types-packages, the For Loop, Foreach Loop, and Sequence containers, and the task hosts that encapsulate each task-can be configured to use transactions. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides three options for configuring transactions: **NotSupported**, **Supported**, and **Required**.  

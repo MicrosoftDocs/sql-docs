@@ -1,6 +1,7 @@
 ---
-title: "Use Always On Policies to View the Health of an Availability Group | Microsoft Docs"
-ms.custom: ""
+title: "Policies to view availability group health"
+description: Use the Always On policies or PowerShell to determine the operational health of an Always On availability group. 
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,29 +12,18 @@ helpviewer_keywords:
 ms.assetid: 6f1bcbc3-1220-4071-8e53-4b957f5d3089
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Use Always On Policies to View the Health of an Availability Group (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to determine the operational health of an Always On availability group by using an Always On policy in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. For information about Always On Policy Based Management, see [Always On Policies for Operational Issues with Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-policies-for-operational-issues-always-on-availability.md).  
   
 > [!IMPORTANT]  
 >  For Always On policies, the category names are used as IDs. Changing the name of an Always On category would break its health-evaluation functionality. Therefore, the names of Always On category should never be modified.  
   
--   **Before you begin:** [Security](#Security)  
   
--   **Use Always On policies to view the health of an availability group, using:**  
   
-     [Always On Dashboard](#SSMSProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+##  <a name="Permissions"></a> Permissions  
  Requires CONNECT, VIEW SERVER STATE, and VIEW ANY DEFINITION permissions.  
   
 ##  <a name="SSMSProcedure"></a> Using the Always On Dashboard  

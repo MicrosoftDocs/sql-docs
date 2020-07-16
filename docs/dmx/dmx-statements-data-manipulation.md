@@ -1,14 +1,13 @@
 ---
-title: "Data Mining Extensions (DMX) Data Manipulation Statements | Microsoft Docs"
-ms.date: 06/07/2018
+title: "Data Manipulation Statements (DMX)| Microsoft Docs"
+ms.date: 10/23/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # DMX Statements - Data Manipulation
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]

@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 0ec0e5cf-e115-4be9-a0db-e65837d6fa45
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET LANGUAGE (Transact-SQL)
@@ -34,7 +33,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET LANGUAGE { [ N ] 'language' | @language_var }   
 ```  
@@ -54,7 +53,7 @@ SET LANGUAGE { [ N ] 'language' | @language_var }
 ## Examples  
  The following example sets the default language to `Italian`, displays the month name, and then switches back to `us_english` and displays the month name again.  
   
-```  
+```sql
 DECLARE @Today DATETIME;  
 SET @Today = '12/5/2007';  
   

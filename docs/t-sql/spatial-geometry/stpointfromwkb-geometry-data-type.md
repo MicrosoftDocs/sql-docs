@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STPointFromWKB (geometry Data Type)"
 ms.assetid: 1157c172-2dc7-4393-bae6-b85406171a34
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STPointFromWKB (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **geometryPoint** instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   

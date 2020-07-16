@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Management Tools"
 ms.assetid: af68d59a-a04d-4f23-9967-ad4ee2e63381
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Install SQL Server Management Tools
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management tools include the following components:  

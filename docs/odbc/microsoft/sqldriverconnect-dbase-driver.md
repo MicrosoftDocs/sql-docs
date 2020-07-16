@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "DBase driver [ODBC], SQLDriverConnect"
   - "SQLDriverConnect function [ODBC], dBASE Driver"
 ms.assetid: c837aa31-068e-4fa3-bc00-aae09bec21de
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDriverConnect (dBASE Driver)
 > [!NOTE]  

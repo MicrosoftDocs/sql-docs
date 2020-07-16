@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: 30f59c11-3bca-41be-8bd7-0d1efaf1f0be
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Use Large CLR UDTs (OLE DB)
   This sample shows how to fetch rows with large user-defined types from a result set. For more information, see [Large CLR User-Defined Types &#40;OLE DB&#41;](../native-client/ole-db/large-clr-user-defined-types-ole-db.md). This sample works with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later.  

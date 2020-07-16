@@ -1,6 +1,7 @@
 ---
-title: "Facet Properties Dialog Box, Dependent Policies Page | Microsoft Docs"
-ms.custom: ""
+title: "'Dependent Policies' page of 'Facet Properties' dialog box"
+description: Describes the 'Dependent Policies' page of the 'Facet Properties' dialog box for Policy-Based Management in SQL Server Management Studio (SSMS).
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -12,10 +13,9 @@ f1_keywords:
 ms.assetid: 13c3da04-6690-439f-85b0-18b4439ac9c1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Facet Properties Dialog Box, Dependent Policies Page
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to display a list of policies that currently reference this Policy-Based Management facet.  
   
 ## Options  

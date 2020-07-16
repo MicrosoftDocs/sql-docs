@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Winsock proxy configuration [SQL Server]"
 ms.assetid: abf71f7b-8bd7-49d2-92f7-9ddf72924d8c
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Winsock Proxy configuration not supported
   The Winsock proxy cannot be configured by using [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools.  
@@ -28,6 +26,6 @@ manager: craigg
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

@@ -1,5 +1,6 @@
 ---
-title: "Master Data Services Database | Microsoft Docs"
+title: Master Data Services Database
+description: The Master Data Services database contains all of the information for the Master Data Services system and is central to a Master Data Services deployment. 
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,13 +12,12 @@ helpviewer_keywords:
   - "database [Master Data Services], about the database"
   - "database [Master Data Services]"
 ms.assetid: 5f590cc1-6ec2-4b8c-a598-03de0f6051a0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Master Data Services Database
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   The database contains all of the information for the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] system. It is central to a [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] deployment. The [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database:  
   

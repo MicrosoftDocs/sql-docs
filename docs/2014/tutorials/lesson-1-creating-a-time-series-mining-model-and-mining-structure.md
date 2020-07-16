@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b201f2b8-9ab5-425b-9ff3-fe321a60a7b7
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Lesson 1: Creating a Time Series Mining Model and Mining Structure
   In this lesson, you will create a mining model that allows you to predict values over time, based on historical data. When you create the model, the underlying structure will be generated automatically and can be used as the basis for additional mining models.  

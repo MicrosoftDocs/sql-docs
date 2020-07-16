@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Integration Services service, configuring"
@@ -13,9 +12,8 @@ helpviewer_keywords:
   - "service [Integration Services], configuring"
   - "default configuration files"
 ms.assetid: 36d78393-a54c-44b0-8709-7f003f44c27f
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Configuring the Integration Services Service (SSIS Service)
     

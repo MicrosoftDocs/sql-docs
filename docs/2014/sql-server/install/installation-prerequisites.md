@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "installation prerequisites, Setup"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: cd1454dc-2585-4b14-83b3-ee9aec6f7e75
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Installation Prerequisites
   For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to install successfully, the following software components are required on the installation computer. They will be installed by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup:  

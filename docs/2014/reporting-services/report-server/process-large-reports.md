@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report processing [Reporting Services], large reports"
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "size [SQL Server], reports"
   - "distributing reports [Reporting Services], large reports"
 ms.assetid: c5275a9f-c95b-46d7-bc62-633879a8a291
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Process Large Reports
   Large reports present certain processing challenges and require certain configurations if they are to run properly. Large reports should not be run on demand unless they are configured to support pagination.  

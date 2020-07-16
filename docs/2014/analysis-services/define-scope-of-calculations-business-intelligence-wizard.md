@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.timeintelligence.selecttimehierarchy.f1"
 ms.assetid: 19c231bb-9a17-4369-ba14-79309603c727
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Scope of Calculations (Business Intelligence Wizard)
   Use the **Define Scope of Calculations** page to associate the new time calculations with individual measures.  

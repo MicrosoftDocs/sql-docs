@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cross-validation"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: bf9483b3-4099-41c4-bbc5-da7005e07bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Cross-Validation (SQL Server Data Mining Add-ins)
   ![Cross-Validation button, Data Mining ribbon](media/dmc-xvalid.gif "Cross-Validation button, Data Mining ribbon")  

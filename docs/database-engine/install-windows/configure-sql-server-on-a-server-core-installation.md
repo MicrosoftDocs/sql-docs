@@ -1,7 +1,8 @@
 ---
-title: "Configure SQL Server on a Server Core Installation | Microsoft Docs"
-ms.custom: ""
-ms.date: "09/05/2017"
+title: "Configure Server Core Installation"
+description: This article covers details about configuring SQL Server on a Server Core installation, including troubleshooting tools.
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: install
@@ -13,11 +14,10 @@ ms.assetid: ed6e5e94-4b8d-422a-a17e-61b05a4df903
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Configure SQL Server on a Server Core Installation
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 This article covers details about configuring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on a Server Core installation.  
 

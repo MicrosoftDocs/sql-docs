@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.editor.xmla.f1"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 14623019-7839-4038-9d12-2f8953d2ec04
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # XMLA Query Editor (Analysis Services - Multidimensional Data)
   Use the XMLA Query Editor to design and execute statements and scripts written in the Multidimensional Expressions (XMLA) language.  

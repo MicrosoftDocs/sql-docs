@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLAllocEnv function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: a21c3782-273f-40b3-b239-47beaf8df462
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLAllocEnv (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: b920ec34-ba8b-4bb8-af53-a3ffd06bafa6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Configure the fill factor Server Configuration Option
   This topic describes how to configure the **fill factor** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Fill factor is provided for fine-tuning index data storage and performance. When an index is created or rebuilt, the fill-factor value determines the percentage of space on each leaf-level page to be filled with data, reserving the rest as free space for future growth. For more information, see [Specify Fill Factor for an Index](../../relational-databases/indexes/specify-fill-factor-for-an-index.md).  
@@ -63,7 +62,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) to set the value of the `fill factor` option to `100`.  
   
-```tsql  
+```sql  
 Use AdventureWorks2012;  
 GO  
 sp_configure 'show advanced options', 1;  

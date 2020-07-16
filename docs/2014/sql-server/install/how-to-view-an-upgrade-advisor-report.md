@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "displaying reports"
@@ -16,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: d13b38af-0ac3-4030-83cd-e7d7825dd09f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # How to: View an Upgrade Advisor Report
   Upgrade Advisor creates reports for each component that you select to analyze. This topic describes how to view an Upgrade Advisor report from the Upgrade Advisor start page.  

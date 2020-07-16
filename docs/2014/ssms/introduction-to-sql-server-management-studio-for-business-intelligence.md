@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ffaa77b7-03d0-4d7a-aa42-c5091a4f2ceb
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Introduction to SQL Server Management Studio for Business Intelligence
   To access, configure, manage, and administer [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. Although all three business intelligence technologies rely on [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], the administrative tasks associated with each of these technologies are slightly different.  
@@ -26,7 +25,7 @@ manager: craigg
   
  [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] provides an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Script project in which you develop and save scripts written in Multidimensional Expressions (MDX), Data Mining Extensions (DMX), and XML for Analysis (XMLA). You use [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Scripts projects to perform management tasks or re-create objects, such as database and cubes, on [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instances. For example, you can develop an XMLA script in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Script project that creates new objects directly on an existing [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance. The [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Scripts projects can be saved as part of a solution and integrated with source code control.  
   
- For more information about how to use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], see [Analysis Services Scripts Project in SQL Server Management Studio](../analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio.md).  
+ For more information about how to use [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)], see [Analysis Services Scripts Project in SQL Server Management Studio](https://docs.microsoft.com/analysis-services/instances/analysis-services-scripts-project-in-sql-server-management-studio).  
   
 ## Managing Integration Services Solutions Using SQL Server Management Studio  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] enables you to use the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] service to manage packages and monitor running packages. You can also use [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)] to organize packages into folders, run packages, import and export packages, migrate Data Transformation Services (DTS) packages, and upgrade [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages.  
@@ -51,7 +50,7 @@ manager: craigg
 -   [Enable and Disable Client-Side Printing for Reporting Services](../reporting-services/report-server/enable-and-disable-client-side-printing-for-reporting-services.md)  
   
 ## See Also  
- [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](../analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt.md)   
+ [Creating Multidimensional Models Using SQL Server Data Tools &#40;SSDT&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/creating-multidimensional-models-using-sql-server-data-tools-ssdt)   
  [Reporting Services in SQL Server Data Tools &#40;SSDT&#41;](../reporting-services/tools/reporting-services-in-sql-server-data-tools-ssdt.md)  
   
   

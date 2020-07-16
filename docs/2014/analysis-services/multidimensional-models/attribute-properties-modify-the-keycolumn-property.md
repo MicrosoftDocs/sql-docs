@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "binding attributes [Analysis Services]"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a2643be4-8123-4cc3-baf9-e5ec54a1669d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Modify the KeyColumn Property of an Attribute
   You can modify the **KeyColumns** property of an attribute. For example, you might want to specify a composite key instead of a single key as the key for the attribute.  

@@ -1,5 +1,6 @@
 ---
-title: "Business Rule Actions (Master Data Services) | Microsoft Docs"
+title: Business Rule Actions
+description: In Master Data Services, business rules cause actions. Learn about default value actions, change value actions, validation actions, and external actions.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -8,13 +9,12 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Business Rule Actions (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], business rule actions are the consequence of business rule condition evaluations. If a condition is true, the action is initiated.  
   

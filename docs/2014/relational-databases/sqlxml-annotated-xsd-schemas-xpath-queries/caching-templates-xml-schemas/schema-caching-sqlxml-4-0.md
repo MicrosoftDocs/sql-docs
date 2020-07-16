@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "cache [SQLXML]"
   - "schemas [SQLXML]"
 ms.assetid: 7e5fda21-b435-41fd-b637-8b616560a93f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Schema Caching (SQLXML 4.0)
   With a side-by-side installation of XML for Microsoft SQL Server 2000 Web Release 1, Microsoft SQLXML 2.0, and SQLXML 3.0, you can explicitly control the schema caching in all versions by using the following registry keys:  

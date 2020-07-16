@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 67084043-6b23-4975-b9db-6e49923d4bab
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Implementing an Outer Join
   Outer join is not supported in natively compiled stored procedures. The following sample shows a way to implement the functionality of a left outer join in a natively compiled stored procedure.  

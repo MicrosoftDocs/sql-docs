@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.is.upgradewizard.ssisupgradewizard.f1"
 ms.assetid: a8698217-4793-40fd-85a0-ef4dad1c139f
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # SSIS Upgrade Wizard (SSIS Package Upgrade Wizard)
   Use the [!INCLUDE[ssIS](../includes/ssis-md.md)] Package Upgrade Wizard to migrate packages that were developed in [!INCLUDE[ssISversion2005](../includes/ssisversion2005-md.md)] and [!INCLUDE[ssISversion10](../includes/ssisversion10-md.md)] to the package format that the current release of [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] uses.  

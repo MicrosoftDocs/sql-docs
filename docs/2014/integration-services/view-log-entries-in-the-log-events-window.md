@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logs [Integration Services], viewing"
   - "Integration Services packages, logs"
   - "packages [Integration Services], logs"
 ms.assetid: c02123c3-67fc-4370-ad14-91ed259f1873
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # View Log Entries in the Log Events Window
   This procedure describes how to run a package and view the log entries it writes. You can view the log entries in real time. The log entries that are written to the **Log Events** window can also be copied and saved for further analysis.  

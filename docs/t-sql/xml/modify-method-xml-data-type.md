@@ -1,9 +1,8 @@
 ---
-title: "modify() Method (xml Data Type) | Microsoft Docs"
+title: modify() Method (xml Data Type)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -13,12 +12,11 @@ helpviewer_keywords:
   - "modify() method"
   - "modify method"
 ms.assetid: 52430735-51f4-46d1-a308-9aecf8648fda
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # modify() Method (xml Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifies the contents of an XML document. Use this method to modify the content of an **xml** type variable or column. This method takes an XML DML statement to insert, update, or delete nodes from XML data. The **modify()** method of the **xml** data type can only be used in the SET clause of an UPDATE statement.  
   
@@ -29,7 +27,9 @@ manager: craigg
 modify (XML_DML)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  XML_DML  
  Is a string in XML Data Manipulation Language (DML). The XML document is updated according to this expression.  
   

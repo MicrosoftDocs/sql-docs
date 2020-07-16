@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLColumns function [ODBC]"
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLColumns Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLColumns(  
      SQLHSTMT       StatementHandle,  
@@ -176,7 +175,7 @@ SQLRETURN SQLColumns(
 ## Code Example  
  In the following example, an application declares buffers for the result set returned by **SQLColumns**. It calls **SQLColumns** to return a result set that describes each column in the EMPLOYEE table. It then calls **SQLBindCol** to bind the columns in the result set to the buffers. Finally, the application fetches each row of data with **SQLFetch** and processes it.  
   
-```  
+```cpp  
 // SQLColumns_Function.cpp  
 // compile with: ODBC32.lib  
 #include <windows.h>  

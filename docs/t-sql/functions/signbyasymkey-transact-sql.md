@@ -21,12 +21,11 @@ helpviewer_keywords:
   - "cryptography [SQL Server], asymmetric keys"
   - "clear text signing"
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # SIGNBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Signs plaintext with an asymmetric key  
   
@@ -34,7 +33,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )  
 ```  
@@ -43,7 +42,7 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
  *Asym_Key_ID*  
  Is the ID of an asymmetric key in the current database. *Asym_Key_ID* is**int**.  
   
- **@plaintext**  
+ **\@plaintext**  
  Is a variable of type **nvarchar**, **char**, **varchar**, or **nchar** containing data that will be signed with the asymmetric key.  
   
  *password*  

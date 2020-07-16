@@ -1,14 +1,14 @@
 ---
-title: Connect to appliance Nodes - Analytics Platform System | Microsoft Docs
+title: Connect to appliance Nodes
 description: This article explains the various ways to connect to each node in the Analytics Platform System appliance.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Connect to appliance nodes in Analytics Platform System
@@ -21,6 +21,9 @@ Before using Hadoop with SQL Server PDW, ask your appliance administrator to ins
 Each of the appliance nodes is accessed directly only under specific usage scenarios and by specific user types. The following table lists each appliance node and the scenarios under which users will connect directly to that node.  
   
 <!-- MISSING LINKS For information on the purpose of each node, see [Understanding SQL Server PDW &#40;SQL Server PDW&#41;](../sqlpdw/understanding-sql-server-pdw-sql-server-pdw.md).  -->  
+
+> [!WARNING]  
+> Changing database or table settings on Control or Compute nodes without explicit consent of the Product Team or APS Customer Support Team may render your APS appliance out of support.
   
 |||  
 |-|-|  

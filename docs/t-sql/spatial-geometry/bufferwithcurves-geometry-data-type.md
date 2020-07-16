@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "BufferWithCurves method (geometry)"
 ms.assetid: 8ffaba3f-d2dd-4e57-9f41-3ced9f14b600
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BufferWithCurves (geometry Data Type)

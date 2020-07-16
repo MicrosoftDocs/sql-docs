@@ -2,10 +2,8 @@
 title: "sp_delete_database_firewall_rule (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/04/2017"
-ms.prod: ""
-ms.prod_service: "sql-database"
+ms.service: sql-database
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_delete_database_firewall_rule"
@@ -19,25 +17,23 @@ helpviewer_keywords:
 ms.assetid: ed295312-e586-4fc2-9e80-806b490ee7bd
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sp_delete_database_firewall_rule (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Removes database-level firewall setting from your [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Database firewall rules can be configured and deleted for the master database, and for user databases on [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)].   
   
  
 ## Syntax  
   
-```  
-  
+```    
 sp_delete_database_firewall_rule [@name =] [N]'name'
 [ ; ]  
 ```  
   
 ## Arguments  
- [**@name =**] **'**_name_**'**  
+ `[@name =] [N]'name'`  
  The name of the database-level firewall setting that will be removed. *name* is **nvarchar(128)** with no default value. The Unicode identifier `N` is optional for [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]. 
   
 ## Permissions  

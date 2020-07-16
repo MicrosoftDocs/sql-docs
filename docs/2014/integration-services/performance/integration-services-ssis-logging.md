@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "Text File log provider"
   - "SQL Server log provider"
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services (SSIS) Logging
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes log providers that you can use to implement logging in packages, containers, and tasks. With logging, you can capture run-time information about a package, helping you audit and troubleshoot a package every time it is run. For example, a log can capture the name of the operator who ran the package and the time the package began and finished.  

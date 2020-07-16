@@ -1,5 +1,6 @@
 ---
 title: "File Restores (Simple Recovery Model) | Microsoft Docs"
+description: In SQL Server, a file restore applies to one or more damaged files without restoring the whole database.
 ms.custom: ""
 ms.date: "03/24/2017"
 ms.prod: sql
@@ -19,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: b6d07386-7c6f-4cc6-be32-93289adbd3d6
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # File Restores (Simple Recovery Model)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic is relevant only for simple-model databases that contain at least one read-only secondary filegroup.  
   

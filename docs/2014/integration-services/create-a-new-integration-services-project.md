@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "projects [Integration Services], creating"
@@ -13,9 +12,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services projects, creating"
   - "SSIS projects, creating"
 ms.assetid: 1e23f259-0401-4333-ab4f-89809aae63b1
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Create a New Integration Services Project
   This procedure creates a new project and a new [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] solution.  

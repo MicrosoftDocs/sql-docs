@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "versions [Master Data Services], changing name"
 ms.assetid: cba8b814-155f-49c5-b636-afddc5b0de4f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Change a Version Name (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], change the version name to customize it for your organization.  

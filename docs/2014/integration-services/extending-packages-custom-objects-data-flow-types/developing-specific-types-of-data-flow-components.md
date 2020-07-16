@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "components [Integration Services], data flow"
   - "data flow [Integration Services], components"
 ms.assetid: 348e219a-b8ff-425e-b9c6-811880101c54
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Developing Specific Types of Data Flow Components
   This section covers the specifics of developing source components, transformation components with synchronous outputs, transformation components with asynchronous outputs, and destination components.  

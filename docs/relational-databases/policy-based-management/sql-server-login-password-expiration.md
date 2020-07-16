@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Login Password Expiration | Microsoft Docs"
+description: Check whether password expiration of each SQL Server login is enabled to help counter a possible attack in SQL Server. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: 7e3bf9da-a436-433d-847a-47c30428cad3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # SQL Server Login Password Expiration
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks whether "Password expiration" of each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login is enabled. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication is enabled and if the operating system version is earlier than [!INCLUDE[winxpsvr](../../includes/winxpsvr-md.md)], an attacker could repeatedly exploit a known [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login password.  
   
 ## Best Practices Recommendations  

@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 4e51a570-58d7-4f01-9390-4198f3602576
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Remove a Secondary Database from an Availability Group (SQL Server)
   This topic describes how to remove a secondary database from an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -80,7 +79,7 @@ manager: craigg
   
      The following example removes the local secondary database *MyDb2* from its availability group.  
   
-    ```  
+    ```sql
     ALTER DATABASE MyDb2 SET HADR OFF;  
     GO  
     ```  
@@ -94,9 +93,8 @@ manager: craigg
   
      For example, the following command removes the secondary database `MyDb8` from the secondary replica hosted by the server instance named `SecondaryComputer\Instance`. Data synchronization to the removed secondary databases ceases. This command does not affect the primary database or any other secondary databases.  
   
-    ```  
-    Remove-SqlAvailabilityDatabase `  
-    -Path SQLSERVER:\Sql\SecondaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb8  
+    ```powershell
+    Remove-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\SecondaryComputer\InstanceName\AvailabilityGroups\MyAg\Databases\MyDb8  
     ```  
   
     > [!NOTE]  
@@ -125,5 +123,3 @@ manager: craigg
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Remove a Primary Database from an Availability Group &#40;SQL Server&#41;](remove-a-primary-database-from-an-availability-group-sql-server.md)  
-  
-  

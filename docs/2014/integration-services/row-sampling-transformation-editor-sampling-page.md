@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.DTS.DESIGNER.ROWSAMPLINGTRANSFORMATION.COLUMNS.F1"
@@ -13,9 +12,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Row Sampling Transformation Editor"
 ms.assetid: 544c7709-6de0-4c08-bda3-759985be9a05
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Row Sampling Transformation Editor (Sampling Page)
   Use the **Row Sampling Transformation Editor** dialog box to split a portion of an input into a sample using a specified number of rows. This transformation divides the input into two separate outputs.  

@@ -30,10 +30,9 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # BEGIN DIALOG CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Begins a dialog from one service to another service. A dialog is a conversation that provides exactly-once-in-order messaging between two services.  
   
@@ -41,7 +40,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 BEGIN DIALOG [ CONVERSATION ] @dialog_handle  
    FROM SERVICE initiator_service_name  
@@ -56,7 +55,9 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **@** _dialog_handle_  
  Is a variable used to store the system-generated dialog handle for the new dialog that is returned by the BEGIN DIALOG CONVERSATION statement. The variable must be of type **uniqueidentifier**.  
   

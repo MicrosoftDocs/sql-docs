@@ -23,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: 810a3a8e-3da3-4bf9-bb15-7b069685a1b6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DEADLOCK_PRIORITY (Transact-SQL)
@@ -35,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var | @deadlock_intvar }  
   
@@ -78,7 +77,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
 ## Examples  
  The following example uses a variable to set the deadlock priority to `LOW`.  
   
-```  
+```sql
 DECLARE @deadlock_var NCHAR(3);  
 SET @deadlock_var = N'LOW';  
   
@@ -88,7 +87,7 @@ GO
   
  The following example sets the deadlock priority to `NORMAL`.  
   
-```  
+```sql
 SET DEADLOCK_PRIORITY NORMAL;  
 GO  
 ```  

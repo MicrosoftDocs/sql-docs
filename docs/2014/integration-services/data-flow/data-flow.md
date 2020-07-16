@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "data flow [Integration Services]"
   - "errors [Integration Services], data flow outputs"
 ms.assetid: 7a50de3c-4ca0-4922-8028-fdddeb47e5b0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Flow
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] provides three different types of data flow components: sources, transformations, and destinations. Sources extract data from data stores such as tables and views in relational databases, files, and [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases. Transformations modify, summarize, and clean data. Destinations load data into data stores or create in-memory datasets.  
@@ -94,7 +93,7 @@ manager: craigg
 |Source|Description|  
 |------------|-----------------|  
 |Oracle Source|The Oracle source is the source component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity also includes a connection manager and a destination. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
-|SAP BI Source|The SAP BI source is the source component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI also includes a connection manager and a destination. For more information, see the download page, [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393).|  
+|SAP BI Source|The SAP BI source is the source component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI also includes a connection manager and a destination. For more information, see the download page, [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).|  
 |Teradata Source|The Teradata source is the source component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity also includes a connection manager and a destination. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
   
  For a demonstration on how to leverage the performance gains of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity, see [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369).  
@@ -155,7 +154,7 @@ manager: craigg
 |Source|Description|  
 |------------|-----------------|  
 |Oracle Destination|The Oracle destination is the destination component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity also includes a connection manager and a source. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
-|SAP BI Destination|The SAP BI destination is the destination component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI also includes a connection manager and a source. For more information, see the download page, [Microsoft SQL Server 2008 Feature Pack](https://go.microsoft.com/fwlink/?LinkId=110393).|  
+|SAP BI Destination|The SAP BI destination is the destination component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for SAP BI also includes a connection manager and a source. For more information, see the download page, [Microsoft SQL Server 2008 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).|  
 |Teradata Destination|The Teradata destination is the destination component of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity. The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Teradata by Attunity also includes a connection manager and a source. For more information, see the download page, [Microsoft Connectors for Oracle and Teradata by Attunity](https://go.microsoft.com/fwlink/?LinkId=254963).|  
   
  For a demonstration on how to leverage the performance gains of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Connector for Oracle by Attunity, see [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369).  
@@ -212,6 +211,6 @@ manager: craigg
 ## Related Content  
  Video, [Performance of Microsoft Connector for Oracle by Attunity (SQL Server Video)](https://go.microsoft.com/fwlink/?LinkID=210369), on technet.microsoft.com.  
   
- Curated Answer, [How to Create a Dynamic Connection String in SSIS](https://go.microsoft.com/fwlink/?LinkId=321994), on curatedviews.cloudapp.net.  
+ Curated Answer, [How to Create a Dynamic Connection String in SSIS](https://kevine323.blogspot.com/2012/04/dynamic-connection-strings-in-ssis.html).  
   
   

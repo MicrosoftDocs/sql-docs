@@ -1,9 +1,10 @@
 ---
-title: "sqlagent90 Application | Microsoft Docs"
-ms.custom: ""
+title: "sqlagent90 Application"
+description: The sqlagent90 application starts SQL Server Agent from the command prompt. Use it when diagnosing SQL Server Agent or when directed by your support provider.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: tools-other
 ms.topic: conceptual
@@ -13,12 +14,11 @@ helpviewer_keywords:
   - "SQL Server Agent, starting"
   - "command prompt utilities [SQL Server], sqlagent90"
 ms.assetid: e8b80e8d-d0c9-4500-a868-0ce08233da08
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # sqlagent90 Application
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
   The **sqlagent90** application starts [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent from the command prompt. Usually, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent should be run from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] or by using SQL-SMO methods in an application. Only run **sqlagent90** from the command prompt when you are diagnosing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent, or when you are directed to it by your primary support provider.  
   
 ## Syntax  

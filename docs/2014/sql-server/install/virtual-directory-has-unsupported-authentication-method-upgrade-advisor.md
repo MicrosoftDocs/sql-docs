@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "virtual directories [Reporting Services]"
 ms.assetid: 216eca6f-9a66-42e1-aa54-dcf99cec9f7d
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Virtual directory has unsupported authentication method (Upgrade Advisor)
   Upgrade Advisor detected an unsupported authentication method on the Report Manager or report server virtual directory. Authentication methods that are not supported by upgrade include Anonymous, Digest, and .NET Passport.  

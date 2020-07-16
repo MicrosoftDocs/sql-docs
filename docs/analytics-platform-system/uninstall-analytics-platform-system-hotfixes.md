@@ -1,14 +1,14 @@
 ---
-title: Uninstall Analytics Platform System hotfixes in  | Microsoft Docs
+title: Uninstall hotfixes
 description: Uninstall Analytics Platform System hotfixes.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Uninstall Analytics Platform System hotfixes 
@@ -21,13 +21,13 @@ To perform these steps, you will need:
   
 -   An Analytics Platform System login with permissions to access the Admin Console to monitor the appliance.  
   
--   The Domain Administrator account to login to the *<appliance_domain>***-HST01** node.  
+-   The Domain Administrator account to login to the <em><appliance_domain></em>**-HST01** node.  
   
 -   The Knowledge Base article number for the hotfix to uninstall.  
   
 ## <a name="HowToUninstallPDW"></a>To uninstall a SQL Server PDW hotfix  
   
-1.  Log on to the *<appliance_domain>***-HST01** node as the Fabric Domain Administrator.  
+1.  Log on to the <em><appliance_domain></em>**-HST01** node as the Fabric Domain Administrator.  
   
 2.  Use the Run as Administrator option to open a Command Prompt.  
   

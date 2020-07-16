@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.deploymentwizard.confirminstallation.f1"
@@ -19,9 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Package Installer Wizard"
 ms.assetid: 6fca44d9-5001-4644-bcf3-c2d10a674b97
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Package Installation Wizard UI Reference
   Use the **Package Installation Wizard** to deploy a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project, including the packages and miscellaneous files it contains and any package dependencies.  

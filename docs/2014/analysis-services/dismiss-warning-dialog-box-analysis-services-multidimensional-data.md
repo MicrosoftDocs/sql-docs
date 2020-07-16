@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dismisswarningdialog.f1"
 ms.assetid: 66d853e0-1b57-4b17-a7d1-a25899411684
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Dismiss Warning Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Dismiss Warning** dialog box to dismiss a particular instance of a warning.  

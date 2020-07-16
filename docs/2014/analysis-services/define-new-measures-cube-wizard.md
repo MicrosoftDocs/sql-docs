@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubewizard.definenewmeasures.f1"
 ms.assetid: f97698f8-6f0f-49d8-86b0-5bfac3c4e627
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define New Measures (Cube Wizard)
   Use the **Define New Measures** page to create new measures for a cube that is being created without using a data source.  

@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Property object [ADO], members"
 ms.assetid: 21f67a7d-6273-4648-9abd-2236650efa4c
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Property Object Properties, Methods, and Events
 ## Properties  

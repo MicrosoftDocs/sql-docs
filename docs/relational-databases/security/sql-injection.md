@@ -1,5 +1,6 @@
 ---
 title: "SQL Injection | Microsoft Docs"
+description: Learn how SQL injection attacks work. Mitigate such attacks by validating input and reviewing code for SQL injection in SQL Server.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -12,11 +13,10 @@ helpviewer_keywords:
 ms.assetid: eb507065-ac58-4f18-8601-e5b7f44213ab
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Injection
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   SQL injection is an attack in which malicious code is inserted into strings that are later passed to an instance of SQL Server for parsing and execution. Any procedure that constructs SQL statements should be reviewed for injection vulnerabilities because SQL Server will execute all syntactically valid queries that it receives. Even parameterized data can be manipulated by a skilled and determined attacker.  
   
 ## How SQL Injection Works  

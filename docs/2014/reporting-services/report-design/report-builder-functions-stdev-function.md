@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: cb51e96e-a828-42f0-b67c-cee3f4d221e7
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # StDev Function (Report Builder and SSRS)
   Returns the standard deviation of all non-null numeric values specified by the expression, evaluated in the given scope.  

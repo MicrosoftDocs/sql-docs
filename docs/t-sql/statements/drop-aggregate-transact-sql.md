@@ -22,10 +22,9 @@ helpviewer_keywords:
 ms.assetid: 84ffc4e7-c451-4f1f-9a67-7fc3a120e53f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # DROP AGGREGATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes a user-defined aggregate function from the current database. User-defined aggregate functions are created by using [CREATE AGGREGATE](../../t-sql/statements/create-aggregate-transact-sql.md).  
   

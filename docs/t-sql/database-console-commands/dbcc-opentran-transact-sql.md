@@ -23,12 +23,11 @@ helpviewer_keywords:
   - "checking open transactions"
   - "oldest transactions [SQL Server]"
 ms.assetid: 63163843-226f-42d3-9e2c-b634fbf06943
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC OPENTRAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 DBCC OPENTRAN helps to identify active transactions that may be preventing log truncation. DBCC OPENTRAN displays information about the oldest active transaction and the oldest distributed and nondistributed replicated transactions, if any, within the transaction log of the specified database. Results are displayed only if there is an active transaction that exists in the log or if the database contains replication information. An informational message is displayed if there are no active transactions in the log.
   
@@ -39,10 +38,10 @@ DBCC OPENTRAN helps to identify active transactions that may be preventing log t
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC OPENTRAN   
 [   
-    ( [ database_name | database_id | 0 ] ) ]  
+    ( [ database_name | database_id | 0 ] )   
     { [ WITH TABLERESULTS ]  
       [ , [ NO_INFOMSGS ] ]  
     }  

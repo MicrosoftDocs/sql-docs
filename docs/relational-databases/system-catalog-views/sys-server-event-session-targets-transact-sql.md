@@ -18,12 +18,11 @@ helpviewer_keywords:
   - "sys.server_event_session_targets catalog view"
   - "xe"
 ms.assetid: dda4879d-57ae-4267-b410-1ef5c37404c7
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.server_event_session_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each event target for an event session.  
   

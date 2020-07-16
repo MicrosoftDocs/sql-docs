@@ -13,11 +13,10 @@ helpviewer_keywords:
 ms.assetid: 
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Graph Architecture  
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 Learn how SQL Graph is architected. Knowing the basics will make it easier to understand other SQL Graph articles.
  
@@ -32,7 +31,7 @@ Figure 1: SQL Graph database architecture
 ## Node Table
 A node table represents an entity in a graph schema. Every time a node table is created, along with the user-defined columns, an implicit `$node_id` column is created, which uniquely identifies a given node in the database. The values in `$node_id` are automatically generated and are a combination of `object_id` of that node table and an internally generated bigint value. However, when the `$node_id` column is selected, a computed value in the form of a JSON string is displayed. Also, `$node_id` is a pseudo column, that maps to an internal name with hex string in it. When you select `$node_id` from the table, the column name will appear as `$node_id_<hex_string>`. Using pseudo-column names in queries is the recommended way of querying the internal `$node_id` column and using internal name with hex string should be avoided.
 
-It is recommended that users create a unique constraint or index on the `$node_id` column at the time of creation of node table, but if one is not created, a default unique, non-clustered index is automatically created. However, any index on a graph pseudo column is created on the underlying internal columns. That is, an index created on the `$node_id` column, will appear on the internal `graph_id_<hex_string>` column.   
+It is recommended that users create a unique constraint or index on the `$node_id` column at the time of creation of node table, but if one is not created, a default unique, nonclustered index is automatically created. However, any index on a graph pseudo column is created on the underlying internal columns. That is, an index created on the `$node_id` column, will appear on the internal `graph_id_<hex_string>` column.   
 
 
 ## Edge Table
@@ -46,7 +45,7 @@ An edge table represents a relationship in a graph. Edges are always directed an
 
 The nodes that a given edge can connect is governed by the data inserted in the `$from_id` and `$to_id` columns. In the first release, it is not possible to define constraints on the edge table, to restrict it from connecting any two type of nodes. That is, an edge can connect any two nodes in the graph, regardless of their types.
 
-Similar to the `$node_id` column, it is recommended that users create a unique index or constraint on the `$edge_id` column at the time of creation of the edge table, but if one is not created, a default unique, non-clustered index is automatically created on this column. However, any index on a graph pseudo column is created on the underlying internal columns. That is, an index created on the `$edge_id` column, will appear on the internal `graph_id_<hex_string>` column. It is also recommended, for OLTP scenarios, that users create an index on (`$from_id`, `$to_id`) columns, for faster lookups in the direction of the edge.  
+Similar to the `$node_id` column, it is recommended that users create a unique index or constraint on the `$edge_id` column at the time of creation of the edge table, but if one is not created, a default unique, nonclustered index is automatically created on this column. However, any index on a graph pseudo column is created on the underlying internal columns. That is, an index created on the `$edge_id` column, will appear on the internal `graph_id_<hex_string>` column. It is also recommended, for OLTP scenarios, that users create an index on (`$from_id`, `$to_id`) columns, for faster lookups in the direction of the edge.  
 
 Figure 2 shows how node and edge tables are stored in the database. 
 
@@ -91,13 +90,15 @@ The following table lists the valid values for `graph_type` column
 
 `sys.columns` also stores information about implicit columns created in node or edge tables. Following information can be retrieved from sys.columns, however, users cannot select these columns from a node or edge table. 
 
-Implicit columns in a node table  
+Implicit columns in a node table
+
 |Column Name	|Data Type	|is_hidden	|Comment  |
 |---  |---|---|---  |
 |graph_id_\<hex_string>	|BIGINT	|1	|internal `graph_id` column  |
 |$node_id_\<hex_string>	|NVARCHAR	|0	|External node `node_id` column  |
 
-Implicit columns in an edge table  
+Implicit columns in an edge table
+
 |Column Name	|Data Type	|is_hidden	|Comment  |
 |---  |---|---|---  |
 |graph_id_\<hex_string>	|BIGINT	|1	|internal `graph_id` column  |
@@ -127,16 +128,18 @@ The following built-in functions are added. These will help users extract inform
 Learn the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced in SQL Server and Azure SQL Database, that enable creating and querying graph objects. The query language extensions help query and traverse the graph using ASCII art syntax.
  
 ### Data Definition Language (DDL) statements
+
 |Task	|Related Article  |Notes
 |---  |---  |---  |
-|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE ` is now extended to support creating a table AS NODE or AS EDGE. Note that an edge table may or may not have any user-defined attributes.  |
+|CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` is now extended to support creating a table AS NODE or AS EDGE. Note that an edge table may or may not have any user-defined attributes.  |
 |ALTER TABLE	|[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|Node and edge tables can be altered the same way a relational table is, using the `ALTER TABLE`. Users can add or modify user-defined columns, indexes or constraints. However, altering internal graph columns, like `$node_id` or `$edge_id`, will result in an error.  |
-|CREATE INDEX	|[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Users can create indexes on pseudo-columns and user-defined columns in node and edge tables. All index types are supported, including clustered and non-clustered columnstore indexes.  |
+|CREATE INDEX	|[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |Users can create indexes on pseudo-columns and user-defined columns in node and edge tables. All index types are supported, including clustered and nonclustered columnstore indexes.  |
 |CREATE EDGE CONSTRAINTS	|[EDGE CONSTRAINTS &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |Users can now create edge constraints on edge tables to enforce specific semantics and also maintain data integrity  |
 |DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |Node and edge tables can be dropped the same way a relational table is, using the `DROP TABLE`. However, in this release, there are no constraints to ensure that no edges point to a deleted node and cascaded deletion of edges, upon deletion of a node or node table is not supported. It is recommended that if a node table is dropped, users drop any edges connected to the nodes in that node table manually to maintain the integrity of the graph.  |
 
 
 ### Data Manipulation Language (DML) statements
+
 |Task	|Related Article  |Notes
 |---  |---  |---  |
 |INSERT |[INSERT &#40;Transact-SQL&#41;](../../t-sql/statements/insert-sql-graph.md)|Inserting into a node table is no different than inserting into a relational table. The values for `$node_id` column is automatically generated. Trying to insert a value in `$node_id` or `$edge_id` column will result in an error. Users must provide values for `$from_id` and `$to_id` columns while inserting into an edge table. `$from_id` and `$to_id` are the `$node_id` values of the nodes that a given edge connects.  |
@@ -146,6 +149,7 @@ Learn the [!INCLUDE[tsql-md](../../includes/tsql-md.md)] extensions introduced i
 
 
 ### Query Statements
+
 |Task	|Related Article  |Notes
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|Nodes and edges are stored as tables internally, hence most of the operations supported on a table in SQL Server or Azure SQL Database are supported on the node and edge tables  |

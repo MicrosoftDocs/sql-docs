@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.transferjobstask.general.f1"
 helpviewer_keywords: 
   - "Transfer Jobs Task Editor"
 ms.assetid: 96531920-92d4-4a3b-a38a-6f0c8bc78ada
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Transfer Jobs Task Editor (General Page)
   Use the **General** page of the **Transfer Jobs Task Editor** dialog box to name and describe the Transfer Jobs task. For more information about the Transfer Jobs task, see [Transfer Jobs Task](control-flow/transfer-jobs-task.md).  

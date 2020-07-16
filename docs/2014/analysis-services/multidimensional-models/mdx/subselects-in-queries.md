@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 9e361798-688e-4b11-9eef-31fc793e8ba4
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Subselects in Queries
   Subselect expressions are nested SELECT expressions that are used to restrict the space of the cube from where the outer external SELECT is being evaluated. Subselects allow you to define a new space over which all calculations are evaluated.  

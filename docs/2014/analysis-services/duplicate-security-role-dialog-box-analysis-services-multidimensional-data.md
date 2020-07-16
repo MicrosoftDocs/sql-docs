@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.duplicaterole.f1"
 ms.assetid: 0420a2f6-6d11-4d6c-a889-31e8ef55bbee
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Analysis Services Duplicate Security Role Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Analysis Services Duplicate Security Role - \<database name> - \<copy from role name>** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to duplicate an existing role in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. You can display the **Duplicate Role** dialog box by right-clicking a role in Object Explorer and selecting **Duplicate**.  

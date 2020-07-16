@@ -1,14 +1,14 @@
 ---
-title: Workload Management Tasks - Analytics Platform System | Microsoft Docs
+title: Workload Management Tasks
 description: Workload management tasks in Analytics Platform System.
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Workload Management Tasks in Analytics Platform System

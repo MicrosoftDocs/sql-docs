@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Text_Editor.Plain_Text.Tabs"
 ms.assetid: 07d82d10-bca9-4b37-abbb-58ef9bfb264b
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Options (Text Editor - Plain Text - Tabs Page)
   Use this dialog to change the tabbing behavior of the Text Editor, which is used to edit a document not associated with a particular development language. To display these settings, click **Options** on the **Tools** menu, expand **Text Editor**, expand **Plain Text**, and then click **Tabs**.  

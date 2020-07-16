@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "10121"
@@ -13,7 +12,7 @@ f1_keywords:
 ms.assetid: 05819637-729b-4cf6-82de-91a99f184ec6
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Add Interactive Sort to a Table or Matrix (Report Builder and SSRS)
   Add interactive sort buttons to enable users to change the sort order of rows and columns in tables and matrices. This feature is supported only in rendering formats that support user interaction, such as HTML.  

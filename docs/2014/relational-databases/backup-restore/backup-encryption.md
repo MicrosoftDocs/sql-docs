@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 334b95a8-6061-4fe0-9e34-b32c9f1706ce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Backup Encryption
   This topic provides an overview of the encryption options for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups. It includes details of the usage, benefits, and recommended practices for encrypting during backup.  
@@ -87,7 +86,7 @@ manager: craigg
 ### Using Transact SQL  
  Following is a sample Transact-SQL statement to encrypt the backup file:  
   
-```  
+```sql
 BACKUP DATABASE [MYTestDB]  
 TO DISK = N'C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\MyTestDB.bak'  
 WITH  
@@ -98,8 +97,7 @@ WITH
    SERVER CERTIFICATE = BackupEncryptCert  
    ),  
   STATS = 10  
-GO  
-  
+GO
 ```  
   
  For the full Transact-SQL statement syntax, see [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql).  
@@ -107,12 +105,9 @@ GO
 ### Using PowerShell  
  This example creates the encryption options and uses it as a parameter value in **Backup-SqlDatabase** cmdlet to create an encrypted backup.  
   
-```  
-C:\PS>$encryptionOption = New-SqlBackupEncryptionOption -Algorithm Aes256 -EncryptorType ServerCertificate -EncryptorName "BackupCert"  
-```  
-  
-```  
-C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyTestDB.bak" -CompressionOption On -EncryptionOption $encryptionOption  
+```powershell
+$encryptionOption = New-SqlBackupEncryptionOption -Algorithm Aes256 -EncryptorType ServerCertificate -EncryptorName "BackupCert"  
+Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyTestDB.bak" -CompressionOption On -EncryptionOption $encryptionOption  
 ```  
   
 ##  <a name="RecommendedPractices"></a> Recommended Practices  
@@ -129,7 +124,7 @@ C:\PS>Backup-SqlDatabase -ServerInstance . -Database "MyTestDB" -BackupFile "MyT
 |Topic/Task|Description|  
 |-----------------|-----------------|  
 |[Create an Encrypted Backup](create-an-encrypted-backup.md)|Describes the basic steps required to create an encrypted backup|  
-|[SQL Server Managed Backup to Windows Azure - Retention and Storage Settings](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Describes the basic steps required to configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] with the encryption options specified.|  
+|[SQL Server Managed Backup to Azure - Retention and Storage Settings](../../database-engine/sql-server-managed-backup-to-windows-azure-retention-and-storage-settings.md)|Describes the basic steps required to configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] with the encryption options specified.|  
 |[Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)|Provides an example of creating an encrypted backup protected by keys in the Azure Key Vault.|  
   
 ## See Also  

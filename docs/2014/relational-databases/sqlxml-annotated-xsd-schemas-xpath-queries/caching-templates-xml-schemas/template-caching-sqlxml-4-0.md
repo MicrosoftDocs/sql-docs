@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "cache [SQLXML]"
   - "templates [SQLXML], caching"
 ms.assetid: 73e151c6-b24e-4422-a116-51e0846bc6f5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Template Caching (SQLXML 4.0)
   Template caching significantly improves performance. If template caching is set, the template remains in memory upon its first execution. This improves the performance for the subsequent execution of the template.  

@@ -17,12 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER CRYPTOGRAPHIC PROVIDER"
 ms.assetid: 876b6348-fb29-49e1-befc-4217979f6416
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Alters a cryptographic provider within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from an Extensible Key Management (EKM) provider.  
   
@@ -36,7 +35,10 @@ ALTER CRYPTOGRAPHIC PROVIDER provider_name
     ENABLE | DISABLE  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *provider_name*  
  Name of the Extensible Key Management provider.  
   

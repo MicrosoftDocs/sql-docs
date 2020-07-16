@@ -1,6 +1,6 @@
 ---
-title: "Example: Requesting Schemas as Results with the XMLDATA and XMLSCHEMA Options | Microsoft Docs"
-ms.custom: ""
+title: "Request schemas as results with XMLDATA & XMLSCHEMA | Microsoft Docs"
+description: Learn how to use the XMLDATA and XMLSCHEMA options in RAW mode with the FOR XML clause to request an XML-DATA schema or an XSD schema in the query result.
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -11,12 +11,12 @@ helpviewer_keywords:
   - "RAW mode, requesting schema example"
   - "RAW mode, with XMLDATA and XMLSCHEMA"
 ms.assetid: 3504ca38-be66-42b2-8dab-f499c9584840
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
 ---
-# Example: Requesting Schemas as Results with the XMLDATA and XMLSCHEMA Options
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# Request schemas as results with XMLDATA & XMLSCHEMA
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The following query returns the XML-DATA schema that describes the document structure.  
   
 ## Example  
@@ -65,7 +65,7 @@ GO
  This is the result:  
   
 ```  
-<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
+<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
   <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="row">  
     <xsd:complexType>  
@@ -100,7 +100,7 @@ GO
  This is the result:  
   
 ```  
-<xsd:schema targetNamespace="urn:example.com" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
+<xsd:schema targetNamespace="urn:example.com" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
   <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="row">  
     <xsd:complexType>  

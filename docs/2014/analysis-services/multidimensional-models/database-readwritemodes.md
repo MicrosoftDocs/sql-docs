@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "databases [Analysis Services], read/write"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 03d7cb5c-7ff0-4e15-bcd2-7075d1b0dd69
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Database ReadWriteModes
   There are often situations when an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database administrator (dba) wants to change a read/write database to a read-only database, or vice versa. These situations are often driven by business needs, such as sharing the same database folder among several servers for scaling out a solution and improving performance. For these situations, the `ReadWriteMode` database property enables the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] dba to easily change the database operating mode.  
@@ -42,7 +40,7 @@ manager: craigg
   
 ## See Also  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft.AnalysisServices.Database.Detach*](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)   
  [Move an Analysis Services Database](move-an-analysis-services-database.md)   
  [Detach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   

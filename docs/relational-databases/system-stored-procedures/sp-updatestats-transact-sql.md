@@ -15,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_updatestats"
 ms.assetid: 01184651-6e61-45d9-a502-366fecca0ee4
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_updatestats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Runs `UPDATE STATISTICS` against all user-defined and internal tables in the current database.  
   
@@ -39,13 +38,13 @@ sp_updatestats [ [ @resample = ] 'resample']
  0 (success) or 1 (failure)  
   
 ## Arguments  
- [ **@resample** =] **'resample'**  
+`[ @resample = ] 'resample'`
  Specifies that **sp_updatestats** will use the RESAMPLE option of the [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) statement. If **'resample'** is not specified, **sp_updatestats** updates statistics by using the default sampling. **resample** is **varchar(8)** with a default value of NO.  
   
 ## Remarks  
  **sp_updatestats** executes `UPDATE STATISTICS`, by specifying the `ALL` keyword, on all user-defined and internal tables in the database. sp_updatestats displays messages that indicate its progress. When the update is completed, it reports that statistics have been updated for all tables.  
   
-sp_updatestats updates statistics on disabled nonclustered indexes and does not update statistics on disabled clustered indexes.  
+**sp_updatestats** updates statistics on disabled nonclustered indexes and does not update statistics on disabled clustered indexes.  
   
 For disk-based tables, **sp_updatestats** updates statistics based on the **modification_counter** information in the **sys.dm_db_stats_properties** catalog view, updating statistics where at least one row has been modified. Statistics on memory-optimized tables are always updated when executing **sp_updatestats**. Therefore do not execute **sp_updatestats** more than necessary.  
   
@@ -54,7 +53,8 @@ For disk-based tables, **sp_updatestats** updates statistics based on the **modi
 For databases with a compatibility level below 90, executing **sp_updatestats** does not preserve the latest NORECOMPUTE setting for specific statistics. For databases with a compatibility level of 90 or higher, sp_updatestats does preserve the latest NORECOMPUTE option for specific statistics. For more information about disabling and re-enabling statistics updates, see [Statistics](../../relational-databases/statistics/statistics.md).  
   
 ## Permissions  
- Requires membership in the **sysadmin** fixed server role, or ownership of the database (**dbo**).  
+
+To run **sp_updatestats**, the user must be the owner of the database (the `dbo`, not just member of the role `db_owner`) or to be member of the sysadmin fixed server role.
 
 ## Examples  
 The following example updates the statistics for tables in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  

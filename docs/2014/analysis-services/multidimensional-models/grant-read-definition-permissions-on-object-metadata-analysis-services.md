@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "metadata [Analysis Services]"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c857e48e-64b0-4ffe-900d-a0a3ddafcefb
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Grant read definition permissions on object metadata (Analysis Services)
   Permission to read an object definition, or metadata, on selected objects lets an administrator grant permission to view object information, without also granting permission to modify the object's definition, modify the object's structure, or view the actual data for the object. `Read Definition` permissions can be granted at the database, data source, dimension, mining structure, and mining model levels. If you require `Read Definition` permissions for a cube, you must enable `Read Definition` for the database.Remember that permissions are additive. For example, one role grants permission to read the metadata for a cube, while a second role grants the same user permission to read the metadata for a dimension. The permissions from the two different roles combine to give the user permission to both read metadata for the cube and the metadata for the dimension within that database.  

@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.sqlmobileconnection.connection.f1"
 helpviewer_keywords: 
   - "SQL Server Compact Connection Manager Editor"
 ms.assetid: b72584b8-4289-41d3-bed8-5e5393adc356
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # SQL Server Compact Edition Connection Manager Editor (Connection Page)
   Use the **SQL Server Compact Edition Connection Manager** dialog box to specify properties for connecting to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Compact database.  

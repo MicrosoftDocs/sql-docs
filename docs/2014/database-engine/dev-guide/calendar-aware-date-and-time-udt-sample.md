@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: "database-engine"
 ms.topic: "reference"
 ms.assetid: cfcf8516-0e7b-4ca4-8bd8-8b2511a50308
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Calendar-Aware Date and Time UDT Sample
   Storing dates as strings can be confusing because dates are meaningless without understanding what calendar system is being used.The `CADatetime` sample defines two user-defined data types, `CADatetime` and `CADate`, which provide calendar-aware handling of dates and times.  
@@ -19,7 +16,7 @@ manager: craigg
 ## Prerequisites  
  To create and run this project the following the following software must be installed:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](https://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](https://www.microsoft.com/sql-server/sql-server-editions-express)  
   
 -   The AdventureWorks database that is available at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer [Web site](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -177,7 +174,7 @@ manager: craigg
         private static readonly char[] allowedDoublePatternChars = new char[] { 'g', '\\' };  
   
         /// <summary>  
-        ///     Each tick is 100 nanoseconds.  This conversion factor when multipled by the number of  
+        ///     Each tick is 100 nanoseconds.  This conversion factor when multiplied by the number of  
         ///     days yields the number of ticks which make up that day.  Ticks are interesting as they  
         ///     can be used to construct DateTime instances in order to perform various date based computations.  
         /// </summary>  

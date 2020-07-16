@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 76e8a6ba-1381-4620-b356-4311e1331ca7
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Create a Stored Procedure
   This topic describes how to create a [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and by using the [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE PROCEDURE statement.  
@@ -63,7 +62,7 @@ manager: craigg
   
 7.  In the **Query Editor**, replace the SELECT statement with the following statement:  
   
-    ```tsql  
+    ```sql  
     SELECT FirstName, LastName, Department  
     FROM HumanResources.vEmployeeDepartmentHistory  
     WHERE FirstName = @FirstName AND LastName = @LastName  
@@ -92,38 +91,34 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example creates the same stored procedure as above using a different procedure name.  
   
-    ```  
+    ```sql
     USE AdventureWorks2012;  
     GO  
     CREATE PROCEDURE HumanResources.uspGetEmployeesTest2   
         @LastName nvarchar(50),   
         @FirstName nvarchar(50)   
-    AS   
+    AS
   
         SET NOCOUNT ON;  
         SELECT FirstName, LastName, Department  
         FROM HumanResources.vEmployeeDepartmentHistory  
         WHERE FirstName = @FirstName AND LastName = @LastName  
         AND EndDate IS NULL;  
-    GO  
-  
+    GO
     ```  
   
 4.  To run the procedure, copy and paste the following example into a new query window and click **Execute**. Notice that different methods of specifying the parameter values are shown.  
   
-    ```  
+    ```sql
     EXECUTE HumanResources.uspGetEmployeesTest2 N'Ackerman', N'Pilar';  
     -- Or  
     EXEC HumanResources.uspGetEmployeesTest2 @LastName = N'Ackerman', @FirstName = N'Pilar';  
     GO  
     -- Or  
     EXECUTE HumanResources.uspGetEmployeesTest2 @FirstName = N'Pilar', @LastName = N'Ackerman';  
-    GO  
-  
+    GO
     ```  
   
-##  <a name="PowerShellProcedure"></a>   
 ## See Also  
  [CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)  
-  
   

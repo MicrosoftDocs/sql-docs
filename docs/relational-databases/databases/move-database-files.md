@@ -24,10 +24,9 @@ helpviewer_keywords:
 ms.assetid: 89f01b10-5fae-4ed8-b0fb-a4b9f540fd28
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Move Database Files
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can move system and user databases by specifying the new file location in the FILENAME clause of the [ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md) statement. Data, log, and full-text catalog files can be moved in this way. This may be useful in the following situations:  
   
 -   Failure recovery. For example, the database is in suspect mode or has shut down, because of a hardware failure.  

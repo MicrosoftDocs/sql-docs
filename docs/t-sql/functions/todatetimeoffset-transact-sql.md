@@ -1,7 +1,7 @@
 ---
 title: "TODATETIMEOFFSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/13/2017"
+ms.date: "04/22/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -21,13 +21,12 @@ helpviewer_keywords:
   - "functions [SQL Server], date and time"
   - "time [SQL Server], functions"
 ms.assetid: b5fafc08-efd4-4a3b-a0b3-068981a0a685
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TODATETIMEOFFSET (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a **datetimeoffset** value that is translated from a **datetime2** expression.  
   
@@ -60,30 +59,27 @@ TODATETIMEOFFSET ( expression , time_zone )
 ### A. Changing the time zone offset of the current date and time  
  The following example changes the zone offset of the current date and time to time zone `-07:00`.  
   
-```  
+```sql  
 DECLARE @todaysDateTime datetime2;  
 SET @todaysDateTime = GETDATE();  
 SELECT TODATETIMEOFFSET (@todaysDateTime, '-07:00');  
--- RETURNS 2007-08-30 15:51:34.7030000 -07:00  
+-- RETURNS 2019-04-22 16:23:51.7666667 -07:00  
 ```  
   
 ### B. Changing the time zone offset in minutes  
  The following example changes the current time zone to `-120` minutes.  
   
-```  
-DECLARE @todaysDate datetime2;  
-SET @todaysDate = GETDATE();  
-SELECT TODATETIMEOFFSET (@todaysDate, -120);  
--- RETURNS 2007-08-30 15:52:37.8770000 -02:00  
+```sql  
+SELECT TODATETIMEOFFSET(SYSDATETIME(), -120)
+-- RETURNS: 2019-04-22 11:39:21.6986813 -02:00  
 ```  
   
 ### C. Adding a 13-hour time zone offset  
  The following example adds a 13-hour time zone offset to a date and time.  
   
-```  
-DECLARE @dateTime datetimeoffset(7)= '2007-08-28 18:00:30';  
-SELECT TODATETIMEOFFSET (@dateTime, '+13:00');  
--- RETURNS 2007-08-28 18:00:30.0000000 +13:00  
+```sql  
+SELECT TODATETIMEOFFSET(SYSDATETIME(), '+13:00')
+-- RETURNS: 2019-04-22 11:39:29.0339301 +13:00
 ```  
   
 ## See Also  

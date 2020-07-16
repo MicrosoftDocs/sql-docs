@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.connexcelfile.f1"
 ms.assetid: 126f7d6b-d270-40e7-b23e-8d114f87065b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect to a Microsoft Excel File (SSAS)
   This page of the **Table Import Wizard** enables you to connect to a Microsoft Excel file stored on the local machine. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
@@ -22,7 +20,7 @@ manager: craigg
 > [!NOTE]  
 >  The credentials of the current user are used when selecting a file in this page. However, import will not succeed if the user specified in the Impersonation Information page does not have sufficient privileges to read from the selected file.  
   
-## UIElement List  
+## UI element list  
  **Friendly connection name**  
  Type a unique name for this data source connection. This is a required field.  
   

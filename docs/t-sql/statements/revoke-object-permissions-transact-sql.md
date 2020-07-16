@@ -15,12 +15,11 @@ helpviewer_keywords:
   - "revoking permissions to access tables"
   - "object permissions [SQL Server], revoking"
 ms.assetid: 99c7146e-d2e7-4f1a-80ff-21a05bc5e8bb
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # REVOKE Object Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revokes permissions on a table, view, table-valued function, stored procedure, extended stored procedure, scalar function, aggregate function, service queue, or synonym. 
   
@@ -28,7 +27,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON   
     [ OBJECT :: ][ schema_name ]. object_name [ ( column [ ,...n ] ) ]  

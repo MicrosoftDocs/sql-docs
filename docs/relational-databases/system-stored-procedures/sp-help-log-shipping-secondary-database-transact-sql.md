@@ -17,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 11ce42ca-d3f1-44c8-9cac-214ca8896b9a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # sp_help_log_shipping_secondary_database (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This stored procedure retrieves the settings for one or more secondary databases.  
   
@@ -38,10 +37,10 @@ sp_help_log_shipping_secondary_database
 ```  
   
 ## Arguments  
- [ **@secondary_database =** ] '*secondary_database*'  
+`[ @secondary_database = ] 'secondary_database'`
  Is the name of the secondary database. *secondary_database* is **sysname**, with no default.  
   
- [ **@secondary_id =** ] '*secondary_id*'  
+`[ @secondary_id = ] 'secondary_id'`
  The ID for the secondary server in the log shipping configuration. *secondary_id* is **uniqueidentifier** and cannot be NULL.  
   
 ## Return Code Values  

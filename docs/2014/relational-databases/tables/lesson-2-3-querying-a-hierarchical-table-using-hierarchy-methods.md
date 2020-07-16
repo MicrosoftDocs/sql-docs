@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "HierarchyID"
 ms.assetid: 3b4f7dae-65b5-4d8d-8641-87aba9aa692d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Querying a Hierarchical Table Using Hierarchy Methods
   Now that the HumanResources.EmployeeOrg table is fully populated, this task will show you how to query the hierarchy using some of the hierarchical methods.  

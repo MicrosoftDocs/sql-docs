@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLProcedures function [ODBC]"
 ms.assetid: d0d9ef10-2fd4-44a5-9334-649f186f4ba0
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLProcedures Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLProcedures(  
      SQLHSTMT       StatementHandle,  

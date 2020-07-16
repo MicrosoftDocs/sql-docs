@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Reporting Services], tasks"
@@ -16,9 +15,9 @@ helpviewer_keywords:
   - "predefined tasks [Reporting Services]"
   - "tasks [Reporting Services]"
 ms.assetid: d7ff90b5-b976-4270-b9ad-9d7b801d8263
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Tasks and Permissions
   In [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], *tasks* are actions that a user or administrator can perform. Tasks are predefined. You cannot create custom tasks or modify the ones provided either programmatically or through a tool. There are twenty-five tasks in all. These tasks comprise the entire set of operations that are available in role-based security. Some examples of tasks include "View reports," "Manage reports," and "Manage report server properties."  

@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "Sql12.dts.designer.odatasource.connectionmanager.f1"
 ms.assetid: 7fc2b8f7-10a8-4adc-a5d3-a4ddf5db651c
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # OData Connection Manager Editor
   Use the **OData Connection Manager Editor** dialog box to add a connection or edit an existing connection to an OData source.  

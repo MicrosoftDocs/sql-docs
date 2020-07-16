@@ -1,19 +1,17 @@
 ---
-title: Manage SQL Server on Linux | Microsoft Docs
+title: Manage SQL Server on Linux
 description: This article provides links to common management tasks and tools for SQL Server running on Linux.
-author: rothja 
-ms.author: jroth 
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 03/17/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 6bd8eb0b-593d-467e-87ea-ab1c4dbcd1ea
-ms.custom: "sql-linux"
 ---
 # Choose the right tool to manage SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 There are several ways to manage SQL Server on Linux. The following section provides a quick overview of different management tools and techniques with pointers to more resources.
 

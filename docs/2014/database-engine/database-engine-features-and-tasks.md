@@ -4,16 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], development"
   - "development [SQL Server Database Engine]"
 ms.assetid: d9efe145-3306-4d61-bd77-e2af43e19c34
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Database Engine Features and Tasks
   Find information that anyone-designer, developer, analyst, or administrator-requires to build [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] databases.  

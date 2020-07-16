@@ -19,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: 1ead375e-f662-4837-903f-8947496c51e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # sys.column_type_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each column that is of user-defined type.  
   

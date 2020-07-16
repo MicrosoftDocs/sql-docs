@@ -1,5 +1,6 @@
 ---
 title: "Mixed Type and Simple Content | Microsoft Docs"
+description: View an example showing that SQL Server does not support creating an XML schema that restricts a mixed type to a simple content.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -10,12 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "mixed types [SQL Server]"
 ms.assetid: 6ea1f11d-e64b-4ebb-ab68-4eb6e4027665
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Mixed Type and Simple Content
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support restricting a mixed type to a simple content.  
   
 ## Example  
@@ -23,8 +23,8 @@ manager: craigg
   
 ```  
 CREATE XML SCHEMA COLLECTION SC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns" xmlns:ns="https://ns"  
-xmlns:ns1="https://ns1">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns" xmlns:ns="http://ns"  
+xmlns:ns1="http://ns1">  
   
     <complexType name="myComplexTypeA" mixed="true">  
         <sequence>  

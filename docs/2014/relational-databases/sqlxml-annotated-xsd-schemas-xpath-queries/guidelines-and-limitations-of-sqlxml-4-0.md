@@ -9,9 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "SQLXML, about SQLXML"
 ms.assetid: fe433d30-90a1-421e-85c6-af13294dc18d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Guidelines and Limitations of SQLXML 4.0
   Remember the following when working with SQLXML 4.0:  

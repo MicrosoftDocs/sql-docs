@@ -1,6 +1,7 @@
 ---
-title: "SQL Server secondary to primary replica read/write connection redirection-Always On Availability Groups | Microsoft Docs"
-ms.custom: ""
+title: "Redirect read/write connections to primary replica"
+description: Learn how to redirect read/write connections to the primary replica of an Always On availability group regardless of the server specified in the connection string. 
+ms.custom: seo-lt-2019
 ms.date: 01/09/2019
 ms.prod: sql
 ms.reviewer: ""
@@ -16,12 +17,11 @@ helpviewer_keywords:
 ms.assetid:
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: "craigg"
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Secondary to primary replica read/write connection redirection (Always On Availability Groups)
 
-[!INCLUDE[appliesto](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[appliesto](../../../includes/applies-to-version/sqlserver2019.md)]
 
 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] CTP 2.0 introduces *secondary to primary replica read/write connection redirection* for Always On Availability Groups. Read/write connection redirection is available on any operating system platform. It allows client application connections to be directed to the primary replica regardless of the target server specified in the connections string. 
 
@@ -40,7 +40,7 @@ Prior to [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)], the AG liste
 In order for a secondary replica to redirect read/write connection requests:
 * The secondary replica must be online. 
 * The replica spec `PRIMARY_ROLE` must include `READ_WRITE_ROUTING_URL`.
-* The connection string must define `ApplicationIntent` as `ReadWrite`- which is the default.
+* The connection string must be `ReadWrite` either by defining `ApplicationIntent` as `ReadWrite` or by not setting `ApplicationIntent` and letting the default (`ReadWrite`) take effect.
 
 ## Set READ_WRITE_ROUTING_URL option
 
@@ -79,7 +79,7 @@ The preceding table shows that when the primary replica has `READ_WRITE_ROUTING_
 In this example, an availability group has three replicas:
 * A primary replica on COMPUTER01
 * A synchronous secondary replica on COMPUTER02
-* A synchronous secondary replica on COMPUTER03
+* A asynchronous secondary replica on COMPUTER03
 
 The following picture represents the availability group.
 
@@ -119,7 +119,7 @@ CREATE AVAILABILITY GROUP MyAg
       'COMPUTER03' WITH   
          (  
          ENDPOINT_URL = 'TCP://COMPUTER03.<domain>.<tld>:5022',  
-         AVAILABILITY_MODE = SYNCHRONOUS_COMMIT,  
+         AVAILABILITY_MODE = ASYNCHRONOUS_COMMIT,  
          FAILOVER_MODE = MANUAL,  
          SECONDARY_ROLE (ALLOW_CONNECTIONS = ALL,   
             READ_ONLY_ROUTING_URL = 'TCP://COMPUTER03.<domain>.<tld>:1433' ),  

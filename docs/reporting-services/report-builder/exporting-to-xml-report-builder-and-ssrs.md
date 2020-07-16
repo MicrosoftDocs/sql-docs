@@ -1,8 +1,9 @@
 ---
-title: "Exporting to XML (Report Builder and SSRS) | Microsoft Docs"
+title: "Exporting to XML (Report Builder) | Microsoft Docs"
+description: In Report Builder, the XML rendering extension renders a paginated report to XML format. Import XML into a database, use as a message, or send to applications.
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
 
 
@@ -72,7 +73,7 @@ ms.author: maggies
   
  XML namespace definitions and schema reference attributes are also included in the report element. Variables are noted in bold face type:  
   
- <**Report** xmlns="**SchemaName**" xmlns:xsi="<https://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
+ <**Report** xmlns="**SchemaName**" xmlns:xsi="<http://www.w3.org/2001/XMLSchema-instance>" xsi:**schemaLocation**="**SchemaNameReportURL**&amp;rc%3aSchema=true" Name="ReportName">  
   
  The values for the variables are as follows:  
   

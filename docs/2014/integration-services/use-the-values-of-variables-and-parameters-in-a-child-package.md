@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "variables [Integration Services], passing between packages"
@@ -13,9 +12,8 @@ helpviewer_keywords:
   - "packages [Integration Services], configurations"
   - "variables [Integration Services], adding"
 ms.assetid: 9b939edb-4e17-48e5-8428-855beb10049c
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Use the Values of Variables and Parameters in a Child Package
   This procedure describes how to create a package configuration that uses the parent variable configuration type. This configuration type enables a child package that is run from a parent package to access a variable in the parent.  

@@ -17,13 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_sql_text dynamic management function"
 ms.assetid: 61b8ad6a-bf80-490c-92db-58dfdff22a24
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_sql_text (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the text of the SQL batch that is identified by the specified *sql_handle*. This table-valued function replaces the system function **fn_get_sql**.  
   
@@ -36,7 +35,9 @@ sys.dm_exec_sql_text(sql_handle | plan_handle)
   
 ## Arguments  
 *sql_handle*  
-Is the SQL handle of the batch to be looked up. *sql_handle* is **varbinary(64)**. *sql_handle* can be obtained from the following dynamic management objects:  
+Is a token that uniquely identifies a batch that has executed or is currently executing. *sql_handle* is **varbinary(64)**. 
+
+The *sql_handle* can be obtained from the following dynamic management objects:  
   
 -   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
@@ -51,13 +52,19 @@ Is the SQL handle of the batch to be looked up. *sql_handle* is **varbinary(64)*
 -   [sys.dm_exec_connections](../../relational-databases/system-dynamic-management-views/sys-dm-exec-connections-transact-sql.md)  
   
 *plan_handle*  
-Uniquely identifies a query plan for a batch that is cached or is currently executing. *plan_handle* is **varbinary(64)**. *plan_handle* can be obtained from the following dynamic management objects:  
+Is a token that uniquely identifies a query execution plan for a batch that has executed and its plan resides in the plan cache, or is currently executing. *plan_handle* is **varbinary(64)**.   
+
+The *plan_handle* can be obtained from the following dynamic management objects:    
   
--   [sys.dm_exec_cached_plans](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
+-   [sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)  
   
--   [sys.dm_exec_query_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
+-   [sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)  
   
--   [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)   
+-   [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)  
+
+-   [sys.dm_exec_procedure_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-procedure-stats-transact-sql.md)  
+
+-   [sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)   
   
 ## Table Returned  
   

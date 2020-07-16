@@ -1,5 +1,5 @@
 ---
-title: "CREATE SEQUENCE (Transact-SQL) | Microsoft Docs"
+title: CREATE SEQUENCE (Transact-SQL)
 ms.custom: ""
 ms.date: "04/11/2017"
 ms.prod: sql
@@ -22,10 +22,11 @@ helpviewer_keywords:
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
+
 # CREATE SEQUENCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates a sequence object and specifies its properties. A sequence is a user-defined schema bound object that generates a sequence of numeric values according to the specification with which the sequence was created. The sequence of numeric values is generated in an ascending or descending order at a defined interval and can be configured to restart (cycle) when exhausted. Sequences, unlike identity columns, are not associated with specific tables. Applications refer to a sequence object to retrieve its next value. The relationship between sequences and tables is controlled by the application. User applications can reference a sequence object and coordinate the values across multiple rows and tables.  
   
@@ -37,7 +38,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE SEQUENCE [schema_name . ] sequence_name  
     [ AS [ built_in_integer_type | user-defined_integer_type ] ]  
     [ START WITH <constant> ]  
@@ -49,7 +50,9 @@ CREATE SEQUENCE [schema_name . ] sequence_name
     [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *sequence_name*  
 Specifies the unique name by which the sequence is known in the database. Type is **sysname**.  
   
@@ -94,7 +97,7 @@ For example, if a cache size of 50 is chosen, [!INCLUDE[ssNoVersion](../../inclu
 When created with the **CACHE** option, an unexpected shutdown (such as a power failure) may result in the loss of sequence numbers remaining in the cache.  
   
 ## General Remarks  
- Sequence numbers are generated outside the scope of the current transaction. They are consumed whether the transaction using the sequence number is committed or rolled back.  
+ Sequence numbers are generated outside the scope of the current transaction. They are consumed whether the transaction using the sequence number is committed or rolled back. Duplicate validation only occurs once a record is fully populated. This can result in some cases where the same number is used for more than one record during creation, but then gets identified as a duplicate. If this occurs and other autonumber values have been applied to subsequent records, this can result in a gap between autonumber values and is expected behavior.
   
 ### Cache management  
  To improve performance, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] pre-allocates the number of sequence numbers specified by the **CACHE** argument.  
@@ -123,7 +126,7 @@ When created with the **CACHE** option, an unexpected shutdown (such as a power 
   
 3.  The calculated value is returned to the calling statement.  
   
- **CACHE option when the cache is exhausted**  
+**CACHE option when the cache is exhausted**  
   
  The following process occurs every time a sequence object is requested to generate the next value for the **CACHE** option if the cache has been exhausted:  
   
@@ -133,7 +136,7 @@ When created with the **CACHE** option, an unexpected shutdown (such as a power 
   
 3.  The system table row for the sequence object is locked, and the value calculated in step 2 (the last value) is written to the system table. A cache-exhausted xevent is fired to notify the user of the new persisted value.  
   
- **NO CACHE option**  
+**NO CACHE option**  
   
  The following process occurs every time that a sequence object is requested to generate the next value for the **NO CACHE** option:  
   
@@ -235,7 +238,7 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
   
  A partial list of the output demonstrates the default values.  
   
-|||  
+| Output | Default value|  
 |-|-|  
 |`start_value`|`-9223372036854775808`|  
 |`increment`|`1`|  

@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.exceldestadapter.mappings.f1"
 helpviewer_keywords: 
   - "Excel Destination Editor"
 ms.assetid: ad44268b-d705-422c-a0c2-d532812502e1
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Excel Destination Editor (Mappings Page)
   Use the **Mappings** page of the **Excel Destination Editor** dialog box to map input columns to destination columns.  

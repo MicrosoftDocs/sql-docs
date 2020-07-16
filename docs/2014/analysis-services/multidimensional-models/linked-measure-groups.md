@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "linked measure groups [Analysis Services]"
@@ -16,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7f838452-8669-4194-8e15-7afdc7f15251
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Linked Measure Groups
   A linked measure group is based on another measure group in a different cube within the same database or a different Analysis Services database. You might use a linked measure group if you want to reuse a set of measures, and the corresponding data values, in multiple cubes.  

@@ -12,10 +12,9 @@ helpviewer_keywords:
 ms.assetid: d2765828-2385-4019-aef2-1de3ab7d1b26
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Monitor Data-tier Applications
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   A data-tier application (DAC) can be monitored from the **Utility Explorer** and **Object Explorer** in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS), along with system views and tables. In addition, all objects in the database contained in the DAC can be monitored using standard database and [!INCLUDE[ssDE](../../includes/ssde-md.md)] monitoring techniques.  
   
 ## Before You Begin  
@@ -39,7 +38,7 @@ manager: craigg
 3.  Select the **View/Utility Explorer Details** menu.  
   
 4.  Select the **Deployed Data-tier Applications** node in the **Utility Explorer**.  
-  
+
  The information in the **Deployed Data-tier Applications** detail page comes from the data in the utility management data warehouse, which defaults to collecting the data every 15 minutes. The interval can also be tailored using the **Utility Administration** details page.  
   
 ## Using Object Explorer  
@@ -49,7 +48,7 @@ manager: craigg
   
 1.  Select the **View/Object Explorer** menu.  
   
-2.  Connect to the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]from the Object Explorer pane.  
+2.  Connect to the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] from the Object Explorer pane.  
   
 3.  Select the **View/Object Explorer Details** menu.  
   

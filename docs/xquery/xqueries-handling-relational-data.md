@@ -1,5 +1,6 @@
 ---
 title: "XQueries Handling Relational Data | Microsoft Docs"
+description: Learn how to bind non-XML relational data to XML by using the XQuery extensions sql:column() and sql:variable().
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 9812b71a-52ec-48a0-92f3-016a93660229
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # XQueries Handling Relational Data
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   You specify XQuery against an **xml** type column or variable by using one of the [XML Data Type Methods](../t-sql/xml/xml-data-type-methods.md). These include **query()**, **value()**, **exist()**, or **modify()**. The XQuery is executed against the XML instance identified in the query generating the XML.  
   

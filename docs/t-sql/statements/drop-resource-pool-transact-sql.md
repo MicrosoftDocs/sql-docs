@@ -17,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 18cd6dd9-7a6d-4a08-b9d5-649af23583d5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # DROP RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a user-defined Resource Governor resource pool.  
   
@@ -28,7 +27,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP RESOURCE POOL pool_name  
 [ ; ]  

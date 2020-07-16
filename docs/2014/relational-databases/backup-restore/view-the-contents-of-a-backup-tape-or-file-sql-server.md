@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: cd6674a2-ca55-4b5a-a971-878ba001821e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # View the Contents of a Backup Tape or File (SQL Server)
   This topic describes how to view the content of a backup tape or file in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -72,7 +71,7 @@ manager: craigg
   
 3.  Use the [RESTORE HEADERONLY](/sql/t-sql/statements/restore-statements-headeronly-transact-sql) statement. This example returns information about the file named `AdventureWorks2012-FullBackup.bak`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 RESTORE HEADERONLY   
 FROM DISK = N'C:\AdventureWorks2012-FullBackup.bak' ;  

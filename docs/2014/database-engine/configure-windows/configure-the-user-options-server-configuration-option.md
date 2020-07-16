@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cfed8f86-6bcf-4b90-88eb-9656e22d5dc5
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Configure the user options Server Configuration Option
   This topic describes how to configure the **user options** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **user options** option specifies global defaults for all users. A list of default query processing options is established for the duration of a user's work session. The **user options** option allows you to change the default values of the SET options (if the server's default settings are not appropriate).  
@@ -89,7 +88,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) to configure the `user options` to change the setting for the ANSI_WARNINGS server option.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'user options', 8 ;  

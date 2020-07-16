@@ -17,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: cb1ab102-1ae0-4811-9144-9a8121ef2d7e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_revokelogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes the login entries from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for a Windows user or group created by using CREATE LOGIN, **sp_grantlogin**, or **sp_denylogin**.  
   
@@ -37,7 +36,7 @@ sp_revokelogin [ @loginame= ] 'login'
 ```  
   
 ## Arguments  
- [ **@loginame=**] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the name of the Windows user or group. *login* is **sysname**, with no default. *login* can be any existing Windows user name or group in the form *Computer name*\\*User or Domain*\\*User*.  
   
 ## Return Code Values  

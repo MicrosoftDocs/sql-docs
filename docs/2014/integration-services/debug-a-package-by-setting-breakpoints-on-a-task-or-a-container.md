@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "containers [Integration Services], breakpoints"
   - "breakpoints [Integration Services]"
   - "tasks [Integration Services], breakpoints"
 ms.assetid: e7fa106a-2221-403a-bb74-efc9f12bb450
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Debug a Package by Setting Breakpoints on a Task or a Container
   This procedure describes how to set breakpoints in a package, a task, a For Loop container, a Foreach Loop container, or a Sequence container.  

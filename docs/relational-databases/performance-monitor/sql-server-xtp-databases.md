@@ -12,10 +12,9 @@ helpviewer_keywords:
 ms.assetid: 488ff55e-173f-43f6-9bdb-67b35e7cebfe
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server XTP Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The **SQL Server XTP Databases** performance object provides In-Memory OLTP database-specific counters.
 

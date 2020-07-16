@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 659b7a4e-f687-44d9-a60a-86490ccbf90f
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Creating a Market Basket Structure and Model (Intermediate Data Mining Tutorial)
   Now that you have created a data source view, you will use the Data Mining Wizard to create a new mining structure. In this task, you will create a mining structure and a mining model that is based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Association algorithm.  

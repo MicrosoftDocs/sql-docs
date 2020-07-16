@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining [Analysis Services], how-to topics"
@@ -17,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 825ef719-2f44-4979-be01-5a81f54e1a53
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # View the Formula for a Time Series Model (Data Mining)
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series viewer inData Mining Designer provides the easiest way to view the details of the regression equation used in a time series model.  

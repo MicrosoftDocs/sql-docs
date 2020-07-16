@@ -1,6 +1,8 @@
 ---
-title: "REVOKE Server Principal Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVOKE Server Principal Permissions"
+description: Revoke permissions on a SQL Server login.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -17,12 +19,11 @@ helpviewer_keywords:
   - "logins [SQL Server], revoking"
   - "REVOKE statement, logins"
 ms.assetid: 75409024-f150-4326-af16-9d60e900df18
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # REVOKE Server Principal Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revokes permissions granted or denied on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
@@ -30,7 +31,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] }   
     ON   

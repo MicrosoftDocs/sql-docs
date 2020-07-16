@@ -1,20 +1,18 @@
 ---
-title: "Specify a Hit Count | Microsoft Docs"
-ms.custom: ""
+title: Specify a Hit Count
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "vs.debug.breakpt.hitcount"
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint hit count"
 ms.assetid: 24836939-94ed-4e57-aa85-5d6938d859e4
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Specify a Hit Count
   A breakpoint hit count is a counter that is incremented by the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger each time the breakpoint is reached. If the specified hit count is reached and any specified breakpoint condition is satisfied, the debugger performs the action specified for the breakpoint.  

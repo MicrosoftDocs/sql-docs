@@ -16,13 +16,12 @@ helpviewer_keywords:
   - "DENY statement, database scoped credentials"
   - "denying permissions [SQL Server], database scoped credential"
 ms.assetid: c508b1c9-169e-4e7a-9a49-7ddf2ca8f848
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DENY Database Scoped Credential (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   Denies permissions on a database scoped credential.  
 
@@ -31,7 +30,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DENY permission  [ ,...n ]   
     ON DATABASE SCOPED CREDENTIAL :: credential_name   

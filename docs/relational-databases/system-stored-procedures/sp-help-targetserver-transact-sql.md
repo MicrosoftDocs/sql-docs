@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_targetserver"
 ms.assetid: f841d3bd-901a-4980-ad0b-1c6eeba3f717
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_help_targetserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists all target servers.  
   
@@ -35,7 +34,7 @@ sp_help_targetserver
 ```  
   
 ## Arguments  
- [ **@server_name=** ] **'***server_name***'**  
+`[ @server_name = ] 'server_name'`
  The name of the server for which to return information. *server_name* is **nvarchar(30)**, with a default of NULL.  
   
 ## Return Code Values  

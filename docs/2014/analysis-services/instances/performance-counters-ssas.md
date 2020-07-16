@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 05d7d5ab-a96c-4f82-94b1-48a657d7c580
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Performance Counters (SSAS)
   Using Performance Monitor, you can monitor the performance of a Microsoft SQL Server Analysis Services (SSAS) instance by using performance counters.  

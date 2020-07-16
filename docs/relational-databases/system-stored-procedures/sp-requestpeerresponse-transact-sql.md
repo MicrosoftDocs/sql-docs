@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_requestpeerresponse"
 ms.assetid: cbe13c22-4d7d-4a36-b194-7a13ce68ef27
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_requestpeerresponse (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   When executed from a node in a peer-to-peer topology, this procedure requests a response from every other node in the topology. By executing this procedure and reviewing the corresponding responses, you can guarantee that all previous commands have been delivered to the responding nodes. This stored procedure is executed at the requesting node on any database.  
   
@@ -34,13 +33,13 @@ sp_requestpeerresponse [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication**= ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication in a peer-to-peer topology for which the status is being verified. *publication* is **sysname**, with no default.  
   
- [ **@description**= ] **'***description***'**  
+`[ @description = ] 'description'`
  User-defined information that can be used to identify individual status requests. *description* is **nvarchar(4000)**, with a default of NULL.  
   
- [ **@request_id** = ] *request_id*  
+`[ @request_id = ] request_id`
  Returns the ID of the new request. *request_id* is **int** and is an OUTPUT parameter. This value can be used when executing [sp_helppeerresponses &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md) to view all responses to a status request.  
   
 ## Return Code Values  

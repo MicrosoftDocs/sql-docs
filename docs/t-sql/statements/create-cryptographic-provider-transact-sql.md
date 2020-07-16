@@ -22,10 +22,9 @@ helpviewer_keywords:
 ms.assetid: 059a39a6-9d32-4d3f-965b-0a1ce75229c7
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a cryptographic provider within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from an Extensible Key Management (EKM) provider.  
   
@@ -38,8 +37,10 @@ manager: craigg
 CREATE CRYPTOGRAPHIC PROVIDER provider_name   
     FROM FILE = path_of_DLL  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *provider_name*  
  Is the name of the Extensible Key Management provider.  
   

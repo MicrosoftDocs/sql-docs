@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensionwizard.finish.f1"
 ms.assetid: 1137740d-3063-4ab1-9cfe-8319194db937
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Completing the Wizard (Dimension Wizard)
   Use the **Completing the Wizard** page to do the following procedures:  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Upgrade Advisor, how-to topics"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d73bf759-58f7-4789-af49-ac8ca94f913d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrade Advisor How-to Topics
   This section contains common procedures for using Upgrade Advisor.  

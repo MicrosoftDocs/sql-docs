@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STContains (geometry Data Type)"
 ms.assetid: 865ceca1-9200-45ed-a7d8-e286e2679fdc
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STContains (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns 1 if a **geometry** instance completely contains another **geometry** instance. Returns 0 if it does not.
   

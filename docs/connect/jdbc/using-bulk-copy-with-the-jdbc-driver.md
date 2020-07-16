@@ -1,18 +1,18 @@
 ---
-title: "Using Bulk Copy with the JDBC Driver | Microsoft Docs"
+title: "Using bulk copy with the JDBC driver"
+description: "The SQLServerBulkCopy class allows you to write data load solutions in Java that offer significant performance advantages over the standard JDBC APIs."
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 21e19635-340d-49bb-b39d-4867102fb5df
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
-# Using Bulk Copy with the JDBC Driver
+# Using bulk copy with the JDBC driver
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -112,7 +112,7 @@ The simplest approach to performing a SQL Server bulk copy operation is to perfo
   
 > [!NOTE]  
 > If you need to roll back all or part of the bulk copy when an error occurs, you can either use a SQLServerBulkCopy-managed transaction, or perform the bulk copy operation within an existing transaction.  
-> For more information, see [Transaction and bulk copy operations](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TransactionBulk)  
+> For more information, see [Transaction and bulk copy operations](#transaction-and-bulk-copy-operations)  
   
  The general steps to perform a bulk copy operation are:  
   
@@ -138,7 +138,7 @@ The simplest approach to performing a SQL Server bulk copy operation is to perfo
 The following application demonstrates how to load data using the SQLServerBulkCopy class. In this example, a ResultSet is used to copy data from the Production.Product table in the SQL Server AdventureWorks database to a similar table in the same database.  
   
 > [!IMPORTANT]  
-> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
+> This sample will not run unless you have created the work tables as described in [Table setup](#table-setup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ```java
 import java.sql.Connection;
@@ -232,7 +232,7 @@ You can perform multiple bulk copy operations using a single instance of a SQLSe
 If you perform several bulk copy operations using the same SQLServerBulkCopy object, there are no restrictions on whether source or target information is equal or different in each operation. However, you must ensure that column association information is properly set each time you write to the server.  
   
 > [!IMPORTANT]  
-> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
+> This sample will not run unless you have created the work tables as described in [Table setup](#table-setup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ```java
 import java.sql.Connection;
@@ -361,7 +361,7 @@ In the example, the source table and destination table each include an Identity 
 The bulk copy operation is executed with the **BatchSize** property set to 10. When the operation encounters the invalid row, an exception is thrown. In this first example, the bulk copy operation is non-transacted. All batches copied up to the point of the error are committed; the batch containing the duplicate key is rolled back, and the bulk copy operation is halted before processing any other batches.  
   
 > [!NOTE]  
-> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
+> This sample will not run unless you have created the work tables as described in [Table setup](#table-setup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ```java
 import java.sql.Connection;
@@ -470,7 +470,7 @@ You can pass a Connection object that has transactions enabled as a parameter in
 The following application is similar to **BulkCopyNonTransacted**, with one exception: in this example, the bulk copy operation is included in a larger, external transaction. When the primary key violation error occurs, the entire transaction is rolled back and no rows are added to the destination table.
 
 > [!NOTE]  
-> This sample will not run unless you have created the work tables as described in [Table setup](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#BKMK_TableSetup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
+> This sample will not run unless you have created the work tables as described in [Table setup](#table-setup). This code is provided to demonstrate the syntax for using SQLServerBulkCopy only. If the source and destination tables are located in the same SQL Server instance, it is easier and faster to use a Transact-SQL INSERT ... SELECT statement to copy the data.  
 
 ```java
 import java.sql.Connection;
@@ -560,12 +560,12 @@ public class BulkCopyExistingTransactions {
 }
 ```
 
-### Bulk Copy from a CSV File  
+### Bulk copy from a CSV file  
 
  The following application demonstrates how to load data using the SQLServerBulkCopy class. In this example, a CSV file is used to copy data exported from the Production.Product table in the SQL Server AdventureWorks database to a similar table in the database.  
   
 > [!IMPORTANT]  
-> This sample will not run unless you have created the work tables as described in [Table setup](../../ssms/download-sql-server-management-studio-ssms.md) to get it.  
+> This sample will not run unless you have created the work tables as described in [Table setup](#table-setup) to get it.  
   
 1. Open **SQL Server Management Studio** and connect to the SQL Server with the AdventureWorks database.  
   
@@ -653,7 +653,7 @@ Beginning with Microsoft JDBC Driver 6.0 for SQL Server, bulk copy is supported 
   
 Depending on the bulk copy options, and the encryption type of the source and destination tables the JDBC driver may transparently decrypt and then encrypt the data or it may send the encrypted data as is. For example, when bulk copying data from an encrypted column to an unencrypted column, the driver transparently decrypts data before sending to SQL Server. Similarly when bulk copying data from an unencrypted column (or from a CSV file) to an encrypted column, the driver transparently encrypts data before sending to SQL Server. If both source and destination is encrypted, then depending on the **allowEncryptedValueModifications** bulk copy option, the driver would send data as is or would decrypt the data and encrypt it again before sending to SQL Server.  
   
-For more information, see the **allowEncryptedValueModifications** bulk copy option below, and [Using Always Encrypted with the JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).  
+For more information, see the **allowEncryptedValueModifications** bulk copy option below, and [Using Always Encrypted with the JDBC Driver](using-always-encrypted-with-the-jdbc-driver.md).  
   
 > [!IMPORTANT]  
 > Limitation of the Microsoft JDBC Driver 6.0 for SQL Server, when bulk copying data from a CSV file to encrypted columns:  
@@ -718,7 +718,7 @@ The SQLServerBulkCopy class can be used to write data only to SQL Server tables.
 | Boolean UseInternalTransaction           | When specified, each batch of the bulk-copy operation will occur within a transaction. If SQLServerBulkCopy is using an existing connection (as specified by the constructor), a SQLServerException will occur.  If SQLServerBulkCopy created a dedicated connection, a transaction will be enabled.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | False - no transaction                                               |
 | Int BatchSize                            | Number of rows in each batch. At the end of each batch, the rows in the batch are sent to the server.<br /><br /> A batch is complete when BatchSize rows have been processed or there are no more rows to send to the destination data source.  If the SQLServerBulkCopy instance has been declared without the UseInternalTransaction option in effect, rows are sent to the server BatchSize rows at a time, but no transaction-related action is taken. If UseInternalTransaction is in effect, each batch of rows is inserted as a separate transaction.                                                                                                                                                                                                                                                                                                                                                                                                                                           | 0 - indicates that each writeToServer operation is a single batch    |
 | Int BulkCopyTimeout                      | Number of seconds for the operation to complete before it times out. A value of 0 indicates no limit; the bulk copy will wait indefinitely.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 60 seconds.                                                          |
-| Boolean allowEncryptedValueModifications | This option is available with Microsoft JDBC Driver 6.0 (or higher) for SQL Server.<br /><br /> When specified, **allowEncryptedValueModifications** enables bulk copying of encrypted data between tables or databases, without decrypting the data. Typically, an application would select data from encrypted columns from one table without decrypting the data (the app would connect to the database with the column encryption setting keyword set to disabled) and then would use this option to bulk insert the data, which is still encrypted. For more information, see [Using Always Encrypted with the JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Use caution when specifying **allowEncryptedValueModifications** as this may lead to corrupting the database because the driver doesn't check if the data is indeed encrypted, or if it is correctly encrypted using the same encryption type, algorithm and key as the target column. |
+| Boolean allowEncryptedValueModifications | This option is available with Microsoft JDBC Driver 6.0 (or higher) for SQL Server.<br /><br /> When specified, **allowEncryptedValueModifications** enables bulk copying of encrypted data between tables or databases, without decrypting the data. Typically, an application would select data from encrypted columns from one table without decrypting the data (the app would connect to the database with the column encryption setting keyword set to disabled) and then would use this option to bulk insert the data, which is still encrypted. For more information, see [Using Always Encrypted with the JDBC Driver](using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Use caution when specifying **allowEncryptedValueModifications** as this may lead to corrupting the database because the driver doesn't check if the data is indeed encrypted, or if it is correctly encrypted using the same encryption type, algorithm and key as the target column. |
   
  Getters and setters:  
   
@@ -789,7 +789,6 @@ Implementation Notes and Limitations:
 | Void setTimeWithTimezoneFormat(DateTimeForm atter dateTimeFormatter)                                   | Sets the format for parsing Time data from the file as java.sql.Types.TIME_WITH_TIMEZONE.           |
 | Void setTimeWithTimezoneFormat(String timeFormat)                                                      | Sets the format for parsing Time data from the file as java.sql.Types.TIME_WITH_TIMEZONE.           |
   
-## See Also  
+## See also  
 
-[Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
-  
+[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)  

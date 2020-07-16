@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STIntersection (geometry Data Type)"
 ms.assetid: 354843f5-cc14-478c-974a-04f363f9530f
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STIntersection (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns an object that represents the points where a **geometry** instance intersects another **geometry** instance.
   

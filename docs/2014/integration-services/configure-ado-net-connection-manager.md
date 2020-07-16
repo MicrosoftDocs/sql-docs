@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.adonetconnection.f1"
 helpviewer_keywords: 
   - "Configure ADO.NET Connection Manager dialog box"
 ms.assetid: 609f8354-e876-4fed-adab-ac8d57a94f1c
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Configure ADO.NET Connection Manager
   Use the **Configure ADO.NET Connection Manager** dialog box to add a connection to a data source that can be accessed by using a .NET Framework data provider, such as the SqlClient provider. The connection manager can use an existing connection, or you can create a new one.  

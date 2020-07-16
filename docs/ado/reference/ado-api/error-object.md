@@ -13,9 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "error object [ADO]"
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Error Object
 Contains details about data access errors that pertain to a single operation involving the provider.  

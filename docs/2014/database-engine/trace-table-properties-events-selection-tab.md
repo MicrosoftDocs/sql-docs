@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.tracetableproperties.eventsselection.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: fa21df6a-b6b5-4b15-9104-957385821594
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Trace Table Properties (Events Selection Tab)
   Use the **Events Selection** tab of the **Trace Table Properties** dialog box to view the events and data column properties of the trace or to remove events or columns from the trace.  

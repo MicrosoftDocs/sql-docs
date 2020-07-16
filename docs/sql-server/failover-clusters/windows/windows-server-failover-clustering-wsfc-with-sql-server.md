@@ -1,6 +1,7 @@
 ---
-title: "Windows Server Failover Clustering with SQL Server | Microsoft Docs"
-ms.custom: ""
+title: "Windows Server Failover Cluster with SQL Server"
+description: Learn about using the Windows Server Failover Cluster service with SQL Server and failover cluster instances. 
+ms.custom: seo-lt-2019
 ms.date: "01/18/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 79d2ea5a-edd8-4b3b-9502-96202057b01a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Windows Server Failover Clustering with SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   A *Windows Server Failover Cluster* (WSFC) is a group of independent servers that work together to increase the availability of applications and services. [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] takes advantage of WSFC services and capabilities to support [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Instances.  
   
    

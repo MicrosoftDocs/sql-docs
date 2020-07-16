@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "installing Upgrade Advisor"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: a6841cc2-ca13-4b1c-9343-9e4d54312c3a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Installing Upgrade Advisor from the Command Prompt
   You can install Upgrade Advisor either by using the Setup Wizard or from the command prompt. By using the command prompt you can perform unattended and automated installations.  

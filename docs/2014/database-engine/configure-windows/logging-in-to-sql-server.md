@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 77158a9a-d638-4818-90a1-cb2eb57df514
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Logging In to SQL Server
   You can log in to an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using any of the graphical administration tools or from a command prompt.  
@@ -65,7 +64,7 @@ manager: craigg
 ## Verifying your Connection Protocol  
  When connected to the [!INCLUDE[ssDE](../../includes/ssde-md.md)], the following query will return the protocol  used for the current connection, along with the authentication method (NTLM or Kerberos), and will indicate if the connection is encrypted.  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme, encrypt_option   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  
@@ -78,7 +77,7 @@ WHERE session_id = @@SPID;
   
 -   [How to Troubleshoot Connecting to the SQL Server Database Engine](https://social.technet.microsoft.com/wiki/contents/articles/how-to-troubleshoot-connecting-to-the-sql-server-database-engine.aspx)  
   
--   [Steps to troubleshoot SQL connectivity issues](https://blogs.msdn.com/b/sql_protocols/archive/2008/04/30/steps-to-troubleshoot-connectivity-issues.aspx)  
+-   [Steps to troubleshoot SQL connectivity issues](https://docs.microsoft.com/archive/blogs/sql_protocols/steps-to-troubleshoot-sql-connectivity-issues)  
   
 ## Related Content  
  [Choose an Authentication Mode](../../relational-databases/security/choose-an-authentication-mode.md)  

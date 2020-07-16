@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Upgrade Advisor], filtering"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: bc3dbe16-f6c1-4f07-8d88-2b8e86302c7e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # How to: Filter Reports
   This topic describes how you can use the Upgrade Advisor Report Viewer to apply filters to a report.  

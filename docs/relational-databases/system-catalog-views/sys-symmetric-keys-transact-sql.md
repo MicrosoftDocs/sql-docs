@@ -17,19 +17,18 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.symmetric_keys catalog view"
 ms.assetid: d410eae1-3a52-45de-b9a1-52d2bd93a8eb
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.symmetric_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns one row for every symmetric key created with the CREATE SYMMETRIC KEY statement.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|**name**|**sysname**|Name of the key. Unique within the c4database.|  
+|**name**|**sysname**|Name of the key. Unique within the database.|  
 |**principal_id**|**int**|ID of the database principal who owns the key.|  
 |**symmetric_key_id**|**int**|ID of the key. Unique within the database.|  
 |**key_length**|**int**|Length of the key in bits.|  

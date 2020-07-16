@@ -15,11 +15,10 @@ helpviewer_keywords:
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Partitioned Tables and Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports table and index partitioning. The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a database. The data is partitioned horizontally, so that groups of rows are mapped into individual partitions. All partitions of a single index or table must reside in the same database. The table or index is treated as a single logical entity when queries or updates are performed on the data. Prior to [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] SP1, partitioned tables and indexes were not available in every edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Editions and Supported Features for SQL Server 2016](../../sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 > [!IMPORTANT]  
@@ -32,7 +31,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 -   You can perform maintenance operations on one or more partitions more quickly. The operations are more efficient because they target only these data subsets, instead of the whole table. For example, you can choose to compress data in one or more partitions or rebuild one or more partitions of an index.  
   
--   You may improve query performance, based on the types of queries you frequently run and on your hardware configuration. For example, the query optimizer can process equi-join queries between two or more partitioned tables faster when the partitioning columns in the tables are the same, because the partitions themselves can be joined.  
+-   You may improve query performance, based on the types of queries you frequently run and on your hardware configuration. For example, the query optimizer can process equi-join queries between two or more partitioned tables faster when the partitioning columns are the same as the columns on which the tables are joined. See [Queries](#queries) below for further information.
   
 When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performs data sorting for I/O operations, it sorts the data first by partition. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] accesses one drive at a time, and this might reduce performance. To improve data sorting performance, stripe the data files of your partitions across more than one disk by setting up a RAID. In this way, although [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still sorts data by partition, it can access all the drives of each partition at the same time.  
   
@@ -128,6 +127,6 @@ In this way, the query optimizer can process the join faster, because the partit
 -   [Bulk Loading into a Partitioned Table](https://msdn.microsoft.com/library/cc966380.aspx)    
 -   [Project REAL: Data Lifecycle -- Partitioning](https://technet.microsoft.com/library/cc966424.aspx)    
 -   [Query Processing Enhancements on Partitioned Tables and Indexes](https://msdn.microsoft.com/library/ms345599.aspx)    
--   [Top 10 Best Practices for Building a Large Scale Relational Data Warehouse](https://sqlcat.com/top10lists/archive/2008/02/06/top-10-best-practices-for-building-a-large-scale-relational-data-warehouse.aspx)    
+-   [Top 10 Best Practices for Building a Large Scale Relational Data Warehouse](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20Relational%20Engine.pdf) in _SQLCAT's Guide to: Relational Engineering_
   
   

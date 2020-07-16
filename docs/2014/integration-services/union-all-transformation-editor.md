@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.unionalltransformation.f1"
 helpviewer_keywords: 
   - "Union All Transformation Editor"
 ms.assetid: 32fbc1c1-da83-4684-9479-31fc3e2df98c
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Union All Transformation Editor
   Use the **Union All Transformation Editor** dialog box to merge several input rowsets into a single output rowset. By including the Union All transformation in a data flow, you can merge data from multiple data flows, create complex datasets by nesting Union All transformations, and re-merge rows after you correct errors in the data.  

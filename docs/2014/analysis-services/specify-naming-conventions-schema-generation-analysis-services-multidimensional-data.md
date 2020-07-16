@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.schemagenwizard.namingconventions.f1"
 ms.assetid: 02d830ea-5b1f-4485-9f94-d64b8bea592b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Naming Conventions (Schema Generation Wizard) (Analysis Services - Multidimensional Data)
   Use the **Specify Naming Conventions** page to define the naming conventions that the Schema Generation Wizard uses when creating schema objects.  

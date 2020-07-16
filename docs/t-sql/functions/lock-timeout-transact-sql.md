@@ -18,12 +18,11 @@ helpviewer_keywords:
   - "current lock time-out setting"
   - "locking [SQL Server], time-outs"
 ms.assetid: 6bf8bf97-60b8-40c1-b89d-8f5a00bcae2e
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # &#x40;&#x40;LOCK_TIMEOUT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the current lock time-out setting in milliseconds for the current session.  
   

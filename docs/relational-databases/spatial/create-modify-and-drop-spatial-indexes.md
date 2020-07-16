@@ -14,13 +14,12 @@ helpviewer_keywords:
   - "indexes [SQL Server], modifying"
   - "spatial indexes [SQL Server], modifying"
 ms.assetid: 00c1b927-8ec5-44cf-87c2-c8de59745735
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create, Modify, and Drop Spatial Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   A spatial index can more efficiently perform certain operations on a column of the **geometry** or **geography** data type (a *spatial column*). More than one spatial index can be specified on a spatial column. This is useful, for example, for indexing different tessellation parameters in a single column.  
   
  There are a number of restrictions on creating spatial indexes. For more information, see [Restrictions on Spatial Indexes](#restrictions) in this topic.  

@@ -8,9 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 610be62e-0994-40bc-9348-4615b9b7a180
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLServerException Members
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -21,7 +20,7 @@ manager: craigg
 
 |Name|Description|  
 |----------|-----------------|  
-|[SQLServerException ](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|Initializes a new instance of the SQLServerException class.|  
+|[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-constructors.md)|Initializes a new instance of the SQLServerException class.|  
   
 ## Fields  
  None.  

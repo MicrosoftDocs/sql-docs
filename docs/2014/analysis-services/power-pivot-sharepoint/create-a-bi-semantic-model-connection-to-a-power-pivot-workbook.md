@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: b2e3f97f-18a8-42b6-9030-b4f818afc3b9
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create a BI Semantic Model Connection to a PowerPivot Workbook
   Use the information in this topic to set up a BI semantic model connection that redirects to a PowerPivot workbook in the same farm.  

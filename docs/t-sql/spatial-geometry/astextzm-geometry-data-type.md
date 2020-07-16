@@ -17,12 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "AsTextZM (geometry Data Type)"
 ms.assetid: 08ac8aa0-aff7-4b22-87e0-1a1d55dcbc04
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # AsTextZM (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation of a geometry instance augmented with any **Z** (elevation) and **M** (measure) values carried by the instance.
   

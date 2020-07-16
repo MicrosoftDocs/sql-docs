@@ -25,10 +25,9 @@ helpviewer_keywords:
 ms.assetid: 7a999fc7-0a26-4a0d-9eeb-db6fc794f3cb
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Use the Copy Database Wizard
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The Copy Database Wizard moves or copies databases and certain server objects easily from one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  to another instance, with no server downtime. By using this wizard, you can do the following: 
   
 -   Pick a source and destination server.  

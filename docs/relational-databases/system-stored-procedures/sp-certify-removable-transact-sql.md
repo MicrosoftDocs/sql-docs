@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_certify_removable"
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_certify_removable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Verifies that a database is correctly configured for distribution on removable media and reports any problems to the user.  
   
@@ -38,10 +37,10 @@ sp_certify_removable [ @dbname= ] 'dbname'
 ```  
   
 ## Arguments  
- [ **@dbname=**] **'***dbname***'**  
+`[ @dbname = ] 'dbname'`
  Specifies the database to be verified. *dbname* is **sysname**.  
   
- [ **@autofix=**] **'auto'**  
+`[ @autofix = ] 'auto'`
  Gives ownership of the database and all database objects to the system administrator, and drops any user-created database users and nondefault permissions. *auto* is **nvarchar(4)**, with a default of NULL.  
   
 ## Return Code Values  

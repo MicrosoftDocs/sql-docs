@@ -13,11 +13,10 @@ helpviewer_keywords:
 ms.assetid: 62ef24b4-3553-4aed-b62a-670980bae501
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DDL Events
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The following tables list the DDL events that can be used to fire a DDL trigger or event notification. Note that each event corresponds to a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or stored procedure, with the statement syntax modified to include an underscore character (_) between keywords.  
   
 > [!IMPORTANT]  

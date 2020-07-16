@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 132bebfd-0206-4d23-829a-b38e5ed17bc9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Log Shipping and Replication (SQL Server)
   Log shipping involves two copies of a single database that typically reside on different computers. At any given time, only one copy of the database is currently available to clients. This copy is known as the primary database. Updates made by clients to the primary database are propagated by means of log shipping to the other copy of the database, known as the secondary database. Log shipping involves applying the transaction log from every insertion, update, or deletion made on the primary database onto the secondary database.  
@@ -105,7 +104,7 @@ manager: craigg
   
     -   If the publication is filtered, you might not be able to bring the publication database up-to-date. Consider a table that is partitioned such that each subscription receives customer data only for a single region: North, East, South, and West. If there is at least one Subscriber for each partition of data, synchronizing with a Subscriber for each partition should bring the publication database up-to-date. However, if data in the West partition, for example, was not replicated to any Subscribers, this data at the Publisher cannot be brought up-to-date. In this case, we recommend reinitializing all subscriptions so that the data at the Publisher and Subscribers converges. For more information, see [Reinitialize Subscriptions](../../relational-databases/replication/reinitialize-subscriptions.md).  
   
-     If you synchronize with a Subscriber that is running a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the subscription cannot be anonymous; it must be a client subscription or server subscription (referred to as local subscriptions and global subscriptions in previous releases). For more information, see [Synchronize Data](../../relational-databases/replication/synchronize-data.md).  
+     If you synchronize with a Subscriber that is running a version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] prior to [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the subscription cannot be anonymous; it must be a client subscription or server subscription (referred to as local subscriptions and global subscriptions in previous releases). For more information, see [Synchronize Data](../../relational-databases/replication/synchronize-data.md).   
   
 ## See Also  
  [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)   

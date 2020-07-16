@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "columns [data mining], content types"
@@ -26,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: 2dacd968-70e8-4993-88b6-a6d36024a4e4
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Content Types (Data Mining)
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], you can define the both the physical data type for a column in a mining structure, and a logical content type for the column when used in a model,  

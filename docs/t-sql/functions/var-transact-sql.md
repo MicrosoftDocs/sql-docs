@@ -17,13 +17,12 @@ helpviewer_keywords:
   - "expressions [SQL Server], statistical variance"
   - "VAR function [Transact-SQL]"
 ms.assetid: 71dfc339-16c8-42f9-8555-ad45400f7f9b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # VAR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the statistical variance of all values in the specified expression. May be followed by the [OVER clause](../../t-sql/queries/select-over-clause-transact-sql.md).  
   

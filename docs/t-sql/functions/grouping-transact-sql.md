@@ -1,7 +1,7 @@
 ---
 title: "GROUPING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "12/03/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -20,12 +20,11 @@ helpviewer_keywords:
   - "GROUPING function"
   - "CUBE operator"
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # GROUPING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Indicates whether a specified column expression in a GROUP BY list is aggregated or not. GROUPING returns 1 for aggregated or 0 for not aggregated in the result set. GROUPING can be used only in the SELECT \<select> list, HAVING, and ORDER BY clauses when GROUP BY is specified.  
   

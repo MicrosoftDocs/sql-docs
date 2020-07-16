@@ -1,10 +1,8 @@
 ---
-title: "KeepExisting Element (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+title: "KeepExisting Element (DTA)"
+description: In the dta utility, the KeepExisting element specifies physical design structures that Database Engine Tuning Advisor retains when it generates recommendations.
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
@@ -12,13 +10,18 @@ dev_langs:
 helpviewer_keywords: 
   - "KeepExisting element"
 ms.assetid: e67aae61-d06d-4a03-85ba-6516c3502dce
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # KeepExisting Element (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Specifies the physical design structures (indexes, indexed views, or partitioning) that Database Engine Tuning Advisor must retain when generating its recommendation.  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+Specifies the physical design structures (indexes, indexed views, or partitioning) that Database Engine Tuning Advisor must retain when generating its recommendation.  
   
 ## Syntax  
   

@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "deleting business rules [Master Data Services]"
   - "business rules [Master Data Services], deleting"
 ms.assetid: b97aa4f9-569f-451d-ad62-65b81f980299
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete a Business Rule (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete a business rule when it is no longer needed.  

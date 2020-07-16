@@ -16,12 +16,11 @@ helpviewer_keywords:
   - "full-text stoplist [SQL Server], permissions"
   - "DENY statement, full-text permissions"
 ms.assetid: d86e9a1d-0938-4ec2-a169-2d0564f3642e
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # DENY Full-Text Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Denies permissions on a full-text catalog and full-text stoplists.  
   
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ] ON  
     FULLTEXT   
         {  

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "XML for Analysis, data mining"
@@ -18,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 54445ee7-720c-4683-99a6-e75b3dcca904
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Developing with XMLA in Analysis Services
   XML for Analysis (XMLA) is a SOAP-based XML protocol, designed specifically for universal data access to any standard multidimensional data source that can be accessed over an HTTP connection. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] uses XMLA as its only protocol when communicating with client applications. Fundamentally, all client libraries supported by Analysis Services formulate requests and responses in XMLA.  
@@ -56,7 +53,7 @@ manager: craigg
 ## Namespace and Schema  
   
 ### Namespace  
- The schema defined in this specification uses the XML namespace https://schemas.microsoft.com/AnalysisServices/2003/Engine and the standard abbreviation "DDL."  
+ The schema defined in this specification uses the XML namespace `https://schemas.microsoft.com/AnalysisServices/2003/Engine` and the standard abbreviation "DDL."  
   
 ### Schema  
  The definition of an XML Schema definition language (XSD) schema for the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object definition language is based on the definition of the schema elements and hierarchy in this section.  

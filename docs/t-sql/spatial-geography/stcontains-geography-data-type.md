@@ -12,12 +12,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STContains method (geography)"
 ms.assetid: b10e8f0a-2926-449a-82ea-be42543420ca
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STContains  (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Specifies whether the calling **geography** instance spatially contains the **geography** instance passed to the method.  
   

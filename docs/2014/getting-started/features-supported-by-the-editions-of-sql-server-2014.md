@@ -4,24 +4,18 @@ ms.custom: ""
 ms.date: "05/24/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "data-quality-services"
-  - "database-engine"
-  - "integration-services"
-  - "master-data-services"
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 5da61ff5-12b9-48e6-b3c8-0dacca1751c4
-author: mightypen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Features Supported by the Editions of SQL Server 2014
-  This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  
-  
-> **NOTE:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is available in an Evaluation edition for a 180-day trial period. For more information, see the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](https://go.microsoft.com/fwlink/?LinkId=190955).  
+
+
+  This topic provides details of features supported by the different editions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. 
+
+ > **NOTE:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] is available in an Evaluation edition for a 180-day trial period. For more information, see the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [Trial Software Web Site](https://go.microsoft.com/fwlink/?LinkId=190955).  
 > 
 > **NOTE:** For features supported by Evaluation and Developer editions see the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise feature set.  
   
@@ -171,8 +165,8 @@ manager: craigg
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent|Yes|Yes|Yes|Yes||||  
 |Microsoft System Center Operations Manager Management Pack|Yes|Yes|Yes|Yes||||  
 |Database Tuning Advisor (DTA)|Yes|Yes|Yes<sup>3</sup>|Yes<sup>3</sup>||||  
-|Deploy a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database to a Windows Azure VM Wizard|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Files in Windows Azure|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|Deploy a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Database to an Azure VM Wizard|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Files in Azure|Yes|Yes|Yes|Yes|Yes|Yes|Yes|  
   
  <sup>2</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web, [!INCLUDE[ssExpress](../includes/ssexpress-md.md)], [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Tools, and [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] with Advanced Services can be profiled using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise editions.  
   

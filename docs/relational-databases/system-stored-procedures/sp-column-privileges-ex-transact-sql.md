@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_column_privileges_ex"
 ms.assetid: 98cb6e58-4007-40fc-b048-449fb2e7e6be
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_column_privileges_ex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns column privileges for the specified table on the specified linked server.  
   
@@ -38,19 +37,19 @@ sp_column_privileges_ex [ @table_server = ] 'table_server'
 ```  
   
 ## Arguments  
- [ **@table_server =** ] **'**_table_server_**'**  
+`[ @table_server = ] 'table_server'`
  Is the name of the linked server for which to return information. *table_server* is **sysname**, with no default.  
   
- [ **@table_name =** ] **'**_table_name_**'**  
+`[ @table_name = ] 'table_name'`
  Is the name of the table that contains the specified column. *table_name* is **sysname**, with a default of NULL.  
   
- [ **@table_schema =** ] **'**_table_schema_**'**  
+`[ @table_schema = ] 'table_schema'`
  Is the table schema. *table_schema* is **sysname**, with a default of NULL.  
   
- [ **@table_catalog =** ] **'**_table_catalog_**'**  
+`[ @table_catalog = ] 'table_catalog'`
  Is the name of the database in which the specified *table_name* resides. *table_catalog* is **sysname**, with a default of NULL.  
   
- [ **@column_name =** ] **'**_column_name_**'**  
+`[ @column_name = ] 'column_name'`
  Is the name of the column for which to provide privilege information. *column_name* is **sysname**, with a default of NULL (all common).  
   
 ## Result Sets  

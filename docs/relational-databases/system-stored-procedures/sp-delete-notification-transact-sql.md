@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_notification"
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_delete_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent notification definition for a specific alert and operator.  
   
@@ -36,10 +35,10 @@ sp_delete_notification
 ```  
   
 ## Arguments  
- [ **@alert_name=** ] **'***alert***'**  
+`[ @alert_name = ] 'alert'`
  The name of the alert. *alert* is **sysname**, with no default.  
   
- [ **@operator_name=** ] **'***operator***'**  
+`[ @operator_name = ] 'operator'`
  The name of the operator. *operator* is **sysname**, with no default.  
   
 ## Return Code Values  

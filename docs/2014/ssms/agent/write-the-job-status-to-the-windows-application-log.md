@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Write the Job Status to the Windows Application Log
   This topic describes how to configure [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] to write job status to the Windows application event log by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects.  
@@ -64,18 +63,15 @@ manager: craigg
     -   Click**When the job completes** to log the job status regardless of completion status.  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
- **To write job status to the Windows application log**  
+
+### To write job status to the Windows application log
   
  Call the `EventLogLevel` property of the `Job` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell.  
   
  The following code example sets the job to generate an operating system event log entry when the job execution finishes.  
   
- **PowerShell**  
-  
-```  
+```powershell
 $srv = new-object Microsoft.SqlServer.Management.Smo.Server("(local)")  
 $jb = new-object Microsoft.SqlServer.Management.Smo.Agent.Job($srv.JobServer, "Test Job")  
 $jb.EventLogLevel = [Microsoft.SqlServer.Management.Smo.Agent.CompletionAction]::Always  
 ```  
-  
-  

@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.connsybasedb.f1"
 ms.assetid: b4ebdc57-8b2a-4950-b489-88360e6c82c5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect to a Sybase Database (SSAS)
   This page of the **Table Import Wizard** enables you to specify settings to connect to an Sybase database. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
@@ -22,7 +20,7 @@ manager: craigg
 > [!NOTE]  
 >  The credentials of the current user are used when selecting a database in this page. However, import will not succeed if the user specified in the Impersonation Information page does not have sufficient privileges to read from the selected database.  
   
-## UIElement List  
+## UI element list  
  **Friendly connection name**  
  Type a unique name for this data source connection. This is a required field.  
   

@@ -20,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: 9b14f37c-b7f5-4f71-b070-cce89a83f69e
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.syscacheobjects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains information about how the cache is used.  
   

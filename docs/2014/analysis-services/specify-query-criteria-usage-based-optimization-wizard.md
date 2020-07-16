@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.usagebasedoptimizationwizard.specifyquerycriteria.f1"
 ms.assetid: 3193adc2-af9f-4234-a4cc-dea0c280a724
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Query Criteria (Usage-Based Optimization Wizard)
   Use the **Specify Query Criteria** page to choose one or more filter options in order to identify queries to optimize.  

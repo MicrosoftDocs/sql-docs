@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "macros [SQL Server]"
   - "Extended Stored Procedure API [SQL Server]"
 ms.assetid: 158a6765-0542-4e84-b5ab-f173d946ef5e
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Database Engine Extended Stored Procedure Programming
     

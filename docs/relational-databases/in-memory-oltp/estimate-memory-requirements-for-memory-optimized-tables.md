@@ -1,6 +1,7 @@
 ---
-title: "Estimate Memory Requirements for Memory-Optimized Tables | Microsoft Docs"
-ms.custom: ""
+title: "Memory requirements - memory-optimized tables"
+description: Learn about memory use and management scenarios for memory-optimized tables in SQL Server, which require sufficient memory for all the rows and indexes.
+ms.custom: seo-dt-2019
 ms.date: "12/02/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -10,11 +11,10 @@ ms.topic: conceptual
 ms.assetid: 5c5cc1fc-1fdf-4562-9443-272ad9ab5ba8
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Estimate Memory Requirements for Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Memory-optimized tables require that sufficient memory exist to keep all of the rows and indexes in memory. Because memory is a finite resource, it is important that you understand and manage memory usage on your system. The topics in this section cover common memory use and management scenarios.
 
@@ -72,8 +72,7 @@ CREATE TABLE t_hk
   col8 char (30) NOT NULL,   
   col9 char (50) NOT NULL  
 
-  WITH (memory_optimized = on)  
-);
+)   WITH (memory_optimized = on)  ;
 GO  
 ```  
 
@@ -139,22 +138,22 @@ Thus, in our example, the memory needed for each hash array is:
   
 Since we have three hash indexes, the memory needed for the hash indexes is 3 * 64MB = 192MB.  
   
-#### Memory for non-clustered indexes  
+#### Memory for nonclustered indexes  
   
-Non-clustered indexes are implemented as BTrees with the inner nodes containing the index value and pointers to subsequent nodes.  Leaf nodes contain the index value and a pointer to the table row in memory.  
+Nonclustered indexes are implemented as BTrees with the inner nodes containing the index value and pointers to subsequent nodes.  Leaf nodes contain the index value and a pointer to the table row in memory.  
   
-Unlike hash indexes, non-clustered indexes do not have a fixed bucket size. The index grows and shrinks dynamically with the data.  
+Unlike hash indexes, nonclustered indexes do not have a fixed bucket size. The index grows and shrinks dynamically with the data.  
   
-Memory needed by non-clustered indexes can be computed as follows:  
+Memory needed by nonclustered indexes can be computed as follows:  
   
 - **Memory allocated to non-leaf nodes**   
     For a typical configuration, the memory allocated to non-leaf nodes is a small percentage of the overall memory taken by the index. This is so small it can safely be ignored.  
   
 - **Memory for leaf nodes**   
-    The leaf nodes have one row for each unique key in the table that points to the data rows with that unique key.  If you have multiple rows with the same key (i.e., you have a non-unique non-clustered index), there is only one row in the index leaf node that points to one of the rows with the other rows linked to each other.  Thus, the total memory required can be approximated by:
+    The leaf nodes have one row for each unique key in the table that points to the data rows with that unique key.  If you have multiple rows with the same key (i.e., you have a non-unique nonclustered index), there is only one row in the index leaf node that points to one of the rows with the other rows linked to each other.  Thus, the total memory required can be approximated by:
   - memoryForNonClusteredIndex = (pointerSize + sum(keyColumnDataTypeSizes)) * rowsWithUniqueKeys  
   
- Non-clustered indexes are best when used for range lookups, as exemplified by the following query:  
+ Nonclustered indexes are best when used for range lookups, as exemplified by the following query:  
   
 ```sql  
 SELECT * FRON t_hk  

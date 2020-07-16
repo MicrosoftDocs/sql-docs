@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "optimizing tables"
 ms.assetid: 89ff6d37-94c0-4773-8be9-dde943fff023
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Optimizing the NewOrg Table
   The **NewOrd** table that you created in the [Populating a Table with Existing Hierarchical Data](lesson-1-2-populating-a-table-with-existing-hierarchical-data.md) task contains all the employee information, and represents the hierarchical structure by using a `hierarchyid` data type. This task adds new indexes to support searches on the `hierarchyid` column.  

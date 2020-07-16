@@ -11,9 +11,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "Error collection [ADO], ADO/WFC syntax"
 ms.assetid: a22c6688-5321-4e6a-ba2a-87985a0e854a
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Error (ADO - WFC Syntax)
 ## package com.ms.wfc.data  

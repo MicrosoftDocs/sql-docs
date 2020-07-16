@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 61766eea-c450-408d-af33-fbe7ef8c9ff2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # common criteria compliance enabled Server Configuration Option
   The common criteria compliance enabled option enables the following elements that are required for the Common Criteria.  

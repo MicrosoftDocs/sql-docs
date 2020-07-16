@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: bc137daa-9f37-4c01-9766-8b7350c75af8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Manage Data Collection
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
  Use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures and functions to manage different aspects of data collection, such as enabling or disabling data collection, changing a collection set configuration, or viewing data in the management data warehouse.  
   
 ## Manage data collection using SSMS  

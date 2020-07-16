@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dsvdesigner.createnamedquery.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 8e192ad6-a0b1-4e21-bb3f-087c93e62941
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create or Edit Named Query Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Create/Edit Named Query** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to create or edit a named query in **Data Source View Designer**. A named query can be treated as a table, on which you can base other [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] objects. You can display the **Create/Edit Named Query** dialog box by:  

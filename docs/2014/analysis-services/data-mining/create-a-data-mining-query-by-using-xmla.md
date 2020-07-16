@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "content queries [DMX]"
 ms.assetid: 8f6b6008-006c-4792-9bd1-64c30dc3fd41
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create a Data Mining Query by Using XMLA
   You can create a variety of queries against data mining objects by using AMO, DMX, or XML/A.  

@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.dmmtrainingtransformation.connection.f1"
 helpviewer_keywords: 
   - "Data Mining Model Training Editor"
 ms.assetid: 098fbb1a-2a26-4288-9f68-d6233cb388ad
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Mining Model Training Editor (Connection Tab)
   Use the **Connection** page of the **Data Mining Model Training Editor** dialog box to select a mining model to train.  

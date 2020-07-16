@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "log files [SQL Server], size"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: a5860904-e2be-4224-8a51-df18a10d3fb9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Verify autogrow is turned on for all data and log files during the upgrade process
   Upgrade Advisor detected data or log files that are not set to autogrow. New and enhanced features require additional disk space for user databases and the **tempdb** system database. To ensure resources can accommodate size increases during upgrade and subsequent production operations, we recommend setting autogrow to ON for all user data and log files and the **tempdb** data and log files before upgrading.  
@@ -90,6 +88,6 @@ MODIFY FILE
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

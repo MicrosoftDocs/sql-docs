@@ -12,12 +12,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MakeValid method (geography)"
 ms.assetid: f67038e3-4f62-4465-994e-e95ac27d8ada
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # MakeValid (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Converts a **geography** instance that is not valid into a valid **geography** instance with a valid Open Geospatial Consortium (OGC) type.  
   

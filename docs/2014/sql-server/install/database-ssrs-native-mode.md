@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.databasesetup.F1"
 ms.assetid: 8c9bb3b3-ea77-4a5b-ba35-7451ed11083d
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Database (SSRS Native Mode)
   Use the Database page to create and configure the report server databases that provide internal storage for one or more report server instances. If you are configuring a report server to use a remote report server database, you must use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager to create the database.  

@@ -15,10 +15,9 @@ apitype: "DLLExport"
 ms.assetid: 21eb3b9a-7d32-455b-89bb-f624198cd202
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # LocalDBShareInstance Function
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Shares the specified SQL Server Express LocalDB instance with other users of the computer, using the specified shared name.  
   
  **Header file:** sqlncli.h  

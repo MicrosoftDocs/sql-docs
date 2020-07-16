@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: "database-engine"
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -15,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1cbb9f35-13d8-40a1-9685-72cb1b589947
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Getting Started in Visual Basic .NET
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET in one of the managed programming languages that is supported by the common runtime library in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. Many of the samples in this documentation are written in [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)] .NET. You can use [!INCLUDE[vsprvslong](../../includes/vsprvslong-md.md)] and [!INCLUDE[vsOrcas](../../includes/vsorcas-md.md)] to develop SMO applications.  

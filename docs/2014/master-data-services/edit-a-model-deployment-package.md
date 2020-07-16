@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 6b0fdb7d-83dd-4392-9011-4ae642c471f1
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Edit a Model Deployment Package
   This topic describes how to deploy selected parts of a model in MDS, rather than an entire model. To do so, you edit an MDS model package using the Model Package Editor.  

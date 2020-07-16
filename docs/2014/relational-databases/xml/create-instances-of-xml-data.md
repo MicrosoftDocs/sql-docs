@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "XML [SQL Server], generating instances"
   - "white space [XML in SQL Server]"
 ms.assetid: dbd6c06f-db6e-44a7-855a-6a55bf374907
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Create Instances of XML Data
   This topic describes how to generate XML instances.  

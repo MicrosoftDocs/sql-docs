@@ -1,8 +1,9 @@
 ---
-title: "Line Charts (Report Builder and SSRS) | Microsoft Docs"
+title: "Line Charts (Report Builder) | Microsoft Docs"
+description: Use line charts to represent large amounts of data that occur over a period of time in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

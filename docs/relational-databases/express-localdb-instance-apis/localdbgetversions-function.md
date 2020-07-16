@@ -15,10 +15,9 @@ apitype: "DLLExport"
 ms.assetid: 033a9c6b-0d7f-4f8a-ab60-33cd6fee0d33
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # LocalDBGetVersions Function
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Returns all SQL Server Express LocalDB versions available on the computer.  
   
  **Header file:** sqlncli.h  

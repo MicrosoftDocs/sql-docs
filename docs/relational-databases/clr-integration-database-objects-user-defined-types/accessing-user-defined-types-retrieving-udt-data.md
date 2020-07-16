@@ -1,5 +1,6 @@
 ---
 title: "Retrieving UDT Data | Microsoft Docs"
+description: This article describes how to access UDTs in a SQL Server database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -21,10 +22,9 @@ helpviewer_keywords:
 ms.assetid: 6a98ac8c-0e69-4c03-83a4-2062cb782049
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Accessing User-Defined Types - Retrieving UDT Data
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In order to create a user-defined type (UDT) on the client, the assembly that was registered as a UDT in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database must be available to the client application. The UDT assembly can be placed in the same directory with the application, or in the Global Assembly Cache (GAC). You can also set a reference to the assembly in your project.  
   
 ## Requirements for Using UDTs in ADO.NET  
@@ -396,7 +396,11 @@ Module Module1
       cmd.CommandText = "INSERT INTO dbo.Points (Pnt) VALUES (@Point)"  
       cmd.CommandType = CommandType.Text  
   
-      Dim param As New SqlParameter("@Point", SqlDbType.Udt)      param.UdtTypeName = "TestPoint.dbo.Point"      param.Direction = ParameterDirection.Input      param.Value = New Point(5, 6)      cmd.Parameters.Add(param)  
+      Dim param As New SqlParameter("@Point", SqlDbType.Udt)      
+      param.UdtTypeName = "TestPoint.dbo.Point"      
+      param.Direction = ParameterDirection.Input      
+      param.Value = New Point(5, 6)      
+      cmd.Parameters.Add(param)  
   
       cnn.Open()  
       cmd.ExecuteNonQuery()  

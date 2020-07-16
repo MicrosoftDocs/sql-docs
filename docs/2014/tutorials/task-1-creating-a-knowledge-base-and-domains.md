@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Task 1: Creating a Knowledge Base and Domains
   In this task, you create the **Suppliers** knowledge base and create domains that is used for cleansing data and matching data to remove duplicates.  

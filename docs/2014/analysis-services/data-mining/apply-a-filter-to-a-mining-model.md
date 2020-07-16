@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "model filter [data mining]"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 4d0abeb5-e939-46d3-9097-6e0358244300
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Apply a Filter to a Mining Model
   If your mining structure contains a nested table, you can apply a filter to the case table, the nested table, or both.  

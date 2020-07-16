@@ -1,5 +1,6 @@
 ---
 title: "Example: Specifying the HIDE Directive | Microsoft Docs"
+description: View an example of using the HIDE directive in an SQL query.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -10,12 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "HIDE directive"
 ms.assetid: 87504d87-1cbd-412a-9041-47884b6efcec
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Example: Specifying the HIDE Directive
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This example illustrates the use of the **HIDE** directive. This directive is useful when you want the query to return an attribute for ordering the rows in the universal table that is returned by the query, but you do not want that attribute in the final resulting XML document.  
   
  This query constructs this XML:  
@@ -70,7 +70,7 @@ go
   <Summary>  
     <SummaryDescription>  
       <pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription" xmlns="">  
-        <p1:p xmlns:p1="https://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain. </p1:p>  
+        <p1:p xmlns:p1="http://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike. Performance-enhancing options include the innovative HL Frame, super-smooth front suspension, and traction for all terrain. </p1:p>  
       </pd:Summary>  
     </SummaryDescription>  
   </Summary>  

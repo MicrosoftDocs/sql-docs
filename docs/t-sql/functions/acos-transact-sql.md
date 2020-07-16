@@ -17,13 +17,12 @@ helpviewer_keywords:
   - "ACOS function"
   - "arccosine"
 ms.assetid: 4ec6b46e-9438-4f0f-8b96-461edd84280a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ACOS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A function that returns the angle, in radians, whose cosine is the specified float expression. This is also called arccosine.
   
@@ -31,7 +30,7 @@ A function that returns the angle, in radians, whose cosine is the specified flo
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ACOS ( float_expression )  
 ```  
   

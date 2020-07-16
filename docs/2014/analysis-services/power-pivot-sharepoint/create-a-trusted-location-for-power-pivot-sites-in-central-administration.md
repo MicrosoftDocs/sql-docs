@@ -1,16 +1,14 @@
 ---
 title: "Create a trusted location for PowerPivot sites in Central Administration | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/28/2017"
+ms.date: "11/25/2019"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: a666f365-cd93-43a3-9d3d-e429dfc19b66
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create a trusted location for PowerPivot sites in Central Administration
   Excel Services lets you specify which locations are valid repositories for workbooks that you open on a SharePoint server. These locations are called 'trusted locations', and you can use different configuration settings for each trusted location you create. For a deployment of PowerPivot for SharePoint, you might consider creating a trusted location for sites that contain PowerPivot workbooks so that you can apply the settings that work best for PowerPivot data access, while preserving default settings for the rest of the farm.  
@@ -57,7 +55,7 @@ manager: craigg
 11. Click **OK**.  
   
 ## See Also  
- [PowerPivot Gallery](../../2014-toc/books-online-for-sql-server-2014.md)   
+ [PowerPivot Gallery](../../2014-toc/index.yml)  
  [Create and Customize PowerPivot Gallery](create-and-customize-power-pivot-gallery.md)   
  [Use PowerPivot Gallery](use-power-pivot-gallery.md)  
   

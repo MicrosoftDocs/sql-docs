@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetData function [ODBC], Cursor Library"
 ms.assetid: ff40c9c0-b847-4426-a099-1bff47e6e872
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetData (Cursor Library)
 > [!IMPORTANT]  

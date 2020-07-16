@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: e1ffb6d7-fbc5-4695-b538-cc2302d1a17d
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Task 2: Testing and Publishing the Matching Policy
   In this task, you test and publish the **Remove Duplicate Suppliers** matching policy.  

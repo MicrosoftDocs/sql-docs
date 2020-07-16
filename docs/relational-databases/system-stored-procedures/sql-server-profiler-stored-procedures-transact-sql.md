@@ -16,12 +16,11 @@ helpviewer_keywords:
   - "monitoring performance [SQL Server], stored procedures"
   - "performance [SQL Server], stored procedures"
 ms.assetid: 8c99c3db-0b04-46c3-aa59-d6f680522fdd
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # SQL Server Profiler Stored Procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used by [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to monitor performance and activity.  
   

@@ -1,6 +1,6 @@
 ---
-title: "Navigate Code and Text | Microsoft Docs"
-ms.custom: ""
+title: "Navigate Code and Text"
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
@@ -18,13 +18,12 @@ helpviewer_keywords:
   - "navigating code"
   - "Go To command"
 ms.assetid: f63247ff-9751-4e99-8ee3-0772ad4009d0
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Navigate Code and Text
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   You can move through text by using:  
   
 -   Bookmarks.  
@@ -36,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -   The **Go To** command.  
   
 > [!NOTE]  
->  For a complete list of keyboard shortcut keys, see [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+>  For a complete list of keyboard shortcut keys, see [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## Navigating with Bookmarks  
  To edit a document elsewhere and then return to your original location, add a bookmark. You set bookmarks and move to them using keyboard shortcuts. View the bookmarks in the bookmark window.  

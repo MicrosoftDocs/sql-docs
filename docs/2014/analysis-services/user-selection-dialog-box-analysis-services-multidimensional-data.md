@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.userselectiondialog.f1"
 ms.assetid: f7261d5e-ff2a-4597-a188-1946f343a32a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # User Selection Dialog Box (Analysis Services - Multidimensional Data)
   Use the **User Selection** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to select users on which to filter queries stored in the query log for the Usage-Based Optimization Wizard.  

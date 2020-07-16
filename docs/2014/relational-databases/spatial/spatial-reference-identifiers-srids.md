@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "geodetic spatial data [SQL Server], identifiers"
   - "SRID"
 ms.assetid: 0612658a-7d1b-4178-bdc2-42b914ea31a7
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 ---
 # Spatial Reference Identifiers (SRIDs)
   Each spatial instance has a spatial reference identifier (SRID). The SRID corresponds to a spatial reference system based on the specific ellipsoid used for either flat-earth mapping or round-earth mapping.  

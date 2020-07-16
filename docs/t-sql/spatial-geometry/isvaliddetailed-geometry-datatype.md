@@ -12,12 +12,11 @@ dev_langs:
 helpviewer_keywords: 
   - "IsValidDetailed geometry"
 ms.assetid: 5a31e88a-ad7b-4ef7-b773-e2571f1cb3aa
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # IsValidDetailed (geometry DataType)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a message that can help to identify problems with a spatial object that is not valid. When the object is not valid, only the first error is returned. When the object is valid, a value of 24400 is returned.
   

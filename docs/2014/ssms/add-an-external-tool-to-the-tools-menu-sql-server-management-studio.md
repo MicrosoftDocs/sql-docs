@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Add an External Tool to the Tools Menu (SQL Server Management Studio)
   You can launch any [!INCLUDE[msCoName](../includes/msconame-md.md)] Windows or [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../includes/dnprdnshort-md.md)] application from [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)]. External applications can be added to, and run from, the **Tools** menu.  

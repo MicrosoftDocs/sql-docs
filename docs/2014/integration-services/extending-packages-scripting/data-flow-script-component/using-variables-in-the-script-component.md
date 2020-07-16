@@ -9,9 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "Script component [Integration Services], using variables"
 ms.assetid: 92d1881a-1ef1-43ae-b1ca-48d0536bdbc2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Using Variables in the Script Component
   Variables store values that a package and its containers, tasks, and event handlers can use at run time. For more information, see [Integration Services &#40;SSIS&#41; Variables](../../integration-services-ssis-variables.md).  

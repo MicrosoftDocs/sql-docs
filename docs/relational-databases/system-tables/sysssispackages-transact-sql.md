@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysssispackages system table"
 ms.assetid: 66155dcd-dcdb-4e33-a242-1625828ad8d2
-author: "douglasl"
-ms.author: "douglasl"
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # sysssispackages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each package that is saved to [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This table is stored in the **msdb** database.  
   

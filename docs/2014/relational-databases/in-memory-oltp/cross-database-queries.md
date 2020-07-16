@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: a0305f5b-91bd-4d18-a2fc-ec235b062fd3
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Cross-Database Queries
   In [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], memory-optimized tables do not support cross-database transactions. You cannot access another database from the same transaction or the same query that also accesses a memory-optimized table. You cannot easily copy data from a table in one database, to a memory-optimized table in another database.  
@@ -18,7 +17,7 @@ manager: craigg
   
  For example, to copy the row from table t1 in database db1 to table t2 in db2, using variable @v1 of type dbo.tt1, you can use something like:  
   
-```tsql  
+```sql  
 USE db2   
 GO   
 DECLARE @v1 dbo.tt1   

@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 07554612-8cb6-4bd9-adde-956177261ccd
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Uninstallation rules
   The Uninstallation Rules page will run a set of rules to ensure that the Setup operation can complete successfully.  

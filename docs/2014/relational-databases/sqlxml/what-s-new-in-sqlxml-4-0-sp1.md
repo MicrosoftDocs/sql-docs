@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "SQL Server Native Client, SQLXML"
   - "side-by-side installations [SQLXML]"
 ms.assetid: 48f7720b-1705-402d-93ce-097ff1737877
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # What&#39;s New in SQLXML 4.0 SP1
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML 4.0 SP1 includes various updates and enhancements. This topic summarizes the updates and provides links to more detailed information, where available. SQLXML 4.0 SP1 provides additional enhancements to support the new data types introduced in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. This topic includes the following subjects:  

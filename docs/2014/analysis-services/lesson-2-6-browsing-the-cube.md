@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 3819946e-d3fa-4c1d-afe3-599c938b1b2e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Browsing the Cube
   After you deploy a cube, the cube data is viewable on the **Browser** tab in Cube Designer, and the dimension data is viewable on the **Browser** tab in Dimension Designer. Browsing cube and dimension data is way to check your work incrementally. You can verify that small changes to properties, relationships, and other objects have the desired effect once the object is processed. While the Browser tab is used to view both cube and dimension data, the tab provides different capabilities based on the object you are browsing.  

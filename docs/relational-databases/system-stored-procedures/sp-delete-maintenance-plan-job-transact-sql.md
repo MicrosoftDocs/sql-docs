@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_maintenance_plan_job"
 ms.assetid: 1c2148c3-2928-4d9b-b1c8-3512cfbd6a63
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_delete_maintenance_plan_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Disassociates the specified maintenance plan from the specified job.  
   
@@ -40,10 +39,10 @@ sp_delete_maintenance_plan_job [ @plan_id = ] 'plan_id' ,
 ```  
   
 ## Arguments  
- [ **@plan_id =**] **'**_plan\_id_**'**  
+`[ @plan_id = ] 'plan\_id'`
  Specifies the ID of the maintenance plan. *plan_id* is **uniqueidentifier**, and must be a valid ID.  
   
- [ **@job_id =**] **'**_job\_id_**'**  
+`[ @job_id = ] 'job\_id'`
  Specifies the ID of the job with which the maintenance plan is associated. *job_id* is **uniqueidentifier**, and must be a valid ID.  
   
 ## Return Code Values  

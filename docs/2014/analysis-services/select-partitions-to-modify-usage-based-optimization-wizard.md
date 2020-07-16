@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.storagedesignwizard.selectpartitions.f1"
 ms.assetid: 1de6e214-5efa-4efa-9336-edbe2310cfbe
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Partitions to Modify (Usage-Based Optimization Wizard)
   Use the **Select Partitions to Modify** page to select the partitions for which you want to design aggregations.  

@@ -1,9 +1,8 @@
 ---
-title: "delete (XML DML) | Microsoft Docs"
+title: delete (XML DML)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -15,12 +14,11 @@ helpviewer_keywords:
   - "delete statement [XML DML]"
   - "deleting nodes"
 ms.assetid: b22c93a4-b84d-4356-af4c-6013322a4b71
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # delete (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Deletes nodes from an XML instance.  
   
@@ -31,7 +29,9 @@ manager: craigg
 delete Expression  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Expression*  
  Is an XQuery expression identifying the nodes to be deleted. All the nodes selected by the expression, and also all the nodes or values that are contained within the selected nodes, are deleted. As described in [insert (XML DML)](../../t-sql/xml/insert-xml-dml.md), this must be a reference to an existing node in the document. It cannot be a constructed node. The expression cannot be the root (/) node. If the expression returns an empty sequence, no deletion occurs and no errors are returned.  
   

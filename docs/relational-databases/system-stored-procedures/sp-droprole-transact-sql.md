@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_droprole"
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_droprole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes a database role from the current database.  
   
@@ -37,7 +36,7 @@ sp_droprole [ @rolename= ] 'role'
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'**_role_**'**  
+`[ @rolename = ] 'role'`
  Is the name of the database role to remove from the current database. *role* is a **sysname**, with no default. *role* must already exist in the current database.  
   
 ## Return Code Values  

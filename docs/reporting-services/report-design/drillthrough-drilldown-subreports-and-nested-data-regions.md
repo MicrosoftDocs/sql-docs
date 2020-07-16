@@ -1,8 +1,9 @@
 ---
 title: "Drillthrough, Drilldown, Subreports, and Nested Data Regions | Microsoft Docs"
+description: Organize data to show the relationship of the general to the detailed and then display the data in a subreport or a separate drillthrough report.
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

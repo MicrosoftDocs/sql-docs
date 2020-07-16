@@ -4,20 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6bbbcbff-1ecd-456c-947f-c445c8da673c
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Task 1: Creating Suppliers Model using Master Data Manager
   In this task, you create a model named **Suppliers** in MDS using **Master Data Manager**.  
   
-1.  Navigate to [http://localhost/mds](http://localhost/mds) to launch **Master Data Manager**. Replace the URL if you have configured Web Application with a different name or on a different a web site.  
+1.  Navigate to `http://localhost/MDS` to launch **Master Data Manager**. Replace the URL if you have configured Web Application with a different name or on a different a web site.  
   
      ![Master Data Manager - System Administation](../../2014/tutorials/media/et-creatingsuppliersmodelusingmdm-01.jpg "Master Data Manager - System Administation")  
   

@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.ftptask.general.f1"
 helpviewer_keywords: 
   - "File Transfer Protocol Task Editor"
 ms.assetid: 28b46fdd-b04a-4f97-a99f-883f5735a6d9
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # FTP Task Editor (General Page)
   Use the **General** page of the **FTP Task Editor** dialog box to specify the FTP connection manager that connects to the FTP server that the task communicates with. You can also name and describe the FTP task.  

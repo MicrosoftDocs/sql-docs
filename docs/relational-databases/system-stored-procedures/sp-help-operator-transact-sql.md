@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_operator"
 ms.assetid: caedc43d-44b8-415a-897e-92923f6de3b8
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_help_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reports information about the operators defined for the server.  
   
@@ -37,10 +36,10 @@ sp_help_operator
 ```  
   
 ## Arguments  
- [ **@operator_name=** ] **'***operator_name***'**  
+`[ @operator_name = ] 'operator_name'`
  The operator name. *operator_name* is **sysname**. If *operator_name* is not specified, information about all operators is returned.  
   
- [ **@operator_id=** ] *operator_id*  
+`[ @operator_id = ] operator_id`
  The identification number of the operator for which information is requested. *operator_id*is **int**, with a default of NULL.  
   
 > [!NOTE]  

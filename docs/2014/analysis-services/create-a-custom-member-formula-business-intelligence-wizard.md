@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.enablecustommemberformula.selectacolumn.f1"
 ms.assetid: 5b9b2d93-0798-4bac-bbd3-c657e09d9883
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create a Custom Member Formula (Business Intelligence Wizard)
   Use the **Create a Custom Member Formula** page to associate attributes in the specified dimension with custom member formula columns-columns that contain Multidimensional Expressions (MDX) statements that define member values for that attribute.  

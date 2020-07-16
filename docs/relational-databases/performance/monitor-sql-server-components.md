@@ -9,10 +9,9 @@ ms.topic: conceptual
 ms.assetid: e8f1b16b-ea40-4e12-886c-967ebda4e6e4
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Monitor SQL Server Components
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Monitoring is important because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a service in a dynamic environment. The data in the application changes. The type of access that users require changes. The way that users connect changes. The types of applications accessing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may even change, but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically manages system-level resources, such as memory and disk space, to minimize the need for extensive system-level manual tuning. Monitoring lets administrators identify performance trends to determine if changes are necessary.  
   
 To monitor any component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] effectively:  
@@ -125,7 +124,7 @@ The following outlines the process for capturing event data and putting it to us
   
      To be analyzed, the captured event data is loaded into the application that captured the data. 
      
-     For example, a captured Extended Event trace can be be reloaded into [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] for viewing ana analysis. For more information, see [Advanced Viewing of Target Data from Extended Events in SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
+     For example, a captured Extended Event trace can be reloaded into [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] for viewing ana analysis. For more information, see [Advanced Viewing of Target Data from Extended Events in SQL Server](../../relational-databases/extended-events/advanced-viewing-of-target-data-from-extended-events-in-sql-server.md).
 
      SQL Trace data can be reloaded into [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for viewing and analysis. For more information, see [View and Analyze Traces with SQL Server Profiler](../../tools/sql-server-profiler/view-and-analyze-traces-with-sql-server-profiler.md).  
   

@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STMGeomCollFromWKB method"
 ms.assetid: bbed028c-9cd6-4236-b5e5-8e914a21f2e4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STGeomCollFromWKB (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **GeometryCollection**instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   

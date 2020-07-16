@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.oledbsourceadapter.columns.f1"
 helpviewer_keywords: 
   - "OLE DB Source Editor"
 ms.assetid: bfbb0ae1-7759-4d45-8865-31df36ae5b34
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # OLE DB Source Editor (Columns Page)
   Use the **Columns** page of the **OLE DB Source Editor** dialog box to map an output column to each external (source) column.  

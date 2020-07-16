@@ -18,12 +18,11 @@ helpviewer_keywords:
   - "sys.server_event_session_fields catalog view"
   - "xe"
 ms.assetid: 7109f9fb-8a1f-432c-92d1-6f8af3e96af1
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.server_event_session_fields (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each customizable column that was explicitly set on events and targets.  
   

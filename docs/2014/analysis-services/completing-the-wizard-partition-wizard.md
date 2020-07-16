@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.partitionwizard.finish.f1"
 ms.assetid: 68a4dd5d-94d9-4a02-be31-949a6da0ef51
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Completing the Wizard (Partition Wizard)
   Use the **Completing the Wizard** page to name the partition, define the aggregation design for your partition, and optionally deploy and process the partition after completing the Partition Wizard.  

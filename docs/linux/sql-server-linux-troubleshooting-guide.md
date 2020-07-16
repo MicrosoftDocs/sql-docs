@@ -1,19 +1,17 @@
 ---
-title: Troubleshoot SQL Server on Linux | Microsoft Docs
+title: Troubleshoot SQL Server on Linux
 description: Provides troubleshooting tips for using SQL Server on Linux.
-author: rothja 
-ms.author: jroth 
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 05/01/2018
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux"
 ms.technology: linux
 ms.assetid: 99636ee8-2ba6-4316-88e0-121988eebcf9S
 ---
 # Troubleshoot SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This document describes how to troubleshoot Microsoft SQL Server running on Linux or in a Docker container. When troubleshooting SQL Server on Linux, remember to review the supported features and known limitations in the [SQL Server on Linux Release Notes](sql-server-linux-release-notes.md).
 
@@ -21,7 +19,9 @@ This document describes how to troubleshoot Microsoft SQL Server running on Linu
 > For answers to frequently asked questions, see the [SQL Server on Linux FAQ](sql-server-linux-faq.md).
 
 ## <a id="connection"></a> Troubleshoot connection failures
-If you are having difficulty connecting to your Linux SQL Server, there are a few things to check. 
+If you are having difficulty connecting to your Linux SQL Server, there are a few things to check.
+
+- If you are unable to connect locally using **localhost**, try using the IP address 127.0.0.1 instead. It is possible that **localhost** is not properly mapped to this address.
 
 - Verify that the server name or IP address is reachable from your client machine.
 
@@ -50,7 +50,7 @@ If you are having difficulty connecting to your Linux SQL Server, there are a fe
 
 ## Manage the SQL Server service
 
-The following sections show how to start, stop, restart, and check the status of the SQL Server service. 
+The following sections show how to start, stop, restart, and check the status of the SQL Server service.
 
 ### Manage the mssql-server service in Red Hat Enterprise Linux (RHEL) and Ubuntu 
 
@@ -188,7 +188,7 @@ As a last resort, you can choose to rebuild the master and model databases back 
 
 ## Improve performance
 
-There are many factors that affect performance, including database design, hardware, and workload demands. If you are looking to improve performance, start by reviewing the best practices in the article, [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md). Then explore some of the avilable tools for troubleshooting performance problems.
+There are many factors that affect performance, including database design, hardware, and workload demands. If you are looking to improve performance, start by reviewing the best practices in the article, [Performance best practices and configuration guidelines for SQL Server on Linux](sql-server-linux-performance-best-practices.md). Then explore some of the available tools for troubleshooting performance problems.
 
 - [Query Store](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
 - [System dynamic management views (DMVs)](../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)

@@ -1,8 +1,9 @@
 ---
-title: "LookupSet Function (Report Builder and SSRS) | Microsoft Docs"
+title: "LookupSet Function (Report Builder) | Microsoft Docs"
+description: Find out about the LookupSet function, which returns the set of matching values for a specified name from a dataset that contains name or value pairs.
 ms.date: 03/07/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

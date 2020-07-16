@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "replication upgrade issues"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 18898388-5158-407b-9774-639af99e8f07
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Replication Upgrade Issues
   The following topics describe the replication issues that might affect your upgrade to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. The topics describe actions that you can take to help reduce the effects of these changes on your environment.  

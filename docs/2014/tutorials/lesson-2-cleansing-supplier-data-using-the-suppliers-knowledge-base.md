@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 215c14de-fc3f-46de-a022-bf69b9ea2a96
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Lesson 2: Cleansing Supplier Data using the Suppliers Knowledge Base
   In this lesson, you cleanse the supplier data in an Excel file by using the **Suppliers** knowledge base you have created in the first lesson. Data cleansing in DQS includes a **computer-assisted process** that analyzes how data conforms to the knowledge in a knowledge base, and an **interactive process** that enables you to review and modify results from the computer-assisted process. The data cleansing feature identifies incorrect data in your data source and then corrects or suggests corrections for the incorrect data. It also standardizes and enriches customer data by using domain values, leading values for synonyms, domain rules, term-based relations, and reference data. You can interactively approve or reject changes proposed by the computer-assisted process. See [Data Cleansing](https://msdn.microsoft.com/library/gg524800.aspx) for more details.  

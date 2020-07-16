@@ -26,7 +26,6 @@ helpviewer_keywords:
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # bcp Utility
   The **bcp** utility bulk copies data between an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and a data file in a user-specified format. The **bcp** utility can be used to import large numbers of new rows into [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] tables or to export data out of tables into data files. Except when used with the **queryout** option, the utility requires no knowledge of [!INCLUDE[tsql](../includes/tsql-md.md)]. To import data into a table, you must either use a format file created for that table or understand the structure of the table and the types of data that are valid for its columns.  
@@ -212,7 +211,7 @@ manager: craigg
  Specifies that empty columns should retain a null value during the operation, rather than have any default values for the columns inserted. For more information, see [Keep Nulls or Use Default Values During Bulk Import &#40;SQL Server&#41;](../relational-databases/import-export/keep-nulls-or-use-default-values-during-bulk-import-sql-server.md).  
   
  **-K** _application_intent_  
- Declares the application workload type when connecting to a server. The only value that is possible is **ReadOnly**. If **-K** is not specified, the bcp utility will not support connectivity to a secondary replica in an AlwaysOn availability group. For more information, see [ Active Secondaries: Readable Secondary Replicas (AlwaysOn Availability Groups)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
+ Declares the application workload type when connecting to a server. The only value that is possible is **ReadOnly**. If **-K** is not specified, the bcp utility will not support connectivity to a secondary replica in an AlwaysOn availability group. For more information, see [Active Secondaries: Readable Secondary Replicas (AlwaysOn Availability Groups)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).  
   
  **-L** _last_row_  
  Specifies the number of the last row to export from a table or import from a data file. This parameter requires a value greater than (>) 0 but less than (\<) or equal to (=) the number of the last row. In the absence of this parameter, the default is the last row of the file.  

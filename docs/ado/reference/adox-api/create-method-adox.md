@@ -14,9 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Create method [ADOX]"
 ms.assetid: 64f5c21c-b581-42d8-bdc7-c4f1bebaf105
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Create Method (ADOX)
 Creates a new catalog.  

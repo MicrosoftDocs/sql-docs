@@ -15,9 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Refresh method [ADO]"
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Refresh Method (ADO)
 Updates the objects in a collection to reflect objects available from, and specific to, the provider.  

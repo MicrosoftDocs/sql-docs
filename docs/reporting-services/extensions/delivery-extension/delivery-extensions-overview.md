@@ -1,5 +1,6 @@
 ---
 title: "Delivery Extensions Overview | Microsoft Docs"
+description: Read an overview of delivery extensions, which you can use to deliver Reporting Services reports in various ways, such as through email or file sharing.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], delivery extensions"
   - "delivery extensions [Reporting Services], about extensions"
 ms.assetid: a30600a9-bbed-4519-9426-3470ff2982e7
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Delivery Extensions Overview
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enables users to create and publish reports that, once created and published, can be delivered to various locations. In addition, [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] includes several delivery extensions and a delivery API that enable developers to create additional delivery extensions to further extend the functionality of delivery in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)].  

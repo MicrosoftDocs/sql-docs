@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "service master key [SQL Server]"
   - "service master key [SQL Server], about service master key"
 ms.assetid: 85f2095d-2590-4f59-8a29-7e100edd02bb
-author: aliceku
-ms.author: aliceku
-manager: craigg
+author: jaszymas
+ms.author: jaszymas
 ---
 # Service Master Key
   The Service Master Key is the root of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] encryption hierarchy. It is generated automatically the first time it is needed to encrypt another key. By default, the Service Master Key is encrypted using the Windows data protection API and using the local machine key. The Service Master Key can only be opened by the Windows service account under which it was created or by a principal with access to both the service account name and its password.  

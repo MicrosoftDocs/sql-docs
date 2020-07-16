@@ -1,6 +1,6 @@
 ---
-title: "SetDefaults Method (ClientSettings Class) | Microsoft Docs"
-ms.custom: ""
+title: "SetDefaults Method (ClientSettings)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 056508f3-a5c8-467c-a196-dc1ef1f5178f
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ClientSettings Class - SetDefaults Method
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Sets all the default values for the instance of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] client with the option to overwrite existing data.  
   
 ## Syntax  

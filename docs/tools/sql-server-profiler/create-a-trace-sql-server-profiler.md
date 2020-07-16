@@ -1,22 +1,24 @@
 ---
-title: "Create a Trace (SQL Server Profiler) | Microsoft Docs"
-ms.custom: ""
-ms.date: "08/01/2016"
+title: Create a Trace
+titleSuffix: SQL Server Profiler
+description: Learn how to capture event data in SQL Server Profiler by creating a trace. Read about the various options you can specify for traces.
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: profiler
 ms.topic: conceptual
-helpviewer_keywords: 
-  - "traces [SQL Server], creating"
 ms.assetid: 0302fa6d-d2b5-43fe-ad70-7a337575b112
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.custom: seo-lt-2019
+ms.date: 08/01/2016
 ---
+
 # Create a Trace (SQL Server Profiler)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  This topic describes how to use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to create a trace.  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+This topic describes how to use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to create a trace.  
   
 ### To create a trace  
   

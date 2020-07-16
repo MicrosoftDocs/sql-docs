@@ -4,16 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Windows authentication [Reporting Services]"
   - "Reporting Services, configuration"
 ms.assetid: 4de9c3dd-0ee7-49b3-88bb-209465ca9d86
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Configure Windows Authentication on the Report Server
   By default, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] accepts requests that specify Negotiate or NTLM authentication. If your deployment includes client applications and browsers that use these security providers, you can use the default values without additional configuration. If you want to use a different security provider for Windows integrated security (for example, if you want to use Kerberos directly), or if you modified the default values and want to restore the original settings, you can use the information in this topic to specify authentication settings on the report server.  
@@ -155,14 +154,8 @@ manager: craigg
     <RSWindowsExtendedProtectionScenario>Any</RSWindowsExtendedProtectionScenario>  
     ```  
   
--   Restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service and look for entries similar to the following in the trace log file:  
-  
-    ```  
-    rshost!rshost!e44!01/14/2010-14:43:51:: i INFO: Registered valid SPNs list for endpoint 2: rshost!rshost!e44!01/14/2010-14:43:52:: i INFO: SPN Whitelist Added <Explicit> - <HTTP/sqlpod064-13.w2k3.net>.  
-    ```  
-  
--   The values under \<Explicit> will contain the SPNs configured in Active Directory for the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service account.  
-  
+-   Restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service.
+
  If you do not want continue using Extended Protection, then set the configuration values back to defaults and restart the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service account.  
   
 ```  

@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STNumGeometries method"
 ms.assetid: 6ae7fac2-62f1-420f-9fc9-a09606be9605
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STNumGeometries (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the number of **geometries** that make up a **geography** instance.  
   

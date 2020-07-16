@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "OLAP objects [Analysis Services], processing"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c7e1f66f-16ca-43da-b8c7-4d3e1fa8b58d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Processing Analysis Services Objects
   Processing affects the following [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] object types: [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] databases, cubes, dimensions, measure groups, partitions, and data mining structures and models. For each object, you can specify the level of processing for the object, or you can specify the Process Default option to enable [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] to automatically select the optimal level of processing. For more information about the different levels of processing for each object, see [Processing Options and Settings &#40;Analysis Services&#41;](processing-options-and-settings-analysis-services.md).  

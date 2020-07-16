@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.fulltextsearch.ftcatalogproperties.general.f1"
 ms.assetid: d1f66762-2d40-4f24-b635-a417d22ee79a
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Full-Text Catalog Properties (General Page)
   This section shows the options and functions available on the **General** page of the **Full-Text Catalog Properties** dialog box.  
@@ -64,7 +63,7 @@ manager: craigg
   
 -   **Yes**  
   
--   For information about diacritical marks, see [Diacritical Mark](https://go.microsoft.com/fwlink/?LinkId=154091) in the MSN Encarta Encyclopedia.  
+-   For information about diacritical marks, see [Diacritic](https://www.merriam-webster.com/dictionary/diacritic) in the Merriam-Webster dictionary.  
   
  **Last Population Date**  
  Displays the date the catalog was last populated.  

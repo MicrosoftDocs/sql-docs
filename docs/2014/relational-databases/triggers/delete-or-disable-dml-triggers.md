@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 0f97f953-33c5-4b26-afeb-db2a26ce38b4
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Delete or Disable DML Triggers
   This topic describes how to delete or disable a DML trigger in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -84,7 +83,7 @@ manager: craigg
   
 3.  Copy and paste the following examples into the query window. Execute the [CREATE TRIGGER](/sql/t-sql/statements/create-trigger-transact-sql) statement to create the `Sales.bonus_reminder` trigger. To delete the trigger, execute the [DROP TRIGGER](/sql/t-sql/statements/drop-trigger-transact-sql) statement.  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -100,7 +99,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Delete the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -118,7 +117,7 @@ GO
   
 3.  Copy and paste the following examples into the query window. Execute the [CREATE TRIGGER](/sql/t-sql/statements/create-trigger-transact-sql) statement to create the `Sales.bonus_reminder` trigger. To disable and enable the trigger, execute the [DISABLE TRIGGER](/sql/t-sql/statements/disable-trigger-transact-sql) and [ENABLE TRIGGER](/sql/t-sql/statements/enable-trigger-transact-sql) statements, respectively.  
   
-```tsql  
+```sql  
 --Create the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -134,7 +133,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Disable the trigger.  
 USE AdventureWorks2012;  
 GO  
@@ -143,7 +142,7 @@ GO
   
 ```  
   
-```tsql  
+```sql  
 --Enable the trigger.  
 USE AdventureWorks2012;  
 GO  

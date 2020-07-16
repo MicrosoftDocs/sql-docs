@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Business Rule Actions (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], business rule actions are the consequence of business rule condition evaluations. If a condition is true, the action is initiated.  

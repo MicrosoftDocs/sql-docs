@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-
+ms.technology: replication
 ms.topic: "reference"
 helpviewer_keywords: 
   - "developer's guide [SQL Server replication]"
@@ -15,10 +14,10 @@ helpviewer_keywords:
 ms.assetid: 7ee134ae-1cab-4a35-8017-8ac6d8fc64b6
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Replication Developer Documentation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   The ability to programmatically configure, maintain, and monitor a replication topology enables you to both simplify repeated replication tasks and improve the user experience for your replication-based applications. By programming replication, your end-users can be provided with customized replication functionalities without having to be familiar with replication stored procedures and replication agent executables or having to using the replication user interface implemented by [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   

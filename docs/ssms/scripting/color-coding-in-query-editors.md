@@ -1,6 +1,6 @@
 ---
-title: "Color Coding in Query Editors | Microsoft Docs"
-ms.custom: ""
+title: "Color Coding in Query Editors"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -11,13 +11,12 @@ helpviewer_keywords:
   - "Query Editor [SQL Server Management Studio], color coding"
   - "color coding [Query Editor]"
 ms.assetid: 802882dc-c997-4e3f-8a01-994bb43169ae
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Color Coding in Query Editors
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The text entered in the code editors is assigned a category; each category is identified by a color. The colors help you quickly find text in your code. For example, comments stand out in dark green. The following table lists the most common colors. You can view the whole list of colors and their categories, and configure a custom color scheme by using the **Tools**, **Options** menu. For more information about how to change the default colors, see [Change Font Color, Size, and Style](../../relational-databases/scripting/change-font-color-size-and-style.md).  
   
 ## Default Code Colors  

@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 0d2eb34d-78c8-41ff-b92d-49b62c16b2ac
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Lesson 1: Create a New Tabular Model Project
   In this lesson, you will create a new, blank tabular model project in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. Once your new project is created, you can begin adding data by using the Table Import Wizard. In addition to creating a new project, this lesson also includes a brief introduction to the tabular model authoring environment in [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)].  

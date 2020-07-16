@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b456448d-1757-48c8-8bbb-2d1c2d6d61e9
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Always On Client Connectivity (SQL Server)
   This topic describes considerations for client connectivity to AlwaysOn Availability Groups, including prerequisites, restrictions, and recommendations for client configurations and settings.  
@@ -31,8 +30,8 @@ manager: craigg
 |------------|----------------------------|------------------------|------------------------|--------------------------------------------------------------------|-----------------------------------------------------------------------------------|  
 |SQL Native Client 11.0 ODBC|Yes|Yes|Yes|Yes|Yes|  
 |SQL Native Client 11.0 OLEDB|No|Yes|Yes|No|No|  
-|ADO.NET with .NET Framework 4.0 with connectivity patch**<sup>*</sup>**|Yes|Yes|Yes|Yes|Yes|  
-|ADO.NET with .NET Framework 3.5 SP1 with connectivity patch **<sup>**</sup>**|Yes|Yes|Yes|Yes|Yes|  
+|ADO.NET with .NET Framework 4.0 with connectivity patch**<sup>*</sup>** |Yes|Yes|Yes|Yes|Yes|  
+|ADO.NET with .NET Framework 3.5 SP1 with connectivity patch **<sup>**</sup>** |Yes|Yes|Yes|Yes|Yes|  
 |Microsoft JDBC driver 4.0 for SQL Server|Yes|Yes|Yes|Yes|Yes|  
   
  **<sup>*</sup>**  Download the connectivity patch for ADO .NET with .NET Framework 4.0: [https://support.microsoft.com/kb/2600211](https://support.microsoft.com/kb/2600211).  

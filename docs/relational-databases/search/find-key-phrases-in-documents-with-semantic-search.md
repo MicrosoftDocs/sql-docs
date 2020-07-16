@@ -1,21 +1,20 @@
 ---
-title: "Find Key Phrases in Documents with Semantic Search | Microsoft Docs"
-ms.custom: ""
+title: "Find key phrases in documents with semantic search"
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
   - "semantic search [SQL Server], key phrase queries"
 ms.assetid: 6ee3676e-ed5d-43ec-aeca-1eed78967111
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
+ms.custom: "seo-lt-2019"
 ---
 # Find Key Phrases in Documents with Semantic Search
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes how to find the key phrases in documents or text columns that are configured for statistical semantic indexing.  
 
 ##  <a name="howtofind"></a> Find the key phrases in documents with SEMANTICKEYPHRASETABLE  

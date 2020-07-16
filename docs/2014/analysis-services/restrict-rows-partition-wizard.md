@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.partitionwizard.typefilterexpression.f1"
 ms.assetid: eec8da8f-eab4-4ac4-a81d-995c814f88ca
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Restrict Rows (Partition Wizard)
   Use the **Restrict Rows** page to restrict the rows that will be retrieved from the specified table and will be aggregated and included in the partition.  

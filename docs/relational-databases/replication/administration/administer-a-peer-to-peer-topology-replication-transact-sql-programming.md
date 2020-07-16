@@ -1,6 +1,7 @@
 ---
-title: "Administer a Peer-to-Peer Topology (Replication Transact-SQL Programming) | Microsoft Docs"
-ms.custom: ""
+title: "Administer a Peer-to-Peer topology (Replication SP)"
+description: Learn how to use replication stored procedures to administer a peer-to-peer topology, such as to add an article, or make a schema change. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: 4d0fa941-f9ea-4a14-aed9-34df593fc6f2
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Administer a Peer-to-Peer Topology (Replication Transact-SQL Programming)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Administering a peer-to-peer topology is similar to administering a typical transactional replication topology, but there are a number of areas with special considerations. The principal difference in administering a peer-to-peer topology is that some changes require the system to be *quiesced*. Quiescing a system involves stopping activity on published tables at all nodes and ensuring that each node has received all changes from all other nodes. For more information, see [Quiesce a Replication Topology &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/administration/quiesce-a-replication-topology-replication-transact-sql-programming.md).  
   
 > [!NOTE]  
@@ -39,7 +39,7 @@ manager: craigg
     >  After [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) is executed, replication automatically adds the article to the subscriptions in the topology.  
   
 6.  Restart the Distribution Agents at each node in the topology.  
-  
+
 ### To make schema changes to a publication database  
   
 1.  Quiesce the system.  

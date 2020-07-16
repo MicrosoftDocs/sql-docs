@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 1de2b888-78a6-4fb2-a647-ba4bf097caf3
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Restore a Transaction Log Backup (SQL Server)
   This topic describes how to restore a transaction log backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -231,14 +230,14 @@ manager: craigg
 ###  <a name="TsqlExample"></a> Examples (Transact-SQL)  
  By default, the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database uses the simple recovery model. The following examples require modifying the database to use the full recovery model, as follows:  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012 SET RECOVERY FULL;  
 ```  
   
 #### A. Applying a single transaction log backup  
  The following example starts by restoring the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database by using a full database backup that resides on a backup device named `AdventureWorks2012_1`. The example then applies the first transaction log backup that resides on a backup device named `AdventureWorks2012_log`. Finally, the example recovers the database.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  
@@ -256,7 +255,7 @@ GO
 #### B. Applying multiple transaction log backups  
  The following example starts by restoring the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database by using a full database backup that resides on a backup device named `AdventureWorks2012_1`. The example then applies, one by one, the first three transaction log backups that reside on a backup device named `AdventureWorks2012_log`. Finally, the example recovers the database.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012  
    FROM AdventureWorks2012_1  
    WITH NORECOVERY;  

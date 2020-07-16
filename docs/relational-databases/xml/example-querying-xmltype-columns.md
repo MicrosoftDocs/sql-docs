@@ -1,5 +1,6 @@
 ---
 title: "Example: Querying XMLType Columns | Microsoft Docs"
+description: View an example of how to query columns of the xml data type.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -10,12 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RAW mode, querying XML example"
 ms.assetid: d9f3710d-7a2e-4abe-9c02-3e3c0df4d620
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Example: Querying XMLType Columns
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The following query includes columns of **xml** type. The query retrieves product model ID, name, and manufacturing steps at the first location from the `Instructions` column of the **xml** type.  
   
 ## Example  
@@ -90,7 +90,7 @@ go
  This is the result:  
   
 ```  
-<MyRoot xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+<MyRoot xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    ...  
   <ProductModelData>  
     <ProductModelID>6</ProductModelID>  

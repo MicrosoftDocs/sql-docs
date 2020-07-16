@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "feature selection, Setup"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 73182088-153b-4634-a060-d14d1fd23b70
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Feature Selection
   Use the check boxes on the **Feature Selection** page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation wizard to select components for your [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  

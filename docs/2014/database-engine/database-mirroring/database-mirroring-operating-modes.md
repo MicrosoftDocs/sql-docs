@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: f8a579c2-55d7-4278-8088-f1da1de5b2e6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Database Mirroring Operating Modes
   This topic describes the synchronous and asynchronous operating modes for database mirroring sessions.  
@@ -187,7 +186,7 @@ manager: craigg
   
 -   SAFETY OFF  
   
-     Turning off transaction safety causes the session to operate asynchronously, in high-performance mode. If the SAFETY property is set to OFF, the WITNESS property should also be set to OFF (the default). For information about the impact of the witness in high-performance mode, see [The State of the Witness](#WitnessState), later in this topic. For more information about running with transaction safety turned off, see [Asynchronous Database Mirroring (High-Performance Mode)](#Async), earlier in this topic.  
+     Turning off transaction safety causes the session to operate asynchronously, in high-performance mode. If the SAFETY property is set to OFF, the WITNESS property should also be set to OFF (the default). For information about the impact of the witness in high-performance mode, see [The State of the Witness](#WitnessState), later in this topic. For more information about running with transaction safety turned off, see [Asynchronous Database Mirroring (High-Performance Mode)](#VisualElement), earlier in this topic.  
   
  The transaction safety setting of the database is recorded on each partner in the **sys.database_mirroring** catalog view in the **mirroring_safety_level** and **mirroring_safety_level_desc** columns. For more information, see [sys.database_mirroring &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-database-mirroring-transact-sql).  
   
@@ -260,5 +259,3 @@ SELECT mirroring_safety_level_desc, mirroring_witness_name, mirroring_witness_st
 ## See Also  
  [Monitoring Database Mirroring &#40;SQL Server&#41;](monitoring-database-mirroring-sql-server.md)   
  [Database Mirroring Witness](database-mirroring-witness.md)  
-  
-  

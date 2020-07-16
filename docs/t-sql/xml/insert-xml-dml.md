@@ -1,9 +1,8 @@
 ---
-title: "insert (XML DML) | Microsoft Docs"
+title: insert (XML DML)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -15,18 +14,17 @@ helpviewer_keywords:
   - "insert keyword [XML DML]"
   - "insert XML DML statement"
 ms.assetid: 0c95c2b3-5cc2-4c38-9e25-86493096c442
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # insert (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Inserts one or more nodes identified by *Expression1* as child nodes or siblings of the node identified by *Expression2*.  
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 insert   
       Expression1 (  
@@ -35,7 +33,9 @@ insert
                 )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Expression1*  
  Identifies one or more nodes to insert. This can be a constant XML instance; a reference to a typed XML data type instance of the same XML Schema collection on which the modify method is being applied; an untyped XML data type instance using a stand-alone **sql:column()**/**sql:variable()** function; or an XQuery expression. The expression can result in a node, and also a text node, or in an ordered sequence of nodes. It cannot resolve to the root (/) node. If the expression results in a value or a sequence of values, the values are inserted as a single text node with a space separating each value in the sequence. If you specify multiple nodes as constant, the nodes are included in parentheses and are separated by commas. You cannot insert heterogeneous sequences such as a sequence of elements, attributes, or values. If *Expression1* resolves to an empty sequence, no insertion occurs and no errors are returned.  
   
@@ -207,7 +207,7 @@ GO
 ```  
   
 ### F. Inserting data using a CDATA section  
- When you insert text that includes characters that are not valid in XML, such as < or >, you can use CDATA sections to insert the data as shown in the following query. The query specifies a CDATA section, but it is added as a text node with any invalid characters converted to entities. For example, '<' is saved as &lt;.  
+ When you insert text that includes characters that are not valid in XML, such as < or >, you can use CDATA sections to insert the data as shown in the following query. The query specifies a CDATA section, but it is added as a text node with any invalid characters converted to entities. For example, `<` is saved as `&lt;`.  
   
 ```  
 USE AdventureWorks;  
@@ -232,7 +232,7 @@ GO
 ```  
 <Root>  
 <ProductDescription ProductID="1" ProductName="Road Bike">  
-<Features> <notxml> as text </notxml> or cdata </Features>  
+<Features> &lt;notxml@gt; as text &lt;/notxml&gt; or cdata </Features>  
 </ProductDescription>  
 </Root>       
 ```  

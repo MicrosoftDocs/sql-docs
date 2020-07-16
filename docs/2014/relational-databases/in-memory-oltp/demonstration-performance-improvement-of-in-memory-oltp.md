@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c6def45d-d2d4-4d24-8068-fab4cd94d8cc
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Demonstration: Performance Improvement of In-Memory OLTP
   This example shows performance improvements when using In-Memory OLTP by comparing differences in response times when running an identical Transact-SQL query against memory-optimized and traditional disk-based tables. Additionally, a natively-compiled stored procedure is also created (based on the same query) and then run to demonstrate that you typically get the best response times when querying a memory-optimized table with a natively-compiled stored procedure. This sample only shows one aspect of performance improvements when accessing data in memory-optimized tables; data access efficiency when performing inserts. This sample is single-threaded and does not take advantage of the concurrency benefits of In-Memory OLTP. A workload that uses concurrency will see a greater performance gain.  
@@ -27,7 +26,7 @@ manager: craigg
   
  To setup the **imoltp** database for our example, first create an empty folder: **c:\imoltp_data**, and then run the following code:  
   
-```tsql  
+```sql  
 USE master  
 GO  
   
@@ -49,7 +48,7 @@ GO
   
  Next, run the following code to create the disk-based table, two (2) memory-optimized tables, and the natively-compiled stored procedure that will be used to demonstrate the different data access methods:  
   
-```tsql  
+```sql  
 USE imoltp  
 GO  
   
@@ -114,7 +113,7 @@ GO
   
  To complete the example run the following code multiple times. Ignore the results from the first run which is negatively affected by initial memory allocation.  
   
-```tsql  
+```sql  
 SET STATISTICS TIME OFF;  
 SET NOCOUNT ON;  
   

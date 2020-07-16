@@ -1,11 +1,10 @@
 ---
-title: "Use the sqlcmd Utility | Microsoft Docs"
-ms.custom: ""
+title: Use the sqlcmd Utility
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 dev_langs: 
   - "TSQL"
@@ -15,9 +14,8 @@ helpviewer_keywords:
   - "statements [SQL Server], executing"
   - "sqlcmd utility, about sqlcmd utility"
 ms.assetid: 3ec89119-7314-43ef-9e91-12e72bb63d62
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Use the sqlcmd Utility
   The `sqlcmd` utility is a command-line utility for ad hoc, interactive execution of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and scripts and for automating [!INCLUDE[tsql](../../includes/tsql-md.md)] scripting tasks. To use `sqlcmd` interactively, or to build script files to be run using `sqlcmd`, users must understand [!INCLUDE[tsql](../../includes/tsql-md.md)]. The `sqlcmd` utility is typically used in the following ways:  
@@ -474,7 +472,7 @@ manager: craigg
   
  `SQLCMD returned 100 to the command shell`  
   
-### G. Using sqlcmd to set encryption on Windows Azure SQL Database  
+### G. Using sqlcmd to set encryption on Azure SQL Database  
  A `sqlcmd`can be executed on a connection to [!INCLUDE[ssSDS](../../includes/sssds-md.md)] data on to specify encryption and certificate trust. Two `sqlcmd```options are available:  
   
 -   The -N switch is used by the client to request an encrypted connection. This option is equivalent to the ADO.net option `ENCRYPT = true`.  

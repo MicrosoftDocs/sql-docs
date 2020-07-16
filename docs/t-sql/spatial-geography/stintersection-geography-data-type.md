@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STIntersection method"
 ms.assetid: 7e09468f-499f-4a38-ba4b-bb30b8821e3b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STIntersection (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns an object that represents the points where a **geography** instance intersects another **geography** instance.  
   

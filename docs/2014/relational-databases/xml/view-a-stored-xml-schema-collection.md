@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "displaying XML schema collections"
   - "viewing XML schema collections"
 ms.assetid: e38031af-22df-4cd9-a14e-e316b822f91b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # View a Stored XML Schema Collection
   After you import an XML schema collection by using [CREATE XML SCHEMA COLLECTION](/sql/t-sql/statements/create-xml-schema-collection-transact-sql), the schema components are stored in the metadata. You can use the [xml_schema_namespace](/sql/t-sql/xml/xml-schema-namespace)intrinsic function to reconstruct the XML schema collection. This function returns an `xml` data type instance.  

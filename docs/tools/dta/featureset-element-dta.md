@@ -1,10 +1,8 @@
 ---
-title: "FeatureSet Element (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+title: "FeatureSet Element (DTA)"
+description: In the dta utility, the FeatureSet element contains the physical design structures Database Engine Tuning Advisor uses during analysis.
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
@@ -12,13 +10,18 @@ dev_langs:
 helpviewer_keywords: 
   - "FeatureSet element"
 ms.assetid: f2070c53-4a5c-4c11-ac38-96ee200c84f0
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # FeatureSet Element (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Contains the physical design structures (indexes or indexed views) that you would like Database Engine Tuning Advisor to use during analysis.  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+Contains the physical design structures (indexes or indexed views) that you would like Database Engine Tuning Advisor to use during analysis.  
   
 ## Syntax  
   

@@ -1,6 +1,6 @@
 ---
-title: "Projects (SQL Server Management Studio) | Microsoft Docs"
-ms.custom: ""
+title: "Projects (SQL Server Management Studio)"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -8,12 +8,11 @@ ms.reviewer: ""
 ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: c13af859-ca66-4e43-b76a-0650ac6566c0
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Projects (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 A [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] project is a collection of logically related scripts and files that can be saved together for database administration and development.  
   
 ## Script Project Overview  

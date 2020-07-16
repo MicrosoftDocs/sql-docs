@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 21e0144a-3cfd-4bc7-87ff-bb7d1800ed2f
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Relationships (SSAS Tabular)
   In tabular models, a relationship is a connection between two tables of data. The relationship establishes how the data in the two tables should be correlated. For example, a Customers table and an Orders table can be related in order to show the customer name that is associated with each order.  

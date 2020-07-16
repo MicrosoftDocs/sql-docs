@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "geometry data type [SQL Server], UDTs"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a167ce3a-50b4-4e77-a884-adb23b586c72
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Remove UDTs named after the reserved GEOMETRY and GEOGRAPHY data types
   Upgrade Advisor detected a user-defined type (UDT) that is named after a term reserved for either the `geometry` or the `geography` data types. The `geometry` and `geography` data types are part of the spatial data feature.  

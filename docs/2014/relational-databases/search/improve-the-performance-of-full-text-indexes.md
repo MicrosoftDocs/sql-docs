@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], performance"
   - "batches [SQL Server], full-text search"
 ms.assetid: ef39ef1f-f0b7-4582-8e9c-31d4bd0ad35d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Improve the Performance of Full-Text Indexes
   Performance for full-text indexing and full-text queries is influenced by hardware resources, such as memory, disk speed, CPU speed, and machine architecture.  

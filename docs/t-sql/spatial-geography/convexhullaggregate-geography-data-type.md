@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "ConvexHullAggregate method (geography)"
 ms.assetid: 21784c66-2725-471b-9e2d-a8c2e3695197
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # ConvexHullAggregate (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a convex hull for a given set of **geography** objects.
   

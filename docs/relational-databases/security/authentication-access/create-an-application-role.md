@@ -1,5 +1,6 @@
 ---
 title: "Create an Application Role | Microsoft Docs"
+description: Create an application role in SQL Server by using SQL Server Management Studio or Transact-SQL to restrict access to a database except through an application.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -14,11 +15,10 @@ helpviewer_keywords:
 ms.assetid: 6b8da1f5-3d8e-4f88-b111-b915788b06f1
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create an Application Role
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   This topic describes how to create an application role in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../../includes/tsql-md.md)]. Application roles restrict user access to a database except through specific applications. Application roles have no users, so the **Role Members** list is not displayed when **Application role** is selected.  
   
 > [!IMPORTANT]  
@@ -64,7 +64,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 8.  Under **Schemas owned by this role**, select or view schemas that will be owned by this role. A schema can be owned by only one schema or role.  
   
 9. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-  
+
 ### Additional Options  
  The **Application Role - New** dialog box also offers options on two additional pages: **Securables** and **Extended Properties**.  
   

@@ -19,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: d4e9a34b-b3a3-434f-8556-768bd20d145a
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_pfieldex (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

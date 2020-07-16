@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "exceptions [data mining]"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: e6fa7c62-4005-4792-9211-3b699377a517
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Outliers (SQL Server Data Mining Add-ins)
   ![Outliers wizard in Data Mining ribbon](media/dmc-outliers.gif "Outliers wizard in Data Mining ribbon")  

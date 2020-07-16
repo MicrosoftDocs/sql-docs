@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "ADO, Visual C++"
   - "Visual C++ [ADO]"
 ms.assetid: 11233b96-e05c-4221-9aed-5f20944b0f1c
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Visual C++ ADO Programming
 The ADO API Reference describes the functionality of the ADO application programming interface (API) using a syntax similar to Microsoft Visual Basic. Though the intended audience is all users, ADO programmers employ diverse languages such as Visual Basic, Visual C++ (with and without the **#import** directive), and Visual J++ (with the ADO/WFC class package).  
@@ -68,6 +67,7 @@ variable = objectPtr->GetProperty;  // get property value
  For example, the **Command** object **ActiveConnection** property is declared with an alternative syntax for **Get**_ActiveConnection_ and **PutRef**_ActiveConnection_. The **PutRef**- syntax is a good choice because in practice, you will typically want to put an open **Connection** object (that is, a **Connection** object pointer) in this property. On the other hand, the **Recordset** object has **Get**-, **Put**-, and **PutRef**_ActiveConnection_ operations, but no alternative syntax.  
   
 ## Collections, the GetItem Method, and the Item Property  
+
  ADO defines several collections, including **Fields**, **Parameters**, **Properties**, and **Errors**. In Visual C++, the **GetItem(_index_)** method returns a member of the collection. *Index* is a **Variant**, the value of which is either a numeric index of the member in the collection, or a string containing the name of the member.  
   
  The **__declspec(property...)** compiler directive declares the **Item** property as an alternative syntax to each collection's fundamental **GetItem()** method. The alternative syntax uses square brackets and looks similar to an array reference. In general, the two forms look like the following:  

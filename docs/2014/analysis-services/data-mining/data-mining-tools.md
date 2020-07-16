@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tools [Analysis Services]"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 003ada6a-0bcd-4f16-8c34-1a9ffc75cd2c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Mining Tools
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides the following tools that you can use to create data mining solutions:  

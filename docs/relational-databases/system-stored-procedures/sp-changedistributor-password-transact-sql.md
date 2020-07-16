@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changedistributor_password"
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_changedistributor_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the password for a Distributor. This stored procedure is executed at the Distributor on any database.  
   
@@ -32,7 +31,7 @@ sp_changedistributor_password [ @password= ] 'password'
 ```  
   
 ## Arguments  
- [ **@password=**] **'**_password_**'**  
+`[ @password = ] 'password'`
  Is the new password. *password* is **sysname**, with no default. If the Distributor is local, the password of the **distributor_admin** system login is changed.  
   
 ## Return Code Values  

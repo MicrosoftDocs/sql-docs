@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Restore a Database to a New Location (SQL Server)
   This topic describes how to restore a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database to a new location, and optionally rename the database, in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You can move a database to a new directory path or create a copy of a database on either the same server instance or a different server instance.  
@@ -187,7 +186,7 @@ manager: craigg
 > [!NOTE]  
 >  The examples of backing up and restoring the transaction log, including point-in-time restores, use the `MyAdvWorks_FullRM` database that is created from [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] just like the following `MyAdvWorks` example. However, the resulting `MyAdvWorks_FullRM` database must be changed to use the full recovery model by using the following [!INCLUDE[tsql](../../includes/tsql-md.md)] statement: ALTER DATABASE <database_name> SET RECOVERY FULL.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- First determine the number and names of the files in the backup.  

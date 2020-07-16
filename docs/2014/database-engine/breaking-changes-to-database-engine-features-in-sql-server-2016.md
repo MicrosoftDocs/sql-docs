@@ -1,7 +1,7 @@
 ---
 title: "Breaking Changes to Database Engine Features in SQL Server 2014 | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/27/2018"
+ms.date: 01/19/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: release-landing
@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 47edefbd-a09b-4087-937a-453cd5c6e061
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Breaking Changes to Database Engine Features in SQL Server 2014
   This topic describes breaking changes in the [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssDE](../includes/ssde-md.md)] and earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. These changes might break applications, scripts, or functionalities that are based on earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. You might encounter these issues when you upgrade. For more information, see [Use Upgrade Advisor to Prepare for Upgrades](../sql-server/install/use-upgrade-advisor-to-prepare-for-upgrades.md).  
@@ -36,7 +35,6 @@ manager: craigg
 |ALTER TABLE|The ALTER TABLE statement allows only two-part (schema.object) table names. Specifying a table name using the following formats now fails at compile time with error 117:<br /><br /> server.database.schema.table<br /><br /> .database.schema.table<br /><br /> ..schema.table<br /><br /> In earlier versions specifying the format server.database.schema.table returned error 4902. Specifying the format .database.schema.table or the format ..schema.table succeeded. To resolve the problem, remove the use of a 4-part prefix.|  
 |Browsing metadata|Querying a view using FOR BROWSE or SET NO_BROWSETABLE ON now returns the metadata of the view, not the metadata of the underlying object. This behavior now matches other methods of browsing metadata.|  
 |SOUNDEX|Under database compatibility level 110, the SOUNDEX function implements new rules that may cause the values computed by the function to be different than the values computed under earlier compatibility levels. After upgrading to compatibility level 110, you may need to rebuild the indexes, heaps, or CHECK constraints that use the SOUNDEX function. For more information, see [SOUNDEX &#40;Transact-SQL&#41;](/sql/t-sql/functions/soundex-transact-sql)
- .|  
 |Row count message for failed DML statements|In [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], the [!INCLUDE[ssDE](../includes/ssde-md.md)] will consistently send the TDS DONE token with RowCount: 0 to clients when a DML statement fails. In earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], an incorrect value of -1 is sent to the client when the DML statement that fails is contained in a TRY-CATCH block and is either autoparameterized by the [!INCLUDE[ssDE](../includes/ssde-md.md)] or the TRY-CATCH block is not on the same level as the failed statement. For example, if a TRY-CATCH block calls a stored procedure and a DML statement in the procedure fails, the client will incorrectly receive a -1 value.<br /><br /> Applications that rely on this incorrect behavior will fail.|  
 |SERVERPROPERTY ('Edition')|Installed product edition of the instance of [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]. Use the value of this property to determine the features and the limits, such as maximum number of CPUs that are supported by the installed product.<br /><br /> Based on the installed Enterprise edition, this can return 'Enterprise Edition' or 'Enterprise Edition: Core-based Licensing'. The Enterprise editions are differentiated based on the maximum compute capacity by a single instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more information on Compute capacity limits in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)], see [Compute Capacity Limits by Edition of SQL Server](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).|  
 |CREATE LOGIN|The `CREATE LOGIN WITH PASSWORD = '`*password*`' HASHED` option cannot be used with hashes created by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 7 or earlier.|  
@@ -260,9 +258,9 @@ manager: craigg
 [!INCLUDE[Archived documentation for very old versions of SQL Server](../includes/paragraph-content/previous-versions-archive-documentation-sql-server.md)]
 
 ## See Also  
- [Deprecated Database Engine Features in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md)   
- [Behavior Changes to Database Engine Features in SQL Server 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md)   
- [Discontinued Database Engine Functionality in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md)   
+ [Deprecated Database Engine Features in SQL Server 2014](deprecated-database-engine-features-in-sql-server-2016.md?view=sql-server-2014)   
+ [Behavior Changes to Database Engine Features in SQL Server 2014](../../2014/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014.md?view=sql-server-2014)   
+ [Discontinued Database Engine Functionality in SQL Server 2014](discontinued-database-engine-functionality-in-sql-server-2016.md?view=sql-server-2014)   
  [SQL Server Database Engine Backward Compatibility](sql-server-database-engine-backward-compatibility.md)   
  [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level)  
  [Breaking Changes to Management Tools Features in SQL Server 2014](breaking-changes-to-management-tools-features-in-sql-server-2014.md?view=sql-server-2014)  

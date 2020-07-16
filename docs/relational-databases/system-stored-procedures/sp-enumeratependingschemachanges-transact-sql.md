@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_enumeratependingschemachanges"
 ms.assetid: df169b21-d10a-41df-b3a1-654cfb58bc21
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_enumeratependingschemachanges (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a list of all pending schema changes. This stored procedure can be used with [sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md), which enables an administrator to skip selected pending schema changes so that they are not replicated. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -33,10 +32,10 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@starting_schemaversion=** ] *starting_schemaversion*  
+`[ @starting_schemaversion = ] starting_schemaversion`
  Is the lowest number schema change to include in the result set.  
   
 ## Result Set  

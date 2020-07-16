@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dsvdesigner.diagramorganizerpane.f1"
@@ -17,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 491fdd22-2326-4f27-a0dd-0a02faae3fd8
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Work with Diagrams in Data Source View Designer (Analysis Services)
   A data source view (DSV) diagram is a visual representation of the objects in a DSV. You can work with the diagram interactively to add, hide, delete or modify specific objects. You can also create multiple diagrams on the same DSV to focus attention on a subset of the objects.  

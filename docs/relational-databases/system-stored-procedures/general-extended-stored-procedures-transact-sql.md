@@ -19,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: 9129f571-d162-42e6-a66b-340fbbf0acd1
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # General Extended Stored Procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that provide an interface from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to external programs for various maintenance activities.  
   

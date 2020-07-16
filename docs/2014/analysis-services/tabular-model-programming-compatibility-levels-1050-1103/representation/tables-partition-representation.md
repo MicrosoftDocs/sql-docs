@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 ms.assetid: b606cd63-755c-4ac0-b19b-95b5363afbdf
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Partition Representation (Tabular)
   For operational purposes, a table can be divided in different subsets of rows that when combined together form the table; each of those subsets is a partition of the table.  

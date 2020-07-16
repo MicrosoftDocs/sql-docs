@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "RDS properties [ADO]"
   - "properties [ADO], RDS"
 ms.assetid: e4e04cbd-21fc-44a1-9f21-49aa68746934
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # RDS Properties
 > [!IMPORTANT]

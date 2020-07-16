@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: "database-engine"
 ms.topic: "reference"
 dev_langs: 
   - "VB"
@@ -15,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d7a3892c-0f1c-4c4d-8480-b58dce3720bc
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Create a Visual Basic SMO Project in Visual Studio .NET
   This section describes how to build a simple SMO console application.  

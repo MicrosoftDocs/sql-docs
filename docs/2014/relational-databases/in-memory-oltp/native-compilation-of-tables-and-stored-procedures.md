@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 5880fbd9-a23e-464a-8b44-09750eeb2dad
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Native Compilation of Tables and Stored Procedures
   In-Memory OLTP introduces the concept of native compilation. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can natively compile stored procedures that access memory-optimized tables. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is also able to natively compile memory-optimized tables. Native compilation allows faster data access and more efficient query execution than interpreted (traditional) [!INCLUDE[tsql](../../includes/tsql-md.md)]. Native compilation of tables and stored procedures produce DLLs.  
@@ -26,7 +25,7 @@ manager: craigg
 ## Maintenance of In-Memory OLTP DLLs  
  The following query shows all table and stored procedure DLLs currently loaded in memory on the server:  
   
-```tsql  
+```sql  
 SELECT name, description FROM sys.dm_os_loaded_modules  
 where description = 'XTP Native DLL'  
 ```  
@@ -44,7 +43,7 @@ where description = 'XTP Native DLL'
   
  Consider the following sample script, which creates a database and a memory-optimized table:  
   
-```tsql  
+```sql  
 use master  
 go  
 create database db1  
@@ -78,7 +77,7 @@ go
   
  Consider the following sample stored procedure, which inserts rows in the table t1 from the previous example:  
   
-```tsql  
+```sql  
 create procedure dbo.native_sp  
 with native_compilation, schemabinding, execute as owner  
 as  

@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS configuration [ADO]"
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Configuring RDS
 > [!IMPORTANT]

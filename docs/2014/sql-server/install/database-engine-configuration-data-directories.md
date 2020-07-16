@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 9b1fa0fc-623b-479a-afc3-4f13bd850487
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Database Engine Configuration - Data Directories
   Use this page to specify the installation location for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssDE](../../includes/ssde-md.md)] program and data files. Based on the type of installation, the supported storage may include local disk, shared storage, or an SMB file server.  
@@ -20,7 +18,7 @@ manager: craigg
 ## Stand-Alone Instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  The following table lists the supported storage types and the default directories for a stand-alone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that are user configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup.  
   
-## UIElement List  
+## UI element list  
   
 |Description|Supported Storage Type|Default directory|Recommendations|  
 |-----------------|----------------------------|-----------------------|---------------------|  

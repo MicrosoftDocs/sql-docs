@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.cdcsource.errorhandling.f1"
 ms.assetid: 8a4c2cb8-fd2f-4c45-824f-b93473a8981e
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # CDC Source Editor (Error Output Page)
   Use the **Error Output** page of the **CDC Source Editor** dialog box to select error handling options.  

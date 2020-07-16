@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLTables function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 69e2a038-5def-423f-91aa-8756e069dd2a
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLTables (Visual FoxPro ODBC Driver)
 > [!NOTE]  

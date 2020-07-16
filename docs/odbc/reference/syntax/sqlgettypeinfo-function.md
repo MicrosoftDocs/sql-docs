@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetTypeInfo function [ODBC]"
 ms.assetid: bdedb044-8924-4ca4-85f3-8b37578e0257
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetTypeInfo Function
 **Conformance**  
@@ -33,7 +32,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetTypeInfo(  
      SQLHSTMT      StatementHandle,  

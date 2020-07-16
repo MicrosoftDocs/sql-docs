@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 652faac0-1cfc-438b-8119-2f4b090a2381
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Manage Roles by using SSMS (SSAS Tabular)
   You can create, edit, and manage roles for a deployed tabular model by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

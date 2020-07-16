@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "memory [Analysis Services]"
@@ -21,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: ef1387a5-5137-4ef4-b731-fec347e5f5ed
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Requirements and Considerations for Analysis Services Deployment
   The performance and availability of a solution depends on many factors, including the capabilities of the underlying hardware, the topology of your server deployment, the characteristics of your solution (for example, having partitions distributed across multiple servers or using ROLAP storage that requires direct access to the relational engine), service level agreements, and the complexity of your data model.  

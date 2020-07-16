@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: edd75f68-dc62-4479-a596-57ce8ad632e5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Installation for SQL Server 2014
- ## [ Download SQL Server 2014 Express ](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
+ ## [Download SQL Server 2014 Express](http://www.hanselman.com/blog/DownloadSQLServerExpress.aspx)
   **Thank you to [Scott Hanselman](http://www.hanselman.com/) for collecting all of the installer package links in one place!**
   
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard provides a single feature tree to install all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components:  
@@ -43,7 +42,7 @@ manager: craigg
  
  **Try it out:**  
   
--   Have an Azure account?  Then go **[Here](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** to spin up a Virtual Machine with SQL Server 2014 Service Pack 1 (SP1) already installed. For more information on SQL Server 2014 (SP1), see [SQL Server 2014 Service Pack 1 release information ](https://support.microsoft.com/en-us/kb/3058865).  
+-   Have an Azure account?  Then go **[Here](https://ms.portal.azure.com/?flight=1#create/Microsoft.SQLServer2016RTMEnterpriseWindowsServer2012R2)** to spin up a Virtual Machine with SQL Server 2014 Service Pack 1 (SP1) already installed. For more information on SQL Server 2014 (SP1), see [SQL Server 2014 Service Pack 1 release information](https://support.microsoft.com/kb/3058865).  
   
 ## In This Section  
  Regardless of whether you use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard or the command prompt to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], Setup involves the following steps:  
@@ -79,11 +78,10 @@ manager: craigg
  [Install SQL Server BI Features with SharePoint &#40;PowerPivot and Reporting Services&#41;](../../sql-server/install/install-sql-server-bi-features-sharepoint-powerpivot-reporting-services.md)  
  This section explains how to install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features in a SharePoint environment. It identifies which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features are available given a specific version and edition of SharePoint. It also includes installation procedures for PowerPivot for SharePoint and Reporting Services in SharePoint mode.  
   
- [Installing SQL Server Samples and Sample Databases](http://sqlserversamples.codeplex.com/)  
+ [Installing SQL Server Samples and Sample Databases](https://sqlserversamples.codeplex.com/)  
  Describes how to install and configure [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] samples and sample databases.  
   
 ## See Also  
  [What's New in SQL Server Installation](../../sql-server/install/what-s-new-in-sql-server-installation.md)   
  [Hardware and Software Requirements for Installing SQL Server 2014](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
-  
   

@@ -1,5 +1,5 @@
 ---
-title: "Filter Operators (Master Data Services) | Microsoft Docs"
+title: Filter Operators
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -8,13 +8,12 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 27914c8b-8951-4b7d-914d-1cbf528dd248
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Filter Operators (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   When filtering a list of members, the following operators are available.  
   

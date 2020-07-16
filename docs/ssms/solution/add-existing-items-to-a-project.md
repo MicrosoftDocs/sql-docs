@@ -1,6 +1,6 @@
 ---
-title: "Add Existing Items to a Project | Microsoft Docs"
-ms.custom: ""
+title: "Add Existing Items to a Project"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -11,12 +11,11 @@ helpviewer_keywords:
   - "projects [SQL Server Management Studio], item additions"
   - "adding project items"
 ms.assetid: 084b3879-e96b-45a7-b421-6a4b0db2b92b
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Add Existing Items to a Project
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Add new items to a project to extend application functionality. An existing item can be a query or a miscellaneous file. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has two project types: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Script Project, and Analysis Services Script Project. The project type determines the query files that you can add to the project. For example, you can add a [!INCLUDE[tsql](../../includes/tsql-md.md)] query (a file with a .sql extension) to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Script project, but you cannot add it to an Analysis Services Script Project. To associate additional file extensions to a project type, see [How to: Associate File Extensions to a Code Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
   
 ### To add an existing query or a miscellaneous file to a project  
@@ -41,7 +40,7 @@ Add new items to a project to extend application functionality. An existing item
     Use this option to filter the files and folders that are displayed. Enter the full or partial file name on which to filter; use an asterisk (`*`) as a wildcard.  
   
     > [!NOTE]  
-    > Navigate to Web and network locations by entering the URL or network path in the **File name** box. For example, **https://mywebsite** displays the files available at the mywebsite Web location, and **\\\myserver\myshare** displays the files available at the myshare location on myserver.  
+    > Navigate to Web and network locations by entering the URL or network path in the **File name** box. For example, **`https://mywebsite`** displays the files available at the mywebsite Web location, and **\\\myserver\myshare** displays the files available at the myshare location on myserver.  
   
     **Files of type**  
     Use this option to filter files based on file extension. Each product lists default filters of the most common file types.  

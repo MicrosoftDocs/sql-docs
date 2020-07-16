@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.dimensionintelligence.adddimensionintelligence.f1"
 ms.assetid: 1089a788-763f-4c3e-80e3-b625e0728343
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Dimension Intelligence (Business Intelligence Wizard)
   Use the **Define Dimension Intelligence** page to map existing dimension attributes to attribute types for the specified dimension type.  

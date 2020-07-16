@@ -14,12 +14,11 @@ helpviewer_keywords:
   - "schemas [SQL Server], permissions"
   - "permissions [SQL Server], schemas"
 ms.assetid: a1fabf35-1f42-48db-b0b8-7181f413ba3a
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # REVOKE Schema Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Revokes permissions on a schema.  
   
@@ -27,7 +26,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     ON SCHEMA :: schema_name   

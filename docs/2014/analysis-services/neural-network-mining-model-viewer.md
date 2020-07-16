@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.neuralnet.f1"
 ms.assetid: 18d87e7b-a821-40ea-9bd8-c6fecf189a1c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Neural Network (Mining Model Viewer)
   Use the **Neural Net** viewer to explore mining models that are based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Neural Network algorithm or the [!INCLUDE[msCoName](../includes/msconame-md.md)] Logistic Regression algorithm.  

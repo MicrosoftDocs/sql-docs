@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Defining and Browsing Perspectives
   A perspective can simplify the view of a cube for specific purposes. By default, users can see all of the elements in a cube to which they have permissions. What users are viewing when they view an entire [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] cube is the default perspective for the cube. A view of the whole cube can be very complex for users to navigate, especially for users who only need to interact with a small part of the cube to satisfy their business intelligence and reporting requirements.  
@@ -186,7 +184,7 @@ manager: craigg
      ![Internet Sales and Reseller Sales measures](../../2014/tutorials/media/l9-perspectives-4.gif "Internet Sales and Reseller Sales measures")  
   
 ## Next Task in Lesson  
- [Defining and Browsing Translations](../analysis-services/lesson-9-2-defining-and-browsing-translations.md)  
+ [Defining and Browsing Translations](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## See Also  
  [Perspectives](multidimensional-models-olap-logical-cube-objects/perspectives.md)   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor [SQL Server], running"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7c83049b-9227-4723-9b7f-66288bc6bd1d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Running Upgrade Advisor (Command Prompt)
   Use the **UpgradeAdvisorWizardCmd** utility to run Upgrade Advisor from the command prompt. You can choose to receive results in XML format or in a file with comma-separated values.  

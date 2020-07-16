@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLParamData function [ODBC]"
 ms.assetid: 68fe010d-9539-4e5b-a260-c8d32423b1db
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLParamData Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLParamData(  
      SQLHSTMT       StatementHandle,  

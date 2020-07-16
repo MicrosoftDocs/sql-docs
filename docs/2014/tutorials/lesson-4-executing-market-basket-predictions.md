@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: b3238f1b-ea04-4253-ade2-838a806b62fe
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Lesson 4: Executing Market Basket Predictions
   In this lesson, you will use the DMX `SELECT` statement to create predictions based on the association models you created in [Lesson 2: Adding Mining Models to the Market Basket Mining Structure](../../2014/tutorials/lesson-2-adding-mining-models-to-the-market-basket-mining-structure.md). A prediction query is created by using the DMX `SELECT` statement and adding a `PREDICTION JOIN` clause. For more information about the syntax of a prediction join, see [SELECT FROM &#60;model&#62; PREDICTION JOIN &#40;DMX&#41;](/sql/dmx/select-from-model-cases-dmx).  

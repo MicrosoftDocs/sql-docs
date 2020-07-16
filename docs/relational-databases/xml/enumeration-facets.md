@@ -1,5 +1,6 @@
 ---
 title: "Enumeration Facets | Microsoft Docs"
+description: Learn how SQL Server uses enumeration facets to validate XML schemas.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -10,12 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "enumeration facets"
 ms.assetid: dec23a79-ddd6-4701-9721-55a2c435a34d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Enumeration Facets
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] rejects XML schemas with types that have pattern facets or enumerations that violate those facets.  
   
 ## Example  
@@ -23,7 +23,7 @@ manager: craigg
   
 ```  
 CREATE XML SCHEMA COLLECTION MySampleCollection AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns" xmlns:ns="https://ns">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns" xmlns:ns="http://ns">  
     <simpleType name="MyST">  
        <restriction base="string">  
           <pattern value="[a-z]*"/>  

@@ -22,9 +22,8 @@ helpviewer_keywords:
   - "version properties [Integration Services]"
   - "SQL Server Integration Services packages, properties"
 ms.assetid: 13f81c3e-2b18-4f83-b445-a2f4a2c560aa
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Set Package Properties
   When you create a package in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by using the graphical interface that [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] provides, you set the properties of the package object in the Properties window.  

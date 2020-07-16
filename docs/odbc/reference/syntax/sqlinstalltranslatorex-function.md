@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLInstallTranslatorEx function [ODBC]"
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLInstallTranslatorEx Function
 **Conformance**  
@@ -32,7 +31,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLInstallTranslatorEx(  
      LPCSTR    lpszTranslator,  

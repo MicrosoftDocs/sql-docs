@@ -1,5 +1,6 @@
 ---
-title: "Web Application Requirements (Master Data Services) | Microsoft Docs"
+title: Web Application Requirements
+description: Find out about the requirements to install and run the Master Data Services web application hosted by Internet Information Services.
 ms.custom: ""
 ms.date: "02/13/2017"
 ms.prod: sql
@@ -10,13 +11,12 @@ ms.topic: conceptual
 keywords: 
   - "master data services"
 ms.assetid: 9455d3cf-c1b7-4d48-8aff-7dc636ed5dc3
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Web Application Requirements (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] is a web application hosted by Internet Information Services (IIS). [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] works only in Internet Explorer (IE) 9 or later. IE 8  and earlier versions, Microsoft Edge and Chrome are not supported.  
 
@@ -63,7 +63,7 @@ Install-WindowsFeature Web-Mgmt-Console, AS-NET-Framework, Web-Asp-Net, Web-Asp-
 Install-WindowsFeature Web-App-Dev, NET-Framework-45-Features -IncludeAllSubFeature -Restart  
 ```  
   
- For more information about PowerShell command, see [Install-WindowsFeature](https://technet.microsoft.com/library/jj205467).  
+ For more information about PowerShell command, see [Install-WindowsFeature](/powershell/module/servermanager/install-windowsfeature).  
   
 ### Accounts and Permissions  
   

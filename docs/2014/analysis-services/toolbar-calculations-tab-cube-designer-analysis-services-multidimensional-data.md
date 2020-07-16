@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 74b1d8b1-6bf4-490a-a181-03cc52348952
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Toolbar (Calculations Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Toolbar** pane to perform common operations on the **Calculations** tab in Cube Designer.  

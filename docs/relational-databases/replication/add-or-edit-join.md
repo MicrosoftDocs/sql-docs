@@ -12,10 +12,9 @@ f1_keywords:
 ms.assetid: 3b546560-720f-48b8-9d63-cf159290e9d4
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Add or Edit Join
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **Add Join** and **Edit Join** dialog boxes allow you to add and edit join filters for merge publications.  
   
 > [!NOTE]  
@@ -48,7 +47,7 @@ manager: craigg
     -   If you are editing an existing join, you must make edits manually.  
   
 3.  **Specify join options**  
-  
+
     -   If the column on which you join in the filtered table is unique, select **Unique key**. The merge process has special performance optimizations available if the column is unique.  
   
         > [!CAUTION]  

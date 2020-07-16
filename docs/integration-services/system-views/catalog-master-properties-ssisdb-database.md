@@ -8,12 +8,12 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 00bfa716-5390-48e3-b30c-d954d5e0be47
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.master_properties (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 Displays the properties of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Master.
 

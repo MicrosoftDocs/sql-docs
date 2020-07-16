@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: "database-engine"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "impersonation [CLR integration]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1495a7af-2248-4cee-afdb-9269fb3a7774
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Impersonation and CLR Integration Security
   When managed code accesses external resources, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not automatically impersonate the current execution context under which the routine is executing. Code in `EXTERNAL_ACCESS` and `UNSAFE` assemblies can explicitly impersonate the current execution context.  

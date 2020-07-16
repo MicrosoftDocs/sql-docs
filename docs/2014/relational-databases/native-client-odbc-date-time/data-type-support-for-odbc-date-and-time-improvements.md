@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "date/time [ODBC], data type support"
   - "ODBC, date/time improvements"
 ms.assetid: 8e0d9ba2-3ec1-4680-86e3-b2590ba8e2e9
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Data Type Support for ODBC Date and Time Improvements
   This topic provides information about ODBC types that support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date and time data types.  
@@ -81,7 +80,7 @@ manager: craigg
   
 -   Minute range is 0 through 59.  
   
--   Seconds range is 0 through 61.9(n). This allows up to two leap seconds to maintain synchronization with sideral time.  
+-   Seconds range is 0 through 61.9(n). This allows up to two leap seconds to maintain synchronization with sidereal time.  
   
      Note that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not allow leap seconds, so second values greater than 59 will cause a server error.  
   

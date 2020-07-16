@@ -20,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: 09fe4a28-ff8a-4655-9da1-4654d5bc514d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.fn_trace_getfilterinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about the filters applied to a specified trace.  
   

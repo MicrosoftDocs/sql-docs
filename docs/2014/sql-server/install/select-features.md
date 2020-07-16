@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 0badc544-c187-40f9-b0cc-14d6ebec345e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Select Features
   Use the Feature Selection page to select [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components and features to update.  

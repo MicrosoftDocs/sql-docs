@@ -21,12 +21,11 @@ helpviewer_keywords:
   - "fragmentation [SQL Server]"
   - "index defragmenting [SQL Server]"
 ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC INDEXDEFRAG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Defragments indexes of the specified table or view.
   
@@ -39,7 +38,7 @@ Defragments indexes of the specified table or view.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC INDEXDEFRAG  
 (  
     { database_name | database_id | 0 }   

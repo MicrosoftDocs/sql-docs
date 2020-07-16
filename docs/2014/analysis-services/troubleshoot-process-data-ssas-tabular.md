@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 678f523c-e181-4456-9a54-7b7bf044b8d2
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Troubleshoot Process Data (SSAS Tabular)
   This topic provides information about processing (refresh) model data when authoring a model by using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]. This topic does not provide information about processing data in models that has been deployed to an Analysis Services server instance. For more information about processing data in a deployed model, see [Script Administrative Tasks in Analysis Services](script-administrative-tasks-in-analysis-services.md).  

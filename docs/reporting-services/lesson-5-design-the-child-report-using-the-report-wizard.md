@@ -7,8 +7,8 @@ ms.technology: reporting-services
 
 ms.topic: conceptual
 ms.assetid: 19a3f927-ea97-4f40-a5f8-cd5f2598e4da
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Lesson 5: Design the Child Report using the Report Wizard
 After you create a data connection and data table for the child report, your next step is to design the child report using the Report Wizard in Report Designer. For more information about Report Designer, see [Design Reports with Report Designer &#40;SSRS&#41;](../reporting-services/tools/design-reporting-services-paginated-reports-with-report-designer-ssrs.md).  

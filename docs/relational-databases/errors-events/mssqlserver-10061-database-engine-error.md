@@ -1,5 +1,6 @@
 ---
 title: "MSSQLSERVER_10061 | Microsoft Docs"
+description: The server did not respond to the client request in SQL Server. See an explanation of the error and possible resolutions.
 ms.custom: ""
 ms.date: "04/04/2017"
 ms.prod: sql
@@ -13,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 729602f3-08df-474c-8740-8dea13c1eee3
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_10061
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|10061|  
 |Event Source|MSSQLSERVER|  

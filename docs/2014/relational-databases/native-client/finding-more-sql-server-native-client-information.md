@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "SQLNCLI, additional resources"
   - "SQL Server Native Client, additional resources"
 ms.assetid: 1bbe4ea4-dda4-47eb-aca1-ddcc3829a6f4
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Finding More SQL Server Native Client Information
   For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client and other types of data access programming, see the following online resources:  
@@ -28,7 +27,7 @@ manager: craigg
   
  The Window DAC SDK includes documentation for ActiveX Data Objects (ADO), OLE DB, and Open Database Connectivity (ODBC).  
   
- Additional information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client can be found by searching the [Microsoft Knowledge Base](https://go.microsoft.com/fwlink?linkid=5757).  
+ Additional information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client can be found by searching the [Microsoft Support](https://support.microsoft.com).  
   
 ## See Also  
  [SQL Server Native Client Programming](sql-server-native-client-programming.md)  

@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.forloopcontainer.f1"
 ms.assetid: c4db9df6-d2f4-44da-9f4d-628893e86956
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # For Loop Editor
   Use the **For Loop** page of the **For Loop Editor** dialog box to configure a loop that repeats a workflow until a specified condition evaluates to false.  

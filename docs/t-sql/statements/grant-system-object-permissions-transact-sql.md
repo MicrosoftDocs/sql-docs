@@ -14,12 +14,11 @@ helpviewer_keywords:
   - "system objects [SQL Server]"
   - "GRANT statement, system objects"
 ms.assetid: 9d4e89f4-478f-419a-8b50-b096771e3880
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # GRANT System Object Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Grants permissions on system objects such as system stored procedures, extended stored procedures, functions, and views.  
   
@@ -27,7 +26,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  

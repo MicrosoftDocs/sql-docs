@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.finish.f1"
 ms.assetid: 6aef1548-35eb-42fd-ae87-63650a79eda1
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Completing the Wizard (Data Mining Wizard)
   Use the **Completing the Wizard** page to review the mining structure that will be created when you finish the wizard. You can also set the name of the mining structure.  

@@ -77,9 +77,9 @@ The following Transact-SQL script creates a master key and a certificate from th
 CREATE MASTER KEY ENCRYPTION BY PASSWORD = '**<Master_Key_Password>**';
 CREATE CERTIFICATE dbm_certificate
     AUTHORIZATION dbm_user
-    FROM FILE = '/var/opt/mssql/data/dbm_certificate.cer'
+    FROM FILE = 'C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.cer'
     WITH PRIVATE KEY (
-    FILE = '/var/opt/mssql/data/dbm_certificate.pvk',
+    FILE = 'c:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\MSSQL\DATA\dbm_certificate.pvk',
     DECRYPTION BY PASSWORD = '**<Private_Key_Password>**'
             );
 ```

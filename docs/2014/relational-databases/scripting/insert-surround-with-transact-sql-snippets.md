@@ -1,20 +1,18 @@
 ---
-title: "Insert Surround-with Transact-SQL snippets | Microsoft Docs"
-ms.custom: ""
+title: Insert Surround-with Transact-SQL snippets
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "snippets [Transact-SQL], surround with"
   - "IntelliSense [SQL Server], surround with snippets"
   - "Transact-SQL snippets, surround with"
 ms.assetid: 5b5a8c6c-968e-4361-a7f5-9e2ac186d927
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Insert Surround-with Transact-SQL snippets
   A surround-with snippet is a template you can use as a starting point when enclosing a set of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a BEGIN, IF, or WHILE block.  

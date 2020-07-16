@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 36f7da07-f008-4b02-922b-4a28ca93018e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # License terms
   Use the License Terms page to accept the license terms for this release.  

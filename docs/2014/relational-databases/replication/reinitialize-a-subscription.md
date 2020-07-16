@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ca3625c5-c62e-4ab7-9829-d511f838e385
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Reinitialize a Subscription
   This topic describes how to reinitialize a subscription in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO). Individual subscriptions can be marked for reinitialization so that a new snapshot is applied during the next synchronization.  

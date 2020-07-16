@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Report Server Web service, accounts"
@@ -13,9 +12,8 @@ helpviewer_keywords:
   - "Report Server Windows service, accounts"
   - "Web service [Reporting Services], report server"
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Configure a Service Account (SSRS Configuration Manager)
   In a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation, the Report Server Web service, Report Manager, and the background processing application run within a single service. The account under which the service runs is defined during Setup when you specify the account in the Service Identity page, but you can use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration tool if you want use a different account or update the password.  

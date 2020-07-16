@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: ecfd783e-7dbb-4a6c-b5ab-c6c27d5dd57f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Connect to the Database Engine Using Extended Protection
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports **Extended Protection** beginning with [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]. **Extended Protection for Authentication** is a feature of the network components implemented by the operating system. **Extended Protection** is supported in Windows 7 and Windows Server 2008 R2. **Extended Protection** is included in service packs for older [!INCLUDE[msCoName](../../includes/msconame-md.md)] operating systems. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is more secure when connections are made using **Extended Protection**.  
@@ -49,7 +48,7 @@ manager: craigg
   
 -   [Integrated Windows Authentication with Extended Protection](https://msdn.microsoft.com/library/dd639324.aspx)  
   
--   [Microsoft Security Advisory (973811), Extended Protection for Authentication](https://www.microsoft.com/technet/security/advisory/973811.mspx)  
+-   [Microsoft Security Advisory (973811), Extended Protection for Authentication](https://support.microsoft.com//help/973811/microsoft-security-advisory-extended-protection-for-authentication)  
   
 ## Settings  
  There are three [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection settings that affect service binding and channel binding. The settings can be configured by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, or by using WMI, and can by viewed by using the **Server Protocol Settings** facet of Policy Based Management.  

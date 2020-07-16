@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "updategrams [SQLXML], passing parameters"
   - "null values [SQLXML]"
 ms.assetid: 2354e6e7-1860-471f-8711-4e374c5a4ed2
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Passing Parameters to Updategrams (SQLXML 4.0)
   Updategrams are templates; therefore, you can pass them parameters. For more information about passing parameters to templates, see [Updategram Security Considerations &#40;SQLXML 4.0&#41;](../security/updategram-security-considerations-sqlxml-4-0.md).  

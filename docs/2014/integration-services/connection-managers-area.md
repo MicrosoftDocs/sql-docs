@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.connectionstray.f1"
 ms.assetid: 0d0c4862-19c0-4513-a5f4-3fe97f635cf6
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Connection Managers Area
   Packages use connection managers to connect to data sources such as files, relational databases, and servers.  

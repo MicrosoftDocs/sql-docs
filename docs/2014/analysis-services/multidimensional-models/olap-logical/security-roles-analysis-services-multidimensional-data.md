@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "storage [Analysis Services], roles"
@@ -21,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 5b7e9cef-ff68-4d8e-99bc-e0094ced1baa
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Security Roles  (Analysis Services - Multidimensional Data)
   Roles are used in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] to manage security for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] objects and data. In basic terms, a role associates the security identifiers (SIDs) of Microsoft Windows users and groups that have specific access rights and permissions defined for objects managed by an instance of [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. Two types of roles are provided in [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]:  

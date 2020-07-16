@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "data quality project,unlock"
   - "data quality project,open"
 ms.assetid: de8a2b04-4673-4beb-b4cf-96a28cdf3a93
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Manage (Open, Unlock, Rename, and Delete) a Data Quality Project
   This topic describes how to manage a data quality project by using [!INCLUDE[ssDQSClient](../includes/ssdqsclient-md.md)] such as open, unlock, rename, and delete a data quality project.  

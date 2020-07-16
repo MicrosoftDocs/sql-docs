@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.datarefreshprogressdb.f1"
 ms.assetid: 0918c04c-c1e6-45b4-acfa-96fa578e684b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Manually Process Data (SSAS Tabular)
   This topic describes how to manually process workspace data in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  

@@ -1,8 +1,0 @@
-- name: Managing CLR Integration Assemblies
-  href: managing-clr-integration-assemblies.md
-- name: Altering an Assembly
-  href: altering-an-assembly.md
-- name: Creating an Assembly
-  href: creating-an-assembly.md
-- name: Dropping an Assembly
-  href: dropping-an-assembly.md

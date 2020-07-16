@@ -8,7 +8,6 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # DefaultMember (MDX)
 
@@ -41,6 +40,6 @@ FROM [Adventure Works]
   
 ## See Also  
  [MDX Function Reference &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [Define a Default Member](../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)  
+ [Define a Default Member](https://docs.microsoft.com/analysis-services/multidimensional-models/attribute-properties-define-a-default-member)  
   
   

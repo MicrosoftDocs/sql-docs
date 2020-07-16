@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "space allocation [SQL Server], index size"
@@ -22,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 2b5137f8-98ad-46b5-9aae-4c980259bf8d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Estimate the Size of a Clustered Index
   You can use the following steps to estimate the amount of space that is required to store data in a clustered index:  

@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.browsedatasourceview.f1"
 ms.assetid: d868600a-423c-4892-bb3b-4e6d67798328
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Browse Data Source View (Data Mining Wizard)
   Use the **Browse Data Source View** dialog box to view the data source view that you selected on the **Select Data Source View** page of the wizard.  

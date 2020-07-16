@@ -1,6 +1,6 @@
 ---
-title: "Custom Reports in Management Studio | Microsoft Docs"
-ms.custom: ""
+title: "Custom Reports in Management Studio"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -12,12 +12,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQL Server Management Studio [SQL Server], custom reports"
 ms.assetid: 1ba3f758-f39b-4f5f-91ca-516cedc78979
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Custom Reports in Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], many Object Explorer nodes display a set of standard reports that are created by [!INCLUDE[msCoName](../../includes/msconame_md.md)]. These reports summarize typically requested server information. Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, administrators can run custom reports that were created in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull_md.md)] from [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].  
   
 ## Implementation  

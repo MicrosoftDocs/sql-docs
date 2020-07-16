@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "SQLXML, xml data type support"
   - "xml data type [SQL Server], SQLXML"
 ms.assetid: 9a6f5ad8-4a8f-4de7-ac17-81d5ccf78459
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # xml Data Type Support in SQLXML 4.0
   Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports XML typed data using the `xml` data type. This topic provides information about how SQLXML 4.0 recognizes instances of the `xml` data type and implements support for them.  

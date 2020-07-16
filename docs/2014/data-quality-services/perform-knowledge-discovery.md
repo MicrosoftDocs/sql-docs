@@ -12,9 +12,8 @@ f1_keywords:
   - "sql12.dqs.kb.kbmap.f1"
   - "sql12.dqs.kb.kbterms.f1"
 ms.assetid: 34a0ea16-02e6-46ed-90bc-dede68687f63
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Perform Knowledge Discovery
   This topic describes how to build a knowledge base through knowledge discovery. In the discovery process, [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) analyzes the data in a sample data source through a computer-assisted process, and adds the knowledge that it gains to the knowledge base. This knowledge can be modified and enhanced in the **Manage Domain Values** step of the knowledge discovery activity, or in the domain management activity.  

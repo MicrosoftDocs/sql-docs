@@ -19,12 +19,11 @@ helpviewer_keywords:
   - "ORIGINAL_LOGIN function"
   - "names [SQL Server], logins"
 ms.assetid: ddfb0991-cde3-4b97-a5b7-ee450133f160
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # ORIGINAL_LOGIN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the name of the login that connected to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can use this function to return the identity of the original login in sessions in which there are many explicit or implicit context switches.  
   

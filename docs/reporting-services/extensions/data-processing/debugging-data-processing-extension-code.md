@@ -1,5 +1,6 @@
 ---
 title: "Debugging Data Processing Extension Code | Microsoft Docs"
+description: Discover how to use Microsoft .NET Framework debugging tools to analyze your data processing extension code and locate errors in it.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "troubleshooting [Reporting Services], data processing extensions"
   - "data processing extensions [Reporting Services], debugging"
 ms.assetid: e963e205-9ae0-446d-97df-028a1d2727d9
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Debugging Data Processing Extension Code
   The [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] provides several debugging tools that can help you analyze your data processing extension code and locate errors in it. The tool that works best will depend on what you are trying to accomplish. This example uses [!INCLUDE[vsOrcas](../../../includes/vsorcas-md.md)].  

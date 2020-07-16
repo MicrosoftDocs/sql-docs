@@ -16,12 +16,11 @@ helpviewer_keywords:
   - "full globe"
   - "STGeomFromText method"
 ms.assetid: 3717987b-77d8-4ccf-a1db-5a8016ac1083
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STGeomFromText (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **geography** instance from an Open Geospatial Consortium (OGC)Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
   

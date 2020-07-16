@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dimensionwizard.dimensionmaintable.f1"
 ms.assetid: 0538b490-5185-49e1-a783-4ce3539a0de5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Source Information (Dimension Wizard)
   Use the **Select the Main Dimension Table** page to select the data source view, main dimension table, key columns, and member name column for the dimension to be created.  

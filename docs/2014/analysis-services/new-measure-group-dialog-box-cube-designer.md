@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.newmeasuregroupdialog.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5f21b865-8030-4371-b16b-430a12fcb997
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # New Measure Group Dialog Box (Cube Designer)
   Use the **New Measure Group** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to add a new measure group to a cube in Cube Designer. You can display the **New Measure Group** dialog box by:  

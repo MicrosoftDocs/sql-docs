@@ -1,7 +1,7 @@
 ---
 title: "GROUP BY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/03/2017"
+ms.date: "03/01/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -31,11 +31,10 @@ helpviewer_keywords:
 ms.assetid: 40075914-6385-4692-b4a5-62fe44ae6cb6
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SELECT - GROUP BY- Transact-SQL
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A SELECT statement clause that divides the query result into groups of rows, usually for the purpose of performing one or more aggregations on each group. The SELECT statement returns one row per group.  
   
@@ -43,7 +42,7 @@ A SELECT statement clause that divides the query result into groups of rows, usu
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database   
 -- ISO-Compliant Syntax  
   
@@ -79,8 +78,19 @@ GROUP BY
 
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Azure SQL Data Warehouse 
+  
+GROUP BY {
+      column-name [ WITH (DISTRIBUTED_AGG) ]  
+    | column-expression
+    | ROLLUP ( <group_by_expression> [ ,...n ] ) 
+} [ ,...n ]
+
+```
+
+```syntaxsql
+-- Syntax for Parallel Data Warehouse  
   
 GROUP BY {
       column-name [ WITH (DISTRIBUTED_AGG) ]  
@@ -88,7 +98,7 @@ GROUP BY {
 } [ ,...n ]
 
 ```  
-  
+    
 ## Arguments 
  
 ### *column-expression*  

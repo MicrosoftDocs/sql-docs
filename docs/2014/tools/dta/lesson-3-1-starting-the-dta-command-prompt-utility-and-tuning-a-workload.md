@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], tutorials"
 ms.assetid: f34a5acf-1f3b-4484-a770-6470cb925ab0
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Starting the dta Command Prompt Utility and Tuning a Workload
   This task guides you through starting the **dta** utility, viewing its Help, and then using it to tune a workload from the command prompt. It uses the workload, MyScript.sql, which you created for the Database Engine Tuning Advisor graphical user interface (GUI) practice [Tuning a Workload](lesson-1-1-tuning-a-workload.md).  

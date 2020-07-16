@@ -18,13 +18,12 @@ helpviewer_keywords:
   - "sys.sp_query_store_flush_db"
   - "sp_query_store_flush_db"
 ms.assetid: 580c03ae-57fc-4562-a6bb-5ec89521e38c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_flush_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Flushes  the in-memory portion of the Query Store data to disk.  
   
@@ -43,7 +42,7 @@ sp_query_store_flush_db [;]
 ## Remarks  
   
 ## Permissions  
- Requires the **EXECUTE** permission on the database, and **DELETE** permission on the query store catalog views.  
+ Requires the **ALTER** permission on the database.
   
 ## Examples  
  The following example flushes the in-memory portion of the Query Store data to disk.  

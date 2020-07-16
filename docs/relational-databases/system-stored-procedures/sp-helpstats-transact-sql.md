@@ -15,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpstats"
 ms.assetid: 00ab3cfd-2736-4fc0-b1b2-16dd49fb2fe5
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helpstats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns statistics information about columns and indexes on the specified table.  
   
@@ -39,10 +38,10 @@ sp_helpstats[ @objname = ] 'object_name'
 ```  
   
 ## Arguments  
- [ **@objname=**] **'***object_name***'**  
+`[ @objname = ] 'object_name'`
  Specifies the table on which to provide statistics information. *object_name* is **nvarchar(520)** and cannot be null. A one- or two-part name can be specified.  
   
- [ **@results=**] **'***value***'**  
+`[ @results = ] 'value'`
  Specifies the extent of information to provide. Valid entries are **ALL** and **STATS**. **ALL** lists statistics for all indexes and also columns that have statistics created on them; **STATS** only lists statistics not associated with an index. *value* is **nvarchar(5)** with a default of STATS.  
   
 ## Return Code Values  

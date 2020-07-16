@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "unattended data refresh [Analysis Services with SharePoint]"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 8571208f-6aae-4058-83c6-9f916f5e2f9b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Schedule a Data Refresh (PowerPivot for SharePoint)
   You can schedule data refresh to get automatic updates to PowerPivot data inside an Excel workbook that you published to a SharePoint site.  

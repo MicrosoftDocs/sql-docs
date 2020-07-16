@@ -17,13 +17,12 @@ helpviewer_keywords:
   - "expressions [SQL Server], statistical standard deviation"
   - "statistical standard deviation"
 ms.assetid: 29f2a906-d084-4464-abc3-4b275ed19442
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # STDEVP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the statistical standard deviation for the population for all values in the specified expression.  
   

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "attributes [Analysis Services], relationships"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 9184d344-e96d-4025-ad6f-3f75129746df
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Attribute Relationships
   In [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], attributes are the fundamental building block of a dimension. A dimension contains a set of attributes that are organized based on attribute relationships.  
@@ -29,7 +27,7 @@ manager: craigg
 -   Results in the selection of more effective aggregates by the aggregation design algorithms, provided that user-defined hierarchies have been defined along the relationship paths.  
   
     > [!NOTE]  
-    >  For more information about the importance and implications of defining and configuring attribute relationships, see the section, "Enhancing query performance," in the [SQL Server 2005 Analysis Services Performance Guide](https://go.microsoft.com/fwlink/?LinkId=81621).  
+    >  For more information about the importance and implications of defining and configuring attribute relationships, see the section, "Enhancing query performance," in the [SQL Server 2005 Analysis Services Performance Guide](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  
   
 ## Attribute Relationship Considerations  
  When the underlying data supports it, you should also define unique attribute relationships between attributes. To define unique attribute relationships, use the **Attribute Relationships** tab of Dimension Designer.  

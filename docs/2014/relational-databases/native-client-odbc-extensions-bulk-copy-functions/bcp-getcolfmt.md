@@ -15,9 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_getcolfmt function"
 ms.assetid: f8bdada5-7b2d-4475-8c98-f93e9d77b130
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # bcp_getcolfmt
   Used to find the column format property value.  

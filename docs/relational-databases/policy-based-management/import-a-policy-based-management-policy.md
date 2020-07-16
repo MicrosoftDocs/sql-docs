@@ -12,10 +12,9 @@ helpviewer_keywords:
 ms.assetid: 850b7ef9-d2b7-4754-bf04-7cb419ffb776
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Import a Policy-Based Management Policy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to import a Policy-Based Management policy instance in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **In This Topic**  
@@ -55,5 +54,4 @@ manager: craigg
 5.  In the **Import** dialog box, type the path and name of the file; or use the Browse (**...**) button to locate the XML file that contains the policy, and then select the file. For more information on the available options in the **Import** dialog box, see [Import Policies Dialog Box](../../relational-databases/policy-based-management/import-policies-dialog-box.md).  
   
 6.  When finished, click **OK**.  
-  
-  
+

@@ -19,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: 2e19205a-25ca-4d4a-916b-d591cf2c892b
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_setcoldata (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

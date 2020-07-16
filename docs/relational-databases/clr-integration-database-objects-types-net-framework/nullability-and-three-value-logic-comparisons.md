@@ -1,5 +1,6 @@
 ---
 title: "Nullability and Three-Value Logic Comparisons | Microsoft Docs"
+description: This article covers how SQL Server data types differ from types in System.Data.SqlTypes in the .NET Framework, which have similar semantics and precision.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 13da4c7f-1010-4b2d-a63c-c69b6bfd96f1
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Nullability and Three-Value Logic Comparisons
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   If you are familiar with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, you will find similar semantics and precision in the **System.Data.SqlTypes** namespace in the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]. There are some differences, however, and this topic covers the most important of these differences.  
   
 ## NULL Values  

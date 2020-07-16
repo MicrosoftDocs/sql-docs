@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "security [Reporting Services], reports"
@@ -14,9 +13,9 @@ helpviewer_keywords:
   - "confidential reports [Reporting Services]"
   - "resources [Reporting Services], security"
 ms.assetid: 63cd55c7-fd2a-49e3-a3f8-59eb1a1c6e83
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Secure Reports and Resources
   You can set security for individual reports and resources to control the degree of access that users have to these items. By default, only users who are members of the **Administrators** built-in group can run reports, view resources, modify properties, and delete the items. All other users must have role assignments created for them that allow access to a report or resource.  

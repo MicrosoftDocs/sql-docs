@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b1b78ded-16c0-4d69-8657-ec57925e68fd
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # DAC Support For SQL Server Objects and Versions
   A data-tier application (DAC) supports the most commonly used [!INCLUDE[ssDE](../../includes/ssde-md.md)] objects.  
@@ -34,7 +33,7 @@ manager: craigg
 |-|-|  
 |DATABASE ROLE|FUNCTION: Inline Table-valued|  
 |FUNCTION: Multistatement Table-valued|FUNCTION: Scalar|  
-|INDEX: Clustered|INDEX: Non-clustered|  
+|INDEX: Clustered|INDEX: Nonclustered|  
 |INDEX: Spacial|INDEX: Unique|  
 |LOGIN|Permissions|  
 |Role Memberships|SCHEMA|  

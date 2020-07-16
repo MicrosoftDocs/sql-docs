@@ -1,7 +1,7 @@
 ---
 title: "Parse (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/22/2017"
+ms.date: "07/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -17,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: b37e28b6-6e2e-470a-945b-ce5252da743a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Parse (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Parse converts the canonical string representation of a **hierarchyid** to a **hierarchyid** value. Parse is called implicitly when a conversion from a string type to **hierarchyid** occurs. Acts as the opposite of [ToString](../../t-sql/data-types/tostring-database-engine.md). Parse() is a static method.
   

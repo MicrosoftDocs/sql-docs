@@ -13,9 +13,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: eadd2c37-d9ec-4b47-a91e-ed90b1eaf4b4
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # supportsGroupByBeyondSelect Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

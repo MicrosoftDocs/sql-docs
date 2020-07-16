@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSpecialColumns function [ODBC]"
 ms.assetid: bb2d9f21-bda0-4e50-a8be-f710db660034
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSpecialColumns Function
 **Conformance**  
@@ -34,7 +33,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLSpecialColumns(  
      SQLHSTMT      StatementHandle,  
@@ -145,9 +144,9 @@ SQLRETURN SQLSpecialColumns(
   
  **SQLSpecialColumns** returns the results as a standard result set, ordered by SCOPE.  
   
- The following columns have been renamed for ODBC 3*.x*. The column name changes do not affect backward compatibility because applications bind by column number.  
+ The following columns have been renamed for ODBC *3.x*. The column name changes do not affect backward compatibility because applications bind by column number.  
   
-|ODBC 2.0 column|ODBC 3*.x* column|  
+|ODBC 2.0 column|ODBC *3.x* column|  
 |---------------------|-----------------------|  
 |PRECISION|COLUMN_SIZE|  
 |LENGTH|BUFFER_LENGTH|  

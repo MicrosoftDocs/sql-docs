@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 6a18f7f0-eb50-485f-a9c7-df31ae0f994e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Change the Membership of a Job Category
   This topic describes how to change the membership of the job category in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects.  
@@ -68,7 +67,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql
     -- adding a new job category to the "NightlyBackups" job  
     USE msdb ;  
     GO  
@@ -84,5 +83,3 @@ manager: craigg
  **To change the membership of a job category**  
   
  Use the `JobCategory` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell.  
-  
-  

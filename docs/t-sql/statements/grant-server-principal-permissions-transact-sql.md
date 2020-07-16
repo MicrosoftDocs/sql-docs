@@ -19,12 +19,11 @@ helpviewer_keywords:
   - "logins [SQL Server], granting access"
   - "granting permissions [SQL Server], impersonation"
 ms.assetid: 4cbed281-5e1e-4d8b-b410-4c18a6cd0205
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # GRANT Server Principal Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Grants permissions on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
@@ -32,7 +31,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 GRANT permission [ ,...n ] }   
     ON   

@@ -4,16 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.ssms.iscatalogprop.general.f1"
   - "sql12.ssis.ssms.iscreatecatalog.f1"
 ms.assetid: 3e2fcf11-e010-41c6-bc26-e4b281c0bfbc
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Catalog Properties Dialog Box
   Use the Catalog Properties dialog box to configure the SSISDB catalog. Catalog properties define how sensitive data is encrypted, how operations and project versioning data is retained, and when validation operations time out. The SSISDB catalog is a central storage and administration point for [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects, packages, parameters, and environments.  

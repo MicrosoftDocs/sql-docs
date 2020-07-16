@@ -1,9 +1,9 @@
 ---
-title: "sys.pdw_column_distribution_properties (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "sys.pdw_column_distribution_properties (Transact-SQL)"
+ms.custom: seo-dt-2019
 ms.date: "03/03/2017"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -11,11 +11,10 @@ dev_langs:
 ms.assetid: 46b74f99-2e22-4dbd-872a-533fce0e239c
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_column_distribution_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Holds distribution information for columns.  
   

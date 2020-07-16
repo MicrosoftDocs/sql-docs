@@ -4,16 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.ssms.isoperations.executions.f1"
   - "sql12.ssis.ssms.isoperations.general.f1"
 ms.assetid: 5bb0fcd6-0ce9-488a-85b8-25dddaa03cda
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Active Operations Dialog Box
   Use the **Active Operations** dialog box to view the status of currently running [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] operations on the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server, such as deployment, validation, and package execution. This data is stored in the SSISDB catalog.  

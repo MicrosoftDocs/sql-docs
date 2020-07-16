@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.partitions.partitiontableselection.f1"
 ms.assetid: 67d05389-81ae-4a6b-947b-986d37ec72b1
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Table Binding Detail (Partition Source Dialog Box) (Analysis Services - Multidimensional Data)
   Use the **Table Binding** option in the **Partition Source** dialog box to specify the fact table that provides the data for the partition. You can display this pane by selecting **Table Binding** from the **Binding type** option in the **Partition Source** dialog box.  

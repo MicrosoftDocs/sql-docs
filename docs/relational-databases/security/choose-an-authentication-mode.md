@@ -1,5 +1,6 @@
 ---
 title: "Choose an Authentication Mode | Microsoft Docs"
+description: Choose between Windows Authentication mode and mixed mode authentication for the SQL Server Database Engine at setup time.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -25,10 +26,9 @@ helpviewer_keywords:
 ms.assetid: ff7a6a48-3d38-4209-aa0f-7d6c0a8c64ef
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Choose an Authentication Mode
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   During setup, you must select an authentication mode for the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. There are two possible modes: Windows Authentication mode and mixed mode. Windows Authentication mode enables Windows Authentication and disables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Mixed mode enables both Windows Authentication and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Windows Authentication is always available and cannot be disabled.  
   
 ## Configuring the Authentication Mode  
@@ -68,12 +68,12 @@ manager: craigg
 2.  In the **Run** dialog box, type **secpol.msc**, and then click **OK**.  
   
 3.  In the **Local Security Settings** application, expand **Security Settings**, expand **Account Policies**, and then click **Password Policy**.  
-  
+
      The password policies are described in the results pane.  
   
 ### Disadvantages of SQL Server Authentication  
   
--   If a user is a Windows domain user who has a login and password for Windows, he must still provide another ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) login and password to connect. Keeping track of multiple names and passwords is difficult for many users. Having to provide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credentials every time that one connects to the database can be annoying.  
+-   If a user is a Windows domain user who has a login and password for Windows, they must still provide another ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) login and password to connect. Keeping track of multiple names and passwords is difficult for many users. Having to provide [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] credentials every time that one connects to the database can be annoying.  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication cannot use Kerberos security protocol.  
   

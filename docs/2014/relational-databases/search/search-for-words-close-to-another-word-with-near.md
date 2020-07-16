@@ -17,9 +17,8 @@ helpviewer_keywords:
   - "full-text queries [SQL Server], proximity"
   - "queries [full-text search], proximity"
 ms.assetid: 87520646-4865-49ae-8790-f766b80a41f3
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Search for Words Close to Another Word with NEAR
   You can use a proximity term (NEAR) in a [CONTAINS](/sql/t-sql/queries/contains-transact-sql) predicate or [CONTAINSTABLE](/sql/relational-databases/system-functions/containstable-transact-sql) function to search for words or phrases near one another. You can also specify the maximum number of non-search terms that separate the first and last search terms. In addition, you can search for words or phrases in any order, or you can search for words and phrases in the order in which you specify them. [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports both the earlier [generic proximity term](#Generic_NEAR), which is now deprecated, and the [custom proximity term](#Custom_NEAR), which is new in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].  

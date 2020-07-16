@@ -21,12 +21,11 @@ helpviewer_keywords:
   - "fragmentation [SQL Server]"
   - "index defragmenting [SQL Server]"
 ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC SHOWCONTIG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Displays fragmentation information for the data and indexes of the specified table or view.
   
@@ -39,7 +38,7 @@ Displays fragmentation information for the data and indexes of the specified tab
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC SHOWCONTIG   
 [ (   
     { table_name | table_id | view_name | view_id }   

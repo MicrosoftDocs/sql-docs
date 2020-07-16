@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: fcc79e96-182a-45e9-8ae2-aeb440e9bedd
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Impersonation (SSAS Tabular)
   This topic provides tabular model authors an understanding of how logon credentials are used by Analysis Services when connecting to a data source to import and process (refresh) data.  

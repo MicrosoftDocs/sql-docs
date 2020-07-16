@@ -17,9 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_gc_cycle_stats dynamic management view"
 ms.assetid: bbc9704e-158e-4d32-b693-f00dce31cd2f
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)

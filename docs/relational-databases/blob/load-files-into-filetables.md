@@ -1,5 +1,6 @@
 ---
 title: "Load Files into FileTables | Microsoft Docs"
+description: Discover how to load and migrate files into FileTables in SQL Server when the files are stored in a variety of ways. Read about bulk loading operations.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,12 +13,11 @@ helpviewer_keywords:
   - "FileTables [SQL Server], bulk loading"
   - "FileTables [SQL Server], loading files"
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Load Files into FileTables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Describes how to load or migrate files into FileTables.  
   
 ##  <a name="BasicsLoadNew"></a> Loading or Migrating Files into a FileTable  
@@ -49,7 +49,7 @@ You can use the following methods to load files into a FileTable:
 2.  Use xcopy or a similar tool to copy the .jpg files, with their directory structure, into the root directory of the FileTable.  
   
 3.  Fix the metadata in the **PhotoMetadata** table, by using code similar to the following example:  
-  
+
 ```sql  
 --  Add a path locator column to the PhotoMetadata table.  
 ALTER TABLE PhotoMetadata ADD pathlocator hierarchyid;  

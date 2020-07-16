@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: a5da8e29-7ffd-44e7-bf61-344fa5bea8ce
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect a PowerPivot Service Application to a SharePoint Web Application in Central Administration
   A PowerPivot service application can be used by any number of SharePoint Web applications in the farm. To make a PowerPivot service application available, you add it to a service association list.  

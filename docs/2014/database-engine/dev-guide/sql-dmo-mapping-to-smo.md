@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: "database-engine"
 ms.topic: "reference"
 ms.assetid: 590f5396-98d5-485e-9b41-728c6ed7cb9d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQL-DMO Mapping to SMO
   SQL Distributed Management Objects (SQL-DMO) is no longer included in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], SQL-DMO applications should be converted to use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO). The SMO object model is similar to SQL-DMO, so most SQL-DMO objects map to an object with the same name in SMO. However, some SQL-DMO objects were changed or dropped in the transition to SMO. This table lists the recommended action to take for SQL-DMO objects that were not converted directly to SMO.  

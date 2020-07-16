@@ -2,7 +2,7 @@
 title: "ConfigurationSetting Property - WindowsServiceIdentityActual | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "WindowsServiceIdentityActual property"
 ms.assetid: 08289240-098d-4ad1-b165-227699747ba4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Property - WindowsServiceIdentityActual
   The identity that the Report Server Windows service is running under. Read-only.  

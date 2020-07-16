@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)
   This sample uses the IRowsetFastUpload interface to send between 4MB and 4GB of data to a filestream column.  

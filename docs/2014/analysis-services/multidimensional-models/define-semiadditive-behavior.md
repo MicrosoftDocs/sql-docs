@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "semiadditive"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b25726bc-728b-4601-ad87-9015c39dc615
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Semiadditive Behavior
   Semiadditive measures, which do not uniformly aggregate across all dimensions, are very common in many business scenarios. Every cube that is based on snapshots of balances over time exhibits this problem. You can find these snapshots in applications dealing with securities, account balances, budgeting, human resources, insurance policies and claims, and many other business domains.  

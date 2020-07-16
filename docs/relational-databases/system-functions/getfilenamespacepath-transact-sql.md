@@ -17,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: b393ecef-baa8-4d05-a268-b2f309fce89a
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # GetFileNamespacePath (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the UNC path for a file or directory in a FileTable.  
   
@@ -45,8 +44,8 @@ manager: craigg
 |**0**|Returns the relative path within the database-level directory.<br /><br /> This is the default value|  
 |**1**|Returns the full UNC path, starting with the `\\computer_name`.|  
   
- *@option*  
- An integer expression that defines how the server component of the path should be formatted. *@option* can have one of the following values:  
+ *\@option*  
+ An integer expression that defines how the server component of the path should be formatted. *\@option* can have one of the following values:  
   
 |Value|Description|  
 |-----------|-----------------|  

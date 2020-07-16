@@ -1,21 +1,20 @@
 ---
 title: "Create Client Applications for FILESTREAM Data | Microsoft Docs"
+description: Learn how to use Win32 APIs to create client applications that access FILESTREAM data. See available functions, required steps, examples, and best practices.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: filestream
 ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], Win32"
 ms.assetid: 8a02aff6-e54c-40c6-a066-2083e9b090aa
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Create Client Applications for FILESTREAM Data
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You can use Win32 APIs to read and write data to a FILESTREAM BLOB. The following steps are required:  
   
 -   Read the FILESTREAM file path.  

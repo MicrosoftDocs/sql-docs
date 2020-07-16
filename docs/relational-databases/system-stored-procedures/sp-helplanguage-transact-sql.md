@@ -16,13 +16,12 @@ helpviewer_keywords:
   - "sp_helplanguage"
   - "default languages"
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helplanguage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Reports information about a particular alternative language or about all languages in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -36,7 +35,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 ```  
   
 ## Arguments  
- [ **@language=** ] **'***language***'**  
+`[ @language = ] 'language'`
  Is the name of the alternative language for which to display information. *language* is **sysname**, with a default of NULL. If *language* is specified, information about the specified language is returned. If language is not specified, information about all languages in the **sys.syslanguages** compatibility view is returned.  
   
 ## Return Code Values  

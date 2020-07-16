@@ -20,12 +20,11 @@ helpviewer_keywords:
   - "rewinding backup devices"
   - "RESTORE REWINDONLY statement"
 ms.assetid: 7f825b40-2264-4608-9809-590d0f09d882
-author: mashamsft
-ms.author: mathoma
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # RESTORE Statements - REWINDONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Rewinds and closes specified tape devices that were left open by BACKUP or RESTORE statements executed with the NOREWIND option. This command is supported only for tape devices.  
   
@@ -33,7 +32,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 RESTORE REWINDONLY   
 FROM <backup_device> [ ,...n ]  

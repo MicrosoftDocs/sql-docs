@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "time series algorithms [Analysis Services]"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: bb225387-fbbf-4189-b172-9daa2495fa9c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Mining Model Content for Time Series Models (Analysis Services - Data Mining)
   All mining models use the same structure to store their content. This structure is defined according to the data mining content schema rowset. However, within that standard structure, the nodes that contain information are arranged in different ways to represent various kinds of trees. This topic describes how the nodes are organized, and what each node means, for mining models that are based on the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm.  
@@ -419,7 +417,7 @@ AND (NODE_TYPE = 29 or NODE_TYPE = 30)
   
  The value for *difference order* indicates how many times the series are compared, or differenced.  
   
- For an enumeration of the possible value types, see <xref:Microsoft.AnalysisServices.AdomdServer.MiningValueType>.  
+ For an enumeration of the possible value types, see [Microsoft.AnalysisServices.AdomdServer.MiningValueType](/previous-versions/sql/sql-server-2014/ms144375(v=sql.120)).  
   
 ### Using the ARIMA Tree Information  
  If you use predictions that are based on the ARIMA algorithm in a business solution, you might want to paste the equation into a report to demonstrate the method that was used to create the prediction. You can use the caption to present the formulas in short format, or the description to present the formulas in long format.  

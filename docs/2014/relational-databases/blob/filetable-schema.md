@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], table schema"
 ms.assetid: e1cb3880-cfda-40ac-91fc-d08998287f44
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # FileTable Schema
   Describes the pre-defined and fixed schema of a FileTable.  

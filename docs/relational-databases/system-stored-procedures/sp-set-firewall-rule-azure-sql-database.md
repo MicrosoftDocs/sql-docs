@@ -2,10 +2,8 @@
 title: "sp_set_firewall_rule (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/28/2016"
-ms.prod: ""
-ms.prod_service: "sql-database, sql-data-warehouse"
+ms.service: sql-database
 ms.reviewer: ""
-ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
   - "sp_set_firewall_rule"
@@ -20,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: a974a561-5382-4039-8499-3a56767bcefe
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_set_firewall_rule (Azure SQL Database)
@@ -61,7 +58,7 @@ sp_set_firewall_rule [@name =] 'name',
  The following code creates a server-level firewall setting called `Allow Azure` that enables access from Azure. Execute the following in the virtual master database.  
   
 ```  
--- Enable Windows Azure connections.  
+-- Enable Azure connections.  
 exec sp_set_firewall_rule N'Allow Azure', '0.0.0.0', '0.0.0.0';  
   
 ```  

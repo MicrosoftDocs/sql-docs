@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: 5892ed24-4dcb-4bf9-a8a4-a7ca898832d5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_802 - Database Engine error
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|802|  
 |Event Source|MSSQLSERVER|  

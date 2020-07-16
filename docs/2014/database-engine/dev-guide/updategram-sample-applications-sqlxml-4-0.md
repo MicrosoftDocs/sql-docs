@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: "database-engine"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "sample applications [SQLXML]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d2287e10-4007-4ba4-ad84-4e2b6adfede5
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Updategram Sample Applications (SQLXML 4.0)
   This section provides examples of using updategrams.  

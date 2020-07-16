@@ -1,19 +1,17 @@
 ---
-title: "Automatic Matching of Syntax Pairs | Microsoft Docs"
-ms.custom: ""
+title: Automatic Matching of Syntax Pairs
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "IntelliSense [SQL Server], delimiter highlighting"
   - "IntelliSense [SQL Server], syntax pair matching"
 ms.assetid: bfc54cda-bfd6-4545-a5b9-f9db2ae13769
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Automatic Matching of Syntax Pairs
   Automatic matching of syntax pairs gives you immediate feedback on whether syntax elements that must be coded in pairs are correctly paired. This is known as delimiter matching in the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor, brace matching in the Analysis Services XMLA Query Editor, and parenthesis matching in the MDX and DMX editors.  

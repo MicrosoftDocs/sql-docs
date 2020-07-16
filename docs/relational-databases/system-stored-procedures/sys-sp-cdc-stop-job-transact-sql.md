@@ -17,12 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_stop_job"
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
-author: rothja
-ms.author: jroth
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.sp_cdc_stop_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Stops a change data capture cleanup or capture job for the current database.  
   
@@ -36,7 +35,7 @@ sys.sp_cdc_stop_job [ [ @job_type = ] 'job_type' ]
 ```  
   
 ## Arguments  
- [ [ **@job_type=** ] **'**_job_type_' ]  
+`[ [ @job_type = ] 'job_type_' ]`
  Type of job to add. *job_type* is **nvarchar(20)** with a default of **capture**. Valid inputs are **capture** and **cleanup**.  
   
 ## Return Code Values  

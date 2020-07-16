@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 3895097e-28fa-4808-a3a8-ba821b4ba4d4
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # How to Create the SQL Server Change Database Instance
   This procedure describes how to use the CDC Designer Console to create CDC instances.  

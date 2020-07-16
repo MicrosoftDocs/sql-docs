@@ -12,10 +12,9 @@ f1_keywords:
 ms.assetid: 5377c59f-2e25-4852-a306-c87ae3dca9fd
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Configure Topology (Peer-to-Peer Replication)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the **Configure topology** page to perform common configuration tasks, such as adding new nodes, deleting nodes, and adding new connections between existing nodes. The node you selected on the **Publication** page of this wizard is displayed on the design surface. To specify configuration options, right-click a node, a connection, or the design surface.  
   
 > [!NOTE]  

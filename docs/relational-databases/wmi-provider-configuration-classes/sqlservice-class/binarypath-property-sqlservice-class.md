@@ -1,5 +1,5 @@
 ---
-title: "BinaryPath Property (SqlService Class ) | Microsoft Docs"
+title: "BinaryPath Property (SqlService Class )"
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -16,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: c59ec28e-be76-44a8-b7aa-e53ea10f71d1
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # BinaryPath Property (SqlService Class )
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the binary path of the service.  
   
 ## Syntax  

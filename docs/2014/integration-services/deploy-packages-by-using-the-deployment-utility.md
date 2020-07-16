@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "packages [Integration Services], installing"
@@ -13,9 +12,8 @@ helpviewer_keywords:
   - "dependencies [Integration Services]"
   - "deploying packages [Integration Services], installing"
 ms.assetid: eaf4b56e-2023-4d17-971c-703031da758c
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Deploy Packages by Using the Deployment Utility
   When you have built a deployment utility to install packages from an [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project on a different computer than the one on which the deployment utility was built, you must first copy the deployment folder to the destination computer.  

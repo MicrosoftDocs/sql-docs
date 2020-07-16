@@ -1,5 +1,6 @@
 ---
 title: "id Function (XQuery) | Microsoft Docs"
+description: Learn how to use the XQuery id function to return a sequence of elements in the XML instance, in document order, with the supplied xs:IDREF values.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: de99fc60-d0ad-4117-a17d-02bdde6512b4
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Functions on Sequences - id
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns the sequence of element nodes with xs:ID values that match the values of one or more of the xs:IDREF values supplied in *$arg*.  
   
@@ -60,7 +60,7 @@ fn:id($arg as xs:IDREF*) as element()*
 -- go  
   
 create xml schema collection SC as  
-'<schema xmlns="https://www.w3.org/2001/XMLSchema" xmlns:e="emp" targetNamespace="emp">  
+'<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:e="emp" targetNamespace="emp">  
             <element name="employees" type="e:EmployeesType"/>  
             <complexType name="EmployeesType">  
                  <sequence>  
@@ -101,7 +101,7 @@ Go
 drop xml schema collection SC  
 go  
 create xml schema collection SC as  
-'<schema xmlns="https://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
+'<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:Customers="Customers" targetNamespace="Customers">  
             <element name="Customers" type="Customers:CustomersType"/>  
             <complexType name="CustomersType">  
                         <sequence>  

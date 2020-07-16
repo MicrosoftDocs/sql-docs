@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Rename a Database
   This topic describes how to rename a user-defined database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The name of the database can include any characters that follow the rules for identifiers.  
@@ -66,7 +65,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example changes the name of the `AdventureWorks2012` database to `Northwind`.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 ALTER DATABASE AdventureWorks2012  

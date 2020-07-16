@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "dimensions [Analysis Services], characteristics"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 9314e749-0918-4862-abaf-a21692188122
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Cube Dimension Properties
   A cube dimension is an instance of a database dimension within a cube. A database dimension can be used in multiple cubes, and multiple cube dimensions can be based on a single database dimension. The following table describes the properties of a cube dimension.  

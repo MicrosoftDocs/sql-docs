@@ -22,11 +22,10 @@ helpviewer_keywords:
 ms.assetid: 03cea355-e39c-46e1-b7db-8832038669dd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Removes one or more views from the current database. DROP VIEW can be executed against indexed views.  
   
@@ -34,13 +33,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```sql  
+```syntaxsql
 -- Syntax for SQL Server, Azure SQL Database, and Azure SQL Data Warehouse
   
 DROP VIEW [ IF EXISTS ] [ schema_name . ] view_name [ ...,n ] [ ; ]  
 ```  
   
-```sql
+```syntaxsql
 -- Syntax for Parallel Data Warehouse  
   
 DROP VIEW [ schema_name . ] view_name [ ; ]  

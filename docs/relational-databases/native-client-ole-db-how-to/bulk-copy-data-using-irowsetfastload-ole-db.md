@@ -13,14 +13,12 @@ helpviewer_keywords:
   - "bulk copy [ODBC], data files"
   - "bulk copy [ODBC], about bulk copy"
 ms.assetid: 0b8908d1-fd6d-47a9-9e30-514cee8f60c8
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copy Data Using IRowsetFastLoad (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-[!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This sample shows the use of IRowsetFastLoad for bulk copying of records into a table.  
   
@@ -48,7 +46,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 6.  Set up the memory buffer from which the data will be copied to the table.  
   
 7.  Call **IRowsetFastLoad::InsertRow** to bulk copy the data in to the table.  
-  
+
 ## Example  
  In this example, 10 records are added to the table IRFLTable. You need to create the table IRFLTable in the database. This sample is not supported on IA64.  
   

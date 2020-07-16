@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 30841d1f-0c3b-4575-8f4a-27a1492e248c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Mark as Date Table for use with Time Intelligence (SSAS Tabular)
   In order to use time intelligence functions in DAX formulas, you must specify a date table and a unique identifier (datetime) column of the Date data type. Once a column in the date table is specified as a unique identifier, you can create relationships between columns in the date table and any fact tables.  
@@ -47,6 +45,6 @@ manager: craigg
   
 ## See Also  
  [Calculations &#40;SSAS Tabular&#41;](calculations-ssas-tabular.md)   
- [Time Intelligence Functions &#40;DAX&#41;](https://msdn.microsoft.com/library/ee634763.aspx)  
+ [Time Intelligence Functions &#40;DAX&#41;](/dax/time-intelligence-functions-dax)  
   
   

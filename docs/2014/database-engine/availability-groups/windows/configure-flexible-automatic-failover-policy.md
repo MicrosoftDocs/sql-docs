@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 1ed564b4-9835-4245-ae35-9ba67419a4ce
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Configure the Flexible Failover Policy to Control Conditions for Automatic Failover (Always On Availability Groups)
   This topic describes how to configure the flexible failover policy for an AlwaysOn availability group by using [!INCLUDE[tsql](../../../includes/tsql-md.md)] or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A flexible failover policy provides granular control over the conditions that cause automatic failover for an availability group. By changing the failure conditions that trigger an automatic failover and the frequency of health checks, you can increase or decrease the likelihood of an automatic failover to support your SLA for high availability.  
@@ -55,8 +54,7 @@ manager: craigg
   
          For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement changes the failure-condition level of an existing availability group, `AG1`, to level one:  
   
-        ```  
-  
+        ```sql
         ALTER AVAILABILITY GROUP AG1 SET (FAILURE_CONDITION_LEVEL = 1);  
         ```  
   
@@ -76,13 +74,13 @@ manager: craigg
   
          For example, the following [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement changes the health-check timeout threshold of an existing availability group, `AG1`, to 60,000 milliseconds (one minute).  
   
-        ```  
-  
+        ```sql
         ALTER AVAILABILITY GROUP AG1 SET (HEALTH_CHECK_TIMEOUT = 60000);  
         ```  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
- **To configure the flexible failover policy**  
+
+### To configure the flexible failover policy**  
   
 1.  Set default (`cd`) to the server instance that hosts the primary replica.  
   
@@ -102,20 +100,20 @@ manager: craigg
   
          For example, the following command changes the failure-condition level of an existing availability group, `AG1`, to level one.  
   
-        ```  
-        Set-SqlAvailabilityGroup `   
-        -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg `   
-        -FailureConditionLevel OnServerDown  
+        ```powershell
+        Set-SqlAvailabilityGroup `
+         -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg `
+         -FailureConditionLevel OnServerDown  
         ```  
   
     -   To set the health check timeout threshold, use the `HealthCheckTimeout`*n* parameter, where, *n* is an integer from 15000 milliseconds (15 seconds) to 4294967295 milliseconds. The default value is 30000 milliseconds (30 seconds).  
   
          For example, the following command changes the health-check timeout threshold of an existing availability group, `AG1`, to 120,000 milliseconds (two minutes).  
   
-        ```  
-        Set-SqlAvailabilityGroup `   
-        -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAG `   
-        -HealthCheckTimeout 120000  
+        ```powershell
+        Set-SqlAvailabilityGroup `
+         -Path SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAG `
+         -HealthCheckTimeout 120000  
         ```  
   
 > [!NOTE]  
@@ -134,5 +132,3 @@ manager: craigg
  [Windows Server Failover Clustering &#40;WSFC&#41; with SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)   
  [Failover Policy for Failover Cluster Instances](../../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)   
  [sp_server_diagnostics &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-server-diagnostics-transact-sql)  
-  
-  

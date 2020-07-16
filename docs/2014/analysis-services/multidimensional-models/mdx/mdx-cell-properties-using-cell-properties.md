@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "intrinsic cell properties [MDX]"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: a593c74d-8c5e-485e-bd92-08f9d22451d4
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Using Cell Properties (MDX)
   Cell properties in Multidimensional Expressions (MDX) contain information about the content and format of cells in a multidimensional data source, such as a cube.  

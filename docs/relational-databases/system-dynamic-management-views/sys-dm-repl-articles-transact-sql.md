@@ -3,7 +3,6 @@ title: "sys.dm_repl_articles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
 f1_keywords: 
@@ -16,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_repl_articles dynamic management function"
 ms.assetid: 794d514e-bacd-432e-a8ec-3a063a97a37b
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_repl_articles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about database objects published as articles in a replication topology.  
   

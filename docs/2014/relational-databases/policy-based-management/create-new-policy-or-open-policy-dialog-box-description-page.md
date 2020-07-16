@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 8964399b-ece9-44cd-b7f6-c5f14c295cb2
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Create New Policy or Open Policy Dialog Box, Description Page
   Use this dialog box to add a description and additional information to a Policy-Based Management policy.  

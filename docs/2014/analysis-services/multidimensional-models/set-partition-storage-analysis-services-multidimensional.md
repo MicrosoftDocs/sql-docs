@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "low latency MOLAP"
@@ -25,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: e525e708-f719-4905-a4cc-20f6a9a3edcd
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Set Partition Storage (Analysis Services - Multidimensional)
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides several standard storage configurations for storage modes and caching options. These provide commonly used configurations for update notification, latency, and rebuilding data.  

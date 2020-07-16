@@ -22,12 +22,11 @@ helpviewer_keywords:
   - "user-defined server roles [SQL Server]"
   - "roles, server"
 ms.assetid: 30c92f80-f7f6-4a84-ae89-16e69add0de6
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # CREATE SERVER ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a new user-defined server role.  
   
@@ -39,7 +38,9 @@ manager: craigg
 CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *role_name*  
  Is the name of the server role to be created.  
   

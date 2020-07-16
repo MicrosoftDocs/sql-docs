@@ -20,12 +20,11 @@ helpviewer_keywords:
   - "rolling back transactions, ROLLBACK WORK"
   - "savepoints [SQL Server]"
 ms.assetid: 2071dbd3-53d5-4510-be8d-26e80f2553b4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # ROLLBACK WORK (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Rolls back a user-specified transaction to the beginning of the transaction.  
   
@@ -34,7 +33,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ROLLBACK [ WORK ]  
 [ ; ]  

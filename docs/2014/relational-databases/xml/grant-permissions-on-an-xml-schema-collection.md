@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], XML schema collections"
   - "ALTER permission"
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Grant Permissions on an XML Schema Collection
   You can grant permissions to create an XML schema collection and also grant permissions on an XML schema collection object.  

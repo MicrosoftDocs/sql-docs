@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: a2bc503d-b6b2-4963-8beb-c11c323f18e0
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Creating an Assembly
   Managed database objects, such as stored procedures or triggers, are compiled and then deployed in units called an assembly. Managed DLL assemblies must be registered in [!INCLUDE[msCoName](../../../includes/ssnoversion-md.md)] before the functionality the assembly provides can be used. To register an assembly in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, use the CREATE ASSEMBLY statement. This topic discusses how to register an assembly in a database using the CREATE ASSEMBLY statement, and how to specify the security settings for the assembly.  
@@ -44,7 +43,7 @@ FROM 'C:\MyDBApp\SQLCLRTest.dll';
 -   The assembly that is called or referenced was created in the same database.  
   
 ## Specifying Security When Creating Assemblies  
- When creating an assembly into a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, you can specify one of three different levels of security in which your code can run: `SAFE`, `EXTERNAL_ACCESS`, or `UNSAFE`. When the `CREATE ASSEMBLY` statement is run, certain checks are performed on the code assembly which may cause the assembly to fail to register on the server. For more information, see the Impersonation sample on [CodePlex](http://msftengprodsamples.codeplex.com/).  
+ When creating an assembly into a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, you can specify one of three different levels of security in which your code can run: `SAFE`, `EXTERNAL_ACCESS`, or `UNSAFE`. When the `CREATE ASSEMBLY` statement is run, certain checks are performed on the code assembly which may cause the assembly to fail to register on the server. For more information, see the Impersonation sample on [CodePlex](https://msftengprodsamples.codeplex.com/).  
   
  `SAFE` is the default permission set and works for the majority of scenarios. To specify a given security level, you modify the syntax of the CREATE ASSEMBLY statement as follows:  
   
@@ -130,5 +129,4 @@ WITH PERMISSION_SET = UNSAFE;
  [CLR Integration Code Access Security](../security/clr-integration-code-access-security.md)   
  [TRUSTWORTHY Database Property](../../security/trustworthy-database-property.md)   
  [Allowing Partially Trusted Callers](../../../database-engine/dev-guide/allowing-partially-trusted-callers.md)  
-  
   

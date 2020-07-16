@@ -11,15 +11,14 @@ helpviewer_keywords:
 ms.assetid: 32f96c1e-9e94-4603-9bcd-b0c2e4af9fda
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQLSERVER_10785
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|MSSQLSERVER|  
 |Event ID|10785|  
 |Event Source|MSSQLSERVER|  

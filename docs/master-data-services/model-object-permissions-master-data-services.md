@@ -1,5 +1,5 @@
 ---
-title: "Model Object Permissions (Master Data Services) | Microsoft Docs"
+title: Model Object Permissions
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,13 +11,12 @@ helpviewer_keywords:
   - "permissions [Master Data Services], model objects"
   - "models [Master Data Services], object permissions"
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Model Object Permissions (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Model object permissions are mandatory. They determine the attributes a user can access in the **Explorer** functional area of the UI.  
   

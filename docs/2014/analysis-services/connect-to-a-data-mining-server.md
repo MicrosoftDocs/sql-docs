@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "connections"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 85962ad6-d840-4bc6-905e-c667c3276944
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect to a Data Mining Server
   ![Connections button](media/misc-connection.gif "Connections button")  

@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "providers [SQLXML]"
   - "providers [SQLXML], listed"
 ms.assetid: 5001e9fd-555c-4332-a57d-4d29a537454a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SQLXML 4.0 Data Access Components
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] SQLXML 4.0 includes three data providers that can insert XML data into and retrieve XML data from a database in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:  

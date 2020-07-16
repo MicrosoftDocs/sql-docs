@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.biwizard.specifyordering.setordering.f1"
 ms.assetid: fc0678fc-e188-4d13-8deb-9daa1281b734
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Attribute Ordering (Business Intelligence Wizard)
   Use the **Specify Attribute Ordering** page to specify the ordering attributes and ordering criteria for attributes in the selected dimension.  

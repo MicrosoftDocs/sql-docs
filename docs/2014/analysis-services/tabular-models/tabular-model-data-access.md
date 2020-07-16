@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 6ae74a8b-0025-450d-94a5-4e601831d420
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Tabular Model Data Access
   Tabular model databases in Analysis Services can be accessed by most of the same clients, interfaces, and languages that you use to retrieve data or metadata from a multidimensional model. For more information, see [Multidimensional Model Data Access &#40;Analysis Services - Multidimensional Data&#41;](../multidimensional-models/mdx/multidimensional-model-data-access-analysis-services-multidimensional-data.md).  
@@ -30,7 +28,7 @@ manager: craigg
   
  The [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] client determines the structure of the specified model by sending a request to the specified data source, which returns a schema that can be used by the client to create queries against the model as a data source and perform operations based on the data. Subsequent operations in the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] user interface to filter data, perform calculations or aggregations, and display associated data are controlled by the client and cannot be programmatically manipulated.  
   
- The queries that are sent by the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] client to the model are issued as DAX statements, which you can monitor by setting a trace on the model.  The client also issues a request to the server for the initial schema definition, which is presented according to the Conceptual Schema Definition Language (CSDL). For more information, see [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ The queries that are sent by the [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] client to the model are issued as DAX statements, which you can monitor by setting a trace on the model.  The client also issues a request to the server for the initial schema definition, which is presented according to the Conceptual Schema Definition Language (CSDL). For more information, see [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### SQL Server Management Studio  
  You can use [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to manage instances that host tabular models, and to query the metadata and data in them. You can process models or the objects in a model, create and manage partitions, and set security that can be used for managing data access. For more information, see the following topics:  
@@ -60,7 +58,7 @@ manager: craigg
   
  Additionally, you can use DAX expressions within the context of an XMLA EXECUTE command statement to send queries to a tabular model that has been deployed in DirectQuery mode.  
   
- For examples of queries on a tabular model using DAX, see [DAX Query Syntax Reference](https://msdn.microsoft.com/library/ee634217.aspx).  
+ For examples of queries on a tabular model using DAX, see [DAX Query Syntax Reference](/dax/dax-syntax-reference
   
 ### MDX  
  You can use MDX to create queries against tabular models that use the in-memory cache as the preferred query method (that is, models that have not been deployed in DirectQuery mode). Although clients such as [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] use DAX both for creating aggregations and for querying the model as a data source, if you are familiar with MDX it can be a shortcut to create sample queries in MDX, see [Building Measures in MDX](../multidimensional-models/mdx/mdx-building-measures.md).  
@@ -68,7 +66,7 @@ manager: craigg
 ### CSDL  
  The Conceptual Schema Definition Language is not a query language, per se, but it can be used to retrieve information about the model and model metadata, that can later be used to create reports or create queries against the model.  
   
- For information about how CSDL is used in tabular models, see [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi).  
+ For information about how CSDL is used in tabular models, see [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi).  
   
 ## Programmatic Interfaces  
  The principal interfaces that are used for interacting with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular models are the schema rowsets, XMLA, and the query clients and query tools provided by [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)].  
@@ -84,7 +82,7 @@ manager: craigg
   
  You can also retrieve data directly from an Analysis Services instance in an XML-based format. You can retrieve the schema of the tabular model by using the DISCOVER_CSDL_METADATA rowset, or you can use an EXECUTE or DISCOVER command with existing ASSL elements, objects, or properties. For more information, see the following resources:  
   
--   [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+-   [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
 ### Manipulate Analysis Services Objects  
  You can create, modify, delete, and process tabular models and objects in them, including tables, columns, perspectives, measures, and partitions, using XMLA commands, or by using AMO. Both AMO and XMLA have been updated to support additional properties that are used in tabular models for enhanced reporting and modeling.  

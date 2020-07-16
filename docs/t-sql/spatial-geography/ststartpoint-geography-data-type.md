@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STStartPoint method"
 ms.assetid: 7df18a5f-b9ee-4e36-b765-a0790c1dee3d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STStartPoint (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the start point of a **geography** instance.  
   

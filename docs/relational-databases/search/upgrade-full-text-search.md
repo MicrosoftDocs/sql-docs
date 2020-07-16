@@ -1,10 +1,8 @@
 ---
 title: "Upgrade Full-Text Search | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
-ms.reviewer: ""
 ms.technology: search
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,13 +12,13 @@ helpviewer_keywords:
   - "installing Full-Text Search"
   - "full-text search [SQL Server], upgrading"
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: pmasl
+ms.author: pelopes
+ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Upgrade Full-Text Search
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Upgrading full-text search to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is done during setup and when database files and full-text catalogs from the earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are attached, restored, or copied using the Copy Database Wizard.  
   
   

@@ -3,7 +3,6 @@ title: "sys.pdw_diag_events (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.prod_service: "pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
@@ -12,7 +11,6 @@ dev_langs:
 ms.assetid: 59bb3e9c-2829-49a0-b382-652ed1f54f88
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.pdw_diag_events (Transact-SQL)

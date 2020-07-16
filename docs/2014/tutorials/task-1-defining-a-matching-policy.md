@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 6f89a720-fce5-4f60-bef3-a159bbc9f25c
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Task 1: Defining a Matching Policy
   In this task, you create a matching policy with one rule in it. The rule will have one prerequisite: **Supplier ID**, which means that the Supplier IDs must match before using the other domains in the rule. The rule uses two other domains: **Supplier Name** with **Similarity** value set to **70%** and **Contact Email** with **Similarity** value set to **30%**.  

@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: a49c4af4-e243-4926-be97-74da1f9d54eb
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Upgrade Workbooks and Scheduled Data Refresh (SharePoint 2013)
   This topic explains the user experience of workbooks created in previous PowerPivot environments and how to upgrade PowerPivot workbooks so that you can take advantage of new features introduced in this release. To learn more about new features, see [What's New in PowerPivot](https://go.microsoft.com/fwlink/?LinkID=203917).  

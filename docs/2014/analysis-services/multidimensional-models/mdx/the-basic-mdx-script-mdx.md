@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "default MDX scripts"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 83d9afda-7d34-42b5-8f28-20172a905f23
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # The Basic MDX Script (MDX)
   A Multidimensional Expressions (MDX) script defines the calculation process for a cube in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]. There are two types of MDX scripts:  

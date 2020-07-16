@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.suggestrelatedcolumns.f1"
 ms.assetid: 02bac877-2376-48ff-a585-5b197263c85e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Suggest Related Columns (Data Mining Wizard)
   Use the **Suggest Related Columns** page to view the recommendations of the **Suggest** feature, which you selected on the previous page of the wizard. Input columns will be pre-selected based on their association with the **Predictable** column that you selected. If you accept the changes in this dialog box, the changes will be reflected on the **Specify the Training Data** page.  

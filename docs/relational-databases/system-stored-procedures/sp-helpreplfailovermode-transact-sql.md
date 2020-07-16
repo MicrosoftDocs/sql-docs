@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpreplfailovermode"
 ms.assetid: d1090e42-6840-4bf6-9aa9-327fd8987ec2
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_helpreplfailovermode (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays the current failover mode of a subscription. This stored procedure is executed at the Subscriber on any database. For more information about failover modes, see [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md).  
   
@@ -36,19 +35,19 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher that is participating in the update of this Subscriber. *publisher* is **sysname**, with no default. The Publisher must already be configured for publishing.  
   
- [ **@publisher_db =**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the publication database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication that is participating in the update of this Subscriber. *publication*is **sysname**, with no default.  
   
- [ **@failover_mode_id=**] **'***failover_mode_id***' OUTPUT**  
+`[ @failover_mode_id = ] 'failover_mode_id' OUTPUT`
  Returns the integer value of the failover mode and is an **OUTPUT** parameter. *failover_mode_id* is a **tinyint** with a default of **0**. It returns **0** for immediate updating and **1** for queued updating.  
   
- [**@failover_mode=**] **'***failover_mode***'OUTPUT**  
+`[ @failover_mode = ] 'failover_mode' OUTPUT`
  Returns the mode in which data modifications are made at the Subscriber. *failover_mode* is a **nvarchar(10)** with a default of NULL. Is an **OUTPUT** parameter.  
   
 |Value|Description|  

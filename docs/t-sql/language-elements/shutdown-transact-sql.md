@@ -19,12 +19,11 @@ helpviewer_keywords:
   - "stopping SQL Server"
   - "immediately stopping SQL Server"
 ms.assetid: c8b03ff9-688c-4fe8-86e8-bd6bd401c9a4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SHUTDOWN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Immediately stops SQL Server.  
   

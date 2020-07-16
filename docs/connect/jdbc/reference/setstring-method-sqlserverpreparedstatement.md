@@ -13,9 +13,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 25dabdc9-c60f-485a-87eb-306067964765
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # setString Method (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

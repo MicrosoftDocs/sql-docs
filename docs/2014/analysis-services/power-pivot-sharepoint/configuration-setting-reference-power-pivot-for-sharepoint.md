@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 3b57dd3f-7820-4ba8-b233-01dc68908273
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Configuration Setting Reference (PowerPivot for SharePoint)
   This topic provides reference documentation for configuration settings used by PowerPivot service applications in a SharePoint farm. If you are using PowerShell script to configure a server, or if you want to look up information for a specific setting, the information in this topic provides detailed descriptions.  

@@ -1,20 +1,18 @@
 ---
-title: "Find Results Windows | Microsoft Docs"
-ms.custom: ""
+title: Find Results Windows
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords:
   - "vs.findresults2"
 helpviewer_keywords: 
   - "Find Results Windows dialog box"
 ms.assetid: 3b68dbb7-26d6-4bc9-bd2c-c27e5dc385c3
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Find Results Windows
   The two Find Results windows display matches found by using the **Find in Files** or **Replace in Files** tabs of the **Find and Replace** dialog. The **Result Options** command for **Find in Files** and **Replace in Files** allows you to choose the Find Results window where any matches found will be listed.  

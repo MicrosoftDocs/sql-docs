@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "schedules [Reporting Services]"
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "subscriptions [Reporting Services], scheduling"
   - "automatic report processing"
 ms.assetid: ecccd16b-eba9-4e95-b55d-f15c621e003f
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Schedules
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides shared schedules and report-specific schedules to help you control processing and distribution of reports. The difference between the two types of schedules is how they are defined, stored, and managed. The internal construction of the two types of schedules is the same. All schedules specify a type of recurrence: monthly, weekly, or daily. Within the recurrence type, you set the intervals and range for how often an event is to occur. The type of recurrence pattern and how those patterns are specified is the same whether you create a shared schedule or a report-specific schedule.  

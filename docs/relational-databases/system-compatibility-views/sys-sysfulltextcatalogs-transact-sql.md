@@ -20,11 +20,10 @@ helpviewer_keywords:
 ms.assetid: 18ac6ad5-01e8-428f-8422-a9ca29626977
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.sysfulltextcatalogs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Contains information about the full-text catalogs.  
   

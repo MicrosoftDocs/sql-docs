@@ -14,11 +14,14 @@ helpviewer_keywords:
   - "SMTP connection manager [Integration Services]"
   - "connection managers [Integration Services], SMTP"
 ms.assetid: 3795d442-714b-4bbb-9acd-75bf277a468a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # SMTP Connection Manager
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   An SMTP connection manager enables a package to connect to a Simple Mail Transfer Protocol (SMTP) server. The Send Mail task that [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes uses an SMTP connection manager.  
   
  When using Microsoft Exchange as the SMTP server, you may need to configure the SMTP connection manager to use Windows Authentication. Exchange servers may be configured to not allow unauthenticated SMTP connections.  
@@ -37,7 +40,8 @@ manager: craigg
     > [!IMPORTANT]  
     >  The SMTP connection manager supports only anonymous authentication and Windows Authentication. It does not support basic authentication.  
   
--   Specify whether to encrypt communication using Secure Sockets Layer (SSL) when sending e-mail messages.  
+-   Specify whether to encrypt communication using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL),
+ when sending e-mail messages.  
   
  You can set properties through [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer or programmatically.  
   
@@ -70,5 +74,5 @@ manager: craigg
 >  When using Microsoft Exchange as the SMTP server, you may need to set **Use Windows Authentication** to **True**. Exchange servers may be configured to disallow unauthenticated SMTP connections.  
   
  **Enable Secure Sockets Layer (SSL)**  
- Select to encrypt communication using Secure Sockets Layer (SSL) when sending e-mail messages.  
+ Select to encrypt communication using TLS/SSL when sending e-mail messages.  
   

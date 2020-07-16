@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 80551dad-97ac-40d0-90af-b810780321ce
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Adding Attributes to Dimensions
   Now that you have defined dimensions, you can populate them with attributes that represent each data element in the dimension. Attributes are commonly based on fields from a data source view. When adding attributes to a dimension, you can include fields from any table in the data source view.  

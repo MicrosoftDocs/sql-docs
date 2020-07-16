@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "statements [MDX]"
@@ -18,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a560383b-bb58-472e-95f5-65d03d8ea08b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # MDX Query Fundamentals (Analysis Services)
   Multidimensional Expressions (MDX) lets you query multidimensional objects, such as cubes, and return multidimensional cellsets that contain the cube's data. This topic and its subtopics provide an overview of MDX queries.  
@@ -26,7 +24,7 @@ manager: craigg
  The following topics describe MDX queries and the cellsets they produce, and provide more detailed information about basic MDX syntax.  
   
 > [!NOTE]  
->  For more information about performance issues related to MDX queries and calculations, see the section "Writing Efficient MDX" in the [SQL Server 2005 Analysis Services Performance Guide](https://go.microsoft.com/fwlink/?LinkId=81621).  
+>  For more information about performance issues related to MDX queries and calculations, see the section "Writing Efficient MDX" in the [SQL Server 2005 Analysis Services Performance Guide](https://docsbay.net/Microsoft-SQL-Server-2005-Analysis-Services-Performance-Guide).  
   
 ## In This Section  
   

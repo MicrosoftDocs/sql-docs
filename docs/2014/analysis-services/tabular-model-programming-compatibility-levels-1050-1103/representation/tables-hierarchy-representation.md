@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 ms.assetid: 1d53dda1-f2c8-4a9b-8ec7-78f43ca1d7db
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Hierarchy Representation (Tabular)
   In tabular models a hierarchy is navigation path from one attribute to another based on values selected by the user.  

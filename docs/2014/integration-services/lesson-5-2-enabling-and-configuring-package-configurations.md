@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 005218ab-8dd5-48e9-a185-6bc60cd43a7a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Step 2: Enabling and Configuring Package Configurations
   In this task, you will convert the project to the Package Deployment Model and enable package configurations using the Package Configuration Wizard. You will use this wizard to generate an XML configuration file that contains configuration settings for the `Directory` property of the Foreach Loop container. The value of the Directory property is supplied by a new package-level variable that you can update at run time. Additionally, you will populate a new sample data folder to use during testing.  
@@ -37,7 +36,7 @@ manager: craigg
   
 9. In the **Property Expressions Editor**, click in the **Property** list, and select `Directory`.  
   
-10. In the **Expression** box, click the ellipsis button**(...)**.  
+10. In the **Expression** box, click the ellipsis button **(...)**.  
   
 11. In the **Expression Builder**, expand the Variables folder, and drag the variable **User::varFolderName** to the **Expression** box.  
   
@@ -81,7 +80,7 @@ manager: craigg
   
 16. Click **Close**.  
   
-17. The wizard creates a configuration file, named SSISTutorial.dtsConfig, that contains configuration settings for the v`alue` of the variable that in turn sets the `Directory` property of the enumerator.  
+17. The wizard creates a configuration file, named SSISTutorial.dtsConfig, that contains configuration settings for the `value` of the variable that in turn sets the `Directory` property of the enumerator.  
   
     > [!NOTE]  
     >  A configuration file typically contains complex information about the package properties, but for this tutorial the only configuration information should be  

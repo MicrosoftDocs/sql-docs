@@ -1,16 +1,14 @@
 ---
-title: "Enable, Disable, and Delete Breakpoints | Microsoft Docs"
-ms.custom: ""
+title: Enable, Disable, and Delete Breakpoints
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 357b5874-273f-43a9-8e30-83872bdea5dc
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Enable, Disable, and Delete Breakpoints
   To view and manage all the open breakpoints, you can use the **Breakpoints** window. Use the window to view breakpoint information and to take actions such as deleting, disabling, or enabling breakpoints.  

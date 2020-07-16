@@ -1,6 +1,6 @@
 ---
 title: "SQL Server mobile reports: End-to-end walk-through"
-description: Walk through creating mobile reports for any screen size with SQL Server Mobile Report Publisher on the Reporting Services web portal, and viewing them in the Power BI mobile apps.
+description: Learn to create mobile reports on SQL Server Mobile Report Publisher, save reports on the Reporting Services web portal, & view reports in Power BI mobile apps.
 ms.date: 12/07/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -33,7 +33,7 @@ To follow along, you need these products:
 *  OR: World Wide Importers sample database, available from the [Microsoft SQL Server Samples](../../sample/microsoft-sql-server-samples.md) page.
 * To view the result: 
   *   [Sign up for the Power BI service](https://go.microsoft.com/fwlink/?LinkID=513879) and
-  *  [Download the Power BI mobile app](https://docs.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) to your mobile device: iOS, Android phone, or Windows 10 device.  
+  *  [Download the Power BI mobile app](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-apps-for-mobile-devices) to your mobile device: iOS, Android phone, or Windows 10 device.  
 
   
 ## Create a shared data source  

@@ -19,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Replication Agent Security Model
   The replication agent security model allows for fine-grained control over the accounts under which replication agents run and make connections: A different account can be specified for each agent. For more information about how to specify accounts, see [Manage Logins and Passwords in Replication](identity-and-access-control-replication.md#manage-logins-and-passwords-in-replication).  

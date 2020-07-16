@@ -1,5 +1,6 @@
 ---
-title: "Derived Hierarchies (Master Data Services) | Microsoft Docs"
+title: Derived Hierarchies
+description: Learn how to create a derived hierarchy to highlight any of the existing domain-based attribute relationships in a Master Data Services model.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -12,13 +13,12 @@ helpviewer_keywords:
   - "hierarchies [Master Data Services], derived hierarchies"
   - "derived hierarchies, about derived hierarchies"
 ms.assetid: a0fbd519-a10e-4cbd-92e6-5de9b8d3e3f0
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Derived Hierarchies (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   A [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] derived hierarchy is derived from the domain-based attribute relationships that already exist between entities in a model.  
   
@@ -62,7 +62,7 @@ manager: craigg
  This type of hierarchy prevents you from moving a member to a level that is not valid. For example, you can move the Road-650 bike from one subcategory, Road Bikes, to another, Mountain Bikes. You cannot move Road-650 directly under a category, like 1 {Bikes}. Each time you move a member in the hierarchy tree, the member's domain-based attribute value changes to reflect the move.  
   
 ## Notes  
- All members in a derived hierarchy tree are sorted by code. You cannot change the sort order.  
+ All members in a derived hierarchy tree are sorted by ID. You cannot change the sort order.  
   
  If a member's domain-based attribute is blank and the attribute is used for a derived hierarchy, the member is not displayed in the hierarchy. Create business rules to require attributes to be populated. For more information, see [Require Attribute Values &#40;Master Data Services&#41;](../master-data-services/require-attribute-values-master-data-services.md).  
   

@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.cdcsource.columns.f1"
 ms.assetid: bcf3030e-98d8-4445-967c-33c3f8ecb4fc
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # CDC Source Editor (Columns Page)
   Use the **Columns** page of the **CDC Source Editor** dialog box to map an output column to each external (source) column.  

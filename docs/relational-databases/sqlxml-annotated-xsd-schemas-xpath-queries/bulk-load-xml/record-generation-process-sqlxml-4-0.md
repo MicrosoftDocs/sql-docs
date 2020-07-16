@@ -1,6 +1,6 @@
 ---
-title: "Record Generation Process (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "Record Generation Process (SQLXML)"
+description: Learn the details of the XML Bulk Load record generation process in SQLXML 4.0.
 ms.date: "03/17/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -19,13 +19,13 @@ helpviewer_keywords:
   - "leaving node scope [SQLXML]"
   - "schema mapping [SQLXML]"
 ms.assetid: d8885bbe-6f15-4fb9-9684-ca7883cfe9ac
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Record Generation Process (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   XML Bulk Load processes the XML input data and prepares records for the appropriate tables in Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. The logic in XML Bulk Load determines when to generate a new record, what child element or attribute values to copy into the fields of the record, and when the record is complete and ready to be sent to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] for insertion.  
   
  XML Bulk Load does not load the entire XML input data into memory, and does not produce complete record sets before sending data to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. This is because XML input data can be a large document and loading the entire document in memory can be expensive. Instead, XML Bulk Load does the following:  
@@ -62,7 +62,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  For example, consider the following XSD schema fragment:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Customer" sql:relation="Customers" >  
    <xsd:complexType>  
@@ -110,7 +110,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  Now, consider the XML view as specified in the following annotated XSD schema. This schema uses **\<sql:relationship>** to specify the relationship between the Cust and CustOrder tables.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  
@@ -220,7 +220,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  This is the schema:  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
 <xsd:annotation>  
   <xsd:appinfo>  

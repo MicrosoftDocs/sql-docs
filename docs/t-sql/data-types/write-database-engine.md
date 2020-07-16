@@ -1,7 +1,7 @@
 ---
 title: "Write (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/23/2017"
+ms.date: "07/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -17,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 7c554334-d2d9-4eae-a4ae-097aa4020e1a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Write (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Write writes out a binary representation of **SqlHierarchyId** to the passed-in **BinaryWriter**. Write cannot be called by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. Use CAST or CONVERT instead.
   

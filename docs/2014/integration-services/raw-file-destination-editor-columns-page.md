@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.rawfiledestinationcolumns.f1"
 ms.assetid: 37f61d0b-1269-42ee-94ab-011cbaac63e9
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Raw File Destination Editor (Columns Page)
   Use the Raw File Destination Editor to configure the Raw File destination to write raw data to a file.  

@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.executeprocesstask.process.f1"
 helpviewer_keywords: 
   - "Execute Process Task Editor"
 ms.assetid: 0fc22406-e79b-47a4-a7e4-108d4ce6202f
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Execute Process Task Editor (Process Page)
   Use the **Process** page of the **Execute Process Task Editor** dialog box to configure the options that execute the process. These options include the executable to run, its location, command prompt arguments, and the variables that provide input and capture output.  

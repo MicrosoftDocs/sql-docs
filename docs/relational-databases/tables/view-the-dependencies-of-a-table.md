@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: c4351ef5-e7d0-46e7-8367-88695e9974f8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View the Dependencies of a Table
@@ -44,7 +43,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  
   
-#### To view the dependencies of a table  
+#### To view the objects on which a table depends  
   
 1.  In **Object Explorer**, expand **Databases**, expand a database, and then expand **Tables**.  
   
@@ -73,7 +72,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
     ```  
   
-#### To view the objects on which a table depends  
+#### To view the dependencies of a table  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

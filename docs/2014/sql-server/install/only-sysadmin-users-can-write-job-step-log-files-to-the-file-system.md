@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "job step log files [SQL Server Agent]"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d26a7cef-1a60-4c95-b9df-f8b4fec59f9b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Only sysadmin users can write job step log files to the file system
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] optionally writes a log for each job step.  

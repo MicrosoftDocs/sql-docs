@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor Analysis Wizard"
@@ -19,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 9375e3d0-c193-4714-96bb-7effd8f4bf18
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrade Advisor User Interface Reference
   This section includes Help topics for [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor. These topics are available from the Upgrade Advisor Wizard by pressing the F1 key or by clicking **Help** on wizard pages and in dialog boxes.  

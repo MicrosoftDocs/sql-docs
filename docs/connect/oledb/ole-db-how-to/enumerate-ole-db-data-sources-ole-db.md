@@ -12,10 +12,9 @@ helpviewer_keywords:
   - "data sources [OLE DB]"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Enumerate OLE DB Data Sources (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

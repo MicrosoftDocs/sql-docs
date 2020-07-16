@@ -13,13 +13,12 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], objects"
   - "GRANT statement, objects"
 ms.assetid: c001c2e7-d092-43d4-8fa6-693b3ec4c3ea
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Object Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Grants permissions on a table, view, table-valued function, stored procedure, extended stored procedure, scalar function, aggregate function, service queue, or synonym.  
   
@@ -29,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 GRANT <permission> [ ,...n ] ON   
     [ OBJECT :: ][ schema_name ]. object_name [ ( column [ ,...n ] ) ]  
     TO <database_principal> [ ,...n ]   

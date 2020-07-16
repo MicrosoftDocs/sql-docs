@@ -1,6 +1,6 @@
 ---
 title: "SET IDENTITY_INSERT (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the SET IDENTITY_INSERT statement. When set to ON, this permits inserting explicit values into the identity column of a table."
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -22,13 +22,10 @@ helpviewer_keywords:
 ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
+monkerRange:  "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions"
 ---
 # SET IDENTITY_INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
-
-> [!div class="nextstepaction"]
-> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
 Allows explicit values to be inserted into the identity column of a table.  
 
@@ -36,7 +33,7 @@ Allows explicit values to be inserted into the identity column of a table.
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF }  
 ```  
@@ -64,7 +61,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
 ## Examples  
  The following example creates a table with an identity column and shows how the `SET IDENTITY_INSERT` setting can be used to fill a gap in the identity values caused by a `DELETE` statement.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Create tool table.  
@@ -91,7 +88,8 @@ FROM dbo.Tool;
 GO  
   
 -- Try to insert an explicit ID value of 3;  
--- should return a warning.  
+-- should return an error:
+-- An explicit value for the identity column in table 'AdventureWorks2012.dbo.Tool' can only be specified when a column list is used and IDENTITY_INSERT is ON.
 INSERT INTO dbo.Tool (ID, Name) VALUES (3, 'Garden shovel');  
 GO  
 -- SET IDENTITY_INSERT to ON.  

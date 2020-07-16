@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "DIMENSION PROPERTIES keyword"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 26b5ad08-3799-4a5e-89f3-dca25e637d45
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Using Member Properties (MDX)
   Member properties cover the basic information about each member in each tuple. This basic information includes the member name, parent level, the number of children, and so on. Member properties are available for all members at a given level. In terms of organization, member properties are treated as dimensionally organized data, stored on a single dimension.  

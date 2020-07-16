@@ -1,7 +1,8 @@
 ---
-title: "Plan your adoption of In-Memory OLTP Features in SQL Server | Microsoft Docs"
-ms.custom: ""
-ms.date: "11/21/2017"
+title: "Plan adoption of in-memory OLTP "
+description: Learn how the adoption of In-Memory OLTP features in SQL Server affects other aspects of your business system.
+ms.custom: seo-dt-2019
+ms.date: "01/28/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -10,11 +11,10 @@ ms.topic: conceptual
 ms.assetid: 041b428f-781d-4628-9f34-4d697894e61e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Plan your adoption of In-Memory OLTP Features in SQL Server
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 This article describes the ways in which the adoption of In-Memory features affects other aspects of your business system.
@@ -53,7 +53,7 @@ A memory-optimized table which contains 200 GB of data requires more than 200 GB
 
 For a database hosted in the Azure SQL Database cloud service, your chosen service tier affects the amount of active memory your database is allowed to consume. You should plan to monitor the memory usage of your database by using an alert. For details, see:
 
-- Review the In-Memory OLTP Storage limits for your [Pricing Tier](https://docs.microsoft.com/azure/sql-database/sql-database-service-tiers#single-database-service-tiers-and-performance-levels)
+- Review the In-Memory OLTP Storage limits for your [Pricing Tier](https://docs.microsoft.com/azure/sql-database/sql-database-purchase-models)
 - [Monitor In-Memory OLTP Storage](https://azure.microsoft.com/documentation/articles/sql-database-in-memory-oltp-monitoring/)
 
 #### Memory-optimized table variables

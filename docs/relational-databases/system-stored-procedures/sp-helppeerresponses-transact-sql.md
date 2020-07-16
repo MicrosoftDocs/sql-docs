@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helppeerresponses"
 ms.assetid: e55789d1-43fb-4a37-9e5e-60ccef122a5d
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_helppeerresponses (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns all responses to a specific status request received from a participant in a peer-to-peer replication topology, where the request was initiated by executing [sp_helppeerrequests](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) at any published database in the topology. This stored procedure is executed on the publication database at a Publisher participating in a peer-to-peer replication topology. For more information, see [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md).  
   
@@ -32,7 +31,7 @@ sp_helppeerresponses [ @request_id = ] request_id
 ```  
   
 ## Arguments  
- [ **@request_id**= ] *request_id*  
+`[ @request_id = ] request_id`
  Is the ID of a specific status request. *request_id* is **int**, with no default.  
   
 ## Result Sets  

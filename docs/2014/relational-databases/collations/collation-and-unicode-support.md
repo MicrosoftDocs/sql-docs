@@ -1,7 +1,7 @@
 ---
 title: "Collation and Unicode Support | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/17/2017"
+ms.date: 10/18/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: 
@@ -26,7 +26,6 @@ helpviewer_keywords:
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Collation and Unicode Support
   Collations in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provide sorting rules, case, and accent sensitivity properties for your data. Collations that are used with character data types such as `char` and `varchar` dictate the code page and corresponding characters that can be represented for that data type. Whether you are installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restoring a database backup, or connecting server to client databases, it is important that you understand the locale requirements, sorting order, and case and accent sensitivity of the data that you will be working with. To list the collations available on your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [sys.fn_helpcollations &#40;Transact-SQL&#41;](/sql/relational-databases/system-functions/sys-fn-helpcollations-transact-sql).  
@@ -46,7 +45,7 @@ manager: craigg
 |Option|Description|  
 |------------|-----------------|  
 |Case-sensitive (_CS)|Distinguishes between uppercase and lowercase letters. If selected, lowercase letters sort ahead of their uppercase versions. If this option is not selected, the collation will be case-insensitive. That is, SQL Server considers the uppercase and lowercase versions of letters to be identical for sorting purposes. You can explicitly select case insensitivity by specifying _CI.|  
-|Accent-sensitive (_AS)|Distinguishes between accented and unaccented characters. For example, 'a' is not equal to '???'. If this option is not selected, the collation will be accent-insensitive. That is, SQL Server considers the accented and unaccented versions of letters to be identical for sorting purposes. You can explicitly select accent insensitivity by specifying _AI.|  
+|Accent-sensitive (_AS)|Distinguishes between accented and unaccented characters. For example, 'a' is not equal to '&#x1EA5;'. If this option is not selected, the collation will be accent-insensitive. That is, SQL Server considers the accented and unaccented versions of letters to be identical for sorting purposes. You can explicitly select accent insensitivity by specifying _AI.|  
 |Kana-sensitive (_KS)|Distinguishes between the two types of Japanese kana characters: Hiragana and Katakana. If this option is not selected, the collation is Kana-insensitive. That is, SQL Server considers Hiragana and Katakana characters to be equal for sorting purposes. Omitting this option is the only method of specifying Kana-insensitivity.|  
 |Width-sensitive (_WS)|Distinguishes between full-width and half-width characters. If this option is not selected, SQL Server considers the full-width and half-width representation of the same character to be identical for sorting purposes. Omitting this option is the only method of specifying width-insensitivity.|  
   

@@ -1,6 +1,6 @@
 ---
-title: "Executing XPath Queries with Namespaces (SQLXMLOLEDB Provider) | Microsoft Docs"
-ms.custom: ""
+title: "Execute XPath queries with namespaces (SQLXMLOLEDB)"
+description: Learn how to specify namespaces in SQLXML 4.0 when executing XPath queries with the SQLXMLOLEDB Provider.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -15,13 +15,13 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], SQLXMLOLEDB Provider"
   - "namespaces [SQLXML], XPath queries"
 ms.assetid: 024a4b7d-435d-47ba-9e80-2c2f640108f5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing XPath Queries with Namespaces (SQLXMLOLEDB Provider)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   XPath queries can include namespaces. If the schema elements are namespace qualified (that is, if they include a target namespace), XPath queries against the schema must specify this namespace.  
   
  Because using the wildcard character (*) is not supported in SQLXML 4.0, you must specify the XPath query by using a namespace prefix. To resolve this prefix, use the namespaces property to specify the namespace binding.  
@@ -35,7 +35,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  In SQLXML 4.0, this XPath query must be specified with a namespace prefix. An example is **x:Contact**, where **x** is the namespace prefix. Consider the following XSD schema:  
   
 ```  
-<schema xmlns="https://www.w3.org/2001/XMLSchema"  
+<schema xmlns="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema"  
             xmlns:con="urn:myschema:Contacts"  
             targetNamespace="urn:myschema:Contacts">  
@@ -90,7 +90,7 @@ End Sub
     ```  
   
 4.  Execute the application.  
-  
+
  This is the partial result:  
   
 ```  

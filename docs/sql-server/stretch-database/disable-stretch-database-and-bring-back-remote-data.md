@@ -1,17 +1,16 @@
 ---
-title: "Disable Stretch Database and bring back remote data | Microsoft Docs"
-ms.custom: ""
+title: "Disable Stretch Database and bring back remote data"
 ms.date: "08/05/2016"
-ms.prod: sql
+ms.service: sql-server-stretch-database
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Stretch Database, disabling"
   - "disabling Stretch Database"
 ms.assetid: c1bbb24e-47e3-46aa-b786-fcadf9fb65ce
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
+ms.custom: seo-dt-2019
 ---
 # Disable Stretch Database and bring back remote data
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]

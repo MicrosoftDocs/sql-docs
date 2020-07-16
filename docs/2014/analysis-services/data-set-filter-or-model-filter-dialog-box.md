@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: a9602174-b7e2-4e16-8ded-dfd8eb9264d7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Set Filter or Model Filter Dialog Box
   This dialog box helps you build the filters that you can apply to a data set.  The data set can be an external data set used for testing, or the case data for a mining model. The name of the dialog box changes depending on whether the filter is for an external data set or for a mining model.  

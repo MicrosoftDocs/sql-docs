@@ -11,12 +11,11 @@ f1_keywords:
 ms.assetid: c8965f2c-51d9-437d-a6f3-8ac2075ede6b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Customize (Commands Page)
   This dialog box enables you to add and remove commands on toolbars and menus as well as change the images used for toolbar buttons or menu commands. You can access the **Commands** page by clicking **Customize** on the **Tools** menu and then clicking **Commands**.  
   
-## UIElement List  
+## UI element list  
  **Categories**  
  Specifies the set of commands that are displayed in the **Commands** list box. The categories of commands are based on menu titles provided by the tools and designers that the environment is currently supporting. This list of titles is dynamic so that the order of categories and the menu titles change, depending on the tools and the designer, as well as any customizations made to them. Therefore, it is possible for two menus from different designers to have the same name, so the same title can appear twice but offer different command sets.  
   

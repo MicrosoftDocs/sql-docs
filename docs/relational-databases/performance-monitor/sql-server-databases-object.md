@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: a7f9e7d4-fff4-4c72-8b3e-3f18dffc8919
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, Databases Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **SQLServer:Databases** object in SQL Server provides counters to monitor bulk copy operations, backup and restore throughput, and transaction log activities. Monitor transactions and the transaction log to determine how much user activity is occurring in the database and how full the transaction log is becoming. The amount of user activity can determine the performance of the database and affect log size, locking, and replication. Monitoring low-level log activity to gauge user activity and resource usage can help you to identify performance bottlenecks.  
   
  Multiple instances of the **Databases** object, each representing a single database, can be monitored at the same time.  
@@ -64,7 +63,7 @@ manager: craigg
 |**Log Pool Total Active Log Size**|Current total active log stored in the shared cache buffer manager in bytes.|
 |**Log Pool Total Shared Pool Size**|Current total memory usage of the shared cache buffer manager in bytes.|
 |**Log Shrinks**|Total number of log shrinks for this database.|  
-|**Log Truncations**|The number of times the transaction log has been shrunk.|  
+|**Log Truncations**|The number of times the transaction log has been truncated (in Simple Recovery Model).|  
 |**Percent Log Used**|Percentage of space in the log that is in use.|  
 |**Repl. Pending Xacts**|Number of transactions in the transaction log of the publication database marked for replication, but not yet delivered to the distribution database.|  
 |**Repl. Trans. Rate**|Number of transactions per second read out of the transaction log of the publication database and delivered to the distribution database.|  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "projects [Integration Services], creating"
@@ -13,9 +12,8 @@ helpviewer_keywords:
   - "SQL Server Integration Services projects, creating"
   - "SSIS projects, creating"
 ms.assetid: 6e90b016-36a5-415e-9440-a20199fffff0
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Development of an Integration Services Project
   You add [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages to projects. To create and work with [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects, you must install the [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] environment. For more information, see [Install Integration Services](install-windows/install-integration-services.md).  

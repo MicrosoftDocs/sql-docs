@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 56b2c852-fd69-4cd2-9b5d-977467b94fd9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Create the Finance Name Policy
   In this task, you will create a database named Finance, and then create a condition that requires all tables to start with the letters **fintbl**. Then, you will create a policy and policy category to enforce a naming standard for tables in the Finance database.  
@@ -34,7 +32,7 @@ manager: craigg
   
 3.  In the **Facet** list, select **Multipart Name**.  
   
-4.  In the **Expression** area, in the **Field** box, select **@Name**; in the **Operator** box, select **Like**; and in the **Value** box, type **'fintbl%'** to force all table names to start with the letters **fintbl**.  
+4.  In the **Expression** area, in the **Field** box, select **\@Name**; in the **Operator** box, select **Like**; and in the **Value** box, type **'fintbl%'** to force all table names to start with the letters **fintbl**.  
   
 5.  On the **Description** page, type **Finance table names must begin with fintbl**, and then click **OK** to create the condition.  
   
@@ -52,7 +50,7 @@ manager: craigg
   
 6.  In the **Create New Condition** dialog box, in the **Name** box, type **Finance Database**.  
   
-7.  In the **Expression** box, complete the expression to include **@Name = 'Finance'**, and then click **OK** to close the condition page.  
+7.  In the **Expression** box, complete the expression to include **\@Name = 'Finance'**, and then click **OK** to close the condition page.  
   
     > [!NOTE]  
     >  You might have to tab out of the **Value** box to enable the **OK** button.  

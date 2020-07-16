@@ -1,14 +1,15 @@
 ---
 title: "Using Always Encrypted with the PHP Drivers for SQL Server | Microsoft Docs"
-ms.date: "01/08/2018"
+ms.date: 12/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: "v-kaywon"
-ms.author: "v-kaywon"
-manager: "mbarwin"
+ms.reviewer: v-kaywon
+ms.author: v-daenge
+author: David-Engel
+manager: v-mabarw
 ---
 # Using Always Encrypted with the PHP Drivers for SQL Server
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -282,24 +283,24 @@ SQLSRV:
 
 Using an Azure Active Directory account:
 ```
-$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreAuthentication"=>$AADPassword);
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultPassword", "KeyStorePrincipalId"=>$AADUsername, "KeyStoreSecret"=>$AADPassword);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 Using an Azure application client ID and secret:
 ```
-$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultClientSecret", "KeyStorePrincipalId"=>$applicationClientID, "KeyStoreAuthentication"=>$applicationClientSecret);
+$connectionInfo = array("Database"=>$databaseName, "UID"=>$uid, "PWD"=>$pwd, "ColumnEncryption"=>"Enabled", "KeyStoreAuthentication"=>"KeyVaultClientSecret", "KeyStorePrincipalId"=>$applicationClientID, "KeyStoreSecret"=>$applicationClientSecret);
 $conn = sqlsrv_connect($server, $connectionInfo);
 ```
 
 PDO_SQLSRV:
 Using an Azure Active Directory account:
 ```
-$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreAuthentication = $AADPassword;";
+$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultPassword; KeyStorePrincipalId = $AADUsername; KeyStoreSecret = $AADPassword;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 Using an Azure application client ID and secret:
 ```
-$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultClientSecret; KeyStorePrincipalId = $applicationClientID; KeyStoreAuthentication = $applicationClientSecret;";
+$connectionInfo = "Database = $databaseName; ColumnEncryption = Enabled; KeyStoreAuthentication = KeyVaultClientSecret; KeyStorePrincipalId = $applicationClientID; KeyStoreSecret = $applicationClientSecret;";
 $conn = new PDO("sqlsrv:server = $server; $connectionInfo", $uid, $pwd);
 ```
 
@@ -324,6 +325,8 @@ The PHP drivers also inherit the limitations imposed by the ODBC Driver for SQL 
   
 ## See Also  
 [Programming Guide for PHP SQL Driver](../../connect/php/programming-guide-for-php-sql-driver.md)
+
 [SQLSRV Driver API Reference](../../connect/php/sqlsrv-driver-api-reference.md)  
+
 [PDO_SQLSRV Driver API Reference](../../connect/php/pdo-sqlsrv-driver-reference.md)  
   

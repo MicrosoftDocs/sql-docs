@@ -18,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Start and Use the Database Engine Tuning Advisor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to start and use Database Engine Tuning Advisor in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For information about how to view and work with the results after you tune a database, see [View and Work with the Output from the Database Engine Tuning Advisor](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Initialize the Database Engine Tuning Advisor  
@@ -66,7 +65,7 @@ manager: craigg
 
       ||  
       |-|  
-      |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].|  
+      |**Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later.|  
 
   
 -   Use the plan cache as a workload. By doing this, you can avoid having to manually create a workload. For more information, see [Tune a Database](#Tune) later in this topic.  

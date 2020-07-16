@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Data Profiling Task Editor"
 ms.assetid: d2fac9ce-730e-474e-961a-69406b633778
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Single Table Quick Profile Form (Data Profiling Task)
   Use the **Single Table Quick Profile Form** to configure the Data Profiling task quickly to profile a single table or view by using default settings.  

@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.xmlsourceadapter.connectionmanager.f1"
 helpviewer_keywords: 
   - "XML Source Editor"
 ms.assetid: e6507403-a3ce-4b6f-91fc-a7de9f7b6283
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # XML Source Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **XML Source Editor** to specify an XML file and the XSD that transforms the XML data.  

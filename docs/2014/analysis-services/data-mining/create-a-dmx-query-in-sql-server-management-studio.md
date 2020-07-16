@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "templates [Analysis Services], queries"
@@ -18,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 568ce40a-1f53-47eb-8c79-14347cdfde83
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create a DMX Query in SQL Server Management Studio
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a set of features to help you create prediction queries, content queries, and data definition queries against mining models and mining structures.  

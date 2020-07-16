@@ -2,7 +2,7 @@
 title: "OLE DB Driver for SQL Server Features | Microsoft Docs"
 description: "OLE DB Driver for SQL Server features"
 ms.custom: ""
-ms.date: "06/12/2018"
+ms.date: "02/11/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -14,10 +14,9 @@ helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], features"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # OLE DB Driver for SQL Server Features
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -29,7 +28,10 @@ manager: craigg
   
  [Performing Asynchronous Operations](../../oledb/features/performing-asynchronous-operations.md)  
  Discusses how OLE DB Driver for SQL Server supports asynchronous operations, which is the ability to return immediately without blocking on the calling thread.  
-  
+
+[Using Azure Active Directory](using-azure-active-directory.md)  
+Discusses new authentication methods introduced in OLE DB driver 18.2.1 that have more secure default settings and allow connecting to an instance of Azure SQL Database using a federated identity.
+
  [Using Multiple Active Result Sets &#40;MARS&#41;](../../oledb/features/using-multiple-active-result-sets-mars.md)  
  Discusses how OLE DB Driver for SQL Server supports multiple active result sets (MARS). MARS enables you to execute and receive multiple result sets using a single database connection  
   
@@ -80,6 +82,9 @@ manager: craigg
   
  [UTF-16 Support in OLE DB Driver for SQL Server](../../oledb/features/utf-16-support-in-oledb-driver-for-sql-server.md)  
  Discusses a behavior change introduced in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]. If you supply a fixed-length buffer when binding a column result or output parameter and if the **wchar** character written into the buffer before the terminating character is a high surrogate code point of a surrogate pair, and if the next **wchar** character is a low surrogate code point, OLE DB Driver for SQL Server will not add the high surrogate code point to the buffer.  
+ 
+ [UTF-8 Support in OLE DB Driver for SQL Server](../../oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+ Discusses support for UTF-8 server encoding and configuration precautions users should take when working with UTF-8 encoded data.
   
  [OLE DB Driver for SQL Server Support for High Availability, Disaster Recovery](../../oledb/features/oledb-driver-for-sql-server-support-for-high-availability-disaster-recovery.md)  
  Discusses how your application can be configured to take advantage of the high-availability, disaster recovery features added in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)].  
@@ -89,6 +94,9 @@ manager: craigg
   
  [OLE DB Driver for SQL Server Support for LocalDB](../../oledb/features/oledb-driver-for-sql-server-support-for-localdb.md)  
  Discusses OLE DB Driver for SQL Server support for the LocalDB feature.  
+  
+ [Using Transparent Network IP Resolution](../../oledb/features/using-transparent-network-ip-resolution.md)  
+ Discusses how OLE DB Driver for SQL Server supports transparent network IP resolution in a failover cluster.  
   
 ## See Also  
  [OLE DB Driver for SQL Server](../../oledb/oledb-driver-for-sql-server.md)      

@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helparticle"
 ms.assetid: 9c4a1a88-56f1-45a0-890c-941b8e0f0799
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_helparticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Displays information about an article. This stored procedure is executed at the Publisher on the publication database. For Oracle Publishers, this stored procedure is executed at the Distributor on any database.  
   
@@ -36,22 +35,22 @@ sp_helparticle [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication =**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
- [ **@article=**] **'***article***'**  
+`[ @article = ] 'article'`
  Is the name of an article in the publication. *article* is **sysname**, with a default of **%**. If *article* is not supplied, information on all articles for the specified publication is returned.  
   
- [ **@returnfilter=**] *returnfilter*  
+`[ @returnfilter = ] returnfilter`
  Specifies whether the filter clause should be returned. *returnfilter* is **bit**, with a default of **1**, which returns the filter clause.  
   
- [ **@publisher**= ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Specifies a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publisher* is **sysname**, with a default of NULL.  
   
 > [!NOTE]  
 >  *publisher* should not be specified when requesting information on an article published by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
- [ **@found=** ] *found* OUTPUT  
+`[ @found = ] found OUTPUT`
  Internal use only.  
   
 ## Result Sets  

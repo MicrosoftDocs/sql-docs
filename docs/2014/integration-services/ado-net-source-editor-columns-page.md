@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.adonetsource.columns.f1"
 ms.assetid: fbc205b9-2001-4737-a76b-1ba777344bd9
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # ADO NET Source Editor (Columns Page)
   Use the **Columns** page of the **ADO NET Source Editor** dialog box to map an output column to each external (source) column.  

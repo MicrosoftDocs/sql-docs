@@ -1,15 +1,14 @@
 ---
 title: "Table and Row Size in Memory-Optimized Tables | Microsoft Docs"
 ms.custom: ""
-ms.date: "10/27/2017"
+ms.date: "10/18/2019"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: b0a248a4-4488-4cc8-89fc-46906a8c24a1
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Table and Row Size in Memory-Optimized Tables
   A memory-optimized table consists of a collection of rows and indexes that contain pointers to rows. In a memory-optimized table, rows cannot be longer than 8,060 bytes. Understanding the size of a memory-optimized table will help you understand if your computer has enough memory.  
@@ -107,7 +106,7 @@ Memory-optimized table, consisting of indexes and rows.
   
 -   Second bucket: (John, Paris), (Jane, Prague)  
   
- An end timestamp ??? (infinity) indicates that this is the currently valid version of the row. The row has not been updated or deleted since this row version was written.  
+ An end timestamp &#x221e; (infinity) indicates that this is the currently valid version of the row. The row has not been updated or deleted since this row version was written.  
   
  For a time greater than 200, the table contains the following rows:  
   
@@ -129,7 +128,7 @@ Memory-optimized table, consisting of indexes and rows.
   
  Consider an Orders table with the following definition:  
   
-```tsql  
+```sql  
 CREATE TABLE dbo.Orders (  
      OrderID int NOT NULL   
            PRIMARY KEY NONCLUSTERED,  
@@ -211,7 +210,7 @@ GO
   
  The actual memory allocated for and used by this table and its indexes can be obtained through the following query:  
   
-```tsql  
+```sql  
 select * from sys.dm_db_xtp_table_memory_stats  
 where object_id = object_id('dbo.Orders')  
 ```  

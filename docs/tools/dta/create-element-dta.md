@@ -1,10 +1,8 @@
 ---
-title: "Create Element (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/01/2017"
+title: "Create Element (DTA)"
+description: In the dta utility, the Create element contains information about the indexes, statistics, or heap structures in a user-specified configuration.  
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
@@ -12,13 +10,18 @@ dev_langs:
 helpviewer_keywords: 
   - "Create element (DTA)"
 ms.assetid: 9d076c90-f933-45f4-b6d9-447793f6528b
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/01/2017
 ---
+
 # Create Element (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Contains information about the indexes, statistics, or heap structures in a user-specified configuration.  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+Contains information about the indexes, statistics, or heap structures in a user-specified configuration.  
   
 ## Syntax  
   

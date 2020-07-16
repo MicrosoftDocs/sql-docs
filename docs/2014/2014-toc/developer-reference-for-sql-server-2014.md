@@ -9,14 +9,15 @@ ms.topic: reference
 f1_keywords: 
   - "sql12.portal.DevRef.f1"
 ms.assetid: e60866bf-c726-479e-8a38-6bced16f527c
-author: mightypen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Developer Reference for SQL Server 2014
+
   The following features and technologies allow you to develop applications that access data in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] database.  
   
 ## Programming Reference Sections  
+
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Common Language Runtime &#40;CLR&#41; Integration Programming Concepts](../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
   
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Native XML](https://technet.microsoft.com/library/ms191274.aspx)  
@@ -39,13 +40,13 @@ manager: craigg
   
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Exception Message Box Programming](../database-engine/dev-guide/exception-message-box-programming.md)  
   
- ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with ADOMD.NET](../analysis-services/multidimensional-models/adomd-net/developing-with-adomd-net.md)  
+ ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
- ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with Analysis Management Objects &#40;AMO&#41;](../analysis-services/multidimensional-models/analysis-management-objects/developing-with-analysis-management-objects-amo.md)  
+ ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
- ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
+ ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl)  
   
- ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [OLE DB for Data Mining](../analysis-services/dev-guide/ole-db-for-data-mining.md)  
+ ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [OLE DB for Data Mining](https://docs.microsoft.com/sql/analysis-services/dev-guide/ole-db-for-data-mining?view=sql-server-2014)  
   
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Integration Services Developer's Guide](../integration-services/integration-services-developer-documentation.md)  
   
@@ -54,6 +55,7 @@ manager: craigg
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Reporting Services Developer's Guide](../reporting-services/reporting-services-features-and-tasks-ssrs.md)  
   
 ## Other Programming Resources  
+
  Developing a data-access application may require you to use one or more of the following technologies:  
   
  [Accessing Data in Visual Studio](https://go.microsoft.com/fwlink/?LinkId=129902)  

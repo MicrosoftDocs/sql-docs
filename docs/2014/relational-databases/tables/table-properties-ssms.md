@@ -15,7 +15,6 @@ f1_keywords:
 ms.assetid: ad8a2fd4-f092-4c0f-be85-54ce8b9d725a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Table Properties
   This topic describes the table properties that are displayed in the Table Properties dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. For more information about how to display these properties, see [View the Table Definition](view-the-table-definition.md).  

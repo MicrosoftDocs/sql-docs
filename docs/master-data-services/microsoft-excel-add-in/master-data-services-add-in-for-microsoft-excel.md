@@ -1,6 +1,7 @@
 ---
-title: "Master Data Services Add-in for Microsoft Excel | Microsoft Docs"
-ms.custom: microsoft-excel-add-in
+title: Overview
+description: Learn how to load data from Master Data Services into Excel and publish it back to Master Data Services by using the Master Data Services Add-in for Excel.
+ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: "07/25/2017"
 ms.prod: sql
 ms.prod_service: "mds"
@@ -8,13 +9,12 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 33d9c8fc-9602-494d-b9ab-8f0f42785974
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Master Data Services Add-in for Microsoft Excel
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   With the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)][!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)], you can load filtered lists of data from MDS into Excel, where you can work with it just as you would any other data. When you are done, you can publish the data back to MDS, where it is centrally stored. Security determines which data you can view and update.  
   
@@ -25,6 +25,7 @@ manager: craigg
 ## Downloads 
 >*  Download the Master Data Services Add-in for Excel for SQL Server 2016 SP2 from [this Microsoft Download Center page](https://www.microsoft.com/download/details.aspx?id=56838). 
 >* Download the [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] [!INCLUDE[ssMDSXLS](../../includes/ssmdsxls-md.md)] for SQL Server 2017 from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=836867).
+>*  Download the Master Data Services Add-in for Excel for SQL Server 2019 CTP from [this Microsoft Download Center page](https://go.microsoft.com/fwlink/?linkid=2086948). 
  
   
 ## Terms  

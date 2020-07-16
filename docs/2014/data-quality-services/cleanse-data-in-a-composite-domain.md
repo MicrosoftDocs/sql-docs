@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 7d1076e0-7710-469a-9107-e293e4bd80ac
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Cleanse Data in a Composite Domain
   This topic provides information about cleansing of composite domains in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A composite domain consists of two or more single domains, and maps to a data field that consists of multiple related terms. The individual domains in a composite domain must have a common area of knowledge. For detailed information about composite domains, see [Managing a Composite Domain](../../2014/data-quality-services/managing-a-composite-domain.md).  

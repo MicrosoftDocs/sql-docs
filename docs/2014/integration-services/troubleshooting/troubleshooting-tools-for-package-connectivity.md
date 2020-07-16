@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "errors [Integration Services], troubleshooting"
   - "packages [Integration Services], troubleshooting"
 ms.assetid: 08a019f5-8ba7-4527-97c1-e9846d4022ff
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Troubleshooting Tools Package Connectivity
   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] includes features and tools that you can use to troubleshoot connectivity between packages and the data sources from which packages extract and load data.  

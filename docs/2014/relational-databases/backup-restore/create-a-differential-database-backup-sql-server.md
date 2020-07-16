@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 70f49794-b217-4519-9f2a-76ed61fa9f99
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Create a Differential Database Backup (SQL Server)
   This topic describes how to create a differential database backup in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -148,7 +147,7 @@ manager: craigg
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  This example creates a full and a differential database backup for the `MyAdvWorks` database.  
   
-```tsql  
+```sql  
 -- Create a full database backup first.  
 BACKUP DATABASE MyAdvWorks   
    TO MyAdvWorks_1   

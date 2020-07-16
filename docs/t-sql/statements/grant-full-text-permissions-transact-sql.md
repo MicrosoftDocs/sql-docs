@@ -16,12 +16,11 @@ helpviewer_keywords:
   - "full-text stoplist [SQL Server], permissions"
   - "GRANT statement, full-text permissions"
 ms.assetid: fdb64e09-222a-47fe-b08b-999264ca261d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # GRANT Full-Text Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Grants permissions on a full-text catalog or full-text stoplist.  
   
@@ -31,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 GRANT permission [ ,...n ] ON  
     FULLTEXT   
         {  

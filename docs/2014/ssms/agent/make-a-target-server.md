@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 13aabe2d-67fe-4c67-8d49-2928dd705b7a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Make a Target Server
   This topic describes how to make a target server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or SQL Server Management Objects (SMO).  
@@ -90,7 +89,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example enlists the current server into the AdventureWorks1 master server. The location for the current server is Building 21, Room 309, Rack 5.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
@@ -105,5 +104,3 @@ manager: craigg
   
 ## See Also  
  [Automated Administration Across an Enterprise](automated-administration-across-an-enterprise.md)  
-  
-  

@@ -1,6 +1,6 @@
 ---
-title: "Find and Replace | Microsoft Docs"
-ms.custom: ""
+title: "Find and Replace"
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -10,13 +10,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Find and Replace dialog box"
 ms.assetid: 09297893-d80b-4c88-86b4-52bfb639e521
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Find and Replace
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Use the **Find and Replace** dialog box to locate text within a file and optionally replace it. Versions of the **Find and Replace** dialog box with slightly different options can appear, depending on how the dialog box was opened. On the **Edit** menu, point to **Find and Replace**, and then click **Quick Find** to open the dialog box with find options, but without replace options. On the **Edit** menu, point to **Find and Replace**, and then click **Quick Replace** to open the dialog box with both find options and replace options.  
   
  Toolbar buttons and shortcut keys are also available to open the **Find and Replace** dialog box.  
@@ -118,4 +117,4 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  This toolbar tab changes the dialog box to a **Replace in Files** dialog box  
   
 ## See Also  
- [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

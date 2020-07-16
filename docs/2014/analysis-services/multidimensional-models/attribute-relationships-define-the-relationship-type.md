@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing member properties"
@@ -16,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 893a9084-d0fe-425c-b251-7518d3b3b65b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define the Relationship Type of an Attribute Relationship
   You define the relationship type of an attribute relationship by using the **Attribute Relationships** tab in Dimension Designer, which can be accessed from [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

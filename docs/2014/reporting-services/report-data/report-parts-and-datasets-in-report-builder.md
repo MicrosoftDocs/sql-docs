@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 1fe86481-9c41-4535-a4b7-c7c4d780cab6
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Report Parts and Datasets in Report Builder
   In Report Builder, the easiest way to include data in a report is to add report parts from the Report Part Gallery. Report parts contain the datasets that they depend on, which are known as *dependent datasets*. Dependent datasets are based on shared data sources and can be either embedded datasets or shared datasets.  

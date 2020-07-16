@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: a230a9bb-6046-401f-b5e5-53ff6edf2264
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Local Mode vs. Connected Mode Reports in the Report Viewer (Reporting Services in SharePoint Mode)
   [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] reports can be configure to run in either *local mode* or *connected mode*, which leverages a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server. Instead, you can use the Report Viewer to directly render reports from SharePoint when the data extension supports local mode reporting. This approach is called *local mode*. In previous versions of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)], the SharePoint farm was required to be connected to a [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] report server configured in SharePoint mode so the Report Viewer control could render reports. This approach is called *remote mode* or *connected mode*.  
@@ -54,9 +53,9 @@ manager: craigg
   
  For more information, see the following.  
   
--   [What's new in Access 2013](http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx) (http://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx).  
+-   [What's new in Access 2013](https://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx) (https://office.microsoft.com/access-help/what-s-new-in-access-2013-HA102809500.aspx).  
   
--   [Basic tasks for an Access app](http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (http://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500).  
+-   [Basic tasks for an Access app](https://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500) (https://office.microsoft.com/access-help/basic-tasks-for-an-access-app-HA102840210.aspx?CTT=5&origin=HA102809500).  
   
 ##  <a name="bkmk_local_mode_sharepoint2010"></a> Configure Local Mode Reporting with SharePoint 2010  
  Local mode requires ASP.NET session state. The installation of Access services will enable ASP.Net sessions state. You can also enable using PowerShell.  
@@ -80,5 +79,4 @@ manager: craigg
   
 ## See Also  
  [Data Sources Supported by Reporting Services &#40;SSRS&#41;](create-deploy-and-manage-mobile-and-paginated-reports.md)  
-  
   

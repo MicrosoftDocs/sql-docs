@@ -22,10 +22,9 @@ helpviewer_keywords:
 ms.assetid: ba56fba1-af9b-4459-b6e4-5d7e71a7630b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SET NOEXEC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Compiles each query but does not execute it.  
   
@@ -33,7 +32,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET NOEXEC { ON | OFF }  
 ```  
@@ -51,7 +50,7 @@ SET NOEXEC { ON | OFF }
 ## Examples  
  The following example uses `NOEXEC` with a valid query, a query with an object name that is not valid, and a query with incorrect syntax.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 PRINT 'Valid query';  

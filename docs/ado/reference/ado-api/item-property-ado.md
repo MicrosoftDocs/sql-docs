@@ -43,9 +43,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Item property [ADO]"
 ms.assetid: e11484bb-c5c7-42d8-9bb8-21572125d727
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Item Property (ADO)
 Indicates a specific member of a collection, by name or ordinal number.  

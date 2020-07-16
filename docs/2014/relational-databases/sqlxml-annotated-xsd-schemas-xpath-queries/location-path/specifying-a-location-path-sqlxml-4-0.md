@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "relative location path [SQLXML]"
   - "location path for XPath query"
 ms.assetid: a23a2b75-bc69-49f0-99db-05e14dc15bc0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Specifying a Location Path (SQLXML 4.0)
   XPath queries are specified in the form of an expression. There are various kinds of expressions. A location path is an expression that selects a set of nodes relative to the context node. The result of evaluating a location path is a node-set.  

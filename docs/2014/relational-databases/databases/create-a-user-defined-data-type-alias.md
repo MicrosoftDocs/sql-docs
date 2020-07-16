@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b1dd8413-0cd0-411b-a79b-1bb043ccc62d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Create a User-Defined Data Type Alias
   This topic describes how to create a new user-defined data type alias in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -112,7 +111,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example creates a data type alias based on the system-supplied `varchar` data type. The `ssn` data type alias is used for columns holding 11-digit social security numbers (999-99-9999). The column cannot be NULL.  
   
-```tsql  
+```sql  
 CREATE TYPE ssn  
 FROM varchar(11) NOT NULL ;  
 ```  

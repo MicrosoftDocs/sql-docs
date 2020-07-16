@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "targets [SQL Server extended events]"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: e281684c-40d1-4cf9-a0d4-7ea1ecffa384
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Extended Events Targets
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Extended Events targets are event consumers. Targets can write to a file, store event data in a memory buffer, or aggregate event data. Targets can process data synchronously or asynchronously.  

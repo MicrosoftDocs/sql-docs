@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ins.instwizard.reportserverinstoptions.f1"
@@ -14,9 +13,8 @@ helpviewer_keywords:
   - "report servers [Reporting Services], installing"
   - "SQL Server Installation Wizard, Report Server Installation Options page"
 ms.assetid: e4561f6c-bc7f-467e-821a-cde8e5cd7391
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Reporting Services Configuration Options (SSRS)
   Use the **Reporting Services Configuration** page of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to specify how a report server is installed and configured. The availability of an installation option depends on options you chose previously on the **Feature Selection** page and whether you are also installing a local instance of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] at the same time you are installing the report server.  

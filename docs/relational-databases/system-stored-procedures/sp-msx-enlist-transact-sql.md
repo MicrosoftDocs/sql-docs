@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_msx_enlist"
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_msx_enlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds the current server to the list of available servers on the master server.  
   
@@ -38,10 +37,10 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ```  
   
 ## Arguments  
- [ **@msx_server_name =**] **'***msx_server***'**  
+`[ @msx_server_name = ] 'msx_server'`
  The name of the multiserver administration (master) server. *msx_server* is **sysname**, with no default.  
   
- [ **@location =**] **'***location***'**  
+`[ @location = ] 'location'`
  The location of the target server to add. *location* is **nvarchar(100)**, with a default of NULL.  
   
 ## Return Code Values  

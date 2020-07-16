@@ -1,6 +1,7 @@
 ---
-title: "Create an Updatable Subscription to a Transactional Publication | Microsoft Docs"
-ms.custom: ""
+title: "Create an Updatable Subscription (Transactional)"
+description: Learn how to create an Updatable Subscription to a Transactional Publication for SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "11/20/2018"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -13,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: f9ef89ed-36f6-431b-8843-25d445ec137f
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Create an Updatable Subscription to a Transactional Publication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 > [!NOTE]  
 >  This feature remains supported in versions of [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)] from 2012 through 2016.  [!INCLUDE[ssNoteDepFutureAvoid](../../../includes/ssnotedepfutureavoid-md.md)]  
 

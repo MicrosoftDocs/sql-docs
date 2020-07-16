@@ -22,12 +22,11 @@ helpviewer_keywords:
   - "backing up master keys [SQL Server]"
   - "database master key [SQL Server], exporting"
 ms.assetid: 0e25fe22-2536-4d7e-ba4a-1921e880f367
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # BACKUP MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Exports the database master key.  
   
@@ -41,7 +40,9 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
     ENCRYPTION BY PASSWORD = 'password'  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  FILE ='*path_to_file*'  
  Specifies the complete path, including file name, to the file to which the master key will be exported. This may be a local path or a UNC path to a network location.  
   

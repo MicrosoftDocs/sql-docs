@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 5fc8ba1a-2b30-4775-9b3b-c09dee711b3e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Lesson 3: Rename Columns
   In this lesson, you will rename many of the columns in each table you imported. Renaming makes columns more identifiable and easier to navigate in both the model designer as well by users selecting fields in a client application. To learn more, see [Rename a Table or Column &#40;SSAS Tabular&#41;](tabular-models/rename-a-table-or-column-ssas-tabular.md).  

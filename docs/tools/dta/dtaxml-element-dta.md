@@ -1,10 +1,8 @@
 ---
-title: "DTAXML Element (DTA) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "DTAXML Element (DTA)"
+description: In the dta utility, the DTAXML element contains all elements that describe tuning input and output that the Database Engine Tuning Advisor generates.
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: tools-other
 ms.topic: conceptual
 dev_langs: 
@@ -12,20 +10,25 @@ dev_langs:
 helpviewer_keywords: 
   - "DTAXML element"
 ms.assetid: 3d9942ed-8a27-40db-a7c9-808984d914a2
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 03/14/2017
 ---
+
 # DTAXML Element (DTA)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  The root element of a Database Engine Tuning Advisor XML input or output file, **DTAXML** contains all elements that describe tuning input and the tuning output that Database Engine Tuning Advisor generates.  
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+The root element of a Database Engine Tuning Advisor XML input or output file, **DTAXML** contains all elements that describe tuning input and the tuning output that Database Engine Tuning Advisor generates.  
   
 ## Syntax  
   
 ```  
   
 <DTAXML   
-    xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"   
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"   
     xmlns="https://schemas.microsoft.com/sqlserver/2004/07/dta">  
     ...code removed here...  
 </DTAXML>  
@@ -35,7 +38,7 @@ manager: craigg
   
 |Attribute|Description|  
 |---------------|-----------------|  
-|**xmlns:xsi**|Required. Identifies the XML Schema Instance namespace. Attributes from this namespace are used to reference the schema that is used to validate the Database Engine Tuning Advisor XML file.<br /><br /> Required value: [https://www.w3.org/2001/XMLSchema-instance](https://www.w3.org/2001/XMLSchema-instance)|  
+|**xmlns:xsi**|Required. Identifies the XML Schema Instance namespace. Attributes from this namespace are used to reference the schema that is used to validate the Database Engine Tuning Advisor XML file.<br /><br /> Required value: [http://www.w3.org/2001/XMLSchema-instance](http://www.w3.org/2001/XMLSchema-instance)|  
 |**xmlns**|Required. Identifies the Database Engine Tuning Advisor namespace.<br /><br /> If you edit the Database Engine Tuning Advisor XML file using the XML editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], this value is used by F1 Help and Dynamic Help to locate possible reference topics in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.<br /><br /> Required value:<br /><br /> [Database Engine Tuning Advisor XML Schema](https://go.microsoft.com/fwlink/?LinkId=43100) Namespace|  
   
 ## Element Characteristics  

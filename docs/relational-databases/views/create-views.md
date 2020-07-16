@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0b7bd2a1-544c-42ba-8e7b-4822f34d7b64
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create Views
@@ -70,7 +69,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 7.  On the **File** menu, click **Save**_view name_.  
   
 8.  In the **Choose Name** dialog box, enter a name for the new view and click **OK**.  
-  
+
      For more information about the query and view designer, see [Query and View Designer Tools &#40;Visual Database Tools&#41;](https://msdn.microsoft.com/library/12e4b5a5-b793-4b6c-a0e5-c450c49bf26f).  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  

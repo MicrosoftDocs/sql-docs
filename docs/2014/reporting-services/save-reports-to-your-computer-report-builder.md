@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 56d2d0d7-1eb6-4c6b-aaf4-0521723ef4af
-author: maggiesmsft
-ms.author: douglasl
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Save Reports to Your Computer (Report Builder)
   In Report Builder, you can save a report definitions to your computer. However, when they are saved to your compute,r other users cannot view the reports and reports that reference shared data sources or store report items such as images and subreports externally might not run. It is recommended that you save reports to a report server or SharePoint site.  

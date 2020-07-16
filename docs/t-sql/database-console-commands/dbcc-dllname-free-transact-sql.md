@@ -24,12 +24,11 @@ helpviewer_keywords:
   - "freeing DLLs"
   - "unloading DLLs"
 ms.assetid: 1eb71c17-fe15-430b-8916-e4e312dcf9c0
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC dllname (FREE) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Unloads the specified extended stored procedure DLL from memory.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)

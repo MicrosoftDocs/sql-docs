@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ARTXP"
@@ -19,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 642297cc-f32a-499b-b26e-fdc7ee24361e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Microsoft Time Series Algorithm
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Time Series algorithm provides regression algorithms that are optimized for the forecasting of continuous values, such as product sales, over time. Whereas other [!INCLUDE[msCoName](../../includes/msconame-md.md)] algorithms, such as decision trees, require additional columns of new information as input to predict a trend, a time series model does not. A time series model can predict trends based only on the original dataset that is used to create the model. You can also add new data to the model when you make a prediction and automatically incorporate the new data in the trend analysis.  

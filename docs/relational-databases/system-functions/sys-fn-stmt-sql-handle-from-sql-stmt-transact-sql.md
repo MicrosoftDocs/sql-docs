@@ -12,11 +12,10 @@ dev_langs:
 ms.assetid: 6794e073-0895-4507-aba3-c3545acc843f
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Gets the **stmt_sql_handle** for a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement under given parameterization type (simple or forced). This allows you to refer to queries stored in the Query Store by using their **stmt_sql_handle** when you know their text.  
   

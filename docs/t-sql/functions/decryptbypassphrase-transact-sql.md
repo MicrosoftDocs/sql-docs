@@ -17,12 +17,11 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], DECRYPTBYPASSPHRASE function"
   - "DECRYPTBYPASSPHRASE function"
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DECRYPTBYPASSPHRASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function decrypts data originally encrypted with a passphrase.  
   
@@ -30,7 +29,7 @@ This function decrypts data originally encrypted with a passphrase.
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DecryptByPassPhrase ( { 'passphrase' | @passphrase }   
     , { 'ciphertext' | @ciphertext }  
@@ -43,35 +42,25 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 The passphrase used to generate the decryption key.  
   
  @passphrase  
-A variable of type
-
-+ **char**
-+ **nchar**
-+ **nvarchar**
-
-or
-
-+ **varchar**
-
-containing the passphrase used to generate the decryption key.  
+A variable of type **char**, **nchar**, **nvarchar**, or **varchar** containing the passphrase used to generate the decryption key.  
   
 '*ciphertext*'  
 The string of data encrypted with the key. *ciphertext* has a **varbinary** data type.  
  
 @ciphertext  
-A variable of type **varbinary** containing data encrypted with the key. The *@ciphertext* variable has a maximum size of 8,000 bytes.  
+A variable of type **varbinary** containing data encrypted with the key. The *\@ciphertext* variable has a maximum size of 8,000 bytes.  
   
 *add_authenticator*  
 Indicates whether the original encryption process included, and encrypted, an authenticator together with the plaintext. *add_authenticator* has a value of 1 if the encryption process used an authenticator. *add_authenticator* has an **int** data type.  
   
 @add_authenticator  
-A variable indicating whether the original encryption process included, and encrypted, an authenticator together with the plaintext. Is *@add_authenticator* has a value of 1 if the encryption process used an authenticator. *@add_authenticator* has an **int** data type.  
+A variable indicating whether the original encryption process included, and encrypted, an authenticator together with the plaintext. Is *\@add_authenticator* has a value of 1 if the encryption process used an authenticator. *\@add_authenticator* has an **int** data type.  
 
 *authenticator*  
 The data used as the basis for the generation of the authenticator. *authenticator* has a **sysname** data type.  
   
 @authenticator  
-A variable containing data used as the basis for the generation of the authenticators. *@authenticator* has a **sysname** data type.  
+A variable containing data used as the basis for the generation of the authenticators. *\@authenticator* has a **sysname** data type.  
   
 ## Return Types  
 **varbinary**, with a maximum size of 8,000 bytes.  
@@ -88,14 +77,14 @@ This example decrypts the record updated in [EncryptByPassPhrase](../../t-sql/fu
   
 ```  
 USE AdventureWorks2012;  
--- Get the pass phrase from the user.  
+-- Get the passphrase from the user.  
 DECLARE @PassphraseEnteredByUser nvarchar(128);  
 SET @PassphraseEnteredByUser   
 = 'A little learning is a dangerous thing!';  
   
 -- Decrypt the encrypted record.  
 SELECT CardNumber, CardNumber_EncryptedbyPassphrase   
-    AS 'Encrypted card number', CONVERT(nvarchar,  
+    AS 'Encrypted card number', CONVERT(varchar,  
     DecryptByPassphrase(@PassphraseEnteredByUser, CardNumber_EncryptedbyPassphrase, 1   
     , CONVERT(varbinary, CreditCardID)))  
     AS 'Decrypted card number' FROM Sales.CreditCard   

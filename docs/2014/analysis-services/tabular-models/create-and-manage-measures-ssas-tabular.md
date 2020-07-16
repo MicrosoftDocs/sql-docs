@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: edc1a4b2-96d3-4f34-bb70-6cacec79e819
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create and Manage Measures (SSAS Tabular)
   A measure is a formula that is created for use in a report or Excel PivotTable (or PivotChart). Measures can be based on standard aggregation functions, such as COUNT or SUM, or you can define your own formula by using DAX. The tasks in this topic describe how to create and manage measures by using a table's measure grid.  

@@ -14,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: 8c0d2f39-59c1-4168-a649-65473f6a771b
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # View Plan Guide Properties
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   You can view the properties of plan guides in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]  
   
  **In This Topic**  

@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5a7f7cfd-7faf-439f-8085-8fd6bf7db355
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Tutorial: Using the hierarchyid Data Type
   This tutorial is intended for users who are experienced with [!INCLUDE[tsql](../../includes/tsql-md.md)], but are new to the `hierarchyid` data type.  

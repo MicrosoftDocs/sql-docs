@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], error messages"
   - "FoxPro ODBC driver [ODBC], error messages"
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # Visual FoxPro ODBC Driver Native Error Messages
 The following tables list error messages native to the Visual FoxPro ODBC Driver.  

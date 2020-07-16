@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 38ea7c03-4754-4e71-896a-f68cc2c98ce2
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Time Series Prediction DMX Tutorial
   In this tutorial, you will learn how to create a time series mining structure, create three custom time series mining models, and then make predictions by using those models.  

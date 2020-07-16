@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: aff96558-e5e5-4b95-8ddf-ee0709c842fb
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Tabular Model Solution Deployment (SSAS Tabular)
   After authoring a tabular model project, you must deploy it in order for users to browse the model by using a reporting client application. This topic describes the various properties and methods you can use when deploying tabular model solutions in your environment.  

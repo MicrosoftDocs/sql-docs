@@ -12,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Handler property [ADO], VC++ example"
 ms.assetid: d046d89c-622b-48bc-9d30-f454c3e13595
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Handler Property Example (VC++)
 > [!IMPORTANT]

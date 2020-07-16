@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2ded5e9c-4251-4fb1-a047-99f13d150b61
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Give Others Ownership of a Job
   This topic describes how to reassign ownership of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs to another user.  
@@ -66,7 +65,7 @@ manager: craigg
   
 3.  In the query window, enter the following statements that use the [sp_manage_jobs_by_login &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-manage-jobs-by-login-transact-sql) system stored procedure. The following example reassigns all jobs from `danw` to `fran??oisa`.  
   
-    ```  
+    ```sql
     USE msdb ;  
     GO  
   
@@ -78,12 +77,11 @@ manager: craigg
     ```  
   
 ##  <a name="SMOProc2"></a> Using SQL Server Management Objects  
- **To give others ownership of a job**  
+
+### To give others ownership of a job
   
 1.  Call the `Job` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For example code, see [Scheduling Automatic Administrative Tasks in SQL Server Agent](sql-server-agent.md).  
   
 ## See Also  
  [Implement Jobs](implement-jobs.md)   
  [Create Jobs](create-jobs.md)  
-  
-  

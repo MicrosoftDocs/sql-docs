@@ -24,10 +24,9 @@ helpviewer_keywords:
 ms.assetid: 4415a126-cd22-4a5e-b84a-d8c68515c83b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # END CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Ends one side of an existing conversation.  
   
@@ -35,7 +34,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 END CONVERSATION conversation_handle  
    [   [ WITH ERROR = failure_code DESCRIPTION = 'failure_text' ]  

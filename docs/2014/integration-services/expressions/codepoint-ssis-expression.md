@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "CODEPOINT function"
   - "leftmost character of expression"
 ms.assetid: 0783d05e-7f35-42fb-a2c4-9621c46effd6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # CODEPOINT (SSIS Expression)
   Returns the Unicode code point of the leftmost character of a character expression.  

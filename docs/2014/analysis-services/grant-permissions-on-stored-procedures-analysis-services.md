@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 01793166-a3e5-4856-8302-21b82d494e69
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Grant permissions on stored procedures (Analysis Services)
   Stored procedures, or assemblies, in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] are external routines, written in a [!INCLUDE[msCoName](../includes/msconame-md.md)] .NET programming language, that extend the capabilities of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. Assemblies let the developer take advantage of cross-language integration, exception handling, versioning support, deployment support, and debugging support.  

@@ -1,19 +1,18 @@
 ---
 title: "Migrate a Reporting Services Installation (Native Mode) | Microsoft Docs"
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-manager: kfile
-ms.date: 11/06/2018
+author: maggiesMSFT
+ms.author: maggies
+ms.date: 05/01/2020
 ---
 
 # Migrate a Reporting Services Installation (Native Mode)
 
 This topic provides step-by-step instructions for migrating one of the following supported versions of a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] native mode deployment to a new SQL Server Reporting Services instance:  
   
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 * [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)]
 
 * [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]  
@@ -33,9 +32,10 @@ This topic provides step-by-step instructions for migrating one of the following
 * [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]  
   
 * [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]
-::: moniker-end
 
 For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode deployment, see [Migrate a Reporting Services Installation &#40;SharePoint Mode&#41;](../../reporting-services/install-windows/migrate-a-reporting-services-installation-sharepoint-mode.md).  
+
+::: moniker-end
   
  Migration is defined as moving application data files to a new SQL Server instance. The following are common reasons you must migrate your installation:  
   
@@ -84,7 +84,7 @@ For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnover
   
 * Write code that calls the WMI provider to copy data between databases. For more information about this approach, see [Access the Reporting Services WMI Provider](../../reporting-services/tools/access-the-reporting-services-wmi-provider.md).  
   
-* If you have just a few items, you can republish reports, report models, and shared data sources from Report Designer, Model Designer, and Report Builder to the new report server. Re-create the role assignments, subscriptions, shared schedules, report snapshot schedules, custom properties that you set on reports or other items, model item security, and properties that you set on the report server. Be prepared to lose report history and report execution log data if you follow these actions.
+* If you have just a few items, you can republish reports and shared data sources from Report Designer, Model Designer, and Report Builder to the new report server. Re-create the role assignments, subscriptions, shared schedules, report snapshot schedules, custom properties that you set on reports or other items, model item security, and properties that you set on the report server. Be prepared to lose report history and report execution log data if you follow these actions.
   
 ## <a name="bkmk_before_you_start"></a> Before You Start
 
@@ -104,7 +104,7 @@ For information on migrating a [!INCLUDE[ssRSnoversion](../../includes/ssrsnover
   
 * IP address restrictions are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions. If you use IP address restrictions, you must redesign your reporting solution prior to migration or use a technology such as a firewall, router, or Network Address Translation (NAT) to configure addresses that are restricted from accessing the report server.  
   
-* Client Secure Sockets Layer (SSL) certificates are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions. If you use client SSL certificates, you must redesign your reporting solution prior to migration.  
+* Client Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), certificates are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions. If you use client TLS certificates, you must redesign your reporting solution prior to migration.  
   
 * If you use an authentication type other than Windows-Integrated authentication, you must update the `<AuthenticationTypes>` element in the **RSReportServer.config** file with a supported authentication type. The supported authentication types are NTLM, Kerberos, Negotiate, and Basic. Anonymous, .NET Passport, and Digest authentication are not supported in [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] and later versions.  
   
@@ -142,9 +142,11 @@ For more information about changes in SQL Server Reporting Services, see the Upg
   
  Click one of the following links to view instructions on how to install a new instance of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]:  
   
-* [Install SQL Server from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)  
+* [Install SQL Server Reporting Services 2016 and older from the Installation Wizard &#40;Setup&#41; ](install-reporting-services-native-mode-report-server.md) 
   
-* [Install SQL Server from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+* [Install SQL Server Reporting Services 2016 and older from the Command Prompt](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)  
+
+* [Install SQL Server Reporting Services 2017 and later](install-reporting-services.md)
 
 ## <a name="bkmk_move_database"></a> Move the Report Server Database
 

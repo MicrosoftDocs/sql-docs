@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "rendering extensions [Reporting Services], custom extensions"
@@ -14,9 +13,8 @@ helpviewer_keywords:
   - "data processing extensions [Reporting Services], custom extensions"
   - "delivery extensions [Reporting Services]"
 ms.assetid: fa184bd7-11d6-4ea3-9249-bc1b13db49e5
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Custom extensions were detected on the report server (Upgrade Advisor)
   Upgrade Advisor detected custom extension settings in the configuration files, indicating that your installation includes one or more custom extensions for data processing, delivery, rendering, security, or authentication. Upgrade will move the extension configuration settings with the upgraded report server. However, if the custom extensions are installed in the existing report server installation folder, the assembly files for those custom extensions will not be moved to the new installation folder during the upgrade process. After upgrade completes, you must move the assembly files to the new [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] installation folder.  

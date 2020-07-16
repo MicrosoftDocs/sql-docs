@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "storage [Analysis Services], partitions"
@@ -22,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 86d17547-a0b6-47ac-876c-d7a5b15ac327
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Partition Storage Modes and Processing
   The storage mode of a partition affects the query and processing performance, storage requirements, and storage locations of the partition and its parent measure group and cube. The choice of storage mode also affects processing choices.  

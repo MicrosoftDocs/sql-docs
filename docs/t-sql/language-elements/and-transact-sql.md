@@ -19,13 +19,12 @@ helpviewer_keywords:
   - "AND"
   - "combining expressions"
 ms.assetid: b61d7f8d-5a51-49b7-91dd-f6190a5a0fb9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # AND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Combines two Boolean expressions and returns **TRUE** when both expressions are **TRUE**. When more than one logical operator is used in a statement, the **AND** operators are evaluated first. You can change the order of evaluation by using parentheses.  
   
@@ -33,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 boolean_expression AND boolean_expression  
 ```  
   
@@ -78,7 +77,7 @@ IF 1 = 1 AND 2 = 2
 BEGIN  
    PRINT 'First Example is TRUE'  
 END  
-ELSE PRINT 'First Example is FALSE';  
+ELSE PRINT 'First Example is FALSE' ;  
 GO  
   
 IF 1 = 1 AND 2 = 17  

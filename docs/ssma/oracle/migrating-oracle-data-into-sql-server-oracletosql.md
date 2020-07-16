@@ -1,5 +1,6 @@
 ---
 title: "Migrating Oracle Data into SQL Server (OracleToSQL) | Microsoft Docs"
+description: Learn how to migrate data from an Oracle database to SQL Server, after you synchronize the converted objects, by using the SSMA for Oracle application.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,7 +13,7 @@ helpviewer_keywords:
 ms.assetid: e23c5268-41ed-4e55-9fe7-a11376202a13
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "v-thobro"
+manager: shamikg
 ---
 # Migrating Oracle Data into SQL Server (OracleToSQL)
 After you have successfully synchronized the converted objects with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can migrate data from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

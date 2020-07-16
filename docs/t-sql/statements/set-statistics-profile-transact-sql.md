@@ -23,10 +23,9 @@ helpviewer_keywords:
 ms.assetid: c635e262-35fa-421a-aa6f-a1c30f351647
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SET STATISTICS PROFILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Displays the profile information for a statement. STATISTICS PROFILE works for ad hoc queries, views, and stored procedures.  
   
@@ -34,7 +33,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET STATISTICS PROFILE { ON | OFF }  
 ```  

@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replmonitorhelppublisher"
 ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_replmonitorhelppublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns current status information for one or more Publishers associated with a Distributor. This stored procedure, which is used to monitor replication, is executed at the Distributor on the distribution database.  
   
@@ -33,10 +32,10 @@ sp_replmonitorhelppublisher [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## Arguments  
- [ **@publisher** = ] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher the status of which is being monitored. *publisher* is **sysname**, with a default value of NULL. If NULL, information will be returned for all Publishers that use the Distributor.  
   
- [ **@refreshpolicy=** ] *refreshpolicy*  
+`[ @refreshpolicy = ] refreshpolicy`
  Internal use only.  
   
 ## Result Sets  

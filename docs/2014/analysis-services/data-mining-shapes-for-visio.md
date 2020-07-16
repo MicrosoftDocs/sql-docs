@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining shapes"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 11a821d9-1c0a-442e-b735-92208ce479dc
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Mining Shapes for Visio
   The Data Mining Shapes for Visio provide templates customized for displaying data mining models. By using these templates, you can connect to a model that you have created, and create interactive presentations to illustrate the results of data mining.  

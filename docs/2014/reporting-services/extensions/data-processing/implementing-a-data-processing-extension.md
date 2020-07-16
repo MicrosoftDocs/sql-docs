@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "custom data processing extensions [Reporting Services]"
@@ -14,9 +12,9 @@ helpviewer_keywords:
   - "data processing extensions [Reporting Services]"
   - "extensions [Reporting Services], data processing"
 ms.assetid: 8dc2b44e-5ad9-411d-a29f-7213e29321a9
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Implementing a Data Processing Extension
   Data processing extensions in [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] enable you to connect to a data source and retrieve data. They also serve as a bridge between a data source and a dataset. [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extensions are modeled after a subset of the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)] data provider interfaces.  

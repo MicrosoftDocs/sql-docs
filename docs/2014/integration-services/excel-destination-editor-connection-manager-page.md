@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.exceldestadapter.connection.f1"
 helpviewer_keywords: 
   - "Excel Destination Editor"
 ms.assetid: fc13f725-963c-488e-91e2-20627133e842
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Excel Destination Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **Excel Destination Editor** dialog box to specify data source information, and to preview the results. The Excel destination loads data into a worksheet or a named range in a [!INCLUDE[ofprexcel](../includes/ofprexcel-md.md)] workbook.  

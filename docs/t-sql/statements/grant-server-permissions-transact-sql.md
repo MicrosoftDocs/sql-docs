@@ -15,12 +15,11 @@ helpviewer_keywords:
   - "servers [SQL Server], permissions"
   - "granting permissions [SQL Server], servers"
 ms.assetid: 7e880a5a-3bdc-491f-a167-7a9ed338be7f
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # GRANT Server Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Grants permissions on a server. 
   
@@ -28,7 +27,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 GRANT permission [ ,...n ]   
     TO <grantee_principal> [ ,...n ] [ WITH GRANT OPTION ]  

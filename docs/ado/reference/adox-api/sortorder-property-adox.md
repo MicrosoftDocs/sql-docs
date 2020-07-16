@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SortOrder property [ADOX]"
 ms.assetid: 04510b19-9cb2-4895-b23b-f7790123eb04
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SortOrder Property (ADOX)
 Indicates the sort sequence for the column (index columns only).  

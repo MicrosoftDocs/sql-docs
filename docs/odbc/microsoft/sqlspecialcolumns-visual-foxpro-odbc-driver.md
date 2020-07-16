@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSpecialColumns function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: b72a978d-6a60-475a-b7d9-c424d77bbe30
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSpecialColumns (Visual FoxPro ODBC Driver)
 > [!NOTE]  

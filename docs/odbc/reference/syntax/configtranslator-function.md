@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ConfigTranslator [ODBC]"
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # ConfigTranslator Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL ConfigTranslator(  
      HWND     hwndParent,  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor [SQL Server], about Upgrade Advisor"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d52773fd-0e13-44a2-a5f2-69d6974bb08f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Overview of Upgrade Advisor
   This section provides an overview to the upgrade process, and information to help you understand and use the Upgrade Advisor Analysis Wizard and Upgrade Advisor Report Viewer.  

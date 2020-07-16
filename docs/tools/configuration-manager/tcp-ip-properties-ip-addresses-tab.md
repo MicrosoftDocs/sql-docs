@@ -1,9 +1,10 @@
 ---
-title: "TCP/IP Properties (IP Addresses Tab) | Microsoft Docs"
-ms.custom: ""
+title: "TCP/IP Properties (IP Addresses Tab)"
+description: Learn how to use the IP Addresses tab of the TCP/IP Properties dialog box to configure the TCP/IP protocol options for a specific IP address in SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "08/24/2016"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
@@ -11,12 +12,11 @@ helpviewer_keywords:
   - "ports [SQL Server], listening on"
   - "listening [SQL Server], on ports"
 ms.assetid: 4c17ed45-9da7-4bec-bce6-970109fe7365
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # TCP/IP Properties (IP Addresses Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Use the **TCP/IP Properties (IP Addresses Tab)** dialog box to configure the TCP/IP protocol options for a specific IP address. Only **TCP Dynamic Ports** and **TCP Port** can be configured for all addresses at once by selecting **IP All**.  
   
  Changes take effect when SQL Server SQL Server is restarted. For information about starting and stopping the SQL Server Browser service, see [Start and Stop the SQL Server Browser Service](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  

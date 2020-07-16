@@ -1,6 +1,6 @@
 ---
-title: "NumberOfProps Property (ClientNetworkProtocol Class) | Microsoft Docs"
-ms.custom: ""
+title: "NumberOfProps Property (ClientNetworkProtocol)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 9c508bc5-c7a4-4db1-b3bf-c7098c66435a
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # NumberOfProps Property (ClientNetworkProtocol Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the number of properties of the client network protocol specified by the [SetOrderValue Method (ClientNetworkProtocol Class)](../../../relational-databases/wmi-provider-configuration-classes/clientnetworkprotocol-class/setordervalue-method-clientnetworkprotocol-class.md).  
   
 ## Syntax  

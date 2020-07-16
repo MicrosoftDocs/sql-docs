@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures [Analysis Services], mining models"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 9ab1506b-856e-4762-a663-5adf15ac71e3
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Delete a Mining Model from a Mining Structure
   You can delete mining models by using Data Mining Designer, by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], or by using DMX statements.  

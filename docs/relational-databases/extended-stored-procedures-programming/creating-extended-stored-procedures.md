@@ -16,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Creating Extended Stored Procedures
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR Integration instead.  

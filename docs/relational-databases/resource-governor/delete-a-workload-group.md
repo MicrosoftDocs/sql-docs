@@ -12,10 +12,9 @@ helpviewer_keywords:
 ms.assetid: d5902c46-5c28-4ac1-8b56-cb4ca2b072d0
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Delete a Workload Group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   You can delete a workload group or resource pool by using either [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Transact-SQL.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  

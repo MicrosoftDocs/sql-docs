@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "DropColumn function"
   - "SQL Server Native Client OLE DB provider, columns"
 ms.assetid: 210811b7-cbd6-421e-bc6e-df9482236768
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Removing a Column from a SQL Server Table
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **ITableDefinition::DropColumn** function. This allows consumers to remove a column from a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table.  

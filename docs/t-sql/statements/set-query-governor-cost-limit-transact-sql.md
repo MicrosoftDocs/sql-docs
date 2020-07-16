@@ -22,10 +22,9 @@ helpviewer_keywords:
 ms.assetid: 3424bb44-6915-462d-a8d7-fe834af81387
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Overrides the currently configured **query governor cost limit** value for the current connection.  
   
@@ -33,7 +32,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET QUERY_GOVERNOR_COST_LIMIT value  
 ```  

@@ -13,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: 44f9983c-1753-4fe0-8475-973aa2460b3a
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server Agent, JobSteps Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **JobSteps** performance object contains performance counters that report information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job steps. The table below lists the counters that this object contains.  
   
  The table below contains the **SQLAgent:JobSteps** counters.  

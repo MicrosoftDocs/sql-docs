@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "SqlXmlParameter object"
   - "Name property"
 ms.assetid: 40b938bf-7b09-48b3-9771-4421a673e17b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SqlXmlParameter Object (SQLXML Managed Classes)
   The SqlXmlParameter object supports these properties:  

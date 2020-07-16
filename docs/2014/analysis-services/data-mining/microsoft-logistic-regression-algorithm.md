@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "logical regression algorithms [Analysis Services]"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 3dd54d07-1c3b-4b87-b7f0-b962ed8cf844
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Microsoft Logistic Regression Algorithm
   Logistic regression is a well-known statistical technique that is used for modeling binary outcomes.  

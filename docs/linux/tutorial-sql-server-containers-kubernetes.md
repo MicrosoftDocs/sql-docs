@@ -1,22 +1,22 @@
 ---
-title: Deploy a SQL Server container in Kubernetes with Azure Kubernetes Services (AKS) | Microsoft Docs
+title: Deploy a SQL Server container with Azure Kubernetes Services (AKS)
 description: This tutorial shows how to deploy a SQL Server high availability solution with Kubernetes on Azure Kubernetes Service.
+ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
+ms.reviewer: vanto
 ms.date: 01/10/2018
 ms.topic: tutorial
 ms.prod: sql
-ms.custom: "sql-linux,mvc"
 ms.technology: linux
 ---
 # Deploy a SQL Server container in Kubernetes with Azure Kubernetes Services (AKS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Learn how to configure a SQL Server instance on Kubernetes in Azure Kubernetes Service (AKS), with persistent storage for high availability (HA). The solution provides resiliency. If the SQL Server instance fails, Kubernetes automatically re-creates it in a new pod. Kubernetes also provides resiliency against a node failure.
 
-This tutorial demonstrates how to configure a highly available SQL Server instance in a container on AKS. You can also create [Always On availability groups for SQL Server containers](sql-server-ag-kubernetes.md). To compare the two different Kubernetes solutions, see [High availability for SQL Server containers](sql-server-linux-container-ha-overview.md).
+This tutorial demonstrates how to configure a highly available SQL Server instance in a container on AKS.
 
 > [!div class="checklist"]
 > * Create an SA password
@@ -46,7 +46,7 @@ In the following diagram, the node hosting the `mssql-server` container has fail
 * **Kubernetes cluster**
    - The tutorial requires a Kubernetes cluster. The steps use [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) to manage the cluster. 
 
-   - See [Deploy an Azure Container Service (AKS) cluster](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) to create and connect to a single-node Kubernetes cluster in AKS with `kubectl`. 
+   - See [Deploy an Azure Kubernetes Service (AKS) cluster](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) to create and connect to a single-node Kubernetes cluster in AKS with `kubectl`. 
 
    >[!NOTE]
    >To protect against node failure, a Kubernetes cluster requires more than one node.
@@ -149,17 +149,20 @@ Configure a [persistent volume](https://kubernetes.io/docs/concepts/storage/pers
 
 In this example, the container hosting the SQL Server instance is described as a Kubernetes deployment object. The deployment creates a replica set. The replica set creates the pod. 
 
-In this step, create a manifest to describe the container based on the SQL Server [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) Docker image. The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret that you already applied to the Kubernetes cluster. The manifest also describes a [service](https://kubernetes.io/docs/concepts/services-networking/service/). This service is a load balancer. The load balancer guarantees that the IP address persists after SQL Server instance is recovered. 
+In this step, create a manifest to describe the container based on the SQL Server [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) Docker image. The manifest references the `mssql-server` persistent volume claim, and the `mssql` secret that you already applied to the Kubernetes cluster. The manifest also describes a [service](https://kubernetes.io/docs/concepts/services-networking/service/). This service is a load balancer. The load balancer guarantees that the IP address persists after SQL Server instance is recovered. 
 
 1. Create a manifest (a YAML file) to describe the deployment. The following example describes a deployment, including a container based on the SQL Server container image.
 
    ```yaml
-   apiVersion: apps/v1beta1
+   apiVersion: apps/v1
    kind: Deployment
    metadata:
      name: mssql-deployment
    spec:
      replicas: 1
+     selector:
+        matchLabels:
+          app: mssql
      template:
        metadata:
          labels:
@@ -176,7 +179,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
              value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: MSSQL_SA_PASSWORD
+           - name: SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql
@@ -247,7 +250,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
    In the preceding image, the pod has a status of `Running`. This status indicates that the container is ready. This may take several minutes.
 
    >[!NOTE]
-   >After the deployment is created, it can take a few minutes before the pod is visible. The delay is because the cluster pulls the [mssql-server-linux](https://hub.docker.com/r/microsoft/mssql-server-linux/) image from the Docker hub. After the image is pulled the first time, subsequent deployments might be faster if the deployment is to a node that already has the image cached on it. 
+   >After the deployment is created, it can take a few minutes before the pod is visible. The delay is because the cluster pulls the [mssql-server-linux](https://hub.docker.com/_/microsoft-mssql-server) image from the Docker hub. After the image is pulled the first time, subsequent deployments might be faster if the deployment is to a node that already has the image cached on it. 
 
 1. Verify the services are running. Run the following command:
 

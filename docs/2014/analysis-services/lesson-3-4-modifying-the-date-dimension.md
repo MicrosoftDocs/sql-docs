@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 4689d780-4bf6-4cf8-8fde-eb3f15dd668a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Modifying the Date Dimension
   In the tasks in this topic, you create a user-defined hierarchy and change the member names that are displayed for the Date, Month, Calendar Quarter, and Calendar Semester attributes. You also define composite keys for attributes, control the sort order of dimension members, and define attribute relationships.  

@@ -36,7 +36,6 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Access Inventory Schemas (AccessToSQL)
 The following sections describe the tables that are created by SSMA when you export Access schemas to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

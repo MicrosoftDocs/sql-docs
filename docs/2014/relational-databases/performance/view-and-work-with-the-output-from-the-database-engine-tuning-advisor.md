@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # View and Work with the Output from the Database Engine Tuning Advisor
   When the Database Engine Tuning Advisor tunes databases, it creates summaries, recommendations, reports, and tuning logs. You can use the tuning log output to troubleshoot Database Engine Tuning Advisor tuning sessions. You can use the summaries, recommendations, and reports to determine whether you want to implement tuning recommendations or continue tuning until you achieve the query performance improvements that you need for your [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. For information about how to use the Database Tuning Advisor to create workloads and tune a database, see [Start and Use the Database Engine Tuning Advisor](database-engine-tuning-advisor.md).  
@@ -276,7 +275,7 @@ manager: craigg
  The index or view affected by the recommendation. The icon in this column reflects the recommendation to drop or add the **Target of Recommendation**.  
   
  **Details**  
- A description of the **Target of Recommendation**. Possible values include clustered, indexed view, or blank indicating a non-clustered index. Also indicates whether the index is unique.  
+ A description of the **Target of Recommendation**. Possible values include clustered, indexed view, or blank indicating a nonclustered index. Also indicates whether the index is unique.  
   
  **Partition Scheme**  
  The partition scheme is provided in this column if partitioning is recommended.  

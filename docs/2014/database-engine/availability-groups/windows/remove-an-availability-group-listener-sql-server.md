@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: fd9bba9a-d29f-4c23-8ecd-aaa049ed5f1b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Remove an Availability Group Listener (SQL Server)
   This topic describes how to remove an availability group listener from an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
@@ -81,7 +80,7 @@ manager: craigg
   
      The following example deletes the listener of the `AccountsAG` availability group. The DNS name is AccountsAG_Listener.  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP AccountsAG REMOVE LISTENER 'AccountsAG_Listener';  
     ```  
   
@@ -92,9 +91,8 @@ manager: craigg
   
 2.  Use the built in `Remove-Item` cmdlet to remove a listener. For example, the following command removes a listener named `MyListener` from an availability group named `MyAg`.  
   
-    ```  
-    Remove-Item `   
-    SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\MyListener  
+    ```powershell
+    Remove-Item SQLSERVER:\Sql\PrimaryServer\InstanceName\AvailabilityGroups\MyAg\AGListeners\MyListener  
     ```  
   
     > [!NOTE]  
@@ -109,5 +107,3 @@ manager: craigg
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)  
-  
-  

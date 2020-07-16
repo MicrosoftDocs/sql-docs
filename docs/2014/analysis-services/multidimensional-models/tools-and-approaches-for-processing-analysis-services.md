@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "process [Analysis Services]"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 82347a16-4145-4655-8adf-2a300f1fdf99
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Tools and Approaches for Processing (Analysis Services)
   Processing is an operation in which Analysis Services queries a relational data source and populates Analysis Services objects using that data.  
@@ -117,13 +115,13 @@ manager: craigg
   
 1.  Starting in this release of SQL Server, you can use Analysis Services PowerShell cmdlets to process objects. The following cmdlets can be run interactively or in script:  
   
-    -   [Invoke-ProcessCube cmdlet](/sql/analysis-services/powershell/invoke-processcube-cmdlet)  
+    -   [Invoke-ProcessCube cmdlet](/powershell/module/sqlserver/invoke-processcube)  
   
-    -   [Invoke-ProcessDimension cmdlet](/sql/analysis-services/powershell/invoke-processdimension-cmdlet)  
+    -   [Invoke-ProcessDimension cmdlet](/powershell/module/sqlserver/invoke-processdimension)  
   
-    -   [Invoke-ProcessPartition cmdlet](/sql/analysis-services/powershell/invoke-processpartition-cmdlet)  
+    -   [Invoke-ProcessPartition cmdlet](/powershell/module/sqlserver/invoke-processpartition)  
   
-    -   [Invoke-ASCmd cmdlet](/sql/analysis-services/powershell/invoke-ascmd-cmdlet), which can be used to execute XMLA, MDX, or DMX script that includes processing commands.  
+    -   [Invoke-ASCmd cmdlet](/powershell/module/sqlserver/invoke-ascmd), which can be used to execute XMLA, MDX, or DMX script that includes processing commands.  
   
 ### Monitoring object processing using SQL Server Profiler  
   

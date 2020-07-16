@@ -11,9 +11,8 @@ f1_keywords:
   - "SQL12.SSIS.SSMS.ISPROJECTPROP.REFERENCES.F1"
   - "sql12.dts.designer.configure.f1"
 ms.assetid: 10183c8d-b1be-420f-972a-96ea97d4f4d8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Configure Dialog Box
   Use the **Configure** dialog box to configure parameters, connection managers, and references to environments, for packages and projects.  

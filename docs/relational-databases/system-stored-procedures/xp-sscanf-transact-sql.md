@@ -17,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 619a9df1-7008-407e-a75a-bc6f851454a8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # xp_sscanf (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reads data from the string into the argument locations specified by each format argument.  
   

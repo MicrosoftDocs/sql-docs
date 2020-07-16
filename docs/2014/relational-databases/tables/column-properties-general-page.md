@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: a745890b-994e-4c23-8028-5c83751e60c4
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Column Properties (General Page)
   Use this page to view properties for the selected column.  

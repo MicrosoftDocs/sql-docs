@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "LEAD function"
   - "analytic functions, LEAD"
 ms.assetid: 21f66bbf-d1ea-4f75-a3c4-20dc7fc1c69e
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LEAD (Transact-SQL)
@@ -43,7 +42,7 @@ LEAD ( scalar_expression [ ,offset ] , [ default ] )
  The number of rows forward from the current row from which to obtain a value. If not specified, the default is 1. *offset* can be a column, subquery, or other expression that evaluates to a positive integer or can be implicitly converted to **bigint**. *offset* cannot be a negative value or an analytic function.  
   
  *default*  
- The value to return when *scalar_expression* at *offset* is NULL. If a default value is not specified, NULL is returned. *default* can be a column, subquery, or other expression, but it cannot be an analytic function. *default* must be type-compatible with *scalar_expression*.  
+ The value to return when *offset* is beyond the scope of the partition. If a default value is not specified, NULL is returned. *default* can be a column, subquery, or other expression, but it cannot be an analytic function. *default* must be type-compatible with *scalar_expression*.
   
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. *order_by_clause* determines the order of the data before the function is applied. When *partition_by_clause* is specified, it determines the order of the data in each partition. The *order_by_clause* is required. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
@@ -64,7 +63,7 @@ GO
 SELECT BusinessEntityID, YEAR(QuotaDate) AS SalesYear, SalesQuota AS CurrentQuota,   
     LEAD(SalesQuota, 1,0) OVER (ORDER BY YEAR(QuotaDate)) AS NextQuota  
 FROM Sales.SalesPersonQuotaHistory  
-WHERE BusinessEntityID = 275 and YEAR(QuotaDate) IN ('2005','2006');  
+WHERE BusinessEntityID = 275 AND YEAR(QuotaDate) IN ('2005','2006');  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
@@ -110,7 +109,7 @@ Northwest                280              1352577.1325          0.00
  The following example demonstrates specifying a variety of arbitrary expressions in the LEAD function syntax.  
   
 ```sql  
-CREATE TABLE T (a int, b int, c int);   
+CREATE TABLE T (a INT, b INT, c INT);   
 GO  
 INSERT INTO T VALUES (1, 1, -3), (2, 2, 4), (3, 1, NULL), (4, 3, 1), (5, 2, NULL), (6, 1, 5);   
   
@@ -142,7 +141,7 @@ b           c           i
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  
        LEAD(SalesAmountQuota,1,0) OVER (ORDER BY CalendarYear, CalendarQuarter) AS NextQuota,  
-   SalesAmountQuota - LEAD(Sale sAmountQuota,1,0) OVER (ORDER BY CalendarYear, CalendarQuarter) AS Diff  
+   SalesAmountQuota - LEAD(SalesAmountQuota,1,0) OVER (ORDER BY CalendarYear, CalendarQuarter) AS Diff  
 FROM dbo.FactSalesQuota  
 WHERE EmployeeKey = 272 AND CalendarYear IN (2001,2002)  
 ORDER BY CalendarYear, CalendarQuarter;  

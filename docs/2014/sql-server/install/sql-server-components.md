@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Upgrade Advisor, components"
@@ -21,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 539b9525-ce3f-4950-9146-5527a5a297ee
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Components
   You can run the Upgrade Advisor Analysis Wizard against a local or remote computer that has [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] installed. The first step in the pre-upgrade analysis is to identify the computer and components for analysis.  
@@ -32,11 +30,11 @@ manager: craigg
   
  To analyze a different computer, use the following guidelines:  
   
--   To scan non-clustered instances, enter the computer name.  
+-   To scan nonclustered instances, enter the computer name.  
   
 -   To scan clustered instances, enter the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance.  
   
--   To scan non-clustered components that are installed on a node of a cluster, enter the computer name of the failover cluster node.  
+-   To scan nonclustered components that are installed on a node of a cluster, enter the computer name of the failover cluster node.  
   
     > [!IMPORTANT]  
     >  Do not include the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name.  

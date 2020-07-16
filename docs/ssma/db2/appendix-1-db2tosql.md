@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: c6a30367-d56f-4fcc-8920-c6a6b0335a67
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Appendix - 1 (DB2ToSQL)
 Quick view of the SSMA Console command line options:  

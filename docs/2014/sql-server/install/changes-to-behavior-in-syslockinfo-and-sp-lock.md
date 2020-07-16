@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "syslockinfo"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b9892ae3-ac15-48be-8b52-78dbed6467ed
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Changes to behavior in syslockinfo and sp_lock
   **syslockinfo** and **sp_lock** may return unexpected values. They may also return additional rows, whereas previous versions of **syslockinfo** and **sp_lock** returned a maximum of two rows per lock resource.  
@@ -33,6 +31,6 @@ manager: craigg
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

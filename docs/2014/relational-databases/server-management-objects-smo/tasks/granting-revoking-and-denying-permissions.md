@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b0eb0f60-3e56-4880-b645-138832b38a1e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Granting, Revoking, and Denying Permissions
   The <xref:Microsoft.SqlServer.Management.Smo.ServerPermission> object is used to assign a set of permissions or an individual server permission to the <xref:Microsoft.SqlServer.Management.Smo.ServerPermissionSet> object. For server level permissions, the grantee refers to a logon. Logons authenticated by Windows are listed as Windows user names. When this code sample runs, it revokes the permission from the grantee and verifies it has been removed with the <xref:Microsoft.SqlServer.Management.Smo.Server.EnumServerPermissions%2A> method.  
@@ -27,7 +26,7 @@ manager: craigg
 ## Granting Server Permissions in Visual Basic  
  This code example grants the Create Endpoint and Alter Any Endpoint permissions to the specified login, and then enumerates and displays the permissions. One of the permissions is revoked, and then the permissions are enumerated again. This example assumes that the specified login has the specified permissions to start with.  
   
-```  
+```vb
 ' compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 ' /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 Imports Microsoft.SqlServer.Management.Smo  
@@ -106,7 +105,7 @@ End Class
 ## Granting Server Permissions in Visual C#  
  This code example grants the Create Endpoint and Alter Any Endpoint permissions to the specified login, and then enumerates and displays the permissions. One of the permissions is revoked, and then the permissions are enumerated again. This example assumes that the specified login has the specified permissions to start with.  
   
-```  
+```csharp
 // compile with: /r:Microsoft.SqlServer.Smo.dll /r:Microsoft.SqlServer.ConnectionInfo.dll   
 // /r:Microsoft.SqlServer.Management.Sdk.Sfc.dll /r:Microsoft.SqlServer.SqlEnum.dll  
 using System;  
@@ -186,7 +185,7 @@ public class A {
 ## Granting Server Permissions in PowerShell  
  This code example grants the Create Endpoint and Alter Any Endpoint permissions to the specified login, and then enumerates and displays the permissions. One of the permissions is revoked, and then the permissions are enumerated again. This example assumes that the specified login has the specified permissions to start with.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\  
 $srv = get-item default  
@@ -247,5 +246,3 @@ foreach ( $spi in $spis)
   
 ## See Also  
  [Permissions Hierarchy &#40;Database Engine&#41;](../../security/permissions-hierarchy-database-engine.md)  
-  
-  

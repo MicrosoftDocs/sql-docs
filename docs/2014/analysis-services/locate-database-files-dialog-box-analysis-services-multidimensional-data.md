@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.localdbfilesdialog.f1"
 ms.assetid: b38aa670-b8a4-4abb-8b32-c29dc52362f5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Locate Database Files Dialog Box (Analysis Services - Multidimensional Data)
   The **Locate Database Files** dialog box displays a list of available files in log and data folders defined for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance. You can either select a listed file, or you can specify a different folder and file if needed. The **Locate Database Files** dialog box is displayed by:  

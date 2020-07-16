@@ -19,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: a0b7b9f3-dbda-4350-a274-bd9ecd5c0a74
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SET CONTEXT_INFO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Associates up to 128 bytes of binary information with the current session or connection.  
   
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET CONTEXT_INFO { binary_str | @binary_var }  
 ```  
@@ -62,7 +61,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
 ### A. Setting context information by using a constant  
  The following example demonstrates `SET CONTEXT_INFO` by setting the value and displaying the results. Note that querying `sys.dm_exec_sessions` requires SELECT and VIEW SERVER STATE permissions, whereas using the CONTEXT_INFO function does not.  
   
-```  
+```sql
 SET CONTEXT_INFO 0x01010101;  
 GO  
 SELECT context_info   
@@ -74,7 +73,7 @@ GO
 ### B. Setting context information by using a function  
  The following example demonstrates using the output of a function to set the context value, where the value from the function must be first placed in a **binary** variable.  
   
-```  
+```sql
 DECLARE @BinVar varbinary(128);  
 SET @BinVar = CAST(REPLICATE( 0x20, 128 ) AS varbinary(128) );  
 SET CONTEXT_INFO @BinVar;  

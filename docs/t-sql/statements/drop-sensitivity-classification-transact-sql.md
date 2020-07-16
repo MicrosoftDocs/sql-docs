@@ -1,12 +1,11 @@
 ---
 title: "DROP SENSITIVITY CLASSIFICATION (Transact-SQL) | Microsoft Docs"
-ms.date: 06/17/2018
+ms.date: 03/25/2019
 ms.reviewer: ""
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: "language-reference"
 ms.custom: ""
-ms.manager: craigg
 ms.author: giladm
 author: giladmit
 f1_keywords:
@@ -27,13 +26,13 @@ helpviewer_keywords:
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # DROP SENSITIVITY CLASSIFICATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
 
 Drops sensitivity classification metadata from one or more database columns.
 
 ## Syntax
 
-```sql
+```syntaxsql
 DROP SENSITIVITY CLASSIFICATION FROM
     <object_name> [, ...n ]
 

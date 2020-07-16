@@ -19,11 +19,10 @@ helpviewer_keywords:
 ms.assetid: b08899a6-c09e-4af4-91aa-a978ada79264
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # ALTER CREDENTIAL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the properties of a credential.  
 
@@ -32,13 +31,16 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'  
     [ , SECRET = 'secret' ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *credential_name*  
  Specifies the name of the credential that is being altered.  
   

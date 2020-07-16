@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "removing logical primary keys"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 172bc267-c637-4caa-bf55-0ba198d30b1e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define Logical Primary Keys in a Data Source View (Analysis Services)
   The Data Source View Wizard and Data Source View Designer automatically define a primary key for a table that is added to a data source view based on underlying database table.  

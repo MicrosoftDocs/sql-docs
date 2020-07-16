@@ -1,37 +1,37 @@
 ---
-title: "Connecting to an Azure SQL database | Microsoft Docs"
+title: "Connecting to an Azure SQL database"
+description: "This article discusses issues when using the Microsoft JDBC Driver for SQL Server to connect to an Azure SQL Database."
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 49645b1f-39b1-4757-bda1-c51ebc375c34
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # Connecting to an Azure SQL database
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-This article discusses issues when using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to connect to a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. For more information about connecting to a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], see:  
+This article discusses issues when using the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] to connect to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)]. For more information about connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], see:  
   
 - [SQL Azure Database](https://docs.microsoft.com/azure/sql-database/sql-database-technical-overview)  
   
 - [How to: Connect to SQL Azure Using JDBC](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-java)  
 
-- [Connecting using Azure Active Directory Authentication](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md)  
+- [Connecting using Azure Active Directory Authentication](connecting-using-azure-active-directory-authentication.md)  
   
 ## Details
 
-When connecting to a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**.  
-[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] doesn't support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** use the sys.databases view to get the catalogs. Please refer to the discussion of permissions in [sys.databases (SQL Azure Database)](https://go.microsoft.com/fwlink/?LinkId=217396) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
+When connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**.  
+[!INCLUDE[ssAzure](../../includes/ssazure_md.md)] doesn't support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** use the sys.databases view to get the catalogs. Please refer to the discussion of permissions in [sys.databases (Transact-SQL)](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)].  
   
-## Connections Dropped
+## Connections dropped
 
-When connecting to a [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], idle connections may be terminated by a network component (such as a firewall) after a period of inactivity. There are two types of idle connections, in this context:  
+When connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], idle connections may be terminated by a network component (such as a firewall) after a period of inactivity. There are two types of idle connections, in this context:  
 
 - Idle at the TCP layer, where connections can be dropped by any number of network devices.  
 
@@ -47,7 +47,7 @@ To avoid dropping idle connections by a network component, the following registr
   
 Restart the computer for the registry settings to take effect.  
 
-To accomplish this when running in Windows Azure create a startup task to add the registry keys.  For example, add the following Startup task to the service definition file:  
+To accomplish this when running in Azure create a startup task to add the registry keys.  For example, add the following Startup task to the service definition file:  
 
 ```xml
 <Startup>  
@@ -69,20 +69,20 @@ shutdown /r /t 1
 :done  
 ```
 
-## Appending the Server Name to the UserId in the Connection String  
+## Appending the server name to the userId in the connection string  
 
 Prior to the 4.0 version of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], when connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you were required to append the server name to the UserId in the connection string. For example, user@servername. Beginning in version 4.0 of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], it's no longer necessary to append @servername to the UserId in the connection string.  
-  
-## Using Encryption Requires Setting hostNameInCertificate
 
-When connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should specify **hostNameInCertificate** if you specify **encrypt=true**. (If the server name in the connection string is *shortName*.*domainName*, set the **hostNameInCertificate** property to \*.*domainName*.)  
-  
-For example:  
+## Using encryption requires setting hostNameInCertificate
+
+Prior to the 7.2 version of the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], when connecting to an [!INCLUDE[ssAzure](../../includes/ssazure_md.md)], you should specify **hostNameInCertificate** if you specify **encrypt=true** (If the server name in the connection string is *shortName*.*domainName*, set the **hostNameInCertificate** property to \*.*domainName*.). This property is optional as of version 7.2 of the driver.
+
+For example:
 
 ```java
-jdbc:sqlserver://abcd.int.mscds.com;databaseName= myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate= *.int.mscds.com;  
+jdbc:sqlserver://abcd.int.mscds.com;databaseName=myDatabase;user=myName;password=myPassword;encrypt=true;hostNameInCertificate=*.int.mscds.com;
 ```
 
-## See Also
+## See also
 
-[Connecting to SQL Server with the JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)  
+[Connecting to SQL Server with the JDBC driver](connecting-to-sql-server-with-the-jdbc-driver.md)  

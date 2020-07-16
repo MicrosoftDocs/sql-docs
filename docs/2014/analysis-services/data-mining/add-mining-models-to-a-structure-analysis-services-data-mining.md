@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures [Analysis Services], creating"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a175daa5-58ea-474c-a82f-9648c5155dc8
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Add Mining Models to a Structure (Analysis Services - Data Mining)
   A mining structure is intended to support multiple mining models. Therefore, after you finish the wizard, you can open the structure and add new mining models. Each time that you create a model, you can use a different algorithm, change the parameters, or apply filters to use a different subset of the data.  

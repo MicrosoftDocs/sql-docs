@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d2241a3f-dbcf-433c-b7bc-f96bdf0eac8c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # View a Job
   This topic describes how to view [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -58,7 +57,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql
     -- lists all aspects of the information for the job NightlyBackups.  
     USE msdb ;  
     GO  
@@ -73,5 +72,3 @@ manager: craigg
  **To view a job**  
   
  Use the `Job` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

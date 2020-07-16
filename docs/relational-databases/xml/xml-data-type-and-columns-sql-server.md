@@ -1,19 +1,20 @@
 ---
 title: "XML Data Type and Columns (SQL Server) | Microsoft Docs"
+description: Learn about the advantages and limitations of the xml data type for storing XML data in SQL Server.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "05/17/2019"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 00db8f21-7d4b-4347-ae43-3a7c314d2fa1
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # XML Data Type and Columns (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic discusses the advantages and the limitations of the **xml** data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and helps you to choose how to store XML data.  
   
 ## Relational or XML Data Model  
@@ -55,9 +56,9 @@ manager: craigg
   
 -   Native storage as **xml** data type  
   
-     The data is stored in an internal representation that preserves the XML content of the data. This internal representation includes information about the containment hierarchy, document order, and element and attribute values. Specifically, the InfoSet content of the XML data is preserved. For more information about InfoSet, visit [https://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). The InfoSet content may not be an identical copy of the text XML, because the following information is not retained: insignificant white spaces, order of attributes, namespace prefixes, and XML declaration.  
+     The data is stored in an internal representation that preserves the XML content of the data. This internal representation includes information about the containment hierarchy, document order, and element and attribute values. Specifically, the InfoSet content of the XML data is preserved. For more information about InfoSet, visit [http://www.w3.org/TR/xml-infoset](https://go.microsoft.com/fwlink/?LinkId=48843). The InfoSet content may not be an identical copy of the text XML, because the following information is not retained: insignificant white spaces, order of attributes, namespace prefixes, and XML declaration.  
   
-     For typed **xml** data type, an **xml** data type bound to XML schemas, the post-schema validation InfoSet (PSVI) adds type information to the InfoSet and is encoded in the internal representation. This improves parsing speed significantly. For more information, see the W3C XML Schema specifications at [https://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) and [https://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
+     For typed **xml** data type, an **xml** data type bound to XML schemas, the post-schema validation InfoSet (PSVI) adds type information to the InfoSet and is encoded in the internal representation. This improves parsing speed significantly. For more information, see the W3C XML Schema specifications at [http://www.w3.org/TR/xmlschema-1](https://go.microsoft.com/fwlink/?LinkId=48881) and [http://www.w3.org/TR/xmlschema-2](https://go.microsoft.com/fwlink/?LinkId=4871).  
   
 -   Mapping between XML and relational storage  
   
@@ -169,6 +170,8 @@ manager: craigg
 -   It cannot be used as a parameter to any scalar, built-in functions other than ISNULL, COALESCE, and DATALENGTH.  
   
 -   It cannot be used as a key column in an index. However, it can be included as data in a clustered index or explicitly added to a nonclustered index by using the INCLUDE keyword when the nonclustered index is created.  
+
+- XML elements can be nested up to 128 levels.
   
 ## See Also  
  [Examples of Bulk Import and Export of XML Documents &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  

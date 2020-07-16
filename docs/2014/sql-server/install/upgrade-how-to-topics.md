@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading Database Engine"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2055865c-f25e-4113-b7e4-2b8ba426335b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrade How-to Topics
   The topics in this section describe how to upgrade a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stand-alone instance.  

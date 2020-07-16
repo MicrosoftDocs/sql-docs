@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_trace_generateevent"
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_trace_generateevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a user-defined event in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -39,13 +38,13 @@ sp_trace_generateevent [ @eventid = ] event_id
 ```  
   
 ## Arguments  
- [ **@eventid=**] *event_id*  
+`[ @eventid = ] event_id`
  Is the ID of the event to turn on. *event_id* is **int**, with no default. The ID must be one of the event numbers from 82 through 91, which represent user-defined events as set with [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md).  
   
- [ **@userinfo**= ] **'***user_info***'**  
+`[ @userinfo = ] 'user_info'`
  Is the optional user-defined string identifying the reason for the event. *user_info* is **nvarchar(128)**, with a default of NULL.  
   
- [ **@userdata**= ] *user_data*  
+`[ @userdata = ] user_data`
  Is the optional user-specified data for the event. *user_data* is **varbinary(8000)**, with a default of NULL.  
   
 ## Return Code Values  

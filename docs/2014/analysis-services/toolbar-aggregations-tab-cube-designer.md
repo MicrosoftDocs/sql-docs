@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 8741ff3e-44c3-4bfa-a56a-de590e01576e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Toolbar (Aggregations Tab, Cube Designer)
   Use the **Toolbar** pane to perform common actions on the **Aggregations** tab in Cube Designer.  

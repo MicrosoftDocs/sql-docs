@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: a0c1bd77-4d82-435d-be75-ed1cd1eaa11a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Close a Trace Window (SQL Server Profiler)
   This topic describes how to close the trace window for traces that are running or for saved traces you are viewing by using [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)].  

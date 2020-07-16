@@ -20,12 +20,11 @@ helpviewer_keywords:
   - "dynamic index rebuilding [SQL Server]"
   - "DBCC DBREINDEX statement"
 ms.assetid: 6e929d09-ccb5-4855-a6af-b616022bc8f6
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC DBREINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Rebuilds one or more indexes for a table in the specified database.
   
 > [!IMPORTANT]  
@@ -37,7 +36,7 @@ Rebuilds one or more indexes for a table in the specified database.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC DBREINDEX   
 (   
     table_name   

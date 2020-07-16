@@ -1,6 +1,6 @@
 ---
-title: "Search Documents Interactively | Microsoft Docs"
-ms.custom: ""
+title: "Search Documents Interactively"
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
@@ -11,13 +11,12 @@ helpviewer_keywords:
   - "searches [SQL Server Management Studio], interactive"
   - "Query Editor [SQL Server Management Studio], interactive search"
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Search Documents Interactively
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   Using the **Find and Replace** dialog box, you can search one or more open files or windows and move through the search matches one by one. This technique allows you to review each individual search match in the context of the text around the match. You also have the option of performing bulk find operations and reviewing search matches in report format using the **Find and Replace** dialog box.  
   
 ### To search all open documents  

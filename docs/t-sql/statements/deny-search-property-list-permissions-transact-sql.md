@@ -1,6 +1,8 @@
 ---
-title: "DENY Search Property List Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "DENY Search Property List Permissions"
+description: Deny permissions on a search property list.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -15,9 +17,8 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], search property lists"
   - "search property lists [SQL Server], permissions"
 ms.assetid: 96513cb4-a9c0-4834-97a4-ddc0777b8415
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DENY Search Property List Permissions (Transact-SQL)
@@ -30,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ] ON  
         SEARCH PROPERTY LIST :: search_property_list_name  
     TO database_principal [ ,...n ] [ CASCADE ]  

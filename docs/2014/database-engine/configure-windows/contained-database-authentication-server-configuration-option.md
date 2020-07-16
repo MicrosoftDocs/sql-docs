@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: b80768d2-ac20-4035-a335-d9adb74b3f6e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # contained database authentication Server Configuration Option
   Use the **contained database authentication** option to enable contained databases on the instance of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
@@ -36,7 +35,7 @@ manager: craigg
 ## Examples  
  The following example enables contained databases on the instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   
-```tsql  
+```sql  
 sp_configure 'contained database authentication', 1;  
 GO  
 RECONFIGURE;  

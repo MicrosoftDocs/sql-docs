@@ -1,8 +1,9 @@
 ---
-title: "Print Reports (SSRS) | Microsoft Docs"
+title: "Print Reports | Microsoft Docs"
+description: You can view and print a report from the web portal or an application that you use to view it. The client computer performs print processing on demand.
 ms.date: 05/24/2018
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-builder
 
 

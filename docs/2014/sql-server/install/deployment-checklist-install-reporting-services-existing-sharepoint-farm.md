@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 436b4c3d-3f2f-464a-be7e-5c051d9ffb8f
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Deployment Checklist: Install Reporting Services into an Existing SharePoint Farm
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint report servers can be installed into a new SharePoint Farm or into an existing SharePoint farm. This topic describes the possible scenarios and best practices for installing [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] into and existing SharePoint farm.  

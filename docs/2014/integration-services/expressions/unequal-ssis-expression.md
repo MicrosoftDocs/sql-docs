@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "unequal operator (!=)"
   - "!= (not equal to)"
 ms.assetid: fad20e85-c0e6-42bf-af70-2bc80ee09be5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # != (Unequal) (SSIS Expression)
   Performs a comparison to determine if two expressions with compatible data types are not equal. The expression evaluator automatically converts many data types before it performs the comparison.  

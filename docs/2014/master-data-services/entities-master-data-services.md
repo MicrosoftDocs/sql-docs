@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "entities [Master Data Services], about entities"
   - "entities [Master Data Services]"
 ms.assetid: 0af057d5-6b73-472b-99eb-9f5eb61a9b5b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Entities (Master Data Services)
   Entities are objects that are contained in [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] models. Each entity contains members, which are the rows of master data that you manage.  

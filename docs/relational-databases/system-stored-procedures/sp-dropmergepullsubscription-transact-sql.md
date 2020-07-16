@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_dropmergepullsubscription"
 ms.assetid: 9301dd80-72f7-4adb-9b13-87e7f9114248
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_dropmergepullsubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a merge pull subscription. This stored procedure is executed at the Subscriber on the subscription database.  
   
@@ -35,16 +34,16 @@ sp_dropmergepullsubscription [ @publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of NULL. This parameter is required. Specify a value of **all** to remove subscriptions to all publications  
   
- [ **@publisher=**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher*is **sysname**, with a default of NULL. This parameter is required.  
   
- [ **@publisher_db=**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db*is **sysname**, with a default of NULL. This parameter is required.  
   
- [ **@reserved=**] **'***reserved***'**  
+`[ @reserved = ] 'reserved'`
  Is reserved for future use. *reserved* is **bit**, with a default of **0**.  
   
 ## Return Code Values  

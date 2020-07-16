@@ -16,11 +16,10 @@ helpviewer_keywords:
 ms.assetid: 2f3ce5f5-c81c-4470-8141-8144d4f218dd
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Deterministic and Nondeterministic Functions
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Deterministic functions always return the same result any time they are called with a specific set of input values and given the same state of the database. Nondeterministic functions may return different results each time they are called with a specific set of input values even if the database state that they access remains the same. For example, the function AVG always returns the same result given the qualifications stated above, but the GETDATE function, which returns the current datetime value, always returns a different result.  
   
  There are several properties of user-defined functions that determine the ability of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] to index the results of the function, either through indexes on computed columns that call the function, or through indexed views that reference the function. The determinism of a function is one such property. For example, a clustered index cannot be created on a view if the view references any nondeterministic functions. For more information about the properties of functions, including determinism, see [User-Defined Functions](../../relational-databases/user-defined-functions/user-defined-functions.md).  
@@ -30,7 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Built-in Function Determinism  
  You cannot influence the determinism of any built-in function. Each built-in function is deterministic or nondeterministic based on how the function is implemented by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For example, specifying an ORDER BY clause in a query does not change the determinism of a function that is used in that query.  
   
- All of the string built-in functions are deterministic. For a list of these functions, see [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md).  
+ All of the string built-in functions are deterministic, except for [FORMAT](../../t-sql/functions/format-transact-sql.md). For a list of these functions, see [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md).  
   
  The following built-in functions from categories of built-in functions other than string functions are always deterministic.  
   

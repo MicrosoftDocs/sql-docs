@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "EXISTING"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 651ee9ac-04ef-4316-87c9-a3df5ac27d22
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # EXISTING Keyword (MDX)
   Forces a specified set to be evaluated within the current context.  

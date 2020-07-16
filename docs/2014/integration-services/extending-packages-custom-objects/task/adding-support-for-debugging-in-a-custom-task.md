@@ -18,9 +18,8 @@ helpviewer_keywords:
   - "SSIS custom tasks, debugging"
   - "debugging [Integration Services], custom tasks"
 ms.assetid: 7f06e49b-0b60-4e81-97da-d32dc248264a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Adding Support for Debugging in a Custom Task
   The [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] run-time engine enables packages, tasks, and other types of containers to be suspended during execution by using breakpoints. The use of breakpoints lets you review and correct errors that prevent your application or tasks from running correctly. The breakpoint architecture enables the client to evaluate the run-time value of objects in the package at defined points of execution while task processing is suspended.  

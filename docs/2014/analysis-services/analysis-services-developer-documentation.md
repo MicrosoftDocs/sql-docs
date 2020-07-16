@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "multidimensional data [Analysis Services], developer's guide"
@@ -14,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 0a6eda76-1c5e-487e-9c8b-1feb09f1a34c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Developer&#39;s Guide (Analysis Services)
     

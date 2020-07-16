@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "geodetic data type [SQL Server]"
   - "geography data type [SQL Server], about geography data type"
 ms.assetid: b585851e-d15b-411f-adeb-aeabeb777c0b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 ---
 # Create, Construct, and Query geography Instances
   The geography spatial data type, `geography`, represents data in a round-earth coordinate system. This type is implemented as a .NET common language runtime (CLR) data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `geography` data type stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.models.algorithmparameters.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 57f9f6f8-8ca4-4a6e-8f18-85f0571b7060
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Algorithm Parameters Dialog Box (Mining Models View)
   Use the **Algorithm Parameters** dialog box to adjust algorithm parameters that are specific to the selected model. When you change an algorithm parameter, you will usually change the results of the mining model. The way that each parameter affects the results depends on the algorithm you are using, and on your data. For more information, see [Customize Mining Models and Structure](data-mining/customize-mining-models-and-structure.md).  

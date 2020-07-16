@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: f9160b48-3beb-439c-9694-f084e1afa625
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Browsing a Naive Bayes Model
   When you open a Naïve Bayes model using **Browse**, the model is displayed in an interactive viewer with four different panes. Use the viewer to explore correlations, and get information about the model and the underlying data.  

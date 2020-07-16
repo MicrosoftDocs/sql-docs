@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 ms.assetid: 0ceb461e-12c1-44ea-97ac-b99bf308676b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Tabular Model Programming
   Tabular models use relational constructs to model the Analysis Services data used by analytical and reporting applications. These models run on an Analysis Service instance that is configured for tabular mode, using an in-memory analytics engine for storage and fast table scans that aggregate and calculate data as it is requested.  
@@ -21,11 +18,11 @@ manager: craigg
  This section provides more information about how you can programmatically work with tabular model entities and their properties.  
   
 ## In This Section  
- [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](https://docs.microsoft.com/bi-reference/csdl/csdl-annotations-for-business-intelligence-csdlbi)  
+ [CSDL Annotations for Business Intelligence &#40;CSDLBI&#41;](/analysis-services/csdlbi/csdl-annotations-for-business-intelligence-csdlbi)  
   
  [Understanding the Tabular Object Model](representation/understanding-tabular-object-model-at-levels-1050-through-1103.md)  
   
- [Technical Reference for BI Annotations to CSDL](https://docs.microsoft.com/bi-reference/csdl/technical-reference-for-bi-annotations-to-csdl)  
+ [Technical Reference for BI Annotations to CSDL](/analysis-services/csdlbi/technical-reference-for-bi-annotations-to-csdl)  
   
  [IMDEmbedded Interface](imdembeddeddata-interface.md)  
   

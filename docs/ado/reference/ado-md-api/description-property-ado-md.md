@@ -18,9 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Description property [ADO MD]"
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Description Property (ADO MD)
 Returns a text explanation of the current object.  

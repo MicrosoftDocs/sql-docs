@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STMLineFromWKB (geometry Data Type)"
 ms.assetid: 00a8a8e7-11d6-47a0-b971-00e60f7877ce
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STMLineFromWKB (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **geometryMultiLineString** instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   

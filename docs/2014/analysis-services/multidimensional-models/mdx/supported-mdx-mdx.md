@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MDX [Analysis Services], statements"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 308bc0b3-4fd6-4435-972b-5e40d9e3c99b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Supported MDX (MDX)
   The following statements and functions are supported within Multidimensional Expressions (MDX) Script:  

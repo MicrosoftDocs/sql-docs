@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report definitions"
@@ -13,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 2d746550-f8cc-4e97-8a06-d0f03cffc18d
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Reports, Report Parts, and Report Definitions (Report Builder and SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] uses a variety of terms to describe a report in different states, including the initial definition, the published report, and the viewed report as it appears to the user.  

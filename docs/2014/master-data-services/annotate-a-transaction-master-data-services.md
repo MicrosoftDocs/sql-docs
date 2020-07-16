@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "annotations [Master Data Services], for transactions"
 ms.assetid: f5a6b2ca-56de-4e42-9da8-fba0ac3e8d92
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Annotate a Transaction (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], annotate a transaction when you want to provide supporting details about the transaction for historical purposes.  

@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Prerequisites, Restrictions, and Recommendations for AlwaysOn Availability Groups (SQL Server)
   This topic describes considerations for deploying [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], including prerequisites, restrictions, and recommendations for host computers, Windows Server Failover Clustering (WSFC) clusters, server instances, and availability groups. For each of these components security considerations and required permissions, if any, are indicated.  
@@ -28,12 +27,12 @@ manager: craigg
   
  
   
-##  <a name="DotNetHotfixes"></a> .Net Hotfixes that Support AlwaysOn Availability Groups  
- Depending on the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] components and features you will use with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], you may need to install additional .Net hotfixes identified in the following table. The hotfixes can be installed in any order.  
+##  <a name="DotNetHotfixes"></a> .NET Hotfixes that Support AlwaysOn Availability Groups  
+ Depending on the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] components and features you will use with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], you may need to install additional .NET hotfixes identified in the following table. The hotfixes can be installed in any order.  
   
 ||Dependent Feature|Hotfix|Link|  
 |------|-----------------------|------------|----------|  
-|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Hotfix for .Net 3.5 SP1 adds support to SQL Client for AlwaysOn features of Read-intent, readonly, and multisubnetfailover. The hotfix needs to be installed on each [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server.|KB 2654347: [Hotfix for .Net 3.5 SP1 to add support for AlwaysOn features](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|![Checkbox](../../media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Hotfix for .NET 3.5 SP1 adds support to SQL Client for AlwaysOn features of Read-intent, readonly, and multisubnetfailover. The hotfix needs to be installed on each [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server.|KB 2654347: [Hotfix for .NET 3.5 SP1 to add support for AlwaysOn features](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 ##  <a name="SystemReqsForAOAG"></a> Windows System Requirements and Recommendations  
   
@@ -97,7 +96,7 @@ manager: craigg
   
      The following PowerShell example sets the HostRecordTTL to 300 seconds for a Network Name resource named "`SQL Network Name (SQL35)`".  
   
-    ```  
+    ```powershell
     Import-Module FailoverClusters  
   
     $nameResource = "SQL Network Name (SQL35)"  
@@ -109,7 +108,7 @@ manager: craigg
   
 ##### Related Content (PowerShell)  
   
--   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog)  
+-   [Clustering and High-Availability](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) (Failover Clustering and Network Load Balancing Team Blog)  
   
 -   [Getting Started with Windows PowerShell on a Failover Cluster](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -119,9 +118,9 @@ manager: craigg
   
 -   [Configure DNS settings in a Multi-Site Failover Cluster](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [DNS Registration with Network Name Resource](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [DNS Registration with Network Name Resource](https://techcommunity.microsoft.com/t5/failover-clustering/dns-registration-with-the-network-name-resource/ba-p/371482)  
   
--   [Windows 2008 R2 Failover Multi-Site Clustering](https://www.microsoft.com/windowsserver2008/en/us/failover-clustering-multisite.aspx)  
+-   [Windows 2008 R2 Failover Multi-Site Clustering](https://kiruba4u.blogspot.com/2012/03/failover-clustering-in-windows-server.html)  
   
 ##  <a name="ServerInstance"></a> SQL Server Instance Prerequisites and Restrictions  
  Each availability group requires a set of failover partners, known as *availability replicas*, which are hosted by instances of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. A given server instance can be a *stand-alone instance* or a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]*failover cluster instance* (FCI).  

@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "out-of-memory conditions"
   - "XML schema collections [SQL Server], large"
 ms.assetid: 29b9d839-aaaf-48fb-be17-840c751f36f1
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Large XML Schema Collections and Out-of-Memory Conditions
   During a call to the built-in XML_SCHEMA_NAMESPACE() function on a large XML schema collection, or when you try to drop large XML schema collections, an out-of-memory condition may occur. The following are solutions you can use to handle this:  

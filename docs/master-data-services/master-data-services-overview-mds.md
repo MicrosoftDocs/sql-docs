@@ -1,5 +1,6 @@
 ---
-title: "Master Data Services Overview (MDS) | Microsoft Docs"
+title: Overview
+description: Learn about the key data organization and management features of Master Data Services. Master Data Services enables you to manage a master set of your data.
 ms.custom: ""
 ms.date: "02/14/2017"
 ms.prod: sql
@@ -13,13 +14,12 @@ helpviewer_keywords:
   - "Master Data Services, overview"
   - "Master Data Services"
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Master Data Services Overview (MDS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 This topic describes the key data organization and management features of [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]. 
   

@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.suggestdatatypes.f1"
 ms.assetid: 8d5652e0-cf57-483f-828b-10f00c08418b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Suggest Column Types Dialog Box UI Reference
   Use the **Suggest Column Types** dialog box to identify the data type and length of columns in a Flat File Connection Manager based on a sampling of the file content.  

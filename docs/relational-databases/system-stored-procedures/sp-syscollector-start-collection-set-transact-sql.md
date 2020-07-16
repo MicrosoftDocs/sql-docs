@@ -16,12 +16,11 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
   - "sp_syscollector_start_collection_set"
 ms.assetid: d8357180-f51e-4681-99f9-0596fe2d2b53
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_syscollector_start_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Starts a collection set if the collector is already enabled and the collection set is not running. If the collector is not enabled, enable the collector by running [sp_syscollector_enable_collector](../../relational-databases/system-stored-procedures/sp-syscollector-enable-collector-transact-sql.md) and then use this stored procedure to start a collection set.  
 
@@ -38,10 +37,10 @@ sp_syscollector_start_collection_set
 ```  
   
 ## Arguments  
- [ **@collection_set_id =** ] *collection_set_id*  
+`[ @collection_set_id = ] collection_set_id`
  Is the unique local identifier for the collection set. *collection_set_id* is **int** with a default value of NULL. *collection_set_id* must have a value if *name* is NULL.  
   
- [ **@name =** ] '*name*'  
+`[ @name = ] 'name'`
  Is the name of the collection set. *name* is **sysname** with a default value of NULL. *name* must have a value if *collection_set_id* is NULL.  
   
 ## Return Code Values  

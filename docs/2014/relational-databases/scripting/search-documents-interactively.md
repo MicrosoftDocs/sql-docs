@@ -1,20 +1,18 @@
 ---
-title: "Search Documents Interactively | Microsoft Docs"
-ms.custom: ""
+title: Search Documents Interactively
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "interactive searches [SQL Server Management Studio]"
   - "searches [SQL Server Management Studio], interactive"
   - "Query Editor [SQL Server Management Studio], interactive search"
 ms.assetid: dae65ac5-67af-45c6-a6e0-952fea26d680
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Search Documents Interactively
   Using the **Find and Replace** dialog box, you can search one or more open files or windows and move through the search matches one by one. This technique allows you to review each individual search match in the context of the text around the match. You also have the option of performing bulk find operations and reviewing search matches in report format using the **Find and Replace** dialog box.  

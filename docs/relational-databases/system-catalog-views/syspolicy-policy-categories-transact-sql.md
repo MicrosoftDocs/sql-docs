@@ -17,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 65f080c7-771f-4cf6-a7a0-88882c637f8d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # syspolicy_policy_categories (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays one row for each Policy-Based Management policy category in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Policy categories help you organize policies when you have many policies. The following table describes the columns in the syspolicy_policy_groups view.  
  

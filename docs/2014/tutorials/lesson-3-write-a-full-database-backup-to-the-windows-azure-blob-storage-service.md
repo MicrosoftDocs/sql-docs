@@ -1,21 +1,19 @@
 ---
-title: "Lesson 3: Write a Full Database Backup to the Windows Azure Blob Storage Service | Microsoft Docs"
+title: "Lesson 3: Write a Full Database Backup to the Azure Blob Storage Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: security
 ms.topic: conceptual
 ms.assetid: 454c8296-64e9-46ed-b141-5ebfbc8a4fe2
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
-# Lesson 3: Write a Full Database Backup to the Windows Azure Blob Storage Service
-  This lesson demonstrates the use of tsql statement to perform a full database backup to Windows Azure Blob storage service.  
+# Lesson 3: Write a Full Database Backup to the Azure Blob Storage Service
+  This lesson demonstrates the use of tsql statement to perform a full database backup to Azure Blob storage service.  
   
-## Perform a Full Database Backup to the Windows Azure Blob Storage Service  
+## Perform a Full Database Backup to the Azure Blob Storage Service  
  To create a full database backup, use the following steps:  
   
 1.  Connect to [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)].  

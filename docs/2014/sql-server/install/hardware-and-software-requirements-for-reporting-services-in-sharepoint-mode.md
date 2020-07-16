@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: 01/09/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: ed91877d-4f74-4266-a932-b824b4810c99
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Hardware and Software Requirements for Reporting Services in SharePoint Mode
 
@@ -58,12 +56,11 @@ manager: craigg
   
 ##  <a name="bkmk_powerview"></a> [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] Requirements
 
- Review the most up-to-date [Power View documentation](http://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) on Office.Microsoft.com. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] is a feature of Microsoft Excel 2013, and is part of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services add-in for Microsoft SharePoint Server 2010 and 2013 Enterprise Editions.  
+ Review the most up-to-date [Power View documentation](https://office.microsoft.com/excel-help/power-view-explore-visualize-and-present-your-data-HA102835634.aspx) on Office.Microsoft.com. [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] is a feature of Microsoft Excel 2013, and is part of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Reporting Services add-in for Microsoft SharePoint Server 2010 and 2013 Enterprise Editions.  
   
 ##  <a name="bkmk_more_information"></a> More Information
 
  For information on SharePoint changes, see [Changes from SharePoint 2010 to SharePoint 2013](https://technet.microsoft.com/library/ff607742\(office.15\).aspx) (https://technet.microsoft.com/library/ff607742(office.15).aspx).  
   
  [SQL Server 2014 Release Notes](https://go.microsoft.com/fwlink/?LinkID=296445).  
-  
   

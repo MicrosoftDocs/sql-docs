@@ -20,13 +20,12 @@ helpviewer_keywords:
   - "greater than operator (>)"
   - "> (greater than operator)"
 ms.assetid: 50a7b098-a3fb-4df6-ae42-1272d6346338
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # &gt; (Greater Than) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Compares two expressions (a comparison operator) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. When you compare nonnull expressions, the result is TRUE if the left operand has a value higher than the right operand; otherwise, the result is FALSE. If either or both operands are NULL, see the topic [SET ANSI_NULLS &#40;Transact-SQL&#41;](../../t-sql/statements/set-ansi-nulls-transact-sql.md).  
   
@@ -34,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 expression > expression  
 ```  
   

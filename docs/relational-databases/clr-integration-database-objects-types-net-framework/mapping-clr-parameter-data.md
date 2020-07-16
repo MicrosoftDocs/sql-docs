@@ -1,5 +1,6 @@
 ---
 title: "Mapping CLR Parameter Data | Microsoft Docs"
+description: This article lists Microsoft SQL Server data types, equivalents in the CLR for SQL Server, and native CLR equivalents in the .NET Framework.
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql
@@ -25,10 +26,9 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Mapping CLR Parameter Data
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The following table lists [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, their equivalents in the common language runtime (CLR) for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the **System.Data.SqlTypes** namespace, and their native CLR equivalents in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
   
 ||||  

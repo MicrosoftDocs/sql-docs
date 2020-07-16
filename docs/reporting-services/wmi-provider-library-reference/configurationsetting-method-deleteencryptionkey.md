@@ -2,7 +2,7 @@
 title: "DeleteEncryptionKey Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -15,8 +15,8 @@ apitype: MOFDef
 helpviewer_keywords: 
   - "DeleteEncryptionKey method"
 ms.assetid: ed2f25b6-6a63-468d-9279-a577ca01b096
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - DeleteEncryptionKey
   Deletes the encryption keys from the report server database.  

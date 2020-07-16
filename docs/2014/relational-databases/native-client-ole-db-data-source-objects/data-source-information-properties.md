@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "information properties [OLE DB]"
   - "OLE DB data source properties [SQL Server Native Client]"
 ms.assetid: 7fd80e47-5bd9-41e2-a3d3-091a7c8c5f2b
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Data Source Information Properties
   In the provider-specific property set DBPROPSET_SQLSERVERDATASOURCEINFO, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider defines the following data source information properties.  

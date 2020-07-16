@@ -1,19 +1,18 @@
 ---
-title: "Using Kerberos Integrated Authentication to Connect to SQL Server | Microsoft Docs"
+title: "Using Kerberos integrated authentication to connect to SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/11/2018"
+ms.date: "01/29/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 687802dc-042a-4363-89aa-741685d165b3
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 
-# Using Kerberos Integrated Authentication to Connect to SQL Server
+# Using Kerberos integrated authentication to connect to SQL Server
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -33,19 +32,19 @@ The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sets the follo
 
 ## Remarks
 
-Prior to [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], applications could specify integrated authentication (using Kerberos or NTLM, depending on which is available) by using the **integratedSecurity** connection property and by referencing **sqljdbc_auth.dll**, as described in [Building the Connection URL](../../connect/jdbc/building-the-connection-url.md).
+Prior to [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], applications could specify integrated authentication (using Kerberos or NTLM, depending on which is available) by using the **integratedSecurity** connection property and by referencing **mssql-jdbc_auth-\<version>-\<arch>.dll**, as described in [Building the connection URL](../../connect/jdbc/building-the-connection-url.md).
 
 Beginning in [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)], an application can use the **authenticationScheme** connection property to indicate that it wants to connect to a database using Kerberos integrated authentication using the pure Java Kerberos implementation:
 
 - If you want integrated authentication using **Krb5LoginModule**, you must still specify the **integratedSecurity=true** connection property. You would then also specify the **authenticationScheme=JavaKerberos** connection property.
 
-- To continue using integrated authentication with **sqljdbc_auth.dll**, just specify **integratedSecurity=true** connection property (and optionally **authenticationScheme=NativeAuthentication**).
+- To continue using integrated authentication with **mssql-jdbc_auth-\<version>-\<arch>.dll**, just specify **integratedSecurity=true** connection property (and optionally **authenticationScheme=NativeAuthentication**).
 
 - If you specify **authenticationScheme=JavaKerberos** but do not also specify **integratedSecurity=true**, the driver will ignore the **authenticationScheme** connection property and it will expect to find user name and password credentials in the connection string.
 
-When using a datasource to create connections, you can programmatically set the authentication scheme using setAuthenticationScheme and (optionally) set the SPN for Kerberos connections using **setServerSpn**.
+When using a datasource to create connections, you can programmatically set the authentication scheme using **setAuthenticationScheme** and (optionally) set the SPN for Kerberos connections using **setServerSpn**.
 
-A new logger has been added to support Kerberos authentication: com.microsoft.sqlserver.jdbc.internals.KerbAuthentication. For more information, see [Tracing Driver Operation](../../connect/jdbc/tracing-driver-operation.md).
+A new logger has been added to support Kerberos authentication: com.microsoft.sqlserver.jdbc.internals.KerbAuthentication. For more information, see [Tracing driver operation](../../connect/jdbc/tracing-driver-operation.md).
 
 The following guidelines will help you to configure Kerberos:
 
@@ -57,7 +56,7 @@ The following guidelines will help you to configure Kerberos:
 > [!NOTE]  
 > The serverSpn connection attribute is only supported by Microsoft JDBC Drivers 4.2 and higher.
 
-## Service Principal Names
+## Service principal names
 
 A service principal name (SPN) is the name by which a client uniquely identifies an instance of a service.
 
@@ -69,14 +68,14 @@ For more information about service principal names (SPNs), see:
 
 - [How to use Kerberos authentication in SQL Server](https://support.microsoft.com/kb/319723)
 
-- [Using Kerberos with SQL Server](https://go.microsoft.com/fwlink/?LinkId=207814)
+- [Using Kerberos with SQL Server](https://docs.microsoft.com/archive/blogs/sql_protocols/using-kerberos-with-sql-server)
 
 > [!NOTE]  
 > Before 6.2 release of JDBC driver, for proper use of Cross Realm Kerberos, you would need to explicitly set the **serverSpn**.
 >
 > As of the 6.2 release, the driver will be able to build the **serverSpn** by default, even when using Cross Realm Kerberos. Although one can use **serverSpn** explicitly too.
 
-## Creating a Login Module Configuration File
+## Creating a login module configuration file
 
 You can optionally specify a Kerberos configuration file. If a configuration file is not specified, the following settings are in effect:
 
@@ -107,17 +106,17 @@ So, each login module configuration file entry consists of a name followed by on
 
 In addition to allowing the driver to acquire Kerberos credentials using the settings specified in the login module configuration file, the driver can use existing credentials. This can be useful when your application needs to create connections using more than one user's credentials.
 
-The driver will attempt to use existing credentials if they are available, before attempting to login using the specified login module. Thus, when using the Subject.doAs method for executing code under a specific context, a connection will be created with the credentials passed to the Subject.doAs call.
+The driver will attempt to use existing credentials if they are available, before attempting to login using the specified login module. Thus, when using the `Subject.doAs` method for executing code under a specific context, a connection will be created with the credentials passed to the `Subject.doAs` call.
 
 For more information, see [JAAS Login Configuration File](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/LoginConfigFile.html) and [Class Krb5LoginModule](https://docs.oracle.com/javase/8/docs/jre/api/security/jaas/spec/com/sun/security/auth/module/Krb5LoginModule.html).
 
-Beginning in Microsoft JDBC Driver 6.2, name of login module configuration file can optionally be passed using connection property jaasConfigurationName, this allows each connection to have its own login configuration.
+Beginning in Microsoft JDBC Driver 6.2, name of login module configuration file can optionally be passed using connection property `jaasConfigurationName`, this allows each connection to have its own login configuration.
 
-## Creating a Kerberos Configuration File
+## Creating a Kerberos configuration file
 
 For more information about Kerberos configuration files, see [Kerberos Requirements](https://docs.oracle.com/javase/8/docs/technotes/guides/security/jgss/tutorials/KerberosReq.html).
 
-This is a sample domain configuration file, where YYYY and ZZZZ are domain names at your site.
+This is a sample domain configuration file, where YYYY and ZZZZ are the domain names.
 
 ```ini
 [libdefaults]  
@@ -144,18 +143,18 @@ forwardable = yes
 
 ```
 
-## Enabling the Domain Configuration File and the Login Module Configuration File
+## Enabling the domain configuration file and the login module configuration file
 
 You can enable a domain configuration file with -Djava.security.krb5.conf. You can enable a login module configuration file with **-Djava.security.auth.login.config**.
 
-For example, when you start your application, you could use this command line:
+For example, the following command can be used to start the application:
 
 ```bash
 Java.exe -Djava.security.auth.login.config=SQLJDBCDriver.conf -Djava.security.krb5.conf=krb5.ini <APPLICATION_NAME>  
 
 ```
 
-## Verifying that SQL Server Can be Accessed via Kerberos
+## Verifying that SQL Server can be accessed via Kerberos
 
 Run the following query in SQL Server Management Studio:
 
@@ -165,7 +164,7 @@ select auth_scheme from sys.dm_exec_connections where session_id=\@\@spid
 
 Make sure that you have the necessary permission to run this query.
 
-## Constrained Delegation
+## Constrained delegation
 
 Beginning in Microsoft JDBC Driver 6.2, the driver supports Kerberos Constrained Delegation. The delegated credential can be passed in as org.ietf.jgss.GSSCredential object, these credentials are used by driver to establish connection.
 
@@ -178,7 +177,7 @@ driverProperties.put("gsscredential", impersonatedUserCredential);
 Connection conn = DriverManager.getConnection(CONNECTION_URI, driverProperties);
 ```
 
-## Kerberos Connection using Principal Names and Password
+## Kerberos connection using principal names and password
 
 Beginning in Microsoft JDBC Driver 6.2, the driver can establish Kerberos connection using the Principal Name and Password passed in connection string.
 
@@ -188,6 +187,33 @@ jdbc:sqlserver://servername=server_name;integratedSecurity=true;authenticationSc
 
 The username property does not require REALM if user belongs to the default_realm set in krb5.conf file. When `userName` and `password` is set along with `integratedSecurity=true;` and `authenticationScheme=JavaKerberos;` property, the connection is established with value of userName as Kerberos Principal along with the password supplied.
 
-## See Also
+## Using Kerberos authentication from Unix Machines on the same domain
 
-[Connecting to SQL Server with the JDBC Driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)
+This guide assumes a working Kerberos setup already exists. Run the following code on a Windows machine with working Kerberos authentication to verify if the aforementioned is true. The code will print "Authentication Scheme: KERBEROS" to the console if successful. No additional run-time flags, dependencies, or driver settings are required outside of the ones provided. The same block of code can be run on Linux to verify successful connections.
+
+```java
+SQLServerDataSource ds = new SQLServerDataSource();
+ds.setServerName("<server>");
+ds.setPortNumber(1433); // change if necessary
+ds.setIntegratedSecurity(true);
+ds.setAuthenticationScheme("JavaKerberos");
+ds.setDatabaseName("<database>");
+
+try (Connection c = ds.getConnection(); Statement s = c.createStatement();
+        ResultSet rs = s.executeQuery("select auth_scheme from sys.dm_exec_connections where session_id=@@spid")) {
+    while (rs.next()) {
+        System.out.println("Authentication Scheme: " + rs.getString(1));
+    }
+}
+```
+
+1. Domain join the client machine to the same domain as the server.
+2. (Optional) Set the default Kerberos ticket location. This is most conveniently done by setting the `KRB5CCNAME` environment variable.
+3. Get the Kerberos ticket, either by generating a new one or placing an existing one in the default Kerberos ticket location. To generate a ticket, simply use a terminal and initialize the ticket via `kinit USER@DOMAIN.AD` where "USER" and "DOMAIN.AD" is the principal and domain respectively. E.g: `kinit SQL_SERVER_USER03@MICROSOFT.COM`. The ticket will be generated in the default ticket location or in the `KRB5CCNAME` path if set.
+4. The terminal will prompt for a password, enter the password.
+5. Verify the credentials in the ticket via `klist` and confirm the credentials are the ones you intend to use for authentication.
+6. Run the above sample code and confirm that Kerberos Authentication was successful.
+
+## See also
+
+[Connecting to SQL Server with the JDBC driver](../../connect/jdbc/connecting-to-sql-server-with-the-jdbc-driver.md)

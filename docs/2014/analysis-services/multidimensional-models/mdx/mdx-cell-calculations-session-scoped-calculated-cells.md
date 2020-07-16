@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "session-scoped calculated members [MDX]"
 ms.assetid: f2d14a89-6286-4e74-9afb-091076f93f21
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Creating Session-Scoped Calculated Cells
     

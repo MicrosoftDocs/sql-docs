@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetParam function [ODBC]"
 ms.assetid: 2ebdc303-3802-443a-8895-69c93dff5618
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetParam Function
 **Conformance**  

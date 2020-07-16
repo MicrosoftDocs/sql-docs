@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "breaking changes [Analysis Services]"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: aeb02542-5a6c-458c-a110-13413dd3e9d9
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Breaking Changes to Analysis Services Features in SQL Server 2014
   This topic describes breaking changes in [!INCLUDE[ssASCurrent](../includes/ssascurrent-md.md)]. These changes might break applications, scripts, or functionality based on earlier versions of SQL Server.  

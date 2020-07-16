@@ -1,5 +1,6 @@
 ---
 title: "Performance of CLR Integration | Microsoft Docs"
+description: This article discusses design choices for Microsoft SQL Server integration with the .NET Framework CLR, including the compilation process and performance.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # CLR Integration Architecture  - Performance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   This topic discusses some of the design choices that enhance the performance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integration with the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework common language runtime (CLR).  
   
 ## The Compilation Process  

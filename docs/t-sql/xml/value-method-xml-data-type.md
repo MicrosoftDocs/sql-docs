@@ -1,9 +1,8 @@
 ---
-title: "value() Method (xml Data Type) | Microsoft Docs"
+title: value() Method (xml Data Type)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -13,12 +12,11 @@ helpviewer_keywords:
   - "value method"
   - "value() method"
 ms.assetid: 298a7361-dc9a-4902-9b1e-49a093cd831d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # value() Method (xml Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Performs an XQuery against the XML and returns a value of SQL type. This method returns a scalar value.  
   
@@ -31,7 +29,9 @@ manager: craigg
 value (XQuery, SQLType)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *XQuery*  
  Is the *XQuery* expression, a string literal, that retrieves data inside the XML instance. The XQuery must return at most one value. Otherwise, an error is returned.  
   

@@ -8,7 +8,6 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
 ---
 # MDX Data Definition - CREATE SUBCUBE
 
@@ -47,7 +46,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
   
  Session objects created in the context of a subcube are dropped when the subcube is dropped.  
   
- For more information about subcubes, see [Building Subcubes in MDX &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md).  
+ For more information about subcubes, see [Building Subcubes in MDX &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx).  
   
 ## Example  
  The following example creates a subcube that restricts the apparent cube space to members that exist with the country of Canada. It then uses the **MEMBERS** function to return all members of the Country level of the Geography user-defined hierarchy - returning only the country of Canada.  
@@ -123,7 +122,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
  The [All Products] and [All Resellers], column and row respectively, contains totals for all members not only those visible ones.  
   
 ## See Also  
- [Key Concepts in MDX &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+ [Key Concepts in MDX &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)   
  [MDX Scripting Statements &#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [DROP SUBCUBE Statement &#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   
  [SELECT Statement &#40;MDX&#41;](../mdx/mdx-data-manipulation-select.md)  

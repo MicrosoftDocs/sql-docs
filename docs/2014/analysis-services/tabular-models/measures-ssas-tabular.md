@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 27ec8f99-e9ef-44c9-a83f-f7c88e128ad3
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Measures (SSAS Tabular)
   In tabular models, a measure is a calculation created using a DAX formula for use in a reporting client. Measures are evaluated based on fields, filters, and slicers users select in the reporting client application.  

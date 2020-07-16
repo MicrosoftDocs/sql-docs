@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STPointFromWKB method"
 ms.assetid: b3b4e3bb-47bc-4621-99c4-c97aa60cdf8b
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STPointFromWKB (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **geographyPoint** instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   

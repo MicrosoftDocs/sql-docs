@@ -12,10 +12,9 @@ helpviewer_keywords:
 ms.assetid: b532ae16-66e7-4641-9bc8-b0d805853477
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Create a Plan Guide for Parameterized Queries
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   A TEMPLATE plan guide matches stand-alone queries that parameterize to a specified form.  
   
  The following example creates a plan guide that matches any query that parameterizes to a specified form, and directs [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to force parameterization of the query. The following two queries are syntactically equivalent, but differ only in their constant literal values.  

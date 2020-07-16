@@ -12,10 +12,9 @@ helpviewer_keywords:
 ms.assetid: 28e25ae3-d3dc-45ec-b316-f219512a1a47
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Symmetric Keys on System Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks for user-created symmetric keys in the master, msdb, model, and tempdb databases.  
   
 ## Best Practices Recommendations  

@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.process.batchsettingsdialog.f1"
 ms.assetid: 0041e042-d7ce-48f9-a690-a6dc65471ff3
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Change Settings Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Change Settings** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to change the settings that govern the processing of objects listed in the **Process** dialog box. You can display the **Change Settings** dialog box by clicking **Change Settings** on the **Process** dialog box.  

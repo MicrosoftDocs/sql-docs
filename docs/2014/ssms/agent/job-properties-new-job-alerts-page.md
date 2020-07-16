@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 6d3f9b24-d214-4e82-b161-c00ff8eff813
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Job Properties: New Job (Alerts Page)
   Use this page to view and organize the alerts for a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.  

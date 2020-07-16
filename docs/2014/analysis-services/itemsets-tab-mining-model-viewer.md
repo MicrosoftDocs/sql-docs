@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.associationrules.itemsets.f1"
 ms.assetid: 95b2b805-b142-4064-9c80-4b1b3fe2fe63
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Itemsets Tab (Mining Model Viewer)
   You can use the **Itemsets** pane to view the frequent itemsets that an association rules mining model contains. Because an association model can contain many itemsets, controls are provided in the viewer to help you filter the itemsets that are displayed in the viewer.  

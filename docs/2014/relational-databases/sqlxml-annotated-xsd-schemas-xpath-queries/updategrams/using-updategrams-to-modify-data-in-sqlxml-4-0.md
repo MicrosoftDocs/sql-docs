@@ -21,9 +21,8 @@ helpviewer_keywords:
   - "deleting data"
   - "inserting data"
 ms.assetid: b8b3b892-cb73-41d0-b945-bce148d81d9b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Using Updategrams to Modify Data in SQLXML 4.0
   You can modify (insert, update, or delete) a database in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from an existing XML document by using an updategram or the OPENXML [!INCLUDE[tsql](../../../includes/tsql-md.md)] function.  

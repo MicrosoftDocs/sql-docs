@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "modifying data source views"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: f790df70-ff21-42ce-b38c-a360e8e01bcd
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Edit the Data Source View used for a Mining Structure
   You can open a data source view from within Data Mining Designer so that you can modify it.  

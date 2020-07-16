@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "drop system objects [SQL Server]"
 ms.assetid: cdfc3c50-c801-4039-a4bf-b35f876f1c61
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Remove statements that drop system objects
   Upgrade Advisor detected statements that drop system objects. System objects, including extended stored procedures, are deployed in the read-only **resource** database (mssqlsystemresource) and cannot be dropped. Modify your applications to either revoke or deny EXECUTE permission on system objects.  
@@ -28,6 +26,6 @@ manager: craigg
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

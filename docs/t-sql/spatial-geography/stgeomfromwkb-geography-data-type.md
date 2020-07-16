@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeomFromWKB method"
 ms.assetid: 79d39d88-5440-49a7-9247-190eafce3f4f
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STGeomFromWKB (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **geography** instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   

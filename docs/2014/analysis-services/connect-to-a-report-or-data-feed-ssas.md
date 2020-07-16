@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.connreportdatafeed.f1"
 ms.assetid: e0ccfb0b-e646-4de8-b7da-f88c986c96e4
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect to a Report or Data Feed (SSAS)
   This page of the **Table Import Wizard** enables you to connect to a data feed. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
@@ -48,7 +46,7 @@ manager: craigg
  Click **View available Azure DataMarket datasets** to display available datasets.  
   
  **Account key**  
- Specify the account key used to access your Windows Azure Marketplace dataset subscriptions.  
+ Specify the account key used to access your Azure Marketplace dataset subscriptions.  
   
  **Find**  
  Locate an account key associated with a Windows Live account.  

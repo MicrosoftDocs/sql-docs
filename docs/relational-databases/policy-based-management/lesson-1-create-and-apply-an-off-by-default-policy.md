@@ -1,6 +1,7 @@
 ---
-title: "Lesson 1: Create and Apply an Off By Default Policy | Microsoft Docs"
-ms.custom: ""
+title: "Lesson 1: Create & Apply an off-by-default policy"
+description: Tutorial that teaches you to create and apply an off-by-default policy for Policy-Based Management in SQL Server. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.technology: security
@@ -10,10 +11,9 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Lesson 1: Create and Apply an Off By Default Policy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Using Policy-Based Management policies, you can administer one or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], one or more instance objects, server instances, one or more databases, or one or more database objects. As the database administrator, you want to ensure that certain servers do not have Database Mail enabled. In this lesson, you will create a condition and a policy that sets that server option. You will test the server to see whether it complies with the policy. Then, you will use the policy to reconfigure the server to bring the server into compliance.  
 
 ## Prerequisites
@@ -30,7 +30,7 @@ To complete this tutorial, you need SQL Server Management Studio, and access to 
   
 2.  In the **Create New Condition** dialog box, in the **Name** box, type **Mail Off**.   
     1. In the **Facet** box, confirm that **Surface Area Configuration** facet is selected.
-    1. In the **Expression** area, in the **Field** box, select **@DatabaseMailEnabled**, in the **Operator** box select **=**, and in the **Value** select **False**.  
+    1. In the **Expression** area, in the **Field** box, select **\@DatabaseMailEnabled**, in the **Operator** box select **=**, and in the **Value** select **False**.  
     1. On the **Description** page, type a description of the condition, and then click **OK** to create the condition.  
 
     ![Mail off condition](Media/lesson-1-create-and-apply-an-off-by-default-policy/mail-off-condition.png) 
@@ -73,7 +73,7 @@ To complete this tutorial, you need SQL Server Management Studio, and access to 
   
 6.  In the **Target Details** area, you will see additional information in the **Message** column if an error occurs. In the **Message** column, click **View** to see a report that contains the results of the check for each facet property that was checked. 
 
-    ![View results of policy evaluation ](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
+    ![View results of policy evaluation](Media/lesson-1-create-and-apply-an-off-by-default-policy/view-results-of-policy-evaluation.png)
   
 7.  The policy description is displayed at the bottom of the page, and the **Additional help** section displays the hyperlink that you have configured for the policy. Click the message hyperlink to open the Web page that you specified when you created the policy.   
 

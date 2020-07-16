@@ -1,6 +1,5 @@
 ---
-title: "Building a Knowledge Base | Microsoft Docs"
-ms.custom: ""
+title: "Building a Knowledge Base"
 ms.date: "07/31/2012"
 ms.prod: sql
 ms.prod_service: "data-quality-services"
@@ -8,13 +7,12 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 51eff161-6ecd-4ee4-8187-1dd8ef4814bd
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: swinarko
+ms.author: sawinark
 ---
 # Building a Knowledge Base
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   A knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS) is a repository of knowledge about your data that enables you to understand your data and maintain its integrity. A knowledge base consists of domains, each of which represents the data in a data field. The knowledge base is used by DQS to perform data cleansing and deduplication on a database. To prepare the knowledge base for data cleansing, you can run a computer-assisted analysis of a data sample, and interactively manage values in the domains. DQS enables you to import knowledge, create rules and relationships, change data values directly, and leverage a default database.  
   

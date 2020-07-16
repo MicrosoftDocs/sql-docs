@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "FileTables [SQL Server], accessing files with T-SQL"
 ms.assetid: 3c4a5ffb-c521-4696-99cb-2b03cffc9c02
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Access FileTables with Transact-SQL
   Describes how [!INCLUDE[tsql](../../includes/tsql-md.md)] data manipulation language (DML) commands work with FileTables.  

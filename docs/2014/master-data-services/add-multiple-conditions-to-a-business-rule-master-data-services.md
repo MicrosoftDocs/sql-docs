@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "business rules [Master Data Services], multiple conditions"
 ms.assetid: 5f0f6958-6cf2-444b-bdcd-05b887637a0b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Add Multiple Conditions to a Business Rule (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], add multiple **AND** or **OR** conditions to a business rule when you want a more complex rule.  

@@ -25,10 +25,9 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Defines a priority level and the set of criteria for determining which [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversations to assign the priority level. The priority level is assigned to any conversation endpoint that uses the same combination of contracts and services that are specified in the conversation priority. Priorities range in value from 1 (low) to 10 (high). The default is 5.  
   
@@ -36,7 +35,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE BROKER PRIORITY ConversationPriorityName  
 FOR CONVERSATION  
@@ -50,7 +49,9 @@ FOR CONVERSATION
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *ConversationPriorityName*  
  Specifies the name for this conversation priority. The name must be unique in the current database, and must conform to the rules for [!INCLUDE[ssDE](../../includes/ssde-md.md)] [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
@@ -215,7 +216,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
 ### D. Creating three priority levels for a target service by using services  
  Supports a system that provides three levels of performance: Gold (high), Silver (medium), and Bronze (low). There is one contract, but each level has a separate initiator service. All initiator services communicate to a central target service.  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldInitToTargetPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -257,7 +258,7 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
 ### E. Creating three priority levels for multiple services using contracts  
  Supports a system that provides three levels of performance: Gold (high), Silver (medium), and Bronze (low). Each level has a separate contract. These priorities apply to any services that are referenced by conversations that use the contracts.  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = GoldContract,  

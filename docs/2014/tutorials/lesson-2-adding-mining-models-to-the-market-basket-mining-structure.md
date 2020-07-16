@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: d96a7a7d-35d7-4b34-abb5-f0822c256253
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Lesson 2: Adding Mining Models to the Market Basket Mining Structure
   In this lesson, you will add two mining models to the Market Basket mining structure that you created in [Lesson 1: Creating the Market Basket Mining Structure](../../2014/tutorials/lesson-1-creating-the-market-basket-mining-structure.md). These mining models will allow you to create predictions.  

@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpdb"
 ms.assetid: 4c3e3302-6cf1-4b2b-8682-004049b578c3
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_helpdb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reports information about a specified database or all databases.  
   
@@ -34,7 +33,7 @@ sp_helpdb [ [ @dbname= ] 'name' ]
 ```  
   
 ## Arguments  
- [ **@dbname=** ] **'***name***'**  
+`[ @dbname = ] 'name'`
  Is the name of the database for which information is reported. *name* is **sysname**, with no default. If *name* is not specified, **sp_helpdb** reports on all databases in the **sys.databases** catalog view.  
   
 ## Return Code Values  

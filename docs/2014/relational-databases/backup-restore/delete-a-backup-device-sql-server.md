@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 7be62480-ed6a-4262-a071-1feba73b1c02
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Delete a Backup Device (SQL Server)
   This topic describes how to delete a backup device in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -63,7 +62,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query. This example shows how to use [sp_dropdevice](/sql/relational-databases/system-stored-procedures/sp-dropdevice-transact-sql) to delete a backup device. Execute the first example to create the `mybackupdisk` backup device and the physical name `c:\backup\backup1.bak`. Execute `sp_dropdevice` to delete the `mybackupdisk` backup device. The `delfile` parameter deletes the physical name.  
   
-```tsql  
+```sql  
 --Define a backup device and physical name.   
 USE AdventureWorks2012 ;  
 GO  

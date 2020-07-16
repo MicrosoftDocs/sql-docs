@@ -21,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: 23578932-e4de-4c39-a5a0-ce45139c4269
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # DROP SYNONYM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Removes a synonym from a specified schema.  
   

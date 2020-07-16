@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: ac516c63-1e79-4ae8-bca6-32d3c1a09c00
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Configure Maximum File Upload Size (PowerPivot for SharePoint)
   PowerPivot workbooks often contain large amounts of data that result in files that exceed the maximum file size allowed for SharePoint uploads. When you try to upload a file that exceeds the upper limit, you will get the following error on SharePoint:  

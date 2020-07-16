@@ -1,7 +1,7 @@
 ---
-title: "Remove a primary database from an availability group"
+title: "Remove database from an availability group"
 description: "Steps to remove a primary database from an Always On availability group using Transact-SQL (T-SQL), PowerShell, or SQL Server Management Studio."
-ms.custom: "seodec18"
+ms.custom: "seo-lt-2019"
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -17,37 +17,17 @@ helpviewer_keywords:
 ms.assetid: 6d4ca31e-ddf0-44bf-be5e-a5da060bf096
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Remove a primary database from an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to remove both the primary database and the corresponding secondary database(s) from an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
--   **Before you begin:**  
-  
-     [Prerequisites and Restrictions](#Prerequisites)  
-  
-     [Security](#Security)  
-  
--   **To remove an availability database, using:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Transact-SQL](#TsqlProcedure)  
-  
-     [PowerShell](#PowerShellProcedure)  
-  
--   **Follow Up:**  [After Removing an Availability Database from an Availability Group](#FollowUp)  
-  
-##  <a name="BeforeYouBegin"></a> Before You Begin  
-  
-###  <a name="Prerequisites"></a> Prerequisites and Restrictions  
+##  <a name="Prerequisites"></a> Prerequisites and Restrictions  
   
 -   This task is supported only on primary replicas. You must be connected to the server instance that hosts the primary replica.  
   
-###  <a name="Security"></a> Security  
-  
-####  <a name="Permissions"></a> Permissions  
+ 
+##  <a name="Permissions"></a> Permissions  
  Requires ALTER AVAILABILITY GROUP permission on the availability group, CONTROL AVAILABILITY GROUP permission, ALTER ANY AVAILABILITY GROUP permission, or CONTROL SERVER permission.  
   
 ##  <a name="SSMSProcedure"></a> Using SQL Server Management Studio  

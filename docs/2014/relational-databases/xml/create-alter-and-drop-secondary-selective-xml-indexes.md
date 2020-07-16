@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Create, Alter, and Drop Secondary Selective XML Indexes
   Describes how to create a new secondary selective XML index, or alter or drop an existing secondary selective XML index.  
@@ -24,7 +23,7 @@ manager: craigg
   
  The following example creates a secondary selective XML index on the path `'pathabc'`. The path to index is identified by the name that was given to it when it was created with the CREATE SELECTIVE XML INDEX statement. For more information, see [CREATE SELECTIVE XML INDEX &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-selective-xml-index-transact-sql).  
   
-```tsql  
+```sql  
 CREATE XML INDEX filt_sxi_index_c  
 ON Tbl(xmlcol)  
 USING XML INDEX sxi_index  
@@ -48,7 +47,7 @@ FOR
   
  The following example changes a secondary selective XML index by dropping it and recreating it.  
   
-```tsql  
+```sql  
 DROP INDEX filt_sxi_index_c  
   
 CREATE XML INDEX filt_sxi_index_c  
@@ -71,7 +70,7 @@ FOR
   
  The following example shows a DROP INDEX statement.  
   
-```tsql  
+```sql  
 DROP INDEX ssxi_index  
 ON tbl  
 ```  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "outer joins"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ca4aa11f-1048-411f-9c6c-3d0a8e319f2f
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Outer join operators \*= and =\* are not supported in 90 or later compatibility modes
   Upgrade Advisor detected the use of outer join operators \*= and =\*. These operators are not supported in 90 or later compatibility modes. When you upgrade, user databases maintain their compatibility mode. Statements that use these operators will fail.  
@@ -48,6 +46,6 @@ ORDER BY employee.job_id
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

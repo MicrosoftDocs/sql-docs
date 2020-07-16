@@ -16,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: a4b6955b-9cae-40fb-99a1-2931e17a8e74
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Cursor Stored Procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that implement cursor variable functionality.  
   

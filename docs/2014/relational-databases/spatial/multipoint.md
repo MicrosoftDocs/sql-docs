@@ -8,9 +8,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "MultiPoint geometry subtype [SQL Server]"
 ms.assetid: 2aaab211-3aba-4dbd-90b7-095d997b1f62
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 ---
 # MultiPoint
   A `MultiPoint` is a collection of zero or more points. The boundary of a `MultiPoint` instance is empty.  

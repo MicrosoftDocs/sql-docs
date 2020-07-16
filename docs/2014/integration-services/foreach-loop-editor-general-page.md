@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "08/22/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.foreachloopcontainer.general.f1"
 ms.assetid: 0b2daa20-c189-4b5b-9b43-bc9c34b08450
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Foreach Loop Editor (General Page)
   Use the **General** page of the **Foreach Loop Editor** dialog box to name and describe a Foreach Loop container that uses a specified enumerator to repeat a workflow for each member in a collection.  

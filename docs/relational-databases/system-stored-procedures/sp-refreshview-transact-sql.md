@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_refreshview"
 ms.assetid: 9ce1d07c-ee66-4a83-8c73-cd2cc104dd08
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_refreshview (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates the metadata for the specified non-schema-bound view. Persistent metadata for a view can become outdated because of changes to the underlying objects upon which the view depends.  
   
@@ -34,7 +33,7 @@ sp_refreshview [ @viewname = ] 'viewname'
 ```  
   
 ## Arguments  
- [ **@viewname=** ] **'***viewname***'**  
+`[ @viewname = ] 'viewname'`
  Is the name of the view. *viewname* is **nvarchar**, with no default. *viewname* can be a multipart identifier, but can only refer to views in the current database.  
   
 ## Return Code Values  

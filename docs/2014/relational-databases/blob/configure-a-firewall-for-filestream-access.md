@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "Windows Firewall [Database Engine], FILESTREAM"
   - "FILESTREAM [SQL Server], Windows Firewall"
 ms.assetid: fc52007f-c26f-4f8e-b9d8-55a7978f4d56
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Configure a Firewall for FILESTREAM Access
   To use FILESTREAM in a firewall-protected environment, both the client and server must be able to resolve DNS names to the server that contains the FILESTREAM files. FILESTREAM requires the Windows file-sharing ports 139 and 445 to be open.  

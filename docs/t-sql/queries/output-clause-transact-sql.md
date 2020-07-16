@@ -1,7 +1,7 @@
 ---
 title: "OUTPUT Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/09/2017"
+ms.date: "01/14/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -28,12 +28,11 @@ helpviewer_keywords:
   - "displaying deleted rows"
   - "UPDATE statement [SQL Server], OUTPUT clause"
 ms.assetid: 41b9962c-0c71-4227-80a0-08fdc19f5fe4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # OUTPUT Clause (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns information from, or expressions based on, each row affected by an INSERT, UPDATE, DELETE, or MERGE statement. These results can be returned to the processing application for use in such things as confirmation messages, archiving, and other such application requirements. The results can also be inserted into a table or table variable. Additionally, you can capture the results of an OUTPUT clause in a nested INSERT, UPDATE, DELETE, or MERGE statement, and insert those results into a target table or view.  
   
@@ -54,7 +53,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 <OUTPUT_CLAUSE> ::=  
 {  
@@ -571,9 +570,11 @@ DECLARE @MyTableVar table(
   );  
   
 INSERT INTO dbo.EmployeeSales (LastName, FirstName, CurrentSales)  
-  OUTPUT INSERTED.LastName,   
+  OUTPUT INSERTED.EmployeeID,
+         INSERTED.LastName,   
          INSERTED.FirstName,   
-         INSERTED.CurrentSales  
+         INSERTED.CurrentSales,
+         INSERTED.ProjectedSales
   INTO @MyTableVar  
     SELECT c.LastName, c.FirstName, sp.SalesYTD  
     FROM Sales.SalesPerson AS sp  

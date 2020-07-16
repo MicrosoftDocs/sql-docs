@@ -1,5 +1,6 @@
 ---
 title: "How to: Deploy a Data Processing Extension to a Report Server | Microsoft Docs"
+description: Find out how to deploy a data processing extension to a report server by learning which entries to add to which configuration files.
 ms.date: 03/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "data processing extensions [Reporting Services], deploying"
   - "assemblies [Reporting Services], data processing extension deployments"
 ms.assetid: e00dface-70f8-434b-9763-8ebee18737d2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Deploying a Data Processing Extension to a Report Server
   Report servers use data processing extensions for retrieving and processing data in rendered reports. You should deploy your data processing extension assembly to a report server as a private assembly. You also need to make an entry in the report server configuration file, RSReportServer.config.  

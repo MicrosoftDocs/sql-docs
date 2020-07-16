@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "time series algorithms [Analysis Services]"
@@ -20,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 9a1c527e-2997-493b-ad6a-aaa71260b018
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Time Series Model Query Examples
   When you create a query against a data mining model, you can create either a content query, which provides details about the patterns discovered in analysis, or you can create a prediction query, which uses the patterns in the model to make predictions for new data. For example, a content query for a time series model might provide additional details about the periodic structures that were detected, while a prediction query might give you predictions for the next 5-10 time slices. You can also retrieve metadata about the model by using a query.  

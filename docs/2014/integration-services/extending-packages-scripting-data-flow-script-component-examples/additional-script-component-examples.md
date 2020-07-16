@@ -11,9 +11,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Script component [Integration Services], examples"
 ms.assetid: 849dd38a-abb5-4702-a413-882aae3980a5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Additional Script Component Examples
   The Script component is a configurable tool that you can use in the data flow of a package to fill almost any requirement that is not met by the sources, transformations, and destinations that are included with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. This section contains Script component code samples that demonstrate the various types of functionality that are available.  

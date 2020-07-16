@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ConfigDriver [ODBC]"
 ms.assetid: 9473f48f-bcae-4784-89c1-7839bad4ed13
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # ConfigDriver Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL ConfigDriver(  
       HWND    hwndParent,  

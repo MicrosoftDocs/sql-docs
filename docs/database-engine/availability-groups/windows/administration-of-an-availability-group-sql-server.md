@@ -1,7 +1,7 @@
 ---
-title: "A reference for the administration of an availability Group"
-description: "A reference page linking you to the the basics of administering an Always On availability group, such as altering properties, adding or removing replicas, adding or removing databases, failing over, configuring the listener, etc."
-ms.custom: "seodec18"
+title: "Administration of an availability Group (content index)"
+description: "A reference index linking you to articles describing the basics of administering an Always On availability group, such as altering properties, adding or removing replicas, adding or removing databases, failing over, configuring the listener, etc."
+ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
 ms.reviewer: ""
@@ -12,10 +12,9 @@ helpviewer_keywords:
 ms.assetid: 0b7542fa-235e-413d-81bf-3eff9ee07480
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Administration of an availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
  Managing an existing Always On availability group in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] involves one or more of the following tasks:  
   
 -   Altering the properties of an existing availability replica, for example to change client connection access (for configuring readable secondary replicas), changing its failover mode, availability mode, or session timeout setting.    
@@ -111,7 +110,7 @@ manager: craigg
 -   **White papers:**  
   
      [Microsoft White Papers for SQL Server 2012](https://msdn.microsoft.com/library/hh403491.aspx)    
-     [SQL Server Customer Advisory Team Whitepapers](https://sqlcat.com/)  
+     [SQL Server Customer Advisory Team Whitepapers](https://techcommunity.microsoft.com/t5/DataCAT/bg-p/DataCAT/)  
   
 ## See Also  
  [Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

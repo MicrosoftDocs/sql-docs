@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.dataflowwindow.f1"
 ms.assetid: ffd7ab42-d7ae-4e7c-86a1-a4364a37c91e
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Flow Tab
   Use the **Data Flow** tab of [!INCLUDE[ssIS](../includes/ssis-md.md)] Designer to create data flows in a [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] package.  

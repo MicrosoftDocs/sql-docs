@@ -2,7 +2,7 @@
 title: "Manage My Data Alerts in Data Alert Manager | Microsoft Docs"
 ms.date: 08/17/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
 
 
@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "managing, alerts"
   - "managing, data alerts"
 ms.assetid: e0e4ffdf-bd4c-4ebd-872b-07486cbb47c2
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Manage My Data Alerts in Data Alert Manager

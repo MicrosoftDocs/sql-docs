@@ -1,10 +1,11 @@
 ---
 title: "What's New in SQL Server 2016"
+description: Learn about new SQL Server 2016 security features, querying capabilities, Hadoop and cloud integration, R analytics, and more.
 ms.custom: ""
 ms.date: "07/22/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 keywords: 
   - "new sql server"
@@ -16,20 +17,19 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # What's new in SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]    
  With SQL Server 2016, you can build intelligent, mission-critical applications using a scalable, hybrid database platform that has everything built in, from in-memory performance and advanced security to in-database analytics. The SQL Server 2016 release adds new security features, querying capabilities, Hadoop and cloud integration, R analytics and more, along with numerous improvements and enhancements. 
 
 This page provides summary information and links to more detailed SQL Server 2016 what's new information for each SQL Server component. 
 
-![SQL Server 2016](../sql-server/media/sql-server-2016.png) 
+![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **Try SQL Server today!** 
 - Download the **free** [**SQL Server 2016 Developer edition!**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers).
 - Download the latest version of [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). 
-- Have an Azure account? Spin up a [Virtual Machine with SQL Server 2016 already installed](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016sp1standardwindowsserver2016/).
+- Have an Azure account? Spin up a [Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview).
 
 ## SQL Server 2016 Database Engine
 - You can now configure **multiple tempDB** database files during SQL Server installation and setup.
@@ -47,17 +47,16 @@ This page provides summary information and links to more detailed SQL Server 201
     - **Dynamic Data Masking:** If specified in the table definition, masked data is hidden from most users, and only users with UNMASK permission can see the complete data.
     - **Row Level Security:** Data access can be restricted at the database engine level, so users see only what is relevant to them. 
 
-See [Database Engine](../database-engine/configure-windows/what-s-new-in-sql-server-2016-database-engine.md).
 ## SQL Server 2016 Analysis Services (SSAS)
 SQL Server 2016 Analysis Services provides improved performance, authoring, database management, filtering, processing, and much more for tabular model databases based on the **1200 compatibility level**.
-- **[SQL Server R Services](../advanced-analytics/r-services/what-s-new-in-sql-server-r-services.md)** integrate the R programming language, used for statistical analysis, into SQL Server. 
+- **[SQL Server R Services](~/machine-learning/what-s-new-in-sql-server-machine-learning-services.md)** integrate the R programming language, used for statistical analysis, into SQL Server. 
 - New **Database Consistency Checker (DBCC)** runs internally to detect potential data corruption issues.
 - **Direct Query**, which queries live external data rather than importing it first, now supports more data sources, including Azure SQL, Oracle and Teradata. 
 - There are numerous new **DAX (Data Access Expressions) functions**.
 - New **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** namespace manages tabular mode instances and models. 
 - [Analysis Services Management Objects (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) is re-factored to include a second assembly, **Microsoft.AnalysisServices.Core.dll**.
 
-See [Analysis Services Engine (SSAS)](../analysis-services/what-s-new-in-analysis-services.md). 
+See [Analysis Services Engine (SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services). 
 
 ## SQL Server 2016 Integration Services (SSIS)
 - Support for **Always On Availability Groups**

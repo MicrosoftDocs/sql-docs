@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ReadOnly property"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 4eff8181-08dd-4fad-b091-d400fc21a020
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Switch an Analysis Services database between ReadOnly and ReadWrite modes
   There are often situations when a [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database administrator (dba) wants to change the read/write mode of a tabular or multidimensional database. These situations are often driven by business needs, such as sharing the database among a pool of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] servers for a better user experience.  
@@ -163,7 +161,7 @@ manager: craigg
   
 ## See Also  
  <xref:Microsoft.AnalysisServices.Server.Attach%2A>   
- <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
+ [Microsoft.AnalysisServices.Database.Detach*](/dotnet/api/microsoft.analysisservices.core.database.detach)   
  [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)   
  [Database Storage Location](database-storage-location.md)   
  [Database ReadWriteModes](database-readwritemodes.md)   

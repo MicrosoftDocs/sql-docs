@@ -1,5 +1,6 @@
 ---
 title: "Mapping MySQL and SQL Server Character Set (MySQLToSQL) | Microsoft Docs"
+description: Learn how to specify a character set for MySQL character data types, expressions, and literals to use during character data type conversion by SSMA for MySQL.
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -9,7 +10,6 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Mapping MySQL and SQL Server Character Set (MySQLToSQL)
 Character set (Charset) can be specified for MySQL character data types, expressions and literals.  

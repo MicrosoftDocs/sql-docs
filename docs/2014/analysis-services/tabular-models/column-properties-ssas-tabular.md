@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.columnprop.f1"
 ms.assetid: 4046c1a3-46c7-47db-b355-52e9c2f23671
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Column Properties (SSAS Tabular)
   This topic describes tabular model column properties.  

@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 9ba826a0-11c5-4819-9435-3e17d53cffa7
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Task 11: Publishing the Knowledge Base
   In this task, you publish the knowledge base. A published knowledgebase can be used for cleansing or matching activity in data quality project.  

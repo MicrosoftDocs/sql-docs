@@ -1,8 +1,9 @@
 ---
-title: "Formatting Text and Placeholders (Report Builder and SSRS) | Microsoft Docs"
+title: "Formatting Text and Placeholders (Report Builder) | Microsoft Docs"
+description: Improve readability of your reports with format choices for fonts, styles, colors, and alignment within text or a data region in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

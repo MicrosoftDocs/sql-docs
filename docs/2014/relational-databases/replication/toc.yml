@@ -362,7 +362,7 @@
       - name: Replication to SQL Database + 
         href: https://docs.microsoft.com/azure/sql-database/replication-to-sql-database
       - name: Replication with SQL Database MI + 
-        href: https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance.md
+        href: https://docs.microsoft.com/azure/sql-database/replication-with-sql-database-managed-instance
       - name: Republish Data
         href: republish-data.md
       - name: Replication over the Internet

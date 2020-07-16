@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.service: sql-data-warehouse
-ms.component: design
+ms.subservice: design
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -12,11 +12,10 @@ dev_langs:
 ms.assetid: 5774fadc-77cc-46f8-8f9f-a0f9efe95e21
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_special_columns_100 (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Returns the optimal set of columns that uniquely identify a row in the table. Also returns columns automatically updated when any value in the row is updated by a transaction.  
   

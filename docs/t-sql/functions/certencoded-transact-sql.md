@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "CERTENCODED"
 ms.assetid: 677a0719-7b9a-4f0b-bc61-41634563f924
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # CERTENCODED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns the public portion of a certificate in binary format. This function takes a certificate ID as an argument, and returns the encoded certificate. To create a new certificate, pass the binary result to **CREATE CERTIFICATE ... WITH BINARY**.
   

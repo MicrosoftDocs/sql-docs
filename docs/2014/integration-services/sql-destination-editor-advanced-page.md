@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.sqlserverdestadapter.advanced.f1"
 helpviewer_keywords: 
   - "SQL Server Destination Editor"
 ms.assetid: 9b46bcf8-ddaf-4d7d-90a6-80bc19517e9b
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # SQL Destination Editor (Advanced Page)
   Use the **Advanced** page of the **SQL Destination Editor** dialog box to specify advanced bulk insert options.  

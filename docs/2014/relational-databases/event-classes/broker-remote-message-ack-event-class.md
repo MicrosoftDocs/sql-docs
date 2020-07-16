@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3d67efe1-74b4-4633-b029-c6e05b19f4dc
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Broker:Remote Message Ack Event Class
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a **Broker:Remote Message Ack** event when [!INCLUDE[ssSB](../../includes/sssb-md.md)] sends or receives a message acknowledgement.  

@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 456c2a47-d395-45f9-9efa-89f3fa2ac621
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specifying Attribute Relationships Between Attributes in a User-Defined Hierarchy
   As you have already learned in this tutorial, you can organize attribute hierarchies into levels within user hierarchies to provide navigation paths for users in a cube. A user hierarchy can represent a natural hierarchy, such as city, state, and country, or can just represent a navigation path, such as employee name, title, and department name. To the user navigating a hierarchy, these two types of user hierarchies are the same.  
@@ -176,7 +174,7 @@ manager: craigg
 14. On the **Build** menu of [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)], click **Deploy Analysis Services Tutorial**.  
   
 ## Next Task in Lesson  
- [Defining the Unknown Member and Null Processing Properties](../analysis-services/lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
+ [Defining the Unknown Member and Null Processing Properties](lesson-4-7-defining-the-unknown-member-and-null-processing-properties.md)  
   
 ## See Also  
  [Define Attribute Relationships](multidimensional-models/attribute-relationships-define.md)   

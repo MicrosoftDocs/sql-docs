@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 2a8c0a59-71c4-4280-824c-2dc17999532e
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Open Table Designer (Visual Database Tools)
   The Table Designer is a visual tool that allows you to design and visualize database tables to which you are connected. You can use Table Designer to create, edit, or delete tables, columns, keys, indexes, relationships, and constraints.  
@@ -28,7 +27,7 @@ manager: craigg
      The **Table Designer** menu is added to the main menu and the designer panes open.  
   
 > [!NOTE]  
->  If you are connected to a SQL Azure database, the new table option will launch a create table template script. Edit the parameters, then run the script to create a new table. For more information, see [SQL Azure Overview](https://go.microsoft.com/fwlink/?LinkId=163948).  
+>  If you are connected to a SQL Azure database, the new table option will launch a create table template script. Edit the parameters, then run the script to create a new table. For more information, see [SQL Azure Overview](/azure/sql-database/sql-database-technical-overview).  
   
 ### Open an existing table  
   

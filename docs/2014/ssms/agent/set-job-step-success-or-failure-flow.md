@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 23041ccf-8a07-41d3-85b9-c449a54b7e1e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Set Job Step Success or Failure Flow
   When creating [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, you can specify what action [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should take if a failure occurs during job execution. Determine the action that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] should take upon the success or failure of each job step. Then use the following procedure to configure the job step action flow logic by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
@@ -74,7 +73,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql
     USE msdb;  
     GO  
     EXEC sp_add_jobstep  
@@ -89,8 +88,7 @@ manager: craigg
  For more information, see [sp_add_jobstep &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql).  
   
 ##  <a name="SMO"></a> Using SQL Server Management Objects  
- **To set job step success or failure flow**  
+
+### To set job step success or failure flow
   
  Use the `JobStep` class by using a programming language that you choose, such as Visual Basic, Visual C#, or PowerShell. For more information, see [SQL Server Management Objects (SMO)](https://msdn.microsoft.com/library/ms162169.aspx).  
-  
-  

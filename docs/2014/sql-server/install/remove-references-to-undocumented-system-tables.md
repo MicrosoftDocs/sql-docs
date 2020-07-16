@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "undocumented system tables [SQL Server]"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 010b1236-2219-4bf4-a6db-e3fc3abfa37a
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Remove references to undocumented system tables
   Many system tables that were undocumented in prior releases have changed or no longer exist; therefore, using these tables may cause errors after upgrading. Because Upgrade Advisor looks for references to system table names, it will report references to any user tables that have the same names as system tables.  
@@ -85,6 +83,6 @@ manager: craigg
   
 ## See Also  
  [Database Engine Upgrade Issues](../../../2014/sql-server/install/database-engine-upgrade-issues.md)   
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

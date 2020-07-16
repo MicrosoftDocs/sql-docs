@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.previewselecttable.f1"
 ms.assetid: b6b34b5a-43b3-4a75-9f3b-b2ad1084b1b6
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Preview Selected Table (SSAS)
   This page of the **Table Import Wizard** enables you to preview the data in the selected table, to select the columns to include in the data import, and to filter data in the selected columns. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
@@ -23,7 +21,7 @@ manager: craigg
   
  The appearance of data on this page does not guarantee import will succeed. If the user name specified in the Impersonation Information page does not have sufficient privileges to read from the selected database, import will fail.  
   
-## UIElement List  
+## UI element list  
  **Checkbox in the column header**  
  Select the checkbox to include the column in the data import. Clear the checkbox to remove the column from the data import.  
   

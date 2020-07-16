@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ready-only cube view"
@@ -19,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: b064171e-b1b4-4f32-95e5-59e1b831c4c9
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Perspectives
   A perspective is a definition that allows users to see a cube in a simpler way. A perspective is a subset of the features of a cube. A perspective enables administrators to create views of a cube, helping users to focus on the most relevant data for them. A perspective contains subsets of all objects from a cube. A perspective cannot include elements that are not defined in the parent cube.  

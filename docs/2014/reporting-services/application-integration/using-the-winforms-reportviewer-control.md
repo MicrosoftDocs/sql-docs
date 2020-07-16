@@ -4,16 +4,14 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "ReportViewer controls"
 ms.assetid: 29fb9f7d-ba65-49fd-9cbc-4c380869de96
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Using the WinForms ReportViewer Control
   To view reports that have been deployed to a report server or reports that exist on the local file system, you can use the WinForms ReportViewer control to render them in a Windows application.  

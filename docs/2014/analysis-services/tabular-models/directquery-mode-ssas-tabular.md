@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.realtime.f1"
 ms.assetid: 45ad2965-05ec-4fb1-a164-d8060b562ea5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # DirectQuery Mode (SSAS Tabular)
   Analysis Services lets you retrieve data and create reports from a tabular model by retrieving data and aggregates directly from a relational database system, using *DirectQuery mode*. This topic introduces the differences between standard tabular models that reside only in memory and tabular models that can query a relational data source, and explains how you can author and deploy a model for use in DirectQuery mode.  
@@ -23,7 +21,7 @@ manager: craigg
   
 -   [Authoring Models for Use with DirectQuery Mode](#bkmk_Design)  
   
-    -   [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_datasources)  
+    -   [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_DataSources)  
   
     -   [Validation and Design Restrictions for DirectQuery Mode](#bkmk_Validation)  
   
@@ -65,7 +63,7 @@ manager: craigg
   
  When you do this, the model designer automatically configures the workspace database to run in a hybrid mode that lets you continue to work with the cached data. The model designer will also notify you of any features in your model that are incompatible with DirectQuery mode. The following list summarizes the main requirements to keep in mind:  
   
--   **Data sources:** DirectQuery models can only use data from a single SQL Server data source. When DirectQuery mode has been turned on for a model, you can use no other types of data in the model designer, including tables added by copy-paste operations. All other import options are disabled. Any tables included in a query must be part of the SQL Server data source. See [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_datasources)for more information.  
+-   **Data sources:** DirectQuery models can only use data from a single SQL Server data source. When DirectQuery mode has been turned on for a model, you can use no other types of data in the model designer, including tables added by copy-paste operations. All other import options are disabled. Any tables included in a query must be part of the SQL Server data source. See [Data Sources for DirectQuery Models](directquery-mode-ssas-tabular.md#bkmk_DataSources)for more information.  
   
 -   **Support for calculated columns:** Calculated columns are not supported for DirectQuery models. However, you can create measures and KPIs, which operate over sets of data. See the section on [validation](#bkmk_Validation) for more information.  
   
@@ -77,7 +75,7 @@ manager: craigg
   
 -   **Client restrictions:** When a model is in DirectQuery mode, it can only be queried by using DAX. You cannot use MDX to create queries. This means that you cannot use the Excel Pivot Client, because Excel uses MDX.  
   
-     However, you can create queries against a DirectQuery model in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] if you use a DAX table query as part of an XMLA Execute statement, For more information, see [DAX Query Syntax Reference](https://msdn.microsoft.com/library/ee634217.aspx).  
+     However, you can create queries against a DirectQuery model in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] if you use a DAX table query as part of an XMLA Execute statement, For more information, see [DAX Query Syntax Reference](/dax/dax-syntax-reference
   
  When you have resolved all the design issues and tested your model, you are ready for deployment. At this point, you can set the preferred method for answering queries against the model. Do you want users to have access to the cache, or always use only the relational data source?  
   
@@ -176,5 +174,3 @@ manager: craigg
  [Partitions &#40;SSAS Tabular&#41;](partitions-ssas-tabular.md)   
  [Tabular Model Projects &#40;SSAS Tabular&#41;](tabular-model-projects-ssas-tabular.md)   
  [Analyze in Excel &#40;SSAS Tabular&#41;](analyze-in-excel-ssas-tabular.md)  
-  
-  

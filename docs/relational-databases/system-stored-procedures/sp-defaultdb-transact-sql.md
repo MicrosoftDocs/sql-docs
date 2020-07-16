@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_defaultdb"
 ms.assetid: 663b859f-c6da-4942-95a6-60b93d05654e
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_defaultdb (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the default database for a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login.  
   
@@ -37,10 +36,10 @@ sp_defaultdb [ @loginame = ] 'login', [ @defdb = ] 'database'
 ```  
   
 ## Arguments  
- [ **@loginame=**] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the login name. *login* is **sysname**, with no default. *login* can be an existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a Windows user or group. If a login for the Windows user or group does not exist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], it is automatically added.  
   
- [ **@defdb=**] **'***database***'**  
+`[ @defdb = ] 'database'`
  Is the name of the new default database. *database* is **sysname**, with no default. *database* must already exist.  
   
 ## Return Code Values  

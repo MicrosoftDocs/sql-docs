@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 8622db47-c223-48fa-87ff-0b4362cd069a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Distributor and Publisher Information Script
   This script uses system tables and replication stored procedures to answer questions commonly asked about objects at the Distributor and Publisher. The script can be used "as-is" and can also provide the basis for customized scripts. The script might require two modifications to run in your environment:  

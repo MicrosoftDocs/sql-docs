@@ -22,13 +22,12 @@ helpviewer_keywords:
   - "NOT EXISTS keyword"
   - "row existence testing [SQL Server]"
 ms.assetid: b6510a65-ac38-4296-a3d5-640db0c27631
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # EXISTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Specifies a subquery to test for the existence of rows.  
   
@@ -76,7 +75,7 @@ WHERE EXISTS
 (SELECT *   
     FROM HumanResources.Employee AS b  
     WHERE a.BusinessEntityID = b.BusinessEntityID  
-    AND a.LastName = 'Johnson');  
+    AND a.LastName = 'Johnson') ;  
 GO  
 ```  
   
@@ -91,7 +90,7 @@ WHERE a.LastName IN
 (SELECT a.LastName  
     FROM HumanResources.Employee AS b  
     WHERE a.BusinessEntityID = b.BusinessEntityID  
-    AND a.LastName = 'Johnson');  
+    AND a.LastName = 'Johnson') ;  
 GO  
 ```  
   
@@ -151,7 +150,7 @@ WHERE EXISTS
     JOIN HumanResources.EmployeeDepartmentHistory AS edh  
        ON d.DepartmentID = edh.DepartmentID  
     WHERE e.BusinessEntityID = edh.BusinessEntityID  
-    AND d.Name LIKE 'P%');  
+    AND d.Name LIKE 'P%') ;  
 GO  
 ```  
   
@@ -168,7 +167,7 @@ JOIN HumanResources.EmployeeDepartmentHistory AS edh
 WHERE edh.DepartmentID IN  
 (SELECT DepartmentID  
    FROM HumanResources.Department  
-   WHERE Name LIKE 'P%');  
+   WHERE Name LIKE 'P%') ;  
 GO  
 ```  
   
@@ -304,7 +303,7 @@ FROM DimCustomer AS a
 WHERE EXISTS  
 (SELECT *   
     FROM dbo.ProspectiveBuyer AS b  
-    WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate));  
+    WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate)) ;  
 ```  
   
 ### G. Using NOT EXISTS  
@@ -318,7 +317,7 @@ FROM DimCustomer AS a
 WHERE NOT EXISTS  
 (SELECT *   
     FROM dbo.ProspectiveBuyer AS b  
-    WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate));  
+    WHERE (a.LastName = b.LastName) AND (a.BirthDate = b.BirthDate)) ;  
 ```  
   
 ## See Also  

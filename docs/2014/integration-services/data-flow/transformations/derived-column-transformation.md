@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "columns [Integration Services], derivations"
   - "Derived Column transformation"
 ms.assetid: 8eba755e-8e48-4233-bd1e-09a46bf2692f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Derived Column Transformation
   The Derived Column transformation creates new column values by applying expressions to transformation input columns. An expression can contain any combination of variables, functions, operators, and columns from the transformation input. The result can be added as a new column or inserted into an existing column as a replacement value. The Derived Column transformation can define multiple derived columns, and any variable or input columns can appear in multiple expressions.  
@@ -71,6 +70,6 @@ manager: craigg
 ## Related Content  
  Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   
- Curated Answer, [How to Split Column Data using SSIS](https://go.microsoft.com/fwlink/?LinkId=321995), on curatedviews.cloudapp.net.  
+ Blog, [How to Split Column Data using SSIS](https://microsoft-ssis.blogspot.com/2012/10/split-multi-value-column-into-multiple.html).  
   
   

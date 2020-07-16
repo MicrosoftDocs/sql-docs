@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Multidimensional Expressions [Analysis Services], about MDX"
@@ -16,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 4797ddc8-6423-497a-9a43-81a1af7eb36c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Key Concepts in MDX (Analysis Services)
   Before you can use Multidimensional Expressions (MDX) to query multidimensional data or create MDX expressions within a cube, it helps to understand multidimensional concepts and terms.  

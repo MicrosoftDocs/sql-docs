@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: cc5bf181-18a0-44d5-8bd7-8060d227c927
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Partitioned Tables and Indexes
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports table and index partitioning. The data of partitioned tables and indexes is divided into units that can be spread across more than one filegroup in a database. The data is partitioned horizontally, so that groups of rows are mapped into individual partitions. All partitions of a single index or table must reside in the same database. The table or index is treated as a single logical entity when queries or updates are performed on the data. Partitioned tables and indexes are not available in every edition of [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2014](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
@@ -108,8 +107,6 @@ manager: craigg
 -   [How to Implement an Automatic Sliding Window](https://msdn.microsoft.com/library/aa964122\(SQL.90\).aspx)  
   
 -   [Bulk Loading into a Partitioned Table](https://msdn.microsoft.com/library/cc966380.aspx)  
-  
--   [Project REAL: Data Lifecycle -- Partitioning](https://www.microsoft.com/downloads/en/details.aspx?FamilyID=a4139d84-ad2d-4cd5-a463-239c6b7d88c9&DisplayLang=en)  
   
 -   [Query Processing Enhancements on Partitioned Tables and Indexes](https://msdn.microsoft.com/library/ms345599.aspx)  
   

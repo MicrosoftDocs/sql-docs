@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 ms.assetid: dcd1dc09-6eaf-440b-9ce6-fef779ff794f
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Set Fast Parse
   The fast parse property must be set for each column of the source or transformation that uses fast parse. To set the property, use the Advanced editor of the Flat File source and Data Conversion transformation.  

@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: c4f4a5a8-a230-4222-bece-9d563501f65f
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Content Queries (Data Mining)
   A content query is a way of extracting information about the internal statistics and structure of the mining model. Sometimes a content query can provide details that are not readily available in the viewer. You can also use the results of a content query to extract information programmatically for other uses.  

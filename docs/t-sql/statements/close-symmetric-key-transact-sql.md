@@ -19,12 +19,11 @@ helpviewer_keywords:
   - "CLOSE SYMMETRIC KEY statement"
   - "cryptography [SQL Server], symmetric keys"
 ms.assetid: 3b083cbb-3c6a-4f59-8d34-601db1efcc83
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # CLOSE SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Closes a symmetric key, or closes all symmetric keys open in the current session.  
   
@@ -33,11 +32,13 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 CLOSE { SYMMETRIC KEY key_name | ALL SYMMETRIC KEYS }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Key_name*  
  Is the name of the symmetric key to be closed.  
   

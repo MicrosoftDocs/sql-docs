@@ -8,12 +8,15 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 005b6b2f-a5d9-4ea4-8d4e-beed6ab33c0d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.set_environment_variable_protection (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Sets the sensitivity bit of an environment variable in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   
@@ -23,7 +26,7 @@ manager: craigg
 catalog.set_environment_variable_protection [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @variable_name = ] variable_name  
-    , [ @is_sensitive = ] is_sensitive  
+    , [ @sensitive = ] sensitive  
 ```  
   
 ## Arguments  

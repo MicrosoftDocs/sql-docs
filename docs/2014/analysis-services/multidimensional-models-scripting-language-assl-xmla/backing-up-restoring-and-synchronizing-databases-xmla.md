@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "restoring databases [XML for Analysis]"
@@ -17,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 6c021b2e-6ad0-444e-b23f-4b5f72ce084b
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Backing Up, Restoring, and Synchronizing Databases (XMLA)
   In XML for Analysis, there are three commands that back up, restore, and synchronize databases:  

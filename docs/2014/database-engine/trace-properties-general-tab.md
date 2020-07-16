@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.traceproperties.general.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 25227268-143b-477e-aac9-8268bcaf2078
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Trace Properties (General Tab)
   Use the **General** tab of the **Trace Properties** dialog box to view or specify properties of a trace.  

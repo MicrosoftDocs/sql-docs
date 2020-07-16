@@ -22,9 +22,8 @@ helpviewer_keywords:
   - "modulo operator (%)"
   - "modulus operator (%)"
 ms.assetid: f93c662e-f405-486e-bf23-a2d03907b5bd
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 
@@ -60,8 +59,7 @@ dividend % divisor
  The following example divides the number 38 by 5. This results in 7 as the integer portion of the result and demonstrates how modulo returns the remainder of 3.  
   
 ```  
-SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder ;  
-  
+SELECT 38 / 5 AS Integer, 38 % 5 AS Remainder;
 ```  
   
 ### B. Example using columns in a table  

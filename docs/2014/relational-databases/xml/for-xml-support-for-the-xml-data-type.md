@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "user-defined functions [SQL Server], XML"
   - "xml data type [SQL Server], FOR XML clause"
 ms.assetid: 365de07d-694c-4c8b-b671-8825be27f87c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # FOR XML Support for the xml Data Type
   If a FOR XML query specifies a column of `xml` type in the SELECT clause, column values are mapped as elements in the returned XML, regardless of whether you specify the ELEMENTS directive. Any XML declaration in the `xml` type column is not serialized.  

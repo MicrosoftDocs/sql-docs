@@ -2,7 +2,7 @@
 title: "SetVirtualDirectory Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SetVirtualDirectory method"
 ms.assetid: 1a25cb1d-38d5-401a-970b-87b642a780e4
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - SetVirtualDirectory
   Sets the name of the virtual directory for a given application.  

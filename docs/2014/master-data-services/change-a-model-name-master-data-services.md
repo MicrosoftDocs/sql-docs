@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: "master-data-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "models [Master Data Services], changing name"
 ms.assetid: 399eed32-7c61-4239-9c06-996a65219518
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Change a Model Name (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can change the name of a model.  

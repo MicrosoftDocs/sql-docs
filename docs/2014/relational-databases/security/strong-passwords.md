@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 338548f4-c4d8-47ca-b597-5c9c0f2fa205
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Strong Passwords
   Passwords can be the weakest link in a server security deployment. You should always take great care when you select a password. A strong password has the following characteristics:  

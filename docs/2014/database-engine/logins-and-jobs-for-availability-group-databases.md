@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d7da14d3-848c-44d4-8e49-d536a1158a61
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Management of Logins and Jobs for the Databases of an Availability Group (SQL Server)
   You should routinely maintain the same set of user logins and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent jobs on every primary database of an AlwaysOn availability group and the corresponding secondary databases. The logins and jobs must be reproduced on every instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] that hosts an availability replica for the availability group.  
@@ -24,7 +23,7 @@ manager: craigg
   
      The server instances that host the availability replicas of an availability group might be configured differently, with different tape drive letters or such. The jobs for each availability replica must allow for any such differences.  
   
-     Notice that backup jobs can use the [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) function to identify whether the local replica is the preferred one for backups, according to the availability group backup preferences. Backup jobs created using the [Maintenance Plan Wizard](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) natively use this function. For other backup jobs, we recommend that you use this function as a condition in your backup jobs, so they execute only on the preferred replica. For more information, see [ Active Secondaries: Backup on Secondary Replicas (AlwaysOn Availability Groups)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
+     Notice that backup jobs can use the [sys.fn_hadr_is_preferred_backup_replica](/sql/relational-databases/system-functions/sys-fn-hadr-backup-is-preferred-replica-transact-sql) function to identify whether the local replica is the preferred one for backups, according to the availability group backup preferences. Backup jobs created using the [Maintenance Plan Wizard](../relational-databases/maintenance-plans/use-the-maintenance-plan-wizard.md) natively use this function. For other backup jobs, we recommend that you use this function as a condition in your backup jobs, so they execute only on the preferred replica. For more information, see [Active Secondaries: Backup on Secondary Replicas (AlwaysOn Availability Groups)](availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).  
   
 -   **Logins**  
   

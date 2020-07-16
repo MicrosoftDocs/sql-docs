@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: "master-data-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "administrators [Master Data Services], changing"
 ms.assetid: cf30312e-4338-49a7-90f0-6e4f7b431ff8
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Change the System Administrator Account (Master Data Services)
   You can change the user account that is designated as the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] system administrator.  

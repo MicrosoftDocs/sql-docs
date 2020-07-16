@@ -1,18 +1,19 @@
 ---
-title: "Using MSDeploy with dbSqlPackage Provider | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "04/26/2017"
-ms.prod: "sql"
+title: Using MSDeploy with dbSqlPackage Provider
+description: Learn about the obsolete MSDeploy provider DbSqlPackage. View parameters, examples, and alternative SQL Server and SQL Azure database publishing tools.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 213b91ab-03e9-431a-80f0-17eed8335abe
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 04/26/2017
 ---
+
 # Using MSDeploy with dbSqlPackage Provider
+
 **DbSqlPackage** is an **MSDeploy** provider that allows you interact with SQL Server/SQL Azure databases. **DbSqlPackage** supports the following actions:  
   
 -   **Extract**: Creates a database snapshot (.dacpac) file from a live SQL Server or SQL Azure databases.  
@@ -41,8 +42,8 @@ You specify MS-Deploy verbs using the **-verb** switch on the MS-Deploy command 
   
 |Verb|Description|  
 |--------|---------------|  
-|dump|Provides information including name, version number, and description, about a source database contained in a .dacpac file. Specify the source database using the following format on the command line:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="***.dacpac-file-path***"**|  
-|sync|Specifies dbSqlPackage actions using the following format on the command line:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" *[,DbSqlPackage-source-parameters] -***dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />See the sections below for the valid source and destination parameters for the sync verb.|  
+|dump|Provides information including name, version number, and description, about a source database contained in a .dacpac file. Specify the source database using the following format on the command line:<br /><br />**msdeploy -verb:dump -source:dbSqlPackage="**_.dacpac-file-path_**"**|  
+|sync|Specifies dbSqlPackage actions using the following format on the command line:<br /><br />**msdeploy -verb:sync -source:dbSqlPackage**="input" _[,DbSqlPackage-source-parameters] -_**dest:dbSqlPackage**="input" *[,DbSqlPackage-destination-parameters]*<br /><br />See the sections below for the valid source and destination parameters for the sync verb.|  
   
 ## dbSqlPackage Source  
 The **dbSqlPackage** provider takes an input that is either a valid SQL Server/SQL Azure connection string or a path to a .dacpac file on disk.  The syntax for specifying the input source for the provider is the following:  

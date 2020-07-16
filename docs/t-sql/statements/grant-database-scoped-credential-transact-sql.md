@@ -18,13 +18,12 @@ helpviewer_keywords:
   - "database scoped credential [SQL Server], permissions"
   - "GRANT statement, database scoped credentials"
 ms.assetid: 501f2c8a-6aeb-41af-bf0b-974d17af33c0
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Database Scoped Credential Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   Grants permissions on a database scoped credential. 
   
@@ -32,7 +31,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
   
 ## Syntax  
   
-```  
+```syntaxsql
 GRANT permission  [ ,...n ]    
     ON DATABASE SCOPED CREDENTIAL :: credential_name   
     TO principal [ ,...n ] [ WITH GRANT OPTION ]   

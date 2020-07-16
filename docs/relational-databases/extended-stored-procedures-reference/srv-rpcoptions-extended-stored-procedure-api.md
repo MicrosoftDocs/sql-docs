@@ -19,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: dbcce5d1-d5a1-4379-9597-04e43af5923d
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # srv_rpcoptions (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

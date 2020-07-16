@@ -18,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # ALTER SEQUENCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Modifies the arguments of an existing sequence object. If the sequence was created with the **CACHE** option, altering the sequence will recreate the cache.  
   
@@ -33,7 +32,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER SEQUENCE [schema_name. ] sequence_name  
     [ RESTART [ WITH <constant> ] ]  
@@ -45,7 +44,9 @@ ALTER SEQUENCE [schema_name. ] sequence_name
     [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *sequence_name*  
  Specifies the unique name by which the sequence is known in the database. Type is **sysname**.  
   
@@ -98,7 +99,7 @@ GRANT ALTER ON OBJECT::Test.TinySeq TO [AdventureWorks\Larry]
  For examples of both creating sequences and using the **NEXT VALUE FOR** function to generate sequence numbers, see [Sequence Numbers](../../relational-databases/sequence-numbers/sequence-numbers.md).  
   
 ### A. Altering a sequence  
- The following example creates a schema named Test and a sequence named TestSeq using the **int** data type, having a range from 0 to 255. The sequence starts with 125 and increments by 25 every time that a number is generated. Because the sequence is configure to cycle, when the value exceeds the maximum value of 200, the sequence restarts at the minimum value of 100.  
+ The following example creates a schema named Test and a sequence named TestSeq using the **int** data type, having a range from 100 to 200. The sequence starts with 125 and increments by 25 every time that a number is generated. Because the sequence is configure to cycle, when the value exceeds the maximum value of 200, the sequence restarts at the minimum value of 100.  
   
 ```  
 CREATE SCHEMA Test ;  
@@ -116,7 +117,7 @@ CREATE SEQUENCE Test.TestSeq
 GO  
 ```  
   
- The following example alters the TestSeq sequence to have a range from 0 to 255. The sequence restarts the numbering series with 100 and increments by 50 every time that a number is generated.  
+ The following example alters the TestSeq sequence to have a range from 50 to 200. The sequence restarts the numbering series with 100 and increments by 50 every time that a number is generated.  
   
 ```  
 ALTER SEQUENCE Test. TestSeq  

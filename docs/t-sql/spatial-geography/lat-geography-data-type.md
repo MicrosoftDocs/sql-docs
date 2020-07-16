@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Lat method"
 ms.assetid: 051d66bc-04de-4c58-861c-760dc5b859b5
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # Lat (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   The latitude property of the **geography** instance.  
   

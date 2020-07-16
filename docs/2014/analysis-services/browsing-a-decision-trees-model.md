@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models, browsing"
@@ -17,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 6b3dd1ae-caff-41c3-817b-802dc020ff88
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Browsing a Decision Trees Model
   When you open a classification model using **Browse**, the model is displayed in an interactive decision tree viewer, similar to the [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees viewer in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. The viewer displays the results of classification as a graph that is designed to highlight the criteria that differentiate one group of data from another. You can also drill down into individual subsets of the tree and retrieve the underlying data.  

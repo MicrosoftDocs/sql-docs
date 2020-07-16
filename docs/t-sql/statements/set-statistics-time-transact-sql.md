@@ -24,10 +24,9 @@ helpviewer_keywords:
 ms.assetid: eec2e1cd-a29d-4cf3-a271-be9d61506f15
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # SET STATISTICS TIME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Displays the number of milliseconds required to parse, compile, and execute each statement.  
   
@@ -35,7 +34,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET STATISTICS TIME { ON | OFF }  
 ```  
@@ -57,7 +56,7 @@ SET STATISTICS TIME { ON | OFF }
 ## Examples  
  This example shows the server execution, parse, and compile times.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO         
 SET STATISTICS TIME ON;  

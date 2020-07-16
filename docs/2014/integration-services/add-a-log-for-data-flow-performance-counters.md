@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "performance counters [Integration Services]"
   - "counters [Integration Services]"
   - "logs [Integration Services], data flow counters"
 ms.assetid: b500d166-33ba-4b82-a92d-b0a333924e8d
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Add a Log for Data Flow Performance Counters
   This procedure describes how to add a log for the performance counters that the data flow engine provides.  

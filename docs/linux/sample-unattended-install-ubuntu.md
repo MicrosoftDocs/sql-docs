@@ -2,18 +2,16 @@
 title: Unattended install for SQL Server on Ubuntu
 titleSuffix: SQL Server
 description: SQL Server Script Sample - Unattended Install on Ubuntu
-author: rothja
-ms.author: jroth
-manager: craigg
+author: VanMSFT 
+ms.author: vanto
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: "sql-linux, seodec18"
 ms.technology: linux
 ---
 # Sample: Unattended SQL Server installation script for Ubuntu
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This sample Bash script installs SQL Server 2017 on Ubuntu 16.04 without interactive input. It provides examples of installing the database engine, the SQL Server command-line tools, SQL Server Agent, and performs post-install steps. You can optionally install full-text search and create an administrative user.
 
@@ -27,6 +25,9 @@ This sample Bash script installs SQL Server 2017 on Ubuntu 16.04 without interac
 - For other system requirements, see [System requirements for SQL Server on Linux](sql-server-linux-setup.md#system).
 
 ## Sample script
+
+> [!NOTE]
+> The script might fail if SQL Server is slow to start. That's because the script will exit with a non-zero status. Removing the `-e` switch on the first line may resolve this issue.
 
 ```bash
 #!/bin/bash -e
@@ -82,6 +83,7 @@ sudo ACCEPT_EULA=Y apt-get install -y mssql-tools unixodbc-dev
 echo Adding SQL Server tools to your path...
 echo PATH="$PATH:/opt/mssql-tools/bin" >> ~/.bash_profile
 echo 'export PATH="$PATH:/opt/mssql-tools/bin"' >> ~/.bashrc
+source ~/.bashrc
 
 # Optional SQL Server Agent installation:
 if [ ! -z $SQL_INSTALL_AGENT ]
@@ -169,7 +171,7 @@ To run the script
    ```
 
 ### Understanding the script
-The first thing the Bash script does is set a few variables. These can be either scripting variables, like the sample, or environment variables. The variable ``` MSSQL_SA_PASSWORD ``` is **required** by SQL Server installation, the others are custom variables created for the script. The sample script performs the following steps:
+The first thing the Bash script does is set a few variables. These can be either scripting variables, like the sample, or environment variables. The variable `MSSQL_SA_PASSWORD` is **required** by SQL Server installation, the others are custom variables created for the script. The sample script performs the following steps:
 
 1. Import the public Microsoft GPG keys.
 

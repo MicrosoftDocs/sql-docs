@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "statefulness [XML for Analysis]"
@@ -18,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: b83bb3ff-09be-4fda-9d1d-6248e04ffb21
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Managing Connections and Sessions (XMLA)
   *Statefulness* is a condition during which the server preserves the identity and context of a client between method calls. *Statelessness* is a condition during which the server does not remember the identity and context of a client after a method call finishes.  

@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "queries [XML in SQL Server], nested FOR XML"
   - "nested FOR XML queries"
 ms.assetid: 7604161a-a958-446d-b102-7dee432979d0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Use Nested FOR XML Queries
   The `xml` data type and the [TYPE directive in FOR XML queries](type-directive-in-for-xml-queries.md) enable the XML returned by the FOR XML queries to be processed on the server as well as on the client.  

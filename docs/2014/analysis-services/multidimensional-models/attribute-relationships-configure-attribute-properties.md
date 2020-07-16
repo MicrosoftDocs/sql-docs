@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "flexible relationships (Analysis Services)"
@@ -16,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: fce511af-66d7-42fc-bb3a-6c516f16b10e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Configure Attribute Relationship Properties
   The following table lists and describes the properties of an attribute relationship.  

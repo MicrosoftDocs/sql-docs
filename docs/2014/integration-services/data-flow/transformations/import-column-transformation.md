@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "importing data, SSIS packages"
   - "inserting data"
 ms.assetid: ac3b74c1-ef54-4297-8062-1734324fffcc
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Import Column Transformation
   The Import Column transformation reads data from files and adds the data to columns in a data flow. Using this transformation, a package can add text and images stored in separate files to a data flow. For example, a data flow that loads data into a table that stores product information can include the Import Column transformation to import customer reviews of each product from files and add the reviews to the data flow.  

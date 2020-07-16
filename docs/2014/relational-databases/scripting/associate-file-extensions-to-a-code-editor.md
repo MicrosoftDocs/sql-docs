@@ -1,20 +1,18 @@
 ---
-title: "Associate File Extensions to a Code Editor | Microsoft Docs"
-ms.custom: ""
+title: Associate File Extensions to a Code Editor
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "file extensions [SQL Server]"
   - "associating file extensions [SQL Server]"
   - "Query Editor [SQL Server Management Studio], associating file extensions"
 ms.assetid: 193630f4-93de-4950-8f36-68702531f925
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Associate File Extensions to a Code Editor
   Associating file extensions to a specific code editor allows you to open a file with the appropriate [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] code editor when you double-click a file in Windows Explorer. The extensions commonly used by [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)], such as .sql and .mdx, are associated during installation. New file extensions must also be associated to [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] in the file system. You can use this feature to open files created with other editors, or to open files you have renamed, such as backups of .sql files that were renamed .bak.  

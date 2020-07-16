@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "installing Upgrade Advisor"
@@ -30,7 +29,6 @@ helpviewer_keywords:
 ms.assetid: 113eb435-8d36-4ed6-9790-b5e4c14809c8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Resolving Upgrade Issues
   The topics in this section describe upgrade issues that can be detected as well as those that cannot be detected, but that might affect the upgrade or post-upgrade experience. The issues are organized by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component.  
@@ -64,6 +62,6 @@ manager: craigg
 -   [Use sp_rename to rename duplicate index name](../../../2014/sql-server/install/use-sp-rename-to-rename-duplicate-index-name.md)  
   
 ## See Also  
- [SQL Server 2014 Upgrade Advisor &#91;new&#93;](/sql/2014/sql-server/install/sql-server-2014-upgrade-advisor)  
+ [SQL Server 2014 Upgrade Advisor &#91;new&#93;](sql-server-2014-upgrade-advisor.md)  
   
   

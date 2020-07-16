@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.tracetemplateproperties.general.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: a5696c47-5f10-4ab4-bd6a-8eea71d4c020
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Trace Template Properties (General Tab)
   Use the **General** tab of the **Trace Template Properties** dialog box to create new trace templates by using the following options. To access this dialog box, on the [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] **File** menu, point to **Templates**, and then click **New Template**.  

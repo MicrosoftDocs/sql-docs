@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, BLOBs"
   - "large data, OLE objects"
 ms.assetid: 767fa2f6-9cd2-436f-add5-e760bed29a58
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # BLOBs and OLE Objects
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider exposes the **ISequentialStream** interface to support consumer access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and xml data types as binary large objects (BLOBs). The **Read** method on **ISequentialStream** lets the consumer retrieve much data in manageable chunks.  

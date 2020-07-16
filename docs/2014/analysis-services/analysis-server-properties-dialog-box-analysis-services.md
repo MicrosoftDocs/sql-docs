@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.ASVS.SSMSIMBI.SERVERPROPERTIES.F1"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b01ec658-c191-49c9-a6cb-549b21a368ab
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Analysis Server Properties Dialog Box (Analysis Services)
   Use the **Analysis Server Properties** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to set the general, language/collation, and security settings for an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance. You can display the **Analysis Server Properties** dialog box by right-clicking an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] instance in **Object Explorer** and selecting **Properties** from the context menu. The **Analysis Server Properties** dialog box contains the following properties.  

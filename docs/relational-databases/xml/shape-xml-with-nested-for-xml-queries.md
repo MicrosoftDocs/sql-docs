@@ -1,5 +1,6 @@
 ---
 title: "Shape XML with Nested FOR XML Queries | Microsoft Docs"
+description: View an example of using nested FOR XML queries to shape the resulting XML.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -12,19 +13,18 @@ helpviewer_keywords:
   - "queries [XML in SQL Server], nested FOR XML"
   - "XML [SQL Server], FOR XML queries"
 ms.assetid: 8dc42c05-16e8-4b7b-a5d3-550b55acae26
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Shape XML with Nested FOR XML Queries
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The following example queries the `Production.Product` table to retrieve the `ListPrice` and `StandardCost` values of a specific product. To make the query interesting, both prices are returned in a <`Price`> element, and each <`Price`> element has a `PriceType` attribute.  
   
 ## Example  
  This is the expected shape of the XML:  
   
 ```  
-<xsd:schema xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet2" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet2" elementFormDefault="qualified">  
+<xsd:schema xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet2" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet2" elementFormDefault="qualified">  
   <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="Production.Product" type="xsd:anyType" />  
 </xsd:schema>  

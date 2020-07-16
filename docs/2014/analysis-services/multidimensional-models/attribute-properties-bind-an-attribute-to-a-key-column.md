@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "names [Analysis Services], attributes"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: c0b0abaa-5c9b-4182-9d5f-fc16cd941d54
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Bind an attribute to a Key column
   This procedure describes how to change the setting for the `Name` property of an attribute in a dimension.  

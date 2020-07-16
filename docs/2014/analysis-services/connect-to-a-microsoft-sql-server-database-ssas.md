@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.connsqlserverdb.f1"
 ms.assetid: 6ebfe029-dbba-4f0d-a556-328e79ef629f
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect to a Microsoft SQL Server Database (SSAS)
   This page of the **Table Import Wizard** enables you to specify settings to connect to a Microsoft SQL Server database. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
@@ -22,7 +20,7 @@ manager: craigg
 > [!NOTE]  
 >  The credentials of the current user are used when selecting a database in this page. However, import will not succeed if the user specified in the Impersonation Information page does not have sufficient privileges to read from the selected database.  
   
-## UIElement List  
+## UI element list  
  **Friendly connection name**  
  Type a unique name for this data source connection. This is a required field.  
   

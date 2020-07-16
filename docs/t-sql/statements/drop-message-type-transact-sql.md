@@ -21,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: 805e8ad5-8a93-49f0-88e5-e6fca8814dd5
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # DROP MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops an existing message type.  
   
@@ -32,7 +31,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP MESSAGE TYPE message_type_name  
 [ ; ]  

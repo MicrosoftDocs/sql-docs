@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "regular attributes [Analysis Services]"
@@ -23,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 59de1ea2-e7a9-4a53-9ee0-14be52e95643
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Attributes and Attribute Hierarchies
   Dimensions are collections of attributes, which are bound to one or more columns in a table or view in the data source view.  

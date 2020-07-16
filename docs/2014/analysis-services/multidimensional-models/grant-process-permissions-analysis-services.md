@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "permissions [Analysis Services], process"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: c1531c23-6b46-46a8-9ba3-b6d3f2016443
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Grant process permissions (Analysis Services)
   As an administrator, you can create a role dedicated to Analysis Services processing operations, allowing you to delegate that particular task to other users, or to applications used for unattended scheduled processing. Process permissions can be granted at the database, cube, dimension, and mining structure levels. Unless you are working with a very large cube or tabular database, we recommend granting processing rights at the database level, inclusive of all objects, including those having dependencies on each other.  

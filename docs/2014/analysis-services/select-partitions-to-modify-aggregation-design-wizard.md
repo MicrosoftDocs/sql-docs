@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.aggregationdesignwizard.selectpartition.f1"
 ms.assetid: 0da64d58-6e03-45f3-8443-6b94d4158891
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Partitions to Modify (Aggregation Design Wizard)
   Use the **Select Partitions to Modify** page to select the partitions for which you want to design aggregations.  

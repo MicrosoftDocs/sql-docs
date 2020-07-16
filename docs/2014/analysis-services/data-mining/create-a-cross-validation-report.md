@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "validating data mining models"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7b1fec4c-7053-41eb-b030-5179257967a4
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create a Cross-Validation Report
   This topic walks you through creation of a cross-validation report using the Accuracy Chart tab in Data Mining Designer. For general information about what a cross-validation report looks like, and the statistical measures it includes, see [Cross-Validation &#40;Analysis Services - Data Mining&#41;](cross-validation-analysis-services-data-mining.md).  

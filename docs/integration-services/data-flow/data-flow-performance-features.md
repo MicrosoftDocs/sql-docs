@@ -21,11 +21,14 @@ helpviewer_keywords:
   - "sorting data [Integration Services]"
   - "aggregations [Integration Services]"
 ms.assetid: c4bbefa6-172b-4547-99a1-a0b38e3e2b05
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Flow Performance Features
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   This topic provides suggestions about how to design [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages to avoid common performance issues. This topic also provides information about features and tools that you can use to troubleshoot the performance of packages.  
   
 ## Configuring the Data Flow  
@@ -142,7 +145,7 @@ manager: craigg
   
  Typically, the slowest components in the Slowly Changing Dimension transformation are the OLE DB Command transformations that perform UPDATEs against a single row at a time. Therefore, the most effective way to improve the performance of the Slowly Changing Dimension transformation is to replace the OLE DB Command transformations. You can replace these transformations with destination components that save all rows to be updated to a staging table. Then, you can add an Execute SQL task that performs a single set-based Transact-SQL UPDATE against all rows at the same time.  
   
- Advanced users can design a custom data flow for slowly changing dimension processing that is optimized for large dimensions. For a discussion and example of this approach, see the section, "Unique dimension scenario," in the white paper, [Project REAL: Business Intelligence ETL Design Practices](https://go.microsoft.com/fwlink/?LinkId=96602).  
+ Advanced users can design a custom data flow for slowly changing dimension processing that is optimized for large dimensions. For a discussion and example of this approach, see the section, "Unique dimension scenario," in the white paper, [Project REAL: Business Intelligence ETL Design Practices](https://www.microsoft.com/download/details.aspx?id=14582).  
   
 ### Destinations  
  To achieve better performance with destinations, consider using a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination and testing the destination's performance.  
@@ -169,7 +172,7 @@ manager: craigg
   
 -   Technical article, [Integration Services: Performance Tuning Techniques](https://go.microsoft.com/fwlink/?LinkId=98900), on technet.microsoft.com  
   
--   Technical article, [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks](https://sqlcat.com/technicalnotes/archive/2010/08/18/increasing-throughput-of-pipelines-by-splitting-synchronous-transformations-into-multiple-tasks.aspx), on sqlcat.com  
+-   Technical article, [Increasing Throughput of Pipelines by Splitting Synchronous Transformations into Multiple Tasks](https://download.microsoft.com/download/0/F/B/0FBFAA46-2BFD-478F-8E56-7BF3C672DF9D/SQLCAT's%20Guide%20to%20BI%20and%20Analytics.pdf), in _SQLCAT's Guide to BI and Analytics_
   
 -   Technical article, [The Data Loading Performance Guide](https://go.microsoft.com/fwlink/?LinkId=220816), on msdn.microsoft.com.  
   

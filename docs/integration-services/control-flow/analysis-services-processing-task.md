@@ -1,10 +1,8 @@
 ---
 title: "Analysis Services Processing Task | Microsoft Docs"
-ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "integration-services"
-ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
@@ -15,11 +13,14 @@ helpviewer_keywords:
   - "Analysis Services Processing task"
   - "processing objects [Integration Services]"
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Analysis Services Processing Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Processing task processes [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects such as tabular models, cubes, dimensions, and mining models.  
   
  When processing tabular models, keep the following in mind:  
@@ -75,7 +76,7 @@ manager: craigg
 -   <xref:Microsoft.DataTransformationServices.Tasks.DTSProcessingTask.DTSProcessingTask>  
   
 ## Analysis Services Processing Task Editor (General Page)
-  Use the **General** pageof the **Analysis Services Processing Task Editor** dialog box to name and describe the Analysis Services Processing task.  
+  Use the **General** page of the **Analysis Services Processing Task Editor** dialog box to name and describe the Analysis Services Processing task.  
   
 ### Options  
  **Name**  
@@ -110,11 +111,12 @@ manager: craigg
  **Related Topics:** [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md), [Add Analysis Services Connection Manager Dialog Box UI Reference](../../integration-services/connection-manager/add-analysis-services-connection-manager-dialog-box-ui-reference.md)  
   
  **Object list**  
- |Property|Description|  
+ 
+|Property|Description|  
 |--------------|-----------------|  
 |**Object Name**|Lists the specified object names.|  
 |**Type**|Lists the types of the specified objects.|  
-|**Process Options**|Select a processing option in the list.<br /><br /> **Related Topics**: [Processing a multidimensional model &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**Process Options**|Select a processing option in the list.<br /><br /> **Related Topics**: [Processing a multidimensional model &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**Settings**|Lists processing settings for the specified objects.|  
   
  **Add**  
@@ -129,7 +131,8 @@ manager: craigg
  **Related Topics:** [Impact Analysis Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](https://msdn.microsoft.com/library/208268eb-4e14-44db-9c64-6f74b776adb6)  
   
  **Batch Settings Summary**  
- |Property|Description|  
+ 
+|Property|Description|  
 |--------------|-----------------|  
 |**Processing order**|Specifies whether objects are processed sequentially or in a batch; if parallel processing is used, specifies the number of objects to process concurrently.|  
 |**Transaction mode**|Specifies the transaction mode for sequential processing.|  
@@ -141,4 +144,3 @@ manager: craigg
  Change the processing options and the handling of errors in dimension keys.  
   
  **Related Topics:** [Change Settings Dialog Box &#40;Analysis Services - Multidimensional Data&#41;](https://msdn.microsoft.com/library/0041e042-d7ce-48f9-a690-a6dc65471ff3)  
-  

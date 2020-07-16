@@ -1,22 +1,22 @@
 ---
-title: "Client Protocols Properties (Order Tab) | Microsoft Docs"
-ms.custom: ""
+title: "Client Protocols Properties (Order Tab)"
+description: Discover how to enable or disable client protocols. See how to rearrange the order in which protocols are used when clients try to connect to SQL Server.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "client protocols [SQL Server]"
 ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
-author: "stevestein"
-ms.author: "sstein"
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Client Protocols Properties (Order Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Use the **Order** page on the **Client Protocols Properties** dialog box to view and enable the client protocols.  
   
  Click a protocol, and then click **Enable** or **Disable** to move the selected protocol to the **Disabled Protocols** or **Enabled Protocols** list.  

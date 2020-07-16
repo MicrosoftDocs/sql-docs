@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "RDS methods [ADO]"
   - "methods [ADO], RDS"
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # RDS Methods
 > [!IMPORTANT]

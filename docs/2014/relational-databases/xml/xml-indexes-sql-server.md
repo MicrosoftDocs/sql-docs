@@ -30,9 +30,8 @@ helpviewer_keywords:
   - "PROPERTY index"
   - "XML indexes [SQL Server], creating"
 ms.assetid: f5c9209d-b3f3-4543-b30b-01365a5e7333
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # XML Indexes (SQL Server)
   XML indexes can be created on `xml` data type columns. They index all tags, values and paths over the XML instances in the column and benefit query performance. Your application may benefit from an XML index in the following situations:  

@@ -1,7 +1,7 @@
 ---
 title: Configure the Report Server Service Account (SSRS Configuration Manager) | Microsoft Docs
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: kfile
 ms.reviewer: ""
 ms.prod: sql-server-2014

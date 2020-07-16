@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubewizard.measureselection.f1"
 ms.assetid: 4f94de4e-b222-4bf9-95af-7aefd3f8dcee
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Measures (Cube Wizard)
   Use the **Select Measures** page to select the measure groups and measures to be created.  

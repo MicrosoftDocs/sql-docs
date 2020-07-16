@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_browsesnapshotfolder"
 ms.assetid: 0872edf2-4038-4bc1-a68d-05ebfad434d2
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_browsesnapshotfolder (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the complete path for the latest snapshot generated for a publication. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -34,13 +33,13 @@ sp_browsesnapshotfolder [@publication= ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication that contains the article. *publication* is **sysname**, with no default.  
   
- [ **@subscriber=**] **'**_subscriber_**'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is **sysname**, with a default of NULL.  
   
- [ **@subscriber_db=**] **'**_subscriber_db_**'**  
+`[ @subscriber_db = ] 'subscriber_db'`
  Is the name of the subscription database. *subscriber_db* is **sysname**, with a default of NULL.  
   
 ## Return Code Values  

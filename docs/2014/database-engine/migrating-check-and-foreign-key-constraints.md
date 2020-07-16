@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: e0a1a1e4-0062-4872-93c3-cd91b7a43c23
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Migrating Check and Foreign Key Constraints
   Check and foreign key constraints are not supported in [!INCLUDE[hek_2](../includes/hek-2-md.md)] in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)]. These constructs are usually used to enforce logical data integrity in the schema and can be important to maintaining the functional correctness of applications.  
@@ -34,7 +33,7 @@ manager: craigg
 ## Table Definition for the Workarounds  
  Before converting to a memory-optimized table, the definition for [Sales].[SalesOrderDetail] is as follows:  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -95,7 +94,7 @@ GO
   
  Note that rowguid is no longer a ROWGUIDCOL as it is not supported in [!INCLUDE[hek_2](../includes/hek-2-md.md)]. The column has been removed. In addition, LineTotal is a computed column and out of scope for this article, so it also has been removed.  
   
-```tsql  
+```sql  
 USE [AdventureWorks2012]  
 GO  
   
@@ -121,7 +120,7 @@ GO
   
 ## Checking Constraints After an Insert, Update, or Delete Operation  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   
@@ -179,7 +178,7 @@ END
   
 ## Enforcing Constraints Before an Insert, Update or Delete Operation  
   
-```tsql  
+```sql  
 USE AdventureWorks2012  
 GO  
   

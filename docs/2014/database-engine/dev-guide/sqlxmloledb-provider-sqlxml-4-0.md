@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: "database-engine"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "providers [SQLXML], SQLXMLOLEDB Provider"
@@ -17,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: fc489682-690a-4bb0-b5ac-237d376dc110
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQLXMLOLEDB Provider (SQLXML 4.0)
   The SQLXMLOLEDB Provider is an OLE DB provider that exposes [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQLXML functionality through ADO.  

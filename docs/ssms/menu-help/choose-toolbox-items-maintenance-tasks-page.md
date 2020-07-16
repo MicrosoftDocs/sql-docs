@@ -1,6 +1,6 @@
 ---
-title: "Choose Toolbox Items (Maintenance Tasks Page) | Microsoft Docs"
-ms.custom: ""
+title: "Choose Toolbox Items (Maintenance Tasks Page)"
+ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "Customize Toolbox dialog box"
 ms.assetid: b92c9054-7479-45d8-a54c-c1bb6699bdb3
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: "markingmyname"
+ms.author: "maghan"
 ---
 # Choose Toolbox Items (Maintenance Tasks Page)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 This tab of the **Customize Toolbox** dialog box displays a list of all maintenancetask components registered on your computer and makes it possible for you to change the ones that are displayed in the Toolbox. You can open the **Customize Toolbox** dialog box from the **Tools** menu. To sort the list of components, select any column heading.  
   
 ## Options  

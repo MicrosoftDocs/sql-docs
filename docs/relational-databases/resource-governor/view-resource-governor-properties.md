@@ -13,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: de3510df-f792-4a9d-80fa-f198fd36cdc8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # View Resource Governor Properties
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   You can create or configure Resource Governor entities, such as resource pools and workload groups, by using the Resource Governor Properties page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
@@ -56,7 +55,7 @@ manager: craigg
 3.  For descriptions of the fields in the page, see [Resource Governor Properties](#RGProp).  
   
 4.  To save any changes, click **OK**.  
-  
+
 ##  <a name="RGProp"></a> Resource Governor properties  
  **Classifier function name**  
  Specify the classifier function by selecting from the list.  

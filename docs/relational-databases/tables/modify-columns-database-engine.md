@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b67b95c5-61ef-4bd8-9a3e-1640eb7583ac
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Modify Columns (Database Engine)
@@ -72,7 +71,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 3.  Copy and paste the following example into the query window and click **Execute**.  
   
-    ```  
+    ```sql  
     CREATE TABLE dbo.doc_exy (column_a INT ) ;  
     GO  
     INSERT INTO dbo.doc_exy (column_a) VALUES (10) ;  

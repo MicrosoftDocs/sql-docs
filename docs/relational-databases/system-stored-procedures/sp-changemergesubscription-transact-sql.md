@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changemergesubscription"
 ms.assetid: fd820f35-c189-4e2d-884d-b60c1c469f58
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_changemergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes selected properties of a merge push subscription. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -37,19 +36,19 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 ```  
   
 ## Arguments  
- [ **@publication=**] **'**_publication_**'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication to change. *publication* is **sysname**, with a default of NULL. The publication must already exist and must conform to the rules for identifiers.  
   
- [ **@subscriber=**]  **'**_subscriber_**'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is **sysname**, with a default of NULL.  
   
- [ **@subscriber_db=**] **'**_subscriber_db_**'**  
+`[ @subscriber_db = ] 'subscriber_db'`
  Is the name of the subscription database. *subscriber_db*is **sysname**, with a default of NULL.  
   
- [ **@property=**] **'**_property_**'**  
+`[ @property = ] 'property'`
  Is the property to change for the given publication. *property* is **sysname**, and can be one of the values in the table.  
   
- [ **@value=**] **'**_value_**'**  
+`[ @value = ] 'value'`
  Is the new value for the specified *property*. *value* is **nvarchar(255)**, and can be one of the values in the table.  
   
 |Property|Value|Description|  

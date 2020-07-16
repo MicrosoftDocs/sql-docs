@@ -1,5 +1,6 @@
 ---
 title: "Generate an Inline XSD Schema | Microsoft Docs"
+description: Learn how to generate an inline XSD schema by using the XMLSCHEMA option in the FOR XML clause of an SQL query.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -16,12 +17,11 @@ helpviewer_keywords:
   - "inline XSD schema generation [SQL Server]"
   - "XMLDATA option"
 ms.assetid: 04b35145-1cca-45f4-9eb7-990abf2e647d
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Generate an Inline XSD Schema
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In a FOR XML clause, you can request that your query return an inline schema together with the query results. If you want an XDR schema, you use the XMLDATA keyword in the FOR XML clause. If you want an XSD schema, you use the XMLSCHEMA keyword.  
   
  This topic describes the XMLSCHEMA keyword and explains the structure of the resulting inline XSD schema. Following are the limitations when you are requesting inline schemas:  
@@ -35,7 +35,7 @@ manager: craigg
  For example:  
   
 ```  
-<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
+<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">  
   <xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />  
   <xsd:element name="Production.ProductModel">  
     <xsd:complexType>  
@@ -112,7 +112,7 @@ FOR XML AUTO, ELEMENTS, XMLSCHEMA
   
  Because the query specifies the ELEMENTS directive, the resulting XML is element-centric. The query also specifies the XMLSCHEMA directive. Therefore, an inline XSD schema is returned. This is the result:  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:schema="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
   
@@ -190,7 +190,7 @@ FOR XML RAW, XMLSCHEMA, ELEMENTS
   
  This is the result. Note in the inline XSD schema, the OrderID element is defined two times. One of the declarations has minOccurs set to 0, corresponding to the OrderID from the CustOrderDetail table, and the second one maps to the OrderID primary key column of the `CustOrder` table where minOccurs is 1 by default.  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" schemaLocation="https://schemas.microsoft.com/sqlserver/2004/sqltypes/sqltypes.xsd" />`  
   
@@ -237,7 +237,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
@@ -275,7 +275,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
@@ -299,7 +299,7 @@ for    XML RAW, ELEMENTS, XMLSCHEMA
   
  `</xsd:schema>`  
   
- `<row xmlns="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">`  
+ `<row xmlns="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">`  
   
  `<ProductID>1</ProductID>`  
   
@@ -331,7 +331,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
@@ -400,7 +400,7 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  `...`  
   
- `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
+ `<xsd:schema targetNamespace="urn:schemas-microsoft-com:sql:SqlRowSet1" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:sqltypes="https://schemas.microsoft.com/sqlserver/2004/sqltypes" elementFormDefault="qualified">`  
   
  `<xsd:import namespace="https://schemas.microsoft.com/sqlserver/2004/sqltypes" />`  
   
@@ -446,11 +446,11 @@ FOR XML RAW, ELEMENTS, XMLSCHEMA
   
  `<Col1>1</Col1>`  
   
- `<Col xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"`  
+ `<Col xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
   
  `xsi:type="Col1">1</Col>`  
   
- `<Col xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance"`  
+ `<Col xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"`  
   
  `xsi:type="Col2">test</Col>`  
   

@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_backuphistory"
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_delete_backuphistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reduces the size of the backup and restore history tables by deleting the entries for backup sets older than the specified date. Additional rows are added to the backup and restore history tables after each backup or restore operation is performed; therefore, we recommend that you periodically execute **sp_delete_backuphistory**.  
   
@@ -37,7 +36,7 @@ sp_delete_backuphistory [ @oldest_date = ] 'oldest_date'
 ```  
   
 ## Arguments  
- [ **@oldest_date=** ] **'**_oldest\_date_**'**  
+`[ @oldest_date = ] 'oldest\_date'`
  Is the oldest date retained in the backup and restore history tables. *oldest_date* is **datetime**, with no default.  
   
 ## Return Code Values  

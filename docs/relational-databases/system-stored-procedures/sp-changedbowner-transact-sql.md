@@ -17,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 516ef311-e83b-45c9-b9cd-0e0641774c04
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_changedbowner (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the owner of the current database.  
   

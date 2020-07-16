@@ -1,5 +1,6 @@
 ---
 title: "Replication Merge Agent | Microsoft Docs"
+description: The Replication Merge Agent applies the initial snapshot held in database tables to the Subscribers, merges incremental data changes, and reconciles conflicts.
 ms.custom: ""
 ms.date: "10/29/2018"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: fe1e7f60-b0c8-45e9-a5e8-4fedfa73d7ea
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Replication Merge Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The Replication Merge Agent is a utility executable that applies the initial snapshot held in the database tables to the Subscribers. It also merges incremental data changes that occurred at the Publisher after the initial snapshot was created, and reconciles conflicts either according to the rules you configure or using a custom resolver you create.  
   
 > [!NOTE]  
@@ -94,7 +94,8 @@ replmerg [-?]
 [-SubscriberSecurityMode [0|1]]  
 [-SubscriberType [0|1|2|3|4|5|6|7|8|9]]  
 [-SubscriptionType [0|1|2]]  
-[-SyncToAlternate [0|1]  
+[-SyncToAlternate [0|1]]  
+[-T [101|102]]  
 [-UploadGenerationsPerBatch upload_generations_per_batch]  
 [-UploadReadChangesPerBatch upload_read_changes_per_batch]  
 [-UploadWriteChangesPerBatch upload_write_changes_per_batch]  
@@ -159,22 +160,22 @@ replmerg [-?]
  Is the location of the filtered data snapshot files when the publication uses parameterized row filters.  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- Is the level of Secure Sockets Layer (SSL) encryption used by the Merge Agent when making connections.  
+ Is the level of Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), encryption used by the Merge Agent when making connections.  
   
 |EncryptionLevel value|Description|  
 |---------------------------|-----------------|  
-|**0**|Specifies that SSL is not used.|  
-|**1**|Specifies that SSL is used, but the agent does not verify that the SSL server certificate is signed by a trusted issuer.|  
-|**2**|Specifies that SSL is used, and that the certificate is verified.|  
+|**0**|Specifies that TLS is not used.|  
+|**1**|Specifies that TLS is used, but the agent does not verify that the TLS/SSL server certificate is signed by a trusted issuer.|  
+|**2**|Specifies that TLS is used, and that the certificate is verified.|  
 
  > [!NOTE]  
- >  A valid SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The ‘Alias Name’ parameter should be the server name and the ‘Server’ parameter should be set to the fully qualified name of the SQL Server.
+ >  A valid TLS/SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The ‘Alias Name’ parameter should be the server name and the ‘Server’ parameter should be set to the fully qualified name of the SQL Server.
 
  For more information, see [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
  **-ExchangeType** [ **1**| **2**| **3**]  
 > [!WARNING]
->  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] To restrict uploading, use the **@subscriber_upload_options** of **sp_addmergearticle** instead.  
+>  [!INCLUDE[ssNoteDepFutureDontUse](../../../includes/ssnotedepfuturedontuse-md.md)] To restrict uploading, use the **\@subscriber_upload_options** of **sp_addmergearticle** instead.  
   
  Specifies the type of data exchange during synchronization, which can be one of the following:  
   
@@ -315,7 +316,7 @@ replmerg [-?]
  Specifies the number of source threads that the Merge Agent uses to enumerate changes from the source. The source is the Subscriber during upload and the Publisher during download. The default is **3**.  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- Is the maximum number of seconds that the Merge Agent waits when the number of concurrent merge processes running is at the limit set by the **@max_concurrent_merge** property of **sp_addmergepublication**. If the maximum number of seconds is reached and the Merge Agent is still waiting, it will exit. A value of 0 means that the agent waits indefinitely, although it can be cancelled.  
+ Is the maximum number of seconds that the Merge Agent waits when the number of concurrent merge processes running is at the limit set by the **\@max_concurrent_merge** property of **sp_addmergepublication**. If the maximum number of seconds is reached and the Merge Agent is still waiting, it will exit. A value of 0 means that the agent waits indefinitely, although it can be cancelled.  
   
  **-SubscriberDatabasePath** _subscriber_database_path_  
  Is the path to the Jet database (.mdb file) if **SubscriberType** is **2** (allows a connection to a Jet database without an ODBC Data Source Name (DSN)).  
@@ -353,7 +354,10 @@ replmerg [-?]
   
  **-SyncToAlternate** [ **0|1**]  
  Specifies whether the Merge Agent is synchronizing between a Subscriber and an alternate Publisher. A value of **1** indicates that it is an alternate Publisher. The default is **0**.  
-  
+ 
+ **-T** [**101|102**]  
+ Trace flags that enable additional functionality for the Merge Agent. A value of **101** enables additional verbose logging information to help determine how much time each step of the merge replication synchronization process takes. A value of **102** writes the same statistics as trace flag **101** but to the <Distribution server>..msmerge_history table instead. Enable merge agent logging when you use trace flag 101 by using the `-output` and `-outputverboselevel` parameters.  For example,  add the following parameters to the merge agent, and then restart the agent: `-T 101, -output, -outputverboselevel`. 
+ 
  **-UploadGenerationsPerBatch** _upload_generations_per_batch_  
  Is the number of generations to be processed in a single batch while uploading changes from the Subscriber to the Publisher. A generation is defined as a logical group of changes per article. The default for a reliable communication link is **100**. The default for an unreliable communication link is **1**.  
   
@@ -389,7 +393,15 @@ replmerg [-?]
   
  To start the Merge Agent, execute **replmerg.exe** from the command prompt. For information, see [Replication Agent Executables](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md).  
   
+ ### Troubleshooting Merge Agent performance 
  The merge agent history for the current session is not removed while running in continuous mode. A long running agent can result in a large number of entries in the merge history tables which could impact performance. To resolve this problem switch to scheduled mode, or continue to use continuous mode but create a dedicated job to periodically restart the merge agent, or reduce the verbosity of the history level to reduce the number of rows and therefor reduce the performance impact.  
+ 
+  In some cases, the Replication Merge Agent may take a long time to replicate changes. To determine which step of the merge replication synchronization process takes the most time, use trace flag 101 together with merge agent logging. To do this, use the following parameters for the merge agent parameters, and then restart the agent:
+  <br/>-T 101
+  <br/>-output
+  <br/>-outputverboselevel
+
+In addition, if you have to write statistics to the <Distribution server>..msmerge_history table, use trace flag -T 102.
   
 ## See Also  
  [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  

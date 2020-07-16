@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.calculationsview.calculationpropertiesdialog.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: eb5e1179-b0e6-4ec8-bf4c-d67a1e329117
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Calculation Properties Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Calculation Properties** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to view or edit the display folder and associated measure group properties of calculations defined on the **Calculations** tab in Cube Designer for the selected cube. You can display the **Calculation Properties** dialog box by clicking **Calculation Properties** on the **Toolbar** pane on the **Calculations** tab in Cube Designer.  

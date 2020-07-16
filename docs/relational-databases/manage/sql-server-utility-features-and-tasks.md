@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Utility Features and Tasks | Microsoft Docs"
+description: Get acquainted with the SQL Server Utility. Learn about its features and find out how you can use it to monitor a SQL Server environment.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -17,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 6e6cbd25-6b1c-4e21-9ade-4584e243fd8f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server Utility Features and Tasks
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] customers have a requirement to manage their [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] environment as a whole, addressed in this release through the concept of application and multiserver management in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
   
 ## Benefits of the SQL Server Utility  

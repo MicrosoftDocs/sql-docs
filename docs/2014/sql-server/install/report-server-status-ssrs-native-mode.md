@@ -4,22 +4,20 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.rsconfigtool.serverstatus.F1"
 ms.assetid: 2f63ad1c-1bc2-449d-b451-fb39a0060838
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Report Server Status (SSRS Native Mode)
   Use this page to view information about the report server instance to which you are currently connected. This page is the start page for report server configuration. Additional pages are available to configure URLs, the service account, the report server database, report server e-mail delivery, scale-out deployment, and encryption keys.  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Native mode.  
   
- To open this page, start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager and connect to the report server instance. For more information, see [Reporting Services Configuration Manager &#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode).  
+ To open this page, start the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager and connect to the report server instance. For more information, see [Reporting Services Configuration Manager &#40;del&#41;](reporting-services-configuration-manager-native-mode.md).  
   
 > [!TIP]  
 >  The[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager (RSConfigTool.exe) is installed with a privilege level of "highestAvailable". This behavior is by design. The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager requires communication with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI APIs. Some of the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] WMI communication requires a higher level or administrative of privileges.  
@@ -67,7 +65,7 @@ manager: craigg
   
 ## See Also  
  [Reporting Services Configuration Manager F1 Help Topics &#40;SSRS Native Mode&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
- [Reporting Services Configuration Manager &#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)   
+ [Reporting Services Configuration Manager &#40;del&#41;](/sql/sql-server/install/reporting-services-configuration-manager-native-mode)   
  [Initialize a Report Server &#40;SSRS Configuration Manager&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)  
   
   

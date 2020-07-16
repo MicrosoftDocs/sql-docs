@@ -15,10 +15,9 @@ helpviewer_keywords:
   - "MSOLEDBSQL, bulk copy operations"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Performing Bulk Copy Operations
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -112,5 +111,4 @@ manager: craigg
  [Bulk Import and Export of Data &#40;SQL Server&#41;](../../../relational-databases/import-export/bulk-import-and-export-of-data-sql-server.md)   
  [IRowsetFastLoad &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/irowsetfastload-ole-db.md)   
  [IBCPSession &#40;OLE DB&#41;](../../oledb/ole-db-interfaces/ibcpsession-ole-db.md)   
- [Optimizing Bulk Import Performance](https://msdn.microsoft.com/library/ms190421\(SQL.105\).aspx)  
 

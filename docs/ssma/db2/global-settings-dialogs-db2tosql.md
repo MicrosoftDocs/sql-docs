@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 360e01bb-6347-4e2b-acda-0daa161ed33b
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Global Settings (Dialogs) (DB2ToSQL)
 Use the Dialogs page of the **Global Settings** dialog box to specify the default user action and warning settings for SSMA.  

@@ -23,18 +23,17 @@ helpviewer_keywords:
   - "table integrity checks [SQL Server]"
   - "checking database objects"
 ms.assetid: 8c70bf34-7570-4eb6-877a-e35064a1380a
-author: uc-msft
+author: pmasl
 ms.author: umajay
-manager: craigg
 ---
 # DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Checks the allocation and structural integrity of all tables and indexed views in the specified filegroup of the current database.
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
   
-```sql
+```syntaxsql
   
 DBCC CHECKFILEGROUP   
 [  

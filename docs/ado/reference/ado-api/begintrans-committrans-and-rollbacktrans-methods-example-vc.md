@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "RollbackTrans method [ADO], VC++ example"
   - "CommitTrans method [ADO], VC++ example"
 ms.assetid: 4ac19647-73e7-4edf-9913-25c8fd927e36
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # BeginTrans, CommitTrans, and RollbackTrans Methods Example (VC++)
 This example changes the book type of all psychology books in the ***Titles*** table of the database. After the [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) method starts a transaction that isolates all the changes made to the ***Titles*** table, the [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) method saves the changes. You can use the [Rollback](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md) method to undo changes that you saved using the [Update](../../../ado/reference/ado-api/update-method.md) method.  
@@ -191,7 +190,7 @@ void BeginTransX() {
          printf("%s -  %s\n", titlrs.m_szT_title, titlrs.m_szT_type);  
          rstTitles->MoveNext();  
       }  
-      // Restore original data becasue this is a demonstration.  
+      // Restore original data because this is a demonstration.  
       rstTitles->MoveFirst();  
   
       while (VARIANT_FALSE == rstTitles->EndOfFile) {  

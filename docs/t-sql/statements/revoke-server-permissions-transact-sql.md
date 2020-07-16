@@ -14,12 +14,11 @@ helpviewer_keywords:
   - "REVOKE statement, server permissions"
   - "servers [SQL Server], permissions"
 ms.assetid: 7b9a56b3-face-452e-a655-147dac306ba1
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # REVOKE Server Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes server-level GRANT and DENY permissions.  
   
@@ -27,7 +26,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission  [ ,...n ]   
     { TO | FROM } <grantee_principal> [ ,...n ]  

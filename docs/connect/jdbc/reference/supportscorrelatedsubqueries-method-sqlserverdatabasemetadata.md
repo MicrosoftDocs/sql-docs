@@ -13,9 +13,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 85bb1bcc-31ae-4f6b-a103-699724bbb0aa
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # supportsCorrelatedSubqueries Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

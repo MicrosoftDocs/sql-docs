@@ -1,6 +1,8 @@
 ---
-title: "REVOKE Search Property List Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVOKE Search Property List Permissions"
+description: Revoke permissions on a search property list.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "06/10/2016"
 ms.prod: sql
 ms.prod_service: "sql-database"
@@ -15,12 +17,11 @@ helpviewer_keywords:
   - "revoking permissions [SQL Server]"
   - "REVOKE statement, search property list permissions"
 ms.assetid: a6b8b37c-0015-4596-898c-51a567659e2e
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # REVOKE Search Property List Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revokes permissions on a search property list.  
   
@@ -28,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON  
         SEARCH PROPERTY LIST :: search_property_list_name  

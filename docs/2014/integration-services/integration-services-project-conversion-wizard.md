@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.migrationwizard.f1"
 ms.assetid: a192b094-4d0f-4c21-b911-460ec844a49f
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services Project Conversion Wizard
   The **Integration Services Project Conversion Wizard** converts a project to the project deployment model.  

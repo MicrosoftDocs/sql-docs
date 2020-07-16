@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetDescField function [ODBC]"
 ms.assetid: f09ff660-1e4a-4370-be85-90d4da0487d3
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetDescField Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLGetDescField(  
      SQLHDESC        DescriptorHandle,  

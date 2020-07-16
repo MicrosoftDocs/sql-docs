@@ -13,11 +13,11 @@ helpviewer_keywords:
   - "Jet-based ODBC drivers [ODBC], Access driver"
   - "desktop database drivers [ODBC], Access driver"
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # Setting Options Programmatically for the Access Driver
+
 |Option|Description|Method|  
 |------------|-----------------|------------|  
 |Buffer Size|The size of the internal buffer, in kilobytes, that is used by Microsoft Access to transfer data to and from the disk. The default buffer size is 2048 KB (displayed as 2048). Any integer value divisible by 256 can be entered.|To set this option dynamically, use the MAXBUFFERSIZE keyword in a call to [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md).|  

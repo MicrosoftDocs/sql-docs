@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.storagedesignwizard.reviewaggregationusage.f1"
 ms.assetid: 49ce2094-c4dc-4e46-8cef-c17c5db084ca
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Review Aggregation Usage (Usage-Based Optimiation Wizard)
   Use the **Review Aggregation Usage** page to configure aggregation usage settings.  

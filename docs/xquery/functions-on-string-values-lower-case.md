@@ -1,5 +1,6 @@
 ---
 title: "lower-case  Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery function lower-case() that converts each character in a specified string to its lower case equivalent.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 5222c4ff-890c-4d57-8506-c065a5ebfd3e
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Functions on String Values - lower-case
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   The lower-case function converts each character in *$arg* to its lower case equivalent. The Microsoft Windows binary case conversion for Unicode code points specifies how characters are converted to lower case. This standard is not identical to the mapping for Unicode code point standard.  
   
@@ -89,7 +89,7 @@ where CatalogDescription.exist('
   
  `<pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
   
- `<p1:p xmlns:p1="https://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike.`  
+ `<p1:p xmlns:p1="http://www.w3.org/1999/xhtml">Our top-of-the-line competition mountain bike.`  
   
  `Performance-enhancing options include the innovative HL Frame,`  
   
@@ -105,7 +105,7 @@ where CatalogDescription.exist('
   
  `<pd:Summary xmlns:pd="https://schemas.microsoft.com/sqlserver/2004/07/adventure-works/ProductModelDescription">`  
   
- `<p1:p xmlns:p1="https://www.w3.org/1999/xhtml">This bike is ridden by race winners. Developed with the`  
+ `<p1:p xmlns:p1="http://www.w3.org/1999/xhtml">This bike is ridden by race winners. Developed with the`  
   
  `Adventure Works Cycles professional race team, it has a extremely light`  
   

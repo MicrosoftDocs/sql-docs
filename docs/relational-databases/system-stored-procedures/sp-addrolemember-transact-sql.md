@@ -1,7 +1,7 @@
 ---
 title: "sp_addrolemember (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/20/2017"
+ms.date: "01/30/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -17,11 +17,10 @@ helpviewer_keywords:
 ms.assetid: a583c087-bdb3-46d2-b9e5-3921b3e6d10b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_addrolemember (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Adds a database user, database role, Windows login, or Windows group to a database role in the current database.  
   
@@ -32,18 +31,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server and Azure SQL Database  
-  
-sp_addrolemember [ @rolename = ] 'role',  
-    [ @membername = ] 'security_account'  
-```  
-  
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
-  
-sp_addrolemember 'role', 'security_account'  
-```  
+```
+sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
+
+```    
   
 ## Arguments  
  [ @rolename= ] '*role*'  
@@ -60,7 +51,7 @@ sp_addrolemember 'role', 'security_account'
   
  A role cannot include itself as a member. Such "circular" definitions are not valid, even when membership is only indirectly implied by one or more intermediate memberships.  
   
- sp_addrolemember cannot add a fixed database role, fixed server role, or dbo to a role. sp_addrolemember cannot be executed within a user-defined transaction.  
+ sp_addrolemember cannot add a fixed database role, fixed server role, or dbo to a role.
   
  Only use sp_addrolemember to add a member to a database role. To add a member to a server role, use [sp_addsrvrolemember &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsrvrolemember-transact-sql.md).  
   
@@ -97,7 +88,7 @@ GO
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
-## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
+## Examples: [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
   
 ### C. Adding a Windows login  
  The following example adds the login `LoginMary` to the `AdventureWorks2008R2` database as user `UserMary`. The user `UserMary` is then added to the `Production` role.  

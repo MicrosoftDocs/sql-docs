@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: e88038c6-fd35-479c-a76f-aabd42d2efef
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: craigg
 ---
 # Troubleshooting (DB2ToSQL)
 It is not uncommon to run into migration issues midway executing the console scripts or commands.  

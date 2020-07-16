@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLInstallDriverEx function [ODBC]"
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLInstallDriverEx Function
 **Conformance**  
@@ -34,7 +33,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLInstallDriverEx(  
      LPCSTR    lpszDriver,  

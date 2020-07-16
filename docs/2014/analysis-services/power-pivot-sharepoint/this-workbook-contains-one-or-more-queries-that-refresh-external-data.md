@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: aa65c992-eb41-4032-9e11-a9ba871b6a3c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # This workbook contains one or more queries that refresh external data.
   For Excel workbooks that contain PowerPivot data, Excel Services shows this warning when it detects connection information and prompts you to enable or disable queries for this workbook.  

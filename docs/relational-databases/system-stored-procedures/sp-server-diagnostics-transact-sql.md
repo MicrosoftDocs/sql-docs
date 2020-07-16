@@ -15,16 +15,15 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_server_diagnostics"
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_server_diagnostics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Captures diagnostic data and health information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to detect potential failures. The procedure runs in repeat mode and sends results periodically. It can be invoked from either a regular or a DAC connection.  
   
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]).  
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later).  
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -35,7 +34,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
 ```  
   
 ## Arguments  
- [ **@repeat_interval** =] **'***repeat_interval_in_seconds***'**  
+`[ @repeat_interval = ] 'repeat_interval_in_seconds'`
  Indicates the time interval at which the stored procedure will run repeatedly to send health information.  
   
  *repeat_interval_in_seconds* is **int** with the default of 0. The valid parameter values are 0, or any value equal to or more than 5. The stored procedure has to run at least 5 seconds to return complete data. The minimum value for the stored procedure to run in the repeat mode is 5 seconds.  
@@ -54,7 +53,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 |Column|Data type|Description|  
 |------------|---------------|-----------------|  
-|**creation_time**|**datetime**|Indicates the time stamp of row creation. Each row in a single rowset has the same time stamp.|  
+|**create_time**|**datetime**|Indicates the time stamp of row creation. Each row in a single rowset has the same time stamp.|  
 |**component_type**|**sysname**|Indicates whether the row contains information for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance level component or for an Always On availability group:<br /><br /> instance<br /><br /> Always On:AvailabilityGroup|  
 |**component_name**|**sysname**|Indicates the name of component or the name of the availability group:<br /><br /> system<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<name of the availability group>*|  
 |**state**|**int**|Indicates the health status of the component:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  

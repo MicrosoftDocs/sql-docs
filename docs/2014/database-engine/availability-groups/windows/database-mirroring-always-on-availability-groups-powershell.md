@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 6197bbe7-67d4-446d-ba5f-cabfa5df77f1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Create a Database Mirroring Endpoint for AlwaysOn Availability Groups (SQL Server PowerShell)
   This topic describes how to create a database mirroring endpoint for use by [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using PowerShell.  
@@ -47,13 +46,12 @@ manager: craigg
 > [!IMPORTANT]  
 >  This example works only on a server instance that currently lack a database mirroring endpoint.  
   
-```  
+```powershell
 # Create the endpoint.  
 $endpoint = New-SqlHadrEndpoint MyMirroringEndpoint -Port 5022 -Path SQLSERVER:\SQL\Machine\Instance  
   
 # Start the endpoint  
-Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"  
-  
+Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
 ```  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
@@ -78,5 +76,3 @@ Set-SqlHadrEndpoint -InputObject $endpoint -State "Started"
 ## See Also  
  [Create an Availability Group &#40;Transact-SQL&#41;](create-an-availability-group-transact-sql.md)   
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
-  
-  

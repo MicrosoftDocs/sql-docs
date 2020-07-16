@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "DROP CRYPTOGRAPHIC PROVIDER statement"
 ms.assetid: 71c55c20-439e-4897-aef5-f20e556d668f
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a cryptographic provider within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.impexpwizard.providesourcequery.f1"
 ms.assetid: c8cbd07e-b9c3-422f-94b8-d6fc8cf31cf5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Provide a Source Query (SQL Server Import and Export Wizard)
   Use the **Provide a Source Query** page to type the SQL statement that will generate the data to copy from the data source to the destination.  

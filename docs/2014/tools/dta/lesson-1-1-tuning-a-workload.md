@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "workloads [SQL Server], tuning"
 ms.assetid: 6229bf3f-1182-4bc6-8451-cedc37f4b62e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Tuning a Workload
   The Database Engine Tuning Advisor can be used to find the best physical database design for query performance on the databases and tables that you select for tuning.  

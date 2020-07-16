@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Table Analysis tools"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d90a12f8-7bc3-4fdb-95a1-7c89058f0d9a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Highlight Exceptions (Table Analysis Tools for Excel)
   ![Highlight Exceptions button in ribbon](media/tat-highlightex.gif "Highlight Exceptions button in ribbon")  

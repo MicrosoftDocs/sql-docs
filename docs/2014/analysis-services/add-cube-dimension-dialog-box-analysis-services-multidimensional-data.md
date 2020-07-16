@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.addcubedimensiondialog.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 625a3b1f-183b-445f-9bb7-96945c324767
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Add Cube Dimension Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Add Cube Dimension** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to add a reference to a database dimension to a cube. You can display the **Add Cube Dimension** dialog box by doing one of the following:  

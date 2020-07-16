@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "expressions [Integration Services], creating"
   - "expressions [Integration Services], property expressions"
 ms.assetid: cb5da499-065f-4fa6-9f6d-5bc5f385241e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Add or Change a Property Expression
   You can create property expressions for packages, tasks, Foreach Loop containers, For Loop containers, Sequence containers, event handlers, package and project level connection managers, and log providers.  

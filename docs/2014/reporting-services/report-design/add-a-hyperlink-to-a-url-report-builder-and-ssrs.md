@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: d3392c0b-7b62-4d27-bc04-2bd0c5487d08
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Add a Hyperlink to a URL (Report Builder and SSRS)
   You can add a hyperlink to a report item when you want your users to be able to click a link in a report and open a browser to the URL that you specify. A hyperlink can be a static URL or an expression that evaluates to a URL. If you have a field in a database that contains URLs, the expression can contain that field, resulting in a dynamic list of hyperlinks in the report. You can add hyperlinks to text boxes, images, charts, and gauges. You must ensure that the user has access to the URL that you provide.  

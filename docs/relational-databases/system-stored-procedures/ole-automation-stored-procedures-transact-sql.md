@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: ff16a833-01fe-4877-8aa6-55b72603ec2e
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # OLE Automation Stored Procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that allow OLE Automation objects to be used within a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] blocks access to OLE Automation stored procedures because this component is turned off as part of the security configuration for this server. A system administrator can enable access to OLE Automation procedures by using sp_configure. For more information, see [Surface Area Configuration](../../relational-databases/security/surface-area-configuration.md).  
   

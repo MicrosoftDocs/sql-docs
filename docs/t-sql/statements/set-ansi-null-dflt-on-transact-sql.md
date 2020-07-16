@@ -23,11 +23,10 @@ helpviewer_keywords:
 ms.assetid: 8c925924-a466-4c8b-aeb2-7e0d341f32db
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET ANSI_NULL_DFLT_ON (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Modifies the behavior of the session to override default nullability of new columns when the **ANSI null default** option for the database is **false**. For more information about setting the value for **ANSI null default**, see [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md).  
   
@@ -35,13 +34,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
 
 SET ANSI_NULL_DFLT_ON {ON | OFF}
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SET ANSI_NULL_DFLT_ON ON

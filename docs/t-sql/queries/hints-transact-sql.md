@@ -18,12 +18,11 @@ helpviewer_keywords:
   - "UPDATE statement [SQL Server], hints"
   - "DELETE statement [SQL Server], hints"
 ms.assetid: 99412475-b0df-4264-9938-33a0b302b41a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # Hints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Hints are options or strategies specified for enforcement by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] query processor on SELECT, INSERT, UPDATE, or DELETE statements. The hints override any execution plan the query optimizer might select for a query.  
   

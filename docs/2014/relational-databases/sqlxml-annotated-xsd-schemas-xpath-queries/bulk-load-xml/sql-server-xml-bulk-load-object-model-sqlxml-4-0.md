@@ -28,9 +28,8 @@ helpviewer_keywords:
   - "Execute method"
   - "XML Bulk Load [SQLXML], object model"
 ms.assetid: a9efbbde-ed2b-4929-acc1-261acaaed19d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SQL Server XML Bulk Load Object Model (SQLXML 4.0)
   The Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] XML Bulk Load object model consists of the SQLXMLBulkLoad object. This object supports the following methods and properties.  

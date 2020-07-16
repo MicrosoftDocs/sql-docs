@@ -1,5 +1,6 @@
 ---
-title: "Business Rule Examples (Master Data Services) | Microsoft Docs"
+title: Business Rule Examples
+description: Review these examples of business rules for Master Data Services. These examples are in sample models included with your installation of Master Data Services.
 ms.custom: ""
 ms.date: "01/05/2017"
 ms.prod: sql
@@ -8,13 +9,12 @@ ms.reviewer: ""
 ms.technology: master-data-services
 ms.topic: conceptual
 ms.assetid: 3974b9be-4b7c-4a37-ab26-1a36ef455744
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Business Rule Examples (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 This article shows examples of business rules for [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. You'll find these examples in the sample models that are included with your installation of [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
   

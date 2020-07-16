@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.executeprocesstask.general.f1"
 helpviewer_keywords: 
   - "Execute Process Task Editor"
 ms.assetid: 39651a0a-3a83-40f4-b8eb-b8b869607a94
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Execute Process Task Editor (General Page)
   Use the **General** pageof the **Execute Process Task Editor** dialog box to name and describe the Execute Process task.  

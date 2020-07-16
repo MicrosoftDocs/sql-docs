@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.multifile.advanced.f1"
 helpviewer_keywords: 
   - "Multiple Flat Files Connection Manager Editor"
 ms.assetid: fc883131-c03d-4ab3-8220-b51cbe243a82
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Multiple Flat Files Connection Manager Editor (Advanced Page)
   Use the **Advanced** page of the **Multiple Flat Files Connection ManagerEditor** dialog box to set properties such as data type and delimiters of each column in the text files to which the flat file connection manager connects.  

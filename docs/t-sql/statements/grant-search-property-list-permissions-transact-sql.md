@@ -1,6 +1,8 @@
 ---
-title: "GRANT Search Property List Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "GRANT Search Property List Permissions"
+description: Grant permissions on a search property list.
+titleSuffix: SQL Server (Transact-SQL)
+ms.custom: "seo-lt-2019"
 ms.date: "07/26/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -15,9 +17,8 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], search property lists"
   - "GRANT statement, search property list permissions"
 ms.assetid: bb2d2550-9c0e-4a88-b50c-12e481d4d3ae
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GRANT Search Property List Permissions (Transact-SQL)
@@ -29,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 GRANT permission [ ,...n ] ON   
     SEARCH PROPERTY LIST :: search_property_list_name  

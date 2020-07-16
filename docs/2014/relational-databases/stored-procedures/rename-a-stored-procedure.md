@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5d2e4c68-7e0b-4405-8919-f5b203e46770
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Rename a Stored Procedure
   This topic describes how to rename a stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -76,7 +75,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to rename a procedure by dropping the procedure and re-creating the procedure with a new name. The first example creates the stored procedure `'HumanResources.uspGetAllEmployeesTest`. The second example renames the stored procedure to `HumanResources.uspEveryEmployeeTest`.  
   
-```tsql  
+```sql  
 --Create the stored procedure.  
 USE AdventureWorks2012;  
 GO  

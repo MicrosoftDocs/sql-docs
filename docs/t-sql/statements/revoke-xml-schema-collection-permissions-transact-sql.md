@@ -1,6 +1,7 @@
 ---
-title: "REVOKE XML Schema Collection Permissions (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: "REVOKE XML Schema Collection Permissions"
+description: Use Transact-SQL to REVOKE XML Schema Collection Permissions.
+ms.custom: "seo-lt-2019"
 ms.date: "08/10/2017"
 ms.prod: sql
 ms.prod_service: "pdw, sql-database"
@@ -14,13 +15,12 @@ helpviewer_keywords:
   - "XML schema collections [SQL Server], permissions"
   - "schema collections [SQL Server], permissions"
 ms.assetid: 8ca0973c-30b2-4633-a165-c09b13cc81ae
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVOKE XML Schema Collection Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Revokes permissions granted or denied on an XML schema collection.  
   
@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON   
     XML SCHEMA COLLECTION :: [ schema_name . ]  

@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Analysis Services objects, server objects"
 ms.assetid: 365bfd63-c55a-433d-9e1a-a788bc149a25
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Server Objects (Analysis Services - Multidimensional Data)
     

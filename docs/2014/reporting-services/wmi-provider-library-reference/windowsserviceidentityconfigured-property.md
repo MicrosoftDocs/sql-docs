@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "WindowsServiceIdentityConfigured"
@@ -16,9 +15,9 @@ topic_type:
 helpviewer_keywords: 
   - "WindowsServiceIdentityConfigured property"
 ms.assetid: ebf8e559-7fe4-4a01-9810-85f18fc04596
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # WindowsServiceIdentityConfigured Property (WMI MSReportServer_ConfigurationSetting)
   Returns the identity that the Report Server Windows service was last configured to run under. Read-only.  

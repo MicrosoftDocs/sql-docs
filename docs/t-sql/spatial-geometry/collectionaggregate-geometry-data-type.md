@@ -12,12 +12,11 @@ dev_langs:
 helpviewer_keywords: 
   - "CollectionAggregate method (geometry)"
 ms.assetid: b7c85d59-c841-4b7f-9d46-8b4b7f2a3afe
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # CollectionAggregate (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Creates a **GeometryCollection** instance from a set of **geometry** types.
   

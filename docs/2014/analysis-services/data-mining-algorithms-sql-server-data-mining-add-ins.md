@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "segmentation"
@@ -23,7 +22,6 @@ helpviewer_keywords:
 ms.assetid: 3a1a62e4-9fb5-4cdb-a6c6-1b8b30d417ef
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Mining Algorithms (SQL Server Data Mining Add-ins)
   The Data Mining Add-ins for Office supports creation of analytical models using the following data mining algorithms. All algorithms are based on well-known machine learning methods and have been implemented by Microsoft Research.  

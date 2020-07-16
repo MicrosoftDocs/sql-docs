@@ -21,12 +21,11 @@ helpviewer_keywords:
   - "cryptography [SQL Server], symmetric keys"
   - "DROP SYMMETRIC KEY statement"
 ms.assetid: 6150bc67-08cb-402e-9c24-b04c9654b434
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DROP SYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Removes a symmetric key from the current database.  
   

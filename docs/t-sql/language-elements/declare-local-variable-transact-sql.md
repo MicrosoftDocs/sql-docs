@@ -1,6 +1,6 @@
 ---
 title: "DECLARE @local_variable (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for using DECLARE to define local variables for use in a batch or procedure."
 ms.date: "07/24/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -18,13 +18,12 @@ helpviewer_keywords:
   - "DECLARE statement"
   - "declaring variables"
 ms.assetid: d1635ebb-f751-4de1-8bbc-cae161f90821
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DECLARE @local_variable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Variables are declared in the body of a batch or procedure with the DECLARE statement and are assigned values by using either a SET or SELECT statement. Cursor variables can be declared with this statement and used with other cursor-related statements. After declaration, all variables are initialized as NULL, unless a value is provided as part of the declaration.  
   

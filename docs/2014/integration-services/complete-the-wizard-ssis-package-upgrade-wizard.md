@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.is.upgradewizard.completewizard.f1"
 ms.assetid: e07bd68e-4dc8-41f0-acfe-059e77688cfa
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Complete the Wizard (SSIS Package Upgrade Wizard)
   Use the **Complete the Wizard** page to review and confirm the package upgrade options that you have selected. This is the last wizard page from which you can go back and change options for this session of the wizard.  

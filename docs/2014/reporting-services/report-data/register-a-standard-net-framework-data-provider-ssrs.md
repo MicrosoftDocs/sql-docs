@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "reports [Reporting Services], data"
@@ -15,9 +14,9 @@ helpviewer_keywords:
   - "data retrieval [Reporting Services]"
   - "Reporting Services, data sources"
 ms.assetid: d92add64-e93c-4598-8508-55d1bc46acf6
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Register a Standard .NET Framework Data Provider (SSRS)
   To use a third-party [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider to retrieve data for a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] report dataset, you need to deploy and register the [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] data provider assembly in two locations: on the report authoring client and on the report server. On the report authoring client, you must register the data provider as a data source type and associate it with a query designer. You can then select this data provider as a type of data source when you create a report dataset. The associated query designer opens to help you create queries for this data source type. On the report server, you must register the data provider as a data source type. You can then process published reports that retrieve data from a data source using this data provider.  

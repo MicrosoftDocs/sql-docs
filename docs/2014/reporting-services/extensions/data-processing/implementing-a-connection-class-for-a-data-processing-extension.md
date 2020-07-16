@@ -4,18 +4,16 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "connections [Reporting Services], data processing extensions"
   - "Connection class"
   - "data processing extensions [Reporting Services], connections"
 ms.assetid: 7047d29e-a2c9-4e6f-ad02-635851a38ed7
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Implementing a Connection Class for a Data Processing Extension
   The **Connection** object represents a database connection or similar resource and is the starting point for users of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] data processing extension. It represents connections to database servers, though any entity with similar behavior can be exposed as a **Connection**.  

@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.ffileconnection.columns.f1"
 helpviewer_keywords: 
   - "Flat File Connection Manager Editor"
 ms.assetid: 40ce7537-abd0-4973-97fd-6ccb90fddfa0
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Flat File Connection Manager Editor (Columns Page)
   Use the **Columns** page of the **Flat File Connection Manager Editor** dialog box to specify the row and column information, and to preview the file.  

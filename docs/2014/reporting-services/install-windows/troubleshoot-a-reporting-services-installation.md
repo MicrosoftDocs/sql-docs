@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: e2536f7f-d90c-4571-9ffd-6bbfe69018d6
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Troubleshoot a Reporting Services Installation
   If you cannot install [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] because of errors that occur during setup, use the instructions in this topic to address the conditions that are most likely to cause installation errors.  
@@ -95,15 +94,15 @@ manager: craigg
   
     1.  Open the SharePoint 2010 Management Shell with administrator privileges. Right click the icon and click, "Run As Administrator". Run the following three cmdlets from the shell:  
   
-    2.  ```  
+    2.  ```powershell
         Install-SPRSService  
         ```  
   
-    3.  ```  
+    3.  ```powershell
         Install-SPRSServiceProxy  
         ```  
   
-    4.  ```  
+    4.  ```powershell
         Get-SPServiceInstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
         ```  
   
@@ -270,8 +269,5 @@ manager: craigg
   
 -   TechNet Wiki: Trouble Shooting topics [Troubleshoot SQL Server Reporting Services (SSRS) in SharePoint Integrated Mode](https://social.technet.microsoft.com/wiki/contents/articles/troubleshoot-sql-server-reporting-services-ssrs-in-sharepoint-integrated-mode.aspx)  
   
--   [Forum: SQL Server Reporting Services](http://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
-  
- ![SharePoint Settings](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint Settings") [Submit feedback and contact information through Microsoft SQL Server Connect](https://connect.microsoft.com/SQLServer/Feedback) (https://connect.microsoft.com/SQLServer/Feedback).  
-  
+-   [Forum: SQL Server Reporting Services](https://social.msdn.microsoft.com/Forums/sqlreportingservices/threads)  
   

@@ -16,16 +16,12 @@ helpviewer_keywords:
   - "rounding expressions"
   - "ROUND function [Transact-SQL]"
 ms.assetid: 23921ed6-dd6a-4c9e-8c32-91c0d44fe4b7
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ROUND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Returns a numeric value, rounded to the specified length or precision.  
   
@@ -104,8 +100,8 @@ SELECT ROUND(123.4545, 2), ROUND(123.45, -2);
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
  ```
---------  ----------
-123.45    100.00
+----------  ----------
+123.4500    100.00
 ```
   
 ### C. Using ROUND to truncate  

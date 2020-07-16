@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 4d93489e-e9bb-45b3-8354-21f58209965d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Securing SQL Server
   Securing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be viewed as a series of steps, involving four areas: the platform, authentication, objects (including data), and applications that access the system. The following topics will guide you through creating and implementing an effective security plan.  
@@ -45,7 +44,7 @@ manager: craigg
 |---------------------------|---------|  
 |Configuring a firewall to work with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configure a Windows Firewall for Database Engine Access](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)|  
 |Configuring a firewall to work with [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]|[Configure a Windows Firewall for Access to the SSIS Service](../../integration-services/configure-a-windows-firewall-for-access-to-the-ssis-service.md)|  
-|Configuring a firewall to work with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configure the Windows Firewall to Allow Analysis Services Access](../../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
+|Configuring a firewall to work with [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|[Configure the Windows Firewall to Allow Analysis Services Access](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |Opening specific ports on a firewall to enable access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[Configure the Windows Firewall to Allow SQL Server Access](../../sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |Configuring support for Extended Protection for Authentication by using channel binding and service binding|[Connect to the Database Engine Using Extended Protection](../../database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection.md)|  
   

@@ -1,6 +1,7 @@
 ---
-title: "Establish Database Mirroring Session - Windows Authentication | Microsoft Docs"
-ms.custom: ""
+title: "Set up database mirroring (Windows Authentication)"
+description: Learn how to set up a database mirroring session with Windows Authentication using SQL Server Management Studio. 
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -12,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: 7cb418d6-dce1-4a0d-830e-9c5ccfe3bd72
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Establish Database Mirroring Session - Windows Authentication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!NOTE]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] Use [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] instead.  

@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: e9339227-6c2e-4c4b-8be2-8c1960bc4a8d
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Creating a Sequence Clustering Mining Model Structure (Intermediate Data Mining Tutorial)
   The first step in creating a sequence clustering mining model is to use the Data Mining Wizard to create a new mining structure and a mining model based on the [!INCLUDE[msCoName](../includes/msconame-md.md)] Sequence Clustering algorithm.  

@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.conditionalsplittransformation.f1"
 helpviewer_keywords: 
   - "Conditional Split Transformation Editor"
 ms.assetid: c30e1633-537a-4837-9991-6203c6f2a21e
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Conditional Split Transformation Editor
   Use the **Conditional Split Transformation Editor** dialog box to create expressions, set the order in which expressions are evaluated, and name the outputs of a conditional split. This dialog box includes mathematical, string, and date/time functions and operators that you can use to build expressions. The first condition that evaluates as true determines the output to which a row is directed.  

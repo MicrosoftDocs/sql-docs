@@ -11,11 +11,10 @@ helpviewer_keywords:
 ms.assetid: 0294ba51-6085-4de2-a52d-dac1a87fbd4d
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Audit Database Object Access Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Audit Database Object Access** event class occurs when database objects, such as schemas, are accessed.  
   
 ## Audit Database Object Access Event Class Data Columns  

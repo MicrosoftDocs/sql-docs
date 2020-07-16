@@ -14,12 +14,11 @@ helpviewer_keywords:
   - "permissions [SQL Server], symmetric keys"
   - "REVOKE statement, symmetric keys"
 ms.assetid: 091da030-a768-4aa3-9509-cc23bd719cea
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # REVOKE Symmetric Key Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Revokes permissions granted and denied on a symmetric key.  
    
@@ -27,7 +26,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   

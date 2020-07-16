@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_droplogin"
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_droplogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. This prevents access to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] under that login name.  
   
@@ -37,7 +36,7 @@ sp_droplogin [ @loginame = ] 'login'
 ```  
   
 ## Arguments  
- [ **@loginame =** ] **'***login***'**  
+`[ @loginame = ] 'login'`
  Is the login to be removed. *login* is **sysname**, with no default. *login* must already exist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Return Code Values  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures [Analysis Services], about mining structures"
@@ -16,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 4e0cbf46-cc60-4e91-a292-9a69f29746f0
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Logical Architecture (Analysis Services - Data Mining)
   Data mining is a process that involves the interaction of multiple components.  

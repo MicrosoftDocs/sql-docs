@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "upgrading SQL Server"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: f77ffbab-a195-4124-acce-9c538f7ca9ce
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Upgrade Process Overview
   This topic provides best practice information for [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Upgrade Advisor and a summary of the recommended process for upgrading to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

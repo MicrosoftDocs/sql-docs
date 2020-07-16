@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.accuracychart.crossvalidation.f1"
 ms.assetid: bd215a68-1ad7-4046-9c44-ec8e2be13a64
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Cross-Validation Tab (Mining Accuracy Chart View)
   Cross-validation lets you partition a mining structure into cross-sections and iteratively train and test models against each cross-section. You specify a number of folds to divide the data into, and each fold is used in turn as the test data, whereas the remaining data is used to train a new model. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] then generates a set of standard accuracy metrics for each model. By comparing the metrics for the models generated for each cross-section, you can get a good idea of how reliable the mining model is for the whole data set.  
@@ -36,7 +34,7 @@ manager: craigg
   
 -   Click **Get Results** to display the results of cross-validation.  
   
-## UIElement List  
+## UI element list  
  **Fold Count**  
  Specify the number of folds, or partitions, to create. The minimum value is 2, meaning that half the data set is used for testing and half for training.  
   

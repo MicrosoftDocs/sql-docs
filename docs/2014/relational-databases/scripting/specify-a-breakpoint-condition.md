@@ -1,18 +1,16 @@
 ---
-title: "Specify a Breakpoint Condition | Microsoft Docs"
-ms.custom: ""
+title: Specify a Breakpoint Condition
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint conditions"
 ms.assetid: b43d8a2b-99a3-4fb7-8848-99c042ea7ef7
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Specify a Breakpoint Condition
   A breakpoint condition is a [!INCLUDE[tsql](../../includes/tsql-md.md)] expression that is evaluated by the debugger when the breakpoint is reached. If the condition is satisfied and any specified hit count reached, the debugger either breaks or performs the action specified for the breakpoint.  

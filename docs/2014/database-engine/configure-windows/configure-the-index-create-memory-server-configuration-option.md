@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 3d722d9b-bada-4bf5-a9d7-bfc556bb4915
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Configure the index create memory Server Configuration Option
   This topic describes how to configure the **index create memory** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **index create memory** option controls the maximum amount of memory initially allocated for creating indexes. The default value for this option is 0 (self-configuring). If more memory is later needed for index creation and the memory is available, the server will use it; thereby, exceeding the setting of this option. If additional memory is not available, the index creation will continue using the memory already allocated.  
@@ -77,7 +76,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) to set the value of the `index create memory` option to `4096`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 EXEC sp_configure 'show advanced options', 1;  
 GO  

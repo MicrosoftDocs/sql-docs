@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.tracefileproperties.eventsselection.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 158d442f-2225-4173-8545-fb1cf611b4d0
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Trace File Properties (Events Selection Tab)
   Use the **Events Selection** tab of the **Trace File Template Properties** dialog box to view the column properties of the trace or remove data columns from the trace.  

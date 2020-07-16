@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Table Analysis tools"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 6d9d1481-18e4-4108-9efa-68152b0940c9
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Table Analysis Tools for Excel
   The data mining tools in the **Analyze** toolbar are the easiest way to get started with data mining. Each tool automatically analyzes the distribution and type of your data, and sets the parameters to ensure that results are valid. You do not have to select an algorithm or configure complex parameters.  

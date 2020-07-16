@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "cluster node configuration"
@@ -13,7 +12,6 @@ f1_keywords:
 ms.assetid: cc960cf3-3b55-44f3-961a-eac4ad05d3d9
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Cluster Node Configuration
   Use the Cluster Node Configuration page to add or remove nodes from a failover cluster instance.To install or upgrade a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster, you must run the Setup program on each node of the failover cluster. To add a node to an existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster, you must run [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup on the node that is to be added to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster instance.  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "testing data mining models"
@@ -28,7 +27,6 @@ helpviewer_keywords:
 ms.assetid: 197144f5-21ed-4009-b448-fe412fb3916c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Testing and Validation (Data Mining)
   Validation is the process of assessing how well your mining models perform against real data. It is important that you validate your mining models by understanding their quality and characteristics before you deploy them into a production environment.  

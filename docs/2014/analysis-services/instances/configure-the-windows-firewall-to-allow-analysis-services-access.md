@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ports [Analysis Services]"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7673acc5-75f0-4703-9ce2-87425ea39d49
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Configure the Windows Firewall to Allow Analysis Services Access
   An essential first step in making [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] available on the network is to determine whether you need to unblock ports in a firewall. Most installations will require that you create at least one in-bound firewall rule that allows connections to [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
@@ -29,7 +27,7 @@ manager: craigg
   
 -   For [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2010, do not open ports in Windows Firewall. As an add-in to SharePoint, the service uses ports configured for SharePoint and makes only local connections to the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instance that loads and queries [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data models.  
   
--   For [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances running on Windows Azure Virtual Machines, use alternate instructions for configuring server access. See [SQL Server Business Intelligence in Windows Azure Virtual Machines](https://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
+-   For [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] instances running on Azure Virtual Machines, use alternate instructions for configuring server access. See [SQL Server Business Intelligence in Azure Virtual Machines](https://msdn.microsoft.com/library/windowsazure/jj992719.aspx).  
   
  Although the default instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] listens on TCP port 2383, you can configure the server to listen on a different fixed port, connecting to the server in this format: \<servername>:\<portnumber>.  
   

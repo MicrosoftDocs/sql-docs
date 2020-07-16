@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "members staging table [Master Data Services]"
   - "database [Master Data Services], members staging table"
 ms.assetid: a8c953da-ec20-47dc-8656-ed5f0dfed89b
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Leaf Member Staging Table (Master Data Services)
   Use the leaf members staging table (stg.name_Leaf) in the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database to create, update, deactivate, and delete leaf members. You can also use it to update attribute values for leaf members.  
@@ -37,7 +36,7 @@ manager: craigg
  What information are you looking for, and did you find it? We're listening to your feedback to improve the content. Please submit your comments to [sqlfeedback@microsoft.com](mailto:sqlfeedback@microsoft.com?subject=Your%20feedback%20about%20the%20Leaf%20Member%20Staging%20Table%20page)  
   
 ## See Also  
- [Load or Update Members in Master Data Services by Using the Staging Process](/sql/2014/master-data-services/add-update-and-delete-data-master-data-services)   
+ [Load or Update Members in Master Data Services by Using the Staging Process](add-update-and-delete-data-master-data-services.md)   
  [Data Import &#40;Master Data Services&#41;](overview-importing-data-from-tables-master-data-services.md)   
  [View Errors that Occur During the Staging Process &#40;Master Data Services&#41;](view-errors-that-occur-during-staging-master-data-services.md)   
  [Staging Process Errors &#40;Master Data Services&#41;](staging-process-errors-master-data-services.md)  

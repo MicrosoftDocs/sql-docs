@@ -7,13 +7,12 @@ ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 ms.assetid: e000a1d8-a049-4542-bfeb-943fd6ab3969
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CurvePolygon
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   A **CurvePolygon** is a topologically closed surface defined by an exterior bounding ring and zero or more interior rings  
   
 > [!IMPORTANT]  
@@ -38,7 +37,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 2.  Has at least four points.  
   
 3.  The start and end point have the same X and Y coordinates.  
-  
+
     > [!NOTE]  
     > Z and M values are ignored.  
   

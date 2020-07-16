@@ -1,5 +1,6 @@
 ---
 title: "Database Mirroring and Log Shipping (SQL Server) | Microsoft Docs"
+description: Learn about the considerations for combining log shipping and database mirroring in SQL Server, including how many destination servers you need.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: 53e98134-e274-4dfd-8b72-0cc0fd5c800e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Database Mirroring and Log Shipping (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A given database can be mirrored or log shipped; it can also be simultaneously mirrored and log shipped. To choose what approach to use, consider the following:  
   
 -   How many destination servers do you require?  

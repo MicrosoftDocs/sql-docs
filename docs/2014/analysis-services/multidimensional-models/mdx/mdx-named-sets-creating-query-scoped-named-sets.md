@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "query-scoped named sets [MDX]"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 78bc1e9a-1bc4-4a5a-ab0b-cf430c8fbfe1
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Creating Query-Scoped Named Sets (MDX)
   If a named set is only required for a single Multidimensional Expressions (MDX) query, you can define that named set by using the WITH keyword. A named set that is created by using the WITH keyword no longer exists after the query has finished running.  

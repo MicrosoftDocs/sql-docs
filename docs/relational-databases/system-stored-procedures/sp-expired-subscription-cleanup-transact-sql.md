@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_expired_subscription_cleanup"
 ms.assetid: 6abc29fe-d77a-4673-9d99-ae31c688012c
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_expired_subscription_cleanup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Checks the status of all the subscriptions of every publication and drops those that have expired. This stored procedure is executed at the Publisher on any database or at the Distributor on the distribution database for a non- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
@@ -32,7 +31,7 @@ sp_expired_subscription_cleanup [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## Arguments  
- [ **@publisher=** ] **'**_publisher_**'**  
+`[ @publisher = ] 'publisher'`
  Is the name of a non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] publisher. *publication* is **sysname**, with a default value of NULL. You should not specify this parameter for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Publisher.  
   
 ## Return Code Values  

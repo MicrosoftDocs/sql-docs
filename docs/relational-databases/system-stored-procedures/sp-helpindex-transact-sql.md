@@ -15,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpindex"
 ms.assetid: c7f73ba0-ec35-4b10-aa5f-f1487e51fbf7
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helpindex (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Reports information about the indexes on a table or view.  
   
@@ -35,7 +34,7 @@ sp_helpindex [ @objname = ] 'name'
 ```  
   
 ## Arguments  
- [ **@objname=** ] **'***name***'**  
+`[ @objname = ] 'name'`
  Is the qualified or nonqualified name of a user-defined table or view. Quotation marks are required only if a qualified table or view name is specified. If a fully qualified name, including a database name, is provided, the database name must be the name of the current database. *name* is **nvarchar(776)**, with no default.  
   
 ## Return Code Values  

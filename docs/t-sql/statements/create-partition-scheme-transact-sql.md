@@ -28,10 +28,9 @@ helpviewer_keywords:
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # CREATE PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates a scheme in the current database that maps the partitions of a partitioned table or index to filegroups. The number and domain of the partitions of a partitioned table or index are determined in a partition function. A partition function must first be created in a [CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md) statement before creating a partition scheme.  
 
@@ -42,14 +41,16 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE PARTITION SCHEME partition_scheme_name  
 AS PARTITION partition_function_name  
 [ ALL ] TO ( { file_group_name | [ PRIMARY ] } [ ,...n ] )  
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *partition_scheme_name*  
  Is the name of the partition scheme. Partition scheme names must be unique within the database and comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   

@@ -1,27 +1,18 @@
 ---
 title: "Quick-Start Installation of SQL Server 2014 | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/25/2017"
+ms.date: 11/25/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "data-quality-services"
-  - "database-engine"
-  - "integration-services"
-  - "master-data-services"
-  - "replication"
-  - "reporting-services-native"
-  - "reporting-services-sharepoint"
+ms.technology: database-engine
 ms.topic: conceptual
 helpviewer_keywords: 
   - "quick start installation [SQL Server]"
   - "installation [SQL Server]"
   - "installing SQL Server, quick start installations"
 ms.assetid: 672afac9-364d-4946-ad5d-8a2d89cf8d81
-author: mightypen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Quick-Start Installation of SQL Server 2014
     
@@ -139,7 +130,7 @@ manager: craigg
   
 |Description|Topic|  
 |-----------------|-----------|  
-|Use the information in this topic to determine whether you need to unblock ports in a firewall to allow access to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] or PowerPivot for SharePoint. You can follow the steps provided in this topic to configure both port and firewall settings.|[Configure the Windows Firewall to Allow Analysis Services Access](../analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access.md)|  
+|Use the information in this topic to determine whether you need to unblock ports in a firewall to allow access to [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] or PowerPivot for SharePoint. You can follow the steps provided in this topic to configure both port and firewall settings.|[Configure the Windows Firewall to Allow Analysis Services Access](https://docs.microsoft.com/analysis-services/instances/configure-the-windows-firewall-to-allow-analysis-services-access)|  
 |This topic provides an overview of firewall configuration and summarizes information of interest to a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] administrator.|[Configure the Windows Firewall to Allow SQL Server Access](../../2014/sql-server/install/configure-the-windows-firewall-to-allow-sql-server-access.md)|  
 |This topic describes how to configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and Windows Firewall with Advanced Security to provide for network connections to an instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] in a multi-homed environment.|[Configure a Multi-Homed Computer for SQL Server Access](../../2014/sql-server/install/configure-a-multi-homed-computer-for-sql-server-access.md)|  
   
@@ -154,7 +145,7 @@ manager: craigg
   
 ## See Also  
  [Product Specifications for SQL Server 2014](sql-server-2014-product-specifications.md)   
- [Get Started with Product Documentation for SQL Server](../2014-toc/books-online-for-sql-server-2014.md) 
+ [Get Started with Product Documentation for SQL Server](../2014-toc/index.yml) 
  [Backward Compatibility](backward-compatibility.md)  
   
   

@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.viewdetailsdialog.f1"
 ms.assetid: bb062d9e-0156-4ac4-837d-9a99e5dd5e93
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # View Details Dialog Box (Analysis Services - Multidimensional Data)
   Use the **View Details** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] and [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to view additional details about a message or operation in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. You can display the **View Details** dialog box by  

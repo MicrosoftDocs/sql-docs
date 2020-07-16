@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "promoting properties [XML in SQL Server]"
   - "property promotion [XML in SQL Server]"
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Promote Frequently Used XML Values with Computed Columns
   If queries are made principally on a small number of element and attribute values, you may want to promote those quantities into relational columns. This is helpful when queries are issued on a small part of the XML data while the whole XML instance is retrieved. Creating an XML index on the XML column is not required. Instead, the promoted column can be indexed. Queries must be written to use the promoted column. That is, the query optimizer does not target again the queries on the XML column to the promoted column.  

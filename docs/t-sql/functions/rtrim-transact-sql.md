@@ -18,13 +18,12 @@ helpviewer_keywords:
   - "blank characters [SQL Server]"
   - "trailing blanks"
 ms.assetid: 52fd6e8d-650c-4f66-abcf-67765aa5aa83
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RTRIM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a character string after truncating all trailing spaces.  
   
@@ -32,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 RTRIM ( character_expression )  
 ```  
   
@@ -50,7 +49,7 @@ RTRIM ( character_expression )
 ### A. Simple Example  
  The following example takes a string of characters that has spaces at the end of the sentence, and returns the text without the spaces at the end of the sentence.  
   
-```  
+```sql  
 SELECT RTRIM('Removes trailing spaces.   ');  
 ```  
   
@@ -61,7 +60,7 @@ SELECT RTRIM('Removes trailing spaces.   ');
 ### B: Simple Example  
  The following example demonstrates how to use `RTRIM` to remove trailing spaces. This time there is another string concatenated to the first string to show that the spaces are gone.  
   
-```  
+```sql  
 SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next string.';  
 ```  
   
@@ -72,7 +71,7 @@ SELECT RTRIM('Four spaces are after the period in this sentence.    ') + 'Next s
 ### C. Using RTRIM with a variable  
  The following example demonstrates how to use `RTRIM` to remove trailing spaces from a character variable.  
   
-```  
+```sql  
 DECLARE @string_to_trim varchar(60);  
 SET @string_to_trim = 'Four spaces are after the period in this sentence.    ';  
 SELECT @string_to_trim + ' Next string.';  
@@ -82,18 +81,11 @@ GO
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```sql   
- -------------------------------------------------------------------------  
- Four spaces are after the period in this sentence.     Next string.  
- 
- (1 row(s) affected)`  
- 
- -------------------------------------------------------------------------  
- Four spaces are after the period in this sentence. Next string.  
- 
- (1 row(s) affected)
- ```  
-  
+```
+Four spaces are after the period in this sentence.     Next string.
+
+Four spaces are after the period in this sentence. Next string.
+```
 
   
 ## See Also  

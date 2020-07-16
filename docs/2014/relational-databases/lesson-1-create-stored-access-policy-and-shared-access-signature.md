@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 41674d9d-8132-4bff-be4d-85a861419f3d
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Lesson 2. Create a policy on container and generate a Shared Access Signature (SAS) key
   In this lesson, you will learn how to create a policy on the Blob container and also generate a SAS key.  
@@ -19,9 +17,9 @@ manager: craigg
   
  You can create a policy and a shared access signature by using one of the following methods:  
   
--   Windows Azure REST API operations: [Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx), [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx), and [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
+-   Azure REST API operations: [Create Container](https://msdn.microsoft.com/library/azure/dd179468.aspx), [Set Container ACL](https://msdn.microsoft.com/library/azure/dd179391.aspx), and [Get Container ACL](https://msdn.microsoft.com/library/azure/dd179469.aspx).  
   
--   [CloudBlobContainer.GetSharedAccessSignature Method](https://msdn.microsoft.com/library/azure/microsoft.windowsazure.storageclient.cloudblobcontainer.getsharedaccesssignature.aspx) in the Windows Azure SDK.  
+-   [CloudBlobContainer.GetSharedAccessSignature Method](https://docs.microsoft.com/dotnet/api/microsoft.azure.storage.blob.cloudblobcontainer.getsharedaccesssignature) in the Azure SDK.  
   
     ```  
   
@@ -35,10 +33,9 @@ manager: craigg
   
     ```  
   
--   A third-party Windows Azure explorer tool, such as [Azure Storage Explorer](http://azurestorageexplorer.codeplex.com/).  
+-   A third-party Azure explorer tool, such as [Azure Storage Explorer](https://azurestorageexplorer.codeplex.com/).  
   
  **Next Lesson:**  
   
  [Lesson 3: Create a SQL Server Credential](../relational-databases/lesson-2-create-a-sql-server-credential-using-a-shared-access-signature.md)  
-  
   

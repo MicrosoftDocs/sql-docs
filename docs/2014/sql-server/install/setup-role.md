@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: c7e9db15-89f2-4d4d-8860-1e64c5821c4d
 author: heidisteen
 ms.author: heidist
-manager: craigg
 ---
 # Setup Role
   Use this page to specify whether to use the Feature Selection page to select individual features, or to install using a setup role.  

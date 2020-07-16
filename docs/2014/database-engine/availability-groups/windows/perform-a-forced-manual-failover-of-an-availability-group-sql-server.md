@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 222288fe-ffc0-4567-b624-5d91485d70f0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Perform a Forced Manual Failover of an Availability Group (SQL Server)
   This topic describes how to perform a forced failover (with possible data loss) on an AlwaysOn availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. A forced failover is a form of manual failover that is intended strictly for disaster recovery, when a [planned manual failover](perform-a-planned-manual-failover-of-an-availability-group-sql-server.md) is not possible. If you force failover to an unsynchronized secondary replica, some data loss is possible. Therefore, we strongly recommend that you force failover only if you must restore service to the availability group immediately and you are willing to risk losing data.  
@@ -136,7 +135,7 @@ manager: craigg
   
      The following example forces the `AccountsAG` availability group to fail over to the local secondary replica.  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP AccountsAG FORCE_FAILOVER_ALLOW_DATA_LOSS;  
     ```  
   
@@ -155,10 +154,8 @@ manager: craigg
   
          The following example performs a forced failover (with possible data loss) of the availability group `MyAg` to the secondary replica on the server instance named `SecondaryServer\InstanceName`. You will be prompted to confirm this operation.  
   
-        ```  
-        Switch-SqlAvailabilityGroup `  
-           -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg `  
-           -AllowDataLoss  
+        ```powershell
+        Switch-SqlAvailabilityGroup -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg -AllowDataLoss  
         ```  
   
     -   **-AllowDataLoss-Force**  
@@ -167,10 +164,8 @@ manager: craigg
   
          The following example performs a forced failover (with possible data loss) of the availability group `MyAg` to the server instance named `SecondaryServer\InstanceName`. The `-Force` option suppresses confirmation of this operation.  
   
-        ```  
-        Switch-SqlAvailabilityGroup `  
-           -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg `  
-           -AllowDataLoss -Force  
+        ```powershell
+        Switch-SqlAvailabilityGroup -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg -AllowDataLoss -Force  
         ```  
   
     > [!NOTE]  

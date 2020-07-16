@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 24ba466d-a7d3-49e7-9111-b348399c9e58
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Task 9: Adding Union All Transform to Combine Correct and Corrected Records
   In this task, you add the Union All Transform to the data flow. The Union All transformation combines multiple inputs into one output. In your scenario, it combine both Correct and Corrected records into one stream.  

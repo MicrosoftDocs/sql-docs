@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.deployment.f1"
@@ -15,7 +14,6 @@ f1_keywords:
 ms.assetid: 140d0c4e-943c-4387-a8d2-6e066c7e4e75
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Configure Default Data Modeling and Deployment Properties (SSAS Tabular)
   This topic describes how to configure the default compatibility level, deployment and workspace database property settings, which can be pre-defined for each new tabular model project you create in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]. After a new project is created, these properties can still be changed depending on your particular requirements.  

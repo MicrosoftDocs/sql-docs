@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Business Intelligence enhancements [Analysis Services], dimension intelligence"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b64fa386-eac2-4286-a320-0631a1887aac
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Add Dimension Intelligence to a Dimension
   Add the dimension intelligence enhancement to a cube or a dimension to specify a standard business type for a dimension. This enhancement also specifies the corresponding types for dimension attributes. Client applications can use these type specifications when analyzing data.  

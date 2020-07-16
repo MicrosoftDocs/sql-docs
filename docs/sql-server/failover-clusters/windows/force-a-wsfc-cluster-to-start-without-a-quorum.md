@@ -1,6 +1,7 @@
 ---
-title: "Force a WSFC Cluster to Start Without a Quorum | Microsoft Docs"
-ms.custom: ""
+title: "Force a WSFC Cluster to Start Without a Quorum"
+description: Force a Windows Server Failover Clustering cluster node to start without a quorum, which may be required to recover data and re-establish high availability.
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -12,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Force a WSFC Cluster to Start Without a Quorum
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to force a Windows Server Failover Clustering (WSFC) cluster node to start without a quorum.  This may be required in disaster recovery and multi-subnet scenarios to recover data and fully re-establish high-availability for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Instances.  
   
 -   **Before you start:**  [Recommendations](#Recommendations), [Security](#Security)  

@@ -22,12 +22,11 @@ helpviewer_keywords:
   - "encryption [SQL Server], Service Master Key"
   - "service master key [SQL Server], exporting"
 ms.assetid: f8356683-6680-4f1c-9eaf-5c29a9a9020d
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # BACKUP SERVICE MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Exports the service master key.  
   
@@ -41,7 +40,9 @@ BACKUP SERVICE MASTER KEY TO FILE = 'path_to_file'
     ENCRYPTION BY PASSWORD = 'password'  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  FILE **='***path_to_file***'**  
  Specifies the complete path, including file name, to the file to which the service master key will be exported. This may be a local path or a UNC path to a network location.  
   

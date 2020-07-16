@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cubes [Analysis Services], scripts"
@@ -17,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: fdecb3ce-7c87-4bab-8000-532ba7a29f96
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # MDX Scripting Fundamentals (Analysis Services)
   In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], a Multidimensional Expressions (MDX) script is made up of one or more MDX expressions or statements that populate a cube with calculations.  

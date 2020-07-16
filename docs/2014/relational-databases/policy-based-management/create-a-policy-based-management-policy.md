@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: b28bf963-89f9-4941-b6c1-6004fec347f1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Create a Policy-Based Management Policy
   This topic describes how to create a Policy-Based Management policy in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

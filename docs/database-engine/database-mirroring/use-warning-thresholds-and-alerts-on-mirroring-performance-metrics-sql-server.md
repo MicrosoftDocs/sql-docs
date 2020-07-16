@@ -1,6 +1,7 @@
 ---
-title: "Use Warning Thresholds and Alerts on Mirroring Performance Metrics | Microsoft Docs"
-ms.custom: ""
+title: "Configure alerts for database mirroring performance metrics"
+description: "Guidance for configuring warning thresholds and alerts for performance metrics used by database mirroring. "
+ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: high-availability
@@ -17,23 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8cdd1515-0bd7-4f8c-a7fc-a33b575e20f6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Use Warning Thresholds and Alerts on Mirroring Performance Metrics (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic contains information about the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] events for which warning thresholds can be configured and managed for database mirroring. You can use the  Database Mirroring Monitor or the **sp_dbmmonitorchangealert**, **sp_dbmmonitorhelpalert**, and **sp_dbmmonitordropalert** stored procedures. This topic also contains information about configuring alerts on database mirroring events.  
   
  After monitoring is established for a mirrored database, a system administrator can configure warning thresholds on several key performance metrics. Also, an administrator can configure alerts on these and other database mirroring events.  
   
- **In This Topic:**  
-  
--   [Performance Metrics and Warning Thresholds](#PerfMetricsAndWarningThresholds)  
-  
--   [Setting Up and Managing Warning Thresholds](#SetUpManageWarningThresholds)  
-  
--   [Using Alerts for a Mirrored Database](#UseAlerts)  
-  
--   [Related Tasks](#RelatedTasks)  
   
 ##  <a name="PerfMetricsAndWarningThresholds"></a> Performance Metrics and Warning Thresholds  
  The following table lists the performance metrics for which warnings can be configured, describes the corresponding warning threshold, and lists the corresponding Database Mirroring Monitor label.  
@@ -100,8 +91,6 @@ manager: craigg
  A system administrator can configure alerts on these by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent or other applications, such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Operations Manager.  
   
  When you define alerts on database mirroring events, we recommend that you define warning thresholds and alerts at both partner server instances. Individual events are generated at either the principal server or the mirror server, but each partner can perform either role at any time. To make sure that an alert continues to operate after a failover, the alert must be defined at both partners.  
-  
- For more information, see the white paper about alerting on database mirroring events at this [SQL Server Web site](https://go.microsoft.com/fwlink/?linkid=62373). This white paper contains information about how to configure alerts using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, the database mirroring WMI events, and sample scripts.  
   
 > [!IMPORTANT]  
 >  For all mirroring sessions, we strongly recommend that you configure the database to send an alert on any state-change events. Unless a state change is expected as the result of a manual configuration change, something has occurred that could compromise your data. To help protect your data, identify and fix the cause of an unexpected state change.  

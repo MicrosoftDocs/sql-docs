@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "writeback [Analysis Services], cubes"
@@ -16,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ae2385fc-7fa0-4f8e-98d7-dcb0a5f0eeea
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Using Cube Writebacks (MDX)
   You update a cube by using the [UPDATE CUBE](/sql/mdx/mdx-data-manipulation-update-cube) statement. This statement lets you update a tuple with a specific value. To effectively use the UPDATE CUBE statement to update a cube, you have to understand the syntax for the statement, the error conditions that can occur, and the affect that updates can have on a cube.  

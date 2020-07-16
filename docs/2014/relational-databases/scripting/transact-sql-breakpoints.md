@@ -1,18 +1,16 @@
 ---
-title: "Transact-SQL Breakpoints | Microsoft Docs"
-ms.custom: ""
+title: Transact-SQL Breakpoints
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoints"
 ms.assetid: c234430f-bd94-4d0d-9e74-2bf11681fa50
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Transact-SQL Breakpoints
   Breakpoints specify that the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger pause execution on a specific [!INCLUDE[tsql](../../includes/tsql-md.md)] statement, you can then view the state of the code elements at that point.  

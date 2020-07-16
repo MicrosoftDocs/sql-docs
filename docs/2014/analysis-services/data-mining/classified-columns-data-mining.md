@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "content types [data mining]"
@@ -20,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 68bf3b78-dc12-497c-898f-b43a45646123
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Classified Columns (Data Mining)
   When you define a classified column, you create a relationship between the current column and another column in the mining structure. The data in the mining structure column that you designate as the classified column contains categorical information that describes the values in another column in the mining structure.  

@@ -1,14 +1,14 @@
 ---
-title: Configure SCOM to monitor Analytics Platform System | Microsoft Docs
+title: Monitor with SCOM 
 description: Follow these steps to configure the System Center Operations Manager (SCOM) management packs for Analytics Platform System. The Management Packs are required to monitor Analytics Platform System from SCOM. 
 author: mzaman1 
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 ---
 
 # Configure System Center Operations Manager (SCOM) to Monitor Analytics Platform System

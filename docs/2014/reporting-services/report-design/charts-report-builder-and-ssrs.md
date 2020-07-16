@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.chartareaproperties.3doptions.f1"
@@ -20,7 +19,7 @@ f1_keywords:
 ms.assetid: d56d0521-362f-4361-843a-acf2c897a87c
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Charts (Report Builder and SSRS)
   When you want to summarize data in a visual format, use the chart data region. Charts enable you to present large volumes of aggregated information at a glance. It is important to carefully prepare and understand your data before you create a chart, as this will help you design your charts quickly and efficiently. For more information, see [Add a Chart to a Report &#40;Report Builder and SSRS&#41;](add-a-chart-to-a-report-report-builder-and-ssrs.md). To start to use a chart immediately, see the bar, column, sparkline, and pie chart tutorials in [Tutorials &#40;Report Builder&#41;](../report-builder-tutorials.md) or the bar and pie chart tutorials in [Reporting Services Tutorials &#40;SSRS&#41;](../reporting-services-tutorials-ssrs.md).  

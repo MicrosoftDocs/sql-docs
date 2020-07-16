@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], Transact-SQL"
 ms.assetid: a6bf0ce7-7e5e-4a07-8917-ee526c9d0a05
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Access FILESTREAM Data with Transact-SQL
   This topic describes how to use the [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT, UPDATE, and DELETE statements to manage FILESTREAM data.  

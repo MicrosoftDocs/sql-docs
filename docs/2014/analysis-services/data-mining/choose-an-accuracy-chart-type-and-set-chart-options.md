@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Mining Accuracy Chart [Analysis Services]"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: bd24dd4a-624f-478a-9c94-b1361e857680
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Choose an Accuracy Chart Type and Set Chart Options
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides multiple methods for determining the validity of your mining models. The type of accuracy chart that you can create for each model or structure depends on these factors:  

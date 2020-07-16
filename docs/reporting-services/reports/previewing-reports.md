@@ -1,11 +1,11 @@
 ---
 title: Preview Reports
-author: markingmyname
-ms.author: maghan
-manager: kfile
+description: Learn how to preview reports in SQL Server Reporting Services before publishing to a production environment.
+author: maggiesMSFT
+ms.author: maggies
 ms.reviewer: ""
 ms.prod: reporting-services
-ms.prod_service: reporting-services-sharepoint, reporting-services-native
+ms.prod_service: reporting-services-native
 ms.technology: reports
 ms.topic: conceptual
 ms.custom: seodec18

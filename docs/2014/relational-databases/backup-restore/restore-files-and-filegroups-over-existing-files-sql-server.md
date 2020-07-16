@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 517e07eb-9685-4b06-90af-b1cc496700b7
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Restore Files and Filegroups over Existing Files (SQL Server)
   This topic describes how to restore files and filegroups over existing files in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -133,7 +132,7 @@ manager: craigg
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  The following example restores the files and filegroups for the `MyNwind` database, and replaces any existing files of the same name. Two transaction logs will also be applied to restore the database to the current time.  
   
-```tsql  
+```sql  
 USE master;  
 GO  
 -- Restore the files and filesgroups for MyNwind.  

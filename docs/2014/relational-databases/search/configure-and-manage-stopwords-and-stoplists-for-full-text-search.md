@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], stopwords"
   - "stopwords [full-text search]"
 ms.assetid: 43b5ce7b-9f09-4443-8a5b-c3da6eb28bcc
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Configure and Manage Stopwords and Stoplists for Full-Text Search
   To prevent a full-text index from becoming bloated, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has a mechanism that discards commonly occurring strings that do not help the search. These discarded strings are called *stopwords*. During index creation, the Full-Text Engine omits stopwords from the full-text index. This means that full-text queries will not search on stopwords.  

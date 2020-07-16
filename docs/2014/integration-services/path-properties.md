@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 dev_langs: 
   - "VB"
@@ -13,9 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "paths [Integration Services], properties"
 ms.assetid: 89b1e347-9579-4f6b-af74-c6519ea08eea
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Path Properties
   The data flow objects in the [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] object model have common properties and custom properties at the level of the component, inputs and outputs, and input columns and output columns. Many properties have read-only values that are assigned at run time by the data flow engine.  

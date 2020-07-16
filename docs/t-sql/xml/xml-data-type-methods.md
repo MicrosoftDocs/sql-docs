@@ -1,9 +1,8 @@
 ---
-title: "xml Data Type Methods | Microsoft Docs"
+title: xml Data Type Methods
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -13,12 +12,11 @@ helpviewer_keywords:
   - "xml data type [SQL Server], methods"
   - "methods [XML in SQL Server]"
 ms.assetid: d112b9c9-be9f-435c-a9e6-d21b65778fb7
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # xml Data Type Methods
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   You can use the **xml** data type methods to query an XML instance stored in a variable or column of **xml** type. The topics in this section describe how to use the **xml** data type methods.  
   

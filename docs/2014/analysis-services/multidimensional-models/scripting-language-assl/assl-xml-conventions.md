@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "whitespace [Analysis Services Scripting Language]"
@@ -25,7 +23,6 @@ helpviewer_keywords:
 ms.assetid: bce4edad-4420-41ce-9672-8c00c5c0dec6
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # ASSL XML Conventions
   Analysis Services Scripting Language (ASSL) represents the hierarchy of objects as a set of element types, each of which defines the child elements they can contain.  

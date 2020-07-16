@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 8373bb35-f0f9-4c3c-a53c-dfaa2ce567ac
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Create a Master Data Services Database
   Create a [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] database when you need a new database to support the [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] web application and [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] web service.  

@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "business rules [Master Data Services], requiring attribute values"
   - "attributes [Master Data Services], requiring values"
 ms.assetid: a360ef13-0c34-43b8-a87e-2f5d8732d30e
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Require Attribute Values (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], require attribute values when you want to ensure your master data is complete.  

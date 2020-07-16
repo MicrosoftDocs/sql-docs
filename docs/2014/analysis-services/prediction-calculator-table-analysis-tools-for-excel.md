@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining model, regression"
@@ -16,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 8bb8c318-e85f-4fd6-b32b-4cdfb13ca1b5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Prediction Calculator (Table Analysis Tools for Excel)
   ![Prediction Calculator tool](media/tat-predcal.gif "Prediction Calculator tool")  

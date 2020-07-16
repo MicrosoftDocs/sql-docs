@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Analysis Services, architecture"
@@ -14,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 1b9cae0a-8990-4194-af5f-a1ea5f2aff06
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Logical Architecture (Analysis Services - Multidimensional Data)
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] uses both server and client components to supply online analytical processing (OLAP) and data mining functionality for business intelligence applications:  

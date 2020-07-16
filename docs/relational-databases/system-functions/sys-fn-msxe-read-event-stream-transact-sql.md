@@ -20,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: 5edb1162-625a-41e0-8ec9-1edc8ab9a74a
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.fn_MSxe_read_event_stream (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Extended Events provides a table valued function (TVF) for internal use by the Extended Events user interface (UI). The table does not provide customer usable data.  
   

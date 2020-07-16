@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Scripting
   Scripting in SMO is controlled by the <xref:Microsoft.SqlServer.Management.Smo.Scripter> object and its child objects, or the `Script` method on individual objects. The <xref:Microsoft.SqlServer.Management.Smo.Scripter> object controls the mapping out of dependency relationships for objects on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
@@ -38,7 +37,7 @@ manager: craigg
   
  This code example requires an `Imports` statement for the System.Collections.Specialized namespace. Insert this with the other Imports statements, before any declarations in the application.  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.SqlServer.Management.Common  
 Imports System.Collections.Specialized  
@@ -47,7 +46,7 @@ Imports System.Collections.Specialized
 ## Scripting Out the Dependencies for a Database in Visual Basic  
  This code example shows how to discover the dependencies and iterate through the list to display the results.  
   
-```  
+```vb
 ' compile with:   
 ' /r:Microsoft.SqlServer.Smo.dll   
 ' /r:Microsoft.SqlServer.ConnectionInfo.dll   
@@ -95,7 +94,7 @@ End Class
 ## Scripting Out the Dependencies for a Database in Visual C#  
  This code example shows how to discover the dependencies and iterate through the list to display the results.  
   
-```  
+```csharp
 // compile with:   
 // /r:Microsoft.SqlServer.Smo.dll   
 // /r:Microsoft.SqlServer.ConnectionInfo.dll   
@@ -143,7 +142,7 @@ public class A {
 ## Scripting Out the Dependencies for a Database in PowerShell  
  This code example shows how to discover the dependencies and iterate through the list to display the results.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\default  
   
@@ -154,7 +153,6 @@ $scrp.Options.WithDependencies = $true
 $scrp.Options.IncludeIfNotExists = $true  
   
 # Set the path context to the tables in AdventureWorks2012.  
-  
 CD Databases\AdventureWorks2012\Tables  
   
 foreach ($Item in Get-ChildItem)  
@@ -162,5 +160,3 @@ foreach ($Item in Get-ChildItem)
  $scrp.Script($Item)  
  }  
 ```  
-  
-  

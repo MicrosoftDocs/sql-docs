@@ -8,19 +8,22 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: ed9d7fa3-61a1-4e21-ba43-1ead7dfc74eb
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
-# catalog.add_data_tap_by_guid
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+# catalog.add_data_tap_by_guid 
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a data tap to a specific data flow path in a package data flow, for an instance of the execution.  
   
 ## Syntax  
   
 ```sql  
-catalog add_data_tap_by_guid [ @execution_id = ] execution_id  
+catalog.add_data_tap_by_guid [ @execution_id = ] execution_id  
 , [ @dataflow_task_guid = ] dataflow_task_guid   
 , [ @dataflow_path_id_string = ] dataflow_path_id_string  
 , [ @data_filename = ] data_filename  

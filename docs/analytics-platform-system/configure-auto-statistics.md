@@ -1,14 +1,14 @@
 ---
-title: "Auto-Statistics (Analytics Platform System)"
+title: "Auto-Statistics"
 description: "Describes auto statistics feature introduced in Analytics Platform System AU7."
 author: "mzaman1" 
-manager: "craigg"	  
 ms.prod: "sql"
 ms.technology: data-warehouse
 ms.topic: "conceptual"
 ms.date: "06/27/2018"
 ms.author: "murshedz"
 ms.reviewer: martinle
+ms.custom: seo-dt-2019
 monikerRange: ">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
 ---
 # Configure auto statistics

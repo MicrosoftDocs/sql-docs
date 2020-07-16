@@ -19,13 +19,12 @@ helpviewer_keywords:
   - "values [SQL Server], average"
   - "average values"
 ms.assetid: 4534b705-d946-441b-9b5d-5fbe561c9131
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # AVG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns the average of the values in a group. It ignores null values.
   
@@ -60,7 +59,7 @@ The evaluated result of *expression* determines the return type.
 |**smallint**|**int**|  
 |**int**|**int**|  
 |**bigint**|**bigint**|  
-|**decimal** category (p, s)|**decimal(38, s)** divided by **decimal(10, 0)**|  
+|**decimal** category (p, s)|**decimal(38, min(s,6))**|  
 |**money** and **smallmoney** category|**money**|  
 |**float** and **real** category|**float**|  
   

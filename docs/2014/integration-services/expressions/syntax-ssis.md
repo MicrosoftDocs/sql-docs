@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "expressions [Integration Services], syntax"
   - "syntax [Integration Services]"
 ms.assetid: 61c053c5-1182-4ad0-b804-51cbd19aa0ba
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Syntax (SSIS)
   The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] expression syntax is similar to the syntax that the C and C# languages use. Expressions include elements such as identifiers (columns and variables), literals, operators, and functions. This topic summarizes the unique requirements of the expression evaluator syntax as they apply to different expression elements.  
@@ -74,7 +73,7 @@ manager: craigg
   
 ## Related Content  
   
--   Technical article, [SSIS Expression Cheat Sheet](https://go.microsoft.com/fwlink/?LinkId=217683), on pragmaticworks.com  
+-   Technical article, [SSIS Expression Cheat Sheet](https://pragmaticworks.com/Resources/Cheat-Sheets/SSIS-Expression-Cheat-Sheet), on pragmaticworks.com  
   
 -   Technical article, [SSIS Expression Examples](https://go.microsoft.com/fwlink/?LinkId=220761), on social.technet.microsoft.com  
   

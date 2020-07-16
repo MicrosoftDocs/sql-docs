@@ -22,12 +22,11 @@ helpviewer_keywords:
   - "IDs [SQL Server], modules"
   - "module object identifiers [SQL Server]"
 ms.assetid: 0d4882c7-edb8-49b1-a470-2c7497b8998f
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # &#x40;&#x40;PROCID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the object identifier (ID) of the current [!INCLUDE[tsql](../../includes/tsql-md.md)] module. A [!INCLUDE[tsql](../../includes/tsql-md.md)] module can be a stored procedure, user-defined function, or trigger. @@PROCID cannot be specified in CLR modules or the in-process data access provider.  
   

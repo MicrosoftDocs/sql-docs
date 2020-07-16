@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures, creating"
 ms.assetid: b8b1eedc-4d6d-4429-a578-e629ec573934
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create Mining Structure (SQL Server Data Mining Add-ins)
   ![Create Mining Structure button, Data Mining ribbon](media/dmc-createstruct.gif "Create Mining Structure button, Data Mining ribbon")  

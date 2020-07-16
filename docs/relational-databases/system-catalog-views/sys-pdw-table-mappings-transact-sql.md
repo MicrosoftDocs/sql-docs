@@ -2,8 +2,8 @@
 title: "sys.pdw_table_mappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/01/2018"
-ms.prod: ""
-ms.prod_service: "sql-data-warehouse, pdw"
+ms.prod: sql
+ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: "language-reference"
 dev_langs: 
@@ -11,7 +11,6 @@ dev_langs:
 ms.assetid: 1af14fe0-e562-4f48-a7f0-783f300a88ac
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.pdw_table_mappings (Transact-SQL)

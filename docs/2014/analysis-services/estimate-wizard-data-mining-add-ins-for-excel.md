@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data modeling [data mining]"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 7f2b1d5f-c9b3-4939-b35a-34ae099af15f
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Estimate Wizard (Data Mining Add-ins for Excel)
   ![Estimate wizard in Data Mining ribbon](media/dmc-estimate.gif "Estimate wizard in Data Mining ribbon")  

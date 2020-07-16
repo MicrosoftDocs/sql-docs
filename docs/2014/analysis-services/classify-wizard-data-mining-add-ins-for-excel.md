@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data modeling [data mining]"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 409c5076-c4c3-4f09-8f30-d3297df45f13
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Classify Wizard (Data Mining Add-ins for Excel)
   ![Classify wizard in Data Mining ribbon](media/dmc-classify.gif "Classify wizard in Data Mining ribbon")  

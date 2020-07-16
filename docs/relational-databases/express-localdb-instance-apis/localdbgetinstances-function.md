@@ -15,10 +15,9 @@ apitype: "DLLExport"
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # LocalDBGetInstances Function
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Returns all SQL Server Express LocalDB instances with the given version.  
   
  **Header file:** sqlncli.h  

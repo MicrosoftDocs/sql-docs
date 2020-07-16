@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "return codes [Integration Services]"
@@ -13,9 +12,8 @@ helpviewer_keywords:
   - "parameterized SQL statements [Integration Services]"
   - "Execute SQL task [Integration Services]"
 ms.assetid: a3ca65e8-65cf-4272-9a81-765a706b8663
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Parameters and Return Codes in the Execute SQL Task
   SQL statements and stored procedures frequently use `input` parameters, `output` parameters, and return codes. In [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], the Execute SQL task supports the `Input`, `Output`, and `ReturnValue` parameter types. You use the `Input` type for input parameters, `Output` for output parameters, and `ReturnValue` for return codes.  

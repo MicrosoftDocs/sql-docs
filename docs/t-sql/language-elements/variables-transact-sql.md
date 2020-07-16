@@ -10,13 +10,12 @@ ms.topic: "language-reference"
 dev_langs: 
   - "TSQL"
 ms.assetid: f372ae86-a003-40af-92de-fa52e3eea13f
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Variables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A Transact-SQL local variable is an object that can hold a single data value of a specific type. Variables in batches and scripts are typically used: 
 
@@ -26,6 +25,9 @@ A Transact-SQL local variable is an object that can hold a single data value of 
 
 > [!NOTE]
 > The names of some Transact-SQL system functions begin with two *at* signs (\@\@). Although in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the \@\@functions are referred to as global variables, they are not variables and do not have the same behaviors as variables. The \@\@functions are system functions, and their syntax usage follows the rules for functions.
+
+> [!NOTE]
+> Variables can not be used in views.
 
 The following script creates a small test table and populates it with 26 rows. The script uses a variable to do three things: 
 

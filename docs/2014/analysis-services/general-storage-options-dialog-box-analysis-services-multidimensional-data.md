@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.setstorageoptions.storage.f1"
 ms.assetid: ee1fac79-ae15-4c3c-9a98-33db04388817
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # General (Storage Options Dialog Box) (Analysis Services - Multidimensional Data)
   Use the **General** tab of the **Storage Options** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to set the storage mode and proactive caching settings for a dimension, cube, measure group, or partition.  

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: b0e57cb7-9b26-4b96-b76a-1f59f5f498c5
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View Foreign Key Properties
@@ -48,7 +47,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 1.  Open the Table Designer for the table containing the foreign key you want to view, right-click in the Table Designer, and choose **Relationships** from the shortcut menu.  
   
 2.  In the **Foreign Key Relationships** dialog box, select the relationship with properties you want to view.  
-  
+
  If the foreign key columns are related to a primary key, the primary key columns are identified in **Table Designer** by a primary key symbol in the row selector.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  

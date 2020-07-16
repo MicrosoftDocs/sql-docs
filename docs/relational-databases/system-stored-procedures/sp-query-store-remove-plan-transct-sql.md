@@ -18,13 +18,12 @@ helpviewer_keywords:
   - "sys.sp_query_store_remove_plan"
   - "sp_query_store_remove_plan"
 ms.assetid: 88734726-135b-4b61-9f3f-f568c1fbece6
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_remove_plan (Transct-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Removes  a single plan from the query store.  
   
@@ -38,7 +37,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ```  
   
 ## Arguments  
- [ **@plan_id =** ] *plan_id*  
+`[ @plan_id = ] plan_id`
  Is the id of the query plan to be removed. *plan_id* is a **bigint**, with no default.  
   
 ## Return Code Values  
@@ -47,7 +46,7 @@ sp_query_store_remove_plan [ @plan_id = ] plan_id [;]
 ## Remarks  
   
 ## Permissions  
- Requires the **EXECUTE** permission on the database, and **DELETE** permission on the query store catalog views.  
+ Requires the **ALTER** permission on the database.
   
 ## Examples  
  The following example returns information about the queries in the query store.  

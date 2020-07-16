@@ -14,10 +14,9 @@ helpviewer_keywords:
 ms.assetid: 8efe8bb4-face-4608-83f4-cc7c6e9faf31
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Data Collector Functions  (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The data collector uses several functions to obtain information about data collection and data collector statistics, or to obtain data.  
   

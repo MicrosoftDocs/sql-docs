@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "annotated XSD schemas, annotations listed"
   - "XSD schemas [SQLXML], annotations"
 ms.assetid: c62a6785-8d66-40a2-9c5d-80c73d600a3b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # XSD Annotations (SQLXML 4.0)
   The following table lists the XSD annotations that were introduced in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], and compares them with the XDR annotations that were introduced in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)].  

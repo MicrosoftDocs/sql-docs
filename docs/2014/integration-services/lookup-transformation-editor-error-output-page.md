@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.lookuptransformation.erroroutput.f1"
 ms.assetid: 15d53bb0-8be1-46fb-b459-04a397e75fac
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Lookup Transformation Editor (Error Output Page)
   Use the **Error Output** page of the **Lookup Transformation Editor** dialog box to specify error handling options.  

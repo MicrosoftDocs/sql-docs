@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 0a00f409-050f-4b92-9763-ba31a6aa3052
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Exploring the Forecasting Model (Intermediate Data Mining Tutorial)
   Now that you have built the forecasting mining model, you can explore the results by using the **Mining Model Viewer** tab of Data Mining Designer. The [!INCLUDE[msCoName](../includes/msconame-md.md)] Time Series Viewer contains two tabs: **Charts** and **Model**.  

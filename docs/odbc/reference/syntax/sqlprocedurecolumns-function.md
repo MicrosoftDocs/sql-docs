@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLProcedureColumns function [ODBC]"
 ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLProcedureColumns Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLProcedureColumns(  
      SQLHSTMT      StatementHandle,  

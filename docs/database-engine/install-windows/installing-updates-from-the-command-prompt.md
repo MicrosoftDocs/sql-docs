@@ -1,5 +1,6 @@
 ---
 title: "Installing Updates from the Command Prompt | Microsoft Docs"
+description: This article describes command syntax for SQL Server update installation. You can test and modify installation scripts to meet the needs of your organization.
 ms.custom: ""
 ms.date: "09/08/2017"
 ms.prod: sql
@@ -10,11 +11,10 @@ ms.assetid: bc98ba2b-aae9-4d01-aa85-d4c36428cb0b
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Installing Updates from the Command Prompt
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Test and modify installation scripts to meet the needs of your organization. 
  

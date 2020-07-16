@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: a27b51ee-7637-4525-9424-bcc16947dc13
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, Database Mirroring Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **SQLServer:Database Mirroring** performance object contains performance counters that report information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database mirroring. The table below lists the counters that this object contains.  
   
 |Name|Description|  

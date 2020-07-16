@@ -19,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: f929226f-b83d-4900-a07c-a62f64527c7f
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
 ---
 # Enhance Merge Replication Performance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   After considering the general performance tips described in [Enhancing General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), consider these additional areas specific to merge replication.  
   
 ## Database Design  

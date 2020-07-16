@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 ms.assetid: 61c4d6ff-6435-456a-9cbd-5113d2113e8a
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Max Function (Report Builder and SSRS)
   Returns the maximum value of all non-null numeric values specified by the expression, in the context of the given scope.  

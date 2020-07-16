@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Collation property"
@@ -32,7 +30,6 @@ helpviewer_keywords:
 ms.assetid: 72ca3387-620d-4473-8e23-7fe1f2b3d5bf
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Cube Properties
   Cubes have a number of properties that you can set to affect cube-wide behavior. These properties are summarized in the following table.  

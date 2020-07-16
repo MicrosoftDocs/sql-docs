@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Slowly Changing Dimension Wizard"
 ms.assetid: e4d62b73-77c5-4b26-9b6d-d5f245768fc8
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Slowly Changing Dimension Wizard F1 Help
   Use the **Slowly Changing Dimension Wizard** to configure the loading of data into various types of slowly changing dimensions. This section provides F1 Help for the pages of the **Slowly Changing Dimension Wizard**. The following table describes the topics in this section.  

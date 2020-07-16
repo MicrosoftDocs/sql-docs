@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "content types [data mining]"
@@ -20,7 +19,6 @@ helpviewer_keywords:
 ms.assetid: 02c0df7b-6ca5-4bd0-ba97-a5826c9da120
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Discretization Methods (Data Mining)
   Some algorithms that are used to create data mining models in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] require specific content types in order to function correctly. For example, the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm cannot use continuous columns as input and cannot predict continuous values. Additionally, some columns may contain so many values that the algorithm cannot easily identify interesting patterns in the data from which to create a model.  

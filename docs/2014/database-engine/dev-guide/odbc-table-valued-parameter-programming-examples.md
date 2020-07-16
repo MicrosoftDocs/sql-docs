@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: "database-engine"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (ODBC), how-to topics"
 ms.assetid: 3f52b7a7-f2bd-4455-b79e-d015fb397726
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # ODBC Table-Valued Parameter Programming Examples
   This section describes how to perform common tasks with ODBC and table-valued parameters. For another sample demonstrating table-valued parameters, see [Use Table-Valued Parameters &#40;ODBC&#41;](../../relational-databases/native-client-odbc-table-valued-parameters/table-valued-parameters-odbc.md).  

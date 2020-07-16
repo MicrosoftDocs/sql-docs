@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_alert"
 ms.assetid: a831315e-793d-41c4-8333-b324bb2bc614
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_delete_alert (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes an alert.  
   
@@ -34,7 +33,7 @@ sp_delete_alert [ @name = ] 'name'
 ```  
   
 ## Arguments  
- [ **@name=** ] **'***name***'**  
+`[ @name = ] 'name'`
  The name of the alert. *name* is **sysname**, with no default.  
   
 ## Return Code Values  

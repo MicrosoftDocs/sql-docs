@@ -13,9 +13,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid:
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # setDisableStatementPooling Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "mirTab"
 ms.assetid: 260c1617-eecc-4007-a84d-3c5778ce46b6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Generate Mirror Tables and CDC Capture Instances
   Use the Generate Mirror Tables page to generate the mirror tables for the tables you included in the CDC instance  

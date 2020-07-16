@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: ccd65867-d4c0-43b2-8361-7fd41c6f79ac
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Check Files In Use
   To avoid restarting Windows after you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates, use the Check Files in Use page to identify processes that are locking files required by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] update Setup program.  
@@ -37,7 +35,7 @@ manager: craigg
   
 -   Name of the file that is locked  
   
-## UIElement List  
+## UI element list  
   
 |Name|Description|  
 |----------|-----------------|  

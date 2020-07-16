@@ -1,6 +1,6 @@
 ---
-title: "Manage Code Formatting | Microsoft Docs"
-ms.custom: ""
+title: "Manage Code Formatting"
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
@@ -23,13 +23,12 @@ helpviewer_keywords:
   - "text [SQL Server]"
   - "unindenting code"
 ms.assetid: ddbac4d2-6bdc-4467-a352-e869ec880eed
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage Code Formatting
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   With the Editor you can format your code with indenting, hidden text, URLs, and so forth. You can also auto-format your code as you type by using Smart Indenting.  
   
 ## Indenting  
@@ -123,7 +122,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 3.  To convert text to lowercase, press CTRL+SHIFT+L, or click **Make Lowercase** on the **Advanced** submenu of the **Edit** menu.  
   
 > [!NOTE]  
->  For a complete list of keyboard shortcut keys, see [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md).  
+>  For a complete list of keyboard shortcut keys, see [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md).  
   
 ## Displaying and Linking to URLs  
  You can create and display clickable URLs in your code. By default, the URLs:  

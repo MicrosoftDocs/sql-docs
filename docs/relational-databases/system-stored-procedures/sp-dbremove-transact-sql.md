@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dbremove"
 ms.assetid: a8513f4a-c025-49c8-99c3-4c83cb7f51ed
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_dbremove (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes a database and all files associated with that database.  
   
@@ -37,10 +36,10 @@ sp_dbremove [ @dbname = ] 'database' [ , [ @dropdev = ] 'dropdev' ]
 ```  
   
 ## Arguments  
- [ **@dbname=** ] **'**_database_**'**  
+`[ @dbname = ] 'database'`
  Is the name of the database to be removed. *database* is **sysname**, with a default value of NULL.  
   
- [ **@dropdev=** ] **'**_dropdev_**'**  
+`[ @dropdev = ] 'dropdev'`
  Is a flag provided for backward compatibility only and is currently ignored. *dropdev* has the value **dropdev**.  
   
 ## Return Code Values  

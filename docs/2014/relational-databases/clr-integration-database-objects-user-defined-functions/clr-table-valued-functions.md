@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 9a6133ea-36e9-45bf-b572-1c0df3d6c194
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # CLR Table-Valued Functions
   A table-valued function is a user-defined function that returns a table.  
@@ -169,7 +168,7 @@ go
 ```  
   
 ## Sample: Returning the Results of a SQL Server Query  
- The following sample shows a table-valued function that queries a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. This sample uses the AdventureWorks Light database from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. See [http://www.codeplex.com/sqlserversamples](https://go.microsoft.com/fwlink/?LinkId=87843) for more information on downloading AdventureWorks.  
+ The following sample shows a table-valued function that queries a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. This sample uses the AdventureWorks Light database from [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]. See [https://www.codeplex.com/sqlserversamples](https://go.microsoft.com/fwlink/?LinkId=87843) for more information on downloading AdventureWorks.  
   
  Name your source code file FindInvalidEmails.cs or FindInvalidEmails.vb.  
   
@@ -408,5 +407,4 @@ go
 SELECT * FROM FindInvalidEmails('2000-01-01');  
 go  
 ```  
-  
   

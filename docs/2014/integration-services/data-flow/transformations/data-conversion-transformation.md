@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "Data Conversion transformation"
   - "data types [Integration Services], converting"
 ms.assetid: fd515bbc-6f49-4d0c-ae7f-6ea3c3f24a1c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Data Conversion Transformation
   The Data Conversion transformation converts the data in an input column to a different data type and then copies it to a new output column. For example, a package can extract data from multiple sources, and then use this transformation to convert columns to the data type required by the destination data store. You can apply multiple conversions to a single input column.  
@@ -42,7 +41,7 @@ manager: craigg
  You can set properties through the [!INCLUDE[ssIS](../../../includes/ssis-md.md)] Designer or programmatically. For information about using the Data Conversion Transformation in the SSIS Designer, see [Convert Data to a Different Data Type by Using the Data Conversion Transformation](data-conversion-transformation.md) and [Data Conversion Transformation Editor](../../data-conversion-transformation-editor.md). For information about setting properties of this transformation programmatically, see [Common Properties](../../common-properties.md) and [Transformation Custom Properties](transformation-custom-properties.md).  
   
 ## Related Content  
- Blog entry, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](https://go.microsoft.com/fwlink/?LinkId=220823), on blogs.msdn.com.  
+ Blog entry, [Performance Comparison between Data Type Conversion Techniques in SSIS 2008](https://techcommunity.microsoft.com/t5/datacat/performance-comparison-between-data-type-conversion-techniques/ba-p/305035), on blogs.msdn.com.  
   
 ## See Also  
  [Fast Parse](../../fast-parse.md)   

@@ -18,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: d2d3af25-8877-46ba-95d9-1844961d97ee
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # DROP DEFAULT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes one or more user-defined defaults from the current database.  
   
@@ -32,7 +31,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 DROP DEFAULT [ IF EXISTS ] { [ schema_name . ] default_name } [ ,...n ] [ ; ]  
 ```  
   

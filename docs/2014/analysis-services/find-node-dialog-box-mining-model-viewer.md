@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.clustering.findnode.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 220ebca3-3339-4b32-9770-4293fe8e70a4
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Find Node Dialog Box (Mining Model Viewer)
   Use the **Find Node** dialog box, available in the **Dependency Network** tab of a model, to locate a specific node. This feature is helpful in complex diagrams that contain many nodes or itemsets.  

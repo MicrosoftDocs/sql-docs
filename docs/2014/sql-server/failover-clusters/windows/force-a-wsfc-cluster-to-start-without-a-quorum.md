@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Force a WSFC Cluster to Start Without a Quorum
   This topic describes how to force a Windows Server Failover Clustering (WSFC) cluster node to start without a quorum.  This may be required in disaster recovery and multi-subnet scenarios to recover data and fully re-establish high-availability for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Instances.  
@@ -72,13 +71,12 @@ Start-ClusterNode -Name $node -FixQuorum
 (Get-ClusterNode $node).NodeWeight = 1  
   
 $nodes = Get-ClusterNode -Cluster $node  
-$nodes | Format-Table -property NodeName, State, NodeWeight  
-  
+$nodes | Format-Table -property NodeName, State, NodeWeight
 ```  
   
 ##  <a name="CommandPromptProcedure"></a> Using Net.exe  
   
-##### To force a cluster to start without a quorum  
+### To force a cluster to start without a quorum  
   
 1.  Use Remote Desktop to connect to the desired cluster node to force online.  
   
@@ -91,7 +89,7 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 ### Example (Net.exe)  
  The following example forces a node cluster service to start without a quorum, sets the `NodeWeight = 1`, and then enumerates cluster node status from the newly forced node.  
   
-```ms-dos  
+```cmd
 net.exe stop clussvc  
 net.exe start clussvc /forcequorum  
 ```  
@@ -116,7 +114,7 @@ net.exe start clussvc /forcequorum
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [View Events and Logs for a Failover Cluster](https://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
+-   [View Events and Logs for a Failover Cluster](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772342(v=ws.11))  
   
 -   [Get-ClusterLog Failover Cluster Cmdlet](https://technet.microsoft.com/library/ee461045.aspx)  
   
@@ -124,5 +122,3 @@ net.exe start clussvc /forcequorum
  [WSFC Disaster Recovery through Forced Quorum &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [Configure Cluster Quorum NodeWeight Settings](configure-cluster-quorum-nodeweight-settings.md)   
  [Failover Cluster Cmdlets in Windows PowerShell Listed by Task Focus](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
-  
-  

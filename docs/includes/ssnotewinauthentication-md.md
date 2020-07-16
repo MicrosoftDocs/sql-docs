@@ -1,1 +1,1 @@
- When possible, use Windows Authentication. 
+ When possible, use Windows authentication. 

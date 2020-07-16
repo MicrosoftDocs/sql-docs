@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "data formats [SQL Server], choosing"
   - "bulk importing [SQL Server], data formats"
 ms.assetid: 73fe6741-9437-4b26-b030-28b863e74399
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Data Formats for Bulk Import or Bulk Export (SQL Server)
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can accept data in character data format or native binary data format. Use character format when you move data between [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and another application (such as [!INCLUDE[msCoName](../../includes/msconame-md.md)] Excel) or another database server (such as Oracle or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). You can use native format only when you transfer data between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

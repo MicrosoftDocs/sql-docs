@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "HierarchyID"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 2c95fa60-5b8e-4a05-ac09-cffe2b05900a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Populating a Hierarchical Table Using Hierarchical Methods
   [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] has 8 employees working in the Marketing department. The employee hierarchy looks like this:  

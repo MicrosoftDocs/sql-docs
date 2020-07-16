@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLColumnPrivileges function [ODBC]"
 ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLColumnPrivileges Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 SQLRETURN SQLColumnPrivileges(  
      SQLHSTMT      StatementHandle,  

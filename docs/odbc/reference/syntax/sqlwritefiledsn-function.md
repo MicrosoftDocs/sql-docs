@@ -17,9 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLWriteFileDSN [ODBC]"
 ms.assetid: 9e18f56f-1061-416b-83d4-ffeec42ab5a9
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLWriteFileDSN Function
 **Conformance**  
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```cpp  
   
 BOOL SQLWriteFileDSN(  
      LPCSTR     lpszFileName,  

@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_enumcustomresolvers"
 ms.assetid: 81bd0d3a-48dc-42b1-b662-c630f61fc630
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_enumcustomresolvers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a list of all available business logic handlers and custom resolvers registered at the Distributor. This stored procedure is executed at the Publisher on any database.  
   
@@ -32,7 +31,7 @@ sp_enumcustomresolvers [ [ @distributor =] 'distributor']
 ```  
   
 ## Arguments  
- [ **@distributor =**] **'**_distributor_**'**  
+`[ @distributor = ] 'distributor'`
  Is the name of the Distributor where the custom resolver is located. *distributor* is **sysname**, with a default of NULL. *This parameter is deprecated and will be removed in a future release.*  
   
 ## Result Sets  

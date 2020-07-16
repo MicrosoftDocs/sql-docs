@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "extended events [SQL Server], PowerShell"
   - "PowerShell [SQL Server], extended events"
 ms.assetid: 0b10016f-a479-4444-a484-46cb4677cf64
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Use the PowerShell Provider for Extended Events
   You can manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Extended Events by using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] PowerShell provider. The XEvent subfolder is available under the SQLSERVER drive. You can access the folder by using either of the following methods:  
@@ -46,7 +45,7 @@ manager: craigg
   
  The following script creates a new session that is named 'TestSession'.  
   
-```  
+```powershell
 #Script for creating a session.  
 cd XEvent  
 $h = hostname  
@@ -54,7 +53,7 @@ cd $h
   
 #Use the default instance.  
 $store = dir | where {$_.DisplayName -ieq 'default'}  
-$session = new-object Microsoft.SqlServer.Management.XEvent.Session -argumentlist $store, "TestSession"  
+$session = New-Object Microsoft.SqlServer.Management.XEvent.Session -ArgumentList $store, "TestSession"  
 $event = $session.AddEvent("sqlserver.file_written")  
 $event.AddAction("package0.callstack")  
 $session.Create()  
@@ -62,7 +61,7 @@ $session.Create()
   
  The following script adds the ring buffer target to the session that was created in the previous example. (This example shows the use of the `Alter` method. Be aware that you can add the target when you first create the session.)  
   
-```  
+```powershell
 #Script to alter a session.  
 cd XEvent  
 $h = hostname  
@@ -70,7 +69,7 @@ cd $h
 cd DEFAULT\Sessions  
   
 #Used to find the specified session.  
-$session = dir|where {$_.Name -eq 'TestSession'}  
+$session = dir | where {$_.Name -eq 'TestSession'}  
   
 #Add the ring buffer target and call the Alter method.  
 $session.AddTarget("package0.ring_buffer")  
@@ -79,7 +78,7 @@ $session.Alter()
   
  The following script creates a new session that uses a predicate expression. In this case, the session collects information for when the c:\temp.log file is written to (through the sqlserver.file_written event).  
   
-```  
+```powershell
 #Script for creating a session.  
 cd XEvent  
 $h = hostname  
@@ -87,7 +86,7 @@ cd $h
   
 #Use the default instance.  
 $store = dir | where {$_.DisplayName -ieq 'default'}  
-$session = new-object Microsoft.SqlServer.Management.XEvent.Session -argumentlist $store, "TestSession2"  
+$session = New-Object Microsoft.SqlServer.Management.XEvent.Session -ArgumentList $store, "TestSession2"  
 $event = $session.AddEvent("sqlserver.file_written")  
   
 #Construct a predicate "equal_i_unicode_string(path, N'c:\temp.log')".  
@@ -95,7 +94,7 @@ $column = $store.SqlServerPackage.EventInfoSet["file_written"].DataEventColumnIn
 $operand = new-object Microsoft.SqlServer.Management.XEvent.PredOperand -argumentlist $column  
 $value = new-object Microsoft.SqlServer.Management.XEvent.PredValue -argumentlist "c:\temp.log"  
 $compare = $store.Package0Package.PredCompareInfoSet["equal_i_unicode_string"]  
-$predicate = new-object Microsoft.SqlServer.Management.XEvent.PredFunctionExpr -argumentlist $compare, $operand, $value  
+$predicate = new-object Microsoft.SqlServer.Management.XEvent.PredFunctionExpr -ArgumentList $compare, $operand, $value  
 $event.SetPredicate($predicate)  
 $session.Create()  
 ```  
@@ -107,5 +106,3 @@ $session.Create()
  [SQL Server PowerShell](../../powershell/sql-server-powershell.md)   
  [Use the system_health Session](use-the-ssms-xe-profiler.md)   
  [Extended Events Tools](extended-events-tools.md)  
-  
-  

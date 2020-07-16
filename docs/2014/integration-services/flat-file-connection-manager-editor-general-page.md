@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.ffileconnection.general.f1"
 helpviewer_keywords: 
   - "Flat File Connection Manager Editor"
 ms.assetid: 77296024-5c1a-4f6a-9665-0b50d45d744c
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Flat File Connection Manager Editor (General Page)
   Use the **General** page of the **Flat File Connection Manager Editor** dialog box to select a file and data format. A flat file connection enables a package to connect to a text file.  

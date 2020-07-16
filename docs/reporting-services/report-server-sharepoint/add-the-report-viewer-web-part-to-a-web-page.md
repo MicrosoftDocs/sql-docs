@@ -1,14 +1,15 @@
 ---
 title: "Add the Report Viewer web part to a web page | Microsoft Docs"
+description: You can use the Report Viewer web part to view reports that run on SQL Server Reporting Services in SharePoint integrated mode.
 ms.date: 10/05/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-server-sharepoint
 
 
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # Add the Report Viewer web part to a web page
 

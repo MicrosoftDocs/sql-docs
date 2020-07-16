@@ -1,7 +1,8 @@
 ---
 title: "XML Format Files (SQL Server) | Microsoft Docs"
+description: SQL Server 2019 provides an XML schema that defines syntax for writing XML format files to use for bulk importing data into a SQL Server table.
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -12,13 +13,12 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], format files"
   - "XML format files [SQL Server]"
 ms.assetid: 69024aad-eeea-4187-8fea-b49bc2359849
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # XML Format Files (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] provides an XML schema that defines syntax for writing *XML format files* to use for bulk importing data into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table. XML format files must adhere to this schema, which is defined in the XML Schema Definition Language (XSDL). XML format files are only supported when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tools are installed together with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   
  You can use an XML format file with a **bcp** command, BULK INSERT statement, or INSERT ... SELECT \* FROM OPENROWSET(BULK...) statement. The **bcp** command allows you to automatically generate an XML format file for a table; for more information, see [bcp Utility](../../tools/bcp-utility.md).  
@@ -313,7 +313,7 @@ XmlNodeList ColumnList = myDoc.GetElementsByTagName("COLUMN");
 for(int i=0;i<ColumnList.Count;i++)  
 {  
    Console.Write("COLUMN: xsi:type=" +ColumnList[i].Attributes["type",  
-      "https://www.w3.org/2001/XMLSchema-instance"].Value+"\n");  
+      "http://www.w3.org/2001/XMLSchema-instance"].Value+"\n");  
 }  
 ```  
   
@@ -359,7 +359,7 @@ for(int i=0;i<ColumnList.Count;i++)
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>   
@@ -395,7 +395,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version="1.0"?>  
 <BCPFORMAT   
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>  
@@ -430,7 +430,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version = "1.0"?>  
 <BCPFORMAT   
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="\t"   
       MAX_LENGTH="12"/>  
@@ -462,7 +462,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version = "1.0"?>  
 <BCPFORMAT  
 xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-   xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
    <RECORD>  
       <FIELD xsi:type="CharTerm" ID="C1" TERMINATOR="\t"   
             MAX_LENGTH="4"/>  
@@ -504,7 +504,7 @@ CREATE TABLE t_xml (c1 int, c2 xml)
 ```xml
 <?xml version="1.0"?>  
 <BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"   
-xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
  <RECORD>  
   <FIELD ID="1" xsi:type="NativePrefix" PREFIX_LENGTH="1"/>  
   <FIELD ID="2" xsi:type="NCharPrefix" PREFIX_LENGTH="8"/>  
@@ -523,7 +523,7 @@ xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
 <?xml version="1.0"?>  
 <BCPFORMAT  
        xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format"  
-       xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
   <RECORD>  
     <FIELD ID="1" xsi:type="CharFixed" LENGTH="10"/>  
     <FIELD ID="2" xsi:type="CharFixed" LENGTH="6"/>  

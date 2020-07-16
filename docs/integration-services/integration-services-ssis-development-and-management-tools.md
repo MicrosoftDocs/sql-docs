@@ -1,5 +1,5 @@
 ---
-title: "Integration Services (SSIS) Development and Management Tools | Microsoft Docs"
+title: "Development and Management Tools | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,11 +16,14 @@ helpviewer_keywords:
   - "SQL Server Integration Services, studio environments"
   - "tools [Integration Services], SQL Server Management Studio"
 ms.assetid: 4eb73e65-d9f3-4ac6-a408-abfa85afc537
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Integration Services (SSIS) Development and Management Tools
+
+[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes two studios for working with packages:  
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] for developing the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] packages that a business solution requires. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] provides the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] project in which you create packages.  

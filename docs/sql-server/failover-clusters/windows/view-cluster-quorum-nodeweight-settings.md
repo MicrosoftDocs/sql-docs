@@ -1,5 +1,6 @@
 ---
 title: "View Cluster Quorum NodeWeight Settings | Microsoft Docs"
+description: Learn how to view NodeWeight settings for each member node in a Windows Server Failover Clustering cluster. These settings are used during quorum voting.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: b845e73a-bb01-4de2-aac2-8ac12abebc95
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # View Cluster Quorum NodeWeight Settings
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to view NodeWeight settings for each member node in a Windows Server Failover Clustering (WSFC) cluster. NodeWeight settings are used during quorum voting to support disaster recovery and multi-subnet scenarios for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Instances.  
   
 -   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  
@@ -49,7 +49,7 @@ manager: craigg
 ### Example (Transact-SQL)  
  The following example queries a system view to return values for all of the nodes in that instance's cluster.  
   
-```tsql  
+```sql  
 SELECT  member_name, member_state_desc, number_of_quorum_votes  
  FROM   sys.dm_hadr_cluster_members;  
 ```  

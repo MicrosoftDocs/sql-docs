@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "objects [Analysis Services], about objects"
@@ -18,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: f76d869b-fc1d-4807-9f28-da09c7be382d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Database Objects (Analysis Services - Multidimensional Data)
   A [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] instance contains database objects and assemblies for use with online analytical processing (OLAP) and data mining.  

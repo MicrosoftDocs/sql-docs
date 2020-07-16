@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models [Analysis Services], feature selections"
@@ -21,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: b044e785-4875-45ab-8ae4-cd3b4e3033bb
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Feature Selection (Data Mining)
   *Feature selection* is a term commonly used in data mining to describe the tools and techniques available for reducing inputs to a manageable size for processing and analysis. Feature selection implies not only *cardinality reduction*, which means imposing an arbitrary or predefined cutoff on the number of attributes that can be considered when building a model, but also the choice of attributes, meaning that either the analyst or the modeling tool actively selects or discards attributes based on their usefulness for analysis.  

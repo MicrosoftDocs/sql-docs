@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Database Engine [SQL Server], tutorials"
 ms.assetid: e4e690c9-434f-4b01-b4de-0b905323ddd6
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Viewing Tuning Recommendations
   This task uses the tuning session that you created in [Tuning a Workload](lesson-1-1-tuning-a-workload.md). After you have tuned the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database by using the MyScript.sql [!INCLUDE[tsql](../../includes/tsql-md.md)] script, [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor displays its results on the **Recommendations** tab. The following task introduces the **Recommendations** tab of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor graphical user interface (GUI) and guides you to explore the information it provides about the tuning session results.  

@@ -1,9 +1,8 @@
 ---
-title: "xml_schema_namespace (Transact-SQL) | Microsoft Docs"
+title: xml_schema_namespace (Transact-SQL)
 ms.custom: ""
 ms.date: "07/27/2017"
 ms.prod: sql
-ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
@@ -19,12 +18,11 @@ helpviewer_keywords:
   - "schemas [SQL Server], XML"
   - "schema collections [SQL Server], reconstructing schemas"
 ms.assetid: ee9873d8-dd3a-4bff-a10c-68bbadbdf1a6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # xml_schema_namespace
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reconstructs all the schemas or a specific schema in the specified XML schema collection. This function returns an **xml** data type instance.  
   
@@ -37,7 +35,9 @@ manager: craigg
 xml_schema_namespace( Relational_schema , XML_schema_collection_name , [ Namespace ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Relational_schema*  
  Is the relational schema name. *Relational_schema* is **sysname**.  
   

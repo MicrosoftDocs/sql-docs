@@ -36,11 +36,10 @@ helpviewer_keywords:
 ms.assetid: 0b6f2b6f-3aa3-4767-943f-43df3c3c5cfd
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP TABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Removes one or more table definitions and all data, indexes, triggers, constraints, and permission specifications for those tables. Any view or stored procedure that references the dropped table must be explicitly dropped by using [DROP VIEW](../../t-sql/statements/drop-view-transact-sql.md) or [DROP PROCEDURE](../../t-sql/statements/drop-procedure-transact-sql.md). To report the dependencies on a table, use [sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md).  
   
@@ -48,18 +47,17 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
-DROP TABLE [ IF EXISTS ] [ database_name . [ schema_name ] . | schema_name . ]  
-table_name [ ,...n ]  
+DROP TABLE [ IF EXISTS ] { database_name.schema_name.table_name | schema_name.table_name | table_name } [ ,...n ]  
 [ ; ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
-DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name   
+DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 [;]  
 ```  
   
@@ -67,7 +65,7 @@ DROP TABLE [ database_name . [ schema_name ] . | schema_name . ] table_name
  *database_name*  
  Is the name of the database in which the table was created.  
   
- Windows Azure SQL Database supports the three-part name format database_name.[schema_name].object_name when the database_name is the current database or the database_name is tempdb and the object_name starts with #. Windows Azure SQL Database does not support four-part names.  
+ Azure SQL Database supports the three-part name format database_name.[schema_name].object_name when the database_name is the current database or the database_name is tempdb and the object_name starts with #. Azure SQL Database does not support four-part names.  
   
  *IF EXISTS*  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  

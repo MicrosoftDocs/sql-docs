@@ -4,16 +4,14 @@ ms.custom: ""
 ms.date: "02/28/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.DTS.DESIGNER.AFPARMCM.F1"
   - "SQL11.DTS.DESIGNER.AFPARMCM.F1"
 ms.assetid: a2380258-0418-4a8c-a731-5071a44ddf1e
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Azure Resource Manager Connection Manager
 The **Azure Resource Manager Connection Manager** enables an SSIS package to manage Azure resources using a [service principal](https://docs.microsoft.com/azure/azure-resource-manager/resource-group-create-service-principal-portal).

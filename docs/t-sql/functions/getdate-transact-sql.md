@@ -1,6 +1,6 @@
 ---
 title: "GETDATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the GETDATE function, which returns the current database system time as a datetime value."
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -27,16 +27,12 @@ helpviewer_keywords:
   - "dates [SQL Server], system date and time"
   - "time [SQL Server], system"
 ms.assetid: bebe3b65-2b3e-4c73-bf80-ff1132c680a7
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # GETDATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Returns the current database system timestamp as a **datetime** value without the database time zone offset. This value is derived from the operating system of the computer on which the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is running.  
 

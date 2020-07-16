@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.pro.replay.generaloptions.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 85a1dec6-9bbc-477a-86c5-b463db9ebb31
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # SQL Server Profiler - Replay Configuration (Basic Replay Options)
   In the **Replay Configuration** dialog box, use the **Basic Replay Options** page to specify how to replay a trace file or table.  

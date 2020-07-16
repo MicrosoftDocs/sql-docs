@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: a763d76b-06a3-4d51-9614-01fc9fb1c158
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Task 8: Adding a New Value for State Entity in Excel
   In this task, you add a value for the State entity in Excel and publish the change to the MDS server.  

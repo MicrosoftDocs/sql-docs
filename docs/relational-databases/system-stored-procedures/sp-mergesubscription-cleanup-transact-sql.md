@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_mergesubscription_cleanup"
 ms.assetid: bfad414f-2bda-4bf5-9507-56a1e743dfc4
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_mergesubscription_cleanup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes metadata, such as triggers and entries, in **sysmergesubscriptions** and **sysmergearticles** after the specified merge push subscription is removed at the Publisher. This stored procedure is run at the Subscriber on the subscription database.  
   
@@ -37,13 +36,13 @@ sp_mergesubscription_cleanup [ @publisher =] 'publisher'
 ```  
   
 ## Arguments  
- [ **@publisher =**] **'***publisher***'**  
+`[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
   
- [ **@publisher_db =**] **'***publisher_db***'**  
+`[ @publisher_db = ] 'publisher_db'`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with no default.  
   
- [ **@publication =**] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with no default.  
   
 ## Return Code Values  

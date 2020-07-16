@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 12e9fe6a-20a5-4c6e-9cc9-d500c003b70a
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Configure the media retention Server Configuration Option
   This topic describes how to configure the **media retention** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **media retention** option specifies the length of time to retain each backup set. The option helps protect backups from being overwritten until the specified number of days has elapsed. After you configure **media retention** option, you do not have to specify the length of time to retain system backups each time you perform a backup. The default value is 0 days, and the maximum value is 365 days.  
@@ -73,7 +72,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) to set the value of the `media retention` option to `60` days.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  

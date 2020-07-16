@@ -17,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 4ba4aa91-4c19-41c7-b70d-5fd9d0e89a5e
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # sp_syspolicy_purge_health_state (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes the policy health states in Policy-Based Management. Policy health states are visual indicators (a scroll symbol with a red "X") within Object Explorer that enable you to determine which nodes have failed a policy evaluation.  
   
@@ -34,7 +33,7 @@ sp_syspolicy_purge_health_state [ @target_tree_root_with_id = ] 'target_tree_roo
 ```  
   
 ## Arguments  
- [ **@target_tree_root_with_id =** ] **'***target_tree_root_with_id***'**  
+`[ @target_tree_root_with_id = ] 'target_tree_root_with_id'`
  Represents the node in Object Explorer where you want to clear the health state. *target_tree_root_with_id* is **nvarchar(400)**, with a default of NULL.  
   
  You can specify values from the target_query_expression_with_id column of the msdb.dbo.syspolicy_system_health_state system view.  

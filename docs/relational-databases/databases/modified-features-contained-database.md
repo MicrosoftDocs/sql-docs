@@ -12,10 +12,9 @@ helpviewer_keywords:
 ms.assetid: a2942509-39a2-4903-b504-ae80a300a9de
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Modified Features (Contained Database)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The following features have been modified to be supported by a partially contained database. Features are usually modified so they do not cross the database boundary.  
   
  For more information, see [Contained Databases](../../relational-databases/databases/contained-databases.md).  

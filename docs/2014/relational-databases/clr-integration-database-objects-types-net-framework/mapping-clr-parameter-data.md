@@ -25,7 +25,6 @@ helpviewer_keywords:
 ms.assetid: 89b43ee9-b9ad-4281-a4bf-c7c8d116daa2
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Mapping CLR Parameter Data
   The following table lists [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types, their equivalents in the common language runtime (CLR) for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in the `System.Data.SqlTypes` namespace, and their native CLR equivalents in the [!INCLUDE[msCoName](../../includes/msconame-md.md)] .NET Framework.  
@@ -44,9 +43,9 @@ manager: craigg
 |`DATETIMEOFFSET`|`None`|**DateTimeOffset, Nullable\<DateTimeOffset>**|  
 |`decimal`|`SqlDecimal`|**Decimal, Nullable\<Decimal>**|  
 |`float`|`SqlDouble`|**Double, Nullable\<Double>**|  
-|`geography`|`SqlGeography`<br /><br /> `SqlGeography` is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][feature pack](https://go.microsoft.com/fwlink/?LinkId=131220).|None|  
-|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][feature pack](https://go.microsoft.com/fwlink/?LinkId=131220).|None|  
-|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][feature pack](https://go.microsoft.com/fwlink/?LinkId=131220).|None|  
+|`geography`|`SqlGeography`<br /><br /> `SqlGeography` is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][feature pack](https://www.microsoft.com/download/details.aspx?id=53164).|None|  
+|`geometry`|`SqlGeometry`<br /><br /> `SqlGeometry` is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][feature pack](https://www.microsoft.com/download/details.aspx?id=53164).|None|  
+|`hierarchyid`|`SqlHierarchyId`<br /><br /> `SqlHierarchyId` is defined in Microsoft.SqlServer.Types.dll, which is installed with SQL Server and can be downloaded from the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)][feature pack](https://www.microsoft.com/download/details.aspx?id=53164).|None|  
 |`image`|None|None|  
 |`int`|`SqlInt32`|**Int32, Nullable\<Int32>**|  
 |`money`|`SqlMoney`|**Decimal, Nullable\<Decimal>**|  

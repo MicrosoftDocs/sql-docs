@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "cluster network selection, Setup"
@@ -13,7 +12,6 @@ f1_keywords:
 ms.assetid: 579482ef-a023-45b2-9176-b4a4188adf9d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Cluster Network Configuration
   Use the **Cluster Network Selection** page to specify the network resources for your failover cluster instance.  

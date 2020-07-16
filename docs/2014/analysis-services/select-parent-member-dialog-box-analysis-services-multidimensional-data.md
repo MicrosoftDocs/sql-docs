@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.saveparentmemberdilaog.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: d3fea023-3334-493f-97ce-5c9829e7ce71
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Parent Member Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Select Parent Member** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to select a parent member for a calculated member. You can display the **Select Parent Member** dialog box by clicking **Change** in the **Calculated Member Form Editor** pane on the **Calculations** tab in Cube Designer.  

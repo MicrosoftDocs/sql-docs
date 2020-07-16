@@ -10,10 +10,9 @@ ms.topic: conceptual
 ms.assetid: 98b2914e-7147-40af-ba7d-87253bbe8bf9
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 ---
 # Publish a Database (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You can use the **Generate and Publish Scripts Wizard** to publish an entire database or individual database objects to a Web hosting provider.  
   
 > [!NOTE]  
@@ -39,7 +38,7 @@ manager: craigg
 4.  On the **Summary** page, review your selections. Click **Previous** to change your selections. Click **Next** to publish the objects you selected.  
   
 5.  On the **Save or Publish Scripts** page, monitor the progress of the publication.  
-  
+
 ## See Also  
  [Generate Scripts &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/generate-scripts-sql-server-management-studio.md)   
  [Copy Databases to Other Servers](../../relational-databases/databases/copy-databases-to-other-servers.md)  

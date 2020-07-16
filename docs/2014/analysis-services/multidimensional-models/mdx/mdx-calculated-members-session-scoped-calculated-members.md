@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "CREATE MEMBER statement"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2875ed89-2c26-4645-8ed9-8848479d110f
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Creating Session-Scoped Calculated Members (MDX)
   To create a calculated member that is available throughout a Multidimensional Expressions (MDX) session, you use the [CREATE MEMBER](/sql/mdx/mdx-data-definition-create-member) statement. A calculated member that is created by using the CREATE MEMBER statement will not be removed until after the MDX session closes.  

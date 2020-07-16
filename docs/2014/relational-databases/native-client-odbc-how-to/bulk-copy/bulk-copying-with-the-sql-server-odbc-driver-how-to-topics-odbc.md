@@ -1,7 +1,7 @@
 ---
 title: "Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/13/2017"
+ms.date: 10/18/2019
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
 ms.technology: native-client
@@ -10,12 +10,11 @@ helpviewer_keywords:
   - "bulk copy [ODBC]"
   - "bulk copy [ODBC], about bulk copy"
 ms.assetid: 6037b2c2-62b5-4a9e-b36d-83e5b315eef2
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Bulk Copying with the SQL Server ODBC Driver How-to Topics (ODBC)
-  When used with Microsoft?? SQL Server??? 2005, the SQL Server ODBC driver supports the same bulk copy functions supported by the DB-Library API.  
+  When used with Microsoft SQL Server 2005, the SQL Server ODBC driver supports the same bulk copy functions supported by the DB-Library API.  
   
  For information about a breaking change in bulk copying beginning in [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], see [Performing Bulk Copy Operations &#40;ODBC&#41;](../../native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md).  
   

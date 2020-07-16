@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "attributes [Master Data Services], deleting"
   - "deleting attributes [Master Data Services]"
 ms.assetid: ec3e66f7-0e35-43d7-a80d-64899948ebfe
-author: leolimsft
+author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Delete an Attribute (Master Data Services)
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], delete an attribute when you want to permanently delete the attribute and all associated attribute values.  

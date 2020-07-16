@@ -18,12 +18,11 @@ helpviewer_keywords:
   - "displaying source text"
   - "OBJECT_DEFINITION function"
 ms.assetid: 2ac837c7-eca9-4d29-b06e-72e30450c68d
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # OBJECT_DEFINITION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the [!INCLUDE[tsql](../../includes/tsql-md.md)] source text of the definition of a specified object.  
   

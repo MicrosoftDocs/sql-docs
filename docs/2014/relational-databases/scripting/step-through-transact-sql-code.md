@@ -1,11 +1,10 @@
 ---
-title: "Step Through Transact-SQL Code | Microsoft Docs"
-ms.custom: ""
+title: Step Through Transact-SQL Code
+ms.custom: seo-lt-2019
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, debugging code"
@@ -13,9 +12,8 @@ helpviewer_keywords:
   - "Transact-SQL debugger, step out"
   - "Transact-SQL debugger, step into"
 ms.assetid: e09079b8-c4c9-42b4-821b-4ce81a98a086
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Step Through Transact-SQL Code
   The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger enables you to control which [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are run in a [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window. You can pause the debugger on individual statements and then view the state of the code elements at that point.  

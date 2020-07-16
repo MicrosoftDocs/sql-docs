@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.SWB.SUMMARY.RENDER.CUSTOM.REPORT.F1"
 ms.assetid: e976e7c0-a805-4370-bf73-356c8e3becfb
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Reports for the Integration Services Server
   In the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)], standard reports are available in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to help you monitor [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] projects that have been deployed to the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server. These reports help you to view package status and history, and, if necessary, identify the cause of package execution failures.  

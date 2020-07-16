@@ -18,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 1d7bd180-fd6c-4b38-a87b-351496040542
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Backing Up and Restoring Databases and Transaction Logs
   In SMO, the <xref:Microsoft.SqlServer.Management.Smo.Backup> class and the <xref:Microsoft.SqlServer.Management.Smo.Restore> class are utility classes that provide the tools to accomplish the specific tasks of backing up and restoring. A <xref:Microsoft.SqlServer.Management.Smo.Backup> object represents a specific backup task that is required instead of a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] object on the server instance.  
@@ -33,7 +32,7 @@ manager: craigg
 ## Backing Up Databases and Transaction Logs in Visual Basic  
  This code example shows how to back up an existing database to a file, and then how to restore it.  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Common  
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.VisualBasic.MyServices  
@@ -173,7 +172,7 @@ End Module
 ## Backing Up Databases and Transaction Logs in Visual C#  
  This code example shows how to back up an existing database to a file, and then how to restore it.  
   
-```  
+```csharp
 using Microsoft.SqlServer.Management.Common;  
 using Microsoft.SqlServer.Management.Smo;  
   
@@ -311,9 +310,7 @@ class A {
 ## Backing Up Databases and Transaction Logs in PowerShell  
  This code example shows how to back up an existing database to a file, and then how to restore it.  
   
-```  
-#Backing up and restoring a Database from PowerShell  
-  
+```powershell
 #Connect to the local, default instance of SQL Server.  
   
 #Get a server object which corresponds to the default instance  
@@ -446,7 +443,7 @@ del "C:\Program Files\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQL\Backup\Test
 > [!NOTE]  
 >  The <xref:System.Collections.Specialized.StringCollection> object requires a reference to the namespace using the `imports System.Collections.Specialized` statement.  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Smo  
 Imports Microsoft.SqlServer.Management.Common  
 Imports System.Collections.Specialized  
@@ -476,7 +473,7 @@ End Module
 > [!NOTE]  
 >  The <xref:System.Collections.Specialized.StringCollection> object requires a reference to the namespace using the `imports System.Collections.Specialized` statement.  
   
-```  
+```csharp
 using Microsoft.SqlServer.Management.Common;  
 using Microsoft.SqlServer.Management.Smo;  
 using System;  
@@ -508,16 +505,14 @@ class A {
 > [!NOTE]  
 >  The <xref:System.Collections.Specialized.StringCollection> object requires a reference to the namespace using the `imports System.Collections.Specialized` statement.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server and get a reference to AdventureWorks2012  
 CD \sql\localhost\default\databases  
-$db = get-item Adventureworks2012  
+$db = Get-Item Adventureworks2012  
   
 $sc = $db.CheckTables([Microsoft.SqlServer.Management.SMO.RepairType]::None)  
-foreach ($c in $sc)  
+ForEach ($c In $sc)  
 {  
     $c  
- }  
+}  
 ```  
-  
-  

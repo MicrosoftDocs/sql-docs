@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STPointOnSurface (geometry Data Type)"
 ms.assetid: 23b2b8eb-4176-49fb-ace0-92398928d60e
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STPointOnSurface (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns an arbitrary point located within the interior of a **geometry** instance.
   

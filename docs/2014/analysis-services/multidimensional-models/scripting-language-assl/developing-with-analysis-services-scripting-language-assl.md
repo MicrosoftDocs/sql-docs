@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "Analysis Services Scripting Language"
@@ -14,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: ce9aca4d-b7ad-451e-bb7f-20c2b0c03f29
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Developing with Analysis Services Scripting Language (ASSL)
   Analysis Services Scripting Language (ASSL) is an extension to XMLA that adds an object definition language and command language for creating and managing Analysis Services structures directly on the server. You can use ASSL in custom application to communicate with Analysis Services over the XMLA protocol. ASSL is made up of two parts:  

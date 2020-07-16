@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.accuracychart.liftchart.f1"
 ms.assetid: f1674e2e-d38e-40c7-b8d1-5585ce9a0168
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Lift Chart Tab (Mining Accuracy Chart View)
   Use the **Lift Chart** pane to view a chart that compares all the selected mining models in the selected mining structure.  

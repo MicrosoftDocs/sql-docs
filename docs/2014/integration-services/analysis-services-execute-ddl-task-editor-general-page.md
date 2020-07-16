@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.asexecuteddltask.general.f1"
 helpviewer_keywords: 
   - "Analysis Services Execute DDL Task Editor"
 ms.assetid: 28788cc5-7c84-4c6f-9650-62372c519728
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Analysis Services Execute DDL Task Editor (General Page)
   Use the **General** pageof the **Analysis Services Execute DDL Task Editor** dialog box to name and describe the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Execute DDL task.  

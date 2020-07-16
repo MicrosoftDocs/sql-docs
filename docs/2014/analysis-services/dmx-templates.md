@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 2a577e52-821d-4bd3-ba35-075a6be285c9
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # DMX Templates
   The data mining templates help you quickly build sophisticated queries. Although the general syntax for DMX queries is well documented, using the templates makes it easier to build queries by clicking and pointing to arguments and data sources.  

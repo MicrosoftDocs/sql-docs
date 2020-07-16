@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "oraDb"
 ms.assetid: 220cf555-0db2-443c-8f87-8e413f3ca731
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Connect to an Oracle Source Database
   Use the Oracle Source page to provide the information necessary to connect to the Oracle source database. The CDC instance will read the redo logs of the Oracle database you are connected to.  

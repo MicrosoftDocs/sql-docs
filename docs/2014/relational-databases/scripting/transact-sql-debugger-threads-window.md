@@ -1,18 +1,16 @@
 ---
-title: "Threads Window | Microsoft Docs"
-ms.custom: ""
+title: Threads Window
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Threads Window [Transact-SQL]"
 ms.assetid: e153f619-0049-4162-9076-c24a454f3278
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Threads Window
   The **Threads** window displays information about the [!INCLUDE[ssDE](../../includes/ssde-md.md)] thread that is used by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor session that is being debugged. You must be in debug mode to display the thread information.  

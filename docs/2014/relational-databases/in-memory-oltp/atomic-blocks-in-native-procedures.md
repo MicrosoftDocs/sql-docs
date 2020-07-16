@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 40e0e749-260c-4cfc-a848-444d30c09d85
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Atomic Blocks
   `BEGIN ATOMIC` is part of the ANSI SQL standard. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports atomic blocks only at the top-level of natively compiled stored procedures.  
@@ -29,7 +28,7 @@ manager: craigg
   
  The following example illustrates the error handling behavior with atomic blocks and natively compiled stored procedures:  
   
-```tsql  
+```sql  
 -- sample table  
 CREATE TABLE dbo.t1 (  
   c1 int not null primary key nonclustered  

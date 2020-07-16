@@ -5,8 +5,7 @@ ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
-ms.technology: 
-
+ms.technology: replication
 ms.topic: "reference"
 dev_langs: 
   - "TSQL"
@@ -19,10 +18,10 @@ helpviewer_keywords:
 ms.assetid: 816d2bda-ed72-43ec-aa4d-7ee3dc25fd8a
 author: "MashaMSFT"
 ms.author: "mathoma"
-manager: craigg
+monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Replication System Stored Procedures Concepts
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   In [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], programmatic access to all of the user-configurable functionality in a replication topology is provided by system stored procedures. While stored procedures may be executed individually using the [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] or the sqlcmd command-line utility, it may be beneficial to write [!INCLUDE[tsql](../../../includes/tsql-md.md)] script files that can be executed to perform a logical sequence of replication tasks.  
   

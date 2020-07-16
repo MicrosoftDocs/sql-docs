@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: e365e9ca-c34b-44ae-840c-10e599fa614f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Guidelines for Transaction Isolation Levels with Memory-Optimized Tables
   In many scenarios, you must specify the transaction isolation level. Transaction isolation for memory-optimized tables differs from disk-based tables.  
@@ -56,7 +55,7 @@ manager: craigg
   
  The following autocommit transaction example shows a join between a memory-optimized table Customers and a regular table [Order History], as part of an ad hoc batch:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED;  
 GO  
 SELECT *   
@@ -67,7 +66,7 @@ LEFT JOIN dbo.[Order History] AS oh
   
  The following explicit or implicit transactions example shows the same join, but this time in an explicit user transaction. The memory-optimized table Customers is accessed under snapshot isolation, as indicated through the table hint WITH (SNAPSHOT), and the regular table [Order History] is accessed under read committed isolation:  
   
-```tsql  
+```sql  
 SET TRANSACTION ISOLATION LEVEL READ COMMITTED  
 GO  
 BEGIN TRAN  
@@ -99,7 +98,7 @@ COMMIT
   
  Notice that the polling logic needs to be outside the scope of the transaction, as it is using snapshot isolation to access table t1. Using polling logic inside the scope of a transaction would create a long-running transaction, which is a bad practice.  
   
-```tsql  
+```sql  
 -- poll table  
 WHILE NOT EXISTS (SELECT 1 FROM dbo.t1)  
 BEGIN   

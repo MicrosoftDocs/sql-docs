@@ -13,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: d67fbd8a-7554-4a16-96f1-d9ee857a95e3
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # SQL Server, Cursor Manager by Type Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **SQLServer:Cursor Manager by Type** object provides counters to monitor cursors, grouped by type.  
   
  This table describes the SQL Server **Cursor Manager by Type** counters.  

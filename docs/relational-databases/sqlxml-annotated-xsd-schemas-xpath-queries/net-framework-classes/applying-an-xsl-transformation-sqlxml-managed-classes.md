@@ -1,6 +1,6 @@
 ---
-title: "Applying an XSL Transformation (SQLXML Managed Classes) | Microsoft Docs"
-ms.custom: ""
+title: "Applying an XSL Transformation (SQLXML)"
+description: View an example of an SQL query that applies an XSL transformation by using the XslPath property of the SqlXmlCommand object in the SQLXML Managed Classes.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -13,13 +13,13 @@ helpviewer_keywords:
   - "SQLXML Managed Classes, applying XSL transformations"
   - "XSL Transformations [SQLXML]"
 ms.assetid: 8562043b-3e9f-41a3-bb41-92b9f14363c4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Applying an XSL Transformation (SQLXML Managed Classes)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   In this example, an SQL query is executed against the AdventureWorks database. The XSL transformation is applied to the query result to generate a two-column table of the employees' first and last names.  
   
  The XslPath property of the SqlXmlCommand object is used to specify the XSL file and its directory path.  
@@ -60,7 +60,7 @@ class Test
   
 ```  
 <?xml version='1.0' encoding='UTF-8'?>  
- <xsl:stylesheet xmlns:xsl="https://www.w3.org/1999/XSL/Transform" version="1.0">   
+ <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">   
     <xsl:output method="html"/>  
     <xsl:template match = '*'>  
         <xsl:apply-templates />  
@@ -105,7 +105,7 @@ class Test
      This creates an executable (DocSample.exe).  
   
 4.  At the command prompt, execute DocSample.exe.  
-  
+
 ## Applying an XSL Transformation in the .NET Framework  
  Instead of applying an XSL transformation in the middle tier, as described previously, you can apply an XSL transformation on the client side (in the .NET Framework). The following revised C# code shows how the XSL transformation is applied in the .NET Framework.  
   

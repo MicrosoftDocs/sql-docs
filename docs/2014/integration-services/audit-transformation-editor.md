@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.audittransformation.f1"
 helpviewer_keywords: 
   - "Audit Transformation Editor"
 ms.assetid: 32786a34-5870-4fde-83c7-ec74d62404b8
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Audit Transformation Editor
   The Audit transformation enables the data flow in a package to include data about the environment in which the package runs. For example, the name of the package, computer, and operator can be added to the data flow. [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] includes system variables that provide this information.  

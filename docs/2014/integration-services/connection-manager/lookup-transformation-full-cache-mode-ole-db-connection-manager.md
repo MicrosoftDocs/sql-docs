@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Lookup transformation [Integration Services]"
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Implement a Lookup Transformation in Full Cache Mode Using the OLE DB Connection Manager
   You can configure the Lookup transformation to use full cache mode and an OLE DB connection manager. In the full cache mode, the reference dataset is loaded into cache before the Lookup transformation runs.  

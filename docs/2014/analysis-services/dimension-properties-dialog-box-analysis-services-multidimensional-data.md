@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.sqlserverstudio.dimensionproperties.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7235d443-b2ce-4c53-b2eb-abceb28394bb
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Dimension Properties Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Dimension Properties** dialog box in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] to set the properties of a dimension in an [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] database. You can display the **Dimension Properties** dialog box by right-clicking a dimension in Object Explorer and selecting **Properties**.  

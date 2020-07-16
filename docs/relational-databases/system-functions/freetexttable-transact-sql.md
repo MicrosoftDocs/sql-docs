@@ -19,13 +19,12 @@ helpviewer_keywords:
   - "ranked results [full-text search]"
   - "column searches [full-text search]"
 ms.assetid: 4523ae15-4260-40a7-a53c-8df15e1fee79
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FREETEXTTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Is a function used in the [FROM clause](../../t-sql/queries/from-transact-sql.md) of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to perform a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search on full-text indexed columns containing character-based data types. This function returns a table of zero, one, or more rows for those columns containing values that match the meaning and not just the exact wording, of the text in the specified *freetext_string*. FREETEXTTABLE is referenced as if it were a regular table name.  
   
@@ -157,7 +156,7 @@ GO
 ```  
   
 > [!NOTE]
->  The LANGUAGE *language_term* paramete*r* is not required to use the *top_n_by_rank* parameter*.*  
+>  The LANGUAGE *language_term* parameter is not required to use the *top_n_by_rank* parameter.  
   
 ## See Also  
  [Get Started with Full-Text Search](../../relational-databases/search/get-started-with-full-text-search.md)   

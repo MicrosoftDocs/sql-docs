@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "master-data-services"
+ms.technology: "master-data-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "hierarchies [Master Data Services], moving members"
@@ -13,9 +12,8 @@ helpviewer_keywords:
   - "derived hierarchies, moving members"
   - "members [Master Data Services], moving"
 ms.assetid: 049c9a15-89c1-478c-8438-028fffc9e187
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Move Members within a Hierarchy (Master Data Services)
   In [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)], move members within a hierarchy to change their location or parent assignment.  

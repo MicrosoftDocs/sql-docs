@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "space allocation [SQL Server], index size"
@@ -19,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: c183b0e4-ef4c-4bfc-8575-5ac219c25b0a
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Estimate the Size of a Nonclustered Index
   Follow these steps to estimate the amount of space that is required to store a nonclustered index:  

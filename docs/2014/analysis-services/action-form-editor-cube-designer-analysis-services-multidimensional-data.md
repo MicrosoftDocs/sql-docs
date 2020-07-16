@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.actionexpression.action.f1"
 ms.assetid: c363a29b-6099-473c-9625-460cc15b3d95
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Action Form Editor (Actions Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the Action Form Editor pane on the **Actions** tab in Cube Designer to create and modify standard actions.  

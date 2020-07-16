@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "data formats [SQL Server], identity values"
   - "bulk importing [SQL Server], identity values"
 ms.assetid: 45894a3f-2d8a-4edd-9568-afa7d0d3061f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Keep Identity Values When Bulk Importing Data (SQL Server)
   Data files that contain identity values can be bulk imported into an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. By default, the values for the identity column in the data file that is imported are ignored and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] assigns unique values automatically. The unique values are based on the seed and increment values that are specified during table creation.  

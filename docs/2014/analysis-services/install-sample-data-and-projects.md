@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Install Sample Data and Projects for the Analysis Services Multidimensional Modeling Tutorial
   Use the instructions and links provided in this topic to install all of the data and project files used in the Analysis Services Tutorials.  
@@ -140,7 +138,7 @@ manager: craigg
 8.  Start SQL Server Management Studio. In SQL Server Management Studio, connect to Analysis Services. Verify that a database named **Analysis Services Tutorial** is running on the server.  
   
 ## Next Step  
- You are now ready to use the tutorial. For more information about how to get started, see [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md).  
+ You are now ready to use the tutorial. For more information about how to get started, see [Multidimensional Modeling &#40;Adventure Works Tutorial&#41;](multidimensional-modeling-adventure-works-tutorial.md).  
   
 ## See Also  
  [Install SQL Server 2014 from the Installation Wizard &#40;Setup&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   

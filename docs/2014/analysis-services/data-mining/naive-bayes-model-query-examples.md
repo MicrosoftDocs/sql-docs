@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "naive bayes model [Analysis Services]"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e642bd7d-5afa-4dfb-8cca-4f84aadf61b0
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Naive Bayes Model Query Examples
   When you create a query against a data mining model, you can create either a content query, which provides details about the patterns discovered in analysis, or you can create a prediction query, which uses the patterns in the model to make predictions for new data. You can also retrieve metadata about the model by using a query against the data mining schema rowset. This section explains how to create these queries for models that are based on the Microsoft Naive Bayes algorithm.  

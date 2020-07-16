@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "installation [SQL Server]"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 59de41e7-557f-462a-8914-53ec35496baa
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Installation How-to Topics
   Use the following topics to install [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

@@ -1,5 +1,6 @@
 ---
 title: "Monitor and Troubleshoot Memory Usage | Microsoft Docs"
+description: Learn about monitoring and troubleshooting In-Memory OLTP memory usage, which has different patterns than disk-based tables in SQL Server.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -10,11 +11,10 @@ ms.topic: conceptual
 ms.assetid: 7a458b9c-3423-4e24-823d-99573544c877
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Monitor and Troubleshoot Memory Usage
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[hek_1](../../includes/hek-1-md.md)] consumes memory in different patterns than disk-based tables. You can monitor the amount of memory allocated and used by memory-optimized tables and indexes in your database using the DMVs or performance counters provided for memory and the garbage collection subsystem.  This gives you visibility at both the system and database level and lets you prevent problems due to memory exhaustion.  
   
  This topic covers monitoring your [!INCLUDE[hek_2](../../includes/hek-2-md.md)] memory usage.  
@@ -43,7 +43,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 2.  Click **New Query**.  
   
 3.  Paste this code into the new query window and execute each section.  
-  
+
     ```  
     -- create a database to be used  
     CREATE DATABASE IMOLTP_DB  

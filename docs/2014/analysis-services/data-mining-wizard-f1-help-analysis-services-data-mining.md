@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.dmwizard.welcome.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: fd443f55-d725-43d4-ae2e-9847f0105a7c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Data Mining Wizard F1 Help (Analysis Services - Data Mining)
   Use the **Data Mining Wizard** to create a new mining structure and an optional associated mining model.  

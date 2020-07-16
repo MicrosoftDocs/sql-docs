@@ -11,12 +11,12 @@ helpviewer_keywords:
   - "unique resource names"
   - "URN"
 ms.assetid: e0d30dbe-7daf-47eb-8412-1b96792b6fb9
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Query Expressions and Uniform Resource Names
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object (SMO) models and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell snap-ins use two types of expression strings that are similar to XPath expressions. Query expressions are strings that specify a set of criteria used to enumerate one or more objects in an object model hierarchy. A Uniform Resource Name (URN) is a specific type of query expression string that uniquely identifies a single object.  
 
@@ -105,7 +105,7 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  Negates the evaluation value of the *PropertyExpression*, enumerating all objects that do not match the condition specified in *PropertyExpression*. For example, not(contains(\@Name, 'xyz')) enumerates all objects that do not have the string xyz in their names.  
   
 ## Remarks  
- Query expressions are strings that enumerate the nodes in an SMO model hierarchy. Each node has a filter expression that specifies the criteria for determining which objects at that node are enumerated. Query expressions are modeled on the XPath expression language. Query expressions implement a small subset of the expressions that are supported by XPath, and also have some extensions that are not found in XPath. XPath expressions are strings that specify a set of criteria that are used to enumerate one or more of the tags in an XML document. For more information about XPath, see [W3C XPath Language](https://www.w3.org/TR/xpath20/).  
+ Query expressions are strings that enumerate the nodes in an SMO model hierarchy. Each node has a filter expression that specifies the criteria for determining which objects at that node are enumerated. Query expressions are modeled on the XPath expression language. Query expressions implement a small subset of the expressions that are supported by XPath, and also have some extensions that are not found in XPath. XPath expressions are strings that specify a set of criteria that are used to enumerate one or more of the tags in an XML document. For more information about XPath, see [W3C XPath Language](http://www.w3.org/TR/xpath20/).  
   
  Query expressions must start with an absolute reference to the Server object. Relative expressions with a leading / are not allowed. The sequence of objects that are specified in a query expression must follow the hierarchy of collection objects in the associated object model. For example, a query expression that references objects in the Microsoft.SqlServer.Management.Smo namespace must start with a Server node followed by a Database node, and so on.  
   

@@ -15,11 +15,10 @@ helpviewer_keywords:
 ms.assetid: d7ddafab-f5a6-44b0-81d5-ba96425aada4
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # User-Defined Functions
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Like functions in programming languages, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] user-defined functions are routines that accept parameters, perform an action, such as a complex calculation, and return the result of that action as a value. The return value can either be a single scalar value or a result set.  
    
 ##  <a name="Benefits"></a> User-defined functions  
@@ -37,21 +36,21 @@ Why use user-defined functions (UDFs)?
   
 -   They can reduce network traffic.  
   
-     An operation that filters data based on some complex constraint that cannot be expressed in a single scalar expression can be expressed as a function. The function can then invoked in the WHERE clause to reduce the number or rows sent to the client.  
+     An operation that filters data based on some complex constraint that cannot be expressed in a single scalar expression can be expressed as a function. The function can then be invoked in the WHERE clause to reduce the number of rows sent to the client.  
   
 > [!IMPORTANT]
 > [!INCLUDE[tsql](../../includes/tsql-md.md)] UDFs in queries can only be executed on a single thread (serial execution plan). Therefore using UDFs inhibits parallel query processing. For more information about parallel query processing, see the [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#parallel-query-processing).
   
 ##  <a name="FunctionTypes"></a> Types of functions  
 **Scalar Function**  
- User-defined scalar functions return a single data value of the type defined in the RETURNS clause. For an inline scalar function, there is no function body; the scalar value is the result of a single statement. For a multistatement scalar function, the function body, defined in a BEGIN...END block, contains a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that return the single value. The return type can be any data type except **text**, **ntext**, **image**, **cursor**, and **timestamp**. 
+ User-defined scalar functions return a single data value of the type defined in the RETURNS clause. For an inline scalar function, the returned scalar value is the result of a single statement. For a multistatement scalar function, the function body can contain a series of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that return the single value. The return type can be any data type except **text**, **ntext**, **image**, **cursor**, and **timestamp**. 
  **[Examples.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#Scalar)**
   
 **Table-Valued Functions**  
  User-defined table-valued functions return a **table** data type. For an inline table-valued function, there is no function body; the table is the result set of a single SELECT statement. **[Examples.](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF)**
   
 **System Functions**  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides many system functions that you can use to perform a variety of operations. They cannot be modified. For more information, see [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [System Stored Functions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-for-transact-sql.md), and [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides many system functions that you can use to perform a variety of operations. They cannot be modified. For more information, see [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md), [System Stored Functions &#40;Transact-SQL&#41;](~/relational-databases/system-functions/system-functions-category-transact-sql.md), and [Dynamic Management Views and Functions &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md).  
   
 ##  <a name="Guidelines"></a> Guidelines  
  [!INCLUDE[tsql](../../includes/tsql-md.md)] errors that cause a statement to be canceled and continue with the next statement in the module (such as triggers or stored procedures) are treated differently inside a function. In functions, such errors cause the execution of the function to stop. This in turn causes the statement that invoked the function to be canceled.  

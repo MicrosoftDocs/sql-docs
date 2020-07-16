@@ -15,9 +15,8 @@ helpviewer_keywords:
   - "Mapping Schema property"
   - "XML templates [SQLXML]"
 ms.assetid: 7368c188-607e-459e-8254-8f23352dfa01
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Executing Templates That Contain XPath Queries (SQLXMLOLEDB Provider)
   This example shows how to use the following SQLXMLOLEDB Provider-specific properties:  

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: "database-engine"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "table-access links [CLR integration]"
@@ -16,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 168efd01-d12e-4bdf-a1b3-0b5c76474eaf
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Links in CLR Integration Security
   This section describes how pieces of user code can call each other in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], either in [!INCLUDE[tsql](../../includes/tsql-md.md)] or in one of the managed languages. These relationships between objects are referred to as links.  

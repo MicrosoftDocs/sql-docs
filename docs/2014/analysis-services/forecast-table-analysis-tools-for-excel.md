@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Table Analysis tools"
@@ -15,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 22bb0b5e-78f5-484e-883d-2b5985a12749
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Forecast (Table Analysis Tools for Excel)
   ![Forecast button in Table Analysis tools ribbon](media/tat-forecast.gif "Forecast button in Table Analysis tools ribbon")  

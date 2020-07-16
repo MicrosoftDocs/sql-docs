@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.ssis.designer.odbcsource.connection.f1"
 ms.assetid: e2c8dc83-6394-4d6c-9232-97e94be72431
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # ODBC Source Editor (Connection Manager Page)
   Use the **Connection Manager** page of the **ODBC Source Editor** dialog box to select the ODBC connection manager for the source. This page also lets you select a table or view from the database.  

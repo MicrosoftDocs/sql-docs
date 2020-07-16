@@ -1,18 +1,16 @@
 ---
-title: "Find in Files | Microsoft Docs"
-ms.custom: ""
+title: Find in Files
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Find in Files dialog box"
 ms.assetid: bf92770a-33df-43ef-85ad-5a9223649b98
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Find in Files
   The **Find in Files** tab of the Find and Replace window enables you to search the code of a specified set of files for a string or expression. The matches found and actions taken are listed in the Find Results window selected in **Result Options**.  

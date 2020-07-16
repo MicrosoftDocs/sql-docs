@@ -15,10 +15,9 @@ helpviewer_keywords:
 ms.assetid: a9f7131f-23e1-4d4d-a36c-180447543926
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Aggregate Functions - count
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns the number of items that are contained in the sequence specified by *$arg*.  
   

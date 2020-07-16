@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeomFromWKB (geometry Data Type)"
 ms.assetid: 6546ddb0-4a5f-46e5-ba04-8007486c95ec
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STGeomFromWKB (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **geometry** instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   

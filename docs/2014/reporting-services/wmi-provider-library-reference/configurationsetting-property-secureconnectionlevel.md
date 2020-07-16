@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 api_name: 
   - "SecureConnectionLevel"
@@ -16,9 +15,9 @@ topic_type:
 helpviewer_keywords: 
   - "SecureConnectionLevel property"
 ms.assetid: fd5549e7-b874-41e2-866e-2f58caf6f733
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # SecureConnectionLevel Property (WMI MSReportServer_ConfigurationSetting)
   Returns the secure connection level specified in the RSReportServer.config file. Read-only.  

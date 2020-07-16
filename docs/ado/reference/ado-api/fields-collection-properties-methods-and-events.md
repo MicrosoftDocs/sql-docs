@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Fields collection [ADO], members"
 ms.assetid: 8cc13e41-7ed8-40df-9a74-5bf846c14c06
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Fields Collection Properties, Methods, and Events
 ## Properties  

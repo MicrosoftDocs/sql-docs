@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: 3f867763-a8e6-413a-b015-20e9672cc4d1
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Application Pattern for Partitioning Memory-Optimized Tables
   [!INCLUDE[hek_2](../../includes/hek-2-md.md)] supports a pattern where a limited amount of active data is kept in a memory-optimized table, while less-frequently accessed data is processed on disk. Typically, this would be a scenario where data is stored based on a `datetime` key.  
@@ -40,7 +39,7 @@ Active Data Maintenance
   
  The first part of this sample creates the database and necessary objects. The second part of the sample shows how to move data from a memory-optimized table into a partitioned table.  
   
-```tsql  
+```sql  
 CREATE DATABASE partitionsample;  
 GO  
   

@@ -12,12 +12,11 @@ dev_langs:
 helpviewer_keywords: 
   - "CollectionAggregate method (geography)"
 ms.assetid: e49a644a-dbf2-46c3-98f5-4b3ec197e2ad
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # CollectionAggregate (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Creates a **GeometryCollection** instance from a set of **geography** objects.
   

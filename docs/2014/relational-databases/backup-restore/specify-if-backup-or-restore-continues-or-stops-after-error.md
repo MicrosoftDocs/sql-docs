@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 042be17a-b9b0-4629-b6bb-b87a8bc6c316
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Specify Whether a Backup or Restore Operation Continues or Stops After Encountering an Error (SQL Server)
   This topic describes how to specify whether a backup or restore operation continues or stops after encountering an error in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
@@ -64,7 +63,7 @@ manager: craigg
   
 3.  In the [BACKUP](/sql/t-sql/statements/backup-transact-sql) statement, specify the CONTINUE_AFTER ERROR option to continue or the STOP_ON_ERROR option to stop. The default behavior is to stop after encountering an error. This example instructs the backup operation to continue despite encountering an error.  
   
-```tsql  
+```sql  
 BACKUP DATABASE AdventureWorks2012   
  TO DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'  
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  
@@ -79,7 +78,7 @@ GO
   
 3.  In the [RESTORE](/sql/t-sql/statements/restore-statements-transact-sql) statement, specify the CONTINUE_AFTER ERROR option to continue or the STOP_ON_ERROR option to stop. The default behavior is to stop after encountering an error. This example instructs the restore operation to continue despite encountering an error.  
   
-```tsql  
+```sql  
 RESTORE DATABASE AdventureWorks2012   
  FROM DISK = 'Z:\SQLServerBackups\AdvWorksData.bak'   
    WITH CHECKSUM, CONTINUE_AFTER_ERROR;  

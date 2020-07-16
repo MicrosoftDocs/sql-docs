@@ -1,6 +1,6 @@
 ---
-title: "Executing XPath Queries (SQLXMLOLEDB Provider) | Microsoft Docs"
-ms.custom: ""
+title: "Executing XPath Queries (SQLXMLOLEDB Provider)"
+description: Learn how to use SQLXMLOLEDB Provider-specific properties when executing XPath queries.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -14,13 +14,12 @@ helpviewer_keywords:
   - "XPath queries [SQLXML], SQLXMLOLEDB Provider"
   - "Mapping Schema property"
 ms.assetid: 19063222-dc9c-48ae-a55f-778103674a9e
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing XPath Queries (SQLXMLOLEDB Provider)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   This example illustrates the use of the following SQLXMLOLEDB Provider-specific properties:  
   
 -   **ClientSideXML**  
@@ -32,7 +31,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  In this sample ADO application, an XPath query (root) is specified against an XSD mapping schema (MySchema.xml). The schema has a **\<Contacts>** element with **ContactID**, **FirstName**, and **LastName** attributes. In the schema, default mapping takes place: an element name maps to the table with the same name, and attributes of simple type map to the columns with the same names.  
   
 ```  
-<xsd:schema xmlns:xsd='https://www.w3.org/2001/XMLSchema'  
+<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema'  
    xmlns:sql='urn:schemas-microsoft-com:mapping-schema'>  
  <xsd:element name= 'root' sql:is-constant='1'>   
     <xsd:complexType>  

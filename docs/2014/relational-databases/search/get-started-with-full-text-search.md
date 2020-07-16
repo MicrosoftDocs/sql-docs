@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "full-text search [SQL Server], about"
   - "full-text search [SQL Server], setting up"
 ms.assetid: 1fa628ba-0ee4-4d8f-b086-c4e52962ca4a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Get Started with Full-Text Search
   Databases in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are full-text enabled by default. However, to use a full-text index on a table, you must set up full-text indexing capability on the columns of the tables that you want to access using the Full-Text Engine.  

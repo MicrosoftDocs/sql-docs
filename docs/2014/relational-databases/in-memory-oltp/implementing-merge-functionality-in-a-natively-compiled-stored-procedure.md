@@ -7,16 +7,15 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: d4bcdc36-3302-4abc-9b35-64ec2b920986
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Implementing MERGE Functionality
   A database may need to perform either an insert of an update, depending on whether a particular row already exists in the database.  
   
  Without using the `MERGE` statement, the following is one approach you can use in [!INCLUDE[tsql](../../includes/tsql-md.md)]:  
   
-```tsql  
+```sql  
 UPDATE mytable SET col=@somevalue WHERE myPK = @parm  
 IF @@ROWCOUNT = 0  
     INSERT mytable (columns) VALUES (@parm, @other values)  
@@ -24,7 +23,7 @@ IF @@ROWCOUNT = 0
   
  Another [!INCLUDE[tsql](../../includes/tsql-md.md)] method to implement a merge:  
   
-```tsql  
+```sql  
 IF EXISTS (SELECT 1 FROM mytable WHERE myPK = @parm)  
     UPDATE....  
 ELSE  
@@ -33,7 +32,7 @@ ELSE
   
  For a natively compiled stored procedure  
   
-```tsql  
+```sql  
 DECLARE @i  int  = 0  -- or whatever your PK data type is  
 UPDATE mytable SET @i=myPK, othercolums = other values WHERE myPK = @parm  
 IF @i = 0  

@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS [ADO]"
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Solutions for Remote Data Access
 ## The Issue  

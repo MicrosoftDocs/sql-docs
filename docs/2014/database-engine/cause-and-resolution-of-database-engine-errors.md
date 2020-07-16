@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: cbfbea15-9277-498f-b772-75b4cb06f408
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Cause and Resolution of Database Engine Errors
   This topic contains cause and resolution information for a number of errors related to the [!INCLUDE[ssDE](../includes/ssde-md.md)].  

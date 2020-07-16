@@ -18,13 +18,12 @@ helpviewer_keywords:
   - "context changes [SQL Server]"
   - "modifying database context"
 ms.assetid: c05acac8-c063-4770-8e36-d7f71d500b10
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # USE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Changes the database context to the specified database or database snapshot in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -32,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
   
 ## Syntax  
   
-```  
+```syntaxsql
 USE { database_name }   
 [;]  
 ```  

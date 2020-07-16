@@ -17,12 +17,11 @@ helpviewer_keywords:
   - "encryption [SQL Server], symmetric keys"
   - "cryptography [SQL Server], symmetric keys"
 ms.assetid: 52d4b12d-17be-4cbd-aa78-65332a4883b0
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DENY Symmetric Key Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Denies permissions on a symmetric key.  
   
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ]    
     ON SYMMETRIC KEY :: symmetric_key_name   
         TO <database_principal> [ ,...n ] [ CASCADE ]  

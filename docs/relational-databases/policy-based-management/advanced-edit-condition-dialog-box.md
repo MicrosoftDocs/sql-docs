@@ -12,10 +12,9 @@ f1_keywords:
 ms.assetid: a0bbe501-78c5-45ad-9087-965d04855663
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Advanced Edit (Condition) Dialog Box
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the **Advanced Edit** dialog box to create complex expressions for Policy-Based Management conditions.  
   
 ## Options  

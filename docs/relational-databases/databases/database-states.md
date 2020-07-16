@@ -1,5 +1,6 @@
 ---
 title: "Database States | Microsoft Docs"
+description: "Find out about various database states, such as ONLINE, OFFLINE, or SUSPECT. Learn how to verify the current state of a database."
 ms.custom: ""
 ms.date: "07/14/2016"
 ms.prod: sql
@@ -26,11 +27,10 @@ helpviewer_keywords:
 ms.assetid: b7f1f111-ca73-4a89-b567-a98d64d6ecb3
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database States
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   A database is always in one specific state. For example, these states include ONLINE, OFFLINE, or SUSPECT. To verify the current state of a database, select the **state_desc** column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view or the **Status** property in the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.  
   
 ## Database State Definitions  

@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "cubes [Analysis Services], creating"
 ms.assetid: d46d659c-3a4e-4364-94ac-f5eb6ba0ec25
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create a Cube Using the Cube Wizard
   You can create a new cube by using the Cube Wizard in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)].  

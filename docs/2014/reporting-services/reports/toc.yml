@@ -33,10 +33,6 @@
   href: upload-a-file-or-report-report-manager.md
 - name: Create a Linked Report
   href: create-a-linked-report.md
-- name: Clickthrough Reports (SSRS)
-  href: clickthrough-reports-ssrs.md
-- name: View and Explore Native Mode Reports Using SharePoint Web Parts (SSRS)
-  href: view-and-explore-native-mode-reports-using-sharepoint-web-parts-ssrs.md
 - name: Report F1 Help
   href: ../report-f1-help.md
   items:

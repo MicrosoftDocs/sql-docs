@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.calculationsview.calculationtoolspane.f1"
 ms.assetid: b1aa8a1a-6532-45d2-8f53-d3e211d7197a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Calculation Tools (Calculations Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Calculation Tools** pane on the **Calculations** tab in Cube Designer to explore metadata, functions, and templates available for use in calculations.  

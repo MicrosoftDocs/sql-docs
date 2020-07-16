@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 74e411fa-74ed-49ec-ab58-68c250f2280e
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Managing Users, Roles, and Logins
   In SMO, logins are represented by the <xref:Microsoft.SqlServer.Management.Smo.Login> object. When the logon exists in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], it can be added to a server role. The server role is represented by the <xref:Microsoft.SqlServer.Management.Smo.ServerRole> object. The database role is represented by the <xref:Microsoft.SqlServer.Management.Smo.DatabaseRole> object and the application role is represented by the <xref:Microsoft.SqlServer.Management.Smo.ApplicationRole> object.  
@@ -35,7 +34,7 @@ manager: craigg
 ## Enumerating Logins and Associated Users in Visual C#  
  Every user in a database is associated with a logon. The logon can be associated with users in more than one database. The code example shows how to call the <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> method of the <xref:Microsoft.SqlServer.Management.Smo.Login> object to list all the database users who are associated with the logon. The example creates a logon and user in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database to make sure there is mapping information to enumerate.  
   
-```  
+```csharp
 {   
 Server srv = new Server();   
 //Iterate through each database and display.   
@@ -61,7 +60,7 @@ foreach ( Database db in srv.Databases) {
 ## Enumerating Logins and Associated Users in PowerShell  
  Every user in a database is associated with a logon. The logon can be associated with users in more than one database. The code example shows how to call the <xref:Microsoft.SqlServer.Management.Smo.Login.EnumDatabaseMappings%2A> method of the <xref:Microsoft.SqlServer.Management.Smo.Login> object to list all the database users who are associated with the logon. The example creates a logon and user in the [!INCLUDE[ssSampleDBnormal](../../../includes/sssampledbnormal-md.md)] database to make sure there is mapping information to enumerate.  
   
-```  
+```powershell
 # Set the path context to the local, default instance of SQL Server.  
 CD \sql\localhost\Default\Databases  
   
@@ -71,7 +70,7 @@ CD \sql\localhost\Default\Databases
  "====="  
  "Login Mappings for the database: "+ $db.Name  
   
- #get the datatable containing the mapping from the smo database oject  
+ #get the datatable containing the mapping from the smo database object  
  $dt = $db.EnumLoginMappings()  
   
  #display the results  
@@ -80,8 +79,7 @@ CD \sql\localhost\Default\Databases
         foreach($col in $row.Table.Columns)  
       {  
         $col.ColumnName + "=" + $row[$col]  
-       }  
-  
+       }
      }  
  }  
 ```  
@@ -97,7 +95,7 @@ CD \sql\localhost\Default\Databases
   
 -   Microsoft.SqlServer.SqlEnum.dll  
   
-```  
+```csharp
 using Microsoft.SqlServer.Management.Smo;  
 using System;  
   
@@ -165,7 +163,7 @@ public class A {
   
  This is the Visual Basic version:  
   
-```  
+```vb
 Imports Microsoft.SqlServer.Management.Smo  
   
 Public Class A  
@@ -229,5 +227,3 @@ Public Class A
    End Sub  
 End Class  
 ```  
-  
-  

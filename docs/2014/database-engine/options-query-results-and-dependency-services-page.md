@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.QueryResults.DependencyServicesGeneral"
 ms.assetid: dd7f6c31-7d7f-4972-854a-1419a2826dca
-author: mashamsft
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Options (Query Results and Dependency Services Page)
   Use this page to specify the server to connect for Dependency Services. Dependency Services enables you to extract information about dependencies between [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects stored on different servers. You view object dependencies by using the **Object Dependencies** dialog box in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)][!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)].  
@@ -47,6 +45,4 @@ manager: craigg
  If using SQL Server Authentication, provide a password.  
   
  **Test**  
- Click to test the connection.  
-  
-  
+ Click to test the connection.

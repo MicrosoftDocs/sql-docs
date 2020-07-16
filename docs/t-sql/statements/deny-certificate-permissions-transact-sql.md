@@ -15,12 +15,11 @@ helpviewer_keywords:
   - "DENY statement, certificates"
   - "denying permissions [SQL Server], certificates"
 ms.assetid: 5971ff9e-d6a4-414b-ae1f-819bc2e348f5
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DENY Certificate Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Denies permissions on a certificate.  
 
@@ -29,7 +28,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DENY permission  [ ,...n ]   
     ON CERTIFICATE :: certificate_name   

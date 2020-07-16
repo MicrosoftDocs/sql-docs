@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.perspectivedb.f1"
 ms.assetid: 2a411c2b-2820-4086-ad7f-ce6a941fefc7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create and Manage Perspectives (SSAS Tabular)
   Perspectives define viewable subsets of a model that provide focused, business-specific, or application-specific viewpoints of the model. The tasks in this topic describe how to create and manage perspectives by using the **Perspectives** dialog box in the model designer.  

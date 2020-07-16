@@ -1,5 +1,5 @@
 ---
-title: "SqlServerAlias Class | Microsoft Docs"
+title: "SqlServerAlias Class"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,10 +18,9 @@ helpviewer_keywords:
 ms.assetid: 475662b9-6985-45bf-b1e9-b0f26ef50443
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # SqlServerAlias Class
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The [SqlServerAlias Class](../../../relational-databases/wmi-provider-configuration-classes/sqlserveralias-class/sqlserveralias-class.md) class represents a server connection alias.  
   
  A server connection alias is required when both the following occur:  

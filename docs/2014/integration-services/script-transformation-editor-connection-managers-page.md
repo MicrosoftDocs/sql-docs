@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.scriptcomponent.connections.f1"
 helpviewer_keywords: 
   - "Script Transformation Editor"
 ms.assetid: 709f048e-0b8b-46c3-9dde-3e912361157f
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Script Transformation Editor (Connection Managers Page)
   Use the **Connection Managers** page of the **Script Transformation Editor** to specify any connections that will be used by the script.  

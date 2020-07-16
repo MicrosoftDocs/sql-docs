@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "SQL12.ASVS.SSMS.PARTITIONS.PROCESSINGOPTIONS.IMBI.F1"
 ms.assetid: 307d69c3-cabb-4dfa-b90c-9852492c1213
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Process Database, Table, or Partition
   The tasks in this topic describe how to process a tabular model database, table, or partitions manually by using the **Process \<object>** dialog box in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  

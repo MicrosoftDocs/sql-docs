@@ -20,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: 454ab849-07a5-4b50-ba0a-6b1b14721f77
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.syscurconfigs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains an entry for each current configuration option. Also, this view contains four entries that describe the configuration structure. **syscurconfigs** is built dynamically when queried by a user. For more information, see [sys.sysconfigures &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysconfigures-transact-sql.md).  
   

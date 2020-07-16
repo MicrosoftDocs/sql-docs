@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Select an Account for the SQL Server Agent Service
   The service startup account defines the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows account in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs and its network permissions. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent runs as a specified user account. You select an account for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager, where you can choose from the following options:  
@@ -68,7 +67,7 @@ manager: craigg
 ## Supported Service Account Types  
  The following table lists the Windows account types that can be used for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service.  
   
-|Service account type|Non-clustered Server|Clustered server|Domain controller (non-clustered)|  
+|Service account type|Nonclustered Server|Clustered server|Domain controller (nonclustered)|  
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows domain account (member of Windows Administrators group)|Supported|Supported|Supported|  
 |Windows domain account (non-administrative)|Supported<sup>1</sup>|Supported<sup>1</sup>|Supported<sup>1</sup>|  

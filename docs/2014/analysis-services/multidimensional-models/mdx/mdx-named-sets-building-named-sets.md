@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Multidimensional Expressions [Analysis Services], named sets"
@@ -17,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 213b0035-e96d-4ba0-83f2-ded206905603
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Building Named Sets in MDX (MDX)
   A set expression can be a lengthy and complex declaration, and therefore be difficult to follow or understand. Or, a set expression may be used so frequently that repeatedly defining the set becomes burdensome. To help make working with a lengthy, complex or commonly used expression easier, Multidimensional Expressions (MDX) lets you such an expression as a *named set*.  

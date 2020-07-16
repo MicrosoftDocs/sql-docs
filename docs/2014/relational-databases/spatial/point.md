@@ -9,9 +9,8 @@ helpviewer_keywords:
   - "Point geometry subtype [SQL Server]"
   - "geometry data type [SQL Server], spatial data"
 ms.assetid: 2a596ec4-8b2f-4962-bcb4-e5c8f77edad5
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 ---
 # Point
   In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] spatial data, a `Point` is a 0-dimensional object representing a single location and may contain Z (elevation) and M (measure) values.  

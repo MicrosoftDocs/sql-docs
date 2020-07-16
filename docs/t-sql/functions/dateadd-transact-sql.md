@@ -1,6 +1,6 @@
 ---
 title: "DATEADD (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the DATEADD function. This function returns a date that has been modified by the specified date part."
 ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -23,16 +23,12 @@ helpviewer_keywords:
   - "date and time [SQL Server], DATEADD"
   - "DATEADD function [SQL Server]"
 ms.assetid: 89c5ae32-89c6-47e1-979e-15d97908b9f1
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATEADD (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
-
-> [!div class="nextstepaction"]
-> [Please help improve SQL Server docs!](https://80s3ignv.optimalworkshop.com/optimalsort/36yyw5kq-0)
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function adds a specified *number* value (as a signed integer) to a specified *datepart* of an input *date* value, and then returns that modified value.
   
@@ -85,7 +81,8 @@ An expression that can resolve to one of the following values:
 For *date*, `DATEADD` will accept a column expression, expression, string literal, or user-defined variable. A string literal value must resolve to a **datetime**. Use four-digit years to avoid ambiguity issues. See [Configure the two digit year cutoff Server Configuration Option](../../database-engine/configure-windows/configure-the-two-digit-year-cutoff-server-configuration-option.md) for information about two-digit years.
   
 ## Return types
-The *date* argument data type becomes the `DATEADD` return value data type, except for string literal *date* values. For a string literal, `DATEADD` returns a **datetime** value. `DATEADD` will raise an error if the string literal seconds scale exceeds three decimal place positions (.nnn) or if the string literal contains the time zone offset part.
+
+The return value data type for this method is dynamic. The return type depends on the argument supplied for `date`. If the value for `date` is a string literal date, `DATEADD` returns a **datetime** value. If another valid input data type is supplied for `date`, `DATEADD` returns the same data type. `DATEADD` raises an error if the string literal seconds scale exceeds three decimal place positions (.nnn) or if the string literal contains the time zone offset part.
   
 ## Return Value  
   

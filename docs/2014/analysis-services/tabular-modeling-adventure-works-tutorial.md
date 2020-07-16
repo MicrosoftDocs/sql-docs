@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 140d0b43-9455-4907-9827-16564a904268
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Tabular Modeling (Adventure Works Tutorial)
   This tutorial provides lessons on how to create a [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] Analysis Services tabular model by using [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
@@ -53,7 +51,7 @@ manager: craigg
   
 -   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)].  
   
--   AdventureWorksDW sample database. This sample database includes the data necessary to complete this tutorial. To download the sample database, see [https://go.microsoft.com/fwlink/?LinkID=335807](https://go.microsoft.com/fwlink/?LinkID=335807).  
+-   AdventureWorksDW sample database. This sample database includes the data necessary to complete this tutorial. To download the sample database, see [https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks).  
   
 -   [!INCLUDE[msCoName](../includes/msconame-md.md)] Excel 2003 or later (for use with the Analyze in Excel feature in lesson 11)  
   

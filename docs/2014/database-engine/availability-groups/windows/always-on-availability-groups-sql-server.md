@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: aa427606-8422-4656-b205-c9e665ddc8c1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Always On Availability Groups (SQL Server)
   The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature is a high-availability and disaster-recovery solution that provides an enterprise-level alternative to database mirroring. Introduced in [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)], [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] maximizes the availability of a set of user databases for an enterprise. An *availability group* supports a failover environment for a discrete set of user databases, known as *availability databases*, that fail over together. An availability group supports a set of read-write primary databases and one to eight sets of corresponding secondary databases. Optionally, secondary databases can be made available for read-only access and/or some backup operations.  
@@ -37,7 +36,7 @@ manager: craigg
   
     -   *Synchronous-commit mode*. This availability mode emphasizes high availability and data protection over performance, at the cost of increased transaction latency. A given availability group can support up to three synchronous-commit availability replicas, including the current primary replica.  
   
-     For more information, see [ Availability Modes;Always On Availability Groups;](availability-modes-always-on-availability-groups.md).  
+     For more information, see [Availability Modes;Always On Availability Groups;](availability-modes-always-on-availability-groups.md).  
   
 -   Supports several forms of availability-group failover:  automatic failover, planned manual failover (generally referred as simply "manual failover"), and forced manual failover (generally referred as simply "forced failover"). For more information, see [Failover and Failover Modes;Always On Availability Groups;](failover-and-failover-modes-always-on-availability-groups.md).  
   
@@ -151,9 +150,9 @@ manager: craigg
   
 -   **Videos:**  
   
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 1: Introducing the Next Generation High Availability Solution](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI302)  
   
-     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using AlwaysOn](http://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
+     [Microsoft SQL Server Code-Named "Denali" Always On Series,Part 2: Building a Mission-Critical High Availability Solution Using AlwaysOn](https://channel9.msdn.com/Events/TechEd/NorthAmerica/2011/DBI404)  
   
 -   **Whitepapers:**  
   
@@ -170,5 +169,4 @@ manager: craigg
  [Monitoring of Availability Groups &#40;SQL Server&#41;](monitoring-of-availability-groups-sql-server.md)   
  [Overview of Transact-SQL Statements for Always On Availability Groups;SQL Server;](transact-sql-statements-for-always-on-availability-groups.md)   
  [Overview of PowerShell Cmdlets for AlwaysOn Availability Groups;SQL Server;](overview-of-powershell-cmdlets-for-always-on-availability-groups-sql-server.md)  
-  
   

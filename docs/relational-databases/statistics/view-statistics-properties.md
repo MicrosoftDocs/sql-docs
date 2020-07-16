@@ -14,11 +14,10 @@ helpviewer_keywords:
 ms.assetid: 0eaa2101-006e-4015-9979-3468b50e0aaa
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # View Statistics Properties
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   You can display current query optimization statistics for a table or indexed view in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Statistics objects include a header with metadata about the statistics, a histogram with the distribution of values in the first key column of the statistics object, and a density vector to measure cross-column correlation. For more information about histograms and density vectors, see [DBCC SHOW_STATISTICS &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md)  
   
  **In This Topic**  
@@ -54,9 +53,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 5.  Right-click the Statistics object of which you want to view the properties and select **Properties**.  
   
-6.  In the **Statistics Properties -** *statistics_name* dialog box, in the **Select a page** pane, select **Details**.  
+6.  In the **Statistics Properties -** _statistics_name_ dialog box, in the **Select a page** pane, select **Details**.  
   
-     The following properties show on the **Details** page in the **Statistics Properties -** *statistics_name* dialog box.  
+     The following properties show on the **Details** page in the **Statistics Properties -** _statistics_name_ dialog box.  
   
      **Table Name**  
      Displays the name of the table described by the statistics.  
@@ -128,7 +127,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
      Average number of rows with duplicate column values within a histogram step, excluding the upper bound (RANGE_ROWS / DISTINCT_RANGE_ROWS for DISTINCT_RANGE_ROWS > 0).  
   
 7.  Click **OK**.  
-  
+
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
 #### To view statistics properties  

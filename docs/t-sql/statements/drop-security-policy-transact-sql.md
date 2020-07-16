@@ -17,12 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "DROP SECURITY POLICY statement"
 ms.assetid: 5bd3393d-2fa5-4db0-a69a-a1a72d638e9d
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DROP SECURITY POLICY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Deletes a security policy.  
   
@@ -30,7 +29,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name    
 [;]  
 ```  

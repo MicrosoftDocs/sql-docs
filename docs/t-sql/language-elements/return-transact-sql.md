@@ -22,12 +22,11 @@ helpviewer_keywords:
   - "exiting procedures [SQL Server]"
   - "RETURN statement"
 ms.assetid: 1d9c8247-fd89-4544-be9c-01c95b745db0
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # RETURN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Exits unconditionally from a query or procedure. RETURN is immediate and complete and can be used at any point to exit from a procedure, batch, or statement block. Statements that follow RETURN are not executed.  
   
@@ -35,7 +34,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 RETURN [ integer_expression ]   
 ```  

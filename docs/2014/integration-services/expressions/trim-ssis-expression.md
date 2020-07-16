@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "TRIM function"
   - "trailing blanks"
 ms.assetid: 7dd9081d-a3d4-483a-bf7e-bf2bd7692d39
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # TRIM (SSIS Expression)
   Returns a character expression after removing leading and trailing spaces.  

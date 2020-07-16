@@ -18,12 +18,11 @@ helpviewer_keywords:
   - "symmetric keys [SQL Server], IDs"
   - "IDs [SQL Server], symmetric keys"
 ms.assetid: d7309542-dbbe-41dc-b42e-5d9a1c8b4838
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # KEY_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the ID of a symmetric key in the current database.  
   

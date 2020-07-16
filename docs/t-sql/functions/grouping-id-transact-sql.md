@@ -16,12 +16,11 @@ helpviewer_keywords:
   - "GROUP BY clause, GROUPING_ID"
   - "GROUPING_ID function"
 ms.assetid: c1050658-b19f-42ee-9a05-ecd6a73b896c
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # GROUPING_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Is a function that computes the level of grouping. GROUPING_ID can be used only in the SELECT \<select> list, HAVING, or ORDER BY clauses when GROUP BY is specified.  
   
@@ -29,7 +28,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 GROUPING_ID ( <column_expression>[ ,...n ] )  
 ```  

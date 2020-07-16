@@ -1,6 +1,6 @@
 ---
-title: "DiffGram Examples (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
+title: "DiffGram Examples (SQLXML)"
+description: View examples of diffgrams in SQLXML 4.0 that perform insert, update, and delete operations to a database.
 ms.date: "03/04/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -13,13 +13,13 @@ helpviewer_keywords:
   - "diffgr:parentID"
   - "parentID annotation"
 ms.assetid: fc148583-dfd3-4efb-a413-f47b150b0975
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DiffGram Examples (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   The examples in this topic consist of DiffGrams that perform insert, update, and delete operations to the database. Before using the examples, note the following:  
   
 -   The examples use two tables (Cust and Ord) that must be created if you want to test the DiffGram examples:  
@@ -32,7 +32,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 -   Most of the examples in this topic use the following XSD Schema:  
   
     ```  
-    <xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+    <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
                 xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   
     <xsd:annotation>  

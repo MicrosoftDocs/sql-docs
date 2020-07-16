@@ -1,5 +1,6 @@
 ---
 title: "Install SQL Server Servicing Updates | Microsoft Docs"
+description: This article provides information about installing updates for SQL Server during a new installation or after SQL Server has been installed.
 ms.custom: ""
 ms.date: "09/05/2017"
 ms.prod: sql
@@ -10,11 +11,10 @@ ms.assetid: 7d6c962b-c8d0-49f7-a2ac-00ad8dca930a
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Install SQL Server Servicing Updates
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 This article provides information about installing updates for [!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)]. This section provides information about the following:
   
@@ -50,7 +50,7 @@ The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates are availa
 When you receive an update through [!INCLUDE[msCoName](../../includes/msconame-md.md)] Update, it will update all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features to the latest version in an unattended mode. If you need more flexibility or don't have internet or WSUS access, you must obtain the updates from the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Download Center.  
   
 ## See Also  
-[Install SQL Server from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)
-[Add Features to an Instance of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)
+[Install SQL Server from the Installation Wizard &#40;Setup&#41;](../../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)        
+[Add Features to an Instance of SQL Server &#40;Setup&#41;](../../database-engine/install-windows/add-features-to-an-instance-of-sql-server-2016-setup.md)         
 [Repair a Failed SQL Server Installation](../../database-engine/install-windows/repair-a-failed-sql-server-installation.md)  
 

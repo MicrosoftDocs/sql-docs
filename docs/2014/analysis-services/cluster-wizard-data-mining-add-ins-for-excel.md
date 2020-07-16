@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "clustering [data mining]"
 ms.assetid: 85b25625-a7ab-4960-9f9c-df22e8ecae37
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Cluster Wizard (Data Mining Add-ins for Excel)
   ![Cluster wizard in Data Mining ribbon](media/dmc-cluster.gif "Cluster wizard in Data Mining ribbon")  

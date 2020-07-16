@@ -4,16 +4,13 @@ ms.custom: ""
 ms.date: "03/08/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "cubes [Analysis Services], local"
 ms.assetid: e52e1515-35a7-4dc3-9bbf-736d176ba0c7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Local Cubes (Analysis Services - Multidimensional Data)
   To create, update or delete local cubes, you must write and execute either an ASSL script or an AMO program.  

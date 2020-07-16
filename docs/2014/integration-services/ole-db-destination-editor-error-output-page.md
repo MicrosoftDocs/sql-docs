@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.oledbdestadapter.errorhandling.f1"
 helpviewer_keywords: 
   - "OLE DB Destination Editor"
 ms.assetid: 3c01f480-16c9-49eb-b40c-13cbc90b019d
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # OLE DB Destination Editor (Error Output Page)
   Use the **Error Output** page of the **OLE DB Destination Editor** dialog box to specify error handling options.  

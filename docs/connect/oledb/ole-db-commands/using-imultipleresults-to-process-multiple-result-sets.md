@@ -15,10 +15,9 @@ helpviewer_keywords:
   - "multiple-rowset results"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Using IMultipleResults to Process Multiple Result Sets
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

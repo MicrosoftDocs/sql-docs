@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 22387419-22c4-43fa-851c-5fecec4b049b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Configure Read-Only Access on an Availability Replica (SQL Server)
   By default both read-write and read-intent access are allowed to the primary replica and no connections are allowed to secondary replicas of an AlwaysOn availability group. This topic describes how to configure connection access on an availability replica of an AlwaysOn availability group in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell.  
@@ -113,7 +112,7 @@ manager: craigg
 ###  <a name="TsqlExample"></a> Example (Transact-SQL)  
  The following example adds a secondary replica to an availability group named *AG2*. A stand-alone server instance, *COMPUTER03\HADR_INSTANCE*, is specified to host the new availability replica. This replica configured to allow only read-write connections for the primary role and to allow only read-intent connections for secondary role.  
   
-```  
+```sql
 ALTER AVAILABILITY GROUP AG2   
    ADD REPLICA ON   
       'COMPUTER03\HADR_INSTANCE' WITH   
@@ -127,10 +126,11 @@ GO
   
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
- **To configure access on an availability replica**  
+
+### To configure access on an availability replica
   
 > [!NOTE]  
->  For a code example, see [Example (PowerShell)](#PSExample), later in this section.  
+>  For a code example, see the PowerShell examples later in this section.  
   
 1.  Change directory (`cd`) to the server instance that hosts the primary replica.  
   
@@ -158,24 +158,20 @@ GO
     > [!NOTE]  
     >  To view the syntax of a cmdlet, use the `Get-Help` cmdlet in the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] PowerShell environment. For more information, see [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md).  
   
- **To set up and use the SQL Server PowerShell provider**  
+To set up and use the SQL Server PowerShell provider, see [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md).
   
--   [SQL Server PowerShell Provider](../../../powershell/sql-server-powershell-provider.md)  
+The following example, sets the both the `ConnectionModeInSecondaryRole` and `ConnectionModeInPrimaryRole` parameters to `AllowAllConnections`.  
   
-###  <a name="PSExample"></a> Example (PowerShell)  
- The following example, sets the both the `ConnectionModeInSecondaryRole` and `ConnectionModeInPrimaryRole` parameters to `AllowAllConnections`.  
-  
-```  
+```powershell
 Set-Location SQLSERVER:\SQL\PrimaryServer\default\AvailabilityGroups\MyAg  
 $primaryReplica = Get-Item "AvailabilityReplicas\PrimaryServer"  
-Set-SqlAvailabilityReplica -ConnectionModeInSecondaryRole "AllowAllConnections" `   
--InputObject $primaryReplica  
-Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `   
--InputObject $primaryReplica  
-  
+
+Set-SqlAvailabilityReplica -ConnectionModeInSecondaryRole "AllowAllConnections" `
+ -InputObject $primaryReplica  
+Set-SqlAvailabilityReplica -ConnectionModeInPrimaryRole "AllowAllConnections" `
+-InputObject $primaryReplica
 ```  
-  
-  
+
 ##  <a name="FollowUp"></a> Follow Up: After Configuring Read-Only Access for an Availability Replica  
  **Read-only access to a readable secondary replica**  
   
@@ -208,30 +204,27 @@ DATABASEPROPERTYEX([db name],'Updatability') = N'READ_ONLY'
   
 ##  <a name="RelatedContent"></a> Related Content  
   
--   [AlwaysOn: Value Proposition of Readable Secondary](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-value-proposition-of-readable-secondary.aspx)  
+-   [Always On: Value Proposition of Readable Secondary](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-value-proposition-of-readable-secondary)  
   
--   [AlwaysOn: Why there are two options to enable a secondary replica for read workload?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload.aspx)  
+-   [Always On: Why there are two options to enable a secondary replica for read workload?](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-why-there-are-two-options-to-enable-a-secondary-replica-for-read-workload)  
   
--   [AlwaysOn: Setting up Readable Seconary Replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-setting-up-readable-seconary-replica.aspx)  
+-   [Always On: Setting up Readable Secondary Replica](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-setting-up-readable-seconary-replica)  
   
--   [AlwaysOn: I just enabled Readable Secondary but my query is blocked?](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-i-just-enabled-readble-secondary-but-my-query-is-blocked.aspx)  
+-   [Always On: I just enabled Readable Secondary but my query is blocked?](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-i-just-enabled-readable-secondary-but-my-query-is-blocked)  
   
--   [AlwaysOn: Making latest statistics available on Readable Secondary, Read-Only database and Database Snapshot](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-making-upto-date-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot.aspx)  
+-   [Always On: Making latest statistics available on Readable Secondary, Read-Only database and Database Snapshot](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-making-latest-statistics-available-on-readable-secondary-read-only-database-and-database-snapshot)  
   
--   [AlwaysOn: Challenges with statistics on ReadOnly database, Database Snapshot and Secondary Replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica.aspx)  
+-   [Always On: Challenges with statistics on ReadOnly database, Database Snapshot and Secondary Replica](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-challenges-with-statistics-on-readonly-database-database-snapshot-and-secondary-replica)  
   
--   [AlwaysOn: Impact on the primary workload when you run reporting workload on the secondary replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica.aspx)  
+-   [Always On: Impact on the primary workload when you run reporting workload on the secondary replica](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-impact-on-the-primary-workload-when-you-run-reporting-workload-on-the-secondary-replica)  
   
--   [AlwaysOn: Impact of mapping reporting workload on Readable Secondary to Snapshot Isolation](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-impact-of-mapping-reporting-workload-to-snapshot-isolation-on-readable-secondary.aspx)  
+-   [Always On: Impact of mapping reporting workload on Readable Secondary to Snapshot Isolation](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-impact-of-mapping-reporting-workload-on-readable-secondary-to-snapshot-isolation)  
   
--   [AlwaysOn: Minimizing blocking of REDO thread when running reporting workload on Secondary Replica](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica.aspx)  
+-   [Always On: Minimizing blocking of REDO thread when running reporting workload on Secondary Replica](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-minimizing-blocking-of-redo-thread-when-running-reporting-workload-on-secondary-replica)  
   
--   [AlwaysOn: Readable Secondary and data latency](https://blogs.msdn.com/b/sqlserverstorageengine/archive/2011/12/22/alwayson.aspx)  
-  
+-   [Always On: Readable Secondary and data latency](https://docs.microsoft.com/archive/blogs/sqlserverstorageengine/alwayson-readable-secondary-and-data-latency)  
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
  [About Client Connection Access to Availability Replicas &#40;SQL Server&#41;](about-client-connection-access-to-availability-replicas-sql-server.md)  
-  
-  

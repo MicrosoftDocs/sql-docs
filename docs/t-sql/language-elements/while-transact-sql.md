@@ -19,13 +19,13 @@ helpviewer_keywords:
   - "nested WHILE loops"
   - "WHILE keyword"
 ms.assetid: 52dd29ab-25d7-4fd3-a960-ac55c30c9ea9
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # WHILE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 
   Sets a condition for the repeated execution of an SQL statement or statement block. The statements are executed repeatedly as long as the specified condition is true. The execution of statements in the WHILE loop can be controlled from inside the loop with the BREAK and CONTINUE keywords.  
   
@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 WHILE Boolean_expression   
@@ -41,7 +41,7 @@ WHILE Boolean_expression
   
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 WHILE Boolean_expression   
@@ -90,19 +90,23 @@ PRINT 'Too much for the market to bear';
  The following example uses `@@FETCH_STATUS` to control cursor activities in a `WHILE` loop.  
   
 ```  
+DECLARE @EmployeeID as nvarchar(256)
+DECLARE @Title as nvarchar(50)
+
 DECLARE Employee_Cursor CURSOR FOR  
-SELECT EmployeeID, Title   
+SELECT LoginID, JobTitle   
 FROM AdventureWorks2012.HumanResources.Employee  
 WHERE JobTitle = 'Marketing Specialist';  
 OPEN Employee_Cursor;  
-FETCH NEXT FROM Employee_Cursor;  
+FETCH NEXT FROM Employee_Cursor INTO @EmployeeID, @Title;  
 WHILE @@FETCH_STATUS = 0  
    BEGIN  
-      FETCH NEXT FROM Employee_Cursor;  
+      Print '   ' + @EmployeeID + '      '+  @Title 
+      FETCH NEXT FROM Employee_Cursor INTO @EmployeeID, @Title;  
    END;  
 CLOSE Employee_Cursor;  
 DEALLOCATE Employee_Cursor;  
-GO  
+GO 
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  

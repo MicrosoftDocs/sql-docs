@@ -14,12 +14,11 @@ helpviewer_keywords:
   - "DENY statement, assemblies"
   - "denying permissions [SQL Server], assemblies"
 ms.assetid: be0896b3-f793-44c9-9390-1c6e58f33b2b
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DENY Assembly Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Denies permissions on an assembly.  
   
@@ -29,7 +28,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name  
     TO database_principal [ ,...n ]   

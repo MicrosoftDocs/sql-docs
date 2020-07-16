@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: ad5385c5-5a50-40ca-a319-97d5606b8511
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Migrating Triggers
   This topic discusses DDL and DML triggers and memory-optimized tables.  
@@ -34,7 +33,7 @@ manager: craigg
   
  The database contains the following objects, scripted as CREATE TABLE, CREATE TRIGGER, and CREATE PROCEDURE statements:  
   
-```tsql  
+```sql  
 CREATE TABLE OrderDetails  
 (  
    OrderId int not null primary key,  
@@ -92,7 +91,7 @@ GO
   
  The following objects are functionally equivalent to the pre-migration state:  
   
-```tsql  
+```sql  
 CREATE TABLE OrderDetails  
 (  
    OrderId int not null PRIMARY KEY NONCLUSTERED HASH WITH (BUCKET_COUNT = 1048576),  

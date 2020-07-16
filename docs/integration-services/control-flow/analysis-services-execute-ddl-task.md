@@ -15,11 +15,14 @@ helpviewer_keywords:
   - "Analysis Services Execute DDL task"
   - "DDL"
 ms.assetid: 7f25c8c6-b601-41f2-9553-be0a2ee0751a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Analysis Services Execute DDL Task
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL task runs data definition language (DDL) statements that can create, drop, or alter mining models and multidimensional objects such as cubes and dimensions. For example, a DDL statement can create a partition in the **Adventure Works** cube, or delete a dimension in [!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)], the sample [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL task uses an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] connection manager to connect to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] or an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] project. For more information, see [Analysis Services Connection Manager](../../integration-services/connection-manager/analysis-services-connection-manager.md).  
@@ -35,9 +38,9 @@ manager: craigg
 ## DDL Statements  
  The DDL statements are represented as statements in [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Scripting Language (ASSL), and framed in an XML for Analysis (XMLA) command.  
   
--   ASSL is used to define and describe an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and the databases and database objects it contains. For more information, see [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](../../analysis-services/scripting/analysis-services-scripting-language-assl-for-xmla.md).  
+-   ASSL is used to define and describe an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] and the databases and database objects it contains. For more information, see [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla).  
   
--   XMLA is a command language that is used to send action commands, such as Create, Alter, or Process, to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [XML for Analysis  &#40;XMLA&#41; Reference](../../analysis-services/xmla/xml-for-analysis-xmla-reference.md).  
+-   XMLA is a command language that is used to send action commands, such as Create, Alter, or Process, to an instance of [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]. For more information, see [XML for Analysis  &#40;XMLA&#41; Reference](/bi-reference/xmla/xml-for-analysis-xmla-reference).  
   
  If the DDL code is stored in a separate file, the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Execute DDL task uses a File connection manager to specify the path of the file. For more information, see [File Connection Manager](../../integration-services/connection-manager/file-connection-manager.md).  
   
@@ -63,7 +66,7 @@ manager: craigg
 ```  
 <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Parallel>  
-    <Process xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+    <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
       <Object>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
       </Object>  
@@ -84,7 +87,7 @@ manager: craigg
         <MiningStructureID>Forecasting</MiningStructureID>  
     </ParentObject>  
     <ObjectDefinition>  
-        <MiningModel xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+        <MiningModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
             <ID>Forecasting</ID>  
             <Name>Forecasting</Name>  
             <Algorithm>Microsoft_Time_Series</Algorithm>  
@@ -146,7 +149,7 @@ manager: craigg
 ```  
 <Batch xmlns="https://schemas.microsoft.com/analysisservices/2003/engine">  
   <Parallel>  
-    <Process xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+    <Process xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
       <Object>  
         <DatabaseID>Adventure Works DW Multidimensional 2012</DatabaseID>  
       </Object>  
@@ -167,7 +170,7 @@ manager: craigg
         <MiningStructureID>Forecasting</MiningStructureID>  
     </ParentObject>  
     <ObjectDefinition>  
-        <MiningModel xmlns:xsd="https://www.w3.org/2001/XMLSchema" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">  
+        <MiningModel xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  
             <ID>Forecasting</ID>  
             <Name>Forecasting</Name>  
             <Algorithm>Microsoft_Time_Series</Algorithm>  

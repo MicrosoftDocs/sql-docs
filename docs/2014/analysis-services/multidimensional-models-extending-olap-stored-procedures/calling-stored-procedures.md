@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "calling stored procedures"
@@ -16,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 96a9660d-875b-4ee4-b339-90020b1d9895
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Calling Stored Procedures
   Stored procedures can be called on the server or from client application. In either case, stored procedures always run on the server, either the context of the server or of a database. There are no special permissions required to execute a stored procedure. Once a stored procedure is added by an assembly to the server or database context, any user can execute the stored procedure as long as the role for the user permits the actions performed by the stored procedure.  

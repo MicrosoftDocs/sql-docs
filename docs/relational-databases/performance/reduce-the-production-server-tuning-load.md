@@ -18,11 +18,10 @@ helpviewer_keywords:
 ms.assetid: bb95ecaf-444a-4771-a625-e0a91c8f0709
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Reduce the Production Server Tuning Load
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor relies on the query optimizer to analyze a workload and to make tuning recommendations. Performing this analysis on the production server adds to the server load and can hurt server performance during the tuning session. You can reduce the impact to the server load during a tuning session by using a test server in addition to the production server.  
   
 ## How Database Engine Tuning Advisor Uses a Test Server  
@@ -68,7 +67,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ```  
 <?xml version="1.0" encoding="utf-16" ?>  
-<DTAXML xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance" xmlns="https://schemas.microsoft.com/sqlserver/2004/07/dta">  
+<DTAXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://schemas.microsoft.com/sqlserver/2004/07/dta">  
   <DTAInput>  
     <Server>  
       <Name>MyServerName</Name>  

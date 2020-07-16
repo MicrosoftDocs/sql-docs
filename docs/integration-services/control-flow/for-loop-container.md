@@ -15,11 +15,14 @@ helpviewer_keywords:
   - "containers [Integration Services], For Loop"
   - "For Loop containers"
 ms.assetid: 44cf7355-992b-4bbf-a28c-bfb012de06f6
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # For Loop Container
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
   The For Loop container defines a repeating control flow in a package. The loop implementation is similar to the **For** looping structure in programming languages. In each repeat of the loop, the For Loop container evaluates an expression and repeats its workflow until the expression evaluates to **False**.  
   
  The For Loop container usesthe following elements to define the loop:  
@@ -63,8 +66,6 @@ manager: craigg
 
 ##  Configure the For Loop container
 This procedure describes how to configure a For Loop container by using the **For Loop Editor** dialog box.  
-  
- For an example of the For Loop container, see [SSIS Loops that do not fail](https://go.microsoft.com/fwlink/?LinkId=240295) on bimonkey.com.  
   
 1.  In [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], double-click the For Loop container to open the **For Loop Editor**.  
   

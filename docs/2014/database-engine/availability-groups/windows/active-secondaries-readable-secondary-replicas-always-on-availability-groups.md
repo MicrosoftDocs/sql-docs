@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 78f3f81a-066a-4fff-b023-7725ff874fdf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Active Secondaries: Readable Secondary Replicas (Always On Availability Groups)
   The [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] active secondary capabilities include support for read-only access to one or more secondary replicas (*readable secondary replicas*). A readable secondary replica allows read-only access to all its secondary databases. However, readable secondary databases are not set to read-only. They are dynamic. A given secondary database changes as changes on the corresponding primary database are applied to the secondary database. For a typical secondary replica, the data, including durable memory optimized tables, in the secondary databases is in near real time. Furthermore, full-text indexes are synchronized with the secondary databases. In many circumstances, data latency between a primary database and the corresponding secondary database is only a few seconds.  
@@ -204,7 +203,7 @@ GO
   
 -   For queries running only on memory-optimized tables, the only supported isolation levels are snapshot, repeatable read, and serializable. Any queries with read-uncommitted or read committed isolation level returns an error unless you have enabled the option MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT at the database level.  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL READ_COMMITTED  
     -- This is not allowed  
     BEGIN TRAN  
@@ -222,7 +221,7 @@ GO
   
 -   No locking hints are supported on memory-optimized tables. For example, all of the following queries fail with an error. Only NOLOCK hint is allowed and it is NOOP when used with memory-optimized tables.  
   
-    ```tsql  
+    ```sql  
     SELECT * FROM t_hk WITH (PAGLOCK)  
     SELECT * FROM t_hk WITH (READPAST)  
     SELECT * FROM t_hk WITH (ROWLOCK)  
@@ -234,7 +233,7 @@ GO
   
 -   For cross-container transactions, transactions with session isolation level "snapshot" that access memory-optimized tables is not supported. For example,  
   
-    ```tsql  
+    ```sql  
     SET TRANSACTION ISOLATION LEVEL SNAPSHOT  
     -- This is not allowed  
     BEGIN TRAN  

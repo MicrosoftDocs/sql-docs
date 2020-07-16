@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: a7d15816-a788-4099-ad91-dc4b26618299
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Grant Permissions on a Stored Procedure
   This topic describes how to grant permissions on a stored procedure in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Permissions can be granted to an existing user, database role, or application role in the database.  
@@ -73,7 +72,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example grants `EXECUTE` permission on the stored procedure `HumanResources.uspUpdateEmployeeHireInfo` to an application role named `Recruiting11`.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;   
 GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  

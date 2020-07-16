@@ -1,7 +1,7 @@
 ---
 title: "ToString (Database Engine) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/23/2017"
+ms.date: "07/23/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -17,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 5fc11ca5-c26d-4518-9512-67aa0270f110
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # ToString (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a string with the logical representation of *this*. ToString is called implicitly when a conversion from **hierarchyid** to a string type occurs. Acts as the opposite of [Parse &#40;Database Engine&#41;](../../t-sql/data-types/parse-database-engine.md).
   

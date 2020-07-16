@@ -1,6 +1,7 @@
 ---
-title: "Configure Cluster Quorum NodeWeight Settings | Microsoft Docs"
-ms.custom: ""
+title: "Configure cluster quorum NodeWeight settings"
+description: Describes how to configure the NodeWeight settings for a member node in a Windows Server Failover Cluster. 
+ms.custom: "seo-lt-2019"
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -12,10 +13,9 @@ helpviewer_keywords:
 ms.assetid: cb3fd9a6-39a2-4e9c-9157-619bf3db9951
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Configure Cluster Quorum NodeWeight Settings
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to configure NodeWeight settings for a member node in a Windows Server Failover Clustering (WSFC) cluster. NodeWeight settings are used during quorum voting to support disaster recovery and multi-subnet scenarios for [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Cluster Instances.  
   
 -   **Before you start:**  [Prerequisites](#Prerequisites), [Security](#Security)  

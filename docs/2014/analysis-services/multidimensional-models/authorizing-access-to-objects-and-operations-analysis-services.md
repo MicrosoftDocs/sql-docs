@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.roledesignerdialog.membership.f1"
@@ -19,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: af28524e-5eca-4dce-a050-da4f406ee1c7
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Authorizing access to objects and operations (Analysis Services)
   Non-administrative user access to cubes, dimensions, and mining models within an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database is granted through membership in one or more database roles. [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] administrators create these database roles, granting Read or Read/Write permissions on [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] objects, and then assigning [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows users and groups to each role.  
@@ -36,7 +34,7 @@ manager: craigg
   
 2.  Type the following query and press F5 to execute:  
   
-    ```  
+    ```sql  
     Select * from $SYSTEM.DBSCHEMA_CATALOGS  
     ```  
   

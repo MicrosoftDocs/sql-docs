@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.cubeeditor.partitiondesigner.partitionstoragesettings.f1"
@@ -13,7 +12,6 @@ f1_keywords:
 ms.assetid: 80c41c71-226c-45fe-b9cf-af824b592fe1
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Storage Settings Dialog Box (Analysis Services - Multidimensional Data)
   Use the **Storage Settings** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to set the proactive caching, storage, and notification settings for a dimension, cube, measure group, or partition. You can display the **Storage Settings** dialog box in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] by:  

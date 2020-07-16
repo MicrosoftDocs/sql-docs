@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Full-Text Engine for SQL service"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 029f9895-7232-4149-9362-3ab1a4133d21
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # The Microsoft Full-Text Engine for SQL Server will not load unsigned third-party components by default
   By default, [!INCLUDE[msCoName](../../includes/msconame-md.md)] Full-Text Engine for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will not load components that are not signed by [!INCLUDE[msCoName](../../includes/msconame-md.md)].  

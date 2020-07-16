@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "CHOOSE function"
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # Logical Functions - CHOOSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the item at the specified index from a list of values in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -28,7 +27,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CHOOSE ( index, val_1, val_2 [, val_n ] )  
 ```  

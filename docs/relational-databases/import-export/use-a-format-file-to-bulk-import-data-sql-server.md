@@ -1,6 +1,6 @@
 ---
-title: "Use a Format File to Bulk Import Data (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Use a format file to bulk import data"
+description: In SQL Server, you can use a format file in bulk-import operations. A format file maps the fields of the data file to the columns of the table.
 ms.date: "09/20/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -11,13 +11,13 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], format files"
   - "format files [SQL Server], importing data using"
 ms.assetid: 2956df78-833f-45fa-8a10-41d6522562b9
-author: douglaslMS
-ms.author: "douglasl"
-manager: craigg
+author: MashaMSFT
+ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+ms.custom: "seo-lt-2019"
 ---
-# Use a Format File to Bulk Import Data (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Use a format file to bulk import data (SQL Server)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This topic illustrates the use of a format file in bulk-import operations.  A format file maps the fields of the data file to the columns of the table.  Please review [Create a Format File (SQL Server)](../../relational-databases/import-export/create-a-format-file-sql-server.md) for additional information.
 
@@ -64,7 +64,7 @@ Using Notepad, create an empty file `D:\BCP\myFirstImport.bcp` and insert the fo
 
 Alternatively, you can execute the following PowerShell script to create and populate the data file:
 ```powershell
-cls
+Clear-Host
 # revise directory as desired
 $dir = 'D:\BCP\';
 
@@ -87,7 +87,7 @@ Add-Content -Path $bcpFile -Value '3,Stella,Rosenhain,1992-03-02';
 
 #Review content
 Get-Content -Path $bcpFile;
-Invoke-Item $bcpFile;
+Notepad.exe $bcpfile;
 ```
 
 ## Creating the Format Files<a name="create_format_file"></a>
@@ -131,7 +131,7 @@ Notepad D:\BCP\myFirstImport.xml
 Your XML format file, `D:\BCP\myFirstImport.xml` should look as follows:
 ```xml
 <?xml version="1.0"?>
-<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="https://www.w3.org/2001/XMLSchema-instance">
+<BCPFORMAT xmlns="https://schemas.microsoft.com/sqlserver/2004/bulkload/format" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
  <RECORD>
   <FIELD ID="1" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="7"/>
   <FIELD ID="2" xsi:type="CharTerm" TERMINATOR="," MAX_LENGTH="25" COLLATION="SQL_Latin1_General_CP1_CI_AS"/>

@@ -1,7 +1,7 @@
 ---
 title: "ntext, text, and image (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "7/22/2017"
+ms.date: "07/22/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -21,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: b0d8769c-7598-4f97-8162-ace5f182b5bc
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # ntext, text, and image (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Fixed and variable-length data types for storing large non-Unicode and Unicode character and binary data. Unicode data uses the UNICODE UCS-2 character set.
   

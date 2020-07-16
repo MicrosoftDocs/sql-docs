@@ -20,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: d8cae434-807a-473e-b94f-f7a0e1b2daf0
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.syslockinfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains information about all granted, converting, and waiting lock requests.  
   

@@ -9,7 +9,7 @@ ms.topic: conceptual
 ms.assetid: 7078b4ed-c779-4bf3-8db8-f9dcb3edd50f
 author: "Shamikg"
 ms.author: "Shamikg"
-manager: "v-thobro"
+manager: shamikg
 ---
 # Edit Type Mapping (OracleToSQL)
 The **Edit Type Mapping** dialog box lets you specify how types are mapped between the source and destination database objects.  

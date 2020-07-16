@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STDimension method"
 ms.assetid: 4368b0f6-0678-4ade-87dc-b43d8b2e8d92
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STDimension (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the maximum dimension of a **geography** instance.  
   

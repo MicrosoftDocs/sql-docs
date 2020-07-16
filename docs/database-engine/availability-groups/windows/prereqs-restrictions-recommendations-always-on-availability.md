@@ -1,8 +1,8 @@
 ---
-title: "Prerequisites, Restrictions, and Recommendations for availability groups"
-description: "A description of the prerequisites, restrictions and recommendations for deploying an Always On availability group."
-ms.custom: "seodec18"
-ms.date: "06/05/2018"
+title: "Availability group: Prerequisites, restrictions, & recommendations"
+description: "A description of the prerequisites, restrictions and recommendations for deploying an Always On availability group to SQL Server."
+ms.custom: seo-lt-2019
+ms.date: "03/22/2019"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: high-availability
@@ -19,10 +19,9 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Prerequisites, Restrictions, and Recommendations for Always On availability groups
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   This article describes considerations for deploying [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], including prerequisites, restrictions, and recommendations for host computers, Windows Server failover clusters (WSFC), server instances, and availability groups. For each of these components security considerations and required permissions, if any, are indicated.  
   
@@ -51,7 +50,7 @@ manager: craigg
 > [!IMPORTANT]  
 >  Also ensure that your environment is correctly configured for connecting to an availability group. For more information, see [Always On Client Connectivity &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-client-connectivity-sql-server.md).  
   
-###  <a name="ComputerRecommendations"></a> Recommendations for Computers That Host Availability Replicas (Windows System)  
+##  <a name="ComputerRecommendations"></a> Recommendations for Computers That Host Availability Replicas (Windows System)  
   
 -   **Comparable systems:**  For a given availability group, all the availability replicas should run on comparable systems that can handle identical workloads.  
   
@@ -82,7 +81,7 @@ manager: craigg
   
      The following PowerShell example sets the HostRecordTTL to 300 seconds for a Network Name resource named `SQL Network Name (SQL35)`.  
   
-    ```  
+    ```powershell
     Import-Module FailoverClusters  
   
     $nameResource = "SQL Network Name (SQL35)"  
@@ -94,7 +93,7 @@ manager: craigg
   
 ##### Related Content (PowerShell)  
   
--   [Clustering and High-Availability](https://blogs.msdn.com/b/clustering/archive/2009/05/23/9636665.aspx) (Failover Clustering and Network Load Balancing Team Blog)  
+-   [Clustering and High-Availability](https://techcommunity.microsoft.com/t5/failover-clustering/bg-p/FailoverClustering) (Failover Clustering and Network Load Balancing Team Blog)  
   
 -   [Getting Started with Windows PowerShell on a Failover Cluster](https://technet.microsoft.com/library/ee619762\(WS.10\).aspx)  
   
@@ -104,7 +103,7 @@ manager: craigg
   
 -   [Configure DNS settings in a Multi-Site Failover Cluster](https://technet.microsoft.com/library/dd197562\(WS.10\).aspx)  
   
--   [DNS Registration with Network Name Resource](https://blogs.msdn.com/b/clustering/archive/2009/07/17/9836756.aspx)  
+-   [DNS Registration with Network Name Resource](https://techcommunity.microsoft.com/t5/failover-clustering/dns-registration-with-the-network-name-resource/ba-p/371482)  
   
 
 ##  <a name="ServerInstance"></a> SQL Server Instance Prerequisites and Restrictions  
@@ -152,17 +151,14 @@ manager: craigg
     -   If a given thread is idle for a while, it is released back into the general [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] thread pool. Normally, an inactive thread is released after ~15 seconds of inactivity. However, depending on the last activity, an idle thread might be retained longer.  
 
     -   A SQL Server instance uses up to 100 threads for parallel redo for secondary replicas. Each database uses up to one-half of the total number of CPU cores, but not more than 16 threads per database. If the total number of required threads for a single instance exceeds 100, SQL Server uses a single redo thread for every remaining database. Serial Redo threads are released after ~15 seconds of inactivity. 
-    
-    > [!NOTE]
-    > Databases are chosen to go single-threaded based on their ascending database ID. As such, the database creation order should be considered for SQL Server instances that host more availability group databases than available worker threads. For example, on a system with 32 or more CPU cores, all databases starting with the 7th database that joined the availability group will be in serial redo mode irrespective of the actual redo workload for each database. Databases that require parallel redo should be added to the availability group first.    
-  
+     
 -   In addition, availability groups use unshared threads, as follows:  
   
     -   Each primary replica uses 1 Log Capture thread for each primary database. In addition, it uses 1 Log Send thread for each secondary database. Log send threads are released after ~15 seconds of inactivity.    
   
     -   A backup on a secondary replica holds a thread on the primary replica for the duration of the backup operation.  
   
- For more information, see [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx) (a CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Engineers Blog).  
+ For more information, see [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/) (a CSS [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Engineers Blog).  
   
 ###  <a name="PermissionsSI"></a> Permissions (Server Instance)  
   
@@ -181,7 +177,7 @@ manager: craigg
   
 ###  <a name="RelatedContentSI"></a> Related Content (Server Instance)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
 ##  <a name="NetworkConnect"></a> Network Connectivity Recommendations  
  We strongly recommend that you use the same network links for communications between WSFC nodes and communications between availability replicas.  Using separate network links can cause unexpected behaviors if some of links fail (even intermittently).  
@@ -261,9 +257,9 @@ manager: craigg
   
 -   **Availability replicas:**  Each availability group supports one primary replica and up to eight secondary replicas. All of the replicas can run under asynchronous-commit mode, or up to three of them can run under synchronous-commit mode (one primary replica with two synchronous secondary replicas).  
   
--   **Maximum number of availability groups and availability databases per computer:** The actual number of databases and availability groups you can put on a computer (VM or physical) depends on the hardware and workload, but there is no enforced limit. Microsoft has extensively tested with 10 AGs and 100 DBs per physical machine. Signs of overloaded systems can include, but are not limited to, worker thread exhaustion, slow response times for availability group system views and DMVs, and/or stalled dispatcher system dumps. Please make sure to thoroughly test your environment with a production-like workload to ensure it can handle peak workload capacity within your application SLAs. When considering SLAs be sure to consider load under failure conditions as well as expected response times.  
+-   **Maximum number of availability groups and availability databases per computer:** The actual number of databases and availability groups you can put on a computer (VM or physical) depends on the hardware and workload, but there is no enforced limit. Microsoft has tested up to 10 AGs and 100 DBs per physical machine, however this is not a binding limit. Depending on the hardware specification on the server and the workload, you can put a higher number of databases and availability groups on an instance of SQL Server. Signs of overloaded systems can include, but are not limited to, worker thread exhaustion, slow response times for availability group system views and DMVs, and/or stalled dispatcher system dumps. Please make sure to thoroughly test your environment with a production-like workload to ensure it can handle peak workload capacity within your application SLAs. When considering SLAs be sure to consider load under failure conditions as well as expected response times.  
   
--   **Do not use the Failover Cluster Manager to manipulate availability groups:**  
+-   **Do not use the Failover Cluster Manager to manipulate availability groups**. The state of a SQL Server Failover Cluster Instance (FCI) is shared between SQL Server and the Windows Failover Cluster (WSFC), with SQL Server keeping more detailed state information about the instances than the cluster cares about. The management model is that SQL Server must drive the transactions, and is responsible for keeping the cluster's view of the state in sync with SQL Server's view of state. If the state of the cluster is changed outside of SQL Server it is possible for the state to get out of sync between WSFC and SQL Server, which may lead to unpredictable behavior.
   
      For example:  
   
@@ -381,7 +377,7 @@ manager: craigg
   
 -   [SQL Server Always On Team Blog: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
--   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+-   [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.microsoft.com/psssql/2012/05/17/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases/)  
   
 ## See Also  
  [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   

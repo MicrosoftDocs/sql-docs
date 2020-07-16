@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dm.miningmodeleditor.accuracychart.columnmapping.f1"
 ms.assetid: f8b1193c-5c86-4c7e-8e35-158d293184fa
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Input Selection Tab (Mining Accuracy Chart View)
   Use the **Input Selection** tab of the **Mining Accuracy Chart** designer to specify the source of the data that is used to test the model and build the accuracy chart.  

@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "manage"
 ms.assetid: 4c617375-6b01-4a71-9680-de0cbf2cff05
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Deploying and Scaling Mining Models (Data Mining Add-ins for Excel)
   The tools in the **Model Usage** and **Management** group are provided to help you manage and browse existing mining models. You can use these tools to view any models that are stored on an instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], not just those created using the add-ins.  

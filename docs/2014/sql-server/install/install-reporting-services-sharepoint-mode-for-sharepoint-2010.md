@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 ms.assetid: 47efa72e-1735-4387-8485-f8994fb08c8c
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Install Reporting Services SharePoint Mode for SharePoint 2010
   The procedures in this topic guide you through a single server installation of a Reporting Services report server in SharePoint mode. The steps include running the SQL Server installation wizard as well as additional configuration tasks that use SharePoint 2010 central administration. The topic can also be used for individual procedures for an existing installation, for example to create a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application. For information on adding additional [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] servers to an existing farm, see [Add an Additional Report Server to a Farm &#40;SSRS Scale-out&#41;](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) and [Add an Additional Reporting Services Web Front-end to a Farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md).  
@@ -137,20 +135,20 @@ manager: craigg
   
 4.  Run the following PowerShell command to install the SharePoint service. A successful completion of the command displays a new line in the management shell. No message is returned to the management shell when the command completes successfully:  
   
-    ```  
+    ```powershell
     Install-SPRSService  
     ```  
   
 5.  Run the following PowerShell command to install the service proxy:  
   
-    ```  
+    ```powershell
     Install-SPRSServiceProxy  
     ```  
   
 6.  Run the following PowerShell command to start the service or see the following notes for instructions to start the service from SharePoint Central administration:  
   
-    ```  
-    get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
+    ```powershell
+    Get-SPServiceInstance -All | Where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
     ```  
   
  You can also start the service from SharePoint central Administration rather than running the third PowerShell command. The following steps are also useful to verify that the service is running.  
@@ -163,9 +161,7 @@ manager: craigg
   
     > [!NOTE]  
     >  If the Reporting Services service stays in the **Starting** status and does not change to **Started**, verify the 'SharePoint 2010 Administration' service is started in Windows Server Manager.  
-  
 
-  
 ##  <a name="bkmk_create_serrviceapplication"></a> Create a Reporting Services Service Application  
  This section provides the steps to create a service application and a description of the properties, if you are reviewing an existing service application.  
   
@@ -246,5 +242,3 @@ manager: craigg
  [PowerShell cmdlets for Reporting Services SharePoint Mode](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
  [Features Supported by the Editions of SQL Server 2012](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Reporting Services SharePoint Service and Service Applications](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  
-  
-  

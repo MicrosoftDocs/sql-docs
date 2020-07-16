@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.impexpwizard.chooseadatasource.f1"
 ms.assetid: ebf28a62-dfc1-4b39-9db5-df1919e5fccb
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Choose a Data Source (SQL Server Import and Export Wizard)
   Use the **Choose a Data Source** page to specify the source of the data that you want to copy.  

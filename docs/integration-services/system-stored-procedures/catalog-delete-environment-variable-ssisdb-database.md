@@ -8,19 +8,22 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: "language-reference"
 ms.assetid: 894b3bdb-aa34-463e-aba4-1b68ad96a0ef
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # catalog.delete_environment_variable (SSISDB Database)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes an environment variable from an environment in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   
 ## Syntax  
   
 ```sql  
-delete_environment_variable [ @folder_name = ] folder_name  
+catalog.delete_environment_variable [ @folder_name = ] folder_name  
     , [ @environment_name = ] environment_name  
     , [ @variable_name = ] variable_name  
 ```  

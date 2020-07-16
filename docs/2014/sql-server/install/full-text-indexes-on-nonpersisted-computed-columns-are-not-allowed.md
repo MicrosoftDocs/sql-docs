@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "full-text indexes"
 ms.assetid: cba737f7-b187-47d0-8458-23dc18d18aca
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Full-text indexes on nonpersisted, computed columns are not allowed
   You cannot create full-text indexes on nondeterministic and imprecise computed columns. Such columns cannot be used as type columns or as full-text key columns.  

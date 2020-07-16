@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "aggregate functions [Analysis Services]"
 ms.assetid: c42166ef-b75c-45f4-859c-09a3e9617664
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Use Aggregate Functions
   When a dimension is used to slice a measure, the measure is summarized along the hierarchies contained in that dimension. The summation behavior depends on the aggregate function specified for the measure. For most measures containing numeric data, the aggregate function is `Sum`. The value of the measure will sum to different amounts depending on which level of the hierarchy is active.  

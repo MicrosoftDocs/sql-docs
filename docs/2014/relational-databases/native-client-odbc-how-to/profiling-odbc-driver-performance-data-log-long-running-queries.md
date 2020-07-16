@@ -9,9 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "queries [ODBC]"
 ms.assetid: b9c1ddce-1dd9-409d-a414-8b544d616273
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Log Long-Running Queries (ODBC)
   This sample shows the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ODBC driver-specific options to log long-running queries. When run, this sample creates Odbcqry.log, which contains a list of queries whose execution exceeds an interval set by the application. This sample is not supported on IA64. This sample was developed for ODBC version 3.0 or later.  

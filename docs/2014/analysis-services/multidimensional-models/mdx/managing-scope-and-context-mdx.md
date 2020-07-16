@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "scripts [MDX], context"
@@ -17,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 631e7c20-8be9-4c35-8609-76516aef19d1
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Managing Scope and Context (MDX)
   In [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)], a Multidimensional Expressions (MDX) script can apply to the entire cube, or to specific portions of the cube, at specific points within the execution of the script. The MDX script can take a layered approach to calculations within a cube through the use of calculation passes.  

@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: "database-engine"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "metadata [OLE DB]"
@@ -14,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 605e3be5-aeea-4573-9847-b866ed3c8bff
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Metadata (OLE DB)
   This section describes parameter metadata, result set column metadata, and schema rowset metadata.  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "AggregationPerfLog property"
@@ -95,7 +94,6 @@ helpviewer_keywords:
 ms.assetid: 06eb0d78-96c0-42ff-b759-f4c794597c8d
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # OLAP Properties
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports the OLAP server properties listed in the following tables. For more information about additional server properties and how to set them, see [Configure Server Properties in Analysis Services](server-properties-in-analysis-services.md).  

@@ -21,10 +21,9 @@ helpviewer_keywords:
 ms.assetid: 8370b730-7fd5-43fe-a7f6-8300b3caa16d
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # DROP RULE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes one or more user-defined rules from the current database.  
   
@@ -35,7 +34,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 DROP RULE [ IF EXISTS ] { [ schema_name . ] rule_name } [ ,...n ] [ ; ]  
 ```  
   

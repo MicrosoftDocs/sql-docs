@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ragged hierarchies [Analysis Services]"
 ms.assetid: e40a5788-7ede-4b0f-93ab-46ca33d0cace
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Ragged Hierarchies
   A ragged hierarchy is a user-defined hierarchy that has an uneven number of levels. Common examples include an organizational chart where a high-level manager has both departmental managers and non-managers as direct reports, or geographic hierarchies composed of Country-Region-City, where some cities lack a parent State or Province, such as Washington D.C., Vatican City, or New Delhi.  
@@ -69,6 +67,6 @@ manager: craigg
  [Create User-Defined Hierarchies](user-defined-hierarchies-create.md)   
  [User Hierarchies](../multidimensional-models-olap-logical-dimension-objects/user-hierarchies.md)   
  [Parent-Child Hierarchy](parent-child-dimension.md)   
- [Connection String Properties &#40;Analysis Services&#41;](../../analysis-services/instances/connection-string-properties-analysis-services.md)  
+ [Connection String Properties &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/connection-string-properties-analysis-services)  
   
   

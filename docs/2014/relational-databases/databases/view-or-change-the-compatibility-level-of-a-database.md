@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 579867ec-57cb-4cb8-af35-9688c1e9e15d
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # View or Change the Compatibility Level of a Database
   This topic describes how to view or change the compatibility level of a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. Before you change the compatibility level of a database, you should understand the impact of the change on your applications. For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).  
@@ -65,7 +64,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example returns the compatibility level of the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT compatibility_level  
@@ -82,7 +81,7 @@ GO
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example changes the compatibility level of the [!INCLUDE[ssSampleDBobject](../../includes/sssql14-md.md)].  
   
-```tsql  
+```sql  
 ALTER DATABASE AdventureWorks2012  
 SET COMPATIBILITY_LEVEL = 120;  
 GO  

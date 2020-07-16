@@ -1,6 +1,6 @@
 ---
-title: "ExitCode Property (SqlService Class) | Microsoft Docs"
-ms.custom: ""
+title: "ExitCode Property (SqlService)"
+ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -17,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: e6b8bff2-946f-4abe-bd50-1f7bb11fdddf
 author: "CarlRabeler"
 ms.author: "carlrab"
-manager: craigg
 ---
 # ExitCode Property (SqlService Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets or sets the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Win32 error code that defines problems encountered when starting and stopping the service.  
   
 ## Syntax  

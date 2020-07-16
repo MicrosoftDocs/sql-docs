@@ -1,5 +1,6 @@
 ---
 title: "namespace-uri Function (XQuery) | Microsoft Docs"
+description: Learn how to use the namespace-uri function in an XQuery to return the namespace URI of a specified QName.
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 9b48d216-26c8-431d-9ab4-20ab187917f4
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Functions on Nodes - namespace-uri
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
 
   Returns the namespace URI of the QName specified in *$arg* as a xs:string.  
   
@@ -89,7 +89,7 @@ WHERE ProductModelID=19
 ```  
 <p1:wheel xmlns:p1="https://www.adventure-works.com/schemas/OtherFeatures">High performance wheels.</p1:wheel>  
 <p2:saddle xmlns:p2="https://www.adventure-works.com/schemas/OtherFeatures">  
-  <p3:i xmlns:p3="https://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
+  <p3:i xmlns:p3="http://www.w3.org/1999/xhtml">Anatomic design</p3:i> and made from durable leather for a full-day of riding in comfort.</p2:saddle>  
 ...  
 ```  
   

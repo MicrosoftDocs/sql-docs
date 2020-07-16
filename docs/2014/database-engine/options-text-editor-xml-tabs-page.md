@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "VS.ToolsOptionsPages.Text_Editor.XML.Tabs"
 ms.assetid: 13bf5f8c-aba3-4c05-b8bb-eb475797c9bd
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Options (Text Editor:XML:Tabs Page)
   This dialog box lets you change the tabbing behavior of the XML Editor, which is used to edit XML documents. To display these settings, click **Options** on the **Tools** menu, expand the **Text Editor** folder, expand the **XML** subfolder and then click **Tabs**.  

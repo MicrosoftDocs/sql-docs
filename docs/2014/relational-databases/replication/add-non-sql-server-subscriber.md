@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 21beeaa0-4b9e-48da-be63-1b9ff14e03d2
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Add Non-SQL Server Subscriber
   Replication supports creating push subscriptions to snapshot and transactional publications for Oracle and IBM DB2 Subscribers.  

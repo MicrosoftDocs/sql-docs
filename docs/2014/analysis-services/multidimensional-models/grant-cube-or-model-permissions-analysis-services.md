@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.roledesignerdialog.cubes.f1"
@@ -17,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 55b1456e-2f6b-4101-b316-c926f40304e3
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Grant cube or model permissions (Analysis Services)
   A cube or tabular model is the primary query object in an Analysis Services data model. When connecting to multidimensional or tabular data from Excel for ad hoc data exploration, users typically start by selecting a specific cube or tabular model as the data structure behind the Pivot report object. This topic explains how to grant the necessary permissions for cube or tabular data access.  

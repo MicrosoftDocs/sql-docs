@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helpdbfixedrole"
 ms.assetid: ad87e9a0-b901-4e37-9950-aa517d680fc3
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_helpdbfixedrole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a list of the fixed database roles.  
   
@@ -34,7 +33,7 @@ sp_helpdbfixedrole [ [ @rolename = ] 'role' ]
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'***role***'**  
+`[ @rolename = ] 'role'`
  Is the name of a fixed database role. *role* is **sysname**, with a default of NULL. If *role* is specified, only information about that role is returned; otherwise, a list and description of all fixed database roles is returned.  
   
 ## Return Code Values  

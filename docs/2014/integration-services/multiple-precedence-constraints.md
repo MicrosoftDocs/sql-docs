@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "multiple precedence constraints"
@@ -13,9 +12,8 @@ helpviewer_keywords:
   - "precedence constraints [Integration Services], multiple"
   - "constrained executables [Integration Services]"
 ms.assetid: 71c53ead-3d19-4bc1-aafd-e5b32595b420
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Multiple Precedence Constraints
   A precedence constraint connects two executables: two tasks, two containers, or one of each. They are known as the precedence executable and the constrained executable. A constrained executable can have multiple precedence constraints. For more information, see [Precedence Constraints](control-flow/precedence-constraints.md).  

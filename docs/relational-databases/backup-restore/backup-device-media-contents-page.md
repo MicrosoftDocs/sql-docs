@@ -1,5 +1,6 @@
 ---
 title: "Backup Device (Media Contents Page) | Microsoft Docs"
+description: Use the Backup Device dialog box to view the backup information. This information describes the device, the media, the media set, and the backup set or sets.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -12,10 +13,9 @@ f1_keywords:
 ms.assetid: 5fc7bd22-b6d8-4af1-8a58-2e7d0b994d08
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Backup Device (Media Contents Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the **Backup Device** dialog box to view the backup information. This information describes the device, the media, the media set, and the backup set or sets.  
   
  **To use SQL Server Management Studio to view the contents of a backup device**  

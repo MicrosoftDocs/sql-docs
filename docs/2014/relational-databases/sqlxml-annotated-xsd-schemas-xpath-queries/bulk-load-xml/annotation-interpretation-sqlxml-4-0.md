@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "bulk load [SQLXML], annotation interpretations"
   - "annotated XDR schemas, XML Bulk Load"
 ms.assetid: 1c46bdb6-2812-4a13-b60b-7101c04b299f
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Annotation Interpretation (SQLXML 4.0)
   The topics in this section describe how XML Bulk Load interprets annotations in the XSD schema. The behavior described here also applies to the annotations in the XDR schema.  

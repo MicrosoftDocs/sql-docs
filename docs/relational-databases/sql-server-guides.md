@@ -13,11 +13,10 @@ helpviewer_keywords:
 ms.assetid: a5d04171-dfbc-4b90-acd0-1bb27d4b7e34
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Guides
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The following guides are available. They discuss general concepts and apply to all versions of SQL Server, unless stated otherwise in the respective guide. 
 

@@ -12,12 +12,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STIsValid method (geography)"
 ms.assetid: 1bfe787f-ddf0-4fc7-af6a-570a58faab23
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STIsValid (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns true if a **geography** instance is well-formed and recognized as a valid geography object based on its Open Geospatial Consortium (OGC) type. Returns false if a **geography** instance is not well-formed. This method is precise.  
   

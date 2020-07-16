@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: a0524602-5239-45a7-8c44-2477302a3637
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # KPIs (SSAS Tabular)
   A *KPI* (Key Performance Indicator), in a tabular model, is used to gauge performance of a value, defined by a *Base* measure, against a *Target* value, also defined by a measure or by an absolute value. This topic provides tabular model authors a basic understanding of KPIs in a tabular model.  

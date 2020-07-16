@@ -25,12 +25,11 @@ helpviewer_keywords:
   - "index creation [SQL Server], XML indexes"
   - "XML indexes [SQL Server], creating"
 ms.assetid: c510cfbc-68be-4736-b3cc-dc5b7aa51f14
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # CREATE XML INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates an XML index on a specified table. An index can be created before there is data in the table. XML indexes can be created on tables in another database by specifying a qualified database name.  
   
@@ -41,7 +40,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 Create XML Index   
 CREATE [ PRIMARY ] XML INDEX index_name   
@@ -52,10 +51,7 @@ CREATE [ PRIMARY ] XML INDEX index_name
 [ ; ]  
   
 <object> ::=  
-{  
-    [ database_name. [ schema_name ] . | schema_name. ]   
-    table_name  
-}  
+{ database_name.schema_name.table_name | schema_name.table_name | table_name }
   
 <xml_index_option> ::=  
 {   

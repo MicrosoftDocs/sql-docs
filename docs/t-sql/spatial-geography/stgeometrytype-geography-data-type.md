@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STGeometryType method"
 ms.assetid: 3e169ead-a98e-44af-8d33-fd59a955cae4
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STGeometryType (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the Open Geospatial Consortium (OGC) type name represented by a **geography** instance.  
   

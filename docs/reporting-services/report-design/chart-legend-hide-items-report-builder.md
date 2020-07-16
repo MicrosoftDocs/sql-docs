@@ -1,8 +1,9 @@
 ---
-title: "Hide Legend Items on the Chart (Report Builder and SSRS) | Microsoft Docs"
+title: "Hide Legend Items on the Chart (Report Builder) | Microsoft Docs"
+description: Discover how to choose items that appear on the legend to display the essential data in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 7c326958-5ae9-4761-9c57-905972276a8f
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Enable and Disable AlwaysOn Availability Groups (SQL Server)
   Enabling [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is a prerequisite for a server instance to use availability groups. Before you can create and configure any availability group, the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature must have been enabled on the each instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that will host an availability replica for one or more availability groups.  
@@ -80,7 +79,7 @@ manager: craigg
   
 1.  Use the following [SERVERPROPERTY](/sql/t-sql/functions/serverproperty-transact-sql) statement:  
   
-    ```  
+    ```sql
     SELECT SERVERPROPERTY ('IsHadrEnabled');  
     ```  
   
@@ -96,12 +95,12 @@ manager: craigg
 ###  <a name="PowerShell1Procedure"></a> Using PowerShell  
  **To determine whether AlwaysOn Availability Groups is enabled**  
   
-1.  Set default (`cd`) to the server instance on which you want to determine whether [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is enabled.  
+1.  Set default (`cd`) to the server instance (e.g. `\SQL\NODE1\DEFAULT`) on which you want to determine whether [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is enabled.  
   
 2.  Enter the following PowerShell `Get-Item` command:  
   
-    ```  
-    PS SQLSERVER:\SQL\NODE1\DEFAULT> get-item . | select IsHadrEnabled  
+    ```powershell
+    Get-Item . | Select IsHadrEnabled  
     ```  
   
     > [!NOTE]  
@@ -154,7 +153,7 @@ manager: craigg
 ####  <a name="ExmplEnable-SqlHadrServic"></a> Example: Enable-SqlAlwaysOn  
  The following PowerShell command enables [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] on an instance of SQL Server (*Computer*\\*Instance*).  
   
-```  
+```powershell
 Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
 ```  
   
@@ -206,7 +205,7 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
   
      For example, the following command disables AlwaysOn Availability Groups on an instance of SQL Server (*Computer*\\*Instance*).  This command requires restarting the instance, and you will be prompted to confirm this restart.  
   
-    ```  
+    ```powershell
     Disable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance  
     ```  
   
@@ -253,5 +252,3 @@ Enable-SqlAlwaysOn -Path SQLSERVER:\SQL\Computer\Instance
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
  [SERVERPROPERTY &#40;Transact-SQL&#41;](/sql/t-sql/functions/serverproperty-transact-sql)  
-  
-  

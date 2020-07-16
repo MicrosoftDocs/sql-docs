@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STMPolyFromWKB method"
 ms.assetid: c4d0e649-0abb-4343-a3f0-3a702c8bbbdb
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STMPolyFromWKB (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **geographyMultiPolygon** instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   

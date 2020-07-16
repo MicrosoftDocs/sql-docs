@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 5634dbfb-740d-4c93-8fd5-2854cc741327
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # LEFT (SSIS Expression)
   Returns the specified number of characters from the leftmost portion of the given character expression.  

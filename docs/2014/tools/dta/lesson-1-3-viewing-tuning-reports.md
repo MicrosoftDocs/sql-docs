@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "tuning reports [SQL Server]"
 ms.assetid: daee6143-269f-428b-8458-9a3e726d586c
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Viewing Tuning Reports
   In the previous practice of this lesson, you viewed the [!INCLUDE[tsql](../../includes/tsql-md.md)] scripts that create or drop database objects in the Database Engine Tuning Advisor recommendations that were generated as a result of the MySession tuning session. The MySession tuning session was created in [Tuning a Workload](lesson-1-1-tuning-a-workload.md).  

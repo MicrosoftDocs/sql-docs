@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "AUTO_DETECT_PERIODICITY parameter"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 7807b5ff-8e0d-418d-a05b-b1a9644536d2
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Microsoft Linear Regression Algorithm Technical Reference
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Linear Regression algorithm is a special version of the Microsoft Decision Trees algorithm that is optimized for modeling pairs of continuous attributes. This topic explains the implementation of the algorithm, describes how to customize the behavior of the algorithm, and provides links to additional information about querying models.  

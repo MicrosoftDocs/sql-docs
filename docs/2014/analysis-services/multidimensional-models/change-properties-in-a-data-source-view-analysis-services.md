@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "friendly names [Analysis Services]"
@@ -17,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 4ccdabea-9c4d-460d-ba78-d23068143696
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Change Properties in a Data Source View (Analysis Services)
   After defining a data source view using the Data Source View Wizard and adding tables, views, named calculations, and named queries to the data source view, you may want to change properties related to:  

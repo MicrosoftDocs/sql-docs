@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: dd80a8e6-1e41-4c49-9898-02b1d2505a10
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Task 12: Discovering Knowledge (Knowledge Discovery)
   In this task, you perform the **Knowledge Discovery** activity on **Supplier ID** and **Supplier Name** domains. In this scenario, the knowledge discovery process mainly imports values for these two domains.  

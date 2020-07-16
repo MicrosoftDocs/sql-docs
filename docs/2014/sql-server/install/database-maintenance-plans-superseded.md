@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "suspended database maintenance plans"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: efac127c-6c81-4c7a-a6c4-9aae5d15545d
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Database maintenance plans superseded
     

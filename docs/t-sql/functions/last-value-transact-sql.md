@@ -16,21 +16,20 @@ helpviewer_keywords:
   - "analytic functions, LAST_VALUE"
   - "LAST_VALUE function"
 ms.assetid: fd833e34-8092-42b7-80fc-95ca6b0eab6b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LAST_VALUE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
 
-  Returns the last value in an ordered set of values in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+  Returns the last value in an ordered set of values.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 LAST_VALUE ( [ scalar_expression ] )   
     OVER ( [ partition_by_clause ] order_by_clause rows_range_clause )   

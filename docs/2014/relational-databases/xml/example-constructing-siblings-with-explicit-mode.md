@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "EXPLICIT FOR XML mode"
 ms.assetid: 8a57b765-a890-46a3-8b5f-5754e921ea6e
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Example: Constructing Siblings with EXPLICIT Mode
   Assume that you want to construct XML that provides sales order information. Note that <`SalesPerson`> and <`OrderDetail`> elements are siblings. Each Order has one <`OrderHeader`> element, one <`SalesPerson`> element, and one or more <`OrderDetail`> elements.  

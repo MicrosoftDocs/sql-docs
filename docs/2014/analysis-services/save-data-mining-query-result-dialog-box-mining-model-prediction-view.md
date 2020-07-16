@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dm.savedataminingqueryresult.f1"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 112fb527-7466-4fd4-9cf1-75596135648f
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Save Data Mining Query Result Dialog Box (Mining Model Prediction View)
   Use the **Save Data Mining Query Result** dialog box to save the results of a data mining query to a new table.  

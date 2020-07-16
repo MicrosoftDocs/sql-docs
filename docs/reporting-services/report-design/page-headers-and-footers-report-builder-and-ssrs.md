@@ -1,8 +1,9 @@
 ---
-title: "Page Headers and Footers (Report Builder and SSRS) | Microsoft Docs"
+title: "Page Headers and Footers (Report Builder) | Microsoft Docs"
+description: Discover the many items you can add to headers and footers, including text, images, rectangles, borders, background color, and expressions in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

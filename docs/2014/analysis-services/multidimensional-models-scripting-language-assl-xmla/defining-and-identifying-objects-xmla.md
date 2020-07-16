@@ -4,9 +4,7 @@ ms.custom: ""
 ms.date: "04/27/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
-  - "docset-sql-devref"
+ms.technology: "analysis-services"
 ms.topic: "reference"
 helpviewer_keywords: 
   - "objects [XML for Analysis]"
@@ -19,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: 43b65f6d-0123-4556-81f0-c7a0b84361e5
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Defining and Identifying Objects (XMLA)
   Objects are identified in XML for Analysis (XMLA) commands by using object identifiers and object references, and are defined by using Analysis Services Scripting Language (ASSL) elements XMLA commands.  

@@ -1,10 +1,9 @@
 ---
-title: "Creating CDATA Sections Using sql:use-cdata (SQLXML 4.0) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/16/2017"
+title: "Creating CDATA sections using sql:use-cdata (SQLXML)"
+description: Learn how to create CDATA sections in SQLXML 4.0 using the sql:use-cdata annotation to escape blocks of text that contain markup characters.
+ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: xml
 ms.topic: "reference"
 helpviewer_keywords: 
@@ -17,13 +16,15 @@ helpviewer_keywords:
   - "annotated XSD schemas, CDATA sections"
   - "sql:use-cdata"
 ms.assetid: 26d2b9dc-f857-44ff-bcd4-aaf64ff809d0
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
+ms.reviewer: ""
+ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating CDATA Sections Using sql:use-cdata (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In XML, CDATA sections are used to escape blocks of text that contain characters that would otherwise be recognized as markup characters.  
   
  A database in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can sometimes contain characters that are treated as markup characters by the XML parser; for example, angle brackets (< and >), the less-than-or-equal-to symbol (<=), and the ampersand (&) are treated as markup characters. However, you can wrap this type of special characters in a CDATA section to prevent them from being treated as markup characters. The text within the CDATA section is treated by the XML parser as plain text.  
@@ -41,7 +42,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  In the following schema, **sql:use-cdata** is set to 1 (True) for the **\<AddressLine1>** within the **\<Address>** element. As a result, the data is returned in a CDATA section.  
   
 ```  
-<xsd:schema xmlns:xsd="https://www.w3.org/2001/XMLSchema"  
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  
             xmlns:sql="urn:schemas-microsoft-com:mapping-schema">  
   <xsd:element name="Address"   
                sql:relation="Person.Address"   

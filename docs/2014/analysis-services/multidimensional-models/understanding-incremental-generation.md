@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "incremental generation [Analysis Services]"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 3ca0aa63-3eb5-4fe9-934f-8e96dee84eaa
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Understanding Incremental Generation
   Following the initial schema generation, you can change cube and dimension definitions by using [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], and then rerun the Schema Generation Wizard. The wizard updates the schema in the subject area database and in the associated data source view to reflect the changes, and retaining the data that currently exists in the tables to be regenerated, to the extent possible. If you changed the tables after the initial generation, the Schema Generation Wizard preserves those changes when possible by using the following rules:  
@@ -57,7 +55,7 @@ manager: craigg
  Adding a new object, such as a dimension, cube, or attribute.  
  The Schema Generation Wizard adds underlying objects to which the new object is mapped.  
   
- If the Schema Generation Wizard cannot make the required change because of the presence of a user object in the subject area database (because the Database Engine returns an error), the Schema Generation Wizard fails and displays the error returned by the Database Engine. For example, if you create a primary key constraint or a non-clustered index on a table after the wizard generated the table, the Schema Generation Wizard does not drop that table because it did not create the constraint or the index.  
+ If the Schema Generation Wizard cannot make the required change because of the presence of a user object in the subject area database (because the Database Engine returns an error), the Schema Generation Wizard fails and displays the error returned by the Database Engine. For example, if you create a primary key constraint or a nonclustered index on a table after the wizard generated the table, the Schema Generation Wizard does not drop that table because it did not create the constraint or the index.  
   
 ## Supporting Schema Changes  
  When you change the properties of the tables or columns in the subject area database or in the associated data source view, the Schema Generation Wizard treats the changes as described in the following table.  

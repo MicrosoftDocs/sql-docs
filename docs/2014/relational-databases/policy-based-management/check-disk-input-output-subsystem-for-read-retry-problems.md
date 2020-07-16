@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: cedf4097-5b73-4964-9935-74a101847019
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Check Disk Input Output Subsystem for Read Retry Problems
   This rule checks the event log for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error message 825. This message indicates that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was unable to read data from the disk on the first try. This message indicates a major problem with the disk I/O subsystem. This message does not currently indicate a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] problem. However, the disk problem could cause data loss or database corruption if it is not resolved.  
@@ -30,6 +29,6 @@ manager: craigg
 ## For More Information  
  [MSSQLSERVER_825](../errors-events/mssqlserver-825-database-engine-error.md)  
   
- [SQL Server I/O Basics, Chapter 2](https://go.microsoft.com/fwlink/?linkid=69370)  
+ [SQL Server I/O Basics, Chapter 2](/previous-versions/sql/sql-server-2005/administrator/cc917726(v=technet.10))  
   
   

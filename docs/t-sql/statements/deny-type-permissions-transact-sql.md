@@ -15,12 +15,11 @@ helpviewer_keywords:
   - "type permissions [SQL Server]"
   - "denying permissions [SQL Server], types"
 ms.assetid: 564e3500-c567-43dc-993b-9ab50e99cf3f
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DENY Type Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Denies permissions on a type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -28,7 +27,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON TYPE :: [ schema_name . ] type_name  
         TO <database_principal> [ ,...n ]  
     [ CASCADE ]  

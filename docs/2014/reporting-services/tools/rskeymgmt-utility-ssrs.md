@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], encryption"
@@ -19,9 +18,9 @@ helpviewer_keywords:
   - "rskeymgmt utility"
   - "scale-out deployments [Reporting Services]"
 ms.assetid: 53f1318d-bd2d-4c08-b19f-c8b698b5b3d3
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # rskeymgmt Utility (SSRS)
   Extracts, restores, creates, and deletes the symmetric key used to protect sensitive report server data against unauthorized access. This utility is also used to join report server instances in a scale-out deployment. A *report server scale-out deployment* refers to multiple report server instances that share a single report server database.  

@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.xmlsourceadapter.columns.f1"
 helpviewer_keywords: 
   - "XML Source Editor"
 ms.assetid: 5162c400-b2fc-4711-af0f-609132fbaaad
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # XML Source Editor (Columns Page)
   Use the **Columns** node of the **XML Source Editor** dialog box to map an output column to an external (source) column.  

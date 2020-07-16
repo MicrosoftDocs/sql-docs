@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: e7b8f084-1052-4133-959b-cebf4add790f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Configure the query governor cost limit Server Configuration Option
   This topic describes how to configure the `query governor cost limit` server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The query governor cost limit option specifies an upper limit on the time period in which a query can run. Query cost refers to the estimated elapsed time, in seconds, that is required to complete a query on a specific hardware configuration. The default value for this option is 0, which sets the query governor to off. This allows all queries to run without any time limitation. If you specify a nonzero, nonnegative value, the query governor disallows execution of any query that has an estimated cost that exceeds that value.  
@@ -69,7 +68,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) to set the value of the `query governor cost limit` option to `120` seconds.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  

@@ -15,13 +15,12 @@ helpviewer_keywords:
   - "database catalog views [SQL Server]"
   - "catalog views [SQL Server], files"
 ms.assetid: 60a05111-c542-45b5-a0cb-433ddcf6286a
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Databases and Files Catalog Views (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   This section contains the following catalog views.  
   

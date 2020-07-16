@@ -3,14 +3,12 @@ title: "sys.pdw_health_alerts (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
-ms.prod_service: "pdw"
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: conceptual
 ms.assetid: 49c01e5f-ee47-41a0-871d-35a759f50851
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.pdw_health_alerts (Transact-SQL)

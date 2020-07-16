@@ -21,13 +21,12 @@ helpviewer_keywords:
   - "database objects [SQL Server]"
   - "names [SQL Server], database objects"
 ms.assetid: 7d5b923f-0c3e-4af9-b39b-132807a6d5b3
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OBJECT_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the database object name for schema-scoped objects. For a list of schema-scoped objects, see [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md).  
   
@@ -35,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 OBJECT_NAME ( object_id [, database_id ] )  
 ```  
   
@@ -90,7 +89,7 @@ GO
 ```  
 USE AdventureWorks2012;  
 GO  
-DECLARE @MyID int;  
+DECLARE @MyID INT;  
 SET @MyID = (SELECT OBJECT_ID('AdventureWorks2012.Production.Product',  
     'U'));  
 SELECT name, object_id, type_desc  
@@ -123,7 +122,7 @@ SELECT QUOTENAME(DB_NAME(database_id))
     + N'.'   
     + QUOTENAME(OBJECT_NAME(object_id, database_id))  
     , *   
-FROM sys.dm_db_index_operational_stats(null, null, null, null);  
+FROM sys.dm_db_index_operational_stats(NULL, NULL, NULL, NULL);  
 GO  
 ```  
   

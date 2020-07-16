@@ -14,12 +14,11 @@ helpviewer_keywords:
   - "isolation levels [SQL Server], metadata access"
   - "hints [SQL Server], locking"
 ms.assetid: 02bb71fa-1e92-4782-a9cf-6e256cc1f3ea
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Transaction Isolation Levels
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not guarantee that lock hints will be honored in queries that access metadata through catalog views, compatibility views, information schema views, metadata-emitting built-in functions.  
   

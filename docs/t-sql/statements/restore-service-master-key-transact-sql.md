@@ -21,12 +21,11 @@ helpviewer_keywords:
   - "RESTORE SERVICE MASTER KEY statement"
   - "transferring Service Master Keys"
 ms.assetid: a68fd0ee-70ce-4104-aca0-fcae5f41fc38
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # RESTORE SERVICE MASTER KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Imports a service master key from a backup file.  
   
@@ -77,6 +76,4 @@ GO
  [Service Master Key](../../relational-databases/security/encryption/service-master-key.md)   
  [ALTER SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-service-master-key-transact-sql.md)   
  [BACKUP SERVICE MASTER KEY &#40;Transact-SQL&#41;](../../t-sql/statements/backup-service-master-key-transact-sql.md)   
- [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)  
-  
-  
+ [Encryption Hierarchy](../../relational-databases/security/encryption/encryption-hierarchy.md)

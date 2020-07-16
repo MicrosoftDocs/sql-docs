@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "objects [Analysis Services], defining objects"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: fbc0698f-93d3-4292-86cd-afe3a2ec5b0a
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Multidimensional Model Solutions (SSAS)
     

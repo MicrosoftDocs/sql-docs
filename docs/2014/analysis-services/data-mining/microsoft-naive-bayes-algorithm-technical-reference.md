@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "MINIMUM_DEPENDENCY_PROBABILITY parameter"
@@ -18,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: a4cd47fe-2127-4930-b18f-3edd17ee9a65
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Microsoft Naive Bayes Algorithm Technical Reference
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes algorithm is a classification algorithm provided by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] for use in predictive modeling. The algorithm calculates the conditional probability between input and predictable columns, and assumes that the columns are independent. This assumption of independence leads to the name Naive Bayes.  

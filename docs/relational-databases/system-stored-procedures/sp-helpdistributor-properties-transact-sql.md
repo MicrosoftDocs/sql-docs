@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpdistributor_properties"
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_helpdistributor_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns Distributor properties. This stored procedure is executed at the Distributor on the distribution database.  
   

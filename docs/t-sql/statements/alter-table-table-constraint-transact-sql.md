@@ -1,7 +1,7 @@
 ---
 title: "table_constraint (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/11/2018"
+ms.date: "03/01/2019"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -14,12 +14,11 @@ dev_langs:
 helpviewer_keywords: 
   - "table_constraint"
 ms.assetid: ac2a11e0-cc77-4e27-b107-4fe5bc6f5195
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # ALTER TABLE table_constraint (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Specifies the properties of a PRIMARY KEY, UNIQUE, FOREIGN KEY, a CHECK constraint, or a DEFAULT definition added to a table by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -27,7 +26,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 [ CONSTRAINT constraint_name ]   
 {   
     { PRIMARY KEY | UNIQUE }   
@@ -48,13 +47,15 @@ manager: craigg
           [ , {node_table TO node_table }]
           [ , ...n ]
         )
-        [ ON DELETE NO ACTION]
+        [ ON DELETE { NO ACTION | CASCADE } ]
     | DEFAULT constant_expression FOR column [ WITH VALUES ]   
     | CHECK [ NOT FOR REPLICATION ] ( logical_expression )  
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  CONSTRAINT  
  Specifies the start of a definition for a PRIMARY KEY, UNIQUE, FOREIGN KEY, or CHECK constraint, or a DEFAULT.  
   
@@ -87,7 +88,7 @@ manager: craigg
 >  Documenting WITH FILLFACTOR = *fillfactor* as the only index option that applies to PRIMARY KEY or UNIQUE constraints is maintained for backward compatibility, but will not be documented in this manner in future releases. Other index options can be specified in the [index_option](../../t-sql/statements/alter-table-index-option-transact-sql.md) clause of ALTER TABLE.  
   
  ON { _partition\_scheme\_name_**(**_partition\_column\_name_**)** | _filegroup_| **"**default**"** }  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Specifies the storage location of the index created for the constraint. If *partition_scheme_name* is specified, the index is partitioned and the partitions are mapped to the filegroups that are specified by *partition_scheme_name*. If *filegroup* is specified, the index is created in the named filegroup. If **"**default**"** is specified or if ON is not specified at all, the index is created in the same filegroup as the table. If ON is specified when a clustered index is added for a PRIMARY KEY or UNIQUE constraint, the whole table is moved to the specified filegroup when the clustered index is created.  
   
@@ -102,7 +103,7 @@ manager: craigg
  *ref_column*  
  Is a column or list of columns in parentheses referenced by the new FOREIGN KEY constraint.  
   
- ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  Specifies what action happens to rows in the table that is altered, if those rows have a referential relationship and the referenced row is deleted from the parent table. The default is NO ACTION.  
   
  NO ACTION  
@@ -127,7 +128,7 @@ manager: craigg
   
  Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the delete action on the **Vendor** row when there is at least one row in the **ProductVendor** table that references it.  
   
- ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON UPDATE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  Specifies what action happens to rows in the table altered when those rows have a referential relationship and the referenced row is updated in the parent table. The default is NO ACTION.  
   
  NO ACTION  
@@ -153,12 +154,12 @@ manager: craigg
  Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the update action on the **Vendor** row when there is at least one row in the **ProductVendor** table that references it.  
   
  NOT FOR REPLICATION  
- **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   
  Can be specified for FOREIGN KEY constraints and CHECK constraints. If this clause is specified for a constraint, the constraint is not enforced when replication agents perform insert, update, or delete operations.  
 
  CONNECTION
- Specifies the pair of node tables that the given edge constraint is allowed to connect.  
+ Specifies the pair of node tables that the given edge constraint is allowed to connect. ON DELETE specifies what happens to the rows in the edge table, when the nodes which were connected via the edge(s) in this edge table are deleted. 
  
  DEFAULT  
  Specifies the default value for the column. DEFAULT definitions can be used to provide values for a new column in the existing rows of data. DEFAULT definitions cannot be added to columns that have a **timestamp** data type, an IDENTITY property, an existing DEFAULT definition, or a bound default. If the column has an existing default, the default must be dropped before the new default can be added. If a default value is specified for a user-defined type column, the type should support an implicit conversion from *constant_expression* to the user-defined type. To maintain compatibility with earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], a constraint name can be assigned to a DEFAULT.  

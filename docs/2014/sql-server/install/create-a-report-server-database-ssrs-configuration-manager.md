@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "08/10/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "report servers [Reporting Services], databases"
   - "report server database"
   - "databases [Reporting Services], creating"
 ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT 
+ms.author: maggies
 ---
 # Create a Report Server Database  (SSRS Configuration Manager)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **Native mode** uses two [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] relational databases to store report server metadata and objects. One database is used for primary storage, and the second one stores temporary data. The databases are created together and bound by name. With a default [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, the databases are named `reportserver` and `reportservertempdb`. Collectively, the two databases are referred to as the "report server database" or "report server catalog".  
@@ -67,6 +65,6 @@ manager: craigg
  When creating a report server database, be aware that not all editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be used to host the database. For more information, see the "Report Server Database Server Edition Requirements" section of [Features Supported by the Editions of SQL Server 2014](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md).  
   
 ## See Also  
- [Reporting Services Configuration Manager &#40;del&#41;](/sql/2014/sql-server/install/reporting-services-configuration-manager-native-mode)  
+ [Reporting Services Configuration Manager &#40;del&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode)  
   
   

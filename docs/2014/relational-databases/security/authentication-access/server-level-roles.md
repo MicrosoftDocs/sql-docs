@@ -21,7 +21,6 @@ helpviewer_keywords:
 ms.assetid: 7adf2ad7-015d-4cbe-9e29-abaefd779008
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Server-Level Roles
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides server-level roles to help you manage the permissions on a server. These roles are security principals that group other principals. Server-level roles are server-wide in their permissions scope. (*Roles* are like *groups* in the Windows operating system.)  
@@ -56,7 +55,7 @@ manager: craigg
 ## Server-Level Permissions  
  Only server-level permissions can be added to user-defined server roles. To list the server-level permissions, execute the following statement. The server-level permissions are:  
   
-```tsql  
+```sql  
 SELECT * FROM sys.fn_builtin_permissions('SERVER') ORDER BY permission_name;  
 ```  
   

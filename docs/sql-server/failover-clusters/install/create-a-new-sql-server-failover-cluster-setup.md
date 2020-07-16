@@ -1,10 +1,11 @@
 ---
-title: "Create a New SQL Server Failover Cluster (Setup) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: "Create new Failover Cluster"
+description: This article describes how to use the Setup program to install or upgrade a SQL Server failover cluster or add a node to an existing cluster.
+ms.custom: "seo-lt-2019"
+ms.date: "12/13/2019"
 ms.reviewer: ""
 ms.prod: sql
-ms.technology: install
+ms.technology: high-availability
 ms.topic: conceptual
 helpviewer_keywords: 
   - "adding nodes"
@@ -16,10 +17,9 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Create a New SQL Server Failover Cluster (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   To install or upgrade a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you must run the Setup program on each node of the failover cluster. To add a node to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you must run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup on the node that is to be added to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance. Do not run Setup on the active node to manage the other nodes.  
   
  Depending on how the nodes are clustered, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster is configured in the following ways:  
@@ -95,7 +95,7 @@ manager: craigg
   
 8.  On the License Terms page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Click **Next** to continue. To end Setup, click **Cancel**.  
   
-9. On the Feature Selection page, select the components for your installation. A description for each component group appears in the right pane after you select the feature name. You can select any combination of check boxes, but only [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in tabular mode, and [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in multidimensional mode support failover clustering. Other selected components will run as a stand-alone feature without failover capability on the current node that you are running Setup on. For more information on [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] modes, see [Determine the Server Mode of an Analysis Services Instance](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+9. On the Feature Selection page, select the components for your installation. A description for each component group appears in the right pane after you select the feature name. You can select any combination of check boxes, but only [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in tabular mode, and [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in multidimensional mode support failover clustering. Other selected components will run as a stand-alone feature without failover capability on the current node that you are running Setup on. For more information on [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] modes, see [Determine the Server Mode of an Analysis Services Instance](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      The prerequisites for the selected features are displayed on the right-hand pane. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup will install the prerequisite that are not already installed during the installation step described later in this procedure.  
   
@@ -249,7 +249,7 @@ manager: craigg
   
 9. On the License Terms page, read the license agreement, and then select the check box to accept the license terms and conditions. To help improve [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)], you can also enable the feature usage option and send reports to [!INCLUDE[msCoName](../../../includes/msconame-md.md)]. Click **Next** to continue. To end Setup, click **Cancel**.  
   
-10. On the Feature Selection page, select the components for your installation. A description for each component group appears in the right pane after you select the feature name. You can select any combination of check boxes, but only [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in tabular mode, and [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in multidimensional mode support failover clustering. Other selected components will run as a stand-alone feature without failover capability on the current node that you are running Setup on. For more information on [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] modes, see [Determine the Server Mode of an Analysis Services Instance](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md).  
+10. On the Feature Selection page, select the components for your installation. A description for each component group appears in the right pane after you select the feature name. You can select any combination of check boxes, but only [!INCLUDE[ssDE](../../../includes/ssde-md.md)], [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in tabular mode, and [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] in multidimensional mode support failover clustering. Other selected components will run as a stand-alone feature without failover capability on the current node that you are running Setup on. For more information on [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] modes, see [Determine the Server Mode of an Analysis Services Instance](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance).  
   
      The prerequisites for the selected features are displayed on the right-hand pane. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup will install the prerequisite that are not already installed during the installation step described later in this procedure.  
   

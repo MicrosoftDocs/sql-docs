@@ -4,15 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "data-quality-services"
-  - "integration-services"
-  - "master-data-services"
+ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 059170b6-d62e-4b28-9451-99a0cc7e1f5f
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Lesson 3: Matching Data to Remove Duplicates from Supplier List
   You prepare the knowledge base for performing matching activity by creating a matching policy in the knowledge base. There can be only one matching policy in a knowledge base. A matching policy consists of one or more matching rules. A rule identifies the domains that are involved in the matching process, and specifies the weight that each domain value carries in the matching judgment. You specify in the rule whether domain values have to be an exact match or can be similar, and to what degree of similarity. You also specify whether a domain match is a prerequisite for the matching process. You can test each rule separately and test the entire policy against sample data. The testing process displays records whose matching scores are greater than the **Min record score** threshold specified in the DQS configuration in a cluster (group). You can continue to tweak the rules in the policy until you are satisfied.  

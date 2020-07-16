@@ -2,7 +2,7 @@
 title: "ListReservedURLs Method (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: wmi-provider-library-reference
 
 
@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ListReservedURLs method"
 ms.assetid: 32335af1-5eae-4420-a0ef-b1e8a3267166
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 ---
 # ConfigurationSetting Method - ListReservedURLs
   Lists URLs reserved for all applications on the report server.  

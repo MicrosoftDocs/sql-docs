@@ -23,9 +23,8 @@ helpviewer_keywords:
   - "table/view mapping [SQLXML], default mapping"
   - "element/attribute mapping [SQLXML]"
 ms.assetid: 9a18e92a-6cfb-4a14-993a-663a95aabb63
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Default Mapping of XSD Elements and Attributes to Tables and Columns (SQLXML 4.0)
   By default, an element of complex type in an XSD annotated schema maps to the table (view) with the same name in the specified database, and an element or attribute of simple type maps to the column with the same name in the table.  

@@ -19,12 +19,11 @@ helpviewer_keywords:
   - "networking [SQL Server], packet errors"
   - "connections [SQL Server], packets"
 ms.assetid: f7da1b80-5cbe-42fa-be71-40c6af16383a
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # &#x40;&#x40;PACKET_ERRORS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the number of network packet errors that have occurred on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connections since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.  
   

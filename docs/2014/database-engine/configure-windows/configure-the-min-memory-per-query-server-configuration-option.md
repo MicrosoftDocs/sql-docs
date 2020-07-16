@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ecd3fb79-b4a6-432f-9ef5-530e0d42d5a6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Configure the min memory per query Server Configuration Option
   This topic describes how to configure the `min memory per query` server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The `min memory per query` option specifies the minimum amount of memory (in kilobytes) that will be allocated for the execution of a query. For example, if `min memory per query` is set to 2,048 KB, the query is guaranteed to get at least that much total memory. The default value is 1,024 KB. The minimum value 512 KB, and the maximum is 2,147,483,647 KB (2 GB).  
@@ -74,7 +73,7 @@ manager: craigg
   
 3.  Copy and paste the following example into the query window and click **Execute**. This example shows how to use [sp_configure](/sql/relational-databases/system-stored-procedures/sp-configure-transact-sql) to set the value of the `min memory per query` option to `3500` KB.  
   
-```tsql  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 EXEC sp_configure 'show advanced options', 1;  

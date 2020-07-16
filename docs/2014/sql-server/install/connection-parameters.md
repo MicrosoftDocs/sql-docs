@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Upgrade Advisor [SQL Server], connections"
@@ -18,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: f754d038-637a-4d8e-85b0-b242e6499d26
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Connection Parameters
   To analyze certain server types, such as the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], you must select a specific instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The default instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is automatically selected. You can change this selection, but you can select only one instance at a time for analysis by Upgrade Advisor. If you have included a server type that requires authentication, you must enter the authentication mode and credentials.  

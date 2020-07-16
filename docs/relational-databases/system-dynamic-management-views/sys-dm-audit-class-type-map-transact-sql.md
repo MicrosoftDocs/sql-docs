@@ -16,9 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_audit_class_type_map dynamic management view"
 ms.assetid: e10b5431-1bb0-47ca-8fd0-c04bd73a4410
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_audit_class_type_map (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]

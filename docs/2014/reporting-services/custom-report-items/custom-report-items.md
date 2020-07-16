@@ -4,18 +4,16 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "docset-sql-devref"
-  - "reporting-services-native"
+ms.technology: reporting-services
 ms.topic: "reference"
 helpviewer_keywords: 
   - "extending Reporting Services"
   - "Reporting Services, extending"
   - "custom report items"
 ms.assetid: 64dcaf2c-1af5-4937-8ff7-98f1ec3b367e
-author: markingmyname
-ms.author: maghan
-manager: craigg
+author: maggiesMSFT
+ms.author: maggies
+manager: kfile
 ---
 # Custom Report Items
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] provides a rich set of tools for building and publishing enterprise reports, managing security and subscriptions, and extending the reporting functionality through a comprehensive API. Reports are defined using an XML-based language called Report Definition Language (RDL). RDL provides a set of instructions that describe layout, query information, and item types for a report. It is possible to extend RDL by writing a custom report item. The custom report item consists of a run-time component, which is called by the report processor at run time, and a design-time component, which allows the custom report item to be available in Report Designer.  

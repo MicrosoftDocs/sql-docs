@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Register a Service Principal Name for Kerberos Connections
   To use Kerberos authentication with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires both the following conditions to be true:  
@@ -141,7 +140,7 @@ setspn -A MSSQLSvc/myhost.redmond.microsoft.com:instancename accountname
   
  To determine the authentication method of a connection, execute the following query.  
   
-```tsql  
+```sql  
 SELECT net_transport, auth_scheme   
 FROM sys.dm_exec_connections   
 WHERE session_id = @@SPID;  

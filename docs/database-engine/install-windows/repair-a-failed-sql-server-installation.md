@@ -1,5 +1,6 @@
 ---
 title: "Repair a Failed SQL Server Installation | Microsoft Docs"
+deescription: This article describes the scenarios where you can try a repair operation to fix failed SQL Server installation.
 ms.custom: ""
 ms.date: "09/08/2017"
 ms.prod: sql
@@ -10,11 +11,10 @@ ms.assetid: 90c11b28-892b-44d6-978e-0eee48c75b7d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
-manager: craigg
 ---
 # Repair a Failed SQL Server Installation
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Repair operation can be used in the following scenarios:  
   

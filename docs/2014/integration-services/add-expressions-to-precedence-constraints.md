@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "precedence executables [Integration Services]"
@@ -15,9 +14,8 @@ helpviewer_keywords:
   - "combining constraints"
   - "expressions [Integration Services], constraints"
 ms.assetid: 5574d89a-a68e-4b84-80ea-da93305e5ca1
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Add Expressions to Precedence Constraints
   A precedence constraint can use an expression to define the constraint between two executables: the precedence executable and the constrained executable. The executables can be tasks or containers. The expression can be used alone or in combination with the execution result of the precedence executable. The execution result of an executable is either success or failure. When you configure the execution result of a precedence constraint, you can set the execution result to `Success`, `Failure`, or `Completion`. `Success` requires that the precedence executable succeed, `Failure` requires that the precedence executable fail, and `Completion` indicates that the constrained executable should run regardless of whether the precedence task succeeds or fails. For more information, see [Precedence Constraints](control-flow/precedence-constraints.md).  

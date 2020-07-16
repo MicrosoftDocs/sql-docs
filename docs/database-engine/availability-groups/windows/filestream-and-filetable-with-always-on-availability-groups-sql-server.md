@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: fdceda9a-a9db-4d1d-8745-345992164a98
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Use FILESTREAM and FileTable with Always On availability groups
@@ -26,16 +25,6 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
  All FILESTREAM functionality is supported. After a failover, FILESTREAM data is accessible on both readable secondary replicas and on the new primary.  
   
  FileTable functionality is partially supported. After a failover, FileTable data is accessible on the primary replica, but FileTable data is not accessible on readable secondary replicas.  
-  
- **In this Topic:**  
-  
--   [Prerequisites](#Prerequisites)  
-  
--   [Using Virtual Network Names (VNNs) for FILESTREAM and FileTable Access](#vnn)  
-  
--   [Related Tasks](#RelatedTasks)  
-  
--   [Related Content](#RelatedContent)  
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   

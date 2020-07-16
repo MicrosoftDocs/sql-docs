@@ -15,14 +15,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dbfixedrolepermission"
 ms.assetid: b8c30191-f532-49cd-83f3-c271f63ce572
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_dbfixedrolepermission (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-  Displays the permissions of a fixed database role. **sp_dbfixedrolepermission** returns correct information in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. The output does not reflect the changes to the permissions hierarchy that were implemented in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see[Permissions &#40;Database Engine&#41;](../../relational-databases/security/permissions-database-engine.md).  
+  Displays the permissions of a fixed database role. **sp_dbfixedrolepermission** returns correct information in [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]. The output does not reflect the changes to the permissions hierarchy that were implemented in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]. For more information, see [Database-Level Roles](../../relational-databases/security/authentication-access/database-level-roles.md#fixed-database-roles), which shows a list of fixed database roles and it's corresponding permissions.  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
@@ -37,7 +36,7 @@ sp_dbfixedrolepermission [ [ @rolename = ] 'role' ]
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'**_role_**'**  
+`[ @rolename = ] 'role'`
  Is the name of a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fixed database role. *role* is **sysname**, with a default of NULL. If *role* is not specified, the permissions for all fixed database roles are displayed.  
   
 ## Return Code Values  

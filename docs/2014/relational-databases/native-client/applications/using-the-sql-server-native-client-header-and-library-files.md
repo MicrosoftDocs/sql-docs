@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "ODBC applications, header files"
   - "SQLNCLI, library files"
 ms.assetid: 69889a98-7740-4667-aecd-adfc0b37f6f0
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Using the SQL Server Native Client Header and Library Files
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client header and library files are installed with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. When developing an application, it is important to copy and install all of the required files for development to your development environment. For more information about installing and redistributing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client, see [Installing SQL Server Native Client](installing-sql-server-native-client.md).  

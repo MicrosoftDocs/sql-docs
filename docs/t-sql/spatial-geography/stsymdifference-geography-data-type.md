@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STSymDifference (geography Data Type)"
 ms.assetid: 82bbfa2c-a61b-4f41-9bf8-6f720f363bae
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STSymDifference (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns an object that represents all points that are either in one **geography** instance or another **geography** instance, but not those points that lie in both instances.  
   

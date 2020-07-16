@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: c184c92d-948f-4037-a502-5fabd909c84c
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Step 3: Testing the Lesson 6 Package
   At run time, your package will obtain the value for the Directory property from the VarFolderName parameter.  

@@ -19,12 +19,11 @@ helpviewer_keywords:
   - "statements [SQL Server], last statement"
   - "counting rows"
 ms.assetid: 97a47998-81d9-4331-a244-9eb8b6fe4a56
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 ---
 # &#x40;&#x40;ROWCOUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the number of rows affected by the last statement. If the number of rows is more than 2 billion, use [ROWCOUNT_BIG](../../t-sql/functions/rowcount-big-transact-sql.md).  
   
@@ -58,7 +57,7 @@ manager: craigg
   
  EXECUTE statements preserve the previous @@ROWCOUNT.  
   
- Statements such as USE, SET \<option>, DEALLOCATE CURSOR, CLOSE CURSOR, BEGIN TRANSACTION, or COMMIT TRANSACTION reset the ROWCOUNT value to 0.  
+ Statements such as USE, SET \<option>, DEALLOCATE CURSOR, CLOSE CURSOR, PRINT, RAISERROR, BEGIN TRANSACTION, or COMMIT TRANSACTION reset the ROWCOUNT value to 0.  
   
  Natively compiled stored procedures preserve the previous @@ROWCOUNT. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements inside natively compiled stored procedures do not set @@ROWCOUNT. For more information, see [Natively Compiled Stored Procedures](../../relational-databases/in-memory-oltp/natively-compiled-stored-procedures.md).  
   
@@ -77,7 +76,7 @@ GO
 ```  
   
 ## See Also  
- [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-for-transact-sql.md)   
+ [System Functions &#40;Transact-SQL&#41;](../../relational-databases/system-functions/system-functions-category-transact-sql.md)   
  [SET ROWCOUNT &#40;Transact-SQL&#41;](../../t-sql/statements/set-rowcount-transact-sql.md)  
   
   

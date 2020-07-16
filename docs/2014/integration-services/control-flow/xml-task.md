@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "XML [Integration Services]"
   - "XML task [Integration Services]"
 ms.assetid: 9f761846-390e-46d5-9db7-858943d40849
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # XML Task
   The XML task is used to work with XML data. Using this task, a package can retrieve XML documents, apply operations to the documents by using Extensible Stylesheet Language Transformations (XSLT) style sheets and XPath expressions, merge multiple documents, or validate, compare, and save the updated documents to files and variables.  
@@ -135,6 +134,5 @@ manager: craigg
   
 -   Blog entry, [XML Destination Script Component](http://agilebi.com/jwelch/2007/06/02/xml-destination-script-component/), on agilebi.com  
   
--   CodePlex sample, [Process XML Data Package Sample](http://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), on www.codeplex.com  
-  
+-   CodePlex sample, [Process XML Data Package Sample](https://msftisprodsamples.codeplex.com/wikipage?title=SS2008!Process%20XML%20Data%20Package%20Sample&version=10&ProjectName=msftisprodsamples), on www.codeplex.com  
   

@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 486195ca-530f-49e8-b40d-0f817db159ee
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Use a BI Semantic Model Connection in Excel or Reporting Services
   This topic explains how to use the BI semantic model connections you created using instructions in other topics. If you have not yet created a BI semantic model, see [Create a BI Semantic Model Connection to a PowerPivot Workbook](create-a-bi-semantic-model-connection-to-a-power-pivot-workbook.md) and [Create a BI Semantic Model Connection to a Tabular Model Database](create-a-bi-semantic-model-connection-to-a-tabular-model-database.md).  

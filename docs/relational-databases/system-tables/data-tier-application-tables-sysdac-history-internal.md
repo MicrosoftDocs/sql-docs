@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysdac_history_internal"
 ms.assetid: 774a1678-0b27-42be-8adc-a6d7a4a56510
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Data-tier Application Tables - sysdac_history_internal
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains information about the actions taken to manage data-tier applications (DAC). This table is stored in the **dbo** schema of the **msdb** database.  
   

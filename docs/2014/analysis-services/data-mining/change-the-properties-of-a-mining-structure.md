@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining structures [Analysis Services], properties"
 ms.assetid: 03b16897-2e36-42b8-9f7d-db1b9b898401
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Change the Properties of a Mining Structure
   There are two kinds of properties on a mining structure, both of which can be modified:  

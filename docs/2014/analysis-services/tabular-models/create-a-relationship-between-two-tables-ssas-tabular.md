@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.managereldb.f1"
@@ -13,7 +12,6 @@ f1_keywords:
 ms.assetid: 052d77b7-7922-408a-a200-786016ee4d15
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Create a Relationship Between Two Tables (SSAS Tabular)
   If the tables in your data source do not have existing relationships, or if you add new tables, you can use the tools in the model designer to create new relationships. For information about how relationships are used in tabular models, see [Relationships &#40;SSAS Tabular&#41;](relationships-ssas-tabular.md).  

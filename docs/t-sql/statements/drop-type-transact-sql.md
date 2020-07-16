@@ -20,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: 11bf83f9-0718-4238-a835-83d2eb14ae7b
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # DROP TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Removes an alias data type or a common language runtime (CLR) user-defined type from the current database.  
   
@@ -31,7 +30,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]  
 ```  
   

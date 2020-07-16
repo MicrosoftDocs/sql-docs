@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models, browsing"
@@ -16,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ad35a528-1949-4048-8678-3b9760c1c88c
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Browsing a Forecasting Model
   When you open a forecasting model using **Browse**, the model is displayed in an interactive viewer, similar to the time series model viewer in [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. The viewer helps you explore trends, compare series, create predictions, and get information about the model and the underlying data.  

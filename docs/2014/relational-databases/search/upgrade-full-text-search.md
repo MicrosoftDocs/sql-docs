@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "installing Full-Text Search"
   - "full-text search [SQL Server], upgrading"
 ms.assetid: 2fee4691-f2b5-472f-8ccc-fa625b654520
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Upgrade Full-Text Search
   Upgrading full-text search to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] is done during setup and when database files and full-text catalogs from the earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are attached, restored, or copied using the Copy Database Wizard.  

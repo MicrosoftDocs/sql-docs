@@ -6,9 +6,8 @@ ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 ms.assetid: 7af4ad5d-484e-45b4-aa16-83c33b358bb6
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MladjoA
+ms.author: mlandzic
 ---
 # Query Spatial Data for Nearest Neighbor
   A common query used with spatial data is the Nearest Neighbor query. Nearest Neighbor queries are used to find the closest spatial objects to a specific spatial object. For example a store locater for a Web site often must find the closest store locations to a customer location.  

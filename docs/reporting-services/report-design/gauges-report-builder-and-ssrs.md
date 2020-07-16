@@ -1,8 +1,9 @@
 ---
-title: "Gauges (Report Builder and SSRS) | Microsoft Docs"
+title: "Gauges (Report Builder) | Microsoft Docs"
+description: Display key performance indicators to illustrate values or to compare data by using a radial or linear gauge in Report Builder. 
 ms.date: 03/03/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

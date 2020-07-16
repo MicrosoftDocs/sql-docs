@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 1a435875-cbee-49d1-914c-4aa15fad7628
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Technical Reference (Data Mining Add-ins for Excel)
   The Data Mining Add-Ins for Office have features useful to programmers and advanced data miners.  

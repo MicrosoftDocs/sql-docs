@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.multifile.general.f1"
 helpviewer_keywords: 
   - "Multiple Flat Files Connection Manager Editor"
 ms.assetid: 00129d43-2772-413b-bdf8-ac5de81cf4a5
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Multiple Flat Files Connection Manager Editor (General Page)
   Use the **General** page of the **Multiple Flat Files Connection Manager Editor** dialog box to select a group of files that have the same data format, and to specify their data format. A multiple flat files connection enables a package to connect to a group of text files that have the same format.  

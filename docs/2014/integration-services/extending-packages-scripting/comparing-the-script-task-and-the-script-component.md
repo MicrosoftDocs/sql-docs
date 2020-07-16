@@ -8,13 +8,12 @@ ms.technology: integration-services
 ms.topic: "reference"
 dev_langs: 
   - "VB"
-helpviewer_keywords: 
+helpviewer_keywords:
   - "Script task [Integration Services], comparing to Script component"
   - "Script component [Integration Services], comparing to Script task"
 ms.assetid: 4b73753a-4239-491b-b7a6-abc63ba83d2d
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Comparing the Script Task and the Script Component
   The Script task, available in the Control Flow window of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] designer, and the Script component, available in the Data Flow window, have very different purposes in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package. The task is a general-purpose control flow tool, whereas the component serves as a source, transformation, or destination in the data flow. Despite their different purposes, however, the Script task and the Script component have some similarities in the coding tools that they use and the objects in the package that they make available to the developer. Understanding their similarities and differences may help you to use both the task and the component more effectively.  
@@ -48,6 +47,6 @@ manager: craigg
 ## See Also  
  [Extending the Package with the Script Task](task/extending-the-package-with-the-script-task.md)   
  [Extending the Data Flow with the Script Component](data-flow-script-component/extending-the-data-flow-with-the-script-component.md)   
- [Consume Web Services in SSIS using Scripts (Curated Answer)](https://go.microsoft.com/fwlink/?LinkId=321996)  
+ [Using a Script Task in SQL Server Integration Services SSIS to Connect to a Web Service](https://www.mssqltips.com/sqlservertip/4288/using-a-script-task-in-sql-server-integration-services-ssis-to-connect-to-a-web-service/)  
   
   

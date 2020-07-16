@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "database engine configuration"
@@ -13,7 +12,6 @@ f1_keywords:
 ms.assetid: dfc27c1e-0fe2-4221-bed5-f52667ddd3c8
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Database Engine Configuration - User Instance
   Use the **User Instance** page to generate a separate instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] for users without administrator permissions, and to add users to the administrator role.  

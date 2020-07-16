@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "sql_variant data type"
   - "SQL Server Native Client ODBC driver, data types"
 ms.assetid: 4ba0924d-9fca-4c48-aced-0a8d817b3dde
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Mapping Data Types (ODBC)
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver maps [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL data types to ODBC SQL data types. The sections below discuss the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL data types and the ODBC SQL data types to which they map. They also discuss the ODBC SQL data types and their corresponding ODBC C data types, and the supported and default conversions.  

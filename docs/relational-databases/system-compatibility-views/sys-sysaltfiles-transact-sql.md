@@ -20,10 +20,9 @@ helpviewer_keywords:
 ms.assetid: 698dec23-5336-4108-87a5-f8e407f8da09
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # sys.sysaltfiles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Under special circumstances, contains rows corresponding to the files in a database.  
   

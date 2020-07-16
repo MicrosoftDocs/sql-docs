@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "FILESTREAM [SQL Server], Win32 and Transact-SQL Conflicts"
 ms.assetid: 8b1ee196-69af-4f9b-9bf5-63d8ac2bc39b
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: MikeRayMSFT
+ms.author: mikeray
 ---
 # Avoid Conflicts with Database Operations in FILESTREAM Applications
   Applications that use SqlOpenFilestream() to open Win32 file handles for reading or writing FILESTREAM BLOB data can encounter conflict errors with [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that are managed in a common transaction. This includes [!INCLUDE[tsql](../../includes/tsql-md.md)] or MARS queries that take a long time to finish execution. Applications must be carefully designed to help avoid these types of conflicts.  

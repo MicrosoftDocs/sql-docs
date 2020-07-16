@@ -1,27 +1,26 @@
 ---
-title: Use Active Directory Authentication (Kerberos)
-titleSuffix: Azure Data Studio
+title: Connect your SQL Server using Windows authentication (Kerberos)
 description: Learn how to enable Kerberos to use Active Directory Authentication for Azure Data Studio
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
+ms.prod: azure-data-studio
+ms.technology: 
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
-author: "meet-bhagdev"
-ms.author: "meetb"
-manager: craigg
+ms.custom: seodec18
+ms.date: 09/24/2018
 ---
-# Connect [!INCLUDE[name-sos](../includes/name-sos-short.md)] to your SQL Server using Windows authentication - Kerberos 
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] supports connecting to SQL Server using Kerberos.
+# Connect Azure Data Studio to your SQL Server using Windows authentication - Kerberos
 
-In order to use Integrated Authentication (Windows Authentication) on macOS or Linux, you need to set up a **Kerberos ticket** linking your current user to a Windows domain account. 
+Azure Data Studio supports connecting to SQL Server using Kerberos.
+
+In order to use Integrated Authentication (Windows Authentication) on macOS or Linux, you need to set up a **Kerberos ticket** linking your current user to a Windows domain account.
 
 ## Prerequisites
 
 - Access to a Windows domain-joined machine in order to query your Kerberos Domain Controller.
-- SQL Server should be configured to allow Kerberos authentication. For the client driver running on Unix, integrated authentication is only supported using Kerberos. More information on setting up Sql Server to authenticate using Kerberos can be found [here](https://support.microsoft.com/help/319723/how-to-use-kerberos-authentication-in-sql-server). There should be SPNs registered for each instance of Sql Server you are trying to connect to. Details about the format of SQL Server SPNs are listed [here](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats)
+- SQL Server should be configured to allow Kerberos authentication. For the client driver running on Unix, integrated authentication is only supported using Kerberos. For more information, see [Using Kerberos integrated authentication to connect to SQL Server](../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md). There should be SPNs registered for each instance of Sql Server you are trying to connect to. For more information, see [Registering a Service Principal Name](https://technet.microsoft.com/library/ms191153%28v=sql.105%29.aspx#SPN%20Formats).
 
 
 ## Checking if Sql Server has Kerberos Setup
@@ -154,7 +153,7 @@ Get a Ticket Granting Ticket (TGT) from KDC.
 kinit username@DOMAIN.COMPANY.COM
 ```
 
-View the available tickets using kinit. If the kinit was successful, you should see a ticket. 
+View the available tickets using klist. If the kinit was successful, you should see a ticket. 
 
 ```bash
 klist
@@ -162,7 +161,7 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## Connect using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## Connect using Azure Data Studio
 
 * Create a new connection profile
 

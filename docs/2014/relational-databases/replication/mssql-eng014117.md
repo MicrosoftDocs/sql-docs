@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # MSSQL_ENG014117
     
@@ -46,7 +45,7 @@ manager: craigg
   
      10.193.17.129 inst1  
   
--   Disable distribution, register the instance, and then reestablish distribution. If the value of @@SERVERNAME is not correct for a non-clustered instance, follow these steps:  
+-   Disable distribution, register the instance, and then reestablish distribution. If the value of @@SERVERNAME is not correct for a nonclustered instance, follow these steps:  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -57,7 +56,7 @@ manager: craigg
   
      After you execute the [sp_addserver &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addserver-transact-sql) stored procedure, you must restart the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service for the change to @@SERVERNAME to take effect.  
   
-     If the value of @@SERVERNAME is not correct for a clustered instance, you must change the name using Cluster Administrator. For more information, see [ AlwaysOn Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+     If the value of @@SERVERNAME is not correct for a clustered instance, you must change the name using Cluster Administrator. For more information, see [AlwaysOn Failover Cluster Instances (SQL Server)](../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
  After verifying that the Distributor instance is registered properly, verify that the distribution database is listed in **msdb..MSdistributiondbs**. If it is not listed:  
   

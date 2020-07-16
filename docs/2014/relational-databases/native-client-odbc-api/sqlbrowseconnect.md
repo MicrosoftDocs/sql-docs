@@ -11,9 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLBrowseConnect function"
 ms.assetid: 57faf388-c7ca-4696-9845-34e0a10cc5f7
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SQLBrowseConnect
   **SQLBrowseConnect** uses keywords that can be categorized into three levels of connection information. For each keyword, the following table indicates whether a list of valid values is returned and whether the keyword is optional.  

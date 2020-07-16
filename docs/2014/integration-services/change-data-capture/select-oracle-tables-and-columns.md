@@ -9,9 +9,8 @@ ms.topic: conceptual
 f1_keywords: 
   - "selTabCol"
 ms.assetid: bf73f80e-a954-4c5f-874e-17fdd4082715
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Select Oracle Tables and Columns
   Use the Select Oracle Tables and Columns page to select the tables from the Oracle source database where changes are captured. This page has the following elements:  

@@ -19,12 +19,11 @@ helpviewer_keywords:
   - "column names [SQL Server]"
   - "names [SQL Server], columns"
 ms.assetid: 4db1fb3b-e46f-43fb-b269-a5b6e8b39ed0
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # INDEX_COL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the indexed column name. Returns NULL for XML indexes.  
   

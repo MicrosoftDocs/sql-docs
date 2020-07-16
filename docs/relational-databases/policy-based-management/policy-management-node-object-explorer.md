@@ -10,10 +10,9 @@ ms.topic: conceptual
 ms.assetid: 7f5dfdc1-6693-4b0d-8691-2d6f06913ed9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 ---
 # Policy Management Node (Object Explorer)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This section contains the following F1 Help topics for the **PolicyManagement** node of Object Explorer in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   [Create New Condition or Open Condition Dialog Box, General Page](../../relational-databases/policy-based-management/create-new-condition-or-open-condition-dialog-box-general-page.md)  

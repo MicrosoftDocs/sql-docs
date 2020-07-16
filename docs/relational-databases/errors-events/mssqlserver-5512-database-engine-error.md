@@ -11,16 +11,15 @@ helpviewer_keywords:
 ms.assetid: 64e01ddc-fb74-4af0-88cf-9402a6900cb0
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 robots: noindex,nofollow
 ---
 # MSSQLSERVER_5512
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|MSSQLSERVER|  
 |Event ID|5512|  
 |Event Source|MSSQLSERVER|  

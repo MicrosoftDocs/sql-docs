@@ -1,21 +1,21 @@
 ---
-title: "TCP/IP Properties (Protocols Tab) | Microsoft Docs"
-ms.custom: ""
+title: "TCP/IP Properties (Protocols Tab)"
+description: Use the options in the Protocols tab of the TCP/IP Properties dialog box to configure the keep alive interval, the enabled flag, and other properties.
+ms.custom: seo-lt-2019
 ms.date: "08/24/2016"
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.reviewer: ""
 ms.technology: configuration
 ms.topic: conceptual
 helpviewer_keywords: 
   - "TCP/IP [SQL Server], configuration options"
 ms.assetid: 007638fc-3a24-4460-adbe-545ded5d6f88
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
 ---
 # TCP/IP Properties (Protocols Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Use the **TCP/IP Properties** dialog box to configure the options for the TCP/IP protocol. Click **TCP/IP** in the left pane, to show individual IP address configurations in the details pane.  
   
  Microsoft SQL Servermust be restarted before the changes take effect.  

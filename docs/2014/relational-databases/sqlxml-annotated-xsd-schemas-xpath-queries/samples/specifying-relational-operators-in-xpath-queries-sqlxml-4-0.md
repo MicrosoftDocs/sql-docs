@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "XPath operators [SQLXML]"
   - "operators [SQLXML]"
 ms.assetid: 177a0eb2-11ef-4459-a317-485a433ee769
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Specifying Relational Operators in XPath Queries (SQLXML 4.0)
   The following examples show how relational operators are specified in XPath queries. The XPath queries in these examples are specified against the mapping schema contained in SampleSchema1.xml. For information about this sample schema, see [Sample Annotated XSD Schema for XPath Examples &#40;SQLXML 4.0&#41;](sample-annotated-xsd-schema-for-xpath-examples-sqlxml-4-0.md).  

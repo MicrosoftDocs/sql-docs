@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "IDREFS directive"
   - "ID directive"
 ms.assetid: 99b9f0d8-ecbb-4225-859f-881066c09785
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Example: Specifying the ID and IDREFS Directives
   An element attribute can be specified as an `ID` type attribute, and the `IDREFS` attribute can then be used to refer to it. This enables intra-document links and is similar to the primary key and foreign key relationships in relational databases.  

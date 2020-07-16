@@ -1,7 +1,7 @@
 ---
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "2/20/2018"
+ms.date: 05/08/2020
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
@@ -19,15 +19,14 @@ helpviewer_keywords:
 ms.assetid: abd5ec8c-1a0e-4d38-a374-8ce3401bc60c
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Creates an External File Format object defining external data stored in Hadoop, Azure Blob Storage, or Azure Data Lake Store. Creating an external file format is a prerequisite for creating an External Table. By creating an External File Format, you specify the actual layout of the data referenced by an external table.  
+  Creates an External File Format object defining external data stored in Hadoop, Azure Blob Storage, Azure Data Lake Store or for the input and output streams associated with External Streams. Creating an external file format is a prerequisite for creating an External Table. By creating an External File Format, you specify the actual layout of the data referenced by an external table.  
   
- PolyBase supports the following file formats:
+The following file formats are supported:
   
 -   Delimited Text  
   
@@ -35,15 +34,18 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 -   Hive ORC
   
--   Parquet  
-  
+-   Parquet
+
+-   JSON - Applies to Azure SQL Edge only.
+
+
 To create an External Table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax
   
-```
+```syntaxsql
 -- Create an external file format for PARQUET files.  
 CREATE EXTERNAL FILE FORMAT file_format_name  
 WITH (  
@@ -82,7 +84,17 @@ WITH (
          | 'org.apache.hadoop.io.compress.DefaultCodec'  
         }  
      ]);  
-  
+
+-- Create an external file format for JSON files.
+CREATE EXTERNAL FILE FORMAT file_format_name  
+WITH (  
+    FORMAT_TYPE = JSON  
+     [ , DATA_COMPRESSION = {  
+        'org.apache.hadoop.io.compress.SnappyCodec'  
+      | 'org.apache.hadoop.io.compress.GzipCodec'      
+      | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
+    ]);  
+ 
 <format_options> ::=  
 {  
     FIELD_TERMINATOR = field_terminator  
@@ -98,7 +110,7 @@ WITH (
  *file_format_name*  
  Specifies a name for the external file format.
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | PARQUET]
+ FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT]
  Specifies the format of the external data.
   
    -   PARQUET
@@ -118,6 +130,9 @@ WITH (
 
    -   DELIMITEDTEXT
    Specifies a text format with column delimiters, also called field terminators.
+   
+   -  JSON
+   Specifies a JSON format. Applies to Azure SQL Edge only. 
   
  FIELD_TERMINATOR = *field_terminator*  
 Applies only to delimited text files. The field terminator specifies one or more characters that mark the end of each field (column) in the text-delimited file. The default is the pipe character ꞌ|ꞌ. For guaranteed support, we recommend using one or more ascii characters.
@@ -232,7 +247,7 @@ Notes about the table:
  TRUE  
  When retrieving data from the text file, store each missing value by using the default value for the data type of the corresponding column in the external table definition. For example, replace a missing value with:  
   
--   0 if the column is defined as a numeric column.
+-   0 if the column is defined as a numeric column. Decimal columns are not supported and will error.
   
 -   Empty string "" if the column is a string column.
   
@@ -242,7 +257,7 @@ Notes about the table:
  Store all missing values as NULL. Any NULL values that are stored by using the word NULL in the delimited text file are imported as the string 'NULL'.
   
    Encoding = {'UTF8' | 'UTF16'}  
- In Azure SQL Data Warehouse, PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server and PDW, PolyBase doesn't support reading UTF16 encoded files.
+ In Azure SQL Data Warehouse and PDW (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
   
  DATA_COMPRESSION = *data_compression_method*  
  Specifies the data compression method for the external data. When DATA_COMPRESSION isn't specified, the default is uncompressed data.
@@ -269,6 +284,14 @@ Notes about the table:
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+
+ The JSON file format type supports the following compression methods:
+  
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
+  
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
 ## Permissions  
  Requires ALTER ANY EXTERNAL FILE FORMAT permission.
@@ -364,6 +387,16 @@ WITH (FORMAT_TYPE = DELIMITEDTEXT,
           USE_TYPE_DEFAULT = True)
 )
 ```   
+### F. Create a JSON external file format  
+ This example creates an external file format for a JSON file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression. This example applies to Azure SQL Edge and is currently not supported for other SQL products. 
+  
+```  
+CREATE EXTERNAL FILE FORMAT jsonFileFormat  
+WITH (  
+    FORMAT_TYPE = JSON,  
+    DATA_COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'  
+);  
+```  
 
 ## See Also
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   

@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_showrowreplicainfo"
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_showrowreplicainfo (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays information about a row in a table that is being used as an article in merge replication. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -35,16 +34,16 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ```  
   
 ## Arguments  
- [ **@ownername**= ] **'***ownername***'**  
+`[ @ownername = ] 'ownername'`
  Is the name of the table owner. *ownername* is **sysname**, with a default of NULL. This parameter is useful to differentiate tables if a database contains multiple tables with the same name, but each table has a different owner.  
   
- [ **@tablename =**] **'***tablename***'**  
+`[ @tablename = ] 'tablename'`
  Is the name of the table that contains the row for which the information is returned. *tablename* is **sysname**, with a default of NULL.  
   
- [ **@rowguid =**] *rowguid*  
+`[ @rowguid = ] rowguid`
  Is the unique identifier of the row. *rowguid* is **uniqueidentifier**, with no default.  
   
- [ **@show**= ] **'***show***'**  
+`[ @show = ] 'show'`
  Determines the amount of information to return in the result set. *show* is **nvarchar(20)** with a default of BOTH. If **row**, only row version information is returned. If **columns**, only column version information is returned. If **both**, both row and column information is returned.  
   
 ## Result Sets for Row Information  

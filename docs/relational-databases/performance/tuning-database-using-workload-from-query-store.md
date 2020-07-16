@@ -11,10 +11,9 @@ helpviewer_keywords:
 ms.assetid: 17107549-5073-4fa2-8ee7-5ed33b38821e
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
 ---
 # Tuning Database Using Workload from Query Store
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 The [Query Store](../../relational-databases/performance/how-query-store-collects-data.md) feature in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] automatically captures a history of queries, plans, and runtime statistics, and persists this information in the database. The [Database Engine Tuning Advisor (DTA)](../../relational-databases/performance/database-engine-tuning-advisor.md) supports a new option to use the Query Store to automatically select an appropriate workload for tuning. For many users, this can take away the need to explicitly collect a workload for tuning. This feature is only available if the database has the Query Store feature turned on. 
@@ -41,6 +40,6 @@ The difference between the Query Store and Plan Cache options is that the former
 
 ## See Also  
 [Database Engine Tuning Advisor](../../relational-databases/performance/database-engine-tuning-advisor.md)     
-[Tutorial: Database Engine Tuning Advisor](Tutorial:%20Database%20Engine%20Tuning%20Advisor.md)     
+[Tutorial: Database Engine Tuning Advisor](../../tools/dta/tutorial-database-engine-tuning-advisor.md)        
 [How Query Store Collects Data](../../relational-databases/performance/how-query-store-collects-data.md)     
 [Query Store Best Practices](../../relational-databases/performance/best-practice-with-the-query-store.md)

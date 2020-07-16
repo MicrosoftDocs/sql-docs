@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.bidtoolset.connoracledb.f1"
 ms.assetid: 9bd177fb-8539-46cd-bf96-189ade52c2a1
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Connect to an Oracle Database (SSAS)
   This page of the **Table Import Wizard** enables you to specify settings to connect to an Oracle database. To access the wizard from the [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)], on the **Model** menu, click **Import from Data Source**.  
@@ -22,7 +20,7 @@ manager: craigg
 > [!NOTE]  
 >  The credentials of the current user are used when selecting a database in this page. However, import will not succeed if the user specified in the Impersonation Information page does not have sufficient privileges to read from the selected database.  
   
-## UIElement List  
+## UI element list  
  **Friendly connection name**  
  Type a unique name for this data source connection. This is a required field.  
   

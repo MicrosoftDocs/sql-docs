@@ -1,6 +1,7 @@
 ---
-title: "Take an Availability Group Offline (SQL Server) | Microsoft Docs"
-ms.custom: ""
+title: "Alter availability group offline"
+description: Steps to set your Always On availability group offline
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
@@ -11,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 50f5aad8-0dff-45ef-8350-f9596d3db898
 author: rothja
 ms.author: jroth
-manager: craigg
 ---
 # Take an Availability Group Offline (SQL Server)
   This topic describes how to take an AlwaysOn availability group from the ONLINE state to the OFFLINE state by using [!INCLUDE[tsql](../includes/tsql-md.md)] in [!INCLUDE[ssSQL11SP1](../includes/sssql11sp1-md.md)] and later versions. There is no data loss for synchronous-commit databases because if any synchronous-commit replica is not synchronized, the OFFLINE operation raises an error and leaves the availability group ONLINE. Keeping the availability group online protects unsynchronized synchronous-commit databases from possible data loss. After an availability group goes offline, its databases become unavailable to clients and you cannot bring the availability group back online. Therefore, take an availability group offline only to migrate the availability group resources from one WSFC cluster to another.  
@@ -53,7 +53,7 @@ manager: craigg
 ### Example  
  The following example takes the `AccountsAG` availability group offline.  
   
-```  
+```sql
 ALTER AVAILABILITY GROUP AccountsAG OFFLINE;  
 ```  
   
@@ -77,5 +77,3 @@ ALTER AVAILABILITY GROUP AccountsAG OFFLINE;
   
 ## See Also  
  [AlwaysOn Availability Groups &#40;SQL Server&#41;](availability-groups/windows/always-on-availability-groups-sql-server.md)  
-  
-  

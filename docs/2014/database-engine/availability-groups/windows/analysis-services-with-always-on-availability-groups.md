@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Analysis Services with Always On Availability Groups
   An AlwaysOn availability group is a predefined collection of SQL Server relational databases that failover together when conditions trigger a failover in any one database, redirecting requests to a mirrored database on another instance in the same availability group. If you are using availability groups as your high availability solution, you can use a database in that group as a data source in an Analysis Services tabular or multidimensional solution. All of the following Analysis Services operations work as expected when using an availability database: processing or importing data, querying relational data directly (using ROLAP storage or DirectQuery mode), and writeback.  
@@ -214,7 +213,7 @@ manager: craigg
  [Availability Group Listeners, Client Connectivity, and Application Failover &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
  [Active Secondaries: Readable Secondary Replicas &#40;AlwaysOn Availability Groups&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
  [AlwaysOn Policies for Operational Issues with AlwaysOn Availability Groups &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
- [Create a Data Source &#40;SSAS Multidimensional&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [Enable Dimension Writeback](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+ [Create a Data Source &#40;SSAS Multidimensional&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [Enable Dimension Writeback](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   
   

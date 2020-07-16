@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "reporting-services-native"
+ms.technology: "reporting-services-native"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.rtp.rptdesigner.shared.maprulesdistribution.f1"
@@ -33,7 +32,7 @@ f1_keywords:
 ms.assetid: a1d691b2-c5ae-420f-af60-b7c54a7385a4
 author: maggiesMSFT
 ms.author: maggies
-manager: craigg
+manager: kfile
 ---
 # Change Map Legends, Color Scale, and Associated Rules (Report Builder and SSRS)
   A map can contain map legends, a color scale, and a distance scale. These parts of a map help users interpret the data visualization on the map.  

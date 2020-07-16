@@ -13,11 +13,14 @@ f1_keywords:
   - "sql13.dts.designer.odatasource.columns.f1"
   - "sql13.dts.designer.odatasource.erroroutput.f1"
 ms.assetid: cc9003c9-638e-432b-867e-e949d50cec90
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # OData Source
+
+[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+
+
 Use the OData Source component in an SSIS package to consume data from an Open Data Protocol (OData) service.
 
 ## Supported protocols and data formats
@@ -32,13 +35,15 @@ The component supports the OData v3 and v4 protocols.
 
 The OData source includes support for the following data sources:
 -   Microsoft Dynamics AX Online and Microsoft Dynamics CRM Online
--   SharePoint lists. To see all the lists on a SharePoint server, use the following URL: https://\<server>/_vti_bin/ListData.svc. For more information about SharePoint URL conventions, see [SharePoint Foundation REST Interface](https://msdn.microsoft.com/library/ff521587.aspx).
+-   SharePoint lists. To see all the lists on a SharePoint server, use the following URL: `https://<server>/_vti_bin/ListData.svc`. For more information about SharePoint URL conventions, see [SharePoint Foundation REST Interface](https://msdn.microsoft.com/library/ff521587.aspx).
 
 ## Supported data types
 
 The OData source supports the following simple data types: int, byte[], bool, byte, DateTime, DateTimeOffset, decimal, double, Guid, Int16, Int32, Int64, sbyte, float, string, and TimeSpan.
 
 To discover the data types of columns in your data source, check the `https://<OData feed endpoint>/$metadata` page.
+
+For the **Decimal** data type, the precision and scale are determined by the source metadata. If the source metadata does not specify the **Precision** and **Scale** properties, the data may be truncated.
 
 > [!IMPORTANT]
 > The OData Source component does not support complex types, such as multiple-choice items, in SharePoint lists.

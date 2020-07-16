@@ -1,18 +1,16 @@
 ---
-title: "Specify a Breakpoint Filter | Microsoft Docs"
-ms.custom: ""
+title: Specify a Breakpoint Filter
+ms.custom: seo-lt-2019
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Transact-SQL debugger, breakpoint filter"
 ms.assetid: 7bf1dddd-7b0b-4c47-8a7b-28a5569b4fa5
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Specify a Breakpoint Filter
   A breakpoint filter limits the breakpoint to acting only on specified computers, operating system processes, and threads. Breakpoint filters are typically used when debugging parallel applications.  

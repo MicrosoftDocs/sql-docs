@@ -11,11 +11,10 @@ helpviewer_keywords:
 ms.assetid: 48919fcb-3a22-43ca-a63c-b210cf2c32d5
 author: "stevestein"
 ms.author: "sstein"
-manager: craigg
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Showplan XML for Query Compile Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The Showplan XML For Query Compile event class occurs when [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compiles an SQL statement. Include thisevent class to identify the Showplan operators on [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
  The Showplan XML For Query Compile event class displays complete, compile time data, so traces that contain this event class can incur significant performance overhead. To minimize this, limit use of this event class to traces that monitor specific problems for brief periods of time.  

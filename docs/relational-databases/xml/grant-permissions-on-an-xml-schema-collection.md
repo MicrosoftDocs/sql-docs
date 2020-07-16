@@ -1,5 +1,6 @@
 ---
 title: "Grant Permissions on an XML Schema Collection | Microsoft Docs"
+description: Learn how to grant permissions to create an XML schema collection and also to grant permissions on an XML schema collection object.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,12 +12,11 @@ helpviewer_keywords:
   - "granting permissions [SQL Server], XML schema collections"
   - "ALTER permission"
 ms.assetid: ffbb829c-3b8f-4e5d-97d9-ab4059aab0db
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MightyPen
+ms.author: genemi
 ---
 # Grant Permissions on an XML Schema Collection
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   You can grant permissions to create an XML schema collection and also grant permissions on an XML schema collection object.  
   
 ## Granting Permission to Create an XML Schema Collection  
@@ -90,7 +90,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
 <xsd:element name="AdditionalContactInfo" >  
   <xsd:complexType mixed="true" >  
@@ -149,7 +149,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
 <xsd:element name="AdditionalContactInfo" >  
@@ -264,7 +264,7 @@ SETUSER 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
 <xsd:element name="AdditionalContactInfo" >  
@@ -290,7 +290,7 @@ SETUSER 'TestLogin1'
 GO  
 ALTER XML SCHEMA COLLECTION myTestSchemaCollection ADD '  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
             xmlns="https://schemas.adventure-works.com/Additional/ContactInfo"   
 elementFormDefault="qualified">  
  <xsd:element name="pager" type="xsd:string"/>  
@@ -357,7 +357,7 @@ setuser 'TestLogin1'
 GO  
 CREATE XML SCHEMA COLLECTION myTestSchemaCollection AS '<?xml version="1.0" encoding="UTF-8" ?>  
 <xsd:schema targetNamespace="https://schemas.adventure-works.com/Additional/ContactInfo"   
-            xmlns:xsd="https://www.w3.org/2001/XMLSchema"   
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"   
 elementFormDefault="qualified">  
   
 <xsd:element name="AdditionalContactInfo" >  
@@ -451,8 +451,8 @@ GO
 CREATE USER schemaUser WITH DEFAULT_SCHEMA=dbo  
 GO  
 CREATE XML SCHEMA COLLECTION MySC AS '  
-<schema xmlns="https://www.w3.org/2001/XMLSchema" targetNamespace="https://ns"  
-xmlns:ns="https://ns">  
+<schema xmlns="http://www.w3.org/2001/XMLSchema" targetNamespace="http://ns"  
+xmlns:ns="http://ns">  
   
    <simpleType name="ListOfIntegers">  
       <list itemType="integer"/>  

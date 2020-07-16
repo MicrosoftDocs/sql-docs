@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "12/29/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "mining models, creating"
 ms.assetid: 8efd5bf4-4e6a-4ee8-971a-6efaed5f3b76
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Add Model to Structure (Data Mining Add-ins for Excel)
   ![Add Model to Structure button](media/dmc-addmodel.gif "Add Model to Structure button")  

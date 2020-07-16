@@ -13,12 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_reinitmergesubscription"
 ms.assetid: 249a4048-e885-48e0-a92a-6577f59de751
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_reinitmergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Marks a merge subscription for reinitialization the next time the Merge Agent runs. This stored procedure is executed at the Publisher in the publication database.  
   
@@ -35,16 +34,16 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
 ```  
   
 ## Arguments  
- [ **@publication =** ] **'***publication***'**  
+`[ @publication = ] 'publication'`
  Is the name of the publication. *publication* is **sysname**, with a default of **all**.  
   
- [ **@subscriber =** ] **'***subscriber***'**  
+`[ @subscriber = ] 'subscriber'`
  Is the name of the Subscriber. *subscriber* is **sysname**, with a default of **all**.  
   
- [ **@subscriber_db =** ] **'***subscriber_db***'**  
+`[ @subscriber_db = ] 'subscriber_db'`
  Is the name of the Subscriber database. *subscriber_db* is **sysname**, with a default of **all**.  
   
- [ **@upload_first =** ] **'***upload_first***'**  
+`[ @upload_first = ] 'upload_first'`
  Is whether changes at the Subscriber are uploaded before the subscription is reinitialized. *upload_first* is **nvarchar(5)**, with a default of FALSE. If **true**, changes are uploaded before the subscription is reinitialized. If **false**, changes are not uploaded.  
   
 ## Return Code Values  

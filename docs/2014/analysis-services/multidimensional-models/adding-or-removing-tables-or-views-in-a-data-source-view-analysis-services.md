@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.asvs.dsvdesigner.tablespane.f1"
@@ -19,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: 98307d04-6548-4d7d-9244-2371dd165249
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Adding or Removing Tables or Views in a Data Source View (Analysis Services)
   After you have created a data source view (DSV) in [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)], you can modify it in Data Source View Designer by adding or removing tables and columns, including tables and columns from another data source.  

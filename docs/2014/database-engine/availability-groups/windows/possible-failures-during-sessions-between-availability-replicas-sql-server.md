@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: cd613898-82d9-482f-a255-0230a6c7d6fe
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Possible Failures During Sessions Between Availability Replicas (SQL Server)
   Physical, operating system, or [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] problems can cause a failure in a session between two availability replicas. An availability replica does not regularly check the components on which Sqlservr.exe relies to verify whether they are functioning correctly or have failed. However, for some types of failures, the affected component reports an error to Sqlservr.exe. An error reported by another component is called a *hard error*. To detect other failures that would otherwise go unnoticed, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implements its own session-timeout mechanism. Specifies the session-timeout period in seconds. This time-out period is the maximum time that a server instance waits to receive a PING message from another instance before considering that other instance to be disconnected. When a session timeout occurs between two availability replicas, the availability replicas assume that a failure has occurred and declares a *soft error*.  
@@ -69,21 +68,21 @@ manager: craigg
   
 -   Network errors such as TCP link time-outs, dropped or corrupted packets, or packets that are in an incorrect order.  
   
--   A hanging operating system, server, or database state.  
+-   An operating system, server, or database that is not responding.  
   
 -   A Windows server timing out.  
   
 -   Insufficient computing resources, such as a CPU or disk overload, the transaction log filling up, or the system is running out of memory or threads. In these cases, you must increase the time-out period, reduce the workload, or change the hardware to handle the workload.  
   
 ### The Session-Timeout Mechanism  
- Because soft errors are not detectable directly by a server instance, a soft error could potentially cause an availability replica to wait indefinitely for a response from the other availability replica in a session. To prevent this, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implements a session time-out mechanism, based on the connected availability replicas sending out a ping on each open connection at a fixed interval. Receiving a ping during the time-out period indicates that the connection is still open and that the server instances are communicating over it. On receiving a ping, a replica resets its time-out counter on that connection. For information about the relationship of availability mode and session timeouts, see [ Availability Modes (AlwaysOn Availability Groups)](availability-modes-always-on-availability-groups.md).  
+ Because soft errors are not detectable directly by a server instance, a soft error could potentially cause an availability replica to wait indefinitely for a response from the other availability replica in a session. To prevent this, [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] implements a session time-out mechanism, based on the connected availability replicas sending out a ping on each open connection at a fixed interval. Receiving a ping during the time-out period indicates that the connection is still open and that the server instances are communicating over it. On receiving a ping, a replica resets its time-out counter on that connection. For information about the relationship of availability mode and session timeouts, see [Availability Modes (AlwaysOn Availability Groups)](availability-modes-always-on-availability-groups.md).  
   
  The primary and secondary replicas ping each other to signal that they are still active, and a session-timeout limit prevents either replica from waiting indefinitely to receive a ping from the other replica. The session-timeout limit is a user-configurable replica property with a default value of 10 seconds. Receiving a ping during the time-out period indicates that the connection is still open and that the server instances are communicating over it. On receiving a ping, an availability replica resets its time-out counter on that connection.  
   
  If no ping is received from the other replica within the session-timeout period, the connection times out. The connection is closed, and the timed-out replica enters the DISCONNECTED state. Even if a disconnected replica is configured for synchronous-commit mode, transactions will not wait for that replica to reconnect and resynchronize.  
   
 ## Responding to an Error  
- Regardless of the type of error, a server instance that detects an error responds appropriately based on the role of the instance, the availability mode of the session, and the state of any other connection in the session. For information about what occurs on the loss of a partner, see [ Availability Modes (AlwaysOn Availability Groups)](availability-modes-always-on-availability-groups.md).  
+ Regardless of the type of error, a server instance that detects an error responds appropriately based on the role of the instance, the availability mode of the session, and the state of any other connection in the session. For information about what occurs on the loss of a partner, see [Availability Modes (AlwaysOn Availability Groups)](availability-modes-always-on-availability-groups.md).  
   
 ## Related Tasks  
  **To change the time-out value (synchronous-commit availability mode only)**  

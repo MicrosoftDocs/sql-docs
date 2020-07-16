@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "templates [SQL Server], traces"
@@ -14,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b81df2a1-e202-43d8-92b0-0beb145f0116
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Modify a Trace Template (SQL Server Profiler)
   This topic describes how to modify a trace template by using [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)].  

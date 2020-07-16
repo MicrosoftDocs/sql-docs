@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 20e9147b-e985-4caa-910e-fc4b38dbf9a1
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Resume an Availability Database (SQL Server)
   You can resume a suspended availability database in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. Resuming a suspended database puts the database into the SYNCHRONIZING state. Resuming the primary database also resumes any of its secondary databases that were suspended as the result of suspending the primary database. If any secondary database was suspended locally, from the server instance that hosts the secondary replica, that secondary database must be resumed locally. Once a given secondary database and the corresponding primary database are in the SYNCHRONIZING state, data synchronization resumes on the secondary database.  
@@ -88,7 +87,8 @@ manager: craigg
      ALTER DATABASE *database_name* SET HADR RESUME  
   
 ##  <a name="PowerShellProcedure"></a> Using PowerShell  
- **To resume a secondary database**  
+
+### To resume a secondary database
   
 1.  Change directory (`cd`) to the server instance that hosts the replica whose database you want to resume. For more information, see [Prerequisites](#Prerequisites), earlier in this topic.  
   
@@ -96,9 +96,8 @@ manager: craigg
   
      For example, the following command resumes data synchronization for the availability database `MyDb3` in the availability group `MyAg`.  
   
-    ```  
-    Resume-SqlAvailabilityDatabase `   
-    -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
+    ```powershell
+    Resume-SqlAvailabilityDatabase -Path SQLSERVER:\Sql\Computer\Instance\AvailabilityGroups\MyAg\Databases\MyDb3  
     ```  
   
     > [!NOTE]  
@@ -114,5 +113,3 @@ manager: craigg
   
 ## See Also  
  [Overview of AlwaysOn Availability Groups &#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)  
-  
-  

@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "partitions [Analysis Services], merging"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: b3857b9b-de43-4911-989d-d14da0196f89
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Merge Partitions in Analysis Services (SSAS - Multidimensional)
   You can merge partitions in an existing [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] database to consolidate fact data from multiple partitions of the same measure group.  

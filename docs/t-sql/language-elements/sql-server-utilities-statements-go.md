@@ -1,5 +1,5 @@
 ---
-title: "GO (Transact-SQL) | Microsoft Docs"
+title: "SQL Server Utilities Statements - GO | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"
 ms.prod: sql
@@ -17,12 +17,11 @@ helpviewer_keywords:
   - "ending batches [SQL Server]"
   - "GO command"
 ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SQL Server Utilities Statements - GO
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides commands that are not [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, but are recognized by the **sqlcmd** and **osql** utilities and [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Code Editor. These commands can be used to facilitate the readability and execution of batches and scripts.  
   
@@ -33,7 +32,6 @@ manager: craigg
 ## Syntax  
   
 ```  
-  
 GO [count]  
 ```  
   
@@ -72,16 +70,16 @@ GO
   
  Applications based on the ODBC or OLE DB APIs receive a syntax error if they try to execute a GO command. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utilities never send a GO command to the server.  
   
- Do not use a semicolon as a statement terminator after GO.  
-  
-## Permissions  
- GO is a utility command that requires no permissions. It can be executed by any user.  
-  
-```  
+ Do not use a semicolon as a statement terminator after GO.
+ 
+```
 -- Yields an error because ; is not permitted after GO  
 SELECT @@VERSION;  
 GO;  
-```  
+```
+  
+## Permissions  
+ GO is a utility command that requires no permissions. It can be executed by any user.    
   
 ## Examples  
  The following example creates two batches. The first batch contains only a `USE AdventureWorks2012` statement to set the database context. The remaining statements use a local variable. Therefore, all local variable declarations must be grouped in a single batch. This is done by not having a `GO` command until after the last statement that references the variable.  

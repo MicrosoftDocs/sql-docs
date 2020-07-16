@@ -1,6 +1,6 @@
 ---
-title: "Manage the Editor and View Mode | Microsoft Docs"
-ms.custom: ""
+title: "Manage the Editor and View Mode"
+ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.technology: scripting
@@ -18,13 +18,12 @@ helpviewer_keywords:
   - "displaying line numbers"
   - "view modes [SQL Server Management Studio]"
 ms.assetid: 25c58a14-9f94-4296-9770-7d84c6bc3969
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage the Editor and View Mode
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The Editor gives you a number of ways to control the view of your code.  
   
 ## Changing the View Mode  

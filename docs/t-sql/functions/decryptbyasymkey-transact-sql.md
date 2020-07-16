@@ -17,12 +17,11 @@ helpviewer_keywords:
   - "DECRYPTBYASYMKEY function"
   - "decryption [SQL Server], asymmetric keys"
 ms.assetid: d9ebcd30-f01c-4cfe-b95e-ffe6ea13788b
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DECRYPTBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function uses an asymmetric key to decrypt encrypted data.  
   
@@ -30,7 +29,7 @@ This function uses an asymmetric key to decrypt encrypted data.
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }   
     [ , 'Asym_Key_Password' ] )  

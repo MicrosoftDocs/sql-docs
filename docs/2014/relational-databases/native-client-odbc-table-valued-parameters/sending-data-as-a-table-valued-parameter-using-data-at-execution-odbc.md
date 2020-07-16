@@ -9,9 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters (ODBC), sending data to a stored procedure one row at a time"
 ms.assetid: 361e6442-34de-4cac-bdbd-e05f04a21ce4
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Sending Data as a Table-Valued Parameter Using Data-At-Execution (ODBC)
   This is similar to the [All in Memory](sending-data-as-a-table-valued-parameter-with-all-values-in-memory-odbc.md) procedure, but uses data-at-execution for the table-valued parameter.  

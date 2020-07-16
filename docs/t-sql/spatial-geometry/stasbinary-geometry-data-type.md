@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "STAsBinary (geometry Data Type)"
 ms.assetid: 65353777-e3e6-461c-9504-ea4d83312692
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: MladjoA
+ms.author: mlandzic 
 ---
 # STAsBinary (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation of a geometry instance.  
  

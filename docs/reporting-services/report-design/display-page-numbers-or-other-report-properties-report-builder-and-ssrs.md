@@ -1,8 +1,9 @@
 ---
-title: "Display Page Numbers or Other Report Properties (Report Builder and SSRS) | Microsoft Docs"
+title: "Display Page Numbers or Other Report Properties (Report Builder) | Microsoft Docs"
+description:  Add properties of your report including page numbers, filenames, and titles, for display in page headers or footers. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
-ms.prod_service: "reporting-services-sharepoint, reporting-services-native"
+ms.prod_service: "reporting-services-native"
 ms.technology: report-design
 
 

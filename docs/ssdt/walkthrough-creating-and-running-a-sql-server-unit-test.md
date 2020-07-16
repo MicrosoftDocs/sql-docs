@@ -1,18 +1,19 @@
 ---
-title: "Walkthrough: Creating and Running a SQL Server Unit Test | Microsoft Docs"
-ms.custom: 
-  - "SSDT"
-ms.date: "02/09/2017"
-ms.prod: "sql"
+title: Creating and Running a SQL Server Unit Test
+description: Learn how to create a SQL Server unit test. Walk through the steps of setting up a test that detects an error in a stored procedure.
+ms.prod: sql
 ms.technology: ssdt
-ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: 992c1d8e-3729-438b-9ef4-cd103e28f145
-author: "stevestein"
-ms.author: "sstein"
-manager: "craigg"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: “”
+ms.custom: seo-lt-2019
+ms.date: 02/09/2017
 ---
+
 # Walkthrough: Creating and Running a SQL Server Unit Test
+
 In this walkthrough, you create a SQL Server unit test that verifies the behavior of several stored procedures. You create SQL Server unit tests to help identify code defects that might cause incorrect application behavior. You can run SQL Server unit tests and application tests as part of an automated suite of tests.  
   
 In this walkthrough, you perform the following tasks:  
@@ -116,12 +117,12 @@ To complete this walkthrough, you must be able to connect to a database server (
     PRINT N'Creating Sales.CK_Orders_FilledDate...';  
     GO  
     ALTER TABLE [Sales].[Orders]  
-        ADD CONSTRAINT [CK_Orders_FilledDate] CHECK ((FilledDate >= OrderDate) AND (FilledDate < '01/01/2020'));  
+        ADD CONSTRAINT [CK_Orders_FilledDate] CHECK ((FilledDate >= OrderDate) AND (FilledDate < '01/01/2030'));  
     GO  
     PRINT N'Creating Sales.CK_Orders_OrderDate...';  
     GO  
     ALTER TABLE [Sales].[Orders]  
-        ADD CONSTRAINT [CK_Orders_OrderDate] CHECK ((OrderDate > '01/01/2005') and (OrderDate < '01/01/2020'));  
+        ADD CONSTRAINT [CK_Orders_OrderDate] CHECK ((OrderDate > '01/01/2005') and (OrderDate < '01/01/2030'));  
     GO  
     PRINT N'Creating Sales.uspCancelOrder...';  
     GO  
@@ -175,7 +176,7 @@ To complete this walkthrough, you must be able to connect to a database server (
     AS  
     BEGIN  
     INSERT INTO [Sales].[Customer] (CustomerName) VALUES (@CustomerName);  
-    SELECT SCOPE_IDENTITY()  
+    RETURN SCOPE_IDENTITY()  
     END  
     GO  
     PRINT N'Creating Sales.uspPlaceNewOrder...';  
@@ -962,7 +963,7 @@ To create and verify a negative test, you must perform the following tasks:
     You specify that you expect to see a specific exception. You can optionally specify a specific error number. If you do not add this attribute, the unit test will fail, and a message appears in the Test Results window  
   
     > [!IMPORTANT]  
-    > Currently, Visual Studio 2012 does not support the ExpectedSqlException attribute. For information to work around this, see [Unable to Run "Expected Failure" Database Unit Test](https://social.msdn.microsoft.com/Forums/ssdt/thread/e74e06ad-e3c9-4cb0-97ad-a6f235a52345).  
+    > Currently, Visual Studio 2012 does not support the ExpectedSqlException attribute. For information to work around this, see [Unable to Run "Expected Failure" Database Unit Test](https://social.msdn.microsoft.com/Forums/en-US/e74e06ad-e3c9-4cb0-97ad-a6f235a52345/unable-to-run-quotexpected-failurequot-database-unit-test).  
   
 3.  On the File menu, click Save SqlServerUnitTests1.cs.  
   

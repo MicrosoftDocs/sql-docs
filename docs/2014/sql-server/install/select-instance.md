@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "Instance to upgrade, Setup"
 ms.assetid: 79d5989f-2fb1-424b-be50-d89c8e39c51b
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Select Instance
   Use the Select Instance page of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard to specify the instance of [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)], [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)], or [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] that you would like to upgrade to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)].  

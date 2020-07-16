@@ -4,8 +4,7 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data mining [Analysis Services], how-to topics"
@@ -13,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 4fa44f60-ef9a-4b59-98c0-c0baf1195c8e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Enable Drillthrough for a Mining Model
   If you have enabled drillthrough for a mining model, when you browse the model you can retrieve detailed information about the cases that were used to create the model. To view this information, you must have the necessary permissions, and the structure must have already been processed.  

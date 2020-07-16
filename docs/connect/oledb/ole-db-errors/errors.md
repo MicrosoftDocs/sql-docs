@@ -1,8 +1,8 @@
 ---
-title: "Errors | Microsoft Docs"
-description: "Errors"
+title: "OLE DB Errors"
+description: "Learn about how errors are returned in the OLE DB Driver for SQL Server and how you can get information about them."
 ms.custom: ""
-ms.date: "06/14/2018"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -16,10 +16,9 @@ helpviewer_keywords:
   - "OLE DB error handling"
 author: pmasl
 ms.author: pelopes
-manager: craigg
 ---
 # Errors
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

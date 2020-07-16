@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "data viewers [Integration Services]"
   - "data flow [Integration Services], data viewers"
   - "adding data viewers"
 ms.assetid: 5e573274-a170-4132-bfc8-a8ff3a8411e4
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Add a Data Viewer to a Data Flow
   This topic describes how to add and configure a data viewer in a data flow. A data viewer displays data that is moving between two data flow components. For example, a data viewer can display the data that is extracted from a data source before a transformation in the data flow modifies the data.  

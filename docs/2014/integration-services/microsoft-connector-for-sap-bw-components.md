@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: bdf81735-dba7-45ef-8794-0eb67c01475a
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Microsoft Connector 1.1 for SAP BW Components
   This section contains topics that describe the three components of the [!INCLUDE[msCoName](../includes/msconame-md.md)] Connector 1.1 for SAP BW:  

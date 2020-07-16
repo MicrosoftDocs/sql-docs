@@ -15,12 +15,11 @@ helpviewer_keywords:
   - "denying permissions [SQL Server], endpoints"
   - "permissions [SQL Server], endpoints"
 ms.assetid: 3ac40457-7529-4eda-95a4-5247345cc8cf
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 ---
 # DENY Endpoint Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Denies permissions on an endpoint.  
 
@@ -29,7 +28,7 @@ manager: craigg
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name  
     TO < server_principal >  [ ,...n ]  
     [ CASCADE ]  

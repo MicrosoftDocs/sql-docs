@@ -1,5 +1,6 @@
 ---
 title: "empty Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery function empty() that returns a value indicating whether a specified sequence of items is empty.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -15,10 +16,9 @@ helpviewer_keywords:
 ms.assetid: 46da89a8-0cd9-4913-8521-4087589a04ba
 author: "rothja"
 ms.author: "jroth"
-manager: craigg
 ---
 # Functions on Sequences - empty
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns True if the value of *$arg* is an empty sequence. Otherwise, the function returns False.  
   

@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: bdd7c71d-1c59-4044-bfe8-c85f908345bb
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Add or Edit Filter
   The **Add Filter** and **Edit Filter** dialog boxes allow you to add and edit static row filters and parameterized row filters.  

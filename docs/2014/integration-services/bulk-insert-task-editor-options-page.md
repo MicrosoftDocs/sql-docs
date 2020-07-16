@@ -4,17 +4,15 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.bulkinserttask.options.f1"
 helpviewer_keywords: 
   - "Bulk Insert Task Editor"
 ms.assetid: b3702811-3eb8-4b28-9190-5ae7a1a7bb6f
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Bulk Insert Task Editor (Options Page)
   Use the **Options** page of the **Bulk Insert Task Editor** dialog box to set properties for the bulk insert operation. The Bulk Insert task copies large amounts of data into a [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] table or view.  

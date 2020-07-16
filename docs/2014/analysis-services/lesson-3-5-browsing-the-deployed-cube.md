@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/14/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Browsing the Deployed Cube
   In the following task, you browse the [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial cube. Because our analysis compares measure across multiple dimensions, you will use an Excel PivotTable to browse your data. Using a PivotTable lets you place customer, date, and product information on different axes so that you can see how Internet Sales change when viewed across specific time periods, customer demographics, and product lines.  
@@ -40,6 +38,6 @@ manager: craigg
      ![Internet sales by region and product line](../../2014/tutorials/media/l3-cube-browser-finish.gif "Internet sales by region and product line")  
   
 ## Next Lesson  
- [Lesson 4: Defining Advanced Attribute and Dimension Properties](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [Lesson 4: Defining Advanced Attribute and Dimension Properties](lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
   
   

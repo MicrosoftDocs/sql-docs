@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 1a8e6bc7-433e-471d-b646-092dc80a2d1a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Replication to Memory-Optimized Table Subscribers
   Tables acting as transactional replication subscribers, excluding Peer-to-peer transactional replication, can be configured as memory-optimized tables. Other replication configurations are not compatible with memory-optimized tables.  
@@ -299,7 +298,7 @@ GO
   
 ##  <a name="Schema"></a> Modifying a schema file  
   
--   Clustered indexes are not supported. Change any clustered indexes to non-clustered indexes.  
+-   Clustered indexes are not supported. Change any clustered indexes to nonclustered indexes.  
   
 -   All columns in the key of an index must be specified as `NOT NULL`.  
   

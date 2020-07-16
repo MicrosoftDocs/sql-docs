@@ -4,14 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
-  - "docset-sql-devref"
+ms.technology: "database-engine"
 ms.topic: "reference"
 ms.assetid: b5185c1e-56de-41a8-a9c3-eec663750cde
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Contact Creation using CLR and XML
   The Contact sample for SQL Server provides some useful utilities that form an extra layer of functionality on top of the base AdventureWorks2012 sample database. The first utility creates contact records for various types of people involved in the AdventureWorks2012 database. The contact information is specified by using XML and is passed to a C#-based or VB stored procedure to create the XML and place it in the proper tables with the database.  
@@ -19,7 +16,7 @@ manager: craigg
 ## Prerequisites  
  To create and run this project the following the following software must be installed:  
   
--   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](https://go.microsoft.com/fwlink/?LinkId=31046)  
+-   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express. You can obtain [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express free of charge from the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express Documentation and Samples [Web site](https://www.microsoft.com/sql-server/sql-server-editions-express)  
   
 -   The AdventureWorks database that is available at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Developer [Web site](https://go.microsoft.com/fwlink/?linkid=62796)  
   
@@ -1380,7 +1377,7 @@ End Class
   
  This is the [!INCLUDE[tsql](../../includes/tsql-md.md)] installation script (`Install.sql`), which deploys the assembly and creates the stored procedure in the database.  
   
-```tsql  
+```sql  
 use AdventureWorks  
 GO  
   

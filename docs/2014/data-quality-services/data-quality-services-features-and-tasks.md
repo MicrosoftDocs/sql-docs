@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: data-quality-services
 ms.topic: conceptual
 ms.assetid: 84928476-3a98-4bac-bb47-6346142752d0
-author: douglaslMS
-ms.author: douglasl
-manager: craigg
+author: lrtoyou1223
+ms.author: lle
 ---
 # Data Quality Services Features and Tasks
   Find information that anyone-data steward, Data Quality Services administrator, or SQL Server administrator-requires to prepare and execute a data quality project.  

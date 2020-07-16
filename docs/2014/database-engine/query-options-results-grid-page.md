@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.swb.query.grid.f1"
 ms.assetid: 764bf435-3aab-4c62-b4e0-64fe020a5a95
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Query Options Results (Grid Page)
   Use this page to specify the options for displaying a query result set in grid format.  

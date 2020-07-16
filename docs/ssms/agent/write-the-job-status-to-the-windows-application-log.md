@@ -1,10 +1,7 @@
 ---
-title: "Write the Job Status to the Windows Application Log | Microsoft Docs"
-ms.custom: ""
-ms.date: "01/19/2017"
+title: Write the Job Status to the Windows Application Log
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,13 +11,17 @@ helpviewer_keywords:
   - "jobs [SQL Server Agent], status"
   - "logs [SQL Server], jobs"
 ms.assetid: 3b813702-8f61-40ec-bf3b-ce9deb7e68be
-author: "stevestein"
-ms.author: "sstein"
-manager: craigg
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
+
 # Write the Job Status to the Windows Application Log
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
@@ -34,18 +35,6 @@ Job responses ensure that database administrators know when jobs complete and ho
 -   Writing an event message to the Windows application log. You can use this response only for failed jobs.  
   
 -   Automatically deleting the job. Use this job response if you are certain that you do not need to rerun this job.  
-  
-**In This Topic**  
-  
--   **Before you begin:**  
-  
-    [Security](#Security)  
-  
--   **To write the job status to the Windows application log, using:**  
-  
-    [SQL Server Management Studio](#SSMS)  
-  
-    [SQL Server Management Objects](#SMO)  
   
 ## <a name="BeforeYouBegin"></a>Before You Begin  
   

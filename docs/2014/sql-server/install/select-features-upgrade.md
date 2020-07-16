@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "database-engine"
+ms.technology: "database-engine"
 ms.topic: conceptual
 f1_keywords: 
   - "features to upgrade"
 ms.assetid: 5e906e23-6638-410d-920b-fdf35b0d3cc4
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Select Features (Upgrade)
   Use the **Select Features** page of the [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] Installation Wizard to view the features to be upgraded to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  

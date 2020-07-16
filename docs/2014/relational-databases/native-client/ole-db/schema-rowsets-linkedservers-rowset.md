@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "LINKEDSERVERS rowset"
   - "enumerating data sources [OLE DB]"
 ms.assetid: 2633fd8a-65e7-498d-9aed-8e4b1cca2381
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # LINKEDSERVERS Rowset (OLE DB)
   The **LINKEDSERVERS** rowset enumerates organization data sources that can participate in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] distributed queries.  

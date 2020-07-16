@@ -19,9 +19,8 @@ helpviewer_keywords:
   - "database roles [SQL Server], modifying"
   - "names [SQL Server], database roles"
 ms.assetid: e1e83caa-17cc-4871-b2db-2711339fb64f
-author: CarlRabeler
-ms.author: carlrab
-manager: craigg
+author: VanMSFT
+ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER ROLE (Transact-SQL)
@@ -36,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server (starting with 2012) and Azure SQL Database  
   
 ALTER ROLE  role_name  
@@ -49,7 +48,7 @@ ALTER ROLE  role_name
 ```  
   
  
-```  
+```syntaxsql
 -- Syntax for SQL Server 2008, Azure SQL Data Warehouse and Parallel Data Warehouse
   
 -- Change the name of a user-defined database role  
@@ -64,7 +63,7 @@ ALTER ROLE role_name
   
  Specifies the database role to change.  
   
- ADD MEMBER *database_principal*l  
+ ADD MEMBER *database_principal*  
  **APPLIES TO:**  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with 2012), [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]  
   
  Specifies to add the database principal to the membership of a database role.  

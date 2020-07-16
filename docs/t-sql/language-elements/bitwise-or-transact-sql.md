@@ -20,13 +20,12 @@ helpviewer_keywords:
   - "bitwise OR (|)"
   - "| (bitwise OR operator)"
 ms.assetid: 86a3b87f-9688-4eaf-a552-29f1b01d880a
-author: "douglaslMS"
-ms.author: "douglasl"
-manager: craigg
+author: rothja
+ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # | (Bitwise OR) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Performs a bitwise logical OR operation between two specified integer values as translated to binary expressions within [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
   
@@ -57,11 +56,9 @@ expression | expression
  The following example creates a table with **int** data types to show the original values and puts the table into one row.  
   
 ```sql  
-CREATE TABLE bitwise  
-(   
- a_int_value int NOT NULL,  
-b_int_value int NOT NULL  
-);  
+CREATE TABLE bitwise (  
+  a_int_value INT NOT NULL,  
+  b_int_value INT NOT NULL);  
 GO  
 INSERT bitwise VALUES (170, 75);  
 GO  

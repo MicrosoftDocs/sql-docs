@@ -11,9 +11,8 @@ topic_type:
 helpviewer_keywords: 
   - "SQLProcedures function"
 ms.assetid: ec41f017-f5e0-40ef-913a-65d206068631
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # SQLProcedures
   All [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stored procedures return a value. **SQLProcedures** reports SQL_PT_FUNCTION for the result set column PROCEDURE_TYPE.  

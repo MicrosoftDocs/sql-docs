@@ -4,13 +4,12 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: analysis-services
 ms.topic: conceptual
 ms.assetid: 1e00c5b9-a9f8-4503-99ee-377c9cc02d7f
 author: minewiskan
 ms.author: owend
-manager: craigg
+manager: kfile
 ---
 # Lesson 4: Exploring the Targeted Mailing Models (Basic Data Mining Tutorial)
   After the models in your project have been processed, you can explore them to look for interesting trends. Because patterns can be complex and difficult simply by looking at numbers, SQL Server Data Mining provides some visual tools that help you investigate the data and understand the rules and relationships that the algorithms have discovered within the data. You can also use a variety of accuracy tests to validate your dataset or discover which model performs best before you deploy it.  

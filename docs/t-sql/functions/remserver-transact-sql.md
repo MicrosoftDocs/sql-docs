@@ -17,12 +17,11 @@ helpviewer_keywords:
   - "remote servers [SQL Server], logins"
   - "@@REMSERVER function"
 ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
-author: MashaMSFT
-ms.author: mathoma
-manager: craigg
+author: julieMSFT
+ms.author: jrasnick
 ---
 # &#x40;&#x40;REMSERVER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
     
 > [!IMPORTANT]  

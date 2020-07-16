@@ -15,13 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helprole"
 ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
-author: stevestein
-ms.author: sstein
-manager: craigg
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helprole (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns information about the roles in the current database.  
   
@@ -35,7 +34,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 ```  
   
 ## Arguments  
- [ **@rolename =** ] **'***role***'**  
+`[ @rolename = ] 'role'`
  Is the name of a role in the current database. *role* is **sysname**, with a default of NULL. *role* must exist in the current database. If *role* is not specified, information about all roles in the current database is returned.  
   
 ## Return Code Values  

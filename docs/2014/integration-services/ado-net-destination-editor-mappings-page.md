@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.adonetdest.mappings.f1"
 ms.assetid: 842d075f-8b7a-457c-a1a1-a7acbe10e9b7
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # ADO NET Destination Editor (Mappings Page)
   Use the **Mappings** page of the **ADO NET Destination Editor** dialog box to map input columns to destination columns.  

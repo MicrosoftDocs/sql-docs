@@ -10,9 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLBindParameter function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 8a69fda2-8903-451a-b030-851bf05aa074
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLBindParameter (Visual FoxPro ODBC Driver)
 > [!NOTE]  

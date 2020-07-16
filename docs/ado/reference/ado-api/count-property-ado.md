@@ -13,9 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Count property [ADO]"
 ms.assetid: da9ccd1f-d402-41a2-940c-45556fc5340d
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Count Property (ADO)
 Indicates the number of objects in a collection.  

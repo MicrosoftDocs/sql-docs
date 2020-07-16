@@ -4,13 +4,11 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "analysis-services"
+ms.technology: "analysis-services"
 ms.topic: conceptual
 ms.assetid: 6617b2a2-9f69-433e-89e0-4c5dc92982cf
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Import Data (SSAS Tabular)
   You can import data into a tabular model from a wide variety of sources. The topics in this section describe how to use the Data Import Wizard to connect to and select data to be imported into a model project.  

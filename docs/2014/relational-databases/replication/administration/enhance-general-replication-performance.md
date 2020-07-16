@@ -20,7 +20,6 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Enhance General Replication Performance
   You can enhance the general performance for all types of replication in your application and on your network by using the guidelines described in this topic.  
@@ -110,7 +109,7 @@ manager: craigg
   
      When large amounts of changes need to be sent to Subscribers, reinitializing them with a new snapshot might be faster than using replication to move the individual changes. For more information, see [Reinitialize Subscriptions](../reinitialize-subscriptions.md).  
   
-     For transactional replication, Replication Monitor displays on the **Undistributed Commands** tab information about: the number of transactions in the distribution database that have not yet been distributed to a Subscriber; and the estimated time for distributing these transactions. For more information, see [ View Information and Perform Tasks using Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
+     For transactional replication, Replication Monitor displays on the **Undistributed Commands** tab information about: the number of transactions in the distribution database that have not yet been distributed to a Subscriber; and the estimated time for distributing these transactions. For more information, see [View Information and Perform Tasks using Replication Monitor](../monitor/view-information-and-perform-tasks-replication-monitor.md).  
   
 ## Snapshot Considerations  
   

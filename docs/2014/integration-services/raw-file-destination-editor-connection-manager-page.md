@@ -4,15 +4,13 @@ ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 f1_keywords: 
   - "sql12.dts.designer.rawfiledestinationconnectionmanager.f1"
 ms.assetid: a0ec9643-3b44-4467-b855-f45ae4794f7f
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Raw File Destination Editor (Connection Manager Page)
   Use the Raw File Destination Editor to configure the Raw File destination to write raw data to a file.  

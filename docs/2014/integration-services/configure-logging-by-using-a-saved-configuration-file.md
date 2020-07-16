@@ -4,16 +4,14 @@ ms.custom: ""
 ms.date: "06/13/2017"
 ms.prod: "sql-server-2014"
 ms.reviewer: ""
-ms.technology: 
-  - "integration-services"
+ms.technology: "integration-services"
 ms.topic: conceptual
 helpviewer_keywords: 
   - "containers [Integration Services], logs"
   - "logs [Integration Services], containers"
 ms.assetid: e5fdbbcb-94ca-4912-aa7c-0d89cebbd308
-author: douglaslms
-ms.author: douglasl
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Configure Logging by Using a Saved Configuration File
   This procedure describes how to configure logging for new containers in a package by loading a previously saved logging configuration file.  

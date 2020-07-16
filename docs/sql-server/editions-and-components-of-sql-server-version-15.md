@@ -252,7 +252,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] change tracking|Yes|Yes|Yes|Yes|Yes|
 |Transactional replication|Yes|Yes|Yes<sup>1</sup>|Yes<sup>1</sup>|Yes<sup>1</sup>|
 |Transactional replication to Azure|Yes|Yes|No|No|No|
-|Transactional replication updateable subscription|Yes|No|No|No|No|
+|Transactional replication updateable subscription|Yes|Yes|No|No|No|
 
 <sup>1</sup> Subscriber only
 

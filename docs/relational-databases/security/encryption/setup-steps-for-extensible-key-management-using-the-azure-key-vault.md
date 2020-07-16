@@ -137,7 +137,7 @@ You can use the Azure portal to create the key vault and then add an Azure AD pr
 
     ![Screenshot of the Add button on the "Add access policy" pane](../../../relational-databases/security/encryption/media/ekm/ekm-part2-select-principal-new.png)
 
-1. On the **Key Vault** pane, select **Keys** and add enter a key vault name, use key type **RSA**, RSA Key Size **2048**, set activation and expiration dates as appropriate, set Enabled? as **Yes**.
+1. On the **Key Vault** pane, select **Keys** and enter a key vault name. Use key type **RSA** and RSA Key Size **2048**. Set activation and expiration dates as appropriate and set **Enabled?** as **Yes**.
 
    ![Screenshot of the "Create Key"pane](../../../relational-databases/security/encryption/media/ekm/ekm-part2-add-keyvault-key.png)  
 

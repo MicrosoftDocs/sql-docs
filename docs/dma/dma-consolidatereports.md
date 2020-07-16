@@ -31,8 +31,8 @@ The following step-by-step instructions help you use the Data Migration Assistan
     - [SSMS](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) 17.0 or above.
     - [PowerBI desktop](https://docs.microsoft.com/power-bi/desktop-get-the-desktop).
 - Download and extract:
-    - The [DMA Reports Power BI template](https://msdnshared.blob.core.windows.net/media/2018/04/PowerBI-Reports1.zip).
-    - The [LoadWarehouse script](https://msdnshared.blob.core.windows.net/media/2018/10/LoadWarehouse.zip).
+    - The [DMA Reports Power BI template](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/2/PowerBI-Reports.zip).
+    - The [LoadWarehouse script](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).
 
 ## Loading the PowerShell modules
 
@@ -41,7 +41,7 @@ Saving the PowerShell modules into the PowerShell modules directory enables you 
 To load the modules, do the following steps:
 
 1. Navigate to C:\Program Files\WindowsPowerShell\Modules, and then create a folder named **DataMigrationAssistant**.
-2. Open the [PowerShell-Modules](https://msdnshared.blob.core.windows.net/media/2018/10/PowerShell-Modules.zip), and then save them into the folder you created.
+2. Open the [PowerShell-Modules](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/1/PowerShell-Modules2.zip), and then save them into the folder you created.
 
       ![PowerShell Modules](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 

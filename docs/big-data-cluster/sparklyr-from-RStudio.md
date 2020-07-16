@@ -8,7 +8,7 @@ ms.reviewer: mikeray
 ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
+ms.technology: machine-learning-bdc
 ---
 
 # Use sparklyr in SQL Server big data cluster

@@ -14,6 +14,7 @@ helpviewer_keywords:
 ms.assetid: 1615db50-69de-4778-8be6-4e058c00ccd4
 author: MladjoA
 ms.author: mlandzic
+ms.date: 07/16/2020
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Spatial Data Types Overview
@@ -25,7 +26,7 @@ In addition, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports 
 ##  <a name="objects"></a> Spatial Data Objects  
 The **geometry** and **geography** data types support sixteen spatial data objects, or instance types. However, only eleven of these instance types are *instantiable*; you can create and work with these instances (or instantiate them) in a database. These instances derive certain properties from their parent data types that distinguish them as **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** or as multiple **geometry** or **geography** instances in a **GeometryCollection**. **Geography** type has an additional instance type, **FullGlobe**.  
 
-The figure below depicts the **geometry** hierarchy upon which the **geometry** and **geography** data types are based. The instantiable types of **geometry** and **geography** are indicated in blue.  
+The figure below depicts the geometry hierarchy upon which the **geometry** and **geography** data types are based. The instantiable types of **geometry** and **geography** are indicated in blue.  
 
 ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.gif) 
 
@@ -81,11 +82,13 @@ For more information on OGC specifications, see the following:
 -   [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
 ##  <a name="circular"></a> Circular Arc Segments  
-Three instantiable types can take circular arc segments: **CircularString**, **CompoundCurve**, and **CurvePolygon**.  A circular arc segment is defined by three points in a two dimensional plane and the third point cannot be the same as the first point.  
+Three instantiable types can take circular arc segments: **CircularString**, **CompoundCurve**, and **CurvePolygon**.  A circular arc segment is defined by three points in a two-dimensional plane and the third point cannot be the same as the first point. Few examples of circular arc segments:
 
-Figures A and B show typical circular arc segments. Note how each of the three points lie on the perimeter of a circle.  
+![circular_arc_segments](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif)
 
-Figures C and D show how a line segment can be defined as a circular arc segment.  Note that three points are still needed to define the circular arc segment unlike a regular line segment which can be defined by just two points.  
+First two examples show typical circular arc segments. Note how each of the three points lie on the perimeter of a circle.  
+
+Other two examples show how a line segment can be defined as a circular arc segment.  Note that three points are still needed to define the circular arc segment unlike a regular line segment which can be defined by just two points.  
 Methods operating on circular arc segment types use straight line segments to approximate the circular arc. The number of line segments used to approximate the arc will depend on the length and curvature of the arc. Z values can be stored for each of the circular arc segment types; however, methods will not use the Z values in their calculations.  
 
 > [!NOTE]  
@@ -170,7 +173,7 @@ SELECT @g.ToString(), @g.STLength();
 ## See Also  
 - [Spatial Data (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [geometry Data Type Method Reference](https://msdn.microsoft.com/library/bb933973.aspx) 
-- [geography Data Type Method Reference](https://msdn.microsoft.com/library/028e6137-7128-4c74-90a7-f7bdd2d79f5e)   
+- [geography Data Type Method Reference](c)   
 - [STNumCurves &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
 - [STNumCurves &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
 - [STGeomFromText &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   

@@ -23,13 +23,13 @@ There are two types of spatial data. The **geometry** data type supports planar,
 In addition, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the **geography** data type, which stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.
 
 ##  <a name="objects"></a> Spatial Data Objects  
-The **geometry** and **geography** data types support sixteen spatial data objects, or instance types. However, only eleven of these instance types are *instantiable*; you can create and work with these instances (or instantiate them) in a database. These instances derive certain properties from their parent data types that distinguish them as **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** or as multiple **geometry** or **geography** instances in a **GeometryCollection**. **Geography** type has an additional instance type, **FullGlobe**.  
+The **geometry** and **geography** data types support 16 spatial data objects, or instance types. However, only 11 of these instance types are *instantiable*; you can create and work with these instances (or instantiate them) in a database. These instances derive certain properties from their parent data types that distinguish them as **Points**, **LineStrings, CircularStrings**, **CompoundCurves**, **Polygons**, **CurvePolygons** or as multiple **geometry** or **geography** instances in a **GeometryCollection**. **Geography** type has an additional instance type, **FullGlobe**.  
 
 The figure below depicts the geometry hierarchy upon which the **geometry** and **geography** data types are based. The instantiable types of **geometry** and **geography** are indicated in blue.  
 
 ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.gif) 
 
-As the figure indicates, the ten instantiable types of the **geometry** and **geography** data types are **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**, and **GeometryCollection**. There is one additional instantiable type for the geography data type: **FullGlobe**. The **geometry** and **geography** types can recognize a specific instance as long as it is a well formed instance, even if the instance is not defined explicitly. For example, if you define a **Point** instance explicitly using the STPointFromText() method, **geometry** and **geography** recognize the instance as a **Point**, as long as the method input is well formed. If you define the same instance using the `STGeomFromText()` method, both the **geometry** and **geography** data types recognize the instance as a **Point**.  
+In addition to 10 instantiable types, there is one additional for the geography data type: **FullGlobe**. The **geometry** and **geography** types can recognize a specific instance as long as it is a well formed instance, even if the instance is not defined explicitly. For example, if you define a **Point** instance explicitly using the STPointFromText() method, **geometry** and **geography** recognize the instance as a **Point**, as long as the method input is well formed. If you define the same instance using the `STGeomFromText()` method, both the **geometry** and **geography** data types recognize the instance as a **Point**.  
 
 The subtypes for geometry and geography types are divided into simple and collection types.  Some methods like `STNumCurves()` work only with simple types.  
 
@@ -48,7 +48,7 @@ Collection types include:
 -   [GeometryCollection](../../relational-databases/spatial/geometrycollection.md)  
 
 ##  <a name="differences"></a> Differences Between the geometry and geography Data Types  
-The two types of spatial data often behave quite similarly, but there are some key differences in how the data is stored and manipulated.  
+The two types of spatial data often behave similarly, but there are some key differences in how the data is stored and manipulated.  
 
 ### How connecting edges are defined  
 The defining data for **LineString** and **Polygon** types are vertices only.  The connecting edge between two vertices in a geometry type is a straight line.  However, the connecting edge between two vertices in a geography type is a short great elliptic arc between the two vertices.  A great ellipse is the intersection of the ellipsoid with a plane through its center and a great elliptic arc is an arc segment on the great ellipse.  
@@ -59,7 +59,7 @@ Circular arc segments for geometry types are defined on the XY Cartesian coordin
 ### Measurements in spatial data types  
 In the planar, or flat-earth, system, measurements of distances and areas are given in the same unit of measurement as coordinates. Using the **geometry** data type, the distance between (2, 2) and (5, 6) is 5 units, regardless of the units used.  
 
-In the ellipsoidal, or round-earth system, coordinates are given in degrees of latitude and longitude. However, lengths and areas are usually measured in meters and square meters, though the measurement may depend on the spatial reference identifier (SRID) of the **geography** instance. The most common unit of measurement for the **geography** data type is meters.  
+In the ellipsoidal, or round-earth system, coordinates are given in degrees of latitude and longitude. However, lengths and areas are typically measured in meters and square meters, though the measurement may depend on the spatial reference identifier (SRID) of the **geography** instance. The most common unit of measurement for the **geography** data type is meters.  
 
 ### Orientation of spatial data  
 In the planar system, the ring orientation of a polygon is not an important factor. For example, a polygon described by ((0, 0), (10, 0), (0, 20), (0, 0)) is the same as a polygon described by ((0, 0), (0, 20), (10, 0), (0, 0)). The *OGC Simple Features for SQL Specification* does not dictate a ring ordering, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not enforce ring ordering.  
@@ -87,7 +87,7 @@ Three instantiable types can take circular arc segments: **CircularString**, **C
 
 First two examples show typical circular arc segments. Note how each of the three points lies on the perimeter of a circle.  
 
-Other two examples show how a line segment can be defined as a circular arc segment.  Note that three points are still needed to define the circular arc segment unlike a regular line segment which can be defined by just two points.  
+Other two examples show how a line segment can be defined as a circular arc segment.  Note that three points are still needed to define the circular arc segment unlike a regular line segment, which can be defined by just two points.  
 Methods operating on circular arc segment types use straight-line segments to approximate the circular arc. The number of line segments used to approximate the arc will depend on the length and curvature of the arc. Z values can be stored for each of the circular arc segment types; however, methods will not use the Z values in their calculations.  
 
 > [!NOTE]  
@@ -125,7 +125,7 @@ LS LengthCS Length
 5.65685...6.28318...
 ```
 
-**CircularString** instances use fewer points to store curve boundaries with greater precision than **LineString** instances. **CircularString** instances are useful for storing circular boundaries like a twenty-mile search radius from a specific point. **LineString** instances are good for storing boundaries that are linear like a square city block.  
+**CircularString** instances use fewer points to store curve boundaries with greater precision than **LineString** instances. **CircularString** instances are useful for storing circular boundaries like a 20-mile search radius from a specific point. **LineString** instances are good for storing boundaries that are linear like a square city block.  
 
 ### LineString and CompoundCurve comparison  
 The following code examples show how to store the same figure using **LineString** and **CompoundCurve** instances:
@@ -153,7 +153,7 @@ SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 1 2.1082, 3 6.3246, 0 7, -3 6.324
 SELECT @g.ToString(), @g.STLength();
 ```
 
-To store the pie slice using a **CircularString** instance requires that three points be used for each line segment.  If an intermediate point is not known, it either has to be calculated or the endpoint of the line segment has to be doubled as the following snippet shows:  
+To store the pie slice using a **CircularString** instance, requires that three points be used for each line segment.  If an intermediate point is not known, it either has to be calculated or the endpoint of the line segment has to be doubled as the following snippet shows:  
 
 ```sql
 SET @g = geometry::Parse('CIRCULARSTRING( 0 0, 3 6.3246, 3 6.3246, 0 7, -3 6.3246, 0 0, 0 0)');

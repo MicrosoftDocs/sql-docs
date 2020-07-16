@@ -417,10 +417,10 @@ These limitations apply only to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)
   
 ```sql  
 CREATE TABLE SimpleTable(  
-    ProductKey [int] NOT NULL,   
-    OrderDateKey [int] NOT NULL,   
-    DueDateKey [int] NOT NULL,   
-    ShipDateKey [int] NOT NULL);  
+    ProductKey [INT] NOT NULL,   
+    OrderDateKey [INT] NOT NULL,   
+    DueDateKey [INT] NOT NULL,   
+    ShipDateKey [INT] NOT NULL);  
 GO  
 CREATE CLUSTERED COLUMNSTORE INDEX cci_Simple ON SimpleTable;  
 GO  
@@ -431,10 +431,10 @@ GO
   
 ```sql  
 CREATE TABLE SimpleTable (  
-    ProductKey [int] NOT NULL,   
-    OrderDateKey [int] NOT NULL,   
-    DueDateKey [int] NOT NULL,   
-    ShipDateKey [int] NOT NULL);  
+    ProductKey [INT] NOT NULL,   
+    OrderDateKey [INT] NOT NULL,   
+    DueDateKey [INT] NOT NULL,   
+    ShipDateKey [INT] NOT NULL);  
 GO  
 CREATE CLUSTERED INDEX cl_simple ON SimpleTable (ProductKey);  
 GO  
@@ -453,10 +453,10 @@ GO
 ```sql  
 --Create the table for use with this example.  
 CREATE TABLE SimpleTable (  
-    ProductKey [int] NOT NULL,   
-    OrderDateKey [int] NOT NULL,   
-    DueDateKey [int] NOT NULL,   
-    ShipDateKey [int] NOT NULL);  
+    ProductKey [INT] NOT NULL,   
+    OrderDateKey [INT] NOT NULL,   
+    DueDateKey [INT] NOT NULL,   
+    ShipDateKey [INT] NOT NULL);  
 GO  
   
 --Create two nonclustered indexes for use with this example  
@@ -485,10 +485,10 @@ GO
     ```sql  
     --Create a rowstore table with a clustered index and a nonclustered index.  
     CREATE TABLE MyFactTable (  
-        ProductKey [int] NOT NULL,  
-        OrderDateKey [int] NOT NULL,  
-         DueDateKey [int] NOT NULL,  
-         ShipDateKey [int] NOT NULL )  
+        ProductKey [INT] NOT NULL,  
+        OrderDateKey [INT] NOT NULL,  
+         DueDateKey [INT] NOT NULL,  
+         ShipDateKey [INT] NOT NULL )  
     )  
     WITH (  
         CLUSTERED INDEX ( ProductKey )  
@@ -602,10 +602,10 @@ WITH ( DROP_EXISTING = ON );
   
 ```sql  
 CREATE TABLE SimpleTable  
-(ProductKey [int] NOT NULL,   
-OrderDateKey [int] NOT NULL,   
-DueDateKey [int] NOT NULL,   
-ShipDateKey [int] NOT NULL);  
+(ProductKey [INT] NOT NULL,   
+OrderDateKey [INT] NOT NULL,   
+DueDateKey [INT] NOT NULL,   
+ShipDateKey [INT] NOT NULL);  
 GO  
 CREATE CLUSTERED INDEX cl_simple ON SimpleTable (ProductKey);  
 GO  

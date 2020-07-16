@@ -330,10 +330,11 @@ Id         : https://contosoekmkeyvault.vault.azure.net:443/
 Download the SQL Server Connector from the [Microsoft Download Center](https://go.microsoft.com/fwlink/p/?LinkId=521700). The download should be done by the administrator of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] computer.  
 
 > [!NOTE]
-> Versions 1.0.0.440 and earlier have been replaced and are no longer supported in production environments. Upgrade to version 1.0.1.0 or later by visiting the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=45344). Use the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under "Upgrade of SQL Server Connector."
-
-> [!NOTE]
-> There is a breaking change in version 1.0.5.0, in terms of the thumbprint algorithm. You might experience database restore failure after upgrading to version 1.0.5.0. For more information, see [KB article 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
+> - SQL Server Connector versions 1.0.0.440 and older have been replaced and are no longer supported in production environments and using the instructions on the [SQL Server Connector Maintenance & Troubleshooting](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) page under [Upgrade of SQL Server Connector](sql-server-connector-maintenance-troubleshooting.md#upgrade-of--connector).
+> - Starting with version 1.0.3.0, the SQL Server Connector reports relevant error messages to the Windows event logs for troubleshooting.
+> - Starting with version 1.0.4.0, there is support for private Azure clouds, including Azure China, Azure Germany, and Azure Government.
+> - There is a breaking change in version 1.0.5.0 in terms of the thumbprint algorithm. You may experience database restore failures after upgrading to 1.0.5.0. For more information, refer to [KB article 447099](https://support.microsoft.com/help/4470999/db-backup-problems-to-sql-server-connector-for-azure-1-0-5-0).
+> - **Starting with version 1.0.7.0, the SQL Server Connector supports filtering messages and network request retry logic.**
   
   ![Screenshot of the SQL Server Connector installation wizard](../../../relational-databases/security/encryption/media/ekm/ekm-connector-install.png)  
   

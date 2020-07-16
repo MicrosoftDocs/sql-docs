@@ -173,7 +173,7 @@ SELECT @g.ToString(), @g.STLength();
 ## See Also  
 - [Spatial Data (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx) 
 - [geometry Data Type Method Reference](https://msdn.microsoft.com/library/bb933973.aspx) 
-- [geography Data Type Method Reference](c)   
+- [geography Data Type Method Reference](https://docs.microsoft.com/sql/t-sql/spatial-geography/spatial-types-geography)   
 - [STNumCurves &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stnumcurves-geometry-data-type.md)   
 - [STNumCurves &#40;geography Data Type&#41;](../../t-sql/spatial-geography/stnumcurves-geography-data-type.md)   
 - [STGeomFromText &#40;geometry Data Type&#41;](../../t-sql/spatial-geometry/stgeomfromtext-geometry-data-type.md)   

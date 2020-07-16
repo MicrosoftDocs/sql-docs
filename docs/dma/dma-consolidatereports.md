@@ -121,7 +121,7 @@ The parameters associated with the dmaDataCollector function are described in th
 |**databaseName** | The database hosting the DatabaseInventory and InstanceInventory tables. |
 |**useInstancesOnly** | Bit flag to specify whether to use a list of Instances for assessment or not.  If set to 0, then the DatabaseInventory table will be used to build the assessment target list. |
 |**AssessmentName** | The name of the DMA assessment. |
-|**TargetPlatform** | The assessment target type that you want to perform.  Possible values are **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, and **SQLServerWindows2017**. |
+|**TargetPlatform** | The assessment target type that you want to perform.  Possible values are **AzureSQLDatabase**, **ManagedSqlServer**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**,  **SqlServerWindows2019**, and **SqlServerLinux2019**. |
 |**AuthenticationMethod** | The authentication method for connecting to the SQL Server targets you want to assess. Possible values are **SQLAuth** and **WindowsAuth**. |
 |**OutputLocation** | The directory in which to storing the JSON assessment output file. Depending on the number of databases being assessed and the number of objects within the databases, the assessments can take an exceptionally long time. The file will be written after all assessments have completed. |
 

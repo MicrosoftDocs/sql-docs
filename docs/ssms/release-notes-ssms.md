@@ -119,10 +119,6 @@ Download previous SSMS versions by selecting the download link in the related se
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2132606&clcid=0x40a)
 
-SSMS 18.5.1 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
-
-18.5.1 is an update to 18.5 with the following bug fixes.
-
 ### Bug fixes in 18.5.1
 
 | New Item | Details |
@@ -151,8 +147,6 @@ SSMS 18.5.1 is the latest general availability (GA) release of SSMS. If you need
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2125901&clcid=0x40a)
 
 SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a previous version of SSMS, see [previous SSMS releases](release-notes-ssms.md#previous-ssms-releases).
-
-18.5 is an update to 18.4 with the following new items and bug fixes.
 
 ### What's new in 18.5
 
@@ -253,8 +247,6 @@ SSMS 18.5 is the latest general availability (GA) release of SSMS. If you need a
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2108895&clcid=0x40a)
 
-18.4 is an update to 18.3.1 with the following new items and bug fixes.
-
 | New item | Details |
 |----------|---------|
 | Data Classification | Added support for custom information protection policy for data classification. |
@@ -310,8 +302,6 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2105412&clcid=0x40a)
 
-18.3.1 is an update to 18.2 with the following new items and bug fixes.
-
 #### What's new in 18.3.1
 
 | New item | Details |
@@ -365,8 +355,6 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 - Release date: July 25, 2019
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2099720&clcid=0x40a)
-
-18.2 is an update to 18.1 with the following new items and bug fixes.
 
 ### What's new in 18.2
 
@@ -439,8 +427,6 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 - Release date: June 11, 2019
 
 [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
-
-18.1 is a small update to 18.0 with the following new item and bug fixes.
 
 #### What's new in 18.1
 
@@ -780,8 +766,6 @@ Deprecated / Removed Features
 - Release number: 17.9.1  
 - Build number: 14.0.17289.0  
 - Release date: November 21, 2018
-
-17.9.1 is a small update to 17.9 with the following bug fixes:
 
 #### Bug fixes in 17.9.1
 

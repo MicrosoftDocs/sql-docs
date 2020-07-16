@@ -6,6 +6,7 @@ ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
 ms.topic: "language-reference"
+ms.custom: fasttrack-edit
 dev_langs: 
   - "TSQL"
 ms.assetid: 17a4c925-d4b5-46ee-9cd6-044f714e6f0e

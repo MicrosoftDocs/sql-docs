@@ -13,7 +13,7 @@ ms.author: arupp
 
 # SQL Connector error and information logging
 
-This article describes modifying registry entires to enable SQL Server Connector error and information logging.
+This article describes modifying registry entries to enable SQL Server Connector error and information logging.
 
 ## SQL Server Connector for Microsoft Azure Key Vault
 

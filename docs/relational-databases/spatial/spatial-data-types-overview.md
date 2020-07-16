@@ -30,7 +30,7 @@ The figure below depicts the geometry hierarchy upon which the **geometry** and 
 
 ![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.gif) 
 
-As the figure indicates, the ten instantiable types of the **geometry** and **geography** data types are **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**, and **GeometryCollection**. There is one additional instantiable type for the geography data type: **FullGlobe**. The **geometry** and **geography** types can recognize a specific instance as long as it is a well-formed instance, even if the instance is not defined explicitly. For example, if you define a **Point** instance explicitly using the STPointFromText() method, **geometry** and **geography** recognize the instance as a **Point**, as long as the method input is well-formed. If you define the same instance using the `STGeomFromText()` method, both the **geometry** and **geography** data types recognize the instance as a **Point**.  
+As the figure indicates, the ten instantiable types of the **geometry** and **geography** data types are **Point**, **MultiPoint**, **LineString**, **CircularString**, **MultiLineString**, **CompoundCurve**, **Polygon**, **CurvePolygon**, **MultiPolygon**, and **GeometryCollection**. There is one additional instantiable type for the geography data type: **FullGlobe**. The **geometry** and **geography** types can recognize a specific instance as long as it is a well formed instance, even if the instance is not defined explicitly. For example, if you define a **Point** instance explicitly using the STPointFromText() method, **geometry** and **geography** recognize the instance as a **Point**, as long as the method input is well formed. If you define the same instance using the `STGeomFromText()` method, both the **geometry** and **geography** data types recognize the instance as a **Point**.  
 
 The subtypes for geometry and geography types are divided into simple and collection types.  Some methods like `STNumCurves()` work only with simple types.  
 
@@ -63,7 +63,7 @@ In the planar, or flat-earth, system, measurements of distances and areas are gi
 In the ellipsoidal, or round-earth system, coordinates are given in degrees of latitude and longitude. However, lengths and areas are usually measured in meters and square meters, though the measurement may depend on the spatial reference identifier (SRID) of the **geography** instance. The most common unit of measurement for the **geography** data type is meters.  
 
 ### Orientation of spatial data  
-In the planar system, the ring orientation of a polygon is not an important factor. For example, a polygon described by ((0, 0), (10, 0), (0, 20), (0, 0)) is the same as a polygon described by ((0, 0), (0, 20), (10, 0), (0, 0)). The OGC Simple Features for SQL Specification does not dictate a ring ordering, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not enforce ring ordering.  
+In the planar system, the ring orientation of a polygon is not an important factor. For example, a polygon described by ((0, 0), (10, 0), (0, 20), (0, 0)) is the same as a polygon described by ((0, 0), (0, 20), (10, 0), (0, 0)). The *OGC Simple Features for SQL Specification* does not dictate a ring ordering, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not enforce ring ordering.  
 
 In an ellipsoidal system, a polygon has no meaning, or is ambiguous, without an orientation. For example, does a ring around the equator describe the northern or southern hemisphere? If we use the **geography** data type to store the spatial instance, we must specify the orientation of the ring and accurately describe the location of the instance. The interior of the polygon in an ellipsoidal system is defined by the "left-hand rule": if you imagine yourself walking along the ring of a geography Polygon, following the points in the order in which they are listed, the area on the left is being treated as the interior of the Polygon, and the area on the right as the exterior of the Polygon.
 
@@ -75,7 +75,7 @@ When the compatibility level is 100 or below in [!INCLUDE[ssCurrent](../../inclu
 In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], **FullGlobe** is a special type of Polygon that covers the entire globe. **FullGlobe** has an area, but no borders or vertices.  
 
 ### Outer and inner rings not important in `geography` data type  
-The OGC Simple Features for SQL Specification discusses outer rings and inner rings, but this distinction makes little sense for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type; any ring of a polygon can be taken to be the outer ring.  
+The *OGC Simple Features for SQL Specification* discusses outer rings and inner rings, but this distinction makes little sense for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] **geography** data type; any ring of a polygon can be taken to be the outer ring.  
 
 For more information on OGC specifications, see the following:  
 -   [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
@@ -86,10 +86,10 @@ Three instantiable types can take circular arc segments: **CircularString**, **C
 
 ![circular_arc_segments](../../relational-databases/spatial/media/7e382f76-59da-4b62-80dc-caf93e637c14.gif)
 
-First two examples show typical circular arc segments. Note how each of the three points lie on the perimeter of a circle.  
+First two examples show typical circular arc segments. Note how each of the three points lies on the perimeter of a circle.  
 
 Other two examples show how a line segment can be defined as a circular arc segment.  Note that three points are still needed to define the circular arc segment unlike a regular line segment which can be defined by just two points.  
-Methods operating on circular arc segment types use straight line segments to approximate the circular arc. The number of line segments used to approximate the arc will depend on the length and curvature of the arc. Z values can be stored for each of the circular arc segment types; however, methods will not use the Z values in their calculations.  
+Methods operating on circular arc segment types use straight-line segments to approximate the circular arc. The number of line segments used to approximate the arc will depend on the length and curvature of the arc. Z values can be stored for each of the circular arc segment types; however, methods will not use the Z values in their calculations.  
 
 > [!NOTE]  
 > If Z values are given for circular arc segments then they must be the same for all points in the circular arc segment for it to be accepted for input. For example: `CIRCULARSTRING(0 0 1, 2 2 1, 4 0 1)` is accepted, but `CIRCULARSTRING(0 0 1, 2 2 2, 4 0 1)` is not accepted.  

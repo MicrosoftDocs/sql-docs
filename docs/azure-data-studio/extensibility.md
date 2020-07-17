@@ -271,4 +271,4 @@ In dashboard, we provide the following context variables:
 |`serverName`|A string of the server name of the current connection. Ex. `serverName == 'localhost'`.|
 |`databaseName` | A string of the database name of the current connection. Ex. `databaseName == 'master'`.|
 |`connection` | The full connection profile object for the current connection (IConnectionProfile)|
-|`dashboardContext` | A string of the context of the page of the dashboard is currently on. Either 'database' or 'server'. Ex. `dashboardContext == 'database'`|
+|`dashboardContext` | A string of the context of the page the dashboard is currently on. Either 'database' or 'server'. Ex. `dashboardContext == 'database'`|

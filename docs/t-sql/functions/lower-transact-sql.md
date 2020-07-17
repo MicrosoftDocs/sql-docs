@@ -33,7 +33,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 LOWER ( character_expression )  
 ```  
   
@@ -47,7 +47,7 @@ LOWER ( character_expression )
 ## Examples  
  The following example uses the `LOWER` function, the `UPPER` function, and nests the `UPPER` function inside the `LOWER` function in selecting product names that have prices between $11 and $20.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LOWER(SUBSTRING(EnglishProductName, 1, 20)) AS Lower,   

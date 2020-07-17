@@ -69,7 +69,9 @@ GRANT
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  ALL  
  This option is deprecated and maintained only for backward compatibility. It does not grant all possible permissions. Granting ALL is equivalent to granting the following permissions: 
   

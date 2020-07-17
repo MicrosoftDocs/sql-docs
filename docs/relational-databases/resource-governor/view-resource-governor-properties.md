@@ -1,5 +1,6 @@
 ---
 title: "View Resource Governor Properties | Microsoft Docs"
+description: Learn how to create or configure Resource Governor entities by using the Resource Governor Properties page in SQL Server Management Studio.
 ms.custom: ""
 ms.date: "07/18/2016"
 ms.prod: sql

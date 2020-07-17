@@ -1,5 +1,6 @@
 ---
 title: "XML Connection Type | Microsoft Docs"
+description: Learn about the XML connection type to connect to and retrieve data from XML documents, Web services, or XML that is embedded in the query.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

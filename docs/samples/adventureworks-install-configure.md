@@ -24,13 +24,15 @@ For more information about samples, see the [Samples GitHub repository](https://
 - [SQL Server Management Studio](../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md)
 
 
-## Download .bak files 
+## Download backup files 
 
 Use these links to download the appropriate sample database for your scenario. 
 
 - **OLTP** data is for most typical online transaction processing workloads. 
 - **Data Warehouse (DW)** data is for data warehousing workloads. 
 - **Lightweight (LT)** data is a lightweight and pared down version of the **OLTP** sample. 
+
+If you're not sure what you need, start with the OLTP version that matches your SQL Server version. 
 
 |**OLTP** |**Data Warehouse** |**Lightweight**|
 |---------|---------|---------|

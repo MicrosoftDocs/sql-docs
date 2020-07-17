@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Deprecated Features Object | Microsoft Docs"
+description: Learn about the SQLServer:Deprecated Features object, which provides a counter to monitor the features designated as deprecated. 
 ms.custom: ""
 ms.date: "05/03/2016"
 ms.prod: sql

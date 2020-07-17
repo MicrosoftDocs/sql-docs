@@ -1,5 +1,6 @@
 ---
 title: "Create Statistics | Microsoft Docs"
+description: Learn how to create query optimization statistics on columns of a table or indexed view in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

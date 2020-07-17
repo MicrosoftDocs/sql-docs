@@ -64,7 +64,7 @@ SSMS 18.6 is the latest general availability (GA) release of SSMS. If you need a
 | Accessibility | Adjusted border colors for accessibility on the **Database general properties page** (the border around the grid and name box is darker to set the to contrast > 3:1). |
 | Accessibility | Added handling for query execution to update the narrator (requires NetFx4.8+ installed on the machine). |
 | Always Encrypted | Fixed issue where *New Column Encryption Key* dialog says the CEK is not enclave-enabled even if the CMK is enclave-enabled.
-| Auditing | Added support for SENSITIVE_BATCH_COMPLETED_GROUP action id (string instead of a number). |
+| Auditing | Added support for SENSITIVE_BATCH_COMPLETED_GROUP action ID (string instead of a number). |
 | Auditing | Added the following fields to the audit viewer: affected_rows, response_rows, connection_id, duration_milliseconds, and data_sensitivity_information. |
 | **Database Diagrams** | Fixed long outstanding issue with **Database Diagrams**, causing both the corruption of existing diagrams and SSMS to crash. If you created or saved a diagram using SSMS 18.0 through 18.5.1, and that diagram includes a *Text Annotation*, you won't be able to open that diagram in any version of SSMS. With this fix, SSMS 18.6 can open and save a diagram created by SSMS 17.9.1 and prior. SSMS 17.9.1 and previous releases can also open the diagram after being saved by SSMS 18.6. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37992649). |
 | Data Classification | Update SSMS to support the import/export of policy exported via PowerShell cmdlets. |
@@ -80,7 +80,7 @@ SSMS 18.6 is the latest general availability (GA) release of SSMS. If you need a
 | Object Explorer | Addressed an issue where SSMS can't expand databases node for master in Azure if there's a control plane outage affecting sys.database_service_objectives. |
 | Reports | Fixed several standard reports that were broken on Linux </br></br> Example: Memory Consumption report was failing with an error similar to "/var/opt/mssql/log/log_116.trc\log.trc' is invalid…"). |
 | SMO / Scripting | Updated the logic to create new SQL Azure Databases to use Gen5_2 as the default SLO. |
-| SMO / Scripting | SMO nuget packages have changed, affecting new app or extension development. </br></br>Microsoft.SqlServer.SqlManagementObjects.SSMS provides SMO DLLs compatible with SSMS 18.x, using the System.Data.SqlClient namespace as the ADO.Net client driver.</br></br> Microsoft.SqlServer.SqlManagementObjects has changed its NetFx SMO binaries to use Microsoft.Data.SqlClient as the ADO.Net client driver. </br> |
+| SMO / Scripting | SMO NuGet packages have changed, affecting new app or extension development. </br></br>Microsoft.SqlServer.SqlManagementObjects.SSMS provides SMO DLLs compatible with SSMS 18.x, using the System.Data.SqlClient namespace as the ADO.Net client driver.</br></br> Microsoft.SqlServer.SqlManagementObjects has changed its NetFx SMO binaries to use Microsoft.Data.SqlClient as the ADO.Net client driver. </br> |
 | Xevent UI | Fixed long outstanding issue (introduced in SSMS 18.0) where "Save to XEL file…" was throwing an error. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37695592). |
 
 #### Known issues (18.6)
@@ -231,7 +231,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 - New Server Audit Specification dialog may cause SSMS to crash with an access violation error.
 
-- SSMS Extensions using SMO would need to be recompiled targeting the new SMO v160 (package will be available on Nuget.org right after SSMS 18.5 is released).
+- SSMS Extensions using SMO would need to be recompiled targeting the new SMO v160 (package will be available on nuget.org right after SSMS 18.5 is released).
 
 - [Error when connecting to SSAS via msmdpump.dll in SSMS](https://feedback.azure.com/forums/908035-sql-server/suggestions/40144696-error-when-connecting-to-ssas-via-msmdpump-dll-in).
 
@@ -290,7 +290,7 @@ Download previous SSMS versions by selecting the download link in the related se
 
 You can reference [SQL Server user feedback](https://feedback.azure.com/forums/908035-sql-server) for other known issues and to provide feedback to the product team.
 
-### (18.3.1)
+### 18.3.1
 
 ![download](media/download-icon.png) [Download SSMS 18.3.1](https://go.microsoft.com/fwlink/?linkid=2105412)
 

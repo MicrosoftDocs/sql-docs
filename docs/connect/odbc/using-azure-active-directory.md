@@ -75,7 +75,7 @@ It is possible to use the new Azure AD authentication options when creating or e
 
 ![CreateNewDSN_ADMSI.png](windows/CreateNewDSN_ADMSI2.png)
 
-The six options correspond to `Trusted_Connection=Yes` (existing legacy Windows SSPI-only integrated authentication) and `Authentication=` `ActiveDirectoryIntegrated`, `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryInteractive`,and `ActiveDirectoryMsi` respectively.
+The six options correspond to `Trusted_Connection=Yes` (existing legacy Windows SSPI-only integrated authentication) and `Authentication=` `ActiveDirectoryIntegrated`, `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryInteractive`, and `ActiveDirectoryMsi` respectively.
 
 ### SQLDriverConnect Prompt (Windows driver only)
 

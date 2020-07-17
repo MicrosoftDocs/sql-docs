@@ -13,6 +13,7 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
+
 # DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD (Transact-SQL)  
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -27,7 +28,9 @@ Displays the number of incremental changes in the base tables that are held for 
 DBCC PDW_SHOWMATERIALIZEDVIEWOVERHEAD ( " [ schema_name .] materialized_view_name  " )
 [;]
 ```
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
  *schema_name*     

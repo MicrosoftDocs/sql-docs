@@ -1,5 +1,5 @@
 ---
-title: "DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL) | Microsoft Docs"
+title: DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 ms.custom: ""
 ms.date: "07/03/2019"
 ms.prod: sql
@@ -13,6 +13,7 @@ author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
+
 # DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
@@ -31,6 +32,8 @@ DBCC SHOWRESULTCACHESPACEUSED
 
 The `DBCC SHOWRESULTCACHESPACEUSED` command doesn't take any parameters and returns the space used by the database where the command is run.
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Permissions
 
 Requires VIEW SERVER STATE permission.
@@ -43,7 +46,6 @@ Requires VIEW SERVER STATE permission.
 |data_space|bigint|Space used for data, in KB.|  
 |index_space|bigint|Space used for indexes, in KB.|  
 |unused_space|bigint|Space that is part of the reserved space and not used, in KB.|  
-
 
 ## See also
 

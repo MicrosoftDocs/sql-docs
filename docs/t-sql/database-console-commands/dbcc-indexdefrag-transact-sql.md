@@ -48,7 +48,9 @@ DBCC INDEXDEFRAG
     [ WITH NO_INFOMSGS ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name* | *database_id* | 0  
  Is the database containing the index to defragment. If 0 is specified, the current database is used. Database names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   

@@ -54,7 +54,9 @@ DBCC CHECKALLOC
 ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name* | *database_id* | 0   
  The name or the ID of the database for which to check allocation and page usage.
  If not specified, or if 0 is specified, the current database is used.

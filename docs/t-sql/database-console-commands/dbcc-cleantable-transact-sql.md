@@ -45,7 +45,9 @@ DBCC CLEANTABLE
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name* | *database_id* | 0  
  Is the database in which the table to be cleaned belongs. If 0 is specified, the current database is used. Database names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   

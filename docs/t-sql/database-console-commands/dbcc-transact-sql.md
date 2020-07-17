@@ -1,5 +1,5 @@
 ---
-title: "DBCC (Transact-SQL) | Microsoft Docs"
+title: DBCC (Transact-SQL)
 ms.custom: ""
 ms.date: "11/14/2017"
 ms.prod: sql
@@ -37,7 +37,9 @@ ms.assetid: c6da8c04-5b6b-459a-9f76-110c92ca8b29
 author: pmasl
 ms.author: umajay
 ---
+
 # DBCC (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The [!INCLUDE[tsql](../../includes/tsql-md.md)] programming language provides DBCC statements that act as Database Console Commands for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].

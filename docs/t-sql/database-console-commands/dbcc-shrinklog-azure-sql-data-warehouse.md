@@ -1,5 +1,5 @@
 ---
-title: "DBCC SHRINKLOG (Parallel Data Warehouse) | Microsoft Docs"
+title: DBCC SHRINKLOG (Parallel Data Warehouse)
 ms.custom: ""
 ms.date: "03/16/2018"
 ms.prod: sql
@@ -12,7 +12,9 @@ author: pmasl
 ms.author: umajay
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
+
 # DBCC SHRINKLOG (Parallel Data Warehouse)
+
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
 
 Reduces the size of the transaction log *across the appliance* for the current [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database. The data is defragmented in order to shrink the transaction log. Over time, the database transaction log can become fragmented and inefficient. Use DBCC SHRINKLOG to reduce fragmentation and reduce the log size.
@@ -27,7 +29,9 @@ DBCC SHRINKLOG
     [ WITH NO_INFOMSGS ]   
 [;]  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments  
 SIZE = { *target_size* [ MB | **GB** | TB ]  } | **DEFAULT**.  
 *target_size* is the desired size for the transaction log, across all the Compute nodes, after DBCC SHRINKLOG completes. It is an integer greater than 0.  

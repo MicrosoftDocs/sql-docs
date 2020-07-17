@@ -55,7 +55,9 @@ DBCC SHOWCONTIG
     ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table_name* | *table_id* | *view_name* | *view_id*  
  Is the table or view to check for fragmentation information. If not specified, all tables and indexed views in the current database are checked. To obtain the table or view ID, use the [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) function.  
   

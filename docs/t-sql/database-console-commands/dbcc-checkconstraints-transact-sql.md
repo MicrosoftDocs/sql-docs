@@ -46,7 +46,9 @@ DBCC CHECKCONSTRAINTS
     ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table_name* | *table_id* | *constraint_name* | *constraint_id*  
  Is the table or constraint to be checked. When *table_name* or *table_id* is specified, all enabled constraints on that table are checked. When *constraint_name* or *constraint_id* is specified, only that constraint is checked. If neither a table identifier nor a constraint identifier is specified, all enabled constraints on all tables in the current database are checked.  
  A constraint name uniquely identifies the table to which it belongs. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  

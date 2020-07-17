@@ -26,6 +26,7 @@ Extensions are provided by the Azure Data Studio team (Microsoft), as well as th
     You can also quickly access the extensions manager by pressing `Ctrl+Shift+X` (Windows/Linux) or `Command+Shift+X` (Mac).
 
 2. Select an available extension to view its details.
+
     ![extension details](media/extensions/extension-details.png)
 
 3. Select the extension you want and **Install** it.
@@ -35,7 +36,7 @@ Extensions are provided by the Azure Data Studio team (Microsoft), as well as th
 If you're having problems accessing the Extensions Manager on Azure Data Studio, you can download the extension you need on our [GitHub Wiki](https://github.com/microsoft/azuredatastudio/wiki/List-of-Extensions).
 
 
-## Manage Extensions 
+## Manage extensions 
 
 ### List installed extensions 
 
@@ -55,7 +56,7 @@ You may temporarily disable an extension instead of permanently removing an exte
 
 If an extension has been disabled, it will be in the **Disabled** section of the extension list and marked as ***Disabled***. You can re-enable it with the **Enable** or **Enable (Workspace)** commands in the drop-down menu. The **Command Palette** also lets you enable all extensions with the commands **Extensions: Enable All Extensions** and **Extensions: Enable All Extensions (Workspace)**. 
 
-![extension enabling](media/extensions/extension-enable.png)
+![extension enabling](media/extensions/extensions-enable.png)
 
 ### Updating an extension
 
@@ -69,11 +70,11 @@ The **Extensions: Check for Extensions Updates** command is another way to check
 
 You can manually install an Azure Data Studio extension packaged in a `.vsix` file using the **Install from VSIX** command in the Extensions view command drop-down, or the **Extensions: Install from VSIX command** in the Command Palette and point to the extension's `.vsix` file.
 
-## Access Installed Azure Data Studio Extensions
+## Access installed Azure Data Studio extensions
 
 Each extension enhances your experience in Azure Data Studio in a different way. As a result, the entry point for extensions can vary. Refer to your installed extension's individual documentation for information on how its features can be accessed once it's installed.
 
-## Extensions View Filters
+## Extensions view filters
 
 The Extensions view search box supports filters to help you find and manage extensions. The commands **Show Installed Extensions** and **Show Recommended Extensions** use filters such as `@installed` and `@recommended` in the search box.
 
@@ -104,7 +105,7 @@ You can sort extensions with the `@sort` filter, which can take the following va
 - `rating` - Sort by extension gallery rating (1-5 stars), in descending order.
 - `name` - Sort alphabetically by extension name.
 
-## Common Questions
+## Common questions
 
 ### Where are extensions installed? 
 Extensions are installed in a per user extensions folder. Depending on your platform, the location is in the following folder:

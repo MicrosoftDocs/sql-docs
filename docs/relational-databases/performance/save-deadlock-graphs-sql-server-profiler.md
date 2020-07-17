@@ -1,5 +1,6 @@
 ---
 title: "Save deadlock graphs (SQL Server Profiler) | Microsoft Docs"
+description: Learn how to save a deadlock graph by using SQL Server Profiler. Deadlock graphs are saved as XML files.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql

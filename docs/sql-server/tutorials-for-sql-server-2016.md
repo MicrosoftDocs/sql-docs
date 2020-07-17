@@ -1,5 +1,6 @@
 ---
 title: "Tutorials for SQL Server | Microsoft Docs"
+description: Use these SQL Server tutorials to learn new technologies and features. Tutorials for earlier versions of SQL Server usually work with more recent versions.
 ms.date: "11/01/2017"
 ms.prod: sql
 ms.technology:

@@ -65,8 +65,8 @@ SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.d
   
  The following example uses `LTRIM` to remove leading spaces from a character variable.  
   
-```  
-DECLARE @string_to_trim varchar(60);  
+```sql  
+DECLARE @string_to_trim VARCHAR(60);  
 SET @string_to_trim = '     5 spaces are at the beginning of this string.';  
 SELECT 
     @string_to_trim AS 'Original string',

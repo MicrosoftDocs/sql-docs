@@ -1,5 +1,6 @@
 ---
 title: "SQL Server XTP Garbage Collection | Microsoft Docs"
+description: Learn about the SQL Server XTP Garbage Collection performance object, which contains counters related to the In-Memory OLTP engine's garbage collector.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

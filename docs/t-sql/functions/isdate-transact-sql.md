@@ -45,7 +45,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 ISDATE ( expression )  
 ```  
   
@@ -79,7 +79,7 @@ ISDATE ( expression )
 ### A. Using ISDATE to test for a valid datetime expression  
  The following example shows you how to use `ISDATE` to test whether a character string is a valid **datetime**.  
   
-```  
+```sql  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
     PRINT 'VALID'  
 ELSE  
@@ -89,7 +89,7 @@ ELSE
 ### B. Showing the effects of the SET DATEFORMAT and SET LANGUAGE settings on return values  
  The following statements show the values that are returned as a result of the settings of `SET DATEFORMAT` and `SET LANGUAGE`.  
   
-```  
+```sql  
 /* Use these sessions settings. */  
 SET LANGUAGE us_english;  
 SET DATEFORMAT mdy;  
@@ -139,7 +139,7 @@ SET DATEFORMAT mdy;
 ### C. Using ISDATE to test for a valid datetime expression  
  The following example shows you how to use `ISDATE` to test whether a character string is a valid **datetime**.  
   
-```  
+```sql  
 IF ISDATE('2009-05-12 10:19:41.177') = 1  
     SELECT 'VALID';  
 ELSE  

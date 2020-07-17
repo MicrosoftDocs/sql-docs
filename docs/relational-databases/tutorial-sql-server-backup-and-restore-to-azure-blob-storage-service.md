@@ -1,5 +1,6 @@
 ---
 title: "Quickstart: Backup & restore to Azure Blob storage service"
+description: "Quickstart: learn how to write backups to and restore from the Azure Blob Storage Service. Create an Azure Blob Container, write a backup, and then restore."
 ms.custom: seo-dt-2019
 ms.date: "04/09/2018"
 ms.prod: sql

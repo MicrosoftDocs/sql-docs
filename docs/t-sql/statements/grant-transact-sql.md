@@ -164,8 +164,8 @@ Grantees of CONTROL SERVER permission, such as members of the sysadmin fixed ser
 
 The following table lists the securables and the articles that describe the securable-specific syntax.  
 
-|Securable|Syntax|
-|---------|------|
+| Securable | GRANT Syntax|
+| ---------| ------ |
 |Application Role|[GRANT Database Principal Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-database-principal-permissions-transact-sql.md)|  
 |Assembly|[GRANT Assembly Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-assembly-permissions-transact-sql.md)|  
 |Asymmetric Key|[GRANT Asymmetric Key Permissions &#40;Transact-SQL&#41;](../../t-sql/statements/grant-asymmetric-key-permissions-transact-sql.md)|  

@@ -81,7 +81,7 @@ The service account, cluster role and the cluster role binding can be created ei
 > [!NOTE]
 > SQL Server 2019 CU5 introduces two feature switches to control the collection of pod and node metrics. By default these parameters are set to true in all environment targets, except OpenShift where the default is overridden. 
 
-You can customize the these settings in  the security section in the `control.json` deployment configuration file:
+You can customize these settings in the security section in the `control.json` deployment configuration file:
 
 ```json
   "security": {

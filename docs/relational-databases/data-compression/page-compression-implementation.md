@@ -1,5 +1,6 @@
 ---
 title: "Page Compression Implementation | Microsoft Docs"
+description: Learn how the SQL Server Database Engine implements page compression to help you plan the storage space that you need for your data.
 ms.custom: ""
 ms.date: "06/30/2016"
 ms.prod: sql

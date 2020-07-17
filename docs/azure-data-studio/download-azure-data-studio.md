@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 7/15/2020
+ms.date: 7/17/2020
 ---
 
 # Download and install Azure Data Studio
@@ -22,9 +22,9 @@ Download and install the latest release:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2135512)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2135513)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2135514) | July 15, 2020 | 1.20.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2135266) | July 15, 2020 | 1.20.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267) | July 15, 2020| 1.20.0 |
+| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2135512)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2135513)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2135514) | July 17, 2020 | 1.20.1 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2135266) | July 17, 2020 | 1.20.1 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267) | July 17, 2020| 1.20.1 |
 
 For details about the latest release, see the [release notes](release-notes.md).
 

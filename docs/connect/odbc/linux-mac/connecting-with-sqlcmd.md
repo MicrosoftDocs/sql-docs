@@ -206,24 +206,12 @@ In the current release, the following commands are not available:
   
 ## DSN Support in sqlcmd and bcp
 
-You can specify a data source name (DSN) instead of a server name in the **sqlcmd** or **bcp** `-S` option (or **sqlcmd** :Connect command) if you specify -D. -D causes **sqlcmd** or **bcp** to connect to the server specified in the DSN by the -S option.  
+You can specify a data source name (DSN) instead of a server name in the **sqlcmd** or **bcp** `-S` option (or **sqlcmd** :Connect command) if you specify `-D`. `-D` causes **sqlcmd** or **bcp** to connect to the server specified in the DSN by the `-S` option.  
   
 System DSNs are stored in the `odbc.ini` file in the ODBC SysConfigDir directory (`/etc/odbc.ini` on standard installations). User DSNs are stored in `.odbc.ini` in a user's home directory (`~/.odbc.ini`).
-  
-The following entries are supported in a DSN on Linux or macOS:
 
--   **ApplicationIntent=ReadOnly**  
+See [DSN and Connection String Keywords and Attributes](../dsn-connection-string-attribute.md) for the list of entries which the driver supports.
 
--   **Database=**_database\_name_  
-  
--   **Driver=ODBC Driver 11 for SQL Server** or **Driver=ODBC Driver 13 for SQL Server**
-  
--   **MultiSubnetFailover=Yes**  
-  
--   **Server=**_server\_name\_or\_IP\_address_  
-  
--   **Trusted_Connection=yes**|**no**  
-  
 In a DSN, only the DRIVER entry is required, but to connect to a server, `sqlcmd` or `bcp` needs the value in the SERVER entry.  
 
 If the same option is specified in both the DSN and the `sqlcmd` or `bcp` command line, the command line option overrides the value used in the DSN. For example, if the DSN has a DATABASE entry and the `sqlcmd` command line includes **-d**, the value passed to **-d** is used. If **Trusted_Connection=yes** is specified in the DSN, Kerberos authentication is used and user name (**-U**) and password (**-P**), if provided, are ignored.

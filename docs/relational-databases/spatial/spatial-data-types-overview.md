@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 There are two types of spatial data. The **geometry** data type supports planar, or Euclidean (flat-earth), data. The **geometry** data type both conforms to the *Open Geospatial Consortium (OGC) Simple Features for SQL Specification* version 1.1.0 and is compliant with SQL MM (ISO standard).
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also supports the **geography** data type, which stores ellipsoidal (round-earth) data, such as GPS latitude and longitude coordinates.
 
-## Spatial Data Objects
+## Spatial data objects
 
 The **geometry** and **geography** data types support 16 types of spatial data objects, or instance types. However, only 11 of these instance types are *instantiable*; you can create and work with these instances (or instantiate them) in a database. These instances derive certain properties from their parent data types.
 
@@ -51,7 +51,7 @@ Collection types are:
 - [MultiPolygon](../../relational-databases/spatial/multipolygon.md)  
 - [GeometryCollection](../../relational-databases/spatial/geometrycollection.md)  
 
-## Differences Between the geometry and geography Data Types
+## Geometry and geography data type differences
 
 The two types of spatial data often behave similarly. There are some key differences in how the data is stored and manipulated.  
 
@@ -96,7 +96,7 @@ For more information on OGC specifications, see the following documents:
 - [OGC Specifications, Simple Feature Access Part 1 - Common Architecture](https://go.microsoft.com/fwlink/?LinkId=93627)  
 - [OGC Specifications, Simple Feature Access Part 2 - SQL Options](https://go.microsoft.com/fwlink/?LinkId=93628)  
 
-## Circular Arc Segments
+## Circular arc segments
 
 Three instantiable types can take circular arc segments: **CircularString**, **CompoundCurve**, and **CurvePolygon**.  A circular arc segment is defined by three points in a two-dimensional plane and the third point cannot be the same as the first point. Few examples of circular arc segments:
 
@@ -192,7 +192,7 @@ SELECT @g.ToString(), @g.STLength();
 
 **CurvePolygon** instances can use **CircularString** and **CompoundCurve** instances when defining their exterior and interior rings. **Polygon** instances can't.
 
-## See Also
+## See also
 
 - [Spatial Data (SQL Server)](https://msdn.microsoft.com/library/bb933790.aspx)
 - [geometry Data Type Method Reference](https://msdn.microsoft.com/library/bb933973.aspx)

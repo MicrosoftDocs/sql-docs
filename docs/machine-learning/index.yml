@@ -80,7 +80,7 @@ landingContent:
       - linkListType: how-to-guide
         links:
           - text: Deploy and make predictions with an ONNX model in Azure SQL Managed Instance
-            url: /azure/azure-sql-edge/deploy-onnx?toc=/azure/azure-sql/toc.json
+            url: /azure/azure-sql-edge/deploy-onnx?context=/azure/azure-sql/managed-instance/context/ml-context
 
   - title: Azure SQL Database Edge
     linkLists:

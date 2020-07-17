@@ -45,7 +45,7 @@ Returns the current database system timestamp as a **datetime** value without th
 
 ## Syntax
 
-```
+```syntaxsql
 GETDATE()
 ```
 

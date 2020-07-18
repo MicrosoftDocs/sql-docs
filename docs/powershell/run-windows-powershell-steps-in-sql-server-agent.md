@@ -15,7 +15,7 @@ ms.author: maghan
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../includes/appliesto-ss-xxxx-asdw-pdw-md.md)]
 
-Use SQL Server Agent to run SQL Server PowerShell scripts at schedule times.  
+Use SQL Server Agent to run SQL Server PowerShell scripts at scheduled times.  
   
 **To run PowerShell from SQL Server Agent, using:**  [PowerShell Job Step](#PShellJob), [Command Prompt Job Step](#CmdExecJob)  
   

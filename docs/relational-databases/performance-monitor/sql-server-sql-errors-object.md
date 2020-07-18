@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, SQL Errors Object | Microsoft Docs"
+description: Learn about the SQLServer:SQL Errors object, which provides counters to monitor SQL Errors in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

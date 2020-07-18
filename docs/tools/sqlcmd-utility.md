@@ -709,7 +709,7 @@ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any 
  Causes **sqlcmd** to exit.  
   
  [**:**] **EXIT**[ **(**_statement_**)** ]  
- Lets you use the result of a SELECT statement as the return value from **sqlcmd**. If numeric, the first column of the last result row is converted to a 4-byte integer (long). MS-DOS passes the low byte to the parent process or operating system error level. Windows 200x passes the whole 4-byte integer. The syntax is:  
+ Lets you use the result of a SELECT statement as the return value from **sqlcmd**. If numeric, the first column of the last result row is converted to a 4-byte integer (long). MS-DOS, Linux, and Mac pass the low byte to the parent process or operating system error level. Windows 200x passes the whole 4-byte integer. The syntax is:  
   
  `:EXIT(query)`  
   

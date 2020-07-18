@@ -1,6 +1,6 @@
 ---
 title: "Open Activity Monitor (SSMS)"
-description: How to open activity monitor in SQL Server Management Studio (SSMS).
+description: Learn how to open Activity Monitor in SQL Server Management Studio. Activity Monitor queries the monitored instance to obtain information to display.
 ms.custom: seo-dt-2019
 ms.date: "08/05/2016"
 ms.prod: sql

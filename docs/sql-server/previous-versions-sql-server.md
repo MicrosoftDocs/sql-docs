@@ -7,7 +7,7 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-ms.date: 05/08/2020
+ms.date: 07/17/2020
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || sql-server-2014 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 
@@ -19,9 +19,8 @@ The documentation for several older versions of Microsoft SQL Server has been ar
 
 There is online documentation for several older versions of SQL Server.
 
-- [2005 – 2012](https://docs.microsoft.com/previous-versions/sql/)
 - [2014](../2014/2014-toc/index.yml?view=sql-server-2014)
-- [2016 and later](../sql-server/index.yml?view=sql-server-2016)
+- [2005 – 2012](https://docs.microsoft.com/previous-versions/sql/)
 
 ## Offline documentation
 

@@ -1,18 +1,18 @@
 ---
-title: Insert Python dataFrame into SQL Server 
-description: How to insert data from a dataframe into SQL Server 
+title: Insert Python dataframe into SQL table 
+description: How to insert data from a dataframe into SQL table
 author: cawrites
 ms.author: chadam
-ms.date: 07/01/2020
+ms.date: 07/14/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
 ---
-# Insert Python dataFrame into SQL Server
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+# Insert Python dataframe into SQL table
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-This article describes how to insert data into a SQL database from a `pandas` dataframe using the `pyodbc` package in Python. For more information, see the [pyodbc documentation](../../connect/python/pyodbc/python-sql-driver-pyodbc.md). By establishing a connection with SQL Server using Python `pandas`, data can be sent directly to a SQL table.
+This article describes how to insert data into a SQL database from a `pandas` dataframe using the `pyodbc` package in Python. For more information, see the [pyodbc documentation](../../connect/python/pyodbc/python-sql-driver-pyodbc.md). By establishing a connection with SQL using Python `pandas`, data can be sent directly to a SQL table.
 
 ## Prerequisites:
 
@@ -40,13 +40,13 @@ The sample database used in this article has been saved to a **.bak** database b
 1. Follow the instructions in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#download-bak-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
 1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
    - Import from the **AdventureWorks.bak** file - you downloaded.
-   - Name the target database "AdventureWorks."
+   - Name the target database "AdventureWorks".
 ::: moniker-end   
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 1. Follow the instructions in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#download-bak-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
 1. Follow the directions in [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
    - Import from the **AdventureWorks.bak** file - you downloaded.
-   - Name the target database "AdventureWorks."
+   - Name the target database "AdventureWorks".
 ::: moniker-end
 
 You can verify that the restored database exists by querying the **HumanResources.Department** table:
@@ -108,16 +108,15 @@ DepartmentID,Name,GroupName,
 16,Executive,Executive General and Administration
 ```
 
-## Connect to SQL Server using Python
+## Connect to SQL using Python
 
-1. Edit the connection string variables 'server','database','username' and 'password' to connect to SQL Server.
+1. Edit the connection string variables 'server','database','username' and 'password' to connect to SQL database.
  
-2. Edit path for CSV file. 
+2. Edit path for CSV file.
  
 ## Load dataframe from CSV file
 
-Use the Python `pandas` package to create a dataframe and load the CSV file. Connect to SQL Server to load dataframe into the new SQL table, HumanResources.DepartmentTest.
-Edit the connection string variables 'server', 'database', 'username', and 'password' to connect to SQL Server.
+Use the Python `pandas` package to create a dataframe and load the CSV file. Connect to SQL to load dataframe into the new SQL table, HumanResources.DepartmentTest.
 
 To create a new notebook:
 1. In Azure Data Studio, select **File**, select **New Notebook**.
@@ -125,8 +124,7 @@ To create a new notebook:
 3. Paste code in notebook, select **Run All**.
 
  ```Python
-import pyodbc 
-import pandas
+import pyodbc
 import pandas as pd
 # insert data from csv file into dataframe.
 # working directory for csv file: type "pwd" in Azure Data Studio or Linux
@@ -137,7 +135,7 @@ df = pd.read_csv("c:\\user\\username\department.csv")
 # server = 'myserver,port' # to specify an alternate port
 server = 'yourservername' 
 database = 'AdventureWorks' 
-username = 'sa' 
+username = 'username' 
 password = 'yourpassword' 
 cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
 cursor = cnxn.cursor()

@@ -1,36 +1,35 @@
 ---
 title: sqlrutils helper functions
-description: Use the sqlrutils function library in SQL Server 2016 R Services and SQL Server Machine Learning Services with R to generate stored procedures containing R script.
+description: sqlrutils is an R package from Microsoft that provides a mechanism for R users to put their R scripts into a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an R development environment. The package is included in SQL Server Machine Learning Services and SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-
-ms.date: 12/15/2018  
+ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# sqlrutils (R library in SQL Server)
+# sqlrutils (R package in SQL Server Machine Learning Services)
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-The **sqlrutils** package provides a mechanism for R users to put their R scripts into a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an R development environment. 
+**sqlrutils** is an R package from Microsoft that provides a mechanism for R users to put their R scripts into a T-SQL stored procedure, register that stored procedure with a database, and run the stored procedure from an R development environment. The package is included in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](sql-server-r-services.md).
 
 By converting your R code to run within a single stored procedure, you can make more effective use of SQL Server R Services, which requires that R script be embedded as a parameter to [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md). The **sqlrutils** package helps you build this embedded R script and set related parameters appropriately.
 
 The **sqlrutils** package performs these tasks:
 
 - Saves the generated T-SQL script as a string inside an R data structure
-- Optionally, generates a .sql file for the T-SQL script, which you can edit or run to create a stored procedure
+- Optionally, generate a .sql file for the T-SQL script, which you can edit or run to create a stored procedure
 - Registers the newly created stored procedure with the SQL Server instance from your R development environment
 
 You can also execute the stored procedure from an R environment, by passing well-formed parameters and processing the results. Or, you can use the stored procedure from SQL Server to support common database integration scenarios such as ETL, model training, and high-volume scoring.
 
-  > [!NOTE]
-  > If you intend to run the stored procedure from an R environment by calling the *executeStoredProcedure* function, you must use an ODBC 3.8 provider, such as ODBC Driver 13 for SQL Server.  
+> [!NOTE]
+> If you intend to run the stored procedure from an R environment by calling the *executeStoredProcedure* function, you must use an ODBC 3.8 provider, such as ODBC Driver 13 for SQL Server.  
   
 ## Full reference documentation
 
-The **sqlrutils** library is distributed in multiple Microsoft products, but usage is the same whether you get the library in SQL Server or another product. Because the functions are the same, [documentation for individual sqlrutils functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) is published to just one location under the [R reference](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
+The **sqlrutils** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual sqlrutils functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) is published to just one location under the [R reference](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
 
 ## Functions list
 
@@ -52,7 +51,7 @@ The following section provides an overview of the functions that you can call fr
 
 ## How to use sqlrutils
 
-The **sqlrutils** library functions must run on a computer having SQL Server Machine Learning with R. If you are working on a client workstation, set a remote compute context to shift execution to SQL Server. The workflow for using this package includes the following steps:
+The **sqlrutils** package functions must run on a computer having SQL Server Machine Learning with R. If you are working on a client workstation, set a remote compute context to shift execution to SQL Server. The workflow for using this package includes the following steps:
 
 + Define stored procedure parameters (inputs, outputs, or both) 
 + Generate and register the stored procedure    
@@ -61,7 +60,7 @@ The **sqlrutils** library functions must run on a computer having SQL Server Mac
 In an R session, load **sqlrutils** from the command line by typing `library(sqlrutils)`.
 
 > [!Note]
-> You can load this library on computer that does not have SQL Server (for example, on an R Client instance) if you change the compute context to SQL Server and execute the code in that compute context.
+> You can load this package on computer that does not have SQL Server (for example, on an R Client instance) if you change the compute context to SQL Server and execute the code in that compute context.
 
 
 ### Define stored procedure parameters and inputs

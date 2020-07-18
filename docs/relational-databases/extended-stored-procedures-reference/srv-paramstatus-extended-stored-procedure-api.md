@@ -1,5 +1,6 @@
 ---
 title: "srv_paramstatus (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_paramstatus returns the status of a particular remote stored procedure call parameter.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

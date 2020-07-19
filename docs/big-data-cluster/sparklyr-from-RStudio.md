@@ -8,12 +8,12 @@ ms.reviewer: mikeray
 ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
+ms.technology: machine-learning-bdc
 ---
 
 # Use sparklyr in SQL Server big data cluster
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Sparklyr provides an R interface for Apache Spark. Sparklyr is a popular way for R developers to use Spark. This article describes how to use sparklyr in a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] using RStudio.
 

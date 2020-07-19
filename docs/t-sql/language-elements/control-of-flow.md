@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Control-of-Flow
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The [!INCLUDE[tsql](../../includes/tsql-md.md)] control-of-flow language keywords are:  
   

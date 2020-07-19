@@ -25,7 +25,7 @@ ms.author: "jroth"
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_virtualservernodes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Returns a list of failover clustered instance nodes on which an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can run. This information is useful in failover clustering environments.  
   

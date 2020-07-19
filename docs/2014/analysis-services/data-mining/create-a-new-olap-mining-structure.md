@@ -96,7 +96,7 @@ ms.author: owend
   
     -   **Filter Expression**: Type a value or expression to serve as the filter condition, or use the dropdown list to select a value from the list of members at the specified level of the hierarchy.  
   
-         For example, if you selected [Geography] as the dimension and [Region Country Name] as the hierarchy level, the dropdown list contains all the valid countries that you can use as a filter condition. You can make multiple selections. As a result, the data in the mining structure will be limited to cube data from these geographical areas.  
+         For example, if you selected [Geography] as the dimension and [Region Country Name] as the hierarchy level, the dropdown list contains all the valid countries/regions that you can use as a filter condition. You can make multiple selections. As a result, the data in the mining structure will be limited to cube data from these geographical areas.  
   
     -   **Parameters**: Ignore this check box. This dialog box supports multiple cube filtering scenarios and this option is not relevant to building a mining structure.  
   
@@ -124,5 +124,3 @@ ms.author: owend
   
 ## See Also  
  [Mining Structure Tasks and How-tos](mining-structure-tasks-and-how-tos.md)  
-  
-  

@@ -1,5 +1,6 @@
 ---
 title: "Table and Row Size in Memory-Optimized Tables | Microsoft Docs"
+description: Learn about table and row size for memory-optimized tables. You can create a table with multiple large and LOB columns.
 ms.custom: ""
 ms.date: "06/19/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Table and Row Size in Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] the in-row data size of a memory-optimized table couldn't be longer than [8,060 bytes](https://msdn.microsoft.com/library/dn205318(v=sql.120).aspx). However, starting [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and in Azure SQL Database it is now possible to create a memory-optimized table with multiple large columns (e.g., multiple varbinary(8000) columns) and LOB columns (i.e., varbinary(max), varchar(max), and nvarchar(max)) and perform operations on them using natively compiled T-SQL modules and table types. 
   

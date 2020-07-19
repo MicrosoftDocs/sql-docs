@@ -1,19 +1,51 @@
 ---
 title: Release notes
 description: Azure Data Studio release notes
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 06/15/2020
+ms.date: 07/17/2020
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## July 2020 (hotfix)
+
+July 17, 2020 &nbsp; / &nbsp; version: 1.20.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Fix bug #11372 Object Explorer drag-and-drop table incorrectly wraps table names | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
+| Fix bug #11356 Dark theme is now the default theme | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| &nbsp; | &nbsp; |
+
+### Known Issue
+
+- Some users have reported connection errors from the new Microsoft.Data.SqlClient v2.0.0 included in this release. Users have found [following these instructions](https://github.com/microsoft/azuredatastudio/issues/11367#issuecomment-659614111) to successfully connect
+
+## July 2020
+
+July 15, 2020 &nbsp; / &nbsp; version: 1.20.0
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Added new Feature Tour | From welcome page and command palette, users can now launch a feature tour to get a walkthrough of commonly used features including Connections Viewlet, Notebooks viewlet, and Extensions Marketplace |
+| New notebook features | &bull; &nbsp; Header support in Markdown Toolbar<br/> &bull; &nbsp; Side-by-side Markdown Preview in Text Cells
+| Drag and Drop Columns and Tables in Query Editor | Users can now directly drag and drop columns and tables from connections viewlet to query editor |
+| Azure Account icon added to Activity Bar) | More discoverable to sign in to Azure |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
+
 
 ## June 2020
 
@@ -414,7 +446,7 @@ January 16, 2019 &nbsp; / &nbsp; version: 1.3.9 &nbsp; / &nbsp; Hotfix release
 
 | Change | Details |
 | :----- | :------ |
-| Fixed a few issues discovered in 1.3.8. | See [January Hotfix Release, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).<br/><br/>For detailed information, see:<br/>&bull; &nbsp; [Change Log, on GitHub](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md).<br/>&bull; &nbsp; [Releases, on GitHub](https://github.com/Microsoft/azuredatastudio/releases). |
+| Fixed a few issues discovered in 1.3.8. | See [January Hotfix Release, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).<br/><br/>For detailed information, see:<br/>&bull; &nbsp; [Change Log, on GitHub](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md).<br/>&bull; &nbsp; [Releases, on GitHub](https://github.com/Microsoft/azuredatastudio/releases). |
 | &nbsp; | &nbsp; |
 
 ## January 2019
@@ -485,7 +517,7 @@ October 29, 2018 &nbsp; / &nbsp; version: 1.1.4
 - Fix [issue #2851](https://github.com/Microsoft/azuredatastudio/issues/2851): TimeSeries chart does not render correctly
 - Fix [issue #2996](https://github.com/Microsoft/azuredatastudio/issues/2996): Temp table loss due to sudden session change
 
-For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
+For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## September 2018 (GA Release)
 
@@ -520,7 +552,7 @@ General Availability release of Azure Data Studio (formerly SQL Operations Studi
 - Fix [issue #2647](https://github.com/Microsoft/azuredatastudio/issues/143): The charts took a significant step backwards.
 - Fix [issue #2648](https://github.com/Microsoft/azuredatastudio/issues/143): SELECT that returns a JSON hyperlinks the whole column.
 
-For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
+For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## August 2018
 
@@ -730,7 +762,7 @@ A highlight for the April Public Preview is the refresh of the source code for t
 
 For additional details, check out the [Visual Studio Code February Release Notes](https://code.visualstudio.com/updates/v1_21), and the [Visual Studio Code January Release Notes](https://code.visualstudio.com/updates/v1_20).
 
-For more information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md).
+For more information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md).
 
 ## March 2018
 

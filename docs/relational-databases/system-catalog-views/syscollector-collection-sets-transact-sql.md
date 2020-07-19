@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # syscollector_collection_sets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Provides information about a collection set, including schedule, collection mode, and its state.  
   

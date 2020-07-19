@@ -1,5 +1,6 @@
 ---
 title: "Execution Plans | Microsoft Docs"
+description: Learn about execution plans or query plans, which the Query Optimizer creates for the SQL Server Database Engine to run queries. 
 ms.custom: ""
 ms.date: "03/01/2020"
 ms.prod: sql
@@ -18,7 +19,7 @@ ms.author: pelopes
 manager: amitban
 ---
 # Execution Plans
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 To be able to execute queries, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] must analyze the statement to determine the most efficient way to access the required data. This analysis is handled by a component called the Query Optimizer. The input to the Query Optimizer consists of the query, the database schema (table and index definitions), and the database statistics. The output of the Query Optimizer is a query execution plan, sometimes referred to as a query plan, or execution plan.   
 

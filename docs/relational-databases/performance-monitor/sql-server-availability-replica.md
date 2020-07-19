@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Availability Replica | Microsoft Docs"
+description: Learn about SQLServer:Availability Replica performance object, which contains performance counters about availability replicas in Always On availability groups.
 ms.custom: ""
 ms.date: "08/25/2016"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, Availability Replica
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **SQLServer:Availability Replica** performance object contains performance counters that report information about the availability replicas in Always On availability groups in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. All availability replica performance counters apply to both the primary replica and the secondary replicas, with send/receive counters reflecting the local replica. For the most part, the primary replica sends most of the data, and the secondary replicas receive the data. However, secondary replicas send ACKs and some other background traffic to the primary replicas. Note that on a given availability replica, some counters will show a zero value, depending on the current role, primary or secondary, of the local replica.  
   
 |Counter Name|Description|  

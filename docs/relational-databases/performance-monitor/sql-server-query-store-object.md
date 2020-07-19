@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Query Store Object | Microsoft Docs"
+description: Learn about the Query Store object, which provides counters to monitor resource usage of SQL Server to store query texts, execution plans and runtime stats.
 ms.custom: ""
 ms.date: "03/17/2016"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: jrasnick
 ---
 # SQL Server, Query Store Object
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The Query Store object provides counters to monitor resource utilization of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to store query texts, execution plans and runtime stats for objects such as stored procedures, ad hoc and prepared [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, and triggers.  
   

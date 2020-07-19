@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # MSmerge_dynamic_snapshots (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSmerge_dynamic_snapshots** table tracks the location of the filtered data snapshot for each partition defined for a merge publication with parameterized row filters. This table is stored in the **publication** database.  
   

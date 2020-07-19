@@ -18,7 +18,7 @@ ms.reviewer:
 
 ---
 # Show Column Names in the Diagram Pane (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can choose to hide or show the column names of tables in the **Diagram Pane** of the Query and View Designer.  
   
 ### Show Column Names  

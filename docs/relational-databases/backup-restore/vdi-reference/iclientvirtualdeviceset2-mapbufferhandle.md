@@ -13,7 +13,7 @@ ms.author: mathoma
 
 # IClientVirtualDeviceSet2::MapBufferHandle (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 The **MapBufferHandle** function is used to obtain a valid buffer address from a buffer handle obtained from some other process.
 

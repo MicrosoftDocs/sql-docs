@@ -1,5 +1,5 @@
 ---
-title: "nodes() Method (xml Data Type) | Microsoft Docs"
+title: nodes() Method (xml Data Type)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
@@ -16,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # nodes() Method (xml Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The **nodes()** method is useful when you want to shred an **xml** data type instance into relational data. It allows you to identify nodes that will be mapped into a new row.  
   
@@ -33,7 +33,9 @@ You can retrieve multiple values from the rowset. For example, you can apply the
 nodes (XQuery) as Table(Column)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *XQuery*  
 Is a string literal, an XQuery expression. If the query expression constructs nodes, these constructed nodes are exposed in the resulting rowset. If the query expression results in an empty sequence, the rowset is empty as well. If the query expression statically results in a sequence that contains atomic values instead of nodes, a static error is raised.  
   

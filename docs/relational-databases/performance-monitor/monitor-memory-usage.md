@@ -1,5 +1,6 @@
 ---
 title: "Monitor Memory Usage | Microsoft Docs"
+description: "Monitor a SQL Server instance to confirm that memory usage is within typical ranges. Use the Memory: Available Bytes and Memory: Pages/sec counters."
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -25,7 +26,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Monitor Memory Usage
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Monitor an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodically to confirm that memory usage is within typical ranges.  
   
  To monitor for a low-memory condition, use the following object counters:  

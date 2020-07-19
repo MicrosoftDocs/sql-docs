@@ -1,5 +1,6 @@
 ---
 title: "Move a Workload Group | Microsoft Docs"
+description: Learn how to move a Resource Governor workload group to a different resource pool by using either SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Move a Workload Group
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   You can move a Resource Governor workload group to a different resource pool by using either [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or Transact-SQL.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  

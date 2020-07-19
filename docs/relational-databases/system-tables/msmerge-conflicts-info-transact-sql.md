@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # MSmerge_conflicts_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSmerge_conflicts_info** table tracks conflicts that occur when synchronizing a subscription to a merge publication. The losing row data for conflicts is stored in the [MSmerge_conflict_publication_article](../../relational-databases/system-tables/msmerge-conflict-publication-article-transact-sql.md) table for the article where the conflict occurred. This table is stored at the Publisher in the publication database and at the Subscriber in the subscription database.  
   

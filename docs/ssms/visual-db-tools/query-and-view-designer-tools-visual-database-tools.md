@@ -25,7 +25,7 @@ ms.reviewer:
 
 ---
 # Query and View Designer Tools (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 When you design a query, view, in-line function, or single-statement stored procedure, the designer you use consists of four panes: the Diagram pane, the Criteria pane, the SQL pane, and the Results pane.  
   
 ![Query Designer](../../ssms/visual-db-tools/media/vs_queryviewdsgpanes.gif "Query Designer")  

@@ -1,5 +1,6 @@
 ---
 title: "Use SQL Server Objects | Microsoft Docs"
+description: Learn about the SQL Server objects and counters that System Monitor uses to monitor activity in computers running an instance of SQL Server.
 ms.custom: ""
 ms.date: "03/17/2016"
 ms.prod: sql
@@ -32,7 +33,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Use SQL Server Objects
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides objects and counters that can be used by System Monitor to monitor activity in computers running an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. An object is any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resource, such as a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] lock or Windows process. Each object contains one or more counters that determine various aspects of the objects to monitor. For example, the **SQL Server Locks** object contains counters called **Number of Deadlocks/sec** and **Lock Timeouts/sec**.  
   

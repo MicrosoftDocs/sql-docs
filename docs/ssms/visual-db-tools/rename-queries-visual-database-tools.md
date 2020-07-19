@@ -16,7 +16,7 @@ ms.reviewer:
 
 ---
 # Rename Queries (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can rename any query that is not currently open for editing. The following procedure assumes that the query you want to rename is closed.  
   
 ### To rename a query  

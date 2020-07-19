@@ -15,7 +15,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Processing Results - Process Results
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Processing results in an ODBC application involves first determining the characteristics of the result set, then retrieving the data into program variables by using either [SQLBindCol](../../relational-databases/native-client-odbc-api/sqlbindcol.md) or [SQLGetData](../../relational-databases/native-client-odbc-api/sqlgetdata.md).  
   

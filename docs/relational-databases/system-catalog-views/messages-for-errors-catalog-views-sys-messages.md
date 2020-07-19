@@ -23,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Messages (for errors) Catalog Views - sys.messages
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains a row for each **message_id** or **language_id** of the error messages in the system, for both system-defined and user-defined messages. For more information, see [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md).  
    

@@ -21,7 +21,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Generate an Inline XSD Schema
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In a FOR XML clause, you can request that your query return an inline schema together with the query results. If you want an XDR schema, you use the XMLDATA keyword in the FOR XML clause. If you want an XSD schema, you use the XMLSCHEMA keyword.  
   
  This topic describes the XMLSCHEMA keyword and explains the structure of the resulting inline XSD schema. Following are the limitations when you are requesting inline schemas:  

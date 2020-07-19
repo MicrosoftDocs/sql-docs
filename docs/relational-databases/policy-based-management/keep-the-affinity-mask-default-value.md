@@ -14,7 +14,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Keep the Affinity Mask Default Value
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks whether the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setting for the affinity mask is set to 0, which is the default value. The affinity mask option dynamically controls CPU affinity.  
   
 ## For More Information  

@@ -1,5 +1,6 @@
 ---
 title: "Best practices with Query Store | Microsoft Docs"
+description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
 ms.custom: ""
 ms.date: "03/04/2020"
 ms.prod: sql
@@ -16,7 +17,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Best practices with Query Store
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article outlines the best practices for using SQL Server Query Store with your workload.
 

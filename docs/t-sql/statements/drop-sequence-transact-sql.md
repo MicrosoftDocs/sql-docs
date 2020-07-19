@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # DROP SEQUENCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Removes a sequence object from the current database.  
   

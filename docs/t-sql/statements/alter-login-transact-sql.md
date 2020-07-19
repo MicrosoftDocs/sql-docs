@@ -158,7 +158,7 @@ If MUST_CHANGE is specified, CHECK_EXPIRATION and CHECK_POLICY must be set to ON
 
 If CHECK_POLICY is set to OFF, CHECK_EXPIRATION cannot be set to ON. An ALTER LOGIN statement that has this combination of options will fail.
 
-You cannot use ALTER_LOGIN with the DISABLE argument to deny access to a Windows group. For example, ALTER_LOGIN [*domain\group*] DISABLE will return the following error message:
+You cannot use ALTER LOGIN with the DISABLE argument to deny access to a Windows group. For example, ALTER LOGIN [*domain\group*] DISABLE will return the following error message:
 
     `"Msg 15151, Level 16, State 1, Line 1
     "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`

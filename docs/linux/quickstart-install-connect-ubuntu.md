@@ -3,7 +3,7 @@ title: "Ubuntu: Install SQL Server on Linux"
 description: This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on Ubuntu and then create and query a database with sqlcmd.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 04/10/2020
+ms.date: 07/15/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: seo-lt-2019
@@ -11,13 +11,16 @@ ms.technology: linux
 ms.assetid: 31c8c92e-12fe-4728-9b95-4bc028250d85
 ---
 # Quickstart: Install SQL Server and create a database on Ubuntu
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
 In this quickstart, you install SQL Server 2017 on Ubuntu 18.04. You then connect with **sqlcmd** to create your first database and run queries.
+
+> [!TIP]
+> This tutorial requires user input and an internet connection. If you are interested in the unattended or offline installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md). For a list of supported platforms, see our [Release notes](sql-server-linux-release-notes.md).
 
 ::: moniker-end
 
@@ -26,10 +29,10 @@ In this quickstart, you install SQL Server 2017 on Ubuntu 18.04. You then connec
 
 In this quickstart, you install SQL Server 2019 on Ubuntu 18.04. You then connect with **sqlcmd** to create your first database and run queries.
 
-::: moniker-end
-
 > [!TIP]
-> This tutorial requires user input and an internet connection. If you are interested in the unattended or offline installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md).
+> This tutorial requires user input and an internet connection. If you are interested in the unattended or offline installation procedures, see [Installation guidance for SQL Server on Linux](sql-server-linux-setup.md). For a list of supported platforms, see our [Release notes](sql-server-linux-release-notes-2019.md).
+
+::: moniker-end
 
 ## Prerequisites
 

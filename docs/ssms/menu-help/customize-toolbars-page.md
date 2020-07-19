@@ -14,7 +14,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Customize (Toolbars Page)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The **Toolbars** tab enables you to create, rename, remove, and reset toolbars. You can access this tab by clicking **Customize** on the **Tools** menu and then clicking **Toolbars**.  
   
 ## UI element list  

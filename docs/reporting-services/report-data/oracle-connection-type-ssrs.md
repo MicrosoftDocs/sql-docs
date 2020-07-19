@@ -1,5 +1,6 @@
 ---
 title: "Oracle Connection Type (Report Builder & Power BI Report Server) | Microsoft Docs"
+description: Use the information in this article about the Oracle connection type to learn how to build a data source.
 ms.date: 03/12/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

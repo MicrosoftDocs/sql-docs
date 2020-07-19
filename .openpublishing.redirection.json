@@ -868,6 +868,11 @@
     {
       "source_path": "docs/advanced-analytics/machine-learning-troubleshooting-faq.md",
       "redirect_url": "/sql/machine-learning/machine-learning-troubleshooting-faq",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/machine-learning-troubleshooting-faq.md",
+      "redirect_url": "/sql/machine-learning/machine-learning-troubleshooting-overview",
       "redirect_document_id": true
     },
     {
@@ -1058,9 +1063,14 @@
     {
       "source_path": "docs/advanced-analytics/r/upgrade-and-installation-faq-sql-server-r-services.md",
       "redirect_url": "/sql/machine-learning/r/upgrade-and-installation-faq-sql-server-r-services",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
+      "source_path": "docs/machine-learning/r/upgrade-and-installation-faq-sql-server-r-services.md",
+      "redirect_url": "/sql/machine-learning/upgrade-and-installation-faq-sql-server-r-services",
+      "redirect_document_id": true
+    },
+      {
       "source_path": "docs/advanced-analytics/r/using-data-from-olap-cubes-in-r.md",
       "redirect_url": "/sql/machine-learning/r/using-data-from-olap-cubes-in-r",
       "redirect_document_id": true

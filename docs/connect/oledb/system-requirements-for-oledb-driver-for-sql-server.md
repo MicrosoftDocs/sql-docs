@@ -1,6 +1,6 @@
 ---
-title: "System requirements for OLE DB Driver for SQL Server | Microsoft Docs"
-description: "Requirements for OLE DB Driver for SQL Server"
+title: "System requirements for OLE DB Driver for SQL Server"
+description: "Lists the system requirements for the OLE DB Driver for SQL Server."
 ms.custom: ""
 ms.date: "03/18/2020"
 ms.prod: sql

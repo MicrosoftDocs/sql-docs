@@ -66,7 +66,7 @@ LOG ( float_expression )
 ### A. Calculating the logarithm for a number.  
  The following example calculates the `LOG` for the specified **float** expression.  
   
-```  
+```sql  
 DECLARE @var FLOAT = 10;  
 SELECT 'The LOG of the variable is: ' + CONVERT(VARCHAR, LOG(@var));  
 GO  
@@ -84,7 +84,7 @@ The LOG of the variable is: 2.30259
 ### B. Calculating the logarithm of the exponent of a number.  
  The following example calculates the `LOG` for the exponent of a number.  
   
-```  
+```sql  
 SELECT LOG (EXP (10));  
   
 ```  
@@ -102,7 +102,7 @@ SELECT LOG (EXP (10));
 ### C. Calculating the logarithm for a number  
  The following example calculates the `LOG` for the specified **float** expression.  
   
-```  
+```sql  
 SELECT LOG(10);  
 ```  
   

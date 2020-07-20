@@ -99,7 +99,7 @@ Visual Studio opens and creates a new Integration Services (SSIS) project. Then 
    4. In the **Connect to a database** section, select the AdventureWorks sample database.
    5. Click **Test Connection**.
       
-       ![Screenshot of a dialog box displaying an OK button and the text, "Test connection succeeded."][06]
+       ![Screenshot of a dialog box displaying an OK button and text that indicates that the test connection succeeded.][06]
    6. In the dialog box that reports the results of the connection test, click **OK** to return to the **Connection Manager** dialog box.
    7. In the **Connection Manager** dialog box, click **OK** to return to the **Configure ADO.NET Connection Manager** dialog box.
 5. In the **Configure ADO.NET Connection Manager** dialog box, click **OK** to return to the **ADO.NET Source Editor**.

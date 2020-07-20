@@ -1,5 +1,5 @@
 ---
-title: Scale concurrent scripts
+title: Configure parallel or concurrent R and Python script execution
 description: Configure parallel or concurrent R and Python script execution in a user account pool to scale SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning-services

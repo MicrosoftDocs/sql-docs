@@ -34,8 +34,6 @@ Empties the database authentication cache containing information about logins  a
 DBCC FLUSHAUTHCACHE [ ; ]  
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments  
 None.
   

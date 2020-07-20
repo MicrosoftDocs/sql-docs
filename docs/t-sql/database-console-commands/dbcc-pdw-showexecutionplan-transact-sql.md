@@ -38,8 +38,6 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
 [;]  
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments  
  *distribution_id*  
  Identifier for the distribution that is running the query plan. This is an integer and cannot be NULL. Used when targeting [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  

@@ -39,8 +39,6 @@ DBCC TRACESTATUS ( [ [ trace# [ ,...n ] ] [ , ] [ -1 ] ] )
 [ WITH NO_INFOMSGS ]  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 *trace#*  
 Is the number of the trace flag for which the status is displayed. If *trace#*, and -1 are not specified, all trace flags that are enabled for the session are displayed.

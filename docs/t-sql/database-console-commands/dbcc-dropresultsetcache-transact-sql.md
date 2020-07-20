@@ -29,8 +29,6 @@ DBCC DROPRESULTSETCACHE
 [;]  
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Permissions
 
 Requires membership in the DB_OWNER fixed server role.

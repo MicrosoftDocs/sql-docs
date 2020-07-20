@@ -27,7 +27,9 @@ ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
 ---
+
 # DBCC CHECKALLOC (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Checks the consistency of disk space allocation structures for a specified database.

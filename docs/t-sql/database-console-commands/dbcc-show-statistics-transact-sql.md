@@ -68,8 +68,6 @@ DBCC SHOW_STATISTICS ( table_name , target )
 [;]
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
  *table_or_indexed_view_name*  

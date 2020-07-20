@@ -32,8 +32,6 @@ DBCC SHOWRESULTCACHESPACEUSED
 
 The `DBCC SHOWRESULTCACHESPACEUSED` command doesn't take any parameters and returns the space used by the database where the command is run.
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Permissions
 
 Requires VIEW SERVER STATE permission.

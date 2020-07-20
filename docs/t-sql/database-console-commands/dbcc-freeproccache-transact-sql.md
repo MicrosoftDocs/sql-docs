@@ -50,8 +50,6 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
      [ WITH NO_INFOMSGS ]   
 [;]  
 ```  
-  
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
  ( { *plan_handle* | *sql_handle* | *pool_name* } )  

@@ -29,7 +29,7 @@ Performs a union operation on a set of geography objects.
   
 UnionAggregate ( geography_operand )  
 ```  
-  
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments

@@ -27,6 +27,8 @@ Generates a predicted value or scores based on a stored model. For more informat
 
 ## Syntax
 
+::: moniker range=">=sql-server-2017||=azuresqldb-current||>=sql-server-linux-2017||=azuresqldb-mi-current||=sqlallproducts-allversions"
+
 ```syntaxsql
 PREDICT  
 (  
@@ -48,6 +50,8 @@ WITH ( <result_set_definition> )
 
 MODEL = @model | model_literal  
 ```
+
+::: moniker-end
 
 ::: moniker range=">=azure-sqldw-latest||=sqlallproducts-allversions"
 

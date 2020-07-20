@@ -13,28 +13,12 @@ metadata:
   ms.date: 07/25/2020  
 
 landingContent:
-  - title: "Module 1: Introduction to Linux"
+  - title: "Module 1: Introduction to SQL Server on Linux"
     linkLists:
     - linkListType: learn
       links:
-      - text: What is Linux? 
-        url: https://www.linux.org/threads/introduction-to-linux.4105/
-      - text: Select a Linux distribution
-        url: https://www.linux.org/threads/selecting-a-linux-distribution.4117/
-      - text: Linux directories
-        url: https://www.linux.org/threads/getting-around-in-linux-directories.4120/
-      - text: Choosing access strategy
-        url: https://www.linux.org/threads/when-to-work-as-root-when-to-work-as-a-system-user.4136/
-      - text: File systems and permissions 
-        url: https://www.linux.org/threads/linux-file-systems.4123/
-      - text: Admin commands
-        url: https://www.linux.org/threads/commands-for-system-administration.4126/
-
-
-  - title: "Module 2: Introduction to SQL Server on Linux"
-    linkLists:
-    - linkListType: learn
-      links:
+      - text: What is Linux?
+        url: new-to-linux-resources.md
       - text: Overview
         url: https://docs.microsoft.com/en-us/learn/modules/introduction-sql-server-linux/
       - text: Channel9 - the How
@@ -53,8 +37,7 @@ landingContent:
         url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes-2019?view=sql-server-ver15
       - text: Frequently asked questions
         url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-faq?view=sql-server-ver15 
-      - text: Migrate
-        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-migrate-restore-database?view=sql-server-ver15
+
 
   - title: "Module 4: Install & connect"
     linkLists:
@@ -86,6 +69,8 @@ landingContent:
         url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-configure-mssql-conf?view=sql-server-ver15#traceflags
       - text: Join domain
         url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-active-directory-authentication?view=sql-server-ver15
+      - text: Migrate
+        url: https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-migrate-restore-database?view=sql-server-ver15
 
 
   - title: "Module 6: Configure business continuity"

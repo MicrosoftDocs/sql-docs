@@ -17,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_start_job"
 ms.assetid: cf443a67-7705-4799-9f39-0e3a6a8a0708
-author: rothja
-ms.author: jroth
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.sp_cdc_start_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Starts a change data capture cleanup or capture job for the current database.  
   

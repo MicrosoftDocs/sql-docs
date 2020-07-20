@@ -1,5 +1,6 @@
 ---
 title: "Report and Snapshot Size Limits | Microsoft Docs"
+description: Learn about report size limits when a report is published in Report Server, rendered at run time, and saved to the file system. 
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

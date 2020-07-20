@@ -15,9 +15,8 @@ topic_type:
 helpviewer_keywords: 
   - "bcp_readfmt function"
 ms.assetid: 654001c8-ae9f-425c-b820-f0191bf89367
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # bcp_readfmt
   Reads a data file format definition from the specified format file.  

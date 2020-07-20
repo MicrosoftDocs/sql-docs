@@ -11,12 +11,11 @@ f1_keywords:
 ms.assetid: 4445ae87-5eaa-4911-aec3-905610592005
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Options (Designers-Maintenance Plans Page)
   Use the **Options** dialog box to determine the default behavior of the designer when new shapes are added to the design surface. On the **Tools** menu, click **Options**, expand **Designers**, and select **Maintenance Plans**.  
   
-## UIElement List  
+## UI element list  
  **Connect a new shape to the selected shape by default**  
  When this check box is selected, new shapes automatically connect to other shapes when they are added to the design surface. When this check box is cleared, new shapes are not connected when they are added. Selecting this check box enables the following boxes.  
   

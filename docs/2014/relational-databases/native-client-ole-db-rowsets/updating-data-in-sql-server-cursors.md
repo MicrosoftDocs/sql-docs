@@ -14,9 +14,8 @@ helpviewer_keywords:
   - "cursors [OLE DB]"
   - "data updates [SQL Server], OLE DB"
 ms.assetid: 732dafee-f2d5-4aef-aad7-3a8bf3b1e876
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Updating Data in SQL Server Cursors
   When fetching and updating data through [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursors, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider consumer application is bound by the same considerations and constraints that apply to any other client application.  

@@ -16,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpeer_conflictdetectionconfigureresponse"
 ms.assetid: 2685fb66-731d-40f7-af4b-596b9222c5d4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSpeer_conflictdetectionconfigresponse (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Used in peer-to-peer replication to store each node's response to a topology wide configuration request. This table is stored in the publication database.  
   

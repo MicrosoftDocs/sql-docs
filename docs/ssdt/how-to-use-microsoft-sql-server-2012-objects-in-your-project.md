@@ -1,12 +1,12 @@
 ---
 title: SQL Server 2012 Objects in Your Project
+description: Become familiar with SQL Server 2012 sequences. See how to add these objects to database projects and use them in queries.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 9baf122f-cf22-4860-98db-ef782cd972fc
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017
@@ -16,7 +16,7 @@ ms.date: 02/09/2017
 
 In this example, you will add a sequence object to a database project targeting Microsoft SQL Server 2012.  
   
-Sequences are introduced in Microsoft SQL Server 2012. A sequence is a user-defined schema-bound object that generates a sequence of numeric values according to the specification with which the sequence was created. The sequence of numeric values is generated in an ascending or descending order at a defined interval and may cycle (repeat) as requested.  For more information on sequence objects, see [Sequence Numbers](htttp://msdn.microsoft.com/library/ff878058(SQL.110).aspx). For information on what's new in Microsoft SQL Server 2012, see [What's New in SQL Server 2012](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
+Sequences are introduced in Microsoft SQL Server 2012. A sequence is a user-defined schema-bound object that generates a sequence of numeric values according to the specification with which the sequence was created. The sequence of numeric values is generated in an ascending or descending order at a defined interval and may cycle (repeat) as requested.  For more information on sequence objects, see [Sequence Numbers](../relational-databases/sequence-numbers/sequence-numbers.md). For information on what's new in Microsoft SQL Server 2012, see [What's New in SQL Server 2012](https://msdn.microsoft.com/library/bb500435(SQL.110).aspx).  
   
 > [!WARNING]  
 > The following procedures utilize entities created in previous procedures in the [Connected Database Development](../ssdt/connected-database-development.md) and [Project-Oriented Offline Database Development](../ssdt/project-oriented-offline-database-development.md) sections.  

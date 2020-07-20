@@ -24,7 +24,6 @@ helpviewer_keywords:
 ms.assetid: 15c17c92-616f-402e-894b-907a296efe5f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Estimate the Size of a Table
   You can use the following steps to estimate the amount of space required to store data in a table:  

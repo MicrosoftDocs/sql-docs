@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "technical reference [SQL Server Database Engine]"
   - "Database Engine [SQL Server], getting assistance"
 ms.assetid: e9533f6b-c48a-4f53-a7a0-379e092bb667
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Technical Reference (Database Engine)
   Find the tools, languages, and administration programming reference documentation for the [!INCLUDE[ssDE](../includes/ssde-md.md)] in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].

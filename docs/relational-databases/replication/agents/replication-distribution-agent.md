@@ -1,5 +1,6 @@
 ---
 title: "Replication Distribution Agent | Microsoft Docs"
+description: Move a snapshot and the transactions held in the distribution database tables to the Subscribers destination tables by using the Replication Distribution Agent.
 ms.custom: ""
 ms.date: "10/29/2018"
 ms.prod: sql
@@ -18,7 +19,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Replication Distribution Agent
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
   The Replication Distribution Agent is an executable that moves the snapshot (for snapshot replication and transactional replication) and the transactions held in the distribution database tables (for transactional replication) to the destination tables at the Subscribers.  
   
 > [!NOTE]  
@@ -58,6 +59,7 @@ distrib [-?]
 [-MaxBcpThreads]  
 [-MaxDeliveredTransactions number_of_transactions]  
 [-MessageInterval message_interval]  
+[-MultiSubnetFailover [0|1]]
 [-OledbStreamThreshold oledb_stream_threshold]  
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2]]  
@@ -129,16 +131,16 @@ distrib [-?]
  Specifies the security mode of the Distributor. A value of 0 indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication Mode, and a value of 1 indicates Windows Authentication Mode (default).  
   
  **-EncryptionLevel** [ **0** | **1** | **2** ]  
- Is the level of Secure Sockets Layer (SSL) encryption used by the Distribution Agent when making connections.  
+ Is the level of Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), encryption used by the Distribution Agent when making connections.  
   
 |EncryptionLevel value|Description|  
 |---------------------------|-----------------|  
-|**0**|Specifies that SSL is not used.|  
-|**1**|Specifies that SSL is used, but the agent does not verify that the SSL server certificate is signed by a trusted issuer.|  
-|**2**|Specifies that SSL is used, and that the certificate is verified.|  
+|**0**|Specifies that TLS is not used.|  
+|**1**|Specifies that TLS is used, but the agent does not verify that the TLS/SSL server certificate is signed by a trusted issuer.|  
+|**2**|Specifies that TLS is used, and that the certificate is verified.|  
  
  > [!NOTE]  
- >  A valid SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The ‘Alias Name’ parameter should be the server name and the ‘Server’ parameter should be set to the fully qualified name of the SQL Server.
+ >  A valid TLS/SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The ‘Alias Name’ parameter should be the server name and the ‘Server’ parameter should be set to the fully qualified name of the SQL Server.
 
  For more information, see [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
@@ -199,6 +201,9 @@ distrib [-?]
 -   The **MessageInterval** value is reached after the last history event is logged.  
   
  If there is no replicated transaction available at the source, the agent reports a no-transaction message to the Distributor. This option specifies how long the agent waits before reporting another no-transaction message. Agents always report a no-transaction message when they detect that there are no transactions available at the source after previously processing replicated transactions. The default is 60 seconds.  
+
+**-MultiSubnetFailover**
+ Specifies whether the MultiSubnetFailover property is enabled or not. If your application is connecting to an AlwaysOn availability group (AG) on different subnets, setting MultiSubnetFailover=true provides faster detection of and connection to the (currently) active server.
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
  Specifies the minimum size, in bytes, for binary large object data above which the data will be bound as a stream. You must specify **-UseOledbStreaming** to use this parameter. Values can range from 400 to 1048576 bytes, with a default of 16384 bytes.  
@@ -293,6 +298,7 @@ distrib [-?]
 |Updated content|  
 |---------------------|  
 |Added the **-ExtendedEventConfigFile** parameter.|  
+|Added the **-MultiSubnetFailover** parameter.|  
   
 ## See Also  
  [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  

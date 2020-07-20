@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: af041b39-fdd1-4cb5-a5ef-2f3ddab84614
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Relabel (SQL Server Data Mining Add-ins)
   ![Office 13 icon for Relabel tool](media/dm13-relabel.gif "Office 13 icon for Relabel tool")

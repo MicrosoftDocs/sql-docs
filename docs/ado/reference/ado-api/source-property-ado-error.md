@@ -15,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Source property [ADO Error]"
 ms.assetid: 4044ba15-f013-4c4c-9fe1-b4410fe9a778
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Source Property (ADO Error)
 Indicates the name of the object or application that originally generated an error.  

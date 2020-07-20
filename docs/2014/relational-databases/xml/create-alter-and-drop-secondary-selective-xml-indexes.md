@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: xml
 ms.topic: conceptual
 ms.assetid: 45128105-833b-40a9-9cc9-1ae03ac0b52b
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Create, Alter, and Drop Secondary Selective XML Indexes
   Describes how to create a new secondary selective XML index, or alter or drop an existing secondary selective XML index.  

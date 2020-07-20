@@ -19,7 +19,7 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query with Full-Text Search
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Write full-text queries by using the predicates **CONTAINS** and **FREETEXT** and the rowset-valued functions **CONTAINSTABLE** and **FREETEXTTABLE** with a **SELECT** statement. This article provides examples of each predicate and function and helps you choose the best one to use.
 
 -   To match words and phrases, use **CONTAINS** and **CONTAINSTABLE**.
@@ -27,7 +27,7 @@ Write full-text queries by using the predicates **CONTAINS** and **FREETEXT** an
 
 ## <a name="examples_simple"></a> Examples of each predicate and function
 
-The following examples use the AdventureWorks sample database. For the final release of AdventureWorks, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://www.microsoft.com/download/details.aspx?id=49502). To run the sample queries, you also have to set up Full-Text Search. For more info, see [Get Started with Full-Text Search](get-started-with-full-text-search.md). 
+The following examples use the AdventureWorks sample database. For the final release of AdventureWorks, see [AdventureWorks Databases and Scripts for SQL Server 2016 CTP3](https://github.com/microsoft/sql-server-samples/releases/tag/adventureworks). To run the sample queries, you also have to set up Full-Text Search. For more info, see [Get Started with Full-Text Search](get-started-with-full-text-search.md). 
 
 ### Example - CONTAINS  
 The following example finds all products with a price of `$80.99` that contain the word `"Mountain"`:

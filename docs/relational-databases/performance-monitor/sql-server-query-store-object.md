@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Query Store Object | Microsoft Docs"
+description: Learn about the Query Store object, which provides counters to monitor resource usage of SQL Server to store query texts, execution plans and runtime stats.
 ms.custom: ""
 ms.date: "03/17/2016"
 ms.prod: sql
@@ -15,15 +16,16 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, Query Store Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-  The Query Store object provides counters to monitor resource utilization of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to store query texts, execution plans and runtime stats for objects such as stored procedures, ad hoc and prepared [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, and triggers.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+The Query Store object provides counters to monitor resource utilization of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to store query texts, execution plans and runtime stats for objects such as stored procedures, ad hoc and prepared [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, and triggers.  
   
- This table describes are the **SQLServer:Query Store**counters.  
+This table describes are the **SQLServer:Query Store** counters.  
   
 |SQL Server Query Store counters|Description|  
 |-------------------------------------|-----------------|  
-|**Query Store CPU usage**|Indicates Query Stores usage of the CPU.|  
+|**Query Store CPU usage**|Indicates Query Store's usage of the CPU as a percentile of the use of the CPU by other processes.|  
 |**Query Store logical reads**|Indicates the number of logical reads made by the Query Store.|  
 |**Query Store logical writes**|Indicates how much data is being queued to be flushed from the Query Store. The frequency and delay of adding items (that represent runtime stats) to the queue is controlled by Data Flush Interval setting.|  
 |**Query Store physical reads**|Indicates the number of physical reads made by the Query Store.|  
@@ -36,9 +38,8 @@ ms.author: jrasnick
 |\<database name>|Query Store information for this database.|  
   
 ## See Also  
- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
- [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)   
- [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  
-  
-  
+
+- [Monitoring Performance By Using the Query Store](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)
+- [Query Store Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)
+- [Query Store Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)
+- [Monitor Resource Usage &#40;System Monitor&#41;](../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md)  

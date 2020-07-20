@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 306c7c25-ae24-4852-ab8c-c82f68a4bc1f
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Specify Object Counts (Usage-Based Optimization Wizard)
   Use the **Specify Object Counts** page to automatically calculate the count of objects in the cube or to manually enter estimated counts. The Usage-Based Optimization Wizard uses the object counts to estimate storage requirements.  

@@ -9,9 +9,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "conversions [ODBC], C to SQL"
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Conversions from C to SQL
   This topic lists issues to consider when you convert from C types to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date/time types.  

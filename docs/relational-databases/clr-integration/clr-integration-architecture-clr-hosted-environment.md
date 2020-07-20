@@ -1,5 +1,6 @@
 ---
 title: "CLR Hosted Environment | Microsoft Docs"
+description: This article describes how CLR and SQL Server are integrated to manage system resources uniformly and how CAS and SQL Server security are integrated.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -28,7 +29,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # CLR Integration Architecture - CLR Hosted Environment
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] integration with the .NET Framework common language runtime (CLR) enables database programmers to use languages such as Visual C#, Visual Basic .NET, and Visual C++. Functions, stored procedures, triggers, data types, and aggregates are among the kinds of business logic that programmers can write with these languages.  
   
   The CLR features garbage-collected memory, preemptive threading, metadata services (type reflection), code verifiability, and code access security. The CLR uses metadata to locate and load classes, lay out instances in memory, resolve method invocations, generate native code, enforce security, and set run-time context boundaries.  

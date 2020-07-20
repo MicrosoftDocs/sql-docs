@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "CommandType property [ADO]"
 ms.assetid: ca44809c-8647-48b6-a7fb-0be70a02f53e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CommandType Property (ADO)
 Indicates the type of a [Command](../../../ado/reference/ado-api/command-object-ado.md) object.  

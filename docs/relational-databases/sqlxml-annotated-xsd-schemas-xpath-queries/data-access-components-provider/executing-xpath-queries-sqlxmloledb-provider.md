@@ -1,5 +1,6 @@
 ---
 title: "Executing XPath Queries (SQLXMLOLEDB Provider)"
+description: Learn how to use SQLXMLOLEDB Provider-specific properties when executing XPath queries.
 ms.date: "03/16/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -18,7 +19,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing XPath Queries (SQLXMLOLEDB Provider)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   This example illustrates the use of the following SQLXMLOLEDB Provider-specific properties:  
   
 -   **ClientSideXML**  

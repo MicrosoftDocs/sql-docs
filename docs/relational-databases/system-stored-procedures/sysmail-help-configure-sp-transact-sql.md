@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_help_configure_sp"
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysmail_help_configure_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays configuration settings for Database Mail.  
   

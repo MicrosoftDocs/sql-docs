@@ -6,13 +6,13 @@ ms.date: "12/09/2019"
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ms.reviewer: pmasl
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # What are Extended Security Updates for SQL Server?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 This article provides information for using the SQL Server registry service to receive Extended Security Updates for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] and [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)]. For more information about other options, see [End of support options](sql-server-end-of-life-overview.md). 
 
@@ -202,6 +202,25 @@ To download ESUs, follow these steps:
 
 1. Download security updates from here, if and when they are made available. 
 
+## Configure regional redundancy 
+
+Customers that require regional redundancy for their **SQL Server registry** can create registration data in two distinct regions. Customers can then download security updates from either region based on **SQL Server registry** service availability. 
+
+For regional redundancy, the **SQL Server registry** service has to be created in two different regions, and your SQL Server inventory has to be split between these two services. This way, half of your SQL Servers are registered with the registry service in one region, and then the other half of your SQL Servers are registered with the registry service in the other region. 
+
+To configure regional redundancy, follow these steps:
+
+1. Split your SQL Server 2008 or 2008 R2 inventory into two files, such as upload1.csv and upload2.csv. 
+  
+   :::image type="content" source="media/sql-server-extended-security-updates/two-upload-files-for-regional-redundancy.png" alt-text="Example upload files":::
+
+1. Create the first **SQL Server registry** service in one region, and then bulk register one of the csv files to it. For example, create the first **SQL Server registry** service in the **West US** region, and bulk register your SQL Servers using the upload1.csv file. 
+1. Create the second **SQL Server registry** service in the second region, and then bulk register the other csv file to it. For example, create the second **SQL Server registry** service in the **East US** region, and bulk register your SQL Servers using the upload2.csv file. 
+
+
+Once your data has been registered with the two different **SQL Server registry** resources, you will be able to download security updates from either region, based on service availability. 
+
+
 ## FAQ
 
 General frequently asked questions about Extended Security updates can be found at the [Extended security updates FAQ](https://www.microsoft.com/cloud-platform/extended-security-updates). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-specific frequently asked questions are listed below. 
@@ -212,7 +231,7 @@ The End of Support date for [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] 
 
 **What does End of Support mean?**
 
-Microsoft Lifecycle Policy offers 10 years of support (5 years for Mainstream Support and 5 years for Extended Support) for Business and Developer products (such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Server). As per the policy, after the end of the Extended Support period there will be no patches or security updates, which may cause security and compliance issues, and expose customers’ applications and business to serious security risks.
+Microsoft Lifecycle Policy offers 10 years of support (5 years for Mainstream Support and 5 years for Extended Support) for Business and Developer products (such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Windows Server). As per the policy, after the end of the Extended Support period there will be no patches or security updates, which may cause security and compliance issues, and expose customers' applications and business to serious security risks.
 
 **What editions of SQL Server are eligible for Extended Security Updates?**
 
@@ -287,7 +306,7 @@ Azure does not currently support shared storage clustering. For advice on how to
 
 **Can customers leverage Extended Security Updates for SQL Server with a third-party hoster?**
 
-Customers cannot leverage Extended Security Updates if they move their [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] environment to a PaaS implementation on other cloud providers. If customers are looking to move to virtual machines (IaaS), they can leverage License Mobility for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via Software Assurance to make the move, and purchase Extended Security Updates from [!INCLUDE[msCoName](../../includes/msconame-md.md)] to manually apply patches to the [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] instances running in a VM (IaaS) on an authorized SPLA hoster’s server. However, free updates in Azure is the more attractive offer.
+Customers cannot leverage Extended Security Updates if they move their [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] environment to a PaaS implementation on other cloud providers. If customers are looking to move to virtual machines (IaaS), they can leverage License Mobility for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] via Software Assurance to make the move, and purchase Extended Security Updates from [!INCLUDE[msCoName](../../includes/msconame-md.md)] to manually apply patches to the [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] instances running in a VM (IaaS) on an authorized SPLA hoster's server. However, free updates in Azure is the more attractive offer.
 
 **What are the best practices for enhancing performance of SQL Server in Azure virtual machines?** 
 

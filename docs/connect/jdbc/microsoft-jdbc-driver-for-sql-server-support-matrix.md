@@ -1,5 +1,6 @@
 ---
 title: "Microsoft JDBC Driver for SQL Server support matrix"
+description: "This page contains the support matrix and support life cycle policy for the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "03/24/2020"
 ms.prod: sql
@@ -8,9 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c5769e67-99f7-4bc1-a4fa-8941dad33d35
-author: MightyPen
-ms.author: genemi
-manager: jroth
+author: David-Engel
+ms.author: v-daenge
 ---
 # Microsoft JDBC Driver for SQL Server support matrix
 

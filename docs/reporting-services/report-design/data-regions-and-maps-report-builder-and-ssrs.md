@@ -1,5 +1,6 @@
 ---
 title: "Data Regions and Maps (Report Builder) | Microsoft Docs"
+description: Explore the types and characteristics of data regions and maps to design the display from your report datasets in Report Builder.  
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

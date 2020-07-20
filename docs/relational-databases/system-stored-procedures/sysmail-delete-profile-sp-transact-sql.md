@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_delete_profile_sp"
 ms.assetid: 71998653-4a02-446d-b6f7-50646a29e8a2
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysmail_delete_profile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes a mail profile used by Database Mail.  
   

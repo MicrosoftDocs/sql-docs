@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "ASYMKEYPROPERTY"
 ms.assetid: a30581f2-e1b1-4996-93e6-527ff96b7c42
-author: MikeRayMSFT
 author: VanMSFT
 ms.author: vanto
 ---
 # ASYMKEYPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns the properties of an asymmetric key.
   

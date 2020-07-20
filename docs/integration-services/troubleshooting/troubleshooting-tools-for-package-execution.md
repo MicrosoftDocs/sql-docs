@@ -106,5 +106,3 @@ ms.author: chugu
 ## Related Tasks  
  [Debugging Data Flow](../../integration-services/troubleshooting/debugging-data-flow.md)  
   
-## Related Content  
- Blog entry, [Adding the error column name to an error output](https://go.microsoft.com/fwlink/?LinkId=261546), on dougbert.com.  

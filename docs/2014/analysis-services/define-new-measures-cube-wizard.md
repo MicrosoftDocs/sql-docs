@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: f97698f8-6f0f-49d8-86b0-5bfac3c4e627
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Define New Measures (Cube Wizard)
   Use the **Define New Measures** page to create new measures for a cube that is being created without using a data source.  

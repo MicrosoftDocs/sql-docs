@@ -1,12 +1,12 @@
 ---
 title: Analyze Script Performance
+description: Find out how client statistics, execution plans, and Code Analysis in SQL Server Data Tools can help improve query, stored procedure, and script performance.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: f4bbdd31-12a5-4c57-b0fe-1c6683820f11
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017

@@ -1,5 +1,6 @@
 ---
 title: "XQuery Functions against the xml Data Type | Microsoft Docs"
+description: Learn about the XQuery functions that are supported for use against the xml data type.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # XQuery Functions against the xml Data Type
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   This topic and its subtopics describe the functions you can use when specifying XQuery against the **xml** data type. For the W3C specifications, see [http://www.w3.org/TR/2004/WD-xpath-functions-20040723](https://go.microsoft.com/fwlink/?LinkId=4873).  
   

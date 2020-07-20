@@ -17,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_wildcard_namespaces catalog view"
 ms.assetid: a3caa932-41c7-48a9-9b2d-ff090afbb66b
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.xml_schema_wildcard_namespaces (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row per enumerated namespace for an XML schema wildcard.  
   

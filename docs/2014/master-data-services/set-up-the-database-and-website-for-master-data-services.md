@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: d50863e7-50d9-4ab8-aabb-fd68e2d132a1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Set up the Database and Website for Master Data Services
   Use the [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] to set up the database and website for [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS)  

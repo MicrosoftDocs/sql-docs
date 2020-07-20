@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # ALTER RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes an existing Resource Governor resource pool configuration in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -27,7 +27,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 ALTER RESOURCE POOL { pool_name | "default" }  
 [WITH  
     ( [ MIN_CPU_PERCENT = value ]  
@@ -52,7 +52,10 @@ ALTER RESOURCE POOL { pool_name | "default" }
 {NUMA_node_ID | NUMA_node_ID TO NUMA_node_ID}[,...n]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  { *pool_name* | **"default"** }  
  Is the name of an existing user-defined resource pool or the default resource pool that is created when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.  
   

@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Add SSIS Connection Manager"
 ms.assetid: 8b85278a-aa1f-4587-9e13-db3b7fcbadfb
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Add SSIS Connection Manager
   Use the **Add SSIS Connection Manager** dialog box to select the type of connection to add to a package.  

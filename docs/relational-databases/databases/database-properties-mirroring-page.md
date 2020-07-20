@@ -1,5 +1,6 @@
 ---
 title: "Database Properties (Mirroring Page) | Microsoft Docs"
+description: "Learn how to configure mirroring properties and view a mirroring session's status. See how to start, pause, or remove a mirroring session."
 ms.custom: ""
 ms.date: "08/25/2016"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Database Properties (Mirroring Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Access this page from the principal database, and use it to configure and to modify the properties of database mirroring for a database. Also use it to launch the Configure Database Mirroring Security Wizard, to view the status of a mirroring session, and to pause or remove the database mirroring session.  
   
 > **IMPORTANT!!!** Security must be configured before you can start mirroring. If mirroring has not been started, you must begin by using the wizard. The **Mirroring** page textboxes are disabled until the wizard has been finished.  

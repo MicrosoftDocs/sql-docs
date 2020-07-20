@@ -11,9 +11,8 @@ f1_keywords:
 dev_langs: 
   - "TSQL"
 ms.assetid: a4499784-67f7-46ef-9f7c-2d0fdd117a52
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Options (Text Editor - Transact-SQL - Tabs Page)
   Use this dialog to change the tabbing behavior of the [!INCLUDE[ssDE](../includes/ssde-md.md)] Query Editor, which is used to program [!INCLUDE[tsql](../includes/tsql-md.md)] scripts. To display these settings, click **Options** on the **Tools** menu, expand the **Text Editor** folder, expand the **Transact-SQL** subfolder and then click **Tabs**.  

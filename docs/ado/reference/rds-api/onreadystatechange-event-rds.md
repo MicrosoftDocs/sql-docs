@@ -11,8 +11,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "onReadyStateChange event [ADO]"
 ms.assetid: bf2ae3ac-bfe4-4709-b50a-ea7c282c3164
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # onReadyStateChange Event (RDS)
 The **onReadyStateChange** event is called whenever the value of the [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) property changes.  

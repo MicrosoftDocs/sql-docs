@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 46bf7d1c-a354-4212-9bfa-258361203b0e
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Dimension Designer (Analysis Services - Multidimensional Data)
   Use Dimension Designer in [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] to browse the data that the dimension contains, and to modify various properties of an existing dimension: attributes, hierarchies, levels, attribute relationships, and translations.  

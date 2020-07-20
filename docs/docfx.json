@@ -97,7 +97,9 @@
     "fileMetadata": {
 
       "feedback_system": {
-        "advanced-analytics/**/*.md": "GitHub",
+        "connect/**/*.md": "GitHub",
+        "odbc/**/*.md": "GitHub",
+        "machine-learning/**/*.md": "GitHub",
         "azure-data-studio/**/*.md": "GitHub",
         "big-data-cluster/**/*.md": "GitHub",
         "database-engine/**/*.md": "GitHub",
@@ -116,7 +118,7 @@
 
       "manager": {
         "**/*.md": "jroth",
-        "advanced-analytics/**/*.md": "cgronlun",
+        "machine-learning/**/*.md": "cgronlun",
         "dmx/**/*.md": "kfollis",
         "language-extensions/**/*.md": "cgronlun",
         "mdx/**/*.md": "kfollis",
@@ -138,13 +140,15 @@
         "2014/data-quality-services/**/*.md": "Data Quality Services (DQS)",
 
     
-        "advanced-analytics/**/*.md": "SQL Server Machine Learning Services",
+        "machine-learning/**/*.md": "SQL Server Machine Learning Services",
+        "machine-learning/index.yml": "",
         "analysis-services/**/*.md": "",
         "analytics-platform-system/**/*.md": "Parallel Data Warehouse",
         "azure-data-studio/**/*.md": "Azure Data Studio",
         "integration-services/**/*.md": "SQL Server Integration Services (SSIS)",
         "language-extensions/**/*.md": "SQL Server Language Extensions",
         "relational-database/replication/**/*.md": "SQL Server Replication",
+        "relational-databases/native-client/**/*.md": "SQL Server Native Client",        
         "reporting-services/**/*.md": "SQL Server Reporting Services (SSRS)",
         "dea/**/*.md": "Database Experimentation Assistant",
         "sql-server/failover-clusters/**/*.md": "SQL Server Always On",
@@ -156,7 +160,6 @@
         "master-data-services/microsoft-excel-add-in/**/*.md": "SQL Server MDS Excel Add-in",
         "ssdt/**/*.md": "SQL Server Data Tools (SSDT)",
         "ssms/**/*.md": "SQL Server Management Studio (SSMS)",
-        "azure-data-studio/**/*.md": "Azure Data Studio",        
         "ssms/agent/**/*.md": "SQL Server Agent",
         "ssms/visual-db-tools/**/*.md": "Visual Database Tools",
         "tools/ssbdiagnose/**/*.md": "ssbdiagnose",
@@ -182,16 +185,16 @@
         "connect/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "dma/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "odbc/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
-        "sql-operations-studio/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
+        "azure-data-studio/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
         "ssma/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = azuresqldb-current || = azuresqldb-mi-current || = azure-sqldw-latest || >= aps-pdw-2016 || = sqlallproducts-allversions",
 
-        "advanced-analytics/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
+        "machine-learning/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "analysis-services/**/*.md": ">= aps-pdw-2016 || = azure-sqldw-latest || = azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions",
         "analytics-platform-system/**/*.md": ">= aps-pdw-2016 || = sqlallproducts-allversions",
         "data-quality-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "database-engine/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "dmx/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
-        "integration-services/**/*.md": ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||=sqlallproducts-allversions",
+        "integration-services/**/*.md": ">=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-current||=azuresqldb-mi-current||=sqlallproducts-allversions",
         "linux/**/*.md": ">= sql-server-2017 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "master-data-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "mdx/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
@@ -199,6 +202,7 @@
         "relational-databases/**/*.md": ">= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "relational-databases/resource-governor/**/*.md": "=azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
         "relational-databases/security/**/*.md": "azuresqldb-current || azuresqldb-mi-current || azure-sqldw-latest || >= aps-pdw-2016 || >= sql-server-2016 || >= sql-server-linux-2017 || sql-server-previousversions || sqlallproducts-allversions",
+        "relational-databases/xml/**/*.md": "azuresqldb-current || azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || sqlallproducts-allversions",
         "reporting-services/**/*.md": ">= sql-server-2016 || = sqlallproducts-allversions",
         "reporting-services/mobile-reports/**/*.md": ">= sql-server-2017 || = sqlallproducts-allversions",
         "samples/**/*.md": "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions",
@@ -229,7 +233,6 @@
     },
 
     "xref":[
-      "mref/sql130.zip",
       "mref/System.Reflection.Assembly.Load.yml",
       "mref/System.Web.UI.WebControls.WebParts.IWebPartRow.yml",
 

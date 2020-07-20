@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: bb46e029-fcf9-4aeb-a066-be41e7668fb9
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # SQL Server, Resource Pool Stats Object
   The SQLServer:Resource Pool Stats object contains performance counters that report information about Resource Governor resource pool statistics.  

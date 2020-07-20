@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Properties (FILESTREAM Tab)"
+description: Find out how to use the FILESTREAM tab of the SQL Server Properties dialog box to enable FILESTREAM for an installation of SQL Server 2019.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,10 +14,10 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server Properties (FILESTREAM Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
-## UIElement List  
+## UI element list  
  **Enable FILESTREAM for Transact-SQL access**  
  Select to enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] access. This control must be checked before the other control options will be available.  
   

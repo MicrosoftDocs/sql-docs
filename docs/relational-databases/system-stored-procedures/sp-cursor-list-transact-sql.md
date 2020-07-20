@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursor_list"
 ms.assetid: 7187cfbe-d4d9-4cfa-a3bb-96a544c7c883
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_cursor_list (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reports the attributes of server cursors currently open for the connection.  
   

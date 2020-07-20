@@ -222,7 +222,7 @@ landingContent:
       - text: Analytics Platform System 
         url: https://www.microsoft.com/sql/analytics-platform-system/
       - text: SQL Server Machine Learning (R & Python)
-        url: https://docs.microsoft.com/sql/advanced-analytics/
+        url: https://docs.microsoft.com/sql/machine-learning/
       - text: Data virtualization with Polybase
         url: ../relational-databases/polybase/polybase-guide.md
 

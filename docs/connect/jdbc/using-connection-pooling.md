@@ -1,5 +1,6 @@
 ---
-title: "Using connection pooling | Microsoft Docs"
+title: "Using connection pooling"
+description: "Learn how the JDBC Driver for SQL Server provides JDBC compliant interfaces to support connection pooling in Java."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 699d4e8a-34bf-4c60-b0d5-4a10dad6084a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using connection pooling
 

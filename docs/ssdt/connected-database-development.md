@@ -1,12 +1,12 @@
 ---
 title: Connected Database Development
+description: Find out how SQL Server Data Tools can work with connected databases. Learn how to browse entities, design tables, edit scripts, and perform other tasks.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 21f7f959-7b8e-4335-8681-bebcd957692c
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017

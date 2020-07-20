@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Message Queue Task Editor"
 ms.assetid: 09368b18-37a5-4321-a173-7cfe5d42d2a2
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Message Queue Task Editor (General Page)
   Use the **General page** of the **Message Queue Task Editor** dialog box to name and describe the Message Queue task, to specify the message format, and to indicate whether the task sends or receives messages.  

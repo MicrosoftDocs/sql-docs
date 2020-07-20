@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "properties [OLE DB]"
   - "cursors [OLE DB]"
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Rowsets and SQL Server Cursors
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns result sets to consumers using two methods:  

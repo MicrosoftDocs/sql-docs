@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Set Operators - UNION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Concatenates the results of two queries into a single result set. You control whether the result set includes duplicate rows:
 
@@ -45,7 +45,7 @@ The following are basic rules for combining the result sets of two queries by us
   
 ## Syntax  
   
-```  
+```syntaxsql
 { <query_specification> | ( <query_expression> ) }   
 { UNION [ ALL ]   
   { <query_specification> | ( <query_expression> ) } 

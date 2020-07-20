@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "CommandText property [ADO]"
 ms.assetid: 4dd7e82a-8da5-4a4e-b439-11a29286fa0e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CommandText Property (ADO)
 Indicates the text of a command to be issued against a provider.  

@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs
   Copies of Database Mail messages and their attachments are retained in **msdb** tables along with the Database Mail event log. Periodically you might want to reduce the size of the tables and archive messages and events that are no longer needed. The following procedures create a SQL Server Agent job to automate the process.  

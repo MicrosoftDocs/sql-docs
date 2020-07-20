@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Migrate PowerPivot to SharePoint 2013
 

@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "BINARY_CHECKSUM function"
   - "binary [SQL Server], checksum values"
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BINARY_CHECKSUM  (Transact-SQL)
@@ -29,7 +29,7 @@ Returns the binary checksum value computed over a row of a table or over a list 
   
 ## Syntax  
   
-```sql
+```syntaxsql
 BINARY_CHECKSUM ( * | expression [ ,...n ] )   
 ```  
   

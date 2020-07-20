@@ -5,15 +5,17 @@ author: yualan
 ms.author: alayu
 ms.reviewer: achatter, maghan, mikeray
 ms.topic: conceptual
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.custom: seo-lt-2019
 ms.date: 03/30/2020
 ---
 
 # Notebooks with SQL Server in Azure Data Studio
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+
+Jupyter Notebook is an open-source web application that allows you to create and share documents containing live code, equations, visualizations, and narrative text. Usage includes data cleaning and transformation, numerical simulation, statistical modeling, data visualization, and machine learning.
 
 This article describes how to launch the Notebook experience in the latest release of [**Azure Data Studio**](../azure-data-studio/download.md) and how to start authoring your own notebooks. It also shows how to write Notebooks using different kernels.
 
@@ -217,4 +219,4 @@ To uninstall a package, use the following command from your terminal:
 - [Deploy SQL Server big data cluster with Azure Data Studio notebook](../big-data-cluster/notebooks-deploy.md).
 - [Manage SQL Server Big Data Clusters with Azure Data Studio notebooks](../big-data-cluster/notebooks-manage-bdc.md).
 - [Run a sample notebook using Spark](../big-data-cluster/notebooks-tutorial-spark.md).
-- [Run Python and R scripts in Azure Data Studio notebooks with SQL Server Machine Learning Services](../advanced-analytics/install/sql-machine-learning-azure-data-studio.md).
+- [Run Python and R scripts in Azure Data Studio notebooks with SQL Server Machine Learning Services](../machine-learning/install/sql-machine-learning-azure-data-studio.md).

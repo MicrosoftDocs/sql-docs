@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 491616c1-f666-4b16-a5ea-1192bf156692
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Progress Report: Online Index Operation Event Class
   The Progress Report: Online Index Operation event class indicates the progress of an online index build operation while the build process is running.  

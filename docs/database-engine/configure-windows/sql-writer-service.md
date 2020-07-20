@@ -1,5 +1,6 @@
 ---
 title: "SQL Writer Service | Microsoft Docs"
+description: Learn about the SQL Writer Service. See how it provides added backup and restore functionality in SQL Server through the Volume Shadow Copy Service framework.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -19,11 +20,11 @@ helpviewer_keywords:
   - "MSDE Writer"
   - "VSS"
 ms.assetid: 0f299867-f499-4c2a-ad6f-b2ef1869381d
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # SQL Writer Service
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The SQL Writer Service provides added functionality for backup and restore of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through the Volume Shadow Copy Service framework.  
   
  The SQL Writer Service is installed automatically. It must be running when the Volume Shadow Copy Service (VSS) application requests a backup or restore. To configure the service, use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Services applet. The SQL Writer Service installs on all operating systems.  

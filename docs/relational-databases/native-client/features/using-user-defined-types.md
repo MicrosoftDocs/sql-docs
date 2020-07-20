@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "data access [SQL Server Native Client], user-defined types"
   - "ISSCommandWithParameters interface"
 ms.assetid: e15d8169-3517-4323-9c9e-0f5c34aff7df
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using User-Defined Types

@@ -14,7 +14,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # ConfigurationSetting Method - ListSSLCertificateBindings
-  Returns a list of installed SSL certificates on the computer.  
+  Returns a list of installed TLS/SSL certificates on the computer.  
   
 ## Syntax  
   

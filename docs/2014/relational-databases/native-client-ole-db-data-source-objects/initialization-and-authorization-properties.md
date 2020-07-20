@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, authorization properties"
   - "initialization properties [OLE DB]"
 ms.assetid: 913ab38c-e443-446c-b326-7447e95aa7f9
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Initialization and Authorization Properties
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider interprets OLE DB initialization and authorization properties as follows:  

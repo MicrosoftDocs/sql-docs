@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLColAttribute function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: d403dfa0-c26d-47d4-91d9-2f29aa387399
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLColAttributes (Visual FoxPro ODBC Driver)
 > [!NOTE]  

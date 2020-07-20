@@ -1,5 +1,6 @@
 ---
 title: "Group Expression Examples (Report Builder) | Microsoft Docs"
+description:  Find out how to group data by a single field or create more complex expressions that identify the data on which to group in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

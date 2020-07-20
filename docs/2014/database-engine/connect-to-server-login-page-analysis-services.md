@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: fb012bc8-5105-438a-afcc-74264ebae035
 author: mashamsft
 ms.author: mathoma
-manager: craigg
 ---
 # Connect to Server (Login Page) Analysis Services
   Use this tab to view or specify the following options when connecting to [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)].  

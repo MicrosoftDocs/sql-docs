@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "transactions [ODBC], degree of support"
 ms.assetid: d56e1458-8da2-4d73-a777-09e045c30a33
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Transaction Support
 The degree of support for transactions is driver-defined. ODBC is designed to be implemented on a single-user or desktop database that has no need to manage multiple updates to its data. Moreover, some databases that support transactions do so only for the Data Manipulation Language (DML) statements of SQL; there are restrictions or special transaction semantics regarding the use of Data Definition Language (DDL) when a transaction is active. That is, there may be transaction support for multiple simultaneous updates to tables but not for changing the number and definition of tables during a transaction.  

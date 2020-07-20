@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RAW mode, retrieving XML information example"
 ms.assetid: 3828b4ca-3ab2-444f-9c58-8be6e7f064a6
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Example: Retrieving Product Model Information as XML
   The following query returns product model information. `RAW` mode is specified in the `FOR XML` clause.  

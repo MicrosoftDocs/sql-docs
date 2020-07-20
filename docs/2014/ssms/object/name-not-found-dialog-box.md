@@ -13,12 +13,11 @@ helpviewer_keywords:
 ms.assetid: 74e34004-091b-4ac8-8824-5d6c6f8b1b6b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Name Not Found Dialog Box
   One or more object names in the dialog box could not be found. Select an option to continue.  
   
-## UIElement List  
+## UI element list  
  **Correct this information and search again**  
  Select to allow use of the **Select this object type**, **Object type**, and **Enter the object name** area.  
   

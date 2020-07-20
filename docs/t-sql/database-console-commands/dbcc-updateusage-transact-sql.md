@@ -1,5 +1,5 @@
 ---
-title: "DBCC UPDATEUSAGE (Transact-SQL) | Microsoft Docs"
+title: DBCC UPDATEUSAGE (Transact-SQL)
 ms.custom: ""
 ms.date: "11/14/2017"
 ms.prod: sql
@@ -34,8 +34,10 @@ ms.assetid: b8752ecc-db45-4e23-aee7-13b8bc3cbae2
 author: pmasl
 ms.author: umajay
 ---
+
 # DBCC UPDATEUSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Reports and corrects pages and row count inaccuracies in the catalog views. These inaccuracies may cause incorrect space usage reports returned by the sp_spaceused system stored procedure.
   
@@ -43,7 +45,7 @@ Reports and corrects pages and row count inaccuracies in the catalog views. Thes
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC UPDATEUSAGE   
 (   { database_name | database_id | 0 }   
     [ , { table_name | table_id | view_name | view_id }   
@@ -51,14 +53,16 @@ DBCC UPDATEUSAGE
 ) [ WITH [ NO_INFOMSGS ] [ , ] [ COUNT_ROWS ] ]   
 ```  
   
-## Arguments  
-*database_name* | *database_id* | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+*database_name* \| *database_id* \| 0  
 Is the name or ID of the database for which to report and correct space usage statistics. If 0 is specified, the current database is used. Database names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
-*table_name* | *table_id* | *view_name* | *view_id*  
+*table_name* \| *table_id* \| *view_name* \| *view_id*  
 Is the name or ID of the table or indexed view for which to report and correct space usage statistics. Table and view names must comply with the rules for identifiers.  
   
-*index_id* | *index_name*  
+*index_id* \| *index_name*  
 Is the ID or name of the index to use. If not specified, the statement processes all indexes for the specified table or view.  
   
 WITH  

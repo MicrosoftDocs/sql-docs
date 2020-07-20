@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "backward compatibility [SQL Server], Database Engine"
   - "full-text search [SQL Server], backward compatibility"
 ms.assetid: 1b5a9bbc-beb8-44fd-ab03-4c14908c604c
-author: craigg-msft
-ms.author: craigg
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Full-Text Search Backward Compatibility
   Topics in the backward compatibility section describe changes in the behavior of full-text search between earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].  

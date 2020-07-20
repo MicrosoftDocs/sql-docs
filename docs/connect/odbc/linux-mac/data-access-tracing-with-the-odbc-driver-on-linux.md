@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "data access tracing"
   - "tracing"
 ms.assetid: 3149173a-588e-47a0-9f50-edb8e9adf5e8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Data Access Tracing with the ODBC Driver on Linux and macOS
 

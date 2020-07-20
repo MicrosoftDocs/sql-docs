@@ -12,6 +12,7 @@ ms.prod: sql
 ms.prod_service: "polybase, sql-data-warehouse, pdw"
 monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
+
 # Troubleshoot PolyBase Kerberos connectivity
 
 [!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -46,7 +47,7 @@ In PolyBase, when authentication is requested against any Kerberos-secured resou
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] goes back to the KDC, passes the TGT back, and requests an ST to access that particular secured resource. The ST is encrypted using the secured service's private key.
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] forwards the ST to Hadoop and gets authenticated to have a session created against that service.
 
-![](./media/polybase-sqlserver.png)
+![Polybase SQL Server](./media/polybase-sqlserver.png)
 
 Issues with authentication fall into one or more of the above four steps. To help with faster debugging, PolyBase has introduced an integrated diagnostics tool to help identify the point of failure.
 
@@ -83,6 +84,8 @@ Update **core-site.xml**, add the three properties below. Set the values accordi
     <value>KERBEROS</value>
 </property>
 ```
+> [!NOTE]
+> The value for `polybase.kerberos.realm` property needs to be all upper case.
 
 The other XMLs will later need to be updated as well if pushdown operations are desired, but with just this file configured, the HDFS file system should at least be able to be accessed.
 

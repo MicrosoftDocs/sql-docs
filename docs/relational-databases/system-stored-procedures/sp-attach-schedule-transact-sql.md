@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_attach_schedule"
 ms.assetid: 80c80eaf-cf23-4ed8-b8dd-65fe59830dd1
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_attach_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Sets a schedule for a job.  
   

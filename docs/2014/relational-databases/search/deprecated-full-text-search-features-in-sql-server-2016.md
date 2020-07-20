@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: ab0d799c-ba79-4459-837b-c4862730dafd
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Deprecated Full-Text Search Features in SQL Server 2014
   This topic describes the deprecated full-text search features that are still available in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  

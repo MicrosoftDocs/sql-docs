@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 4ef65300-abce-43a6-8119-cb3f962dd564
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Toolbar (Actions Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Toolbar** pane to perform common actions on the **Actions** tab in Cube Designer.  

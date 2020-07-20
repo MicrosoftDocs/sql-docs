@@ -1,5 +1,6 @@
 ---
 title: "Restore a Database to a New Location (SQL Server) | Microsoft Docs"
+description: This article shows you how to restore a SQL Server database to a new location and rename the database by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "08/05/2016"
 ms.prod: sql
@@ -21,7 +22,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Restore a Database to a New Location (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to restore a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database to a new location, and optionally rename the database, in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using SQL Server Management Studio(SSMS) or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You can move a database to a new directory path or create a copy of a database on either the same server instance or a different server instance.  
     
 ##  <a name="BeforeYouBegin"></a> Before you begin!  

@@ -17,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_facets catalog view"
 ms.assetid: 4402dde9-1877-4872-8550-140dc2a177d2
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.xml_schema_facets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row per facet (restriction) of an xml-type definition (corresponds to **sys.xml_types**).  
   

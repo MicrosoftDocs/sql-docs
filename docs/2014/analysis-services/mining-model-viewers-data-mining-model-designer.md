@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 4ba391d5-c97b-4848-ba7c-7d096fa4b7dd
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Mining Model Viewers (Data Mining Model Designer)
   Use the **Mining Model Viewer** tab to explore the mining models that a mining structure contains.

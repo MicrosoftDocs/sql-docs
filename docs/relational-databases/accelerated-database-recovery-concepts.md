@@ -1,6 +1,6 @@
 ---
 title: "Accelerated database recovery | Microsoft Docs"
-ms.date: "08/12/2019"
+ms.date: "05/20/2020"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Accelerated database recovery
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Accelerated database recovery (ADR) improves database availability, especially in the presence of long running transactions, by redesigning the SQL database engine recovery process. ADR is new for SQL Server 2019 and is also available for single databases and pooled databases in Azure SQL Database, and databases in Azure SQL Data Warehouse (currently in public preview). The primary benefits of ADR are:
 
@@ -129,7 +129,9 @@ The following types of customers should consider enabling ADR:
 - Customers that have seen cases where active transactions are causing the transaction log to grow significantly.  
 - Customers that have experienced long periods of database unavailability due to SQL Server long running recovery (such as unexpected SQL Server restart or manual transaction rollback).
 
+>[!IMPORTANT]
+>ADR is not supported for databases enrolled in database mirroring.
 
 ## See Also  
 
-  
+[Manage accelerated database recovery](accelerated-database-recovery-management.md)

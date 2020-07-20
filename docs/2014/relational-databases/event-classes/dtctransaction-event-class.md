@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 9a2d358e-5b8f-4d0b-8b93-6705c009ad57
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # DTCTransaction Event Class
   Use the **DTCTransaction** event class to monitor the state of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] transactions coordinated through [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (DTC). This includes transactions involving two or more databases in the same instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)], or distributed transactions involving two or more instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)].  

@@ -1,15 +1,15 @@
 ---
-title: "Microsoft Drivers for PHP for SQL Server Support Matrix | Microsoft Docs"
+title: "Microsoft Drivers for PHP Support Matrix"
+description: "This page contains the support matrix and support lifecycle policy for the Microsoft PHP Drivers for SQL Server."
 ms.custom: ""
-ms.date: "01/31/2020"
+ms.date: "04/15/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: "David-Engel"
-ms.author: "genemi"
-manager: ""
+author: David-Engel
+ms.author: v-daenge
 ---
 # Microsoft PHP Drivers for SQL Server Support Matrix
 
@@ -100,7 +100,7 @@ The following Windows operating system versions are supported with the listed ve
 |Windows Vista SP2                   |   |   |   |   |   |Y  |Y  |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-The following Linux and Mac operating system versions (64-bit only) are supported with the listed version of the Microsoft PHP Drivers:
+The following Linux and macOS operating system versions (64-bit only) are supported with the listed version of the Microsoft PHP Drivers:
 
 |PHP for SQL Server driver version &#8594;<br />&#8595; Operating system|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -126,12 +126,12 @@ The following Linux and Mac operating system versions (64-bit only) are supporte
 |macOS El Capitan (64-bit)           |   |   |Y  |Y  |Y  |   |   |
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
 
-<sup>1</sup> Alpine Linux support is experimental for version 5.8.
+<sup>1</sup> Alpine Linux support is experimental for version 5.8.0. Version 5.8.1 introduces production support.
 
 ## See Also
 
-[Release Notes](../../connect/php/release-notes-php-sql-driver.md)
+[Release Notes](release-notes-php-sql-driver.md)
 
-[Support Resources](../../connect/php/support-resources-for-the-php-sql-driver.md)
+[Support Resources](support-resources-for-the-php-sql-driver.md)
 
-[System Requirements](../../connect/php/system-requirements-for-the-php-sql-driver.md)
+[System Requirements](system-requirements-for-the-php-sql-driver.md)

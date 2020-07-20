@@ -1,5 +1,6 @@
 ---
 title: "sp_addarticle (Transact-SQL) | Microsoft Docs"
+description: Creates an article and adds it to a publication. This stored procedure runs at the Publisher on the publication database.
 ms.custom: ""
 ms.date: "10/28/2015"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 # sp_addarticle (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates an article and adds it to a publication. This stored procedure is executed at the Publisher on the publication database.  
   

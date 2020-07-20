@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # TestServer Element (DTA)
   Specifies the test server to use when tuning a production server.  

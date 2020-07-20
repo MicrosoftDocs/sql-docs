@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "SQLXML, samples"
   - "examples [SQLXML], requirements"
 ms.assetid: acfee2eb-cf35-4377-9fde-82ad1d938011
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Requirements for Running SQLXML Examples
   The [SQLXML 4.0 Programming](sqlxml-4-0-programming-concepts.md) section provides numerous examples. This topic lists requirements for creating working samples from these examples.  

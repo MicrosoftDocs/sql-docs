@@ -35,7 +35,7 @@ Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] not to execute 
 
 ## Syntax
 
-```
+```syntaxsql
 SET SHOWPLAN_XML { ON | OFF }
 ```
 

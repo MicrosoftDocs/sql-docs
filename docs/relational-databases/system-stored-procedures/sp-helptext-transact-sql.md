@@ -15,12 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_helptext"
 ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helptext (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Displays the definition of a user-defined rule, default, unencrypted [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, user-defined [!INCLUDE[tsql](../../includes/tsql-md.md)] function, trigger, computed column, CHECK constraint, view, or system object such as a system stored procedure.  
   

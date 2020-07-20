@@ -13,11 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_dropmergearticle"
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_dropmergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes an article from a merge publication. This stored procedure is executed at the Publisher on the publication database.  
   

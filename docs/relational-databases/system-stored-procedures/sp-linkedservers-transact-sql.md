@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_linkedservers"
 ms.assetid: d8f82f78-8a1f-4831-bcee-7c36c6e7dfbb
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_linkedservers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the list of linked servers defined in the local server.  
   

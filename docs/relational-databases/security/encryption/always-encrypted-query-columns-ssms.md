@@ -1,5 +1,6 @@
 ---
 title: "Query columns using Always Encrypted with SQL Server Management Studio | Microsoft Docs"
+description: Learn how to query columns in Always Encrypted using SQL Server Management Studio. Retrieve ciphertext or text values stored in encrypted columns.
 ms.custom: ""
 ms.date: 10/31/2019
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query columns using Always Encrypted with SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 This article describes how to query columns, encrypted with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md) using [SQL Server Management Studio (SSMS)](../../../ssms/download-sql-server-management-studio-ssms.md). With SSMS, you can:
 - Retrieve ciphertext values stored in encrypted columns. 
@@ -166,7 +167,7 @@ DECLARE @NewSalary money = @Salary * 1.1; -- an expression used instead of a lit
  
 For an attempted parameterization to succeed:   
 - The type of the literal used for the initialization of the variable to be parametrized, must match the type in the variable declaration.   
-- If the declared type of the variable is a date type or a time type, the variable must be initialized using a string using one of the following ISO 8601-compliant formats.   
+- If the declared type of the variable is a date type or a time type, the variable must be initialized using a string using one of the following [ISO 8601-compliant formats](https://docs.microsoft.com/sql/t-sql/functions/cast-and-convert-transact-sql#date-and-time-styles).    
 
 Here are the examples of Transact-SQL variable declarations that will result in parameterization errors:   
 ```sql

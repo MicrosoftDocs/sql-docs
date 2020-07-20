@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsub_identity_range system table"
 ms.assetid: 26e20d28-14ed-44fc-af3b-4de386de4bb8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSsub_identity_range (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSsub_identity_range** table provides identity range management support for subscriptions. This table is stored in the subscription databases.  
   

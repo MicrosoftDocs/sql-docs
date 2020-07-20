@@ -1,8 +1,8 @@
 ---
-title: "Microsoft OLE DB Driver for SQL Server | Microsoft Docs"
-description: "Microsoft OLE DB Driver for SQL Server"
+title: "Microsoft OLE DB Driver for SQL Server"
+description: "The Microsoft OLE DB Driver for SQL Server provides connectivity to SQL Server and Azure SQL Database via standard OLE DB APIs."
 ms.custom: ""
-ms.date: "02/12/2019"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -20,7 +20,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Microsoft OLE DB Driver for SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 
@@ -45,15 +45,15 @@ The OLE DB Driver for SQL Server is a stand-alone data access application progra
 There are three distinct generations of Microsoft OLE DB providers for SQL Server.
 
 ### 1. Microsoft OLE DB Provider for SQL Server (SQLOLEDB)
-The [Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) still ships as part of [Windows Data Access Components](https://msdn.microsoft.com/library/ms692897.aspx). It is not maintained anymore and it is not recommended to use this driver for new development.
+The [Microsoft OLE DB Provider for SQL Server](../../ado/guide/appendixes/microsoft-ole-db-provider-for-sql-server.md) (SQLOLEDB) still ships as part of [Windows Data Access Components](/previous-versions/windows/desktop/ms692897(v=vs.85)). It is not maintained anymore and it is not recommended to use this driver for new development.
 
 ### 2. SQL Server Native Client (SNAC)
 Starting in [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], the [SQL Server Native Client (SNAC)](../../relational-databases/native-client/sql-server-native-client.md) includes an OLE DB provider interface (SQLNCLI) and is the OLE DB provider that shipped with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] through [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)].
 
-It was [announced as deprecated in 2011](https://blogs.msdn.microsoft.com/sqlnativeclient/2011/08/29/microsoft-is-aligning-with-odbc-for-native-relational-data-access/) and it is not recommended to use this driver for new development. For more information about the SNAC lifecycle and available downloads, refer to [SNAC lifecycle explained](https://blogs.msdn.microsoft.com/sqlreleaseservices/snac-lifecycle-explained/).
+It was [announced as deprecated in 2011](/archive/blogs/sqlnativeclient/microsoft-is-aligning-with-odbc-for-native-relational-data-access) and it is not recommended to use this driver for new development. For more information about the SNAC lifecycle and available downloads, refer to [SNAC lifecycle explained](/archive/blogs/sqlreleaseservices/snac-lifecycle-explained).
 
 ### 3. Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)
-OLE DB was [undeprecated](https://blogs.msdn.microsoft.com/sqlnativeclient/2017/10/06/announcing-the-new-release-of-ole-db-driver-for-sql-server/) and released in 2018.
+OLE DB was [undeprecated](/archive/blogs/sqlnativeclient/announcing-the-new-release-of-ole-db-driver-for-sql-server) and released in 2018.
 
 The new OLE DB provider is called the Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL). The new provider will be updated with the most recent server features going forward.
 

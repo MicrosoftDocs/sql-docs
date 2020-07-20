@@ -13,9 +13,8 @@ helpviewer_keywords:
   - "sp_xml_preparedocument"
   - "XML [SQL Server], system stored procedures"
 ms.assetid: e60c7f85-6823-4d28-93d6-b053d08cc830
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # XML System Stored Procedures
   SQL Server provides the following system stored procedures that are used together with OPENXML:  

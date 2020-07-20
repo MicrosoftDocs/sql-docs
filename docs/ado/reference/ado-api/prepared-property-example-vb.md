@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Prepared property [ADO], Visual Basic example"
 ms.assetid: e3a3db2d-7f73-4288-ad08-5468f251d610
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Prepared Property Example (VB)
 This example demonstrates the [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) property by opening two [Command](../../../ado/reference/ado-api/command-object-ado.md) objects - one prepared and one not prepared.  

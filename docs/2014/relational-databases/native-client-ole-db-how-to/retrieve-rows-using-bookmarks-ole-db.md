@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "bookmarks [OLE DB]"
   - "rows [OLE DB]"
 ms.assetid: 5e14d5c8-e7c6-498f-8041-7e006a1c2d81
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Retrieve Rows Using Bookmarks (OLE DB)
   The consumer sets the `dwFlag` field value of the binding structure to DBCOLUMNSINFO_ISBOOKMARK to indicate that the column is used as bookmark. The consumer also sets the rowset property DBPROP_BOOKMARKS to VARIANT_TRUE. This allows column 0 to be present in the rowset. `IRowsetLocate::GetRowsAt` is then used to fetch rows starting with the row specified an offset from a bookmark.  

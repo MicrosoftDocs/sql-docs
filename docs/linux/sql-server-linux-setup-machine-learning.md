@@ -9,14 +9,14 @@ manager: cgronlun
 ms.date: 03/05/2020
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Install SQL Server Machine Learning Services (Python and R) on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
-This article guides you in the installation of [SQL Server Machine Learning Services](../advanced-analytics/index.yml) on Linux. Python and R scripts can be executed in-database using Machine Learning Services.
+This article guides you in the installation of [SQL Server Machine Learning Services](../machine-learning/index.yml) on Linux. Python and R scripts can be executed in-database using Machine Learning Services.
 
 > [!NOTE]
 > Machine Learning Services is installed by default on SQL Server Big Data Clusters. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md)
@@ -245,9 +245,8 @@ Includes:
 ```bash
 # Install as root or sudo
 # Add everything (all R, Python)
-# Be sure to include -9.4.7* in mlsservices package names
-sudo zypper install mssql-mlservices-mlm-py-9.4.7*
-sudo zypper install mssql-mlservices-mlm-r-9.4.7* 
+sudo zypper install mssql-mlservices-mlm-py
+sudo zypper install mssql-mlservices-mlm-r
 ```
 
 ### Minimum installation 
@@ -263,16 +262,15 @@ Includes:
 ```bash
 # Install as root or sudo
 # Minimum install of R, Python extensions
-# Be sure to include -9.4.6* in mlsservices package names
-sudo zypper install mssql-mlservices-packages-py-9.4.7*
-sudo zypper install mssql-mlservices-packages-r-9.4.7*
+sudo zypper install mssql-mlservices-packages-py
+sudo zypper install mssql-mlservices-packages-r
 ```
 
 ## Post-install config (required)
 
 Additional configuration is primarily through the [mssql-conf tool](sql-server-linux-configure-mssql-conf.md).
 
-1. Add the mssql user account used to run the SQL Server service.
+1. After the package installation finishes, run mssql-conf setup and follow the prompts to set the SA password and choose your edition. Perform this step only if you have not configured SQL Server on Linux yet. 
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -380,21 +378,21 @@ Download packages from [https://packages.microsoft.com/](https://packages.micros
 
 ### RHEL/7 paths
 
-|||
+|Package|Download location|
 |--|----|
 | mssql/mlservices packages | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 | microsoft-r-open packages | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 ### Ubuntu/16.04 paths
 
-|||
+|Package|Download location|
 |--|----|
 | mssql/mlservices packages | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 | microsoft-r-open packages | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 ### SLES/12 paths
 
-|||
+|Package|Download location|
 |--|----|
 | mssql/mlservices packages | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 | microsoft-r-open packages | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 
@@ -429,10 +427,10 @@ mssql-mlservices-mlm-py-9.4.7.64
 
 Python developers can learn how to use Python with SQL Server by following these tutorials:
 
-+ [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](..\advanced-analytics\tutorials\python-ski-rental-linear-regression-deploy-model.md)
-+ [Tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../advanced-analytics/tutorials/python-clustering-model.md)
++ [Python tutorial: Predict ski rental with linear regression in SQL Server Machine Learning Services](../machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md)
++ [Python tutorial: Categorizing customers using k-means clustering with SQL Server Machine Learning Services](../machine-learning/tutorials/python-clustering-model.md)
 
 R developers can get started with some simple examples, and learn the basics of how R works with SQL Server. For your next step, see the following links:
 
-+ [Tutorial: Run R in T-SQL](../advanced-analytics/tutorials/quickstart-r-create-script.md)
-+ [Tutorial: In-database analytics for R developers](../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [Quickstart: Run R in T-SQL](../machine-learning/tutorials/quickstart-r-create-script.md)
++ [Tutorial: In-database analytics for R developers](../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)

@@ -1,7 +1,8 @@
 ---
 title: "Release Notes ODBC Driver for SQL Server on Linux and macOS"
+description: "Learn what's new and changed in released versions of the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "03/10/2020"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: "v-jizho2"
@@ -29,6 +30,13 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+## 17.5.2.2, April 2020 (Alpine Linux only)
+
+| Feature added | Details |
+| :------------ | :------ |
+| Bug fixed. | See [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## 17.5.2, March 2020
 
@@ -164,6 +172,6 @@ The ODBC driver on SUSE Linux (Preview) supports 64-bit SUSE Linux Enterprise 11
 
 The ODBC driver on Linux supports [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. For more information, see [ODBC Driver on Linux Support for High Availability, Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
-The ODBC driver on Linux supports connections to Microsoft Azure SQL Database. For more information, see [How to: Connect to Azure SQL Database Using ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
+The ODBC driver on Linux supports connections to Azure SQL Database.
 
 The `-l` option (login timeout) has been added to `bcp`. For more information, see [Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

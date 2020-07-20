@@ -44,7 +44,7 @@ If your environment will use Kerberos constrained delegation, then the SharePoin
 
     **As a best practice C2WTS should run under its own domain identity.**
 
-    * Create an Active Directory account and register the account as a managed account in SharePoint Server. To learn more about managed accounts, see [Managed Accounts in Sharepoint](https://blog.wbaer.net/2010/04/11/managed-accounts-in-sharepoint-2010/)
+    * Create an Active Directory account and register the account as a managed account in SharePoint Server.
    
     * Configure C2WTS Service to use the managed account through SharePoint Central Administration > Security > Configure Service Accounts > Windows Service - Claims to Windows Token Service
 

@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_xml_removedocument"
 ms.assetid: f9dca50a-8baf-4170-90bc-e72783ce5b73
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_xml_removedocument (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Removes the internal representation of the XML document specified by the document handle and invalidates the document handle.  
   

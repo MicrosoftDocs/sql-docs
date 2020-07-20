@@ -12,7 +12,7 @@ ms.author: mathoma
 ms.custom: "seo-lt-2019"
 ---
 # Installation and configuration
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Wide World Importers OLTP database installation and configuration instructions.
 
 ## Prerequisites
@@ -30,7 +30,7 @@ Download the sample WideWorldImporters database backup/bacpac that corresponds t
 
 Source code to recreate the sample database is available from the following location. Note that recreating the sample will result in slight differences in the data, since there is a random factor in the data generation:
 
-[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
 ## Install
 

@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "ghost records"
   - "sp_clean_db_file_free_space"
 ms.assetid: 3eb53a67-969d-4cb8-9681-b1c8e6fd55b6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_clean_db_file_free_space (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes residual information left on database pages because of data modification routines in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. sp_clean_db_file_free_space cleans all pages in only one file of a database.  
   

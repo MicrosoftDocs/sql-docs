@@ -1,6 +1,6 @@
 ---
 title: "Get Started with Full-Text Search | Microsoft Docs"
-ms.date: "08/22/2016"
+ms.date: "03/31/2020"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
 ms.technology: search
@@ -17,7 +17,7 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Get Started with Full-Text Search
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 SQL Server databases are full-text enabled by default. Before you can run full-text queries, however, you must create a full text catalog and create a full-text index on the tables or indexed views you want to search.
 
 ## Set up full-text search in two steps
@@ -49,10 +49,17 @@ To set up full-text search by using a wizard, see [Use the Full-Text Indexing Wi
 2.  Before you can create a full-text index on the Document table, ensure that the table has a unique, single-column, non-nullable index. The following [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md) statement creates a unique index, `ui_ukDoc`, on the DocumentID column of the Document table:  
   
     ```sql 
-    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentID);  
+    CREATE UNIQUE INDEX ui_ukDoc ON Production.Document(DocumentNode);  
     ```  
 
-3.  After you have a unique key, you can create a full-text index on the `Document` table by using the following [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) statement.  
+3.  Drop the existing full-text index on the `Document` table by using the following [DROP FULLTEXT INDEX](../../t-sql/statements/drop-fulltext-index-transact-sql.md) statement. 
+
+    ```sql
+    DROP FULLTEXT INDEX ON Production.Document
+    GO
+    ```
+
+4.  After you have a unique key, you can create a full-text index on the `Document` table by using the following [CREATE FULLTEXT INDEX](../../t-sql/statements/create-fulltext-index-transact-sql.md) statement.  
   
     ```sql  
     CREATE FULLTEXT INDEX ON Production.Document  
@@ -66,6 +73,8 @@ To set up full-text search by using a wizard, see [Use the Full-Text Indexing Wi
     GO  
   
     ```  
+    
+  
   
      The TYPE COLUMN defined in this example specifies the type column in the table that contains the type of the document in each row of the column 'Document' (which is of binary type). The type column stores the user-supplied file extension - ".doc", ".xls", and so forth - of the document in a given row. The Full-Text Engine uses the file extension in a given row to invoke the correct filter to use for parsing the data in that row. After the filter has parsed the binary data of the row, the specified word breaker parses the content. (In this example, the word breaker for British English is used.) For more information, see [Configure and Manage Filters for Search](../../relational-databases/search/configure-and-manage-filters-for-search.md).  
 

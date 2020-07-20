@@ -12,7 +12,6 @@ f1_keywords:
 ms.assetid: 479bae2c-fee0-4215-b424-1ab779a7e5ca
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Column Selection Dialog Box (Visual Database Tools)
   Lets you change the Custom view for tables in the database diagram. Custom view shows only the column properties identified by the user.  

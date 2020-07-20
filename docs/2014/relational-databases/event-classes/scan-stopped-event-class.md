@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: b6b20ae9-aebb-454a-b639-6b7bb2f9339b
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Scan:Stopped Event Class
   The Scan:Stopped event class occurs when a table or index scan stops.  

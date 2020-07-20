@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 4445c0d9-a66b-4d7c-88e4-a66fa6f7d9fd
 author: MladjoA
 ms.author: mlandzic
-manager: craigg
 ---
 # GeometryCollection
   A `GeometryCollection` is a collection of zero or more `geometry` or `geography` instances. A `GeometryCollection` can be empty.  

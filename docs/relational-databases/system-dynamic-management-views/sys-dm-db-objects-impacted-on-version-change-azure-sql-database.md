@@ -16,13 +16,13 @@ helpviewer_keywords:
   - "dm_db_objects_impacted_on_version_change"
   - "sys.dm_db_objects_impacted_on_version_change"
 ms.assetid: b94af834-c4f6-4a27-80a6-e8e71fa8793a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ms.custom: seo-dt-2019
 ---
 # sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   This database-scoped system view is designed to provide an early warning system to determine objects that will be impacted by a major release upgrade in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. You can use the view either before or after the upgrade to get a full enumeration of impacted objects. You will need to query this view in each database to get a full accounting across the entire server.  
   

@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "ODBC error handling, message types"
   - "errors [ODBC], types"
 ms.assetid: 46c0c22e-d105-4d5b-bb9d-5694472e8651
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Error Messages
   The text of messages returned by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver is placed in the *MessageText* parameter of **SQLGetDiagRec**. The source of an error is indicated by the header of the message:  

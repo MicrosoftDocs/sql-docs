@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: f39fc1c7-cfec-4a95-97f6-6b95954694bb
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 ---
 # Best Practices for Calling Natively Compiled Stored Procedures
   Natively compiled stored procedures are:  

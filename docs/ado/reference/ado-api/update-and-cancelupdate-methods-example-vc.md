@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "CancelUpdate method [ADO]"
   - "Update method [ADO], VC++ example"
 ms.assetid: cc59d23a-2f38-42f9-8b65-ed89009e87ec
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Update and CancelUpdate Methods Example (VC++)
 This example demonstrates the [Update](../../../ado/reference/ado-api/update-method.md) method in conjunction with the [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) method.  

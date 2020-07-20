@@ -9,7 +9,6 @@ ms.topic: conceptual
 ms.assetid: 7d74a60b-8933-4038-bcbb-4e9dcc4f70e9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Task 1: Creating a Knowledge Base and Domains
   In this task, you create the **Suppliers** knowledge base and create domains that is used for cleansing data and matching data to remove duplicates.  

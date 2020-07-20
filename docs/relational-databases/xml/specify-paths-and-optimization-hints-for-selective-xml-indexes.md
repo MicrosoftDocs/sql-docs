@@ -1,5 +1,6 @@
 ---
 title: "Paths & optimization hints for selective XML Indexes | Microsoft Docs"
+description: Learn how to specify node paths and optimization hints when you create or alter selective XML indexes.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -12,7 +13,7 @@ ms.author: genemi
 ms.custom: "seo-lt-2019"
 ---
 # Specify Paths and Optimization Hints for Selective XML Indexes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic describes how to specify node paths to index and optimization hints for indexing when you create or alter selective XML indexes.  
   
  You specify node paths and optimization hints at the same time in one of the following statements:  

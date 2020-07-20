@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 9f7ed895-ad65-43e3-ba08-00d7bff1456d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 ---
 # Cross-Database Transactions Not Supported For Database Mirroring or AlwaysOn Availability Groups (SQL Server)
   Cross-database transactions and distributed transactions are not supported by [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] or by database mirroring. This is because transaction atomicity/integrity cannot be guaranteed for the following reasons:  

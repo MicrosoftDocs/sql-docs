@@ -1,5 +1,6 @@
 ---
 title: "Remove Data Quality Server Objects | Microsoft Docs"
+description: If you uninstall Data Quality Server from an instance of SQL Server, some Data Quality Server objects, including the DQS databases, must be deleted manually.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -7,11 +8,11 @@ ms.reviewer: ""
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 1b7c6dbb-b40e-4822-9caa-608e1056af8e
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ---
 # Remove Data Quality Server Objects
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Uninstalling [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] from an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or completely removing an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that has [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] does not delete some [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] objects, including the DQS databases. This implies that you do not lose your DQS data if you uninstall [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] using the SQL Server setup. You must manually delete these [!INCLUDE[ssDQSServer](../../includes/ssdqsserver-md.md)] objects after the uninstall process is complete.  
   

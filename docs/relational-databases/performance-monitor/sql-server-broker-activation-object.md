@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Broker Activation Object | Microsoft Docs"
+description: Learn about the SQLServer:BrokerActivation performance object, which contains performance counters that report information on stored procedure activation. 
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, Broker Activation Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **SQLServer:BrokerActivation** performance object contains performance counters that report information on stored procedure activation. The table below lists the counters that this object contains.  
   
 |SQL Server Broker Activation counters|Description|  

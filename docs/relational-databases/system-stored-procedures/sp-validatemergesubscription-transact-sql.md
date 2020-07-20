@@ -13,11 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_validatemergesubscription"
 ms.assetid: d73ad03c-e5b3-4606-a0ee-7d75e12762a6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_validatemergesubscription (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Performs a validation for the specified subscription. This stored procedure is executed at the Publisher on the publication database.  
   

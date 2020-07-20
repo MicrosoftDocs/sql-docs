@@ -10,9 +10,8 @@ helpviewer_keywords:
   - "Transact-SQL debugger, breakpoint action"
   - "Transact-SQL debugger, breakpoint when hit action"
 ms.assetid: f97f0097-6f51-40c1-b2e0-294a93ce1e1b
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Specify a Breakpoint Action
   A breakpoint **When Hit** action specifies a custom task that the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger performs for a breakpoint. If the specified hit count is reached and any specified breakpoint condition is satisfied, the debugger performs the action specified for the breakpoint.  

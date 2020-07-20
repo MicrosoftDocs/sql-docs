@@ -1,5 +1,6 @@
 ---
 title: "Collect Small Slices on a Pie Chart (Report Builder) | Microsoft Docs"
+description: Learn about collecting many small slices in a pie chart into one single slice in Report Builder paginated reports. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -16,7 +17,7 @@ Pie charts with too many slices can look cluttered. Learn to collect many small 
  
  To collect small slices into one slice, first decide whether your threshold for collecting small slices is measured as a percentage of the pie chart or as a fixed value. 
  
- The [Tutorial: Add a Pie Chart to Your Report (Report Builder)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md) walks you through collecting small slices into a single slice, if you'd like to try this with sample data first.
+ The [Tutorial: Add a Pie Chart to Your Report (Report Builder)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md) walks you through collecting small slices into a single slice, if you'd like to try this with sample data first.
  
  ![report-builder-pie-chart-other-slice](../../reporting-services/report-design/media/report-builder-pie-chart-other-slice.png)
   
@@ -75,7 +76,7 @@ Pie charts with too many slices can look cluttered. Learn to collect many small 
 >  You cannot format the secondary pie chart. For this reason, it is strongly recommended to use the first approach when collecting pie slices.  
   
 ## See Also  
-* [Tutorial: Add a Pie Chart to Your Report (Report Builder)](Tutorial:%20Add%20a%20Pie%20Chart%20to%20Your%20Report%20\(Report%20Builder\).md)
+* [Tutorial: Add a Pie Chart to Your Report (Report Builder)](../tutorial-add-a-pie-chart-to-your-report-report-builder.md)
 *  [Pie Charts &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/pie-charts-report-builder-and-ssrs.md)   
 *  [Formatting Data Points on a Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/formatting-data-points-on-a-chart-report-builder-and-ssrs.md)   
 *  [Display Data Point Labels Outside a Pie Chart &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/display-data-point-labels-outside-a-pie-chart-report-builder-and-ssrs.md)   

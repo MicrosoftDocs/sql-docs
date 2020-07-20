@@ -1,5 +1,6 @@
 ---
 title: "Frequently asked questions (FAQ) for JDBC driver"
+description: "This page provides answers to frequently asked questions about the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "03/24/2020"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Frequently asked questions (FAQ) for JDBC driver
 
@@ -107,8 +108,8 @@ The JDBC Drivers 6.0, 6.2, 6.4, and 7.0 are redistributable. Review the "Distrib
 **Can I use the driver to access Microsoft SQL Server from a Linux computer?**  
 Yes! You can use the driver to access SQL Server from Linux, Unix, and other non-Windows platforms. For more information, see [Microsoft JDBC Driver for SQL Server Support Matrix](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md).
 
-**Does the driver support Secure Sockets Layer (SSL) encryption?**  
-Starting with version 1.2, the driver supports Secure Sockets Layer (SSL) encryption. For more information, see [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md).
+**Does the driver support TLS encryption?**  
+Starting with version 1.2, the driver supports Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), encryption. For more information, see [Using encryption](../../connect/jdbc/using-ssl-encryption.md).
 
 **Which authentication types are supported by the Microsoft JDBC Driver for SQL Server?**  
 The table below lists available authentication options. A pure Java Kerberos authentication is available starting with the 4.0 release of the driver.

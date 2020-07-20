@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "arguments in catalog functions [ODBC], pattern value"
   - "pattern value arguments [ODBC]"
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Pattern Value Arguments
 Some arguments in the catalog functions, such as the *TableName* argument in **SQLTables**, accept search patterns. These arguments accept search patterns if the SQL_ATTR_METADATA_ID statement attribute is set to SQL_FALSE; they are identifier arguments that do not accept a search pattern if this attribute is set to SQL_TRUE.  

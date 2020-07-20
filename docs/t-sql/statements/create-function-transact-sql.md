@@ -43,7 +43,7 @@ ms.author: carlrab
 ---
 # CREATE FUNCTION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Creates a user-defined function in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value can either be a scalar (single) value or a table. Use this statement to create a reusable routine that can be used in these ways:
 
@@ -72,7 +72,7 @@ Creates a user-defined function in [!INCLUDE[ssNoVersion](../../includes/ssnover
 
 ## Syntax
 
-```
+```syntaxsql
 -- Transact-SQL Scalar Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
 ( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type
@@ -90,7 +90,7 @@ RETURNS return_data_type
 [ ; ]
 ```
 
-```
+```syntaxsql
 -- Transact-SQL Inline Table-Valued Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type
@@ -105,7 +105,7 @@ RETURNS TABLE
 [ ; ]
 ```
 
-```
+```syntaxsql
 -- Transact-SQL Multi-Statement Table-Valued Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
 ( [ { @parameter_name [ AS ] [ type_schema_name. ] parameter_data_type
@@ -124,7 +124,7 @@ RETURNS @return_variable TABLE <table_type_definition>
 
 ```
 
-```
+```syntaxsql
 -- Transact-SQL Function Clauses
 <function_option>::=
 {
@@ -185,7 +185,7 @@ column_name AS computed_column_expression
 }
 ```
 
-```
+```syntaxsql
 -- CLR Scalar Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
 ( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type
@@ -198,7 +198,7 @@ RETURNS { return_data_type }
 [ ; ]
 ```
 
-```
+```syntaxsql
 -- CLR Table-Valued Function Syntax
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
 ( { @parameter_name [AS] [ type_schema_name. ] parameter_data_type
@@ -212,7 +212,7 @@ RETURNS TABLE <clr_table_type_definition>
 [ ; ]
 ```
 
-```
+```syntaxsql
 -- CLR Function Clauses
 <order_clause> ::=
 {
@@ -233,7 +233,7 @@ RETURNS TABLE <clr_table_type_definition>
 ( { column_name data_type } [ ,...n ] )
 ```
 
-```
+```syntaxsql
 -- In-Memory OLTP: Syntax for natively compiled, scalar user-defined function
 CREATE [ OR ALTER ] FUNCTION [ schema_name. ] function_name
  ( [ { @parameter_name [ AS ][ type_schema_name. ] parameter_data_type
@@ -258,6 +258,8 @@ RETURNS return_data_type
 }
 
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

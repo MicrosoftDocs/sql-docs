@@ -1,5 +1,6 @@
 ---
 title: "Create a Database Master Key | Microsoft Docs"
+description: Create a database master key in SQL Server by using Transact-SQL. Be sure you have the required permissions.
 ms.custom: ""
 ms.date: "09/12/2019"
 ms.prod: sql
@@ -16,7 +17,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Create a Database Master Key
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 This topic describes how to create a database master key in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../../includes/tsql-md.md)].
 
 ## Security

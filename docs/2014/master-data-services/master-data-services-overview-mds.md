@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 8a4c28b1-6061-4850-80b6-132438b8c156
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Master Data Services Overview
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], the model is the highest level container in the structure of your master data. You create a model to manage groups of similar data, for example to manage online product data. A model contains one or more entities, and entities contain members that are the data records.
 
 |||
 |-|-|
-|![Azure Virtual Machine](../../2014/master-data-services/media/azure-virtual-machine.png "Azure Virtual Machine")|Do you want to try out SQL Server 2016? Sign up for Microsoft Azure, and then go **[Here](https://azure.microsoft.com/marketplace/partners/microsoft/sqlserver2016rtmenterprisewindowsserver2012r2/?wt.mc_id=sqL16_vm)** to spin up a Virtual Machine with SQL Server 2016  already installed. You can delete the Virtual Machine when you're finished.|
+|![Azure Virtual Machine](../../2014/master-data-services/media/azure-virtual-machine.png "Azure Virtual Machine")|Do you want to try out SQL Server 2016? Sign up for Microsoft Azure, and then go **[Here](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview)** to spin up a Virtual Machine with SQL Server 2016  already installed. You can delete the Virtual Machine when you're finished.|
 
  For example, your online product model may contain entities such as product, color, and style. The  color entity may contain  members for the colors red, silver, and black.
 

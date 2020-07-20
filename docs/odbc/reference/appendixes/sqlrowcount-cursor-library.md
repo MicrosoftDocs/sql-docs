@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLRowCount function [ODBC], Cursor Library"
 ms.assetid: 781cf5a5-325e-4523-8633-d96d9e98277c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLRowCount (Cursor Library)
 > [!IMPORTANT]  

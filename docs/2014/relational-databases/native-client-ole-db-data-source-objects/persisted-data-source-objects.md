@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "SQL Server Native Client OLE DB provider, persisted data source objects"
   - "persisted data source objects"
 ms.assetid: dfdacc81-42fe-4f20-8969-bed1f743defe
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Persisted Data Source Objects
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports persisted data source objects with the **IPersistFile** interface.  

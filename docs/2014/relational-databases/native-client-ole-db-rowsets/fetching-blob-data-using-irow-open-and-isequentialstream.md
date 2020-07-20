@@ -12,9 +12,8 @@ helpviewer_keywords:
   - "ISequentialStream interface"
   - "BLOBs, fetching"
 ms.assetid: 439b3976-84e7-4d11-8dba-f668adbc9159
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Fetching BLOB Data Using IRow::Open and ISequentialStream
   **IRow::Open** supports only DBGUID_STREAM and DBGUID_NULL type of objects to be opened.  

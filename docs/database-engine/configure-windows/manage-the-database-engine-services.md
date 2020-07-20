@@ -1,5 +1,6 @@
 ---
 title: "Manage the Database Engine Services | Microsoft Docs"
+description: Get acquainted with services that are available in SQL Server. See how to start SQL Server Configuration Manager, which you can use to manage various services.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -22,15 +23,15 @@ helpviewer_keywords:
   - "administering SQL Server, services"
   - "SQL Server services"
 ms.assetid: aa732e43-53ba-4eea-bb9b-089da0766fc1
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Manage the Database Engine Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on the operating systems as a service. A service is a type of application that runs in the system background. Services usually provide core operating system features, such as Web serving, event logging, or file serving. Services can run without showing a user interface on the computer desktop. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, and several other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components run as services. These services typically are started when the operating system starts. This depends on what is specified during setup; some services are not started by default. This section describes the management of the various [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. Before you log in to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you need to know how to start, stop, pause, resume, and restart an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you are logged in, you can perform tasks such as administering the server or querying a database.  
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] runs on the operating systems as a service. A service is a type of application that runs in the system background. Services usually provides core operating system features, such as Web serving, event logging, or file serving. Services can run without showing a user interface on the computer desktop. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent, and several other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components run as services. These services typically are started when the operating system starts. This depends on what is specified during setup; some services are not started by default. This section describes the management of the various [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services. Before you log in to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you need to know how to start, stop, pause, resume, and restart an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. After you are logged in, you can perform tasks such as administering the server or querying a database.  
   
 ## Using the SQL Server Service  
- When you start an instance of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], you are starting the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. After you start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service, users can establish new connections to the server. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service can be started and stopped as a service, either locally or remotely. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is referred to as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) if it is the default instance, or MSSQL$*\<instancename>*if it is a named instance.  
+ When you start an instance of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], you are starting the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service. After you start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service, users can establish new connections to the server. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service can be started and stopped as a service, either locally or remotely. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is referred to as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER) if it is the default instance, or MSSQL$*\<instancename\>* if it is a named instance.  
   
 ## Using SQL Server Configuration Manager  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager allows you to stop, start, or pause various [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services.  

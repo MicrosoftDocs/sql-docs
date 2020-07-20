@@ -11,12 +11,11 @@ f1_keywords:
 ms.assetid: b43f4b97-17b9-4004-a824-f77b9e145741
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Options (Designers-Table and Database Designers Page)
   Use this page to determine the default behavior of the designer. To access the settings, on the **Tools** menu, click **Options**, expand the **Designers** folder, and click **Table Designer**.  
   
-## UIElement List  
+## UI element list  
  **Override connection string time-out value for table designer updates**  
  Permits a new time-out value to be set for the actions of the table designer. This can be useful when the table designer affects a large table and requires extra time to complete the table modification.  
   

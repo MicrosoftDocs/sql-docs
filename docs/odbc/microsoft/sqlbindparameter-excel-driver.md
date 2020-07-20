@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Excel driver [ODBC], SQLBindParameter"
   - "SQLBindParameter function [ODBC], Excel Driver"
 ms.assetid: 40489bc5-3e2a-425e-892d-e0dc037f4d7a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLBindParameter (Excel Driver)
 > [!NOTE]  

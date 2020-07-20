@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "log_shipping_monitor_primary system table"
 ms.assetid: 5f629a29-1a62-40e6-ae33-6f6b7dd09a36
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # log_shipping_monitor_primary (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Stores one monitor record per primary database in each log shipping configuration. This table is stored in the **msdb** database.  
   

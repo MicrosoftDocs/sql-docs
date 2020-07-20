@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ADO MD code examples, VBScript"
 ms.assetid: b4647211-2566-4657-ae7b-3dd761457d7b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Axis Example (VBScript)
 This Active Server Page displays OLAP data from an MDX Query string and writes the resulting cellset to an HTML table structure.  

@@ -11,8 +11,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "FilterColumn property [ADO]"
 ms.assetid: 0a5473e8-8ce6-4518-83fb-4920b827e285
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # FilterColumn Property (RDS)
 Indicates the column on which to evaluate the filter criteria.  

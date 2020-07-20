@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 1791785b-d67d-4cab-8acc-b3cf13af7a1f
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # User-Configurable Event Category
   The **User-Configurable** event category contains the **User-Configurable** event classes.  

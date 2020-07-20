@@ -11,9 +11,8 @@ helpviewer_keywords:
   - "handles [ODBC], connection"
   - "handles [ODBC], about handles"
 ms.assetid: 6172cd52-9c9a-467d-992f-def07f3f3bb1
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Allocate Handles and Connect to SQL Server (ODBC)
     

@@ -26,7 +26,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # PERMISSIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a value containing a bitmap that indicates the statement, object, or column permissions of the current user.  
   
@@ -36,7 +36,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 PERMISSIONS ( [ objectid [ , 'column' ] ] )  
 ```  

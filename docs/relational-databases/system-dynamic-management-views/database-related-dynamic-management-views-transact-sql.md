@@ -12,11 +12,11 @@ helpviewer_keywords:
   - "database dynamic management objects [SQL Server]"
   - "dynamic management objects [SQL Server], database"
 ms.assetid: 615e9440-32a3-4ec4-94c6-94547e10ebda
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Database Related Dynamic Management Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section describes the following dynamic management objects in [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] and sometimes in SQL Database.  
   

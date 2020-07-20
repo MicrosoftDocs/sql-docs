@@ -1,5 +1,6 @@
 ---
 title: "Retrieve and Query XML Data | Microsoft Docs"
+description: Learn about the query options that must be specified when querying XML data, and about the parts of XML instances that are not preserved when stored in databases.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Retrieve and Query XML Data
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic describes the query options that you have to specify to query XML data. It also describes the parts of XML instances that are not preserved when they are stored in databases.  
   
 ##  <a name="features"></a> Features of an XML Instance That Are Not Preserved  

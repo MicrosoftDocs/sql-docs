@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "sp_dbmmonitorchangemonitoring"
   - "database mirroring [SQL Server], monitoring"
 ms.assetid: 17be755b-673d-4cd4-9544-6ecb4220bed3
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_dbmmonitorchangemonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the value of a database mirroring monitoring parameter.  
   

@@ -17,7 +17,6 @@ helpviewer_keywords:
 ms.assetid: c5434211-697a-423f-ad71-d78178b69a78
 author: stevestein
 ms.author: sstein
-manager: craigg
 ---
 # Upgrade Database Diagrams from Previous Editions (Visual Database Tools)
   Database diagrams created on previous editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases are upgraded automatically when database diagramming is set up on [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For more steps for setting up diagramming see [Set Up Database Diagram Designer &#40;Visual Database Tools&#41;](visual-database-tools.md).  

@@ -2,7 +2,7 @@
 title: "Tutorial: Always Encrypted with secure enclaves using SSMS"
 description: This tutorial teaches you how to create a basic Always Encrypted with secure enclaves environment, how to encrypt data in-place, and issue rich queries against encrypted columns using SQL Server Management Studio (SSMS). 
 ms.custom: seo-lt-2019
-ms.date: 10/15/2019
+ms.date: 04/10/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: vanto
@@ -15,7 +15,7 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Tutorial: Always Encrypted with secure enclaves using SSMS
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 This tutorial teaches you how to get started with [Always Encrypted with secure enclaves](encryption/always-encrypted-enclaves.md). It will show you:
 - How to create a basic environment for testing and evaluating Always Encrypted with secure enclaves.
@@ -109,14 +109,14 @@ In this step, you will configure the SQL Server computer as a guarded host regis
 
 3. Restart your SQL Server computer when prompted to complete the installation of Hyper-V.
 
-4. If your SQL Server computer is a virtual machine or if it is a legacy physical machine that does not support UEFI Secure Boot or is not equipped with IOMMU, you need to remove the VBS requirement for platform security features.
-    1. Remove the requirement in Windows registry.
+4. If your SQL Server computer is a virtual machine, a physical machine that does not support UEFI Secure Boot, or a physial machine not equipped with an IOMMU, you need to remove the VBS requirement for platform security features.
+    1. Remove the requirement for Secure Boot and IOMMU by running the following command on your SQL Server computer in an elevated PowerShell console:
 
         ```powershell
        Set-ItemProperty -Path HKLM:\SYSTEM\CurrentControlSet\Control\DeviceGuard -Name RequirePlatformSecurityFeatures -Value 0
        ```
 
-    1. Restart the computer again to get VBS to come online with the lowered requirements.
+    1. Restart the SQL Server computer again to get VBS to come online with the lowered requirements.
 
         ```powershell
        Restart-Computer

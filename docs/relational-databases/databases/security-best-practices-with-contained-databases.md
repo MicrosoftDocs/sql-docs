@@ -1,5 +1,6 @@
 ---
 title: "Security Best Practices with Contained Databases | Microsoft Docs"
+description: Understand and mitigate the unique threats to contained databases, including those related to the USER WITH PASSWORD authentication process in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2016"
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.author: vanto
 ms.reviewer: jaszymas
 ---
 # Security Best Practices with Contained Databases
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contained databases have some unique threats that should be understood and mitigated by [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] administrators. Most of the threats are related to the **USER WITH PASSWORD** authentication process, which moves the authentication boundary from the [!INCLUDE[ssDE](../../includes/ssde-md.md)] level to the database level.  
   

@@ -7,9 +7,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: c39f03a7-e223-4fd7-bd30-142e28f51654
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Supported SQL Server Features
   This topic discusses [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are or not supported for use with memory-optimized objects.  

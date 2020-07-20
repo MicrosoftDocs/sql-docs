@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 THROW [ { error_number | @local_variable },  
         { message | @local_variable },  
         { state | @local_variable } ]   
@@ -40,7 +40,7 @@ THROW [ { error_number | @local_variable },
  Is a constant or variable that represents the exception. *error_number* is **int** and must be greater than or equal to 50000 and less than or equal to 2147483647.  
   
  *message*  
- Is an string or variable that describes the exception. *message* is **nvarchar(2048)**.  
+ Is a string or variable that describes the exception. *message* is **nvarchar(2048)**.  
   
  *state*  
  Is a constant or variable between 0 and 255 that indicates the state to associate with the message. *state* is **tinyint**.  
@@ -61,7 +61,7 @@ THROW [ { error_number | @local_variable },
 |-------------------------|---------------------|  
 |If a *msg_id* is passed to RAISERROR, the ID must be defined in sys.messages.|The *error_number* parameter does not have to be defined in sys.messages.|  
 |The *msg_str* parameter can contain **printf** formatting styles.|The *message* parameter does not accept **printf** style formatting.|  
-|The *severity* parameter specifies the severity of the exception.|There is no *severity* parameter. The exception severity is always set to 16.|  
+|The *severity* parameter specifies the severity of the exception.|There is no *severity* parameter. When THROW is used to initiate the exception, the severity is always set to 16. However, when THROW is used to re-throw an existing exception, the severity is set to that exception's severity level.|  
   
 ## Examples  
   
@@ -117,15 +117,14 @@ END CATCH;
 ```sql  
 EXEC sys.sp_addmessage  
      @msgnum   = 60000  
-,@severity = 16  
-,@msgtext  = N'This is a test message with one numeric parameter (%d), one string parameter (%s), and another string parameter (%s).'  
+    ,@severity = 16  
+    ,@msgtext  = N'This is a test message with one numeric parameter (%d), one string parameter (%s), and another string parameter (%s).'  
     ,@lang = 'us_english';   
 GO  
   
 DECLARE @msg NVARCHAR(2048) = FORMATMESSAGE(60000, 500, N'First string', N'second string');   
   
 THROW 60000, @msg, 1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

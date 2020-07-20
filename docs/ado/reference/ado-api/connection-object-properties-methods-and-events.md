@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Connection object [ADO], members"
 ms.assetid: f571b74d-b796-4009-9c66-6a36ab995a2a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Connection Object Properties, Methods, and Events
 ## Properties/Collections  

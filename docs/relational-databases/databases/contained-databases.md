@@ -1,5 +1,6 @@
 ---
 title: "Contained Databases | Microsoft Docs"
+description: "Learn about contained databases, the benefits and limitations of partially contained databases, and how SQL Server 2019 works to isolate databases."
 ms.custom: ""
 ms.date: "08/24/2016"
 ms.prod: sql
@@ -18,7 +19,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Contained Databases
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   A *contained database* is a database that is isolated from other databases and from the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that hosts the database.  [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] helps user to isolate their database from the instance in 4 ways.  
   

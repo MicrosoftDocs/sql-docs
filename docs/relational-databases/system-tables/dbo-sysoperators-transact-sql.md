@@ -17,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysoperators system table"
 ms.assetid: c2afa20c-b15f-46ca-ae74-2eb65909409e
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # dbo.sysoperators (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent operator.  
   

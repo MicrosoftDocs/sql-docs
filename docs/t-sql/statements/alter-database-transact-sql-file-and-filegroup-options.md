@@ -66,7 +66,7 @@ In the following row, click whichever product name you are interested in. The cl
 
 ## Syntax
 
-```
+```syntaxsql
 ALTER DATABASE database_name
 {
     <add_or_modify_files>
@@ -720,7 +720,7 @@ Use this statement with a database in Azure SQL Database managed instance.
 
 ## Syntax for databases in a managed instance
 
-```
+```syntaxsql
 ALTER DATABASE database_name
 {
     <add_or_modify_files>

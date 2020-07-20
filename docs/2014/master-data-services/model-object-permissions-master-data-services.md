@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: fab6335b-4cae-47de-ae7c-6c4743e0680f
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
 ---
 # Model Object Permissions (Master Data Services)
   Model object permissions are mandatory. They determine the attributes a user can access in the **Explorer** functional area of the UI.  

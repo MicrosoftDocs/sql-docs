@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Mode property [ADO], Visual Basic example"
   - "IsolationLevel property [ADO], Visual Basic example"
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # IsolationLevel and Mode Properties Example (VB)
 This example uses the [Mode](../../../ado/reference/ado-api/mode-property-ado.md) property to open an exclusive connection, and the [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) property to open a transaction that is conducted in isolation of other transactions.  

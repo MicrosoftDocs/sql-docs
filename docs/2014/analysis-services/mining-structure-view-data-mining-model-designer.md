@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: 3ddd0ab7-a4a1-4451-bac8-a0ad0b48be09
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Mining Structure View (Data Mining Model Designer)
   Use the **Mining Structure** views to modify mining structures and to process a mining structure and all its associated mining models.  

@@ -13,7 +13,6 @@ helpviewer_keywords:
 ms.assetid: 5694d3fe-52e8-4fb7-a1f1-22629151b618
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Select Table Dialog Box (Mining Accuracy Chart View)
   Use the **Select Table** dialog box to select a table to use to test the accuracy of the mining models that the selected mining structure contains.  

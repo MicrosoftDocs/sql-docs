@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 85b25625-a7ab-4960-9f9c-df22e8ecae37
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Cluster Wizard (Data Mining Add-ins for Excel)
   ![Cluster wizard in Data Mining ribbon](media/dmc-cluster.gif "Cluster wizard in Data Mining ribbon")  

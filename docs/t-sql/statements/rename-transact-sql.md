@@ -11,7 +11,7 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # RENAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 Renames a user-created table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. Renames a user-created table, a column in a user-created table or database in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].
 
@@ -20,7 +20,7 @@ Renames a user-created table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. R
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse
 
 -- Rename a table.
@@ -29,7 +29,7 @@ RENAME OBJECT [::] [ [ database_name . [schema_name ] ] . ] | [schema_name . ] ]
 
 ```
 
-```
+```syntaxsql
 -- Syntax for Analytics Platform System
 
 -- Rename a table
@@ -90,7 +90,7 @@ You can't rename a table or database while it is in use. Renaming a table requir
 
 ### Rename column restrictions
 
-You can't rename a column that is used for the table's distribution. You also can't rename any columns in a temp table. 
+You can't rename a column that is used for the table's distribution. You also can't rename any columns in an external table or a temp table. 
 
 ### Views are not updated
 

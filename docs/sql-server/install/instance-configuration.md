@@ -1,5 +1,6 @@
 ---
 title: "Installation Wizard Help | Microsoft Docs"
+description: Specify whether to create a default instance or a named instance of SQL Server by using Instance Configuration in the SQL Server Installation Wizard.
 ms.custom: ""
 ms.date: 08/16/2019
 ms.prod: sql
@@ -12,14 +13,14 @@ helpviewer_keywords:
   - "Instance Name page [SQL Server Installation Wizard]"
   - "SQL Server Installation Wizard, Instance Name page"
 ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 robots: noindex,nofollow
 ---
 
 # Installation Wizard help
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This article describes some of the configuration pages in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Wizard.
 
@@ -125,7 +126,7 @@ If you're installing [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md
 
 The default directories in the following table are user-configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. Permission to access these files is granted to local administrators and to members of the SQLServerMSASUser$\<instance> security group that's created and provisioned during Setup.  
   
-### UIElement list  
+### UI element list  
   
 |Description|Default directory|Recommendations|  
 |-----------------|-----------------------|---------------------|  
@@ -158,7 +159,7 @@ For more information about directories, file locations, and instance ID naming, 
 
 The default directories in the following table are user-configurable during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup. Permission to access these files is granted to local administrators and to members of the SQLServerMSASUser$\<instance> security group that's created and provisioned during Setup.  
   
-#### UIElement list
+#### UI element list
   
 |Description|Default directory|Recommendations|  
 |-----------------|-----------------------|---------------------|  
@@ -279,7 +280,7 @@ To specify an SMB file share as a directory, you must manually type the supporte
   
 For a standalone instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the following table lists the supported storage types and the default directories that you can configure during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup:  
   
-### UIElement list
+### UI element list
   
 |Description|Supported storage types|Default directory|Recommendations|  
 |-----------------|----------------------------|-----------------------|---------------------|  
@@ -354,7 +355,7 @@ For a failover cluster instance of [!INCLUDE[ssNoVersion](../../includes/ssnover
 |**tempdb data directory**|Local disk, shared storage, SMB file server|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\Data<br /><br /> **Tip**: If you select **shared disk** on the **Cluster Disk Selection** page, the default is the first shared disk. This field defaults to blank if you don't make a selection on the **Cluster Disk Selection** page.|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup configures ACLs for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] directories and breaks inheritance as part of configuration.<br /><br /> Ensure that the specified directory or directories (if multiple files are specified) are valid for all the cluster nodes. During failover, if the **tempdb** directories aren't available on the failover target node, the SQL Server resource fails to come online.|  
 |**tempdb log directory**|Local disk, shared storage, SMB file server|\<Drive:>\Program Files\\[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\MSSQL*nn*.\<InstanceID>\MSSQL\Data<br /><br /> **Tip**: If you select **shared disk** on the **Cluster Disk Selection** page, the default is the first shared disk. This field defaults to blank if you don't make a selection on the **Cluster Disk Selection** page.|Best practices for user data directories depend on workload and performance requirements.<br /><br /> Ensure that the specified directory is valid for all the cluster nodes. During failover, if the **tempdb** directories aren't available on the failover target node, the SQL Server resource fails to come online.<br /><br /> Ensure that the log directory has adequate space.|  
   
-### UIElement list
+### UI element list
 
 Configure the settings for **tempdb** according to your workload and requirements. The following settings apply to **tempdb** data files:  
   
@@ -419,7 +420,7 @@ The MaxDOP setting applies only to SQL Server 2019 and later.
 
 If this page is skipped during setup, the default MaxDOP value is the recommended value displayed in this page instead of the default [!INCLUDE[ssde_md](../../includes/ssde_md.md)] value for previous versions (0). You can also manually configure this setting on this page, and you can modify this setting after installation. 
 
-### UIElement list
+### UI element list
 
 * **Max degree of parallelism (MaxDOP)** is the value for the maximum number of processors to use during parallel execution of a single statement. The default value will align with the max degree of parallelism guidelines in [Configure the max degree of parallelism Server Configuration Option](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines).
 
@@ -427,11 +428,11 @@ If this page is skipped during setup, the default MaxDOP value is the recommende
 
 **min server memory** determines the lower memory limit that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will use for the buffer pool and other caches. The default value is 0 and the recommended value is also 0. For more information on the effects of **min server memory**, see the [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
 
-**max server memory** determines the upper memory limit that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will use for the buffer pool and other caches. The default value is 2,147,483,647 megabytes (MB) and the calculated recommended values will align with the memory configuration guidelines in [Server Memory Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually) for a standalone [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, based on the existing system memory. For more information on the effects of **max server memory**, see the [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
+**max server memory** determines the upper memory limit that the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] will use for the buffer pool and other caches. The default value is 2,147,483,647 megabytes (MB) and the calculated recommended values will align with the memory configuration guidelines in [Server Memory Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md#manually) for a standalone [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, based on the existing system memory. For more information on the effects of **max server memory**, see the [Memory Management Architecture Guide](../../relational-databases/memory-management-architecture-guide.md#effects-of-min-and-max-server-memory).
 
 If this page is skipped during setup, the default **max server memory** value used is the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] default value (2,147,483,647 megabytes). You can manually configure these settings on this page once you've chosen the **Recommended** radio button, and you can modify these setting after installation. For more information, see [Server Memory Configuration Options](../../database-engine/configure-windows/server-memory-server-configuration-options.md).
 
-### UIElement list
+### UI element list
   
 **Default**: This radio button is selected by default and sets the **min server memory** and **max server memory** settings to the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] default values. 
 
@@ -449,7 +450,7 @@ If this page is skipped during setup, the default **max server memory** value us
 
 Use this page to enable FILESTREAM for this installation of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. FILESTREAM integrates the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] with an NTFS file system by storing **varbinary(max)** binary large object (BLOB) data as files in the file system. [!INCLUDE[tsql](../../includes/tsql-md.md)] statements can insert, update, query, search, and back up FILESTREAM data. Microsoft Win32 file-system interfaces provide streaming access to the data. 
   
-### UIElement list
+### UI element list
   
 **Enable FILESTREAM for Transact-SQL access**: Select to enable FILESTREAM for [!INCLUDE[tsql](../../includes/tsql-md.md)] access. This check box must be selected before the other options will be available.  
   

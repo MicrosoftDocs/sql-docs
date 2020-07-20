@@ -1,6 +1,6 @@
 ---
 title: "Reporting Services with availability groups"
-description: Learn about configuring SQL Server Reporting Services (SSRS) with Always On availability groups. 
+description: Learn about configuring Reporting Services to work with Always On availability groups in SQL Server. Supported functionality differs for different scenarios.
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -18,7 +18,7 @@ ms.author: mathoma
 manager: erikre
 ---
 # Reporting Services with Always On Availability Groups (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   This topic contains information about configuring [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] to work with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] (AG) in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. The three scenarios for using [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] and [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] are databases for report data sources, report server databases, and report design. The supported functionality and required configuration is different for the three scenarios.  
   

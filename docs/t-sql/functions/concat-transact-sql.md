@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CONCAT function"
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONCAT (Transact-SQL)
@@ -28,7 +28,7 @@ This function returns a string resulting from the concatenation, or joining, of 
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CONCAT ( string_value1, string_value2 [, string_valueN ] )  
 ```  
   

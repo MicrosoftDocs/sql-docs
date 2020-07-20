@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "RDS samples [ADO], VBScript"
   - "VBScript RDS examples [ADO]"
 ms.assetid: 22f23c30-7c21-4fe3-8e76-36cea6448819
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RDS Code Examples in VBScript
 > [!IMPORTANT]

@@ -1,7 +1,7 @@
 ---
 title: "Support policies for OLE DB Driver for SQL Server | Microsoft Docs"
 description: "Support policies for OLE DB Driver for SQL Server"
-ms.date: "03/18/2020"
+ms.date: "05/25/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -12,7 +12,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Support policies for OLE DB Driver for SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -24,6 +24,7 @@ OLE DB Driver for SQL Server is tested with and supports connections to the foll
 
 | Driver version | Azure SQL Database | Azure SQL DW | Azure SQL Managed Instance | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
 |----|-|-|-|-|-|-|-|-|
+|18.4|Y|Y|Y|Y|Y|Y|Y|Y|
 |18.3|Y|Y|Y|Y|Y|Y|Y|Y|
 |18.2|Y|Y|Y|Y|Y|Y|Y|Y|
 |18.1|Y|Y|Y| |Y|Y|Y|Y|
@@ -36,6 +37,7 @@ The following table lists which operating systems are supported by OLE DB Driver
 
 | Driver version | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
 |----|-|-|-|-|-|-|
+|18.4|Y|Y|Y|Y|Y|Y|
 |18.3|Y|Y|Y|Y|Y|Y|
 |18.2|Y|Y|Y|Y|Y|Y|
 |18.1| |Y|Y|Y|Y|Y|
@@ -45,9 +47,6 @@ The following table lists which operating systems are supported by OLE DB Driver
 <sup>1</sup> Supported on Windows Server 2012 with [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
 <sup>2</sup> Supported on Windows Server 2012 R2 with [April 2014 update](https://go.microsoft.com/fwlink/?linkid=2073785) and [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
 <sup>3</sup> Supported on Windows 8.1 with [April 2014 update](https://go.microsoft.com/fwlink/?linkid=2073785) and [KB2999226](https://go.microsoft.com/fwlink/?linkid=2074061).  
-
-> [!NOTE]  
-> Use of the UTF-8 code page on Windows ("Use Unicode UTF-8 for worldwide language support") is not supported.
 
 ## ADO support policies  
 

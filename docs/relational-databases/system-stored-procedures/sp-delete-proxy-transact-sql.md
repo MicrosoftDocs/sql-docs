@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "sp_delete_proxy"
   - "DROP PROXY statement"
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_delete_proxy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes the specified proxy.  
   

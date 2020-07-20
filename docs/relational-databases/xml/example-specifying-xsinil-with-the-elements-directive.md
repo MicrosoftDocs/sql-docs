@@ -1,5 +1,6 @@
 ---
 title: "Specify XSINIL with the ELEMENTS Directive | Microsoft Docs"
+description: View an example that specifies XSINIL with the ELEMENTS directive to generate element-centric XML from the query result.
 ms.date: "03/01/2017"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -14,7 +15,7 @@ ms.author: genemi
 ms.custom: "seo-lt-2019"
 ---
 # Example: Specifying XSINIL with the ELEMENTS Directive
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The following query specifies the `ELEMENTS` directive to generate element-centric XML from the query result.  
   
 ## Example  

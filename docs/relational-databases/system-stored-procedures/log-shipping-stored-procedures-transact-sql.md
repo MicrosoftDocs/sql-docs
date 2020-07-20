@@ -13,11 +13,11 @@ helpviewer_keywords:
   - "log shipping [SQL Server], stored procedures"
   - "system stored procedures [SQL Server], log shipping"
 ms.assetid: 39554188-20fe-42ec-a53f-35e1dc98c274
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Log Shipping Stored Procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and later versions support the following system stored procedures that are used to configure, modify, and monitor log shipping configurations.  
   

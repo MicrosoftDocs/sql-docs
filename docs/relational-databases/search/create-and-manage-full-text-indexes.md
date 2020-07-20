@@ -1,7 +1,7 @@
 ---
 title: "Create and Manage Full-Text Indexes | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "03/31/2020"
 ms.prod: sql
 ms.prod_service: "search, sql-database"
 ms.technology: search
@@ -15,7 +15,7 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create and Manage Full-Text Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 This topic describes how to create, populate, and manage full-text indexes in SQL Server.
   
 ## Prerequisite - Create a full-text catalog
@@ -111,15 +111,15 @@ SELECT INDEXPROPERTY( OBJECT_ID('table_name'), 'index_name',  'IsFulltextKey' );
   
  **Example**  
   
- The following example inquires whether the `PK_Document_DocumentID` index is used to enforce the uniqueness of the full-text key column, as follows:  
+ The following example inquires whether the `PK_Document_DocumentNode` index is used to enforce the uniqueness of the full-text key column, as follows:  
   
 ```sql  
 USE AdventureWorks  
 GO  
-SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentID',  'IsFulltextKey' )  
+SELECT INDEXPROPERTY ( OBJECT_ID('Production.Document'), 'PK_Document_DocumentNode',  'IsFulltextKey' )  
 ```  
   
- This example returns 1 if the `PK_Document_DocumentID` index is used to enforce uniqueness of the full-text key column. Otherwise, it returns 0 or NULL. NULL implies you are using an invalid index name, the index name does not correspond to the table, the table does not exist, or so forth.  
+ This example returns 1 if the `PK_Document_DocumentNode` index is used to enforce uniqueness of the full-text key column. Otherwise, it returns 0 or NULL. NULL implies you are using an invalid index name, the index name does not correspond to the table, the table does not exist, or so forth.  
   
 ### Find the identifier of the full-text key column  
   
@@ -135,7 +135,7 @@ SELECT OBJECTPROPERTYEX(OBJECT_ID( 'table_name'), 'TableFulltextKeyColumn' ) AS 
   
  The following example returns the identifier of the full-text key column or NULL. NULL implies that you are using an invalid index name, the index name does not correspond to the table, the table does not exist, or so forth.  
   
-```sql  
+```sql
 USE AdventureWorks;  
 GO  
 SELECT OBJECTPROPERTYEX(OBJECT_ID('Production.Document'), 'TableFulltextKeyColumn');  
@@ -156,7 +156,7 @@ SELECT @key_column AS 'Unique Key Column';
 GO  
 ```  
   
- This example returns a result set column named `Unique Key Column`, which displays a single row containing the name of the unique key column of the Document table, DocumentID. Note that if this query contained an invalid index name, the index name did not correspond to the table, the table did not exist, and so forth, it would return NULL.  
+ This example returns a result set column named `Unique Key Column`, which displays a single row containing the name of the unique key column of the Document table, DocumentNode. Note that if this query contained an invalid index name, the index name did not correspond to the table, the table did not exist, and so forth, it would return NULL.  
 
 ## Index varbinary(max) and xml columns  
  If a **varbinary(max)**, **varbinary**, or **xml** column is full-text indexed, it can be queried using the full-text predicates (CONTAINS and FREETEXT) and functions (CONTAINSTABLE and FREETEXTTABLE), like any other full-text indexed column.

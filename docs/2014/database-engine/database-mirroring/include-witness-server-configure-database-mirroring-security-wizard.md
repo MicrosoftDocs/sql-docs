@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: f04b38a4-f4e2-4d4c-bdac-7cc70e5a5684
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 ---
 # Include Witness Server (Configure Database Mirroring Security Wizard)
   Use this page to specify whether you want to include a witness server in this security configuration for database mirroring.  

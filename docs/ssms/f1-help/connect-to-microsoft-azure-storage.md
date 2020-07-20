@@ -15,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Connect to Microsoft Azure Storage
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use the **Azure Storage Connection** dialog to specify a storage account and validate your connection to Azure.  
   
 ## Options  
@@ -24,7 +24,7 @@ Specify the following information about your Azure account, and then click **Nex
 1.  **Storage Account** - Specify the storage account name.
 
    >[!NOTE]
-   > You can only connect to [General-purpose Storage Accounts](https://docs.microsoft.com/azure/storage/storage-introduction#azure-storage-services). Connecting to other types of storage accounts can result in an error similar to the following:
+   > You can only connect to [General-purpose Storage Accounts](https://docs.microsoft.com/azure/storage/common/storage-introduction#azure-storage-services). Connecting to other types of storage accounts can result in an error similar to the following:
    >
    >  The value for one of the HTTP headers is not in the correct format. (Microsoft.SqlServer.StorageClient).
    >

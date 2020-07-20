@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_maintenance_plan"
 ms.assetid: e972a510-960e-41d6-93c5-c71cd581a585
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_help_maintenance_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about the specified maintenance plan. If a plan is not specified, this stored procedure returns information about all maintenance plans.  
   

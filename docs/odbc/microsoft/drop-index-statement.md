@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "DROP INDEX [ODBC]"
   - "SQL grammar [ODBC], DROP INDEX"
 ms.assetid: cd0ff767-9254-413b-bd1a-bed26c6774f5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # DROP INDEX Statement
 When the Microsoft Access, dBASE, or Paradox driver is used, the syntax of the DROP INDEX statement is "DROP INDEX a on b" where "a" is the name of the index and "b" is the name of the table (not DROP INDEX *index-name*).  

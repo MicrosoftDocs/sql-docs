@@ -1,5 +1,6 @@
 ---
 title: "Using SQLXML Bulk Load in the .NET Environment"
+description: Learn how to use the SQLXML 4.0 Bulk Load COM object in the .NET environment to bulk load XML data into a database.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLXML 4.0 .NET Framework Support - Using Bulk Load
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic explains how the XML Bulk Load functionality can be used in the .NET environment. For detailed information about XML Bulk Load, see [Performing Bulk Load of XML Data &#40;SQLXML 4.0&#41;](../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/bulk-load-xml/performing-bulk-load-of-xml-data-sqlxml-4-0.md).  
   
  To use the SQLXML Bulk Load COM object from a managed environment, you need to add a project reference to this object. This generates a managed wrapper interface around the Bulk Load COM object.  

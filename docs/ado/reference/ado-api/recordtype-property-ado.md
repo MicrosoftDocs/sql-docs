@@ -15,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "RecordType property [ADO]"
 ms.assetid: 790e46a2-13d2-451e-a8be-130bd9a206a4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RecordType Property (ADO)
 Indicates the type of [Record](../../../ado/reference/ado-api/record-object-ado.md) object.  

@@ -1,6 +1,7 @@
 ---
 title: Set Trace Display Defaults
 titleSuffix: SQL Server Profiler
+description: Explore the tool options that SQL Server Profiler uses by default in traces, such as the font type, size, and style, and learn how to adjust them.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
@@ -15,7 +16,7 @@ ms.date: 03/01/2017
 
 # Set Trace Display Defaults (SQL Server Profiler)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes how to set tool options, which specify the font types, size, and style that [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] uses to display traces in the trace window. You can also specify that [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] displays all dates and times with the regional settings that are configured for your operating system.  
   

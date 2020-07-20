@@ -11,8 +11,8 @@ dev_langs:
 helpviewer_keywords: 
   - "SubmitChanges method [ADO], VBScript example"
 ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # SubmitChanges Method Example (VBScript)
 > [!IMPORTANT]

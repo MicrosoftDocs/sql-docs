@@ -30,9 +30,8 @@ helpviewer_keywords:
   - "at-identity attribute"
   - "xml data type [SQL Server], SQLXML"
 ms.assetid: 4dc48762-bc12-43fb-b356-ea1b9c1e287e
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Inserting Data Using XML Updategrams (SQLXML 4.0)
   An updategram indicates an insert operation when a record instance appears in the **\<after>** block but not in the corresponding **\<before>** block. In this case, the updategram inserts the record in the **\<after>** block into the database.  

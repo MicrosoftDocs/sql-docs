@@ -22,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # ALTER SERVER CONFIGURATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Modifies global configuration settings for the current server in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -30,7 +30,7 @@ Modifies global configuration settings for the current server in [!INCLUDE[ssNoV
   
 ## Syntax  
 
-```  
+```syntaxsql
 ALTER SERVER CONFIGURATION  
 SET <optionspec>   
 [;]  
@@ -105,7 +105,10 @@ SET <optionspec>
    }  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 **\<process_affinity> ::=**  
   
 PROCESS AFFINITY  

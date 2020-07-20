@@ -1,5 +1,6 @@
 ---
 title: "Network Protocols and Network Libraries | Microsoft Docs"
+description: A server can be configured to monitor multiple network protocols. You can change the configuration using the SQL Server Configuration Manager.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "network protocols [SQL Server], about network protocols"
   - "configuration options [SQL Server], libraries"
 ms.assetid: 8cd437f6-9af1-44ce-9cb0-4d10c83da9ce
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ---
 # Network Protocols and Network Libraries
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   A server can listen on, or monitor, multiple network protocols at one time. However, each protocol must be configured. If a particular protocol is not configured, the server cannot listen on that protocol. After installation, you can change the protocol configurations using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   

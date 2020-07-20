@@ -1,6 +1,6 @@
 ---
 title: "Handling null values"
-description: "Demonstrates how to work with GUID and uniqueidentifier values in SQL Server and .NET."
+description: "Demonstrates how to work with null values in SQL Server and .NET and how they differ from empty values."
 ms.date: "08/15/2019"
 dev_langs: 
   - "csharp"
@@ -9,8 +9,8 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Handling null values

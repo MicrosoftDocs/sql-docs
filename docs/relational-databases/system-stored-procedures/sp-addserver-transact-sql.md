@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "machine names [SQL Server]"
   - "computer names"
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_addserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Defines the name of the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When the computer hosting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is renamed, use **sp_addserver** to inform the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] of the new computer name. This procedure must be executed on all instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] hosted on the computer. The instance name of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] cannot be changed. To change the instance name of a named instance, install a new instance with the desired name, detach the database files from old instance, attach the databases to the new instance and drop the old instance. Alternatively, you can create a client alias name on the client computer, redirecting the connection to different server and instance name or **server:port** combination without changing the name of the instance on the server computer.
 

@@ -25,7 +25,7 @@ author: rothja
 ms.author: jroth
 ---
 # FETCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retrieves a specific row from a [!INCLUDE[tsql](../../includes/tsql-md.md)] server cursor.  
   
@@ -33,7 +33,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql
 FETCH   
           [ [ NEXT | PRIOR | FIRST | LAST   
                     | ABSOLUTE { n | @nvar }   

@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Manage big data clusters for SQL Server controller dashboard
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 In addition to **azdata** and the cluster status notebook, there is another way to view the status of a SQL Server Big Data Cluster. You can now add the SQL Server Big Data Cluster controller through the **Connections** viewlet. This enables you to have a dashboard to view the cluster health.
 
@@ -22,8 +22,8 @@ In addition to **azdata** and the cluster status notebook, there is another way 
 
 The following prerequisites are required to launch the notebook:
 
-* Latest version of [Azure Data Studio Insiders build](https://docs.microsoft.com/sql/big-data-cluster/deploy-big-data-tools?view=sqlallproducts-download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc)
-* [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] extension installed in Azure Data Studio
+* Latest version of [Azure Data Studio](https://aka.ms/getazuredatastudio)
+* [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] extension installed in Azure Data Studio](../azure-data-studio/data-virtualization-extension.md)
 
 In addition to above, SQL Server 2019 Big Data Cluster also requires:
 

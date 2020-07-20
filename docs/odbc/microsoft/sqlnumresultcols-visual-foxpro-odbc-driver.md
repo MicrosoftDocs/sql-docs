@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLNumResultCols function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: a83d826c-6908-4115-b6e6-4d0615ff1738
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLNumResultCols (Visual FoxPro ODBC Driver)
 > [!NOTE]  

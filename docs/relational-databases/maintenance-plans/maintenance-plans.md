@@ -1,5 +1,6 @@
 ---
 title: "Maintenance Plans | Microsoft Docs"
+description: Learn about maintenance plans, which create a workflow to ensure that your SQL Server database is optimized, regularly backed up, and free of inconsistencies.
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Maintenance Plans
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Maintenance plans create a workflow of the tasks required to make sure that your database is optimized, regularly backed up, and free of inconsistencies. The Maintenance Plan Wizard also creates core maintenance plans, but creating plans manually gives you much more flexibility.  
   
 ## Benefits of Maintenance Plans  

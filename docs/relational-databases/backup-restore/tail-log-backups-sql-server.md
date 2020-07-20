@@ -1,5 +1,6 @@
 ---
 title: "Tail-Log Backups (SQL Server) | Microsoft Docs"
+description: In SQL Server, a tail-log backup captures any log records that have not yet been backed up to prevent data loss and to keep the log chain intact.
 ms.custom: ""
 ms.date: "08/01/2016"
 ms.prod: sql
@@ -19,7 +20,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 # Tail-Log Backups (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic is relevant only for backup and restore of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases that are using the full or bulk-logged recovery models.  
   
  A *tail-log backup* captures any log records that have not yet been backed up (the *tail of the log*) to prevent work loss and to keep the log chain intact. Before you can recover a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database to its latest point in time, you must back up the tail of its transaction log. The tail-log backup will be the last backup of interest in the recovery plan for the database.  

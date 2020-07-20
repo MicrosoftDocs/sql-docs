@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "DataMember property"
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DataMember Property
 Indicates the name of the data member that will be retrieved from the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) referenced by the [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md) property.  

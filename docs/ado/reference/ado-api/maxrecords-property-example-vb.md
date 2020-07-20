@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MaxRecords property [ADO], Visual Basic example"
 ms.assetid: 630a3be4-7a87-41cf-997e-8bb50d89db1e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # MaxRecords Property Example (VB)
 This example uses the [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) property to open a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) containing the 10 most expensive titles in the ***Titles*** table.  

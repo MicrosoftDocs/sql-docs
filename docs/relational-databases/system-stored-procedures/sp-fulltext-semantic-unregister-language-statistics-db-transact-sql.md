@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_fulltext_semantic_unregister_language_statistics_db"
 ms.assetid: 1426ca4a-9a76-489e-98da-8f6d13ff9732
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_fulltext_semantic_unregister_language_statistics_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Unregisters an existing Semantic Language Statistics database from the current instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and deletes any associated metadata.  
   

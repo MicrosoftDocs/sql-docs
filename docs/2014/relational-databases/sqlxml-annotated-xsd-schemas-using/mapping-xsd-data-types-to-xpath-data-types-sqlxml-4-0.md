@@ -16,9 +16,8 @@ helpviewer_keywords:
   - "XPath data types [SQLXML]"
   - "XSD schemas [SQLXML], mapping data types"
 ms.assetid: ced1a95e-18d4-4a5a-8da8-dbb6d58bbd45
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Mapping XSD Data Types to XPath Data Types (SQLXML 4.0)
   When an XPath query is executed against an XSD schema and the XSD type is specified in the `xsd:type` attribute, XPath uses the data type specified when it processes the query.  

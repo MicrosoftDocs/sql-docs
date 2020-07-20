@@ -11,7 +11,6 @@ f1_keywords:
 ms.assetid: a3370370-43cd-4cc2-bb9f-c0d988b96f05
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Calculation Tools (Actions Tab, Cube Designer) (Analysis Services - Multidimensional Data)
   Use the **Calculation Tools** pane on the **Actions** tab in Cube Designer to explore metadata, functions, and templates available for use in actions, drillthrough actions, and report actions.  

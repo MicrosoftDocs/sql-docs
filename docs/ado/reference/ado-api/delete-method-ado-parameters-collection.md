@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Delete method [ADO]"
 ms.assetid: 160c575e-df63-4ade-a2d3-5fd8f72e70cc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Delete Method (ADO Parameters Collection)
 Deletes an object from the [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection.  

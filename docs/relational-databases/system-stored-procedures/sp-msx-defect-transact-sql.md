@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_msx_defect"
 ms.assetid: 0dfd963a-3bc5-4b58-94f7-aec976da2883
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_msx_defect (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes the current server from multiserver operations.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Start and Use the Database Engine Tuning Advisor | Microsoft Docs"
+description: Learn how to start and use Database Engine Tuning Advisor in SQL Server to create workloads, tune databases, and create XML input files.
 ms.custom: ""
 ms.date: "01/09/2017"
 ms.prod: sql
@@ -20,7 +21,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Start and Use the Database Engine Tuning Advisor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to start and use Database Engine Tuning Advisor in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For information about how to view and work with the results after you tune a database, see [View and Work with the Output from the Database Engine Tuning Advisor](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md).  
   
 ##  <a name="Initialize"></a> Initialize the Database Engine Tuning Advisor  

@@ -34,7 +34,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET NOCOUNT { ON | OFF }   
 ```  
@@ -50,7 +50,7 @@ SET NOCOUNT { ON | OFF }
   
  To view the current setting for this setting, run the following query.  
   
-```  
+```sql
 DECLARE @NOCOUNT VARCHAR(3) = 'OFF';  
 IF ( (512 & @@OPTIONS) = 512 ) SET @NOCOUNT = 'ON';  
 SELECT @NOCOUNT AS NOCOUNT;  
@@ -63,7 +63,7 @@ SELECT @NOCOUNT AS NOCOUNT;
 ## Examples  
  The following example prevents the message about the number of rows affected from being displayed.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 SET NOCOUNT OFF;  

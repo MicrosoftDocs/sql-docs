@@ -14,11 +14,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_rda_test_connection stored procedure"
 ms.assetid: e2ba050c-d7e3-4f33-8281-c9b525b4edb4
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.sp_rda_test_connection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Tests the connection from SQL Server to the remote Azure server and reports problems that may prevent data migration.  
   

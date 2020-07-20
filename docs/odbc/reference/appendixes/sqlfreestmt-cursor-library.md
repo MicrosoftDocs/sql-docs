@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLFreeStmt function [ODBC], Cursor Library"
 ms.assetid: 47bfbd4d-9453-4609-958d-1e05794cb223
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLFreeStmt (Cursor Library)
 > [!IMPORTANT]  

@@ -11,8 +11,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Azure SQL Database catalog views"
 ms.assetid: 6ea26833-718b-4588-82f0-2511a76d3554
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # Azure SQL Database Catalog Views

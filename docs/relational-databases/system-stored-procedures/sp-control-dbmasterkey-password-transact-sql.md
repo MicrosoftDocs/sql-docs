@@ -1,7 +1,7 @@
 ---
 title: "sp_control_dbmasterkey_password (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "02/25/2016"
+ms.date: "04/09/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -19,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sp_control_dbmasterkey_password (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Adds or drops a credential containing the password needed to open a database master key.  
   
@@ -71,7 +71,7 @@ sp_control_dbmasterkey_password @db_name = 'database_name,
  **Potential Backward Compatibility Issue:** Currently, the stored procedure does not check whether a master key exists. This is permitted for backward compatibility, but displays a warning. This behavior is deprecated. In a future release the master key must exist and the password used in the stored procedure **sp_control_dbmasterkey_password** must be the same password as one of the passwords used to encrypt the database master key.  
   
 ## Permissions  
- Requires CONTROL permission on the database.  
+ Requires membership in the **sysadmin** fixed server role.  
   
 ## Examples  
   

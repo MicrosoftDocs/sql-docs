@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "DataFactory handler in RDS [ADO]"
   - "customized handler in RDS [ADO]"
 ms.assetid: d447712a-e123-47b5-a3a4-5d366cfe8d72
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Writing Your Own Customized Handler
 You may want to write your own handler if you are an IIS server administrator who wants the default RDS support, but more control over user requests and access rights.  

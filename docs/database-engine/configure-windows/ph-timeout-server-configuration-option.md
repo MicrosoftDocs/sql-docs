@@ -1,5 +1,6 @@
 ---
 title: "PH timeout Server Configuration Option | Microsoft Docs"
+description: 'Learn about the "PH timeout" option. See how it limits the time that the full-text protocol handler allots for connecting to a SQL Server database.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -15,11 +16,11 @@ helpviewer_keywords:
   - "protocols [SQL Server], timing out"
   - "ph timeout option"
 ms.assetid: ed19a07c-83fe-4582-9c9e-41b1ce571850
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # PH timeout Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use the PH timeout option to specify the time, in seconds, that the full-text protocol handler should wait to connect to a database before timing out. The default value is 60 seconds. Increase the ph timeout value when connection attempts are timing out due to temporary network issues.  
   

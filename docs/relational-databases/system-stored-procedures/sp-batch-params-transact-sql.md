@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_batch_params"
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_batch_params (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a rowset that contains information about the parameters included in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. **sp_batch_params** only parses the batch specified and returns information about embedded parameter values. It does not execute the batch or modify the execution environment.  
   

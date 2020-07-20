@@ -5,7 +5,7 @@ description: This article describes security concepts for SQL Server Big Data Cl
 author: nelgson 
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 10/23/2019
+ms.date: 06/22/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Security concepts for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article will cover the key security-related concepts in the big data cluster
 
@@ -79,17 +79,21 @@ Hadoop components do not support mixed mode authentication, which means that a b
 The login credentials you need to define during deployment include.
 
 Cluster admin username:
+
  + `AZDATA_USERNAME=<username>`
 
 Cluster admin password:  
  + `AZDATA_PASSWORD=<password>`
 
 > [!NOTE]
-> Note that in non-AD mode, the username "root" has to be used in combination with the above password, for authenticating to the Gateway (Knox) for access to HDFS/Spark.
+> Note that in non-AD mode, the username has to be used in combination with the above password, for authenticating to the Gateway (Knox) for access to HDFS/Spark. Prior to SQL Server 2019 CU5, the user name was `root`.
+> 
+> [!INCLUDE [big-data-cluster-root-user](../includes/big-data-cluster-root-user.md)]
 
 ## Next steps
 
-To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following resources:
+[What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
 
-- [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
-- [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+[Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+
+[Kubernetes RBAC](kubernetes-rbac.md)

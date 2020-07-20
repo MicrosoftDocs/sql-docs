@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Operators (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   An operator is a symbol specifying an action that is performed on one or more expressions. The following tables lists the operator categories that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses.  
   

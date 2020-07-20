@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Value property [ADO]"
 ms.assetid: 48919c74-86d4-462e-99b9-8854ceb8d683
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Value Property (ADO)
 

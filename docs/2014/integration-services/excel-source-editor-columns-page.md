@@ -11,9 +11,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Excel Source Editor"
 ms.assetid: 50024686-a18d-4824-b20e-c84123f89d0b
-author: janinezhang
-ms.author: janinez
-manager: craigg
+author: chugugrace
+ms.author: chugu
 ---
 # Excel Source Editor (Columns Page)
   Use the **Columns** page of the **Excel Source Editor** dialog box to map an output column to each external (source) column.  

@@ -1,5 +1,6 @@
 ---
-title: "Utility Explorer F1 Help | Microsoft Docs"
+title: Utility Explorer F1 Help
+description: Get acquainted with functionality that is offered in various areas of the SQL Server Utility. Learn about views, the dashboard, and the Utility Administration tabs.
 ms.custom: ""
 ms.date: "08/19/2016"
 ms.prod: sql
@@ -20,8 +21,10 @@ ms.assetid: 8697e4a4-4f59-4cda-af71-7de86005bd4a
 author: MikeRayMSFT
 ms.author: mikeray
 ---
+
 # Utility Explorer F1 Help
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The following sections document [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility functionality and associated operations.  
   
   ## Utility Dashboard (SQL Server Utility)
@@ -30,7 +33,7 @@ ms.author: mikeray
  For more information about how to create a utility control point, see [Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md). For more information about how to add an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, see [Enroll an Instance of SQL Server &#40;SQL Server Utility&#41;](../../relational-databases/manage/enroll-an-instance-of-sql-server-sql-server-utility.md).  
  
   
-### UIElement List  
+### UI element list  
  Managed Instance Health  
  Health status for managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is displayed on the left side of the Utility Explorer content pane.  
   
@@ -113,15 +116,15 @@ ms.author: mikeray
  ## Deployed Data-tier Application Details (SQL Server Utility)
   Information in the Deployed Data-tier Applications view of Utility Explorer provides utilization data for individual data-tier applications, CPU utilization history, storage utilization details at the file level, and the ability to view and update policy thresholds. Policy thresholds can be controlled at the data-tier application level for CPU utilization and for database data files and log files. You can also view property details for individual data-tier applications.  
   
-### UIElement List  
+### UI element list  
  List view  
  The list view in the top pane displays data about individual data-tier applications. Health state icons provide summary status for each data-tier application by utilization category:  
   
--   Green check - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Number of data-tier application which are not violating resource utilization policies. Resources are well-utilized.  
+-   Green check - :::image type="icon" source="media/well-utilized.png" border="false"::: - Number of data-tier application which are not violating resource utilization policies. Resources are well-utilized.  
   
--   Green down arrow - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
+-   Green down arrow - ![down arrow](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
   
--   Red up arrow - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Resources are overutilized.  
+-   Red up arrow - ![up arrow](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Resources are overutilized.  
   
  The sequence of columns in the list view can be changed by dragging them to the left or the right. Columns in the list view can be added or deleted by right-clicking on the column headings and selecting or unselecting columns. The right-click menu also provides sort options. Sorting can also be activated by clicking at the top of a column name.  
   
@@ -253,17 +256,17 @@ ms.author: mikeray
 ## Managed Instance Details (SQL Server Utility)
  Information in the Managed Instances view of Utility Explorer provides utilization data for individual instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], CPU utilization history, storage utilization details at the file level, and the ability to view and update policy thresholds. Policy thresholds can be controlled at the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance level, for a computer, for database files and log files, and at the level of storage volumes. You can also view property details for individual managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-### UIElement List  
+### UI element list  
  List view  
  The list view in the top pane displays data about individual instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] listed in rows by ComputerName\InstanceName.  
   
  Health state icons provide summary status for each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by utilization category:  
   
--   Green check - ![](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Number of managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] which are not violating resource utilization policies. Resources are well-utilized.  
+-   Green check - ![green check](../../relational-databases/manage/media/well-utilized.gif "Well_utilized") - Number of managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] which are not violating resource utilization policies. Resources are well-utilized.  
   
--   Green down arrow - ![](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
+-   Green down arrow - ![down arrow](../../relational-databases/manage/media/utility-down-arrow.gif "Utility_down_arrow") - Resources are underutilized.  
   
--   Red up arrow - ![](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Resources are overutilized.  
+-   Red up arrow - ![up arrow](../../relational-databases/manage/media/utility-up-arrow.gif "Utility_up_arrow") - Resources are overutilized.  
   
  The sequence of columns in the list view can be changed by dragging them to the left or the right. Columns in the list view can be added or deleted by right-clicking on the column headings and selecting or unselecting columns. The right-click menu also provides sort options. Sorting can also be activated by clicking at the top of a column name.  
   
@@ -411,7 +414,7 @@ ms.author: mikeray
 ## Utility Administration (SQL Server Utility)
 Use the Utility Administration tabs to manage policy, security, and data warehouse settings for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. For more information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility concepts, see [SQL Server Utility Features and Tasks](../../relational-databases/manage/sql-server-utility-features-and-tasks.md).  
   
-### UIElement List
+### UI element list
  **Policy tab** - Use the policy tab to view or specify global monitoring policies.  
   
  Set global data-tier application monitoring policies. To expand the list of values for this option, click on the arrow next to the policy name, or click on the policy title.  

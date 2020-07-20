@@ -1,5 +1,6 @@
 ---
 title: "Database Engine Tutorials | Microsoft Docs"
+description: Use these tutorials to learn about the SQL Server Database Engine, including getting started and using the SQL Server Management Studio.
 ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: "jroth"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Engine Tutorials
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 This section contains tutorials for [!INCLUDE[ssDECurrent](../includes/ssdecurrent-md.md)].  
   
 [Tutorial: Getting Started with the Database Engine](../relational-databases/tutorial-getting-started-with-the-database-engine.md)  

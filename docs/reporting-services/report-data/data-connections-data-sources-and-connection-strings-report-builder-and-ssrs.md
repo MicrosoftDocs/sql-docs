@@ -1,6 +1,7 @@
 ---
 title: "Create data connection strings - Report Builder & SSRS | Microsoft Docs"
-ms.date: 11/18/2019
+description: Learn how to create data connection strings and learn important information related to data source credentials.
+ms.date: 05/21/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data
@@ -42,7 +43,7 @@ ms.author: maggies
 |XML data source, XML document|`https://localhost/XML/Customers.xml`|Set the data source type to **XML**. The connection string is a URL to the XML document. 
 |XML data source, embedded XML document|*Empty*|Set the data source type to **XML**. The XML data is embedded in the report definition.|  
 |SharePoint List|`data source=https://MySharePointWeb/MySharePointSite/`|Set data source type to **SharePoint List**.|  
-| Power BI Premium dataset (Starting with Reporting Services 2019) | Server=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;initial catalog = <YourDatasetName> | Set data source type to **Microsoft SQL Server Analysis Services**. |
+| Power BI Premium dataset (Starting with Reporting Services 2019 and Power BI Report Server January 2020) | `Data Source=powerbi://api.powerbi.com/v1.0/myorg/<workspacename>;Initial Catalog=<datasetname>` | Set data source type to **Microsoft SQL Server Analysis Services**. |
 
   
  If you fail to connect to a report server using **localhost**, check that the network protocol for TCP/IP protocol is enabled. For more information, see [Configure Client Protocols](../../database-engine/configure-windows/configure-client-protocols.md).  

@@ -1,5 +1,6 @@
 ---
-title: "System Requirements (ODBC Driver for SQL Server) | Microsoft Docs"
+title: "System Requirements (ODBC Driver for SQL Server)"
+description: "This lists the system requirements for the ODBC Driver for SQL Server on Linux and macOS operating systems."
 ms.custom: ""
 ms.date: "03/18/2020"
 ms.prod: sql
@@ -12,10 +13,10 @@ helpviewer_keywords:
   - "system requirements"
   - "requirements"
 ms.assetid: f03b7fdd-0e9d-4e74-958d-e8c87e027348
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
-# System Requirements
+# System Requirements (Linux and macOS)
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -27,7 +28,7 @@ The Linux and macOS drivers SQL version compatibility is the same as the [Window
 
 ## Operating system support
 
-Versions 17, 13.1, and 13 of the Linux and macOS drivers are supported for the 64-bit versions of the following operating systems:
+Versions 17, 13.1, and 13 of the Linux and macOS drivers are supported on the x64 architecture of the following operating systems:
 
 |Supported Operating System     |17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
 |-------------------------------|----|----|----|----|----|----|----|--|

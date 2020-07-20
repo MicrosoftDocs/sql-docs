@@ -48,7 +48,7 @@ In the following row, click whichever product name you are interested in. The cl
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for SQL Server
 
 ALTER LOGIN login_name
@@ -158,7 +158,7 @@ If MUST_CHANGE is specified, CHECK_EXPIRATION and CHECK_POLICY must be set to ON
 
 If CHECK_POLICY is set to OFF, CHECK_EXPIRATION cannot be set to ON. An ALTER LOGIN statement that has this combination of options will fail.
 
-You cannot use ALTER_LOGIN with the DISABLE argument to deny access to a Windows group. For example, ALTER_LOGIN [*domain\group*] DISABLE will return the following error message:
+You cannot use ALTER LOGIN with the DISABLE argument to deny access to a Windows group. For example, ALTER LOGIN [*domain\group*] DISABLE will return the following error message:
 
     `"Msg 15151, Level 16, State 1, Line 1
     "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
@@ -287,7 +287,7 @@ GO
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database
 
 ALTER LOGIN login_name
@@ -448,7 +448,7 @@ GO
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database managed instance
 
 ALTER LOGIN login_name
@@ -487,7 +487,7 @@ ALTER LOGIN login_name
 > [!NOTE]
 > The Azure AD admin for managed instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Database managed instance using Azure AD logins
 
 ALTER LOGIN login_name
@@ -715,7 +715,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for Azure Synapse
 
 ALTER LOGIN login_name
@@ -875,7 +875,7 @@ GO
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for Analytics Platform System
 
 ALTER LOGIN login_name

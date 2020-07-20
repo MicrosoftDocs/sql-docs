@@ -10,7 +10,7 @@ ms.technology: integration-services
 author: chugugrace
 ms.author: chugu
 ---
-# SQL Server Integration Services (SSIS) DevOps Tools (Preview)
+# SQL Server Integration Services (SSIS) DevOps Tools
 
 [SSIS DevOps Tools](https://marketplace.visualstudio.com/items?itemName=SSIS.ssis-devops-tools) extension is available in **Azure DevOps** Marketplace.
 
@@ -68,7 +68,7 @@ start -Wait -FilePath msiexec -Args "/i AFP.msi /quiet /l* log.txt"
 cat log.txt
 ```
 
-- Protection level **EncryptSensitiveWithPassword** and **EncryptAllWithPassword** are not supported in SSIS Build task. Make sure all SSIS projects in codebase are not using these two protection levels, or SSIS Build task will hang and time out during execution.
+- Protection level **EncryptSensitiveWithPassword** and **EncryptAllWithPassword** are not supported in SSIS Build task. Make sure all SSIS projects in codebase are not using these two protection levels, or SSIS Build task will stop responding and time out during execution.
 
 ## SSIS Deploy task
 
@@ -166,7 +166,7 @@ Refer to details on how to [define configuration JSON](#define-configuration-jso
 
 Path of the SSIS catalog configuration JSON file. This property is only visible when selecting "File path" as configuration file source.
 
-To use [pipeline variables](https://docs.microsoft.comazure/devops/pipelines/process/variables?view=azure-devops&tabs=yaml%2Cbatch) in configuration JSON file, you need to add a [File Transform task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) before this task to substitute configuration values with pipeline variables. For more information, see [JSON variable substitution](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution).
+To use [pipeline variables](/azure/devops/pipelines/process/variables) in configuration JSON file, you need to add a [File Transform task](https://docs.microsoft.com/azure/devops/pipelines/tasks/utility/file-transform?view=azure-devops) before this task to substitute configuration values with pipeline variables. For more information, see [JSON variable substitution](https://docs.microsoft.com/azure/devops/pipelines/tasks/transforms-variable-substitution?view=azure-devops&tabs=Classic#json-variable-substitution).
 
 #### Inline configuration JSON
 
@@ -307,9 +307,9 @@ The configuration JSON schema has three layers:
 
 |Property  |Description  |Notes  |
 |---------|---------|---------|
-|name|Name of the parameter.|The parameter can be *project parameter* or *package parameter*. <br> The parameter will be skipped if it does not exist in the parent project.|
-|container|Container of the parameter.|<li>If the parameter is a project parameter, the *container* should be the project name. <li>If it's a package parameter, the *container* should be the package name with **.dtsx** extension. <li> If the parameter is a connection manager property, the name should be in such format: **CM.\<Connection Manager Name>.\<Property Name>**.|
-|value|Value of the parameter.|<li>When *valueType* is *referenced*: The value is a reference to an environment variable in  *string* type. <li> When *valueType* is *literal*: This attribute supports any valid *boolean*, *number*, and *string* JSON values. <br> The value will be converted to the target parameter type. Error will occur if it cannot be converted.<li> The value of *null* is invalid. The task will skip this parameter object, and give a warning.|
+|name|Name of the parameter.|<li>The parameter can be a project parameter or a package parameter. <li>The parameter is skipped if it doesn't exist. <li>If the parameter is a connection manager property, the name should be in the format **CM.\<Connection Manager Name>.\<Property Name>**. |
+|container|Container of the parameter.|<li>If the parameter is a project parameter, the *container* should be the project name. <li>If it's a package parameter, the *container* should be the package name with **.dtsx** extension.|
+|value|Value of the parameter.|<li>When *valueType* is *referenced*: The value is a reference to an environment variable in  *string* type. <li> When *valueType* is *literal*: This attribute supports any valid *boolean*, *number*, and *string* JSON values. <li> The value will be converted to the target parameter type. Error will occur if it cannot be converted.<li> The value of *null* is invalid. The task will skip this parameter object, and give a warning.|
 |valueType|Type of the parameter value.|Valid types are: <br> *literal*: The *value* attribute represents a literal value. <br> *referenced*: The *value* attribute represents a reference to an environment variable.|
 
 ##### Reference Attributes
@@ -338,6 +338,26 @@ The configuration JSON schema has three layers:
 |sensitive|Whether the value of the environment variable is sensitive.|Valid inputs are: <br> *true* <br> *false*|
 
 ## Release notes
+
+### Version 1.0.2
+
+Release Date: May 26, 2020
+
+- Fixed an issue that SSIS Catalog Configuration task may fail in some case after configuration work is done.
+
+### Version 1.0.1
+
+Release Date: May 9, 2020
+
+- Fixed an issue that SSIS Build task always build the whole solution even if only single dtproj file is specified as project path.
+
+### Version 1.0.0
+
+Release Date: May 8, 2020
+
+- General Availability (GA) release.
+- Added a restriction of minimum .NET framework version on agent. Currently the minimum .NET framework version is 4.6.2.
+- Refined description of SSIS Build task and SSIS Deploy task.
 
 ### Version 0.2.0 Preview
 

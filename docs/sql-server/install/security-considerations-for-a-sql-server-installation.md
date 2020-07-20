@@ -1,10 +1,11 @@
 ---
 title: "Security Considerations"
+description: This article discusses some security best practices that you should consider both before and after you install SQL Server.
 ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: security
 ms.topic: conceptual
 helpviewer_keywords: 
   - "firewall systems [SQL Server]"
@@ -23,11 +24,11 @@ helpviewer_keywords:
   - "file system security [SQL Server]"
   - "installing SQL Server, security"
 ms.assetid: cf96155f-30a8-48b7-8d6b-24ce90dafdc7
-author: MashaMSFT
-ms.author: mathoma
+author: VanMSFT
+ms.author: vanto
 ---
 # Security Considerations for a SQL Server Installation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
  Security is important for every product and every business. By following simple best practices, you can avoid many security vulnerabilities. This article discusses some security best practices that you should consider both before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and after you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Security guidance for specific features is included in the reference articles for those features.  
   

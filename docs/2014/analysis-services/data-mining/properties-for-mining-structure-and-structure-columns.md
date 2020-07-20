@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: ce90f684-bb8c-4eca-b9e6-000794dbee16
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Properties for Mining Structure and Structure Columns
   You can set or change the properties for a mining structure and for its associated columns and nested tables by using the **Mining Structure** tab of Data Mining Designer. Properties that you set in this tab are propagated to each mining model that is associated with the structure.  

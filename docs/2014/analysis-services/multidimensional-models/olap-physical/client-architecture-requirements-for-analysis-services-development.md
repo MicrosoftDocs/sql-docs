@@ -16,7 +16,6 @@ helpviewer_keywords:
 ms.assetid: 03a8eb6b-159f-4a0a-afbe-06a2424b6090
 author: minewiskan
 ms.author: owend
-manager: craigg
 ---
 # Client Architecture Requirements for Analysis Services Development
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] supports a thin-client architecture. The [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] calculation engine is entirely server-based, so all queries are resolved on the server. As a result, only a single round trip between the client and the server is required for each query, resulting in scalable performance as queries increase in complexity.
@@ -25,7 +24,7 @@ manager: craigg
 
  Several different providers are provided with [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] to support different programming languages. A provider communicates with an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server by sending and receiving XML for Analysis in SOAP packets over TCP/IP or over HTTP through Internet Information Services (IIS). An HTTP connection uses a COM object instantiated by IIS, called a data pump, which acts as a conduit for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] data. The data pump does not examine the underlying data contained in the HTTP stream in any way, nor are any of the underlying data structures available to any of the code in the data library itself.
 
- ![Logical client architecture for Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-clientarch9.gif "Logical client architecture for Analysis Services")
+ ![Logical client architecture for Analysis Services](../../../analysis-services/dev-guide/media/as-clientarch9.gif "Logical client architecture for Analysis Services")
 
  Win32 client applications can connect to an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server using OLE DB for OLAP interfaces or the Microsoft® ActiveX® Data Objects (ADO) object model for Component Object Model (COM) automation languages, such as Microsoft Visual Basic®. Applications coded with .NET languages can connect to an [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] server using ADOMD.NET.
 
@@ -40,7 +39,7 @@ manager: craigg
 
  [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] has a Web architecture with a fully scalable middle tier for deployment by both small and large organizations. [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] provides broad middle tier support for Web services. ASP applications are supported by OLE DB for OLAP and ADO MD, ASP.NET applications are supported by ADOMD.NET. The middle tier, illustrated in the following figure, is scalable to many concurrent users.
 
- ![Logical diagram for middle-tier architecture](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/as-midtierarch9.gif "Logical diagram for middle-tier architecture")
+ ![Logical diagram for middle-tier architecture](../../../analysis-services/dev-guide/media/as-midtierarch9.gif "Logical diagram for middle-tier architecture")
 
  Both client and middle tier applications can communicate directly with [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] without using a provider. Client and middle tier applications may send XML for Analysis in SOAP packets over TCP/IP, HTTP, or HTTPS. The client may be coded using any language that supports SOAP. Communication in this case is most easily managed by Internet Information Services (IIS) using HTTP, although a direct connection to the server using TCP/IP may also be coded. This is the thinnest possible client solution for [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)].
 

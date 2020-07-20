@@ -23,7 +23,7 @@ author: rothja
 ms.author: jroth
 ---
 # SOME | ANY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Compares a scalar value with a single-column set of values. SOME and ANY are equivalent.  
   
@@ -31,7 +31,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }   
      { SOME | ANY } ( subquery )   

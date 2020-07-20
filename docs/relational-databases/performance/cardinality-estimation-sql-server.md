@@ -1,5 +1,6 @@
 ---
 title: "Cardinality Estimation (SQL Server) | Microsoft Docs"
+description: The SQL Server Query Optimizer selects query plans that have the lowest estimated processing cost, which it determines based on rows processed and a cost model.
 ms.custom: ""
 ms.date: "02/24/2019"
 ms.prod: sql
@@ -19,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 # Cardinality Estimation (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Optimizer is a cost-based Query Optimizer. This means that it selects query plans that have the lowest estimated processing cost to execute. The Query Optimizer determines the cost of executing a query plan based on two main factors:
 
@@ -43,12 +44,7 @@ In the following cases, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)
 
 This article illustrates how you can assess and choose the best CE configuration for your system. Most systems benefit from the latest CE because it is the most accurate. The CE predicts how many rows your query will likely return. The cardinality prediction is used by the Query Optimizer to generate the optimal query plan. With more accurate estimations, the Query Optimizer can usually do a better job of producing a more optimal query plan.  
   
-Your application system could possibly have an important query whose plan is changed to a slower plan due to the new CE. Such a query might be like one of the following:  
-  
-- An OLTP (online transaction processing) query that runs so frequently that multiple instance of it often run concurrently.  
-- A SELECT with substantial aggregation that runs during your OLTP business hours.  
-  
-You have techniques for identifying a query that performs slower with the new CE. And you have options for how to address the performance issue.
+Your application system could possibly have an important query whose plan is changed to a slower plan due to changes in the CE throughout versions. You have techniques and tools for identifying a query that performs slower due to CE issues. And you have options for how to address the ensuing performance issues.
   
 ## Versions of the CE
 
@@ -124,7 +120,10 @@ SET QUERY_STORE CLEAR;
 ```  
   
 > [!TIP] 
-> We recommend that you install the latest release of [Management Studio](https://msdn.microsoft.com/library/mt238290.aspx) and update it often.  
+> We recommend that you install the latest release of [Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) and update it often.  
+
+> [!IMPORTANT] 
+> Ensure the Query Store is correctly configured for your database and workload. For more information, see [Best practices with Query Store](../../relational-databases/performance/best-practice-with-the-query-store.md). 
   
 Another option for tracking the cardinality estimation process is to use the extended event named **query_optimizer_estimate_cardinality**. The following [!INCLUDE[tsql](../../includes/tsql-md.md)] code sample runs on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. It writes a .xel file to `C:\Temp\` (although you can change the path). When you open the .xel file in [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)], its detailed information is displayed in a user friendly manner.  
   
@@ -171,7 +170,7 @@ Next are steps you can use to assess whether any of your most important queries 
   
     3.  Ensure that your database has its `LEGACY_CARDINALITY_ESTIMATION` configuration turned OFF.  
   
-    4.  CLEAR your query store. Of course, ensure your query store is ON.  
+    4.  Clear your Query Store. Ensure your Query Store is ON.  
   
     5.  Run the statement: `SET NOCOUNT OFF;`  
   
@@ -277,8 +276,8 @@ With extense new research on modern workloads and actual business data reveal th
   
 ```sql  
 SELECT s.ticket, s.customer, r.store  
-FROM dbo.Sales    AS s  
-CROSS JOIN dbo.Returns  AS r  
+FROM dbo.Sales AS s  
+CROSS JOIN dbo.Returns AS r  
 WHERE s.ticket = r.ticket AND  
       s.type = 'toy' AND  
       r.date = '2016-05-11';  

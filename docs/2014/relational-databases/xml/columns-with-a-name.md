@@ -9,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "names [SQL Server], columns with"
 ms.assetid: c994e089-4cfc-4e9b-b7fc-e74f6014b51a
-author: MightyPen
-ms.author: genemi
-manager: craigg
+author: rothja
+ms.author: jroth
 ---
 # Columns with a Name
   The following are the specific conditions in which rowset columns with a name are mapped, case-sensitive, to the resulting XML:  

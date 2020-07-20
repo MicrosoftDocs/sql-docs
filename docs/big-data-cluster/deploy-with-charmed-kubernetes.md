@@ -91,8 +91,6 @@ applications:
     options:
       channel: 1.18/stable
       allow-privileged: 'True'
-  kubernetes-worker:
-    constraints: cores=8 mem=64G root-disk=100G
 ```
 
 It will also be useful to apply an overlay specific to the cloud in use. There are many sample overlays for **Charmed Kubernetes** to facilitate integration with the underlying cloud. For example, for Azure, the [sample overlay][azure-overlay] additional installs and connects the `azure-integrator` charm, which will create an Azure based storage class and enable the cluster to use natve Azure load balancers.

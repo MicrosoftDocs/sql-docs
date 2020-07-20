@@ -101,7 +101,9 @@ ORDER BY order_by_expression
 OVER ( [ PARTITION BY value_expression ] [ order_by_clause ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  PARTITION BY  
  Divides the query result set into partitions. The window function is applied to each partition separately and computation restarts for each partition.  
   

@@ -49,7 +49,9 @@ SET DATEFIRST { number | @number_var }
 SET DATEFIRST 7 ;  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *number* | **@**_number_var_  
  Is an integer that indicates the first day of the week. It can be one of the following values.  
   

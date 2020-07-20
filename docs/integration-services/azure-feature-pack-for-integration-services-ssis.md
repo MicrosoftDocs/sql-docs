@@ -188,6 +188,12 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 ## Release Notes
 
+### Version 1.19.0
+
+#### Improvements
+
+1. Added support for shared access signature authentication to Azure Storage connection manager.
+
 ### Version 1.18.0
 
 #### Improvements

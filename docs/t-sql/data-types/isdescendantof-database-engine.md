@@ -34,8 +34,10 @@ child. IsDescendantOf ( parent )
 -- CLR syntax  
 SqlHierarchyId IsDescendantOf (SqlHierarchyId parent )  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *parent*  
 The **hierarchyid** node for which the IsDescendantOf test should be performed.
   

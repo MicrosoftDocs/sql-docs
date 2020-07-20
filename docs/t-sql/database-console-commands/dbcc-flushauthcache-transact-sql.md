@@ -1,5 +1,5 @@
 ---
-title: "DBCC FLUSHAUTHCACHE (Transact-SQL) | Microsoft Docs"
+title: DBCC FLUSHAUTHCACHE (Transact-SQL)
 ms.custom: ""
 ms.date: "07/16/2017"
 ms.prod: sql
@@ -19,7 +19,9 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
+
 # DBCC FLUSHAUTHCACHE (Transact-SQL)
+
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Empties the database authentication cache containing information about logins  and firewall rules,  for the current user database in [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. This statement doesn't apply to the logical master database, because the master database contains the physical storage for the information about logins and firewall rules. The user executing the statement and other currently connected users remain connected. (DBCC FLUSHAUTHCACHE isn't currently supported for [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)].)
@@ -30,8 +32,8 @@ Empties the database authentication cache containing information about logins  a
   
 ```syntaxsql
 DBCC FLUSHAUTHCACHE [ ; ]  
-```  
-  
+```
+
 ## Arguments  
 None.
   

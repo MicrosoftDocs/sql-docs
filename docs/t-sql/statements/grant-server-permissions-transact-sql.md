@@ -48,7 +48,9 @@ GRANT permission [ ,...n ]
     | server_role  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on a server. For a list of the permissions, see the Remarks section later in this topic.  
   

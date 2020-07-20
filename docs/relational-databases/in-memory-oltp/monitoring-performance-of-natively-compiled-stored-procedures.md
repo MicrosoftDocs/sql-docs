@@ -45,9 +45,7 @@ EXEC sys.sp_xtp_control_proc_exec_stats 1
 **[!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]**: Enable or disable statistics collection on natively compiled stored procedures at the procedure level using the [database-scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) option `XTP_PROCEDURE_EXECUTION_STATISTICS`. The following statement enables collection of procedure-level execution statistics for all natively compiled T-SQL modules in the current database:
 
 ```sql
-ALTER DATABASE
-    SCOPED CONFIGURATION
-    SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON;
+ALTER DATABASE SCOPED CONFIGURATION SET XTP_PROCEDURE_EXECUTION_STATISTICS = ON;
 ```
 
 ## Query-Level Execution Statistics

@@ -35,8 +35,8 @@ Defines a date that is combined with a time of day. The time is based on a 24-ho
   
 ## smalldatetime description
   
-|||  
-|-|-|  
+|Property|Value|
+|--------|-----|
 |Syntax|**smalldatetime**|  
 |Usage|DECLARE \@MySmalldatetime **smalldatetime**<br /><br /> CREATE TABLE Table1 ( Column1 **smalldatetime** )|  
 |Default string literal formats<br /><br /> (used for down-level client)|Not applicable|  

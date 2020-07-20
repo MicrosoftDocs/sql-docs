@@ -103,6 +103,8 @@
         items:
         - name: Azure Kubernetes Service
           href: big-data-cluster/deploy-on-aks.md
+        - name: Charmed Kubernetes
+          href: big-data-cluster/deploy-with-charmed-kubernetes.md
         - name: Kubeadm
           href: big-data-cluster/deploy-with-kubeadm.md
         - name: OpenShift

@@ -132,7 +132,9 @@ Query hints specify that the indicated hints should be used throughout the query
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 { HASH | ORDER } GROUP  
 Specifies that aggregations that the query's GROUP BY or DISTINCT clause describes should use hashing or ordering.  
   

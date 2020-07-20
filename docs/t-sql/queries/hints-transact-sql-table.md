@@ -114,7 +114,9 @@ WITH  ( <table_hint> [ [, ]...n ] )
 }   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 WITH **(** \<table_hint> **)** [ [**,** ]...*n* ]  
 With some exceptions, table hints are supported in the FROM clause only when the hints are specified with the WITH keyword. Table hints also must be specified with parentheses.  
   

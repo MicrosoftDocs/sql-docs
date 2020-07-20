@@ -1,5 +1,5 @@
 ---
-title: "sql_variant (Transact-SQL) | Microsoft Docs"
+title: sql_variant (Transact-SQL)
 ms.custom: ""
 ms.date: "09/12/2017"
 ms.prod: sql
@@ -95,18 +95,24 @@ The following rules apply to **sql_variant** comparisons:
 ## Converting sql_variant Data  
 When handling the **sql_variant** data type, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports implicit conversions of objects with other data types to the **sql_variant** type. However, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] does not support implicit conversions from **sql_variant** data to an object with another data type.
   
-## Restrictions  
-The following table lists the types of values that cannot be stored by using **sql_variant**:
-  
-|||  
-|-|-|  
-|**varchar(max)**|**varbinary(max)**|  
-|**nvarchar(max)**|**xml**|  
-|**text**|**ntext**|  
-|**image**|**rowversion** (**timestamp**)|  
-|**sql_variant**|**geography**|  
-|**hierarchyid**|**geometry**|  
-|User-defined types|**datetimeoffset**<sup>1</sup>| 
+## Restrictions
+
+The following lists the types of values that cannot be stored by using **sql_variant**:
+
+- **datetimeoffset**<sup>1</sup>
+- **geography**
+- **geometry**
+- **hierarchyid**
+- **image**
+- **ntext**
+- **nvarchar(max)**
+- **rowversion** (**timestamp**)
+- **text**
+- **varchar(max)**
+- **varbinary(max)**
+- **sql_variant**
+- User-defined types
+- **xml**
 
 <sup>1</sup> SQL Server 2012 and greater do not restrict **datetimeoffset**.
 

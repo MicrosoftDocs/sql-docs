@@ -76,47 +76,12 @@ subjects:
 EOF
 ```
 
-The service account, cluster role and the cluster role binding can be created either before or post BDC deployment. Kubernetes automatically updates the permission for the Telegraf service account. If these are created as a pod deployment, you will see a few minutes delay in the pod and node metrics being collected.
-
-```console
-export CLUSTER_NAME=mssql-cluster
-kubectl create -f - <<EOF
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: ${CLUSTER_NAME}:cr-mssql-metricsdc-reader
-rules:
-- apiGroups:
-  - '*'
-  resources:
-  - pods
-  - nodes/stats
-  verbs:
-  - get
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: ${CLUSTER_NAME}:crb-mssql-metricsdc-reader
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: ${CLUSTER_NAME}:cr-mssql-metricsdc-reader
-subjects:
-- kind: ServiceAccount
-  name: sa-mssql-metricsdc-reader
-  namespace: ${CLUSTER_NAME}
-EOF
-```
-
-​> [!NOTE]
-> The service account, cluster role and the cluster role binding can be created either before or post BDC deployment. Kubernetes will automatically update the permission for the Telegraf service account. If these are created pod deployment, you will see a few minutes delay in the pod and node metrics being collected.
+The service account, cluster role and the cluster role binding can be created either before or post BDC deployment. Kubernetes automatically updates the permission for the Telegraf service account. If these are created as a pod deployment, you will see a few minutes' delay in the pod and node metrics being collected.
 
 > [!NOTE]
 > SQL Server 2019 CU5 introduces two feature switches to control the collection of pod and node metrics. By default these parameters are set to true in all environment targets, except OpenShift where the default is overridden. 
 
-You can customize the these settings in  the security section in the `control.json` deployment configuration file:
+You can customize these settings in the security section in the `control.json` deployment configuration file:
 
 ```json
   "security": {
@@ -126,4 +91,4 @@ You can customize the these settings in  the security section in the `control.js
   }
 ```
 
-If these settings are set to `false`, BDC deployemnt workflow will not attempt to create the service account, cluster role, and the binding for Telegraf.
+If these settings are set to `false`, BDC deployment workflow will not attempt to create the service account, cluster role, and the binding for Telegraf.

@@ -27,7 +27,9 @@ Returns a **LineString** instance with two points that represent the shortest di
 .ShortestLineTo ( geometry_other )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *geometry_other*  
  The second **geometry** instance that the calling **geometry** instance is trying to determine the shortest distance to.  
   

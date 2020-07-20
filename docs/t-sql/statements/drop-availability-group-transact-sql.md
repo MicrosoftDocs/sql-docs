@@ -41,7 +41,9 @@ DROP AVAILABILITY GROUP group_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *group_name*  
  Specifies the name of the availability group to be dropped.  
   

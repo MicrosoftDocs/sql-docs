@@ -112,7 +112,9 @@ CREATE STATISTICS statistics_name
     IS | IS NOT | = | <> | != | > | >= | !> | < | <= | !<  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *statistics_name*  
  Is the name of the statistics to create.  
   

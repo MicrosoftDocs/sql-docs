@@ -36,7 +36,9 @@ I am making this fix now, from ```sql to ```cs, on 2020/04/16.  GeneMi.
 void Read( BinaryReader r )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *r*  
  The **BinaryReader** object that produces a binary stream corresponding to a binary representation of a **hierarchyid** node.  
   

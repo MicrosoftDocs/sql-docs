@@ -32,7 +32,9 @@ ms.author: vanto
 DROP CRYPTOGRAPHIC PROVIDER provider_name   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *provider_name*  
  Is the name of the Extensible Key Management provider.  
   

@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 helpviewer_keywords: 
-  - "Installing the Extension Pack"
+  - "Installing the extension pack"
   - "SQL Server Database Objects"
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: "nahk-ivanov"
@@ -55,16 +55,14 @@ To install the extension pack:
 6. On the **Ready to Install** page, select **Install**.
 7. On the **Completed the First Step of Installation** page, select **Next**.
   
-   A new dialog box will appear, in which you select the type of Extension Pack installation.
-
-   instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] for the Extension Pack installation.
+   A new dialog box appears. Select the extension pack type.
   
 8. Select the desired installation type and, click **Next**.
 
    > [!IMPORTANT]
-   > Remote option should only be used when installing Extension Pack on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on Linux or when targeting [!INCLUDE[ssAzureMi](../../includes/ssazuremi_md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installations running on Windows should always have Extension Pack installed locally. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] and Azure SQL Data Warehouse do not support Extension Pack.
+   > Remote option should only be used when installing extension pack on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] running on Linux or when targeting [!INCLUDE[ssAzureMi](../../includes/ssazuremi_md.md)]. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installations running on Windows should always have extension pack installed locally. [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] and Azure SQL Data Warehouse do not support extension pack.
 
-   If you are installing the Extension Pack on a local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, then next page will allow you to choose a local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which you'll be migrating Oracle schemas. Choose an instance in the drop-down, and then select **Next**.
+   If you are installing the extension pack on a local [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance, then next page will allow you to choose a local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to which you'll be migrating Oracle schemas. Choose an instance in the drop-down, and then select **Next**.
 
    The default instance has the same name as the computer. Named instances will be followed by a backslash and the instance name.
 

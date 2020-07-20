@@ -90,6 +90,8 @@ MERGE
     <search_condition> 
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 WITH \<common_table_expression>  

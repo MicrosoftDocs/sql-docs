@@ -23,7 +23,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-a
 This article introduces Scalar UDF Inlining, a feature under the [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]).
 
 ## T-SQL scalar User-Defined Functions
-User-Defined Functions (UDFs) that are implemented in [!INCLUDE[tsql](../../includes/tsql-md.md)] and return a single data value are referred to as T-SQL Scalar User-Defined Functions. T-SQL UDFs are an elegant way to achieve code reuse and modularity across [!INCLUDE[tsql](../../includes/tsql-md.md)] queries. Some computations (such as complex business rules) are easier to express in imperative UDF form. UDFs help in building up complex logic without requiring expertise in writing complex SQL queries.
+User-Defined Functions (UDFs) that are implemented in [!INCLUDE[tsql](../../includes/tsql-md.md)] and return a single data value are referred to as T-SQL Scalar User-Defined Functions. T-SQL UDFs are an elegant way to achieve code reuse and modularity across [!INCLUDE[tsql](../../includes/tsql-md.md)] queries. Some computations (such as complex business rules) are easier to express in imperative UDF form. UDFs help in building up complex logic without requiring expertise in writing complex SQL queries. For more information about UDFs, see [Create User-defined Functions (Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).
 
 ## Performance of scalar UDFs
 Scalar UDFs typically end up performing poorly due to the following reasons:
@@ -128,7 +128,7 @@ As mentioned earlier, the query plan no longer has a user-defined function opera
 Depending upon the complexity of the logic in the UDF, the resulting query plan might also get bigger and more complex. As we can see, the operations inside the UDF are now no longer a black box, and hence the query optimizer is able to cost and optimize those operations. Also, since the UDF is no longer in the plan, iterative UDF invocation is replaced by a plan that completely avoids function call overhead.
 
 ## Inlineable scalar UDFs requirements
-<a name="requirements"></a> A scalar T-SQL UDF can be inline if all of the following conditions are true:
+<a name="requirements"></a> A scalar T-SQL UDF can be inlined if all of the following conditions are true:
 
 - The UDF is written using the following constructs:
     - `DECLARE`, `SET`: Variable declaration and assignments.
@@ -149,15 +149,15 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
 - There are no signatures added to the UDF.
 - The UDF is not a partition function.
 - The UDF does not contain references to Common Table Expressions (CTEs)
-- The UDF does not contain references to intrinsic functions (e.g. @@ROWCOUNT) that may alter the results when inlined (restriction added in Microsoft SQL Server 2019 CU2).
+- The UDF does not contain references to intrinsic functions (for example `@@ROWCOUNT`) that may alter the results when inlined (restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2).
 - The UDF does not contain aggregate functions being passed as parameters to a scalar UDF (restriction added in Microsoft SQL Server 2019 CU2).
-- The UDF does not reference built-in views (e.g. OBJECT_ID, restriction added in Microsoft SQL Server 2019 CU2).
--	The UDF does not reference XML methods (restriction added in Microsoft SQL Server 2019 CU4).
--	The UDF does not contain a SELECT with ORDER BY without a "TOP 1" (restriction added in Microsoft SQL Server 2019 CU4).
--	The UDF does not contain a SELECT query that performs an assignment in conjunction with the ORDER BY clause (e.g. SELECT @x = @x +1 FROM table ORDER BY column_name, restriction added in Microsoft SQL Server 2019 CU4).
-- The UDF does not contain multiple RETURN statements (restriction added in SQL Server 2019 CU5).
-- The UDF is not called from a RETURN statement (restriction added in SQL Server 2019 CU5).
-- The UDF does not reference the STRING_AGG function (restriction added in SQL Server 2019 CU5). 
+- The UDF does not reference built-in views (for example `OBJECT_ID`, restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2).
+- The UDF does not reference XML methods (restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4).
+- The UDF does not contain a SELECT with `ORDER BY` without a `TOP 1` clause (restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4).
+- The UDF does not contain a SELECT query that performs an assignment in conjunction with the `ORDER BY` clause (for example `SELECT @x = @x + 1 FROM table1 ORDER BY col1`, restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4).
+- The UDF does not contain multiple RETURN statements (restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5).
+- The UDF is not called from a RETURN statement (restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5).
+- The UDF does not reference the `STRING_AGG` function (restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5). 
 
 <sup>1</sup> `SELECT` with variable accumulation/aggregation (for example, `SELECT @val += col1 FROM table1`) is not supported for inlining.
 
@@ -166,7 +166,7 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
 <sup>3</sup> Intrinsic functions whose results depend upon the current system time are time-dependent. An intrinsic function that may update some internal global state is an example of a function with side effects. Such functions return different results each time they are called, based on the internal state.
 
 > [!NOTE]
-> For information on the latest T-SQL Scalar UDF Inlining fixes and changes to inlining eligibility scenarios, see the Knowledge Base article: [FIX: Scalar UDF Inlining issues in SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019).
+> For information on the latest T-SQL Scalar UDF Inlining fixes and changes to inlining eligibility scenarios, see the Knowledge Base article: [FIX: Scalar UDF Inlining issues in SQL Server 2019](https://support.microsoft.com/help/4538581).
 
 ### Checking whether or not a UDF can be inlined
 For every T-SQL scalar UDF, the [sys.sql_modules](../system-catalog-views/sys-sql-modules-transact-sql.md) catalog view includes a property called `is_inlineable`, which indicates whether a UDF is inlineable or not. 
@@ -267,13 +267,14 @@ As described in this article, scalar UDF inlining transforms a query with scalar
 1. Views that reference inline scalar UDFs cannot be indexed. If you need to create an index on such views, disable inlining for the referenced UDFs.
 1. There might be some differences in the behavior of [Dynamic Data masking](../security/dynamic-data-masking.md) with UDF inlining. 
 In certain situations (depending upon the logic in the UDF), inlining might be more conservative w.r.t masking output columns. In scenarios where the columns referenced in a UDF are not output columns, they will not be masked. 
-1. If a UDF references built-in functions such as `SCOPE_IDENTITY()`, `@@ROWCOUNT`, or `@@ERROR`, the value returned by the built-in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF. Beginning in Microsoft SQL Server 2019 CU2, we will block inlining if the UDF references certain intrinsic functions (e.g. @@ROWCOUNT).
+1. If a UDF references built-in functions such as `SCOPE_IDENTITY()`, `@@ROWCOUNT`, or `@@ERROR`, the value returned by the built-in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2, inlining is blocked if the UDF references certain intrinsic functions (for example `@@ROWCOUNT`).
 
 ## See Also
+[Create User-defined Functions (Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)     
 [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [Joins](../../relational-databases/performance/joins.md)     
 [Demonstrating Intelligent Query Processing](https://aka.ms/IQPDemos)     
-[FIX: Scalar UDF Inlining issues in SQL Server 2019](https://support.microsoft.com/en-us/help/4538581/fix-scalar-udf-inlining-issues-in-sql-server-2019)     
+[FIX: Scalar UDF Inlining issues in SQL Server 2019](https://support.microsoft.com/help/4538581)     
 

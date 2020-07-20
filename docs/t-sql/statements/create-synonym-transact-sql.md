@@ -91,9 +91,12 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 - Assembly (CLR) Table-valued Function
 - Assembly (CLR) Scalar Function
 - Assembly Aggregate (CLR) Aggregate Functions
-- Replication-filter-procedure|Extended Stored Procedure
-- SQL Scalar Function|SQL Table-valued Function
-- SQL Inline-table-valued Function|SQL Stored Procedure
+- Replication-filter-procedure
+- Extended Stored Procedure
+- SQL Scalar Function
+- SQL Table-valued Function
+- SQL Inline-table-valued Function
+- SQL Stored Procedure
 - Table<sup>1</sup> (User-defined)
 - View
 

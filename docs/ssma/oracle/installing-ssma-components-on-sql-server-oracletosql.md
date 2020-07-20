@@ -55,10 +55,7 @@ To install the extension pack:
 6. On the **Ready to Install** page, select **Install**.
 7. On the **Completed the First Step of Installation** page, select **Next**.
   
-   A new dialog box appears. In the new dialog specify:
-
-      - Extension pack type
-      - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance
+   A new dialog box appears. Select the extension pack type.
   
 8. Select the desired installation type and, click **Next**.
 

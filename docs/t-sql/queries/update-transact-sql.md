@@ -183,7 +183,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  DEFAULT  
  Specifies that the default value defined for the column is to replace the existing value in the column. This can also be used to change the column to NULL if the column has no default and is defined to allow null values.  
   
- { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
+ { **+=** \| **-=** \| **\*=** \| **/=** \| **%=** \| **&=** \| **^=** \| **|=** }  
  Compound assignment operator:  
  +=                       Add and assign  
  -=                        Subtract and assign  

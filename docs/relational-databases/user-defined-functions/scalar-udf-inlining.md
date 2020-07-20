@@ -23,7 +23,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-a
 This article introduces Scalar UDF Inlining, a feature under the [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md) suite of features. This feature improves the performance of queries that invoke scalar UDFs in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)]).
 
 ## T-SQL scalar User-Defined Functions
-User-Defined Functions (UDFs) that are implemented in [!INCLUDE[tsql](../../includes/tsql-md.md)] and return a single data value are referred to as T-SQL Scalar User-Defined Functions. T-SQL UDFs are an elegant way to achieve code reuse and modularity across [!INCLUDE[tsql](../../includes/tsql-md.md)] queries. Some computations (such as complex business rules) are easier to express in imperative UDF form. UDFs help in building up complex logic without requiring expertise in writing complex SQL queries.
+User-Defined Functions (UDFs) that are implemented in [!INCLUDE[tsql](../../includes/tsql-md.md)] and return a single data value are referred to as T-SQL Scalar User-Defined Functions. T-SQL UDFs are an elegant way to achieve code reuse and modularity across [!INCLUDE[tsql](../../includes/tsql-md.md)] queries. Some computations (such as complex business rules) are easier to express in imperative UDF form. UDFs help in building up complex logic without requiring expertise in writing complex SQL queries. For more information about UDFs, see [Create User-defined Functions (Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).
 
 ## Performance of scalar UDFs
 Scalar UDFs typically end up performing poorly due to the following reasons:
@@ -149,12 +149,12 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
 - There are no signatures added to the UDF.
 - The UDF is not a partition function.
 - The UDF does not contain references to Common Table Expressions (CTEs)
-- The UDF does not contain references to intrinsic functions (e.g. `@@ROWCOUNT`) that may alter the results when inlined (restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2).
+- The UDF does not contain references to intrinsic functions (for example `@@ROWCOUNT`) that may alter the results when inlined (restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2).
 - The UDF does not contain aggregate functions being passed as parameters to a scalar UDF (restriction added in Microsoft SQL Server 2019 CU2).
-- The UDF does not reference built-in views (e.g. `OBJECT_ID`, restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2).
+- The UDF does not reference built-in views (for example `OBJECT_ID`, restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2).
 - The UDF does not reference XML methods (restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4).
 - The UDF does not contain a SELECT with `ORDER BY` without a `TOP 1` clause (restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4).
-- The UDF does not contain a SELECT query that performs an assignment in conjunction with the `ORDER BY` clause (e.g. `SELECT @x = @x + 1 FROM table1 ORDER BY col1`, restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4).
+- The UDF does not contain a SELECT query that performs an assignment in conjunction with the `ORDER BY` clause (for example `SELECT @x = @x + 1 FROM table1 ORDER BY col1`, restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4).
 - The UDF does not contain multiple RETURN statements (restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5).
 - The UDF is not called from a RETURN statement (restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5).
 - The UDF does not reference the `STRING_AGG` function (restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5). 
@@ -267,9 +267,10 @@ As described in this article, scalar UDF inlining transforms a query with scalar
 1. Views that reference inline scalar UDFs cannot be indexed. If you need to create an index on such views, disable inlining for the referenced UDFs.
 1. There might be some differences in the behavior of [Dynamic Data masking](../security/dynamic-data-masking.md) with UDF inlining. 
 In certain situations (depending upon the logic in the UDF), inlining might be more conservative w.r.t masking output columns. In scenarios where the columns referenced in a UDF are not output columns, they will not be masked. 
-1. If a UDF references built-in functions such as `SCOPE_IDENTITY()`, `@@ROWCOUNT`, or `@@ERROR`, the value returned by the built-in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2, inlining is blocked if the UDF references certain intrinsic functions (e.g. @@ROWCOUNT).
+1. If a UDF references built-in functions such as `SCOPE_IDENTITY()`, `@@ROWCOUNT`, or `@@ERROR`, the value returned by the built-in function will change with inlining. This change in behavior is because inlining changes the scope of statements inside the UDF. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU2, inlining is blocked if the UDF references certain intrinsic functions (for example `@@ROWCOUNT`).
 
 ## See Also
+[Create User-defined Functions (Database Engine)](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md)   
 [Performance Center for SQL Server Database Engine and Azure SQL Database](../../relational-databases/performance/performance-center-for-sql-server-database-engine-and-azure-sql-database.md)     
 [Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md)     
 [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     

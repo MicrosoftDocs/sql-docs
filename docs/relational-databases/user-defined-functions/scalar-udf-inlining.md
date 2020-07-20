@@ -276,5 +276,5 @@ In certain situations (depending upon the logic in the UDF), inlining might be m
 [Showplan Logical and Physical Operators Reference](../../relational-databases/showplan-logical-and-physical-operators-reference.md)     
 [Joins](../../relational-databases/performance/joins.md)     
 [Demonstrating Intelligent Query Processing](https://aka.ms/IQPDemos)     
-[FIX: Scalar UDF Inlining issues in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]](https://support.microsoft.com/help/4538581)     
+[FIX: Scalar UDF Inlining issues in SQL Server 2019](https://support.microsoft.com/help/4538581)     
 

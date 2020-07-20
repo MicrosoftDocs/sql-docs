@@ -34,6 +34,8 @@ Enables the specified trace flags.
 DBCC TRACEON ( trace# [ ,...n ][ , -1 ] ) [ WITH NO_INFOMSGS ]  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 *trace#*  
 Is the number of the trace flag to turn on.  

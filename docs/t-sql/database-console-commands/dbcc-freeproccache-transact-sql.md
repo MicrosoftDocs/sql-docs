@@ -51,6 +51,8 @@ DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ]
 [;]  
 ```  
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
  ( { *plan_handle* | *sql_handle* | *pool_name* } )  
 *plan_handle* uniquely identifies a query plan for a batch that has executed and whose plan resides in the plan cache. *plan_handle* is **varbinary(64)** and can be obtained from the following dynamic management objects:  

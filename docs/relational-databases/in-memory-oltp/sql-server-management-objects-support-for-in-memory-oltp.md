@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Management Objects support - in-memory OLTP"
-description: "Describes items in SQL Server Management Objects (SMO) that support In-Memory OLTP."
+description: Learn which items (types and members) in SQL Server Management Objects (SMO) support In-Memory OLTP.
 ms.custom: seo-dt-2019
 ms.date: "08/18/2017"
 ms.prod: sql

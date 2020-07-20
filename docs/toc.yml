@@ -9841,6 +9841,8 @@
       href: linux/new-to-sql-learning-resources.yml
     - name: New to Linux docs
       href: linux/new-to-linux-learning-resources.yml
+    - name: New to Linux resources
+      href: linux/new-to-linux-resources.md
     - name: Migrate from Windows
       href: linux/sql-server-linux-migrate-restore-database.md
     - name: Migrate to Docker

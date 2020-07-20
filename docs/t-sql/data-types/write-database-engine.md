@@ -28,7 +28,7 @@ Write writes out a binary representation of **SqlHierarchyId** to the passed-in 
 ```sql
 void Write( BinaryWriter w )   
 ```  
-  
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments

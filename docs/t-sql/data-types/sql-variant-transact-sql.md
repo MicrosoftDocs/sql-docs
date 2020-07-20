@@ -21,7 +21,9 @@ ms.assetid: 01229779-8bc1-4c7d-890a-8246d4899250
 author: MikeRayMSFT
 ms.author: mikeray
 ---
+
 # sql_variant (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 A data type that stores values of various [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-supported data types.
@@ -30,10 +32,12 @@ A data type that stores values of various [!INCLUDE[ssNoVersion](../../includes/
   
 ## Syntax  
   
-```sql
+```syntaxsql
 sql_variant  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Remarks  
 **sql_variant** can be used in columns, parameters, variables, and the return values of user-defined functions. **sql_variant** enables these database objects to support values of other data types.
   

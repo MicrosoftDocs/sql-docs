@@ -32,7 +32,7 @@ ms.author: lle
 
  Derived hierarchies come from the relationships between entities in a model. These are domain-based attribute relationships. In the product model for example, you can have a color derived hierarchy that comes from the relationship between the color and product entities.
 
- ![](../../2014/master-data-services/media/mds-derivedhierarchy.png)
+ ![Screenshot of the Color Hierarchy. Three color entities are highlighted, and one is expanded to show its related product entities.](../../2014/master-data-services/media/mds-derivedhierarchy.png)
 
  Once you've defined  a basic structure for your data, you can start adding data records (members) by using the import feature. You load data into staging tables,  validate the data using business rules, and load the data into  MDS tables.  You can also use business rules to set attribute values.
 

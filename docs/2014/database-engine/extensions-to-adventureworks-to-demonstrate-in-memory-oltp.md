@@ -399,7 +399,7 @@ ms.author: sstein
   
  Ensure that the command prompt is located in the RML Utilities installation folder. For example:  
   
- ![](../../2014/database-engine/media/SQLServer2014RTMIn-MemoryOLTP01.jpg)  
+ ![Screenshot of the R M L Cmd Prompt. The command prompt includes the R M L Utilities installation folder.](../../2014/database-engine/media/SQLServer2014RTMIn-MemoryOLTP01.jpg)  
   
  The command-line options for ostress can be seen when simply running ostress.exe without any command-line options. The main options to consider for running ostress with this sample are:  
   
@@ -469,7 +469,7 @@ ostress.exe -n10 -r5 -S. -E -dAdventureWorks2014 -q -Q"DECLARE @i int = 0, @od S
   
  If everything works as expected, your command window will look similar to the following. Error messages are not expected.  
   
- ![](../../2014/database-engine/media/SQLServer2014RTMIn-MemoryOLTP02.jpg)  
+ ![Screenshot of the R M L Cmd Prompt showing output from the ostress tool. The last line indicates that command ran without any errors.](../../2014/database-engine/media/SQLServer2014RTMIn-MemoryOLTP02.jpg)  
   
  Validate that also the workload functions as expected for disk-based tables by running the following command in the RML Cmd Prompt:  
   

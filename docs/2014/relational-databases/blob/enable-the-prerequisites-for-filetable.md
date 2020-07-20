@@ -59,8 +59,8 @@ GO
 ###  <a name="HowToNTAccess"></a> How To: Enable Non-Transactional Access at the Database Level  
  The available levels of non-transactional access are FULL, READ_ONLY, and OFF.  
   
- **Specify the level of non-transactional access by using Transact-SQL**  
- -   When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql) statement with the **NON_TRANSACTED_ACCESS** FILESTREAM option.  
+ **Specify the level of non-transactional access by using Transact-SQL** 
+-   When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql) statement with the **NON_TRANSACTED_ACCESS** FILESTREAM option.  
   
     ```sql  
     CREATE DATABASE database_name  
@@ -86,7 +86,7 @@ GO
  The name that you specify must be unique across the instance for database-level directories.  
   
  **Specify a directory for FileTables by using Transact-SQL**  
- -   When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql) statement with the **DIRECTORY_NAME** FILESTREAM option.  
+-   When you **create a new database**, call the [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](/sql/t-sql/statements/create-database-sql-server-transact-sql) statement with the **DIRECTORY_NAME** FILESTREAM option.  
   
     ```sql  
     CREATE DATABASE database_name  

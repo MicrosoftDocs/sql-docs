@@ -177,9 +177,9 @@ Use the `Backup-SqlDatabase` cmdlet and specify `Log` for the value of the `-Bac
   
 The following example creates a log backup of the `MyDB` database to the default backup location of the server instance `Computer\Instance`.  
   
-    ```powershell
-    Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Log  
-    ```  
+```powershell
+Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Log  
+```  
   
 To set up and use the SQL Server PowerShell provider, see [SQL Server PowerShell Provider](../../powershell/sql-server-powershell-provider.md).
   

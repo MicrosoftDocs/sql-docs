@@ -49,8 +49,8 @@ GO
 ###  <a name="HowToInstallModel"></a> How To: Install, Attach, and Register the Semantic Language Statistics Database  
  The semantic language statistics database is not installed by the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup program. To set up the Semantic Language Statistics database as a prerequisite for semantic indexing, do the following tasks:  
   
- **1. Install the semantic language statistics database.**  
- 1.  Locate the semantic language statistics database on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation media or download it from the Web.  
+**1. Install the semantic language statistics database.**  
+1.  Locate the semantic language statistics database on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation media or download it from the Web.  
   
     -   Locate the Windows installer package named **SemanticLanguageDatabase.msi** on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation media. Locate the 32-bit or 64-bit version of the installer package depending on the target system. The name of the containing folder identifies the 32-bit or 64-bit version of the file; the file name itself is the same for both versions.  
   

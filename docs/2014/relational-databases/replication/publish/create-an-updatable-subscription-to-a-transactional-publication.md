@@ -90,7 +90,7 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
     * `failover` - enables the subscription for immediate updating with queued updating as a failover option.
 
     > [!NOTE]  
->  `failover` requires that the publication also be enabled for queued updating subscriptions. 
+    >  `failover` requires that the publication also be enabled for queued updating subscriptions. 
  
 4. At the Subscriber, execute [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Specify the following:
 
@@ -98,7 +98,7 @@ Configure updatable subscriptions on the **Updatable Subscriptions** page of the
     * The Microsoft Windows credentials under which the Distribution Agent at the Subscriber runs for `@job_login` and `@job_password`. 
 
     > [!NOTE]  
->  Connections made using Windows Integrated Authentication are always made using the Windows credentials specified by `@job_login` and `@job_password`. The Distribution Agent always makes the local connection to the Subscriber using Windows Integrated Authentication. By default, the agent connects to the Distributor using Windows Integrated Authentication. 
+    >  Connections made using Windows Integrated Authentication are always made using the Windows credentials specified by `@job_login` and `@job_password`. The Distribution Agent always makes the local connection to the Subscriber using Windows Integrated Authentication. By default, the agent connects to the Distributor using Windows Integrated Authentication. 
  
     * (Optional) A value of `0` for `@distributor_security_mode` and the Microsoft SQL Server login information for `@distributor_login` and `@distributor_password`, if you need to use SQL Server Authentication when connecting to the Distributor. 
     * A schedule for the Distribution Agent job for this subscription. 
@@ -132,7 +132,7 @@ This registers the pull subscription at the Publisher.
     * `failover` - enables support for immediate updating with queued updating as a failover option.
 
     > [!NOTE]  
->  `failover` requires that the publication also be enabled for queued updating subscriptions. 
+    >  `failover` requires that the publication also be enabled for queued updating subscriptions. 
  
 4. At the Publisher, execute [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Specify the following parameters:
 
@@ -140,7 +140,7 @@ This registers the pull subscription at the Publisher.
     * The Windows credentials under which the Distribution Agent at the Distributor runs for `@job_login` and `@job_password`. 
 
     > [!NOTE]  
->  Connections made using Windows Integrated Authentication are always made using the Windows credentials specified by `@job_login` and `@job_password`. The Distribution Agent always makes the local connection to the Distributor using Windows Integrated Authentication. By default, the agent will connect to the Subscriber using Windows Integrated Authentication. 
+    >  Connections made using Windows Integrated Authentication are always made using the Windows credentials specified by `@job_login` and `@job_password`. The Distribution Agent always makes the local connection to the Distributor using Windows Integrated Authentication. By default, the agent will connect to the Subscriber using Windows Integrated Authentication. 
 
     * (Optional) A value of `0` for `@subscriber_security_mode` and the SQL Server login information for `@subscriber_login` and `@subscriber_password`, if you need to use SQL Server Authentication when connecting to the Subscriber. 
     * A schedule for the Distribution Agent job for this subscription.
@@ -170,7 +170,7 @@ This registers the pull subscription at the Publisher.
     * `queued failover` - enables support for queued updating with immediate updating as a failover option.
 
     > [!NOTE]  
->  `queued failover` requires that the publication also be enabled for immediate updating subscriptions. To fail over to immediate updating, you must use [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) to define the credentials under which changes at the Subscriber are replicated to the Publisher.
+    >  `queued failover` requires that the publication also be enabled for immediate updating subscriptions. To fail over to immediate updating, you must use [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) to define the credentials under which changes at the Subscriber are replicated to the Publisher.
  
 4. At the Subscriber, execute [sp_addpullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql). Specify the following parameters:
 
@@ -178,7 +178,7 @@ This registers the pull subscription at the Publisher.
     * The Windows credentials under which the Distribution Agent at the Subscriber runs for `@job_login` and `@job_password`. 
 
     > [!NOTE]  
->  Connections made using Windows Integrated Authentication are always made using the Windows credentials specified by `@job_login` and `@job_password`. The Distribution Agent always makes the local connection to the Subscriber using Windows Integrated Authentication. By default, the agent connects to the Distributor using Windows Integrated Authentication. 
+    >  Connections made using Windows Integrated Authentication are always made using the Windows credentials specified by `@job_login` and `@job_password`. The Distribution Agent always makes the local connection to the Subscriber using Windows Integrated Authentication. By default, the agent connects to the Distributor using Windows Integrated Authentication. 
  
     * (Optional) A value of `0` for `@distributor_security_mode` and the SQL Server login information for `@distributor_login` and `@distributor_password`, if you need to use SQL Server Authentication when connecting to the Distributor. 
     * A schedule for the Distribution Agent job for this subscription.
@@ -206,7 +206,7 @@ This registers the pull subscription at the Publisher.
     * `queued failover` - enables support for queued updating with immediate updating as a failover option.
 
     > [!NOTE]  
->  The queued failover option requires that the publication also be enabled for immediate updating subscriptions. To fail over to immediate updating, you must use [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) to define the credentials under which changes at the Subscriber are replicated to the Publisher.
+    >  The queued failover option requires that the publication also be enabled for immediate updating subscriptions. To fail over to immediate updating, you must use [sp_link_publication](/sql/relational-databases/system-stored-procedures/sp-link-publication-transact-sql) to define the credentials under which changes at the Subscriber are replicated to the Publisher.
 
 4. At the Publisher, execute [sp_addpushsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql). Specify the following parameters:
 
@@ -214,7 +214,7 @@ This registers the pull subscription at the Publisher.
     * The Windows credentials under which the Distribution Agent at the Distributor runs for `@job_login` and `@job_password`. 
 
     > [!NOTE]  
->  Connections made using Windows Integrated Authentication are always made using the Windows credentials specified by `@job_login` and `@job_password`. The Distribution Agent always makes the local connection to the Distributor using Windows Integrated Authentication. By default, the agent connects to the Subscriber using Windows Integrated Authentication. 
+    >  Connections made using Windows Integrated Authentication are always made using the Windows credentials specified by `@job_login` and `@job_password`. The Distribution Agent always makes the local connection to the Distributor using Windows Integrated Authentication. By default, the agent connects to the Subscriber using Windows Integrated Authentication. 
  
     * (Optional) A value of `0` for `@subscriber_security_mode` and the SQL Server login information for `@subscriber_login` and `@subscriber_password`, if you need to use SQL Server Authentication when connecting to the Subscriber. 
     * A schedule for the Distribution Agent job for this subscription.

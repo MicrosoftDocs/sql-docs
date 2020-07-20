@@ -1,5 +1,5 @@
 ---
-title: "DBCC CHECKIDENT (Transact-SQL) | Microsoft Docs"
+title: DBCC CHECKIDENT (Transact-SQL)
 ms.custom: ""
 ms.date: "03/07/2019"
 ms.prod: sql
@@ -30,6 +30,7 @@ author: pmasl
 ms.author: umajay
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions"
 ---
+
 # DBCC CHECKIDENT (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]

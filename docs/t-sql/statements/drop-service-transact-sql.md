@@ -37,7 +37,9 @@ DROP SERVICE service_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *service_name*  
  The name of the service to drop. Server, database, and schema names cannot be specified.  
   

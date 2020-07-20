@@ -40,7 +40,7 @@ THROW [ { error_number | @local_variable },
  Is a constant or variable that represents the exception. *error_number* is **int** and must be greater than or equal to 50000 and less than or equal to 2147483647.  
   
  *message*  
- Is an string or variable that describes the exception. *message* is **nvarchar(2048)**.  
+ Is a string or variable that describes the exception. *message* is **nvarchar(2048)**.  
   
  *state*  
  Is a constant or variable between 0 and 255 that indicates the state to associate with the message. *state* is **tinyint**.  

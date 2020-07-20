@@ -20,11 +20,9 @@ Learn how to run Python and R scripts in [Azure Data Studio](https://docs.micros
 
 - A server with SQL Server Machine Learning Services installed and enabled. You can use Machine Learning Services on Windows, Linux, or Big Data Clusters:
 
-    - [Install SQL Server Machine Learning Services on Windows](sql-machine-learning-services-windows-install.md).
-
-    - [Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
-
-    - [Run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+  - [Install SQL Server Machine Learning Services on Windows](sql-machine-learning-services-windows-install.md).
+  - [Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
+  - [Run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 
 ## Create a SQL notebook
 
@@ -119,5 +117,7 @@ Follow these steps to run an R script:
 
 ## Next steps
 
+- [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks-guidance.md)
+- [Create and run a SQL Server notebook](../../azure-data-studio/notebooks-tutorial-sql-kernel.md)
 - [Quickstart: Run simple Python scripts with SQL Server Machine Learning Services](../tutorials/quickstart-python-create-script.md)
 - [Quickstart: Run simple R scripts with SQL Server Machine Learning Services](../tutorials/quickstart-r-create-script.md)

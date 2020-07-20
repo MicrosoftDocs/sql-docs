@@ -56,7 +56,9 @@ OPTION ( <query_option> [ ,...n ] )
     | { FORCE | DISABLE } EXTERNALPUSHDOWN  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *query_hint*  
  Keywords that indicate which optimizer hints are used to customize the way the Database Engine processes the statement. For more information, see [Query Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-query.md).  
   

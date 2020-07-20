@@ -49,7 +49,9 @@ Following is syntax for Azure SQL Data Warehouse and Parallel Data Warehouse:
 ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *expression*  
 The numeric expression that specifies the number of rows to be returned. *expression* is implicitly converted to a **float** value if you specify PERCENT. Otherwise, *expression* is converted to **bigint**.  
   

@@ -109,8 +109,14 @@ Specifies the data type of a [Field](../../../ado/reference/ado-api/field-object
 |AdoEnums.DataType.WCHAR|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Append Method (ADO)](../../../ado/reference/ado-api/append-method-ado.md)|[CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|  
-|[CreateRecordset Method (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|[Type Property (ADO)](../../../ado/reference/ado-api/type-property-ado.md)|
+
+:::row:::
+    :::column:::
+        [Append Method (ADO)](../../../ado/reference/ado-api/append-method-ado.md)  
+        [CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [CreateRecordset Method (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)  
+        [Type Property (ADO)](../../../ado/reference/ado-api/type-property-ado.md)  
+    :::column-end:::
+:::row-end:::

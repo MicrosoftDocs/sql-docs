@@ -37,6 +37,8 @@ TRIM ( [ characters FROM ] string )
 TRIM ( string )
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 characters

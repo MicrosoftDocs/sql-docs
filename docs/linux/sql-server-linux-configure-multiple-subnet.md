@@ -67,11 +67,11 @@ In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports
     
     ```xml
     <instance attributes id="Node3-2nd-IP" score="2">
-        <rule id="Subnet2-IP" score="INFINITY">
-            <expression id="Subnet2-Node" attribute="\#uname" operation="eq" value="Node3" />
+        <rule id="Subnet2-IP" score="INFINITY" boolean-op="or">
+            <expression id="Subnet2-Node" attribute="#uname" operation="eq" value="Node3" />
         </rule>
         <nvpair id="IP-In-Subnet-2" name="ip" value="192.168.2.102"/>
-        <nvpair id="Netmask-For-IP2" name="cidr\_netmask" value="24" />
+        <nvpair id="Netmask-For-IP2" name="cidr_netmask" value="24" />
     </instance attributes>
     ```
 

@@ -1,5 +1,5 @@
 ---
-title: "Basic data types sample | Microsoft Docs"
+title: "Basic data types sample for JDBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

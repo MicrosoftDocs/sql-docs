@@ -15,7 +15,7 @@ ms.reviewer: maghan
 ---
 # Azure Data Lake Analytics task
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

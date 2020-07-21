@@ -18,7 +18,7 @@ ms.author: chugu
 ---
 # Copy Package Objects
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This topic describes how to copy control flow items, data flow items, and connection managers within a package or between packages.  

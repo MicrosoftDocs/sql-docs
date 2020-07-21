@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 2-2: Add and configure the Foreach Loop container
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

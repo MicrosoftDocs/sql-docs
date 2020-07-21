@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # OLE DB Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   **Source Custom Properties**  

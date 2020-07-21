@@ -19,7 +19,7 @@ ms.author: chugu
 ---
 # Transfer Logins Task
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Transfer Logins task transfers one or more logins between instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

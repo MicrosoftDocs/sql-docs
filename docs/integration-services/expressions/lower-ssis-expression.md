@@ -18,7 +18,7 @@ ms.author: chugu
 ---
 # LOWER (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns a character expression after converting uppercase characters to lowercase characters.  

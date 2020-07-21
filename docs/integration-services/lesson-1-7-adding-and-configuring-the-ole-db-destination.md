@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 1-7: Add and configure the OLE DB destination
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

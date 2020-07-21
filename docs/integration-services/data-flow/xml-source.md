@@ -22,7 +22,7 @@ ms.author: chugu
 ---
 # XML Source
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The XML source reads an XML data file and populates the columns in the source output with the data.  

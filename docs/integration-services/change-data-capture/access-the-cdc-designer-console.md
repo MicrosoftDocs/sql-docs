@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Access the CDC Designer Console
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You can access the CDC Designer Console from the computer where you installed the console. For more information about installation, see Installation.  

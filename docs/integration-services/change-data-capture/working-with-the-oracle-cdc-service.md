@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Working with the Oracle CDC Service
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This section describes some important concepts of the Oracle CDC Service. The concepts included in this section are:  

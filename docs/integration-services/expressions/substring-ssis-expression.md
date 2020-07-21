@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # SUBSTRING (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns the part of a character expression that starts at the specified position and has the specified length. The *position* parameter and the *length* parameter must evaluate to integers.  

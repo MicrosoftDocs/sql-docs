@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # catalog.worker_agents (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Displays the information for the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker.
 

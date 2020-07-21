@@ -25,7 +25,7 @@ ms.author: chugu
 ---
 # Working with Variables Programmatically
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Variables are a way to dynamically set values and control processes in packages, containers, tasks, and event handlers. Variables can also be used by precedence constraints to control the direction of the flow of data to different tasks. Variables have a variety of uses:  

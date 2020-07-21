@@ -19,7 +19,7 @@ ms.author: chugu
 ---
 # Creating a Destination with the Script Component
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You use a destination component in the data flow of an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package to save data received from upstream sources and transformations to a data source. Ordinarily the destination component connects to the data source through an existing connection manager.  

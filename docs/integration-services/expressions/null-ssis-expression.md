@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # NULL (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns a null value of a requested data type.  

@@ -13,7 +13,7 @@ ms.author: "haoqian"
 ---
 # Scale Out support for high availability via SQL Server failover cluster instance
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

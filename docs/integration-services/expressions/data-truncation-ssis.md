@@ -18,7 +18,7 @@ ms.author: chugu
 ---
 # Data Truncation (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Converting values from one data type to another may cause values to be truncated.  

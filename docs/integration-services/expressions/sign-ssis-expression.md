@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # SIGN (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns the positive (+1), negative (-1), or zero (0) sign of a numeric expression.  

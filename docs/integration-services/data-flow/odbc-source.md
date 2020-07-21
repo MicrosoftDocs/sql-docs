@@ -18,7 +18,7 @@ ms.author: chugu
 ---
 # ODBC Source
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The ODBC source extracts data from ODBC-supported database by using a database table, a view, or an SQL statement.  

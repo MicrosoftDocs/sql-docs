@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # ? : (Conditional) (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns one of two expressions based on the evaluation of a Boolean expression. If the Boolean expression evaluates to TRUE, then the first expression is evaluated and the result is the expression result. If the Boolean expression evaluates to FALSE then the second expression is evaluated and its result is the expression result.  

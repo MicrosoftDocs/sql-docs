@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # Divide (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Divides the first numeric expression by the second one.  

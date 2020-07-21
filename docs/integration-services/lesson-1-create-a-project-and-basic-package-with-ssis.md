@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 1: Create a project and basic package with SSIS
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 3-2: Add and configure logging
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

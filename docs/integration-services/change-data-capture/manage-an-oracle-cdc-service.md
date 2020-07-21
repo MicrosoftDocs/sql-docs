@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Manage an Oracle CDC Service
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You can use the CDC Service Configuration Console to manage a specific CDC Service.  

@@ -24,7 +24,7 @@ ms.author: chugu
 ---
 # Percentage Sampling Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Percentage Sampling transformation creates a sample data set by selecting a percentage of the transformation input rows. The sample data set is a random selection of rows from the transformation input, to make the resultant sample representative of the input.  

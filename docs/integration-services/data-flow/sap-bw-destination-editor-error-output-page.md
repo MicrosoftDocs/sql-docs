@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # SAP BW Destination Editor (Error Output Page)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Error Output** page of the **SAP BW Destination Editor** to specify error handling options.  

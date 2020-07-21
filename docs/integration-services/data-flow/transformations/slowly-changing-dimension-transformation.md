@@ -20,7 +20,7 @@ ms.author: chugu
 ---
 # Slowly Changing Dimension Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Slowly Changing Dimension transformation coordinates the updating and inserting of records in data warehouse dimension tables. For example, you can use this transformation to configure the transformation outputs that insert and update records in the DimProduct table of the [!INCLUDE[ssSampleDBDWobject](../../../includes/sssampledbdwobject-md.md)] database with data from the Production.Products table in the AdventureWorks OLTP database.  

@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # CDC Source Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The following table describes the custom properties of the CDC source. All properties are read/write.  

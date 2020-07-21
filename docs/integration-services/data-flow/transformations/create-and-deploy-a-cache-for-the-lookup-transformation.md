@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # Create and Deploy a Cache for the Lookup Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You can create and deploy a cache file (.caw) for the Lookup transformation. The reference dataset is stored in the cache file.  

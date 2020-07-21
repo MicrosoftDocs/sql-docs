@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # Debug a Script by Setting Breakpoints in a Script Task and Script Component
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This procedure describes how to set breakpoints in the scripts that are used in the Script task and Script component.  

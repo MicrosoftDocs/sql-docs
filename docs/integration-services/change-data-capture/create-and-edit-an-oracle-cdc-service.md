@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Create and Edit an Oracle CDC Service
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You create and edit a new Oracle CDC Windows Service from the CDC Service Configuration Console.  

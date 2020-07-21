@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # CEILING (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns the smallest integer that is greater than or equal to a numeric expression.  

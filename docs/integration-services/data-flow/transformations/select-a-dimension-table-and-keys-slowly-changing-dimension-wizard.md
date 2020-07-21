@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Select a Dimension Table and Keys (Slowly Changing Dimension Wizard)
 
-[!INCLUDE[ssis-appliesto](../../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Select a Dimension Table and Keys** page to select a dimension table to load. Map columns from the data flow to the columns that will be loaded.  

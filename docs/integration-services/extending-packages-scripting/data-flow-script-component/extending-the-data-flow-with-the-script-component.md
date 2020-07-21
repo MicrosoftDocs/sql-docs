@@ -27,7 +27,7 @@ ms.author: chugu
 ---
 # Extending the Data Flow with the Script Component
 
-[!INCLUDE[ssis-appliesto](../../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Script component extends the data flow capabilities of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] packages with custom code written in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic or [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual C# that is compiled and executed at package run time. The Script component simplifies the development of a custom data flow source, transformation, or destination when the sources, transformations, and destinations included with [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] do not fully satisfy your requirements. After you configure the component with the expected inputs and outputs, it writes all the required infrastructure code for you, letting you focus exclusively on the code that is required for your custom processing.  

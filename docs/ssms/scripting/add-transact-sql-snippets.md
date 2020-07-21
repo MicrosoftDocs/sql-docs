@@ -1,5 +1,6 @@
 ---
 title: "Add Transact-SQL Snippets"
+description: Learn how to add your own Transact-SQL code snippets to the set of pre-defined snippets included in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 1-4: Add a Data Flow task to the package
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

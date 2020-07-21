@@ -20,7 +20,7 @@ ms.author: chugu
 ---
 # SSIS How to Create an ETL Package
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

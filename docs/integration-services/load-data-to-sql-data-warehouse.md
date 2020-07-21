@@ -13,7 +13,7 @@ author: chugugrace
 ---
 # Load data into Azure SQL Data Warehouse with SQL Server Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

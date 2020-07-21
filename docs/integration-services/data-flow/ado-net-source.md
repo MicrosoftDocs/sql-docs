@@ -24,7 +24,7 @@ ms.author: chugu
 ---
 # ADO NET Source
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The ADO NET source consumes data from a .NET provider and makes the data available to the data flow.  

@@ -19,7 +19,7 @@ ms.author: chugu
 ---
 # Adding Tasks Programmatically
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Tasks can be added to the following types of objects in the run-time engine:  

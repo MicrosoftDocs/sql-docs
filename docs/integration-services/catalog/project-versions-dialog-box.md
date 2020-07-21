@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Project Versions Dialog Box
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Project Versions** dialog box to view versions of a project and to restore a previous version.  

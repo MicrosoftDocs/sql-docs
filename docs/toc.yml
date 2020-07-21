@@ -4640,6 +4640,8 @@
         href: database-engine/configure-windows/show-advanced-options-server-configuration-option.md
       - name: SMO & DMO XPs
         href: database-engine/configure-windows/smo-and-dmo-xps-server-configuration-option.md
+      - name: suppress recovery model errors
+        href: database-engine/configure-windows/suppress-recovery-model-errors-server-configuration-option.md
       - name: transform noise words
         href: database-engine/configure-windows/transform-noise-words-server-configuration-option.md
       - name: Configure the two digit year cutoff

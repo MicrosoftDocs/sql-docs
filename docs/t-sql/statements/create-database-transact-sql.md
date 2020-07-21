@@ -1045,13 +1045,13 @@ The MAXSIZE value for the DTU model, if specified, has to be a valid value shown
 **General purpose - provisioned compute - Fsv2-series (part 1)**
 
 |MAXSIZE|GP_Fsv2_8|GP_Fsv2_10|GP_Fsv2_12|GP_Fsv2_14|GP_Fsv2_16|GP_Fsv2_18|
-|:----- | ------: | ------: | ------: | ------: | ------: |
+|:----- | ------: | ------: | ------: | ------: | ------: | ------: |
 |Max data size (GB)|1024|1024|1024|1024|1536|1536|
 
 **General purpose - provisioned compute - Fsv2-series (part 2)**
 
 |MAXSIZE|GP_Fsv2_20|GP_Fsv2_24|GP_Fsv2_32|GP_Fsv2_36|GP_Fsv2_72|
-|:----- | ------: | ------: | ------: | ------: |
+|:----- | ------: | ------: | ------: | ------: | ------: |
 |Max data size (GB)|1536|1536|3072|3072|4096|
 
 **General purpose - serverless compute - Gen5 (part 1)**

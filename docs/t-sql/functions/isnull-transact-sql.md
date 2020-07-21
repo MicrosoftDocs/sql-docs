@@ -36,7 +36,9 @@ Replaces NULL with the specified replacement value.
 ISNULL ( check_expression , replacement_value )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *check_expression*  
  Is the [expression](../../t-sql/language-elements/expressions-transact-sql.md) to be checked for NULL. *check_expression* can be of any type.  
   

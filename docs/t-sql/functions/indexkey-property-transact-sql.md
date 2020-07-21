@@ -39,7 +39,9 @@ ms.author: maghan
 INDEXKEY_PROPERTY ( object_ID ,index_ID ,key_ID ,property )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *object_ID*  
  Is the object identification number of the table or indexed view. *object_ID* is **int**.  
   

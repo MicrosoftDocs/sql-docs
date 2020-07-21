@@ -111,7 +111,7 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_JOBS Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/bb934102(v=sql.110))|Returns information about current jobs.|  
 |[DISCOVER_KEYWORDS Rowset &#40;XMLA&#41;](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126063(v=sql.110))|Returns the list of reserved keywords.|  
 |[DISCOVER_LITERALS Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126236(v=sql.110))|Returns the list of literals, including data types and values, supported by XMLA.|  
-|[DISCOVER_LOCKS Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126236(v=sql.110))|Returns a snapshot of the locks used at a specific point in time.|  
+|[DISCOVER_LOCKS Rowset](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2012/bb934104(v=sql.110))|Returns a snapshot of the locks used at a specific point in time.|  
 |[DISCOVER_MEMORYGRANT Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh270266(v=sql.110))|Returns information about memory allocated by Analysis Services at start up.|  
 |[DISCOVER_MEMORYUSAGE Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh270268(v=sql.110))|Shows memory usage by specific objects.|  
 |[DISCOVER_OBJECT_ACTIVITY Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/bb934094(v=sql.110))|Reports on object activity since the service last started.|  
@@ -131,8 +131,8 @@ ORDER BY TABLE_NAME ASC
 |[DISCOVER_TRACES Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh270255(v=sql.110))|Returns a list of traces actively running on the current connection.|  
 |[DISCOVER_TRANSACTIONS Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh270263(v=sql.110))|Returns a list of transactions actively running on the current connection.|  
 |[DISCOVER_XEVENT_TRACE_DEFINITION Rowset](../dev-guide/discover-xevent-trace-definition-rowset.md)|Returns a list of xevent traces actively running on the current connection.|  
-|[DMSCHEMA_MINING_COLUMNS Rowset](https://docs.microsoft.com/analysis-services/data-mining/data-mining-schema-rowsets-ssas)|Lists the individual columns of all mining models available on the current connection.|  
-|[DMSCHEMA_MINING_FUNCTIONS Rowset](https://docs.microsoft.com/analysis-services/data-mining/data-mining-schema-rowsets-ssas)|Returns a list of functions supported by the data mining algorithms on the server.|  
+|[DMSCHEMA_MINING_COLUMNS Rowset](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2008-r2/ms126237(v=sql.105))|Lists the individual columns of all mining models available on the current connection.|  
+|[DMSCHEMA_MINING_FUNCTIONS Rowset](https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2012/ms126188(v=sql.110))|Returns a list of functions supported by the data mining algorithms on the server.|  
 |[DMSCHEMA_MINING_MODEL_CONTENT Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110))|Returns a rowset consisting of columns that describe the current model.|  
 |[DMSCHEMA_MINING_MODEL_CONTENT_PMML Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126283(v=sql.110))|Returns a rowset consisting of columns that describe the current model in PMML format.| 
 |[DMSCHEMA_MINING_MODEL_XML Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126071(v=sql.110))|Returns a rowset consisting of columns that describe the current model in PMML format.| 

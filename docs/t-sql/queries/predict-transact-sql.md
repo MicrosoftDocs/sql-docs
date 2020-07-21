@@ -199,8 +199,8 @@ The preceding example query can be rewritten to create a view by specifying `MOD
 CREATE VIEW predictions
 AS
 SELECT d.*, p.Score
-FROM PREDICT(MODEL = (SELECT test_model FROM model_table WHERE Id = 1),
-DATA = dbo.mytable AS d) WITH (Score float) AS p;
+FROM PREDICT(MODEL = (SELECT test_model FROM scoring_model WHERE model_id = 1),
+             DATA = dbo.mytable AS d) WITH (Score float) AS p;
 ```
 
 :::moniker-end

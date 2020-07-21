@@ -1,5 +1,6 @@
 ---
 title: "Load the SMO Assemblies in Windows PowerShell | Microsoft Docs"
+description: Learn how to load the SQL Server Management Object (SMO) assemblies in Windows PowerShell scripts that do not use the SQL Server PowerShell provider.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

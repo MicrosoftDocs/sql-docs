@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Manage a CDC Instance
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You can use the CDC Designer Console to view information about the instances that you create and to manage the operation of the instances.  

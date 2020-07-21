@@ -19,7 +19,7 @@ ms.author: chugu
 ---
 # Merge Data by Using the Union All Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To add and configure a Union All transformation, the package must already include at least one Data Flow task and two data sources.  

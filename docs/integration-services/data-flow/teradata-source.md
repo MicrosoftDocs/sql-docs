@@ -12,7 +12,7 @@ ms.author: chugu
 ---
 # Connect to the Teradata source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 The Teradata source extracts data from Teradata databases by using:
 - A table or a view.

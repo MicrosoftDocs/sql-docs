@@ -12,7 +12,7 @@ ms.author: chugu
 ---
 # Oracle destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 The Oracle destination bulk loads data into Oracle Database.
 

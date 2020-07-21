@@ -26,7 +26,9 @@ author: rothja
 ms.author: jroth
 monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
+
 # SELECT @local_variable (Transact-SQL)
+
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   Sets a local variable to the value of an expression.  
@@ -45,15 +47,16 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
+
 @*local_variable*  
  Is a declared variable for which a value is to be assigned.  
   
-{= | += | -= | \*= | /= | %= | &= | ^= | |= }   
+{= \| += \| -= \| \*= \| /= \| %= \| &= \| ^= \| \|= }   
 Assign the value on the right to the variable on the left.  
   
 Compound assignment operator:  
-  |operator |action |   
-  |-----|-----|  
+  |operator |action |
+  |---------|-------|
   | = | Assigns the expression that follows, to the variable. |  
   | += | Add and assign |   
   | -= | Subtract and assign |  

@@ -39,7 +39,7 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  *scalar_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- { = | <> | != | > | >= | !> | < | <= | !< }  
+ { = \| <> \| != \| > \| >= \| !> \| < \| <= \| !< }  
  Is a comparison operator.  
   
  *subquery*  

@@ -43,7 +43,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  *scalar_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- { = | <> | != | > | >= | !> | < | <= | !< }  
+ { = \| <> \| != \| > \| >= \| !> \| < \| <= \| !< }  
  Is any valid comparison operator.  
   
  SOME | ANY  

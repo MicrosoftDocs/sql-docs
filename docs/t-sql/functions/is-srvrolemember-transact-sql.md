@@ -34,7 +34,9 @@ ms.author: vanto
 IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *role* **'**  
  Is the name of the server role that is being checked. *role* is **sysname**.  
   

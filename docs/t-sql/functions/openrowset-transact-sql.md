@@ -71,6 +71,8 @@ OPENROWSET
    [ , FORMATFILE_DATASOURCE = 'data_source_name' ]
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 ### '*provider_name*'

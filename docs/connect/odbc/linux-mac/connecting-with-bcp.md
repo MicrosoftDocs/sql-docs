@@ -144,3 +144,4 @@ Used with the format and -f format_file options, generates an XML-based format f
 ## See Also
 
 [Connecting with **sqlcmd**](connecting-with-sqlcmd.md)  
+[Release Notes](release-notes-tools.md)

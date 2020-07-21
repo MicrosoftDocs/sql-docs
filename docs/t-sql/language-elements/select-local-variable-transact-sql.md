@@ -54,31 +54,32 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 {= \| += \| -= \| \*= \| /= \| %= \| &= \| ^= \| \|= }   
 Assign the value on the right to the variable on the left.  
   
-Compound assignment operator:  
-  |operator |action |
-  |---------|-------|
-  | = | Assigns the expression that follows, to the variable. |  
-  | += | Add and assign |   
-  | -= | Subtract and assign |  
-  | \*= | Multiply and assign |  
-  | /= | Divide and assign |  
-  | %= | Modulo and assign |  
-  | &= | Bitwise AND and assign |  
-  | ^= | Bitwise XOR and assign |  
-  | \|= | Bitwise OR and assign |  
-  
- *expression*  
- Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md). This includes a scalar subquery.  
-  
-## Remarks  
- SELECT @*local_variable* is typically used to return a single value into the variable. However, when *expression* is the name of a column, it can return multiple values. If the SELECT statement returns more than one value, the variable is assigned the last value that is returned.  
-  
- If the SELECT statement returns no rows, the variable retains its present value. If *expression* is a scalar subquery that returns no value, the variable is set to NULL.  
-  
- One SELECT statement can initialize multiple local variables.  
-  
-> [!NOTE]  
->  A SELECT statement that contains a variable assignment cannot be used to also perform typical result set retrieval operations.  
+Compound assignment operator:
+|operator |action |
+|---------|-------|
+| = | Assigns the expression that follows, to the variable. |
+| += | Add and assign |
+| -= | Subtract and assign |
+| \*= | Multiply and assign |
+| /= | Divide and assign |
+| %= | Modulo and assign |
+| &= | Bitwise AND and assign |
+| ^= | Bitwise XOR and assign |
+| \|= | Bitwise OR and assign |
+
+*expression*  
+Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md). This includes a scalar subquery.  
+
+## Remarks
+
+SELECT @*local_variable* is typically used to return a single value into the variable. However, when *expression* is the name of a column, it can return multiple values. If the SELECT statement returns more than one value, the variable is assigned the last value that is returned.  
+
+If the SELECT statement returns no rows, the variable retains its present value. If *expression* is a scalar subquery that returns no value, the variable is set to NULL.  
+
+One SELECT statement can initialize multiple local variables.  
+
+> [!NOTE]
+> A SELECT statement that contains a variable assignment cannot be used to also perform typical result set retrieval operations.  
   
 ## Examples  
   

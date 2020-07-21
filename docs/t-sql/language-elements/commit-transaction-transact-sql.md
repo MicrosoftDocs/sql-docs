@@ -54,7 +54,9 @@ COMMIT [ TRAN | TRANSACTION ]
 ``` 
  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *transaction_name*  
  **APPLIES TO:** SQL Server and Azure SQL Database
  

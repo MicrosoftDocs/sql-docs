@@ -40,7 +40,9 @@ ms.author: jrasnick
 TEXTVALID ( 'table.column' ,text_ ptr )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table*  
  Is the name of the table that will be used.  
   

@@ -38,7 +38,9 @@ ms.author: vanto
 VerifySignedByCert( Cert_ID , signed_data , signature )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Cert_ID*  
  Is the ID of a certificate in the database. *Cert_ID* is **int**.  
   

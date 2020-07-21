@@ -35,7 +35,9 @@ THROW [ { error_number | @local_variable },
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *error_number*  
  Is a constant or variable that represents the exception. *error_number* is **int** and must be greater than or equal to 50000 and less than or equal to 2147483647.  
   

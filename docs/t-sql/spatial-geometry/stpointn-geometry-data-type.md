@@ -30,7 +30,9 @@ Returns a specified point in a **geometry** instance.
 .STPointN ( expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is an **int** expression between 1 and the number of points in the **geometry** instance.  
   

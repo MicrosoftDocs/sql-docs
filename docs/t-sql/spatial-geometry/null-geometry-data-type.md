@@ -29,7 +29,9 @@ A read-only property providing a null instance of the **geometry** type.
 Null  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
   
 ## Return Types  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type: **geometry**  

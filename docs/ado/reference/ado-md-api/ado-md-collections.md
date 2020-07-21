@@ -16,7 +16,7 @@ ms.author: jroth
 ---
 # ADO MD Collections
 
-|||  
+|Collection|Description|  
 |-|-|  
 |[Axes](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|Contains the **Axis** objects that define a cellset.|  
 |[CubeDefs](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|Contains the **CubeDef** objects that represent a cube from a multidimensional catalog.|  

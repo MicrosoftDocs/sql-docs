@@ -1,6 +1,6 @@
 ---
 title: "Spatial Data Types Overview | Microsoft Docs"
-ms.date: "07/16/2020"
+ms.date: "07/21/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""

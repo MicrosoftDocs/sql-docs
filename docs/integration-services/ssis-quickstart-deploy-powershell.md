@@ -11,7 +11,7 @@ ms.author: chugu
 ---
 # Deploy an SSIS project with PowerShell
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This quickstart demonstrates how to use a PowerShell script to connect to a database server and deploy an SSIS project to the SSIS Catalog.

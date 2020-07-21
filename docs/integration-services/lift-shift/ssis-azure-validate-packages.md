@@ -13,7 +13,7 @@ ms.reviewer: maghan
 ---
 # Validate SQL Server Integration Services (SSIS) packages deployed to Azure
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

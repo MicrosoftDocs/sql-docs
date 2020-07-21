@@ -12,7 +12,7 @@ ms.author: chugu
 ---
 # Oracle Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 An Oracle Connection Manager is used to enable a package to extract data from Oracle Databases and load data into Oracle Databases.
 

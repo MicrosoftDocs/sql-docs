@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # ROUND (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns a numeric expression that is rounded to the specified length or precision. The length parameter must evaluate to an integer.  

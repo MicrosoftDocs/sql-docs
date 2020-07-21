@@ -36,7 +36,9 @@ ms.author: jrasnick
 ROWCOUNT_BIG ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **bigint**  
   
 ## Remarks  

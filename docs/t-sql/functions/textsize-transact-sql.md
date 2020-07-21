@@ -35,7 +35,9 @@ ms.author: jrasnick
 @@TEXTSIZE  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Examples  

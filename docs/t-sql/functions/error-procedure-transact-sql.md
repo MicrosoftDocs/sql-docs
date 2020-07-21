@@ -40,7 +40,9 @@ This function returns the name of the stored procedure or trigger where an error
 ERROR_PROCEDURE ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
 **nvarchar(128)**  
   
 ## Return Value  

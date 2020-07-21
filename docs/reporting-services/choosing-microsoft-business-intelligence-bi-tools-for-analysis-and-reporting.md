@@ -1,5 +1,6 @@
 ---
 title: Analysis and reporting with Microsoft business intelligence (BI) tools
+description: Learn about the workloads mapped for data analysis and reporting, and about the Microsoft BI tools that are best suited for those workloads.
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""

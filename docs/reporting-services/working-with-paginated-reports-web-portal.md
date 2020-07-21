@@ -1,5 +1,6 @@
 ---
 title: "Working with paginated reports (web portal) | Microsoft Docs"
+description: Learn how to view and manage the properties of a paginated report within the web portal. Also, learn to use Report Builder to create or edit paginated reports.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

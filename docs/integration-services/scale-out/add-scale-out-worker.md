@@ -13,7 +13,7 @@ ms.author: "haoqian"
 ---
 # Add a Scale Out Worker with Scale Out Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

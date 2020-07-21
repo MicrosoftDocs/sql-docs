@@ -16,7 +16,7 @@ ms.author: mathoma
     
 ## Details  
   
-|Attribute|Value|  
+|||  
 |-|-|  
 |Product Name|SQL Server|  
 |Product Version|11.0|  

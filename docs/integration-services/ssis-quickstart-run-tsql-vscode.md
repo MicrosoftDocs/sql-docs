@@ -11,7 +11,7 @@ ms.author: chugu
 ---
 # Run an SSIS package from Visual Studio Code with Transact-SQL
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This quickstart demonstrates how to use Visual Studio Code to connect to the SSIS Catalog database, and then use Transact-SQL statements to run an SSIS package stored in the SSIS Catalog.

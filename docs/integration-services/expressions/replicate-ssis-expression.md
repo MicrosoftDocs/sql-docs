@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # REPLICATE (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns a character expression that is replicated a number of times. The *times* argument must evaluate to an integer.  

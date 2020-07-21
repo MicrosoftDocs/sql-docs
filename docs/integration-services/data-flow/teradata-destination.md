@@ -13,7 +13,7 @@ ms.author: chugu
 
 # Teradata destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 The Teradata destination bulk loads data into Teradata Database.
 

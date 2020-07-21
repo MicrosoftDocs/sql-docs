@@ -1,5 +1,5 @@
 ---
-title: "SELECT @local_variable (Transact-SQL) | Microsoft Docs"
+title: SELECT @local_variable (Transact-SQL)
 ms.custom: ""
 ms.date: "09/06/2017"
 ms.prod: sql
@@ -51,21 +51,22 @@ SELECT { @local_variable { = | += | -= | *= | /= | %= | &= | ^= | |= } expressio
 @*local_variable*  
  Is a declared variable for which a value is to be assigned.  
   
-{= \| += \| -= \| \*= \| /= \| %= \| &= \| ^= \| \|= }   
+{= \| += \| -= \| \*= \| /= \| %= \| &= \| ^= \| \|= }  
 Assign the value on the right to the variable on the left.  
   
-Compound assignment operator:
-|operator |action |
-|---------|-------|
-| = | Assigns the expression that follows, to the variable. |
-| += | Add and assign |
-| -= | Subtract and assign |
-| \*= | Multiply and assign |
-| /= | Divide and assign |
-| %= | Modulo and assign |
-| &= | Bitwise AND and assign |
-| ^= | Bitwise XOR and assign |
-| \|= | Bitwise OR and assign |
+Compound assignment operator:  
+
+| operator | action |  
+| -------- | ------ |  
+| = | Assigns the expression that follows, to the variable. |  
+| += | Add and assign |  
+| -= | Subtract and assign |  
+| \*= | Multiply and assign |  
+| /= | Divide and assign |  
+| %= | Modulo and assign |  
+| &= | Bitwise AND and assign |  
+| ^= | Bitwise XOR and assign |  
+| \|= | Bitwise OR and assign |  
 
 *expression*  
 Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md). This includes a scalar subquery.  
@@ -99,7 +100,7 @@ SELECT @var1 AS 'Company Name';
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
- ```  
+ ```
  Company Name  
  ------------------------------  
  Generic Name  
@@ -121,7 +122,7 @@ SELECT @var1 AS 'Company Name' ;
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-```  
+```
 Company Name  
 ----------------------------  
 NULL  
@@ -132,5 +133,3 @@ NULL
  [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md)   
  [Compound Operators &#40;Transact-SQL&#41;](../../t-sql/language-elements/compound-operators-transact-sql.md)   
  [SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)  
-  
-  

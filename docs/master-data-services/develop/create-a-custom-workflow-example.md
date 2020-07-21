@@ -41,9 +41,9 @@ namespace MDSWorkflowTestLib
         public void StartWorkflow(string workflowType, System.Xml.XmlElement dataElement)  
         {  
             // Extract the attributes we want out of the element data.  
-            XmlNode NameNode = dataElement.SelectSingleNode("//ExternalAction/MemberData/Name");  
-            XmlNode CodeNode = dataElement.SelectSingleNode("//ExternalAction/MemberData/Code");  
-            XmlNode EnteringUserNode = dataElement.SelectSingleNode("//ExternalAction/MemberData/LastChgUserName");  
+            XmlNode NameNode = dataElement.SelectSingleNode("./MemberData/Name");  
+            XmlNode CodeNode = dataElement.SelectSingleNode("./MemberData/Code");  
+            XmlNode EnteringUserNode = dataElement.SelectSingleNode("./MemberData/LastChgUserName");  
   
             // Open a connection on the workflow database.  
             SqlConnection workflowConn = new SqlConnection(@"Data Source=<Server instance>; Initial Catalog=WorkflowTest; Integrated Security=True");  

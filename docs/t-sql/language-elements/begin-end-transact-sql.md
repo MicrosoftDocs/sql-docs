@@ -40,7 +40,9 @@ BEGIN
 END  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  { *sql_statement* | *statement_block* }  
  Is any valid [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or statement grouping as defined by using a statement block.  
   

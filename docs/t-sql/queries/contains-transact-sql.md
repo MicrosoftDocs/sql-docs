@@ -35,9 +35,10 @@ ms.assetid: 996c72fc-b1ab-4c96-bd12-946be9c18f84
 author: VanMSFT
 ms.author: vanto
 ---
-# CONTAINS (Transact-SQL)
-[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
+# CONTAINS (Transact-SQL)
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Searches for precise or fuzzy (less precise) matches to single words and phrases, words within a certain distance of one another, or weighted matches in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. CONTAINS is a predicate used in the [WHERE clause](../../t-sql/queries/where-transact-sql.md) of a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement to perform [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] full-text search on full-text indexed columns containing character-based data types.  
   
@@ -134,7 +135,9 @@ CONTAINS (
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *column_name*  
  Is the name of a full-text indexed column of the table specified in the FROM clause. The columns can be of type **char**, **varchar**, **nchar**, **nvarchar**, **text**, **ntext**, **image**, **xml**, **varbinary**, or **varbinary(max)**.  
   
@@ -312,18 +315,18 @@ CONTAINS(column_name, 'NEAR ((Monday, Tuesday, Wednesday), MAX, TRUE)')
  Specifies a weight value, which is a number from 0.0 through 1.0. Each component in *\<weighted_term>* may include a *weight_value*. *weight_value* is a way to change how various portions of a query affect the rank value assigned to each row matching the query. WEIGHT does not affect the results of CONTAINS queries, but WEIGHT impacts rank in [CONTAINSTABLE](../../relational-databases/system-functions/containstable-transact-sql.md) queries.  
   
 > [!NOTE]  
->  The decimal separator is always a period, regardless of the operating system locale.  
+> The decimal separator is always a period, regardless of the operating system locale.  
   
- { AND | & } | { AND NOT | &! } | { OR | | }  
+ { AND \| & } \| { AND NOT \| &! } \| { OR \| \| }  
  Specifies a logical operation between two contains search conditions.  
   
- { AND | & }  
+ { AND \| & }  
  Indicates that the two contains search conditions must be met for a match. The ampersand symbol (&) may be used instead of the AND keyword to represent the AND operator.  
   
- { AND NOT | &! }  
+ { AND NOT \| &! }  
  Indicates that the second search condition must not be present for a match. The ampersand followed by the exclamation mark symbol (&!) may be used instead of the AND NOT keyword to represent the AND NOT operator.  
   
- { OR | | }  
+ { OR \| \| }  
  Indicates that either of the two contains search conditions must be met for a match. The bar symbol (|) may be used instead of the OR keyword to represent the OR operator.  
   
  When *\<contains_search_condition>* contains parenthesized groups, these parenthesized groups are evaluated first. After evaluating parenthesized groups, these rules apply when using these logical operators with contains search conditions:  

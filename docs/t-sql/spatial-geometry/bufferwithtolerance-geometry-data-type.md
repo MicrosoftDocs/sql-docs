@@ -30,7 +30,9 @@ Returns a geometric object that represents the union of all point values whose d
 .BufferWithTolerance ( distance, tolerance, relative )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *distance*  
  Is a **float** expression specifying the distance from the **geometry** instance around which to calculate the buffer.  
   

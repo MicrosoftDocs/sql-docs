@@ -55,7 +55,7 @@ ms.author: owend
  [Move an Analysis Services Database](move-an-analysis-services-database.md)   
  [Database ReadWriteModes](database-readwritemodes.md)   
  [Switch an Analysis Services database between ReadOnly and ReadWrite modes](switch-an-analysis-services-database-between-readonly-and-readwrite-modes.md)   
- [Detach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/detach-element)   
- [Attach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)  
+ [Detach Element](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/detach-element)   
+ [Attach Element](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/attach-element)  
   
   

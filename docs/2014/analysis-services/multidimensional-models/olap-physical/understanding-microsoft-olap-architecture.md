@@ -32,11 +32,11 @@ ms.author: owend
  [More...](understanding-microsoft-olap-physical-architecture.md)  
   
  ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **Programming Architecture**  
- [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/analysis-services/amo/developing-with-analysis-management-objects-amo)  
   
  [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
- [Developing with ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
+ [Developing with ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/developing-with-adomd-net)  
   
  ![Small File Folder Icon](../../../integration-services/media/filefolder-small.gif "Small File Folder Icon") **International Considerations**  
  [Globalization scenarios for Analysis Services Multiidimensional](../../globalization-scenarios-for-analysis-services-multiidimensional.md)  

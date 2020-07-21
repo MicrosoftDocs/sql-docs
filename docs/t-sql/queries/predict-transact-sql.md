@@ -75,11 +75,11 @@ WITH ( <result_set_definition> )
   }  
 
 <model_object> ::=
-{
-      model_literal
-      | model_variable
-      | ( scalar_subquery )
-}
+  {
+    model_literal
+    | model_variable
+    | ( scalar_subquery )
+  }
 ```
 
 ::: moniker-end

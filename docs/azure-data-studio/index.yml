@@ -59,8 +59,8 @@ landingContent:
             url: notebooks-guidance.md
           - text: How to use the SQL Kernel
             url: notebooks-tutorial-sql-kernel.md
-          - text: How to manage notebooks in Azure Data Studio
-            url: notebooks-manage-sql-server.md
+          - text: How to use the Python Kernel
+            url: notebooks-tutorial-python-kernel.md
           - text: Kqlmagic extension in Azure Data Studio
             url: notebooks-kqlmagic.md
 

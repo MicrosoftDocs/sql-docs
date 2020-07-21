@@ -35,7 +35,9 @@ This function returns the name of a table column, based on the table identificat
 COL_NAME ( table_id , column_id )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *table_id*  
 The identification number of the table containing that column. The *table_id* argument has an **int** data type.
   

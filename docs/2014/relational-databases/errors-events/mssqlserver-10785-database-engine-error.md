@@ -16,7 +16,7 @@ ms.author: mathoma
     
 ## Details  
   
-|||  
+|Attribute|Value|  
 |-|-|  
 |Product Name|MSSQLSERVER|  
 |Event ID|10785|  

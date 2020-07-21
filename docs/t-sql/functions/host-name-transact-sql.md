@@ -33,7 +33,9 @@ ms.author: vanto
 HOST_NAME ()  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **nvarchar(128)**  
   
 ## Remarks  

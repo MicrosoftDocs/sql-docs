@@ -134,13 +134,13 @@ Controls ANSI to OEM conversion of data.
 
 ### SQL_COPT_SS_AUTOBEGINTXN
 
-Controls whether or not the driver automatically creates a new transaction after one is commited.
-Introduced in version 17.6.1
+Version 17.6+
+While autocommit is off, controls automatic BEGIN TRANSACTION after ROLLBACK or COMMIT.
 
 | Attribute Value | Description |
 |-|-|
-| SQL_AUTOBEGINTXN_ON | (Default) New transaction started after commit. |
-| SQL_AUTOBEGINTXN_OFF | No new transaction after commit. |
+| SQL_AUTOBEGINTXN_ON | (Default) Automatic BEGIN TRANSACTION after ROLLBACK or COMMIT. |
+| SQL_AUTOBEGINTXN_OFF | No automatic BEGIN TRANSACTION after ROLLBACK or COMMIT. |
 
 ### SQL_COPT_SS_FALLBACK_CONNECT
 

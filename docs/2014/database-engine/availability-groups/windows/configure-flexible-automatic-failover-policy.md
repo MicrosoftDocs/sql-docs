@@ -19,8 +19,8 @@ ms.author: mathoma
   
   
   
-  > [!NOTE]  
-  >  The flexible failover policy of an availability group cannot be configured by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
+    > [!NOTE]  
+    >  The flexible failover policy of an availability group cannot be configured by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
   

@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # TRIM (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns a character expression after removing leading and trailing spaces.  

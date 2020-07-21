@@ -40,7 +40,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 dividend % divisor  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *dividend*  
  Is the numeric expression to divide. *dividend* must be a valid [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any one of the data types in the integer and monetary data type categories, or the **numeric** data type.  
   

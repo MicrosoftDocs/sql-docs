@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # Configure Dialog Box
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Configure** dialog box to configure parameters, connection managers, and references to environments, for packages and projects.  

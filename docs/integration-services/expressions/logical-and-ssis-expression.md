@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # &amp;&amp; (Logical AND) (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Performs a logical AND operation. The expression evaluates to TRUE if all conditions are TRUE.  

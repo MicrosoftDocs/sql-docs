@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # POWER (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns the result of raising a numeric expression to a power. The power parameter must evaluate to an integer.  

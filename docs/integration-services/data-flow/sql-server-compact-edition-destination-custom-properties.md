@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # SQL Server Compact Edition Destination Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Compact destination has both custom properties and the properties common to all data flow components.  

@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Direct the CDC Stream According to the Type of Change
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To add and configure a CDC splitter Transformation, the package must contain at least one Data Flow task and a CDC source.  

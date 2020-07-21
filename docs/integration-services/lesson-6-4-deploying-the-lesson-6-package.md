@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 6-4: Deploy the Lesson 6 package
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

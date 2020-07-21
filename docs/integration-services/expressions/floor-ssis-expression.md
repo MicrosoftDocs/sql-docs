@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # FLOOR (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns the largest integer that is less than or equal to a numeric expression.  

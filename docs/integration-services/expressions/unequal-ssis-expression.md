@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # != (Unequal) (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Performs a comparison to determine if two expressions with compatible data types are not equal. The expression evaluator automatically converts many data types before it performs the comparison.  

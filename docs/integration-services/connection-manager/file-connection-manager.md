@@ -22,7 +22,7 @@ ms.author: chugu
 ---
 # File Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   A File connection manager enables a package to reference an existing file or folder, or to create a file or folder at run time. For example, you can reference an Excel file. Certain components in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] use information in files to perform their work. For example, an Execute SQL task can reference a file that contains the SQL statements that the task executes. Other components perform operations on files. For example, the File System task can reference a file to copy it to a new location.  

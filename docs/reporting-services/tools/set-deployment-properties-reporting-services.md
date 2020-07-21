@@ -1,5 +1,6 @@
 ---
 title: "Set Deployment Properties (Reporting Services) | Microsoft Docs"
+description: Learn how to set the deployment properties that are used by SQL Server Data Tools (SSDT) or Visual Studio to build, preview, and deploy reports.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: tools

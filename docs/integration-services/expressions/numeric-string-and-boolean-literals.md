@@ -20,7 +20,7 @@ ms.author: chugu
 ---
 # Numeric, string, and Boolean literals
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  Expressions can include numeric, string, and Boolean literals. The expression evaluator supports a variety of numeric literals such as integers, decimals, and floating-point constants. The expression evaluator also supports the long and float suffixes, which specify how the expression evaluator handles values, and scientific notation in numeric literals.  

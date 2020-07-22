@@ -30,7 +30,9 @@ Returns an object that represents the point set from one **geometry** instance t
 .STDifference ( other_geometry )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geometry*  
  Is another **geometry** instance indicating which points to remove from the instance on which `STDifference()` is being invoked.  
   

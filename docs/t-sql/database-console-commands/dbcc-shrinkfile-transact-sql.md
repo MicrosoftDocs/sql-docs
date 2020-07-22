@@ -51,7 +51,9 @@ DBCC SHRINKFILE
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *file_name*  
 The file to be shrunk's logical name.
   

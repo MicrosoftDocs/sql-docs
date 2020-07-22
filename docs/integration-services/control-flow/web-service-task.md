@@ -20,7 +20,7 @@ ms.author: chugu
 ---
 # Web Service Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Web Service task executes a Web service method. You can use the Web Service task for the following purposes:  

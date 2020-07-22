@@ -46,9 +46,8 @@ ms.author: carlrab
   
 ## Relationship Cardinalities  
   
-||||  
-|-|-|-|  
-|From|To|Relationship|  
+| From | To | Relationship |
+| ---- | -- | ------------ |  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|Many to one|  
   
 ## See also  

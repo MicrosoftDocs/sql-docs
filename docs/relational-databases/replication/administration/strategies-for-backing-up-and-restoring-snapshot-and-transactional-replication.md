@@ -24,7 +24,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
 ---
 # Strategies for Backing Up and Restoring Snapshot and Transactional Replication
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/applies-to-version/sql-asdb.md)]
+[!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
   When you design a backup and restore strategy for snapshot and transactional replication, there are three areas to consider:  
   
 -   Which databases to back up.

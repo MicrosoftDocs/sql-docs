@@ -1,5 +1,5 @@
 ---
-title: "Commands Generating Multiple-Rowset Results | Microsoft Docs"
+title: "Commands generating multiple-rowset results (OLE DB driver) | Microsoft Docs"
 description: "Commands generating multiple-rowset results"
 ms.custom: ""
 ms.date: "06/14/2018"

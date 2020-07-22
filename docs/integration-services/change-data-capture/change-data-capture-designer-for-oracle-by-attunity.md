@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Change Data Capture Designer for Oracle by Attunity
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The CDC Designer Console is used to develop and maintain Oracle CDC Instances. The CDC Designer Console is a Microsoft Management Console snap-in that contains the following elements:  

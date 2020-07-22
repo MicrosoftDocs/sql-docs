@@ -30,7 +30,9 @@ Returns 1 if a **geometry** instance crosses another **geometry** instance. Retu
 .STCrosses ( other_geometry )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geometry*  
  Is another **geometry** instance to compare against the instance on which `STCrosses()` is invoked.  
   

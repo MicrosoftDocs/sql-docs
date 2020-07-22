@@ -30,7 +30,9 @@ Returns a **geometrycollection** instance from an Open Geospatial Consortium (OG
 STGeomCollFromWKB ( 'WKB_geometrycollection' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *WKB_geometrycollection*  
  Is the WKB representation of the **geometrycollection** instance you wish to return. *WKB_geometrycollection* is a **varbinary(max)** expression.  
   

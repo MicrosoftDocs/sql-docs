@@ -1,5 +1,6 @@
 ---
 title: Download SQL Server PowerShell Module
+description: Learn how to install the SqlServer PowerShell modules. The SqlServer module provides cmdlets that support the latest SQL features, and the SQLPS module runs agent jobs using PowerShell. 
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual

@@ -1,5 +1,5 @@
 ---
-title: "Command Parameters | Microsoft Docs"
+title: "Command Parameters (OLE DB driver) | Microsoft Docs"
 description: "Command parameters"
 ms.custom: ""
 ms.date: "06/14/2018"

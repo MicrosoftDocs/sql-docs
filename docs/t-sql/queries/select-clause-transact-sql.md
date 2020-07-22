@@ -57,7 +57,9 @@ SELECT [ ALL | DISTINCT ]
     } [ ,...n ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **ALL**  
  Specifies that duplicate rows can appear in the result set. ALL is the default.  
   

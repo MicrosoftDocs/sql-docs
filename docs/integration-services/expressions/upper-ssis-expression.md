@@ -18,7 +18,7 @@ ms.author: chugu
 ---
 # UPPER (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns a character expression after converting lowercase characters to uppercase characters.  

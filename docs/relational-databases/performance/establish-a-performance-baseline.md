@@ -1,5 +1,6 @@
 ---
 title: "Establish a Performance Baseline | Microsoft Docs"
+description: Take performance measurements at regular intervals over time, even when no problems occur, to establish a server performance baseline in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

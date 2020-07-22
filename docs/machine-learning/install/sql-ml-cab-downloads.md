@@ -148,7 +148,7 @@ For SQL Server 2016 R Services, baseline releases are either the RTM version or 
 
 |Release  |Download link  |
 |---------|---------------|
-|**SQL Server 2016 SP2 CU6**     |
+|**SQL Server 2016 SP2 CU6-CU13**     |
 |Microsoft R Open     |[SRO_3.2.2.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079936&clcid=1033)|
 |Microsoft R Server    |[SRS_8.0.3.20100_1033.cab](https://go.microsoft.com/fwlink/?LinkId=2079933&clcid=1033)|
 |**SQL Server 2016 SP2 CU1-CU5**     |

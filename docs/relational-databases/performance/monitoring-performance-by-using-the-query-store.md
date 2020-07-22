@@ -1,5 +1,6 @@
 ---
 title: "Monitoring Performance By Using the Query Store | Microsoft Docs"
+description: The SQL Server Query Store provides insight on query plan choice and performance. Query Store captures history of queries, plans, and runtime statistics.
 ms.custom: ""
 ms.date: 04/09/2020
 ms.prod: sql

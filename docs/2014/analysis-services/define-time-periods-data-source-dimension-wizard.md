@@ -20,7 +20,7 @@ ms.author: owend
   
 ## Options  
  **Time Property Name**  
- Displays the attribute types used to indicate time periods within time dimensions. For more information about attribute types, see [Type Element &#40;DimensionAttribute&#41; &#40;ASSL&#41;](https://docs.microsoft.com/bi-reference/assl/properties/type-element-dimensionattribute-assl).  
+ Displays the attribute types used to indicate time periods within time dimensions. For more information about attribute types, see [Type Element &#40;DimensionAttribute&#41; &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/assl/properties/type-element-dimensionattribute-assl).  
   
 > [!NOTE]  
 >  The `Date` attribute type should be used only for columns with a DateTime data type.  

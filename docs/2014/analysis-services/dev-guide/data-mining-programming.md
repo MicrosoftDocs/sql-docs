@@ -48,10 +48,10 @@ ms.author: owend
  Describes additions to the specification to support data mining and multidimensional data: new schema rowsets and columns, Data Mining Extensions (DMX) language for creating and managing mining structures.  
   
 ## Related Reference  
- [Developing with ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
+ [Developing with ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/developing-with-adomd-net)  
  Introduces ADOMD.NET client and server programming objects.  
   
- [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/analysis-services/amo/developing-with-analysis-management-objects-amo)  
  Introduces the AMO programming library.  
   
  [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  

@@ -45,7 +45,7 @@ ms.author: owend
   
 -   You cannot change the database context of the XMLA Query window after you have opened the **Query** window. Therefore, if you need to send a query to a different database or to a different instance, you must open that database or instance using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] and open a new **XMLA Query** window within that context.  
   
- You can create traces against an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular model as you would on a multidimensional solution. In this release, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides many new events that can be used to track memory usage, query and processing operations, and file usage. For more information, see [Analysis Services Trace Events](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events).  
+ You can create traces against an [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] tabular model as you would on a multidimensional solution. In this release, [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] provides many new events that can be used to track memory usage, query and processing operations, and file usage. For more information, see [Analysis Services Trace Events](https://docs.microsoft.com/analysis-services/trace-events/analysis-services-trace-events).  
   
 > [!WARNING]  
 >  If you put a trace on a tabular model database, you might see some events that are categorized as DMX queries. However, data mining is not supported on tabular model data, and the DMX queries executed on the database are limited to SELECT statements on the model metadata. The events are categorized as DMX only because the same parser framework is used for MDX.  
@@ -98,11 +98,11 @@ ms.author: owend
 ### Schema Rowsets  
  Client applications can use the schema rowsets to examine the metadata of tabular models and to retrieve support and monitoring information from the [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] server. In this release of SQL Server new schema rowsets have been added and existing schema rowsets extended to support features related to tabular models and to enhance monitoring and performance analysis across [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)].  
   
--   [DISCOVER_CALC_DEPENDENCY Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-calc-dependency-rowset)  
+-   [DISCOVER_CALC_DEPENDENCY Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/gg471590(v=sql.110))  
   
      New schema rowset for tracking dependencies among the columns and references in a tabular model  
   
--   [DISCOVER_CSDL_METADATA Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset)  
+-   [DISCOVER_CSDL_METADATA Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/gg471582(v=sql.110))  
   
      New schema rowset for obtaining the CSDL representation of a tabular model  
   
@@ -110,11 +110,11 @@ ms.author: owend
   
      New schema rowset for monitoring SQL Server Extended Events. For more information, see [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md).  
   
--   [DISCOVER_TRACES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-traces-rowset)  
+-   [DISCOVER_TRACES Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/hh270255(v=sql.110))  
   
      New `Type` column lets you filter traces by category. For more information, see [Create Profiler Traces for Replay &#40;Analysis Services&#41;](../instances/create-profiler-traces-for-replay-analysis-services.md).  
   
--   [MDSCHEMA_HIERARCHIES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/mdschema-hierarchies-rowset)  
+-   [MDSCHEMA_HIERARCHIES Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126062(v=sql.110))  
   
      New `STRUCTURE_TYPE` enumeration supports identification of user-defined hierarchies created in tabular models. For more information, see [Hierarchies &#40;SSAS Tabular&#41;](hierarchies-ssas-tabular.md).  
   

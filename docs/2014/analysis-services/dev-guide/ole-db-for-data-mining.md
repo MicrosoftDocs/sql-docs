@@ -21,7 +21,7 @@ ms.author: owend
  **For More Information:** [Data Mining Schema Rowsets](../../relational-databases/native-client-ole-db-rowsets/rowsets.md), [CREATE MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/create-mining-structure-dmx), [ALTER MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/alter-mining-structure-dmx), [DROP MINING STRUCTURE &#40;DMX&#41;](/sql/dmx/drop-mining-structure-dmx)  
   
 ## See Also  
- [Analysis Services Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)   
+ [Analysis Services Schema Rowsets](https://docs.microsoft.com/analysis-services/instances/analysis-services-schema-rowsets)   
  [Data Mining Extensions &#40;DMX&#41; Reference](/sql/dmx/data-mining-extensions-dmx-reference)  
   
   

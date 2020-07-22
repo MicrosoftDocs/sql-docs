@@ -40,9 +40,9 @@ ms.author: jroth
   
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Exception Message Box Programming](../database-engine/dev-guide/exception-message-box-programming.md)  
   
- ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
+ ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/developing-with-adomd-net)  
   
- ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/analysis-services/amo/developing-with-analysis-management-objects-amo)  
   
  ![Small File Folder Icon](../integration-services/media/filefolder-small.gif "Small File Folder Icon") [Developing with Analysis Services Scripting Language &#40;ASSL&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl)  
   

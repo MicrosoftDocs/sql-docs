@@ -1,5 +1,5 @@
 ---
-title: "Release Notes mssql-tools on Linux and macOS"
+title: "Release Notes for mssql-tools on Linux and macOS"
 description: "Learn what's new and changed in released versions of the Microsoft SQL Server Tools."
 ms.custom: ""
 ms.date: "07/13/2020"

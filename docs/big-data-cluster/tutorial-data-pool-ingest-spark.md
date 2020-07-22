@@ -110,7 +110,7 @@ The next step is to create a Spark streaming job that loads web clickstream data
    1. Configure the Spark-SQL connector parameters
 
     > [!NOTE]
-    > If your big data cluster is deployed with Active Directory integration, replace the value of **hostname** below to include the FQDN appended to the the service name. E.g. *hostname=master-p-svc.<domainName>*.
+    > If your big data cluster is deployed with Active Directory integration, replace the value of **hostname** below to include the FQDN appended to the the service name. E.g. *hostname=master-p-svc.\<domainName>*.
 
       ```
       import org.apache.spark.sql.types._

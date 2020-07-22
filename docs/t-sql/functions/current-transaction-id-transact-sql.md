@@ -31,7 +31,9 @@ This function returns the transaction ID of the current transaction in the curre
 CURRENT_TRANSACTION_ID( )  
   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return types
 **bigint**
   

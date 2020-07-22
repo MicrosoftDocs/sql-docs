@@ -1,5 +1,5 @@
 ---
-title: "Creating Rowsets with ICommand::Execute | Microsoft Docs"
+title: "Create rowset with ICommand::Execute (OLE DB driver) | Microsoft Docs"
 description: "Creating rowsets with ICommand::Execute"
 ms.custom: ""
 ms.date: "06/14/2018"

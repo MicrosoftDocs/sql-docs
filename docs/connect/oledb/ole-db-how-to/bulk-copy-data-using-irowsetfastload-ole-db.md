@@ -1,5 +1,5 @@
 ---
-title: "Bulk Copy Data Using IRowsetFastLoad (OLE DB) | Microsoft Docs"
+title: "Bulk copy data using IRowsetFastLoad (OLE DB driver) | Microsoft Docs"
 description: "Bulk copy data into a SQL Server table Using IRowsetFastLoad interface of OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

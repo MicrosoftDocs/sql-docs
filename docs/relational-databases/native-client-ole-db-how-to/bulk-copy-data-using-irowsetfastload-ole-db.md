@@ -1,5 +1,5 @@
 ---
-title: "Bulk Copy Data Using IRowsetFastLoad (OLE DB) | Microsoft Docs"
+title: "Bulk copy data using IRowsetFastLoad (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

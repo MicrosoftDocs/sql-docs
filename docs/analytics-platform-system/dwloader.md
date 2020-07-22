@@ -335,17 +335,17 @@ Examples of LF:
   
 An LF is required for Unix. A CR is required for Windows.  
   
-**-D** { **ymd** | ydm | mdy | myd |  dmy | dym | *custom_date_format* }  
+**-D** { **ymd** \| ydm \| mdy \| myd \| dmy \| dym \| *custom_date_format* }  
 Specifies the order of month (m), day (d), and year (y) for all datetime fields in the input file. The default order is ymd. To specify multiple order formats for the same source file, use the -dt option.  
   
-ymd | dmy  
+ymd \| dmy  
 ydm and dmy allow the same input formats. Both allow the year to be at the beginning or the end of the date. For example, for both **ydm** and **dmy** date formats, you could have 2013-02-03 or 02-03-2013 in the input file.  
   
 ydm  
 You can only load input formatted as ydm into columns of data type datetime and smalldatetime. You cannot load ydm values into a column of the datetime2, date, or datetimeoffset data type.  
   
 mdy  
-mdy allows <month><space><day><comma><year>.  
+mdy allows \<month>\<space>\<day>\<comma>\<year>.  
   
 Examples of mdy input data for January 1, 1975:  
   

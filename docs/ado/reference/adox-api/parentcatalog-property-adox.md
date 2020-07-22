@@ -53,11 +53,18 @@ Specifies the parent catalog of a Table, User, or Column object to provide acces
  An error occurs when the table or column is appended to a different **Catalog** than the **ParentCatalog**.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|  
-|[User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)||  
-  
+
+:::row:::
+    :::column:::
+        [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [ParentCatalog Property Example (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)

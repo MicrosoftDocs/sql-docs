@@ -71,24 +71,20 @@ EXEC sp_monitor
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
-||||  
-|-|-|-|  
-|**last_run**|**current_run**|**seconds**|  
+| last_run | current_run | seconds |
+| -------- | ----------- | ------- |
 |Mar 29 1998 11:55AM|Apr 4 1998 2:22 PM|561|  
   
-||||  
-|-|-|-|  
-|**cpu_busy**|**io_busy**|**idle**|  
+| cpu_busy | io_busy | idle |
+| -------- | ------- | ---- |
 |190(0)-0%|187(0)-0%|148(556)-99%|  
   
-||||  
-|-|-|-|  
-|**packets_received**|**packets_sent**|**packet_errors**|  
+| packets_received | packets_sent | packet_errors |
+| ---------------- | ------------ | ------------- |
 |16(1)|20(2)|0(0)|  
   
-|||||  
-|-|-|-|-|  
-|**total_read**|**total_write**|**total_errors**|**connections**|  
+| total_read | total_write | total_errors | connections |
+| ---------- | ----------- | ------------ | ----------- |
 |141(0)|54920(127)|0(0)|4(0)|  
   
 ## See Also  

@@ -30,7 +30,9 @@ ms.author: mlandzic
 .STDifference ( other_geography )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geography*  
  Is another **geography** instance indicating which points to remove from the instance on which STDifference() is being invoked.  
   

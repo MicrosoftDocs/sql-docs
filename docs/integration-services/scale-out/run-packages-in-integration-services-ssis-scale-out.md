@@ -14,7 +14,7 @@ f1_keywords:
 ---
 # Run packages in Integration Services (SSIS) Scale Out
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 After you deploy packages to the Integration Services server, you can run them in Scale Out by using one of the following methods:

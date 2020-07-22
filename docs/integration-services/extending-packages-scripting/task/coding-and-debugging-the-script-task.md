@@ -24,7 +24,7 @@ ms.author: chugu
 ---
 # Coding and Debugging the Script Task
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   After configuring the Script task in the **Script Task Editor**, you write your custom code in the Script task development environment.  

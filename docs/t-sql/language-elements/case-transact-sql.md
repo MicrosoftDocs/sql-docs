@@ -81,7 +81,9 @@ END
  WHEN *Boolean_expression*  
  Is the Boolean expression evaluated when using the searched CASE format. *Boolean_expression* is any valid Boolean expression.  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  Returns the highest precedence type from the set of types in *result_expressions* and the optional *else_result_expression*. For more information, see [Data Type Precedence &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ### Return Values  

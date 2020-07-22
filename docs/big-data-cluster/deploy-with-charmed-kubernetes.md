@@ -293,4 +293,4 @@ Proxy for running Spark statements, jobs, applications  https://40.81.116.26:304
 [overlays]: https://ubuntu.com/kubernetes/docs/install-manual#cloud-integration
 [storage]: https://ubuntu.com/kubernetes/docs/storage
 [kubectl install documentation]: https://kubernetes.io/docs/tasks/tools/install-kubectl/
-[bdc-overlay]: https://github.com/charmed-kubernetes/bundle/blob/master/overlays/bdc-overlay.yaml
+[bdc-overlay]: https://raw.githubusercontent.com/charmed-kubernetes/bundle/master/overlays/bdc-overlay.yaml

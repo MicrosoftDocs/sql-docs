@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # * (Multiply) (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Performs an arithmetic operation that multiples one number by another number.  
   

@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # Understanding the DMX Select Statement
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   The [SELECT](../dmx/select-dmx.md) statement is the basis for most queries that you create with Data Mining Extensions (DMX) in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. It can perform many different kinds of tasks, such as browsing and predicting against data mining models.  
   

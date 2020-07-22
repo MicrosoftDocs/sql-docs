@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # ALTER MINING STRUCTURE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Creates a new mining model that is based on an existing mining structure.  When you use the **ALTER MINING STRUCTURE** statement to create a new mining model, the structure must already exist. In contrast, when you use the statement, [CREATE MINING MODEL &#40;DMX&#41;](../dmx/create-mining-model-dmx.md), you create a model and automatically generate its underlying mining structure at the same time.  
   

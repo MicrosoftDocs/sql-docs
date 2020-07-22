@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # ClusterProbability (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns the probability that the input case belongs to the specified cluster.  
   

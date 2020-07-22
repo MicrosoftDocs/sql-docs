@@ -51,7 +51,7 @@ In this step, you create a database master key. Creating a master key is require
 
 In this step, enter your external data source and the credential details to create an external data source object. The credentials are used for the database object to connect to the data source. Enter a name for the external data source. An example is Test. Provide the external data source SQL Server connection details. Enter the **Server name** and the **Database name** where you want your external data source created.
 
-The next step is to configure a credential. Enter a name for the credential. This name is the database scoped credential that's used to securely store the sign-in information for the external data source you create. An example is TestCred. Enter a username and password to connect to the data source.
+The next step is to configure a credential. Enter a name for the credential. This name is the database scoped credential that's used to securely store the sign-in information for the external data source you create. An example is `TestCred`. Enter a username and password to connect to the data source.
 
 ![External data source credentials](media/data-virtualization/data-source-credentials.png)
 

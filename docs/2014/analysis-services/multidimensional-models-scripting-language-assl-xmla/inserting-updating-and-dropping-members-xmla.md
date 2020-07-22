@@ -106,7 +106,5 @@ ms.author: owend
  [Drop Element &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/drop-element-xmla)   
  [Insert Element &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/insert-element-xmla)   
  [Update Element &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/update-element-xmla)   
- [Defining and Identifying Objects &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-objects)   
+ [Defining and Identifying Objects &#40;XMLA&#41;](https://docs.microsoft.com/sql/analysis-services/multidimensional-models-scripting-language-assl-xmla/defining-and-identifying-objects-xmlas)   
  [Developing with XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
-  
-  

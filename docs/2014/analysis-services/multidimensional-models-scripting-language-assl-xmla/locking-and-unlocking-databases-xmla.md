@@ -16,7 +16,7 @@ author: minewiskan
 ms.author: owend
 ---
 # Locking and Unlocking Databases (XMLA)
-  You can lock and unlock databases using, respectively, the [Lock](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/lock-element-xmla) and [Unlock](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/lock-element-xmla) commands in XML for Analysis (XMLA). Typically, other XMLA commands automatically lock and unlock objects as needed to complete the command during execution. You can explicitly lock or unlock a database to perform multiple commands within a single transaction, such as a [Batch](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/batch-element-xmla) command, while preventing other applications from committing a write transaction to the database.  
+  You can lock and unlock databases using, respectively, the [Lock](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/lock-element-xmla) and [Unlock](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/unlock-element-xmla) commands in XML for Analysis (XMLA). Typically, other XMLA commands automatically lock and unlock objects as needed to complete the command during execution. You can explicitly lock or unlock a database to perform multiple commands within a single transaction, such as a [Batch](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/batch-element-xmla) command, while preventing other applications from committing a write transaction to the database.  
   
 ## Locking Databases  
  The `Lock` command locks an object, either for shared or exclusive use, within the context of the currently active transaction. A lock on an object prevents transactions from committing until the lock is removed. [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] supports two types of locks, shared locks and exclusive locks. For more information about the lock types supported by [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], see [Mode Element &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/mode-element-xmla).  
@@ -38,7 +38,7 @@ ms.author: owend
   
 ## See Also  
  [Lock Element &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/lock-element-xmla)   
- [Unlock Element &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/lock-element-xmla)   
+ [Unlock Element &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/unlock-element-xmla)   
  [Developing with XMLA in Analysis Services](developing-with-xmla-in-analysis-services.md)  
   
   

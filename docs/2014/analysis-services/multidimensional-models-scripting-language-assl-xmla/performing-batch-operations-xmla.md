@@ -103,7 +103,7 @@ ms.author: owend
   
 -   The [Bindings](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/bindings-element-xmla) property contains a collection of out-of-line bindings used by all of the `Process` commands in the `Batch` command.  
   
--   The [DataSource](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/source-element-xmla) property contains an out-of-line binding for a data source used by all of the `Process` commands in the `Batch` command.  
+-   The [DataSource](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/datasource-element-xmla) property contains an out-of-line binding for a data source used by all of the `Process` commands in the `Batch` command.  
   
 -   The [DataSourceView](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/datasourceview-element-xmla) property contains an out-of-line binding for a data source view used by all of the `Process` commands in the `Batch` command.  
   

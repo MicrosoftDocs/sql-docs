@@ -27,7 +27,7 @@ ms.author: owend
   
  ![Formula to calculate the cell ordinal position](../../analysis-services/dev-guide/media/cellordinalformula.gif "Formula to calculate the cell ordinal position")  
   
- Once you know a cell's ordinal number, you can indicate the intended value of the cell in the [Value](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/value-element-xmla) property of the [Cell](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/cell-element-xmla) property.  
+ Once you know a cell's ordinal number, you can indicate the intended value of the cell in the [Value](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/value-element-xmla) property of the [Cell](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/cell-element-xmla) property.  
   
 ## See Also  
  [Update Element &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/update-element-xmla)   

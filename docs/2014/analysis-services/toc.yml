@@ -91,12 +91,12 @@
     href: https://docs.microsoft.com/analysis-services/trace-events/analysis-services-trace-events
     items:
     - name: Command Events Event Category
-      href: https://docs.microsoft.com/analysis-services/trace-events/discover-events-event-category
+      href: https://docs.microsoft.com/analysis-services/trace-events/command-events-event-category
       items:
       - name: Command Events Data Columns
         href: https://docs.microsoft.com/analysis-services/trace-events/command-events-data-columns
     - name: Discover Events Event Category
-      href: https://docs.microsoft.com/analysis-services/trace-events/discover-events-data-columns
+      href: https://docs.microsoft.com/analysis-services/trace-events/discover-events-event-category
       items:
       - name: Discover Events Data Columns
         href: https://docs.microsoft.com/analysis-services/trace-events/discover-events-data-columns
@@ -121,7 +121,7 @@
       - name: Lock Events Data Columns
         href: https://docs.microsoft.com/analysis-services/trace-events/lock-events-data-columns
     - name: Notification Events Event Category
-      href: https://docs.microsoft.com/analysis-services/trace-events/notification-events-data-columns
+      href: https://docs.microsoft.com/analysis-services/trace-events/notification-events-event-category
       items:
       - name: Notification Events Data Columns
         href: https://docs.microsoft.com/analysis-services/trace-events/notification-events-data-columns

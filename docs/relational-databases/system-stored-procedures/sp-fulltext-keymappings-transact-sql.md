@@ -102,8 +102,8 @@ GO
   
  This example returns all the DocIds and full-text keys from the table, as follows:  
   
-| TABLE | `docid` | `key` |
-| ----- | ------- | ----- |
+| TABLE | docid | key |
+| ----- | ----- | --- |
 |`1`|`1`|`1`|  
 |`2`|`2`|`2`|  
 |`3`|`3`|`3`|  
@@ -126,8 +126,8 @@ GO
   
  This example returns the following results.  
   
-| TABLE | `docid` | `key` |
-| ----- | ------- | ----- |
+| TABLE | docid | key |
+| ----- | ----- | --- |
 |`4`|`4`|`4`|  
   
 ## See Also  

@@ -22,8 +22,8 @@ author: minewiskan
   
 ## See Also  
  [Querying Multidimensional Data with MDX](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx)   
- [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [Retrieving Data from an Analytical Data Source](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source)   
+ [Analysis Services Scripting Language &#40;ASSL for XMLA&#41;](https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [Retrieving Data from an Analytical Data Source](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source?view=asallproducts-allversions)   
  [Define Assignments and Other Script Commands](https://docs.microsoft.com/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
   
   

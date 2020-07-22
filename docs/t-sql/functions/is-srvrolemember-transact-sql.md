@@ -40,14 +40,48 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
   
  Valid values for *role* are user-defined server roles, and the following fixed server roles:  
   
-|||  
-|-|-|  
-|sysadmin|serveradmin|  
-|dbcreator|setupadmin|  
-|bulkadmin|securityadmin|  
-|diskadmin|**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> public|  
-|processadmin||  
-  
+:::row:::
+    :::column:::
+        sysadmin
+    :::column-end:::
+    :::column:::
+        serveradmin
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        dbcreator
+    :::column-end:::
+    :::column:::
+        setupadmin
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        bulkadmin
+    :::column-end:::
+    :::column:::
+        securityadmin
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        diskadmin
+    :::column-end:::
+    :::column:::
+        public—**Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        processadmin
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
+
  **'** *login* **'**  
  Is the name of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login to check. *login* is **sysname**, with a default of NULL. If no value is specified, the result is based on the current Execution context. If the parameter contains the word NULL will return NULL.  
   

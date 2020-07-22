@@ -1,5 +1,6 @@
 ---
 title: "Query Expressions and Uniform Resource Names | Microsoft Docs"
+description: Learn about Query Expressions, which enumerate one or more objects in an object model hierarchy, and about Uniform Resource names (URNs), which uniquely identify a single object.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

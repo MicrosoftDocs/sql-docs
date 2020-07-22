@@ -15672,7 +15672,92 @@
     },
     {
       "source_path": "docs/connect/jdbc/code-samples/index.md",
-      "redirect_url": "/sql/connect/jdbc/code-samples/sample-jdbc-driver-applications",
+      "redirect_url": "/sql/connect/jdbc/sample-jdbc-driver-applications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/basic-data-types-sample.md",
+      "redirect_url": "/sql/connect/jdbc/basic-data-types-sample",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/caching-result-set-data-sample.md",
+      "redirect_url": "/sql/connect/jdbc/caching-result-set-data-sample",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/connecting-and-retrieving-data.md",
+      "redirect_url": "/sql/connect/jdbc/connecting-and-retrieving-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/connection-url-sample.md",
+      "redirect_url": "/sql/connect/jdbc/connection-url-sample",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/data-discovery-and-classification-sample.md",
+      "redirect_url": "/sql/connect/jdbc/data-discovery-classification-sample",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/data-source-sample.md",
+      "redirect_url": "/sql/connect/jdbc/data-source-sample",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/modifying-result-set-data-sample.md",
+      "redirect_url": "/sql/connect/jdbc/modifying-result-set-data-sample",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/reading-large-data-sample.md",
+      "redirect_url": "/sql/connect/jdbc/reading-large-data-sample",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/reading-large-data-with-stored-procedures-sample.md",
+      "redirect_url": "/sql/connect/jdbc/reading-large-data-with-stored-procedures-sample",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/retrieving-result-set-data-sample.md",
+      "redirect_url": "/sql/connect/jdbc/retrieving-result-set-data-sample",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/sample-jdbc-driver-applications.md",
+      "redirect_url": "/sql/connect/jdbc/sample-jdbc-driver-applications",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/spatial-data-types-sample.md",
+      "redirect_url": "/sql/connect/jdbc/spatial-data-types-sample",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/sqlxml-data-type-sample.md",
+      "redirect_url": "/sql/connect/jdbc/sqlxml-data-type-sample",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/updating-large-data-sample.md",
+      "redirect_url": "/sql/connect/jdbc/updating-large-data-sample",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/working-with-data-types-jdbc.md",
+      "redirect_url": "/sql/connect/jdbc/working-with-data-types-jdbc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/working-with-large-data.md",
+      "redirect_url": "/sql/connect/jdbc/working-with-large-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/connect/jdbc/code-samples/working-with-result-sets.md",
+      "redirect_url": "/sql/connect/jdbc/working-with-result-sets",
       "redirect_document_id": false
     },
     {

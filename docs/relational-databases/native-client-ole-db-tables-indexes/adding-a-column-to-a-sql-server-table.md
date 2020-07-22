@@ -1,5 +1,5 @@
 ---
-title: "Adding a Column to a SQL Server Table | Microsoft Docs"
+title: "Add column to SQL Server table (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

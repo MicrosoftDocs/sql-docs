@@ -14,7 +14,7 @@ localization_priority: "None"
 ---
 # Initialize a Subscription with a Snapshot
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../includes/applies-to-version/sql-asdbmi.md)]
 
 This article describes the processes that occur when a replication publication is initialized. An initial snapshot is applied to the Subscribers.
 

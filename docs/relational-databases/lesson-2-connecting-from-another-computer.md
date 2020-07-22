@@ -12,7 +12,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Lesson 2: Connecting from Another Computer
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 To enhance security, the [!INCLUDE[ssDE](../includes/ssde-md.md)] of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Developer, Express, and Evaluation editions cannot be accessed from another computer when initially installed. This lesson shows you how to enable the protocols, configure the ports, and configure the Windows Firewall for connecting from other computers.  
   
 This lesson contains the following tasks:  

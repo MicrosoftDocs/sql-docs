@@ -1,5 +1,6 @@
 ---
 title: "Bookmarks F1 Help"
+description: View F1 Help for bookmarks.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

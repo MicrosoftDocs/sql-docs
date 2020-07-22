@@ -158,10 +158,10 @@ If CHECK_POLICY is set to OFF, CHECK_EXPIRATION cannot be set to ON. An ALTER LO
 
 You cannot use ALTER LOGIN with the DISABLE argument to deny access to a Windows group. For example, ALTER LOGIN [*domain\group*] DISABLE will return the following error message:
 
-    `"Msg 15151, Level 16, State 1, Line 1
-    "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
+`"Msg 15151, Level 16, State 1, Line 1
+"Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
 
-    This is by design.
+This is by design.
   
 In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to authenticate a connection and server-level firewall rules are temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -582,8 +582,8 @@ If CHECK_POLICY is set to OFF, CHECK_EXPIRATION cannot be set to ON. An ALTER LO
 
 You cannot use ALTER_LOGIN with the DISABLE argument to deny access to a Windows group. This is by design. For example, ALTER_LOGIN [*domain\group*] DISABLE will return the following error message:
 
-    `"Msg 15151, Level 16, State 1, Line 1
-    "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
+`"Msg 15151, Level 16, State 1, Line 1
+"Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
 
 In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to authenticate a connection and server-level firewall rules are temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 
@@ -950,8 +950,8 @@ If CHECK_POLICY is set to OFF, CHECK_EXPIRATION cannot be set to ON. An ALTER LO
 
 You cannot use ALTER_LOGIN with the DISABLE argument to deny access to a Windows group. This is by design. For example, ALTER_LOGIN [*domain\group*] DISABLE will return the following error message:
 
-    `"Msg 15151, Level 16, State 1, Line 1
-    "Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
+`"Msg 15151, Level 16, State 1, Line 1
+"Cannot alter the login '*Domain\Group*', because it does not exist or you do not have permission."`
 
 In [!INCLUDE[ssSDS](../../includes/sssds-md.md)], login data required to authenticate a connection and server-level firewall rules are temporarily cached in each database. This cache is periodically refreshed. To force a refresh of the authentication cache and make sure that a database has the latest version of the logins table, execute [DBCC FLUSHAUTHCACHE](../../t-sql/database-console-commands/dbcc-flushauthcache-transact-sql.md).
 

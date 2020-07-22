@@ -86,14 +86,11 @@ In addition to the machine specs, it is also necessary to modify the configurati
 machines:
   '0':
     constraints: cores=2 mem=4G root-disk=16G
-    series: bionic
   '1':
     constraints: cores=8 mem=64G root-disk=100G
-    series: bionic
 applications:
   kubernetes-master:
     options:
-      channel: 1.18/stable
       allow-privileged: 'True'
 ```
 

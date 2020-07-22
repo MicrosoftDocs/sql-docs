@@ -1,5 +1,5 @@
 ---
-title: "Cursors | Microsoft Docs"
+title: "Cursors (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/11/2020
 ms.prod: sql

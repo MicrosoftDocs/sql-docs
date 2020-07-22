@@ -1,5 +1,6 @@
 ---
 title: "Configure Editors (SQL Server Management Studio)"
+description: Learn how to customize the operation of the SQL Server Management Studio editors by setting options in the Options dialog.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

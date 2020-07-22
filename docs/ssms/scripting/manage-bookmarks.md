@@ -1,5 +1,6 @@
 ---
 title: "Manage Bookmarks"
+description: The Bookmarks window in a code editor enables you to create links to locations in code . Learn how to create, delete, activate, and disable bookmarks, and how to use them to navigate through your code.  
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

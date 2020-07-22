@@ -93,7 +93,7 @@ The .NET managed languages, such as C# and Visual Basic, are the most common use
 
 #### Documentation
 
-| Example | Description |
+| Area | Description |
 | :-- | :-- |
 | [C# using ADO.NET](./ado-net/index.md)| Root of our documentation. |
 | [Namespace: System.Data](https://docs.microsoft.com/dotnet/api/system.data) | A set of classes used for ADO.NET. |
@@ -157,7 +157,7 @@ Microsoft provides a Java Database Connectivity (JDBC) driver for use with SQL S
 
 The JDBC documentation includes the following major areas:
 
-| Documentation | Description |
+| Area | Description |
 | :-- | :-- |
 | [Java Database Connectivity (JDBC)](./jdbc/index.md) | Root of our JDBC documentation. |
 | [Reference](./jdbc/reference/index.md) | Interfaces, classes, and members. |

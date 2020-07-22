@@ -38,7 +38,7 @@ This function returns the number of bytes used to represent any expression.
 ```
 DATALENGTH ( expression )   
 ```  
-  
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments

@@ -35,8 +35,6 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
 ```
 DATEDIFF_BIG ( datepart , startdate , enddate )  
 ```  
-  
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 *datepart*  

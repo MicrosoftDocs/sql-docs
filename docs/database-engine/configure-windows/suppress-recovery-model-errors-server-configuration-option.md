@@ -23,7 +23,7 @@ Use the **suppress recovery model errors** advanced configuration option to spec
 
 ## Examples
 
-The following example enables suppression of error messages related to the change of database recovery model, and then executes command for changing database recovery model, returning warning only. Recovery model is not actually changed. Make sure to replace *MyDatabase* with the actual database name.
+The following example enables suppression of error messages related to the change of database recovery model, and then executes command for changing database recovery model, returning warning only. Recovery model is not actually changed. Make sure to replace *my_database* with the actual database name.
 
 ```sql
 -- Turn advanced configuration options on:
@@ -39,7 +39,7 @@ RECONFIGURE ;
 GO
 
 -- Execute command for changing recovery model to Simple:
-ALTER DATABASE MyDatabase SET RECOVERY SIMPLE;
+ALTER DATABASE my_database SET RECOVERY SIMPLE;
 GO
 ```
 

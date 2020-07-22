@@ -24,7 +24,7 @@ ms.author: owend
 ## In This Section  
  Follow these links to learn more about monitoring.  
   
- [Analysis Services Trace Events](https://docs.microsoft.com/bi-reference/trace-events/analysis-services-trace-events)  
+ [Analysis Services Trace Events](https://docs.microsoft.com/analysis-services/trace-events/analysis-services-trace-events)  
   
  [Use SQL Server Profiler to Monitor Analysis Services](use-sql-server-profiler-to-monitor-analysis-services.md)  
   

@@ -47,7 +47,7 @@ ms.author: owend
  Depending on which algorithm you used to create the model, the root node has a varying number of child nodes. Child nodes have different meanings and contain different content, depending on the algorithm and the depth and complexity of the data.  
   
 ##  <a name="bkmk_Nodes"></a> Nodes in Mining Model Content  
- In a mining model, a node is a general-purpose container that stores a piece of information about all or part of the model. The structure of each node is always the same, and contains the columns defined by the data mining schema rowset. For more information, see [DMSCHEMA_MINING_MODEL_CONTENT Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-rowset).  
+ In a mining model, a node is a general-purpose container that stores a piece of information about all or part of the model. The structure of each node is always the same, and contains the columns defined by the data mining schema rowset. For more information, see [DMSCHEMA_MINING_MODEL_CONTENT Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126267(v=sql.110)).  
   
  Each node includes metadata about the node, including an identifier that is unique within each model, the ID of the parent node, and the number of child nodes that the node has. The metadata identifies the model to which the node belongs, and the database catalog where that particular model is stored. Additional content provided in the node differs depending on the type of algorithm you used to create the model, and might include the following:  
   

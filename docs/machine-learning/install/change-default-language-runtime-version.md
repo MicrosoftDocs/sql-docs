@@ -1,11 +1,10 @@
 ---
 title: Change the default language runtime version
-description: Learn how to change the default version of the R or Python runtime used by a SQL instance with SQL machine learning.
+description: Learn how to change the default version of the R or Python runtime used by a SQL instance with SQL Server 2017 Machine Learning Services or SQL Server R Services.
 ms.custom: ""
 ms.prod: sql
-ms.technology: machine-learning
-
-ms.date: 06/18/2020
+ms.technology: machine-learning-services
+ms.date: 07/22/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
@@ -15,7 +14,18 @@ monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 
 # Change the default language runtime version
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
+
+This article describes how to change the default version of R or Python used by a SQL instance in [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md) or [SQL Server 2016 R Services](../r/sql-server-r-services.md).
+
+The following lists the versions of the R and Python runtime that are included in SQL Server 2017 Machine Learning Services and  SQL Server 2016 R Services.
+
+| SQL Server Version | R runtime versions | Python runtime version |
+|-|-|-|
+| SQL Server 2016 RTM - SP2 CU13 | 3.2.2 | Not available |
+| SQL Server 2016 SP2 CU14 and later | 3.2.2 and 3.5.2 | Not available |
+| SQL Server 2017 RTM - CU21 | 3.3.3 | 3.5.2 |
+| SQL Server 2017 CU22 and later | 3.3.3 and 3.5.2 | 3.5.2 and 3.7.2 |
 
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 

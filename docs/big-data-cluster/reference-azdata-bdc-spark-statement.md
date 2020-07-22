@@ -15,10 +15,10 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md)
+The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
-|     |     |
+| Command | Description |
 | --- | --- |
 [azdata bdc spark statement list](#azdata-bdc-spark-statement-list) | List all the statements in the given Spark session.
 [azdata bdc spark statement create](#azdata-bdc-spark-statement-create) | Create a new Spark statement in the given session.

@@ -208,7 +208,7 @@ public class BulkCopySingle {
 
 ### Performing a bulk copy operation using Transact-SQL
 
-The following example illustrates how to use the executeUpdate method to execute the BULK INSERT statement.  
+The following example illustrates how to use the `executeUpdate` method to execute the BULK INSERT statement.  
   
 > [!NOTE]  
 > The file path for the data source is relative to the server. The server process must have access to that path in order for the bulk copy operation to succeed.  

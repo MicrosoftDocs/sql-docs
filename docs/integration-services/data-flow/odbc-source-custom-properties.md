@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # ODBC Source Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The following table describes the custom properties of the ODBC source. All properties can be set from SSIS property expressions.  

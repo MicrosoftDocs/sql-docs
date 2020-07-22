@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # Azure HDInsight Hive Task
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Use the **Azure HDInsight Hive Task** to run Hive script on an Azure HDInsight cluster.

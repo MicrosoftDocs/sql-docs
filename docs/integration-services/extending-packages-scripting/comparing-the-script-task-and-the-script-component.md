@@ -18,7 +18,7 @@ ms.author: chugu
 ---
 # Comparing the Script Task and the Script Component
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Script task, available in the Control Flow window of the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] designer, and the Script component, available in the Data Flow window, have very different purposes in an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package. The task is a general-purpose control flow tool, whereas the component serves as a source, transformation, or destination in the data flow. Despite their different purposes, however, the Script task and the Script component have some similarities in the coding tools that they use and the objects in the package that they make available to the developer. Understanding their similarities and differences may help you to use both the task and the component more effectively.  

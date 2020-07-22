@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # Convert Data Type with Data Conversion Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To add and configure a Data Conversion transformation, the package must already include at least one Data Flow task and one source.  

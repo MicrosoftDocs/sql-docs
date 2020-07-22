@@ -18,7 +18,7 @@ ms.author: chugu
 ---
 # OData Source
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Use the OData Source component in an SSIS package to consume data from an Open Data Protocol (OData) service.

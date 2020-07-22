@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Change Data Capture Designer for Oracle by Attunity F1 Help Reference
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Change Data Capture Designer for Oracle by Attunity is used to create and manage Oracle CDC Instance. The topics in this section explain how to carry out the available tasks in the CDC Designer Console.  

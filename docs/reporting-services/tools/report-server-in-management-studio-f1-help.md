@@ -1,5 +1,6 @@
 ---
 title: "Report Server in Management Studio F1 Help | Microsoft Docs"
+description: View information about the features for managing report servers in SQL Server Management Studio.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

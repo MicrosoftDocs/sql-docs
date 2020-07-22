@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # Saving a Package Programmatically
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   After building a new package programmatically, or modifying an existing one, you usually want to save your changes.  

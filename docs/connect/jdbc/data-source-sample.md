@@ -27,18 +27,18 @@ The code file for this sample is named ConnectDataSource.java, and it can be fou
 
 ## Requirements
 
-To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).
+To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
 
 > [!NOTE]  
-> The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](system-requirements-for-the-jdbc-driver.md).
 
 ## Example
 
-In the following example, the sample code sets various connection properties by using setter methods of the [SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) object, and then calls the [getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) method of the SQLServerDataSource object to return a [SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) object.
+In the following example, the sample code sets various connection properties by using setter methods of the [SQLServerDataSource](reference/sqlserverdatasource-class.md) object, and then calls the [getConnection](reference/getconnection-method-sqlserverdatasource.md) method of the SQLServerDataSource object to return a [SQLServerConnection](reference/sqlserverconnection-class.md) object.
 
-Next, the sample code uses the [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) method of the SQLServerConnection object to create a [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) object, and then the [executeQuery](../../connect/jdbc/reference/executequery-method-sqlserverpreparedstatement.md) method is called to execute the stored procedure.
+Next, the sample code uses the [prepareCall](reference/preparecall-method-sqlserverconnection.md) method of the SQLServerConnection object to create a [SQLServerCallableStatement](reference/sqlservercallablestatement-class.md) object, and then the [executeQuery](reference/executequery-method-sqlserverpreparedstatement.md) method is called to execute the stored procedure.
 
-Finally, the sample uses the [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) object returned from the executeQuery method to iterate through the results returned by the stored procedure.
+Finally, the sample uses the [SQLServerResultSet](reference/sqlserverresultset-class.md) object returned from the executeQuery method to iterate through the results returned by the stored procedure.
 
 ```java
 import java.sql.CallableStatement;
@@ -83,4 +83,4 @@ public class ConnectDataSource {
 
 ## See also
 
-[Connecting and retrieving data](../../connect/jdbc/connecting-and-retrieving-data.md)
+[Connecting and retrieving data](connecting-and-retrieving-data.md)

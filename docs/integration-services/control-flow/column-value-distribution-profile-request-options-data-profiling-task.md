@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Column Value Distribution Profile Request Options (Data Profiling Task)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Request Properties** pane of the **Profile Requests** page to set the options for the **Column Value Distribution Profile Request** selected in the requests pane. A Column Value Distribution profile reports all the distinct values in the selected column and the percentage of rows in the table that each value represents. The profile can also report values that represent more than a specified percentage of rows in the table. This profile can help you identify problems in your data such as an incorrect number of distinct values in a column. For example, you profile a United States state column and discover more than 50 distinct values.  

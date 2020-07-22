@@ -1,5 +1,5 @@
 ---
-title: "Data Type Mapping in ITableDefinition | Microsoft Docs"
+title: "Data type mapping in ITableDefinition (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

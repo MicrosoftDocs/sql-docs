@@ -1,5 +1,5 @@
 ---
-title: "Data Types (OLE DB) | Microsoft Docs"
+title: "Data types (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

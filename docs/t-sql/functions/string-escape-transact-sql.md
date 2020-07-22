@@ -32,8 +32,6 @@ Escapes special characters in texts and returns text with escaped characters. **
 ```sql
 STRING_ESCAPE( text , type )  
 ```  
-  
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

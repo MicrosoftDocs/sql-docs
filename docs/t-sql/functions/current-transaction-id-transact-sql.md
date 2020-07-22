@@ -32,9 +32,8 @@ CURRENT_TRANSACTION_ID( )
   
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Return types
+
 **bigint**
   
 ## Return Value  

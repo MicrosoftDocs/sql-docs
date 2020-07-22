@@ -1,5 +1,6 @@
 ---
 title: "ATOM Device Information Settings | Microsoft Docs"
+description: Learn details about device information settings for the Atom rendering extension that supports submittal of the Atom feed name and character encoding to use.
 ms.date: 03/16/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

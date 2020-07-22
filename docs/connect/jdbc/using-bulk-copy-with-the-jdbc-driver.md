@@ -2,7 +2,7 @@
 title: "Using bulk copy with the JDBC driver"
 description: "The SQLServerBulkCopy class allows you to write data load solutions in Java that offer significant performance advantages over the standard JDBC APIs."
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "07/22/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -447,14 +447,14 @@ public class BulkCopyNonTransacted {
 }
 ```
 
-### Performing a dedicated build copy operation in a transaction 
+### Performing a dedicated bulk copy operation in a transaction
 
-By default, a bulk copy operation is its own transaction. When you want to perform a dedicated bulk copy operation, create a new instance of SQLServerBulkCopy with a connection string. In this scenario, the bulk copy operation creates, and then commits or rolls back the transaction. You can explicitly specify the **UseInternalTransaction** option in **SQLServerBulkCopyOptions** to explicitly cause a bulk copy operation to execute in its own transaction, causing each batch of the bulk copy operation to execute within a separate transaction.  
+By default, a bulk copy operation is its own transaction. When you want to perform a dedicated bulk copy operation, create a new instance of SQLServerBulkCopy with a connection string. In this scenario, the bulk copy operation creates, and then commits or rolls back the transaction. You can set the **UseInternalTransaction** option to **true** in **SQLServerBulkCopyOptions** to explicitly cause a bulk copy operation to execute in its own transaction, causing each batch of the bulk copy operation to execute within a separate transaction.
   
 > [!NOTE]  
 > Since different batches are executed in different transactions, if an error occurs during the bulk copy operation, all the rows in the current batch will be rolled back, but rows from previous batches will remain in the database.  
   
-When you specify the **UseInternalTransaction** option in **BulkCopyNonTransacted**, the bulk copy operation is included in a larger, external transaction. When the primary key violation error occurs, the entire transaction is rolled back and no rows are added to the destination table.
+When you set the **UseInternalTransaction** option to **true** in the **BulkCopyNonTransacted** application, the bulk copy operation is included in a larger, external transaction. When the primary key violation error occurs, the entire transaction is rolled back and no rows are added to the destination table.
 
 ```java
 SQLServerBulkCopyOptions copyOptions = new SQLServerBulkCopyOptions();
@@ -664,7 +664,7 @@ For more information, see the **allowEncryptedValueModifications** bulk copy opt
   
 ## Bulk copy API for JDBC driver  
   
-### SQLServerBulkCopy 
+### SQLServerBulkCopy
 
 Lets you efficiently bulk load a SQL Server table with data from another source.  
   
@@ -718,7 +718,7 @@ The SQLServerBulkCopy class can be used to write data only to SQL Server tables.
 | Boolean UseInternalTransaction           | When specified, each batch of the bulk-copy operation will occur within a transaction. If SQLServerBulkCopy is using an existing connection (as specified by the constructor), a SQLServerException will occur.  If SQLServerBulkCopy created a dedicated connection, a transaction will be enabled.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | False - no transaction                                               |
 | Int BatchSize                            | Number of rows in each batch. At the end of each batch, the rows in the batch are sent to the server.<br /><br /> A batch is complete when BatchSize rows have been processed or there are no more rows to send to the destination data source.  If the SQLServerBulkCopy instance has been declared without the UseInternalTransaction option in effect, rows are sent to the server BatchSize rows at a time, but no transaction-related action is taken. If UseInternalTransaction is in effect, each batch of rows is inserted as a separate transaction.                                                                                                                                                                                                                                                                                                                                                                                                                                           | 0 - indicates that each writeToServer operation is a single batch    |
 | Int BulkCopyTimeout                      | Number of seconds for the operation to complete before it times out. A value of 0 indicates no limit; the bulk copy will wait indefinitely.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             | 60 seconds.                                                          |
-| Boolean allowEncryptedValueModifications | This option is available with Microsoft JDBC Driver 6.0 (or higher) for SQL Server.<br /><br /> When specified, **allowEncryptedValueModifications** enables bulk copying of encrypted data between tables or databases, without decrypting the data. Typically, an application would select data from encrypted columns from one table without decrypting the data (the app would connect to the database with the column encryption setting keyword set to disabled) and then would use this option to bulk insert the data, which is still encrypted. For more information, see [Using Always Encrypted with the JDBC Driver](using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Use caution when specifying **allowEncryptedValueModifications** as this may lead to corrupting the database because the driver doesn't check if the data is indeed encrypted, or if it is correctly encrypted using the same encryption type, algorithm and key as the target column. |
+| Boolean allowEncryptedValueModifications | This option is available with Microsoft JDBC Driver 6.0 (or higher) for SQL Server.<br /><br /> When set to **true**, **allowEncryptedValueModifications** enables bulk copying of encrypted data between tables or databases, without decrypting the data. Typically, an application would select data from encrypted columns from one table without decrypting the data (the app would connect to the database with the column encryption setting keyword set to disabled) and then would use this option to bulk insert the data, which is still encrypted. For more information, see [Using Always Encrypted with the JDBC Driver](using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Use caution when setting **allowEncryptedValueModifications** to **true** as this may lead to corrupting the database because the driver doesn't check if the data is indeed encrypted, or if it is correctly encrypted using the same encryption type, algorithm and key as the target column. |
   
  Getters and setters:  
   

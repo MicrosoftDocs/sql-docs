@@ -1,5 +1,5 @@
 ---
-title: "Deprecated Database Engine Features | Microsoft Docs"
+title: "Deprecated database engine features in SQL Server 2017 | Microsoft Docs"
 titleSuffix: "SQL Server 2019"
 description: Find out about deprecated database engine features that are still available in SQL Server 2017 (14.x), but shouldn't be used in new applications.
 ms.custom: "seo-lt-2019"

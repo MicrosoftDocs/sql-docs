@@ -1,5 +1,5 @@
 ---
-title: "Data Type Support for OLE DB Date and Time Improvements | Microsoft Docs"
+title: "Data type support for OLE DB date and time improvements (OLE DB driver) | Microsoft Docs"
 description: "Data type support for OLE DB date and time improvements"
 ms.custom: ""
 ms.date: "06/14/2018"

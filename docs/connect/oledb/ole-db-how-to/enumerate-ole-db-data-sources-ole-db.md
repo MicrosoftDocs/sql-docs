@@ -1,5 +1,5 @@
 ---
-title: "Enumerate OLE DB Data Sources (OLE DB) | Microsoft Docs"
+title: "Enumerate OLE DB data sources (OLE DB driver) | Microsoft Docs"
 description: "Enumerate OLE DB data sources using MSOLEDBSQL enumerator"
 ms.custom: ""
 ms.date: "06/14/2018"

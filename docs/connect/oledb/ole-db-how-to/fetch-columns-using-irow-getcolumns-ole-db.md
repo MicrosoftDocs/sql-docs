@@ -1,5 +1,5 @@
 ---
-title: "Fetch Columns Using IRow::GetColumns (OLE DB) | Microsoft Docs"
+title: "Fetch columns using IRow::GetColumns (OLE DB driver) | Microsoft Docs"
 description: "Fetch columns using IRow::GetColumns (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

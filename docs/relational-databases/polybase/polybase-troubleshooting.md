@@ -18,7 +18,7 @@ monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproduct
 ---
 # Monitor and troubleshoot PolyBase
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 To troubleshoot PolyBase, use the techniques found in this topic.
 

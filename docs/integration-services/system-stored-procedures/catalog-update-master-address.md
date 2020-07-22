@@ -16,7 +16,7 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE[sqlserver2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 Update the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Master endpoint.
 

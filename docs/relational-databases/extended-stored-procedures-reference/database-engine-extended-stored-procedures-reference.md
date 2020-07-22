@@ -1,6 +1,6 @@
 ---
 title: "Extended Stored Procedures Programmer&#39;s Reference | Microsoft Docs"
-description: Learn how the Database Engine Extended Stored Procedures provide a server-based application programming interface (API) for extending SQL Server functionality.
+description: Learn how the Database Engine Extended Stored Procedures provide a server-based application programming interface (API) for expanding SQL Server functionality.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

@@ -30,25 +30,21 @@ Your new appliance will be delivered on pallets to the dock at your data center.
   
 If your IHV is not performing the hardware install, use the following steps to install the hardware.  
   
-|||  
+|Task|Description|  
 |-|-|  
-|**Task**|**Description**|  
 |Confirm documentation|Confirm that you have received all necessary documents and information from your independent hardware vendor (IHV). See [Information to Obtain from Your IHV &#40;Analytics Platform System&#41;](information-to-obtain-from-your-ihv.md).|  
 |Install hardware|Verify the data center can accommodate the appliance. Move the appliance components to the data center. Rack the network switches, PDUs, and cabling. See [Hardware Installation &#40;Analytics Platform System&#41;](hardware-installation.md).|  
   
 ## <a name="PowerOnAppliance"></a>2. Power On the Appliance  
   
-|||  
+|Task|Description|  
 |-|-|  
-|**Task**|**Description**|  
 |Power on the appliance|Power on each appliance component node in the required order, waiting as necessary to confirm that no errors are encountered.|  
   
 ## <a name="ConfigureAppliance"></a>3. Configure the Appliance  
   
-|||  
+|Task|Description|  
 |-|-|  
-|**Task**|**Description**|  
-|||  
 |Configure the appliance by using the SQL Server PDW**Configuration Manager**|Use the Configuration Manager to set appliance passwords, time zones, network and firewall settings, security certificates, and performance and other settings on your appliance. See [Appliance Configuration &#40;Analytics Platform System&#41;](appliance-configuration.md).|  
   
 > [!WARNING]  
@@ -56,18 +52,16 @@ If your IHV is not performing the hardware install, use the following steps to i
   
 ## <a name="SoftwareServicing"></a>4. Set Up Software Servicing  
   
-|||  
+|Task|Description|  
 |-|-|  
-|**Task**|**Description**|  
 |Apply SQL Server PDW updates|(Optional) You may need to apply one or more SQL Server PDW updates to update your SQL Server PDW software to the latest version. See [Apply Analytics Platform System Hotfixes &#40;Analytics Platform System&#41;](apply-analytics-platform-system-hotfixes.md).|  
 |Configure Windows Server Update Services|Configure the appliance to receive updates from Windows Server Update Services for supporting software. See [Download and Apply Microsoft Updates &#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md).|  
   
 ## <a name="NextSteps"></a>Next Steps  
 After you have completed all of the preceding steps, your appliance is ready for use. You or other personnel at your location can proceed with the following tasks.  
   
-|||  
+|Task|Description|  
 |-|-|  
-|**Task**|**Description**|  
 |Install SQL Server PDW drivers and configure connectivity|Configure local computers to connect to SQL Server PDW by using SQL Server Data Tools, sqlcmd, business intelligence software, or other tools. <!-- MISSING LINKS See [Client Tools (SQL Server PDW)](assetId:///721851d5-e521-4d5b-ba6d-8e2e9d3c7808).-->|  
 |Create logons and server roles, and assign permissions|Plan and create logons and server roles that will allow users to log on to SQL Server PDW with the appropriate permissions. <!-- MISSING LINKS See [PDW Permissions &#40;SQL Server PDW&#41;](../sqlpdw/pdw-permissions-sql-server-pdw.md).-->|  
 |Configure the Azure Data Management Gateway|The Gateway enables Azure users to access on-premises APS data by exposing APS data as secure OData feeds. The Gateway is installed on the Control node already. Ask Microsoft for assistance with configuration.|  

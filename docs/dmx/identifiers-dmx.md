@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # Identifiers (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   All objects in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] must have an identifier. An object's name is its identifier. Servers, databases, and database objects such as data sources, data source views, cubes, dimensions, mining models, and so on have identifiers.  
   

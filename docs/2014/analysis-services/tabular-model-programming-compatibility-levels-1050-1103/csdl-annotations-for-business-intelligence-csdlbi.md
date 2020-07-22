@@ -35,7 +35,7 @@ ms.author: owend
   
  You cannot modify these objects directly, but must use the client tools and application programming interfaces (APIs) provided for working with tabular models.  
   
- You can obtain the CSDL for a model by sending a DISCOVER request to the server that hosts the model. The request must be qualified by specifying the server and the model, and, optionally, a view or perspective. The returned message is an XML string. Certain elements are language-dependent and may return different values depending on the language of the current connection. For more information, see [DISCOVER_CSDL_METADATA Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/discover-csdl-metadata-rowset).  
+ You can obtain the CSDL for a model by sending a DISCOVER request to the server that hosts the model. The request must be qualified by specifying the server and the model, and, optionally, a view or perspective. The returned message is an XML string. Certain elements are language-dependent and may return different values depending on the language of the current connection. For more information, see [DISCOVER_CSDL_METADATA Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/gg471582(v=sql.110)).  
   
 ### CSDLBI Versions  
  The original CSDL specification (from the Entity Data Framework) provides for most of the entities and properties that are needed to support modeling. The BI annotations support special requirements of tabular models, reporting properties required for clients such as [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)], and additional metadata required for multidimensional models. This section describes the updates in each version.  

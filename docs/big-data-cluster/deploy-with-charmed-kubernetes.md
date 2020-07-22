@@ -35,6 +35,10 @@ Deploying the applications which make up **Charmed Kubernetes** is achieved with
 
 ### Create a controller
 
+> [!TIP]
+> Altrenatively, you can use a hosted controller by registering at [jaas.ai](https://jaas.ai)  
+
+
 Juju requires a machine or instance to act as a controller. This controller will then manage the deployment of applications and further provisioning of resources in the cloud. To create a controller, use the `juju bootstrap command`. For example, to create a new controller in the `ukwest` region of Microsoft Azure, with the name `azk8s`, run the following:
 
 ```bash
@@ -74,7 +78,7 @@ The system requirements of the SQL BDC specify the node it is run on should have
 
 An 'overlay' file can be created for the `kubernetes-core` bundle to request that the kubernetes-worker machine has at least these requirements. An overlay is simply an additional YAML file which is merged on top of the bundle before it is deployed.
 
-The full kubernetes-core bundle YAMl can be viewed [here][kubernetes-core-bundle].
+The full kubernetes-core bundle YAML can be viewed [here][kubernetes-core-bundle].
 
 In addition to the machine specs, it is also necessary to modify the configuration for the `kubernetes-master` charm to allow the `kube-api-server` to run in privilleged mode. The changes can be expressed in the following overlay:
 
@@ -92,6 +96,9 @@ applications:
       channel: 1.18/stable
       allow-privileged: 'True'
 ```
+
+This file is also available to download [here][bdc-overlay]. For this guide, the file has been named `bdc-overlay.yaml`, but obviously the file can be named anything, as long as the actual filename is used  in the deploy step below.
+
 
 It will also be useful to apply an overlay specific to the cloud in use. There are many sample overlays for **Charmed Kubernetes** to facilitate integration with the underlying cloud. For example, for Azure, the [sample overlay][azure-overlay] additional installs and connects the `azure-integrator` charm, which will create an Azure based storage class and enable the cluster to use natve Azure load balancers.
 
@@ -289,3 +296,4 @@ Proxy for running Spark statements, jobs, applications  https://40.81.116.26:304
 [overlays]: https://ubuntu.com/kubernetes/docs/install-manual#cloud-integration
 [storage]: https://ubuntu.com/kubernetes/docs/storage
 [kubectl install documentation]: https://kubernetes.io/docs/tasks/tools/install-kubectl/
+[bdc-overlay]: https://github.com/charmed-kubernetes/bundle/blob/master/overlays/bdc-overlay.yaml

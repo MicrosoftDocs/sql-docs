@@ -26,7 +26,7 @@ ms.author: pelopes
 ## Syntax  
   
 ```  
-
+  
 HRESULT BCPControl(   
       int eOption,  
       void *iValue);  

@@ -1,5 +1,6 @@
 ---
 title: "Create Charts, Alerts, Logs, and Reports | Microsoft Docs"
+description: Learn how to create charts, alerts, logs, and reports to monitor an instance of SQL Server by using System Monitor. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

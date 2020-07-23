@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Workload Group Stats Object | Microsoft Docs"
+description: Learn about the SQLServer:Workload Group Stats object, which contains performance counters that report about Resource Governor workload group statistics.
 ms.custom: ""
 ms.date: "12/04/2015"
 ms.prod: sql

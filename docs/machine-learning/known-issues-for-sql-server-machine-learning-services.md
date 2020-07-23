@@ -3,7 +3,7 @@ title: Known issues for Python and R
 description: This article describes known problems or limitations with the Python and R components that are provided in SQL Server Machine Learning Services and SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/07/2020
+ms.date: 07/15/2020
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
@@ -11,7 +11,7 @@ ms.custom: contperfq4
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Known issues in SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 This article describes known problems or limitations with the Python and R components that are provided in [SQL Server Machine Learning Services](sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](r/sql-server-r-services.md).
 
@@ -527,6 +527,14 @@ Don't run the library install in parallel to the long-running query. Or rerun th
 SQL Server 2019 contains a regression that effects R scripts that use parallel execution. Examples include using `rxExec` with `RxLocalPar` compute context and scripts that use the parallel package. This problem is caused by errors the parallel package encounters when writing to the null device while executing in SQL Server.
 
 **Applies to:** SQL Server 2019.
+
+### 23. Precision loss for money/numeric/decimal/bigint data types
+
+Executing an R script with `sp_execute_external_script` allows money, numeric, decimal, and bigint data types as input data. However, because they are converted to R's numeric type, they suffer a precision loss with values that are very high or have decimal point values.
+
++ **money**: Sometimes cent values would be imprecise and a warning would be issued: *Warning: unable to precisely represent cents values*.  
++ **numeric/decimal**: `sp_execute_external_script` with an R script does not support the full range of those data types and would alter the last few decimal digits especially those with fraction.
++ **bigint**: R only support up to 53-bit integers and then it will start to have precision loss.
 
 ## Python script execution issues
 

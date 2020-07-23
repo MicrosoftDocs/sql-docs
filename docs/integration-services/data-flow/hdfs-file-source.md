@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # HDFS File Source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The HDFS File Source component enables an SSIS package to read data from a HDFS file. The supported file formats are Text and Avro. (ORC sources are not supported.)  

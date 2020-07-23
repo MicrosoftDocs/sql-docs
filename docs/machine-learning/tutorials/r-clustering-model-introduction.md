@@ -66,7 +66,7 @@ In [part four](r-clustering-model-deploy.md),  you'll learn how to create a stor
 
 ## Restore the sample database
 
-The sample dataset used in this tutorial has been saved to a **.bak** database backup file for you to download and use. This dataset is derived from the [tpcx-bb](http://www.tpc.org/tpcx-bb/default.asp) dataset provided by the [Transaction Processing Performance Council (TPC)](http://www.tpc.org/default.asp).
+The sample dataset used in this tutorial has been saved to a **.bak** database backup file for you to download and use. This dataset is derived from the [tpcx-bb](http://www.tpc.org/tpcx-bb/default5.asp) dataset provided by the [Transaction Processing Performance Council (TPC)](http://www.tpc.org/).
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 > [!NOTE]

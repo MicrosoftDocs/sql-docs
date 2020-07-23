@@ -30,7 +30,9 @@ ms.author: mlandzic
 .STSrid  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type: **int**  
   
  CLR type: **SqlInt32**  

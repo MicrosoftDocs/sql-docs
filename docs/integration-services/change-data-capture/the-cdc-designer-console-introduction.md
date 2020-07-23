@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # The CDC Designer Console Introduction
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The section describes the installation procedures for the Change Data Capture Designer for Oracle by Attunity.  

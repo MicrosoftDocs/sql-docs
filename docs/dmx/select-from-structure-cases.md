@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # SELECT FROM &lt;structure&gt;.CASES
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns the cases that were used to create the mining structure.  
   

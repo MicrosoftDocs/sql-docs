@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # How to Manage a Local CDC Service
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This procedure describes how to use the CDC Service Configuration Console to manage specific CDC services.  

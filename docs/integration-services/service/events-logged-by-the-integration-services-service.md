@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # Events Logged by the Integration Services Service
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service logs various messages to the Windows Application event log. The service logs these messages when the service starts, when the service stops, and when certain problems occur.  

@@ -75,7 +75,9 @@ Applies to: SQL Server
 
 Enabling auditing in SQL Server requires server configuration. To enable SQL Server audit for the WideWorldImporters sample, run the following statement in the database:
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+```sql
+EXECUTE [Application].[Configuration_ApplyAuditing]
+```
 
 In Azure SQL Database, Audit is configured through the [Azure portal](https://portal.azure.com/).
 
@@ -85,5 +87,7 @@ Applies to: Azure SQL Database
 
 Row-Level Security is not enabled by default in the bacpac download of WideWorldImporters. To enable Row-Level Security in the database, run the following stored procedure:
 
-    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```sql
+EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```
 

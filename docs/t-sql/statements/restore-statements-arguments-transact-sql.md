@@ -38,7 +38,9 @@ This topic documents the arguments that are described in the Syntax sections of 
   
 -   [RESTORE VERIFYONLY &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  DATABASE  
  **Supported by:**  [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)  
   

@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Define a State Variable
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This procedure describes how to define a package variable where the CDC state is stored.  

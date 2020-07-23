@@ -41,7 +41,7 @@ ms.author: owend
 |OlapQueryLog table in a relational database|Query log|Collect inputs for the Usage Optimization Wizard|No|  
 |SQLDmp\<guid>.mdmp files|Crashes and exceptions|Deep troubleshooting|No|  
   
- We highly recommend the following link for additional information resources not covered in this topic: [Initial data collection tips from Microsoft Support](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx).  
+ We highly recommend the following link for additional information resources not covered in this topic: [Initial data collection tips from Microsoft Support](https://docs.microsoft.com/archive/blogs/dstfs/data-to-collect-for-troubleshooting-analysis-services-issue).  
   
 ##  <a name="bkmk_general"></a> General information on log file configuration settings  
  You can find sections for each log in the msmdsrv.ini server configuration file, located in the \Program Files\Microsoft SQL Server\MSAS12.MSSQLSERVER\OLAP\Config folder. See [Configure Server Properties in Analysis Services](../server-properties/server-properties-in-analysis-services.md) for instructions on editing the file.  
@@ -168,7 +168,7 @@ ms.author: owend
   
 -   Configure the msmdsrv.log file to control the size and number of msmdsrv log file. The settings are not enabled by default, so be sure to add them as post-installation step. See [MSMDSRV service log file](#bkmk_msmdsrv) in this topic.  
   
--   Review this blog post from Microsoft Customer Support to learn what resources they use to get information about server operations: [Initial Data Collection](https://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
+-   Review this blog post from Microsoft Customer Support to learn what resources they use to get information about server operations: [Initial Data Collection](https://docs.microsoft.com/archive/blogs/dstfs/data-to-collect-for-troubleshooting-analysis-services-issue)  
   
 -   Use ASTrace2012, rather than a query log, to find out who is querying cubes. The query log is typically used to provide input into the Usage Based Optimization Wizard, and the data it captures is not easy to read or interpret. ASTrace2012 is a community tool, widely used, that captures query operations. See [Microsoft SQL Server Community Samples: Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/).  
   

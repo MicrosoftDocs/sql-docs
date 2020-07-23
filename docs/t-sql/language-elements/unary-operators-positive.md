@@ -44,7 +44,9 @@ Returns the value of a numeric expression (a unary operator). Unary operators pe
 + numeric_expression  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *numeric_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any one of the data types in the numeric data type category, except the **datetime** and **smalldatetime** data types.  
   

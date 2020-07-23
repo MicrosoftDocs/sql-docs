@@ -280,7 +280,7 @@
     - name: Restore the Default SQL Server Management Studio Configuration
       href: tutorials/lesson-1-8-restore-the-default-sql-server-management-studio-configuration.md
     - name: "Summary: Basic Navigation"
-      href: tutorials/lesson-1-9-summary-basic-navigation.md
+      href: /sql/tools/dta/lesson-1-basic-navigation-in-database-engine-tuning-advisor.md
   - name: "Lesson 2: Writing Transact-SQL"
     href: tutorials/lesson-2-writing-transact-sql.md
     items:

@@ -1,5 +1,5 @@
 ---
-title: "Reduce (geography Data Type ) | Microsoft Docs"
+title: Reduce (geography Data Type )
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -32,11 +32,12 @@ ms.author: mlandzic
 .Reduce ( tolerance )  
 ```  
   
-## Arguments  
-  
-|||  
-|-|-|  
-|Term|Definition|  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+
+|Term|Definition|
+|----|----------|
 |*tolerance*|Is a value of type **float**. *tolerance* is the tolerance to input to the Douglas-Peucker algorithm. *tolerance* must be a positive number.|  
   
 ## Return Types  

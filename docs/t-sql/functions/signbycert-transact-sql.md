@@ -38,7 +38,9 @@ ms.author: vanto
 SignByCert ( certificate_ID , @cleartext [ , 'password' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *certificate_ID*  
  Is the ID of a certificate in the current database. *certificate_ID* is **int**.  
   

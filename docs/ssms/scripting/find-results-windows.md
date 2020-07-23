@@ -1,5 +1,6 @@
 ---
 title: "Find Results Windows"
+description: There are two Find Results windows to hold matches found by Find in Files and Replace in Files operations. Learn how to display these windows, and how to display the code file and line corresponding to a match.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

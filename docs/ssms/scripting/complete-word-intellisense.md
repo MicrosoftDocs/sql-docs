@@ -1,5 +1,6 @@
 ---
 title: "Complete Word (IntelliSense)"
+description: The Microsoft IntelliSense Complete Word feature can complete what you are typing once you have typed enough to uniquely identify it, or it can provide a list of possibilities for you to choose from. Learn the four ways to invoke this feature.  
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

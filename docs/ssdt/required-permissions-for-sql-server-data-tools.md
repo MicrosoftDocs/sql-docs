@@ -33,9 +33,8 @@ Before you can perform an action on a database in Visual Studio, you must log on
 ## <a name="DatabaseCreationAndDeploymentPermissions"></a>Permissions to Create or Deploy a Database  
 You must have the following permissions to create or deploy a database.  
   
-|||  
-|-|-|  
 |Actions|Required Permissions|  
+|-|-|  
 |Import database objects and settings|You must be able to connect to the source database.<br /><br />If the source database is based on SQL Server 2005, you must also own or have the **VIEW DEFINITION** permission on each object.<br /><br />If the source database is based on SQL Server 2008 or later, you must also own or have the **VIEW DEFINITION** permission on each object. Your login must have the **VIEW SERVER STATE** permission (for database encryption keys).|  
 |Import server objects and settings|You must be able to connect to the master database on the specified server.<br /><br />If the server is running SQL Server 2005, you must have the **VIEW ANY DEFINITION** permission on the server.<br /><br />If the source database is based on SQL Server 2008 or later, you must have the **VIEW ANY DEFINITION** permission on the server. Your login must have the **VIEW SERVER STATE** permission (for database encryption keys).|  
 |Create or update a database project|You do not require any database permissions to create or modify a database project.|  
@@ -52,9 +51,8 @@ For more information, see SQL Server Books Online.
 ## <a name="DatabaseUnitTestingPermissions"></a>Permissions to Perform Unit Testing on a SQL Server Database  
 You must have the following permissions to perform unit tests on a database.  
   
-|||  
-|-|-|  
 |Actions|Required Permissions|  
+|-|-|   
 |Execute a test action|You must use the execution context database connection. For more information, see [Overview of Connection Strings and Permissions](../ssdt/overview-of-connection-strings-and-permissions.md).|  
 |Execute a pre-test or post-test action|You must use the privileged context database connection. This database connection has more permissions than the execution context connection does.|  
 |Run TestInitialize and TestCleanup scripts|You must use the privileged context database connection.|  

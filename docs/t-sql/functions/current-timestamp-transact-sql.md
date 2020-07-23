@@ -52,7 +52,9 @@ See [Date and Time Data Types and Functions](../../t-sql/functions/date-and-time
 CURRENT_TIMESTAMP  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 This function takes no arguments.
   
 ## Return Type  

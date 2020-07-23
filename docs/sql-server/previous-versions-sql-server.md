@@ -7,8 +7,8 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-ms.date: 07/17/2020
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || sql-server-2014 || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+ms.date: 07/22/2020
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 
 # Previous versions of SQL Server documentation
@@ -19,7 +19,7 @@ The documentation for several older versions of Microsoft SQL Server has been ar
 
 There is online documentation for several older versions of SQL Server.
 
-- [2014](../2014/2014-toc/index.yml?view=sql-server-2014)
+- [2014](/previous-versions/sql/2014/index.yml?view=sql-server-2014)
 - [2005 – 2012](https://docs.microsoft.com/previous-versions/sql/)
 
 ## Offline documentation
@@ -40,6 +40,6 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 ## Next steps
 
 - [SQL Server online documentation](../sql-server/index.yml?view=sql-server-2016)
-- [SQL Server 2014 online documentation](../2014/2014-toc/index.yml?view=sql-server-2014)
+- [SQL Server 2014 online documentation](/previous-versions/sql/2014/index.yml?view=sql-server-2014)
 - [Install SQL Server documentation to view offline in SSMS](sql-server-offline-documentation.md)
 - [Versioning system for SQL documentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)

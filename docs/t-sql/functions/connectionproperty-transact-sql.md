@@ -30,8 +30,10 @@ For a request that comes in to the server, this function returns information abo
 ```sql
 CONNECTIONPROPERTY ( property )  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *property*  
 The property of the connection. *property* can have one of these values:
   

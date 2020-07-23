@@ -1,5 +1,3 @@
-- name: Errors and Events (Replication)
-  href: errors-events-replication.md
 - name: Errors and Events Reference (Replication)
   href: ../errors-and-events-reference-replication.md
   items:

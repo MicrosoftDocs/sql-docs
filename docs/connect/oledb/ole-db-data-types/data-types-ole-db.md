@@ -1,5 +1,5 @@
 ---
-title: "Data Types (OLE DB) | Microsoft Docs"
+title: "Data types (OLE DB driver) | Microsoft Docs"
 description: "Data Types (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

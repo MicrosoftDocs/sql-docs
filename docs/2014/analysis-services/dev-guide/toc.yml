@@ -8,11 +8,11 @@
 - name: Tabular Model Programming +
   href: ../tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md
 - name: Analysis Services Schema Rowsets +
-  href: https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets
+  href: https://docs.microsoft.com/analysis-services/instances/analysis-services-schema-rowsets
 - name: ASSL Reference +
-  href: https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla
+  href: https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla
 - name: XMLA Reference +
-  href: https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference
+  href: https://docs.microsoft.com/analysis-services/xmla/xml-for-analysis-xmla-reference
 - name: Multidimensional Model Programming
   href: ../multidimensional-models/multidimensional-model-programming.md
   items:
@@ -149,37 +149,37 @@
   - name: Redistributing ADOMD.NET
     href: https://docs.microsoft.com/analysis-services/adomd/redistributing-adomd-net
   - name: Developing with Analysis Management Objects (AMO)
-    href: https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo
+    href: https://docs.microsoft.com/analysis-services/amo/developing-with-analysis-management-objects-amo
   - name: AMO Concepts and Object Model
-    href: https://docs.microsoft.com/bi-reference/amo/amo-concepts-and-object-model
+    href: https://docs.microsoft.com/analysis-services/amo/amo-concepts-and-object-model
   - name: Introducing AMO Classes
-    href: https://docs.microsoft.com/bi-reference/amo/amo-classes-introduction
+    href: https://docs.microsoft.com/analysis-services/amo/amo-classes-introduction
     items:
     - name: AMO Fundamental Classes
-      href: https://docs.microsoft.com/bi-reference/amo/amo-fundamental-classes
+      href: https://docs.microsoft.com/analysis-services/amo/amo-fundamental-classes
     - name: AMO OLAP Classes
-      href: https://docs.microsoft.com/bi-reference/amo/amo-olap-classes
+      href: https://docs.microsoft.com/analysis-services/amo/amo-olap-classes
     - name: AMO Data Mining Classes
-      href: https://docs.microsoft.com/bi-reference/amo/amo-data-mining-classes
+      href: https://docs.microsoft.com/analysis-services/amo/amo-data-mining-classes
     - name: AMO Security Classes
-      href: https://docs.microsoft.com/bi-reference/amo/amo-security-classes
+      href: https://docs.microsoft.com/analysis-services/amo/amo-security-classes
     - name: AMO Other Classes and Methods
-      href: https://docs.microsoft.com/bi-reference/amo/amo-other-classes-and-methods
+      href: https://docs.microsoft.com/analysis-services/amo/amo-other-classes-and-methods
   - name: Programming Administrative Tasks with AMO
-    href: https://docs.microsoft.com/bi-reference/amo/programming-administrative-tasks-with-amo
+    href: https://docs.microsoft.com/analysis-services/amo/programming-administrative-tasks-with-amo
     items:
     - name: Programming AMO Fundamental Objects
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-fundamental-objects
+      href: https://docs.microsoft.com/analysis-services/amo/programming-amo-fundamental-objects
     - name: Programming AMO OLAP Basic Objects
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-basic-objects
+      href: https://docs.microsoft.com/analysis-services/amo/programming-amo-olap-basic-objects
     - name: Programming AMO OLAP Advanced Objects
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-olap-advanced-objects
+      href: https://docs.microsoft.com/analysis-services/amo/programming-amo-olap-advanced-objects
     - name: Programming AMO Data Mining Objects
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-data-mining-objects
+      href: https://docs.microsoft.com/analysis-services/amo/programming-amo-data-mining-objects
     - name: Programming AMO Security Objects
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-security-objects
+      href: https://docs.microsoft.com/analysis-services/amo/programming-amo-security-objects
     - name: Programming AMO Complementary Classes and Methods
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-complementary-classes-and-methods
+      href: https://docs.microsoft.com/analysis-services/amo/programming-amo-complementary-classes-and-methods
   - name: Developing with Analysis Services Scripting Language (ASSL)
     href: ../multidimensional-models/scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md
   - name: ASSL Objects and Object Characteristics

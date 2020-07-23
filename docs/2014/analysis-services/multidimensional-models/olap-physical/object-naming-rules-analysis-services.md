@@ -83,6 +83,6 @@ ms.author: owend
 ## See Also  
  [MDX Reserved Words](/sql/mdx/mdx-reserved-words)   
  [Translations &#40;Analysis Services&#41;](/analysis-services/translation-support-in-analysis-services)   
- [XML for Analysis Compliance &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-compliance-xmla)  
+ [XML for Analysis Compliance &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-for-analysis-compliance-xmla)  
   
   

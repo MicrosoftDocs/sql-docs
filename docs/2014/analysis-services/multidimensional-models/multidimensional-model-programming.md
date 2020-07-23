@@ -16,9 +16,9 @@ ms.author: owend
 ## In This Section  
  [Understanding Microsoft OLAP Architecture](olap-physical/understanding-microsoft-olap-architecture.md)  
   
- [Developing with ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
+ [Developing with ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/developing-with-adomd-net)  
   
- [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
+ [Developing with Analysis Management Objects &#40;AMO&#41;](https://docs.microsoft.com/analysis-services/amo/developing-with-analysis-management-objects-amo)  
   
  [Developing with XMLA in Analysis Services](../multidimensional-models-scripting-language-assl-xmla/developing-with-xmla-in-analysis-services.md)  
   

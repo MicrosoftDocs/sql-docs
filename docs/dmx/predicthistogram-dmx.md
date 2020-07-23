@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # PredictHistogram (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns a table that represents a histogram for the prediction of a given column.  
   

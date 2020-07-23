@@ -33,6 +33,6 @@ ADOMD.NET Object Model
 |Support implicit conversion and casting among the six basic types of the MDX language|[Microsoft.AnalysisServices.AdomdServer.MDXValue](/previous-versions/sql/sql-server-2014/ms143573(v=sql.120))<br /> The [Microsoft.AnalysisServices.AdomdServer.MDXValue](/previous-versions/sql/sql-server-2014/ms143573(v=sql.120)) object provides implicit conversion and casting among the following types:<br /><br /> -   [Microsoft.AnalysisServices.AdomdServer.Hierarchy](/previous-versions/sql/sql-server-2014/ms143578(v=sql.120))<br />-   [Microsoft.AnalysisServices.AdomdServer.Level](/previous-versions/sql/sql-server-2014/ms143581(v=sql.120))<br />-   [Microsoft.AnalysisServices.AdomdServer.Member](/previous-versions/sql/sql-server-2014/ms143820(v=sql.120))<br />-   [Microsoft.AnalysisServices.AdomdServer.Tuple](/previous-versions/sql/sql-server-2014/ms145330(v=sql.120))<br />-   [Microsoft.AnalysisServices.AdomdServer.Set](/previous-versions/sql/sql-server-2014/ms144530(v=sql.120))<br />-   Scalar, or value types|  
   
 ## See Also  
- [ADOMD.NET Server Programming](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
+ [ADOMD.NET Server Programming](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-server/adomd-net-server-programming)  
   
   

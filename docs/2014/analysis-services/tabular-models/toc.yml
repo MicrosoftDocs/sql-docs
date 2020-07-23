@@ -124,7 +124,7 @@
   - name: Delete Relationships
     href: delete-relationships-ssas-tabular.md
 - name: Calculations
-  href: calculations-ssas-tabular.md
+  href: https://docs.microsoft.com/sql/analysis-services/tabular-models/calculations-ssas-tabular?view=sql-server-2014
   items:
   - name: Understanding DAX in Tabular Models
     href: understanding-dax-in-tabular-models-ssas-tabular.md

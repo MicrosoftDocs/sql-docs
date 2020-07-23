@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # + (Add) (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Performs an arithmetic operation that adds two numbers together.  
   

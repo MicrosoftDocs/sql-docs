@@ -33,7 +33,9 @@ monikerRange: "= azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-20
 TRY_CAST ( expression AS data_type [ ( length ) ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  The value to be cast. Any valid expression.  
   

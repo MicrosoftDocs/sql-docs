@@ -1,7 +1,7 @@
 ---
 title: "model Database | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/19/2018"
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -37,7 +37,7 @@ ms.author: "sstein"
 |Primary data|modeldev|model.mdf|Autogrow by 64 MB until the disk is full.|  
 |Log|modellog|modellog.ldf|Autogrow by 64 MB to a maximum of 2 terabytes.|  
 
-For SQL Server 2014, see [model Database](https://docs.microsoft.com/sql/relational-databases/databases/model-database?view=sql-server-2014) for default file growth values.  
+For SQL Server 2014, see [model Database](/previous-versions/sql/2014/relational-databases/databases/model-database?view=sql-server-2014) for default file growth values.  
 
  To move the **model** database or log files, see [Move System Databases](../../relational-databases/databases/move-system-databases.md).  
   

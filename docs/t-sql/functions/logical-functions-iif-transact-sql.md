@@ -32,7 +32,9 @@ ms.author: maghan
 IIF ( boolean_expression, true_value, false_value )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *boolean_expression*  
  A valid Boolean expression.  
   

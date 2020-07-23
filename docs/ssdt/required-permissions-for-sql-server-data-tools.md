@@ -67,9 +67,8 @@ You must have the **INSERT** and **SELECT** permissions on the objects in the ta
 ## <a name="SchemaAndDataComparePermissions"></a>Permissions to Compare Schemas and Data  
 You must have the following permissions to compare schemas or data.  
   
-|||  
-|-|-|  
 |Actions|Required Permissions|  
+|-|-|   
 |Compare the schemas of two databases|You must have the permissions to import objects and settings from the databases as described in [Permissions to Create or Deploy a Database](#DatabaseCreationAndDeploymentPermissions).|  
 |Compare the schemas of a database and a database project|You must have the permissions to import objects and settings from the database as described in [Permissions to Create or Deploy a Database](#DatabaseCreationAndDeploymentPermissions). You must also have the database project open in Visual Studio.|  
 |Write updates to a target database|You must have the permissions to deploy updates to the target database as described in [Permissions to Create or Deploy a Database](#DatabaseCreationAndDeploymentPermissions).|  

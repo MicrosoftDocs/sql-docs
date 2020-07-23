@@ -40,7 +40,9 @@ BACKUP MASTER KEY TO FILE = 'path_to_file'
     ENCRYPTION BY PASSWORD = 'password'  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  FILE ='*path_to_file*'  
  Specifies the complete path, including file name, to the file to which the master key will be exported. This may be a local path or a UNC path to a network location.  
   

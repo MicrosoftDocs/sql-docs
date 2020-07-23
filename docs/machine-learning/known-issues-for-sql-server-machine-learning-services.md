@@ -3,7 +3,7 @@ title: Known issues for Python and R
 description: This article describes known problems or limitations with the Python and R components that are provided in SQL Server Machine Learning Services and SQL Server 2016 R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/07/2020
+ms.date: 07/15/2020
 ms.topic: troubleshooting
 author: dphansen
 ms.author: davidph
@@ -11,13 +11,13 @@ ms.custom: contperfq4
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Known issues in SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 This article describes known problems or limitations with the Python and R components that are provided in [SQL Server Machine Learning Services](sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](r/sql-server-r-services.md).
 
 ## Setup and configuration issues
 
-For a description of processes and common questions that are related to initial setup and configuration, see [Upgrade and installation FAQ](r/upgrade-and-installation-faq-sql-server-r-services.md). It contains information about upgrades, side-by-side installation, and installation of new R or Python components.
+For a description of processes and common questions that are related to initial setup and configuration, see [Upgrade and installation FAQ](upgrade-and-installation-faq-sql-server-r-services.md). It contains information about upgrades, side-by-side installation, and installation of new R or Python components.
 
 ### 1. Inconsistent results in MKL computations due to missing environment variable
 
@@ -528,6 +528,14 @@ SQL Server 2019 contains a regression that effects R scripts that use parallel e
 
 **Applies to:** SQL Server 2019.
 
+### 23. Precision loss for money/numeric/decimal/bigint data types
+
+Executing an R script with `sp_execute_external_script` allows money, numeric, decimal, and bigint data types as input data. However, because they are converted to R's numeric type, they suffer a precision loss with values that are very high or have decimal point values.
+
++ **money**: Sometimes cent values would be imprecise and a warning would be issued: *Warning: unable to precisely represent cents values*.  
++ **numeric/decimal**: `sp_execute_external_script` with an R script does not support the full range of those data types and would alter the last few decimal digits especially those with fraction.
++ **bigint**: R only support up to 53-bit integers and then it will start to have precision loss.
+
 ## Python script execution issues
 
 This section contains known issues that are specific to running Python on SQL Server, as well as issues that are related to the Python packages published by Microsoft, including [revoscalepy](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) and [microsoftml](https://docs.microsoft.com/r-server/python-reference/microsoftml/microsoftml-package).
@@ -702,6 +710,22 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 **Applies to:** SQL Server 2019 on Linux
 
+### 9. Cannot install **tensorflow** package using **sqlmlutils**
+
+The [sqlmlutils package](package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) is used to install Python packages in SQL Server 2019. However, the package **tensorflow** cannot be installed using sqlmlutils. The tensorflow package depends on a newer version of numpy than the version installed in SQL Server. However, numpy is a preinstalled system package that sqlmlutils cannot update when trying to install tensorflow.
+
+**Workaround**
+
+Using a command prompt in administrator mode, run the following command, replacing "MSSQLSERVER" with the name of your SQL instance:
+
+   ```cmd
+   "C:\Program Files\Microsoft SQL Server\MSSQL15.MSSQLSERVER\PYTHON_SERVICES\python.exe" -m pip install --upgrade tensorflow
+   ```
+
+   If you get a "TLS/SSL" error, see [7. Unable to install Python packages using pip](#7-unable-to-install-python-packages-using-pip-after-installing-sql-server-2019-on-windows) earlier in this article.
+
+**Applies to:** SQL Server 2019 on Windows
+
 ## Revolution R Enterprise and Microsoft R Open
 
 This section lists issues specific to R connectivity, development, and performance tools that are provided by Revolution Analytics. These tools were provided in earlier pre-release versions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
@@ -724,4 +748,4 @@ Revision 0.92 of the SQLite ODBC driver is incompatible with RevoScaleR. Revisio
 
 ## Next steps
 
-[Troubleshooting machine learning in SQL Server](machine-learning-troubleshooting-faq.md)
+[Troubleshooting machine learning in SQL Server](machine-learning-troubleshooting-overview.md)

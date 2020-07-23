@@ -36,9 +36,7 @@ CREATE LOGIN participates in transactions. If CREATE LOGIN is executed within a 
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## Click a product!
-
-In the following row, click whichever product name you are interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 

@@ -50,7 +50,9 @@ ms.author: vanto
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  CONSTRAINT  
  Specifies the start of the definition for a PRIMARY KEY, UNIQUE, FOREIGN KEY, or CHECK constraint.  
   
@@ -104,7 +106,7 @@ ms.author: vanto
  *ref_column*  
  Is a column in parentheses referenced by the new FOREIGN KEY constraint.  
   
- ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  Specifies what action happens to rows in the table that is altered, if those rows have a referential relationship and the referenced row is deleted from the parent table. The default is NO ACTION.  
   
  NO ACTION  
@@ -129,7 +131,7 @@ ms.author: vanto
   
  Conversely, if NO ACTION is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the delete action on the **Vendor** row when there is at least one row in the **ProductVendor** table that references it.  
   
- ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }  
+ ON UPDATE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }  
  Specifies what action happens to rows in the table altered when those rows have a referential relationship and the referenced row is updated in the parent table. The default is NO ACTION.  
   
  NO ACTION  

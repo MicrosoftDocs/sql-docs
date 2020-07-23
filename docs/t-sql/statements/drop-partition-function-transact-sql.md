@@ -36,7 +36,9 @@ ms.author: carlrab
 DROP PARTITION FUNCTION partition_function_name [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *partition_function_name*  
  Is the name of the partition function that is to be dropped.  
   

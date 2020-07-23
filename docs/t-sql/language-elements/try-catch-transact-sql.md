@@ -50,7 +50,9 @@ END CATCH
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *sql_statement*  
  Is any [!INCLUDE[tsql](../../includes/tsql-md.md)] statement.  
   

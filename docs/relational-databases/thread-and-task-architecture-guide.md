@@ -34,7 +34,16 @@ A **task** represents the unit of work that needs to be completed to fulfill the
 -  Serial requests will only have one active task at any given point in time during execution.     
 Tasks exist in various states throughout their lifetime. For more information about task states, see [sys.dm_os_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). Tasks in SUSPENDED state are waiting on resources required to execute the task to become available. For more information about waiting tasks, see [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md).
 
-A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **worker thread**, also known as worker or thread, is a logical representation of an operating system thread. When executing **serial requests**, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] will spawn a worker to execute the active task (1:1). When executing **parallel requests** in [row mode](../relational-databases/query-processing-architecture-guide.md#execution-modes), the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assigns a worker to coordinate the child workers responsible for completing tasks assigned to them (also 1:1), called the **parent thread**. The parent thread has a parent task associated with it. The number of worker threads spawned for each task depends on:
+A [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **worker thread**, also known as worker or thread, is a logical representation of an operating system thread. When executing **serial requests**, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] will spawn a worker to execute the active task (1:1). When executing **parallel requests** in [row mode](../relational-databases/query-processing-architecture-guide.md#execution-modes), the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assigns a worker to coordinate the child workers responsible for completing tasks assigned to them (also 1:1), called the **parent thread** (or coordinating thread). The parent thread has a parent task associated with it. The parent thread is the point of entry of the request and exists even before engine parses a query. The main responsibilities of the parent thread are: 
+-  Coordinate a parallel scan.
+-  Start child parallel workers.
+-  Collect rows from parallel threads and send to the client.
+-  Perform local and global aggregations.    
+
+> [!NOTE]
+> If a query plan has serial and parallel branches, one of the parallel tasks will be responsible for executing the serial branch. 
+
+The number of worker threads spawned for each task depends on:
 -	Whether the request was eligible for parallelism as determined by the Query Optimizer.
 -	What is the actual available [degree of parallelism (DOP)](../relational-databases/query-processing-architecture-guide.md#DOP) in the system based on current load. This may differ from estimated DOP, which is based on the server configuration for max degree of parallelism (MAXDOP). For example, the server configuration for MAXDOP may be 8 but the available DOP at runtime can be only 2, which affects query performance. 
 
@@ -66,19 +75,18 @@ The execution plan shows a [Hash Join](../relational-databases/performance/joins
 > If you think of an execution plan as a tree, a **branch** is an area of the plan that groups one or more operators between Parallelism operators, also called Exchange Iterators. For more information about plan operators, see [Showplan Logical and Physical Operators Reference](../relational-databases/showplan-logical-and-physical-operators-reference.md). 
 
 While there are three branches in the execution plan, at any point during execution only two branches can execute concurrently in this execution plan:
-1.  The branch where a *Clustered Index Scan* is used on the `Sales.SalesOrderHeaderBulk` (build input of the join) executed concurrently with the branch where a *Clustered Index Scan* was used on the `Sales.SalesOrderDetailBulk` (probe input of the join).
-2. The branch where a *Clustered Index Scan* is used on the `Sales.SalesOrderDetailBulk` (probe input of the join) executes concurrently with the branch where the *Bitmap* was created and currently the *Hash Match* is executing.
+1.  The branch where a *Clustered Index Scan* is used on the `Sales.SalesOrderHeaderBulk` (build input of the join) executes alone.
+2.  Then, the branch where a *Clustered Index Scan* is used on the `Sales.SalesOrderDetailBulk` (probe input of the join) executes concurrently with the branch where the *Bitmap* was created and currently the *Hash Match* is executing.
 
-The Showplan XML shows that 16 worker threads were reserved and used on NUMA nodes 0 and 1:
+The Showplan XML shows that 16 worker threads were reserved and used on NUMA node 0:
 
 ```xml
 <ThreadStat Branches="2" UsedThreads="16">
-  <ThreadReservation NodeId="0" ReservedThreads="8" />
-  <ThreadReservation NodeId="1" ReservedThreads="8" />
+  <ThreadReservation NodeId="0" ReservedThreads="16" />
 </ThreadStat>
 ```
 
-Thread reservation ensures the [!INCLUDE[ssde_md](../includes/ssde_md.md)] has enough worker threads to carry out all the tasks that will be needed for the request. Threads can be reserved across all NUMA nodes, or be reserved in just one NUMA node. Thread reservation is done at runtime before execution starts, and is dependent on scheduler load. The number of reserved worker threads is generically derived from the formula ***concurrent branches* * *runtime DOP*** and excludes the parent worker thread. Each branch is limited to a number of worker threads that's equal to MaxDOP. In this example there are two concurrent branches and MaxDOP is set to 8, therefore **2 * 8 = 16**.
+Thread reservation ensures the [!INCLUDE[ssde_md](../includes/ssde_md.md)] has enough worker threads to carry out all the tasks that will be needed for the request. Threads can be reserved across several NUMA nodes, or be reserved in just one NUMA node. Thread reservation is done at runtime before execution starts, and is dependent on scheduler load. The number of reserved worker threads is generically derived from the formula ***concurrent branches* * *runtime DOP*** and excludes the parent worker thread. Each branch is limited to a number of worker threads that's equal to MaxDOP. In this example there are two concurrent branches and MaxDOP is set to 8, therefore **2 * 8 = 16**.
 
 For reference, observe the live execution plan from [Live Query Statistics](../relational-databases/performance/live-query-statistics.md), where one branch has completed and two branches are executing concurrently.
 
@@ -96,6 +104,9 @@ ORDER BY parent_task_address, scheduler_id;
 
 > [!TIP]
 > The column `parent_task_address` is always NULL for the parent task. 
+
+> [!TIP]
+> On a very busy [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], it's possible to see a number of active tasks that's over the limit set by reserved threads. These tasks can belong to a branch that is not being used anymore and are in a transient state, waiting for cleanup. 
 
 [!INCLUDE[ssResult](../includes/ssresult-md.md)] Notice there are 17 active tasks for the branches that are currently executing: 16 child tasks corresponding to the reserved threads, plus the parent task, or coordinating task.
 
@@ -119,24 +130,21 @@ ORDER BY parent_task_address, scheduler_id;
 |0x000001EF4758ACA8|0x000001EC8628D468|SUSPENDED|11|0x000001EFBFA4A160|
 |0x000001EF4758ACA8|0x000001EFBD3A1C28|SUSPENDED|11|0x000001EF6BD72160|
 
-> [!TIP]
-> On a very busy [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)], it's possible to see a number of active tasks that's over the limit set by reserved threads. These tasks can belong to a branch that is not being used anymore and are in a transient state, waiting for cleanup. 
-
 Observe that each of the 16 child tasks has a different worker thread assigned (seen in the `worker_address` column), but all the workers are assigned to the same pool of eight schedulers (0,5,6,7,8,9,10,11), and that the parent task is assigned to a scheduler outside this pool (3).
 
 > [!IMPORTANT]
-> Once the first set of parallel tasks on a given branch is scheduled, the [!INCLUDE[ssde_md](../includes/ssde_md.md)] will use that same pool of schedulers for any additional tasks on other branches. This means the same set of schedulers will be used for all the parallel tasks in the entire execution plan, only limited by MaxDOP.      
-> The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] will always try to assign schedulers from the same NUMA node for task execution. However, the worker thread assigned to the parent task may be placed in a different NUMA node from other tasks.
+> Once the first set of parallel tasks on a given branch is scheduled, the [!INCLUDE[ssde_md](../includes/ssde_md.md)] will use that same pool of schedulers for any additional tasks on other branches. This means the same set of schedulers will be used for all the parallel tasks in the entire execution plan, only limited by MaxDOP.  
+> The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] will always try to assign schedulers from the same NUMA node for task execution, and assign them sequentially (in round-robin fashion) if schedulers are available. However, the worker thread assigned to the parent task may be placed in a different NUMA node from other tasks.
 
 A worker thread can only remain active in the scheduler for the duration of its quantum (4 ms) and must yield its scheduler after that quantum has elapsed, so that a worker thread assigned to another task may become active. When a worker's quantum expires and is no longer active, the respective task is placed in a FIFO queue in a RUNNABLE state, until it moves to a RUNNING state again, assuming the task won't require access to resources that are not available at the moment, such as a latch or lock, in which case the task would be placed in a SUSPENDED state instead of RUNNABLE, until such time those resources are available.  
 
 > [!TIP] 
 > For the output of the DMV seen above, all active tasks are in SUSPENDED state. More detail on waiting tasks is available by querying the [sys.dm_os_waiting_tasks](../relational-databases/system-dynamic-management-views/sys-dm-os-waiting-tasks-transact-sql.md) DMV. 
 
-In summary, a parallel request will spawn multiple tasks, where each task must be assigned to a single worker thread, and each worker thread must be assigned to a single scheduler. Therefore, the number of schedulers in use cannot exceed the number of parallel tasks per branch, which is set my MaxDOP. 
+In summary, a parallel request will spawn multiple tasks. Each task must be assigned to a single worker thread. Each worker thread must be assigned to a single scheduler. Therefore, the number of schedulers in use cannot exceed the number of parallel tasks per branch, which is set by the MaxDOP configuration or query hint. The coordinating thread does not contribute to the MaxDOP limit. 
 
 ### Allocating threads to a CPU
-By default, each instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] starts each thread, and the operating system distributes threads from instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] among the processors (CPUs) on a computer, based on load. If process affinity has been enabled at the operating system level, then the operating system assigns each thread to a specific CPU. In contrast, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assigns [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **worker threads** to **schedulers** that distribute the threads evenly among the CPUs.
+By default, each instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] starts each thread, and the operating system distributes threads from instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] among the processors (CPUs) on a computer, based on load. If process affinity has been enabled at the operating system level, then the operating system assigns each thread to a specific CPU. In contrast, the [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] assigns [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] **worker threads** to **schedulers** that distribute the threads evenly among the CPUs, in a round-robin fashion.
     
 To carry out multitasking, for example when multiple applications access the same set of CPUs, the operating system sometimes moves worker threads among different CPUs. Although efficient from an operating system point of view, this activity can reduce [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] performance under heavy system loads, as each processor cache is repeatedly reloaded with data. Assigning CPUs to specific threads can improve performance under these conditions by eliminating processor reloads and reducing thread migration across CPUs (thereby reducing context switching); such an association between a thread and a processor is called processor affinity. If affinity has been enabled, the operating system assigns each thread to a specific CPU. 
 

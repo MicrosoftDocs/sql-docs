@@ -18,7 +18,7 @@ ms.author: chugu
 ---
 # Examples of Advanced Integration Services Expressions
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This section provides examples of advanced expressions that combine multiple operators and functions. If an expression is used in a precedence constraint or the Conditional Split transformation, it must evaluate to a Boolean. That restriction, however, does not apply to expressions used in property expressions, variables, the Derived Column transformation, or the For Loop container.  

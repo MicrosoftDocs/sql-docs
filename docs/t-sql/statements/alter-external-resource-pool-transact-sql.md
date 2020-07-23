@@ -19,7 +19,7 @@ manager: cgronlund
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Changes a Resource Governor external pool that specifies resources that can be used by external processes. 
 
@@ -55,6 +55,8 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 { *pool_name* | "default" }  

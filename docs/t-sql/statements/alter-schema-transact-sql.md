@@ -53,7 +53,10 @@ ALTER SCHEMA schema_name
 [;]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of a schema in the current database, into which the securable will be moved. Cannot be SYS or INFORMATION_SCHEMA.  
   

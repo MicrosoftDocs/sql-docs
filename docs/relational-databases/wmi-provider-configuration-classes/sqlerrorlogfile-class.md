@@ -12,7 +12,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # SqlErrorLogFile Class
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   Provides properties for viewing information about a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log file.  
   
 ## Syntax  
@@ -33,8 +33,8 @@ class SQLErrorLogFile
 ## Properties  
  The SQLErrorLogFile class defines the following properties.  
   
-|||  
-|-|-|  
+| Property | Description |
+| -------- | ----------- |
 |ArchiveNumber|Data type: **uint32**<br /><br /> Access type: Read-only<br /><br /> <br /><br /> The archive number for the log file.|  
 |InstanceName|Data type: **string**<br /><br /> Access type: Read-only<br /><br /> Qualifiers: Key<br /><br /> <br /><br /> The name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where the log file resides.|  
 |LastModified|Data type: **datetime**<br /><br /> Access type: Read-only<br /><br /> <br /><br /> The date that the log file was last modified.|  
@@ -43,8 +43,8 @@ class SQLErrorLogFile
   
 ## Remarks  
   
-|||  
-|-|-|  
+| Type | Name |
+| ---- | ---- |
 |MOF|Sqlmgmprovider xpsp2up.mof|  
 |DLL|Sqlmgmprovider.dll|  
 |Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  

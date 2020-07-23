@@ -11,7 +11,7 @@ ms.author: chugu
 ---
 # Deploy an SSIS project from SSMS with Transact-SQL
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

@@ -39,7 +39,9 @@ NULLIF ( expression , expression )
  *expression*  
  Is any valid scalar [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  Returns the same type as the first *expression*.  
   
  NULLIF returns the first *expression* if the two expressions are not equal. If the expressions are equal, NULLIF returns a null value of the type of the first *expression*.  

@@ -13,7 +13,7 @@ ms.reviewer: maghan
 ---
 # Lift and shift SQL Server Integration Services workloads to the cloud
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 You can now move your SQL Server Integration Services (SSIS) projects, packages, and workloads to the Azure cloud. Deploy, run, and manage SSIS projects and packages in the SSIS Catalog (SSISDB) on Azure SQL Database or SQL Database Managed Instance with familiar tools such as SQL Server Management Studio (SSMS).

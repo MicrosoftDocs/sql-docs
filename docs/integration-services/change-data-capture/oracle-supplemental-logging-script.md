@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Oracle Supplemental Logging Script
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This dialog box shows the script the Oracle supplemental logging script.  

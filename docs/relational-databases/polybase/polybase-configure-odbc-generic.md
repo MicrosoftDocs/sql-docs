@@ -65,7 +65,7 @@ The following Transact-SQL commands are used in this section:
 
     ```sql
     CREATE EXTERNAL DATA SOURCE <external_data_source_name>
-    WITH ( LOCATION = odbc://<ODBC server address>[:<port>],
+    WITH ( LOCATION = 'odbc://<ODBC server address>[:<port>]',
     CONNECTION_OPTIONS = 'Driver={<Name of Installed Driver>};
     ServerNode = <name of server  address>:<Port>',
     -- PUSHDOWN = [ON] | OFF,
@@ -82,7 +82,7 @@ The following Transact-SQL commands are used in this section:
 
     ```sql
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH ( LOCATION = odbc://SERVERNAME:4444,
+    WITH ( LOCATION = 'odbc://SERVERNAME:4444',
     CONNECTION_OPTIONS = 'Driver={CData ODBC Driver For SAP 2015};
     ServerNode = sap_server_node:5555',
     PUSHDOWN = ON,

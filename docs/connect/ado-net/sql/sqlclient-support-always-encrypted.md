@@ -1,7 +1,7 @@
 ---
 title: "Using Always Encrypted with SqlClient"
 description: "Learn how to develop applications using Microsoft.Data.SqlClient and Always Encrypted to keep your data secure."
-ms.date: "05/06/2020"
+ms.date: 07/09/2020
 ms.assetid: 
 ms.prod: sql
 ms.prod_service: connectivity
@@ -69,6 +69,9 @@ To configure your application:
 3. Provide the attestation protocol to be used by setting the `Attestation Protocol` keyword in the connection string. The value of this keyword should be set to "HGS".
 
 For a step-by-step tutorial, see [Tutorial: Develop a .NET application using Always Encrypted with secure enclaves](tutorial-always-encrypted-enclaves-develop-net-apps.md).
+
+> [!NOTE]
+> Always Encrypted with secure enclaves is only supported on Windows.
 
 ## Retrieving and modifying data in encrypted columns
 
@@ -508,7 +511,8 @@ With SqlBulkCopy, you can copy data, which is already encrypted and stored in on
 - Configure both database connections to the source table and to the target table without Always Encrypted enabled.
 - Set the `AllowEncryptedValueModifications` option (see [SqlBulkCopyOptions](https://docs.microsoft.com/dotnet/api/microsoft.data.sqlclient.sqlbulkcopyoptions)).
 
-Note: Use caution when specifying `AllowEncryptedValueModifications` as this may lead to corrupting the database because the **Microsoft .NET Data Provider for SQL Server** does not check if the data is indeed encrypted, or if it is correctly encrypted using the same encryption type, algorithm, and key as the target column.
+> [!NOTE]
+> Use caution when specifying `AllowEncryptedValueModifications` as this may lead to corrupting the database because the **Microsoft .NET Data Provider for SQL Server** does not check if the data is indeed encrypted, or if it is correctly encrypted using the same encryption type, algorithm, and key as the target column.
 
 Here is an example that copies data from one table to another. The SSN and BirthDate columns are assumed to be encrypted.
 

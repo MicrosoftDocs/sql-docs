@@ -1,5 +1,5 @@
 ---
-title: "Bookmarks | Microsoft Docs"
+title: "Row bookmarks (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: QuickWatch Dialog Box
+description: Learn how to use the QuickWatch dialog box as you debug code, to quickly view the data type and value of one Transact-SQL expression (such as a variable). 
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting

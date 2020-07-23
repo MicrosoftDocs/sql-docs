@@ -411,10 +411,6 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||||
-> |-|-|-|-|-|
-> |||||
-
 :::row:::
     :::column:::
         [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)

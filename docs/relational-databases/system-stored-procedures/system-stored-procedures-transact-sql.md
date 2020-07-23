@@ -83,8 +83,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         sp_column_privileges
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_column_privileges_ex
@@ -93,8 +91,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         sp_columns
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_columns_ex
@@ -103,8 +99,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         sp_databases
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_cursor
@@ -113,8 +107,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         sp_cursorclose
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_cursorexecute
@@ -123,8 +115,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         sp_cursorfetch
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_cursoroption
@@ -133,8 +123,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         sp_cursoropen
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_cursorprepare
@@ -143,8 +131,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         sp_cursorprepexec
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_cursorunprepare
@@ -153,8 +139,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         sp_execute
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_datatype_info
@@ -163,8 +147,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         sp_fkeys
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_foreignkeys
@@ -173,8 +155,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         sp_indexes
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_pkeys
@@ -183,8 +163,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         sp_primarykeys
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_prepare
@@ -193,8 +171,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         sp_prepexec
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_prepexecrpc
@@ -203,8 +179,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         sp_unprepare
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_server_info
@@ -213,8 +187,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         sp_special_columns
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_sproc_columns
@@ -223,8 +195,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         sp_statistics
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_table_privileges
@@ -233,8 +203,6 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
         sp_table_privileges_ex
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_tables
@@ -256,8 +224,6 @@ The following stored procedures are not documented:
         sp_assemblies_rowset_rmt
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_assemblies_rowset2
@@ -266,8 +232,6 @@ The following stored procedures are not documented:
         sp_assembly_dependencies_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_assembly_dependencies_rowset_rmt
@@ -276,8 +240,6 @@ The following stored procedures are not documented:
         sp_assembly_dependencies_rowset2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_bcp_dbcmptlevel
@@ -286,8 +248,6 @@ The following stored procedures are not documented:
         sp_catalogs_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_catalogs_rowset;2
@@ -296,8 +256,6 @@ The following stored procedures are not documented:
         sp_catalogs_rowset;5
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_catalogs_rowset_rmt
@@ -306,8 +264,6 @@ The following stored procedures are not documented:
         sp_catalogs_rowset2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_check_constbytable_rowset
@@ -316,8 +272,6 @@ The following stored procedures are not documented:
         sp_check_constbytable_rowset;2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_check_constbytable_rowset2
@@ -326,8 +280,6 @@ The following stored procedures are not documented:
         sp_check_constraints_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_check_constraints_rowset;2
@@ -336,8 +288,6 @@ The following stored procedures are not documented:
         sp_check_constraints_rowset2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_column_privileges_rowset
@@ -346,8 +296,6 @@ The following stored procedures are not documented:
         sp_column_privileges_rowset;2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_column_privileges_rowset;5
@@ -356,8 +304,6 @@ The following stored procedures are not documented:
         sp_column_privileges_rowset_rmt
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_column_privileges_rowset2
@@ -366,8 +312,6 @@ The following stored procedures are not documented:
         sp_columns_90
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_columns_90_rowset
@@ -376,8 +320,6 @@ The following stored procedures are not documented:
         sp_columns_90_rowset_rmt
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_columns_90_rowset2
@@ -386,8 +328,6 @@ The following stored procedures are not documented:
         sp_columns_ex_90
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_columns_rowset
@@ -396,8 +336,6 @@ The following stored procedures are not documented:
         sp_columns_rowset;2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_columns_rowset;5
@@ -406,8 +344,6 @@ The following stored procedures are not documented:
         sp_columns_rowset_rmt
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_columns_rowset2
@@ -416,8 +352,6 @@ The following stored procedures are not documented:
         sp_constr_col_usage_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_datatype_info_90
@@ -426,8 +360,6 @@ The following stored procedures are not documented:
         sp_ddopen;1
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_ddopen;10
@@ -436,8 +368,6 @@ The following stored procedures are not documented:
         sp_ddopen;11
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_ddopen;12
@@ -446,8 +376,6 @@ The following stored procedures are not documented:
         sp_ddopen;13
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_ddopen;2
@@ -456,8 +384,6 @@ The following stored procedures are not documented:
         sp_ddopen;3
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_ddopen;4
@@ -466,8 +392,6 @@ The following stored procedures are not documented:
         sp_ddopen;5
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_ddopen;6
@@ -476,8 +400,6 @@ The following stored procedures are not documented:
         sp_ddopen;7
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_ddopen;8
@@ -486,8 +408,6 @@ The following stored procedures are not documented:
         sp_ddopen;9
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_foreign_keys_rowset
@@ -496,8 +416,6 @@ The following stored procedures are not documented:
         sp_foreign_keys_rowset;2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_foreign_keys_rowset;3
@@ -506,8 +424,6 @@ The following stored procedures are not documented:
         sp_foreign_keys_rowset;5
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_foreign_keys_rowset_rmt
@@ -516,8 +432,6 @@ The following stored procedures are not documented:
         sp_foreign_keys_rowset2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_foreign_keys_rowset3
@@ -526,8 +440,6 @@ The following stored procedures are not documented:
         sp_indexes_90_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_indexes_90_rowset_rmt
@@ -536,8 +448,6 @@ The following stored procedures are not documented:
         sp_indexes_90_rowset2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_indexes_rowset
@@ -546,8 +456,6 @@ The following stored procedures are not documented:
         sp_indexes_rowset;2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_indexes_rowset;5
@@ -556,8 +464,6 @@ The following stored procedures are not documented:
         sp_indexes_rowset_rmt
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_indexes_rowset2
@@ -566,8 +472,6 @@ The following stored procedures are not documented:
         sp_linkedservers_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_linkedservers_rowset;2
@@ -576,8 +480,6 @@ The following stored procedures are not documented:
         sp_linkedservers_rowset2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_oledb_database
@@ -586,8 +488,6 @@ The following stored procedures are not documented:
         sp_oledb_defdb
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_oledb_deflang
@@ -596,8 +496,6 @@ The following stored procedures are not documented:
         sp_oledb_language
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_oledb_ro_usrname
@@ -606,8 +504,6 @@ The following stored procedures are not documented:
         sp_primary_keys_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_primary_keys_rowset;2
@@ -616,8 +512,6 @@ The following stored procedures are not documented:
         sp_primary_keys_rowset;3
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_primary_keys_rowset;5
@@ -626,8 +520,6 @@ The following stored procedures are not documented:
         sp_primary_keys_rowset_rmt
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_primary_keys_rowset2
@@ -636,8 +528,6 @@ The following stored procedures are not documented:
         sp_procedure_params_90_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_procedure_params_90_rowset2
@@ -646,8 +536,6 @@ The following stored procedures are not documented:
         sp_procedure_params_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_procedure_params_rowset;2
@@ -656,8 +544,6 @@ The following stored procedures are not documented:
         sp_procedure_params_rowset2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_procedures_rowset
@@ -666,8 +552,6 @@ The following stored procedures are not documented:
         sp_procedures_rowset;2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_procedures_rowset2
@@ -676,8 +560,6 @@ The following stored procedures are not documented:
         sp_provider_types_90_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_provider_types_rowset
@@ -686,8 +568,6 @@ The following stored procedures are not documented:
         sp_schemata_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_schemata_rowset;3
@@ -696,8 +576,6 @@ The following stored procedures are not documented:
         sp_special_columns_90
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_sproc_columns_90
@@ -706,8 +584,6 @@ The following stored procedures are not documented:
         sp_statistics_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_statistics_rowset;2
@@ -716,8 +592,6 @@ The following stored procedures are not documented:
         sp_statistics_rowset2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_stored_procedures
@@ -726,8 +600,6 @@ The following stored procedures are not documented:
         sp_table_constraints_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_table_constraints_rowset;2
@@ -736,8 +608,6 @@ The following stored procedures are not documented:
         sp_table_constraints_rowset2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_table_privileges_rowset
@@ -746,8 +616,6 @@ The following stored procedures are not documented:
         sp_table_privileges_rowset;2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_table_privileges_rowset;5
@@ -756,8 +624,6 @@ The following stored procedures are not documented:
         sp_table_privileges_rowset_rmt
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_table_privileges_rowset2
@@ -766,8 +632,6 @@ The following stored procedures are not documented:
         sp_table_statistics_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_table_statistics_rowset;2
@@ -776,8 +640,6 @@ The following stored procedures are not documented:
         sp_table_statistics2_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_tablecollations
@@ -786,8 +648,6 @@ The following stored procedures are not documented:
         sp_tablecollations_90
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_tables_info_90_rowset
@@ -796,8 +656,6 @@ The following stored procedures are not documented:
         sp_tables_info_90_rowset_64
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_tables_info_90_rowset2
@@ -806,8 +664,6 @@ The following stored procedures are not documented:
         sp_tables_info_90_rowset2_64
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_tables_info_rowset
@@ -816,8 +672,6 @@ The following stored procedures are not documented:
         sp_tables_info_rowset;2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_tables_info_rowset_64
@@ -826,8 +680,6 @@ The following stored procedures are not documented:
         sp_tables_info_rowset_64;2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_tables_info_rowset2
@@ -836,8 +688,6 @@ The following stored procedures are not documented:
         sp_tables_info_rowset2_64
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_tables_rowset;2
@@ -846,8 +696,6 @@ The following stored procedures are not documented:
         sp_tables_rowset;5
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_tables_rowset_rmt
@@ -856,8 +704,6 @@ The following stored procedures are not documented:
         sp_tables_rowset2
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_usertypes_rowset
@@ -866,8 +712,6 @@ The following stored procedures are not documented:
         sp_usertypes_rowset_rmt
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_usertypes_rowset2
@@ -876,8 +720,6 @@ The following stored procedures are not documented:
         sp_views_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_views_rowset2
@@ -886,8 +728,6 @@ The following stored procedures are not documented:
         sp_xml_schema_rowset
     :::column-end:::
 :::row-end:::  
-    :::column-end:::
-:::row-end:::
 :::row:::
     :::column:::
         sp_xml_schema_rowset2

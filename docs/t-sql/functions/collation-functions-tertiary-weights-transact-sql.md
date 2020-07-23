@@ -34,7 +34,9 @@ For each character in a non-Unicode string expression - defined with a SQL terti
 TERTIARY_WEIGHTS( non_Unicode_character_string_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *non_Unicode_character_string_expression*  
 A string [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **char**, **varchar**, or **varchar(max)** defined on a tertiary SQL collation. For a list of these collations, see Remarks.
   

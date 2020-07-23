@@ -36,7 +36,9 @@ This function returns the message text of the error that caused the CATCH block 
 ERROR_MESSAGE ( )   
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **nvarchar(4000)**  
   
 ## Return Value  

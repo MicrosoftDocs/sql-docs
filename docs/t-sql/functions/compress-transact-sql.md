@@ -29,7 +29,9 @@ This function compresses the input expression, using the GZIP algorithm. The fun
 COMPRESS ( expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *expression*  
 A
 

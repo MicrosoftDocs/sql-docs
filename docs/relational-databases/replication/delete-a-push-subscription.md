@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 3c4847e2-aed9-4488-b45d-8164422bdb10
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Delete a Push Subscription
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

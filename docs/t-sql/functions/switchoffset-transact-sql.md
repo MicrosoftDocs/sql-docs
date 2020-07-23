@@ -40,7 +40,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 SWITCHOFFSET ( DATETIMEOFFSET, time_zone )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *DATETIMEOFFSET*  
  Is an expression that can be resolved to a **datetimeoffset(n)** value.  
   

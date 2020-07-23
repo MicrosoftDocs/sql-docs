@@ -49,7 +49,7 @@ sp_clean_db_file_free_space
  0 (success) or 1 (failure)  
   
 ## Remarks  
- Deletes operations from a table or update operations that cause a row to move can immediately free up space on a page by removing references to the row. However, under certain circumstances, the row can physically remain on the data page as a ghost record. Ghost records are periodically removed by a background process. This residual data is not returned by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] in response to queries. However, in environments in which the physical security of the data or backup files is at risk, you can use `sp_clean_db_file_free_space` to clean these ghost records.  
+ Deletes operations from a table or update operations that cause a row to move can immediately free up space on a page by removing references to the row. However, under certain circumstances, the row can physically remain on the data page as a ghost record. Ghost records are periodically removed by a background process. This residual data is not returned by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] in response to queries. However, in environments in which the physical security of the data or backup files is at risk, you can use `sp_clean_db_file_free_space` to clean these ghost records. To perform this operation for all database files at once, use [sp_clean_db_free_space (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md). 
   
  The length of time required to run sp_clean_db_file_free_space depends on the size of the file, the available free space, and the capacity of the disk. Because running `sp_clean_db_file_free_space` can significantly affect I/O activity, we recommend that you run this procedure outside usual operation hours.  
   
@@ -72,5 +72,6 @@ EXEC sp_clean_db_file_free_space
   
 ## See Also  
  [Database Engine Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
- [Ghost Cleanup Process Guide](../ghost-record-cleanup-process-guide.md) 
+ [Ghost Cleanup Process Guide](../ghost-record-cleanup-process-guide.md)    
+ [sp_clean_db_free_space (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-clean-db-free-space-transact-sql.md)
    

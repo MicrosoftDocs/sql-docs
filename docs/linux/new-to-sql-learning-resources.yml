@@ -74,7 +74,7 @@ landingContent:
       - text: Join domain
         url: sql-server-linux-active-directory-authentication.md
       - text: Load sample data 
-        url: ../samples/adventureworks-install-configure?view=sql-server-2017&tabs=ssms
+        url: ../samples/adventureworks-install-configure.md
 
 
   - title: "Module 5: Configure business continuity"

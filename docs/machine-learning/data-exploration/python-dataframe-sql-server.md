@@ -1,6 +1,6 @@
 ---
 title: Insert Python dataframe into SQL table 
-description: How to insert data from a dataframe into SQL table
+description: How to insert data from a dataframe into SQL table.
 author: cawrites
 ms.author: chadam
 ms.date: 07/14/2020
@@ -85,8 +85,8 @@ CREATE TABLE [HumanResources].[DepartmentTest](
 GO
 ```
 
-## Create CVS file
-Copy text and save file as department.cvs for dataframe.
+## Create CSV file
+Copy text and save file as department.csv for dataframe.
 
 ```text
 DepartmentID,Name,GroupName,

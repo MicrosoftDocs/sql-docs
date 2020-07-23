@@ -30,7 +30,7 @@ ms.author: carlrab
   
 ```syntaxsql 
 sp_clean_db_free_space   
-  [ @dbname ] = 'database_name'   
+  [ @dbname = ] 'database_name'   
   [ , [ @cleaning_delay = ] 'delay_in_seconds' ] [;]  
 ```  
   

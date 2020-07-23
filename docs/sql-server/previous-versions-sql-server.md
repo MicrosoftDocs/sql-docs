@@ -19,7 +19,7 @@ The documentation for several older versions of Microsoft SQL Server has been ar
 
 There is online documentation for several older versions of SQL Server.
 
-- [2014](/previous-versions/sql/2014/index.yml?view=sql-server-2014)
+- [2014](https://docs.microsoft.com/previous-versions/sql/2014/)
 - [2005 – 2012](https://docs.microsoft.com/previous-versions/sql/)
 
 ## Offline documentation

@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 # Insert Python dataframe into SQL table
 [!INCLUDE[sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-This article describes how to insert data into a SQL database from a `pandas` dataframe using the `pyodbc` package in Python. For more information, see the [pyodbc documentation](../../connect/python/pyodbc/python-sql-driver-pyodbc.md). By establishing a connection with SQL using Python `pandas`, data can be sent directly to a SQL table.
+This article describes how to insert data into a SQL database from a `pandas` dataframe using the `pyodbc` package in Python. For more information, see the [pyodbc documentation](../../connect/python/pyodbc/python-sql-driver-pyodbc.md). By establishing a connection to a SQL database, data contained within a Python dataframe can be inserted directly to a SQL table.
 
 ## Prerequisites:
 

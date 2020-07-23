@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # &lt;source data query&gt; - SHAPE
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Combines queries from multiple data sources into a single hierarchical table (that is, a table with nested tables), which becomes the case table for the mining model.  
   

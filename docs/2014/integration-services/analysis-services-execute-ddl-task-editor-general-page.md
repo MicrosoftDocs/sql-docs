@@ -34,7 +34,7 @@ ms.author: chugu
  [Analysis Services Execute DDL Task Editor &#40;DDL Page&#41;](../../2014/integration-services/analysis-services-execute-ddl-task-editor-ddl-page.md)   
  [Expressions Page](expressions/expressions-page.md)   
  [Control Flow](control-flow/control-flow.md)   
- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [XML for Analysis  &#40;XMLA&#41; Reference](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+ [Analysis Services Scripting Language &#40;ASSL&#41; Reference](https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla)   
+ [XML for Analysis  &#40;XMLA&#41; Reference](https://docs.microsoft.com/analysis-services/xmla/xml-for-analysis-xmla-reference)  
   
   

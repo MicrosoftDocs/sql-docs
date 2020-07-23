@@ -18,10 +18,10 @@ ms.author: owend
   
 - [Multidimensional Model Programming](../multidimensional-models/multidimensional-model-programming.md)  
   
-- [Analysis Services Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/analysis-services-schema-rowsets)  
+- [Analysis Services Schema Rowsets](https://docs.microsoft.com/analysis-services/instances/analysis-services-schema-rowsets)  
   
-- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)  
+- [Analysis Services Scripting Language &#40;ASSL&#41; Reference](https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla)  
   
-- [XML for Analysis  &#40;XMLA&#41; Reference](https://docs.microsoft.com/bi-reference/xmla/xml-for-analysis-xmla-reference)  
+- [XML for Analysis  &#40;XMLA&#41; Reference](https://docs.microsoft.com/analysis-services/xmla/xml-for-analysis-xmla-reference)  
   
   

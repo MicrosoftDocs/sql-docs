@@ -1,5 +1,6 @@
 ---
 title: "Objects Supported by the Generate Scripts Wizard"
+description: See what object types that the Generate and Publish Scripts Wizard can help you publish.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

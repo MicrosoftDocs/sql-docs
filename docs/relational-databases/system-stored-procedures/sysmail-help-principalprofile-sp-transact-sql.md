@@ -53,9 +53,8 @@ sysmail_help_principalprofile_sp [ {   [ @principal_id = ] principal_id | [ @pri
 ## Result Sets  
  Returns a result set that contains the columns listed in the following table.  
   
-||||  
-|-|-|-|  
-|Column name|Data type|Description|  
+| Column name | Data type | Description |
+| ----------- | --------- | ----------- |
 |**principal_id**|**int**|The ID of the database user.|  
 |**principal_name**|**sysname**|The name of the database user.|  
 |**profile_id**|**int**|The ID number of the Database Mail profile.|  

@@ -1,7 +1,7 @@
 ---
 title: Connect to Server (Connection Properties Page) Database Engine
 ms.prod: sql
-ms.prod_service:"sql-tools
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 

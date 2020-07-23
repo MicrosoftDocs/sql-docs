@@ -34,7 +34,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 INDEXPROPERTY ( object_ID , index_or_statistics_name , property )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *object_ID*  
  Is an expression that contains the object identification number of the table or indexed view for which to provide index property information. *object_ID* is **int**.  
   

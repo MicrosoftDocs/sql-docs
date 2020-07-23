@@ -35,7 +35,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 IS_ROLEMEMBER ( 'role' [ , 'database_principal' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *role* **'**  
  Is the name of the database role that is being checked. *role* is **sysname**.  
   

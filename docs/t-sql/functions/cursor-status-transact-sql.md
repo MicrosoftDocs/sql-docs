@@ -38,7 +38,9 @@ CURSOR_STATUS
      )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 'local'  
 Specifies a constant indicating that the cursor source is a local cursor name.
   

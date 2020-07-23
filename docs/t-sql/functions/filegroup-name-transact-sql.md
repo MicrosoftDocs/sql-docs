@@ -38,7 +38,9 @@ This function returns the filegroup name for the specified filegroup identificat
 FILEGROUP_NAME ( filegroup_id )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *filegroup_id*  
 
 The filegroup ID number whose filegroup name `FILEGROUP_NAME` will return. *filegroup_id* has a **smallint** data type.  

@@ -36,7 +36,9 @@ HASHBYTES ( '<algorithm>', { @input | 'input' } )
 <algorithm>::= MD2 | MD4 | MD5 | SHA | SHA1 | SHA2_256 | SHA2_512   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 
 `<algorithm>`  
 Identifies the hashing algorithm to be used to hash the input. This is a required argument with no default. The single quotation marks are required. Beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], all algorithms other than SHA2_256, and SHA2_512 are deprecated.  

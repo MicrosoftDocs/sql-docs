@@ -62,8 +62,7 @@ sp_clean_db_free_space
 ```sql  
 USE master;  
 GO  
-EXEC sp_clean_db_free_space   
-@dbname = N'AdventureWorks2012' ;  
+EXEC sp_clean_db_free_space @dbname = N'AdventureWorks2012';  
 ```  
   
 ## See Also  

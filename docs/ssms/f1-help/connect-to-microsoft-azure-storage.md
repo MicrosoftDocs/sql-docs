@@ -21,7 +21,7 @@ ms.date: 07/12/2017
 Use the **Azure Storage Connection** dialog to specify a storage account and validate your connection to Azure.  
   
 ## Options  
-Specify the following information about your Azure account, and then click **Next** to continue.  
+Specify the following information about your Azure account, and then select **Next** to continue.  
   
 1.  **Storage Account** - Specify the storage account name.
 

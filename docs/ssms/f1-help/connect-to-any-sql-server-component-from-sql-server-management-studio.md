@@ -39,10 +39,10 @@ Although [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] allows you to
 You can save connections to specific servers in Registered Servers, or you can save connections in projects with Solution Explorer.  
   
 ### Saving Connections in Registered Servers  
-When you register a server, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] saves the connection information in Registered Servers. To connect to a registered server, double-click the server name in Registered Servers. Object Explorer then opens a connection to the server.  
+When you register a server, [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] saves the connection information in Registered Servers. To connect to a registered server, double-select the server name in Registered Servers. Object Explorer then opens a connection to the server.  
   
 ### Saving Connections in Solution Explorer  
-Solution Explorer allows you to store related queries, scripts, connections, and other associated information in a project. Each script project contains a node called **Connections**, where you can save one or more connections. To add a connection, right-click **Connections**, and then click **New Connection**. To access a saved connection, expand **Connections** and double-click the connection. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] opens a query window associated with that connection. When saved, scripts retain their association to a specific connection.  
+Solution Explorer allows you to store related queries, scripts, connections, and other associated information in a project. Each script project contains a node called **Connections**, where you can save one or more connections. To add a connection, right-select **Connections**, and then select **New Connection**. To access a saved connection, expand **Connections** and double-select the connection. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] opens a query window associated with that connection. When saved, scripts retain their association to a specific connection.  
   
 ## See Also  
 [Use SQL Server Management Studio](../../ssms/use-sql-server-management-studio.md)  

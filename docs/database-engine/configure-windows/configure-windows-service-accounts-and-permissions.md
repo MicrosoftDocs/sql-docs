@@ -60,7 +60,7 @@ Each service in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] repres
 
  Most services and their properties can be configured by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Here are the paths to the last four versions when Windows is installed on the C drive.
 
-|||
+|SQL Server version|Path|
 |-|-|
 |SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|

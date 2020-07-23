@@ -20,9 +20,8 @@ ms.author: jroth
   
  ![Availability group data synchronization](media/always-onag-datasynchronization.gif "Availability group data synchronization")  
   
-|||||  
+|Sequence|Step description|Comments|Useful metrics|  
 |-|-|-|-|  
-|**Sequence**|**Step description**|**Comments**|**Useful metrics**|  
 |1|Log generation|Log data is flushed to disk. This log must be replicated to the secondary replicas. The log records enter the send queue.|[SQL Server:Database > Log bytes flushed\sec](~/relational-databases/performance-monitor/sql-server-databases-object.md)|  
 |2|Capture|Logs for each database is captured and sent to the corresponding partner queue (one per database-replica pair). This capture process runs continuously as long as the availability replica is connected and data movement is not suspended for any reason, and the database-replica pair is shown to be either Synchronizing or Synchronized. If the capture process is not able to scan and enqueue the messages fast enough, the log send queue builds up.|[SQL Server:Availability Replica > Bytes Sent to Replica\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md), which is an aggregation of the sum of all database messages queued for that availability replica.<br /><br /> [log_send_queue_size](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB) and [log_bytes_send_rate](~/relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md) (KB/sec) on the primary replica.|  
 |3|Send|The messages in each database-replica queue is dequeued and sent across the wire to the respective secondary replica.|[SQL Server:Availability Replica > Bytes sent to transport\sec](~/relational-databases/performance-monitor/sql-server-availability-replica.md)|  
@@ -35,9 +34,8 @@ ms.author: jroth
   
  After the logs have been captured on the primary replica, they are subject to two levels of flow controls, as shown in the following table.  
   
-|||||  
+|Level|Number of gates|Number of messages|Useful metrics|  
 |-|-|-|-|  
-|**Level**|**Number of gates**|**Number of messages**|**Useful metrics**|  
 |Transport|1 per availability replica|8192|Extended event **database_transport_flow_control_action**|  
 |Database|1 per availability database|11200 (x64)<br /><br /> 1600 (x86)|[DBMIRROR_SEND](~/relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)<br /><br /> Extended event **hadron_database_flow_control_action**|  
   

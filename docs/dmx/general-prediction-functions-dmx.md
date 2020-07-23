@@ -16,15 +16,23 @@ author: minewiskan
   
 ## Common Functions  
  You can use functions to extend the results that a mining model returns. You can use the following functions for any **SELECT** statement that returns a table expression:  
-  
-|||  
-|-|-|  
-|[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)|  
-|[BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)|[TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)|  
-|[Predict &#40;DMX&#41;](../dmx/predict-dmx.md)|[TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)|  
-|[RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|[TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)|  
-|[RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)||  
-  
+
+:::row:::
+    :::column:::
+        [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)  
+        [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)  
+        [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
+        [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)  
+        [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)  
+    :::column-end:::
+    :::column:::
+        [RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)  
+        [TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)  
+        [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)  
+        [TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)  
+    :::column-end:::
+:::row-end:::
+
  In addition, the following functions are supported for almost all model types:  
   
 -   [Exists &#40;DMX&#41;](../dmx/exists-dmx.md)  

@@ -1,5 +1,6 @@
 ---
 title: "Print Code and Results"
+description: Learn how to specify the coloration of text when printed. The colors can differ from those used for display. Learn also how to control whether line numbers appear in the listing.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

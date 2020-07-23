@@ -25,7 +25,7 @@ ms.author: owend
  This schema rowset is not sorted.  
   
 ## Using ADOMD.NET to return the rowset  
- When using ADOMD.NET and the schema rowset to retrieve metadata, you can use either the GUID or string to reference a schema rowset object in the GetSchemaDataSet method. For more information, see [Working with Schema Rowsets in ADOMD.NET](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets).  
+ When using ADOMD.NET and the schema rowset to retrieve metadata, you can use either the GUID or string to reference a schema rowset object in the GetSchemaDataSet method. For more information, see [Working with Schema Rowsets in ADOMD.NET](https://docs.microsoft.com/analysis-services/adomd/multidimensional-models-adomd-net-client/retrieving-metadata-working-with-schema-rowsets).  
   
  The following table provides the GUID and string values that identify this rowset.  
   
@@ -35,7 +35,7 @@ ms.author: owend
 |String|DISCOVER_XEVENT_TRACE_DEFINITION|  
   
 ## See Also  
- [XML for Analysis Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/xml/xml-for-analysis-schema-rowsets)   
+ [XML for Analysis Schema Rowsets](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126221(v=sql.110))   
  [Use SQL Server Extended Events &#40;XEvents&#41; to Monitor Analysis Services](../instances/monitor-analysis-services-with-sql-server-extended-events.md)   
  [Use Dynamic Management Views &#40;DMVs&#41; to Monitor Analysis Services](../instances/use-dynamic-management-views-dmvs-to-monitor-analysis-services.md)  
   

@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # Usage (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   When you use Data Mining Extensions (DMX) to define a new data mining model in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you must specify how the data mining algorithm that builds the model will use each column. You can specify a column as one of the following types:  
   

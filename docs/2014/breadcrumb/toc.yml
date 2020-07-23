@@ -402,7 +402,7 @@
           topicHref: /sql/analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103
         - name: Schema Rowsets
           tocHref: /sql/analysis-services/schema-rowsets/
-          topicHref: /sql/analysis-services/schema-rowsets/analysis-services-schema-rowsets
+          topicHref: https://docs.microsoft.com/analysis-services/instances/analysis-services-schema-rowsets
         - name: Scripting
           tocHref: https://docs.microsoft.com/analysis-services/assl
           topicHref: https://docs.microsoft.com/analysis-services/assl/analysis-services-scripting-language-assl-for-xmla
@@ -421,7 +421,7 @@
             topicHref: https://docs.microsoft.com/analysis-services/assl/data-type/analysis-services-scripting-language-xml-data-types-assl
         - name: XMLA
           tocHref: /sql/analysis-services/xmla/
-          topicHref: /sql/analysis-services/xmla/xml-for-analysis-xmla-reference
+          topicHref: https://docs.microsoft.com/analysis-services/xmla/xml-for-analysis-xmla-reference
       - name: Install SQL Server
         tocHref: /sql/database-engine/install-windows/
         topicHref: /sql/database-engine/install-windows/installation-for-sql-server

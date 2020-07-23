@@ -38,9 +38,9 @@ ms.author: owend
  [Microsoft.AnalysisServices.Database.DbStorageLocation*](/dotnet/api/microsoft.analysisservices.core.database.dbstoragelocation)   
  [Attach and Detach Analysis Services Databases](attach-and-detach-analysis-services-databases.md)   
  [Move an Analysis Services Database](move-an-analysis-services-database.md)   
- [DbStorageLocation Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/dbstoragelocation-element)   
- [Create Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/create-element-xmla)   
- [Attach Element](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/attach-element)   
- [Synchronize Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-commands/synchronize-element-xmla)  
+ [DbStorageLocation Element](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/dbstoragelocation-element)   
+ [Create Element &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/create-element-xmla)   
+ [Attach Element](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/attach-element)   
+ [Synchronize Element &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-commands/synchronize-element-xmla)  
   
   

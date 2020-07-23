@@ -1,5 +1,5 @@
 ---
-title: "Creating a Rowset with IOpenRowset | Microsoft Docs"
+title: "Create rowset with IOpenRowset (OLE DB driver) | Microsoft Docs"
 description: "Creating a rowset with IOpenRowset interface of OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

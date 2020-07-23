@@ -1,5 +1,6 @@
 ---
 title: "Activity Monitor | Microsoft Docs"
+description: Learn how to use Activity Monitor to display information about SQL Server processes and how these processes affect the current instance of SQL Server.
 ms.custom: ""
 ms.date: "04/07/2019"
 ms.prod: sql

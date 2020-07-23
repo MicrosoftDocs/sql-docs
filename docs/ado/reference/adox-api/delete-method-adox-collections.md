@@ -51,13 +51,24 @@ Collection.Delete Name
  For [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) and [Users](../../../ado/reference/adox-api/users-collection-adox.md) collections, an error will occur if the provider does not support deleting tables or users, respectively. For [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) and [Views](../../../ado/reference/adox-api/views-collection-adox.md) collections, **Delete** will fail if the provider does not support persisting commands.  
   
 ## Applies To  
-  
-||||  
-|-|-|-|  
-|[Columns Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)|[Groups Collection (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)|[Indexes Collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Keys Collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)|[Procedures Collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)|[Tables Collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)|  
-|[Users Collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)|[Views Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)||  
-  
+
+:::row:::
+    :::column:::
+        [Columns Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
+        [Groups Collection (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)  
+        [Indexes Collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Keys Collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+        [Procedures Collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+        [Tables Collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Users Collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
+        [Views Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Procedures Delete Method Example (VB)](../../../ado/reference/adox-api/procedures-delete-method-example-vb.md)   
  [Views Delete Method Example (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)

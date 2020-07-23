@@ -34,8 +34,8 @@ ms.author: jaszymas
   
 DROP COLUMN ENCRYPTION KEY key_name [;]  
 ```  
-  
-## Arguments  
+
+## Arguments
  *key_name*  
  Is the name by which the column encryption key to be dropped from the database.  
   

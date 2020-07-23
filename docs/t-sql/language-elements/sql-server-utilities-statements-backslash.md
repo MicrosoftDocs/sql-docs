@@ -44,7 +44,9 @@ ms.author: jroth
 <continued section of string>  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  \<first section of string>  
  Is the start of a string.  
   

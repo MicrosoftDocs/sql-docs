@@ -1,7 +1,7 @@
 ---
 title: Insert data from a SQL table into a Python pandas dataframe
 titleSuffix: SQL machine learning
-description: Learn how to read data from a SQL database and insert it into a pandas dataframe using Python.
+description: Learn how to read data from a SQL table and insert into a pandas dataframe using Python.
 author: cawrites
 ms.author: chadam
 ms.date: 07/14/2020
@@ -11,9 +11,9 @@ ms.technology: machine-learning
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
 ---
 # Insert data from a SQL table into a Python pandas dataframe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE[sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-This article describes how to insert data from a SQL database a `pandas` dataframe using the `pyodbc` package in Python. The dataframe can be used for further data exploration. For more information, see the [pyodbc documentation](../../connect/python/pyodbc/python-sql-driver-pyodbc.md).
+This article describes how to insert data from a SQL table into a `pandas` dataframe using the `pyodbc` package in Python. The rows and columns of data contained within the dataframe can be used for further data exploration. For more information, see the [pyodbc documentation](../../connect/python/pyodbc/python-sql-driver-pyodbc.md).
 
 ## Prerequisites:
 
@@ -37,13 +37,13 @@ This article describes how to insert data from a SQL database a `pandas` datafra
 
 The sample database used in this article has been saved to a **.bak** database backup file for you to download and use.
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions"
-1. Follow the instructions in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#download-bak-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
+1. Follow the instructions in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#download-backup-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
 1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
    - Import from the **AdventureWorks.bak** file - you downloaded.
    - Name the target database "AdventureWorks".
 ::: moniker-end   
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-1. Follow the instructions in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#download-bak-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
+1. Follow the instructions in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#download-backup-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
 1. Follow the directions in [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
    - Import from the **AdventureWorks.bak** file - you downloaded.
    - Name the target database "AdventureWorks".

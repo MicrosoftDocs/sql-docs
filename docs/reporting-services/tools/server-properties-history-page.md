@@ -1,5 +1,6 @@
 ---
 title: "Server Properties (History Page) | Microsoft Docs"
+description: Learn how to use the Reporting Services History page in SQL Server Management Studio to set a default value for the number of copies of report history to retain.
 ms.date: 06/10/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

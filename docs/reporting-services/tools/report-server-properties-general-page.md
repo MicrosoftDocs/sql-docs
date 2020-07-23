@@ -1,5 +1,6 @@
 ---
 title: "Server Properties (General Page) | Microsoft Docs"
+description: Learn about the options on the Report Server Properties page.
 ms.date: 06/08/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

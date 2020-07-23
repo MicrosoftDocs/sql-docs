@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # Data Profiling Task Editor (General Page)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **General** page of the **Data Profiling Task Editor** to configure the following options:  

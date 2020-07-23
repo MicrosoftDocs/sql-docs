@@ -30,7 +30,9 @@ ms.author: mlandzic
 .STRelate ( other_geometry, intersection_pattern_matrix )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geometry*  
  Is another **geometry** instance to compare against the instance on which `STRelate()` is invoked.  
   

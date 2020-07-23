@@ -12,7 +12,7 @@ ms.author: chugu
 ---
 # Use the Teradata connection manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 With the Teradata connection manager, you can enable a package to extract data from Teradata databases and load data into Teradata databases.
 

@@ -1,5 +1,5 @@
 ---
-title: "Command Syntax | Microsoft Docs"
+title: "Command syntax (OLE DB driver) | Microsoft Docs"
 description: "Command syntax and Stored Procedures"
 ms.custom: ""
 ms.date: "06/14/2018"

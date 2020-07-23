@@ -1,5 +1,6 @@
 ---
 title: "Best practices with Query Store | Microsoft Docs"
+description: Learn best practices for using SQL Server Query Store with your workload, such as using the latest SQL Server Management Studio and Query Performance Insight.
 ms.custom: ""
 ms.date: "03/04/2020"
 ms.prod: sql
@@ -173,7 +174,7 @@ SET QUERY_STORE = ON
       INTERVAL_LENGTH_MINUTES = 60,
       SIZE_BASED_CLEANUP_MODE = AUTO,
       MAX_PLANS_PER_QUERY = 200,
-      WAIT_STATS_CAPTURE_MODE = ON,
+      WAIT_STATS_CAPTURE_MODE = ON
     );
 ```
 

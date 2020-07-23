@@ -37,7 +37,9 @@ DROP CONTRACT contract_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *contract_name*  
  The name of the contract to drop. Server, database, and schema names cannot be specified.  
   

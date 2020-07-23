@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # Data Types (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   When you use Data Mining Extensions (DMX) to define a new mining model in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], you must provide a data type for each column in the model. The data type describes the data that the data mining algorithm will use when it builds the model.  
   

@@ -44,7 +44,9 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
 DATEPART ( datepart , date )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *datepart*  
 The specific part of the *date* argument for which `DATEPART` will return an **integer**. This table lists all valid *datepart* arguments.
 

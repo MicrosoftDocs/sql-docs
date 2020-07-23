@@ -18,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Functions on Nodes - namespace-uri
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Returns the namespace URI of the QName specified in *$arg* as a xs:string.  
   

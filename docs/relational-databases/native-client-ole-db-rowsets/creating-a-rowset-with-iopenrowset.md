@@ -1,5 +1,5 @@
 ---
-title: "Creating a Rowset with IOpenRowset | Microsoft Docs"
+title: "Create rowset with IOpenRowset (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -33,7 +33,9 @@ ms.author: jroth
 CLOSE { { [ GLOBAL ] cursor_name } | cursor_variable_name }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  GLOBAL  
  Specifies that *cursor_name* refers to a global cursor.  
   

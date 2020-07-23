@@ -1,5 +1,5 @@
 ---
-title: "NumericScale and Precision Properties Example (VB) | Microsoft Docs"
+title: "NumericScale and Precision properties ADOX code example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity

@@ -22,12 +22,15 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # binary and varbinary (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Binary data types of either fixed length or variable length.
   
-## Arguments  
+## Arguments
+
 **binary** [ ( _n_ ) ]
 Fixed-length binary data with a length of _n_ bytes, where _n_ is a value from 1 through 8,000. The storage size is _n_ bytes.
   

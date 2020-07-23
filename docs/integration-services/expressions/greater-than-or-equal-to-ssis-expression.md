@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # &gt;= (Greater Than or Equal To) (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Performs a comparison to determine if the first expression is greater than or equal to the second one. The expression evaluator automatically converts many data types before it performs the comparison.  

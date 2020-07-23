@@ -1,5 +1,6 @@
 ---
 title: "Format a Reporting Services Script File | Microsoft Docs"
+description: Learn how to format a Reporting Services script file in Microsoft Visual Basic .NET that contains user-defined procedures and module-level variables.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

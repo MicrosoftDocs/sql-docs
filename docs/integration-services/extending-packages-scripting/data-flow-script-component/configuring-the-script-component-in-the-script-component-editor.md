@@ -20,7 +20,7 @@ ms.author: chugu
 ---
 # Configuring the Script Component in the Script Component Editor
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Before you write custom code in the Script component, you must select the type of data flow component that you want to create-source, transformation, or destination-and then configure the component's metadata and properties in the **Script Transformation Editor**.  

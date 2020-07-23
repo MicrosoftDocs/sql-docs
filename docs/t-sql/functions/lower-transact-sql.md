@@ -33,11 +33,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 LOWER ( character_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *character_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character or binary data. *character_expression* can be a constant, variable, or column. *character_expression* must be of a data type that is implicitly convertible to **varchar**. Otherwise, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) to explicitly convert *character_expression*.  
   
@@ -47,7 +49,7 @@ LOWER ( character_expression )
 ## Examples  
  The following example uses the `LOWER` function, the `UPPER` function, and nests the `UPPER` function inside the `LOWER` function in selecting product names that have prices between $11 and $20.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT LOWER(SUBSTRING(EnglishProductName, 1, 20)) AS Lower,   

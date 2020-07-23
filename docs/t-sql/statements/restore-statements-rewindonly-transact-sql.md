@@ -49,7 +49,9 @@ FROM <backup_device> [ ,...n ]
 }   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **\<backup_device> ::=** 
   
  Specifies the logical or physical backup devices to use for the restore operation.  

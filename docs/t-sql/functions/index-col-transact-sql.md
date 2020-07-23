@@ -37,7 +37,9 @@ INDEX_COL ( '[ database_name . [ schema_name ] .| schema_name ]
     table_or_view_name', index_id , key_id )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name*  
  Is the name of the database.  
   

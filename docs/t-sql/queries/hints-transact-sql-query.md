@@ -132,7 +132,9 @@ Query hints specify that the indicated hints should be used throughout the query
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 { HASH | ORDER } GROUP  
 Specifies that aggregations that the query's GROUP BY or DISTINCT clause describes should use hashing or ordering.  
   
@@ -355,12 +357,12 @@ TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ]
   
  When you specify _exposed\_object\_name_ without also specifying a table hint, any indexes you specify in the query as part of a table hint for the object are disregarded. The Query Optimizer then determines index usage. You can use this technique to eliminate the effect of an INDEX table hint when you can't modify the original query. See Example J.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [**(**_index\_value_**(**_index\_column\_name_ [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK }
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) \| INDEX = ( _index\_value_ ) \| FORCESEEK [**(**_index\_value_**(**_index\_column\_name_ [**,**... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK }
  Is the table hint to apply to the table or view that corresponds to *exposed_object_name* as a query hint. For a description of these hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Table hints other than INDEX, FORCESCAN, and FORCESEEK are disallowed as query hints unless the query already has a WITH clause specifying the table hint. For more information, see Remarks.  
   
-> [!CAUTION] 
+> [!CAUTION]
 > Specifying FORCESEEK with parameters limits the number of plans that can be considered by the optimizer more than when specifying FORCESEEK without parameters. This may cause a "Plan cannot be generated" error to occur in more cases. In a future release, internal modifications to the optimizer may allow more plans to be considered.  
   
 ## Remarks  

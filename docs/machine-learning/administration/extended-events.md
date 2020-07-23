@@ -129,7 +129,7 @@ The configuration file itself has the following format:
 The following example shows the definition of an event trace for the Launchpad service:
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  
@@ -152,7 +152,7 @@ The following example shows the definition of an event trace for the Launchpad s
 The following example shows the definition of an event trace for the BXLServer executable.
   
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
  <event_session name="sqlsatelliteut" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="hay">Xevent for sql tdd runner.</description>  

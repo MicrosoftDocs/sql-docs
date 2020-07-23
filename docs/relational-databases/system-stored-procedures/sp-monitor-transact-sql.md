@@ -64,14 +64,14 @@ sp_monitor
 ## Examples  
  The following example reports information about how busy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has been.  
   
-```  
+```console
 USE master  
 EXEC sp_monitor  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
 
-```sql
+```console
 last_run       current_run                   seconds
 -----------    --------------------------    ---------
 Mar 29 1998    11:55AM Apr 4 1998 2:22 PM    561

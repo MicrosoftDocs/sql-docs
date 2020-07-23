@@ -477,6 +477,7 @@ For a note about the minimum permission levels needed for each action in this se
     --Create an ENCRYPTION KEY using the ASYMMETRIC KEY (EKMSampleASYKey)
     CREATE DATABASE ENCRYPTION KEY   
     WITH ALGORITHM = AES_256   
+    ENCRYPTION BY SERVER ASYMMETRIC KEY EKMSampleASYKey;
     ```  
   
 1. Encrypt the test database. Enable TDE by setting ENCRYPTION ON.

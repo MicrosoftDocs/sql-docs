@@ -97,7 +97,7 @@ The tool runs independently of [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 | Argument | Description|
 | --- | --- |
-| *Name Node Address* | The IP or FQDN of the name node. Refers to the "LOCATION" argument in your CREATE EXTERNAL DATA SOURCE T-SQL. Note: SQL Server 2019 version of tool requires 'hdfs://' to precede the IP or FQDN|
+| *Name Node Address* | The IP or FQDN of the name node. Refers to the "LOCATION" argument in your CREATE EXTERNAL DATA SOURCE T-SQL. Note: The SQL Server 2019 version of the tool requires *hdfs:\/\/* to precede the IP or FQDN.|
 | *Name Node Port* | The port of the name node. Refers to the "LOCATION" argument in your CREATE EXTERNAL DATA SOURCE T-SQL. For example, 8020. |
 | *Service Principal* | The admin service principal to your KDC. Matches the "IDENTITY" argument in your `CREATE DATABASE SCOPED CREDENTIAL` T-SQL.|
 | *Service Password* | Instead of typing your password at the console, store it in a file and pass the file path here. The contents of the file should match what you use as your "SECRET" argument in your `CREATE DATABASE SCOPED CREDENTIAL` T-SQL. |

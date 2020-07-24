@@ -122,4 +122,4 @@ CountryRegionCode                 Name
 
 ## Next steps
 
-+ [Insert Python dataframe into SQL](../data-exploration/python-dataframe-sqlserver.md)
++ [Insert Python dataframe into SQL](../data-exploration/python-dataframe-sql-server.md)

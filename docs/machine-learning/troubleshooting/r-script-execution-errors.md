@@ -36,7 +36,7 @@ We also recommend that you review and slightly rewrite the script to correct any
 
 Additionally, you can use the sqlrutils package to bundle your R script in a format that is more easily consumed as a stored procedure. For more information, see:
 * [sqlrutils package](../r/ref-r-sqlrutils.md)
-* [Create a stored procedure by using sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
+* [Create a stored procedure by using sqlrutils](../r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
 ## Script returns inconsistent results
 

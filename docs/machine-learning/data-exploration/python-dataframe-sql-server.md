@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 # Insert Python dataframe into SQL table
 [!INCLUDE[sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-This article describes how to insert a [pandas](https://pandas.pydata.org/) dataframe into a SQL database using the [pyodbc](../../connect/python/pyodbc/python-sql-driver-pyodbc.md) package in Python. By establishing a connection to a SQL database, data contained within a Python dataframe can be inserted directly to a SQL table.
+This article describes how to insert a [pandas](https://pandas.pydata.org/) dataframe into a SQL database using the [pyodbc](../../connect/python/pyodbc/python-sql-driver-pyodbc.md) package in Python.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ This article describes how to insert a [pandas](https://pandas.pydata.org/) data
 
 * Azure Data Studio. For how to install, see [Azure Data Studio](../../azure-data-studio/what-is.md).
 
-* [Restore sample database](../../samples/adventureworks-install-configure) The sample database used in this article has been saved to a **.bak** database backup file for you to download and use.
+* [Restore sample database](../../samples/adventureworks-install-configure) to get sample data used in this article.
 
 ## Verify restored database
 

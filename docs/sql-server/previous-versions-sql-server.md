@@ -19,13 +19,13 @@ The documentation for several older versions of Microsoft SQL Server has been ar
 
 To access the online documentation for SQL Server 2005 - 2014, see the following landing page:
 
-[SQL Server previous versions documentation](https://docs.microsoft.com/previous-versions/sql/).
+- [SQL Server previous versions documentation](https://docs.microsoft.com/previous-versions/sql/).
 
 ## Offline documentation
 
 To access offline content for SQL Server versions 2012 and later, see the following article:
 
-[Install SQL Server documentation to view offline in SSMS](sql-server-offline-documentation.md).
+- [Install SQL Server documentation to view offline in SSMS](sql-server-offline-documentation.md).
 
 > [!IMPORTANT]
 > SQL 2014 Transact-SQL content is only available [offline](../sql-server/sql-server-offline-documentation.md#sql-server-2014-offline-content).
@@ -34,11 +34,11 @@ To access offline content for SQL Server versions 2012 and later, see the follow
 
 Review the Microsoft Product Lifecycle for information about how a specific product, service, or technology is supported:
 
-[Microsoft Lifecycle Policy](https://support.microsoft.com/lifecycle/selectindex)
+- [Microsoft Lifecycle Policy](https://support.microsoft.com/lifecycle/selectindex)
 
 For specific guidance on your options for SQL Server end of support, see the following article:
 
-[SQL Server end of support options](../sql-server/end-of-support/sql-server-end-of-life-overview.md)
+- [SQL Server end of support options](../sql-server/end-of-support/sql-server-end-of-life-overview.md)
 
 ## Next steps
 

@@ -1,5 +1,5 @@
 ---
-title: "Preparing Commands | Microsoft Docs"
+title: "Preparing commands (OLE DB driver) | Microsoft Docs"
 description: "Preparing commands using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

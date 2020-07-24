@@ -1,5 +1,5 @@
 ---
-title: "ISSCommandWithParameters (OLE DB) | Microsoft Docs"
+title: "ISSCommandWithParameters (OLE DB driver) | Microsoft Docs"
 description: "ISSCommandWithParameters (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

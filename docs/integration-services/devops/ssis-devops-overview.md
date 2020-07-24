@@ -137,7 +137,7 @@ Specify whether overwrite the existing projects or SSISDeploymentManifest files 
 
 #### Continue deployment when error occurs
 
-Specify whether tp continue deployment for remaining projects or files when an error occurs. If 'No', SSIS Deploy task will stop immediately when error occurs.
+Specify whether to continue deployment for remaining projects or files when an error occurs. If 'No', SSIS Deploy task will stop immediately when error occurs.
 
 ### Limitations and known issues
 

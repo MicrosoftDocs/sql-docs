@@ -1,5 +1,5 @@
 ---
-title: "Parameter and Rowset Metadata | Microsoft Docs"
+title: Parameter and rowset metadata (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

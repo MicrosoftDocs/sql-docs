@@ -1,5 +1,6 @@
 ---
 title: Breakpoints Window
+description: Learn how to use the Breakpoints window of the Database Engine Query Editor to manage Transact-SQL debugger breakpoints.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting

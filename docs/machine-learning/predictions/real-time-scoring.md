@@ -195,4 +195,4 @@ To disable real-time scoring functionality, open an elevated command prompt, and
 
 ## Next steps
 
-For more background on scoring in SQL Server, see [How to generate predictions in SQL Server machine learning](r/how-to-do-realtime-scoring.md).
+For more background on scoring in SQL Server, see [How to generate predictions in SQL Server machine learning](how-to-do-realtime-scoring.md).

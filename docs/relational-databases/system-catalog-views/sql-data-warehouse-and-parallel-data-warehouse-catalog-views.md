@@ -70,6 +70,7 @@ ms.custom: seo-dt-2019
   
  [sys.workload_management_workload_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest) 
 
+ [sys.pdw_permanent_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)
 
 ## [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Catalog Views
 

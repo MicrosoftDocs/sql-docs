@@ -1,5 +1,5 @@
 ---
-title: "Persisted data source objects (OLE DB driver) | Microsoft Docs"
+title: Persisted data source objects (OLE DB driver)
 description: "Persisted data source objects"
 ms.custom: ""
 ms.date: "06/14/2018"

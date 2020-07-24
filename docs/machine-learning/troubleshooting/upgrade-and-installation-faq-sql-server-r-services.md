@@ -27,7 +27,7 @@ Depending on the build of SQL Server that you are installing, some of the follow
 
 - In early versions of SQL Server 2016 R Services, 8dot3 notation was required on the drive that contains the working directory. If you installed a pre-release version, upgrading to SQL Server 2016 Service Pack 1 should fix this issue. This requirement does not apply to releases after SP1.
 
-- You cannot install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a failover cluster in SQL Server 2016. However, SQL Server 2019 does provide failover support. For more information, see [What's New](what-s-new-in-sql-server-machine-learning-services.md).
+- You cannot install [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] on a failover cluster in SQL Server 2016. However, SQL Server 2019 does provide failover support. For more information, see [What's New](../what-s-new-in-sql-server-machine-learning-services.md).
 
 - On an Azure VM, some additional configuration might be necessary. For example, you might need to create a firewall exception to support remote access.
 
@@ -59,7 +59,7 @@ You can upgrade your version of SQL Server by re-running the setup wizard.
 + [Upgrade SQL Server Using the Installation Wizard](../../database-engine/install-windows/upgrade-sql-server-using-the-installation-wizard-setup.md)
 
 You can upgrade just the machine learning components by using a process called binding: 
-+ [Use SqlBindR to upgrade machine learning components](install/upgrade-r-and-python.md)
++ [Use SqlBindR to upgrade machine learning components](../install/upgrade-r-and-python.md)
 
 ### End of support for in-place upgrades from prerelease versions
 
@@ -160,6 +160,6 @@ If you have problems removing an older version, you might need to edit the regis
 
 ## See also
 
- [SQL Server Machine Learning Services (In-Database)](r/sql-server-r-services.md)
+ [SQL Server Machine Learning Services (In-Database)](../r/sql-server-r-services.md)
 
- [SQL Server Machine Learning Server (Standalone)](r/r-server-standalone.md)
+ [SQL Server Machine Learning Server (Standalone)](../r/r-server-standalone.md)

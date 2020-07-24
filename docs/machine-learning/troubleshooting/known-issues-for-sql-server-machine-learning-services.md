@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 # Known issues in SQL Server Machine Learning Services
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-This article describes known problems or limitations with the Python and R components that are provided in [SQL Server Machine Learning Services](sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](r/sql-server-r-services.md).
+This article describes known problems or limitations with the Python and R components that are provided in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](../r/sql-server-r-services.md).
 
 ## Setup and configuration issues
 
@@ -132,7 +132,7 @@ This message is displayed if either of the following two statements is true,
 + You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 + You installed Microsoft R Server by using the [separate Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
-To ensure that the server and client use the same version you might need to use _binding_, supported for Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](install/upgrade-r-and-python.md).
+To ensure that the server and client use the same version you might need to use _binding_, supported for Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](../install/upgrade-r-and-python.md).
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 
@@ -144,7 +144,7 @@ As a workaround, you can install the service release by using the command line a
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
-To get the latest installers, see [Install machine learning components without internet access](install/sql-ml-component-install-without-internet-access.md).
+To get the latest installers, see [Install machine learning components without internet access](../install/sql-ml-component-install-without-internet-access.md).
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 
@@ -182,7 +182,7 @@ It is possible to call the machine learning libraries that are installed for SQL
 
 For example, even if you are using the Enterprise Edition of SQL Server, R runs in single-threaded mode when you run your R code by using external tools. To get the benefits of performance in SQL Server, initiate a SQL Server connection and use [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to call the external script runtime.
 
-In general, avoid calling the machine learning libraries that are used by SQL Server from external tools. If you need to debug R or Python code, it is typically easier to do so outside of SQL Server. To get the same  libraries that are in SQL Server, you can install Microsoft R Client or [SQL Server 2017 Machine Learning Server (Standalone)](install/sql-machine-learning-standalone-windows-install.md).
+In general, avoid calling the machine learning libraries that are used by SQL Server from external tools. If you need to debug R or Python code, it is typically easier to do so outside of SQL Server. To get the same  libraries that are in SQL Server, you can install Microsoft R Client or [SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md).
 
 ### 12. SQL Server Data Tools does not support permissions required by external scripts
 
@@ -368,7 +368,7 @@ Although the issue is not specific to SQL Server, it can greatly affect performa
 
 If you do not absolutely require a string data type for other operations, mapping the string values to a numeric (integer) data type as part of data preparation would be beneficial from a performance and scale perspective.
 
-For a discussion of this issue, and other tips, see [Performance for R Services - data optimization](r/r-and-data-optimization-r-services.md).
+For a discussion of this issue, and other tips, see [Performance for R Services - data optimization](../r/r-and-data-optimization-r-services.md).
 
 ### 10. Arguments *varsToKeep* and *varsToDrop* are not supported for SQL Server data sources
 
@@ -378,7 +378,7 @@ When you use the rxDataStep function to write results to a table, using the *var
 
 Not all data types that are supported in SQL can be used in R. As a workaround, consider casting the unsupported data type to a supported data type before passing the data to sp\_execute\_external\_script.
 
-For more information, see [R libraries and data types](r/r-libraries-and-data-types.md).
+For more information, see [R libraries and data types](../r/r-libraries-and-data-types.md).
 
 ### 12. Possible string corruption using unicode strings in varchar columns
 
@@ -398,7 +398,7 @@ If you want to use multiple output sets that include values of type **raw**, one
 
 Because [!INCLUDE[tsql](../../includes/tsql-md.md)] and R support various data types, numeric data types can suffer loss of precision during conversion.
 
-For more information about implicit data-type conversion, see [R libraries and data types](r/r-libraries-and-data-types.md).
+For more information about implicit data-type conversion, see [R libraries and data types](../r/r-libraries-and-data-types.md).
 
 ### 15. Variable scoping error when you use the transformFunc parameter
 
@@ -632,7 +632,7 @@ wget 'https://bootstrap.pypa.io/get-pip.py'
 
 **Recommendation**
 
-See [Install Python packages with sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md).
+See [Install Python packages with sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md).
 
 **Applies to:** SQL Server 2019 on Linux
 
@@ -712,7 +712,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 ### 9. Cannot install **tensorflow** package using **sqlmlutils**
 
-The [sqlmlutils package](package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) is used to install Python packages in SQL Server 2019. However, the package **tensorflow** cannot be installed using sqlmlutils. The tensorflow package depends on a newer version of numpy than the version installed in SQL Server. However, numpy is a preinstalled system package that sqlmlutils cannot update when trying to install tensorflow.
+The [sqlmlutils package](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) is used to install Python packages in SQL Server 2019. However, the package **tensorflow** cannot be installed using sqlmlutils. The tensorflow package depends on a newer version of numpy than the version installed in SQL Server. However, numpy is a preinstalled system package that sqlmlutils cannot update when trying to install tensorflow.
 
 **Workaround**
 

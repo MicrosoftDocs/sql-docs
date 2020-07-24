@@ -26,23 +26,23 @@ However, sometimes code that works perfectly in an external IDE or utility might
 
 1. Check to see whether Launchpad is running.
 
-2. Review messages to see whether either the input data or output data contains columns with incompatible or unsupported data types. For example, queries on a SQL database often return GUIDs or RowGUIDs, both of which are unsupported. For more information, see [R libraries and data types](r/r-libraries-and-data-types.md).
+2. Review messages to see whether either the input data or output data contains columns with incompatible or unsupported data types. For example, queries on a SQL database often return GUIDs or RowGUIDs, both of which are unsupported. For more information, see [R libraries and data types](../r/r-libraries-and-data-types.md).
 
 3. Review the help pages for individual R functions to determine whether all parameters are supported for the SQL Server compute context. For ScaleR help, use the inline R help commands, or see [Package Reference](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler).
 
 If the R runtime is functioning but your script returns errors, we recommend that you try debugging the script in a dedicated R development environment, such as  R Tools for Visual Studio.
 
-We also recommend that you review and slightly rewrite the script to correct any problems with data types that might arise when you move data between R and the database engine. For more information, see [R libraries and data types](r/r-libraries-and-data-types.md).
+We also recommend that you review and slightly rewrite the script to correct any problems with data types that might arise when you move data between R and the database engine. For more information, see [R libraries and data types](../r/r-libraries-and-data-types.md).
 
 Additionally, you can use the sqlrutils package to bundle your R script in a format that is more easily consumed as a stored procedure. For more information, see:
-* [sqlrutils package](r/ref-r-sqlrutils.md)
+* [sqlrutils package](../r/ref-r-sqlrutils.md)
 * [Create a stored procedure by using sqlrutils](r/how-to-create-a-stored-procedure-using-sqlrutils.md)
 
 ## Script returns inconsistent results
 
 R scripts can return different values in a SQL Server context, for several reasons:
 
-- Implicit type conversion is automatically performed on some data types, when the data is passed between SQL Server and R. For more information, see [R libraries and data types](r/r-libraries-and-data-types.md).
+- Implicit type conversion is automatically performed on some data types, when the data is passed between SQL Server and R. For more information, see [R libraries and data types](../r/r-libraries-and-data-types.md).
 
 - Determine whether bitness is a factor. For example, there are often differences in the results of math operations for 32-bit and 64-bit floating point libraries.
 

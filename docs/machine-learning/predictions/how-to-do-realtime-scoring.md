@@ -92,7 +92,7 @@ Serializing a model to a binary format is useful, but not required if you are sc
 
 ## Scoring in related products
 
-If you are using the [standalone server](r-server-standalone.md) or a [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), you have other options besides stored procedures and T-SQL functions for generating predictions quickly. Both the standalone server and Machine Learning Server support the concept of a *web service* for code deployment. You can bundle an R or Python pre-trained model as a web service, called at run time to evaluate new data inputs. For more information, see these articles:
+If you are using the [standalone server](../r/r-server-standalone.md) or a [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server), you have other options besides stored procedures and T-SQL functions for generating predictions quickly. Both the standalone server and Machine Learning Server support the concept of a *web service* for code deployment. You can bundle an R or Python pre-trained model as a web service, called at run time to evaluate new data inputs. For more information, see these articles:
 
 + [What are web services in Machine Learning Server?](https://docs.microsoft.com/machine-learning-server/operationalize/concept-what-are-web-services)
 + [What is operationalization?](https://docs.microsoft.com/machine-learning-server/what-is-operationalization)

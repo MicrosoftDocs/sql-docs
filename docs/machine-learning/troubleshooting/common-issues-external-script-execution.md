@@ -11,7 +11,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Troubleshoot issues with Launchpad service and external script execution in SQL Server
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 This article provides troubleshooting guidance for issues involving the SQL Server Trusted Launchpad service. The Launchpad service supports external script execution for R and Python. Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols.  
 
@@ -93,7 +93,7 @@ If the Windows group for R users (also used for Python) cannot log on to the ins
 
     * *Security logs indicate that the account NT SERVICE was unable to log on*
 
-For information about how to grant this user group the necessary permissions, see [Install SQL Server R Services](install/sql-r-services-windows-install.md).
+For information about how to grant this user group the necessary permissions, see [Install SQL Server R Services](../install/sql-r-services-windows-install.md).
 
 > [!NOTE]
 > This limitation does not apply if you use SQL logins to run R scripts from a remote workstation.
@@ -154,7 +154,7 @@ This error can mean one of several things:
 
 - Launchpad might have insufficient external users to run the external query. For example, if you are running more than 20 external queries concurrently, and there are only 20 default users, one or more queries might fail.
 
-- Insufficient memory is available to process the R task. This error happens most often in a default environment, where SQL Server might be using up to 70 percent of the computer's resources. For information about how to modify the server configuration to support greater use of resources by R, see [Operationalizing your R code](r/operationalizing-your-r-code.md).
+- Insufficient memory is available to process the R task. This error happens most often in a default environment, where SQL Server might be using up to 70 percent of the computer's resources. For information about how to modify the server configuration to support greater use of resources by R, see [Operationalizing your R code](../r/operationalizing-your-r-code.md).
 
 ## "Can't find package"
 
@@ -185,7 +185,7 @@ To resolve the issue, you must reinstall the package to the SQL Server instance 
 
 ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 >[!NOTE]
->If you have upgraded an instance of SQL Server 2016 to use the latest version of Microsoft R, the default library location is different. For more information, see [Use SqlBindR to upgrade an instance of R Services](install/upgrade-r-and-python.md).
+>If you have upgraded an instance of SQL Server 2016 to use the latest version of Microsoft R, the default library location is different. For more information, see [Use SqlBindR to upgrade an instance of R Services](../install/upgrade-r-and-python.md).
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"

@@ -36,15 +36,15 @@ If you have encountered an error, or need to understand an issue in your environ
 
 Start here if you have not set up machine learning with SQL Server, or if you want to add the feature:
 
-+ [Install SQL Server Machine Learning Services (In-Database)](install/sql-machine-learning-services-windows-install.md)
-+ [Install SQL Server Machine Learning Server (Standalone)](install/sql-machine-learning-standalone-windows-install.md)
-+ [Command prompt setup](install/sql-ml-component-commandline-install.md)
-+ [Offline setup (no internet)](install/sql-ml-component-install-without-internet-access.md)
++ [Install SQL Server Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md)
++ [Install SQL Server Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md)
++ [Command prompt setup](../install/sql-ml-component-commandline-install.md)
++ [Offline setup (no internet)](../install/sql-ml-component-install-without-internet-access.md)
 
 ### Configuration
 
 The following articles contain information about defaults, and how to customize the configuration for machine learning on a SQL instance:
 
-+ [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](administration/scale-concurrent-execution-external-scripts.md)   
-+ [How to create a resource pool](administration/create-external-resource-pool.md)
-+ [Optimization for R workloads](r/operationalizing-your-r-code.md)
++ [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](../administration/scale-concurrent-execution-external-scripts.md)   
++ [How to create a resource pool](../administration/create-external-resource-pool.md)
++ [Optimization for R workloads](../r/operationalizing-your-r-code.md)

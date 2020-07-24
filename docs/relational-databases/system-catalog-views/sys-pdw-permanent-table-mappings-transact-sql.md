@@ -13,7 +13,7 @@ ms.author: emtehran
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_permanent_table_mappings (Transact-SQL)
-[!INCLUDE[applies-to-version/_asa](../../includes/applies-to-version/_asa.md)]
+[!INCLUDE [Applies to](../../includes/applies-md.md)] [!INCLUDE [Synapse Analytics](../../includes/applies-to-version/_asa.md)]
 
   Ties permanent user tables to internal object names by **object_id**. Recommended for better performance over sys.pdw_table_mappings.  
   

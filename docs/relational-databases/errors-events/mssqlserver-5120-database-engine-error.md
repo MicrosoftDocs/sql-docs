@@ -1,5 +1,5 @@
 ---
-title: "MSSQLSERVER_5228 | Microsoft Docs"
+title: MSSQLSERVER_5120
 ms.custom: ""
 ms.date: 07/10/2020
 ms.prod: sql

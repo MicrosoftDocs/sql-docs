@@ -29,11 +29,19 @@ Indicates the operational type or data type of a [Parameter](../../../ado/refere
  For all other objects, the **Type** property is read-only.  
   
 ## Applies To  
-  
-||||  
-|-|-|-|  
-|[Field Object](../../../ado/reference/ado-api/field-object.md)|[Parameter Object](../../../ado/reference/ado-api/parameter-object.md)|[Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Field Object](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+    :::column:::
+        [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Type Property Example (Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
  [Type Property Example (Property) (VC++)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   

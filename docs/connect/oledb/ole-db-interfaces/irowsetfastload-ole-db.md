@@ -1,5 +1,5 @@
 ---
-title: "IRowsetFastLoad (OLE DB) | Microsoft Docs"
+title: "IRowsetFastLoad (OLE DB driver) | Microsoft Docs"
 description: "IRowsetFastLoad (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

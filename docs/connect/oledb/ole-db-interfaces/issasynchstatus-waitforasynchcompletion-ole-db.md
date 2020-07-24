@@ -1,5 +1,5 @@
 ---
-title: "ISSAsynchStatus::WaitForAsynchCompletion (OLE DB) | Microsoft Docs"
+title: "ISSAsynchStatus::WaitForAsynchCompletion (OLE DB driver) | Microsoft Docs"
 description: "ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

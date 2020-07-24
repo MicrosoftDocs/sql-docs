@@ -483,9 +483,8 @@ Changing any of the following SET options for a given execution will affect the 
     :::column:::
         FORCEPLAN
     :::column-end:::
-:::row-end:::ARITHABORT:::row:::
     :::column:::
-            
+        ARITHABORT
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -495,9 +494,8 @@ Changing any of the following SET options for a given execution will affect the 
     :::column:::
         ANSI_PADDING
     :::column-end:::
-:::row-end:::NUMERIC_ROUNDABORT:::row:::
     :::column:::
-            
+        NUMERIC_ROUNDABORT
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -507,9 +505,8 @@ Changing any of the following SET options for a given execution will affect the 
     :::column:::
         LANGUAGE
     :::column-end:::
-:::row-end:::CONCAT_NULL_YIELDS_NULL:::row:::
     :::column:::
-            
+        CONCAT_NULL_YIELDS_NULL
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -519,9 +516,8 @@ Changing any of the following SET options for a given execution will affect the 
     :::column:::
         ANSI_WARNINGS
     :::column-end:::
-:::row-end:::QUOTED_IDENTIFIER:::row:::
     :::column:::
-            
+        QUOTED_IDENTIFIER
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -531,9 +527,8 @@ Changing any of the following SET options for a given execution will affect the 
     :::column:::
         NO_BROWSETABLE
     :::column-end:::
-:::row-end:::ANSI_DEFAULTS:::row:::
     :::column:::
-        
+        ANSI_DEFAULTS
     :::column-end:::
 :::row-end:::
 

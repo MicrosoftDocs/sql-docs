@@ -1,5 +1,6 @@
 ---
 title: "Manage Code Formatting"
+description: Learn about the three styles of text indenting and how to use them, and learn how to create clickable URLs.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

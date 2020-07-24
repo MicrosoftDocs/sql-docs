@@ -1,5 +1,5 @@
 ---
-title: "IBCPSession2 (OLE DB) | Microsoft Docs"
+title: "IBCPSession2 (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

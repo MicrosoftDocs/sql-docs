@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # IsInNode (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Indicates whether the specified node contains the current case.  
   

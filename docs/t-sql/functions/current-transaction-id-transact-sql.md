@@ -31,8 +31,9 @@ This function returns the transaction ID of the current transaction in the curre
 CURRENT_TRANSACTION_ID( )  
   
 ```  
-  
+
 ## Return types
+
 **bigint**
   
 ## Return Value  

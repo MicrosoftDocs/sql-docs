@@ -1,5 +1,5 @@
 ---
-title: "Data Type Mapping in Rowsets and Parameters | Microsoft Docs"
+title: "Data type mapping in rowsets and parameters (OLE DB driver) | Microsoft Docs"
 description: "Data Type mapping in rowsets and parameters"
 ms.custom: ""
 ms.date: "02/21/2020"

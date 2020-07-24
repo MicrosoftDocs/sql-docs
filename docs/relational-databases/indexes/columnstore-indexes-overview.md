@@ -187,7 +187,6 @@ All of the columns in a columnstore index are stored in the metadata as included
         [sys.dm_db_index_physical_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-physical-stats-transact-sql.md)
     :::column-end:::
     :::column:::
-        
     :::column-end:::
 :::row-end:::
  

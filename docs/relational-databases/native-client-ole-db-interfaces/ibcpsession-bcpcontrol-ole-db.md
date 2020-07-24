@@ -1,5 +1,5 @@
 ---
-title: "IBCPSession::BCPControl (OLE DB) | Microsoft Docs"
+title: "IBCPSession::BCPControl (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -25,7 +25,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```  
-  
+
 HRESULT BCPControl(   
       int eOption,  
       void *iValue);  

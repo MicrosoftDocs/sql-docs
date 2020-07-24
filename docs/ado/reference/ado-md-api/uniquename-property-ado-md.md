@@ -28,12 +28,6 @@ Indicates an unambiguous name for the current object.
   
 ## Applies To  
   
-|||  
-|-|-|  
-|||  
-|||  
-  
-
 :::row:::
     :::column:::
         [Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)  

@@ -102,12 +102,12 @@ The *SE_MANAGE_VOLUME_NAME* user privilege can be assigned in **Windows Administ
 
 The Database File initialization process writes zeros to the new regions of the file under initialization. The duration of this process  depends on size of file portion that is initialized and on the response time and capacity of the storage system. If the initialization takes a long time, you may see the following messages recorded in the SQL Server Errorlog and the Application Log.
 
-```
+```console
 Msg 5144
 Autogrow of file '%.*ls' in database '%.*ls' was cancelled by user or timed out after %d milliseconds.  Use ALTER DATABASE to set a smaller FILEGROWTH value for this file or to explicitly set a new file size.
 ```
 
-```
+```console
 Msg 5145
 Autogrow of file '%.*ls' in database '%.*ls' took %d milliseconds.  Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file.
 ```

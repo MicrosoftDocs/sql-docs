@@ -1,5 +1,5 @@
 ---
-title: "OLE DB API Support for Date and Time Enhancements | Microsoft Docs"
+title: API support for date and time enhancements (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql

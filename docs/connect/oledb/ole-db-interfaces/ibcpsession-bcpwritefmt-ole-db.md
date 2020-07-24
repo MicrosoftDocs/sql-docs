@@ -1,5 +1,5 @@
 ---
-title: "IBCPSession::BCPWriteFmt (OLE DB) | Microsoft Docs"
+title: "IBCPSession::BCPWriteFmt (OLE DB driver) | Microsoft Docs"
 description: "Using IBCPSession::BCPWriteFmt to save the format files in either xml or text format (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

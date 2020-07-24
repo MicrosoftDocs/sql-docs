@@ -1,5 +1,5 @@
 ---
-title: "Deprecated Database Engine Features | Microsoft Docs"
+title: "Deprecated database engine features in SQL Server 2019 | Microsoft Docs"
 titleSuffix: "SQL Server 2019"
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"

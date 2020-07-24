@@ -39,9 +39,8 @@ Job responses specify actions that the [!INCLUDE[ssNoVersion](../../includes/ssn
   
 ## Related Tasks  
   
-|||  
+|Description|Topic|  
 |-|-|  
-|**Description**|**Topic**|  
 |Describes how to notify an operator of job status.|[Notify an Operator of Job Status](../../ssms/agent/notify-an-operator-of-job-status.md)|  
 |Describes how to write job status to the Windows application log.|[Write the Job Status to the Windows Application Log](../../ssms/agent/write-the-job-status-to-the-windows-application-log.md)|  
   

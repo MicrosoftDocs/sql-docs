@@ -55,9 +55,8 @@ You can also view job activity for the current session by using the stored proce
   
 ## Related Tasks  
   
-|||  
-|-|-|  
-|**Description**|**Topic**|  
+|Description|Topic|  
+|-|-|   
 |Describes how to view the runtime state of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs.|[View Job Activity](../../ssms/agent/view-job-activity.md)|  
   
 ## See Also  

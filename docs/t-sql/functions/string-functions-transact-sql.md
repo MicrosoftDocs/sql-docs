@@ -23,21 +23,126 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The following scalar functions perform an operation on a string input value and return a string or numeric value:  
-  
-||||  
-|-|-|-| 
-|[ASCII](../../t-sql/functions/ascii-transact-sql.md)|[CHAR](../../t-sql/functions/char-transact-sql.md)|[CHARINDEX](../../t-sql/functions/charindex-transact-sql.md)|
-|[CONCAT](../../t-sql/functions/concat-transact-sql.md)|[CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md)|[DIFFERENCE](../../t-sql/functions/difference-transact-sql.md) |
-|[FORMAT](../../t-sql/functions/format-transact-sql.md)|[LEFT](../../t-sql/functions/left-transact-sql.md)|[LEN](../../t-sql/functions/len-transact-sql.md) |
-|[LOWER](../../t-sql/functions/lower-transact-sql.md)|[LTRIM](../../t-sql/functions/ltrim-transact-sql.md)|[NCHAR](../../t-sql/functions/nchar-transact-sql.md) |
-|[PATINDEX](../../t-sql/functions/patindex-transact-sql.md)|[QUOTENAME](../../t-sql/functions/quotename-transact-sql.md)|[REPLACE](../../t-sql/functions/replace-transact-sql.md) |
-|[REPLICATE](../../t-sql/functions/replicate-transact-sql.md)|[REVERSE](../../t-sql/functions/reverse-transact-sql.md) |[RIGHT](../../t-sql/functions/right-transact-sql.md) |
-|[RTRIM](../../t-sql/functions/rtrim-transact-sql.md)|[SOUNDEX](../../t-sql/functions/soundex-transact-sql.md) |[SPACE](../../t-sql/functions/space-transact-sql.md) |
-|[STR](../../t-sql/functions/str-transact-sql.md)|[STRING_AGG](../../t-sql/functions/string-agg-transact-sql.md)|[STRING_ESCAPE](../../t-sql/functions/string-escape-transact-sql.md) |
-|[STRING_SPLIT](../../t-sql/functions/string-split-transact-sql.md)|[STUFF](../../t-sql/functions/stuff-transact-sql.md)|[SUBSTRING](../../t-sql/functions/substring-transact-sql.md) |
-|[TRANSLATE](../../t-sql/functions/translate-transact-sql.md)|[TRIM](../../t-sql/functions/trim-transact-sql.md)|[UNICODE](../../t-sql/functions/unicode-transact-sql.md) |
-|[UPPER](../../t-sql/functions/upper-transact-sql.md) | | |
 
+:::row:::
+    :::column:::
+        [ASCII](../../t-sql/functions/ascii-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [CHAR](../../t-sql/functions/char-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [CHARINDEX](../../t-sql/functions/charindex-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [CONCAT](../../t-sql/functions/concat-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [CONCAT_WS](../../t-sql/functions/concat-ws-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [DIFFERENCE](../../t-sql/functions/difference-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [FORMAT](../../t-sql/functions/format-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [LEFT](../../t-sql/functions/left-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [LEN](../../t-sql/functions/len-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [LOWER](../../t-sql/functions/lower-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [LTRIM](../../t-sql/functions/ltrim-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [NCHAR](../../t-sql/functions/nchar-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [PATINDEX](../../t-sql/functions/patindex-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [QUOTENAME](../../t-sql/functions/quotename-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [REPLACE](../../t-sql/functions/replace-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [REPLICATE](../../t-sql/functions/replicate-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [REVERSE](../../t-sql/functions/reverse-transact-sql.md) 
+    :::column-end:::
+    :::column:::
+        [RIGHT](../../t-sql/functions/right-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [RTRIM](../../t-sql/functions/rtrim-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [SOUNDEX](../../t-sql/functions/soundex-transact-sql.md) 
+    :::column-end:::
+    :::column:::
+        [SPACE](../../t-sql/functions/space-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [STR](../../t-sql/functions/str-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [STRING_AGG](../../t-sql/functions/string-agg-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [STRING_ESCAPE](../../t-sql/functions/string-escape-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [STRING_SPLIT](../../t-sql/functions/string-split-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [STUFF](../../t-sql/functions/stuff-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [SUBSTRING](../../t-sql/functions/substring-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [TRANSLATE](../../t-sql/functions/translate-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [TRIM](../../t-sql/functions/trim-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [UNICODE](../../t-sql/functions/unicode-transact-sql.md) 
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [UPPER](../../t-sql/functions/upper-transact-sql.md) 
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
   
  All built-in string functions except `FORMAT` are deterministic. This means they return the same value any time they are called with a specific set of input values. For more information about function determinism, see [Deterministic and Nondeterministic Functions](../../relational-databases/user-defined-functions/deterministic-and-nondeterministic-functions.md).  

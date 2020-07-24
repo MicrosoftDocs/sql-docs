@@ -1,5 +1,5 @@
 ---
-title: "Integrated Kerberos Authentication (OLE DB) | Microsoft Docs"
+title: "Integrated Kerberos authentication (OLE DB driver) | Microsoft Docs"
 description: "Integrated kerberos authentication (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

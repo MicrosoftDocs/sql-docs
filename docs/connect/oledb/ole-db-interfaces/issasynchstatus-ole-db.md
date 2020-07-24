@@ -1,5 +1,5 @@
 ---
-title: "ISSAsynchStatus (OLE DB) | Microsoft Docs"
+title: "ISSAsynchStatus (OLE DB driver) | Microsoft Docs"
 description: "ISSAsynchStatus (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

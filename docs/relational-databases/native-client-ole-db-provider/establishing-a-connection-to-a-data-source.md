@@ -1,5 +1,5 @@
 ---
-title: "Establishing a Connection to a Data Source | Microsoft Docs"
+title: "Establish connection to data source (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

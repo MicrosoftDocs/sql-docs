@@ -52,15 +52,15 @@ When SYSTEM_VERSIONING is set to ON, schema modification operations are limited.
 
 ## Security of the CREATE Temporal TABLE Statement
 
-||Create New History Table|Reuse Existing History Table|
-|-|------------------------------|----------------------------------|
+| Feature | Create New History Table | Reuse Existing History Table |
+| ------- | ------------------------ | ---------------------------- |
 |Permission Required|**CREATE TABLE** permission in the database<br /><br /> **ALTER** permission on the schemas into which the current and history tables are being created|**CREATE TABLE** permission in the database<br /><br /> **ALTER** permission on the schema in which the current table will be created.<br /><br /> **CONTROL** permission on the history table specified as part of the **CREATE TABLE** statement creating the temporal table|
 |Audit|Audit shows that users attempted to create two objects. Operation may fail due to lack of permissions to create a table in the database or due to lack of permissions to alter schemas for either table.|Audit shows that temporal table was created. Operation may fail due to lack of permission to create a table in the database, due to lack of permissions to alter the schema for the temporal table, or to lack of permissions on the history table.|
 
 ## Security of the ALTER Temporal TABLE SET (SYSTEM_VERSIONING ON/OFF) Statement
 
-||Create New History Table|Reuse Existing History Table|
-|-|------------------------------|----------------------------------|
+| Feature | Create New History Table | Reuse Existing History Table |
+| ------- | ------------------------ | ---------------------------- |
 |Permission Required|**CONTROL** permission in the database<br /><br /> **CREATE TABLE** permission in the database<br /><br /> **ALTER** permission on the schemas into which the history table is being created|**CONTROL** permission on the original table which is altered<br /><br /> **CONTROL** permission on the history table specified as part of the **ALTER TABLE** statement|
 |Audit|Audit shows that the temporal table was altered and the history table was created at the same time. Operation may fail due to lack of permissions to create a table in the database, due to lack of permissions to alter schema for history table, or due to lack of permission to modify temporal table.|Audit shows that temporal table was altered, but operation required access to history table. Operation may fail due to lack of permissions on the history table or lack of permissions on the current table.|
 

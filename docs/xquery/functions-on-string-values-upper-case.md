@@ -31,9 +31,8 @@ fn:upper-case($arg as xs:string?) as xs:string
   
 ## Arguments  
   
-|||  
-|-|-|  
 |Term|Definition|  
+|-|-|
 |*$arg*|The string value to be converted to upper case.|  
   
 ## Remarks  

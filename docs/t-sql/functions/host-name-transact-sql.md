@@ -32,8 +32,8 @@ ms.author: vanto
   
 HOST_NAME ()  
 ```  
-  
-## Return Types  
+
+## Return Types
  **nvarchar(128)**  
   
 ## Remarks  

@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # IMPORT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Loads a mining model or mining structure from an Analysis Services Backup File (.abf) file onto the server.  
   

@@ -33,7 +33,9 @@ Returns the binary checksum value computed over a row of a table or over a list 
 BINARY_CHECKSUM ( * | expression [ ,...n ] )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *\**  
 Specifies that the computation covers all the table columns. BINARY_CHECKSUM ignores columns of noncomparable data types in its computation. Noncomparable data types include  
 * **cursor**  

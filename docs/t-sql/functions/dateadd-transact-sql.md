@@ -42,7 +42,9 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
 DATEADD (datepart , number , date )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *datepart*  
 The part of *date* to which `DATEADD` adds an **integer** *number*. This table lists all valid *datepart* arguments. 
 

@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # OR (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   A logical operator that performs a logical disjunction on two numeric expressions.  
   

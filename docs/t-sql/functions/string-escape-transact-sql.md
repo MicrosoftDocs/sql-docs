@@ -32,7 +32,7 @@ Escapes special characters in texts and returns text with escaped characters. **
 ```sql
 STRING_ESCAPE( text , type )  
 ```  
-  
+
 ## Arguments
 
  *text*  

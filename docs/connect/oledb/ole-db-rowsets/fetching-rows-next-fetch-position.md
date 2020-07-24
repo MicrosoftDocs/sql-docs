@@ -1,5 +1,5 @@
 ---
-title: "Next Fetch Position | Microsoft Docs"
+title: "Next fetch position (OLE DB driver) | Microsoft Docs"
 description: "Fetching rows - next fetch position"
 ms.custom: ""
 ms.date: "06/14/2018"

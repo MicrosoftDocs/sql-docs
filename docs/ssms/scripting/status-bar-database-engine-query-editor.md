@@ -1,5 +1,6 @@
 ---
 title: Status Bar (Database Engine Query Editor)
+description: Learn how to color code the status bar of a Database Engine Query Editor window to indicate which instance of the DataBase engine the window is connected to.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting

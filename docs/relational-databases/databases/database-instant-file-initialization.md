@@ -94,7 +94,7 @@ If the potential for disclosing deleted content is a concern, you should take on
     > [!NOTE]
     > Disabling will increase allocation times  for data files, and only affects files that are created or increased in size after the user right is revoked.
   
-### *SE_MANAGE_VOLUME_NAME* user right
+### SE_MANAGE_VOLUME_NAME user right
 
 The *SE_MANAGE_VOLUME_NAME* user privilege can be assigned in **Windows Administrative Tools**, **Local Security Policy** applet. Under **Local Policies** select **User Right Assignment** and modify the **Perform volume maintenance tasks** property.
 
@@ -114,7 +114,6 @@ Autogrow of file '%.*ls' in database '%.*ls' took %d milliseconds.  Consider usi
 
 A long autogrow of a database and/or transaction log file may cause query performance problems. This is becasue an operation that requires the autogrowth of a file will hold on to resources such as locks or latches during the duration of the file grow operation. You may see long waits on latches for allocation pages. The operation that requires the long autogrow will show a wait type of  PREEMPTIVE_OS_WRITEFILEGATHER.
 
-**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP4, [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])
 
 
 

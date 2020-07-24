@@ -2,7 +2,7 @@
 title: "Using bulk copy with the JDBC driver"
 description: "The SQLServerBulkCopy class allows you to write data load solutions in Java that offer significant performance advantages over the standard JDBC APIs."
 ms.custom: ""
-ms.date: "07/22/2020"
+ms.date: "07/24/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -33,7 +33,7 @@ Using the `SQLServerBulkCopy` class, you can perform:
   
 ## Bulk copy example setup  
 
-The `SQLServerBulkCopy` class can be used to write data only to SQL Server tables. The code samples shown in this article use the SQL Server sample database, AdventureWorks. To avoid altering the existing tables in the code samples, write data to tables that you create first.  
+The `SQLServerBulkCopy` class can be used to write data only to SQL Server tables. The code samples shown in this article use the SQL Server sample database, [AdventureWorks](../../samples/adventureworks-install-configure.md). To avoid altering the existing tables in the code samples, write data to tables that you create first.  
   
 The `BulkCopyDemoMatchingColumns` and `BulkCopyDemoDifferentColumns` tables are both based on the AdventureWorks `Production.Products` table. In code samples that use these tables, data is added from the `Production.Products` table to one of these sample tables. The `BulkCopyDemoDifferentColumns` table is used when the sample illustrates how to map columns from the source data to the destination table; `BulkCopyDemoMatchingColumns` is used for most other samples.  
   
@@ -75,7 +75,7 @@ CREATE TABLE [dbo].[BulkCopyDemoDifferentColumns]([ProdID] [int] IDENTITY(1,1) N
     [ProdID] ASC  
 ) ON [PRIMARY]) ON [PRIMARY]  
   
-IF EXISTS (SELECT * FROM dbo.sysobject
+IF EXISTS (SELECT * FROM dbo.sysobjects
  WHERE id = object_id(N'[dbo].[BulkCopyDemoOrderHeader]')
  AND OBJECTPROPERTY(id, N'IsUserTable') = 1)  
     DROP TABLE [dbo].[BulkCopyDemoOrderHeader]  
@@ -449,13 +449,8 @@ public class BulkCopyNonTransacted {
 
 ### Performing a dedicated bulk copy operation in a transaction
 
-By default, a bulk copy operation is its own transaction. When you want to perform a dedicated bulk copy operation, create a new instance of `SQLServerBulkCopy` with a connection string. In this scenario, the bulk copy operation creates, and then commits or rolls back the transaction. You can set the `UseInternalTransaction` option to `true` in `SQLServerBulkCopyOptions` to explicitly cause a bulk copy operation to execute in its own transaction, causing each batch of the bulk copy operation to execute within a separate transaction.
+By default, a bulk copy operation does not create transactions itself. When you want to perform a dedicated bulk copy operation, create a new instance of `SQLServerBulkCopy` with a connection string. In this scenario, each batch of the bulk copy operation is implicitly committed by the database. You can set the `UseInternalTransaction` option to `true` in `SQLServerBulkCopyOptions` to make the bulk copy operation create transactions, performing a commit after each each batch of the bulk copy operation.
   
-> [!NOTE]  
-> Since different batches are executed in different transactions, if an error occurs during the bulk copy operation, all the rows in the current batch will be rolled back, but rows from previous batches will remain in the database.  
-  
-When you set the `UseInternalTransaction` option to `true` in the `BulkCopyNonTransacted` application, the bulk copy operation is included in a larger, external transaction. When the primary key violation error occurs, the entire transaction is rolled back and no rows are added to the destination table.
-
 ```java
 SQLServerBulkCopyOptions copyOptions = new SQLServerBulkCopyOptions();
 copyOptions.setKeepIdentity(true);
@@ -536,6 +531,7 @@ public class BulkCopyExistingTransactions {
             }
             catch (SQLException e) {
                 e.printStackTrace();
+                destinationConnection.rollback();
             }
 
             // Perform a final count on the destination
@@ -674,7 +670,7 @@ The `SQLServerBulkCopy` class can be used to write data only to SQL Server table
   
 | Constructor | Description |
 | ----------- | ----------- |
-| `SQLServerBulkCopy(Connection)` | Initializes a new instance of the `SQLServerBulkCopy` class using the specified open instance of `SQLServerConnection`. If the Connection has transactions enabled, the copy operations will be performed within that transaction. |
+| `SQLServerBulkCopy(Connection connection)` | Initializes a new instance of the `SQLServerBulkCopy` class using the specified open instance of `SQLServerConnection`. If the `Connection` has transactions enabled, the copy operations will be performed within that transaction. |
 | `SQLServerBulkCopy(String connectionURL)` | Initializes and opens a new instance of `SQLServerConnection` based on the supplied `connectionURL`. The constructor uses the `SQLServerConnection` to initialize a new instance of the `SQLServerBulkCopy` class. |
   
 | Property | Description |
@@ -684,9 +680,9 @@ The `SQLServerBulkCopy` class can be used to write data only to SQL Server table
   
 | Method | Description |
 | ------ | ----------- |
-| `void addColumnMapping((int sourceColumn, int destinationColumn)` | Adds a new column-mapping, using ordinals to specify both source and destination columns. |
-| `void addColumnMapping ((int sourceColumn, String destinationColumn)` | Adds a new column-mapping, using an ordinal for the source column and a column name for the destination column. |
-| `void addColumnMapping ((String sourceColumn, int destinationColumn)` | Adds a new column-mapping, using a column name to describe the source column and an ordinal to specify the destination column. |
+| `void addColumnMapping(int sourceColumn, int destinationColumn)` | Adds a new column-mapping, using ordinals to specify both source and destination columns. |
+| `void addColumnMapping (int sourceColumn, String destinationColumn)` | Adds a new column-mapping, using an ordinal for the source column and a column name for the destination column. |
+| `void addColumnMapping (String sourceColumn, int destinationColumn)` | Adds a new column-mapping, using a column name to describe the source column and an ordinal to specify the destination column. |
 | `void addColumnMapping (String sourceColumn, String destinationColumn)` | Adds a new column-mapping, using column names to specify both source and destination columns. |
 | `void clearColumnMappings()` | Clears the contents of the column mappings. |
 | `void close()` | Closes the `SQLServerBulkCopy` instance. |
@@ -711,12 +707,12 @@ The `SQLServerBulkCopy` class can be used to write data only to SQL Server table
 | Option | Description | Default |
 | ------ | ----------- | ------- |
 | `boolean CheckConstraints` | Check constraints while data is being inserted. | False - constraints aren't checked |
-| `boolean FireTriggers` | When specified, cause the server to fire the insert triggers for the rows being inserted into the database. | False - no triggers are fired |
+| `boolean FireTriggers` | Cause the server to fire the insert triggers for the rows being inserted into the database. | False - no triggers are fired |
 | `boolean KeepIdentity` | Preserve source identity values. | False - identity values are assigned by the destination |
 | `boolean KeepNulls` | Preserve null values in the destination table regardless of the settings for default values. | False - null values are replaced by default values where applicable. |
 | `boolean TableLock` | Obtain a bulk update lock for the duration of the bulk copy operation. | False - row locks are used. |
-| `boolean UseInternalTransaction` | When specified, each batch of the bulk-copy operation will occur within a transaction. If `SQLServerBulkCopy` is using an existing connection (as specified by the constructor), a `SQLServerException` will occur.  If `SQLServerBulkCopy` created a dedicated connection, a transaction will be enabled. | False - no transaction |
-| `int BatchSize` | Number of rows in each batch. At the end of each batch, the rows in the batch are sent to the server.<br /><br /> A batch is complete when `BatchSize` rows have been processed or there are no more rows to send to the destination data source.  If the `SQLServerBulkCopy` instance has been declared without the `UseInternalTransaction` option in effect, rows are sent to the server `BatchSize` rows at a time, but no transaction-related action is taken. If `UseInternalTransaction` is in effect, each batch of rows is inserted as a separate transaction. | 0 - indicates that each `writeToServer` operation is a single batch |
+| `boolean UseInternalTransaction` | When set to `true`, each batch of the bulk-copy operation will occur within a transaction. If `SQLServerBulkCopy` is using an existing connection (as specified by the constructor), a `SQLServerException` will occur.  If `SQLServerBulkCopy` created a dedicated connection, a transaction will be created and committed for each batch. | False - no transaction |
+| `int BatchSize` | Number of rows in each batch. At the end of each batch, the rows in the batch are sent to the server.<br /><br /> A batch is complete when `BatchSize` rows have been processed or there are no more rows to send to the destination data source.  If the `SQLServerBulkCopy` instance has been declared with the `UseInternalTransaction` option set to `false`, rows are sent to the server `BatchSize` rows at a time, but no transaction-related action is taken. If `UseInternalTransaction` is set to `true`, each batch of rows is performed within an explicit transaction. | 0 - indicates that each `writeToServer` operation is a single batch |
 | `int BulkCopyTimeout` | Number of seconds for the operation to complete before it times out. A value of 0 indicates no limit; the bulk copy will wait indefinitely. | 60 seconds. |
 | `boolean allowEncryptedValueModifications` | This option is available with Microsoft JDBC Driver 6.0 (or higher) for SQL Server.<br /><br /> When set to `true`, `allowEncryptedValueModifications` enables bulk copying of encrypted data between tables or databases, without decrypting the data. Typically, an application would select data from encrypted columns from one table without decrypting the data (the app would connect to the database with the column encryption setting keyword set to disabled) and then would use this option to bulk insert the data, which is still encrypted. For more information, see [Using Always Encrypted with the JDBC Driver](using-always-encrypted-with-the-jdbc-driver.md).<br /><br /> Use caution when setting `allowEncryptedValueModifications` to `true` as this may lead to corrupting the database because the driver doesn't check if the data is indeed encrypted, or if it is correctly encrypted using the same encryption type, algorithm and key as the target column. |
   
@@ -725,17 +721,17 @@ The `SQLServerBulkCopy` class can be used to write data only to SQL Server table
 | Methods | Description |
 | ------- | ----------- |
 | `boolean isCheckConstraints()` | Indicates whether constraints are to be checked while data is being inserted or not. |
-| `void setCheckConstraints(Boolean checkConstraints)` | Sets whether constraints are to be checked while data is being inserted or not. |
+| `void setCheckConstraints(boolean checkConstraints)` | Sets whether constraints are to be checked while data is being inserted or not. |
 | `boolean isFireTriggers()` | Indicates if the server should fire the insert triggers for the rows being inserted into the database. |
-| `void setFireTriggers(Boolean fireTriggers)` | Sets whether the server should be set to fire triggers for the rows being inserted into the database. |
+| `void setFireTriggers(boolean fireTriggers)` | Sets whether the server should be set to fire triggers for the rows being inserted into the database. |
 | `boolean isKeepIdentity()` | Indicates whether or not to preserve any source identity values. |
-| `void setKeepIdentity(Boolean keepIdentity)` | Sets whether or not to preserve identity values. |
+| `void setKeepIdentity(boolean keepIdentity)` | Sets whether or not to preserve identity values. |
 | `boolean isKeepNulls()` | Indicates whether to preserve null values in the destination table regardless of the settings for default values, or if they should be replaced by the default values (where applicable). |
-| `void setKeepNulls(Boolean keepNulls)` | Sets whether to preserve null values in the destination table regardless of the settings for default values, or if they should be replaced by the default values (where applicable). |
+| `void setKeepNulls(boolean keepNulls)` | Sets whether to preserve null values in the destination table regardless of the settings for default values, or if they should be replaced by the default values (where applicable). |
 | `boolean isTableLock()` | Indicates whether `SQLServerBulkCopy` should obtain a bulk update lock for the duration of the bulk copy operation. |
-| `void setTableLock(Boolean tableLock)` | Sets whether `SQLServerBulkCopy` should obtain a bulk update lock for the duration of the bulk copy operation. |
+| `void setTableLock(boolean tableLock)` | Sets whether `SQLServerBulkCopy` should obtain a bulk update lock for the duration of the bulk copy operation. |
 | `boolean isUseInternalTransaction()` | Indicates whether each batch of the bulk-copy operation will occur within a transaction. |
-| `void setUseInternalTranscation(Boolean useInternalTransaction)` | Sets whether each batch of the bulk-copy operations will occur within a transaction or not. |
+| `void setUseInternalTranscation(boolean useInternalTransaction)` | Sets whether each batch of the bulk-copy operations will occur within a transaction or not. |
 | `int getBatchSize()` | Gets the number of rows in each batch. At the end of each batch, the rows in the batch are sent to the server. |
 | `void setBatchSize(int batchSize)` | Sets the number of rows in each batch. At the end of each batch, the rows in the batch are sent to the server. |
 | `int getBulkCopyTimeout()` | Gets the number of seconds for the operation to complete before it times out. |
@@ -776,9 +772,9 @@ Implementation Notes and Limitations:
   
 | Constructor | Description |
 | ----------- | ----------- |
-| `SQLServerBulkCSVFileRecord(String fileToParse, String encoding, String delimiter, boolean firstLineIsColumnNamesSQLServerBulkCSVFileRecord(String, String, String, boolean)` | Initializes a new instance of the `SQLServerBulkCSVFileRecord` class that will parse each line in the `fileToParse` with the provided delimiter and encoding. If `firstLineIsColumnNames` is set to True, the first line in the file will be parsed as column names.  If encoding is NULL, the default encoding will be used. |
-| `SQLServerBulkCSVFileRecord(String fileToParse, String encoding, boolean firstLineIsColumnNamesSQLServerBulkCSVFileRecord(String, String, boolean)` | Initializes a new instance of the `SQLServerBulkCSVFileRecord` class that will parse each line in the `fileToParse` with a comma as the delimiter and provided encoding. If `firstLineIsColumnNames` is set to True, the first line in the file will be parsed as column names.  If encoding is NULL, the default encoding will be used. |
-| `SQLServerBulkCSVFileRecord(String fileToParse, boolean firstLineIsColumnNamesSQLServerBulkCSVFileRecord(String, boolean)` | Initializes a new instance of the `SQLServerBulkCSVFileRecord` class that will parse each line in the `fileToParse` with a comma as the delimiter and default encoding. If `firstLineIsColumnNames` is set to True, the first line in the file will be parsed as column names. |
+| `SQLServerBulkCSVFileRecord(String fileToParse, String encoding, String delimiter, boolean firstLineIsColumnNames)` | Initializes a new instance of the `SQLServerBulkCSVFileRecord` class that will parse each line in the `fileToParse` with the provided delimiter and encoding. If `firstLineIsColumnNames` is set to True, the first line in the file will be parsed as column names.  If encoding is NULL, the default encoding will be used. |
+| `SQLServerBulkCSVFileRecord(String fileToParse, String encoding, boolean firstLineIsColumnNames)` | Initializes a new instance of the `SQLServerBulkCSVFileRecord` class that will parse each line in the `fileToParse` with a comma as the delimiter and provided encoding. If `firstLineIsColumnNames` is set to True, the first line in the file will be parsed as column names.  If encoding is NULL, the default encoding will be used. |
+| `SQLServerBulkCSVFileRecord(String fileToParse, boolean firstLineIsColumnNames` | Initializes a new instance of the `SQLServerBulkCSVFileRecord` class that will parse each line in the `fileToParse` with a comma as the delimiter and default encoding. If `firstLineIsColumnNames` is set to True, the first line in the file will be parsed as column names. |
   
 | Method | Description |
 | ------ | ----------- |

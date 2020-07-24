@@ -1,13 +1,13 @@
 ---
 title: Previous versions of SQL Server documentation
-description: Accessing Online and Offline SQL Server documentation
+description: How to get online and offline documentation for previous versions of SQL Server, including 2005, 2008, 2012, and 2014.
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
-ms.date: 07/22/2020
+ms.date: 07/24/2020
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 
@@ -17,14 +17,9 @@ The documentation for several older versions of Microsoft SQL Server has been ar
 
 ## Online documentation
 
-There is online documentation for several older versions of SQL Server.
-
-- [2014](https://docs.microsoft.com/previous-versions/sql/2014/)
-- [2005 – 2012](https://docs.microsoft.com/previous-versions/sql/)
+To access the online documentation for SQL Server 2005 - 2014, see the [SQL Server previous versions landing page](https://docs.microsoft.com/previous-versions/sql/).
 
 ## Offline documentation
-
-There is offline documentation for several older versions of SQL Server.
 
 To access offline content for SQL Server versions 2012 and later, see [Install SQL Server documentation to view offline in SSMS](sql-server-offline-documentation.md).
 
@@ -39,7 +34,5 @@ Review the Microsoft Product Lifecycle for information about how a specific prod
 
 ## Next steps
 
-- [SQL Server online documentation](../sql-server/index.yml?view=sql-server-2016)
-- [SQL Server 2014 online documentation](/previous-versions/sql/2014/index.yml?view=sql-server-2014)
-- [Install SQL Server documentation to view offline in SSMS](sql-server-offline-documentation.md)
-- [Versioning system for SQL documentation](../sql-server/versioning-system-monikers-ui-sql-server.md?view=sql-server-2016)
+- [SQL Server 2016-2019 online documentation](../sql-server/index.yml)
+- [SQL Server docs navigation guide](../sql-server/sql-docs-navigation-guide.md)

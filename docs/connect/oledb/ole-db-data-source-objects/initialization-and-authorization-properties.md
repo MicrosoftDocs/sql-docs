@@ -1,5 +1,5 @@
 ---
-title: "Initialization and Authorization Properties | Microsoft Docs"
+title: "Initialization and authorization properties (OLE DB driver) | Microsoft Docs"
 description: "Initialization and authorization properties"
 ms.custom: ""
 ms.date: "01/02/2020"

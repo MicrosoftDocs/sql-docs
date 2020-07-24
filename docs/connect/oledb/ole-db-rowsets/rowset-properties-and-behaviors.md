@@ -1,5 +1,5 @@
 ---
-title: "Rowset properties and behaviors (OLE DB driver) | Microsoft Docs"
+title: Rowset properties and behaviors (OLE DB driver)
 description: "Rowset properties and behaviors in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

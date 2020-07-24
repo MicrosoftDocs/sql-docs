@@ -1,5 +1,5 @@
 ---
-title: "Retrieving error information (OLE DB driver) | Microsoft Docs"
+title: Retrieving error information (OLE DB driver)
 description: "Retrieving error information using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

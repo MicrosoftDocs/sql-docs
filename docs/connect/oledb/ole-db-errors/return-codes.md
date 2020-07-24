@@ -1,5 +1,5 @@
 ---
-title: "Return codes (OLE DB driver) | Microsoft Docs"
+title: Return codes (OLE DB driver)
 description: "Return codes"
 ms.custom: ""
 ms.date: "06/14/2018"

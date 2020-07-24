@@ -1,5 +1,5 @@
 ---
-title: "Rowset properties and behaviors (Native Client OLE DB provider) | Microsoft Docs"
+title: Rowset properties and behaviors (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Rowsets and SQL Server cursors (Native Client OLE DB provider) | Microsoft Docs"
+title: Rowsets and SQL Server cursors (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

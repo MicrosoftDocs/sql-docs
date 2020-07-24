@@ -1,5 +1,5 @@
 ---
-title: "Set large data (OLE DB driver) | Microsoft Docs"
+title: Set large data (OLE DB driver)
 description: "Set large data (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

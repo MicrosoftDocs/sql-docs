@@ -1,5 +1,5 @@
 ---
-title: "Rowsets and SQL Server cursors (OLE DB driver) | Microsoft Docs"
+title: Rowsets and SQL Server cursors (OLE DB driver)
 description: "Rowsets and SQL Server cursors"
 ms.custom: ""
 ms.date: "06/14/2018"

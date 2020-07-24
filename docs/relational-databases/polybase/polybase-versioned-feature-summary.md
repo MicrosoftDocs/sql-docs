@@ -23,7 +23,7 @@ This table lists the key features for PolyBase and the products in which they're
   
 ||||||
 |-|-|-|-|-|   
-|**Feature**|**SQL Server 2016**|**Azure SQL Database**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
+|**Feature**|**SQL Server 2016**|**Azure SQL Database**|**Azure Synapse Analytics**|**Parallel Data Warehouse**| 
 |Query Hadoop data with [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|No|No|Yes|
 |Import data from Hadoop|Yes|No|No|Yes|
 |Export data to Hadoop  |Yes|No|No| Yes|
@@ -57,9 +57,9 @@ PolyBase has the following limitations:
 
 - In order to use PolyBase you must have sysadmin or CONTROL SERVER level permissions on the database.
 
-- The maximum possible row size, which includes the full length of variable length columns, can't exceed 32 KB in SQL Server or 1 MB in Azure SQL Data Warehouse.
+- The maximum possible row size, which includes the full length of variable length columns, can't exceed 32 KB in SQL Server or 1 MB in Azure Synapse Analytics.
 
-- When data is exported into an ORC file format from SQL Server or SQL Data Warehouse, text-heavy columns might be limited. They can be limited to as few as 50 columns because of Java out-of-memory error messages. To work around this issue, export only a subset of the columns.
+- When data is exported into an ORC file format from SQL Server or Azure Synapse Analytics, text-heavy columns might be limited. They can be limited to as few as 50 columns because of Java out-of-memory error messages. To work around this issue, export only a subset of the columns.
 
 - PolyBase can't connect to a Hortonworks instance if Knox is enabled.
 

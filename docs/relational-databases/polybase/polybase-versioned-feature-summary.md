@@ -20,10 +20,9 @@ This article is a summary of PolyBase features available for SQL Server products
 ## Feature summary for product releases
 
 This table lists the key features for PolyBase and the products in which they're available.  
-  
-||||||
-|-|-|-|-|-|
-|**Feature**|**SQL Server 2016**|**Azure SQL Database**|**Azure Synapse Analytics**|**Parallel Data Warehouse**|
+
+|**Feature** |**SQL Server 2016** |**Azure SQL Database** |**Azure Synapse Analytics** |**Parallel Data Warehouse** |
+|---------|---------|---------|---------|---------|
 |Query Hadoop data with [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|No|No|Yes|
 |Import data from Hadoop|Yes|No|No|Yes|
 |Export data to Hadoop  |Yes|No|No| Yes|
@@ -39,9 +38,8 @@ This table lists the key features for PolyBase and the products in which they're
 
 In SQL Server and APS, not all T-SQL operators can be pushed down to the Hadoop cluster. This table lists all the supported operators and a subset of the unsupported operators.
 
-||||
-|-|-|-|
-|**Operator type**|**Pushable to Hadoop**|**Pushable to Blob storage**|
+|**Operator type** |**Pushable to Hadoop** |**Pushable to Blob storage** |
+|---------|---------|---------|
 |Column projections|Yes|No|
 |Predicates|Yes|No|
 |Aggregates|Partial|No|

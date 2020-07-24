@@ -49,16 +49,16 @@ This error can be caused by a transient condition that existed on the system dur
 
 There are a wide range of errors that could cause database recovery to fail. While you must evaluate each error on a case by case basis, the resolution to a database recovery failure is typically the same as described in the User Action section below.
 
-## User Action  
+## User action  
  
 For information about the cause of this occurrence of error 3414, examine the Windows Event Log or ERRORLOG for a previous error that indicates the specific failure. The appropriate user action depends on whether the information in the Windows Event Log indicates that the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error was caused by a transient condition or a permanent failure. 
-The error message states to "diagnose recovery errors and fix them, or restore from a known good backup". Therefore, you can attempt to correct the error that you encounter to allow recovery to complete (see [Correctable Errors and Deferred Transactions](#correctable-errors-and-deferred-transactions))
+The error message states to "diagnose recovery errors and fix them, or restore from a known good backup". Therefore, you can attempt to correct the error that you encounter to allow recovery to complete (see [Correctable errors and deferred transactions](#correctable-errors-and-deferred-transactions)).
 
 If the errors cannot be corrected, the first and best option to resolve this problem is to restore from a good backup. However, if you cannot recover from a backup, you have two additional options, which do not guarantee full data recovery: use emergency repair with [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) or attempt to copy out as much data as possible to another database. 
 
- - Restore from the last known good database backup
- - Use the emergency repair method provided by [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)
- - Attempt to copy out as much data as possible to another database.
+ 1. Restore from the last known good database backup
+ 1. Use the emergency repair method provided by [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)
+ 1. Attempt to copy out as much data as possible to another database.
 
 The first method of restoring a good database backup is the best choice to bring a database to a known consistent state.  
 
@@ -66,7 +66,7 @@ The second best choice, if no backup is available, is to get the database online
 
 If emergency repair does not work and you want to try to salvage some data to another database, the way to get access to the database is by setting the database in emergency mode via the ALTER DATABASE <dbname> SET EMERGENCY command. Then you can attempt to copy data out from tables.
 
-### Correctable Errors and Deferred Transactions
+### Correctable errors and deferred transactions
 Not all errors encountered during database recovery will result in a recovery failure and a suspect database:
 
 Errors when opening the database and/or transaction log files for the first time, occur before recovery. Examples of such errors are  [17204](mssqlserver-17204-database-engine-error.md) and [17207](mssqlserver-17207-database-engine-error.md). Once these errors are corrected, recovery may be allowed to proceed (but not guaranteed to complete if other recovery errors occur). Errors such as 17204 and 17207 do not result in a SUSPECT database. In fact, the status of the database is RECOVERY_PENDING when these problems occur. 
@@ -89,7 +89,7 @@ If a committed transaction is to be rolled forward, the page can be marked inacc
 
 
   
-## See Also  
+## See also  
 [ALTER DATABASE &#40;Transact-SQL&#41;](~/t-sql/statements/alter-database-transact-sql-set-options.md)  
 [DBCC CHECKDB &#40;Transact-SQL&#41;](~/t-sql/database-console-commands/dbcc-checkdb-transact-sql.md)  
 [Complete Database Restores &#40;Simple Recovery Model&#41;](~/relational-databases/backup-restore/complete-database-restores-simple-recovery-model.md)  

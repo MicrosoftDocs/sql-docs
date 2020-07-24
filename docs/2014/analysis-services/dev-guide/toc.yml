@@ -91,6 +91,6 @@
     - name: Programming AMO Security Objects
       href: https://docs.microsoft.com/analysis-services/amo/programming-amo-security-objects
     - name: Programming AMO Complementary Classes and Methods
-      href: https://docs.microsoft.com/bi-reference/amo/programming-amo-complementary-classes-and-methods
+      href: https://docs.microsoft.com/analysis-services/amo/programming-amo-complementary-classes-and-methods
   - name: Developing with XMLA in Analysis Services
   - name: Defining Stored Procedures

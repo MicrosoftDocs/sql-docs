@@ -95,7 +95,7 @@ The output will contain either the URL to the container and/or the SAS token. Th
   
 If the URL is included, separate it from the SAS token at the question mark (do not include the question mark). For example, the previous output would result in the following two values.  
   
-|||  
+|Type|Output|  
 |-|-|  
 |**Container URL**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
 |**SAS token**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  

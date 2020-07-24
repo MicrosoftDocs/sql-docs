@@ -55,7 +55,7 @@ Partial aggregation means that a final aggregation must occur after the data rea
 
 PolyBase has the following limitations:
 
-- In order to use PolyBase you must have sysadmin or CONTROL SERVER level permissions on the database.
+- In order to use PolyBase, you must have sysadmin or CONTROL SERVER level permissions on the database.
 
 - The maximum possible row size, which includes the full length of variable length columns, can't exceed 32 KB in SQL Server or 1 MB in Azure Synapse Analytics.
 

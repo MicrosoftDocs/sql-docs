@@ -32,7 +32,7 @@ This article describes how to insert a [pandas](https://pandas.pydata.org/) data
 
 * Azure Data Studio. For how to install, see [Azure Data Studio](../../azure-data-studio/what-is.md).
 
-* [Restore sample database](../../samples/adventureworks-install-configure) to get sample data used in this article.
+* [Restore sample database](../../samples/adventureworks-install-configure.md) to get sample data used in this article.
 
 ## Verify restored database
 
@@ -152,4 +152,4 @@ Results
 
 ## Next steps
 
-+ [Plot a histogram for data exploration with Python](../machine-learning/data-exploration/python-plot-histogram.md)
++ [Plot a histogram for data exploration with Python](../data-exploration/python-plot-histogram.md)

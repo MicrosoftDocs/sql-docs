@@ -33,7 +33,7 @@ This article describes how to insert SQL data into a [pandas](https://pandas.pyd
 
 * Azure Data Studio. For how to install, see [Azure Data Studio](../../azure-data-studio/what-is.md).
 
-* [Restore sample database](../../samples/adventureworks-install-configure) to get sample data used in this article.
+* [Restore sample database](../../samples/adventureworks-install-configure.md) to get sample data used in this article.
 
 ## Verify restored database
 
@@ -122,4 +122,4 @@ CountryRegionCode                 Name
 
 ## Next steps
 
-+ [Insert Python dataframe into SQL](../machine-learning/data-exploration/python-dataframe-sqlserver.md)
++ [Insert Python dataframe into SQL](../data-exploration/python-dataframe-sqlserver.md)

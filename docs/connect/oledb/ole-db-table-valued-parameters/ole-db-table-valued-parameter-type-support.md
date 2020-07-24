@@ -1,5 +1,5 @@
 ---
-title: "OLE DB Table-Valued Parameter Type Support | Microsoft Docs"
+title: Table-valued parameter type support (OLE DB driver)
 description: "OLE DB Table-Valued Parameter type support"
 ms.custom: ""
 ms.date: "06/14/2018"

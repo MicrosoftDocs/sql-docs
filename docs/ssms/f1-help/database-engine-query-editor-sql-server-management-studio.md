@@ -1,5 +1,5 @@
 ---
-title: Database Engine Query Editor
+title: SSMS Query Editor
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -24,7 +24,7 @@ ms.custom: seo-lt-2019
 ms.date: 03/03/2020
 ---
 
-# SSMS Query Editor
+# SQL Server Management Studio (SSMS) Query Editor
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
@@ -96,7 +96,7 @@ You can also check the code in the Query Editor by selecting Ctrl + F5.
 
 ### Display Estimated Execution Plan using the editor toolbar
 
-Requests a query execution plan from the query processor without actually executing the query, and displays the plan in the **Execution plan** window. This plan uses index statistics as an estimate of the number of rows that are expected to be returned during each part of the query execution. The actual query plan that is used can be different from the estimated execution plan. This can occur if the number of rows that are returned is significantly different from the estimate, and the query processor changes the plan to be more efficient.
+Requests a query execution plan from the query processor without actually executing the query, and displays the plan in the **Execution plan** window. This plan uses index statistics as an estimate of the number of rows that are expected to return during each part of the query execution. The actual query plan that is used can be different from the estimated execution plan. This can occur if the number of rows that are returned is different from the estimate, and the query processor changes the plan to be more efficient.
 
 You can also display an estimated execution plan by selecting Ctrl + L or from the [context menu](#display-estimated-execution-plan-using-the-context-menu).
 
@@ -138,7 +138,7 @@ You can also return results to text by selecting Ctrl + T or from the [context m
 
 ### Results to Grid using the editor toolbar
 
-Returns the query results as one or more grids in the **Results** window. This option is usually enabled by default.
+Returns the query results as one or more grids in the **Results** window. This option is enabled by default.
 
 You can also return results to text by selecting Ctrl + D or from the [context menu](#results-using-the-context-menu).
 
@@ -210,7 +210,7 @@ Executes the selected code or, if no code is selected, executes all the code in 
 
 ### Display Estimated Execution Plan using the context menu
 
-Requests a query execution plan from the query processor without actually executing the query, and displays the plan in the **Execution plan** window. This plan uses index statistics as an estimate of the number of rows that are expected to be returned during each part of the query execution. The actual query plan that is used can be different from the estimated execution plan. This can occur if the number of rows that are returned is significantly different from the estimate, and the query processor changes the plan to be more efficient.
+Requests a query execution plan from the query processor without actually executing the query, and displays the plan in the **Execution plan** window. This plan uses index statistics as an estimate of the number of rows that are expected to return during each part of the query execution. The actual query plan that is used can be different from the estimated execution plan. This can occur if the number of rows that are returned is different from the estimate, and the query processor changes the plan to be more efficient.
 
 ### IntelliSense Enabled using the context menu
 

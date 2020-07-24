@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 ---
 
 # Troubleshoot machine learning in SQL Server
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Use this article as a starting point for troubleshooting issues you encounter when using SQL Server machine learning.
 
@@ -21,10 +21,10 @@ Use this article as a starting point for troubleshooting issues you encounter wh
 
 The following articles describe known issues with the current and previous releases:
 
-+ [Known issues for R Services](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
-+ [SQL Server 2016 release notes](../sql-server/sql-server-2016-release-notes.md)
-+ [SQL Server 2017 release notes](../sql-server/sql-server-2017-release-notes.md)
-+ [SQL Server 2019 release notes](../sql-server/sql-server-version-15-release-notes.md)
++ [Known issues for R Services](known-issues-for-sql-server-machine-learning-services.md)
++ [SQL Server 2016 release notes](../../sql-server/sql-server-2016-release-notes.md)
++ [SQL Server 2017 release notes](../../sql-server/sql-server-2017-release-notes.md)
++ [SQL Server 2019 release notes](../../sql-server/sql-server-version-15-release-notes.md)
 
 ## How to gather system information
 

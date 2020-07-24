@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Common R scripting errors in SQL Server
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 This article documents several common scripting errors when running R code in SQL Server. The list is not comprehensive. There are many packages and errors can vary between versions of the same package.
 
@@ -54,13 +54,13 @@ R scripts can return different values in a SQL Server context, for several reaso
 
 ## Implied authentication for remote execution via ODBC
 
-If you connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] computer to run R commands by using the **RevoScaleR** functions, you might get an error when you use ODBC calls that write data to the server. This error happens only when you're using Windows authentication.
+If you connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] computer to run R commands by using the **RevoScaleR** functions, you might get an error when you use ODBC calls that write data to the server. This error happens only when you're using Windows authentication.
 
 The reason is that the worker accounts that are created for R Services do not have permission to connect to the server. Therefore, ODBC calls cannot be executed on your behalf. The problem does not occur with SQL logins because, with SQL logins, the credentials are passed explicitly from the R client to the SQL Server instance and then to ODBC. However, using SQL logins is also less secure than using Windows authentication.
 
 To enable your Windows credentials to be passed securely from a script that's initiated remotely, SQL Server must emulate your credentials. This process is termed _implied authentication_. To make this work, the worker accounts that run R or Python scripts on the SQL Server computer must have the correct permissions.
 
-1. Open [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] as an administrator on the instance where you want to run R code.
+1. Open [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] as an administrator on the instance where you want to run R code.
 
 2. Run the following script. Be sure to edit the user group name, if you changed the default, and the computer and instance names.
 
@@ -97,4 +97,4 @@ If there are multiple variables to delete, we suggest that you save the names of
 
 [Upgrade and installation FAQ](upgrade-and-installation-faq-sql-server-r-services.md)
 
-[Troubleshoot database engine connections](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)
+[Troubleshoot database engine connections](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

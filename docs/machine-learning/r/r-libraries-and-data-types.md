@@ -130,19 +130,18 @@ outputDataSet <- inputDataSet'
 
 **Results**
 
-||||||
+|Row \#|C1|C2|C3|C4|
 |-|-|-|-|-|
-||C1|C2|C3|C4|
 |1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
 |1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 Note the use of the `str` function in R to get the schema of the output data. This function returns the following information:
 
-<code>'data.frame':2 obs. of  4 variables:</code>
-<code> $ c1: int  1 -11</code>
-<code> $ c2: Factor w/ 2 levels "Hello","world": 1 2</code>
-<code> $ c3: Factor w/ 2 levels "6732EA46-2D5D-430B-8A01-86E7F3351C3E",..: 2 1</code>
-<code> $ cR: num  4 2</code>
+<code>'data.frame':2 obs. of  4 variables:</code>  
+<code> $ c1: int  1 -11</code>  
+<code> $ c2: Factor w/ 2 levels "Hello","world": 1 2</code>  
+<code> $ c3: Factor w/ 2 levels "6732EA46-2D5D-430B-8A01-86E7F3351C3E",..: 2 1</code>  
+<code> $ cR: num  4 2</code>  
 
 From this, you can see that the following data type conversions were implicitly performed as part of this query:
 

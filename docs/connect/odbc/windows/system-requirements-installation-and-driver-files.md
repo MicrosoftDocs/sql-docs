@@ -24,6 +24,7 @@ Compatibility indicates that a driver was tested for compatibility against exist
 
 |Driver Version|Azure SQL Database|Azure SQL DW|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|SQL Server 2008 R2|SQL Server 2008|SQL Server 2005|
 |-|-|-|-|-|-|-|-|-|-|-|-|
+|17.6|Y|Y|Y|Y|Y|Y|Y|Y| | | |
 |17.5|Y|Y|Y|Y|Y|Y|Y|Y| | | |
 |17.4|Y|Y|Y|Y|Y|Y|Y|Y| | | |
 |17.3|Y|Y|Y|Y|Y|Y|Y|Y|Y|Y| |
@@ -45,6 +46,7 @@ The following matrix indicates driver version support for Windows operating syst
 
 |Driver version|Windows Server 2019|Windows Server 2016|Windows Server 2012 R2|Windows Server 2012|Windows Server 2008 R2|Windows 10|Windows 8.1|Windows 7|Windows Vista SP2|
 |-|-|-|-|-|-|-|-|-|-|
+|17.6|Y|Y|Y|Y| |Y|Y| | |
 |17.5|Y|Y|Y|Y| |Y|Y| | |
 |17.4|Y|Y|Y|Y|Y|Y|Y|Y| |
 |17.3|Y|Y|Y|Y|Y|Y|Y|Y| |

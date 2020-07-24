@@ -36,9 +36,8 @@ Members of the **sysadmin** fixed server role can execute **sp_delete_job** to d
   
 ## Related Tasks  
   
-|||  
-|-|-|  
-|**Description**|**Topic**|  
+|Description|Topic|  
+|-|-|   
 |Describes how to delete one or more [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs.|[Delete One or More Jobs](../../ssms/agent/delete-one-or-more-jobs.md)|  
 |Describes how to configure [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent to automatically delete jobs when they succeed, fail, or complete.|[Automatically Delete a Job](../../ssms/agent/automatically-delete-a-job.md)|  
   

@@ -16,9 +16,8 @@ ms.date: 02/09/2017
 
 You can use the following keyboard shortcuts to navigate within the SQL Server Unit Test Designer.  
   
-|||  
-|-|-|  
-|**Action or Menu Option**|**Keyboard Shortcut**|  
+|Action or Menu Option|Keyboard Shortcut|  
+|-|-|   
 |Move from the Transact\-SQL editor to the navigation bar.|CTRL + F2|  
 |Move forward through navigation bar elements.|TAB|  
 |Move backward through navigation bar elements.|SHIFT+TAB|  

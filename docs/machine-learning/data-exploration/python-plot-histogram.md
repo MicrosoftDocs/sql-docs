@@ -33,7 +33,7 @@ This article describes how to plot data using the Python package [pandas'.hist()
 
 * Azure Data Studio. For how to install, see [Azure Data Studio](../../azure-data-studio/what-is.md).
 
-* [Restore sample DW database](../../samples/adventureworks-install-configure) to get sample data used in this article.
+* [Restore sample DW database](../../samples/adventureworks-install-configure.md) to get sample data used in this article.
 
 ## Verify restored Database
 

@@ -1,5 +1,6 @@
 ---
 title: "Search Text with Regular Expressions"
+description: 'Learn how to use a regular expression in the "Find what" field of a Find and Replace dialog box to specify a pattern to be matched.'
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

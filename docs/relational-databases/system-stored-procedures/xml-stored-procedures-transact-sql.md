@@ -20,10 +20,15 @@ ms.author: carlrab
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used for XML text management.  
-  
-|||  
-|-|-|  
-|[sp_xml_preparedocument](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)|[sp_xml_removedocument](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)|  
+
+:::row:::
+    :::column:::
+        [sp_xml_preparedocument](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sp_xml_removedocument](../../relational-databases/system-stored-procedures/sp-xml-removedocument-transact-sql.md)
+    :::column-end:::
+:::row-end:::
   
 ## See Also  
  [System Stored Procedures &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

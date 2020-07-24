@@ -30,14 +30,47 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### SELECT Statement  
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor provides IntelliSense support for the following syntax elements in the SELECT statement:  
   
-|||  
-|-|-|  
-|SELECT|WHERE|  
-|FROM|ORDER BY|  
-|HAVING|UNION|  
-|FOR|GROUP BY|  
-|TOP|OPTION (hint)|  
-  
+:::row:::
+    :::column:::
+        SELECT
+    :::column-end:::
+    :::column:::
+        WHERE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        FROM
+    :::column-end:::
+    :::column:::
+        ORDER BY
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        HAVING
+    :::column-end:::
+    :::column:::
+        UNION
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        FOR
+    :::column-end:::
+    :::column:::
+        GROUP BY
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        TOP
+    :::column-end:::
+    :::column:::
+        OPTION (hint)
+    :::column-end:::
+:::row-end:::
+
 ### Additional Transact-SQL Statements That Are Supported  
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor also provides IntelliSense support for [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that are shown in the following table.  
   

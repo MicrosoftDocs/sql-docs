@@ -1,5 +1,5 @@
 ---
-title: "Parameter and Rowset Metadata | Microsoft Docs"
+title: Parameter and rowset metadata (OLE DB driver)
 description: "Parameter and rowset metadata"
 ms.custom: ""
 ms.date: "06/14/2018"

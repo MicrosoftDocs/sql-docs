@@ -41,8 +41,14 @@ Specifies how a provider should execute a command.
 |AdoEnums.ExecuteOption.UNSPECIFIED|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Execute Method (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)|[Execute Method (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|  
-|[Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[Requery Method](../../../ado/reference/ado-api/requery-method.md)|
+
+:::row:::
+    :::column:::
+        [Execute Method (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+        [Execute Method (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
+    :::column-end:::
+    :::column:::
+        [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [Requery Method](../../../ado/reference/ado-api/requery-method.md)  
+    :::column-end:::
+:::row-end:::

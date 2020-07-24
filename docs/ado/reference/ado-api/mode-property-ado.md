@@ -35,11 +35,19 @@ Indicates the available permissions for modifying data in a [Connection](../../.
 >  **Remote Data Service Usage** When used on a client-side **Connection** object, the **Mode** property can only be set to **adModeUnknown**.  
   
 ## Applies To  
-  
-||||  
-|-|-|-|  
-|[Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [IsolationLevel and Mode Properties Example (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
  [IsolationLevel and Mode Properties Example (VC++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   

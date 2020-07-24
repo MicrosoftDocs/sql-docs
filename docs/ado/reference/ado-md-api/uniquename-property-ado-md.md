@@ -28,10 +28,16 @@ Indicates an unambiguous name for the current object.
   
 ## Applies To  
   
-|||  
-|-|-|  
-|[Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Hierarchy Object (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|  
-|[Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|  
-  
+:::row:::
+    :::column:::
+        [Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)  
+        [Hierarchy Object (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)  
+    :::column-end:::
+    :::column:::
+        [Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+        [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Name Property (ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)

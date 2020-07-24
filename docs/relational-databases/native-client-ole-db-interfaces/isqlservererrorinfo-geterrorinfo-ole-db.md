@@ -1,5 +1,5 @@
 ---
-title: "ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Microsoft Docs"
+title: "ISQLServerErrorInfo::GetErrorInfo (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

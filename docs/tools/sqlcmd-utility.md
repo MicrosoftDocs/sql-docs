@@ -778,7 +778,7 @@ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any 
   
  Time-out options:  
   
-|||  
+|Value|Behavior|  
 |-|-|  
 |0|wait forever|  
 |n>0|wait for n seconds|  

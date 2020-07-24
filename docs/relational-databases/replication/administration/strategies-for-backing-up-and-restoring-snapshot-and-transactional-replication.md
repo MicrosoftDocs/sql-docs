@@ -21,7 +21,7 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Strategies for Backing Up and Restoring Snapshot and Transactional Replication
 [!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]

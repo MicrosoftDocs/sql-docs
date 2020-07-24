@@ -1,6 +1,6 @@
 ---
 title: Plot a histogram for data exploration with Python
-description: Learn how to create a histogram to visualize data 
+description: Learn how to create a histogram to visualize data using Python.
 author: cawrites
 ms.author: chadam
 ms.date: 07/14/2020

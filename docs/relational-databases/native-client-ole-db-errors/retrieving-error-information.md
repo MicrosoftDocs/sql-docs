@@ -1,5 +1,5 @@
 ---
-title: "Retrieving Error Information | Microsoft Docs"
+title: Retrieving error information (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

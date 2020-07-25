@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 ---
 # Collect data to troubleshoot SQL machine learning
 
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 This article describes how to collect the data you need when you're attempting to resolve problems in SQL machine learning. This data can be useful whether you're resolving problems on your own or with the help of Microsoft customer support.
 
@@ -292,9 +292,9 @@ Because it might not be possible to exclude all folders that are needed by the S
 
 ### Is the firewall open for SQL Server? Does the instance support remote connections?
 
-1. To determine whether SQL Server supports remote connections, see [Configure remote server connections](../database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md).
+1. To determine whether SQL Server supports remote connections, see [Configure remote server connections](../../database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md).
 
-2. Determine whether a firewall rule has been created for SQL Server. For security reasons, in a default installation, it might not be possible for remote R or Python client to connect to the instance. For more information, see [Troubleshooting connecting to SQL Server](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
+2. Determine whether a firewall rule has been created for SQL Server. For security reasons, in a default installation, it might not be possible for remote R or Python client to connect to the instance. For more information, see [Troubleshooting connecting to SQL Server](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md).
 
 ## See also
 

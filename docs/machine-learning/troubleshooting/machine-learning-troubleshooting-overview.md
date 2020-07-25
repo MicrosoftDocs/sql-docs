@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 ---
 
 # Troubleshoot machine learning in SQL Server
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Use this article as a starting point for troubleshooting issues you encounter when using SQL Server machine learning.
 
@@ -21,10 +21,10 @@ Use this article as a starting point for troubleshooting issues you encounter wh
 
 The following articles describe known issues with the current and previous releases:
 
-+ [Known issues for R Services](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
-+ [SQL Server 2016 release notes](../sql-server/sql-server-2016-release-notes.md)
-+ [SQL Server 2017 release notes](../sql-server/sql-server-2017-release-notes.md)
-+ [SQL Server 2019 release notes](../sql-server/sql-server-version-15-release-notes.md)
++ [Known issues for R Services](known-issues-for-sql-server-machine-learning-services.md)
++ [SQL Server 2016 release notes](../../sql-server/sql-server-2016-release-notes.md)
++ [SQL Server 2017 release notes](../../sql-server/sql-server-2017-release-notes.md)
++ [SQL Server 2019 release notes](../../sql-server/sql-server-version-15-release-notes.md)
 
 ## How to gather system information
 
@@ -36,15 +36,15 @@ If you have encountered an error, or need to understand an issue in your environ
 
 Start here if you have not set up machine learning with SQL Server, or if you want to add the feature:
 
-+ [Install SQL Server Machine Learning Services (In-Database)](install/sql-machine-learning-services-windows-install.md)
-+ [Install SQL Server Machine Learning Server (Standalone)](install/sql-machine-learning-standalone-windows-install.md)
-+ [Command prompt setup](install/sql-ml-component-commandline-install.md)
-+ [Offline setup (no internet)](install/sql-ml-component-install-without-internet-access.md)
++ [Install SQL Server Machine Learning Services (In-Database)](../install/sql-machine-learning-services-windows-install.md)
++ [Install SQL Server Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md)
++ [Command prompt setup](../install/sql-ml-component-commandline-install.md)
++ [Offline setup (no internet)](../install/sql-ml-component-install-without-internet-access.md)
 
 ### Configuration
 
 The following articles contain information about defaults, and how to customize the configuration for machine learning on a SQL instance:
 
-+ [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](administration/scale-concurrent-execution-external-scripts.md)   
-+ [How to create a resource pool](administration/create-external-resource-pool.md)
-+ [Optimization for R workloads](r/operationalizing-your-r-code.md)
++ [Scale concurrent execution of external scripts in SQL Server Machine Learning Services](../administration/scale-concurrent-execution-external-scripts.md)   
++ [How to create a resource pool](../administration/create-external-resource-pool.md)
++ [Optimization for R workloads](../r/operationalizing-your-r-code.md)

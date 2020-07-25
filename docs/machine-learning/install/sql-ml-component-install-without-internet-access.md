@@ -210,4 +210,4 @@ An initial offline installation of SQL Server R Services requires the same confi
 
 ## Next steps
 
-For help with any unfamiliar messages or log entries, see [Upgrade and installation FAQ - Machine Learning Services](../upgrade-and-installation-faq-sql-server-r-services.md).
+For help with any unfamiliar messages or log entries, see [Upgrade and installation FAQ - Machine Learning Services](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md).

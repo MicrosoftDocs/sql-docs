@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL Syntax Supported by IntelliSense
+description: Learn which Transact-SQL statements and syntax elements are supported by SQL Server Management Studio IntelliSense in SQL Server 2019 (15.x).
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual

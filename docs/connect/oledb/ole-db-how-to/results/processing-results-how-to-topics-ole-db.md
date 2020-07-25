@@ -1,5 +1,5 @@
 ---
-title: "Processing Results How-to Topics (OLE DB) | Microsoft Docs"
+title: Processing results how-to topics (OLE DB driver)
 description: "Processing results how-to topics (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

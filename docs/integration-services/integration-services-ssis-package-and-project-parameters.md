@@ -70,10 +70,10 @@ ms.author: chugu
  The following Transact-SQL views and stored procedure can be used to display and set parameter values.  
   
  [catalog.execution_parameter_values &#40;SSISDB Database&#41;](../integration-services/system-views/catalog-execution-parameter-values-ssisdb-database.md)(view)  
- Shows the actual parameter values that will be used by a specific execution  
+ Shows the actual parameter values in a specific execution.
   
  [catalog.get_parameter_values &#40;SSISDB Database&#41;](../integration-services/system-stored-procedures/catalog-get-parameter-values-ssisdb-database.md) (stored procedure)  
- Resolves and shows the actual values for the specified package and environment reference  
+ Resolves and shows the actual values for the specified package and environment reference.
   
  [catalog.object_parameters &#40;SSISDB Database&#41;](../integration-services/system-views/catalog-object-parameters-ssisdb-database.md) (view)  
  Displays the parameters and properties for all packages and projects in the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] catalog, including the design default and server default values.  

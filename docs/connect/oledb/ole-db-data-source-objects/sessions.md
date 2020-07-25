@@ -1,5 +1,5 @@
 ---
-title: "Sessions | Microsoft Docs"
+title: Sessions (OLE DB driver)
 description: "Sessions in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

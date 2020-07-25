@@ -1,5 +1,6 @@
 ---
 title: "XML Editor (SQL Server Management Studio)"
+description: Learn how to use the visual tools of the SQL Server Management Studio XML Editor to work with XML schemas (XSDs), ADO.NET datasets, and XML documents.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -41,7 +41,7 @@ Scoring is an important task that can easily be automated, or started from exter
 
 + [Real-time scoring, optimized  for small batches
 + Single-row scoring, for calling from an application
-+ [Native scoring](../sql-native-scoring.md), for fast batch prediction from SQL Server without calling R
++ [Native scoring](../predictions/native-scoring-predict-transact-sql.md), for fast batch prediction from SQL Server without calling R
 
 This walkthrough provides examples of scoring using a stored procedure in both batch and single-row modes:
 

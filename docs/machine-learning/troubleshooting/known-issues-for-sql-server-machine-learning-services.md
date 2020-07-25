@@ -11,9 +11,9 @@ ms.custom: contperfq4
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Known issues in SQL Server Machine Learning Services
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-This article describes known problems or limitations with the Python and R components that are provided in [SQL Server Machine Learning Services](sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](r/sql-server-r-services.md).
+This article describes known problems or limitations with the Python and R components that are provided in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](../r/sql-server-r-services.md).
 
 ## Setup and configuration issues
 
@@ -121,7 +121,7 @@ This issue is fixed in the release version. Also, this limitation does not apply
 
 **Applies to:** SQL Server 2017 with Python
 
-### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when you connect to an older version of SQL Server R Services from a client by using [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)]
+### <a name="bkmk_sqlbindr"></a> Warning of incompatible version when you connect to an older version of SQL Server R Services from a client by using [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
 
 When you run R code in a SQL Server 2016 compute context, you might see the following error:
 
@@ -129,10 +129,10 @@ When you run R code in a SQL Server 2016 compute context, you might see the foll
 
 This message is displayed if either of the following two statements is true,
 
-+ You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../includes/sssqlv14-md.md)].
++ You installed R Server (Standalone) on a client computer by using the setup wizard for [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)].
 + You installed Microsoft R Server by using the [separate Windows installer](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows).
 
-To ensure that the server and client use the same version you might need to use _binding_, supported for Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](install/upgrade-r-and-python.md).
+To ensure that the server and client use the same version you might need to use _binding_, supported for Microsoft R Server 9.0 and later releases, to upgrade the R components in SQL Server 2016 instances. To determine if support for upgrades is available for your version of R Services, see [Upgrade an instance of R Services using SqlBindR.exe](../install/upgrade-r-and-python.md).
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 
@@ -144,7 +144,7 @@ As a workaround, you can install the service release by using the command line a
 
 `C:\<path to installation media>\SQLServer2016-KB3164674-x64.exe /Action=Patch /IACCEPTROPENLICENSETERMS /MRCACHEDIRECTORY=<path to CU1 CAB files>`
 
-To get the latest installers, see [Install machine learning components without internet access](install/sql-ml-component-install-without-internet-access.md).
+To get the latest installers, see [Install machine learning components without internet access](../install/sql-ml-component-install-without-internet-access.md).
 
 **Applies to:** SQL Server 2016 R Services, with R Server version 9.0.0 or earlier
 
@@ -162,7 +162,7 @@ Look for Launchpad in the `Binn` folder for the instance. For example, in a defa
 
 ### 9. Remote compute contexts are blocked by a firewall in SQL Server instances that are running on Azure virtual machines
 
-If you have installed [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] on an Azure virtual machine, you might not be able to use compute contexts that require the use of the virtual machine's workspace. The reason is that, by default, the firewall on Azure virtual machines includes a rule that blocks network access for local R user accounts.
+If you have installed [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] on an Azure virtual machine, you might not be able to use compute contexts that require the use of the virtual machine's workspace. The reason is that, by default, the firewall on Azure virtual machines includes a rule that blocks network access for local R user accounts.
 
 As a workaround, on the Azure VM, open **Windows Firewall with Advanced Security**, select **Outbound Rules**, and disable the following rule: **Block network access for R local user accounts in SQL Server instance MSSQLSERVER**. You can also leave the rule enabled, but change the security property to **Allow if secure**.
 
@@ -180,9 +180,9 @@ If upgrade is not feasible, as a workaround, use  a SQL login to run remote R jo
 
 It is possible to call the machine learning libraries that are installed for SQL Server from an external application, such as RGui. Doing so might be the most convenient way to accomplish certain tasks, such as installing new packages, or running ad hoc tests on very short code samples. However, outside of SQL Server, performance might be limited.
 
-For example, even if you are using the Enterprise Edition of SQL Server, R runs in single-threaded mode when you run your R code by using external tools. To get the benefits of performance in SQL Server, initiate a SQL Server connection and use [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to call the external script runtime.
+For example, even if you are using the Enterprise Edition of SQL Server, R runs in single-threaded mode when you run your R code by using external tools. To get the benefits of performance in SQL Server, initiate a SQL Server connection and use [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to call the external script runtime.
 
-In general, avoid calling the machine learning libraries that are used by SQL Server from external tools. If you need to debug R or Python code, it is typically easier to do so outside of SQL Server. To get the same  libraries that are in SQL Server, you can install Microsoft R Client or [SQL Server 2017 Machine Learning Server (Standalone)](install/sql-machine-learning-standalone-windows-install.md).
+In general, avoid calling the machine learning libraries that are used by SQL Server from external tools. If you need to debug R or Python code, it is typically easier to do so outside of SQL Server. To get the same  libraries that are in SQL Server, you can install Microsoft R Client or [SQL Server 2017 Machine Learning Server (Standalone)](../install/sql-machine-learning-standalone-windows-install.md).
 
 ### 12. SQL Server Data Tools does not support permissions required by external scripts
 
@@ -198,7 +198,7 @@ As a workaround, run the additional GRANT statements in a post-deployment script
 
 In Enterprise Edition, you can use resource pools to manage external script processes. In some early release builds, the maximum memory that could be allocated to the R processes was 20 percent. Therefore, if the server had 32 GB of RAM, the R executables (RTerm.exe and BxlServer.exe) could use a maximum of 6.4 GB in a single request.
 
-If you encounter resource limitations, check the current default. If 20 percent is not enough, see the documentation for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on how to change this value.
+If you encounter resource limitations, check the current default. If 20 percent is not enough, see the documentation for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on how to change this value.
 
 **Applies to:** SQL Server 2016 R Services, Enterprise Edition
 
@@ -333,19 +333,19 @@ If you need to use larger models, the following workarounds are available:
 + Use feature selection to remove unnecessary columns.
 + If you are using an open source algorithm, consider a similar implementation using the corresponding algorithm in MicrosoftML or RevoScaleR. These packages have been optimized for deployment scenarios.
 + After the model has been rationalized and the size reduced using the preceding steps, see if the [memCompress](https://www.rdocumentation.org/packages/base/versions/3.4.1/topics/memCompress) function in base R can be used to reduce the size of the model before passing it to SQL Server. This option is best when the model is close to the 2 GB limit.
-+ For larger models, you can use the SQL Server [FileTable](../relational-databases/blob/filetables-sql-server.md) feature to store the models, rather than using a varbinary column.
++ For larger models, you can use the SQL Server [FileTable](../../relational-databases/blob/filetables-sql-server.md) feature to store the models, rather than using a varbinary column.
 
-    To use FileTables, you must add a firewall exception, because data stored in FileTables is managed by the Filestream filesystem driver in SQL Server, and default firewall rules block network file access. For more information, see [Enable Prerequisites for FileTable](../relational-databases/blob/enable-the-prerequisites-for-filetable.md).
+    To use FileTables, you must add a firewall exception, because data stored in FileTables is managed by the Filestream filesystem driver in SQL Server, and default firewall rules block network file access. For more information, see [Enable Prerequisites for FileTable](../../relational-databases/blob/enable-the-prerequisites-for-filetable.md).
 
-    After you have enabled FileTable, to write the model, you get a path from SQL using the FileTable API, and then write the model to that location from your code. When you need to read the model, you get the path from SQL and then call the model using the path from your script. For more information, see [Access FileTables with File Input-Output APIs](../relational-databases/blob/access-filetables-with-file-input-output-apis.md).
+    After you have enabled FileTable, to write the model, you get a path from SQL using the FileTable API, and then write the model to that location from your code. When you need to read the model, you get the path from SQL and then call the model using the path from your script. For more information, see [Access FileTables with File Input-Output APIs](../../relational-databases/blob/access-filetables-with-file-input-output-apis.md).
 
-### 7. Avoid clearing workspaces when you execute R code in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compute context
+### 7. Avoid clearing workspaces when you execute R code in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compute context
 
-If you use an R command to clear your workspace of objects while running R code in a [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] compute context, or if you clear the workspace as part of an R script called by using [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), you might get this error: *workspace object revoScriptConnection not found*
+If you use an R command to clear your workspace of objects while running R code in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compute context, or if you clear the workspace as part of an R script called by using [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md), you might get this error: *workspace object revoScriptConnection not found*
 
-`revoScriptConnection` is an object in the R workspace that contains information about an R session that is called from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. However, if your R code includes a command to clear the workspace (such as `rm(list=ls()))`, all information about the session and other objects in the R workspace is cleared as well.
+`revoScriptConnection` is an object in the R workspace that contains information about an R session that is called from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, if your R code includes a command to clear the workspace (such as `rm(list=ls()))`, all information about the session and other objects in the R workspace is cleared as well.
 
-As a workaround, avoid indiscriminate clearing of variables and other objects while you're running R in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Although clearing the workspace is common when working in the R console, it can have unintended consequences.
+As a workaround, avoid indiscriminate clearing of variables and other objects while you're running R in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Although clearing the workspace is common when working in the R console, it can have unintended consequences.
 
 + To delete specific variables, use the R `remove` function: for example, `remove('name1', 'name2', ...)`
 + If there are multiple variables to delete, save the names of temporary variables to a list and perform periodic garbage collection.
@@ -354,9 +354,9 @@ As a workaround, avoid indiscriminate clearing of variables and other objects wh
 
 You cannot use in an R script the following types of query results:
 
-- Data from a [!INCLUDE[tsql](../includes/tsql-md.md)] query that references AlwaysEncrypted columns.
+- Data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query that references AlwaysEncrypted columns.
   
-- Data from a [!INCLUDE[tsql](../includes/tsql-md.md)] query that references masked columns.
+- Data from a [!INCLUDE[tsql](../../includes/tsql-md.md)] query that references masked columns.
   
      If you need to use masked data in an R script, a possible workaround is to make a copy of the data in a temporary table and use that data instead.
 
@@ -368,7 +368,7 @@ Although the issue is not specific to SQL Server, it can greatly affect performa
 
 If you do not absolutely require a string data type for other operations, mapping the string values to a numeric (integer) data type as part of data preparation would be beneficial from a performance and scale perspective.
 
-For a discussion of this issue, and other tips, see [Performance for R Services - data optimization](r/r-and-data-optimization-r-services.md).
+For a discussion of this issue, and other tips, see [Performance for R Services - data optimization](../r/r-and-data-optimization-r-services.md).
 
 ### 10. Arguments *varsToKeep* and *varsToDrop* are not supported for SQL Server data sources
 
@@ -378,13 +378,13 @@ When you use the rxDataStep function to write results to a table, using the *var
 
 Not all data types that are supported in SQL can be used in R. As a workaround, consider casting the unsupported data type to a supported data type before passing the data to sp\_execute\_external\_script.
 
-For more information, see [R libraries and data types](r/r-libraries-and-data-types.md).
+For more information, see [R libraries and data types](../r/r-libraries-and-data-types.md).
 
 ### 12. Possible string corruption using unicode strings in varchar columns
 
-Passing unicode data in varchar columns from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to R/Python can result in string corruption. This is due to the encoding for these unicode string in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] collations   may not match with the default UTF-8 encoding used in R/Python. 
+Passing unicode data in varchar columns from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to R/Python can result in string corruption. This is due to the encoding for these unicode string in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collations   may not match with the default UTF-8 encoding used in R/Python. 
 
-To send any non-ASCII string data from [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to R/Python, use UTF-8 encoding (available in [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]) or use nvarchar type for the same.
+To send any non-ASCII string data from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to R/Python, use UTF-8 encoding (available in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) or use nvarchar type for the same.
 
 ### 13. Only one value of type `raw` can be returned from `sp_execute_external_script`
 
@@ -392,13 +392,13 @@ When a binary data type (the R **raw** data type) is returned from R, the value 
 
 With data types other than **raw**, you can return parameter values along with the results of the stored procedure by adding the OUTPUT keyword. For more information, see [Parameters](https://docs.microsoft.com/sql/relational-databases/stored-procedures/parameters).
 
-If you want to use multiple output sets that include values of type **raw**, one possible workaround is to do multiple calls of the stored procedure, or to send the result sets back to [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] by using ODBC.
+If you want to use multiple output sets that include values of type **raw**, one possible workaround is to do multiple calls of the stored procedure, or to send the result sets back to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using ODBC.
 
 ### 14. Loss of precision
 
-Because [!INCLUDE[tsql](../includes/tsql-md.md)] and R support various data types, numeric data types can suffer loss of precision during conversion.
+Because [!INCLUDE[tsql](../../includes/tsql-md.md)] and R support various data types, numeric data types can suffer loss of precision during conversion.
 
-For more information about implicit data-type conversion, see [R libraries and data types](r/r-libraries-and-data-types.md).
+For more information about implicit data-type conversion, see [R libraries and data types](../r/r-libraries-and-data-types.md).
 
 ### 15. Variable scoping error when you use the transformFunc parameter
 
@@ -632,7 +632,7 @@ wget 'https://bootstrap.pypa.io/get-pip.py'
 
 **Recommendation**
 
-See [Install Python packages with sqlmlutils](package-management/install-additional-python-packages-on-sql-server.md).
+See [Install Python packages with sqlmlutils](../package-management/install-additional-python-packages-on-sql-server.md).
 
 **Applies to:** SQL Server 2019 on Linux
 
@@ -712,7 +712,7 @@ sudo cp /opt/mssql/lib/libc++abi.so.1 /opt/mssql-extensibility/lib/
 
 ### 9. Cannot install **tensorflow** package using **sqlmlutils**
 
-The [sqlmlutils package](package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) is used to install Python packages in SQL Server 2019. However, the package **tensorflow** cannot be installed using sqlmlutils. The tensorflow package depends on a newer version of numpy than the version installed in SQL Server. However, numpy is a preinstalled system package that sqlmlutils cannot update when trying to install tensorflow.
+The [sqlmlutils package](../package-management/install-additional-python-packages-on-sql-server.md?view=sql-server-ver15) is used to install Python packages in SQL Server 2019. However, the package **tensorflow** cannot be installed using sqlmlutils. The tensorflow package depends on a newer version of numpy than the version installed in SQL Server. However, numpy is a preinstalled system package that sqlmlutils cannot update when trying to install tensorflow.
 
 **Workaround**
 
@@ -728,19 +728,19 @@ Using a command prompt in administrator mode, run the following command, replaci
 
 ## Revolution R Enterprise and Microsoft R Open
 
-This section lists issues specific to R connectivity, development, and performance tools that are provided by Revolution Analytics. These tools were provided in earlier pre-release versions of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)].
+This section lists issues specific to R connectivity, development, and performance tools that are provided by Revolution Analytics. These tools were provided in earlier pre-release versions of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 In general, we recommend that you uninstall these previous versions and install the latest version of SQL Server or Microsoft R Server.
 
 ### 1. Revolution R Enterprise is not supported
 
-Installing Revolution R Enterprise side by side with any version of [!INCLUDE[rsql_productname_md](../includes/rsql-productname-md.md)] is not supported.
+Installing Revolution R Enterprise side by side with any version of [!INCLUDE[rsql_productname_md](../../includes/rsql-productname-md.md)] is not supported.
 
-If you have an existing license for Revolution R Enterprise, you must put it on a separate computer from both the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance and any workstation that you want to use to connect to the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance.
+If you have an existing license for Revolution R Enterprise, you must put it on a separate computer from both the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance and any workstation that you want to use to connect to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.
 
-Some pre-release versions of [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)] included an R development environment for Windows that was created by Revolution Analytics. This tool is no longer provided, and is not supported.
+Some pre-release versions of [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] included an R development environment for Windows that was created by Revolution Analytics. This tool is no longer provided, and is not supported.
 
-For compatibility with [!INCLUDE[rsql_productname](../includes/rsql-productname-md.md)], we recommend that you install Microsoft R Client instead. [R Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019) and [Visual Studio Code](https://code.visualstudio.com/) also supports Microsoft R solutions.
+For compatibility with [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)], we recommend that you install Microsoft R Client instead. [R Tools for Visual Studio](https://marketplace.visualstudio.com/items?itemName=MikhailArkhipov007.RTVS2019) and [Visual Studio Code](https://code.visualstudio.com/) also supports Microsoft R solutions.
 
 ### 2. Compatibility issues with SQLite ODBC driver and RevoScaleR
 

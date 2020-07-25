@@ -90,7 +90,7 @@ The following algorithms are supported in revoscalepy and RevoScaleR.
   + [rxDtree](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdtree)
   + [rxDForest](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdforest)
 
-If you need to use an algorithms from MicrosoftML or microsoftml, use [real-time scoring with sp_rxPredict](../real-time-scoring.md).
+If you need to use an algorithms from MicrosoftML or microsoftml, use [real-time scoring with sp_rxPredict](../predictions/real-time-scoring.md).
 
 Unsupported model types include the following types:
 

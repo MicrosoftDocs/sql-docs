@@ -1,5 +1,5 @@
 ---
-title: "Retrieve Rows Using Bookmarks (OLE DB) | Microsoft Docs"
+title: Retrieve rows using bookmarks (OLE DB driver)
 description: "Retrieve rows using bookmarks (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

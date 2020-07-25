@@ -1,6 +1,6 @@
 ---
 title: Integrated terminal
-description: Learn about the Integrated terminal in Azure Data Studio.
+description: Learn how to open a terminal that is integrated into Azure Data Studio. An integrated terminal can be more convenient than a separate one.
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: azure-data-studio

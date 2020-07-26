@@ -1,5 +1,6 @@
 ---
 title: "Data Types (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn about how Extended Stored Procedure API data types can be expanded by including the Srv.h header file in your program.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql

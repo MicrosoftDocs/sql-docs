@@ -1,5 +1,6 @@
 ---
 title: "srv_pfield (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_pfield in the Extended Stored Procedure API returns information about a database connection.  
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

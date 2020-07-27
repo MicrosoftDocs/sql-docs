@@ -188,9 +188,8 @@ FOR
   
 ##  <a name="reltasks"></a> Related Tasks  
   
-|||  
-|-|-|  
-|**Task**|**Topic**|  
+| Task | Topic |
+| ---- | ----- |
 |Specify the node paths that you want to index and optional optimization hints when you create or alter a selective XML index.|[Specify Paths and Optimization Hints for Selective XML Indexes](../../relational-databases/xml/specify-paths-and-optimization-hints-for-selective-xml-indexes.md)|  
 |Create, alter, or drop a selective XML index.|[Create, Alter, and Drop Selective XML Indexes](../../relational-databases/xml/create-alter-and-drop-selective-xml-indexes.md)|  
 |Create, alter, or drop a secondary selective XML index.|[Create, Alter, and Drop Secondary Selective XML Indexes](../../relational-databases/xml/create-alter-and-drop-secondary-selective-xml-indexes.md)|  

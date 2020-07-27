@@ -103,19 +103,67 @@ In addition to the SET options and deterministic function requirements, the foll
 - The view must reference only base tables that are in the same database as the view. The view cannot reference other views.
 - The SELECT statement in the view definition must not contain the following Transact-SQL elements:
 
-   ||||
-   |-|-|-|
-   |`COUNT`|ROWSET functions (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET`, AND `OPENXML`)|`OUTER` joins (`LEFT`, `RIGHT`, or `FULL`)|
-   |Derived table (defined by specifying a `SELECT` statement in the `FROM` clause)|Self-joins|Specifying columns by using `SELECT *` or `SELECT <table_name>.*`|
-   |`DISTINCT`|`STDEV`, `STDEVP`, `VAR`, `VARP`, or `AVG`|Common table expression (CTE)|
-   |**float**<sup>1</sup>, **text**, **ntext**, **image**, **XML**, or **filestream** columns|Subquery|`OVER` clause, which includes ranking or aggregate window functions|
-   |Full-text predicates (`CONTAINS`, `FREETEXT`)|`SUM` function that references a nullable expression|`ORDER BY`|
-   |CLR user-defined aggregate function|`TOP`|`CUBE`, `ROLLUP`, or `GROUPING SETS` operators|
-   |`MIN`, `MAX`|`UNION`, `EXCEPT`, or `INTERSECT` operators|`TABLESAMPLE`|
-   |Table variables|`OUTER APPLY` or `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
-   |Sparse column sets|Inline (TVF) or multi-statement table-valued functions (MSTVF)|`OFFSET`|
-   |`CHECKSUM_AGG`|||
-   |&nbsp;|&nbsp;|&nbsp;|
+:::row:::
+    :::column:::
+        `COUNT`
+
+        Derived table (defined by specifying a `SELECT` statement in the `FROM` clause)
+
+        `DISTINCT`
+
+        **float**<sup>1</sup>, **text**, **ntext**, **image**, **XML**, or **filestream** columns
+
+        Full-text predicates (`CONTAINS`, `FREETEXT`)
+
+        CLR user-defined aggregate function
+
+        `MIN`, `MAX`
+
+        Table variables
+
+        Sparse column sets
+
+        `CHECKSUM_AGG`
+    :::column-end:::
+    :::column:::
+        ROWSET functions (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET`, AND `OPENXML`)
+
+        Self-joins
+
+        `STDEV`, `STDEVP`, `VAR`, `VARP`, or `AVG`
+
+        Subquery
+
+        `SUM` function that references a nullable expression
+
+        `TOP`
+
+        `UNION`, `EXCEPT`, or `INTERSECT` operators
+
+        `OUTER APPLY` or `CROSS APPLY`
+
+        Inline (TVF) or multi-statement table-valued functions (MSTVF)
+    :::column-end:::
+    :::column:::
+        `OUTER` joins (`LEFT`, `RIGHT`, or `FULL`)
+
+        Specifying columns by using `SELECT *` or `SELECT <table_name>.*`
+
+        Common table expression (CTE)
+
+        `OVER` clause, which includes ranking or aggregate window functions
+
+        `ORDER BY`
+
+        `CUBE`, `ROLLUP`, or `GROUPING SETS` operators
+
+        `TABLESAMPLE`
+
+        `PIVOT`, `UNPIVOT`
+
+        `OFFSET`
+    :::column-end:::
+:::row-end:::
   
     <sup>1</sup> The indexed view can contain **float** columns; however, such columns cannot be included in the clustered index key.
 

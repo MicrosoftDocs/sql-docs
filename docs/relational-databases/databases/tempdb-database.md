@@ -42,7 +42,7 @@ The `tempdb` system database is a global resource that is available to all users
   
 Operations within `tempdb` are minimally logged so that transactions can be rolled back. `tempdb` is re-created every time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started so that the system always starts with a clean copy of the database. Temporary tables and stored procedures are dropped automatically on disconnect, and no connections are active when the system is shut down. Therefore, there is never anything in `tempdb` to be saved from one session of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another. Backup and restore operations are not allowed on `tempdb`.  
 
-## Physical Properties of `tempdb` in SQL Server
+## Physical Properties of tempdb in SQL Server
 
 The following table lists the initial configuration values of the `tempdb` data and log files in SQL Server, which are based on the defaults for the Model database. The sizes of these files may vary slightly for different editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -57,11 +57,11 @@ The following table lists the initial configuration values of the `tempdb` data 
 > [!NOTE]
 > The default value for the number of data files is based on the general guidelines in [KB 2154845](https://support.microsoft.com/kb/2154845/).  
   
-### Moving the `tempdb` data and log files in SQL Server
+### Moving the tempdb data and log files in SQL Server
 
 To move the `tempdb` data and log files, see [Move System Databases](../../relational-databases/databases/move-system-databases.md).  
   
-### Database Options for `tempdb` in SQL Server
+### Database Options for tempdb in SQL Server
 
 The following table lists the default value for each database option in the `tempdb` database and whether the option can be modified. To view the current settings for these options, use the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.  
   
@@ -99,9 +99,9 @@ The following table lists the default value for each database option in the `tem
   
 For a description of these database options, see [ALTER DATABASE SET Options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md).  
   
-## `tempdb` database in SQL Database
+## tempdb database in SQL Database
 
-### `tempdb` sizes for DTU-based service tiers
+### tempdb sizes for DTU-based service tiers
 
 |SLO|Max `tempdb` Data File Size (GBs)|# of `tempdb` data files|Max `tempdb` data size (GB)|
 |---|---:|---:|---:|
@@ -127,7 +127,7 @@ For a description of these database options, see [ALTER DATABASE SET Options (Tr
 |Basic Elastic Pools (all DTU configurations)|13.9|12|166.7|
 ||||
 
-### `tempdb` sizes for vCore-based service tiers
+### tempdb sizes for vCore-based service tiers
 
 See [vCore-based resource limits](https://docs.microsoft.com/azure/sql-database/sql-database-vcore-resource-limits)
 
@@ -155,7 +155,7 @@ The following operations cannot be performed on the `tempdb` database:
 
 Any user can create temporary objects in `tempdb`. Users can only access their own objects, unless they receive additional permissions. It is possible to revoke the connect permission to `tempdb` to prevent a user from using `tempdb`, but is not recommended as some routine operations require the use of `tempdb`.  
 
-## Optimizing `tempdb` performance in SQL Server
+## Optimizing tempdb performance in SQL Server
 The size and physical placement of the `tempdb` database can affect the performance of a system. For example, if the size that is defined for `tempdb` is too small, part of the system-processing load may be taken up with auto growing `tempdb` to the size required to support the workload every time you restart the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 If possible, use [database instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md) to improve the performance of data file grow operations.
@@ -192,7 +192,7 @@ Put the `tempdb` database on a fast I/O subsystem. Use disk striping if there ar
 
 Put the `tempdb` database on disks that differ from those that are used by user databases.
 
-## Performance improvements in `tempdb` for SQL Server
+## Performance improvements in tempdb for SQL Server
 Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], `tempdb` performance is further optimized in the following ways:  
   
 - Temporary tables and table variables are cached. Caching allows operations that drop and create the temporary objects to execute very quickly and reduces page allocation contention.  
@@ -207,7 +207,7 @@ For more information on performance improvements in `tempdb`, see the following 
 
 [TEMPDB - Files and Trace Flags and Updates, Oh My!](https://blogs.msdn.microsoft.com/sql_server_team/tempdb-files-and-trace-flags-and-updates-oh-my/)
 
-## Memory-Optimized `tempdb` Metadata
+## Memory-Optimized tempdb Metadata
 Metadata contention in `tempdb` has historically been a bottleneck to scalability for many workloads running on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] introduces a new feature that is part of the [In-Memory Database](../in-memory-database.md) feature family, memory-optimized tempdb metadata, which effectively removes this bottleneck and unlocks a new level of scalability for tempdb-heavy workloads. In [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the system tables involved in managing temporary table metadata can be moved into latch-free non-durable memory-optimized tables.
 
 Watch this 7-minute video for an overview of how and when to use memory-optimized tempdb metadata:
@@ -260,7 +260,7 @@ SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 
 If the server fails to start for any reason after enabling memory-optimized tempdb metadata, you can bypass the feature by starting the SQL Server with [minimal configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) using the **-f** startup option. This will enable you to disable the feature and then restart SQL Server in normal mode.
 
-## Capacity Planning for `tempdb` in SQL Server
+## Capacity Planning for tempdb in SQL Server
 Determining the appropriate size for `tempdb` in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] production environment depends on many factors. As described previously in this article, these factors include the existing workload and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are used. We recommend that you analyze the existing workload by performing the following tasks in a SQL Server test environment:
 
 - Set autogrow on for `tempdb`.
@@ -268,7 +268,7 @@ Determining the appropriate size for `tempdb` in a [!INCLUDE[ssNoVersion](../../
 - Execute index maintenance operations, such as rebuilding indexes and monitor `tempdb` space.
 - Use the space-use values from the previous steps to predict your total workload usage; adjust this value for projected concurrent activity, and then set the size of `tempdb` accordingly.
 
-## How to Monitor `tempdb` use
+## How to Monitor tempdb use
 Running out of disk space in `tempdb` can cause significant disruptions in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] production environment and can prevent applications that are running from completing operations. You can use the [sys.dm_db_file_space_usage](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md) dynamic management view to monitor the disk space that is used in the TempDB files:
 
 ```sql

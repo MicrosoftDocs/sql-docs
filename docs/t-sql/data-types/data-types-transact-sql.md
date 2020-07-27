@@ -35,13 +35,44 @@ When two expressions that have different data types, collations, precision, scal
 ## Data type categories
 Data types in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are organized into the following categories:
   
-|||  
-|-|-|  
-|Exact numerics|Unicode character strings|  
-|Approximate numerics|Binary strings|  
-|Date and time|Other data types|  
-|Character strings||  
-  
+:::row:::
+    :::column:::
+        Exact numerics
+    :::column-end:::
+    :::column:::
+        Unicode character strings
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Approximate numerics
+    :::column-end:::
+    :::column:::
+        Binary strings
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Date and time
+    :::column-end:::
+    :::column:::
+        Other data types
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Character strings
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+ 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], based on their storage characteristics, some data types are designated as belonging to the following groups:
 -   Large value data types: **varchar(max)**, and **nvarchar(max)**  
 -   Large object data types: **text**, **ntext**, **image**, **varbinary(max)**, and **xml**  
@@ -51,58 +82,218 @@ In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], based on their sto
   
 ### Exact numerics
   
-|||  
-|-|-|  
-|[bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|[numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)|  
-|[bit](../../t-sql/data-types/bit-transact-sql.md)|[smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|  
-|[decimal](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)|[smallmoney](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)|  
-|[int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|[tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)|  
-|[money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)||  
-  
+:::row:::
+    :::column:::
+        [bigint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [numeric](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [bit](../../t-sql/data-types/bit-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [smallint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [decimal](../../t-sql/data-types/decimal-and-numeric-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [smallmoney](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [int](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [tinyint](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [money](../../t-sql/data-types/money-and-smallmoney-transact-sql.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
 ### Approximate numerics
   
-|||  
-|-|-|  
-|[float](../../t-sql/data-types/float-and-real-transact-sql.md)|[real](../../t-sql/data-types/float-and-real-transact-sql.md)|  
-  
+:::row:::
+    :::column:::
+        [float](../../t-sql/data-types/float-and-real-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [real](../../t-sql/data-types/float-and-real-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
 ### Date and time
   
-|||  
-|-|-|  
-|[date](../../t-sql/data-types/date-transact-sql.md)|[datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)|  
-|[datetime2](../../t-sql/data-types/datetime2-transact-sql.md)|[smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)|  
-|[datetime](../../t-sql/data-types/datetime-transact-sql.md)|[time](../../t-sql/data-types/time-transact-sql.md)|  
+:::row:::
+    :::column:::
+        [date](../../t-sql/data-types/date-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [datetimeoffset](../../t-sql/data-types/datetimeoffset-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [datetime2](../../t-sql/data-types/datetime2-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [smalldatetime](../../t-sql/data-types/smalldatetime-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [datetime](../../t-sql/data-types/datetime-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [time](../../t-sql/data-types/time-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
   
 ### Character strings
   
-|||  
-|-|-|  
-|[char](../../t-sql/data-types/char-and-varchar-transact-sql.md)|[varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)|  
-|[text](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
-  
+:::row:::
+    :::column:::
+        [char](../../t-sql/data-types/char-and-varchar-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [varchar](../../t-sql/data-types/char-and-varchar-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [text](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+ 
 ### Unicode character strings
   
-|||  
-|-|-|  
-|[nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)|[nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)|  
-|[ntext](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
+:::row:::
+    :::column:::
+        [nchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [nvarchar](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [ntext](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
   
+
 ### Binary strings
   
-|||  
-|-|-|  
-|[binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|[varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)|  
-|[image](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)||  
-  
+:::row:::
+    :::column:::
+        [binary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [varbinary](../../t-sql/data-types/binary-and-varbinary-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [image](../../t-sql/data-types/ntext-text-and-image-transact-sql.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
 ### Other data types
-  
-|||  
-|-|-|  
-|[cursor](../../t-sql/data-types/cursor-transact-sql.md)|[rowversion](../../t-sql/data-types/rowversion-transact-sql.md)|  
-|[hierarchyid](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)|[uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md)|  
-|[sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)|[xml](../../t-sql/xml/xml-transact-sql.md)|  
-|[Spatial Geometry Types](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md) |[Spatial Geography Types](../../t-sql/spatial-geography/spatial-types-geography.md)|  
-|[table](../../t-sql/data-types/table-transact-sql.md) | |
+
+:::row:::
+    :::column:::
+        [cursor](../../t-sql/data-types/cursor-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [rowversion](../../t-sql/data-types/rowversion-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [hierarchyid](../../t-sql/data-types/hierarchyid-data-type-method-reference.md)
+    :::column-end:::
+    :::column:::
+        [uniqueidentifier](../../t-sql/data-types/uniqueidentifier-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [sql_variant](../../t-sql/data-types/sql-variant-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [xml](../../t-sql/xml/xml-transact-sql.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [Spatial Geometry Types](../../t-sql/spatial-geometry/spatial-types-geometry-transact-sql.md) 
+    :::column-end:::
+    :::column:::
+        [Spatial Geography Types](../../t-sql/spatial-geography/spatial-types-geography.md)
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        [table](../../t-sql/data-types/table-transact-sql.md) 
+    :::column-end:::
+    :::column:::
+         
+    :::column-end:::
+:::row-end:::
+
   
 ## See also
 [CREATE PROCEDURE &#40;Transact-SQL&#41;](../../t-sql/statements/create-procedure-transact-sql.md)  

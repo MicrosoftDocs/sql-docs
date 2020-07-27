@@ -1,5 +1,6 @@
 ---
 title: "Reporting Services Tutorials | Microsoft Docs"
+description: Learn about the capabilities of SQL Server 2016 Reporting Services or later (SSRS), SQL Server Data Tools (SSDT), and Report Builder with sample data.
 ms.date: 11/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

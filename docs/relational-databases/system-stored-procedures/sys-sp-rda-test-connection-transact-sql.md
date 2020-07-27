@@ -1,5 +1,6 @@
 ---
 title: "sys.sp_rda_test_connection (Transact-SQL) | Microsoft Docs"
+description: Learn to use sys.sp_rda_test_connection to test the connection from SQL Server to the remote Azure server and reports problems that may prevent data migration.
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql

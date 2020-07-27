@@ -117,11 +117,20 @@ The following table shows which editions of SQL Server 2019 are compatible with 
 
 Installing SQL Server 2019 on Server Core mode is supported by the following editions of Windows Server:
 
-|                              |
-| :------------------------  |
-| Windows Server 2019 Core | 
-| Windows Server 2016 Core |
-| &nbsp; | 
+:::row:::
+    :::column:::
+        Windows Server 2019 Core
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2016 Core
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md). 
 

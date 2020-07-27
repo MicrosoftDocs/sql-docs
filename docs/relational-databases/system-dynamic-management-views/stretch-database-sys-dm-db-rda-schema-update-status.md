@@ -1,5 +1,6 @@
 ---
 title: "sys.dm_db_rda_schema_update_status (Transact-SQL) | Microsoft Docs"
+description: Learn how sys.dm_db_rda_schema_update_status contains a row for each schema update task for the remote data archive of each Stretch-enabled table in the database.
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql

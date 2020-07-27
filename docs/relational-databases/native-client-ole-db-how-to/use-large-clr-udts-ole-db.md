@@ -12,7 +12,7 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Use Large CLR UDTs (OLE DB)
+# Use Large CLR UDTs  in SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This sample shows how to fetch rows with large user-defined types from a result set. For more information, see [Large CLR User-Defined Types &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/large-clr-user-defined-types-ole-db.md). This sample works with [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] or later.  

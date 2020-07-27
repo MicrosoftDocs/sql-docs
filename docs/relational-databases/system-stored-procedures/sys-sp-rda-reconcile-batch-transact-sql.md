@@ -1,5 +1,6 @@
 ---
 title: "sys.sp_rda_reconcile_batch (Transact-SQL) | Microsoft Docs"
+description: Learn how to use sys.sp_rda_reconcile_batch to reconcile the batch ID in the Stretch-enabled SQL Server table with the batch ID stored in the remote Azure table.
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql

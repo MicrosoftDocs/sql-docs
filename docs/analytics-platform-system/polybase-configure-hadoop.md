@@ -10,7 +10,7 @@ ms.author: murshedz
 ms.reviewer: martinle
 ms.custom: seo-dt-2019, seo-lt-2019
 ---
-# Configure PolyBase to access external data in Hadoop
+# Configure PolyBase in Parallel Data Warehouse to access external data in Hadoop
 
 The article explains how to use PolyBase on an APS appliance to query external data in Hadoop.
 

@@ -51,7 +51,7 @@ The following table lists examples of Object Relational Mapping (ORM) frameworks
 | C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x or later)](https://docs.microsoft.com/ef/) |
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM, included in Laravel install](https://laravel.com/docs/) |
-| Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
+| Node.js | [Sequelize ORM](https://sequelize.org/) |
 | Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
 | &nbsp; | &nbsp; |

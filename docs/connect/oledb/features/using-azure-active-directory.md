@@ -1,7 +1,7 @@
 ---
 title: "Using Azure Active Directory| Microsoft Docs for SQL Server"
 ms.custom: ""
-ms.date: "07/31/2020"
+ms.date: "09/30/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -37,7 +37,7 @@ Version 18.5 adds support for the following authentication method:
 > - Azure Active Directory integrated authentication
 > - Azure Active Directory interactive authentication
 > - Azure Active Directory MSI authentication
-> - Azure Active Directory serviceprincipal authentication
+> - Azure Active Directory service principal authentication
 
 ## Connection string keywords and properties
 The following connection string keywords have been introduced to support Azure Active Directory authentication:
@@ -143,9 +143,9 @@ This section shows examples of new and existing connection string keywords to be
 ### Azure Active Directory service principal authentication
 
 - Using `IDataInitialize::GetDataSource`:
-    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryServicePrincipal**;User ID=[Application (client) ID];Password=[client secret];Use Encryption for Data=true
+    > Provider=MSOLEDBSQL;Data Source=[server];Initial Catalog=[database];**Authentication=ActiveDirectoryServicePrincipal**;User ID=[Application (client) ID];Password=[Application (client) secret];Use Encryption for Data=true
 - Using `DBPROP_INIT_PROVIDERSTRING`:
-    > Server=[server];Database=[database];**Authentication=ActiveDirectoryServicePrincipal**;UID=[Application (client) ID];PWD=[client secret];Encrypt=yes
+    > Server=[server];Database=[database];**Authentication=ActiveDirectoryServicePrincipal**;UID=[Application (client) ID];PWD=[Application (client) secret];Encrypt=yes
 
 ## Code samples
 

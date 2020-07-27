@@ -1,7 +1,7 @@
 ---
 title: MSSQLSERVER_5120
 ms.custom: ""
-ms.date: 07/10/2020
+ms.date: 07/25/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -35,7 +35,7 @@ ms.author: mathoma
   
 ### Access is denied 
 If you are getting the `Access is Denied` operating system error = 5, consider these methods:
-   -  Check the permissions that are set of the file by looking at the properties of the file in Windows Explorer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses Windows groups to provision Access Control on the various file resources. Make sure the appropriate group [with names like SQLServerMSSQLUser$ComputerName$MSSQLSERVER or SQLServerMSSQLUser$ComputerName$InstanceName] has the required permissions on the database file that is mentioned in the error message. Review [Configure File System Permissions for Database Engine Access](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md) for more details. Ensure that the Windows group actually includes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account or the service SID.
+   -  Check the permissions that are set of the file by looking at the properties of the file in Windows Explorer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses Windows groups to provision Access Control on the various file resources. Make sure the appropriate group [with names like SQLServerMSSQLUser$ComputerName$MSSQLSERVER or SQLServerMSSQLUser$ComputerName$InstanceName] has the required permissions on the database file that is mentioned in the error message. Review [Configure File System Permissions for Database Engine Access](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014) for more details. Ensure that the Windows group actually includes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account or the service SID.
    -  Review the user account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is currently running. You can use the Windows Task Manager to get this information. Look for the "User Name" value for the executable "sqlservr.exe". Also if you recently changed the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account, know that the supported way to do this operation is to use the [SQL Server Configuration Manager](../sql-server-configuration-manager.md) utility. 
    -  Depending on the type of operation (opening databases during server startup, attaching a database, database restore, and so on), the account that is used for impersonation and accessing the database file may vary. Review the topic [Securing Data and Log Files](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) to understand which operation sets what permission and to which accounts. Use a tool like Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to understand if the file access is happening under the security context of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance service startup account [or Service SID] or an impersonated account.
 

@@ -154,9 +154,8 @@ GO
  **Indexes that are created when you create a new FileTable**  
  When you create a new FileTable, the following system-defined indexes are also created:  
   
-|||  
+|Columns|Index type|  
 |-|-|  
-|**Columns**|**Index type**|  
 |[path_locator] ASC|Primary Key, nonclustered|  
 |[parent_path_locator] ASC,<br /><br /> [name] ASC|Unique, nonclustered|  
 |[stream_id] ASC|Unique, nonclustered|  

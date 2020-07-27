@@ -1,7 +1,0 @@
-- name: Command Prompt Utility Reference (Database Engine)
-  items:
-  - name: dta Utility +
-    href: dta/dta-utility.md
-  - name: ssbdiagnose Utility (Service Broker) +
-    href: ssbdiagnose/ssbdiagnose-utility-service-broker.md
-  - name: Ssms Utility

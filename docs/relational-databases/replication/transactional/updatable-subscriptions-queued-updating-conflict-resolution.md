@@ -18,7 +18,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Updatable Subscriptions - Queued Updating Conflict Resolution
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Because queued updating subscriptions allow modifications to the same data at multiple locations, there may be conflicts when data is synchronized at the Publisher. Replication detects any conflicts when changes are synchronized with the Publisher and resolves those conflicts using the resolution policy you selected when creating the publication. The following conflicts can occur:  
   
 -   Update and insert conflicts. This conflict happens when the same data is changed at two locations. One change wins, and the other one loses.  

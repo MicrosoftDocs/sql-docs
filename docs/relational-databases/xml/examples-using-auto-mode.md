@@ -15,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Examples: Using AUTO Mode
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The following examples illustrate the use of AUTO mode. Many of these queries are specified against bicycle manufacturing instructions XML documents that are stored in the Instructions column of the ProductModel table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] sample database.  
   
 ## Example: Retrieving customer, order, and order detail information  

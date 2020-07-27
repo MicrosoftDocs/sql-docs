@@ -12,7 +12,7 @@ ms.author: sawinark
 ---
 # Adding Knowledge to a Knowledge Base
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes the ways in which you can add knowledge to a knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Before you can perform data quality operations, you have to have knowledge about the data. You acquire that knowledge by building and maintaining a data quality knowledge base, and adding to it knowledge related to a specific type of data source. The knowledge base is a repository of knowledge about your data that enables you to understand your data and maintain its integrity.  
   

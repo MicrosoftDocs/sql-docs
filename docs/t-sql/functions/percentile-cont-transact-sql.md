@@ -35,7 +35,9 @@ PERCENTILE_CONT ( numeric_literal )
     OVER ( [ <partition_by_clause> ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *numeric_literal*  
  The percentile to compute. The value must range between 0.0 and 1.0.  
   

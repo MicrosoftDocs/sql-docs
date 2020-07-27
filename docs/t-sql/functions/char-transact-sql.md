@@ -24,12 +24,12 @@ helpviewer_keywords:
   - "line feed"
   - "printing ASCII values"
 ms.assetid: 955afe94-539c-465d-af22-16ec45da432a
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHAR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function converts an **int** ASCII code to a character value.
   
@@ -41,7 +41,9 @@ This function converts an **int** ASCII code to a character value.
 CHAR ( integer_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *integer_expression*  
 An integer from 0 through 255. `CHAR` returns a `NULL` value for integer expressions outside this range, or when then integer expresses only the first byte of a double-byte character.
 

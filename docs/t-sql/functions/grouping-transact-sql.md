@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "GROUPING function"
   - "CUBE operator"
 ms.assetid: 4efa3868-1fc4-4626-8fb1-e863cc03e422
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # GROUPING (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -37,7 +37,9 @@ ms.author: jrasnick
 GROUPING ( <column_expression> )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  \<column_expression>  
  Is a column or an expression that contains a column in a [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clause.  
   

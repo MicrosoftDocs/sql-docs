@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # IDENT_SEED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the original seed value specified when creating an identity column in a table or a view. Changing the current value of an identity column by using DBCC CHECKIDENT doesn't change the value returned by this function.  
   
@@ -33,7 +33,9 @@ ms.author: vanto
 IDENT_SEED ( 'table_or_view' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *table_or_view* **'**  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) that specifies the table or view to check for an identity seed value. *table_or_view* can be a character string constant enclosed in quotation marks, a variable, a function, or a column name. *table_or_view* is **char**, **nchar**, **varchar**, or **nvarchar**.  
   

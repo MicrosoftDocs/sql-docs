@@ -11,7 +11,7 @@ ms.author: mikeray
 author: MikeRayMSFT
 ---
 # SQL Server Big Data Clusters partners
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 For support implementing solutions with SQL Server Big Data Clusters, you can work with partners. This article identifies some Microsoft partners with solutions for Big Data Clusters.
 
 ## Our partners

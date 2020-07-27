@@ -18,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Validate Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   In this implementation, the **validate** expression is not supported. The results of XQuery construction expressions are always untyped. If the result of an XQuery expression should be typed, use the SQL CAST expression to cast the result to an **xml** data type with the preferred schema collection.  
   

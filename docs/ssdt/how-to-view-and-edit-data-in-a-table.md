@@ -1,5 +1,6 @@
 ---
 title: View and Edit Data in a Table
+description: Learn how to use Data Editor to view, edit, and delete data in an existing table. See how to view changes in script form and save them to a script file.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -9,7 +10,6 @@ f1_keywords:
 ms.assetid: bb67ce83-a87a-4e14-84cd-9a5930fe74c8
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017

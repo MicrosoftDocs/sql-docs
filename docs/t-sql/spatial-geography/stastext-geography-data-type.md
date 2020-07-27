@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STAsText (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation of a **geography** instance. This text will not contain any Z (elevation) or M (measure) values carried by the instance.  
   
@@ -32,7 +32,9 @@ ms.author: mlandzic
 .STAsText ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **nvarchar(max)**  
   
  CLR return type: **SqlChars**  

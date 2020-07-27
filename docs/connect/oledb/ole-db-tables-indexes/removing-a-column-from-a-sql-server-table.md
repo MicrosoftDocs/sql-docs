@@ -1,5 +1,5 @@
 ---
-title: "Removing a Column from a SQL Server Table | Microsoft Docs"
+title: Remove column from SQL Server table (OLE DB driver)
 description: "Removing a column from a SQL Server table using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"
@@ -17,7 +17,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Removing a Column from a SQL Server Table
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

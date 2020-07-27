@@ -1,5 +1,5 @@
 ---
-title: "char and varchar (Transact-SQL) | Microsoft Docs"
+title: char and varchar (Transact-SQL)
 ms.custom: ""
 ms.date: "11/19/2019"
 ms.prod: sql
@@ -25,9 +25,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # char and varchar (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Character data types that are either fixed-size, **char**, or variable-size, **varchar**. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], when a UTF-8 enabled collation is used, these data types store the full range of [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) character data and use the [UTF-8](https://www.wikipedia.org/wiki/UTF-8) character encoding. If a non-UTF-8 collation is specified, then these data types store only a subset of characters supported by the corresponding code page of that collation.
 

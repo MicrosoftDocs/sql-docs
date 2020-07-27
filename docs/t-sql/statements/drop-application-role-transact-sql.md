@@ -23,7 +23,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DROP APPLICATION ROLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Removes an application role from the current database.  
   
@@ -36,7 +36,9 @@ ms.author: vanto
 DROP APPLICATION ROLE rolename  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *rolename*  
  Specifies the name of the application role to be dropped.  
   

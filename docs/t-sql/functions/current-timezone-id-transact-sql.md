@@ -1,5 +1,5 @@
 ---
-title: "CURRENT_TIMEZONE (Transact-SQL) | Microsoft Docs"
+title: "CURRENT_TIMEZONE_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/18/2020"
 ms.prod: sql
@@ -28,7 +28,7 @@ ms.author: mlandzic
 ---
 # CURRENT_TIMEZONE_ID (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 This function returns the ID of the time zone observed by a server or an instance. For Azure SQL Managed Instance, return value is based on the time zone of the instance itself assigned during instance creation, not the time zone of the underlying operating system.
   

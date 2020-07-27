@@ -2,17 +2,17 @@
 title: Deploy R code in stored procedures
 description: Embed R language code in a SQL Server stored procedure to make it available to any client application having access to a SQL Server database.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 03/15/2019  
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Operationalize R code using stored procedures in SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 When using the R and Python features in SQL Server Machine Learning Services, the most common approach for moving solutions to a production environment is by embedding code in stored procedures. This article summarizes the key points for the SQL developer to consider when operationalizing R code using SQL Server.
 
@@ -41,7 +41,7 @@ Scoring is an important task that can easily be automated, or started from exter
 
 + [Real-time scoring, optimized  for small batches
 + Single-row scoring, for calling from an application
-+ [Native scoring](../sql-native-scoring.md), for fast batch prediction from SQL Server without calling R
++ [Native scoring](../predictions/native-scoring-predict-transact-sql.md), for fast batch prediction from SQL Server without calling R
 
 This walkthrough provides examples of scoring using a stored procedure in both batch and single-row modes:
 

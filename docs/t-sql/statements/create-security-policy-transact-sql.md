@@ -27,7 +27,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CREATE SECURITY POLICY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Creates a security policy for row level security.  
   
@@ -48,8 +48,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
     [ { AFTER { INSERT | UPDATE } }   
     | { BEFORE { UPDATE | DELETE } } ]  
 ```  
-  
-## Arguments  
+
+## Arguments
  *security_policy_name*  
  The name of the security policy. Security policy names must comply with the rules for identifiers and must be unique within the database and to its schema.  
   

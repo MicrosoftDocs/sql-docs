@@ -13,12 +13,11 @@ f1_keywords:
 ms.assetid: 195dda61-308a-4c94-8f57-1fd01ab1e521
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # Post-Save Notifications Dialog Box (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 This dialog box appears when errors are encountered while trying to save changes to a table. This dialog box lists the objects that were successfully saved in the database, the objects that were not saved, and the errors that were encountered.  
   
 ## Options  

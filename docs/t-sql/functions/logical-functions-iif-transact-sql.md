@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "IIF function"
 ms.assetid: e3ccf8ed-1cec-43ac-90b7-d8597c24b050
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # Logical Functions - IIF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns one of two values, depending on whether the Boolean expression evaluates to true or false in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -32,7 +32,9 @@ ms.author: jrasnick
 IIF ( boolean_expression, true_value, false_value )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *boolean_expression*  
  A valid Boolean expression.  
   

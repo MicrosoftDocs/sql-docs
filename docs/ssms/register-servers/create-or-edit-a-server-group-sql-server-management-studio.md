@@ -14,7 +14,6 @@ helpviewer_keywords:
 ms.assetid: d4a942bd-2dd1-42db-ad0e-e9a9ae5b856d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: "mikeray"
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -22,7 +21,7 @@ ms.date: 03/01/2017
 
 # Create or Edit a Server Group (SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This topic describes how to organize the servers in Registered Servers in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by creating server groups, and placing the servers in the server groups. You can create server groups in Registered Servers at any time, or you can create server groups when you register servers.  
 

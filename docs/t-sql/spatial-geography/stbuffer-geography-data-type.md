@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STBuffer (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a geography object that represents the union of all points whose distance from a **geography** instance is less than or equal to a specified value.  
   
@@ -32,7 +32,9 @@ ms.author: mlandzic
 .STBuffer ( distance )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *distance*  
  Is a value of type **float** (**double** in the .NET Framework) specifying the distance from the **geography** instance around which to calculate the buffer.  
   

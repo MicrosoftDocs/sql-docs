@@ -1,5 +1,6 @@
 ---
 title: "Configure the remote login timeout Server Configuration Option | Microsoft Docs"
+description: 'Learn about the "remote login timeout" option. See how it limits the number of seconds that SQL Server allots for connecting to a remote server.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Configure the remote login timeout Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **remote login timeout** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **remote login timeout** option specifies the number of seconds to wait before returning from a failed attempt to log in to a remote server. For example, if you are trying to log in to a remote server and that server is down, **remote login timeout** helps make sure that you do not have to wait indefinitely before your computer stops trying to log in. The default value for this option is 10 seconds. A value of 0 allows for an infinite wait.  
   

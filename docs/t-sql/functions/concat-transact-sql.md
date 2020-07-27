@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CONCAT function"
 ms.assetid: fce5a8d4-283b-4c47-95e5-4946402550d5
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONCAT (Transact-SQL)
@@ -32,7 +32,9 @@ This function returns a string resulting from the concatenation, or joining, of 
 CONCAT ( string_value1, string_value2 [, string_valueN ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *string_value*  
 A string value to concatenate to the other values. The `CONCAT` function requires at least two *string_value* arguments, and no more than 254 *string_value* arguments.
   

@@ -19,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DROP CRYPTOGRAPHIC PROVIDER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a cryptographic provider within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -32,7 +32,9 @@ ms.author: vanto
 DROP CRYPTOGRAPHIC PROVIDER provider_name   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *provider_name*  
  Is the name of the Extensible Key Management provider.  
   

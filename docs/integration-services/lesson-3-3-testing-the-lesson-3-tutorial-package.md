@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 3-3: Test the Lesson 3 tutorial package
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

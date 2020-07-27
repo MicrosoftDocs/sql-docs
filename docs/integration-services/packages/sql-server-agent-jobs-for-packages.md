@@ -1,7 +1,7 @@
 ---
 title: "SQL Server Agent Jobs for Packages | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/04/2018
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ ms.author: chugu
 ---
 # SQL Server Agent Jobs for Packages
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You can automate and schedule the execution of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. You can schedule packages that are deployed to the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] server, and are stored in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store, and the file system.  
@@ -116,25 +116,25 @@ ms.author: chugu
 6.  Select **Integration Services Package** for the job step type.  
   
 7.  In the **Run as** list, select **SQL Server Agent Service Account** or select a proxy account that has the credentials that the job step will use. For information about creating a proxy account, see [Create a SQL Server Agent Proxy](../../ssms/agent/create-a-sql-server-agent-proxy.md).  
-  
-     Using a proxy account instead of the **SQL Server Agent Service Account** may resolve common issues that can occur when executing a package using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. For more information about these issues, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base article, [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](https://support.microsoft.com/kb/918760). 
-     
-  7.1 When running job with a Proxy, one has to have the following security items in place for the job to successfuly run.
 
-      Credential Login used by the Proxy, the account running the SQL Server Agent and the account running the SQL Server Service     require the following permissions:
-Local Security Policy Attribue: Replace a Process Level Token
-Full control over %SYSTEMROOT%\Temp 
-
-Failure to put in the security items will result in the job failing and an error message similar to the following: The job failed.  A required privilege is not held by the client.
+    Using a proxy account instead of the **SQL Server Agent Service Account** may resolve common issues that can occur when executing a package using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent. For more information about these issues, see the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Knowledge Base article, [An SSIS package does not run when you call the SSIS package from a SQL Server Agent job step](https://support.microsoft.com/kb/918760). 
      
-  
-    > **NOTE:** If the password changes for the credential that the proxy account uses, you need to update the credential password. Otherwise, the job step will fail.  
-  
-     For information about configuring the SQL Server Agent service account, see [Set the Service Startup Account for SQL Server Agent &#40;SQL Server Configuration Manager&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
-  
+    - When running job with a Proxy, one has to have the following security items in place for the job to successfuly run.
+
+        Credential Login used by the Proxy, the account running the SQL Server Agent and the account running the SQL Server Service     require the following permissions:
+
+        - Local Security Policy Attribue: Replace a Process Level Token
+        - Full control over %SYSTEMROOT%\Temp 
+
+        Failure to put in the security items will result in the job failing and an error message similar to the following: The job failed. A required privilege is not held by the client.
+
+        > **NOTE:** If the password changes for the credential that the proxy account uses, you need to update the credential password. Otherwise, the job step will fail.  
+
+        For information about configuring the SQL Server Agent service account, see [Set the Service Startup Account for SQL Server Agent &#40;SQL Server Configuration Manager&#41;](https://msdn.microsoft.com/library/46ffe818-ebb5-43a0-840b-923f219a2472).  
+
 8.  In the **Package Source** list box, click the source of the package and then configure the options for the job step.  
   
-     **The following table describes the possible package sources.**  
+    **The following table describes the possible package sources.**  
   
     |Package Source|Description|  
     |--------------------|-----------------|  
@@ -142,12 +142,13 @@ Failure to put in the security items will result in the job failing and an error
     |**SQL Server**|Packages that are stored in the MSDB database. You use the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service to manage these packages.|  
     |**SSIS Package Store**|Packages that are stored in the default folder on your computer. The default folder is *\<drive>*:\Program Files\Microsoft SQL Server\110\DTS\Packages. You use the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service to manage these packages.<br /><br /> Note: You can specify a different folder or specify additional folders in the file system to be managed by the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service, by modifying the configuration file for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. For more information, see [Integration Services Service &#40;SSIS Service&#41;](../../integration-services/service/integration-services-service-ssis-service.md).|  
     |**File System**|Packages that are stored in any folder on your local machine.|  
+    |||
   
-     **The following tables describe the configuration options that are available for the job step depending on the package source you select.**  
+    **The following tables describe the configuration options that are available for the job step depending on the package source you select.**  
   
     > **IMPORTANT:** If the package is password-protected, when you click any of the tabs on the **General** page of the **New Job Step** dialog box, with the exception of the **Package** tab, you need to enter the password in the **Package Password** dialog box that appears. Otherwise the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job will fail to run the package.  
   
-     **Package Source**: SSIS Catalog  
+    **Package Source**: SSIS Catalog  
   
     |Tab|Options|  
     |---------|-------------|  
@@ -185,7 +186,8 @@ Failure to put in the security items will result in the job failing and an error
   
 9. Click **OK** to save the settings and close the **New Job Step** dialog box.  
   
-    > **NOTE:** For packages that are stored in the **SSIS Catalog**, the **OK** button is disabled when there is an unresolved parameter or connection manager property setting. An unresolved setting occurs when you are using a value contained in a server environment variable to set the parameter or property and one of the following conditions is met.:  
+    > [!NOTE]
+    > For packages that are stored in the **SSIS Catalog**, the **OK** button is disabled when there is an unresolved parameter or connection manager property setting. An unresolved setting occurs when you are using a value contained in a server environment variable to set the parameter or property and one of the following conditions is met.:  
     >   
     >  The **Environment** checkbox on the **Configuration** tab is not selected.  
     >   

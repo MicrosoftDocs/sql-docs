@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # IHconstrainttypes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHconstrainttypes** system table contains one row for each type of non-SQL Server constraint supported for non-SQL Server Publishers. This table is stored in the distribution database.  
   

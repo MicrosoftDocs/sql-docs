@@ -1,5 +1,6 @@
 ---
 title: "Subqueries (SQL Server) | Microsoft Docs"
+description: Look at an example of a subquery, which is a query that is nested in a SELECT, INSERT, UPDATE, or DELETE statement, or inside another subquery in SQL Server.
 ms.custom: ""
 ms.date: "02/18/2018"
 ms.prod: sql
@@ -19,7 +20,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 
 # Subqueries (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
  
 A subquery is a query that is nested inside a `SELECT`, `INSERT`, `UPDATE`, or `DELETE` statement, or inside another subquery. A subquery can be used anywhere an expression is allowed. In this example a subquery is used as a column expression named MaxUnitPrice in a SELECT statement.
 

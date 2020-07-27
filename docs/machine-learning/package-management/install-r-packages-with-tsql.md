@@ -2,10 +2,10 @@
 title: Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages
 description: Add new R packages to SQL Server 2016 R Services or SQL Server Machine Learning Services (In-Database).
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/20/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
@@ -13,7 +13,7 @@ monikerRange: "=sql-server-2017||=sqlallproducts-allversions"
 ---
 
 # Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages on SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This article explains how to install new R packages on an instance of SQL Server where machine learning is enabled. There are multiple approaches to choose from. Using T-SQL works best for server administrators who are unfamiliar with R.
 
@@ -44,7 +44,7 @@ Run the T-SQL statement `CREATE EXTERNAL LIBRARY` to upload the zipped package c
 For example, the following statement names as the package source a miniCRAN repository containing the **randomForest** package, together with its dependencies. 
 
 ```sql
-CREATE EXTERNAL LIBRARY randomForest
+CREATE EXTERNAL LIBRARY [randomForest]
 FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
 WITH (LANGUAGE = 'R');
 ```

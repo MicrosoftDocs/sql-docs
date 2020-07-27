@@ -16,7 +16,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STCurveN (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns the curve specified from a **geometry** instance that is a **LineString**, **CircularString**, **CompoundCurve**, or **MultiLineString**.
   
@@ -27,7 +27,9 @@ Returns the curve specified from a **geometry** instance that is a **LineString*
 .STCurveN ( curve_index )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *curve_index*  
  Is an **int** expression between 1 and the number of curves in the **geometry** instance.  
   

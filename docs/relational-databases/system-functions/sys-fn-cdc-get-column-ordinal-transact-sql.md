@@ -22,7 +22,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # sys.fn_cdc_get_column_ordinal (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the column ordinal of the specified column as it appears in the [change table](../../relational-databases/system-tables/cdc-capture-instance-ct-transact-sql.md) associated with the specified capture instance.  
   

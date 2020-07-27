@@ -35,6 +35,10 @@
       href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
     - name: Download Microsoft SqlClient Data Provider for SQL Server
       href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+    - name: "Enable event tracing in SqlClient"
+      href: ../connect/ado-net/enable-eventsource-tracing.md
+    - name: "AppContext switches in SqlClient"
+      href: ../connect/ado-net/appcontext-switches.md
     - name: SqlClient Driver support lifecycle
       href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
     - name: Finding additional SqlClient Driver information
@@ -97,6 +101,8 @@
           href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
         - name: Transaction and bulk copy operations
           href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
+        - name: Order hints for bulk copy operations
+          href: ../connect/ado-net/sql/bulk-copy-order-hints.md
       - name: Multiple Active Result Sets (MARS)
         href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
         items:
@@ -147,7 +153,15 @@
         href: ../connect/ado-net/sql/sqlclient-support-localdb.md
       - name: SqlClient support for Always Encrypted
         href: ../connect/ado-net/sql/sqlclient-support-always-encrypted.md
-
+        items:
+        - name: Develop a .NET application using Always Encrypted with secure enclaves
+          href: ado-net/sql/tutorial-always-encrypted-enclaves-develop-net-apps.md
+        - name: Using Azure Key Vault with Always Encrypted
+          href: ado-net/sql/azure-key-vault-example.md
+        - name: Using Azure Key Vault with Always Encrypted with Secure Enclaves
+          href: ado-net/sql/azure-key-vault-enclave-example.md
+      - name: Data Discovery and Classification in SqlClient
+        href: ../connect/ado-net/sql/data-classification.md
 - name: JDBC
   items:
   - name: Microsoft JDBC Driver for SQL Server
@@ -2637,8 +2651,8 @@
     - name: Using Always Encrypted with the JDBC Driver
       href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
       items:
-      - name: Always Encrypted with secure enclaves
-        href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
+      - name: Using Always Encrypted with secure enclaves with the JDBC Driver
+        href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
     - name: Guide articles
       items:
       - name: Using Statements with SQL
@@ -2802,9 +2816,9 @@
         href: ../connect/odbc/linux-mac/programming-guidelines.md
       - name: Tools
         items:
-        - name: Connecting with bcp.exe
+        - name: Connecting with bcp
           href: ../connect/odbc/linux-mac/connecting-with-bcp.md
-        - name: Connecting with sqlcmd.exe
+        - name: Connecting with sqlcmd
           href: ../connect/odbc/linux-mac/connecting-with-sqlcmd.md
       - name: Using Integrated Authentication
         href: ../connect/odbc/linux-mac/using-integrated-authentication.md
@@ -2848,7 +2862,7 @@
     items:
     - name: Custom Keystore Providers
       href: ../connect/odbc/custom-keystore-providers.md
-    - name: DSN Connection String Keywords and Attributes
+    - name: DSN and Connection String Keywords and Attributes
       href: ../connect/odbc/dsn-connection-string-attribute.md
     - name: Using Always Encrypted
       href: ../connect/odbc/using-always-encrypted-with-the-odbc-driver.md
@@ -5522,7 +5536,7 @@
         href: ../connect/php/how-to-connect-on-a-specified-port.md
       - name: Connection Pooling
         href: ../connect/php/connection-pooling-microsoft-drivers-for-php-for-sql-server.md
-      - name: "How to: Disable Multiple Active Resultsets (MARS)"
+      - name: "How to: Disable Multiple Active Result Sets (MARS)"
         href: ../connect/php/how-to-disable-multiple-active-resultsets-mars.md
       - name: Connection Options
         href: ../connect/php/connection-options.md
@@ -5995,7 +6009,7 @@
         href: ../ado/guide/data/handling-errors-in-vbscript.md
       - name: Handling Errors in Visual C++
         href: ../ado/guide/data/handling-errors-in-visual-c.md
-      - name: Handline Errors in Visual J++
+      - name: Handling Errors in Visual J++
         href: ../ado/guide/data/handline-errors-in-visual-j.md
       - name: Handling Errors in JScript
         href: ../ado/guide/data/handling-errors-in-jscript.md
@@ -6111,7 +6125,7 @@
       href: ../ado/guide/data/streams-and-persistence.md
     - name: Command Streams
       href: ../ado/guide/data/command-streams.md
-    - name: Retrieving Resultsets into Streams
+    - name: Retrieving Result Sets into Streams
       href: ../ado/guide/data/retrieving-resultsets-into-streams.md
     - name: Using ADO for Internet Publishing
       href: ../ado/guide/data/using-ado-for-internet-publishing.md

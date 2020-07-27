@@ -12,7 +12,7 @@ ms.technology: big-data-cluster
 
 # Manage big data cluster access in Active Directory mode
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes how to update the Active Directory groups that are provided during deployment for clusterAdmins and clusterUsers.
 

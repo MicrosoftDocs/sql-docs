@@ -1,5 +1,6 @@
 ---
 title: "Analysis Server Properties (Log On Tab)"
+description: Learn about the Log On tab of the Analysis Server Properties dialog box. See how to use it to specify the SSAS service account and start or stop the service.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Analysis Server Properties (Log On Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Use the **Log On** tab of the **Analysis Server Properties** dialog box to specify the account used by the [!INCLUDE[ssAS](../../includes/ssas-md.md)] service, and to start and stop the service.  
   
 > [!NOTE]  

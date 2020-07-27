@@ -1,12 +1,12 @@
 ---
 title: Customize Database Deployments Using Deployment Contributors
+description: Learn how to modify the behavior of database projects. View resources on build and deployment contributors, and see examples of scenarios that use them.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017

@@ -59,6 +59,8 @@ By default, the **OPENJSON** table-valued function returns three columns, which 
 
 *with_clause* contains a list of columns with their types for **OPENJSON** to return. By default, **OPENJSON** matches keys in *jsonExpression* with the column names in *with_clause* (in this case, matches keys implies that it is case sensitive). If a column name does not match a key name, you can provide an optional *column_path*, which is a [JSON Path Expression](../../relational-databases/json/json-path-expressions-sql-server.md) that references a key within the *jsonExpression*. 
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 ### *jsonExpression*
@@ -397,8 +399,8 @@ CROSS APPLY OPENJSON ( root.value) AS TheValues
 
 ## See also
 
- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [Convert JSON Data to Rows and Columns with OPENJSON &#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   
- [Use OPENJSON with the Default Schema &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md)   
- [Use OPENJSON with an Explicit Schema &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  
+- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [Convert JSON Data to Rows and Columns with OPENJSON &#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   
+- [Use OPENJSON with the Default Schema &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md)   
+- [Use OPENJSON with an Explicit Schema &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  
   

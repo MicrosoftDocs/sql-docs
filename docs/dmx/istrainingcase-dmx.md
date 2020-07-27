@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # IsTrainingCase (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Indicates whether a case is used as a training case for the specified data mining model or mining structure.  
   

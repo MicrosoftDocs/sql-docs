@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Long (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   The longitude property of the **geography** instance.  
   
@@ -29,7 +29,9 @@ ms.author: mlandzic
   
 .Long  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return Value  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type: **float**  
   

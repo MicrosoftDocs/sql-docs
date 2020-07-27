@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STSymDifference (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns an object that represents all points that are either in one **geography** instance or another **geography** instance, but not those points that lie in both instances.  
   
@@ -30,7 +30,9 @@ ms.author: mlandzic
 .STSymDifference ( other_geography )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geography*  
  Is another **geography** instance in addition to the instance on which STSymDistance() is being invoked.  
   

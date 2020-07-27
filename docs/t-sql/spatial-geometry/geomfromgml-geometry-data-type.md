@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # GeomFromGml (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Construct a **geometry** instance given a representation in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] subset of the Geography Markup Language (GML).
   
@@ -34,7 +34,9 @@ For more information on the Geography Markup Language, see the following Open Ge
 GeomFromGml ( GML_input, SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *GML_input*  
  Is an XML input from which the GML will return a value.  
   

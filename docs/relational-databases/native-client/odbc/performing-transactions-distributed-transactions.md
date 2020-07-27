@@ -1,5 +1,6 @@
 ---
 title: "Create a distributed transactions | Microsoft Docs"
+description: Applications can use MSDTC to extend or distribute a transaction across several instances of SQL Server. A .NET class can also distribute a transaction.
 ms.custom: ""
 ms.date: "05/13/2019"
 ms.prod: sql
@@ -20,7 +21,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Create a distributed transaction
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 <!--
 The following includes .md file is Empty, as of long before 2019/May/13.

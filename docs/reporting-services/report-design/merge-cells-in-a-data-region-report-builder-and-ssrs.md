@@ -1,5 +1,6 @@
 ---
 title: "Merge Cells in a Data Region (Report Builder) | Microsoft Docs"
+description: Discover how to merge cells in a data region to combine cells, improve data region appearance, or provide spanning labels for column and row groups in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

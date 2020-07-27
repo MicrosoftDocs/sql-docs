@@ -49,16 +49,21 @@ Click one of the following tabs for the syntax, arguments, remarks, permissions,
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## Click a product!
-
-In the following row, click whichever product name you are interested in. The click displays different content here, appropriate for whichever product you click:
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||
-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />managed instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
-||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />managed instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -320,7 +325,7 @@ Rollback is controlled by the RESTORE statement through the [ RECOVERY | NORECOV
 Backups of **master**, **model** and **msdb** that were created by using an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be restored by [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].
 
 > [!NOTE]
-> No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup be restored to an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] than the version on which the backup was created.
+> No [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backup can be restored to an earlier version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] than the version on which the backup was created.
 
 Each version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a different default path than earlier versions. Therefore, to restore a database that was created in the default location for earlier version backups, you must use the MOVE option. For information about the new default path, see [File Locations for Default and Named Instances of SQL Server](../../sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md).
 
@@ -724,9 +729,17 @@ RESTORE DATABASE Sales
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||
-> |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />managed instance \*_**|[Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+:::row:::
+    :::column:::
+        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />managed instance \*_**
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -864,9 +877,17 @@ WHERE r.command = 'RESTORE DATABASE'
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> ||||
-> |-|-|-|
-> |[SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)|[SQL Database<br />managed instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_**
+:::row:::
+    :::column:::
+        [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />managed instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Analytics<br />Platform System (PDW) \*_**
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

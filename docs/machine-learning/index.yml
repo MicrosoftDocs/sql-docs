@@ -77,6 +77,10 @@ landingContent:
             url: /azure/azure-sql/managed-instance/machine-learning-services-overview
           - text: Key differences between ML in Azure SQL Managed Instance and SQL Server
             url: /azure/azure-sql/managed-instance/machine-learning-services-differences
+      - linkListType: how-to-guide
+        links:
+          - text: Deploy and make predictions with an ONNX model in Azure SQL Managed Instance
+            url: /azure/azure-sql-edge/deploy-onnx?context=/azure/azure-sql/managed-instance/context/ml-context
 
   - title: Azure SQL Database Edge
     linkLists:
@@ -88,7 +92,6 @@ landingContent:
         links:
           - text: Deploy and make predictions with an ONNX model in SQL Database Edge
             url: /azure/sql-database-edge/deploy-onnx
-
 
   - title: Azure Data Studio ML extension
     linkLists:

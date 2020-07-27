@@ -13,17 +13,17 @@ ms.author: chugu
 ---
 # catalog.delete_environment (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes an environment from a folder in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   
 ## Syntax  
   
 ```sql  
-delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] environment_name  
+catalog.delete_environment [ @folder_name = ] folder_name , [ @environment_name = ] environment_name  
 ```  
   
 ## Arguments  

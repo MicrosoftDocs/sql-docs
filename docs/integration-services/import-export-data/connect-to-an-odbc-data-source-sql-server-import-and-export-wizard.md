@@ -2,7 +2,7 @@
 title: "Connect to an ODBC Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 description: How to configure an ODBC DSN or create an ODBC connection string to use with SQL Server Import and Export Wizard
 ms.custom: ""
-ms.date: "12/31/2019"
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: "vanto"
 ms.technology: integration-services
@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Connect to an ODBC Data Source (SQL Server Import and Export Wizard)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This topic shows you how to connect to an **ODBC** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard.
@@ -87,9 +87,9 @@ If you want to provide your connection information with a connection string, the
 
 This example is going to use the following connection string, which connects to Microsoft SQL Server. The database example that is used is **WideWorldImporters** and we're connecting to the SQL Server on the local machine.
 
-    ```
-    Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
-    ```
+```console
+Driver={ODBC Driver 13 for SQL Server};server=localhost;database=WideWorldImporters;trusted_connection=Yes;
+```
 
 Enter the connection string in the **ConnectionString** field on the **Choose a Data Source** or **Choose a Destination** page. After you enter the connection string, the wizard parses the string and displays the individual properties and their values in the list.
 
@@ -134,7 +134,7 @@ To build and test the connection string for your ODBC driver on your own compute
 
 10. Open the saved file with Notepad or another text editor. Here are the contents of our SQL Server example.
 
-    ```   
+    ```console
     [ODBC]  
     DRIVER=ODBC Driver 13 for SQL Server  
     TrustServerCertificate=No  
@@ -149,9 +149,9 @@ To build and test the connection string for your ODBC driver on your own compute
 
     After you assemble the necessary values from the sample file DSN, you have the following connection string.
     
-        ```
-        DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
-        ```
+    ```console
+    DRIVER=ODBC Driver 13 for SQL Server;SERVER=localhost;DATABASE=WideWorldImporters;Trusted_Connection=Yes
+    ```
 
     You don't typically need all the settings in a DSN created by the ODBC Data Source Administrator to create a connection string that works.  
     -   You always have to specify the ODBC driver.

@@ -1,5 +1,6 @@
 ---
 title: Threads Window
+description: Learn about the Threads window, which displays information about the Database Engine thread being debugged. The information displays only in debug mode.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -17,7 +18,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Transact-SQL Debugger - Threads Window
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The **Threads** window displays information about the [!INCLUDE[ssDE](../../includes/ssde-md.md)] thread that is used by the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor session that is being debugged. You must be in debug mode to display the thread information.  
 

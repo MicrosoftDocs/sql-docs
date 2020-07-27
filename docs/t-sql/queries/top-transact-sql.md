@@ -23,7 +23,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # TOP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Limits the rows returned in a query result set to a specified number of rows or percentage of rows in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. When you use TOP with the ORDER BY clause, the result set is limited to the first *N* number of ordered rows. Otherwise, TOP returns the first *N* number of rows in an undefined order. Use this clause to specify the number of rows returned from a SELECT statement. Or, use TOP to specify the rows affected by an INSERT, UPDATE, MERGE, or DELETE statement.  
   
@@ -49,7 +49,9 @@ Following is syntax for Azure SQL Data Warehouse and Parallel Data Warehouse:
 ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *expression*  
 The numeric expression that specifies the number of rows to be returned. *expression* is implicitly converted to a **float** value if you specify PERCENT. Otherwise, *expression* is converted to **bigint**.  
   

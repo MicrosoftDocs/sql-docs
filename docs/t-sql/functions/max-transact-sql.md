@@ -17,12 +17,12 @@ helpviewer_keywords:
   - "values [SQL Server], maximum"
   - "maximum values [SQL Server]"
 ms.assetid: 9b002b69-ab5e-472d-b12e-dc2fbe35ef42
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # MAX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the maximum value in the expression.  
   
@@ -38,7 +38,9 @@ MAX( [ ALL | DISTINCT ] expression )
 MAX ([ ALL ] expression) OVER ( [ <partition_by_clause> ] [ <order_by_clause> ] )  
 ``` 
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **ALL**  
  Applies the aggregate function to all values. ALL is the default.  
   

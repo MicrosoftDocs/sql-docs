@@ -1,7 +1,7 @@
 ---
 title: "PowerShell: Manage authentication"
+description: Learn how to use SQL Server Authentication rather than Windows Authentication (the default) when connecting to an instance of the Database Engine.
 titleSuffix: SQL Server on Linux
-description: Learn how to use PowerShell to manage Windows and SQL authentication to SQL Server. 
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,7 +13,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # PowerShell: Manage authentication to SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 By default, the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell components use Windows Authentication when connecting to an instance of the [!INCLUDE[ssDE](../includes/ssde-md.md)]. You can use SQL Server Authentication by either defining a PowerShell virtual drive, or by specifying the **-Username** and **-Password** parameters for **Invoke-Sqlcmd**.  
   

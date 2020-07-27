@@ -22,7 +22,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 # File Restores (Full Recovery Model)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic is relevant only for databases that contain multiple files or filegroups under the full or bulk-load recovery model.  
   

@@ -1,5 +1,6 @@
 ---
 title: Specify a Hit Count
+description: Learn how to set a hit count for a breakpoint, so that the debugger won't break at that breakpoint until the hit count is reached.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -19,7 +20,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Specify a Hit Count
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 A breakpoint hit count is a counter that is incremented by the [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger each time the breakpoint is reached. If the specified hit count is reached and any specified breakpoint condition is satisfied, the debugger performs the action specified for the breakpoint.  
 

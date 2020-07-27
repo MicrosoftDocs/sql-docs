@@ -40,7 +40,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # UPDATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Changes existing data in a table or view in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For examples, see [Examples](#UpdateExamples).  
   
@@ -129,7 +129,9 @@ SET { column_name = { expression | NULL } } [ ,...n ]
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH \<common_table_expression>  
  Specifies the temporary named result set or view, also known as common table expression (CTE), defined within the scope of the UPDATE statement. The CTE result set is derived from a simple query and is referenced by UPDATE statement.  
   
@@ -181,7 +183,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  DEFAULT  
  Specifies that the default value defined for the column is to replace the existing value in the column. This can also be used to change the column to NULL if the column has no default and is defined to allow null values.  
   
- { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
+ { **+=** \| **-=** \| **\*=** \| **/=** \| **%=** \| **&=** \| **^=** \| **|=** }  
  Compound assignment operator:  
  +=                       Add and assign  
  -=                        Subtract and assign  

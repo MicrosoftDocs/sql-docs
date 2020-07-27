@@ -13,17 +13,19 @@ ms.author: chugu
 ---
 # catalog.set_worker_agent_property (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Sets the property of a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker.
 
 ## Syntax
 
 ```sql
-catalog.set_worker_agent_property [@WorkerAgentId =] WorkerAgentId, [@PropertyName =] PropertyName, [@PropertyValue =] PropertyValue 
+catalog.set_worker_agent_property [ @WorkerAgentId = ] WorkerAgentId
+    , [ @PropertyName = ] PropertyName
+    , [ @PropertyValue = ] PropertyValue 
 ```
 
 ## Arguments

@@ -14,7 +14,7 @@ author: rothja
 ms.author: jroth
 ---
 # Change Data Capture and Other SQL Server Features
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how the following features interact with change data capture:  
   
 -   [Change tracking](#ChangeTracking)  

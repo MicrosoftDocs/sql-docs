@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # IsValidDetailed (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a message that can help to identify problems with a spatial object that is not valid. When the object is not valid, only the first error is returned. When the object is valid, a value of 24400 is returned.  
   
@@ -30,7 +30,9 @@ ms.author: mlandzic
 .IsValidDetailed()  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **nvarchar(max)**  
   
  CLR return type: **string**  

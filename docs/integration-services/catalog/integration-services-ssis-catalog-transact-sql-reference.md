@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Integration Services (SSIS) Catalog Transact-SQL Reference
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [Views &#40;Integration Services Catalog&#41;](../../integration-services/system-views/views-integration-services-catalog.md)  

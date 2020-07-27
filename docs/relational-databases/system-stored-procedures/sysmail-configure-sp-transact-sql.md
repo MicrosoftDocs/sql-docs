@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sysmail_configure_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes configuration settings for Database Mail. The configuration settings specified with **sysmail_configure_sp** apply to the entire [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
   
@@ -53,9 +53,8 @@ sysmail_configure_sp [ [ @parameter_name = ] 'parameter_name' ]
 ## Remarks  
  Database Mail uses the following parameters:  
   
-||||  
-|-|-|-|  
-|Parameter name|Description|Default Value|  
+| Parameter name | Description | Default value |
+| -------------- | ----------- | ------------- |
 |*AccountRetryAttempts*|The number of times that the external mail process attempts to send the e-mail message using each account in the specified profile.|**1**|  
 |*AccountRetryDelay*|The amount of time, in seconds, for the external mail process to wait between attempts to send a message.|**5000**|  
 |*DatabaseMailExeMinimumLifeTime*|The minimum amount of time, in seconds, that the external mail process remains active. When Database Mail is sending many messages, increase this value to keep Database Mail active and avoid the overhead of frequent starts and stops.|**600**|  

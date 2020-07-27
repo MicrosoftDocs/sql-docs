@@ -3,7 +3,6 @@ title: Use managed backup to Azure"
 description: Learn how to enable SQL Server Managed Backup to Microsoft Azure at the database and instance level, and enable notifications and monitor backup activity.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
-ms.description: "Enable SQL Server managed backup to Azure"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ""
@@ -16,7 +15,7 @@ ms.author: mikeray
 
 # Enable SQL Server managed backup to Azure
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to enable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] with default settings at both the database and instance level. It also describes how to enable email notifications and how to monitor backup activity.  
   
  This tutorial uses Azure PowerShell. Before starting the tutorial, [download and install Azure PowerShell](https://azure.microsoft.com/documentation/articles/powershell-install-configure/).  
@@ -96,7 +95,7 @@ The output will contain either the URL to the container and/or the SAS token. Th
   
 If the URL is included, separate it from the SAS token at the question mark (do not include the question mark). For example, the previous output would result in the following two values.  
   
-|||  
+|Type|Output|  
 |-|-|  
 |**Container URL**|https://managedbackupstorage.blob.core.windows.net/backupcontainer|  
 |**SAS token**|sv=2014-02-14&sr=c&sig=xM2LXVo1Erqp7LxQ%9BxqK9QC6%5Qabcd%9LKjHGnnmQWEsDf%5Q%se=2015-05-14T14%3B93%4V20X&sp=rwdl|  

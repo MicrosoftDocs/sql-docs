@@ -1,7 +1,7 @@
 ---
 title: "Tutorial: Use Azure Blob storage service with SQL Server 2016"
 ms.custom: seo-dt-2019
-ms.date: 01/10/2019
+ms.date: 07/22/2020
 ms.prod: sql
 ms.technology: 
 ms.prod_service: "database-engine"
@@ -17,7 +17,7 @@ ms.author: mathoma
 ---
 # Tutorial: Use Azure Blob storage service with SQL Server 2016
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 Welcome to the  Working with SQL Server 2016 in Microsoft Azure Blob Storage service tutorial. This tutorial helps you understand how to use the Microsoft Azure Blob storage service for SQL Server data files and SQL Server backups.  
   
 SQL Server integration support for the Microsoft Azure Blob storage service began as a SQL Server 2012 Service Pack 1 CU2 enhancement, and has been enhanced further with SQL Server 2014 and SQL Server 2016. For an overview of the functionality and benefits of using this feature, see [SQL Server Data Files in Microsoft Azure](../relational-databases/databases/sql-server-data-files-in-microsoft-azure.md). For a live demo, see [Demo of Point in Time Restore](https://channel9.msdn.com/Blogs/Windows-Azure/File-Snapshot-Backups-Demo).  
@@ -175,7 +175,7 @@ To create a SQL Server credential, follow these steps:
 In this section, you will back up the AdventureWorks2016 database in your on-premises SQL Server 2016 instance to the Azure container that you created in [Section 1](#1---create-stored-access-policy-and-shared-access-storage).
   
 > [!NOTE]  
-> If you wish to backup a SQL Server 2012 SP1 CU2 or later database or a SQL Server 2014 database to this Azure container, you can use the  deprecated syntax documented [here](https://docs.microsoft.com/sql/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) to backup to URL using the WITH CREDENTIAL syntax.  
+> If you wish to backup a SQL Server 2012 SP1 CU2 or later database or a SQL Server 2014 database to this Azure container, you can use the  deprecated syntax documented [here](/previous-versions/sql/2014/relational-databases/backup-restore/sql-server-backup-to-url?view=sql-server-2014) to backup to URL using the WITH CREDENTIAL syntax.  
   
 To back up a database to Blob storage, follow these steps:  
   

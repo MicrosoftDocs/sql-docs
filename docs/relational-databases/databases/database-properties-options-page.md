@@ -1,5 +1,6 @@
 ---
 title: "Database Properties (Options Page) | Microsoft Docs"
+description: "Learn how to use the Options tab in the Database Properties dialog box to view or modify a database's collation, recovery model, and other settings."
 ms.custom: ""
 ms.date: "08/28/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Database Properties (Options Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use this page to view or modify options for the selected database. For more information about the options available on this page, see [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md) and [ALTER DATABASE SCOPED CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md).  
   

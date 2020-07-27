@@ -20,16 +20,25 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # SQL Server Profiler Stored Procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the following system stored procedures that are used by [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to monitor performance and activity.  
-  
-|||  
-|-|-|  
-|[sp_trace_create](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)|[sp_trace_setfilter](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)|  
-|[sp_trace_generateevent](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)|[sp_trace_setstatus](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)|  
-|[sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)||  
-  
+
+:::row:::
+    :::column:::
+        [sp_trace_create](../../relational-databases/system-stored-procedures/sp-trace-create-transact-sql.md)
+
+        [sp_trace_generateevent](../../relational-databases/system-stored-procedures/sp-trace-generateevent-transact-sql.md)
+
+        [sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sp_trace_setfilter](../../relational-databases/system-stored-procedures/sp-trace-setfilter-transact-sql.md)
+
+        [sp_trace_setstatus](../../relational-databases/system-stored-procedures/sp-trace-setstatus-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+
  For an example of using trace stored procedures, see [Create a Trace &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md).  
   
 ## See Also  

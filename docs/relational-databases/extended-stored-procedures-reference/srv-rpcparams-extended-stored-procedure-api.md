@@ -1,5 +1,6 @@
 ---
 title: "srv_rpcparams (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn about srv_rpcparams and how it can return the number of parameters for the current remote stored procedure.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
@@ -21,7 +22,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # srv_rpcparams (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

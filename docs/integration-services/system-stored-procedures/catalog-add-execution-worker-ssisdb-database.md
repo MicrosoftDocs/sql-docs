@@ -14,17 +14,17 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # catalog.add_execution_worker (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017](../../includes/applies-to-version/sqlserver2017.md)]
 
 Adds a [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] Scale Out Worker to an instance of execution in Scale Out.
 
 ## Syntax
 
 ```sql
-catalog.add_execution_worker [@execution_id = ] execution_id, [@workeragent_id = ] workeragent_id
+catalog.add_execution_worker [ @execution_id = ] execution_id, [ @workeragent_id = ] workeragent_id
 ```
 
 ## Arguments

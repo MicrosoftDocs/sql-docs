@@ -30,7 +30,7 @@ public:
   
 ## Methods  
   
-|||  
+|Method|Description|  
 |-|-|  
 |[GetDataProviderDSO Method](../../../ado/reference/ado-api/getdataproviderdso-method.md)|Retrieves the underlying OLE DB Data Source object from the Shape provider.|  
   

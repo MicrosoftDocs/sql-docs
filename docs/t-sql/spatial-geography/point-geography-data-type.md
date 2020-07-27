@@ -20,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Point (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Constructs a **geography** instance representing a **Point** instance from its latitude and longitude values and a spatial reference ID (SRID).
   
@@ -31,7 +31,9 @@ Constructs a **geography** instance representing a **Point** instance from its l
 Point ( Lat, Long, SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Lat*  
  Is a **float** expression representing the y-coordinate of the **Point** being generated.  
   

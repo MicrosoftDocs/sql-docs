@@ -3,7 +3,7 @@ title: "sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Micros
 ms.custom: ""
 ms.date: "07/24/2019"
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.reviewer: ""
 ms.topic: "language-reference"
 f1_keywords: 
@@ -22,7 +22,7 @@ manager: cgronlun
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # sys.dm_resource_governor_external_resource_pools (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Returns information about the current external resource pool state, the current configuration of resource pools, and resource pool statistics. 
   

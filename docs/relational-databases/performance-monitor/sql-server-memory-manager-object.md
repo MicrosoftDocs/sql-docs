@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Memory Manager Object | Microsoft Docs"
+description: Learn about the Memory Manager object, which provides counters to monitor overall server memory usage in SQL Server. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, Memory Manager Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **Memory Manager** object in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides counters to monitor overall server memory usage. Monitoring overall server memory usage to gauge user activity and resource usage can help you to identify performance bottlenecks. Monitoring the memory used by an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can help determine:  
   
 -   If bottlenecks exist from inadequate physical memory for storing frequently accessed data in cache. If memory is inadequate, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must retrieve the data from disk.  

@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # PWDCOMPARE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Hashes a password and compares the hash to the hash of an existing password. PWDCOMPARE can be used to search for blank [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login passwords or common weak passwords.  
   
@@ -36,7 +36,9 @@ PWDCOMPARE ( 'clear_text_password'
    [ , version ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *clear_text_password* **'**  
  Is the unencrypted password. *clear_text_password* is **sysname** (**nvarchar(128)**).  
   

@@ -16,7 +16,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # WMI Provider for Server Events Classes and Properties
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The following server events make up the programming model for the WMI Provider for Server Events. There are two main categories of events that can be queried by issuing WQL queries against the provider. These are data definition language (DDL) events and trace events. The QUEUE_ACTIVATION and BROKER_QUEUE_DISABLED service broker events can also be queried. Note the inclusive nature of the following tree diagrams. The DDL_ASSEMBLY_EVENTS event, for example, includes any ALTER_ASSEMBLY, CREATE_ASSEMBLY, and DROP_ASSEMBLY event. Similarly, the TRC_FULL_TEXT event includes any FT_CRAWL_ABORTED, FT_CRAWL_STARTED, and FT_CRAWL_STOPPED event. ALL_EVENTS covers all DDL events, trace events, QUEUE_ACTIVATION, and BROKER_QUEUE_DISABLED.  
   
  To learn which properties can be queried from an event or event group, refer to the event schema. By default, the event schema is installed in the following directory: [!INCLUDE[ssInstallPath](../../includes/ssinstallpath-md.md)]Tools\Binn\schemas\sqlserver\2006\11\events\events.xsd.  

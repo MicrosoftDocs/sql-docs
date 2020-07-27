@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Browser Properties (Advanced Tab)"
+description: Learn about the options on the Advanced tab in the SQL Server Browser Properties dialog box, such as the dump directory and the instance ID.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server Browser Properties (Advanced Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser program runs as a service on the server. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser listens for incoming requests for [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources and provides information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances installed on the computer.  
   
 ## Options  

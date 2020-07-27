@@ -1,5 +1,5 @@
 ---
-title: "Initialization and Authorization Properties | Microsoft Docs"
+title: "Initialization and authorization properties (OLE DB driver) | Microsoft Docs"
 description: "Initialization and authorization properties"
 ms.custom: ""
 ms.date: "01/02/2020"
@@ -18,7 +18,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Initialization and Authorization Properties
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -1,5 +1,5 @@
 ---
-title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
+title: CREATE TABLE (Transact-SQL)
 ms.custom: ""
 ms.date: 02/24/2020
 ms.prod: sql
@@ -49,7 +49,7 @@ ms.author: carlrab
 ---
 # CREATE TABLE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -337,6 +337,8 @@ column_name <data_type>
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 *database_name*
@@ -622,7 +624,7 @@ Is the name of the table referenced by the FOREIGN KEY constraint, and the schem
 **(** *ref_column* [ **,**... *n* ] **)**
 Is a column, or list of columns, from the table referenced by the FOREIGN KEY constraint.
 
-ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }
+ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }
 Specifies what action happens to rows in the table created, if those rows have a referential relationship and the referenced row is deleted from the parent table. The default is NO ACTION.
 
 NO ACTION
@@ -647,7 +649,7 @@ If a `DELETE` statement is executed on a row in the **Vendor** table, and an `ON
 
 Conversely, if `NO ACTION` is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the delete action on the **Vendor** row if there is at least one row in the **ProductVendor** table that references it.
 
-ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }
+ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT }
 Specifies what action happens to rows in the table altered when those rows have a referential relationship and the referenced row is updated in the parent table. The default is NO ACTION.
 
 NO ACTION

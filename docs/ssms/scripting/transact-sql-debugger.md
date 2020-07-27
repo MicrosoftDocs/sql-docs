@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL debugger
+description: Learn how to step through code and view the execution state using the Transact-SQL debugger, and how to do various other debugging tasks. 
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -11,13 +12,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 12/04/2019
-monikerRange: ">= sql-server-2014 || = sqlallproducts-allversions" 
+ms.date: 07/22/2020
+monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions" 
 ---
 
 # Transact-SQL debugger
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger helps you find errors in [!INCLUDE[tsql](../../includes/tsql-md.md)] code by investigating the run-time behavior of the code. After you set the [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor window to debug mode, you can pause execution on specific lines of code and inspect information and data that is used by or returned by those [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.
 

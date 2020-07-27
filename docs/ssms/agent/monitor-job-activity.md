@@ -20,12 +20,11 @@ helpviewer_keywords:
 ms.assetid: 71cb432b-631d-4b8b-9965-e731b3d8266d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Monitor Job Activity
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
@@ -56,9 +55,8 @@ You can also view job activity for the current session by using the stored proce
   
 ## Related Tasks  
   
-|||  
-|-|-|  
-|**Description**|**Topic**|  
+|Description|Topic|  
+|-|-|   
 |Describes how to view the runtime state of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs.|[View Job Activity](../../ssms/agent/view-job-activity.md)|  
   
 ## See Also  

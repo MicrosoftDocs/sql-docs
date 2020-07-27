@@ -1,5 +1,6 @@
 ---
 title: Breakpoints Window
+description: Learn how to use the Breakpoints window of the Database Engine Query Editor to manage Transact-SQL debugger breakpoints.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -11,13 +12,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 12/04/2019
-monikerRange: ">= sql-server-2014 || = sqlallproducts-allversions"
+ms.date: 07/22/2020
+monikerRange: ">= sql-server-2016 || = sqlallproducts-allversions"
 ---
 
 # Transact-SQL Debugger - Breakpoints Window
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The **Breakpoints** window lists all the breakpoints that are set in the current [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor. To manage the breakpoints, use the toolbar in the **Breakpoints** window. Breakpoints are locations in the code where execution pauses in debug mode so that you can view debugging data.
 

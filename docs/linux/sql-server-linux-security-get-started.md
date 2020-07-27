@@ -11,7 +11,7 @@ ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ---
 # Walkthrough for the security features of SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 If you are a Linux user who is new to SQL Server, the following tasks walk you through some of the security tasks. These are not unique or specific to Linux, but it helps to give you an idea of areas to investigate further. In each example, a link is provided to the in-depth documentation for that area.
 
@@ -82,7 +82,7 @@ GRANT SELECT ON Object::Sales TO Orders;  
 GRANT UPDATE ON Object::Sales TO Orders;   
 GRANT DELETE ON Object::Sales TO Orders;   
 ALTER ROLE Sales ADD MEMBER Jerry;   
-```   
+```
 
 For more information about the permission system, see [Getting Started with Database Engine Permissions](../relational-databases/security/authentication-access/getting-started-with-database-engine-permissions.md).
 
@@ -102,14 +102,14 @@ GO  
 CREATE USER Manager WITHOUT LOGIN;     
    
 CREATE USER SalesPerson280 WITHOUT LOGIN;    
-```   
+```
 
 Grant read access on the `Sales.SalesOrderHeader` table to both users:    
    
 ```   
 GRANT SELECT ON Sales.SalesOrderHeader TO Manager;      
-GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;    
-```   
+GRANT SELECT ON Sales.SalesOrderHeader TO SalesPerson280;
+```
    
 Create a new schema and inline table-valued function. The function returns 1 when a row in the `SalesPersonID` column matches the ID of a `SalesPerson` login or if the user executing the query is the Manager user.   
    
@@ -124,7 +124,7 @@ AS
    RETURN SELECT 1 AS fn_securitypredicate_result    
 WHERE ('SalesPerson' + CAST(@SalesPersonId as VARCHAR(16)) = USER_NAME())     
     OR (USER_NAME() = 'Manager');    
-```   
+```
 
 Create a security policy adding the function as both a filter and a block predicate on the table:  
 
@@ -250,11 +250,12 @@ For more information about TDE, see [Transparent Data Encryption (TDE)](../relat
 ## Configure backup encryption
 SQL Server has the ability to encrypt the data while creating a backup. By specifying the encryption algorithm and the encryptor (a certificate or asymmetric key) when creating a backup, you can create an encrypted backup file.    
   
-> [!WARNING]  
->  It is very important to back up the certificate or asymmetric key, and preferably to a different location than the backup file it was used to encrypt. Without the certificate or asymmetric key, you cannot restore the backup, rendering the backup file unusable. 
+> [!WARNING]
+> It is very important to back up the certificate or asymmetric key, and preferably to a different location than the backup file it was used to encrypt. Without the certificate or asymmetric key, you cannot restore the backup, rendering the backup file unusable. 
  
  
 The following example creates a certificate, and then creates a backup protected by the certificate.
+
 ```
 USE master;  
 GO  

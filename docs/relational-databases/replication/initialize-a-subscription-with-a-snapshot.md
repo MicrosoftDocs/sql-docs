@@ -16,7 +16,7 @@ monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts
 ---
 # Initialize a Subscription with a Snapshot
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 This article describes the processes that occur when a replication publication is initialized. An initial snapshot is applied to the Subscribers.
 

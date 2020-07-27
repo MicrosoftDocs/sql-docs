@@ -24,7 +24,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # DROP ASSEMBLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes an assembly and all its associated files from the current database. Assemblies are created by using [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md) and modified by using [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md).  
   
@@ -38,7 +38,9 @@ DROP ASSEMBLY [ IF EXISTS ] assembly_name [ ,...n ]
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *IF EXISTS*  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   

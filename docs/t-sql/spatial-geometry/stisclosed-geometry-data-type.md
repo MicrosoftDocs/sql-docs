@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STIsClosed (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns 1 if the start and end points of the given **geometry** instance are the same. Returns 1 for **geometrycollection** types if each contained **geometry** instance is closed. Returns 0 if the instance is not closed.
   
@@ -30,7 +30,9 @@ Returns 1 if the start and end points of the given **geometry** instance are the
 .STIsClosed ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
   
  CLR return type: **SqlBoolean**  

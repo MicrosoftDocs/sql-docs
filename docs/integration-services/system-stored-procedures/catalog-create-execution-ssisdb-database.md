@@ -13,10 +13,10 @@ ms.author: chugu
 ---
 # catalog.create_execution (SSISDB Database)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates an instance of execution in the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] catalog.  
   
@@ -25,14 +25,14 @@ ms.author: chugu
 ## Syntax  
   
 ```sql  
-catalog.create_execution [@folder_name = folder_name  
-     , [@project_name =] project_name  
-     , [@package_name =] package_name  
-  [  , [@reference_id =] reference_id ]  
-  [  , [@use32bitruntime =] use32bitruntime ] 
-  [  , [@runinscaleout =] runinscaleout ]
-  [  , [@useanyworker =] useanyworker ] 
-     , [@execution_id =] execution_id OUTPUT  
+catalog.create_execution [ @folder_name = ] folder_name  
+     , [ @project_name = ] project_name  
+     , [ @package_name = ] package_name  
+  [  , [ @reference_id = ] reference_id ]  
+  [  , [ @use32bitruntime = ] use32bitruntime ] 
+  [  , [ @runinscaleout = ] runinscaleout ]
+  [  , [ @useanyworker = ] useanyworker ] 
+     , [ @execution_id = ] execution_id OUTPUT  
 ```  
   
 ## Arguments  

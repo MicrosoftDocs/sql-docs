@@ -20,7 +20,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC HELP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Returns syntax information for the specified DBCC command.
   
@@ -33,7 +33,9 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *dbcc_statement* | *\@dbcc_statement_var*  
  Is the name of the DBCC command for which to receive syntax information. Provide only the part of the DBCC command that follows DBCC, for example, CHECKDB instead of DBCC CHECKDB.  
   

@@ -23,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # DROP SERVICE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Drops an existing service.  
   
@@ -37,7 +37,9 @@ DROP SERVICE service_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *service_name*  
  The name of the service to drop. Server, database, and schema names cannot be specified.  
   

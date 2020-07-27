@@ -27,7 +27,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC CHECKFILEGROUP (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 Checks the allocation and structural integrity of all tables and indexed views in the specified filegroup of the current database.
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
@@ -52,7 +52,9 @@ DBCC CHECKFILEGROUP
 ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *filegroup_name*  
  Is the name of the filegroup in the current database for which to check table allocation and structural integrity. If not specified, or if 0 is specified, the default is the primary filegroup. Filegroup names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
  *filegroup_name* cannot be a FILESTREAM filegroup.  

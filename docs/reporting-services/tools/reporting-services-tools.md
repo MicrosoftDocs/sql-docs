@@ -1,5 +1,6 @@
 ---
 title: "Reporting Services Tools | Microsoft Docs"
+description: Learn about the tools for development, configuration, administration, and report viewing that are contained in SQL Server Reporting Services.
 ms.date: 06/06/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -9,7 +9,6 @@ f1_keywords:
 ms.assetid: ad0bbf7f-b0de-406a-bd0a-cb779816b101
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,7 +16,7 @@ ms.date: 01/19/2017
 
 # Check Constraint Dialog Box (Visual Database Tools)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This dialog box appears when you right-click a table definition grid in Table Designer and click **Check Constraints**. The dialog box contains a set of properties for non-unique constraints attached to the tables in your database. Properties applying to unique constraints appear in the **Indexes/Keys** dialog box.  
   

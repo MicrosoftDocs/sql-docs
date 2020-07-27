@@ -1,5 +1,6 @@
 ---
 title: "Enable Compression on a Table or Index | Microsoft Docs"
+description: Learn how to enable compression on a table or index in SQL Server by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql  
@@ -26,7 +27,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ---
 # Enable Compression on a Table or Index
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic describes how to enable compression on a table or index in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
@@ -196,7 +197,11 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
      When complete, click **Close**.  
   
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
-  
+
+### SQL Server
+
+In SQL Server, run `sp_estimate_data_compression_savings` and then enable compression on the table or index. See the following sections. 
+
 #### To enable compression on a table  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
@@ -239,7 +244,47 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
   
     ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);  
     GO  
+    ``` 
+    
+### On Azure SQL Database
+
+Azure SQL Database does not support `sp_estimate_data_compression`. The following scripts enable compression without estimating the compression amount. 
+
+#### To enable compression on a table  
+  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  On the Standard bar, click **New Query**.  
+  
+3.  Copy and paste the following example into the query window and click **Execute**. The example enables ROW compression on all partitions in the specified table.  
+  
+    ```sql  
+    USE AdventureWorks2012;  
+    GO  
+
+    ALTER TABLE Production.TransactionHistory REBUILD PARTITION = ALL  
+    WITH (DATA_COMPRESSION = ROW);   
+    GO  
     ```  
+  
+#### To enable compression on an index  
+  
+1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
+  
+2.  On the Standard bar, click **New Query**.  
+  
+3.  Copy and paste the following example into the query window and click **Execute**. The example first queries the `sys.indexes` catalog view to return the name and `index_id` for each index on the `Production.TransactionHistory` table. Finally, the example rebuilds index ID 2 (`IX_TransactionHistory_ProductID`), specifying PAGE compression.  
+  
+    ```sql  
+    USE AdventureWorks2012;   
+    GO  
+    SELECT name, index_id  
+    FROM sys.indexes  
+    WHERE OBJECT_NAME (object_id) = N'TransactionHistory';  
+    
+    ALTER INDEX IX_TransactionHistory_ProductID ON Production.TransactionHistory REBUILD PARTITION = ALL WITH (DATA_COMPRESSION = PAGE);  
+    GO  
+    ``` 
   
  For more information, see [ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md) and [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md).  
   

@@ -1,5 +1,6 @@
 ---
 title: "true Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery function true() that returns the Boolean value True.
 ms.custom: ""
 ms.date: "08/10/2016"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Boolean Constructor Functions - true (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Returns the xs:boolean value True. This is equivalent to `xs:boolean("1")`.  
   

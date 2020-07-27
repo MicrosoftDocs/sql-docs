@@ -18,7 +18,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Configure the Transaction Set Job for an Oracle Publisher
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The **Xactset** job is an Oracle database job created by replication that runs at an Oracle Publisher to create transaction sets when the Log Reader Agent is not connected to the Publisher. You can enable and configure this job from the Distributor programmatically using replication stored procedures. For more information, see [Performance Tuning for Oracle Publishers](../../../relational-databases/replication/non-sql/performance-tuning-for-oracle-publishers.md).  
   
 ### To enable the transaction set job  

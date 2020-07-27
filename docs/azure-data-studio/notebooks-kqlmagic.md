@@ -1,12 +1,12 @@
 ---
-title: Notebooks with KQL (Kusto Query Language) magic in Azure Data Studio
+title: Notebooks with Kqlmagic (Kusto Query Language) in Azure Data Studio
 description: This tutorial shows how you can create and run Kqlmagic in Azure Data Studio.
 author: markingmyname
 ms.author: maghan
 ms.reviewer: jukoesma
 ms.topic: tutorial
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.custom: ""
 ms.date: 04/27/2020
 ---
@@ -163,11 +163,14 @@ Query data using the [render operator](https://docs.microsoft.com/azure/data-exp
    > [!Note]
    > Every time you create a new notebook in Azure Data Studio you must load the Kqlmagic extension.
 
-3. Connect and authenticate
+3. Connect and authenticate.
+
+   First, you must generate an API key for your Application Insights resource. Then, use the Application ID and API key to connect to Application Insights from the notebook:
 
    ```python
    %kql appinsights://appid='DEMO_APP';appkey='DEMO_KEY'
    ```
+
 
 ### Query and visualize for Application Insights
 
@@ -247,5 +250,4 @@ Learn more about notebooks and Kqlmagic:
 - [Extension (Magic) to Jupyter notebook and Jupyter lab, that enable notebook experience working with Kusto, Application Insights, and LogAnalytics data](https://github.com/Microsoft/jupyter-Kqlmagic)
 - [Kqlmagic](https://pypi.org/project/Kqlmagic/)
 - [KustoMagicSamples](https://notebooks.azure.com/RknDzgn/projects/KustoMagicSamples/html/Getting%20Started%20with%20Kqlmagic%20on%20Azure%20Data%20Explorer-Copy.ipynb)
-- [How to use notebooks](notebooks-guidance.md)
-- [How to manage notebooks in Azure Data Studio](notebooks-manage-sql-server.md)
+- [How to use notebooks in Azure Data Studio](notebooks-guidance.md)

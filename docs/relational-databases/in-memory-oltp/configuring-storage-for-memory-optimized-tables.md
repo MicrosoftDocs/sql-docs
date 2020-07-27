@@ -1,5 +1,6 @@
 ---
 title: "Configuring Storage for Memory-Optimized Tables | Microsoft Docs"
+description: Learn how to configure storage capacity and input/output operations per second (IOPS) for memory-optimized tables in SQL Server.
 ms.custom: ""
 ms.date: "1/15/2020"
 ms.prod: sql
@@ -12,7 +13,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # Configuring Storage for Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You need to configure storage capacity and input/output operations per second (IOPS).  
   
 ## Storage Capacity  

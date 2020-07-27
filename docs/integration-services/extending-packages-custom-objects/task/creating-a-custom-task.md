@@ -15,12 +15,12 @@ ms.author: chugu
 ---
 # Creating a Custom Task
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The steps involved in creating a custom task are similar to the steps for creating any other custom object for [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)]:  
   
--   Create a new class that inherits from the base class. For a task, the base class is <xref:Microsoft.SqlServer.Dts.Runtime.Task>.  
+-   Create a new class that inherits from the base class. For a task, the base class is [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task).  
   
 -   Apply the attribute that identifies the type of object to the class. For a task, the attribute is <xref:Microsoft.SqlServer.Dts.Runtime.DtsTaskAttribute>.  
   
@@ -31,7 +31,7 @@ ms.author: chugu
 ## Getting Started with a Custom Task  
   
 ### Creating Projects and Classes  
- Because all managed tasks derive from the <xref:Microsoft.SqlServer.Dts.Runtime.Task> base class, the first step when you create a custom task is to create a class library project in your preferred managed programming language and create a class that inherits from the base class. In this derived class you will override the methods and properties of the base class to implement your custom functionality.  
+ Because all managed tasks derive from the [Microsoft.SqlServer.Dts.Runtime.Task](/dotnet/api/microsoft.sqlserver.dts.runtime.task) base class, the first step when you create a custom task is to create a class library project in your preferred managed programming language and create a class that inherits from the base class. In this derived class you will override the methods and properties of the base class to implement your custom functionality.  
   
  In the same solution, create a second class library project for the custom user interface. A separate assembly for the user interface is recommended for ease of deployment because it allows you to update and redeploy the connection manager or its user interface independently.  
   

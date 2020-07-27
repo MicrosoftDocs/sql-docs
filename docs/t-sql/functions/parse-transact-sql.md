@@ -19,7 +19,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # PARSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the result of an expression, translated to the requested data type in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -32,7 +32,9 @@ ms.author: jrasnick
 PARSE ( string_value AS data_type [ USING culture ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *string_value*  
  **nvarchar**(4000) value representing the formatted value to parse into the specified data type.  
   

@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server from the Installation Wizard (Setup)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 This article explains how to install SQL Server with the Installation Wizard. It applies to [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] and [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
 

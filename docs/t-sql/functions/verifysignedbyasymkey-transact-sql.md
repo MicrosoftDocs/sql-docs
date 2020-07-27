@@ -24,7 +24,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # VERIFYSIGNEDBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Tests whether digitally signed data has been changed since it was signed.  
   
@@ -37,7 +37,9 @@ ms.author: vanto
 VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Asym_Key_ID*  
  Is the ID of an asymmetric key certificate in the database.  
   

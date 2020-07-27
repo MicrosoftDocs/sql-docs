@@ -25,7 +25,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # SET REMOTE_PROC_TRANSACTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Specifies that when a local transaction is active, executing a remote stored procedure starts a [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction managed by [!INCLUDE[msCoName](../../includes/msconame-md.md)] Distributed Transaction Coordinator (MS DTC).  
   
@@ -41,7 +41,9 @@ ms.author: carlrab
 SET REMOTE_PROC_TRANSACTIONS { ON | OFF }   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  ON | OFF  
  When ON, a [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction is started when a remote stored procedure is executed from a local transaction. When OFF, calling remote stored procedures from a local transaction does not start a [!INCLUDE[tsql](../../includes/tsql-md.md)] distributed transaction.  
   

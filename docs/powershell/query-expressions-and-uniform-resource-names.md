@@ -1,5 +1,6 @@
 ---
 title: "Query Expressions and Uniform Resource Names | Microsoft Docs"
+description: Learn about Query Expressions, which enumerate one or more objects in an object model hierarchy, and about Uniform Resource names (URNs), which uniquely identify a single object.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: maghan
 ---
 # Query Expressions and Uniform Resource Names
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object (SMO) models and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell snap-ins use two types of expression strings that are similar to XPath expressions. Query expressions are strings that specify a set of criteria used to enumerate one or more objects in an object model hierarchy. A Uniform Resource Name (URN) is a specific type of query expression string that uniquely identifies a single object.  
 

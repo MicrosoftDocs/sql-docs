@@ -1,5 +1,6 @@
 ---
 title: "Row-Level Security | Microsoft Docs"
+description: Learn how Row-Level Security uses group membership or execution context to control access to rows in a database table in SQL Server.
 ms.custom: ""
 ms.date: "05/14/2019"
 ms.prod: sql
@@ -21,7 +22,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 
 # Row-Level Security
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   ![Row level security graphic](../../relational-databases/security/media/row-level-security-graphic.png "Row level security graphic")  
   

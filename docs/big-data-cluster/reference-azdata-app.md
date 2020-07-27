@@ -5,7 +5,7 @@ description: Reference article for azdata app commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,12 +13,12 @@ ms.technology: big-data-cluster
 
 # azdata app
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following article provides reference for the `app` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md)
+The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
-|     |     |
+| Command | Description |
 | --- | --- |
 [azdata app template](reference-azdata-app-template.md) | Templates.
 [azdata app init](#azdata-app-init) | Kickstart new application skeleton.
@@ -33,10 +33,14 @@ Helps you to kickstart new application skeleton and/or spec files based on runti
 ```bash
 azdata app init [--spec -s] 
                 [--name -n]  
-                [--version -v]  
-                [--template -t]  
-                [--destination -d]  
-                [--url -u]
+                
+[--version -v]  
+                
+[--template -t]  
+                
+[--destination -d]  
+                
+[--url -u]
 ```
 ### Examples
 Scaffold a new application `spec.yaml` only.
@@ -76,13 +80,14 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata app create
 Create an application.
 ```bash
 azdata app create --spec -s 
+                  
 ```
 ### Examples
 Create a new application from a directory containing a valid spec.yaml deployment specification.
@@ -100,7 +105,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata app update
@@ -127,7 +132,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata app list
@@ -162,7 +167,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata app delete
@@ -189,7 +194,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata app run
@@ -197,7 +202,8 @@ Run an application.
 ```bash
 azdata app run --name -n 
                --version -v  
-               [--inputs]
+               
+[--inputs]
 ```
 ### Examples
 Run application with no input parameters.
@@ -228,7 +234,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata app describe
@@ -236,7 +242,8 @@ Describe an application.
 ```bash
 azdata app describe [--spec -s] 
                     [--name -n]  
-                    [--version -v]
+                    
+[--version -v]
 ```
 ### Examples
 Describe the application.
@@ -258,7 +265,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 

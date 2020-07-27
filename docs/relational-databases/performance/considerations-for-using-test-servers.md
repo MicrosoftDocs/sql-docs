@@ -1,5 +1,6 @@
 ---
 title: "Considerations for Using Test Servers | Microsoft Docs"
+description: Learn how to use a test server to tune a database on a production server. This is an important benefit of Database Engine Tuning Advisor.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -20,7 +21,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Considerations for Using Test Servers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Using a test server to tune a database on a production server is an important benefit of [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor. Using this feature, you can offload tuning overhead to a test server without copying the actual data over to the test server from the production server.  
   
 > [!NOTE]  

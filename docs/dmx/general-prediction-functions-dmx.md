@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # General Prediction Functions (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   You can use the **SELECT** statement in Data Mining Extensions (DMX) to create different types of queries. A query can be used to return information about the mining model itself, to make new predictions, or alter the model by training it with new data. [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] provides a variety of specialized functions that control the type of information that is returned in a query. By adding these functions to a DMX query, you can retrieve additional statistics or columns of data. However, each query type and each model type supports certain functions only.  
   

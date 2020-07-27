@@ -2,7 +2,7 @@
 title: "C++ ODBC app accessing a SQL database"
 description: "This C++ sample application demonstrates how to use the ODBC APIs to connect to and access a SQL database."
 ms.custom: ""
-ms.date: "07/08/2019"
+ms.date: "06/19/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -13,7 +13,8 @@ ms.author: v-daenge
 ---
 # C++ ODBC example application accesses a SQL database
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
+
 
 This C++ sample application demonstrates how to use the ODBC APIs to connect to and access a SQL database.
 
@@ -733,208 +734,214 @@ void HandleDiagnosticRecord (SQLHANDLE      hHandle,
 ## C. odbcsql.sln code
 
 ```
-Microsoft Visual Studio Solution File, Format Version 12.00 
-# Visual Studio 11 
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "odbcsql", "odbcsql.vcxproj", "{C5948D2C-C53D-4933-9AC5-48066AD6A560}" 
-EndProject 
-Global 
-    GlobalSection(SolutionConfigurationPlatforms) = preSolution 
-        Debug|Win32 = Debug|Win32 
-        Debug|x64 = Debug|x64 
-        Release|Win32 = Release|Win32 
-        Release|x64 = Release|x64 
-    EndGlobalSection 
-    GlobalSection(ProjectConfigurationPlatforms) = postSolution 
-        {C5948D2C-C53D-4933-9AC5-48066AD6A560}.Debug|Win32.ActiveCfg = Debug|Win32 
-        {C5948D2C-C53D-4933-9AC5-48066AD6A560}.Debug|Win32.Build.0 = Debug|Win32 
-        {C5948D2C-C53D-4933-9AC5-48066AD6A560}.Debug|x64.ActiveCfg = Debug|x64 
-        {C5948D2C-C53D-4933-9AC5-48066AD6A560}.Debug|x64.Build.0 = Debug|x64 
-        {C5948D2C-C53D-4933-9AC5-48066AD6A560}.Release|Win32.ActiveCfg = Release|Win32 
-        {C5948D2C-C53D-4933-9AC5-48066AD6A560}.Release|Win32.Build.0 = Release|Win32 
-        {C5948D2C-C53D-4933-9AC5-48066AD6A560}.Release|x64.ActiveCfg = Release|x64 
-        {C5948D2C-C53D-4933-9AC5-48066AD6A560}.Release|x64.Build.0 = Release|x64 
-    EndGlobalSection 
-    GlobalSection(SolutionProperties) = preSolution 
-        HideSolutionNode = FALSE 
-    EndGlobalSection 
-EndGlobal 
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29230.47
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "odbcsql", "odbcsql.vcxproj", "{C5948D2C-C53D-4933-9AC5-48066AD6A560}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C5948D2C-C53D-4933-9AC5-48066AD6A560}.Debug|x64.ActiveCfg = Debug|x64
+		{C5948D2C-C53D-4933-9AC5-48066AD6A560}.Debug|x64.Build.0 = Debug|x64
+		{C5948D2C-C53D-4933-9AC5-48066AD6A560}.Debug|x86.ActiveCfg = Debug|Win32
+		{C5948D2C-C53D-4933-9AC5-48066AD6A560}.Debug|x86.Build.0 = Debug|Win32
+		{C5948D2C-C53D-4933-9AC5-48066AD6A560}.Release|x64.ActiveCfg = Release|x64
+		{C5948D2C-C53D-4933-9AC5-48066AD6A560}.Release|x64.Build.0 = Release|x64
+		{C5948D2C-C53D-4933-9AC5-48066AD6A560}.Release|x86.ActiveCfg = Release|Win32
+		{C5948D2C-C53D-4933-9AC5-48066AD6A560}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32894C74-C0AE-427F-969B-5F757A98EAFF}
+	EndGlobalSection
+EndGlobal
 ```
 
 ## D. odbcsql.vcxproj code
 
 ```xml
-<?xml version="1.0" encoding="utf-8"?> 
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003"> 
-  <ItemGroup Label="ProjectConfigurations"> 
-    <ProjectConfiguration Include="Debug|Win32"> 
-      <Configuration>Debug</Configuration> 
-      <Platform>Win32</Platform> 
-    </ProjectConfiguration> 
-    <ProjectConfiguration Include="Debug|x64"> 
-      <Configuration>Debug</Configuration> 
-      <Platform>x64</Platform> 
-    </ProjectConfiguration> 
-    <ProjectConfiguration Include="Release|Win32"> 
-      <Configuration>Release</Configuration> 
-      <Platform>Win32</Platform> 
-    </ProjectConfiguration> 
-    <ProjectConfiguration Include="Release|x64"> 
-      <Configuration>Release</Configuration> 
-      <Platform>x64</Platform> 
-    </ProjectConfiguration> 
-  </ItemGroup> 
-  <PropertyGroup Label="Globals"> 
-    <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and '$(VisualStudioVersion)' == ''">$(VCTargetsPath11)</VCTargetsPath> 
-  </PropertyGroup> 
-  <PropertyGroup Label="Globals"> 
-    <ProjectGuid>{C5948D2C-C53D-4933-9AC5-48066AD6A560}</ProjectGuid> 
-    <RootNamespace>odbcsql</RootNamespace> 
-    <Keyword>Win32Proj</Keyword> 
-  </PropertyGroup> 
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" /> 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration"> 
-    <ConfigurationType>Application</ConfigurationType> 
-    <PlatformToolset>v110</PlatformToolset> 
-    <CharacterSet>Unicode</CharacterSet> 
-    <WholeProgramOptimization>true</WholeProgramOptimization> 
-  </PropertyGroup> 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration"> 
-    <ConfigurationType>Application</ConfigurationType> 
-    <PlatformToolset>v110</PlatformToolset> 
-    <CharacterSet>Unicode</CharacterSet> 
-  </PropertyGroup> 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration"> 
-    <ConfigurationType>Application</ConfigurationType> 
-    <PlatformToolset>v110</PlatformToolset> 
-    <CharacterSet>Unicode</CharacterSet> 
-    <WholeProgramOptimization>true</WholeProgramOptimization> 
-  </PropertyGroup> 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration"> 
-    <ConfigurationType>Application</ConfigurationType> 
-    <PlatformToolset>v110</PlatformToolset> 
-    <CharacterSet>Unicode</CharacterSet> 
-  </PropertyGroup> 
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" /> 
-  <ImportGroup Label="ExtensionSettings"> 
-  </ImportGroup> 
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets"> 
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" /> 
-  </ImportGroup> 
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets"> 
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" /> 
-  </ImportGroup> 
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets"> 
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" /> 
-  </ImportGroup> 
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets"> 
-    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" /> 
-  </ImportGroup> 
-  <PropertyGroup Label="UserMacros" /> 
-  <PropertyGroup> 
-    <_ProjectFileVersion>11.0.40930.0</_ProjectFileVersion> 
-  </PropertyGroup> 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> 
-    <OutDir>$(SolutionDir)$(Configuration)\</OutDir> 
-    <IntDir>$(Configuration)\</IntDir> 
-    <LinkIncremental>true</LinkIncremental> 
-  </PropertyGroup> 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"> 
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir> 
-    <IntDir>$(Platform)\$(Configuration)\</IntDir> 
-    <LinkIncremental>true</LinkIncremental> 
-  </PropertyGroup> 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> 
-    <OutDir>$(SolutionDir)$(Configuration)\</OutDir> 
-    <IntDir>$(Configuration)\</IntDir> 
-    <LinkIncremental>false</LinkIncremental> 
-  </PropertyGroup> 
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> 
-    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir> 
-    <IntDir>$(Platform)\$(Configuration)\</IntDir> 
-    <LinkIncremental>false</LinkIncremental> 
-  </PropertyGroup> 
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'"> 
-    <ClCompile> 
-      <Optimization>Disabled</Optimization> 
-      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions> 
-      <MinimalRebuild>true</MinimalRebuild> 
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks> 
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary> 
-      <PrecompiledHeader /> 
-      <WarningLevel>Level4</WarningLevel> 
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat> 
-      <TreatWarningAsError>true</TreatWarningAsError> 
-    </ClCompile> 
-    <Link> 
-      <GenerateDebugInformation>true</GenerateDebugInformation> 
-      <SubSystem>Console</SubSystem> 
-      <TargetMachine>MachineX86</TargetMachine> 
-    </Link> 
-  </ItemDefinitionGroup> 
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'"> 
-    <Midl> 
-      <TargetEnvironment>X64</TargetEnvironment> 
-    </Midl> 
-    <ClCompile> 
-      <Optimization>Disabled</Optimization> 
-      <PreprocessorDefinitions>_WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions> 
-      <MinimalRebuild>true</MinimalRebuild> 
-      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks> 
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary> 
-      <PrecompiledHeader /> 
-      <WarningLevel>Level4</WarningLevel> 
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat> 
-      <TreatWarningAsError>true</TreatWarningAsError> 
-    </ClCompile> 
-    <Link> 
-      <GenerateDebugInformation>true</GenerateDebugInformation> 
-      <SubSystem>Console</SubSystem> 
-      <TargetMachine>MachineX64</TargetMachine> 
-    </Link> 
-  </ItemDefinitionGroup> 
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'"> 
-    <ClCompile> 
-      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions> 
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary> 
-      <PrecompiledHeader /> 
-      <WarningLevel>Level4</WarningLevel> 
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat> 
-      <TreatWarningAsError>true</TreatWarningAsError> 
-    </ClCompile> 
-    <Link> 
-      <GenerateDebugInformation>true</GenerateDebugInformation> 
-      <SubSystem>Console</SubSystem> 
-      <OptimizeReferences>true</OptimizeReferences> 
-      <EnableCOMDATFolding>true</EnableCOMDATFolding> 
-      <TargetMachine>MachineX86</TargetMachine> 
-    </Link> 
-  </ItemDefinitionGroup> 
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'"> 
-    <Midl> 
-      <TargetEnvironment>X64</TargetEnvironment> 
-    </Midl> 
-    <ClCompile> 
-      <PreprocessorDefinitions>_WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions> 
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary> 
-      <PrecompiledHeader /> 
-      <WarningLevel>Level4</WarningLevel> 
-      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat> 
-      <TreatWarningAsError>true</TreatWarningAsError> 
-    </ClCompile> 
-    <Link> 
-      <GenerateDebugInformation>true</GenerateDebugInformation> 
-      <SubSystem>Console</SubSystem> 
-      <OptimizeReferences>true</OptimizeReferences> 
-      <EnableCOMDATFolding>true</EnableCOMDATFolding> 
-      <TargetMachine>MachineX64</TargetMachine> 
-    </Link> 
-  </ItemDefinitionGroup> 
-  <ItemGroup> 
-    <ClCompile Include="odbcsql.cpp" /> 
-  </ItemGroup> 
-  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" /> 
-  <ImportGroup Label="ExtensionTargets"> 
-  </ImportGroup> 
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCTargetsPath Condition="'$(VCTargetsPath11)' != '' and '$(VSVersion)' == '' and '$(VisualStudioVersion)' == ''">$(VCTargetsPath11)</VCTargetsPath>
+  </PropertyGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{C5948D2C-C53D-4933-9AC5-48066AD6A560}</ProjectGuid>
+    <RootNamespace>odbcsql</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v142</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.40930.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>$(SolutionDir)$(Platform)\$(Configuration)\</OutDir>
+    <IntDir>$(Platform)\$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WIN64;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Midl>
+      <TargetEnvironment>X64</TargetEnvironment>
+    </Midl>
+    <ClCompile>
+      <PreprocessorDefinitions>_WIN64;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level4</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <TreatWarningAsError>true</TreatWarningAsError>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="odbcsql.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
 </Project>
 ```
 

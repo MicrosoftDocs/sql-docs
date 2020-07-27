@@ -17,7 +17,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Altering an Assembly
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Assemblies that have been registered in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can be updated from a more recent version using the ALTER ASSEMBLY statement. To update an assembly, use the ALTER ASSEMBLY statement with the following syntax:  
   
 ```  

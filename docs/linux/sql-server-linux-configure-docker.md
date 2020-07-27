@@ -13,7 +13,7 @@ moniker: ">= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allv
 ---
 # Configure SQL Server container images on Docker
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article explains how to configure and use the [mssql-server-linux container image](https://hub.docker.com/_/microsoft-mssql-server) with Docker. 
 
@@ -632,6 +632,14 @@ Add the `MSSQL_DATA_DIR` variable to change your data directory in your `docker 
 
 ```bash
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+
+## <a id="enablesqlagent"></a> Enable SQL Server Agent
+
+Enable SQL Server Agent and it starts automatically with SQL Server
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_AGENT_ENABLED=true" --name sql1 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
 ## <a id="troubleshooting"></a> Troubleshooting

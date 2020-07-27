@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Creating a system-versioned temporal table
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 There are three ways to create a system-versioned temporal table with regards to how the history table is specified:
 
@@ -143,7 +143,7 @@ ALTER TABLE InsurancePolicy
         SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN
             CONSTRAINT DF_SysStart DEFAULT SYSUTCDATETIME()
       , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN
-            CONSTRAINT DF_SysEnd DEFAULT CONVERT(DATETIME2, '9999-12-31 23:59:59'),
+            CONSTRAINT DF_SysEnd DEFAULT CONVERT(DATETIME2, '9999-12-31 23:59:59.9999999'),
         PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);
 GO
 

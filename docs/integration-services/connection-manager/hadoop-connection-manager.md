@@ -1,7 +1,7 @@
 ---
 title: "Hadoop Connection Manager | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/01/2017"
+ms.date: 06/29/2020
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Hadoop Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Hadoop Connection Manager enables a SQL Server Integration Services (SSIS) package to connect to a Hadoop cluster, by using the values you specify for the properties.  
@@ -77,7 +77,7 @@ On the SSIS computer:
 
     The computer must be configured as a member of a workgroup, because a Kerberos realm is different from a Windows domain. Set the Kerberos realm and add a KDC server, as shown in the following example. Replace `REALM.COM` with your own respective realm, as needed.
 
-    ```    
+    ```console
     C:> Ksetup /setdomain REALM.COM`
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     ```
@@ -86,7 +86,7 @@ On the SSIS computer:
 
 2.	Verify the configuration with **Ksetup** command. The output should look like the following sample:
 
-    ```
+    ```console
     C:> Ksetup
     default realm = REALM.COM (external)
     REALM.com:
@@ -108,7 +108,7 @@ On the KDC server:
 
 1.	Edit the KDC configuration in the **krb5.conf** file. Allow KDC to trust the Windows domain by referring to the following configuration template. By default, the configuration is located at **/etc/krb5.conf**.
 
-    ```
+    ```console
     [logging]
     default = FILE:/var/log/krb5libs.log
     kdc = FILE:/var/log/krb5kdc.log
@@ -156,7 +156,7 @@ On the domain controller:
 
 1.	Run the following **Ksetup** commands to add a realm entry:
 
-    ```
+    ```console
     C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
     C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
     ```
@@ -195,10 +195,10 @@ On the gateway computer:
 
 Run the following **Ksetup** commands to add a realm entry.
 
-    ```
-    C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
-    C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
-    ```
+```console
+C:> Ksetup /addkdc REALM.COM <your_kdc_server_address>
+C:> ksetup /addhosttorealmmap HDFS-service-FQDN REALM.COM
+```
 
 ## See also  
  [Hadoop Hive Task](../../integration-services/control-flow/hadoop-hive-task.md)   

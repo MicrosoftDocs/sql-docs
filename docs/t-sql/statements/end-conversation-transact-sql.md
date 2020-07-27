@@ -26,7 +26,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # END CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Ends one side of an existing conversation.  
   
@@ -43,7 +43,9 @@ END CONVERSATION conversation_handle
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *conversation_handle*  
  Is the conversation handle for the conversation to end.  
   

@@ -1,10 +1,9 @@
 ---
 title: Extensibility architecture
-description: This article describes the architecture of the extensibility framework for running an external script, such as R or Python, on SQL server.
+description: This article describes the architecture of the extensibility framework for running an external Python or R script on SQL server Machine Learning Services. The script executes in a language runtime environment as an extension to the core database engine.
 ms.prod: sql
-ms.technology: machine-learning
-
-ms.date: 11/04/2019
+ms.technology: machine-learning-services
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
@@ -14,13 +13,13 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 ---
 
 # Extensibility architecture in SQL Server Machine Learning Services 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-SQL Server has an extensibility framework for running an external script, such as R or Python, on the server. The script executes in a language runtime environment as an extension to the core database engine.
+This article describes the architecture of the extensibility framework for running an external Python or R script on SQL server Machine Learning Services. The script executes in a language runtime environment as an extension to the core database engine.
 
 ## Background
 
-The extensibility framework was introduced in SQL Server 2016 to support the R runtime. SQL Server 2017 and later has support for Python.
+The extensibility framework was introduced in SQL Server 2016 to support the R runtime with [R Services](../r/sql-server-r-services.md). SQL Server 2017 and later has support for Python with [Machine Learning Services](../sql-server-machine-learning-services.md).
 
 The purpose of the extensibility framework is to provide an interface between SQL Server and data science languages such as R and Python. The goal is to reduce friction when moving data science solutions into production, and protecting data exposed during the development process. By executing a trusted scripting language within a secure framework managed by SQL Server, database administrators can maintain security while allowing data scientists access to enterprise data.
 

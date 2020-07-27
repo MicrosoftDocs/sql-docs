@@ -1,5 +1,6 @@
 ---
 title: Toggle a Breakpoint
+description: Learn how to toggle a breakpoint to highlight the associated Transact-SQL statement, and to perform various actions on the statement (such as editing). 
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -15,7 +16,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Toggle a Breakpoint
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The act of setting a breakpoint on a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement is called toggling a breakpoint.  
 

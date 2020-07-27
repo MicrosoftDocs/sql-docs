@@ -13,7 +13,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # SQL Server managed backup to Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] manages and automates SQL Server backups to Microsoft Azure Blob storage. You can choose to allow SQL Server to determine the backup schedule based on the transaction workload of your database. Or you can use advanced options to define a schedule. The retention settings determine how long the backups are stored in Azure Blob storage. [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] supports point in time restore for the retention time period specified.  
   
@@ -45,9 +45,8 @@ ms.author: mikeray
   
  PowerShell cmdlets are also available to configure [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]. SQL Server Management Studio supports restoring backups created by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] by using the **Restore Database** task  
   
-|||  
-|-|-|  
 |System Object|Description|  
+|-|-|  
 |**MSDB**|Stores the metadata, backup history for all the backups created by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_basic (Transact-SQL)](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-basic-transact-sql.md)|Enables [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].|  
 |[managed_backup.sp_backup_config_advanced &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/managed-backup-sp-backup-config-advanced-transact-sql.md)|Configures advanced settings for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)], such as encryption.|  

@@ -1,5 +1,6 @@
 ---
 title: "Manage the Editor and View Mode"
+description: "Learn how to select either of two view modes of SQL Server Management Studio: Tabbed Documents mode and Multiple Document Interface mode. Learn also about split views, word wrap, Virtual Space mode, displaying line numbers, Full Screen mode, and Auto Hide All." 
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -23,7 +24,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Manage the Editor and View Mode
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The Editor gives you a number of ways to control the view of your code.  
   
 ## Changing the View Mode  

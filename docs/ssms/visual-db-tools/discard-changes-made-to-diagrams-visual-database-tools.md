@@ -13,12 +13,11 @@ helpviewer_keywords:
 ms.assetid: a3e8e874-60f2-4d96-ae81-272c8319c3d7
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # Discard Changes Made to Diagrams (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can discard changes in your database diagram that you do not want to save in the database.  
   
 ### To discard pending modifications  

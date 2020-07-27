@@ -1,5 +1,6 @@
 ---
 title: "Encode and Decode SQL Server Identifiers | Microsoft Docs"
+description: Some characters that can appear in SQL Server-delimited identifiers are not supported in Windows PowerShell paths. Learn how to include them by representing them with their hexadecimal values.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -11,7 +12,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Encode and Decode SQL Server Identifiers
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 SQL Server-delimited identifiers sometimes contain characters not supported in Windows PowerShell paths. These characters can be specified by encoding their hexadecimal values.  
 

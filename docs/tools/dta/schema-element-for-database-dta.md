@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: d932e59c-953f-4ab4-934d-b6baf344835c
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -20,7 +19,7 @@ ms.date: 03/01/2017
 
 # Schema Element for Database (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies the schema of the database that you want to tune.  
   

@@ -19,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # IS_OBJECTSIGNED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Indicates whether an object is signed by a specified certificate or asymmetric key.  
   
@@ -34,7 +34,9 @@ IS_OBJECTSIGNED (
   )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'OBJECT'**  
  The type of securable class.  
   

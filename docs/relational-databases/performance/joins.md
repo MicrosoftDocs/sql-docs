@@ -1,5 +1,6 @@
 ---
 title: "Joins (SQL Server) | Microsoft Docs"
+description: Learn about the types of join operations that SQL Server employs. SQL Server supports vertical table partitioning, or columnar storage, using join operations.
 ms.custom: ""
 ms.date: "07/19/2019"
 ms.prod: sql
@@ -19,7 +20,7 @@ ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Joins (SQL Server)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performs sort, intersect, union, and difference operations using in-memory sorting and hash join technology. Using this type of query plan, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports vertical table partitioning, sometimes called columnar storage.   
 
@@ -239,7 +240,7 @@ A few conditions make a logical join eligible for a batch mode Adaptive Join:
 - The database compatibility level is 140 or higher.
 - The query is a `SELECT` statement (data modification statements are currently ineligible).
 - The join is eligible to be executed both by an indexed Nested Loops join or a Hash join physical algorithm.
-- The Hash join uses [Batch mode](../../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) - either through the presence of a Columnstore index in the query overall or a Columnstore indexed table being referenced directly by the join.
+- The Hash join uses Batch mode, enabled through the presence of a Columnstore index in the query overall, a Columnstore indexed table being referenced directly by the join, or through the use of the [Batch Mode on Rowstore feature](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore).
 - The generated alternative solutions of the Nested Loops join and Hash join should have the same first child (outer reference).
 
 ### Adaptive threshold rows

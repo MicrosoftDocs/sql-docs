@@ -19,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Sequence Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supports the XQuery operators that are used to construct, filter, and combine a sequence of items. An item can be an atomic value or a node.  
   

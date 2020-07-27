@@ -1,5 +1,6 @@
 ---
 title: "Server Network Configuration | Microsoft Docs"
+description: Become familiar with SQL Server network configuration tasks. View information on enabling protocols, configuring encryption, registering SPNs, and other actions.
 ms.custom: ""
 ms.date: "07/27/2016"
 ms.prod: sql
@@ -20,7 +21,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Server Network Configuration
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Server network configuration tasks include enabling protocols, modifying the port or pipe used by a protocol, configuring encryption, configuring the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser service, exposing or hiding the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] on the network, and registering the Server Principal Name. Most of the time, you do not have to change the server network configuration. Only reconfigure the server network protocols if special network requirements.  
   
  Network configuration for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is done using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. For earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the Server Network Utility that ships with those products.  

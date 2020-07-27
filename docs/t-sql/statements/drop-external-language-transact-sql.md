@@ -12,8 +12,8 @@ manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
-# DROP EXTERNAL LIBRARY (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# DROP EXTERNAL LANGUAGE (Transact-SQL)  
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 Deletes an existing external language.
 

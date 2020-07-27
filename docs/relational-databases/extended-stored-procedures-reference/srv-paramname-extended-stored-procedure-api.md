@@ -1,5 +1,6 @@
 ---
 title: "srv_paramname (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_paramname in the Extended Stored Procedure API returns the name of a remote stored procedure call parameter.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -21,7 +22,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # srv_paramname (Extended Stored Procedure API)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureDontUse](../../includes/ssnotedepfuturedontuse-md.md)] Use CLR integration instead.  

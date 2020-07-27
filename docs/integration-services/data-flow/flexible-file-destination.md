@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Flexible File Destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 The **Flexible File Destination** component enables an SSIS package to write data to various supported storage services.
 

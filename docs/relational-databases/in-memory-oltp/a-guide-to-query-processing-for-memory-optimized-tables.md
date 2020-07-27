@@ -1,5 +1,6 @@
 ---
 title: "Query processing for memory-optimized tables"
+description: Learn about query processing for both memory-optimized tables and natively compiled stored procedures in In-Memory OLTP in SQL Server.
 ms.custom: seo-dt-2019
 ms.date: "05/09/2019"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # A Guide to Query Processing for Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   In-Memory OLTP introduces memory-optimized tables and natively compiled stored procedures in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This article gives an overview of query processing for both memory-optimized tables and natively compiled stored procedures.  
   

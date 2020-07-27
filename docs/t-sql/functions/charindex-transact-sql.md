@@ -18,12 +18,12 @@ helpviewer_keywords:
   - "pattern searching [SQL Server]"
   - "starting point of expression in character string"
 ms.assetid: 78c10341-8373-4b30-b404-3db20e1a3ac4
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CHARINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function searches for one character expression inside a second character expression, returning the starting position of the first expression if found.
   
@@ -35,7 +35,9 @@ This function searches for one character expression inside a second character ex
 CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *expressionToFind*  
 A character [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing the sequence to find. *expressionToFind* has an 8000 character limit.
   

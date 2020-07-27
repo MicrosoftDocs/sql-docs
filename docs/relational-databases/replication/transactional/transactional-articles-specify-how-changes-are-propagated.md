@@ -16,7 +16,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Transactional Articles - Specify How Changes Are Propagated
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Transactional replication allows you to specify how data changes are propagated from the Publisher to Subscribers. For each published table, you can specify one of four ways that each operation (INSERT, UPDATE, or DELETE) should be propagated to the Subscriber:  
   
 -   Specify that transactional replication should script out and subsequently call a stored procedure to propagate changes to Subscribers (the default).  

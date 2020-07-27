@@ -19,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # REVOKE Object Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revokes permissions on a table, view, table-valued function, stored procedure, extended stored procedure, scalar function, aggregate function, service queue, or synonym. 
   
@@ -49,7 +49,9 @@ REVOKE [ GRANT OPTION FOR ] <permission> [ ,...n ] ON
     | Database_user_with_no_login      
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be revoked on a schema-contained object. For a list of the permissions, see the Remarks section later in this topic.  
   

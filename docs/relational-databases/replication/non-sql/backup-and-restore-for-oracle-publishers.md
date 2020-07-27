@@ -17,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Backup and Restore for Oracle Publishers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Follow these guidelines when backing up and restoring:  
   

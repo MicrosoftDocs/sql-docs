@@ -1,5 +1,6 @@
 ---
 title: "Navigate Code and Text"
+description: "Learn how to navigate through a document with various techniques: set a bookmark for a location to make it easy to return to that location; search incrementally; use mouse and keyboard; and, use the Go To command to go to a line by specifying its line number."
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -23,7 +24,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Navigate Code and Text
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   You can move through text by using:  
   
 -   Bookmarks.  

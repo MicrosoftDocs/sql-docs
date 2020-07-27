@@ -44,7 +44,7 @@ ms.author: chugu
 ---
 # Transformation Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In addition to the properties that are common to most data flow objects in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] object model, many data flow objects have custom properties that are specific to the object. These custom properties are available only at run time, and are not documented in the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed Programming Reference Documentation.  

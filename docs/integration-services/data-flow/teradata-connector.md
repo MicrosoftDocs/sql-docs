@@ -10,8 +10,9 @@ ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
 ---
-# Microsoft connector for Teradata (preview)
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+# Microsoft connector for Teradata
+
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Microsoft connector for Teradata enables to export data from and load data into Teradata databases in an SSIS package.
 
@@ -77,6 +78,16 @@ To execute SSIS package *targeting SQL Server 2017 and below*, you will need to 
 - [SQL Server 2012: Microsoft Connector Version 2.0 for Teradata by Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
 
 To design SSIS package in SSDT *targeting SQL Server 2017 and below*, you will need to have **Microsoft Connector for Teradata** and install **Microsoft Connector for Teradata by Attunity** with corresponding version.
+
+## Limitations and known issues
+
+- Teradata Source/Destination Editor, **Default database** property does not take effective. As work-around, type database name in dropdown box to filter table or view.
+
+- Teradata Source/Destination Editor, Mapping step does not work when type \<database>.<table/view>. As work-around, type \<database>.<table/view>, then click the drop-down button.
+
+- Teradata Source Editor, view cannot be displayed when Data access mode is "Table Name – TPT Export". As work-around, use Advanced Editor of Teradata Source.
+
+- Teradata Destination, attribute ‘PackMaximum’ cannot be set to ‘True’. Otherwise, error will occur.
 
 ## Uninstallation
 

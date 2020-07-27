@@ -1,5 +1,5 @@
 ---
-title: "DBCC CHECKCONSTRAINTS (Transact-SQL) | Microsoft Docs"
+title: DBCC CHECKCONSTRAINTS (Transact-SQL)
 ms.custom: ""
 ms.date: "11/14/2017"
 ms.prod: sql
@@ -24,8 +24,10 @@ ms.assetid: da6c9cee-6687-46e8-b504-738551f9068b
 author: pmasl
 ms.author: umajay
 ---
+
 # DBCC CHECKCONSTRAINTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Checks the integrity of a specified constraint or all constraints on a specified table in the current database.
   
@@ -46,8 +48,10 @@ DBCC CHECKCONSTRAINTS
     ]  
 ```  
   
-## Arguments  
- *table_name* | *table_id* | *constraint_name* | *constraint_id*  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+ *table_name* \| *table_id* \| *constraint_name* \| *constraint_id*  
  Is the table or constraint to be checked. When *table_name* or *table_id* is specified, all enabled constraints on that table are checked. When *constraint_name* or *constraint_id* is specified, only that constraint is checked. If neither a table identifier nor a constraint identifier is specified, all enabled constraints on all tables in the current database are checked.  
  A constraint name uniquely identifies the table to which it belongs. For more information, see [Database Identifiers](../../relational-databases/databases/database-identifiers.md).  
   

@@ -16,7 +16,7 @@ ms.author: "sstein"
 ---
 # master Database
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The **master** database records all the system-level information for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system. This includes instance-wide metadata such as logon accounts, endpoints, linked servers, and system configuration settings. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], system objects are no longer stored in the **master** database; instead, they are stored in the [Resource database](../../relational-databases/databases/resource-database.md). Also, **master** is the database that records the existence of all other databases and the location of those database files and records the initialization information for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Therefore, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot start if the **master** database is unavailable.  
 
 > [!IMPORTANT]
@@ -81,6 +81,7 @@ For a description of these database options, see [ALTER DATABASE &#40;Transact-S
 The following operations cannot be performed on the **master** database:  
   
 - Adding files or filegroups.  
+- Backups, only a full database backup can be performed on the master database.
 - Changing collation. The default collation is the server collation.  
 - Changing the database owner. **master** is owned by **sa**.  
 - Creating a full-text catalog or full-text index.  

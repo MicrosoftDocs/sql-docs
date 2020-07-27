@@ -1,6 +1,7 @@
 ---
 title: "Customize the Parameters Pane in a Report (Report Builder) | Microsoft Docs"
-ms.date: 03/01/2017
+description: Learn how to customize the Parameters pane when creating paginated reports with parameters in Report Builder.
+ms.date: 06/15/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-design
@@ -58,30 +59,30 @@ ms.author: maggies
 
     -   Right click parameter in the **Report Data** pane, and then click **Delete**.
 
-## Hidden/Internal parameters in runtime
-If you have hidden/internal parameters, the logic on whether it'll be rendered as empty space in runtime is as follows:
+## Hidden/Internal parameters during runtime
+If you have a hidden/internal parameter, the logic of whether it will be rendered as empty space during runtime is as follows:
 
-   - If any row or column is full of hidden/internal parameters or empty cell, then it won't be rendered in runtime;
-   - Otherwise, both hidden/internal parameters and empty cell will be rendered as empty space;
+   - If any row or column contains only hidden/internal parameters or empty cells, then the entire row or column won't be rendered during runtime
+   - Otherwise, the hidden/internal parameter or empty cell will be rendered as empty space
 
-For example, `ReportParameter1` is hidden while rests are visible:
+For example, `ReportParameter1` is hidden while the rest of the parameters are visible:
 
 ![Hidden Parameter Example 1](../../reporting-services/report-design/media/ssrs-hidden-parameter-rb-1.png "One hidden parameter in layout grid")
 
-This will result in an empty space in runtime because there are visible parameters in first column or first row:
+This will result as an empty space during runtime because there are visible parameters in first column or first row:
 
 ![Hidden Parameter Example 1 - runtime](../../reporting-services/report-design/media/ssrs-hidden-parameter-server-1.png "One hidden parameter in layout grid result in empty space in runtime")
 
-Now if we change `ReportParameter3` to hidden as well:
+Using the same example, if you also set `ReportParameter3` as hidden:
 
 ![Hidden Parameter Example 2](../../reporting-services/report-design/media/ssrs-hidden-parameter-rb-2.png "Two hidden parameter in same column")
 
-Then the first column is omitted because the whole column is empty:
+Then the first column is not rendered during runtime because the entire column is considered empty:
 
 ![Hidden Parameter Example 2 - runtime](../../reporting-services/report-design/media/ssrs-hidden-parameter-server-2.png "Two hidden parameter in same column in runtime")
 
 ## Default layout
-For those reports that were authored before SSRS 2016 version, a default layout grid of 2 columns and N rows will be used in runtime. To change the layout, simply open the report in latest Report Builder and save back, then a customized layout info will be saved to .rdl file as well.
+For reports that were authored before SQL Server Reporting Services 2016, a default parameter layout grid of 2 columns and N rows will be used during runtime. To change the default layout, open the report in Microsoft Report Builder and save the report. After saving the report, the customized parameter layout information will be saved to the .rdl file.
 
 
 ## See also

@@ -1,5 +1,6 @@
 ---
 title: "Run Transact-SQL Script Files Using sqlcmd"
+description: Learn how to use sqlcmd to run a Transact-SQL script file. It can contain Transact-SQL statements, sqlcmd commands, and scripting variables.
 ms.custom: seo-lt-2019
 ms.date: "07/15/2016"
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sqlcmd - Run Transact-SQL Script Files
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
  Use **sqlcmd** to run a Transact-SQL script file. A Transact-SQL script file is a text file that can contain a combination of Transact-SQL statements, **sqlcmd** commands, and scripting variables.  
 
 ## Create a script file  

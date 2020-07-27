@@ -8,10 +8,10 @@ ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
-monikerRange: "=sql-server-previousversions||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server end of support options 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 This article explains your options for addressing SQL Server products that have reached end of support.
 

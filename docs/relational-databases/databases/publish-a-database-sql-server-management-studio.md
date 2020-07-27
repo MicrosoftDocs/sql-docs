@@ -12,7 +12,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Publish a Database (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You can use the **Generate and Publish Scripts Wizard** to publish an entire database or individual database objects to a Web hosting provider.  
   
 > [!NOTE]  

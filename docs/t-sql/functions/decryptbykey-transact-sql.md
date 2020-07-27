@@ -22,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DECRYPTBYKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function uses a symmetric key to decrypt data.  
   
@@ -36,7 +36,9 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
     [ , add_authenticator, { authenticator | @authenticator } ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *ciphertext*  
 A variable of type **varbinary** containing data encrypted with the key.  
   

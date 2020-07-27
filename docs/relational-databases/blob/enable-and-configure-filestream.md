@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # Enable and configure FILESTREAM
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Before you can start to use FILESTREAM, you must enable FILESTREAM on the instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. This topic describes how to enable FILESTREAM by using SQL Server Configuration Manager.  
   
 ##  <a name="enabling"></a> Enabling FILESTREAM  
@@ -70,9 +70,8 @@ ms.author: mikeray
   
 -   Set up and tune the RAID level for fault tolerance and the performance that is required by an application.  
   
-||||||  
-|-|-|-|-|-|  
 |RAID level|Write performance|Read performance|Fault tolerance|Remarks|  
+|-|-|-|-|-|   
 |RAID 5|Normal|Normal|Excellent|Performance is better than one disk or JBOD; and less than RAID 0 or RAID 5 with striping.|  
 |RAID 0|Excellent|Excellent|None||  
 |RAID 5 + striping|Excellent|Excellent|Excellent|Most expensive option.|  

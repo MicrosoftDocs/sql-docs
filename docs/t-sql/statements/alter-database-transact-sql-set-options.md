@@ -2,7 +2,7 @@
 title: "ALTER DATABASE SET Options (Transact-SQL) | Microsoft Docs"
 description: Learn about how to set database options such as Automatic tuning, encryption, Query Store in SQL Server, and Azure SQL Database.
 ms.custom: ""
-ms.date: 05/27/2020
+ms.date: 06/22/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -45,9 +45,20 @@ In the following row, select whichever product name you're interested in. Doing 
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-> |||||
-> |---|---|---|---|
-> |**_\* SQL Server \*_** &nbsp;|[SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)|||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -730,8 +741,11 @@ Controls whether the Query Store is enabled in this database, and also controls 
 ON     
 Enables the Query Store.
 
-OFF     
-Disables the Query Store. OFF is the default value.
+OFF      
+Disables the Query Store. OFF is the default value. 
+
+> [!NOTE]  
+> Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
 Remove the contents of the Query Store.
@@ -1221,13 +1235,39 @@ Not all database options use the WITH \<termination> clause or can be specified 
 
 The plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is cleared by setting one of the following options:
 
-|||
-|-|-|
-|OFFLINE|READ_WRITE|
-|ONLINE|MODIFY FILEGROUP DEFAULT|
-|MODIFY_NAME|MODIFY FILEGROUP READ_WRITE|
-|COLLATE|MODIFY FILEGROUP READ_ONLY|
-|READ_ONLY||
+:::row:::
+    :::column:::
+        OFFLINE
+    :::column-end:::
+    :::column:::
+        ONLINE
+    :::column-end:::
+    :::column:::
+        MODIFY_NAME
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        COLLATE
+    :::column-end:::
+    :::column:::
+        READ_ONLY
+    :::column-end:::
+    :::column:::
+        READ_WRITE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        MODIFY FILEGROUP DEFAULT
+    :::column-end:::
+    :::column:::
+        MODIFY FILEGROUP READ_WRITE
+    :::column-end:::
+    :::column:::
+        MODIFY FILEGROUP READ_ONLY
+    :::column-end:::
+:::row-end:::
 
 The plan cache is also flushed in the following scenarios.
 
@@ -1415,9 +1455,20 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|**_\* SQL Database<br />single database/elastic pool \*_** &nbsp;|[SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />single database/elastic pool \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -2296,9 +2347,20 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current) |**_\* SQL Database<br />managed instance \*_** &nbsp;||[Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />managed instance \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -3080,9 +3142,20 @@ SET QUERY_STORE = ON
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-set-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Azure Synapse<br />Analytics \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

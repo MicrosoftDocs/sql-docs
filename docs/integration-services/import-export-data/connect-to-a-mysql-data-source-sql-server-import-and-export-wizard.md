@@ -1,7 +1,7 @@
 ---
 title: "Connect to a MySQL Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/20/2017"
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: integration-services
@@ -12,7 +12,7 @@ ms.author: chugu
 ---
 # Connect to a MySQL Data Source (SQL Server Import and Export Wizard)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This topic shows you how to connect to an **MySQL** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard. There are several data providers that you can use to connect to MySQL.
@@ -34,6 +34,7 @@ After you select **.NET Framework Data Provider for MySQL** on the **Choose a Da
 |Server name|**Server**|
 |Database name|**Database**|
 |Authentication (login) info|**User Id** and **Password**|
+|||
 
 You don't have to enter the connection string in the **ConnectionString** field of the list. After you enter individual values for the MySQL server name (**Server**) and login info, the wizard assembles the connection string from the individual properties and their values. 
 
@@ -73,18 +74,18 @@ The user id and password to connect.
 ### Connection string format
 Here's the format of a typical connection string.
 
-    ```
-    Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
-    ```
+```console
+Driver={MySQL ODBC 5.3 Unicode Driver};Server=<server>;Database=<database>;UID=<user id>;PWD=<password>
+```
 
 ### Enter the connection string
 Enter the connection string in the **ConnectionString** field, or enter the DSN name in the **Dsn** field, on the **Choose a Data Source** or **Choose a Destination** page. After you enter the connection string, the wizard parses the string and displays the individual properties and their values in the list.
 
 The following example uses this connection string.
 
-    ```
-    Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
-    ```
+```console
+Driver={MySQL ODBC 5.3 Unicode Driver};Server=127.0.0.1;Database=world;UID=root;PWD=********
+```
 
 Here's the screen that you see after entering the connection string.
 

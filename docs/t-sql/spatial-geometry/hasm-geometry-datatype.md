@@ -16,7 +16,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # HasM (geometry DataType)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns 1 (true) if a spatial object contains at least one M value; otherwise, it returns 0 (false).  
   
@@ -27,7 +27,9 @@ ms.author: mlandzic
 .HasM  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
   
  CLR return type: **Boolean**  

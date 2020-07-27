@@ -22,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # KEY_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the ID of a symmetric key in the current database.  
   
@@ -35,7 +35,9 @@ ms.author: vanto
 Key_ID ( 'Key_Name' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *Key_Name* **'**  
  The name of a symmetric key in the database.  
   

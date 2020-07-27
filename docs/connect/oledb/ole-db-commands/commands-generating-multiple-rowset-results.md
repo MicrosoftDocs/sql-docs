@@ -1,5 +1,5 @@
 ---
-title: "Commands Generating Multiple-Rowset Results | Microsoft Docs"
+title: "Commands generating multiple-rowset results (OLE DB driver) | Microsoft Docs"
 description: "Commands generating multiple-rowset results"
 ms.custom: ""
 ms.date: "06/14/2018"
@@ -19,7 +19,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Commands Generating Multiple-Rowset Results
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

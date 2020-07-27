@@ -1,5 +1,6 @@
 ---
 title: "round Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery function round() that returns the number not having a fractional part that is closest to the specified argument.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Numeric Values Functions - round
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns the number not having a fractional part that is closest to the argument. If there is more than one number like that, the one that is closest to positive infinity is returned. For example:  
   

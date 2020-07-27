@@ -14,7 +14,7 @@ monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # SQL Server 2019 privacy supplement
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 This article summarizes Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SQL Server may collect standard computer information and data about usage and performance may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of the product. This article serves as an addendum to the overall [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839). The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
 

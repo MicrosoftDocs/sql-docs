@@ -16,7 +16,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Specify Merge Replication properties
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 This topic explains how to specify various properties for your merge replication. 
 
 ## Merge Article is Download-Only
@@ -163,8 +163,8 @@ This topic describes how to specify the conflict tracking and resolution level f
   
 At the Publisher on the publication database, execute [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md). Specify a value of **false** for `@delete_tracking`. For more information, see [Define an Article](../../../relational-databases/replication/publish/define-an-article.md).
   
-    > [!NOTE]  
-    >  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  
+> [!NOTE]  
+>  If the source table for an article is already published in another publication, the value of **delete_tracking** must be the same for both articles.  
   
 ### Specify that deletes be ignored for an existing merge article  
   

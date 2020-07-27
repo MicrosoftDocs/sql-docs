@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Point (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Constructs a **geometry** instance representing a **Point** instance from its X and Y values and an SRID.
   
@@ -30,7 +30,9 @@ Constructs a **geometry** instance representing a **Point** instance from its X 
 Point ( X, Y, SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *X*  
  Is a **float** expression representing the X-coordinate of the **Point** being generated.  
   

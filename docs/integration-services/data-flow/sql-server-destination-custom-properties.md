@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # SQL Server Destination Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destination has both custom properties and the properties common to all data flow components.  

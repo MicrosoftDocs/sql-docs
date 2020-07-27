@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL Syntax Supported by IntelliSense
+description: Learn which Transact-SQL statements and syntax elements are supported by SQL Server Management Studio IntelliSense in SQL Server 2019 (15.x).
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual
@@ -18,7 +19,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 
 # Transact-SQL Syntax Supported by IntelliSense
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   This topic describes the [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and syntax elements that are supported by IntelliSense in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
 ## Statements Supported by IntelliSense  
@@ -30,14 +31,47 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### SELECT Statement  
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor provides IntelliSense support for the following syntax elements in the SELECT statement:  
   
-|||  
-|-|-|  
-|SELECT|WHERE|  
-|FROM|ORDER BY|  
-|HAVING|UNION|  
-|FOR|GROUP BY|  
-|TOP|OPTION (hint)|  
-  
+:::row:::
+    :::column:::
+        SELECT
+    :::column-end:::
+    :::column:::
+        WHERE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        FROM
+    :::column-end:::
+    :::column:::
+        ORDER BY
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        HAVING
+    :::column-end:::
+    :::column:::
+        UNION
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        FOR
+    :::column-end:::
+    :::column:::
+        GROUP BY
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        TOP
+    :::column-end:::
+    :::column:::
+        OPTION (hint)
+    :::column-end:::
+:::row-end:::
+
 ### Additional Transact-SQL Statements That Are Supported  
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor also provides IntelliSense support for [!INCLUDE[tsql](../../includes/tsql-md.md)] statements that are shown in the following table.  
   

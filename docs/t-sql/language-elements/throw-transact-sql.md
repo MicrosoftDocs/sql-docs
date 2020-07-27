@@ -35,12 +35,14 @@ THROW [ { error_number | @local_variable },
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *error_number*  
  Is a constant or variable that represents the exception. *error_number* is **int** and must be greater than or equal to 50000 and less than or equal to 2147483647.  
   
  *message*  
- Is an string or variable that describes the exception. *message* is **nvarchar(2048)**.  
+ Is a string or variable that describes the exception. *message* is **nvarchar(2048)**.  
   
  *state*  
  Is a constant or variable between 0 and 255 that indicates the state to associate with the message. *state* is **tinyint**.  
@@ -117,15 +119,14 @@ END CATCH;
 ```sql  
 EXEC sys.sp_addmessage  
      @msgnum   = 60000  
-,@severity = 16  
-,@msgtext  = N'This is a test message with one numeric parameter (%d), one string parameter (%s), and another string parameter (%s).'  
+    ,@severity = 16  
+    ,@msgtext  = N'This is a test message with one numeric parameter (%d), one string parameter (%s), and another string parameter (%s).'  
     ,@lang = 'us_english';   
 GO  
   
 DECLARE @msg NVARCHAR(2048) = FORMATMESSAGE(60000, 500, N'First string', N'second string');   
   
 THROW 60000, @msg, 1;  
-  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  

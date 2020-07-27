@@ -10,7 +10,7 @@ ms.author: mikeray
 author: MikeRayMSFT
 ---
 # SQL Server monitoring partners
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 To monitor your SQL Server services, choose from a wide variety of industry-leading tools. This article highlights Microsoft partner companies with monitoring solutions supporting Microsoft SQL Server.
 
 ## Microsoft monitoring partners

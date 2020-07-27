@@ -12,12 +12,11 @@ helpviewer_keywords:
 ms.assetid: 629c3e06-f933-483b-8621-280dbb7a7bd1
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # Organize Jobs
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!IMPORTANT]  
 > On [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance), most, but not all SQL Server Agent features are currently supported. See [Azure SQL Database Managed Instance T-SQL differences from SQL Server](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent) for details.
@@ -29,9 +28,8 @@ Job categories help you organize your jobs for easy filtering and grouping. For 
   
 ## Related Tasks  
   
-|||  
+|Description|Topic|  
 |-|-|  
-|**Description**|**Topic**|  
 |Describes how to create a job category.|[Create a Job Category](../../ssms/agent/create-a-job-category.md)|  
 |Describes how to delete a job category.|[Delete a Job Category](../../ssms/agent/delete-a-job-category.md)|  
 |Describes how to assign a job to a job category.|[Assign a Job to a Job Category](../../ssms/agent/assign-a-job-to-a-job-category.md)|  

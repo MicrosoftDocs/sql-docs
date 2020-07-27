@@ -25,7 +25,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Enhance Transactional Replication Performance
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   After considering the general performance tips described in [Enhancing General Replication Performance](../../../relational-databases/replication/administration/enhance-general-replication-performance.md), consider these additional areas specific to transactional replication.  
   
 ## Database Design  

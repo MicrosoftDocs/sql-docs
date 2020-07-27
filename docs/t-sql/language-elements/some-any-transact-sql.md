@@ -23,7 +23,7 @@ author: rothja
 ms.author: jroth
 ---
 # SOME | ANY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Compares a scalar value with a single-column set of values. SOME and ANY are equivalent.  
   
@@ -37,11 +37,13 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
      { SOME | ANY } ( subquery )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *scalar_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- { = | <> | != | > | >= | !> | < | <= | !< }  
+ { = \| <> \| != \| > \| >= \| !> \| < \| <= \| !< }  
  Is any valid comparison operator.  
   
  SOME | ANY  

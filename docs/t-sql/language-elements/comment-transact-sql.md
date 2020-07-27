@@ -24,7 +24,7 @@ ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # -- (Comment) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Indicates user-provided text. Comments can be inserted on a separate line, nested at the end of a [!INCLUDE[tsql](../../includes/tsql-md.md)] command line, or within a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. The server does not evaluate the comment.  
   
@@ -37,7 +37,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 -- text_of_comment  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *text_of_comment*  
  Is the character string that contains the text of the comment.  
   

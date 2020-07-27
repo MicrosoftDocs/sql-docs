@@ -1,7 +1,7 @@
 ---
 title: "Connect to an Oracle Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: integration-services
@@ -12,7 +12,7 @@ ms.author: chugu
 ---
 # Connect to an Oracle Data Source (SQL Server Import and Export Wizard)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This topic shows you how to connect to an **Oracle** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard. There are several data providers that you can use to connect to Oracle.
@@ -30,6 +30,7 @@ After you select **.NET Framework Data Provider for Oracle** on the **Choose a D
 |---|---|
 |Server name|**Data Source**|
 |Authentication (login) info|**User ID** and **Password**; or, **Integrated Security**|
+|||
 
 You don't have to enter the connection string in the **ConnectionString** field of the list. After you enter individual values for the Oracle server name (**Data Source**) and login info, the wizard assembles the connection string from the individual properties and their values. 
 
@@ -64,9 +65,9 @@ The user id and password to connect.
 ### Connection string format
 Here's the format of a typical connection string.
 
-    ```
-    Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
-    ```
+```console
+Driver={Microsoft ODBC for Oracle};Server=myServerAddress;Uid=myUsername;Pwd=myPassword;
+```
 
 ### Enter the connection string
 Enter the connection string in the **ConnectionString** field, or enter the DSN name in the **Dsn** field, on the **Choose a Data Source** or **Choose a Destination** page. After you enter the connection string, the wizard parses the string and displays the individual properties and their values in the list.

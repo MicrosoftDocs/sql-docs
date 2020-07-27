@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL Debugger Information
+description: Learn how to view Transact-SQL debugger output, which includes information such as call stacks, threads, breakpoints, code, variables, and commands.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -22,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Transact-SQL Debugger - Information
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Every time that the debugger pauses execution on a specific [!INCLUDE[tsql](../../includes/tsql-md.md)] statement, you can use the various debugger windows to view the current execution state. 
 

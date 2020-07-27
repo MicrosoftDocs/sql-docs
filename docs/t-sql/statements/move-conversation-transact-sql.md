@@ -25,7 +25,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # MOVE CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Moves a conversation to a different conversation group.  
   
@@ -40,7 +40,9 @@ MOVE CONVERSATION conversation_handle
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *conversation_handle*  
  Is a variable or constant containing the conversation handle of the conversation to be moved. *conversation_handle* must be of type **uniqueidentifier**.  
   

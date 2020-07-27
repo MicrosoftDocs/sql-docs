@@ -13,7 +13,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # SQL Server Express LocalDB Reference
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   This section contains information about the SQL Server Express LocalDB:  
   
 -   [SQL Server Express LocalDB Error Message Reference](../relational-databases/express-localdb-error-messages/sql-server-express-localdb-reference-error-messages.md)  

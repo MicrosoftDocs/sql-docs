@@ -17,7 +17,7 @@ manager: erikre
 ---
 # Upgrade Integration Services Packages
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   When you upgrade an instance of [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] to the current release of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], your existing [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] packages are not automatically upgraded to the package format that the current release [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)][!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] uses. You will have to select an upgrade method and manually upgrade your packages.  

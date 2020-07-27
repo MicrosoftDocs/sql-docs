@@ -2,17 +2,16 @@
 title: Convert R and SQL data types
 description: Review the implicit and explicit data type conversions between R and SQL Server in data science and machine learning solutions.
 ms.prod: sql
-ms.technology: machine-learning
-
-ms.date: 08/08/2019
-ms.topic: conceptual
+ms.technology: machine-learning-services
+ms.date: 07/15/2020
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Data type mappings between R and SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 For R solutions that run on the R integration feature in SQL Server Machine Learning Services, review the list of unsupported data types, and data type conversions that might be performed implicitly when data is passed between R libraries and SQL Server.
 
@@ -36,17 +35,17 @@ The following table shows the changes in data types and values when data from [!
 
 |SQL type|R class|RESULT SET type|Comments|
 |-|-|-|-|
-|**bigint**|`numeric`|**float**||
+|**bigint**|`numeric`|**float**|Executing an R script with `sp_execute_external_script` allows bigint data type as input data. However, because they are converted to R's numeric type, it suffers a precision loss with values that are very high or have decimal point values. R only support up to 53-bit integers and then it will start to have precision loss.|
 |**binary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Only allowed as input parameter and output|
 |**bit**|`logical`|**bit**||
-|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
+|**char(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|The input data frame (input_data_1) are created without explicitly setting of *stringsAsFactors* parameter so the column type will depend on the *default.stringsAsFactors()* in R|
 |**datetime**|`POSIXct`|**datetime**|Represented as GMT|
 |**date**|`POSIXct`|**datetime**|Represented as GMT|
-|**decimal(p,s)**|`numeric`|**float**||
+|**decimal(p,s)**|`numeric`|**float**|Executing an R script with `sp_execute_external_script` allows decimal data type as input data. However, because they are converted to R's numeric type, it suffers a precision loss with values that are very high or have decimal point values. `sp_execute_external_script` with an R script does not support the full range of the data type and would alter the last few decimal digits especially those with fraction.|
 |**float**|`numeric`|**float**||
 |**int**|`integer`|**int**||
-|**money**|`numeric`|**float**||
-|**numeric(p,s)**|`numeric`|**float**||
+|**money**|`numeric`|**float**|Executing an R script with `sp_execute_external_script` allows money data type as input data. However, because they are converted to R's numeric type, it suffers a precision loss with values that are very high or have decimal point values. Sometimes cent values would be imprecise and a warning would be issued: *Warning: unable to precisely represent cents values*.  |
+|**numeric(p,s)**|`numeric`|**float**|Executing an R script with `sp_execute_external_script` allows numeric data type as input data. However, because they are converted to R's numeric type, it suffers a precision loss with values that are very high or have decimal point values. `sp_execute_external_script` with an R script does not support the full range of the data type and would alter the last few decimal digits especially those with fraction.|
 |**real**|`numeric`|**float**||
 |**smalldatetime**|`POSIXct`|**datetime**|Represented as GMT|
 |**smallint**|`integer`|**int**||
@@ -55,8 +54,7 @@ The following table shows the changes in data types and values when data from [!
 |**uniqueidentifier**|`character`|**varchar(max)**||
 |**varbinary(n)**<br /><br /> n <= 8000|`raw`|**varbinary(max)**|Only allowed as input parameter and output|
 |**varbinary(max)**|`raw`|**varbinary(max)**|Only allowed as input parameter and output|
-|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**||
-
+|**varchar(n)**<br /><br /> n <= 8000|`character`|**varchar(max)**|The input data frame (input_data_1) are created without explicitly setting of *stringsAsFactors* parameter so the column type will depend on the *default.stringsAsFactors()* in R|
 
 ## Data types not supported by R
 

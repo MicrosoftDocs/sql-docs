@@ -1,5 +1,6 @@
 ---
 title: "Cardinality Estimation (SQL Server) | Microsoft Docs"
+description: The SQL Server Query Optimizer selects query plans that have the lowest estimated processing cost, which it determines based on rows processed and a cost model.
 ms.custom: ""
 ms.date: "02/24/2019"
 ms.prod: sql
@@ -19,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 # Cardinality Estimation (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Optimizer is a cost-based Query Optimizer. This means that it selects query plans that have the lowest estimated processing cost to execute. The Query Optimizer determines the cost of executing a query plan based on two main factors:
 

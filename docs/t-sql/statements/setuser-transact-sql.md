@@ -22,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SETUSER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Allows a member of the **sysadmin** fixed server role or the owner of a database to impersonate another user.  
   
@@ -38,7 +38,9 @@ ms.author: vanto
 SETUSER [ 'username' [ WITH NORESET ] ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *username* **'**  
  Is the name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Windows user in the current database that is impersonated. When *username* is not specified, the original identity of the system administrator or database owner impersonating the user is reset.  
   

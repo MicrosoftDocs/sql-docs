@@ -13,7 +13,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ms.custom: seo-lt-2019
 ---
 # sys.dm_xe_database_session_events (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns information about session events. Events are discrete execution points. Predicates can be applied to events to stop them from firing if the event does not contain the required information.  
   

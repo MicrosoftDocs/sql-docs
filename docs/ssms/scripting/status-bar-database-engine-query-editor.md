@@ -1,5 +1,6 @@
 ---
 title: Status Bar (Database Engine Query Editor)
+description: Learn how to color code the status bar of a Database Engine Query Editor window to indicate which instance of the DataBase engine the window is connected to.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting
@@ -15,7 +16,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Status Bar (Database Engine Query Editor)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The status bar of [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor windows can be color coded to indicate which instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] each window is connected to.
 

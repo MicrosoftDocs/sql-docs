@@ -25,6 +25,8 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
 JSON_MODIFY ( expression , path , newValue )  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
  *expression*  
@@ -301,12 +303,12 @@ PRINT @info
   
 ```sql  
 UPDATE Employee
-SET jsonCol=JSON_MODIFY(jsonCol,"$.info.address.town",'London')
+SET jsonCol=JSON_MODIFY(jsonCol,'$.info.address.town','London')
 WHERE EmployeeID=17
 ```  
   
 ## See Also
 
- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
   

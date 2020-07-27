@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Hadoop Pig Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the Hadoop Pig Task to run Pig script on a Hadoop cluster.  

@@ -37,8 +37,9 @@ GeneMi.  2019/04/03.
 | New item | Details |
 | :------- | :------ |
 | New distributions supported. | Ubuntu 20.04 |
-| Support for Federated Authentication | See [Using Azure Active directory](../using-azure-active-directory.md). |
+| Support for Federated Authentication | See [Using Azure Active Directory](../using-azure-active-directory.md). |
 | Metadata caching for prepared statements | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| SQL_COPT_SS_AUTOBEGINTXN connection attribute to control whether automatic BEGIN TRANSACTION happens after ROLLBACK or COMMIT | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 

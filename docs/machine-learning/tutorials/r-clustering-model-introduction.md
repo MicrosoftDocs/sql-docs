@@ -12,7 +12,7 @@ ms.date: 05/26/2020
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
-# Tutorial: Prepare data to perform clustering in R with SQL machine learning
+# Tutorial: Develop a clustering model in R with SQL machine learning
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"

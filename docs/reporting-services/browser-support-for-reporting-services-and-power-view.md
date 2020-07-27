@@ -1,5 +1,6 @@
 ---
 title: "Browser Support for Reporting Services and Power View | Microsoft Docs"
+description: Learn about what browser versions are supported for managing and viewing SQL Server Reporting Services, the ReportViewer Controls and Power View.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

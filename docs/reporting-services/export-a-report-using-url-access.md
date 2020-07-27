@@ -1,5 +1,6 @@
 ---
 title: "Export a Report Using URL Access | Microsoft Docs"
+description: "Learn how to export a report using URL access by specifying the format in which to render a report by using the rs:Format URL parameter."
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

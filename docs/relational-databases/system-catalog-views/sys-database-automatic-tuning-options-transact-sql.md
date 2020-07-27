@@ -1,6 +1,6 @@
 ---
 title: "sys.database_automatic_tuning_options (Transact-SQL) | Microsoft Docs"
-description: Learn how to view automatic tuning options on a SQL Database
+description: Learn how to view automatic tuning options on an SQL Database. See required permissions and view additional available resources.
 ms.custom: ""
 ms.date: "07/20/2017"
 ms.prod: sql

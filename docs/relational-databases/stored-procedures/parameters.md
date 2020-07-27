@@ -1,5 +1,6 @@
 ---
 title: "Parameters | Microsoft Docs"
+description: Learn how to use parameters to exchange data between stored procedures and functions and the application or tool that called the stored procedure or function.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

@@ -12,7 +12,7 @@ manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
-# CREATE EXTERNAL LANGUAGE (Transact-SQL)
+# ALTER EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 Modifies the content in an existing external language extension in the database.

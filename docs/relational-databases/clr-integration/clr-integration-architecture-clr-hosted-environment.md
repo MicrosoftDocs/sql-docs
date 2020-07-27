@@ -148,9 +148,8 @@ Thread.EndThreadAffinity();
 ###### Security: Permission sets  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] allows users to specify the reliability and security requirements for code deployed into the database. When assemblies are uploaded into the database, the author of the assembly can specify one of three permission sets for that assembly: SAFE, EXTERNAL_ACCESS, and UNSAFE.  
   
-|||||  
+|Functionality|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |-|-|-|-|  
-|Permission set|SAFE|EXTERNAL_ACCESS|UNSAFE|  
 |Code Access Security|Execute only|Execute + access to external resources|Unrestricted|  
 |Programming model restrictions|Yes|Yes|No restrictions|  
 |Verifiability requirement|Yes|Yes|No|  

@@ -1,5 +1,6 @@
 ---
 title: "srv_paramlen (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_paramlen in the Extended Stored Procedure API returns the data length of a remote stored procedure call parameter.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

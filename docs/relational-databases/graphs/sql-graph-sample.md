@@ -66,7 +66,7 @@ CREATE TABLE livesIn AS EDGE;
 CREATE TABLE locatedIn AS EDGE;
 
 -- Insert data into node tables. Inserting into a node table is same as inserting into a regular table
-INSERT INTO Person (Id, Person)
+INSERT INTO Person (Id, name)
 	VALUES (1, 'John')
 		 , (2, 'Mary')
 		 , (3, 'Alice')

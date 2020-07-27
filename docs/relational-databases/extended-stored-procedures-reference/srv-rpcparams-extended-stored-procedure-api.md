@@ -1,5 +1,6 @@
 ---
 title: "srv_rpcparams (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn about srv_rpcparams and how it can return the number of parameters for the current remote stored procedure.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

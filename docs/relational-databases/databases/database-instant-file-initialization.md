@@ -2,7 +2,7 @@
 title: Database Instant File Initialization
 description: Learn about instant file initialization and how to enable it on your SQL Server database.
 ms.custom: contperfq4
-ms.date: 05/30/2020
+ms.date: 07/24/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -31,6 +31,7 @@ By default, data and log files are initialized to overwrite any existing data le
 - Restore a database or filegroup.  
 
 In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], instant file initialization (IFI) allows for faster execution of the previously mentioned file operations, since it reclaims used disk space without filling that space with zeros. Instead, disk content is overwritten as new data is written to the files. Log files cannot be initialized instantaneously.
+
 
 ## Enable instant file initialization
 
@@ -93,5 +94,29 @@ If the potential for disclosing deleted content is a concern, you should take on
     > [!NOTE]
     > Disabling will increase allocation times  for data files, and only affects files that are created or increased in size after the user right is revoked.
   
+### SE_MANAGE_VOLUME_NAME user right
+
+The *SE_MANAGE_VOLUME_NAME* user privilege can be assigned in **Windows Administrative Tools**, **Local Security Policy** applet. Under **Local Policies** select **User Right Assignment** and modify the **Perform volume maintenance tasks** property.
+
+## Performance considerations
+
+The Database File initialization process writes zeros to the new regions of the file under initialization. The duration of this process  depends on size of file portion that is initialized and on the response time and capacity of the storage system. If the initialization takes a long time, you may see the following messages recorded in the SQL Server Errorlog and the Application Log.
+
+```
+Msg 5144
+Autogrow of file '%.*ls' in database '%.*ls' was cancelled by user or timed out after %d milliseconds.  Use ALTER DATABASE to set a smaller FILEGROWTH value for this file or to explicitly set a new file size.
+```
+
+```
+Msg 5145
+Autogrow of file '%.*ls' in database '%.*ls' took %d milliseconds.  Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file.
+```
+
+A long autogrow of a database and/or transaction log file may cause query performance problems. This is because an operation that requires the autogrowth of a file will hold on to resources such as locks or latches during the duration of the file grow operation. You may see long waits on latches for allocation pages. The operation that requires the long autogrow will show a wait type of  PREEMPTIVE_OS_WRITEFILEGATHER.
+
+
+
+
+
 ## See Also  
  [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)

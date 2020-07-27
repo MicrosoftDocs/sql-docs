@@ -25,8 +25,11 @@ ms.author: mathoma
   
  Support details are as follows:  
   
--   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] upgrade is supported both through the user interface and from the command prompt. You can run upgrade from the command prompt on each failover cluster node, or by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup UI  to upgrade each cluster node.  For more information, see [Upgrade an Always On Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/windows/upgrade-an-Always-On-failover-cluster-instance-setup.md) and [Install SQL Server from the Command Prompt](../../../database-engine/install-windows/install-sql-server-2016-from-the-command-prompt.md).  
-  
+-   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] upgrade is supported both through the user interface and from the command prompt. You can run upgrade from the command prompt on each failover cluster node, or by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup UI to upgrade each cluster node. For more information, see:
+
+   - [Install a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance](../install/create-a-new-sql-server-failover-cluster-setup.md#to-install-a-new--failover-cluster-using-integrated-install-with-add-node)
+   - [Install SQL Server from the Command Prompt](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
+
 -   The following scenarios are not supported as part of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] upgrade:  
   
     -   You cannot upgrade from a stand-alone instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] to a failover cluster instance.  
@@ -115,7 +118,7 @@ Follow these steps to upgrade your Always On failover cluster instance in a mult
   
 1.  Follow the steps above to upgrade your failover cluster instance.  
   
-2.  To add a new node on a different subnet using the AddNode Setup action and confirm the IP address resource dependency to OR on the **Cluster Network Configuration** page. For more information, see [Add or Remove Nodes in an Always On Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-an-Always-On-failover-cluster-instance-setup.md).  
+2.  To add a new node on a different subnet using the AddNode Setup action and confirm the IP address resource dependency to OR on the **Cluster Network Configuration** page. For more information, see [Add or Remove Nodes in an Always On failover cluster instance (Setup)](../install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ### To upgrade a multi-subnet failover cluster instance currently using Stretch VLAN to use multi-subnet.  
   

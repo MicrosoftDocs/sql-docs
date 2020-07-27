@@ -101,6 +101,10 @@ In addition to the SET options and deterministic function requirements, the foll
 
 - The view must be created by using the `WITH SCHEMABINDING` option.
 - The view must reference only base tables that are in the same database as the view. The view cannot reference other views.
+
+- If `GROUP BY` is present, the VIEW definition must contain `COUNT_BIG(*)` and must not contain `HAVING`. These `GROUP BY` restrictions are applicable only to the indexed view definition. A query can use an indexed view in its execution plan even if it does not satisfy these `GROUP BY` restrictions.
+- If the view definition contains a `GROUP BY` clause, the key of the unique clustered index can reference only the columns specified in the `GROUP BY` clause.
+
 - The SELECT statement in the view definition must not contain the following Transact-SQL elements:
 
 :::row:::
@@ -164,11 +168,9 @@ In addition to the SET options and deterministic function requirements, the foll
         `OFFSET`
     :::column-end:::
 :::row-end:::
-  
-    <sup>1</sup> The indexed view can contain **float** columns; however, such columns cannot be included in the clustered index key.
 
-- If `GROUP BY` is present, the VIEW definition must contain `COUNT_BIG(*)` and must not contain `HAVING`. These `GROUP BY` restrictions are applicable only to the indexed view definition. A query can use an indexed view in its execution plan even if it does not satisfy these `GROUP BY` restrictions.
-- If the view definition contains a `GROUP BY` clause, the key of the unique clustered index can reference only the columns specified in the `GROUP BY` clause.
+
+<sup>1</sup> The indexed view can contain **float** columns; however, such columns cannot be included in the clustered index key.
 
 > [!IMPORTANT]
 > Indexed views are not supported on top of temporal queries (queries that use `FOR SYSTEM_TIME` clause).

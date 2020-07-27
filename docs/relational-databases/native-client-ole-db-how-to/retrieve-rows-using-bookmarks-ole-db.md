@@ -15,7 +15,7 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Retrieve Rows Using Bookmarks (OLE DB)
+# Retrieve Rows Using Bookmarks (Native Client OLE DB provider)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The consumer sets the **dwFlag** field value of the binding structure to DBCOLUMNSINFO_ISBOOKMARK to indicate that the column is used as bookmark. The consumer also sets the rowset property DBPROP_BOOKMARKS to VARIANT_TRUE. This allows column 0 to be present in the rowset. **IRowsetLocate::GetRowsAt** is then used to fetch rows starting with the row specified an offset from a bookmark.  

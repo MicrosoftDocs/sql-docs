@@ -34,7 +34,7 @@ The following table lists a few examples of Object Relational Mapping (ORM) fram
 | C# | Windows, Linux, macOS | [Entity Framework](https://docs.microsoft.com/ef)<br>[Entity Framework Core](https://docs.microsoft.com/ef/core/index) |
 | Java | Windows, Linux, macOS |[Hibernate ORM](https://hibernate.org/orm)|
 | PHP | Windows, Linux | [Laravel (Eloquent)](https://laravel.com/docs/5.0/eloquent) |
-| Node.js | Windows, Linux, macOS | [Sequelize ORM](https://docs.sequelizejs.com) |
+| Node.js | Windows, Linux, macOS | [Sequelize ORM](http://sequelize.org/) |
 | Python | Windows, Linux, macOS |[Django](https://www.djangoproject.com/) |
 | Ruby | Windows, Linux, macOS | [Ruby on Rails](https://rubyonrails.org/) |
 

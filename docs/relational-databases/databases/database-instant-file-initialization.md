@@ -112,7 +112,7 @@ Msg 5145
 Autogrow of file '%.*ls' in database '%.*ls' took %d milliseconds.  Consider using ALTER DATABASE to set a smaller FILEGROWTH for this file.
 ```
 
-A long autogrow of a database and/or transaction log file may cause query performance problems. This is becasue an operation that requires the autogrowth of a file will hold on to resources such as locks or latches during the duration of the file grow operation. You may see long waits on latches for allocation pages. The operation that requires the long autogrow will show a wait type of  PREEMPTIVE_OS_WRITEFILEGATHER.
+A long autogrow of a database and/or transaction log file may cause query performance problems. This is because an operation that requires the autogrowth of a file will hold on to resources such as locks or latches during the duration of the file grow operation. You may see long waits on latches for allocation pages. The operation that requires the long autogrow will show a wait type of  PREEMPTIVE_OS_WRITEFILEGATHER.
 
 
 

@@ -1,5 +1,6 @@
 ---
 title: "Customize Rendering Extension Parameters in RSReportServer.Config | Microsoft Docs"
+description: Specify rendering extension parameters in the RSReportServer configuration file to override default report rendering behavior for Reporting Services reports. 
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

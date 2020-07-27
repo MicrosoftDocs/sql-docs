@@ -14,7 +14,7 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Streaming Support for BLOB Output Parameters
+# Streaming Support for BLOB Output Parameters in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic contains a sample that shows streaming support for BLOB output parameters, which binds BLOB output parameters as ISequentialStreams.  

@@ -15,7 +15,7 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 # sys.pdw_permanent_table_mappings (Transact-SQL)
 [!INCLUDE [Applies to](../../includes/applies-to-version/asa.md)]
 
-  Ties permanent user tables to internal object names by **object_id**. Recommended for better performance over sys.pdw_table_mappings.  
+  Ties permanent user tables to internal object names by **object_id**. Recommended for better performance over **sys.pdw_table_mappings**.  
   
 > [!NOTE]
 > **sys.pdw_permanent_table_mappings** holds mappings to permanent tables and does not include temporary or external tables.
@@ -27,7 +27,6 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
   
 ## See Also  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   
- [sys.pdw_index_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)   
- [sys.pdw_database_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-database-mappings-transact-sql.md)  
+ [sys.pdw_index_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-index-mappings-transact-sql.md)  
   
   

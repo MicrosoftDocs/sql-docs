@@ -98,14 +98,13 @@ ms.author: "jroth"
 ## Permission Set Summary  
  The following chart summarizes the restrictions and permissions granted to the **SAFE**, **EXTERNAL_ACCESS**, and **UNSAFE** permission sets.  
   
-|||||  
+|Functionality|**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|   
 |-|-|-|-|  
-||**SAFE**|**EXTERNAL_ACCESS**|**UNSAFE**|  
-|**Code Access Security Permissions**|Execute only|Execute + access to external resources|Unrestricted (including P/Invoke)|  
-|**Programming model restrictions**|Yes|Yes|No restrictions|  
-|**Verifiability requirement**|Yes|Yes|No|  
-|**Local data access**|Yes|Yes|Yes|  
-|**Ability to call native code**|No|No|Yes|  
+|Code Access Security Permissions|Execute only|Execute + access to external resources|Unrestricted (including P/Invoke)|  
+|Programming model restrictions|Yes|Yes|No restrictions|  
+|Verifiability requirement|Yes|Yes|No|  
+|Local data access|Yes|Yes|Yes|  
+|Ability to call native code|No|No|Yes|  
   
 ## See Also  
  [CLR Integration Security](../../../relational-databases/clr-integration/security/clr-integration-security.md)   

@@ -128,7 +128,7 @@ SELECT * FROM TestDatabase.dbo.myNative;
 SQL Server support two types of format file: non-XML format and XML format.  The non-XML format is the original format that is supported by earlier versions of SQL Server.  Please review [Non-XML Format Files (SQL Server)](../../relational-databases/import-export/non-xml-format-files-sql-server.md) for detailed information.  The following command will use the [bcp utility](../../tools/bcp-utility.md) to generate a non-xml format file, `myNative.fmt`, based on the schema of `myNative`.  To use a [bcp](../../tools/bcp-utility.md) command to create a format file, specify the **format** argument and use **nul** instead of a data-file path.  The format option also requires the **-f** option.  In addition, for this example, the qualifier **c** is used to specify character data, and **T** is used to specify a trusted connection using integrated security.  At a command prompt, enter the following commands:
 
 ```cmd
-bcp TestDatabase.dbo.myNative format nul -f D:\BCP\myNative.fmt -T -n 
+bcp TestDatabase.dbo.myNative format nul -f D:\BCP\myNative.fmt -T 
 
 REM Review file
 Notepad D:\BCP\myNative.fmt

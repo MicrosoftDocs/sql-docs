@@ -1,5 +1,6 @@
 ---
 title: "Tutorial: Add a Pie Chart to Your Report (Report Builder) | Microsoft Docs"
+description: Learn how to create a pie chart in a Reporting Services paginated report, add percentages, and combine small slices into a single slice.
 ms.date: 06/15/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

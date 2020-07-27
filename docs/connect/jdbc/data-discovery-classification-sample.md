@@ -1,5 +1,6 @@
 ---
-title: "SQL Data Discovery and Classification | Microsoft Docs"
+title: "SQL Data Discovery and Classification JDBC Sample"
+description: "This Microsoft JDBC Driver for SQL Server sample application demonstrates how to use a result set to retrieve Data Discovery and CLassification information."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -11,21 +12,21 @@ author: David-Engel
 ms.author: v-daenge
 ---
 
-# SQL Data Discovery and Classification
+# SQL Data Discovery and Classification JDBC Sample
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 This [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] sample application demonstrates how to use result set getter methods to retrieve [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 'SQL Data Discovery and Classification information' from the tables holding such information.
-  
-The code file for this sample is named DataDiscoveryAndClassification.java, and it can be found in the following location:  
+
+The code file for this sample is named DataDiscoveryAndClassification.java, and it can be found in the following location:
 
 ```bash
-\<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification  
+\<installation directory>\sqljdbc_<version>\<language>\samples\dataclassification
 ```
 
-## Requirements  
+## Requirements
 
-To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).
+To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
 
 ```java
 import java.sql.Connection;
@@ -179,4 +180,4 @@ public class DataDiscoveryAndClassification {
 
 ## See also
 
-[Sample JDBC driver applications](../../connect/jdbc/sample-jdbc-driver-applications.md)  
+[Sample JDBC driver applications](sample-jdbc-driver-applications.md)

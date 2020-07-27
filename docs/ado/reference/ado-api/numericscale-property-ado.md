@@ -31,11 +31,16 @@ Indicates the scale of numeric values in a [Parameter](../../../ado/reference/ad
  For a **Field**object, **NumericScale** is normally read-only. However, for new **Field** objects that have been appended to the [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection of a [Record](../../../ado/reference/ado-api/record-object-ado.md), **NumericScale** is read/write only after the [Value](../../../ado/reference/ado-api/value-property-ado.md) property for the **Field** has been specified and the data provider has successfully added the new **Field** by calling the [Update](../../../ado/reference/ado-api/update-method.md) method of the [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Parameter Object](../../../ado/reference/ado-api/parameter-object.md)|[Field Object](../../../ado/reference/ado-api/field-object.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Field Object](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [NumericScale and Precision Properties Example (VB)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vb.md)   
  [NumericScale and Precision Properties Example (VC++)](../../../ado/reference/ado-api/numericscale-and-precision-properties-example-vc.md)   

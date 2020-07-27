@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # Property Expressions Editor
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Property Expressions Editor** dialog box to create, edit, or delete the property expressions that update property values.  

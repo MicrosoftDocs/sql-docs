@@ -2,7 +2,7 @@
 title: "sqlservr Application"
 description: The sqlservr application starts, stops, pauses, and continues an instance of SQL Server from a command prompt.
 ms.custom: seo-lt-2019
-ms.date: "08/01/2019"
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
@@ -27,7 +27,7 @@ ms.author: maghan
 
 # sqlservr Application
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 The **sqlservr** application starts, stops, pauses, and continues an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] from a command prompt.
 
@@ -92,7 +92,7 @@ The following parameters are obsolete and not supported in [!INCLUDE[ssCurrent](
 |Parameter | More information|
 |:-----|:-----|
 |**-h** | In earlier versions of 32-bit instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to reserve virtual memory address space for Hot Add memory metadata when AWE is enabled. Supported through [!INCLUDE[sssql14](../includes/sssql14-md.md)]. For more information, see [Discontinued SQL Server Features in SQL Server 2016](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md).|
-|**-g** | *memory_to_reserve*<br/><br>Applies to earlier versions of 32-bit instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Supported through [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Specifies an integer number of megabytes (MB) of memory that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] leaves available for memory allocations within the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process, but outside the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory pool. For more information, see [the SQL Server 2014 documentation on Server Memory Configuration Options](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
+|**-g** | *memory_to_reserve*<br/><br>Applies to earlier versions of 32-bit instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Supported through [!INCLUDE[sssql14](../includes/sssql14-md.md)]. Specifies an integer number of megabytes (MB) of memory that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] leaves available for memory allocations within the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] process, but outside the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] memory pool. For more information, see [the SQL Server 2014 documentation on Server Memory Configuration Options](/previous-versions/sql/2014/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014).|
 | &nbsp; | &nbsp; |
 
 ## See Also

@@ -35,7 +35,12 @@ Specifies a bookmark indicating where the operation should begin.
 |AdoEnums.Bookmark.LAST|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[GetRows Method (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)|[Move Method (ADO)](../../../ado/reference/ado-api/move-method-ado.md)|
+
+:::row:::
+    :::column:::
+        [GetRows Method (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Move Method (ADO)](../../../ado/reference/ado-api/move-method-ado.md)  
+    :::column-end:::
+:::row-end:::

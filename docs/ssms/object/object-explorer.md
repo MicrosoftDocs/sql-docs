@@ -44,5 +44,4 @@ Object Explorer provides a hierarchical user interface to view and manage the ob
 |Describes how to connect Object Explorer to an instance of the [!INCLUDE[ssDE](../../includes/ssde_md.md)], [!INCLUDE[ssASnoversion](../../includes/ssasnoversion_md.md)], [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], and [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].|[Connect to an Instance From Object Explorer](../../ssms/object/connect-to-an-instance-from-object-explorer.md)|  
 |Describes how to manage objects represented as nodes in the Object Explorer hierarchy.|[Manage Objects by Using Object Explorer](../../ssms/object/manage-objects-by-using-object-explorer.md)|  
 |Describes the Object Explorer Details Pane, a tabular view of all of the objects in the server with a user interface to manage them.|[Object Explorer Details Pane](../../ssms/object/object-explorer-details-pane.md)|  
-|Describes ways to run custom reports in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Custom Reports in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|  
-  
+|Describes ways to run custom reports in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].|[Custom Reports in Management Studio](../../ssms/object/custom-reports-in-management-studio.md)|

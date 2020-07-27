@@ -38,8 +38,10 @@ This function returns the number of bytes used to represent any expression.
 ```
 DATALENGTH ( expression )   
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any data type.
   

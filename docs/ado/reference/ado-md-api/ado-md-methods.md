@@ -16,7 +16,7 @@ ms.author: jroth
 ---
 # ADO MD Methods
 
-|||  
+|Method|Description|  
 |-|-|  
 |[Close](../../../ado/reference/ado-md-api/close-method-ado-md.md)|Closes an open cellset.|  
 |[GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)|Retrieves an ADO MD schema object (dimension, hierarchy, level, or member) by its unique name.|  

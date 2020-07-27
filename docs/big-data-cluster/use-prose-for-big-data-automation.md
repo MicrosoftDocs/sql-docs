@@ -108,8 +108,8 @@ To learn more, see the [documentation](https://aka.ms/prose-codeaccelerator-fixt
 Another common scenario is to detect patterns in a string column for the purpose of cleaning or grouping. For example, you may have a date column with dates in multiple different formats. In order to standardize the values, you might want to write conditional statements using regular expressions.
 
 
-|   |Name                      |BirthDate      |
-|---|:-------------------------|:--------------|
+|Row|Name                      |BirthDate      |
+|--:|:-------------------------|:--------------|
 | 0 |Bertram du Plessis        |1995           |
 | 1 |Naiara Moravcikova        |Unknown        |
 | 2 |Jihoo Spel                |2014           |

@@ -1,5 +1,5 @@
 ---
-title: "IBCPSession::BCPColumns (OLE DB) | Microsoft Docs"
+title: "IBCPSession::BCPColumns (OLE DB driver) | Microsoft Docs"
 description: "IBCPSession::BCPColumns (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

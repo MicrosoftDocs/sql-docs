@@ -16,7 +16,7 @@ ms.author: jroth
 ---
 # ADOX Collections
 
-|||  
+|Collection|Description|  
 |-|-|  
 |[Columns](../../../ado/reference/adox-api/columns-collection-adox.md)|Contains all **Column** objects of a table, index, or key.|  
 |[Groups](../../../ado/reference/adox-api/groups-collection-adox.md)|Contains all stored **Group** objects of a catalog or user.|  

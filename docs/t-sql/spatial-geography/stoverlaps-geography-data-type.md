@@ -27,7 +27,9 @@ ms.author: mlandzic
 .STOverlaps ( other_geography )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geography*  
  Is another **geography** instance to compare against the instance on which `STOverlaps()` is invoked.  
   

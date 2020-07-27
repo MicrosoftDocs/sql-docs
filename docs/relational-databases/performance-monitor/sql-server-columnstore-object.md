@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Columnstore Object | Microsoft Docs"
+description: Learn about the SQLServer:Columnstore object, which provides counters to monitor columnstore index execution in SQL Server.
 ms.custom: ""
 ms.date: "04/12/2016"
 ms.prod: sql

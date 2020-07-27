@@ -39,7 +39,9 @@ This function returns the application name for the current session, if the appli
 APP_NAME  ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
 **nvarchar(128)**
   
 ## Remarks  

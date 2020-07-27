@@ -1,5 +1,5 @@
 ---
-title: "Rowset Properties and Behaviors | Microsoft Docs"
+title: Rowset properties and behaviors (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -17,7 +17,7 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Rowset Properties and Behaviors
+# Rowset Properties and Behaviors (Native Client OLE DB provider)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   These are the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider rowset properties.  
@@ -73,7 +73,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |DBPROP_REPORTMULTIPLECHANGES|This rowset property is not implemented by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider. Trying to read or write the property value generates an error.|  
 |DBPROP_RETURNPENDINGINSERTS|R/W: Read-only<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: When a method that fetches rows is called, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider does not return pending insert rows.|  
 |DBPROP_ROWRESTRICT|R/W: Read-only<br /><br /> Default: VARIANT_TRUE<br /><br /> Description: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider rowsets do not support access rights based on the row. If the **IRowsetChange** interface is exposed on a rowset, the **SetData** method can be called by the consumer.|  
-|DBPROP_ROWSET_ASYNCH|R/W: Read/write<br /><br /> Default: 0<br /><br /> Description: Provides for anychronous rowset processing. This property is in the Rowset property group and DBPROPSET_ROWSET property set. Type is VT_14.<br /><br /> The only value in the bitmask supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client is **DBPROPVAL_ASYNCH_INITIALIZE**.|  
+|DBPROP_ROWSET_ASYNCH|R/W: Read/write<br /><br /> Default: 0<br /><br /> Description: Provides for asynchronous rowset processing. This property is in the Rowset property group and DBPROPSET_ROWSET property set. Type is VT_14.<br /><br /> The only value in the bitmask supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client is **DBPROPVAL_ASYNCH_INITIALIZE**.|  
 |DBPROP_ROWTHREADMODEL|R/W: Read-only<br /><br /> Default: DBPROPVAL_RT_FREETHREAD<br /><br /> Description: The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports access to its objects from multiple execution threads of a single consumer.|  
 |DBPROP_SERVERCURSOR|R/W: Read/write<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: When set, a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cursor is used to support the rowset. For more information, see [Rowsets and SQL Server Cursors](../../relational-databases/native-client-ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_SERVERDATAONINSERT|R/W: Read/write<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: Server data on insert.<br /><br /> VARIANT_TRUE: At the time an insert is transmitted to the server, the provider retrieves data from the server to update the local row cache.<br /><br /> VARIANT_FALSE: The provider does not retrieve server values for newly inserted rows.|  

@@ -114,9 +114,8 @@ In this way, the query optimizer can process the join faster, because the partit
   
 ## Related Tasks  
   
-|||  
-|-|-|  
-|**Tasks**|**Topic**|  
+|Tasks|Topic|  
+|-|-|   
 |Describes how to create partition functions and partition schemes and then apply these to a table and index.|[Create Partitioned Tables and Indexes](../../relational-databases/partitions/create-partitioned-tables-and-indexes.md)|  
 |||  
   

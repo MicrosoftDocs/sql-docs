@@ -39,6 +39,8 @@ To change the compatibility level of a database, refer to [View or Change the Co
 STRING_SPLIT ( string , separator )  
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
  *string*  

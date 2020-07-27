@@ -242,9 +242,8 @@ GO
   
 #### Event fields  
   
-||||  
-|-|-|-|  
 |Name|Type_name|Description|  
+|-|-|-|  
 |availability_group_id|guid|The ID of the availability group.|  
 |availability_group_name|unicode_string|The name of the availability group, if available.|  
 |availability_replica_id|guid|The ID of the availability replica.|  

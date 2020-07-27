@@ -1,5 +1,6 @@
 ---
 title: "srv_describe (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_describe in the Extended Stored Procedure API defines the column name and source and destination data types for a specific column in a row.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql

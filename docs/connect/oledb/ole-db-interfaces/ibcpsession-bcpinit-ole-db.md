@@ -1,5 +1,5 @@
 ---
-title: "IBCPSession::BCPInit (OLE DB) | Microsoft Docs"
+title: "IBCPSession::BCPInit (OLE DB driver) | Microsoft Docs"
 description: "IBCPSession::BCPInit (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

@@ -49,10 +49,10 @@ CREATE TABLE friends (StartDate date) AS EDGE;
 ```   
 
 ![person-friends-tables](../../relational-databases/graphs/media/person-friends-tables.png "Person node and friends edge tables")  
-Nodes and Edges are stored as tables  
+Nodes and Edges are stored as tables into a special folder for their identification, this folder "Graph Tables" is located inside the tables folder 
 
 ### Query language extensions  
-New `MATCH` clause is introduced to support pattern matching and multi-hop navigation through the graph. The `MATCH` function uses ASCII-art style syntax for pattern matching. For example:  
+New [`MATCH`](../../t-sql/queries/match-sql-graph.md) clause is introduced to support pattern matching and multi-hop navigation through the graph. The `MATCH` function uses ASCII-art style syntax for pattern matching. For example:  
 
 ```   
 -- Find friends of John

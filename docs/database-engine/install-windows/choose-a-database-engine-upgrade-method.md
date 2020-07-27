@@ -27,7 +27,7 @@ There are several approaches to consider when you are planning to upgrade the [!
   
 > [!NOTE]  
 >  You may also consider upgrading the Azure SQL Database or virtualizing your SQL Server environment as part of your upgrade plan. These articles are out of scope for this article, but here are some links:
->   - [SQL Server on Azure Virtual Machines overview](https://azure.microsoft.com/documentation/articles/virtual-machines-sql-server-infrastructure-services/)
+>   - [SQL Server on Azure Virtual Machines overview](https://azure.microsoft.com/services/virtual-machines/sql-server/#overview)
 >   - [Azure SQL Database](https://azure.microsoft.com/services/sql-database/) 
 >   - [Selecting a SQL Server option in Azure](https://azure.microsoft.com/documentation/articles/data-management-azure-sql-database-and-sql-server-iaas/).  
   

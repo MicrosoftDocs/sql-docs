@@ -136,13 +136,44 @@ For minimum version requirements to install [!INCLUDE[ssNoVersion](../../include
 
 Installing SQL Server 2016 and 2017 on Server Core mode is supported by the following editions of Windows Server:
 
-|                              |                                |
-| :------------------------    | :------------------------------|
-| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
-| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
-| Windows Server 2012 R2 Standard | Windows Server 2012 R2  Datacenter|
-| Windows Server 2012 Standard | Windows Server 2012 Datacenter |
-| &nbsp; | &nbsp; |
+:::row:::
+    :::column:::
+        Windows Server 2019 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2019 Datacenter
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2016 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2016 Datacenter
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2012 R2 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2012 R2  Datacenter
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2012 Standard
+    :::column-end:::
+    :::column:::
+        Windows Server 2012 Datacenter
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md).  
 

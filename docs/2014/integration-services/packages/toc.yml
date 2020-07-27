@@ -1,8 +1,0 @@
-- name: Deployment of Projects and Packages
-  items:
-  - name: Package Deployment (SSIS)
-  - name: Package Configuration Wizard UI Reference
-- name: Execution of Projects and Packages
-  items:
-  - name: Load-Balancing Packages on Remote Servers by Using SQL Server Agent
-  - name: SQL Server Agent Jobs for Packages

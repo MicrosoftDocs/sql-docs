@@ -1,5 +1,6 @@
 ---
 title: "sys.sp_rda_deauthorize_db (Transact-SQL) | Microsoft Docs"
+description: Learn how to use sys.sp_rda_deauthorize_db to remove authenticated connections between local Stretch-enabled databases and remote Azure databases.
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql

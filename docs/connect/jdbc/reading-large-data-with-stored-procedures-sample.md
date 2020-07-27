@@ -36,7 +36,7 @@ The sample would create the required stored procedure in the [!INCLUDE[ssSampleD
 
 ## Example
 
-In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database. Next, the sample code creates sample data and updates the Production.Document table by using a parameterized query. Then, the sample code gets the adaptive buffering mode by using the [getResponseBuffering](reference/getresponsebuffering-method-sqlserverstatement.md) method of the [SQLServerStatement](/sqlserverstatement-class.md) class and executes the GetLargeDataValue stored procedure. Starting with the JDBC driver version 2.0 release, the responseBuffering connection property is set to "adaptive" by default.
+In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] database. Next, the sample code creates sample data and updates the Production.Document table by using a parameterized query. Then, the sample code gets the adaptive buffering mode by using the [getResponseBuffering](reference/getresponsebuffering-method-sqlserverstatement.md) method of the [SQLServerStatement](/sql/connect/jdbc/reference/sqlserverstatement-class) class and executes the GetLargeDataValue stored procedure. Starting with the JDBC driver version 2.0 release, the responseBuffering connection property is set to "adaptive" by default.
 
 Finally, the sample code displays the data returned with the OUT parameters and also demonstrates how to use the `mark` and `reset` methods on the stream to re-read any portion of the data.
 

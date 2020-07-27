@@ -1,5 +1,6 @@
 ---
 title: "sys.remote_data_archive_databases (Transact-SQL) | Microsoft Docs"
+description: Learn how sys.remote_data_archive_databases contains one row for each remote database that stores data from a Stretch-enabled local database.
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql

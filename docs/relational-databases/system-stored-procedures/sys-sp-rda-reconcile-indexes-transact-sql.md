@@ -1,5 +1,6 @@
 ---
 title: "sys.sp_rda_reconcile_indexes (Transact-SQL) | Microsoft Docs"
+description: Learn about sys.sp_rda_reconcile_indexes. See how to use this Transact-SQL stored procedure to queue a schema task to reconcile indexes on a remote table.
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql

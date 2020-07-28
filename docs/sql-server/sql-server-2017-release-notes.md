@@ -146,7 +146,7 @@ There are no release notes for SQL Server on Windows related to this release. Se
 
 ## More information
 - [SQL Server Reporting Services release notes](../reporting-services/release-notes-reporting-services.md).
-- [Known Issues for Machine Learning Services](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
+- [Known Issues for Machine Learning Services](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md)
 - [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

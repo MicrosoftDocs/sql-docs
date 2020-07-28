@@ -26,7 +26,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 06/03/2020
+ms.date: 07/22/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 
@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-> For SQL Server 2014 and lower, see [sqlcmd Utility](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014).
+> For SQL Server 2014 and lower, see [sqlcmd Utility](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014).
 >
 > For using sqlcmd on Linux, see [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).
 
@@ -709,7 +709,7 @@ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any 
  Causes **sqlcmd** to exit.  
   
  [**:**] **EXIT**[ **(**_statement_**)** ]  
- Lets you use the result of a SELECT statement as the return value from **sqlcmd**. If numeric, the first column of the last result row is converted to a 4-byte integer (long). MS-DOS passes the low byte to the parent process or operating system error level. Windows 200x passes the whole 4-byte integer. The syntax is:  
+ Lets you use the result of a SELECT statement as the return value from **sqlcmd**. If numeric, the first column of the last result row is converted to a 4-byte integer (long). MS-DOS, Linux, and Mac pass the low byte to the parent process or operating system error level. Windows 200x passes the whole 4-byte integer. The syntax is:  
   
  `:EXIT(query)`  
   
@@ -778,7 +778,7 @@ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any 
   
  Time-out options:  
   
-|||  
+|Value|Behavior|  
 |-|-|  
 |0|wait forever|  
 |n>0|wait for n seconds|  

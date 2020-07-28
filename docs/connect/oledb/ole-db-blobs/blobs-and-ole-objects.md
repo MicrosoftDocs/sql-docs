@@ -1,5 +1,5 @@
 ---
-title: "BLOBs and OLE Objects | Microsoft Docs"
+title: "BLOBs and OLE Objects (OLE DB driver) | Microsoft Docs"
 description: "BLOBs and OLE Objects"
 ms.custom: ""
 ms.date: "05/25/2020"

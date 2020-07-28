@@ -1,5 +1,5 @@
 ---
-title: "IRowsetFastLoad::Commit (OLE DB) | Microsoft Docs"
+title: "IRowsetFastLoad::Commit (OLE DB driver) | Microsoft Docs"
 description: "IRowsetFastLoad::Commit (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

@@ -1,5 +1,5 @@
 ---
-title: "Rowset Properties and Behaviors | Microsoft Docs"
+title: Rowset properties and behaviors (OLE DB driver)
 description: "Rowset properties and behaviors in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "08/28/2020"
@@ -74,7 +74,7 @@ ms.author: pelopes
 |DBPROP_REPORTMULTIPLECHANGES|This rowset property is not implemented by the OLE DB Driver for SQL Server. Trying to read or write the property value generates an error.|  
 |DBPROP_RETURNPENDINGINSERTS|R/W: Read-only<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: When a method that fetches rows is called, the OLE DB Driver for SQL Server does not return pending insert rows.|  
 |DBPROP_ROWRESTRICT|R/W: Read-only<br /><br /> Default: VARIANT_TRUE<br /><br /> Description: OLE DB Driver for SQL Server rowsets do not support access rights based on the row. If the **IRowsetChange** interface is exposed on a rowset, the **SetData** method can be called by the consumer.|  
-|DBPROP_ROWSET_ASYNCH|R/W: Read/write<br /><br /> Default: 0<br /><br /> Description: Provides asynchronous rowset processing. This property is in the Rowset property group and DBPROPSET_ROWSET property set. Type is VT_14.<br /><br /> The only value in the bitmask supported by OLE DB Driver for SQL Server is **DBPROPVAL_ASYNCH_INITIALIZE**.|  
+|DBPROP_ROWSET_ASYNCH|R/W: Read/write<br /><br /> Default: 0<br /><br /> Description: Provides for asynchronous rowset processing. This property is in the Rowset property group and DBPROPSET_ROWSET property set. Type is VT_14.<br /><br /> The only value in the bitmask supported by OLE DB Driver for SQL Server is **DBPROPVAL_ASYNCH_INITIALIZE**.|  
 |DBPROP_ROWTHREADMODEL|R/W: Read-only<br /><br /> Default: DBPROPVAL_RT_FREETHREAD<br /><br /> Description: The OLE DB Driver for SQL Server supports access to its objects from multiple execution threads of a single consumer.|  
 |DBPROP_SERVERCURSOR|R/W: Read/write<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: When set, a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursor is used to support the rowset. For more information, see [Rowsets and SQL Server Cursors](../../oledb/ole-db-rowsets/rowsets-and-sql-server-cursors.md).|  
 |DBPROP_SERVERDATAONINSERT|R/W: Read/write<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: Server data on insert.<br /><br /> VARIANT_TRUE: At the time an insert is transmitted to the server, the provider retrieves data from the server to update the local row cache.<br /><br /> VARIANT_FALSE: The provider does not retrieve server values for newly inserted rows.|  

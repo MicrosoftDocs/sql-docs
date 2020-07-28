@@ -58,7 +58,9 @@ BEGIN { TRAN | TRANSACTION }
 ```  
 
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *transaction_name*  
  **APPLIES TO:** SQL Server (starting with 2008), Azure SQL Database
  

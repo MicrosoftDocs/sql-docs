@@ -18,7 +18,9 @@ ms.assetid: 81577d7e-8ff6-4e73-b7f4-94c03d4921e7
 author: MikeRayMSFT
 ms.author: mikeray
 ---
+
 # GetLevel (Database Engine)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns an integer that represents the depth of the node *this* in the tree.
@@ -34,7 +36,9 @@ node.GetLevel ( )
 -- CLR syntax  
 SqlInt16 GetLevel ( )   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return Types  
 **SQL Server return type:smallint**
   

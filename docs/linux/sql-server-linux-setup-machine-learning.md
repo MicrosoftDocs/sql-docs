@@ -270,7 +270,7 @@ sudo zypper install mssql-mlservices-packages-r
 
 Additional configuration is primarily through the [mssql-conf tool](sql-server-linux-configure-mssql-conf.md).
 
-1. Add the mssql user account used to run the SQL Server service.
+1. After the package installation finishes, run mssql-conf setup and follow the prompts to set the SA password and choose your edition. Perform this step only if you have not configured SQL Server on Linux yet. 
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf setup
@@ -378,21 +378,21 @@ Download packages from [https://packages.microsoft.com/](https://packages.micros
 
 ### RHEL/7 paths
 
-|||
+|Package|Download location|
 |--|----|
 | mssql/mlservices packages | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 | microsoft-r-open packages | [https://packages.microsoft.com/rhel/7/prod/](https://packages.microsoft.com/rhel/7/prod/) | 
 
 ### Ubuntu/16.04 paths
 
-|||
+|Package|Download location|
 |--|----|
 | mssql/mlservices packages | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 | microsoft-r-open packages | [https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/) | 
 
 ### SLES/12 paths
 
-|||
+|Package|Download location|
 |--|----|
 | mssql/mlservices packages | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 | microsoft-r-open packages | [https://packages.microsoft.com/sles/12/prod/](https://packages.microsoft.com/sles/12/prod/) | 

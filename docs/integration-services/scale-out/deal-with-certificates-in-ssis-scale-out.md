@@ -13,7 +13,7 @@ ms.author: "haoqian"
 ---
 # Manage certificates for SQL Server Integration Services Scale Out
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

@@ -32,7 +32,9 @@ This function returns a **date** value that maps to the specified year, month, a
 DATEFROMPARTS ( year, month, day )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *year*  
 An integer expression that specifies a year.
   

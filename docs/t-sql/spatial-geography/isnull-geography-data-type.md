@@ -29,7 +29,9 @@ ms.author: mlandzic
 .IsNull  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type: **bit**  
   
  CLR type: **SqlBoolean**  

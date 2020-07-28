@@ -35,7 +35,9 @@ This function searches for one character expression inside a second character ex
 CHARINDEX ( expressionToFind , expressionToSearch [ , start_location ] )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *expressionToFind*  
 A character [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing the sequence to find. *expressionToFind* has an 8000 character limit.
   

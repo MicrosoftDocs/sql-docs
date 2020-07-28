@@ -40,6 +40,8 @@ CollationDesignator_<ComparisonStyle>
 | { _BIN | _BIN2 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 *CollationDesignator*   

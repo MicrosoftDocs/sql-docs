@@ -1,5 +1,6 @@
 ---
 title: "Query Store Usage Scenarios | Microsoft Docs"
+description: Learn how Query Store can be used to track and ensure predictable workload performance. Consider several examples in SQL Server.
 ms.custom: ""
 ms.date: "11/29/2018"
 ms.prod: sql

@@ -30,7 +30,9 @@ ms.author: mlandzic
 .STIntersection ( other_geography )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geography*  
  Is another **geography** instance to compare with the instance on which STIntersection() is being invoked.  
   

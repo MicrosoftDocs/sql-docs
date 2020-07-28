@@ -1,5 +1,6 @@
 ---
 title: "HTML Viewer and the Report Toolbar | Microsoft Docs"
+description: Learn about the HTML Viewer and the report toolbar and how you can view reports on demand as they are requested from the report server.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

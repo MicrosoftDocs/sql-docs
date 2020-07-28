@@ -1,5 +1,5 @@
 ---
-title: "Creating SQL Server Indexes | Microsoft Docs"
+title: "Create SQL Server indexes (OLE DB driver) | Microsoft Docs"
 description: "Creating SQL Server indexes using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

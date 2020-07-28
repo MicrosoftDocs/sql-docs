@@ -343,10 +343,10 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
 
 ```
 
-## Syntax for Azure Synapse Analytics
+## Syntax for Azure Synapse Analytics and Parallel Data Warehouse
 
 ```syntaxsql
--- Syntax for Azure Synapse Analytics and Analytics Platform System
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse
 
 ALTER TABLE { database_name.schema_name.source_table_name | schema_name.source_table_name | source_table_name }
 {

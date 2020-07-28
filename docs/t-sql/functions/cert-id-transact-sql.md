@@ -34,7 +34,9 @@ This function returns the ID value of a certificate.
 Cert_ID ( 'cert_name' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 **'** *cert_name* **'**  
 
 The name of a certificate in the database.

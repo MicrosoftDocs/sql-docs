@@ -1,5 +1,5 @@
 ---
-title: "IBCPSession (OLE DB) | Microsoft Docs"
+title: "IBCPSession (OLE DB driver) | Microsoft Docs"
 description: "IBCPSession interface (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

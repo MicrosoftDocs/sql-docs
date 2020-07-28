@@ -1,5 +1,5 @@
 ---
-title: "Getting Large Data | Microsoft Docs"
+title: "Getting large data (OLE DB driver) | Microsoft Docs"
 description: "Getting large data using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

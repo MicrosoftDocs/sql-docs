@@ -31,9 +31,8 @@ You can run a job manually, or you can configure it to run according to a schedu
   
 ## Related Tasks  
   
-|||  
-|-|-|  
-|**Description**|**Topic**|  
+|Description|Topic|  
+|-|-|   
 |Contains information about creating jobs and assigning ownership.|[Create Jobs](../../ssms/agent/create-jobs.md)|  
 |Contains information about organizing jobs into categories.|[Organize Jobs](../../ssms/agent/organize-jobs.md)|  
 |Contains information about the different kinds of job steps you can create and how to manage them.|[Manage Job Steps](../../ssms/agent/manage-job-steps.md)|  

@@ -1,5 +1,5 @@
 ---
-title: "IBCPSession::BCPControl (OLE DB) | Microsoft Docs"
+title: "IBCPSession::BCPControl (OLE DB driver) | Microsoft Docs"
 description: "IBCPSession::BCPControl (OLE DB)"
 ms.custom: ""
 ms.date: "07/03/2018"

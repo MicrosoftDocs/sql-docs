@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Locks Object | Microsoft Docs"
+description: Learn about the SQLServer:Locks object, which provides information about SQL Server locks on individual resource types. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -32,7 +32,9 @@ This function returns a string resulting from the concatenation, or joining, of 
 CONCAT ( string_value1, string_value2 [, string_valueN ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *string_value*  
 A string value to concatenate to the other values. The `CONCAT` function requires at least two *string_value* arguments, and no more than 254 *string_value* arguments.
   

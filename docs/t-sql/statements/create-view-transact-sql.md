@@ -1,5 +1,5 @@
 ---
-title: "CREATE VIEW (Transact-SQL) | Microsoft Docs"
+title: CREATE VIEW (Transact-SQL)
 ms.custom: ""
 ms.date: 04/16/2020
 ms.prod: sql
@@ -38,7 +38,9 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # CREATE VIEW (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Creates a virtual table whose contents (columns and rows) are defined by a query. Use this statement to create a view of the data in one or more tables in the database. For example, a view can be used for the following purposes:  
@@ -56,18 +58,18 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
-CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]   
-[ WITH <view_attribute> [ ,...n ] ]   
-AS select_statement   
-[ WITH CHECK OPTION ]   
+CREATE [ OR ALTER ] VIEW [ schema_name . ] view_name [ (column [ ,...n ] ) ]
+[ WITH <view_attribute> [ ,...n ] ]
+AS select_statement
+[ WITH CHECK OPTION ]
 [ ; ]  
   
-<view_attribute> ::=   
+<view_attribute> ::=
 {  
     [ ENCRYPTION ]  
     [ SCHEMABINDING ]  
-    [ VIEW_METADATA ]       
-}   
+    [ VIEW_METADATA ]
+}
 ```  
   
 ```syntaxsql
@@ -82,7 +84,10 @@ AS <select_statement>
     SELECT <select_criteria>  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
+
 OR ALTER  
  **Applies to**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1).   
   

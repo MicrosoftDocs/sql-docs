@@ -65,8 +65,8 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
   
 ## Relationship Cardinalities  
   
-||||  
-|-|-|-|  
+| First element | Second element | Relationship |
+| --------------| -------------- | ------------ |  
 |dm_exec_sessions.session_id|dm_exec_connections.session_id|One-to-one|  
 |dm_exec_requests.connection_id|dm_exec_connections.connection_id|Many to one|  
 |dm_broker_connections.connection_id|dm_exec_connections.connection_id|One to one|  

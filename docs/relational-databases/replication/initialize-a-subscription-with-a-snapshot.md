@@ -14,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 monikerRange: "= azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions"
 ---
-# Initialize a Subscription with a Snapshot
+# Initialize a Subscription with a Snapshot for a New Publication
 
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 

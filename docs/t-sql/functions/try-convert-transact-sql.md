@@ -33,7 +33,9 @@ monikerRange: "= azuresqldb-current||>= sql-server-2016 ||>= sql-server-linux-20
 TRY_CONVERT ( data_type [ ( length ) ], expression [, style ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *data_type [ ( length ) ]*  
  The data type into which to cast *expression*.  
   

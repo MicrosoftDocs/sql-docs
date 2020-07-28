@@ -1,5 +1,5 @@
 ---
-title: "OLE DB How-to Topics | Microsoft Docs"
+title: How-to topics (OLE DB driver)
 description: "OLE DB how-to topics"
 ms.custom: ""
 ms.date: "06/14/2018"

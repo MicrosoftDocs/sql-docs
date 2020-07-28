@@ -1,5 +1,5 @@
 ---
-title: "IColumnsRowset | Microsoft Docs"
+title: "IColumnsRowset (OLE DB driver) | Microsoft Docs"
 description: "IColumnsRowset interface"
 ms.custom: ""
 ms.date: "06/14/2018"

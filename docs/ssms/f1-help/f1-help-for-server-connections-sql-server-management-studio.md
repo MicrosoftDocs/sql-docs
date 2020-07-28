@@ -1,7 +1,7 @@
 ---
 title: F1 Help for Server Connections
 ms.prod: sql
-ms.prod_service: "sql-tools"
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 

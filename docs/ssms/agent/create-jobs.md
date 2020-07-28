@@ -31,9 +31,8 @@ Jobs can be written to run on the local instance of [!INCLUDE[ssNoVersion](../..
   
 ## Related Tasks  
   
-|||  
+|Description|Topic|  
 |-|-|  
-|**Description**|**Topic**|  
 |Describes how to create a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.|[Create a Job](../../ssms/agent/create-a-job.md)|  
 |Describes how to reassign ownership of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs to another user.|[Give Others Ownership of a Job](../../ssms/agent/give-others-ownership-of-a-job.md)|  
 |Describes how to set up the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job history log.|[Set Up the Job History Log](../../ssms/agent/set-up-the-job-history-log.md)|  

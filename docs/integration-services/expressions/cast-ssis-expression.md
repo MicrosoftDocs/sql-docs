@@ -19,7 +19,7 @@ ms.author: chugu
 ---
 # Cast (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Explicitly converts an expression from one data type to a different data type. The cast operator can also function as a truncation operator.  

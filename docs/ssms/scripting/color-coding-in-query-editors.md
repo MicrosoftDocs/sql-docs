@@ -1,5 +1,6 @@
 ---
 title: "Color Coding in Query Editors"
+description: Learn how text categories are color coded to help you more easily find specific text, and how you can configure a custom color scheme.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

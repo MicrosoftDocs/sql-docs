@@ -33,7 +33,9 @@ This **geography** data type method supports **FullGlobe** instances or spatial 
 STGeomFromText ( 'geography_tagged_text' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *geography_tagged_text*  
  Is the WKT representation of the **geography** instance to return. *geography_tagged_text* is an **nvarchar(max)** expression.  
   

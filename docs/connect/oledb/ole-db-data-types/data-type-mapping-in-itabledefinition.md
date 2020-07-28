@@ -1,5 +1,5 @@
 ---
-title: "Data Type Mapping in ITableDefinition | Microsoft Docs"
+title: "Data type mapping in ITableDefinition (OLE DB driver) | Microsoft Docs"
 description: "Data type mapping in ITableDefinition"
 ms.custom: ""
 ms.date: "06/14/2018"

@@ -1,5 +1,6 @@
 ---
 title: "Insert Surround-with Transact-SQL snippets"
+description: Learn how to insert a surround-with snippet to serve as a starting point for placing statements in code blocks.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

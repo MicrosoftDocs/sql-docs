@@ -34,7 +34,9 @@ This function returns the smallest integer greater than, or equal to, the specif
 CEILING ( numeric_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *numeric_expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of the exact numeric or approximate numeric data type category. For this function, the **bit** data type is invalid.
   

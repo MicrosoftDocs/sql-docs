@@ -80,7 +80,9 @@ UPDATE STATISTICS [ schema_name . ] table_name
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table_or_indexed_view_name*  
  Is the name of the table or indexed view that contains the statistics object.  
   

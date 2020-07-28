@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Message Results | Microsoft Docs"
+title: SQL Server message results (OLE DB driver)
 description: "SQL Server message results"
 ms.custom: ""
 ms.date: "06/14/2018"

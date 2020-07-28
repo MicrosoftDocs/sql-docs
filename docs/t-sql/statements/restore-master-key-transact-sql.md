@@ -43,7 +43,9 @@ RESTORE MASTER KEY FROM FILE = 'path_to_file'
     [ FORCE ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  FILE ='*path_to_file*'  
  Specifies the complete path, including file name, to the stored database master key. *path_to_file* can be a local path or a UNC path to a network location.  
   

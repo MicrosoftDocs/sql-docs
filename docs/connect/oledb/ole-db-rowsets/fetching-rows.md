@@ -1,5 +1,5 @@
 ---
-title: "Fetching Rows | Microsoft Docs"
+title: "Fetching rows (OLE DB driver) | Microsoft Docs"
 description: "Fetching rows using the IRowset interface"
 ms.custom: ""
 ms.date: "06/14/2018"

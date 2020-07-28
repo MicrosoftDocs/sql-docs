@@ -55,12 +55,11 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
   
 `[ , @namespace = ] ' \<class> '`
  Is the class of the specified module. When *module_name* is a DDL trigger, \<class> is required. *\<class>* is **nvarchar**(20). Valid inputs are:  
-  
-|||  
-|-|-|  
-|DATABASE_DDL_TRIGGER||  
-|SERVER_DDL_TRIGGER|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|  
-  
+
+* DATABASE_DDL_TRIGGER
+
+* SERVER_DDL_TRIGGER - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+
 ## Return Code Values  
  0 (success) or a nonzero number (failure)  
   

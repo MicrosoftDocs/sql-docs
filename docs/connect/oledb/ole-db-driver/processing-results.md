@@ -1,5 +1,5 @@
 ---
-title: "Processing Results | Microsoft Docs"
+title: Processing results (OLE DB driver)
 description: "Processing results"
 ms.custom: ""
 ms.date: "06/14/2018"

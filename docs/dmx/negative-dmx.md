@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # - (Negative) (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Performs a unary operation that returns the negative value of a numeric expression.  
   

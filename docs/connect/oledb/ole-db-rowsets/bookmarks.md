@@ -1,5 +1,5 @@
 ---
-title: "Bookmarks | Microsoft Docs"
+title: "Row bookmarks (OLE DB driver) | Microsoft Docs"
 description: "Bookmarks in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

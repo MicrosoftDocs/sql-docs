@@ -31,7 +31,9 @@ ms.author: vanto
 SESSION_CONTEXT(N'key')  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  'key'  
  The key (type sysname) of the value being retrieved.  
   

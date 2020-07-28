@@ -30,7 +30,9 @@ Returns a **geography** instance from an Open Geospatial Consortium (OGC) Well-K
 STMPointFromText ( 'multipoint_tagged_text', SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *multipoint_tagged_text*  
  Is the WKT representation of the **geographyMultiPoint** instance you wish to return. *multipoint_tagged_text* is an **nvarchar(max)** expression.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Set up a SQL Server database alert (Windows) | Microsoft Docs"
+description: Learn how to create an alert that is raised when a System Monitor counter reaches a threshold value. In response, System Monitor can launch an application.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -634,6 +634,14 @@ Add the `MSSQL_DATA_DIR` variable to change your data directory in your `docker 
 docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
 ```
 
+## <a id="enablesqlagent"></a> Enable SQL Server Agent
+
+Enable SQL Server Agent and it starts automatically with SQL Server
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_AGENT_ENABLED=true" --name sql1 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+
 ## <a id="troubleshooting"></a> Troubleshooting
 
 The following sections provide troubleshooting suggestions for running SQL Server in containers.

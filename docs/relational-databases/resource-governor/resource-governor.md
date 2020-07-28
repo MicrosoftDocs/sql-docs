@@ -1,5 +1,6 @@
 ---
 title: "Resource Governor | Microsoft Docs"
+description: Learn about the SQL Server Resource Governor feature that limits the amount of CPU, physical I/O, and memory that incoming application requests can use.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

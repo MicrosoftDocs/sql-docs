@@ -1,5 +1,6 @@
 ---
 title: "Delete an Item (Management Studio) | Microsoft Docs"
+description: Learn how to delete role definitions and shared schedules in SQL Management Studio.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

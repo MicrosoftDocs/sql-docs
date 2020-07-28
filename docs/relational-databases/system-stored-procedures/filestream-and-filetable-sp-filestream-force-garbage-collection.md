@@ -47,9 +47,8 @@ sp_filestream_force_garbage_collection
   
 ## Return Code Values  
   
-|||  
-|-|-|  
-|Value|Description|  
+| Value | Description |
+| ----- | ----------- |   
 |0|Operation success|  
 |1|Operation failure|  
   

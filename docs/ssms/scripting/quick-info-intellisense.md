@@ -1,5 +1,6 @@
 ---
 title: "Quick Info (IntelliSense)"
+description: Learn how to use the IntelliSense Quick Info option to display the complete declaration for any identifier in your code. In SQL Server Management Studio, the option is available in the Database Engine Editor and XML Query Editor.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

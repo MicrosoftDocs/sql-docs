@@ -34,7 +34,9 @@ For more information on Geography Markup Language, see the following Open Geospa
 .AsGml ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **xml**  
   
  CLR return type: **SqlXml**  

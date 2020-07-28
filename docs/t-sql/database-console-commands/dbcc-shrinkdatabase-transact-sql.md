@@ -58,7 +58,9 @@ DBCC SHRINKDATABASE
 
 ```  
 
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 _database\_name_ | _database\_id_ | 0  
 Is the database name or ID to be shrunk. 0 specifies that the current database is used.  
   

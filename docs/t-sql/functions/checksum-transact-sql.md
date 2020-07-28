@@ -35,7 +35,9 @@ The `CHECKSUM` function returns the checksum value computed over a table row, or
 CHECKSUM ( * | expression [ ,...n ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 \*  
 This argument specifies that the checksum computation covers all table columns. `CHECKSUM` returns an error if any column has a noncomparable data type. Noncomparable data types include:
 

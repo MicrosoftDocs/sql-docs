@@ -1,5 +1,5 @@
 ---
-title: "ICommand (OLE DB) | Microsoft Docs"
+title: "ICommand (OLE DB driver) | Microsoft Docs"
 description: "ICommand interface (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

@@ -1,5 +1,6 @@
 ---
 title: "Validate Plan Guides After Upgrade | Microsoft Docs"
+description: When you upgrade your application to a new release of SQL Server, we recommend that you re-evaluate and test plan guide definitions.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

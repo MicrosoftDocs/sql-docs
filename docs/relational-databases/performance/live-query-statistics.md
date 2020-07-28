@@ -1,5 +1,6 @@
 ---
 title: "Live Query Statistics | Microsoft Docs"
+description: Learn how to view the live execution plan of an active query in SQL Server Management Studio. Use the execution statistics to debug query performance issues.
 ms.custom: ""
 ms.date: "11/21/2018"
 ms.prod: sql

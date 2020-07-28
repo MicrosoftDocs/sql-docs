@@ -246,9 +246,9 @@ The Report Viewer Control is now shipped as a NuGet package and no longer shows 
     
 The viewer control is designed for modern browsers. The control may not work as expected if the browser renders the page using IE compatibility mode. Intranet sites may require a meta tag to override default browser behavior.
 
-    ```
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    ```
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+```
 
 ## NuGet.org pages
 

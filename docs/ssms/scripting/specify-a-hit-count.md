@@ -1,5 +1,6 @@
 ---
 title: Specify a Hit Count
+description: Learn how to set a hit count for a breakpoint, so that the debugger won't break at that breakpoint until the hit count is reached.
 titleSuffix: T-SQL debugger
 ms.prod: sql
 ms.technology: scripting

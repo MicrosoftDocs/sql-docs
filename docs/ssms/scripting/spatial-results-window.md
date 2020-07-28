@@ -1,5 +1,6 @@
 ---
 title: "Spatial Results Window"
+description: Learn how to use the Spatial results window, which provides visual mapping tools for viewing spatial data. To view spatial results your query results must include a spatial column with either geometry or geography data.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

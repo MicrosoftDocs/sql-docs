@@ -59,7 +59,7 @@ To load the modules, perform the following steps:
 
     PowerShell should now load these modules automatically when a new PowerShell session starts.
 
-## Create an inventory of SQL Servers
+## <a name="create-inventory"></a> Create an inventory of SQL Servers
 
 Before running the PowerShell script to assess your SQL Servers, you need to build an inventory of the SQL Servers that you want to assess.
 

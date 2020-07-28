@@ -1,5 +1,6 @@
 ---
 title: "OLE Automation Result Sets | Microsoft Docs"
+description: Learn that if an OLE Automation property or method returns data in an array with one or two dimensions, the array is returned to the client as a result set.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

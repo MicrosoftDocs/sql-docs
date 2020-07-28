@@ -1,5 +1,5 @@
 ---
-title: "Supporting Distributed Transactions | Microsoft Docs"
+title: Supporting distributed transactions (OLE DB driver)
 description: "Distributed transactions in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

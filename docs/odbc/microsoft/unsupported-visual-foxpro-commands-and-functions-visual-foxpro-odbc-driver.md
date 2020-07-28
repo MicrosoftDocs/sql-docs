@@ -23,294 +23,705 @@ The following table lists FoxPro commands and functions that are not supported b
  If your application interacts with data whose rules, triggers, default values, or stored procedures call these Visual FoxPro commands or functions, the driver can generate an error.  
   
 ## Unsupported Visual FoxPro Commands and Functions  
-  
-||||  
-|-|-|-|  
-|#DEFINE ... #UNDEF|#IF ... #ENDIF Preprocessor Directive|#IFDEF &#124; #IFNDEF|  
-|#INCLUDE Preprocessor Directive|:: Scope Resolution Operator|! Command (see RUN &#124; ! Command)|  
-|? &#124; ?? Command|??? Command|\ &#124; \\\ Command|  
-|@ ... BOX Command|@ ... CLASS Command|@ ... CLEAR Command|  
-|@ ... EDIT - Edit Boxes Command|@ ... FILL Command|@ ... GET|  
-|@ ... MENU Command|@ ... PROMPT Command|@ ... SAY Command|  
-|@ ... SCROLL Command|@ ... TO Command||  
-  
+
+:::row:::
+    :::column:::
+        ! Command (see RUN &#124; ! Command)  
+        #DEFINE ... #UNDEF  
+        #IF ... #ENDIF Preprocessor Directive  
+        #IFDEF &#124; #IFNDEF  
+        #INCLUDE Preprocessor Directive  
+        :: Scope Resolution Operator  
+        ? &#124; ?? Command  
+    :::column-end:::
+    :::column:::
+        ??? Command  
+        @ ... BOX Command  
+        @ ... CLASS Command  
+        @ ... CLEAR Command  
+        @ ... EDIT - Edit Boxes Command  
+        @ ... FILL Command  
+        @ ... GET  
+    :::column-end:::
+    :::column:::
+        @ ... MENU Command  
+        @ ... PROMPT Command  
+        @ ... SAY Command  
+        @ ... SCROLL Command  
+        @ ... TO Command  
+        \ &#124; \\\ Command  
+    :::column-end:::
+:::row-end:::
+
 ## A  
-  
-||||  
-|-|-|-|  
-|ACCEPT Command|ACLASS( ) Function|ACTIVATE MENU Command|  
-|ACTIVATE POPUP Command|ACTIVATE SCREEN Command|ACTIVATE WINDOW Command|  
-|ActivateCell Method|ADD CLASS Command|ADIR( ) Function|  
-|AFONT( ) Function|AINSTANCE( ) Function|_ALIGNMENT System Memory Variable|  
-|AMEMBERS( ) Function|ANSITOOEM( ) Function|APRINTERS( ) Function|  
-|ASELOBJ( ) Function|ASSIST Command||  
-  
+
+:::row:::
+    :::column:::
+        ACCEPT Command  
+        ACLASS( ) Function  
+        ACTIVATE MENU Command  
+        ACTIVATE POPUP Command  
+        ACTIVATE SCREEN Command  
+        ACTIVATE WINDOW Command  
+    :::column-end:::
+    :::column:::
+        ActivateCell Method  
+        ADD CLASS Command  
+        ADIR( ) Function  
+        AFONT( ) Function  
+        AINSTANCE( ) Function  
+        _ALIGNMENT System Memory Variable  
+    :::column-end:::
+    :::column:::
+        AMEMBERS( ) Function  
+        ANSITOOEM( ) Function  
+        APRINTERS( ) Function  
+        ASELOBJ( ) Function  
+        ASSIST Command  
+    :::column-end:::
+:::row-end:::
+
 ## B  
-  
-||||  
-|-|-|-|  
-|BAR( ) Function|BARCOUNT( ) Function|BARPROMPT( ) Function|  
-|_BEAUTIFY System Memory Variable|_BOX System Memory Variable|BROWSE Command|  
-|_BROWSER System Memory Variable|BUILD APP Command|BUILD EXE Command|  
-|BUILD PROJECT Command|_BUILDER System Memory Variable||  
-  
+
+:::row:::
+    :::column:::
+        BAR( ) Function  
+        BARCOUNT( ) Function  
+        BARPROMPT( ) Function  
+        _BEAUTIFY System Memory Variable  
+    :::column-end:::
+    :::column:::
+        _BOX System Memory Variable  
+        BROWSE Command  
+        _BROWSER System Memory Variable  
+        BUILD APP Command  
+    :::column-end:::
+    :::column:::
+        BUILD EXE Command  
+        BUILD PROJECT Command  
+        _BUILDER System Memory Variable  
+    :::column-end:::
+:::row-end:::
+
 ## C  
-  
-||||  
-|-|-|-|  
-|_CALCVALUE System Memory Variable|_CLIPTEXT System Memory Variable|_CONVERTER System Memory Variable|  
-|_CUROBJ System Memory Variable|CALL Command|CANCEL Command|  
-|CAPSLOCK( ) Function|CD Command|CHANGE Command|  
-|CHDIR Command|CHRSAW( ) Function|CLOSE MEMO Command|  
-|CNTBAR( ) Function|CNTPAD( ) Function|COL( ) Function|  
-|COMPILE Command|COMPILE DATABASE Command|COMPILE FORM Command|  
-|COMPOBJ( ) Function|Container Object|Control Object|  
-|COPY FILE Command|COPY MEMO Command|CREATE CLASS Command|  
-|CREATE CLASSLIB Command|CREATE COLOR SET Command|CREATE Command|  
-|CREATE CONNECTION Command|CREATE DATABASE Command|CREATE FORM Command|  
-|CREATE FROM Command|CREATE LABEL Command|CREATE MENU Command|  
-|CREATE PROJECT Command|CREATE QUERY Command|CREATE REPORT Command|  
-|CREATE SCREEN Command|CREATE SQL VIEW Command|CREATE TRIGGER Command|  
-|CREATE VIEW Command|CREATEOBJECT( ) Function|CURDIR( ) Function|  
-  
+
+:::row:::
+    :::column:::
+        _CALCVALUE System Memory Variable  
+        CALL Command  
+        CANCEL Command  
+        CAPSLOCK( ) Function  
+        CD Command  
+        CHANGE Command  
+        CHDIR Command  
+        CHRSAW( ) Function  
+        _CLIPTEXT System Memory Variable  
+        CLOSE MEMO Command  
+        CNTBAR( ) Function  
+        CNTPAD( ) Function  
+        COL( ) Function  
+        COMPILE Command  
+    :::column-end:::
+    :::column:::
+        COMPILE DATABASE Command  
+        COMPILE FORM Command  
+        COMPOBJ( ) Function  
+        Container Object  
+        Control Object  
+        _CONVERTER System Memory Variable  
+        COPY FILE Command  
+        COPY MEMO Command  
+        CREATE Command  
+        CREATE CLASS Command  
+        CREATE CLASSLIB Command  
+        CREATE COLOR SET Command  
+        CREATE CONNECTION Command  
+        CREATE DATABASE Command  
+    :::column-end:::
+    :::column:::
+        CREATE FORM Command  
+        CREATE FROM Command  
+        CREATE LABEL Command  
+        CREATE MENU Command  
+        CREATE PROJECT Command  
+        CREATE QUERY Command  
+        CREATE REPORT Command  
+        CREATE SCREEN Command  
+        CREATE SQL VIEW Command  
+        CREATE TRIGGER Command  
+        CREATE VIEW Command  
+        CREATEOBJECT( ) Function  
+        CURDIR( ) Function  
+        _CUROBJ System Memory Variable  
+    :::column-end:::
+:::row-end:::
+
 ## D  
-  
-||||  
-|-|-|-|  
-|_DBLCLICK System Memory Variable|_DIARYDATE System Memory Variable|DBSETPROP( ) Function|  
-|DDE Functions|DEACTIVATE MENU Command|DEACTIVATE POPUP Command|  
-|DEACTIVATE WINDOW Command|DECLARE - DLL Command|DECLARE Command|  
-|DEFINE BAR Command|DEFINE BOX Command|DEFINE CLASS Command|  
-|DEFINE MENU Command|DEFINE PAD Command|DEFINE POPUP Command|  
-|DEFINE WINDOW Command|DELETE CONNECTION Command|DELETE DATABASE Command|  
-|DELETE FILE Command|DELETE TRIGGER Command|DELETE VIEW Command|  
-|DIR Command|DIRECTORY Command|DISPLAY Command|  
-|DISPLAY CONNECTIONS Command|DISPLAY DATABASE Command|DISPLAY DLLS Command|  
-|DISPLAY FILES Command|DISPLAY MEMORY Command|DISPLAY OBJECTS Command|  
-|DISPLAY PROCEDURES Command|DISPLAY STATUS Command|DISPLAY STRUCTURE Command|  
-|DISPLAY TABLES Command|DISPLAY VIEWS Command|DO FORM Command|  
-  
+
+:::row:::
+    :::column:::
+        _DBLCLICK System Memory Variable  
+        DBSETPROP( ) Function  
+        DDE Functions  
+        DEACTIVATE MENU Command  
+        DEACTIVATE POPUP Command  
+        DEACTIVATE WINDOW Command  
+        DECLARE Command  
+        DECLARE - DLL Command  
+        DEFINE BAR Command  
+        DEFINE BOX Command  
+        DEFINE CLASS Command  
+        DEFINE MENU Command  
+    :::column-end:::
+    :::column:::
+        DEFINE PAD Command  
+        DEFINE POPUP Command  
+        DEFINE WINDOW Command  
+        DELETE CONNECTION Command  
+        DELETE DATABASE Command  
+        DELETE FILE Command  
+        DELETE TRIGGER Command  
+        DELETE VIEW Command  
+        _DIARYDATE System Memory Variable  
+        DIR Command  
+        DIRECTORY Command  
+        DISPLAY Command  
+    :::column-end:::
+    :::column:::
+        DISPLAY CONNECTIONS Command  
+        DISPLAY DATABASE Command  
+        DISPLAY DLLS Command  
+        DISPLAY FILES Command  
+        DISPLAY MEMORY Command  
+        DISPLAY OBJECTS Command  
+        DISPLAY PROCEDURES Command  
+        DISPLAY STATUS Command  
+        DISPLAY STRUCTURE Command  
+        DISPLAY TABLES Command  
+        DISPLAY VIEWS Command  
+        DO FORM Command  
+    :::column-end:::
+:::row-end:::
+
 ## E  
-  
-||||  
-|-|-|-|  
-|EDIT Command|ERROR Command||  
-|ERASE Command|EXTERNAL Command|EXPORT Command|  
-|EJECT Command|EJECT PAGE Command||  
-  
+
+:::row:::
+    :::column:::
+        EDIT Command  
+        EJECT Command  
+        EJECT PAGE Command  
+    :::column-end:::
+    :::column:::
+        ERASE Command  
+        ERROR Command  
+        EXPORT Command  
+    :::column-end:::
+    :::column:::
+        EXTERNAL Command  
+    :::column-end:::
+:::row-end:::
+
 ## F  
-  
-||||  
-|-|-|-|  
-|_FOXDOC System Memory Variable|_FOXGRAPH System Memory Variable|FEOF( ) Function|  
-|FCLOSE( ) Function|FCREATE( ) Function|FGETS( ) Function|  
-|FERROR( ) Function|FFLUSH( ) Function|FKLABEL( ) Function|  
-|FILER Command|FIND Command|FOPEN( ) Function|  
-|FKMAX( ) Function|FONTMETRIC( ) Function|FSEEK( ) Function|  
-|FPUTS( ) Function|FREAD( ) Function||  
-|FWRITE( ) Function|FCHSIZE( ) Function||  
-  
+
+:::row:::
+    :::column:::
+        FCHSIZE( ) Function  
+        FCLOSE( ) Function  
+        FCREATE( ) Function  
+        FEOF( ) Function  
+        FERROR( ) Function  
+        FFLUSH( ) Function  
+        FGETS( ) Function  
+    :::column-end:::
+    :::column:::
+        FILER Command  
+        FIND Command  
+        FKLABEL( ) Function  
+        FKMAX( ) Function  
+        FONTMETRIC( ) Function  
+        FOPEN( ) Function  
+        _FOXDOC System Memory Variable  
+    :::column-end:::
+    :::column:::
+        _FOXGRAPH System Memory Variable  
+        FPUTS( ) Function  
+        FREAD( ) Function  
+        FSEEK( ) Function  
+        FWRITE( ) Function  
+    :::column-end:::
+:::row-end:::
+
 ## G  
-  
-||||  
-|-|-|-|  
-|_GENGRAPH System Memory Variable|_GENMENU System Memory Variable|_GENPD System Memory Variable|  
-|_GENSCRN System Memory Variable|_GENXTAB System Memory Variable|GETBAR( ) Function|  
-|GETCOLOR( ) Function|GETDIR( ) Function|GETEXPR Command|  
-|GETFILE( ) Function|GETFONT( ) Function|GETOBJECT( ) Function|  
-|GETPAD( ) Function|GETPICT( ) Function|GETPRINTER( ) Function|  
-  
+
+:::row:::
+    :::column:::
+        _GENGRAPH System Memory Variable  
+        _GENMENU System Memory Variable  
+        _GENPD System Memory Variable  
+        _GENSCRN System Memory Variable  
+        _GENXTAB System Memory Variable  
+    :::column-end:::
+    :::column:::
+        GETBAR( ) Function  
+        GETCOLOR( ) Function  
+        GETDIR( ) Function  
+        GETEXPR Command  
+        GETFILE( ) Function  
+    :::column-end:::
+    :::column:::
+        GETFONT( ) Function  
+        GETOBJECT( ) Function  
+        GETPAD( ) Function  
+        GETPICT( ) Function  
+        GETPRINTER( ) Function  
+    :::column-end:::
+:::row-end:::
+
 ## H  
-  
-||||  
-|-|-|-|  
-|HELP Command|HIDE MENU Command|HIDE POPUP Command|  
-|HIDE WINDOW Command|HOME( ) Function||  
-  
+
+:::row:::
+    :::column:::
+        HELP Command  
+        HIDE MENU Command  
+    :::column-end:::
+    :::column:::
+        HIDE POPUP Command  
+        HIDE WINDOW Command  
+    :::column-end:::
+    :::column:::
+        HOME( ) Function  
+    :::column-end:::
+:::row-end:::
+
 ## I  
-  
-||||  
-|-|-|-|  
-|IMESTATUS( ) Function|IMPORT Command|INPUT Command|  
-|INDEX ON Command|INKEY( ) Function|ISCOLOR( ) Function|  
-|INSERT Command|INSMODE( ) Function||  
-|ISMOUSE( ) Function|_INDENT System Memory Variable||  
-  
+
+:::row:::
+    :::column:::
+        IMESTATUS( ) Function  
+        IMPORT Command  
+        _INDENT System Memory Variable  
+        INDEX ON Command  
+    :::column-end:::
+    :::column:::
+        INKEY( ) Function  
+        INPUT Command  
+        INSERT Command  
+        INSMODE( ) Function  
+    :::column-end:::
+    :::column:::
+        ISCOLOR( ) Function  
+        ISMOUSE( ) Function  
+    :::column-end:::
+:::row-end:::
+
 ## J  
-  
-||||  
-|-|-|-|  
-|JOIN Command|||  
-  
+
+JOIN Command
+
 ## K  
-  
-||||  
-|-|-|-|  
-|KEYBOARD Command|||  
-  
+
+KEYBOARD Command
+
 ## L  
-  
-||||  
-|-|-|-|  
-|_LMARGIN System Memory Variable|LABEL Command|LASTKEY( ) Function|  
-|LINENO( ) Function|LIST Commands|LIST CONNECTIONS Command|  
-|LOAD Command|LOCFILE( ) Function||  
-  
+
+:::row:::
+    :::column:::
+        LABEL Command  
+        LASTKEY( ) Function  
+        LINENO( ) Function  
+    :::column-end:::
+    :::column:::
+        LIST Commands  
+        LIST CONNECTIONS Command  
+        _LMARGIN System Memory Variable  
+    :::column-end:::
+    :::column:::
+        LOAD Command  
+        LOCFILE( ) Function  
+    :::column-end:::
+:::row-end:::
+
 ## M  
-  
-||||  
-|-|-|-|  
-|MCOL( ) Function|MD Command|MENU TO Command|  
-|MEMORY( ) Function|MENU Command|MKDIR Command|  
-|MENU( ) Function|MESSAGEBOX( ) Function|MODIFY CONNECTION Command|  
-|MODIFY CLASS Command|MODIFY COMMAND Command|MODIFY FORM Command|  
-|MODIFY DATABASE Command|MODIFY FILE Command|MODIFY MEMO Command|  
-|MODIFY GENERAL Command|MODIFY LABEL Command|MODIFY PROJECT Command|  
-|MODIFY MENU Command|MODIFY PROCEDURE Command|MODIFY SCREEN Command|  
-|MODIFY QUERY Command|MODIFY REPORT Command|MODIFY WINDOW Command|  
-|MODIFY STRUCTURE Command|MODIFY VIEW Command|MOVE WINDOW Command|  
-|MOUSE Command|MOVE POPUP Command|MROW( ) Function|  
-|MRKBAR( ) Function|MRKPAD( ) Function||  
-|MWINDOW( ) Function|MDOWN( ) Function||  
-  
+
+:::row:::
+    :::column:::
+        MCOL( ) Function  
+        MD Command  
+        MDOWN( ) Function  
+        MEMORY( ) Function  
+        MENU Command  
+        MENU( ) Function  
+        MENU TO Command  
+        MESSAGEBOX( ) Function  
+        MKDIR Command  
+        MODIFY CLASS Command  
+        MODIFY COMMAND Command  
+        MODIFY CONNECTION Command  
+    :::column-end:::
+    :::column:::
+        MODIFY DATABASE Command  
+        MODIFY FILE Command  
+        MODIFY FORM Command  
+        MODIFY GENERAL Command  
+        MODIFY LABEL Command  
+        MODIFY MEMO Command  
+        MODIFY MENU Command  
+        MODIFY PROCEDURE Command  
+        MODIFY PROJECT Command  
+        MODIFY QUERY Command  
+        MODIFY REPORT Command  
+        MODIFY SCREEN Command  
+    :::column-end:::
+    :::column:::
+        MODIFY STRUCTURE Command  
+        MODIFY VIEW Command  
+        MODIFY WINDOW Command  
+        MOUSE Command  
+        MOVE POPUP Command  
+        MOVE WINDOW Command  
+        MRKBAR( ) Function  
+        MRKPAD( ) Function  
+        MROW( ) Function  
+        MWINDOW( ) Function  
+    :::column-end:::
+:::row-end:::
+
 ## N  
-  
-||||  
-|-|-|-|  
-|NUMLOCK( ) Function|||  
-  
+
+NUMLOCK( ) Function
+
 ## O  
-  
-||||  
-|-|-|-|  
-|OBJNUM( ) Function|OBJTOCLIENT( ) Function|ON BAR Command|  
-|OEMTOANSI( ) Function|ON APLABOUT Command|ON EXIT MENU Command|  
-|ON ESCAPE Command|ON EXIT BAR Command|ON KEY = Command|  
-|ON EXIT PAD Command|ON EXIT POPUP Command|ON PAD Command|  
-|ON KEY LABEL Command|ON MACHELP Command|ON SELECTION BAR Command|  
-|ON PAGE Command|ON READERROR Command|ON SELECTION POPUP Command|  
-|ON SELECTION MENU Command|ON SELECTION PAD Command||  
-|ON SHUTDOWN Command|OBJVAR( ) Function||  
-  
+
+:::row:::
+    :::column:::
+        OBJNUM( ) Function  
+        OBJTOCLIENT( ) Function  
+        OBJVAR( ) Function  
+        OEMTOANSI( ) Function  
+        ON APLABOUT Command  
+        ON BAR Command  
+        ON ESCAPE Command  
+        ON EXIT BAR Command  
+    :::column-end:::
+    :::column:::
+        ON EXIT MENU Command  
+        ON EXIT PAD Command  
+        ON EXIT POPUP Command  
+        ON KEY = Command  
+        ON KEY LABEL Command  
+        ON MACHELP Command  
+        ON PAD Command  
+        ON PAGE Command  
+    :::column-end:::
+    :::column:::
+        ON READERROR Command  
+        ON SELECTION BAR Command  
+        ON SELECTION MENU Command  
+        ON SELECTION PAD Command  
+        ON SELECTION POPUP Command  
+        ON SHUTDOWN Command  
+    :::column-end:::
+:::row-end:::
+
 ## P  
-  
-||||  
-|-|-|-|  
-|_PADVANCE System Memory Variable|_PAGENO System Memory Variable|_PBPAGE System Memory Variable|  
-|_PCOLNO System Memory Variable|_PCOPIES System Memory Variable|_PDRIVER System Memory Variable|  
-|_PDSETUP System Memory Variable|_PECODE System Memory Variable|_PEJECT System Memory Variable|  
-|_PEPAGE System Memory Variable|_PLENGTH System Memory Variable|_PLINENO System Memory Variable|  
-|_PLOFFSET System Memory Variable|_PPITCH System Memory Variable|_PQUALITY System Memory Variable|  
-|_PRETEXT System Memory Variable|_PSCODE System Memory Variable|_PSPACING System Memory Variable|  
-|_PWAIT System Memory Variable|PACK DATABASE Command|PAD( ) Function|  
-|PCOL( ) Function|PEMSTATUS( ) Function|PLAY MACRO Command|  
-|POP KEY Command|POP MENU Command|POP POPUP Command|  
-|POPUP( ) Function|PRINTJOB ... ENDPRINTJOB Command|PRINTSTATUS( ) Function|  
-|PRMBAR( ) Function|PRMPAD( ) Function|PROMPT( ) Function|  
-|PROW( ) Function|PRTINFO( ) Function|PUSH KEY Command|  
-|PUSH MENU Command|PUSH POPUP Command|PUTFILE( ) Function|  
-  
+
+:::row:::
+    :::column:::
+        PACK DATABASE Command  
+        PAD( ) Function  
+        _PADVANCE System Memory Variable  
+        _PAGENO System Memory Variable  
+        _PBPAGE System Memory Variable  
+        PCOL( ) Function  
+        _PCOLNO System Memory Variable  
+        _PCOPIES System Memory Variable  
+        _PDRIVER System Memory Variable  
+        _PDSETUP System Memory Variable  
+        _PECODE System Memory Variable  
+        _PEJECT System Memory Variable  
+        PEMSTATUS( ) Function  
+    :::column-end:::
+    :::column:::
+        _PEPAGE System Memory Variable  
+        PLAY MACRO Command  
+        _PLENGTH System Memory Variable  
+        _PLINENO System Memory Variable  
+        _PLOFFSET System Memory Variable  
+        POP KEY Command  
+        POP MENU Command  
+        POP POPUP Command  
+        POPUP( ) Function  
+        _PPITCH System Memory Variable  
+        _PQUALITY System Memory Variable  
+        _PRETEXT System Memory Variable  
+        PRINTJOB ... ENDPRINTJOB Command  
+    :::column-end:::
+    :::column:::
+        PRINTSTATUS( ) Function  
+        PRMBAR( ) Function  
+        PRMPAD( ) Function  
+        PROMPT( ) Function  
+        PROW( ) Function  
+        PRTINFO( ) Function  
+        _PSCODE System Memory Variable  
+        _PSPACING System Memory Variable  
+        PUSH KEY Command  
+        PUSH MENU Command  
+        PUSH POPUP Command  
+        PUTFILE( ) Function  
+        _PWAIT System Memory Variable  
+    :::column-end:::
+:::row-end:::
+
 ## Q  
-  
-||||  
-|-|-|-|  
-|QUIT Command|||  
-  
+
+QUIT Command
+
 ## R  
-  
-||||  
-|-|-|-|  
-|_RMARGIN System Memory Variable|RD Command|READKEY( ) Function|  
-|READ Command|READ MENU Command|RELEASE BAR Command|  
-|REFRESH() Function|REINDEX Command|RELEASE LIBRARY Command|  
-|RELEASE CLASSLIB Command|RELEASE Command|RELEASE PAD Command|  
-|RELEASE MENUS Command|RELEASE MODULE Command|RELEASE WINDOWS Command|  
-|RELEASE POPUPS Command|RELEASE PROCEDURE Command|RENAME Command|  
-|REMOVE CLASS Command|RENAME CLASS Command|RENAME VIEW Command|  
-|RENAME CONNECTION Command|RENAME TABLE Command|RESTORE FROM Command|  
-|REPORT Command|REQUERY( ) Function|RESTORE WINDOW Command|  
-|RESTORE MACROS Command|RESTORE SCREEN Command|RGBSCHEME( ) Function|  
-|RESUME Command|RGB( ) Function|RUN &#124; ! Command|  
-|RMDIR Command|ROW( ) Function||  
-|RUNSCRIPT Command|RDLEVEL( ) Function||  
-  
+
+:::row:::
+    :::column:::
+        RD Command  
+        RDLEVEL( ) Function  
+        READ Command  
+        READ MENU Command  
+        READKEY( ) Function  
+        REFRESH() Function  
+        REINDEX Command  
+        RELEASE Command  
+        RELEASE BAR Command  
+        RELEASE CLASSLIB Command  
+        RELEASE LIBRARY Command  
+        RELEASE MENUS Command  
+        RELEASE MODULE Command  
+    :::column-end:::
+    :::column:::
+        RELEASE PAD Command  
+        RELEASE POPUPS Command  
+        RELEASE PROCEDURE Command  
+        RELEASE WINDOWS Command  
+        REMOVE CLASS Command  
+        RENAME Command  
+        RENAME CLASS Command  
+        RENAME CONNECTION Command  
+        RENAME TABLE Command  
+        RENAME VIEW Command  
+        REPORT Command  
+        REQUERY( ) Function  
+        RESTORE FROM Command  
+    :::column-end:::
+    :::column:::
+        RESTORE MACROS Command  
+        RESTORE SCREEN Command  
+        RESTORE WINDOW Command  
+        RESUME Command  
+        RGB( ) Function  
+        RGBSCHEME( ) Function  
+        _RMARGIN System Memory Variable  
+        RMDIR Command  
+        ROW( ) Function  
+        RUN &#124; ! Command  
+        RUNSCRIPT Command  
+    :::column-end:::
+:::row-end:::
+
 ## S  
-  
-||||  
-|-|-|-|  
-|SAVE MACROS Command|SAVE SCREEN Command|SAVE TO Command|  
-|SAVE WINDOWS Command|SCHEME( ) Function|SCOLS( ) Function|  
-|SCROLL Command|_SCREEN System Memory Variable|SET Command|  
-|SET ALTERNATE Command|SET ANSI Command|SET APLABOUT Command|  
-|SET AUTOSAVE Command|SET BELL Command|SET BLINK Command|  
-|SET BORDER Command|SET BRSTATUS Command|SET CLASSLIB Command|  
-|SET CLEAR Command|SET CLOCK Command|SET COLOR OF Command|  
-|SET COLOR OF SCHEME Command|SET COLOR SET Command|SET COLOR TO Command|  
-|SET COMPATIBLE Command|SET CONFIRM Command|SET CONSOLE Command|  
-|SET CPCOMPILE|SET CPDIALOG|SET CURRENCY Command|  
-|SET CURSOR Command|SET DATASESSION Command|SET DEBUG Command|  
-|SET DECIMALS Command|SET DELIMITERS Command|SET DEVELOPMENT Command|  
-|SET DEVICE Command|SET DISPLAY Command|SET DOHISTORY Command|  
-|SET ECHO Command|SET ESCAPE Command|SET FORMAT Command|  
-|SET FUNCTION Command|SET HEADINGS Command|SET HELP Command|  
-|SET HELPFILTER Command|SET INTENSITY Command|SET KEY Command|  
-|SET KEYCOMP Command|SET LOGERRORS Command|SET MACDESKTOP Command|  
-|SET MACHELP Command|SET MACKEY Command|SET MARGIN Command|  
-|SET MARK OF Command|SET MARK TO Command|SET MEMOWIDTH Command|  
-|SET MESSAGE Command|SET MOUSE Command|SET ODOMETER Command|  
-|SET OLEOBJECT Command|SET PALETTE Command|SET PDSETUP Command|  
-|SET POINT Command|SET PRINTER Command|SET READBORDER Command|  
-|SET REFRESH Command|SET RESOURCE Command|SET SAFETY Command|  
-|SET SCOREBOARD Command|SET SECONDS Command|SET SEPARATOR Command|  
-|SET SHADOWS Command|SET SKIP OF Command|SET SPACE Command|  
-|SET STATUS Command|SET STATUS BAR Command|SET STEP Command|  
-|SET STICKY Command|SET SYSFORMATS Command|SET SYSMENU Command|  
-|SET TALK Command|SET TEXTMERGE Command|SET TEXTMERGE DELIMITERS Command|  
-|SET TOPIC Command|SET TOPIC ID Command|SET TRBETWEEN Command|  
-|SET TYPEAHEAD Command|SET VIEW Command|SET WINDOW OF MEMO Command|  
-|SET XCMDFILE Command|_SHELL System Memory Variable|SHOW GET Command|  
-|SHOW GETS Command|SHOW MENU Command|SHOW OBJECT Command|  
-|SHOW POPUP Command|SHOW WINDOW Command|SIZE POPUP Command|  
-|SIZE WINDOW Command|SKPBAR( ) Function|SKPPAD( ) Function|  
-|SOUNDEX( ) Function|_SPELLCHK System Memory Variable|SQL functions|  
-|SROWS( ) Function|_STARTUP System Memory Variable|SUSPEND Command|  
-|SYS() Functions except SYS(2011)|SYSMETRIC( ) Function||  
-  
+
+:::row:::
+    :::column:::
+        SAVE MACROS Command  
+        SAVE SCREEN Command  
+        SAVE TO Command  
+        SAVE WINDOWS Command  
+        SCHEME( ) Function  
+        SCOLS( ) Function  
+        _SCREEN System Memory Variable  
+        SCROLL Command  
+        SET Command  
+        SET ALTERNATE Command  
+        SET ANSI Command  
+        SET APLABOUT Command  
+        SET AUTOSAVE Command  
+        SET BELL Command  
+        SET BLINK Command  
+        SET BORDER Command  
+        SET BRSTATUS Command  
+        SET CLASSLIB Command  
+        SET CLEAR Command  
+        SET CLOCK Command  
+        SET COLOR OF Command  
+        SET COLOR OF SCHEME Command  
+        SET COLOR SET Command  
+        SET COLOR TO Command  
+        SET COMPATIBLE Command  
+        SET CONFIRM Command  
+        SET CONSOLE Command  
+        SET CPCOMPILE  
+        SET CPDIALOG  
+        SET CURRENCY Command  
+        SET CURSOR Command  
+        SET DATASESSION Command  
+        SET DEBUG Command  
+        SET DECIMALS Command  
+        SET DELIMITERS Command  
+        SET DEVELOPMENT Command  
+        SET DEVICE Command  
+    :::column-end:::
+    :::column:::
+        SET DISPLAY Command  
+        SET DOHISTORY Command  
+        SET ECHO Command  
+        SET ESCAPE Command  
+        SET FORMAT Command  
+        SET FUNCTION Command  
+        SET HEADINGS Command  
+        SET HELP Command  
+        SET HELPFILTER Command  
+        SET INTENSITY Command  
+        SET KEY Command  
+        SET KEYCOMP Command  
+        SET LOGERRORS Command  
+        SET MACDESKTOP Command  
+        SET MACHELP Command  
+        SET MACKEY Command  
+        SET MARGIN Command  
+        SET MARK OF Command  
+        SET MARK TO Command  
+        SET MEMOWIDTH Command  
+        SET MESSAGE Command  
+        SET MOUSE Command  
+        SET ODOMETER Command  
+        SET OLEOBJECT Command  
+        SET PALETTE Command  
+        SET PDSETUP Command  
+        SET POINT Command  
+        SET PRINTER Command  
+        SET READBORDER Command  
+        SET REFRESH Command  
+        SET RESOURCE Command  
+        SET SAFETY Command  
+        SET SCOREBOARD Command  
+        SET SECONDS Command  
+        SET SEPARATOR Command  
+        SET SHADOWS Command  
+        SET SKIP OF Command  
+    :::column-end:::
+    :::column:::
+        SET SPACE Command  
+        SET STATUS Command  
+        SET STATUS BAR Command  
+        SET STEP Command  
+        SET STICKY Command  
+        SET SYSFORMATS Command  
+        SET SYSMENU Command  
+        SET TALK Command  
+        SET TEXTMERGE Command  
+        SET TEXTMERGE DELIMITERS Command  
+        SET TOPIC Command  
+        SET TOPIC ID Command  
+        SET TRBETWEEN Command  
+        SET TYPEAHEAD Command  
+        SET VIEW Command  
+        SET WINDOW OF MEMO Command  
+        SET XCMDFILE Command  
+        _SHELL System Memory Variable  
+        SHOW GET Command  
+        SHOW GETS Command  
+        SHOW MENU Command  
+        SHOW OBJECT Command  
+        SHOW POPUP Command  
+        SHOW WINDOW Command  
+        SIZE POPUP Command  
+        SIZE WINDOW Command  
+        SKPBAR( ) Function  
+        SKPPAD( ) Function  
+        SOUNDEX( ) Function  
+        _SPELLCHK System Memory Variable  
+        SQL functions  
+        SROWS( ) Function  
+        _STARTUP System Memory Variable  
+        SUSPEND Command  
+        SYS() Functions except SYS(2011)  
+        SYSMETRIC( ) Function  
+    :::column-end:::
+:::row-end:::
+
 ## T  
-  
-||||  
-|-|-|-|  
-|_TABS System Memory Variable|TEXT ... ENDTEXT Command|TXTWIDTH( ) Function|  
-|TRANSFORM( ) Function|_TRANSPORT System Memory Variable||  
-|TYPE Command|_THROTTLE System Memory Variable||  
-  
+
+:::row:::
+    :::column:::
+        _TABS System Memory Variable  
+        TEXT ... ENDTEXT Command  
+        _THROTTLE System Memory Variable  
+    :::column-end:::
+    :::column:::
+        TRANSFORM( ) Function  
+        _TRANSPORT System Memory Variable  
+        TXTWIDTH( ) Function  
+    :::column-end:::
+    :::column:::
+        TYPE Command  
+    :::column-end:::
+:::row-end:::
+
 ## U  
-  
-||||  
-|-|-|-|  
-|UPDATED( ) Function|USE Command||  
-  
+
+:::row:::
+    :::column:::
+        UPDATED( ) Function  
+    :::column-end:::
+    :::column:::
+        USE Command  
+    :::column-end:::
+:::row-end:::
+
 ## V  
-  
-||||  
-|-|-|-|  
-|VALIDATE DATABASE Command|VARREAD( ) Function|VERSION( ) Function|  
-  
+
+:::row:::
+    :::column:::
+        VALIDATE DATABASE Command  
+    :::column-end:::
+    :::column:::
+        VARREAD( ) Function  
+    :::column-end:::
+    :::column:::
+        VERSION( ) Function  
+    :::column-end:::
+:::row-end:::
+
 ## W  
-  
-||||  
-|-|-|-|  
-|_WINDOWS System Memory Variable|_WIZARD System Memory Variable|WCHILD( ) Function|  
-|WAIT Command|WBORDER( ) Function|WFONT( ) Function|  
-|WCOLS( ) Function|WEXIST( ) Function|WLROW( ) Function|  
-|WITH ... ENDWITH Command|WLAST( ) Function|WONTOP( ) Function|  
-|WMAXIMUM( ) Function|WLCOL( ) Function|WREAD( ) Function|  
-|WOUTPUT( ) Function|WMINIMUM( ) Function|WVISIBLE( ) Function|  
-|WPARENT( ) Function|WTITLE( ) Function||  
-|WROWS( ) Function|_WRAP System Memory Variable||  
-  
+
+:::row:::
+    :::column:::
+        WAIT Command  
+        WBORDER( ) Function  
+        WCHILD( ) Function  
+        WCOLS( ) Function  
+        WEXIST( ) Function  
+        WFONT( ) Function  
+        _WINDOWS System Memory Variable  
+        WITH ... ENDWITH Command  
+    :::column-end:::
+    :::column:::
+        _WIZARD System Memory Variable  
+        WLAST( ) Function  
+        WLCOL( ) Function  
+        WLROW( ) Function  
+        WMAXIMUM( ) Function  
+        WMINIMUM( ) Function  
+        WONTOP( ) Function  
+        WOUTPUT( ) Function  
+    :::column-end:::
+    :::column:::
+        WPARENT( ) Function  
+        _WRAP System Memory Variable  
+        WREAD( ) Function  
+        WROWS( ) Function  
+        WTITLE( ) Function  
+        WVISIBLE( ) Function  
+    :::column-end:::
+:::row-end:::
+
 ## Z  
-  
-||||  
-|-|-|-|  
-|ZOOM WINDOW Command|||
+
+ZOOM WINDOW Command

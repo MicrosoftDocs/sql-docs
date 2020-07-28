@@ -1,5 +1,5 @@
 ---
-title: "Table-Valued Parameters (OLE DB) | Microsoft Docs"
+title: Table-valued parameters (OLE DB driver)
 description: "Table-Valued Parameters (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

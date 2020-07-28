@@ -30,19 +30,43 @@ Prior to ODBC 3.8 and the Windows 7 SDK, asynchronous operations were permitted 
   
 ## Executing Statement Operations Asynchronously  
  The following statement functions operate on a data source and can execute asynchronously:  
-  
-||||  
-|-|-|-|  
-|[SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)|[SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md)|[SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)|  
-|[SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)|[SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)|[SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)|  
-|[SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)|[SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)|[SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)|  
-|[SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)|[SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)|[SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)|  
-|[SQLGetTypeInfo](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)|[SQLMoreResults](../../../odbc/reference/syntax/sqlmoreresults-function.md)|[SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md)|  
-|[SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)|[SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)|[SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)|  
-|[SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)|[SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)|[SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)|  
-|[SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)|[SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)|[SQLSpecialColumns](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)|  
-|[SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)|[SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)|[SQLTables](../../../odbc/reference/syntax/sqltables-function.md)|  
-  
+
+:::row:::
+    :::column:::
+        [SQLBulkOperations](../../../odbc/reference/syntax/sqlbulkoperations-function.md)  
+        [SQLColAttribute](../../../odbc/reference/syntax/sqlcolattribute-function.md)  
+        [SQLColumnPrivileges](../../../odbc/reference/syntax/sqlcolumnprivileges-function.md)  
+        [SQLColumns](../../../odbc/reference/syntax/sqlcolumns-function.md)  
+        [SQLDescribeCol](../../../odbc/reference/syntax/sqldescribecol-function.md)  
+        [SQLDescribeParam](../../../odbc/reference/syntax/sqldescribeparam-function.md)  
+        [SQLExecDirect](../../../odbc/reference/syntax/sqlexecdirect-function.md)  
+        [SQLExecute](../../../odbc/reference/syntax/sqlexecute-function.md)  
+        [SQLFetch](../../../odbc/reference/syntax/sqlfetch-function.md)  
+    :::column-end:::
+    :::column:::
+        [SQLFetchScroll](../../../odbc/reference/syntax/sqlfetchscroll-function.md)  
+        [SQLForeignKeys](../../../odbc/reference/syntax/sqlforeignkeys-function.md)  
+        [SQLGetData](../../../odbc/reference/syntax/sqlgetdata-function.md)  
+        [SQLGetTypeInfo](../../../odbc/reference/syntax/sqlgettypeinfo-function.md)  
+        [SQLMoreResults](../../../odbc/reference/syntax/sqlmoreresults-function.md)  
+        [SQLNumParams](../../../odbc/reference/syntax/sqlnumparams-function.md)  
+        [SQLNumResultCols](../../../odbc/reference/syntax/sqlnumresultcols-function.md)  
+        [SQLParamData](../../../odbc/reference/syntax/sqlparamdata-function.md)  
+        [SQLPrepare](../../../odbc/reference/syntax/sqlprepare-function.md)  
+    :::column-end:::
+    :::column:::
+        [SQLPrimaryKeys](../../../odbc/reference/syntax/sqlprimarykeys-function.md)  
+        [SQLProcedureColumns](../../../odbc/reference/syntax/sqlprocedurecolumns-function.md)  
+        [SQLProcedures](../../../odbc/reference/syntax/sqlprocedures-function.md)  
+        [SQLPutData](../../../odbc/reference/syntax/sqlputdata-function.md)  
+        [SQLSetPos](../../../odbc/reference/syntax/sqlsetpos-function.md)  
+        [SQLSpecialColumns](../../../odbc/reference/syntax/sqlspecialcolumns-function.md)  
+        [SQLStatistics](../../../odbc/reference/syntax/sqlstatistics-function.md)  
+        [SQLTablePrivileges](../../../odbc/reference/syntax/sqltableprivileges-function.md)  
+        [SQLTables](../../../odbc/reference/syntax/sqltables-function.md)  
+    :::column-end:::
+:::row-end:::
+
  Asynchronous statement execution is controlled on either a per-statement or a per-connection basis, depending on the data source. That is, the application specifies not that a particular function is to be executed asynchronously, but that any function executed on a particular statement is to be executed asynchronously. To find out which one is supported, an application calls [SQLGetInfo](../../../odbc/reference/syntax/sqlgetinfo-function.md) with an option of SQL_ASYNC_MODE. SQL_AM_CONNECTION is returned if connection-level asynchronous execution (for a statement handle) is supported; SQL_AM_STATEMENT if statement-level asynchronous execution is supported.  
   
  To specify that functions executed with a particular statement are to be executed asynchronously, the application calls **SQLSetStmtAttr** with the SQL_ATTR_ASYNC_ENABLE attribute and sets it to SQL_ASYNC_ENABLE_ON. If connection-level asynchronous processing is supported, the SQL_ATTR_ASYNC_ENABLE statement attribute is read-only and its value is the same as the connection attribute of the connection on which the statement was allocated. It is driver-specific whether the value of the statement attribute is set at statement allocation time or later. Attempting to set it will return SQL_ERROR and SQLSTATE HYC00 (Optional feature not implemented).  
@@ -150,12 +174,22 @@ while ((rc = SQLExecDirect(hstmt1, SQLStatement, SQL_NTS)) == SQL_STILL_EXECUTIN
 -   Efficient asynchronous ODBC calls and the ability to cancel connection operations enable an application to allow the user to cancel any slow operation without having to wait for timeouts.  
   
  The following functions, which operate on connection handles, can now be executed asynchronously:  
-  
-||||  
-|-|-|-|  
-|[SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)|[SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)|[SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)|  
-|[SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)|[SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)|[SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)|  
-  
+
+:::row:::
+    :::column:::
+        [SQLBrowseConnect](../../../odbc/reference/syntax/sqlbrowseconnect-function.md)  
+        [SQLConnect](../../../odbc/reference/syntax/sqlconnect-function.md)  
+    :::column-end:::
+    :::column:::
+        [SQLDisconnect](../../../odbc/reference/syntax/sqldisconnect-function.md)  
+        [SQLDriverConnect](../../../odbc/reference/syntax/sqldriverconnect-function.md)  
+    :::column-end:::
+    :::column:::
+        [SQLEndTran](../../../odbc/reference/syntax/sqlendtran-function.md)  
+        [SQLSetConnectAttr](../../../odbc/reference/syntax/sqlsetconnectattr-function.md)  
+    :::column-end:::
+:::row-end:::
+
  To determine whether a driver supports asynchronous operations on these functions, an application calls **SQLGetInfo** with SQL_ASYNC_DBC_FUNCTIONS. SQL_ASYNC_DBC_CAPABLE is returned if asynchronous operations are supported. SQL_ASYNC_DBC_NOT_CAPABLE is returned if asynchronous operations are not supported.  
   
  To specify that functions executed with a particular connection are to be executed asynchronously, the application calls **SQLSetConnectAttr** and sets the SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE attribute to SQL_ASYNC_DBC_ENABLE_ON. Setting a connection attribute before establishing a connection always executes synchronously. Also, the operation setting the connection attribute SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE with **SQLSetConnectAttr** always executes synchronously.  

@@ -1,5 +1,5 @@
 ---
-title: "SSVARIANT Structure | Microsoft Docs"
+title: SSVARIANT structure (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

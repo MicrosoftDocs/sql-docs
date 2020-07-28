@@ -1,5 +1,5 @@
 ---
-title: "Setting Large Data | Microsoft Docs"
+title: Setting large data (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

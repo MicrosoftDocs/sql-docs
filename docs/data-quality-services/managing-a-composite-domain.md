@@ -23,7 +23,7 @@ ms.author: sawinark
 ## In This Section  
  Using a composite domain enables you to do the following:  
   
-|||  
+|Operation Description|Topic|  
 |-|-|  
 |Create a semantic representation for a data field that consists of multiple related terms that are not parsed|[Create a Composite Domain](../data-quality-services/create-a-composite-domain.md)|  
 |When you are mapping complex data to a composite domain, you can parse the data based on knowledge, in addition to parsing on a delimiter. DQS will first attempt to use its knowledge about single domains to determine how parts of the complex string belong in single domains.|[Create a Composite Domain](../data-quality-services/create-a-composite-domain.md)|  

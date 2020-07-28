@@ -42,9 +42,8 @@ Click to reset the type mapping list to the SSMA defaults.
 ## Type Mappings  
 The following table shows the default mapping between source and target data types  
   
-|||  
+|MySQL Data Type|SQL Server Data Type|  
 |-|-|  
-|**MySQL Data Type**|**SQL Server Data Type**|  
 |bigint|bigint|  
 |bigint[*..255]|bigint|  
 |binary|binary[1]|  

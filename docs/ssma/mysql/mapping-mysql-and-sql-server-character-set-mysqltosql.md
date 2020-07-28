@@ -71,9 +71,8 @@ Charset Mapping varies at different node levels, namely:
   
     The Charset mapping between MySQL database and the target database on Root Metadata Node Level is given below:  
   
-    ||||  
+    |Charset Name|Charset Description|Target Charset Type (Default)|  
     |-|-|-|  
-    |**Charset Name**|**Charset Description**|**Target Charset Type (Default)**|  
     |big5|Big5 Traditional Chinese|NCHAR/NVARCHAR (Default)|  
     |dec8|DEC West European|CHAR/VARCHAR (Default)|  
     |cp850|DOS West European|CHAR/VARCHAR (Default)|  

@@ -16,9 +16,8 @@ This section includes Help topics for SQL Server Migration Assistant (SSMA) for 
 ## In This Section  
 The following table lists the SSMA dialog boxes:  
   
-|||  
+|Topic|Description|  
 |-|-|  
-|**Topic**|**Description**|  
 |[Advanced Object Selection  &#40;MySQLToSQL&#41;](../../ssma/mysql/advanced-object-selection-mysqltosql.md)|Use the **Advanced Object Select** dialog box to find database objects by using filter criteria, and then select or clear those objects.|  
 |[Assessment Report &#40;MySQLToSQL&#41;](../../ssma/mysql/assessment-report-mysqltosql.md)|Use the Report to view the results of the conversion of MySQL objects to Transact-SQL syntax, and to estimate the time and complexity of a migration to SQL Server.|  
 |[Connect to MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connect-to-mysql-mysqltosql.md)|Use the **Connect to MySQL** dialog box to connect to the MySQL database that you want to migrate.|  

@@ -17,9 +17,8 @@ To access the Assessment Report, select objects to convert in source metadata ex
   
 ## Options  
   
-|||  
-|-|-|  
 |Term|Definition|  
+|-|-|  
 |**Conversion statistics**|Shows the conversion statistics by statement type. This pane is visible when a group object, such as a schema, or an object without code is selected in the left pane.|  
 |**Objects by Categories**|Shows the number of objects by category. This pane is visible only when a group object, such as a schema, or an object without code is selected in the left pane.|  
 |**Statistics**|Shows the conversion statistics for the selected object. This pane is visible only when an individual object with code is selected in the left pane. You might have to expand **Statistics**, which is immediately above the **Source** pane, to view this pane.|  

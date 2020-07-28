@@ -155,9 +155,8 @@ SSMA can convert many LOCK TABLE statements into table hints. SSMA cannot conver
   
 The following table shows how SSMA converts DB2 lock modes:  
   
-|||  
-|-|-|  
 |DB2 Lock Mode|SQL Server Table Hint|  
+|-|-|  
 |ROW SHARE|ROWLOCK, HOLDLOCK|  
 |ROW EXCLUSIVE|ROWLOCK, XLOCK, HOLDLOCK|  
 |SHARE UPDATE = ROW SHARE|ROWLOCK, HOLDLOCK|  

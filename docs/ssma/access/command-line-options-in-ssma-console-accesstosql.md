@@ -111,10 +111,6 @@ This optional switch denotes the project environment settings folder for the cur
   
 `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -e c:\SsmaProjects\CommonEnvironment`  
   
-||  
-|-|  
-||  
-  
 ### Secure password option: -p/securepassword  
 This option indicates the encrypted password for server connections. It differs from all other options in that it does not execute any script or help in any migration-related activities, but helps manage password-encryption for the server connections used in the migration project.  
   

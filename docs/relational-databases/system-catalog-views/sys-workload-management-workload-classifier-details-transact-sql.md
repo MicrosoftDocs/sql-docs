@@ -15,7 +15,7 @@ monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # sys.workload_management_workload_classifier_details (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   Returns details for each classifier.  
   

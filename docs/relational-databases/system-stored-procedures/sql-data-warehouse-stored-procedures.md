@@ -14,7 +14,7 @@ ms.author: rortloff
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SQL Data Warehouse Stored Procedures
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] provides built-in procedures that you can use to perform operations related to database roles. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] includes the following system procedures:  
   

@@ -20,7 +20,7 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
 ---
 # OPENJSON (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 **OPENJSON** is a table-valued function that parses JSON text and returns objects and properties from the JSON input as rows and columns. In other words, **OPENJSON** provides a rowset view over a JSON document. You can explicitly specify the columns in the rowset and the JSON property paths used to populate the columns. Since **OPENJSON** returns a set of rows, you can use **OPENJSON** in the `FROM` clause of a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement just as you can use any other table, view, or table-valued function.  
   

@@ -14,7 +14,7 @@ ms.author: carlrab
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_os_performance_counters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Contains information about Windows performance counters for the nodes in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   

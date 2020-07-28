@@ -13,7 +13,7 @@ ms.author: "rortloff"
 monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_replicated_table_cache_state (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
   Returns the state of the cache associated with a replicated table by **object_id**.  
   

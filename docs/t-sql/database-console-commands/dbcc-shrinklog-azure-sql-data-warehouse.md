@@ -15,7 +15,7 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 
 # DBCC SHRINKLOG (Parallel Data Warehouse)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
 Reduces the size of the transaction log *across the appliance* for the current [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] database. The data is defragmented in order to shrink the transaction log. Over time, the database transaction log can become fragmented and inefficient. Use DBCC SHRINKLOG to reduce fragmentation and reduce the log size.
   

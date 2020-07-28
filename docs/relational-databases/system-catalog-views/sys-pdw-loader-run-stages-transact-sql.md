@@ -14,7 +14,7 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.pdw_loader_run_stages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Contains information about ongoing and completed load operations in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. The information persists across system restarts.  
   

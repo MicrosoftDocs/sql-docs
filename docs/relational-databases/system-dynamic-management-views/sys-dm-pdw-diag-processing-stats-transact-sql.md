@@ -14,7 +14,7 @@ ms.author: carlrab
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_diag_processing_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Displays information related to all internal diagnostic events that could be incorporated into diagnostic sessions defined by the administrator. Query this view to understand the statistics behind the diagnostics and eventing subsystems that drive the population of all the other DMVs. There are a group of queues for each process on each node.  
   

@@ -14,7 +14,7 @@ ms.author: carlrab
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_query_stats_xe_file (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   This DMV is deprecated and will be removed in a future release. In this release, it returns 0 rows.  
   

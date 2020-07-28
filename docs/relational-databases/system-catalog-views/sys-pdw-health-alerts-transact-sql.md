@@ -12,7 +12,7 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.pdw_health_alerts (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Stores properties for the different alerts that can occur on the system; this is a catalog table for alerts.  
   

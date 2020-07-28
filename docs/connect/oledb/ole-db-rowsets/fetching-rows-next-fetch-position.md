@@ -1,5 +1,5 @@
 ---
-title: "Next Fetch Position | Microsoft Docs"
+title: "Next fetch position (OLE DB driver) | Microsoft Docs"
 description: "Fetching rows - next fetch position"
 ms.custom: ""
 ms.date: "06/14/2018"
@@ -16,7 +16,7 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ---
-# Fetching Rows - Next Fetch Position
+# Fetching Rows - Next Fetch Position (OLE DB Driver)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

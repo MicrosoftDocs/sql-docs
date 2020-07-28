@@ -11,7 +11,7 @@ ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 ---
-# Configure PolyBase to access external data in SQL Server
+# Configure PolyBase to access external data with ODBC generic types
 
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 

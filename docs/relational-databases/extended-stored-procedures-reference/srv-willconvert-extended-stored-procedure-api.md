@@ -1,5 +1,6 @@
 ---
 title: "srv_willconvert (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_willconvert determines whether a specific data type conversion is available within the ODS Library.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

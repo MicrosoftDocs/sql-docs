@@ -1,5 +1,5 @@
 ---
-title: "Preparing Commands | Microsoft Docs"
+title: Preparing commands (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -17,7 +17,7 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Preparing Commands
+# Preparing Commands in SQL Server Native Client
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider supports command preparation for optimized multiple execution of a single command; however, command preparation generates overhead, and a consumer does not need to prepare a command to execute it more than once. In general, a command should be prepared if it will be executed more than three times.  

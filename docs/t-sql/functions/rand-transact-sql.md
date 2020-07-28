@@ -35,7 +35,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 RAND ( [ seed ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *seed*  
  Is an integer [expression](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**, **smallint**, or **int**) that gives the seed value. If *seed* is not specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] assigns a seed value at random. For a specified seed value, the result returned is always the same.  
   

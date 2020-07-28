@@ -1,5 +1,5 @@
 ---
-title: "IBCPSession::BCPExec (OLE DB) | Microsoft Docs"
+title: "IBCPSession::BCPExec (OLE DB driver) | Microsoft Docs"
 description: "IBCPSession::BCPExec (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

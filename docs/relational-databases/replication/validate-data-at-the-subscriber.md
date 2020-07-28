@@ -16,7 +16,7 @@ helpviewer_keywords:
 ms.assetid: 215b4c9a-0ce9-4c00-ac0b-43b54151dfa3
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Validate Replicated Data
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

@@ -1,6 +1,6 @@
 ---
 title: "Lesson 3: Define a Dataset for the Table Report | Microsoft Docs"
-description: "After you define the data source for the paginated report, you need to define a dataset. In SQL Server Reporting Services, data that you use in reports is contained in a dataset."
+description: In this lesson, learn how to define a dataset for the Table Report in SQL Server Reporting Services (SSRS).
 ms.date: 05/01/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

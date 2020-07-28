@@ -1,5 +1,6 @@
 ---
 title: "Navigate Code and Text"
+description: "Learn how to navigate through a document with various techniques: set a bookmark for a location to make it easy to return to that location; search incrementally; use mouse and keyboard; and, use the Go To command to go to a line by specifying its line number."
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "Parameter Info (IntelliSense)"
+description: Learn how to use the IntelliSense Parameter info option, which provides information as you type about the parameters required by a function or stored procedure.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

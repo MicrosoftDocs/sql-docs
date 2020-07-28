@@ -32,7 +32,9 @@ This function returns the last day of the month containing a specified date, wit
 EOMONTH ( start_date [, month_to_add ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *start_date*  
 A date expression that specifies the date for which to return the last day of the month.  
   

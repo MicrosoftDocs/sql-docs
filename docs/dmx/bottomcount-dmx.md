@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # BottomCount (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns the specified number of bottom-most rows, in increasing order of rank as specified by an expression.  
   

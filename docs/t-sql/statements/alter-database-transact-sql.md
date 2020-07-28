@@ -39,10 +39,23 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -278,10 +291,23 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />single database/elastic pool \*_** &nbsp;|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />single database/elastic pool \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -397,7 +423,7 @@ ALTER DATABASE db1
     MODIFY Name = db2 ;
 ```
 
-MODIFY (EDITION **=** ['Basic' | 'Standard' | 'Premium' |'GeneralPurpose' | 'BusinessCritical' | 'Hyperscale'])
+MODIFY (EDITION **=** ['Basic' \| 'Standard' \| 'Premium' \|'GeneralPurpose' \| 'BusinessCritical' \| 'Hyperscale'])
 Changes the service tier of the database.
 
 The following example changes edition to `Premium`:
@@ -410,7 +436,7 @@ ALTER DATABASE current
 > [!IMPORTANT]
 > EDITION change fails if the MAXSIZE property for the database is set to a value outside the valid range supported by that edition.
 
-MODIFY (MAXSIZE **=** [100 MB | 500 MB | 1 | 1024...4096] GB)
+MODIFY (MAXSIZE **=** [100 MB \| 500 MB \| 1 \| 1024...4096] GB)
 Specifies the maximum size of the database. The maximum size must comply with the valid set of values for the EDITION property of the database. Changing the maximum size of the database may cause the database EDITION to be changed.
 
 > [!NOTE]
@@ -731,10 +757,25 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />managed instance \*_** &nbsp;|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />managed instance \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+    :::column-end:::
+:::row-end:::
+
+
 
 &nbsp;
 
@@ -858,10 +899,23 @@ ALTER DATABASE WideWorldImporters
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;|[Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Azure Synapse<br />Analytics \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-database-transact-sql.md?view=aps-pdw-2016-au7)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -987,10 +1041,23 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](alter-database-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
-||||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

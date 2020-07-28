@@ -59,10 +59,17 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||
-|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />managed instance](backup-transact-sql.md?view=azuresqldb-mi-current)|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
-||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />managed instance](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -239,11 +246,11 @@ Indicates that the accompanying set of [backup devices](../../relational-databas
 
 Specifies a logical or physical backup device to use for the backup operation.
 
-{ *logical_device_name* | **@**_logical\_device\_name\_var_ }
+{ *logical_device_name* \| **@**_logical\_device\_name\_var_ }
 **Applies to:** SQL Server
 Is the logical name of the backup device to which the database is backed up. The logical name must follow the rules for identifiers. If supplied as a variable (@*logical_device_name_var*), the backup device name can be specified either as a string constant (@_logical\_device\_name\_var_**=** logical backup device name) or as a variable of any character string data type except for the **ntext** or **text** data types.
 
-{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' }
+{ DISK \| TAPE \| URL} **=** { **'**_physical\_device\_name_**'** \| **@**_physical\_device\_name\_var_ \| 'NUL' }
 **Applies to:** DISK, TAPE, and URL apply to SQL Server.
 Specifies a disk file or tape device, or a Microsoft Azure Blob storage service. The URL format is used for creating backups to the Microsoft Azure storage service. For more information and examples, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). For a tutorial, see [Tutorial: SQL Server Backup and Restore to Microsoft Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).
 
@@ -712,7 +719,7 @@ This table describes interactions between the { **NOINIT** | INIT } and { **NOSK
 > [!NOTE]
 > If the tape media is empty or the disk backup file does not exist, all these interactions write a media header and proceed. If the media is not empty and lacks a valid media header, these operations give feedback stating that this is not valid MTF media, and they terminate the backup operation.
 
-||NOINIT|INIT|
+|Skip option|NOINIT|INIT|
 |------|------------|----------|
 |NOSKIP|If the volume contains a valid media header, verifies that the media name matches the given `MEDIANAME`, if any. If it matches, appends the backup set, preserving all existing backup sets.<br /> If the volume does not contain a valid media header, an error occurs.|If the volume contains a valid media header, performs the following checks:<br /><ul><li>If `MEDIANAME` was specified, verifies that the given media name matches the media header's media name.<sup>1</sup></li><li>Verifies that there are no unexpired backup sets already on the media. If there are, terminates the backup.</li></ul><br />If these checks pass, overwrites any backup sets on the media, preserving only the media header.<br /> If the volume does not contain a valid media header, generates one with using specified `MEDIANAME` and `MEDIADESCRIPTION`, if any.|
 |SKIP|If the volume contains a valid media header, appends the backup set, preserving all existing backup sets.|If the volume contains a valid<sup>2</sup> media header, overwrites any backup sets on the media, preserving only the media header.<br /> If the media is empty, generates a media header using the specified `MEDIANAME` and `MEDIADESCRIPTION`, if any.|
@@ -977,9 +984,17 @@ WHERE r.command LIKE 'BACKUP%'
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|**_\* SQL Database<br />managed instance \*_** &nbsp;|[Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />managed instance \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](backup-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -1183,9 +1198,17 @@ WITH STATS = 5, COPY_ONLY;
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> ||||
-> |---|---|---|
-> |[SQL Server](backup-transact-sql.md?view=sql-server-2016)|[SQL Database<br />managed instance](backup-transact-sql.md?view=azuresqldb-mi-current)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+:::row:::
+    :::column:::
+        [SQL Server](backup-transact-sql.md?view=sql-server-2016)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />managed instance](backup-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

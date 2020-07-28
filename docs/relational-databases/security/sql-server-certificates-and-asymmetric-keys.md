@@ -62,9 +62,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Tools  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] provides tools and utilities that will generate certificates and strong name key files. These tools offer a richer amount of flexibility in the key generation process than the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntax. You can use these tools to create RSA keys with more complex key lengths and then import them into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The following table shows where to find these tools.  
   
-|||  
-|-|-|  
-|Tool|Purpose|  
+| Tool | Purpose |
+| ---- | ------- |
 |[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|Creates self-signed certificates.|  
 |[makecert](/windows/desktop/SecCrypto/makecert)|Creates certificates. Deprecated in favor of **New-SelfSignedCertificate**.|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|Creates strong names for symmetric keys.|  

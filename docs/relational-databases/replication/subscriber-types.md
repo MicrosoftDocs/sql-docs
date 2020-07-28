@@ -12,7 +12,7 @@ f1_keywords:
 ms.assetid: a70656cb-21c9-4489-be77-ccd396747e3b
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Subscriber Types
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

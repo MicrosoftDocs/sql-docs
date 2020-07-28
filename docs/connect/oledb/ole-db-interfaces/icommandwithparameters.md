@@ -1,5 +1,5 @@
 ---
-title: "ICommandWithParameters | Microsoft Docs"
+title: "ICommandWithParameters (OLE DB driver) | Microsoft Docs"
 description: "ICommandWithParameters interface"
 ms.custom: ""
 ms.date: "06/14/2018"

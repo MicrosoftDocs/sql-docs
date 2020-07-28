@@ -1,5 +1,5 @@
 ---
-title: "Obtain a FAST_FORWARD Cursor | Microsoft Docs"
+title: Obtain a FAST_FORWARD cursor (OLE DB driver)
 description: "Obtain a FAST_FORWARD cursor using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

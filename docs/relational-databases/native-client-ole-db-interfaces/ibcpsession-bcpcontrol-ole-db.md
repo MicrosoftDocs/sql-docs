@@ -1,5 +1,5 @@
 ---
-title: "IBCPSession::BCPControl (OLE DB) | Microsoft Docs"
+title: "IBCPSession::BCPControl (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -17,7 +17,7 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# IBCPSession::BCPControl (OLE DB)
+# IBCPSession::BCPControl (Native Client OLE DB Provider)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Sets the options for a bulk-copy operation.  
@@ -25,7 +25,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Syntax  
   
 ```  
-  
+
 HRESULT BCPControl(   
       int eOption,  
       void *iValue);  

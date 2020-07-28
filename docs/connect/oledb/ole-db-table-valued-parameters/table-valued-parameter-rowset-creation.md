@@ -1,5 +1,5 @@
 ---
-title: "Table-Valued Parameter Rowset Creation | Microsoft Docs"
+title: Table-valued parameter rowset creation (OLE DB driver)
 description: "Static and dynamic Table-Valued Parameter rowset creation"
 ms.custom: ""
 ms.date: "06/14/2018"

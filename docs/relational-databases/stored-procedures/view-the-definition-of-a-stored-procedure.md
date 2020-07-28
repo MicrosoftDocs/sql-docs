@@ -1,5 +1,6 @@
 ---
 title: "View the Definition of a Stored Procedure | Microsoft Docs"
+description: Learn how to view the definition of procedure in Object Explorer and by using a system stored procedure, system function, and object catalog view in the Query Editor.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

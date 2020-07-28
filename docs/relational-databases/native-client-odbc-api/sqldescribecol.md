@@ -31,8 +31,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## SQLDescribeCol Support for Enhanced Date and Time Features  
  The values returned for date/time types are as follows:  
   
-||*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
-|-|-------------------|---------------------|------------------------|  
+| Attribute | *DataTypePtr* | *ColumnSizePtr* | *DecimalDigitsPtr* |  
+| --------- | ------------- |---------------- | ------------------ |  
 |datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  

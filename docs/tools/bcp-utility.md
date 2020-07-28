@@ -413,7 +413,7 @@ Performs the bulk-copy operation using the native (database) data types of the d
  **-v**<a name="v"></a>  
  Reports the **bcp** utility version number and copyright.  
   
- **-V** (**80** \| **90** \| **100** \| **110** \| **120** \| **130)<a name="V"></a>  
+ **-V** (**80** \| **90** \| **100** \| **110** \| **120** \| **130**)<a name="V"></a>  
  Performs the bulk-copy operation using data types from an earlier version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. This option does not prompt for each field; it uses the default values.  
   
  **80** = [!INCLUDE[ssVersion2000](../includes/ssversion2000-md.md)]  

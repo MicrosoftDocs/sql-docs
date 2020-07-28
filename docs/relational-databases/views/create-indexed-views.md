@@ -132,8 +132,6 @@ In addition to the SET options and deterministic function requirements, the foll
        <div class="column">
             ROWSET functions (<code>OPENDATASOURCE</code>, <code>OPENQUERY</code>, <code>OPENROWSET</code>, AND <code>OPENXML</code>)
        <br><br>
-            ROWSET functions (<code>OPENDATASOURCE</code>, <code>OPENQUERY</code>, <code>OPENROWSET</code>, AND <code>OPENXML</code>)
-       <br><br>
             Self-joins
        <br><br>
             <code>STDEV</code>, <code>STDEVP</code>, <code>VAR</code>, <code>VARP</code>, or <code>AVG</code>

@@ -57,7 +57,7 @@ In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports
     </instance attributes>
     ```
     
-    where *NameForAttribute* is the unique name for this attribute,*NameForIP* is the name associated with the IP address, *IPAddress* is the IP address for the second subnet.
+    where *NameForAttribute* is the unique name for this attribute, *NameForIP* is the name associated with the IP address, *IPAddress* is the IP address for the second subnet.
     
     The following shows an example.
     
@@ -86,7 +86,7 @@ In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports
     </instance attributes>
     ```
    
-   The 'boolean-op="or"' is used when the subnet has more than one servers.
+   The 'boolean-op="or"' is used when the subnet has more than one server.
 
 
 3. Import the modified CIB and reconfigure Pacemaker.
@@ -108,9 +108,12 @@ In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports
 ### Check and verify failover
 
 1. After the CIB is successfully applied with the updated configuration, ping the DNS name associated with the IP address resource in Pacemaker. It should reflect the IP address associated with the subnet currently hosting the AG or FCI.
+
 2. Fail the AG or FCI to the other subnet.
+
 3. After the AG or FCI is fully online, ping the DNS name associated with the IP address. It should reflect the IP address in the second subnet.
+
 4. If desired, fail the AG or FCI back to the original subnet.
 
-Here is a CSS post showing how to configure the CIB for three subnets, please reveiw for detail.
-https://techcommunity.microsoft.com/t5/sql-server-support/configure-multiple-subnet-alwayson-availability-groups-by/ba-p/1544838
+Here is a CSS post showing how to configure the CIB for three subnets, please review for detail: 
+[Configure multiple-subnet AlwaysOn Availability Group by modifying CIB](https://techcommunity.microsoft.com/t5/sql-server-support/configure-multiple-subnet-alwayson-availability-groups-by/ba-p/1544838).

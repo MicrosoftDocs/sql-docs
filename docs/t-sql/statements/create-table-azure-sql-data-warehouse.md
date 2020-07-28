@@ -255,7 +255,7 @@ Same as `datetime`, except that you can specify the number of fractional seconds
 | `money`|8|  
 | `smallmoney` |4|  
   
- `bigint` | `int` | `smallint` | `tinyint`  
+ `bigint` \| `int` \| `smallint` \| `tinyint`  
  Exact-number data types that use integer data. The storage is shown in the following table.  
   
 | Data Type | Storage bytes |  

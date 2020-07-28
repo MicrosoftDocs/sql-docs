@@ -1,5 +1,5 @@
 ---
-title: "Tables and Indexes | Microsoft Docs"
+title: Tables and indexes (OLE DB driver)
 description: "Creating, altering, and droping tables and indexes using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

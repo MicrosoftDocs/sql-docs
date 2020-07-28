@@ -89,9 +89,8 @@ from [Adventure Works]
   
  The following table displays the obtained results.  
   
-|||  
+|Field in measures|Results|  
 |-|-|  
-||Results|  
 |lowercase found in lowercase string|16|  
 |uppercase found in lowercase string|16|  
 |searched string is empty|0|  

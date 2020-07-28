@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Message Results | Microsoft Docs"
+title: SQL Server message results (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

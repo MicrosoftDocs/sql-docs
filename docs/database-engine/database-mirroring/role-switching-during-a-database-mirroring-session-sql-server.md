@@ -61,7 +61,7 @@ ms.author: mikeray
   
  The following table summarizes which forms of failover are supported under each of the operating modes.  
   
-||High performance|High-safety mode without a witness|High-safety mode with a witness|  
+|Form of failover|High performance|High-safety mode without a witness|High-safety mode with a witness|  
 |-|----------------------|-----------------------------------------|--------------------------------------|  
 |Automatic failover|No|No|Yes|  
 |Manual failover|No|Yes|Yes|  

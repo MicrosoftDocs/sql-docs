@@ -111,7 +111,7 @@ REM Gather information about the instance of LocalDB
 
  The last line above, returns information similar to the following.
 
-|||
+|Category|Value|
 |-|-|
 |Name|`LocalDBApp1`|
 |Version|\<Current Version>|

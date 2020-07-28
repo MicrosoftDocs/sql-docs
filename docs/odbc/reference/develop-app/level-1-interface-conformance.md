@@ -18,7 +18,7 @@ ms.author: v-daenge
 # Level 1 Interface Conformance
 The Level 1 interface conformance level includes the Core interface conformance level functionality plus additional features, such as transactions, that are usually available in an OLTP relational DBMS. A Level 1 interface-conformant driver lets the application do the following, in addition to the features in the Core interface conformance level:  
   
-|||  
+|Feature number|Description|  
 |-|-|  
 |101|Specify the schema of database tables and views (using two-part naming). (For more information, see the three-part naming feature 201 in [Level 2 Interface Conformance](../../../odbc/reference/develop-app/level-2-interface-conformance.md).)|  
 |102|Invoke true asynchronous execution of ODBC functions, where applicable ODBC functions are all synchronous or all asynchronous on a given connection.|  

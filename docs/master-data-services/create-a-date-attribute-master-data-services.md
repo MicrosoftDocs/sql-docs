@@ -69,7 +69,7 @@ ms.author: lle
 ## To display the time portion of a datetime value  
  To have the user interface display the time portion of a datetime value, you must select an appropriate input mask for the attribute. None of the built-in masks for Datetime attributes do this, but you can add a new mask that will allow you to display time. To do so, add a row in the mdm.tblList table of the MDS database, where the built-in masks are stored. The row should have the following values:  
   
-|||  
+|Column|Value|  
 |-|-|  
 |ListCode|lstInputMask|  
 |ListName|Input Mask|  

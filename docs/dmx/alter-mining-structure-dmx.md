@@ -102,9 +102,8 @@ USING <algorithm> [(<parameter list>)]
 > [!NOTE]  
 >  The NOT_NULL modeling flag applies to the mining structure column. For more information, see [CREATE MINING STRUCTURE &#40;DMX&#41;](../dmx/create-mining-structure-dmx.md).  
   
-|||  
-|-|-|  
 |Term|Definition|  
+|-|-|  
 |**REGRESSOR**|Indicates that the algorithm can use the specified column in the regression formula of regression algorithms.|  
 |**MODEL_EXISTENCE_ONLY**|Indicates that the values for the attribute column are less important than the presence of the attribute.|  
   
@@ -113,7 +112,7 @@ USING <algorithm> [(<parameter list>)]
 ### Prediction Clause  
  The prediction clause describes how the prediction column is used. The following table lists the possible clauses.  
   
-|||  
+|Clause|Description|  
 |-|-|  
 |**PREDICT**|This column can be predicted by the model, and its values can be used as input to predict the value of other predictable columns.|  
 |**PREDICT_ONLY**|This column can be predicted by the model, but its values cannot be used in input cases to predict the value of other predictable columns.|  

@@ -16,7 +16,7 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 
 # DBCC DROPRESULTSETCACHE  (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Removes all result set cache entries from an Azure [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] database.
   

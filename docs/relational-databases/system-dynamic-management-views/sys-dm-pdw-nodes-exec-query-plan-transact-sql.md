@@ -16,7 +16,7 @@ monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 
 # sys.pdw_nodes_dm_exec_query_plan (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Returns the Showplan in XML format for the batch specified by the plan handle. The plan specified by the plan handle can either be cached or currently executing.  
 

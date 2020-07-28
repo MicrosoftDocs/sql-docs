@@ -18,9 +18,8 @@ monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 
   Contains information about ongoing and completed load operations in [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]. The information persists across system restarts.  
   
-|||||  
-|-|-|-|-|  
-|Column Name|Data Type|Description|Range|  
+| Column Name | Data Type | Description | Range |
+| ----------- | --------- | ----------- | ----- |
 |run_id|**int**|Unique identifier of a loader run.||  
 |stage|**nvarchar(30)**|The current stage for the run.|'CREATE_STAGING', 'DMS_LOAD', 'LOAD_INSERT', 'LOAD_CLEANUP'|  
 |request_id|**nvarchar(32)**|ID of the request running this stage.||  

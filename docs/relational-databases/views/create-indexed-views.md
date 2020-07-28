@@ -154,8 +154,6 @@ In addition to the SET options and deterministic function requirements, the foll
        <div class="column">
             <code>OUTER</code> joins (<code>LEFT</code>, <code>RIGHT</code>, or <code>FULL</code>)
        <br><br>
-            <code>OUTER</code> joins (<code>LEFT</code>, <code>RIGHT</code>, or <code>FULL</code>)
-       <br><br>
             Specifying columns by using <code>SELECT *</code> or <code>SELECT &lt;table_name&gt;.*</code>
        <br><br>
             Common table expression (CTE)

@@ -93,9 +93,8 @@ ms.date: 11/18/2019
 
  Tasks related to creating data connections, adding data from external sources, datasets, and queries.  
   
-|||  
+|Common Tasks|Links|  
 |-|-|  
-|**Common Tasks**|**Links**|  
 |Create data connections|[Create data connection strings - Report Builder & SSRS](../../reporting-services/report-data/data-connections-data-sources-and-connection-strings-report-builder-and-ssrs.md)|  
 |Create datasets and queries|[Report Embedded Datasets and Shared Datasets &#40;Report Builder and SSRS&#41;](../../reporting-services/report-data/report-embedded-datasets-and-shared-datasets-report-builder-and-ssrs.md)|  
 |Manage data sources after they are published|[Manage Report Data Sources](../../reporting-services/report-data/manage-report-data-sources.md)|  

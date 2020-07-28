@@ -153,9 +153,8 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
   
  The following table summarizes the event handlers and when retry will fire:  
   
-|Error Category|<|\<|Event type||>|>|>|  
+|Error Category / Event type|FireAlert|FireSchedule|CreateSchedule|UpdateSchedule|DeleteSchedule|GenerateAlert|DeliverAlert|  
 |--------------------|--------|--------|----------------|-|--------|--------|--------|  
-||**FireAlert**|**FireSchedule**|**CreateSchedule**|**UpdateSchedule**|**DeleteSchedule**|**GenerateAlert**|**DeliverAlert**|  
 |Out of memory|X|X|X|X|X|X|X|  
 |Thread abort|X|X|X|X|X|X|X|  
 |SQL Agent is not running|X||X|X|X|||  

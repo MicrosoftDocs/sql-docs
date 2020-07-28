@@ -56,7 +56,7 @@ monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ####  <a name="bkmk_databases"></a> Databases you will see in the completed migration  
  The following table describes the SQL Server Databases related to [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] you will have after you successfully migrate your [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint installation:  
   
-|Database|Example name||  
+|Database|Example name|Notes|  
 |--------------|------------------|-|  
 |Catalog database|ReportingService_[service application GUID] **(&#42;)**|User migrates.|  
 |Temp database|ReportingService_[service application GUID]TempDB **(&#42;)**|User migrates.|  
@@ -69,7 +69,7 @@ monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
   
  ![Basic diagram of SSRS SharePoint Migration](../../reporting-services/install-windows/media/rs-sharepoint-migration.gif "Basic diagram of SSRS SharePoint Migration")  
   
-||Objects|Method|Notes|  
+|Item|Objects|Method|Notes|  
 |-|-------------|------------|-----------|  
 |**1**|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] encryption keys.|**Rskeymgmt.exe** or [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Configuration Manager. See [Back Up and Restore Reporting Services Encryption Keys](../../reporting-services/install-windows/ssrs-encryption-keys-back-up-and-restore-encryption-keys.md).|The noted tools can used for the backup but for the restore operation you will use the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application management pages or PowerShell.|  
 |**2**|SharePoint content databases.||Backup the database and detach it.<br /><br /> See the section "Database attach upgrade " in [Determine upgrade approach (SharePoint Server 2010) (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx).|  
@@ -81,13 +81,12 @@ monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
   
  Before you complete the restore steps, you need to install and configuring the new SharePoint Farm and [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode. For more information on a basic installation of [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint mode, see [Install Reporting Services SharePoint Mode](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md).  
   
-||Objects|Method|Notes|  
+|Item|Objects|Method|Notes|  
 |-|-------------|------------|-----------|  
 |**1**|Restore SharePoint Content databases to the new farm.|SharePoint "Database attach upgrade" Method.|Basic Steps:<br /><br /> 1) Restore the database on the new server.<br /><br /> 2) Attach the content database to a web application by indicating the URL.<br /><br /> 3) Get-SPWebapplication lists all web applications and the URLs.<br /><br /> <br /><br /> See the section "Database attach upgrade " in [Determine upgrade approach (SharePoint Server 2010) (https://technet.microsoft.com/library/cc263447.aspx)](https://technet.microsoft.com/library/cc263447.aspx)and [Attach databases and upgrade to SharePoint Server 2010 (https://technet.microsoft.com/library/cc263299.aspx)](https://technet.microsoft.com/library/cc263299.aspx).|  
 |**2**|Restore the SQL Server database that is the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] catalog database (ReportServer).|SQL Database backup and restore.<br /><br /> **or**<br /><br /> SQL Server database attached and detach.|The first time the database is used, [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] will update the database schema as needed so it will work with the SQL Server 2016 environment.|  
 |**3**|Create a new [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.|Create a new [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] service application.|When you create the new service application, configure it to use the report server database you copied over.<br /><br /> For more information on using SharePoint Central Administration, see the "Step 3: Create a Reporting Services Service Application" section in [Install The First Report Server in SharePoint Mode](../../reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode.md).<br /><br /> For examples using PowerShell, see the section "To create a Reporting Services Service Application using PowerShell" in [Reporting Services SharePoint Service and Service Applications](../../reporting-services/report-server-sharepoint/reporting-services-sharepoint-service-and-service-applications.md).|  
 |**4**|Restore [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] configuration files.|Simple file copy.|Example of the default location of the files: C:\Program Files\Common Files\Microsoft Shared\Web Server Extensions\15\WebServices\Reporting.|  
-|||||  
 |**5**|Restore the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]encryption keys.|Restore the key back up file using the [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Service Application "SystemSettings" page.<br /><br /> **or**<br /><br /> PowerShell.|See the section "Key Management" in the topic [Manage a Reporting Services SharePoint Service Application](../../reporting-services/report-server-sharepoint/manage-a-reporting-services-sharepoint-service-application.md).|   
   
 ##  <a name="bkmk_migrate_from_ctp"></a> Migrate from a SQL Server 2012 or SQL Server 2014 Deployment  

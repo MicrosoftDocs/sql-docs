@@ -30,9 +30,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  When all data values in a column share the same data type, that data type is used for the whole column. When data values in a column are different data types, the data type of the whole column is chosen based on the following table. To use the following table, find one data type along the left row axis and a second data type along the top column axis. The intersection of the row and column describes the data type of the result set column.  
   
-||||||||  
-|-|-|-|-|-|-|-|  
-||**int**|**float**|**money**|**datetime**|**varchar**|**nvarchar**|  
+|   | **int** | **float** | **money** | **datetime** | **varchar** | **nvarchar** |
+| - | ------- | --------- | --------- | ------------ | ----------- | ------------ |
 |**int**|**int**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**float**|**float**|**float**|**money**|**varchar**|**varchar**|**nvarchar**|  
 |**money**|**money**|**money**|**money**|**varchar**|**varchar**|**nvarchar**|  

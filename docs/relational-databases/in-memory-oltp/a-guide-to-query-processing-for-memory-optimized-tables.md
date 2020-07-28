@@ -189,7 +189,7 @@ END
   
  Natively compiled stored procedures are compiled at create time, whereas interpreted stored procedures are compiled at first execution time. (A portion of the compilation, particularly parsing and algebrization, take place at create. However, for interpreted stored procedures, optimization of the query plans takes place at first execution.) The recompilation logic is similar. Natively compiled stored procedures are recompiled on first execution of the procedure if the server is restarted. Interpreted stored procedures are recompiled if the plan is no longer in the plan cache. The following table summarizes compilation and recompilation cases for both natively compiled and interpreted stored procedures:  
   
-||Natively compiled|Interpreted|  
+|Compilation type|Natively compiled|Interpreted|  
 |-|-----------------------|-----------------|  
 |Initial compilation|At create time.|At first execution.|  
 |Automatic recompilation|Upon first execution of the procedure after a database or server restart.|On server restart. Or, eviction from the plan cache, usually based on schema or stats changes, or memory pressure.|  

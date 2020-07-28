@@ -57,6 +57,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**supports_sparse_files**|**bit**|Indicates if the volume supports sparse files.  Cannot be null.|  
 |**is_read_only**|**bit**|Indicates if the volume is currently marked as read only. Cannot be null.|  
 |**is_compressed**|**bit**|Indicates if this volume is currently compressed. Cannot be null.|  
+|**incurs_seek_penalty**|**tinyint**|Indicates the type of storage backing this volume. Possible values are:<br /><br /> 0: The volume is on SSD storage<br /><br /> 1: The volume is on HDD storage<br /><br /> 2: The storage type can't be determined (if the instance is on a VM, for example)<br /><br /> NULL: The storage type can't be determined (because the instance is on Linux, and the needed Windows APIs aren't available)|  
   
 ## Security  
   

@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Error Detail | Microsoft Docs"
+title: SQL Server error detail (OLE DB driver)
 description: "SQL Server error detail"
 ms.custom: ""
 ms.date: "06/14/2018"

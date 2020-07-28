@@ -1,5 +1,5 @@
 ---
-title: "Supporting Local Transactions | Microsoft Docs"
+title: Supporting local transactions (OLE DB driver)
 description: "Local transactions in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

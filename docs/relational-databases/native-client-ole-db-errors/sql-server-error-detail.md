@@ -1,5 +1,5 @@
 ---
-title: "SQL Server Error Detail | Microsoft Docs"
+title: SQL Server error detail (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

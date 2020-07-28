@@ -1,5 +1,5 @@
 ---
-title: "Tables and Indexes | Microsoft Docs"
+title: Tables and indexes (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

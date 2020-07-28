@@ -1,5 +1,5 @@
 ---
-title: "Table-Valued Parameter Rowset Creation | Microsoft Docs"
+title: Table-valued parameter rowset creation (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

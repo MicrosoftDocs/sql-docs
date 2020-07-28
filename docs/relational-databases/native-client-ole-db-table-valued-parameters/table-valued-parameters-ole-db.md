@@ -1,5 +1,5 @@
 ---
-title: "Table-Valued Parameters (OLE DB) | Microsoft Docs"
+title: Table-valued parameters (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

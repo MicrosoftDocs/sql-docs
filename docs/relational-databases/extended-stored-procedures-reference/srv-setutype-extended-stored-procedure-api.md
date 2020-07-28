@@ -1,5 +1,6 @@
 ---
 title: "srv_setutype (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn about srv_setutype. srv_setutype sets the user-defined data type for a column in a row.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

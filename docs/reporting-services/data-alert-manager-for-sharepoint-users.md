@@ -1,5 +1,6 @@
 ---
 title: "Data Alert Manager for SharePoint Users | Microsoft Docs"
+description: Learn how Reporting Services provides Data Alert Manager for SharePoint information workers to manage the data alerts.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

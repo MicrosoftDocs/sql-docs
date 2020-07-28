@@ -44,7 +44,7 @@ Run the T-SQL statement `CREATE EXTERNAL LIBRARY` to upload the zipped package c
 For example, the following statement names as the package source a miniCRAN repository containing the **randomForest** package, together with its dependencies. 
 
 ```sql
-CREATE EXTERNAL LIBRARY randomForest
+CREATE EXTERNAL LIBRARY [randomForest]
 FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
 WITH (LANGUAGE = 'R');
 ```

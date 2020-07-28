@@ -1,6 +1,6 @@
 ---
 title: "Identify issues with IntelliSense (SSMS)"
-description: Learn how to troubleshoot and identify issues with Intellisense with SQL Server Management Studio (SSMS).
+description: Learn about the cases where Intellisense in SQL Server Management Studio (SSMS) does not work as you might expect.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,5 +1,6 @@
 ---
 title: "sys.dm_db_rda_migration_status (Transact-SQL) | Microsoft Docs"
+description: Learn how sys.dm_db_rda_migration_status contains one row for each batch of migrated data from each Stretch-enabled table on the local instance of SQL Server.
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql

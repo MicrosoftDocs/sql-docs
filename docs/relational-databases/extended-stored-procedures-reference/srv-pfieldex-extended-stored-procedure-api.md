@@ -1,5 +1,6 @@
 ---
 title: "srv_pfieldex (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_pfieldex in the Extended Stored Procedure API returns a pointer to data containing the requested SRV_PROC field.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql

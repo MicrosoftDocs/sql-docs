@@ -1,6 +1,6 @@
 ---
 title: "Lesson 4: Add a Table to the Report | Microsoft Docs"
-description: "After you define the dataset, you can start designing the paginated report. You create a report layout by dragging and dropping report objects from the Toolbox pane to the Design surface."
+description: You create a report layout by dragging and dropping report objects, like a table, from the Toolbox pane to the Design surface.
 ms.date: 12/16/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

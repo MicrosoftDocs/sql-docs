@@ -1,5 +1,6 @@
 ---
 title: "Create a Data-Driven Subscription (SSRS Tutorial) | Microsoft Docs"
+description: Learn about data-driven subscriptions through a simple example that creates a data-driven subscription to generate and save filtered report output to a file share.
 ms.date: 05/26/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

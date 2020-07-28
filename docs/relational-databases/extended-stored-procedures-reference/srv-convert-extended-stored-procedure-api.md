@@ -1,5 +1,6 @@
 ---
 title: "srv_convert (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_convert in the Extended Stored Procedure API changes data from one data type to another.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

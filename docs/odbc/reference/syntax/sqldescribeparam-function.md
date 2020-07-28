@@ -41,7 +41,7 @@ SQLRETURN SQLDescribeParam(
       SQLSMALLINT *   NullablePtr);  
 ```  
   
-## Argument  
+## Arguments  
  *StatementHandle*  
  [Input] Statement handle.  
   

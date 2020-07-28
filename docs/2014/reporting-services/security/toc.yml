@@ -1,9 +1,0 @@
-- name: Authentication with the Report Server
-- name: Roles and Permissions
-  items:
-  - name: Granting Permissions on a Native Mode Report Server
-    items:
-    - name: Tasks and Permissions
-    - name: Role Definitions
-    - name: Role Assignments
-  - name: Granting Permissions on Report Server Items on a SharePoint Site

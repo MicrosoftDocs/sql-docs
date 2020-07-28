@@ -1,5 +1,6 @@
 ---
 title: "Working with subscriptions (web portal) | Microsoft Docs"
+description: Learn how to use the Subscriptions page to list all of the subscriptions for the current report in Reporting Services. 
 ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

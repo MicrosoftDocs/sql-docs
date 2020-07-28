@@ -120,7 +120,7 @@ Value is a decimal with a range between 0.75 to 100.00.  The value for request_m
 REQUEST_MAX_RESOURCE_GRANT_PERCENT = value  
 Value is a decimal and must be greater than request_min_resource_grant_percent.
 
-IMPORTANCE = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
+IMPORTANCE = { LOW \|  BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }  
 Alters the default importance of a request for the workload group.
 
 QUERY_EXECUTION_TIMEOUT_SEC = value  

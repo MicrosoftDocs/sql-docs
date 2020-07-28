@@ -1,5 +1,6 @@
 ---
 title: "srv_alloc (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn about srv_alloc in the Extended Stored Procedure API and how it allocates memory dynamically.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

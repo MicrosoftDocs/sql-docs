@@ -1,5 +1,6 @@
 ---
 title: "srv_paramset (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_paramset in the Extended Stored Procedure API sets the value of a remote stored procedure call return parameter.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

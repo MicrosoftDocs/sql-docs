@@ -151,7 +151,7 @@ ms.author: "mathoma"
 ### Maintenance Considerations  
  Some actions require the system to be quiescent. This means stopping activity on published tables at all nodes and making sure that each node has received all changes from all other nodes.  
   
-||SQL Server 2005 peers only or mix of SQL Server 2005 peers with SQL Server 2008 peers and higher|SQL Server 2005 peers only or mix of SQL Server 2005 peers with SQL Server 2008 peers and higher|SQL2008 peers and higher|SQL2008 peers and higher|  
+|Action|SQL Server 2005 peers only or mix of SQL Server 2005 peers with SQL Server 2008 peers and higher|SQL Server 2005 peers only or mix of SQL Server 2005 peers with SQL Server 2008 peers and higher|SQL2008 peers and higher|SQL2008 peers and higher|  
 |-|------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|------------------------------|------------------------------|  
 |Adding a node to the topology|2 nodes in complete topology: No quiescing required. Use `sync_type = 'initialize with backup'`.|More than 2 nodes: Quiescing required.|`sync_type = 'replication support only'`: Quiescing required.|`sync_type = 'initialize with backup'` and `'initialize from lsn'`: No quiescing required.|  
   

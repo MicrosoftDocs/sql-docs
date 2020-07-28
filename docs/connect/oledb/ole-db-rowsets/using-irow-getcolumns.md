@@ -1,5 +1,5 @@
 ---
-title: "Using IRow::GetColumns | Microsoft Docs"
+title: Using IRow::GetColumns (OLE DB driver)
 description: "Using IRow::GetColumns to access all the columns in a row"
 ms.custom: ""
 ms.date: "06/14/2018"

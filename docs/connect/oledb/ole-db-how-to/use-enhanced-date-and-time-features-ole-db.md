@@ -1,5 +1,5 @@
 ---
-title: "Use Enhanced Date and Time Features (OLE DB) | Microsoft Docs"
+title: Use enhanced date and time features (OLE DB driver)
 description: "Use enhanced date and time features (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

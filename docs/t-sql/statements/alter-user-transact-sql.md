@@ -106,7 +106,7 @@ NAME = newUserName
 > [!NOTE]
 > This option is available only for contained users.
 
- DEFAULT_LANGUAGE **=**_{ NONE | \<lcid> | \<language name> | \<language alias> }_
+ DEFAULT_LANGUAGE **=**_{ NONE \| \<lcid> \| \<language name> \| \<language alias> }_
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.
 
  Specifies a default language to be assigned to the user. If this option is set to NONE, the default language is set to the current default language of the database. If the default language of the database is later changed, the default language of the user will remain unchanged. *DEFAULT_LANGUAGE* can be the local ID (lcid), the name of the language, or the language alias.

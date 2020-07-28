@@ -1,7 +1,7 @@
 ---
 title: "Download Microsoft OLE DB Driver for SQL Server | Microsoft Docs"
 description: "Download the Microsoft OLE DB Driver for SQL Server to develop native Windows applications that connect to SQL Server and Azure SQL Database."
-ms.date: "07/25/2020"
+ms.date: "08/28/2020"
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual

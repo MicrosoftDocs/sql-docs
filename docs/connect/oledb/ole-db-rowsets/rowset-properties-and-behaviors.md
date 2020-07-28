@@ -1,8 +1,8 @@
 ---
-title: "Rowset Properties and Behaviors (MSOLEDBSQL) | Microsoft Docs"
+title: "Rowset Properties and Behaviors | Microsoft Docs"
 description: "Rowset properties and behaviors in OLE DB Driver for SQL Server"
 ms.custom: ""
-ms.date: "07/25/2020"
+ms.date: "08/28/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ---
-# Rowset Properties and Behaviors (MSOLEDBSQL)
+# Rowset Properties and Behaviors
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  The following are the OLE DB Driver for SQL Server rowset properties.  
+  The following are the OLE DB Driver for SQL Server rowset properties:
   
 |Property ID|Description|  
 |-----------------|-----------------|  
@@ -91,7 +91,7 @@ ms.author: pelopes
 |SSPROP_DEFERPREPARE|Column: No<br /><br /> R/W: Read/write<br /><br /> Type: VT_BOOL<br /><br /> Default: VARIANT_TRUE<br /><br /> Description: VARIANT_TRUE: In prepared execution, the command preparation is deferred until **ICommand::Execute** is called or a metaproperty operation is performed. If the property is set to<br /><br /> VARIANT_FALSE: The statement is prepared when **ICommandPrepare::Prepare** is executed.|  
 |SSPROP_IRowsetFastLoad|Column: No<br /><br /> R/W: Read/write<br /><br /> Type: VT_BOOL<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: Set this property to VARIANT_TRUE to open a fast load rowset through **IOpenRowset::OpenRowset**. You cannot set this property in **ICommandProperties::SetProperties**.|  
 |SSPROP_ISSAsynchStatus|Column: No.<br /><br /> R/W: Read/write<br /><br /> Type: VT_BOOL<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: Set this property to VARIANT_TRUE to enable asynchronous operations using the [ISSAsynchStatus](../../oledb/ole-db-interfaces/issasynchstatus-ole-db.md) interface.|  
-|SSPROP_ISSDataClassification|R/W: Read/write<br /><br /> Default: VARIANT_TRUE<br /><br /> Description: The OLE DB Driver for SQL Server supports retrieval of sensitivity classification information using the [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md) interface.|  
+|SSPROP_ISSDataClassification|R/W: Read/write<br /><br />  Type: VT_BOOL<br /><br /> Default: VARIANT_TRUE<br /><br /> Description: The OLE DB Driver for SQL Server supports retrieval of sensitivity classification information using the [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md) interface.|  
 |SSPROP_MAXBLOBLENGTH|Column: No<br /><br /> R/W: Read/write<br /><br /> Type: VT_I4<br /><br /> Default: The provider does not restrict the size of the text returned by the server and the property value is set to its maximum. For example, 2147483647.<br /><br /> Description: The OLE DB Driver for SQL Server executes a SET TEXTSIZE statement to restrict the length of binary large object (BLOB) data returned in a SELECT statement.|  
 |SSPROP_NOCOUNT_STATUS|Column: NoCount<br /><br /> R/W: Read-only<br /><br /> Type: VT_BOOL<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: A boolean value representing the status of SET NOCOUNT ON/OFF in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]:<br /><br /> VARIANT_TRUE: when SET NOCOUNT ON<br /><br /> VARIANT_FALSE: when SET NOCOUNT OFF|  
 |SSPROP_QP_NOTIFICATION_MSGTEXT|Column: No<br /><br /> R/W: Read/write<br /><br /> Type: VT_BSTR (1-2000 characters allowed)<br /><br /> Default: Empty string<br /><br /> Description: The message text of the query notification. This is user defined, and has no defined format.|  

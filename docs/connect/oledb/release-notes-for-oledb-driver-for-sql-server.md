@@ -1,7 +1,7 @@
 ---
 title: "Release notes for OLE DB Driver"
 description: "This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server."
-ms.date: "07/25/2020"
+ms.date: "08/28/2020"
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -42,7 +42,7 @@ If you need to download the installer in a language other than the one detected 
 
 | Bug fixed | Details |
 | :-------- | :------ |
-|Fixed an issue involving NUL characters in the middle of the string.|Fixed a bug, which resulted in the driver returning length of strings only up to null terminator.|
+| Fixed an issue with embedded NUL characters | Fixed a bug which resulted in the driver returning an incorrect length of strings with embedded NUL characters. |
 
 ## Previous Releases
 

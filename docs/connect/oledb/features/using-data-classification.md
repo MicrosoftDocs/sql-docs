@@ -1,7 +1,7 @@
 ---
 title: "Using Data Classification with Microsoft OLE DB Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/25/2020"
+ms.date: "08/28/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -14,260 +14,214 @@ ms.author: v-beaziz
 manager: kenvh
 ---
 # Using data classification
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../../includes/applies-to-version/sql-asdb-asa.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
 ## Overview
-Sensitivity classification allows the client to provide database columns with sensitivity metadata. As a result, applications can handle different types of sensitive data (such as health, financial, and so on) based on data protection policies.
+[SQL Data Discovery and Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification) is a set of advanced services for discovering, classifying, labeling, and reporting sensitive information in your databases. Microsoft OLE DB Driver for SQL Server (version [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#18.5.0)) adds support for retrieving classification metadata when the underlying data source supports the feature. This information is accessed via the [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md) interface.
 
 For more information on how to assign classification to columns, see [SQL Data Discovery and Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification).
 
 Microsoft OLE DB Driver 18.5 allows the retrieval of this metadata via the [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md) interface.
 
-## Code sample
+## Code samples
 
+The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] queries can be executed in SSMS to create classified data on Microsoft SQL Server:
+
+```sql
+CREATE DATABASE [mydb]
+GO
+
+USE [mydb]
+GO
+
+CREATE TABLE [dbo].[mytable](
+    [col1] [int] NULL,
+    [col2] [int] NULL,
+) ON [PRIMARY]
+GO
+
+ADD SENSITIVITY CLASSIFICATION TO [dbo].[mytable].[col1] WITH (label = 'Label1', label_id = 'LabelId1', information_type = 'Type1', information_type_id = 'TypeId1', rank = Medium)
+GO
+
+ADD SENSITIVITY CLASSIFICATION TO [dbo].[mytable].[col2] WITH (label = 'Label2', label_id = 'LabelId2', information_type = 'Type2', information_type_id = 'TypeId2', rank = High)
+```
+
+The following C++ code uses the Microsoft OLE DB Driver to obtain the classification information generated using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] queries above:
 ```cpp
-#include <string>
-#include <iostream>
 #include <oledb.h>
+#include <atlbase.h>
+#include <msdasc.h>
+#include <exception>
+#include <iostream>
+#include <string>
 #include "msoledbsql.h"
 
-HRESULT Connect(IDBInitialize *&pIDBInitialize, const wchar_t *server, const wchar_t *database);
-HRESULT GetISSDataClassification(IDBInitialize *pIDBInitialize, ISSDataClassification *&pISSDataClassification, const wchar_t *query);
-HRESULT PrintSensitivityClassificationInfo(ISSDataClassification *pISSDataClassification);
+void Connect(CComPtr<IDBInitialize>& pIDBInitialize, const wchar_t* server, const wchar_t* database);
+SENSITIVITYCLASSIFICATION* GetSensitivityClassificationInfo(CComPtr<IDBInitialize>& pIDBInitialize, const wchar_t* query);
+void PrintSensitivityClassificationInfo(SENSITIVITYCLASSIFICATION* pSensitivityClassification);
 
 int main()
 {
     const wchar_t server[] = L"myserver";
     const wchar_t database[] = L"mydb";
-    const wchar_t query[] = L"SELECT a, b, c, a + c FROM mytable";
-    IDBInitialize *pIDBInitialize = nullptr;
-    ISSDataClassification *pISSDataClassification = nullptr;
-    int retVal = 0;
+    const wchar_t query[] = L"SELECT col1, col2, col1 + col2 FROM mytable";
 
     CoInitialize(nullptr);
 
-    // Connect to data source
-    if (FAILED(Connect(pIDBInitialize, server, database)))
+    try
     {
-        std::wcout << L"Failed to establish connection." << std::endl;
-        retVal = -1;
-        goto Cleanup;
-    }
+        // Connect to data source
+        CComPtr<IDBInitialize> pIDBInitialize;
+        Connect(pIDBInitialize, server, database);
 
-    // Obtain DataClassification object
-    if (FAILED(GetISSDataClassification(pIDBInitialize, pISSDataClassification, query)))
-    {
-        std::wcout << L"Failed to get data classification object." << std::endl;
-        retVal = -1;
-        goto Cleanup;
-    }
+        // Obtain sensitivity classification info
+        SENSITIVITYCLASSIFICATION* pSensitivityClassification = GetSensitivityClassificationInfo(pIDBInitialize, query);
 
-    // Print data classification data
-    if (FAILED(PrintSensitivityClassificationInfo(pISSDataClassification)))
-    {
-        std::wcout << L"Failed to get data classification info." << std::endl;
-        retVal = -1;
-        goto Cleanup;
-    }
+        // Print sensitivity classification info
+        PrintSensitivityClassificationInfo(pSensitivityClassification);
 
-Cleanup:
-    if (pISSDataClassification)
-    {
-        pISSDataClassification->Release();
-        pISSDataClassification = nullptr;
-    }
+        if (pSensitivityClassification)
+        {
+            CComPtr<IMalloc> pIMalloc;
+            if (FAILED(CoGetMalloc(1, &pIMalloc)))
+            {
+                throw std::exception("CoGetMalloc call failed.");
+            }
 
-    if (pIDBInitialize)
+            // Release memory
+            pIMalloc->Free(pSensitivityClassification);
+        }
+    }
+    catch (std::exception& e)
     {
-        pIDBInitialize->Uninitialize();
-        pIDBInitialize->Release();
-        pIDBInitialize = nullptr;
+        std::cerr << "Exception caught: " << e.what() << std::endl;
+        return 1;
     }
 
     CoUninitialize();
-    return retVal;
+    return 0;
 }
 
-HRESULT PrintSensitivityClassificationInfo(ISSDataClassification *pISSDataClassification)
-{
-    SENSITIVITYCLASSIFICATION *pSensitivityClassification = nullptr;
-
-    IMalloc *pIMalloc = nullptr;
-    HRESULT hr = CoGetMalloc(1, &pIMalloc);
-    if (FAILED(hr))
-    {
-        std::wcout << L"Failed to get Malloc object." << std::endl;
-        goto Cleanup;
-    }
-
-    hr = pISSDataClassification->GetSensitivityClassification(&pSensitivityClassification);
-
-    if (FAILED(hr))
-    {
-        goto Cleanup;
-    }
-
-    if (pSensitivityClassification)
-    {
-        std::wcout << L"Query sensitivity rank: " << pSensitivityClassification->eQuerySensitivityRank << std::endl
-                   << std::endl;
-
-        for (int indColumnSensitivityMetadata = 0; indColumnSensitivityMetadata < pSensitivityClassification->cColumnSensitivityMetadata; ++indColumnSensitivityMetadata)
-        {
-            std::wcout << L"                Column #" << indColumnSensitivityMetadata << std::endl;
-            for (int indSensitivityProperties = 0; indSensitivityProperties < pSensitivityClassification->rgColumnSensitivityMetadata[indColumnSensitivityMetadata].cSensitivityProperties; ++indSensitivityProperties)
-            {
-                std::wcout << L"Prop #" << indSensitivityProperties << std::endl;
-                std::wcout << L"Column sensitivity rank: " << pSensitivityClassification->rgColumnSensitivityMetadata[indColumnSensitivityMetadata].rgSensitivityProperties[indSensitivityProperties].eSensitivityRank << std::endl;
-                if (pSensitivityClassification->rgColumnSensitivityMetadata[indColumnSensitivityMetadata].rgSensitivityProperties[indSensitivityProperties].pInformationType)
-                {
-                    std::wcout << L"Info type #" << pSensitivityClassification->rgColumnSensitivityMetadata[indColumnSensitivityMetadata].rgSensitivityProperties[indSensitivityProperties].pInformationType->pwszId << std::endl;
-                    std::wcout << L"Info type name: " << pSensitivityClassification->rgColumnSensitivityMetadata[indColumnSensitivityMetadata].rgSensitivityProperties[indSensitivityProperties].pInformationType->pwszName << std::endl;
-                }
-                else
-                {
-                    std::wcout << L"Info type N/A\n";
-                }
-
-                if (pSensitivityClassification->rgColumnSensitivityMetadata[indColumnSensitivityMetadata].rgSensitivityProperties[indSensitivityProperties].pSensitivityLabel)
-                {
-                    std::wcout << L"Label #" << pSensitivityClassification->rgColumnSensitivityMetadata[indColumnSensitivityMetadata].rgSensitivityProperties[indSensitivityProperties].pSensitivityLabel->pwszId << std::endl;
-                    std::wcout << L"Label name: " << pSensitivityClassification->rgColumnSensitivityMetadata[indColumnSensitivityMetadata].rgSensitivityProperties[indSensitivityProperties].pSensitivityLabel->pwszName << std::endl;
-                }
-                else
-                {
-                    std::wcout << L"Label N/A\n";
-                }
-                std::wcout << std::endl;
-            }
-        }
-    }
-
-Cleanup:
-    if (pSensitivityClassification)
-    {
-        pIMalloc->Free(pSensitivityClassification);
-        pSensitivityClassification = nullptr;
-        pIMalloc->Release();
-        pIMalloc = nullptr;
-    }
-
-    return hr;
-}
-
-HRESULT Connect(IDBInitialize *&pIDBInitialize, const wchar_t *server, const wchar_t *database)
+void Connect(CComPtr<IDBInitialize>& pIDBInitialize, const wchar_t* server, const wchar_t* database)
 {
     // Construct the connection string.
-    std::wstring connString = L"Server=" + std::wstring(server) + L";Database=" +
-                              std::wstring(database) + L";Authentication=ActiveDirectoryIntegrated;Encrypt=yes;";
+    std::wstring connString = L"Provider=MSOLEDBSQL;Data Source=" + std::wstring(server) + L";Database=" +
+        std::wstring(database) + L";Authentication=ActiveDirectoryIntegrated;Use Encryption for Data=true;";
 
-    HRESULT hr = CoCreateInstance(CLSID_MSOLEDBSQL, nullptr, CLSCTX_INPROC_SERVER, IID_IDBInitialize, reinterpret_cast<LPVOID *>(&pIDBInitialize));
-    if (FAILED(hr))
+    CComPtr<IDataInitialize> pIDataInitialize;
+    if (FAILED(CoCreateInstance(CLSID_MSDAINITIALIZE, nullptr, CLSCTX_INPROC_SERVER, IID_IDataInitialize, reinterpret_cast<LPVOID*>(&pIDataInitialize))))
     {
-        std::wcout << L"Failed to create an IDBInitialize instance." << std::endl;
-        goto Cleanup;
+        throw std::exception("CoCreateInstance call failed.");
     }
 
+    if (FAILED(pIDataInitialize->GetDataSource(nullptr, CLSCTX_INPROC_SERVER, connString.c_str(), IID_IDBInitialize, reinterpret_cast<IUnknown**>(&pIDBInitialize))))
     {
-        IDBProperties *pIDBProperties = nullptr;
-        hr = pIDBInitialize->QueryInterface<IDBProperties>(&pIDBProperties);
-
-        if (FAILED(hr))
-        {
-            std::wcout << L"Failed to get IDBProperties object." << std::endl;
-            goto Cleanup;
-        }
-
-        DBPROP prop = {};
-        prop.dwPropertyID = DBPROP_INIT_PROVIDERSTRING;
-        prop.vValue.vt = VT_BSTR;
-        prop.vValue.bstrVal = SysAllocString(connString.c_str());
-
-        DBPROPSET propSet = {};
-        propSet.cProperties = 1;
-        propSet.guidPropertySet = DBPROPSET_DBINIT;
-        propSet.rgProperties = &prop;
-
-        hr = pIDBProperties->SetProperties(1, &propSet);
-
-        pIDBProperties->Release();
-        pIDBProperties = nullptr;
-
-        VariantClear(&prop.vValue);
-
-        if (FAILED(hr))
-        {
-            std::wcout << L"Failed to set properties." << std::endl;
-            goto Cleanup;
-        }
-
-        hr = pIDBInitialize->Initialize();
-        if (FAILED(hr))
-        {
-            goto Cleanup;
-        }
+        throw std::exception("GetDataSource call failed.");
     }
-Cleanup:
-    return hr;
+
+    if (FAILED(pIDBInitialize->Initialize()))
+    {
+        throw std::exception("Initialize call failed.");
+    }
 }
 
-HRESULT GetISSDataClassification(IDBInitialize *pIDBInitialize, ISSDataClassification *&pISSDataClassification, const wchar_t *query)
+SENSITIVITYCLASSIFICATION* GetSensitivityClassificationInfo(CComPtr<IDBInitialize>& pIDBInitialize, const wchar_t* query)
 {
-    IDBCreateCommand *pIDBCreateCommand = nullptr;
-    IDBCreateSession *pIDBCreateSession = nullptr;
-    ICommandText *pICommandText = nullptr;
-
-    HRESULT hr = pIDBInitialize->QueryInterface<IDBCreateSession>(&pIDBCreateSession);
-    if (FAILED(hr))
+    CComPtr<IDBCreateSession> pIDBCreateSession;
+    if (FAILED(pIDBInitialize.QueryInterface<IDBCreateSession>(&pIDBCreateSession)))
     {
-        std::wcout << L"Failed to get session object." << std::endl;
-        goto Cleanup;
+        throw std::exception("QueryInterface call failed.");
     }
 
-    hr = pIDBCreateSession->CreateSession(nullptr, IID_IDBCreateCommand, reinterpret_cast<IUnknown **>(&pIDBCreateCommand));
-    pIDBCreateSession->Release();
-    pIDBCreateSession = nullptr;
-
-    if (FAILED(hr))
+    CComPtr<IDBCreateCommand> pIDBCreateCommand;
+    if (FAILED(pIDBCreateSession->CreateSession(nullptr, IID_IDBCreateCommand, reinterpret_cast<IUnknown**>(&pIDBCreateCommand))))
     {
-        std::wcout << L"Failed to create a session." << std::endl;
-        goto Cleanup;
+        throw std::exception("CreateSession call failed.");
     }
 
-    hr = pIDBCreateCommand->CreateCommand(nullptr, IID_ICommandText, reinterpret_cast<IUnknown **>(&pICommandText));
-
-    pIDBCreateCommand->Release();
-    pIDBCreateCommand = nullptr;
-
-    if (FAILED(hr))
+    CComPtr<ICommandText> pICommandText;
+    if (FAILED(pIDBCreateCommand->CreateCommand(nullptr, IID_ICommandText, reinterpret_cast<IUnknown**>(&pICommandText))))
     {
-        std::wcout << L"Failed to get command object." << std::endl;
-        goto Cleanup;
+        throw std::exception("CreateCommand call failed.");
     }
 
-    hr = pICommandText->SetCommandText(DBGUID_DBSQL, query);
-    if (FAILED(hr))
+    if (FAILED(pICommandText->SetCommandText(DBGUID_DBSQL, query)))
     {
-        std::wcout << L"Failed to set command text." << std::endl;
-        goto Cleanup;
+        throw std::exception("SetCommandText call failed.");
     }
 
-    hr = pICommandText->Execute(nullptr, IID_ISSDataClassification, nullptr, nullptr, reinterpret_cast<IUnknown **>(&pISSDataClassification));
-    if (FAILED(hr))
+    CComPtr<ISSDataClassification> pISSDataClassification;
+    if (FAILED(pICommandText->Execute(nullptr, IID_ISSDataClassification, nullptr, nullptr, reinterpret_cast<IUnknown**>(&pISSDataClassification))))
     {
-        std::wcout << L"Failed to execute command." << std::endl;
-        goto Cleanup;
+        throw std::exception("Execute call failed.");
     }
 
-Cleanup:
-    if (pICommandText)
+    SENSITIVITYCLASSIFICATION* pSensitivityClassification = nullptr;
+    if (FAILED(pISSDataClassification->GetSensitivityClassification(&pSensitivityClassification)))
     {
-        pICommandText->Release();
-        pICommandText = nullptr;
+        throw std::exception("GetSensitivityClassification call failed.");
     }
-    return hr;
+
+    return pSensitivityClassification;
+}
+
+void PrintSensitivityClassificationInfo(SENSITIVITYCLASSIFICATION* pSensitivityClassification)
+{
+    if (!pSensitivityClassification)
+    {
+        return;
+    }
+
+    if (pSensitivityClassification->eQuerySensitivityRank != SENSITIVITYRANK_NOT_DEFINED)
+    {
+        std::wcout << L"Query sensitivity rank: " << pSensitivityClassification->eQuerySensitivityRank << L"\n\n";
+    }
+
+    for (USHORT colIdx = 0; colIdx < pSensitivityClassification->cColumnSensitivityMetadata; ++colIdx)
+    {
+        const COLUMNSENSITIVITYMETADATA& columnMetadata = pSensitivityClassification->rgColumnSensitivityMetadata[colIdx];
+
+        std::wcout << L"Sensitivity classification for column #" << colIdx << L":" << std::endl;
+        for (USHORT propIdx = 0; propIdx < columnMetadata.cSensitivityProperties; ++propIdx)
+        {
+            const SENSITIVITYPROPERTY& prop = columnMetadata.rgSensitivityProperties[propIdx];
+
+            std::wcout << L"Property #" << propIdx << L":" << std::endl;
+
+            if (prop.eSensitivityRank != SENSITIVITYRANK_NOT_DEFINED)
+            {
+                std::wcout << L"\tSensitivity rank: \t" << prop.eSensitivityRank << std::endl;
+            }
+
+            if (prop.pSensitivityLabel)
+            {
+                if (prop.pSensitivityLabel->pwszId)
+                {
+                    std::wcout << L"\tSensitivity label id: \t" << prop.pSensitivityLabel->pwszId << std::endl;
+                }
+                if (prop.pSensitivityLabel->pwszName)
+                {
+                    std::wcout << L"\tSensitivity label name: " << prop.pSensitivityLabel->pwszName << std::endl;
+                }
+            }
+
+            if (prop.pInformationType)
+            {
+                if (prop.pInformationType->pwszId)
+                {
+                    std::wcout << L"\tInformation type id: \t" << prop.pInformationType->pwszId << std::endl;
+                }
+                if (prop.pInformationType->pwszName)
+                {
+                    std::wcout << L"\tInformation type name: \t" << prop.pInformationType->pwszName << std::endl;
+                }
+            }
+
+            std::wcout << std::endl;
+        }
+    }
 }
 ```
 

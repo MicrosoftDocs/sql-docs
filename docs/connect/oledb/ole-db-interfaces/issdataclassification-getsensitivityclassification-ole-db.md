@@ -2,7 +2,7 @@
 title: "ISSDataClassification::GetSensitivityClassification | Microsoft Docs"
 description: "ISSDataClassification::GetSensitivityClassification"
 ms.custom: ""
-ms.date: "07/25/2020"
+ms.date: "08/28/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -17,7 +17,7 @@ author: bazizi
 ms.author: v-beaziz
 ---
 # ISSDataClassification::GetSensitivityClassification
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW](../../../includes/applies-to-version/sql-asdb-asa.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -53,24 +53,24 @@ The OLE DB Driver for SQL Server allocates a block of memory to hold the SENSITI
 ```cpp
 typedef struct tagSensitivityClassification
 {
-    USHORT cSensitivityLabels;
-    SENSITIVITYLABEL* rgSensitivityLabels;
-    USHORT cInformationTypes;
-    INFORMATIONTYPE* rgInformationTypes;
-    USHORT cColumnSensitivityMetadata;
-    COLUMNSENSITIVITYMETADATA* rgColumnSensitivityMetadata;
-    SENSITIVITYRANKENUM eQuerySensitivityRank;
+    USHORT                     cSensitivityLabels;
+    SENSITIVITYLABEL          *rgSensitivityLabels;
+    USHORT                     cInformationTypes;
+    INFORMATIONTYPE           *rgInformationTypes;
+    USHORT                     cColumnSensitivityMetadata;
+    COLUMNSENSITIVITYMETADATA *rgColumnSensitivityMetadata;
+    SENSITIVITYRANKENUM        eQuerySensitivityRank;
 } SENSITIVITYCLASSIFICATION;
 ```  
 
 |Member|Description|  
 |------------|-----------------|  
-|*cSensitivityLabels*|Number of SENSITIVITYLABEL structures in *rgSensitivityLabels*.|  
-|*rgSensitivityLabels*|A pointer to memory in which to return an array of SENSITIVITYLABEL structures.|  
-|*cInformationTypes*|Number of INFORMATIONTYPE structures in *rgInformationTypes*.|  
-|*rgInformationTypes*|A pointer to memory in which to return an array of INFORMATIONTYPE structures.|  
-|*cColumnSensitivityMetadata*|Number of COLUMNSENSITIVITYMETADATA structures in *rgColumnSensitivityMetadata*|  
-|*rgColumnSensitivityMetadata*|A pointer to memory in which to return an array of COLUMNSENSITIVITYMETADATA structures.|  
+|*cSensitivityLabels*|The number of SENSITIVITYLABEL structures in *rgSensitivityLabels*.|  
+|*rgSensitivityLabels*|An array of SENSITIVITYLABEL structures.|  
+|*cInformationTypes*|The number of INFORMATIONTYPE structures in *rgInformationTypes*.|  
+|*rgInformationTypes*|An array of INFORMATIONTYPE structures.|  
+|*cColumnSensitivityMetadata*|The number of COLUMNSENSITIVITYMETADATA structures in *rgColumnSensitivityMetadata*|  
+|*rgColumnSensitivityMetadata*|An array of COLUMNSENSITIVITYMETADATA structures.|  
 |*eQuerySensitivityRank*|An enum representing the sensitivity rank for the query that was executed to obtain the rowset.|  
 
 The SENSITIVITYLABEL structure is defined as follows:
@@ -84,8 +84,8 @@ typedef struct tagSENSITIVITYLABEL
 
 |Member|Description|  
 |------------|-----------------|  
-|*pwszName*|The name for the sensitivity label.|  
-|*pwszId*|The identifier for the sensitivity label.|  
+|*pwszName*|The name for a sensitivity label.|  
+|*pwszId*|The identifier for a sensitivity label.|  
 
 The INFORMATIONTYPE structure is defined as follows:
 ```cpp
@@ -98,8 +98,8 @@ typedef struct tagINFORMATIONTYPE
 
 |Member|Description|  
 |------------|-----------------|  
-|*pwszName*|The name for the information type.|  
-|*pwszId*|The identifier for the information type.|  
+|*pwszName*|The name for an information type.|  
+|*pwszId*|The identifier for an information type.|  
 
 The COLUMNSENSITIVITYMETADATA structure is defined as follows:
 ```cpp
@@ -112,8 +112,8 @@ typedef struct tagCOLUMNSENSITIVITYMETADATA
 
 |Member|Description|  
 |------------|-----------------|  
-|*cSensitivityProperties*|Number of SENSITIVITYPROPERTY structures in *rgSensitivityProperties*.|  
-|*rgSensitivityProperties*|A pointer to memory in which to return an array of SENSITIVITYPROPERTY structures.|  
+|*cSensitivityProperties*|The number of SENSITIVITYPROPERTY structures in *rgSensitivityProperties*.|  
+|*rgSensitivityProperties*|An array of SENSITIVITYPROPERTY structures.|  
 
 The SENSITIVITYRANKENUM enum is defined as follows:
 ```cpp
@@ -127,15 +127,6 @@ typedef enum tagSENSITIVITYRANKENUM
     SENSITIVITYRANK_CRITICAL = 40
 } SENSITIVITYRANKENUM;
 ```
-
-|Member|Description|  
-|------------|-----------------|  
-|*SENSITIVITYRANK_NOT_DEFINED*|Sensitivity ranking is undefined.|  
-|*SENSITIVITYRANK_NONE*|No sensitivity rankings present.|  
-|*SENSITIVITYRANK_LOW*|Low sensitivity ranking.|  
-|*SENSITIVITYRANK_MEDIUM*|Medium sensitivity ranking.|  
-|*SENSITIVITYRANK_HIGH*|High sensitivity ranking.|  
-|*SENSITIVITYRANK_CRITICAL*|Critical sensitivity ranking.|  
 
 The SENSITIVITYPROPERTY structure is defined as follows:
 ```cpp
@@ -151,7 +142,7 @@ typedef struct tagSENSITIVITYPROPERTY
 |------------|-----------------|  
 |*pSensitivityLabel*|A pointer to a SENSITIVITYLABEL structure.|  
 |*pInformationType*|A pointer to an INFORMATIONTYPE structure.|  
-|*eSensitivityRank*|An enum representing the sensitivity rank for this sensitivity property.|  
+|*eSensitivityRank*|A relative ranking of the sensitivity of a column that is part of per-column data.|  
 
 ## See Also  
  [ISSDataClassification](../../oledb/ole-db-interfaces/issdataclassification-ole-db.md)  

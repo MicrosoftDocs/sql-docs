@@ -107,68 +107,18 @@ In addition to the SET options and deterministic function requirements, the foll
 
 - The SELECT statement in the view definition must not contain the following Transact-SQL elements:
 
-   <div class="row">
-       <div class="column">
-            <code>COUNT</code>
-       <br><br>
-            Derived table (defined by specifying a <code>SELECT</code> statement in the <code>FROM</code> clause)
-       <br><br>
-            <code>DISTINCT</code>
-       <br><br>
-            <b>float</b><sup>1</sup>, <b>text</b>, <b>ntext</b>, <b>image</b>, <b>XML</b>, or <b>filestream</b> columns
-       <br><br>
-            Full-text predicates (<code>CONTAINS</code>, <code>FREETEXT</code>)
-       <br><br>
-            CLR user-defined aggregate function
-       <br><br>
-            <code>MIN</code>, <code>MAX</code>
-       <br><br>
-            Table variables
-       <br><br>
-            Sparse column sets
-       <br><br>
-            <code>CHECKSUM_AGG</code>
-       </div>
-       <div class="column">
-            ROWSET functions (<code>OPENDATASOURCE</code>, <code>OPENQUERY</code>, <code>OPENROWSET</code>, AND <code>OPENXML</code>)
-       <br><br>
-            Self-joins
-       <br><br>
-            <code>STDEV</code>, <code>STDEVP</code>, <code>VAR</code>, <code>VARP</code>, or <code>AVG</code>
-       <br><br>
-            Subquery
-       <br><br>
-            <code>SUM</code> function that references a nullable expression
-       <br><br>
-            <code>TOP</code>
-       <br><br>
-            <code>UNION</code>, <code>EXCEPT</code>, or <code>INTERSECT</code> operators
-       <br><br>
-            <code>OUTER APPLY</code> or <code>CROSS APPLY</code>
-       <br><br>
-            Inline (TVF) or multi-statement table-valued functions (MSTVF)
-       <br><br>
-       </div>
-       <div class="column">
-            <code>OUTER</code> joins (<code>LEFT</code>, <code>RIGHT</code>, or <code>FULL</code>)
-       <br><br>
-            Specifying columns by using <code>SELECT *</code> or <code>SELECT &lt;table_name&gt;.*</code>
-       <br><br>
-            Common table expression (CTE)
-       <br><br>
-            <code>OVER</code> clause, which includes ranking or aggregate window functions
-       <br><br>
-            <code>ORDER BY</code>
-       <br><br>
-            <code>CUBE</code>, <code>ROLLUP</code>, or <code>GROUPING SETS</code> operators
-       <br><br>
-            <code>TABLESAMPLE</code>
-       <br><br>
-            <code>PIVOT</code>, <code>UNPIVOT</code>
-       <br><br>
-            <code>OFFSET</code>
-     </div>
-   </div>
+   | Transact-SQL elements | (continued) | (continued) |
+   | --------------------- | ----------- | ----------- |
+   |`COUNT`|ROWSET functions (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET`, AND `OPENXML`)|`OUTER` joins (`LEFT`, `RIGHT`, or `FULL`)|
+   |Derived table (defined by specifying a `SELECT` statement in the `FROM` clause)|Self-joins|Specifying columns by using `SELECT *` or `SELECT <table_name>.*`|
+   |`DISTINCT`|`STDEV`, `STDEVP`, `VAR`, `VARP`, or `AVG`|Common table expression (CTE)|
+   |**float**<sup>1</sup>, **text**, **ntext**, **image**, **XML**, or **filestream** columns|Subquery|`OVER` clause, which includes ranking or aggregate window functions|
+   |Full-text predicates (`CONTAINS`, `FREETEXT`)|`SUM` function that references a nullable expression|`ORDER BY`|
+   |CLR user-defined aggregate function|`TOP`|`CUBE`, `ROLLUP`, or `GROUPING SETS` operators|
+   |`MIN`, `MAX`|`UNION`, `EXCEPT`, or `INTERSECT` operators|`TABLESAMPLE`|
+   |Table variables|`OUTER APPLY` or `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
+   |Sparse column sets|Inline (TVF) or multi-statement table-valued functions (MSTVF)|`OFFSET`|
+   |`CHECKSUM_AGG`|||
 
    <sup>1</sup> The indexed view can contain **float** columns; however, such columns cannot be included in the clustered index key.
 

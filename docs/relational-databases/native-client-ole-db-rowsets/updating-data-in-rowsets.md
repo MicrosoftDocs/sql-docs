@@ -1,5 +1,5 @@
 ---
-title: "Updating Data in Rowsets | Microsoft Docs"
+title: Updating data in rowsets (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

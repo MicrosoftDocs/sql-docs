@@ -1,5 +1,5 @@
 ---
-title: "Updating Data in Rowsets | Microsoft Docs"
+title: Updating data in rowsets (OLE DB driver)
 description: "Updating data in rowsets using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

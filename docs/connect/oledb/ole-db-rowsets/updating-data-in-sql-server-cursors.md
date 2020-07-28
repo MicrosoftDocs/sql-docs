@@ -1,5 +1,5 @@
 ---
-title: "Updating Data in SQL Server Cursors | Microsoft Docs"
+title: Update data in cursors (OLE DB driver)
 description: "Updating data in SQL Server cursors"
 ms.custom: ""
 ms.date: "06/14/2018"

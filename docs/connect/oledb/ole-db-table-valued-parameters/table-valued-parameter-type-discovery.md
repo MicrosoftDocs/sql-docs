@@ -1,5 +1,5 @@
 ---
-title: "Table-Valued Parameter Type Discovery | Microsoft Docs"
+title: Table-valued parameter type discovery (OLE DB driver)
 description: "Table-Valued Parameter type discovery using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

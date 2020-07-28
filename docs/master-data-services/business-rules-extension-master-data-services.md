@@ -58,9 +58,8 @@ CREATE PROCEDURE [usr].[YourAction]
   
  Script actions will be executed as mds_br_user which has following permissions  
   
-|||  
+|Schema|Permissions|  
 |-|-|  
-|**Schema**|**Permissions**|  
 |mdm|SELECT|  
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  

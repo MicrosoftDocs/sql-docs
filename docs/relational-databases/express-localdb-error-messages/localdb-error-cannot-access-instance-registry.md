@@ -15,7 +15,7 @@ ms.author: sstein
     
 ## Details  
   
-|||  
+|Category|Value|  
 |-|-|  
 |Product Name|SQL Server|  
 |Event ID|262|  

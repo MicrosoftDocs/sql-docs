@@ -1,5 +1,6 @@
 ---
 title: "srv_paraminfo (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_paraminfo in the Extended Stored Procedure API returns information about a parameter.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql

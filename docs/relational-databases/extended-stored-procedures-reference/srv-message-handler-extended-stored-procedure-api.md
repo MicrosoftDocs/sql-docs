@@ -1,5 +1,6 @@
 ---
 title: "srv_message_handler (Extended Stored Procedure API)"
+description: Learn about srv_message_handler and how it calls the installed Extended Stored Procedure API message handler.
 ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

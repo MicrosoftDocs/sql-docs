@@ -1,5 +1,5 @@
 ---
-title: "Streaming Support for BLOB Output Parameters | Microsoft Docs"
+title: Streaming support for BLOB output parameters (OLE DB driver)
 description: "Streaming support for BLOB output parameters"
 ms.custom: ""
 ms.date: "06/14/2018"

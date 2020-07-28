@@ -88,9 +88,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
     > [!NOTE]
     > The new SPN format does not require a port number. This means that a multiple-port server or a protocol that does not use port numbers can use Kerberos authentication.  
    
-|||  
+|SPN format|Description|  
 |-|-|  
-|MSSQLSvc/\<FQDN>:<port>|The provider-generated, default SPN when TCP is used. \<port> is a TCP port number.|  
+|MSSQLSvc/\<FQDN>:\<port>|The provider-generated, default SPN when TCP is used. \<port> is a TCP port number.|  
 |MSSQLSvc/\<FQDN>|The provider-generated, default SPN for a default instance when a protocol other than TCP is used. \<FQDN> is a fully-qualified domain name.|  
 |MSSQLSvc/\<FQDN>:\<instancename>|The provider-generated, default SPN for a named instance when a protocol other than TCP is used. \<instancename> is the name of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 

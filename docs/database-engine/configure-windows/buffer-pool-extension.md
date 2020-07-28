@@ -92,9 +92,8 @@ ms.author: maghan
   
 ## Related Tasks  
   
-|||  
+|Task Description|Topic|  
 |-|-|  
-|**Task Description**|**Topic**|  
 |Enable and configure the buffer pool extension.|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |Modify the buffer pool extension configuration|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |View the buffer pool extension configuration|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)|  

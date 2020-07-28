@@ -21,9 +21,8 @@ ms.author: lle
   
 ## Excel Add-in Settings  
   
-||||  
-|-|-|-|  
 |Tab and Section|Setting|Description|  
+|-|-|-|  
 |Settings: Publishing|Show **Publish and Annotate** dialog box when publishing|Select to display the **Publish and Annotate** dialog box after you click **Publish**, enabling you to enter a single annotation for all changes or to enter an annotation for each change.<br /><br /> Deselect to specify that the Publish process is initiated without the **Publish and Annotate** dialog box being displayed. You will not have the opportunity to enter an annotation.|  
 |Settings: Version|Version selection|Select the version of the master data that will be loaded into the Excel Add-in. Can be:<br /><br /> **None** to have the version not default to any version<br /><br /> **Oldest** to default to the oldest version **Newest** to default to the most recent version.|  
 |Settings: Logging|Turn on detailed logging|Enable logging for the process of loading master data from MDS into the Excel Add-in, such that the  result of every command in the service is logged.|  

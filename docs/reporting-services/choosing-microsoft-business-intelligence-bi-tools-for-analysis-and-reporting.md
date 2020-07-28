@@ -21,7 +21,7 @@ The following table maps workloads for data analysis and reporting to the Micros
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
-|Workloads|User|Excel-based BI&nbsp;tool|SharePoint-based BI&nbsp;tool|SharePoint&nbsp;Online-based BI tool|Power&nbsp;BI-based BI&nbsp;tool|SQL&nbsp;Server-based BI&nbsp;tool|  
+|Workloads|User|Excel-based BI&nbsp;tool|SharePoint-based BI&nbsp;tool|SharePoint&nbsp;Online-based BI&nbsp;tool|Power&nbsp;BI-based BI&nbsp;tool|SQL&nbsp;Server-based BI&nbsp;tool|  
 |---------------|----------|-|-|--------------|-|-|  
 |**Self-Service BI**|Analyst/End User||||||  
 |Easily discover, and access public and corporate data||[Excel 2016](https://support.office.com/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-US&ad=US)|||[Azure Data Catalog](https://azure.microsoft.com/services/data-catalog/)||  

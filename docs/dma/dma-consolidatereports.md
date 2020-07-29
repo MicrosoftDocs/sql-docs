@@ -91,7 +91,7 @@ Create a database called **EstateInventory** and a table called **DatabaseInvent
 - DatabaseName
 - AssessmentFlag
 
-![SQL Server table contents](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-DatabaseInventory.png)
+![SQL Server table contents](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 If this database isn't on the tools computer, ensure that the tools computer has network connectivity to this SQL Server instance.
 
@@ -108,7 +108,7 @@ Create a database called **EstateInventory** and a table called **InstanceInvent
 - Port
 - AssessmentFlag
 
-![SQL Server table contents](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-InstanceInventory.png)
+![SQL Server table contents](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
 
 ## Running a scaled assessment
 
@@ -164,7 +164,7 @@ After the dmaProcessor has finishing processing the assessment files, the data w
 
 2. Load the data warehouse.
 
-  ![LoadWarehouse contents loaded](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
+  ![LoadWarehouse contents loaded](../dma/media//dma-consolidatereports/dma-load-warehouse-loaded.png)
 
 ## Set your database owners
 
@@ -172,7 +172,7 @@ While it's not mandatory, to get the most value from the reports, it's recommend
 
 You can also use the LoadWarehouse script to provide the basic TSQL statements for you to set the database owners.
 
-  ![LoadWarehouse setting owners](../dma/media//dma-consolidatereports/dma-LoadWarehouse-set-owners.png)
+  ![LoadWarehouse setting owners](../dma/media//dma-consolidatereports/dma-load-warehouse-set-owners.png)
 
 ## DMA reports
 

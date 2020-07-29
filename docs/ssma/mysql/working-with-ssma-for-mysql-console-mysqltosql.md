@@ -17,9 +17,8 @@ This section explains the procedure to migrate the MySQL database using the SSMA
   
 Topics covered in this section include:  
   
-|||  
+|Topic|Description|  
 |-|-|  
-|**Topics**|**Description**|  
 |[Getting Started with SSMA for MySQL Console &#40;MySQLToSQL&#41;](../../ssma/mysql/getting-started-with-ssma-for-mysql-console-mysqltosql.md)|Explains the procedure to execute the console application.|  
 |[Command Line Options in SSMA Console &#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md)|Describes the command line options and parameters to operate the SSMA console application.|  
 |[Creating Script Files &#40;MySQLToSQL&#41;](../../ssma/mysql/creating-script-files-mysqltosql.md)|Explains how to create a script file.|  

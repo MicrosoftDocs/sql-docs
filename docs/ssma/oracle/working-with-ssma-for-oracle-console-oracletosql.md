@@ -18,9 +18,8 @@ This section explains the procedure to migrate the Oracle database using the SSM
   
 Topics covered in this section include:  
   
-|||  
+|Topic|Description|  
 |-|-|  
-|**Topics**|**Description**|  
 |[Getting Started with SSMA  for Oracle Console &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|Explains the procedure to execute the console application.|  
 |[Command Line Options in SSMA Console &#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|Describes the command line options and parameters to operate the SSMA console application.|  
 |[Creating Script Files &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|Explains how to create a script file.|  

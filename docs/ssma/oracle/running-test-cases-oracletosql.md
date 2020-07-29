@@ -35,9 +35,8 @@ At this step, SSMA Tester creates auxiliary objects (tables, triggers, and views
   
 Assume that the verified table is named USER_TABLE. For such a table, the following auxiliary objects are created in Oracle.  
   
-||||  
-|-|-|-|  
 |Name|Type|Description|  
+|-|-|-|  
 |USER_TABLE$Trg|trigger|Trigger auditing the changes in the verified table.|  
 |USER_TABLE$AUD|table|Table where deleted and overwritten rows are saved.|  
 |USER_TABLE$AUDID|table|Table where new and changed rows are saved.|  
@@ -48,16 +47,14 @@ Assume that the verified table is named USER_TABLE. For such a table, the follow
   
 The following object is created in the schema of verified table at [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
-||||  
-|-|-|-|  
 |Name|Type|Description|  
+|-|-|-|  
 |USER_TABLE$Trg|trigger|Trigger auditing the changes in the verified table.|  
   
 And the following objects are created at [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]in the ssmatesterdb database.  
   
-||||  
-|-|-|-|  
 |Name|Type|Description|  
+|-|-|-|  
 |USER_TABLE$Aud|table|Table where deleted and overwritten rows are saved.|  
 |USER_TABLE$AudID|table|Table where new and changed rows are saved.|  
 |USER_TABLE|view|Simplified representation of the table modifications.|  

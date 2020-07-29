@@ -11,7 +11,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Real-time scoring with sp_rxPredict in SQL Server Machine Learning Services
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 Learn how to perform real-time scoring with the [sp_rxPredict](../../relational-databases/system-stored-procedures/sp-rxpredict-transact-sql.md) system stored procedure in SQL Server for high-performance predictions or scores in forecasting workloads.
 
@@ -155,7 +155,7 @@ Real-time scoring does not use an interpreter; therefore, any functionality that
 
 + Models using a transformation function or formula containing a transformation, such as `A ~ log(B` are not supported in real-time scoring. To use a model of this type, we recommend that you perform the transformation on input data before passing the data to real-time scoring.
 
-## Example: sp_rxPredict
+## Example
 
 This section describes the steps required to prepare and save a model for **real-time** prediction, and provides an example in R of how to call the function from T-SQL.
 

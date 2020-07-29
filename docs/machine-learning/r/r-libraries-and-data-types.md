@@ -137,11 +137,13 @@ outputDataSet <- inputDataSet'
 
 Note the use of the `str` function in R to get the schema of the output data. This function returns the following information:
 
-<code>'data.frame':2 obs. of  4 variables:</code>  
-<code> $ c1: int  1 -11</code>  
-<code> $ c2: Factor w/ 2 levels "Hello","world": 1 2</code>  
-<code> $ c3: Factor w/ 2 levels "6732EA46-2D5D-430B-8A01-86E7F3351C3E",..: 2 1</code>  
-<code> $ cR: num  4 2</code>  
+```output
+'data.frame':2 obs. of  4 variables:
+ $ c1: int  1 -11
+ $ c2: Factor w/ 2 levels "Hello","world": 1 2
+ $ c3: Factor w/ 2 levels "6732EA46-2D5D-430B-8A01-86E7F3351C3E",..: 2 1
+ $ cR: num  4 2
+```
 
 From this, you can see that the following data type conversions were implicitly performed as part of this query:
 

@@ -50,7 +50,6 @@ ADD SENSITIVITY CLASSIFICATION TO [dbo].[mytable].[col2] WITH (label = 'Label2',
 
 The following C++ code uses the Microsoft OLE DB Driver to obtain the classification information generated using the [!INCLUDE[tsql](../../../includes/tsql-md.md)] queries above:
 ```cpp
-#include <oledb.h>
 #include <atlbase.h>
 #include <msdasc.h>
 #include <exception>

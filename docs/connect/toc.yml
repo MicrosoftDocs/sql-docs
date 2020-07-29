@@ -5407,9 +5407,11 @@
         - name: ISSCommandWithParameters::SetParameterProperties
           href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md
         - name: ISSDataClassification
-          href: oledb/ole-db-interfaces/issdataclassification-ole-db.md
-        - name: ISSDataClassification::GetSensitivityClassification
-          href: oledb/ole-db-interfaces/issdataclassification-getsensitivityclassification-ole-db.md
+          items:
+          - name: ISSDataClassification
+            href: oledb/ole-db-interfaces/issdataclassification-ole-db.md
+          - name: ISSDataClassification::GetSensitivityClassification
+            href: oledb/ole-db-interfaces/issdataclassification-getsensitivityclassification-ole-db.md
       - name: How to
         href: ../connect/oledb/ole-db-how-to/ole-db-how-to-topics.md
         items:

@@ -8428,6 +8428,8 @@
         href: ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
       - name: Add an External Tool to the Tools Menu
         href: ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+      - name: Install Extensions in SQL Server Management Studio (SSMS)
+        href: ssms/install-extensions-in-sql-server-management-studio-ssms.md
       - name: SSMS Utility
         href: ssms/ssms-utility.md
       - name: SSMS Keyboard Shortcuts

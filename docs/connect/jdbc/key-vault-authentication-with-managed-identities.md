@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 
-author: Peter Bae
+author: peterbae
 ms.author: v-hyba
 ---
 # Key Vault authentication with Managed Identities
@@ -23,6 +23,8 @@ The JDBC Driver supports Always Encrypted as of version 6.0 (or higher) . Please
 
 [Azure Key Vault](https://docs.microsoft.com/azure/key-vault/basic-concepts) is a convenient option to store and manage column master keys for Always Encrypted. If the application is hosted in Azure, the user can use [Managed Identities](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) to authenticate to the Azure Key Vault, thus eliminating the need to provide and expose any credentials in the code. 
 
+## Connection properties for Key Vault authentication with Managed Identities
+
 For JDBC Driver 8.3.0 and later, the driver introduced the following connection properties:
 
 | ConnectionProperty    || Values||
@@ -33,15 +35,15 @@ For JDBC Driver 8.3.0 and later, the driver introduced the following connection 
 
 The following examples show how the connection properties are used in a connection string.
 
-#### Use Managed Identity to authenticate to AKV
+## Use Managed Identity to authenticate to AKV
 ```
 "jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=keyStoreManagedIdentity;"
 ```
-#### Use Managed Identity and the principal ID to authenticate to AKV
+## Use Managed Identity and the principal ID to authenticate to AKV
 ```
 "jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=keyStoreManagedIdentity;keyStorePrincipal=<principalId>"
 ```
-#### Use clientId and clientSecret to authentication to AKV
+## Use clientId and clientSecret to authentication to AKV
 ```
 "jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=keyStoreSecret;keyStorePrincipalId=<clientId>;keyStoreSecret=<clientSecret>"
 ```

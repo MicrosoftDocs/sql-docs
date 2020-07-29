@@ -8,7 +8,7 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 
-author: Peter Bae
+author: peterbae
 ms.author: v-hyba
 ---
 # Client Certificate Authentication for Loopback Scenarios

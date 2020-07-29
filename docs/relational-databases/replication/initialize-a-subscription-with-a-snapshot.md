@@ -1,5 +1,5 @@
 ---
-title: Initialize a Subscription with a Snapshot | Microsoft Docs
+title: Initialize subscription with snapshot
 ms.custom:
 ms.date: 03/23/2020
 ms.prod: sql

@@ -73,8 +73,8 @@ ms.author: mathoma
 ##  <a name="Overview"></a> Overview of Failover  
  The following table summarizes which forms of failover are supported under different availability and failover modes. For each pairing, the effective availability mode and failover mode is determined by the intersection of the modes of the primary replica plus the modes of one or more secondary replicas.  
   
-||Asynchronous-commit mode|Synchronous-commit mode with manual-failover mode|Synchronous-commit mode with automatic-failover mode|  
-|-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
+|Failover form|Asynchronous-commit mode|Synchronous-commit mode with manual-failover mode|Synchronous-commit mode with automatic-failover mode|  
+|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Automatic failover|No|No|Yes|  
 |Planned manual failover|No|Yes|Yes|  
 |Forced failover|Yes|Yes|Yes**&#42;**|  

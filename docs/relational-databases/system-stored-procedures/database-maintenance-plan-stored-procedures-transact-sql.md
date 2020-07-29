@@ -26,10 +26,10 @@ ms.author: mathoma
   
 :::row:::
     :::column:::
-    [sp_add_maintenance_plan](../../relational-databases/system-stored-procedures/sp-add-maintenance-plan-transact-sql.md)
-    [sp_add_maintenance_plan_db](../../relational-databases/system-stored-procedures/sp-add-maintenance-plan-db-transact-sql.md)
-    [sp_add_maintenance_plan_job](../../relational-databases/system-stored-procedures/sp-add-maintenance-plan-job-transact-sql.md)
-    [sp_delete_maintenance_plan](../../relational-databases/system-stored-procedures/sp-delete-maintenance-plan-transact-sql.md)
+    [sp_add_maintenance_plan](../../relational-databases/system-stored-procedures/sp-add-maintenance-plan-transact-sql.md)  
+    [sp_add_maintenance_plan_db](../../relational-databases/system-stored-procedures/sp-add-maintenance-plan-db-transact-sql.md)  
+    [sp_add_maintenance_plan_job](../../relational-databases/system-stored-procedures/sp-add-maintenance-plan-job-transact-sql.md)  
+    [sp_delete_maintenance_plan](../../relational-databases/system-stored-procedures/sp-delete-maintenance-plan-transact-sql.md)  
     :::column-end:::
     :::column:::
     [sp_delete_maintenance_plan_db](../../relational-databases/system-stored-procedures/sp-delete-maintenance-plan-db-transact-sql.md)  

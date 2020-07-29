@@ -10,7 +10,7 @@ ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Real-time scoring with sp_rxPredict in SQL Server Machine Learning Services
+# Real-time scoring with sp_rxPredict in SQL Server
 [!INCLUDE[sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
 Learn how to perform real-time scoring with the [sp_rxPredict](../../relational-databases/system-stored-procedures/sp-rxpredict-transact-sql.md) system stored procedure in SQL Server for high-performance predictions or scores in forecasting workloads.

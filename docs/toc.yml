@@ -1,4 +1,3 @@
-
 - name: SQL Server
   href: sql-server/index.yml
 
@@ -7024,9 +7023,9 @@
           href: relational-databases/polybase/configure-scale-out-groups-windows.md
       - name: Data Virtualization Wizard
         items:
-        - name: Virtualize relational data
+        - name: Virtualize data
           href: relational-databases/polybase/data-virtualization.md
-        - name: Virtualize CSV data
+        - name: Virtualize CSV file
           href: relational-databases/polybase/data-virtualization-csv.md
       - name: Troubleshoot
         items:

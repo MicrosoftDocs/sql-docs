@@ -1,5 +1,6 @@
 ---
 title: "srv_rpcowner (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_rpcowner in the Extended Stored Procedure API returns the owner component for the current remote stored procedure.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

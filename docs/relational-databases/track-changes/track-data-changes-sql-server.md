@@ -153,9 +153,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ## Related Tasks (required)  
   
-|||  
+|Task|Topic|  
 |-|-|  
-|**Task**|**Topic**|  
 |Provides an overview of change data capture.|[About Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)|  
 |Describes how to enable and disable change data capture on a database or table.|[Enable and Disable Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/enable-and-disable-change-data-capture-sql-server.md)|  
 |Describes how to administer and monitor change data capture.|[Administer and Monitor Change Data Capture &#40;SQL Server&#41;](../../relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md)|  

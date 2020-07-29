@@ -1,5 +1,0 @@
-- name: Report Server Web Service
-  items:
-  - name: Reporting Services Properties
-  - name: Using Reporting Services SOAP Headers
-  - name: Introducing Exception Handling in Reporting Services

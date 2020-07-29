@@ -14,7 +14,7 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Fetch Columns Using IRow::GetColumns (OLE DB)
+# Fetch Columns in SQL Server Native Client Using IRow::GetColumns (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The **IRow** interface allows direct access to columns of a single row in the result set. Thus, **IRow** is an efficient way to retrieve columns from a result set with one row.  

@@ -59,7 +59,8 @@ SSMS 18.6 is the latest general availability (GA) release of SSMS. If you need a
 | Auditing | Added support for SENSITIVE_BATCH_COMPLETED_GROUP action ID (string instead of a number). |
 | Auditing | Added the following fields to the audit viewer: affected_rows, response_rows, connection_id, duration_milliseconds, and data_sensitivity_information. |
 | Data Classification | Update SSMS to support the import/export of policy exported via PowerShell cmdlets. |
-| Import Flat File | Added Support for Fixed Width files and file type detection for .csv/.tsv files to ensure they are parsed as csv/tsv files respectively. |
+| Import Flat File | Added support for Fixed Width files and file type detection for .csv/.tsv files to ensure they are parsed as csv/tsv files respectively. |
+| Integration Services | Added support for Azure SQL Managed Instance agent jobs to execute an SSIS package from package store in Azure-SSIS IR. |
 | SMO / Scripting | Added support to script Dynamic Data Masking on [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (formerly SQL Azure DW). |
 | SMO / Scripting | Added support to script Security Policy on [Azure Synapse Analytics](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/sql-data-warehouse-overview-what-is) (formerly SQL DW). |
 

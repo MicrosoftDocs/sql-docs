@@ -156,7 +156,7 @@ The versioning system is fully implemented for SQL Server version 2016 onward.
     - [Previous versions of SQL Server, 2012-2005](../toc/previous-versions-sql-server.md)
 
 - _2014:_ &nbsp; The versioning system is half implemented for SQL Server 2014. You can choose SQL Server 2014 in the versioning control, and it works. Yet internally the files for 2014 are dedicated to just 2014, the same way the files for 2008 are dedicated to just 2008.
-    - [SQL Server 2014 offline documentation](/previous-versions/sql/2014/sql-server-offline-documentation?view=sql-server-2014)
+    - [SQL Server 2014 offline documentation](/sql/sql-server/sql-server-offline-documentation)
 
 - _2016 and later:_ &nbsp; The versioning system is fully implemented for SQL Server 2016 and later versions.
     - [Welcome to SQL Server documentation 2016 and later](/sql/sql-server/?view=sql-server-2016)

@@ -1,8 +1,0 @@
-- name: SQL Server Native Client Programming
-- name: SQL Server Native Client Features
-- name: Building Applications with SQL Server Native Client
-- name: SQL Server Native Client (OLE DB) +
-  href: ole-db/sql-server-native-client-ole-db.md
-- name: SQL Server Native Client (ODBC) +
-  href: odbc/sql-server-native-client-odbc.md
-- name: SQL Server Native Client Errors

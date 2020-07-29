@@ -1,9 +1,0 @@
-- name: Finding, Viewing, and Managing Reports
-- name: Exporting Reports
-- name: Printing Reports
-- name: Saving Reports
-- name: Report Builder F1 Help
-  items:
-  - name: Query Designers
-    items:
-    - name: Text-based Query Designer User Interface

@@ -246,11 +246,11 @@ Indicates that the accompanying set of [backup devices](../../relational-databas
 
 Specifies a logical or physical backup device to use for the backup operation.
 
-{ *logical_device_name* | **@**_logical\_device\_name\_var_ }
+{ *logical_device_name* \| **@**_logical\_device\_name\_var_ }
 **Applies to:** SQL Server
 Is the logical name of the backup device to which the database is backed up. The logical name must follow the rules for identifiers. If supplied as a variable (@*logical_device_name_var*), the backup device name can be specified either as a string constant (@_logical\_device\_name\_var_**=** logical backup device name) or as a variable of any character string data type except for the **ntext** or **text** data types.
 
-{ DISK | TAPE | URL} **=** { **'**_physical\_device\_name_**'** | **@**_physical\_device\_name\_var_ | 'NUL' }
+{ DISK \| TAPE \| URL} **=** { **'**_physical\_device\_name_**'** \| **@**_physical\_device\_name\_var_ \| 'NUL' }
 **Applies to:** DISK, TAPE, and URL apply to SQL Server.
 Specifies a disk file or tape device, or a Microsoft Azure Blob storage service. The URL format is used for creating backups to the Microsoft Azure storage service. For more information and examples, see [SQL Server Backup and Restore with Microsoft Azure Blob Storage Service](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md). For a tutorial, see [Tutorial: SQL Server Backup and Restore to Microsoft Azure Blob Storage Service](~/relational-databases/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service.md).
 

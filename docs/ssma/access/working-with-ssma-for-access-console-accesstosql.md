@@ -18,9 +18,8 @@ This section explains the procedure for migrating an Access database by using th
   
 Topics covered in this section include:  
   
-|||  
+|Topic|Description|  
 |-|-|  
-|**Topics**|**Description**|  
 |[Getting Started with SSMA for Access Console &#40;AccessToSQL&#41;](../../ssma/access/getting-started-with-ssma-for-access-console-accesstosql.md)|Explains the procedure to execute the console application.|  
 |[Command Line Options in SSMA Console &#40;AccessToSQL&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md)|Describes the command line options and parameters to operate the SSMA console application.|  
 |[Creating Script Files &#40;AccessToSQL&#41;](../../ssma/access/creating-script-files-accesstosql.md)|Explains how to create a script file.|  

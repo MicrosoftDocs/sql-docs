@@ -518,7 +518,7 @@ The current setting of this option can be determined by examining the `is_date_c
 **\<db_encryption_option> ::=**     
 Controls the database encryption state.
 
-ENCRYPTION { ON | **OFF** | SUSPEND | RESUME }     
+ENCRYPTION { ON \| **OFF** \| SUSPEND \| RESUME }     
 ON     
 Sets the database to be encrypted.
 
@@ -791,7 +791,7 @@ Size-based cleanup won't be automatically activated.
 
 SIZE_BASED_CLEANUP_MODE is type **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 Designates the currently active query capture mode. Each mode defines specific query capture policies.
 
 > [!NOTE]
@@ -918,7 +918,7 @@ The current setting of this option can be determined by examining the `page_veri
 
 Enables or disables Stretch Database for the database. For more info, see [Stretch Database](../../sql-server/stretch-database/stretch-database.md).
 
-REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> | FEDERATED_SERVICE_ACCOUNT = ON | OFF } )| **OFF**     
+REMOTE_DATA_ARCHIVE = { ON ( SERVER = \<server_name> , { CREDENTIAL = \<db_scoped_credential_name> \| FEDERATED_SERVICE_ACCOUNT = ON \| OFF } )\| **OFF**     
 ON     
 Enables Stretch Database for the database. For more info, including additional prerequisites, see [Enable Stretch Database for a database](../../sql-server/stretch-database/enable-stretch-database-for-a-database.md).
 
@@ -1909,7 +1909,7 @@ Size-based cleanup will be automatically activated when size on disk reaches 90%
 
 SIZE_BASED_CLEANUP_MODE is type **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 Designates the currently active query capture mode. Each mode defines specific query capture policies.   
 
 > [!NOTE]
@@ -2088,7 +2088,7 @@ A warning message is displayed when one of these errors occurs. The query, batch
 
 You can determine this option's status by examining the `is_arithabort_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the `IsArithmeticAbortEnabled` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }     
+COMPATIBILITY_LEVEL = { 150 \| 140 \| 130 \| 120 \| 110 \| 100 }     
 For more information, see [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 CONCAT_NULL_YIELDS_NULL { ON | **OFF** }     
@@ -2736,7 +2736,7 @@ Size-based cleanup will be automatically activated when size on disk reaches 90%
 
 SIZE_BASED_CLEANUP_MODE is type **nvarchar**.
 
-QUERY_CAPTURE_MODE { ALL | AUTO | CUSTOM | NONE }     
+QUERY_CAPTURE_MODE { ALL \| AUTO \| CUSTOM \| NONE }     
 Designates the currently active query capture mode.
 
 ALL     
@@ -2910,7 +2910,7 @@ A warning message is displayed when one of these errors occurs. The query, batch
 
   You can determine this option's status by examining the `is_arithabort_on` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view. You can also determine the status by examining the `IsArithmeticAbortEnabled` property of the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function.
 
-COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 }     
+COMPATIBILITY_LEVEL = { 150 \| 140 \| 130 \| 120 \| 110 \| 100 }     
 For more information, see [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
 CONCAT_NULL_YIELDS_NULL { ON | **OFF** }     

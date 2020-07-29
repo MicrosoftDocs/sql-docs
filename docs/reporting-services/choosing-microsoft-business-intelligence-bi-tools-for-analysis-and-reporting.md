@@ -1,5 +1,6 @@
 ---
 title: Analysis and reporting with Microsoft business intelligence (BI) tools
+description: Learn about the workloads mapped for data analysis and reporting, and about the Microsoft BI tools that are best suited for those workloads.
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
@@ -21,9 +22,8 @@ The following table maps workloads for data analysis and reporting to the Micros
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
-|Workloads|User|||BI Tools|||  
+|Workloads|User|Excel-based BI&nbsp;tool|SharePoint-based BI&nbsp;tool|SharePoint&nbsp;Online-based BI&nbsp;tool|Power&nbsp;BI-based BI&nbsp;tool|SQL&nbsp;Server-based BI&nbsp;tool|  
 |---------------|----------|-|-|--------------|-|-|  
-|||**Excel**|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**Self-Service BI**|Analyst/End User||||||  
 |Easily discover, and access public and corporate data||[Excel 2016](https://support.office.com/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-US&ad=US)|||[Azure Data Catalog](https://azure.microsoft.com/services/data-catalog/)||  
 |Create powerful data models||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  

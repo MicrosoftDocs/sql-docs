@@ -1,9 +1,0 @@
-- name: SQL Server Profiler Templates and Permissions
-- name: Create a Trace Template (SQL Server Profiler)
-- name: Save Traces and Trace Templates
-- name: Filter Traces with SQL Server Profiler
-  items:
-  - name: Filter Events in a Trace (SQL Server Profiler)
-- name: Start a Trace
-- name: Replay Traces
-- name: SQL Server Profiler F1 Help

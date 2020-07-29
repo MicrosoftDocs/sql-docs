@@ -21,9 +21,9 @@ landingContent:
         url: new-to-linux-resources.md
       - text: Overview
         url: https://docs.microsoft.com/en-us/learn/modules/introduction-sql-server-linux/
-      - text: Channel9 - the How
+      - text: Additonal Learning - How SQL Server Runs on Linux
         url: https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-on-Linux-The-HOW?term=sql%20server%20on%20Linux&lang-en=true
-      - text: Channel9 - overview
+      - text:Additonal Learning - SQL Server on Linux - Overview
         url: https://channel9.msdn.com/events/Connect/2016/101?term=sql%20server%20on%20Linux&lang-en=true 
 
 
@@ -55,7 +55,7 @@ landingContent:
         url: ../tools/overview-sql-tools.md
       - text: Azure Data Studio (Tool)
         url: ../azure-data-studio/what-is.md
-      - text: Channel9 resources
+      - text: Additonal Learning - Cross-Platform SQL Tools
         url: https://channel9.msdn.com/events/Connect/2016/173?term=SQL%20on%20linux&lang-en=true
 
 

@@ -40,7 +40,7 @@ Manual extension installation is accomplished by copying the associated extensio
 
 3.  The file copy process can be completed by Visual Studio at build time by checking the "Copy VSIX content to the following location" checkbox in the VSIX tab of the project’s properties window. In the textbox below the checkbox, enter the folder location above with a folder for this extension appended.  For example: ```C:\Program Files (x86)\Microsoft SQL Server Management Studio 18\Common7\IDE\Extensions\SampleExtension```
   
-![image file here](./media/install-extensions/vsix_ssms.png)
+![Project properties window VSIX settings with 3 checkboxes and a text box](./media/install-extensions/vsix_ssms.png)
 
 4. Build the extension project, a successful build will transfer the extension files to the SSMS extension folder.
 

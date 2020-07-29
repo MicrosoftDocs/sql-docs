@@ -1,5 +1,5 @@
 ---
-title: "Transactions | Microsoft Docs"
+title: Transactions (OLE DB driver)
 description: "Transactions in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

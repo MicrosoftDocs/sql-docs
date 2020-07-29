@@ -1,7 +1,7 @@
 ---
 title: "Using Azure Active Directory| Microsoft Docs for SQL Server"
 ms.custom: ""
-ms.date: "09/30/2020"
+ms.date: "08/28/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

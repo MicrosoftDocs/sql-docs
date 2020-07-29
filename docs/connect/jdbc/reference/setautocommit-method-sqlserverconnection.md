@@ -1,5 +1,6 @@
 ---
-title: "setAutoCommit Method (SQLServerConnection) | Microsoft Docs"
+title: "setAutoCommit Method (SQLServerConnection)"
+description: "Learn the public API details for the setAutoCommit method in the SQLServerConnection class of the JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

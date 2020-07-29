@@ -1,5 +1,6 @@
 ---
-title: "Using auto generated keys | Microsoft Docs"
+title: "Using auto generated keys"
+description: "Learn how the JDBC Driver for SQL Server supports retrieving automatically generated row identifiers when an application performs database operations."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

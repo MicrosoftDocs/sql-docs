@@ -15,20 +15,20 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 Learn how to perform real-time scoring with the [sp_rxPredict](../../relational-databases/system-stored-procedures/sp-rxpredict-transact-sql.md) system stored procedure in SQL Server for high-performance predictions or scores in forecasting workloads.
 
-Real-time scoring with `sp_rxPredict` is language-agnostic and executes with no dependencies on the R or Python runtimes in Machine Learning Services or R Services. Assuming a model created and trained using Microsoft functions, and then serialized to a binary format in SQL Server, you can use real-time scoring to generate predicted outcomes on new data inputs on SQL Server instances that do not have the R or Python add-on installed.
+Real-time scoring with `sp_rxPredict` is language-agnostic and executes with no dependencies on the R or Python runtimes in [Machine Learning Services](../sql-server-machine-learning-services.md) or [R Services](../r/sql-server-r-services.md). Assuming a model created and trained using Microsoft functions, and then serialized to a binary format in SQL Server, you can use real-time scoring to generate predicted outcomes on new data inputs on SQL Server instances that do not have the R or Python add-on installed.
 
 ## How real-time scoring works
 
-Real-time scoring is supported  on specific model types based on RevoScaleR or MicrosoftML functions such as  [rxLinMod (RevoScaleR)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod) and [rxNeuralNet (MicrosoftML)](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet). It uses native C++ libraries to generate scores, based on user input provided to a machine learning model stored in a special binary format.
+Real-time scoring is supported  on specific model types based on functions in [RevoScaleR](../r/ref-r-revoscaler.md) or [MicrosoftML](../r/ref-r-microsoftml.md) in R, or [revoscalepy](../python/ref-py-revoscalepy.md) or [microsoftml](../python/ref-py-microsoftml.md) in Python. It uses native C++ libraries to generate scores, based on user input provided to a machine learning model stored in a special binary format.
 
-Because a trained model can be used for scoring without having to call an external language runtime, the overhead of multiple processes is reduced. This supports much faster prediction performance for production scoring scenarios. Because the data never leaves SQL Server, results can be generated and inserted into a new table without any data translation between R and SQL.
+Because a trained model can be used for scoring without having to call an external language runtime in [Machine Learning Services](../sql-server-machine-learning-services.md) or [R Services](../r/sql-server-r-services.md), the overhead of multiple processes is reduced. 
 
 Real-time scoring is a multi-step process:
 
 1. The stored procedure that does scoring must be enabled on a per-database basis.
 2. You load the pre-trained model in binary format.
 3. You provide new input data to be scored, either tabular or single rows, as input to the model.
-4. To generate scores, call the [sp_rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) stored procedure.
+4. To generate scores, call the [sp_rxPredict](../../relational-databases/system-stored-procedures/sp-rxpredict-transact-sql.md) stored procedure.
 
 ## Prerequisites
 
@@ -44,6 +44,45 @@ Real-time scoring is a multi-step process:
 
 > [!Note]
 > Real-time scoring is currently optimized for fast predictions on smaller data sets, ranging from a few rows to hundreds of thousands of rows. On big datasets, using [rxPredict](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) might be faster.
+
+<a name ="bkmk_enableRtScoring"></a> 
+
+## Enable real-time scoring
+
+You must enable this feature for each database that you want to use for scoring. The server administrator should run the command-line utility, RegisterRExt.exe, which is included with the RevoScaleR package.
+
+> [!NOTE]
+> In order for real-time scoring to work, SQL CLR functionality needs to be enabled in the instance; additionally, the database needs to be marked trustworthy. When you run the script, these actions are performed for you. However, consider the additional security implications before doing this!
+
+1. Open an elevated command prompt, and navigate to the folder where RegisterRExt.exe is located. The following path can be used in a default installation:
+
+    `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\`
+
+2. Run the following command, substituting the name of your instance and the target database where you want to enable the extended stored procedures:
+
+    `RegisterRExt.exe /installRts [/instance:name] /database:databasename`
+
+    For example, to add the extended stored procedure to the CLRPredict database on the default instance, type:
+
+    `RegisterRExt.exe /installRts /database:CLRPRedict`
+
+    The instance name is optional if the database is on the default instance. If you are using a named instance, you must specify the instance name.
+
+3. RegisterRExt.exe creates the following objects:
+
+    + Trusted assemblies
+    + The stored procedure `sp_rxPredict`
+    + A new database role, `rxpredict_users`. The database administrator can use this role to grant permission to users who use the real-time scoring functionality.
+
+4. Add any users who need to run `sp_rxPredict` to the new role.
+
+> [!NOTE]
+>
+> In SQL Server 2017 and later, additional security measures are in place to prevent problems with CLR integration. These measures impose additional restrictions on the use of this stored procedure as well.
+
+## Disable real-time scoring
+
+To disable real-time scoring functionality, open an elevated command prompt, and run the following command: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 <a name="bkmk_py_supported_algos"></a>
 
@@ -76,7 +115,6 @@ Real-time scoring is a multi-step process:
   + [concat](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/concat)
   + [categorical](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical)
   + [categorical_hash](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/categorical-hash)
-
 
 <a name="bkmk_rt_supported_algos"></a>
 
@@ -113,51 +151,15 @@ Real-time scoring is a multi-step process:
 
 Real-time scoring does not use an interpreter; therefore, any functionality that might require an interpreter is not supported during the scoring step.  These might include:
 
-  + Models using the `rxGlm` or `rxNaiveBayes` algorithms are not supported.
++ Models using the `rxGlm` or `rxNaiveBayes` algorithms are not supported.
 
-  + Models using a transformation function or formula containing a transformation, such as <code>A ~ log(B)</code> are not supported in real-time scoring. To use a model of this type, we recommend that you perform the transformation on input data before passing the data to real-time scoring.
-
++ Models using a transformation function or formula containing a transformation, such as `A ~ log(B` are not supported in real-time scoring. To use a model of this type, we recommend that you perform the transformation on input data before passing the data to real-time scoring.
 
 ## Example: sp_rxPredict
 
-This section describes the steps required to set up **real-time** prediction, and provides an example in R of how to call the function from T-SQL.
+This section describes the steps required to prepare and save a model for **real-time** prediction, and provides an example in R of how to call the function from T-SQL.
 
-<a name ="bkmk_enableRtScoring"></a> 
-
-### Step 1. Enable the real-time scoring procedure
-
-You must enable this feature for each database that you want to use for scoring. The server administrator should run the command-line utility, RegisterRExt.exe, which is included with the RevoScaleR package.
-
-> [!NOTE]
-> In order for real-time scoring to work, SQL CLR functionality needs to be enabled in the instance; additionally, the database needs to be marked trustworthy. When you run the script, these actions are performed for you. However, consider the additional security implications before doing this!
-
-1. Open an elevated command prompt, and navigate to the folder where RegisterRExt.exe is located. The following path can be used in a default installation:
-    
-    `<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\`
-
-2. Run the following command, substituting the name of your instance and the target database where you want to enable the extended stored procedures:
-
-    `RegisterRExt.exe /installRts [/instance:name] /database:databasename`
-
-    For example, to add the extended stored procedure to the CLRPredict database on the default instance, type:
-
-    `RegisterRExt.exe /installRts /database:CLRPRedict`
-
-    The instance name is optional if the database is on the default instance. If you are using a named instance, you must specify the instance name.
-
-3. RegisterRExt.exe creates the following objects:
-
-    + Trusted assemblies
-    + The stored procedure `sp_rxPredict`
-    + A new database role, `rxpredict_users`. The database administrator can use this role to grant permission to users who use the real-time scoring functionality.
-
-4. Add any users who need to run `sp_rxPredict` to the new role.
-
-> [!NOTE]
-> 
-> In SQL Server 2017, additional security measures are in place to prevent problems with CLR integration. These measures impose additional restrictions on the use of this stored procedure as well. 
-
-### Step 2. Prepare and save the model
+### Step 1. Prepare and save the model
 
 The binary format required by sp\_rxPredict is the same as the format required to use the PREDICT function. Therefore, in your R code, include a call to [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel), and be sure to specify `realtimeScoringOnly = TRUE`, as in this example:
 
@@ -165,9 +167,9 @@ The binary format required by sp\_rxPredict is the same as the format required t
 model <- rxSerializeModel(model.name, realtimeScoringOnly = TRUE)
 ```
 
-### Step 3. Call sp_rxPredict
+### Step 2. Call sp_rxPredict
 
-You call sp\_rxPredict as you would any other stored procedure. In the current release, the stored procedure takes only two parameters: _\@model_ for the model in binary format, and _\@inputData_ for the data to use in scoring, defined as a valid SQL query.
+You call `sp_rxPredict` as you would any other stored procedure. In the current release, the stored procedure takes only two parameters: _\@model_ for the model in binary format, and _\@inputData_ for the data to use in scoring, defined as a valid SQL query.
 
 Because the binary format is the same that is used by the PREDICT function, you can use the models and data table from the preceding example.
 
@@ -183,17 +185,14 @@ EXEC sp_rxPredict
 ```
 
 > [!NOTE]
-> 
-> The call to sp\_rxPredict fails if the input data for scoring does not include columns that match the requirements of the model. Currently, only the following .NET data types are supported: double, float, short, ushort, long, ulong and string.
-> 
+> The call to `sp_rxPredict` fails if the input data for scoring does not include columns that match the requirements of the model. Currently, only the following .NET data types are supported: double, float, short, ushort, long, ulong and string.
+>
 > Therefore, you might need to filter out unsupported types in your input data before using it for real-time scoring.
-> 
+>
 > For information about corresponding SQL types, see [SQL-CLR Type Mapping](/dotnet/framework/data/adonet/sql/linq/sql-clr-type-mapping) or [Mapping CLR Parameter Data](https://docs.microsoft.com/sql/relational-databases/clr-integration-database-objects-types-net-framework/mapping-clr-parameter-data).
-
-## Disable real-time scoring
-
-To disable real-time scoring functionality, open an elevated command prompt, and run the following command: `RegisterRExt.exe /uninstallrts /database:<database_name> [/instance:name]`
 
 ## Next steps
 
-For more background on scoring in SQL Server, see [How to generate predictions in SQL Server machine learning](how-to-do-realtime-scoring.md).
++ [Native scoring using the PREDICT T-SQL function with SQL machine learning](native-scoring-predict-transact-sql.md)
++ [sp_rxPredict](../../relational-databases/system-stored-procedures/sp-rxpredict-transact-sql.md)
++ [SQL machine learning](../index.yml)

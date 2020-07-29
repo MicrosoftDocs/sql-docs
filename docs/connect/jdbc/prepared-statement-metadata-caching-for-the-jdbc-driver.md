@@ -1,5 +1,6 @@
 ---
-title: "Prepared statement metadata caching for the JDBC driver | Microsoft Docs"
+title: "Prepared statement metadata caching for the JDBC driver"
+description: "Learn how the JDBC Driver for SQL Server caches prepared statements to improve performance by minimizing calls to the database and how you can control its behavior."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

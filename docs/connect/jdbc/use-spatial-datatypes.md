@@ -19,7 +19,7 @@ Spatial datatypes (Geometry and Geography) are supported starting JDBC Driver pr
 
 ## Creating a geometry / geography object
 
-There are two main ways to create a Geometry / Geography object - either convert from a Well-Known Text (WKT) or a Well-Known Binary (WKB).
+There are two main ways to create a Geometry / Geography object - either convert from a Well-Known Text (WKT) or an internal SQL Server format (CLR).
 
 ### Creating from WKT
 
@@ -31,14 +31,14 @@ Geography geogWKT = Geography.STGeomFromText(geoWKT, 4326);
 
 This will create a LINESTRING Geometry object with Spatial Reference System Identifier (SRID) 0, and a Geography object with SRID 4326.
 
-### Creating from WKB
+### Creating from CLR
 
 ```java
-byte[] geomWKB = Hex.decodeHex("00000000010403000000000000000000F03F00000000000000000000000000000000000000000000F03F000000000000F0BF000000000000000001000000010000000001000000FFFFFFFF0000000002".toCharArray());
-byte[] geogWKB = Hex.decodeHex("E61000000104030000000000000000000000000000000000F03F000000000000F03F00000000000000000000000000000000000000000000F0BF01000000010000000001000000FFFFFFFF0000000002".toCharArray());
+byte[] geomCLR = Hex.decodeHex("00000000010403000000000000000000F03F00000000000000000000000000000000000000000000F03F000000000000F0BF000000000000000001000000010000000001000000FFFFFFFF0000000002".toCharArray());
+byte[] geogCLR = Hex.decodeHex("E61000000104030000000000000000000000000000000000F03F000000000000F03F00000000000000000000000000000000000000000000F0BF01000000010000000001000000FFFFFFFF0000000002".toCharArray());
 
-Geometry geomWKT = Geometry.deserialize(geomWKB);
-Geography geogWKT = Geography.deserialize(geogWKB);
+Geometry geomWKT = Geometry.deserialize(geomCLR);
+Geography geogWKT = Geography.deserialize(geogCLR);
 ```
 
 This will create a Geometry and Geography object that is equivalent to the ones created from the WKT previously.
@@ -100,12 +100,12 @@ These are the new public APIs that have been introduced with this addition, in t
 |Method|Description|
 |:------|:----------|
 |Geometry STGeomFromText(String wkt, int SRID)| Constructor for a Geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
-|Geometry STGeomFromWKB(byte[] wkb)| Constructor for a Geometry instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
-|Geometries deserialize(byte[] wkb)| Constructor for a Geometry instance from an internal SQL Server format for spatial data.
+|Geometry STGeomFromCLR(byte[] clr)| Constructor for a Geometry instance from an internal SQL Server format(CLR) representation.
+|Geometries deserialize(byte[] clr)| Constructor for a Geometry instance from an internal SQL Server format for spatial data.
 |Geometry parse(String wkt)| Constructor for a Geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation. Spatial Reference Identifier is defaulted to 0.
 |Geometry point(double x, double y, int SRID)| Constructor for a Geometry instance that represents a Point instance from its X and Y values and a Spatial Reference Identifier.
 |String STAsText()| Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation of a Geometry instance. This text will not contain any Z (elevation) or M (measure) values carried by the instance.
-|byte[] STAsBinary()| Returns the Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation of a Geometry instance. This value will not contain any Z or M values carried by the instance.
+|byte[] STAsBinary()| Returns the internal SQL Server format (CLR) representation of a Geometry instance. This value will not contain any Z or M values carried by the instance.
 |byte[] serialize()| Returns the bytes that represent an internal SQL Server format of Geometry type.
 |boolean hasM()| Returns if the object contains an M (measure) value.
 |boolean hasZ()| Returns if the object contains a Z (elevation) value.
@@ -125,12 +125,12 @@ These are the new public APIs that have been introduced with this addition, in t
 |Method|Description|
 |:------|:----------|
 |Geography STGeomFromText(String wkt, int SRID)| Constructor for a Geography instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
-|Geography STGeomFromWKB(byte[] wkb)| Constructor for a Geography instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
-|Geography deserialize(byte[] wkb)| Constructor for a Geography instance from an internal SQL Server format for spatial data.
+|Geography STGeomFromCLR(byte[] clr)| Constructor for a Geography instance from an internal SQL Server format (CLR) representation.
+|Geography deserialize(byte[] clr)| Constructor for a Geography instance from an internal SQL Server format for spatial data.
 |Geography parse(String wkt)| Constructor for a Geography instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation. Spatial Reference Identifier is defaulted to 0.
 |Geography point(double lon, double lat, int SRID)| Constructor for a Geography instance that represents a Point instance from its longitude and latitude and a Spatial Reference Identifier.
 |String STAsText()| Returns the Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation of a Geography instance. This text will not contain any Z (elevation) or M (measure) values carried by the instance.
-|byte[] STAsBinary())| Returns the Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation of a Geography instance. This value will not contain any Z or M values carried by the instance.
+|byte[] STAsBinary())| Returns the internal SQL Server format (CLR) representation of a Geography instance. This value will not contain any Z or M values carried by the instance.
 |byte[] serialize()| Returns the bytes that represent an internal SQL Server format of Geography type.
 |boolean hasM()| Returns if the object contains an M (measure) value.
 |boolean hasZ()| Returns if the object contains a Z (elevation) value.

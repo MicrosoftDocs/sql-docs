@@ -2,7 +2,7 @@
 title: "Using bulk copy with the JDBC driver"
 description: "The SQLServerBulkCopy class allows you to write data load solutions in Java that offer significant performance advantages over the standard JDBC APIs."
 ms.custom: ""
-ms.date: "07/24/2020"
+ms.date: "07/31/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -351,6 +351,18 @@ public class BulkCopyMultiple {
  Bulk copy operations can be performed as isolated operations or as part of a multiple step transaction. This latter option enables you to perform more than one bulk copy operation within the same transaction, as well as perform other database operations (such as inserts, updates, and deletes) while still being able to commit or roll back the entire transaction.  
   
  By default, a bulk copy operation is performed as an isolated operation. The bulk copy operation occurs in a non-transacted way, with no opportunity for rolling it back. If you need to roll back all or part of the bulk copy when an error occurs, you can use a `SQLServerBulkCopy`-managed transaction or perform the bulk copy operation within an existing transaction.  
+
+## Extended Bulk Copy for Azure Data Warehouse
+
+Preview version v8.3.1 adds a new connection property, `sendTemporalDataTypesAsStringForBulkCopy`. This boolean property is TRUE by default.
+
+This connection property, when set to FALSE, will send DATE, DATETIME, DATIMETIME2 DATETIMEOFFSET, SMALLDATETIME, and TIME datatypes (aka temporal datatypes) as their respective types instead of sending them as String.
+
+Sending the temporal datatypes as their respective types allows the user to send data into those columns for Azure DW, which was not possible before due to the driver converting the data into String. Sending String data into temporal columns works for SQL Server because SQL Server would perform implicit conversion for us, but it is not the same with Azure DW.
+
+Additionally, even without setting this connection string to FALSE, from v8.3.1 and onward, MONEY and SMALLMONEY datatypes will be sent as MONEY / SMALLMONEY datatypes instead of DECIMAL after these changes, which also allows those datatypes to be bulk copied into Azure DW.
+
+For more information and limitation, see [Extended Bulk Copy for Azure DW](https://github.com/microsoft/mssql-jdbc/wiki/Extended-Bulk-Copy-for-Azure-DW).
   
 ### Performing a non-transacted bulk copy operation
 

@@ -23,8 +23,6 @@ manager: kenvh
 
 For more information on how to assign classification to columns, see [SQL Data Discovery and Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification).
 
-Microsoft OLE DB Driver 18.5 allows the retrieval of this metadata via the [ISSDataClassification](../ole-db-interfaces/issdataclassification-ole-db.md) interface.
-
 ## Code samples
 
 The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] queries can be executed in SSMS to create classified data on Microsoft SQL Server:

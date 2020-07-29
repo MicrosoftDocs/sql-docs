@@ -69,7 +69,7 @@ typedef struct tagSensitivityClassification
 |*rgSensitivityLabels*|An array of SENSITIVITYLABEL structures.|  
 |*cInformationTypes*|The number of INFORMATIONTYPE structures in *rgInformationTypes*.|  
 |*rgInformationTypes*|An array of INFORMATIONTYPE structures.|  
-|*cColumnSensitivityMetadata*|The number of COLUMNSENSITIVITYMETADATA structures in *rgColumnSensitivityMetadata*|  
+|*cColumnSensitivityMetadata*|The number of COLUMNSENSITIVITYMETADATA structures in *rgColumnSensitivityMetadata*.|  
 |*rgColumnSensitivityMetadata*|An array of COLUMNSENSITIVITYMETADATA structures.|  
 |*eQuerySensitivityRank*|An enum representing the sensitivity rank for the query that was executed to obtain the rowset.|  
 

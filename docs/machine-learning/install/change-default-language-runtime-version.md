@@ -27,6 +27,13 @@ The following lists the versions of the R and Python runtime that are included i
 | SQL Server 2017 RTM - CU21 | 3.3.3 | 3.5.2 |
 | SQL Server 2017 CU22 and later | 3.3.3 and 3.5.2 | 3.5.2 and 3.7.2 |
 
+## Prerequisites
+
+You need to install **Cumulative Update (CU) 22 or later for SQL Server 2017** or **Cumulative Update (CU) 14 or later for SQL Server 2016 Services Pack (SP) 2** to change the default R or Python  runtime. To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
+
+> [!NOTE]
+> If you slipstream the Cumulative Update with a new installation of SQL Server, only the newest versions of the R and Python runtime will be installed.
+
 ::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 
 This article describes how to change the default version of R used by a SQL instance in [SQL Server 2016 R Services](../r/sql-server-r-services.md)).

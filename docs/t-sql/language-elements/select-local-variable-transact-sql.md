@@ -29,7 +29,7 @@ monikerRange: "= azuresqldb-current ||>= sql-server-2016 ||= azure-sqldw-latest|
 
 # SELECT @local_variable (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Sets a local variable to the value of an expression.  
   

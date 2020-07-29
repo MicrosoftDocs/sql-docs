@@ -1,5 +1,5 @@
 ---
-title: "Transactions | Microsoft Docs"
+title: Transactions (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

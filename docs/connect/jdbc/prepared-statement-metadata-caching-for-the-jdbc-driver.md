@@ -52,7 +52,7 @@ One more change introduced from 6.1.6-preview is that prior to this, driver woul
 |void setServerPreparedStatementDiscardThreshold(int serverPreparedStatementDiscardThreshold)|This setting controls how many outstanding prepared statement discard actions (sp_unprepare) can be outstanding per connection before a call to clean up the outstanding handles on the server is executed. If the setting is <= 1 unprepare actions are executed immediately on prepared statement close. If it is set to {@literal >} 1 these calls are batched together to avoid overhead of calling sp_unprepare too often|
 |int getServerPreparedStatementDiscardThreshold()|This setting controls how many outstanding prepared statement discard actions (sp_unprepare) can be outstanding per connection before a call to clean up the outstanding handles on the server is executed. If the setting is <= 1 unprepare actions are executed immediately on prepared statement close. If it is set to {@literal >} 1 these calls are batched together to avoid overhead of calling sp_unprepare too often.|
 
-## Prepared statement metatada caching
+## Prepared statement metadata caching
 As of 6.3.0-preview version, Microsoft JDBC driver for SQL Server supports prepared statement caching. Prior to v6.3.0-preview, if one executes a query that has been already prepared and stored in the cache, calling the same query again will not result in preparing it. Now, the driver looks up the query in cache and find the handle and execute it with sp_execute.
 Prepared Statement Metadata caching is **disabled** by default. In order to enable it, you need to call the following method on the connection object:
 

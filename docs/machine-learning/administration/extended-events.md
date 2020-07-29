@@ -106,7 +106,7 @@ The configuration file must be named the same as the executable, using the forma
 The configuration file itself has the following format:
 
 ```xml
-\<?xml version="1.0" encoding="utf-8"?>  
+<?xml version="1.0" encoding="utf-8"?>  
 <event_sessions>  
 <event_session name="[session name]" maxMemory="1" dispatchLatency="1" MaxDispatchLatency="2 SECONDS">  
     <description owner="you">Xevent for launchpad or bxl server.</description>  

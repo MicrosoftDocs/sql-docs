@@ -3,18 +3,17 @@ title: Real-time scoring using sp_rxPredict
 description: Generate predictions using sp_rxPredict, scoring data inputs against a pre-trained model written in R on SQL Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-
-ms.date: 03/30/2020
+ms.date: 07/29/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# Real-time scoring with sp_rxPredict in SQL Server machine learning
+# Real-time scoring with sp_rxPredict in SQL Server Machine Learning Services
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
-Real-time scoring uses the [sp_rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) system stored procedure and the CLR extension capabilities in SQL Server for high-performance predictions or scores in forecasting workloads. Real-time scoring is language-agnostic and executes with no dependencies on R or Python run times. Assuming a model created and trained using Microsoft functions, and then serialized to a binary format in SQL Server, you can use real-time scoring to generate predicted outcomes on new data inputs on SQL Server instances that do not have the R or Python add-on installed.
+Learn how to perform real-time scoring with the [sp_rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql) system stored procedure and the CLR extension capabilities in SQL Server Machine Learning Services for high-performance predictions or scores in forecasting workloads. Real-time scoring is language-agnostic and executes with no dependencies on R or Python run times. Assuming a model created and trained using Microsoft functions, and then serialized to a binary format in SQL Server, you can use real-time scoring to generate predicted outcomes on new data inputs on SQL Server instances that do not have the R or Python add-on installed.
 
 ## How real-time scoring works
 
@@ -31,7 +30,7 @@ Real-time scoring is a multi-step process:
 
 ## Prerequisites
 
-+ [Enable SQL Server CLR integration](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
++ [Enable SQL Server CLR integration](../../relational-databases/clr-integration/clr-integration-enabling.md).
 
 + [Enable real-time scoring](#bkmk_enableRtScoring).
 

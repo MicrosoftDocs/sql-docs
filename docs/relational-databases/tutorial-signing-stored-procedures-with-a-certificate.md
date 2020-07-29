@@ -149,7 +149,7 @@ EXECUTE TestCreditRatingSP;
 GO  
 ```  
   
-Run the following code to use the `EXECUTE AS` statement to become the `TestCreditRatingUser` account and run the stored procedure. This time you will see the user context is set to the USER MAPPED TO CERTIFICATE context.  
+Run the following code to use the `EXECUTE AS` statement to become the `TestCreditRatingUser` account and run the stored procedure. This time you will see the user context is set to the USER MAPPED TO CERTIFICATE context. Note that this option is not supported in a contained database or Azure SQL Database or Azure Synapse Analytics.
   
 ```sql  
 EXECUTE AS LOGIN = 'TestCreditRatingUser';  

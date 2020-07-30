@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 
-# Create Data Features using T-SQL
+# Python tutorial: Create Data Features using T-SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In part three of this five-part tutorial series, you'll learn how to create features from raw data by using a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. You'll then call that function from a SQL stored procedure to create a table that contains the feature values.

@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 
-# Train and save a Python model using T-SQL
+# Python tutorial: Train and save a Python model using T-SQL
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In part four of this five-part tutorial series, you'll learn how to train a machine learning model using the Python packages **scikit-learn** and **revoscalepy**. These Python libraries are already installed with SQL Server machine learning.

@@ -39,6 +39,9 @@ ms.author: mathoma
 - Basic availability groups are only supported for Standard Edition servers. 
 
 - Basic availability groups cannot be part of a distributed availability group. 
+
+- You may have multiple Basic availability groups connected to a single instance of SQL Server.
+
   
 ## Configuration  
  An Always On basic availability group can be created on any two SQL Server 2016 Standard Edition servers. When you create a basic availability group, you must specify both replicas during creation.  

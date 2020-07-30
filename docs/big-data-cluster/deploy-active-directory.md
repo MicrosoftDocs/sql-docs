@@ -27,9 +27,12 @@ To enable Active Directory (AD) authentication, the BDC automatically creates th
 
 To automatically create all the required objects in Active Directory, the BDC needs an AD account during deployment. This account needs to have permissions to create users, groups, and machine accounts inside the provided OU.
 
-The steps below assume you already have an Active Directory domain controller. If you don't have a domain controller, the following [guide](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) includes steps that can be helpful.
+>[!Important]
+>Depending on the password expiration policy set in the Domain Controller, passwords for these accounts can expire (default is 42 days). At this time, there is no mechanism to rotate credentials for all accounts in BDC, so the cluster will become inoperable once the expiration period is met. To workaround this issue, update the expiration policy for the BDC service accounts to “Password never expires” in the Domain Controller. This action can be done before or after the expiration time. In the latter case, Active Directory will reactivate the expired passwords. 
 
 For a list of AD accounts and groups, see [Auto generated Active Directory objects](active-directory-objects.md).
+
+The steps below assume you already have an Active Directory domain controller. If you don't have a domain controller, the following [guide](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) includes steps that can be helpful.
 
 ## Create AD objects
 

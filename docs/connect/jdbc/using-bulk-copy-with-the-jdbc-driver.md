@@ -356,11 +356,11 @@ public class BulkCopyMultiple {
 
 Preview version v8.3.1 adds a new connection property, `sendTemporalDataTypesAsStringForBulkCopy`. This boolean property is TRUE by default.
 
-This connection property, when set to `false`, will send *DATE*, *DATETIME*, *DATIMETIME2*, *DATETIMEOFFSET*, *SMALLDATETIME*, and *TIME* datatypes as their respective types instead of sending them as String.
+This connection property, when set to `false`, will send **DATE**, **DATETIME**, **DATIMETIME2**, **DATETIMEOFFSET**, **SMALLDATETIME**, and **TIME** datatypes as their respective types instead of sending them as String.
 
 Sending the temporal datatypes as their respective types allows the user to send data into those columns for Azure DW, which was not possible before due to the driver converting the data into String. Sending String data into temporal columns works for SQL Server because SQL Server would perform implicit conversion for us, but it is not the same with Azure DW.
 
-Additionally, even without setting this connection string to 'false', from *v8.3.1* and onward, *MONEY* and *SMALLMONEY* datatypes will be sent as *MONEY* / *SMALLMONEY* datatypes instead of *DECIMAL*, which also allows those datatypes to be bulk copied into Azure DW.
+Additionally, even without setting this connection string to 'false', from **v8.3.1** and onward, **MONEY** and **SMALLMONEY** datatypes will be sent as **MONEY** / **SMALLMONEY** datatypes instead of **DECIMAL**, which also allows those datatypes to be bulk copied into Azure DW.
 
 For more information and limitation, see [Extended Bulk Copy for Azure DW](https://github.com/microsoft/mssql-jdbc/wiki/Extended-Bulk-Copy-for-Azure-DW).
   

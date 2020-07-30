@@ -14,7 +14,7 @@ monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 
 ## DMV
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Pushdown computation improves the performance of queries on your Hadoop cluster.
 

@@ -16,7 +16,8 @@ ms.author: "josack"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # APPROX_COUNT_DISTINCT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sqlserver2019-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2019-asdb-asdbmi-asa.md)]
 
 This function returns the approximate number of unique non-null values in a group. 
   
@@ -30,7 +31,9 @@ This function returns the approximate number of unique non-null values in a grou
 APPROX_COUNT_DISTINCT ( expression )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any type, except **image**, **sql_variant**, **ntext**, or **text**. 
 

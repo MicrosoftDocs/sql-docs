@@ -21,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.extended_procedures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains a row for each object that is an extended stored procedure, with **sys.objects.type** = X. Because extended stored procedures are installed into the **master** database, they are only visible from that database context. Selecting from the **sys.extended_procedures** view in any other database context will return an empty result set.  
 

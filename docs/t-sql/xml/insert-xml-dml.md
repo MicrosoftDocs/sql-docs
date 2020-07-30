@@ -1,5 +1,5 @@
 ---
-title: "insert (XML DML) | Microsoft Docs"
+title: insert (XML DML)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
@@ -18,7 +18,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # insert (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Inserts one or more nodes identified by *Expression1* as child nodes or siblings of the node identified by *Expression2*.  
   
@@ -33,7 +33,9 @@ insert
                 )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Expression1*  
  Identifies one or more nodes to insert. This can be a constant XML instance; a reference to a typed XML data type instance of the same XML Schema collection on which the modify method is being applied; an untyped XML data type instance using a stand-alone **sql:column()**/**sql:variable()** function; or an XQuery expression. The expression can result in a node, and also a text node, or in an ordered sequence of nodes. It cannot resolve to the root (/) node. If the expression results in a value or a sequence of values, the values are inserted as a single text node with a space separating each value in the sequence. If you specify multiple nodes as constant, the nodes are included in parentheses and are separated by commas. You cannot insert heterogeneous sequences such as a sequence of elements, attributes, or values. If *Expression1* resolves to an empty sequence, no insertion occurs and no errors are returned.  
   

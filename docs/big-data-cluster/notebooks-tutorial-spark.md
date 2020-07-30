@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Run a sample notebook using Spark
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This tutorial demonstrates how to load and run a notebook in Azure Data Studio on a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. This allows data scientists and data engineers to run Python, R, or Scala code against the cluster.
 

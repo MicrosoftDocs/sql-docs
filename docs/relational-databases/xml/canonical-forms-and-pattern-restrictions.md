@@ -16,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Canonical Forms and Pattern Restrictions
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The XSD pattern facet allows for the restriction of the lexical space of simple types. When a pattern restriction is put on a type for which there is more than one possible lexical representation, some values could cause unexpected behavior upon validation.  
   
  This behavior occurs because lexical representations of these values are not stored in the database. Therefore, the values are converted to their canonical representations when serialized as output. If a document contains a value whose canonical form does not comply with the pattern restriction for its type, the document is rejected if a user tries to reinsert it.  

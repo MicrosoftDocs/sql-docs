@@ -4,7 +4,7 @@ TOCTitle: Latest updates for Microsoft SQL Server
 ms:assetid: 0d1835fd-2b44-47cf-8f90-305ca14b7823
 ms:mtpsurl: https://technet.microsoft.com/library/Ff803383(v=MSDN.10)
 ms:contentKeyID: 31804705
-ms.date: 2/13/2020
+ms.date: 06/22/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
@@ -30,8 +30,8 @@ Each of the following links provides information for all of the applicable produ
 
 |Product Versions   | Latest Service Pack |  Latest GDR | Latest cumulative update | CU Release Date | General Guidance  |
 |--|--|--|--|--|--|
-|SQL Server 2019|N/A|[KB 4517790](https://support.microsoft.com/help/4517790)|CU 4 [(KB 4548597)](https://support.microsoft.com/help/4548597)|3/31/2020|[SQL Server 2019 Installation](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
-|SQL Server 2017|N/A|[KB 4505224](https://support.microsoft.com/help/4505224)|CU 20 [(KB 4541283)](https://support.microsoft.com/help/4541283)|2/5/2020|[SQL Server 2017 Installation](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2019|N/A|[KB 4517790](https://support.microsoft.com/help/4517790)|CU 5 [(KB 4552255)](https://support.microsoft.com/help/4552255)|6/22/2020|[SQL Server 2019 Installation](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
+|SQL Server 2017|N/A|[KB 4505224](https://support.microsoft.com/help/4505224)|CU 21 [(KB 4557397)](https://support.microsoft.com/help/4557397)|7/1/2020|[SQL Server 2017 Installation](https://docs.microsoft.com/sql/database-engine/install-windows/installation-for-sql-server)|
 |SQL Server 2016|SP2 [(KB 4052908)](https://support.microsoft.com/help/4052908)|[KB 4532097](https://support.microsoft.com/help/4532097)|CU 13 [(KB 4549825)](https://support.microsoft.com/kb/4549825)|5/28/2020|[SQL Server 2016 Installation](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|SP1 [(KB 3182545)](https://support.microsoft.com/help/3182545/sql-server-2016-service-pack-1-release-information)|[KB 4505219](https://support.microsoft.com/help/4505219)|CU 15 + GDR [(KB 4505221)](https://support.microsoft.com/help/4505221)|7/9/2019|[SQL Server 2016 Installation](https://technet.microsoft.com/library/bb500469.aspx)|
 |SQL Server 2016|N/A|[KB4058560](https://support.microsoft.com/help/4058560)|CU 9 [(KB 4058559)](https://support.microsoft.com/help/4058559)|11/22/2017|[SQL Server 2016 Installation](https://technet.microsoft.com/library/bb500469.aspx)|
@@ -51,6 +51,8 @@ Each of the following links provides information for all of the applicable produ
 |SQL Server 2000|SP4 [(KB 290211)](https://support.microsoft.com/kb/290211)|N/A|N/A|N/A|[SQL Server 2000 Installation](https://technet.microsoft.com/library/aa197941(sql.80).aspx)|
 
 **Learn how to test updates:** [Testing and Developing Supportability Roadmaps for ISV Applications (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
+
+[!INCLUDE [sql-server-servicing-updates-version-15](../../includes/sql-server-servicing-updates-version-15.md)]
 
 ### Knowledge base
 

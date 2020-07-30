@@ -12,7 +12,7 @@ ms.author: sawinark
 ---
 # Managing a Composite Domain
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes the use of composite domains in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). Sometimes a single domain does not represent the data in a field satisfactorily, and you can represent the data only by grouping single domains. To do so, you create a composite domain. A composite domain consists of two or more single domains, and maps to a data field that consists of multiple related terms that are not parsed, but are included in a single composite value. Each term in the value will be represented by a different single domain. Once you have included single domains into composite domains, and then mapped the composite domain to the data field, you can build knowledge in the knowledge base about the data in that field by building knowledge in the single domains. A composite domain, like a single domain, is a semantic representation of the data in a single data field.  
   
@@ -23,7 +23,7 @@ ms.author: sawinark
 ## In This Section  
  Using a composite domain enables you to do the following:  
   
-|||  
+|Operation Description|Topic|  
 |-|-|  
 |Create a semantic representation for a data field that consists of multiple related terms that are not parsed|[Create a Composite Domain](../data-quality-services/create-a-composite-domain.md)|  
 |When you are mapping complex data to a composite domain, you can parse the data based on knowledge, in addition to parsing on a delimiter. DQS will first attempt to use its knowledge about single domains to determine how parts of the complex string belong in single domains.|[Create a Composite Domain](../data-quality-services/create-a-composite-domain.md)|  

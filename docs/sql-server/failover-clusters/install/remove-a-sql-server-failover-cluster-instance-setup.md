@@ -16,9 +16,12 @@ ms.assetid: bf63353b-69cf-4c5c-98ea-7b151e36537f
 author: MashaMSFT
 ms.author: mathoma
 ---
+
 # Remove an Always On Failover Cluster Instance (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Use this procedure to uninstall an Always On [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance.  
+
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+
+Use this procedure to uninstall an Always On [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance.  
   
 > [!IMPORTANT]  
 >  To update or remove a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you must be a local administrator with permission to login as a service on all nodes of the Windows Server failover cluster.  

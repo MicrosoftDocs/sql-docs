@@ -13,7 +13,7 @@ ms.author: mathoma
 
 # IServerVirtualDevice::CloseDevice (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 The **CloseDevice** function closes a virtual device that had been opened with IServerVirtualDeviceSet2::OpenDevice
 

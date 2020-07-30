@@ -22,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # core.sp_purge_data (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes data from the management data warehouse based on a retention policy. This procedure is executed daily by the mdw_purge_data [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job against the management data warehouse associated with the specified instance. You can use this stored procedure to perform an on-demand removal of data from the management data warehouse.  
   

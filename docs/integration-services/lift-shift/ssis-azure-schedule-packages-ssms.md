@@ -13,7 +13,7 @@ ms.reviewer: maghan
 ---
 # Schedule the execution of SSIS packages deployed in Azure with SQL Server Management Studio (SSMS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

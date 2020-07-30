@@ -1,5 +1,6 @@
 ---
 title: "sys.dm_db_xtp_checkpoint_files (Transact-SQL) | Microsoft Docs"
+description: Displays information about checkpoint files, including file size, physical location, and transaction ID. Learn how this view differs for versions of SQL Server.
 ms.date: "03/20/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

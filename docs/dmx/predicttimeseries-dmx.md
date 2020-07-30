@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # PredictTimeSeries (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns predicted future values for time series data. Time series data is continuous and can be stored in a nested table or in a case table. The **PredictTimeSeries** function always returns a nested table.  
   
@@ -141,7 +141,7 @@ ON
   
  Original predictions:  
   
-||||  
+|Model Region|ReportingDate|Quantity|  
 |-|-|-|  
 |M200 Pacific|7/25/2008 12:00:00 AM|46|  
 |M200 Pacific|8/25/2008 12:00:00 AM|44|  
@@ -149,7 +149,7 @@ ON
   
  Updated predictions:  
   
-||||  
+|Model Region|ReportingDate|Quantity|  
 |-|-|-|  
 |M200 Pacific|7/25/2008 12:00:00 AM|91|  
 |M200 Pacific|8/25/2008 12:00:00 AM|89|  

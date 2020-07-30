@@ -1,5 +1,5 @@
 ---
-title: "Table-Valued Parameter Type Discovery | Microsoft Docs"
+title: Table-valued parameter type discovery (OLE DB driver)
 description: "Table-Valued Parameter type discovery using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"
@@ -14,7 +14,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Table-Valued Parameter Type Discovery
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

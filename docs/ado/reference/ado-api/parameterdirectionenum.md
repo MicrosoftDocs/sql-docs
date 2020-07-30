@@ -39,7 +39,12 @@ Specifies whether the [Parameter](../../../ado/reference/ado-api/parameter-objec
 |AdoEnums.ParameterDirection.UNKNOWN|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|[Direction Property](../../../ado/reference/ado-api/direction-property.md)|
+
+:::row:::
+    :::column:::
+        [CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Direction Property](../../../ado/reference/ado-api/direction-property.md)  
+    :::column-end:::
+:::row-end:::

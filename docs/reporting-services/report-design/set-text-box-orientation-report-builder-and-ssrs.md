@@ -1,5 +1,6 @@
 ---
 title: "Set Text Box Orientation (Report Builder) | Microsoft Docs"
+description: Find out how to rotate a text box in different directions in your paginated reports in Report Builder. 
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

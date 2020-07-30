@@ -16,7 +16,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Guidelines and Limitations of DiffGrams in SQLXML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   Remember the following when using DiffGrams with SQLXML 4.0:  
   
 -   Binary large object (BLOB) types like **text/ntext** and images should not be used in the **\<diffgr:before>** block in when working with DiffGrams, because this will include them for use in concurrency control. This can cause problems with [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] because of the limitations on comparison for BLOB types. For example, the LIKE keyword is used in the WHERE clause for comparing between columns of the **text** data type; however, comparisons will fail in the case of BLOB types where the size of the data is greater than 8K.  

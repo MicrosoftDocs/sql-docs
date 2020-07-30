@@ -6,8 +6,8 @@ summary: Learn how to use Azure Data Studio to run SQL Server, Azure SQL Databas
 metadata:
   title: Azure Data Studio
   summary: Learn how to use Azure Data Studio to run SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebooks and more.
-  ms.prod: sql
-  ms.technology: azure-data-studio
+  ms.prod: azure-data-studio
+  ms.technology: 
   ms.topic: landing-page
   author: markingmyname
   ms.author: maghan
@@ -59,8 +59,8 @@ landingContent:
             url: notebooks-guidance.md
           - text: How to use the SQL Kernel
             url: notebooks-tutorial-sql-kernel.md
-          - text: How to manage notebooks in Azure Data Studio
-            url: notebooks-manage-sql-server.md
+          - text: How to use the Python Kernel
+            url: notebooks-tutorial-python-kernel.md
           - text: Kqlmagic extension in Azure Data Studio
             url: notebooks-kqlmagic.md
 

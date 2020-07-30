@@ -22,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # managed_backup.sp_set_parameter (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Sets the value of the specified Smart Admin system parameter.  
   

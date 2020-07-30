@@ -1,6 +1,6 @@
 ---
-title: "System requirements for OLE DB Driver for SQL Server | Microsoft Docs"
-description: "Requirements for OLE DB Driver for SQL Server"
+title: "System requirements for OLE DB Driver for SQL Server"
+description: "Lists the system requirements for the OLE DB Driver for SQL Server."
 ms.custom: ""
 ms.date: "03/18/2020"
 ms.prod: sql
@@ -19,7 +19,7 @@ ms.author: pelopes
 
 # System requirements for OLE DB Driver for SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 

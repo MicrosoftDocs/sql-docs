@@ -12,7 +12,7 @@ ms.author: sawinark
 ---
 # DQS Knowledge Bases and Domains
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes what a knowledge base is in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). To cleanse data, you have to have knowledge about the data. To prepare knowledge for a data quality project, you build and maintain a knowledge base (KB) that DQS can use to identify incorrect or invalid data. DQS enables you to use both computer-assisted and interactive processes to create, build, and update your knowledge base. Knowledge in a knowledge base is maintained in domains, each of which is specific to a data field. The knowledge base is a repository of knowledge about your data that enables you to understand your data and maintain its integrity.  
   
@@ -140,7 +140,7 @@ ms.author: sawinark
 ## In This Section  
  You can perform the following operations on a knowledge base and its domains:  
   
-|||  
+|Operation Description|Topic|  
 |-|-|  
 |Create, open, add knowledge to, and perform discovery on a knowledge base|[Building a Knowledge Base](../data-quality-services/building-a-knowledge-base.md)|  
 |Perform import and export operations on domains and knowledge bases|[Importing and Exporting Knowledge](../data-quality-services/importing-and-exporting-knowledge.md)|  

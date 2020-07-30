@@ -14,7 +14,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # View Policies Dialog Box
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to view the policies that are effective for this target. This dialog box shows relevant policies, their policy categories, and information about the policies.  
   
 ## Options  

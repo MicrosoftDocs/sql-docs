@@ -15,7 +15,7 @@ ms.reviewer: "mikeray"
 ms.author: mathoma
 ---
 # Enable enhanced database failover to a database in an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 In SQL Server 2012 and 2014, if a database participating in an availability group on the primary replica loses the ability to write transactions, it will not trigger a failover even if the replicas are synchronized and configured for automatic failover.
 

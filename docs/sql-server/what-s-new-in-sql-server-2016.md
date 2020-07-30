@@ -19,7 +19,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # What's new in SQL Server 2016
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]    
  With SQL Server 2016, you can build intelligent, mission-critical applications using a scalable, hybrid database platform that has everything built in, from in-memory performance and advanced security to in-database analytics. The SQL Server 2016 release adds new security features, querying capabilities, Hadoop and cloud integration, R analytics and more, along with numerous improvements and enhancements. 
 
 This page provides summary information and links to more detailed SQL Server 2016 what's new information for each SQL Server component. 
@@ -27,7 +27,7 @@ This page provides summary information and links to more detailed SQL Server 201
 ![SQL Server 2016](../sql-server/media/sql-server-2016.png)
 
  **Try SQL Server today!** 
-- Download the **free** [**SQL Server 2016 Developer edition!**](https://www.microsoft.com/cloud-platform/sql-server-editions-developers).
+- Download the **free** [**SQL Server newest edition!**](https://www.microsoft.com/sql-server/sql-server-downloads).
 - Download the latest version of [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md). 
 - Have an Azure account? Spin up a [Virtual Machine with SQL Server 2016 already installed](https://azuremarketplace.microsoft.com/marketplace/apps/microsoftsqlserver.sql2017-ws2019?tab=Overview).
 

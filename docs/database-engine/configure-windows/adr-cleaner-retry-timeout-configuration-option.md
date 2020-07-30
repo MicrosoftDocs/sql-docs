@@ -14,7 +14,7 @@ ms.author: mikeray
 ---
 # ADR cleaner retry timeout (min) configuration option
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Introduced in SQL Server 2019.
 

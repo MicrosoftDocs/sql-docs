@@ -21,7 +21,7 @@ author: rothja
 ms.author: jroth
 ---
 # CONTINUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Restarts a WHILE loop. Any statements after the CONTINUE keyword are ignored. CONTINUE is frequently, but not always, opened by an IF test. For more information, see [WHILE &#40;Transact-SQL&#41;](../../t-sql/language-elements/while-transact-sql.md) and [Control-of-Flow Language &#40;Transact-SQL&#41;](~/t-sql/language-elements/control-of-flow.md).  
   

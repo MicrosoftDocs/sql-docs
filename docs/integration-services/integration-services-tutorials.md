@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Integration Services Tutorials
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This section contains tutorials [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

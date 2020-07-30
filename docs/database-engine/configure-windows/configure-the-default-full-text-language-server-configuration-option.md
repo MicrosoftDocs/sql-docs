@@ -1,5 +1,6 @@
 ---
 title: "Configure the default full-text language Server Configuration Option | Microsoft Docs"
+description: Learn about the default full-text language option. See how to configure it to specify the default language that SQL Server uses for full-text indexes.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Configure the default full-text language Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **default full-text language** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **default full-text language** option specifies a default language value for full-text indexes. Linguistic analysis is performed on all data that is full-text indexed and is dependent on the language of the data. The default value of this option is the language of the server. For a localized version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup sets the **default full-text language** option to the language of the server if an appropriate match exists. For a non-localized version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the **default full-text language** option is English.  
   

@@ -15,7 +15,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # Command-Line Management Tool: SqlLocalDB.exe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   SqlLocalDB.exe is a simple tool that enables the user to easily manage LocalDB instances from the command line. It is implemented as a simple wrapper around the LocalDB instance API. As in many similar SQL Server tools (for example, SQLCMD), parameters are passed to SqlLocalDB as command-line arguments and output is sent to the console.  
   
  SqlLocalDB enables developers to use LocalDB without having to write code to call the API or depend on other tools to do it for them.  

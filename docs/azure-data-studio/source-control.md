@@ -1,8 +1,8 @@
 ---
 title: Source control
 description: Learn how to configure source control in Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"

@@ -22,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # core.sp_update_data_source (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates an existing row or inserts a new row in the management data warehouse core.source_info_internal table. This procedure is called by the data collector run-time component every time an upload package starts uploading data to the management data warehouse.  
   

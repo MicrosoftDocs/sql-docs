@@ -24,19 +24,19 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 # CREATE EXTERNAL FILE FORMAT (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2016-xxxx-asdw-pdw-md.md)]
 
-  Creates an External File Format object defining external data stored in Hadoop, Azure Blob Storage, Azure Data Lake Store or for the input and output streams associated with External Streams. Creating an external file format is a prerequisite for creating an External Table. By creating an External File Format, you specify the actual layout of the data referenced by an external table.  
+Creates an External File Format object defining external data stored in Hadoop, Azure Blob Storage, Azure Data Lake Store or for the input and output streams associated with External Streams. Creating an external file format is a prerequisite for creating an External Table. By creating an External File Format, you specify the actual layout of the data referenced by an external table.  
   
 The following file formats are supported:
   
--   Delimited Text  
+- Delimited Text  
   
--   Hive RCFile  
+- Hive RCFile  
   
--   Hive ORC
+- Hive ORC
   
--   Parquet
+- Parquet
 
--   JSON 
+- JSON - Applies to Azure SQL Edge only.
 
 
 To create an External Table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-table-transact-sql.md).
@@ -107,38 +107,38 @@ WITH (
 ```  
   
 ## Arguments  
- *file_format_name*  
- Specifies a name for the external file format.
+*file_format_name*  
+Specifies a name for the external file format.
   
- FORMAT_TYPE = [ PARQUET | ORC | RCFILE | DELIMITEDTEXT]
- Specifies the format of the external data.
+FORMAT_TYPE = [ PARQUET \| ORC \| RCFILE \| DELIMITEDTEXT]
+Specifies the format of the external data.
   
-   -   PARQUET
-   Specifies a Parquet format.
+- PARQUET
+  Specifies a Parquet format.
   
-   -   ORC  
-   Specifies an Optimized Row Columnar (ORC) format. This option requires Hive version 0.11 or higher on the external Hadoop cluster. In Hadoop, the ORC file format offers better compression and performance than the RCFILE file format.
+- ORC  
+  Specifies an Optimized Row Columnar (ORC) format. This option requires Hive version 0.11 or higher on the external Hadoop cluster. In Hadoop, the ORC file format offers better compression and performance than the RCFILE file format.
 
-   -   RCFILE (in combination with SERDE_METHOD = *SERDE_method*)
-   Specifies a Record Columnar file format (RcFile). This option requires you to specify a Hive Serializer and Deserializer (SerDe) method. This requirement is the same if you use Hive/HiveQL in Hadoop to query RC files. Note, the SerDe method is case-sensitive.
+- RCFILE (in combination with SERDE_METHOD = *SERDE_method*)
+  Specifies a Record Columnar file format (RcFile). This option requires you to specify a Hive Serializer and Deserializer (SerDe) method. This requirement is the same if you use Hive/HiveQL in Hadoop to query RC files. Note, the SerDe method is case-sensitive.
 
-   Examples of specifying RCFile with the two SerDe methods that PolyBase supports.
+  Examples of specifying RCFile with the two SerDe methods that PolyBase supports.
 
-    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe'
 
-    -   FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
+  - FORMAT_TYPE = RCFILE, SERDE_METHOD = 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'
 
-   -   DELIMITEDTEXT
-   Specifies a text format with column delimiters, also called field terminators.
+- DELIMITEDTEXT
+  Specifies a text format with column delimiters, also called field terminators.
    
-   -  JSON
-   Specifies a JSON format. Applies to Azure SQL Edge only. 
+- JSON
+  Specifies a JSON format. Applies to Azure SQL Edge only. 
   
- FIELD_TERMINATOR = *field_terminator*  
+FIELD_TERMINATOR = *field_terminator*  
 Applies only to delimited text files. The field terminator specifies one or more characters that mark the end of each field (column) in the text-delimited file. The default is the pipe character ꞌ|ꞌ. For guaranteed support, we recommend using one or more ascii characters.
   
   
- Examples:  
+Examples:  
   
 -   FIELD_TERMINATOR = '|'  
   
@@ -148,7 +148,7 @@ Applies only to delimited text files. The field terminator specifies one or more
   
 -   FIELD_TERMINATOR = '~|~'  
   
- STRING_DELIMITER = *string_delimiter*  
+STRING_DELIMITER = *string_delimiter*  
 Specifies the field terminator for data of type string in the text-delimited file. The string delimiter is one or more characters in length and is enclosed with single quotes. The default is the empty string "". For guaranteed support, we recommend using one or more ascii characters.
  
   

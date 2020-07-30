@@ -5,7 +5,7 @@ description: Reference article for azdata bdc debug commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,25 +13,30 @@ ms.technology: big-data-cluster
 
 # azdata bdc debug
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following article provides reference for the `bdc debug` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md)
+The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
-|     |     |
+| Command | Description |
 | --- | --- |
 [azdata bdc debug copy-logs](#azdata-bdc-debug-copy-logs) | Copy logs.
-[azdata bdc debug dump](#azdata-bdc-debug-dump) | Trigger logging dump.
+[azdata bdc debug dump](#azdata-bdc-debug-dump) | Trigger memory dump.
 ## azdata bdc debug copy-logs
 Copy the debug logs from the Big Data Cluster - Kubernetes configuration is required on your system.
 ```bash
 azdata bdc debug copy-logs --namespace -n 
                            [--container -c]  
-                           [--target-folder -d]  
-                           [--pod -p]  
-                           [--timeout -t]  
-                           [--skip-compress -sc]  
-                           [--exclude-dumps -ed]
+                           
+[--target-folder -d]  
+                           
+[--pod -p]  
+                           
+[--timeout -t]  
+                           
+[--skip-compress -sc]  
+                           
+[--exclude-dumps -ed]
 ```
 ### Required Parameters
 #### `--namespace -n`
@@ -57,24 +62,26 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc debug dump
-Trigger logging dump and copy it out from container - Kubernetes configuration is required on your system.
+Trigger memory dump and copy it out from container - Kubernetes configuration is required on your system.
 ```bash
 azdata bdc debug dump --namespace -n 
-                      --container -c  
-                      [--target-folder -d]
+                      [--container -c]  
+                      
+[--target-folder -d]
 ```
 ### Required Parameters
 #### `--namespace -n`
 Big data cluster name, used for kubernetes namespace.
-#### `--container -c`
-Copy the logs for the containers with similar name, Optional, by default copies logs for all containers. Cannot be specified multiple times. If specified multiple times, last one will be used
 ### Optional Parameters
+#### `--container -c`
+The target container to be triggered for dumping the running processes
+`controller`
 #### `--target-folder -d`
-Target folder path to copy logs to. Optional, by default creates the result in the local folder.  Cannot be specified multiple times. If specified multiple times, last one will be used
+Target folder to copy the dump out.
 `./output/dump`
 ### Global Arguments
 #### `--debug`
@@ -84,7 +91,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 

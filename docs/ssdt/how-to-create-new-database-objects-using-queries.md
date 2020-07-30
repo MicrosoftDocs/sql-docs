@@ -1,12 +1,12 @@
 ---
 title: Create New Database Objects Using Queries
+description: Get acquainted with the Transact-SQL Editor. See how to open this editor, and view examples that show how to use it to create a new table, function, or view.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: ac983ac7-f9c4-495d-8a99-e1ba370fb271
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017

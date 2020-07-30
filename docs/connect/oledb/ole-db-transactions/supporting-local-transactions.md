@@ -1,5 +1,5 @@
 ---
-title: "Supporting Local Transactions | Microsoft Docs"
+title: Supporting local transactions (OLE DB driver)
 description: "Local transactions in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"
@@ -19,7 +19,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Supporting Local Transactions
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

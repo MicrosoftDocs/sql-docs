@@ -16,7 +16,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STContains  (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Specifies whether the calling **geography** instance spatially contains the **geography** instance passed to the method.  
   
@@ -27,7 +27,9 @@ ms.author: mlandzic
 .STContains ( other_geography )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geography*  
  Is another **geography** instance to compare against the instance on which `STContains()` is invoked.  
   

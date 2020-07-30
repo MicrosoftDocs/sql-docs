@@ -1,5 +1,6 @@
 ---
 title: "Change Workload Group Settings | Microsoft Docs"
+description: Learn how to change workload group settings of the default and user-defined workload groups by using SQL Server Management Studio or Transact-SQL.
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Change Workload Group Settings
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   You can change workload group settings by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 -   **Before you begin:**  [Limitations and Restrictions](#LimitationsRestrictions), [Permissions](#Permissions)  

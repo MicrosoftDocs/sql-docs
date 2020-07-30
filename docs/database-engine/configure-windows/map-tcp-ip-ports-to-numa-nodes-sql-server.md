@@ -1,5 +1,6 @@
 ---
 title: "Map TCP IP Ports to NUMA Nodes (SQL Server) | Microsoft Docs"
+description: "Learn how to use SQL Server Configuration Manager to map TCP/IP ports to non-uniform memory access (NUMA) nodes. See how to create a node identification bitmap."
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -22,15 +23,15 @@ author: markingmyname
 ms.author: maghan
 ---
 # Map TCP IP Ports to NUMA Nodes (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to map TCP/IP ports to non-uniform memory access (NUMA) nodes by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. On startup, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] writes the node information to the error log.  
   
  To determine the node number of the node you want to use, either read the node information from the error log, or from the **sys.dm_os_schedulers** view. To set a TCP/IP address and port to single or multiple nodes, append a node identification bitmap (an affinity mask) in brackets after the port number. Nodes can be specified in either decimal or hexadecimal format. To create the bitmap, first number the nodes from right to left starting with zero, as in 76543210. Create a binary representation of the node list, providing 1 for nodes you want to use, and 0 for nodes you do not want to use. For example, to use NUMA nodes 0, 2, and 5, specify 00100101.  
   
-|||  
-|-|-|  
-|NUMA node number|76543210|  
-|Mask for 0, 2, and 5 counting from right|00100101|  
+```text
+NUMA node number                            76543210
+Mask for 0, 2, and 5 counting from right    00100101
+```
   
  Convert the binary representation (00100101), into decimal `[37]`, or hexadecimal `[0x25]`. To listen on all nodes, provide no node identifier.  
   

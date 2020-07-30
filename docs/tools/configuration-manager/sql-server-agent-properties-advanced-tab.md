@@ -1,5 +1,6 @@
 ---
 title: "SQL Server Agent Properties (Advanced Tab)"
+description: Learn about the options on the Advanced tab in the SQL Server Agent Properties dialog box, such as the dump directory and the instance ID.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server Agent Properties (Advanced Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Five properties appear on the **Advanced** tab by default. If custom properties are defined, they also appear on this tab, with their values.  
   
 ## Options  

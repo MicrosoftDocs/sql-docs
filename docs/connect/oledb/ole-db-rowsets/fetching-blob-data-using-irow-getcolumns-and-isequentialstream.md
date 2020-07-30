@@ -16,8 +16,8 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ---
-# Fetching BLOB Data Using IRow::GetColumns and ISequentialStream
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Fetching BLOB Data by Using IRow::GetColumns and ISequentialStream
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

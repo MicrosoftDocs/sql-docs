@@ -1,29 +1,29 @@
 ---
 title: Connect Spark to SQL Server
 titleSuffix: SQL Server big data clusters
-description: Learn how to use the MSSQL Spark Connector in Spark to read and write to SQL Server.
+description: Learn how to use the Apache Spark Connector for SQL Server and Azure SQL to read and write to SQL Server.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: shivsood
+ms.reviewer: mikeray
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
+ms.technology: machine-learning-bdc
 ---
 
-# How to read and write to SQL Server from Spark using the MSSQL Spark Connector
+# How to read and write to SQL Server from Spark using the Apache Spark Connector for SQL Server and Azure SQL
 
 A key big data usage pattern is high volume data processing in Spark, followed by writing the data to SQL Server for access to line-of-business applications. These usage patterns benefit from a connector that utilizes key SQL optimizations and provides an efficient write mechanism.
 
-This article provides an overview of the MSSQL Spark connector interface and instantiating it for use with non-AD mode and AD-mode. Then, provides an example of how to use the MSSQL Spark connector to read and write to the following locations within a big data cluster:
+This article provides an overview of the Apache Spark Connector for SQL Server and Azure SQL interface and instantiating it for use with non-AD mode and AD-mode. Then, provides an example of how to use the Apache Spark Connector for SQL Server and Azure SQL to read and write to the following locations within a big data cluster:
 1. The SQL Server master instance
 1. The SQL Server data pool
 
-   ![MSSQL Spark connector diagram](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+   ![Apache Spark Connector for SQL Server and Azure SQL diagram](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
 
-## MSSQL Spark Connector Interface
+## Apache Spark Connector for SQL Server and Azure SQL Interface
 
-SQL Server 2019 provides the **MSSQL Spark connector** for big data clusters that uses SQL Server bulk write APIs for Spark to SQL writes. MSSQL Spark Connector is based on Spark data source APIs and provides a familiar Spark JDBC connector interface. For interface parameters refer [Apache Spark documentation](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). The MSSQL Spark connector is referenced by the name **com.microsoft.sqlserver.jdbc.spark**. The MSSQL Spark connector supports two security modes to connect with SQL Server, non-Active Directory mode and Active Directory(AD)-mode:
+SQL Server 2019 provides the [**Apache Spark Connector for SQL Server and Azure SQL**](https://github.com/microsoft/sql-spark-connector) for big data clusters that uses SQL Server bulk write APIs for Spark to SQL writes. The Apache Spark Connector for SQL Server and Azure SQL is based on Spark data source APIs and provides a familiar Spark JDBC connector interface. For interface parameters refer [Apache Spark documentation](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html). The Apache Spark Connector for SQL Server and Azure SQL is referenced by the name **com.microsoft.sqlserver.jdbc.spark**. The Apache Spark Connector for SQL Server and Azure SQL supports two security modes to connect with SQL Server, non-Active Directory mode and Active Directory(AD)-mode:
 ### Non-AD Mode:
 In non-AD mode security, each user has a username and password which need to be provided as parameters during the connector instantiation to perform read and/or writes.
 An example connector instantiation for non-AD mode is below:
@@ -65,11 +65,11 @@ The following table describes interface parameters that have changed or are new:
 
 | Property name | Optional | Description |
 |---|---|---|
-| **isolationLevel** | Yes | This describes the isolation level of the connection. The default for MSSQLSpark Connector is **READ_COMMITTED** |
+| **isolationLevel** | Yes | This describes the isolation level of the connection. The default for the connector is **READ_COMMITTED** |
 
 The connector uses SQL Server Bulk write APIs. Any bulk write parameters can be passed as optional parameters by the user and are passed as-is by the connector to the underlying API. For more information about bulk write operations, see [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
-## MSSQL Spark Connector Sample
+## Apache Spark Connector for SQL Server and Azure SQL Sample
 The sample performs the following tasks:
 
 - Read a file from HDFS and do some basic processing.
@@ -106,7 +106,7 @@ The sample performs the following tasks:
 
 ### Run the sample notebook
 
-To demonstrate the use of the MSSQL Spark Connector with this data in non-AD mode, you can download a sample notebook, open it in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks with SQL Server](../azure-data-studio/notebooks-guidance.md).
+To demonstrate the use of the Apache Spark Connector for SQL Server and Azure SQL with this data in non-AD mode, you can download a sample notebook, open it in Azure Data Studio, and run each code block. For more information about working with notebooks, see [How to use notebooks with SQL Server](../azure-data-studio/notebooks-guidance.md).
 
 1. From a PowerShell or bash command line, run the following command to download the **mssql_spark_connector_non_ad_pyspark.ipynb** sample notebook:
 
@@ -116,7 +116,7 @@ To demonstrate the use of the MSSQL Spark Connector with this data in non-AD mod
 
 1. In Azure Data Studio, open the sample notebook file. Verify that it is connected to your HDFS/Spark Gateway for your big data cluster.
 
-1. Run each code cell in the sample to see usage of MSSQL Spark connector.
+1. Run each code cell in the sample to see usage of the Apache Spark Connector for SQL Server and Azure SQL.
 
 ## Next steps
 

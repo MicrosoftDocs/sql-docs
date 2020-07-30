@@ -1,11 +1,11 @@
 ---
 title: Azure Active Directory in SSDT
+description: "Learn about the Azure Active Directory authentication methods that SQL Server Data Tools (SSDT) provides for Azure SQL Database and Azure SQL Data Warehouse."
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 10/28/2019

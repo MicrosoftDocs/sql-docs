@@ -1,5 +1,6 @@
 ---
 title: "Data Sources Supported by Reporting Services | Microsoft Docs"
+description: Learn about the various data sources that are supported by Reporting Services, including Microsoft SQL Server, Oracle, and ODBC.
 ms.date: 05/21/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -8,12 +8,12 @@ ms.service: sql-database
 ms.prod_service: sql-database,sql
 ms.custom: security
 ms.topic: conceptual
-ms.date: 09/12/2019
-ms.author: mibar
-author: barmichal
+ms.date: 06/10/2020
+ms.author: datrigan
+author: DavidTrigano
 ---
 # SQL Data Discovery and Classification
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Data Discovery & Classification introduces a new tool built into [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) for **discovering**, **classifying**, **labeling** & **reporting** the sensitive data in your databases.
 Discovering and classifying your most sensitive data (business, financial, healthcare, etc.) can play a pivotal role in your organizational information protection stature. It can serve as infrastructure for:
@@ -120,7 +120,9 @@ SELECT
     O.NAME AS table_name,
     C.NAME AS column_name,
     information_type,
-	label
+	label,
+	rank,
+	rank_desc
 FROM sys.sensitivity_classifications sc
     JOIN sys.objects O
     ON  sc.major_id = O.object_id

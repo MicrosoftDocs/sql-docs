@@ -4,8 +4,8 @@ titleSuffix: Azure Data Studio
 description: Learn how to manage Python or R packages in your database with the [Machine Learning extension for Azure Data Studio.
 ms.date: "05/19/2020"
 ms.reviewer: "sstein"
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: machine-learning
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph

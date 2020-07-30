@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 
 # RAISERROR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 > [!NOTE]
 > The **RAISERROR** statement does not honor **SET XACT_ABORT**. New applications should use **THROW** instead of **RAISERROR**.
@@ -61,7 +61,9 @@ RAISERROR ( { msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *msg_id*  
  Is a user-defined error message number stored in the sys.messages catalog view using sp_addmessage. Error numbers for user-defined error messages should be greater than 50000. When *msg_id* is not specified, RAISERROR raises an error message with an error number of 50000.  
   

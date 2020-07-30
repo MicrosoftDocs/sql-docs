@@ -125,6 +125,8 @@ sudo yum install unixODBC-devel
 
 ```bash
 sudo su
+curl -O https://packages.microsoft.com/keys/microsoft.asc
+rpm --import microsoft.asc
 
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version

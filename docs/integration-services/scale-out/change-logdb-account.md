@@ -2,7 +2,7 @@
 title: "Change the account for SSIS Scale Out logging | Microsoft Docs"
 description: "This article describes how to change the user account for SSIS Scale Out logging"
 ms.custom: performance
-ms.date: "12/13/2017"
+ms.date: 06/29/2020
 ms.prod: sql
 ms.technology: integration-services
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.reviewer: maghan
 ---
 # Change the account for Scale Out logging
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 When you run SSIS packages in Scale Out, the event messages are logged in the SSISDB database with an auto-created user account named **##MS_SSISLogDBWorkerAgentLogin##**. The login for this user uses SQL Server authentication.
@@ -32,12 +32,12 @@ For instructions about how to join a database role, see [Join a Role](../../rela
 ## 3. Update the logging information in SSISDB
 Call the stored procedure `[catalog].[update_logdb_info]` with the SQL Server name and connection string as parameters, as shown in the following example:
 
-    ```sql
-    SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
-    SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
-    EXEC [internal].[update_logdb_info] @serverName, @connectionString
-    GO
-    ```
+```sql
+SET @serverName = CONVERT(sysname, SERVERPROPERTY('servername'))
+SET @connectionString = 'Data Source=' + @serverName + ';Initial Catalog=SSISDB;Integrated Security=SSPI;'
+EXEC [internal].[update_logdb_info] @serverName, @connectionString
+GO
+```
 
 ## 4. Restart the Scale Out Worker service
 Restart the Scale Out Worker service to make the change effective.

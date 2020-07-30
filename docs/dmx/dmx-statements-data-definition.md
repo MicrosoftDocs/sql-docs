@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # DMX Statements - Data Definition 
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   The following table lists the statements that are part of the data mining data definition language (DDL) in Data Mining Extensions (DMX).  
   

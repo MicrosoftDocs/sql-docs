@@ -1,5 +1,6 @@
 ---
 title: "Use the WMI Provider for Configuration Management"
+description: Learn about the WMI Provider for Configuration Management, including binding, specifying a connection string, and permissions/server authentication.
 ms.custom: seo-lt-2019
 ms.date: "04/12/2019"
 ms.prod: sql
@@ -22,7 +23,7 @@ ms.author: "carlrab"
 ---
 # Working with the WMI Provider for Configuration Management
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This article provides guidance about how to program with the WMI Provider for Computer Management.
 

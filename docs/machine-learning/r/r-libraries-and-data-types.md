@@ -133,7 +133,7 @@ outputDataSet <- inputDataSet'
 |Row \#|C1|C2|C3|C4|
 |-|-|-|-|-|
 |1|1|Hello|6e225611-4b58-4995-a0a5-554d19012ef1|4|
-|1|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
+|2|-11|world|6732ea46-2d5d-430b-8ao1-86e7f3351c3e|2|
 
 Note the use of the `str` function in R to get the schema of the output data. This function returns the following information:
 

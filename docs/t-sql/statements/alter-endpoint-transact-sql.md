@@ -21,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # ALTER ENDPOINT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Enables modifying an existing endpoint in the following ways:  
   

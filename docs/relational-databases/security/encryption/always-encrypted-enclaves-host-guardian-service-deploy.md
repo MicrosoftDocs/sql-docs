@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 
 # Deploy the Host Guardian Service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)]
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 This article describes how to deploy the Host Guardian Service (HGS) as an attestation service for [!INCLUDE [ssnoversion-md](../../../includes/ssnoversion-md.md)].
 Before you start, make sure to read the [Plan for Host Guardian Service attestation](./always-encrypted-enclaves-host-guardian-service-plan.md) article for a full list of prerequisites and architectural guidance.

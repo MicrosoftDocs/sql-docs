@@ -13,7 +13,7 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Always Encrypted with secure enclaves
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
  
 Always Encrypted with secure enclaves provides additional functionality to the [Always Encrypted](always-encrypted-database-engine.md) feature.
 

@@ -35,12 +35,18 @@ Indicates the name of an object.
  You can retrieve the **Name** property of an object by an ordinal reference, after which you can refer to the object directly by name. For example, if `rstMain.Properties(20).Name` yields `Updatability`, you can subsequently refer to this property as `rstMain.Properties("Updatability")`.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Field Object](../../../ado/reference/ado-api/field-object.md)|  
-|[Parameter Object](../../../ado/reference/ado-api/parameter-object.md)|[Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+        [Field Object](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)  
+        [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Attributes and Name Properties Example (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [Attributes and Name Properties Example (VC++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

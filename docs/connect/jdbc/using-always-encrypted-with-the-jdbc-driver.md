@@ -2,7 +2,7 @@
 title: "Using Always Encrypted with the JDBC driver"
 description: "Learn how to use Always Encrypted in your Java application with the JDBC driver for SQL Server to encrypt sensitive data on the server."
 ms.custom: ""
-ms.date: "05/06/2020"
+ms.date: "07/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -39,11 +39,11 @@ The Microsoft JDBC Driver for SQL Server communicates with a keystore using a co
 ### Using built-in column master key store providers
 The Microsoft JDBC Driver for SQL Server comes with the following built-in column master key store providers. Some of these providers are pre-registered with the specific provider names (used to look up the provider) and some require either additional credentials or explicit registration.
 
-| Class                                                 | Description                                        | Provider (lookup) name  | Is pre-registered? |
-| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
-| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | A provider for a keystore for the Azure Key Vault. | AZURE_KEY_VAULT         | _No_ before JDBC driver version 7.4.1, but _yes_ starting with JDBC driver version 7.4.1. |
-| **SQLServerColumnEncryptionCertificateStoreProvider** | A provider for the Windows Certificate Store.      | MSSQL_CERTIFICATE_STORE | _Yes_                |
-| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | A provider for the Java keystore.                  | MSSQL_JAVA_KEYSTORE     | _Yes_                |
+| Class                                                 | Description                                        | Provider (lookup) name  | Is pre-registered? | Platform |
+| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- | :------- |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | A provider for a keystore for the Azure Key Vault. | AZURE_KEY_VAULT         | _No_ before JDBC driver version 7.4.1, but _yes_ starting with JDBC driver version 7.4.1. | Windows, Linux, macOS |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | A provider for the Windows Certificate Store.      | MSSQL_CERTIFICATE_STORE | _Yes_                | Windows |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | A provider for the Java keystore.                  | MSSQL_JAVA_KEYSTORE     | _Yes_                | Windows, Linux, macOS |
 |||||
 
 For the pre-registered keystore providers, you don't need to make any application code changes to use these providers but note the following items:

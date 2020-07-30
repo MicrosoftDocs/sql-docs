@@ -42,9 +42,8 @@ ms.author: carlrab
 ## Remarks  
  This view has the following relationship cardinalities.  
   
-||||  
-|-|-|-|  
-|From|To|Relationship|  
+| From | To | Relationship |
+| ---- | -- | ------------ |
 |sys.server_event_session_events.event_session_id|sys.server_event_sessions.event_session_id|Many to one|  
   
 ## See Also  

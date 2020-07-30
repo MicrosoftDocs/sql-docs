@@ -22,7 +22,7 @@ ms.author: "jroth"
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fn_check_object_signatures (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Returns a list of all signable objects and indicates whether an object is signed by a specified certificate or asymmetric key. If the object is signed by the specified certificate or asymmetric key signed, it also returns whether the object's signature is valid.  
   

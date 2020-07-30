@@ -12,12 +12,11 @@ f1_keywords:
 ms.assetid: 1f15ef88-6f02-4cfc-8327-3408233619b1
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # Description Property Dialog Box (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The **Description Property** dialog box provides an editable area where you can write a detailed description of database objects such as tables, columns, and foreign key constraints. You can access this dialog box from the Properties window for objects such as tables and views when they are selected in a designer, from dialog boxes for objects such as indexes and check constraints, and from the **Column Properties** tab in Table Designer for table columns. The description is stored as an extended property for the object.  
   
 ## See Also  

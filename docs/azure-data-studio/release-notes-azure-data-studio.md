@@ -1,20 +1,68 @@
 ---
 title: Release notes
-description: Azure Data Studio release notes
-ms.prod: sql
-ms.technology: azure-data-studio
+description: This article has release notes for Azure Data Studio releases from November, 2017, until now. For many of the summarized issues there are links to additional details.
+ms.prod: azure-data-studio
+ms.technology: 
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: viharp
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 05/27/2020
+ms.date: 07/17/2020
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](download.md)**
+
+## July 2020 (hotfix)
+
+July 17, 2020 &nbsp; / &nbsp; version: 1.20.1
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Fix bug #11372 Object Explorer drag-and-drop table incorrectly wraps table names | [#11372](https://github.com/microsoft/azuredatastudio/issues/11372)  |
+| Fix bug #11356 Dark theme is now the default theme | [#11356](https://github.com/microsoft/azuredatastudio/issues/11356)  |
+| &nbsp; | &nbsp; |
+
+### Known Issue
+
+- Some users have reported connection errors from the new Microsoft.Data.SqlClient v2.0.0 included in this release. Users have found [following these instructions](https://github.com/microsoft/azuredatastudio/issues/11367#issuecomment-659614111) to successfully connect
+
+## July 2020
+
+July 15, 2020 &nbsp; / &nbsp; version: 1.20.0
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Added new Feature Tour | From welcome page and command palette, users can now launch a feature tour to get a walkthrough of commonly used features including Connections Viewlet, Notebooks viewlet, and Extensions Marketplace |
+| New notebook features | &bull; &nbsp; Header support in Markdown Toolbar<br/> &bull; &nbsp; Side-by-side Markdown Preview in Text Cells
+| Drag and Drop Columns and Tables in Query Editor | Users can now directly drag and drop columns and tables from connections viewlet to query editor |
+| Azure Account icon added to Activity Bar) | More discoverable to sign in to Azure |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
+
+
+## June 2020
+
+June 15, 2020 &nbsp; / &nbsp; version: 1.19.0
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Added Azure Data Studio to Azure portal Integration | Users can now directly launch to Azure portal from an Azure SQL DB connection, Azure Postgres, and more. |
+| New notebook features | &bull; &nbsp; New Notebook toolbar <br/> &bull; &nbsp; New Edit Cell toolbar <br/> &bull; &nbsp; Python dependencies wizard UX updates <br/> &bull; &nbsp; Improved spacing across notebooks |
+| Announcing SQL Assessment API extension | This extension adds SQL Server best-practice assessment in ADS. It exposes SQL Assessment API, which was previously available for use in PowerShell SqlServer module and SMO only, to let you evaluate your SQL Server instances and receive for them recommendations by SQL Server Team. Learn more about SQL Assessment API and what it is capable of [in this article.](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15) |
+| [Machine Learning Extension improvements](https://go.microsoft.com/fwlink/?linkid=2129918) | Now supports Azure SQL Managed Instance. |
+| Data Virtualization extension improvements | Now supports MongoDB and Teradata |
+| Postgres extension bug fixes | Fixed Azure MFA |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2020+Release%22+is%3Aclosed). |
+| &nbsp; | &nbsp; |
 
 ## May 2020 (hotfix)
 
@@ -39,7 +87,7 @@ May 20, 2020 &nbsp; / &nbsp; version: 1.18.0
 | Announcing Redgate SQL Prompt extension | This extension lets you manage formatting styles directly within Azure Data Studio, so you can create and edit your styles without leaving the IDE. |
 | Announcing Machine Learning Extension | This extension enables you to: <br/> &bull; &nbsp; Manage Python and R packages with SQL Server machine learning services with Azure Data Studio.<br/> &bull; &nbsp; Use ONNX model to make predictions in Azure SQL Edge.<br/> &bull; &nbsp; View ONNX models in an Azure SQL Edge database. <br/> &bull; &nbsp; Import ONNX models from a file or Azure Machine Learning into Azure SQL Edge database. <br/> &bull; &nbsp; Create a notebook to run experiments. |
 | New notebook features | &bull; &nbsp; Added new Python Dependencies Wizard to make it easier to install Python dependencies <br/> &bull; &nbsp; Added underline support for Markdown Toolbar |
-| Parameterization for Always Encrypted | Allows you to run queries that insert, update or filter by encrypted database columns.|
+| Parameterization for Always Encrypted | Allows you to run queries that insert, update, or filter by encrypted database columns.|
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22May+2020+Release%22+is%3Aclosed). |
 | &nbsp; | &nbsp; |
 
@@ -225,7 +273,7 @@ September 10, 2019 &nbsp; / &nbsp; version: 1.11.0
 | Change | Details |
 | :----- | :------ |
 | Enable SQLCMD Mode | Query editor now supports toggling of SQLCMD mode to write and edit queries as SQLCMD scripts |
-| Community Extension: Query Editor Boost | Query Editor Boost is an open source extension focused on enhancing the Azure Data Studio query editor for users who are frequently writing queries. &bull; &nbsp; Save the current query as a snippet <br/>&bull; &nbsp; Switch databases using Ctrl+U <br/> &bull; &nbsp; New Query from template <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/dzsquared/query-editor-boost) |
+| Community Extension: Query Editor Boost | Query Editor Boost is an open-source extension focused on enhancing the Azure Data Studio query editor for users who are frequently writing queries. &bull; &nbsp; Save the current query as a snippet <br/>&bull; &nbsp; Switch databases using Ctrl+U <br/> &bull; &nbsp; New Query from template <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/dzsquared/query-editor-boost) |
 | Notebook Improvements | &bull; &nbsp; Performance improvements for supporting larger notebook files <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2019+Release%22+label%3A%22Area%3A+Notebooks%22+is%3Aclosed) |
 | Visual Studio Code August Release Merge 1.38 | Latest improvements can be found [here](https://code.visualstudio.com/updates/v1_38). |
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
@@ -246,7 +294,7 @@ August 15, 2019 &nbsp; / &nbsp; version: 1.10.0
 | :----- | :------ |
 | Release of SandDance 1.3.1 extension | &bull; &nbsp; Smart chart detection <br/>&bull; &nbsp; 3D Visualizations <br/> &bull; &nbsp; Data filtering |
 | Notebook Improvements | &bull; &nbsp; Add code or text cell in-line <br/>&bull; &nbsp; Added ability to right-click SQL results grid to save result as CSV, JSON, etc. <br/> &bull; &nbsp; Improvement to notebook loading performance for loading JSON faster <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) |
-| SQL Server 2019 Support |  This release includes support for additional SQL Server 2019 Big Data Cluster features including: <br/> &bull; &nbsp; Reduced time taken to load table and column information on the object mapping page. <br/> &bull; &nbsp; Fixed a bug with loading existing database scoped credentials on the connection details page. <br/> &bull; &nbsp; Increased default sample size used for PROSE parsing. | 
+| SQL Server 2019 Support |  This release includes support for additional SQL Server 2019 Big Data Cluster features including: <br/> &bull; &nbsp; Reduced time taken to load table and column information on the object-mapping page. <br/> &bull; &nbsp; Fixed a bug with loading existing database scoped credentials on the connection details page. <br/> &bull; &nbsp; Increased default sample size used for PROSE parsing. | 
 | Dacpac extension now supports AAD | 
 | Visual Studio Code July Release Merge 1.37 | Latest improvements can be found [here](https://code.visualstudio.com/updates/v1_37). |
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
@@ -325,7 +373,7 @@ April 18, 2019 &nbsp; / &nbsp; version: 1.6.0
 | :----- | :------ |
 | Renamed **Servers** tab to **Connections** | |
 | Moved Azure Resource Explorer as an Azure viewlet under Connections | Users can now view their Azure SQL instances through Azure viewlet in the Connections view and expand to view objects under each server or database.|
-| SQL Notebook Improvements | &bull; &nbsp; Added button on toolbar to clear output for all cells <br/>&bull; &nbsp; Added button on toolbar to run all cells <br/>&bull; &nbsp; Fixed connection name instead of server name (if set) in the Attach to dropdown <br/>&bull; &nbsp; Fix for images in markdown not rendering when using relative image paths <br/>&bull; &nbsp; Improved functionality in notebook grids by adding double-click autoresize column size and improved mousewheel support <br/>&bull; &nbsp; Improvements to error handling and python install resiliency when installing python through notebooks <br/>&bull; &nbsp; Improvements to "select all" functionality when selecting notebook cells <br/>&bull; &nbsp; Improvements to notebook connections to prevent closing a notebook and impacting an object explorer connection <br/>&bull; &nbsp; Improved notebook experience to display a message to the user when notebook disconnected and needs a connection to run cells<br/>&bull; &nbsp; Improved support for unsaved notebooks to rehydrate in ADS when ADS is started again |
+| SQL Notebook Improvements | &bull; &nbsp; Added button on toolbar to clear output for all cells <br/>&bull; &nbsp; Added button on toolbar to run all cells <br/>&bull; &nbsp; Fixed connection name instead of server name (if set) in the Attach to dropdown <br/>&bull; &nbsp; Fix for images in markdown not rendering when using relative image paths <br/>&bull; &nbsp; Improved functionality in notebook grids by adding double-click auto resize column size and improved mousewheel support <br/>&bull; &nbsp; Improvements to error handling and python install resiliency when installing python through notebooks <br/>&bull; &nbsp; Improvements to "select all" functionality when selecting notebook cells <br/>&bull; &nbsp; Improvements to notebook connections to prevent closing a notebook and impacting an object explorer connection <br/>&bull; &nbsp; Improved notebook experience to display a message to the user when notebook disconnected and needs a connection to run cells<br/>&bull; &nbsp; Improved support for unsaved notebooks to rehydrate in ADS when ADS is started again |
 | Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/26?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -398,7 +446,7 @@ January 16, 2019 &nbsp; / &nbsp; version: 1.3.9 &nbsp; / &nbsp; Hotfix release
 
 | Change | Details |
 | :----- | :------ |
-| Fixed a few issues discovered in 1.3.8. | See [January Hotfix Release, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).<br/><br/>For detailed information, see:<br/>&bull; &nbsp; [Change Log, on GitHub](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md).<br/>&bull; &nbsp; [Releases, on GitHub](https://github.com/Microsoft/azuredatastudio/releases). |
+| Fixed a few issues discovered in 1.3.8. | See [January Hotfix Release, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/24?closed=1).<br/><br/>For detailed information, see:<br/>&bull; &nbsp; [Change Log, on GitHub](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md).<br/>&bull; &nbsp; [Releases, on GitHub](https://github.com/Microsoft/azuredatastudio/releases). |
 | &nbsp; | &nbsp; |
 
 ## January 2019
@@ -469,7 +517,7 @@ October 29, 2018 &nbsp; / &nbsp; version: 1.1.4
 - Fix [issue #2851](https://github.com/Microsoft/azuredatastudio/issues/2851): TimeSeries chart does not render correctly
 - Fix [issue #2996](https://github.com/Microsoft/azuredatastudio/issues/2996): Temp table loss due to sudden session change
 
-For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
+For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## September 2018 (GA Release)
 
@@ -494,17 +542,17 @@ General Availability release of Azure Data Studio (formerly SQL Operations Studi
 | Change | Details |
 | :----- | :------ |
 | Support for SQL Server 2019 preview features including [big data cluster](../big-data-cluster/big-data-cluster-overview.md) support. | Connect to the HDFS/Spark Gateway shipped with SQL Server 2019 preview.<br/><br/>Browse HDFS, upload files, save files, and launch useful actions such as Analyze in Notebook for CSV files.<br/><br/>Submit Spark jobs from the dashboard or right-click on a HDFS/Spark connection in Object Explorer. |
-| Azure Data Studio Notebooks. | Create or open Notebooks using an integrated Notebook viewer. In this release the Notebook viewer supports connecting to local kernels and the SQL Server 2019 big data cluster only.<br/><br/>Use the PROSE Code Accelerator libraries in your Notebook to learn file format and data types for fast data preparation. |
-| Azure Resource Explorer. | The Azure Resource Explorer view lets you browse data-related endpoints for your Azure accounts and create connections to them in Object Explorer. In this release Azure SQL Databases and servers are supported. |
+| Azure Data Studio Notebooks. | Create or open Notebooks using an integrated Notebook viewer. In this release, the Notebook viewer supports connecting to local kernels and the SQL Server 2019 big data cluster only.<br/><br/>Use the PROSE Code Accelerator libraries in your Notebook to learn file format and data types for fast data preparation. |
+| Azure Resource Explorer. | The Azure Resource Explorer view lets you browse data-related endpoints for your Azure accounts and create connections to them in Object Explorer. In this release, Azure SQL Databases and servers are supported. |
 | SQL Server PolyBase Create External Table Wizard. | Create an external table and its supporting metadata structures with an easy to use wizard. In this release, remote SQL Server and Oracle servers are supported. |
 | &nbsp; | &nbsp; |
 
 ### Bug Fixes, September 2018
 
-- Fix [issue #2647](https://github.com/Microsoft/azuredatastudio/issues/143): The charts took a big step backwards.
+- Fix [issue #2647](https://github.com/Microsoft/azuredatastudio/issues/143): The charts took a significant step backwards.
 - Fix [issue #2648](https://github.com/Microsoft/azuredatastudio/issues/143): SELECT that returns a JSON hyperlinks the whole column.
 
-For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
+For detailed information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md), and [Releases](https://github.com/Microsoft/azuredatastudio/releases).
 
 ## August 2018
 
@@ -547,7 +595,7 @@ _0.32.8 contains fixes for a couple regressions found in 0.32.7 ([#1971](https:/
 - Fix [issue #1782](https://github.com/Microsoft/azuredatastudio/issues/1782): Edit data: cell doesn't revert to original value on hitting Escape key.
 - Fix [issue #1836](https://github.com/Microsoft/azuredatastudio/issues/1836): .sql files not associated with SQL Operations Studio.
 - Fix [issue #1850](https://github.com/Microsoft/azuredatastudio/issues/1850): Typing N'' autocompletes to N'''.
-- Fix [issue #1985](https://github.com/Microsoft/azuredatastudio/issues/1985): Copy from query results grid is off by 1 column.
+- Fix [issue #1985](https://github.com/Microsoft/azuredatastudio/issues/1985): Copy from query results grid is off by one column.
 - Fix [issue #1998](https://github.com/Microsoft/azuredatastudio/pull/1998): Add VS Code version to About dialog.
 - Fix [issue #2042](https://github.com/Microsoft/azuredatastudio/pull/2042): Agent: Enabled button to import queries from sql files.
 - Fix [issue #2091](https://github.com/Microsoft/azuredatastudio/issues/2091): Can't use Ctrl+C shortcut to copy from result pane.
@@ -617,7 +665,7 @@ June 20, 2018 &nbsp; / &nbsp; version: 0.30.6 &nbsp; / &nbsp; Public Preview
 
 ### GitHub Issues Fixes, June 2018
 
-- Feature request ([issue 1204](https://github.com/Microsoft/azuredatastudio/issues/1204)): Please make the results grid auto-fit column width to data, and remember manual changes if the same query is re-run.
+- Feature request ([issue 1204](https://github.com/Microsoft/azuredatastudio/issues/1204)): Make the results grid autofit column width to data, and remember manual changes if the same query is rerun.
 - Fix [issue 1398](https://github.com/Microsoft/azuredatastudio/issues/1398): Should show add message and add account button when linked account is empty.
 - Fix [issue 1399](https://github.com/Microsoft/azuredatastudio/issues/1399): Linked account tab is broken when the view is collapsed.
 - Fix [issue 1374](https://github.com/Microsoft/azuredatastudio/issues/1374): SQL Tools Service crashes when opening .sql file from disk.
@@ -714,7 +762,7 @@ A highlight for the April Public Preview is the refresh of the source code for t
 
 For additional details, check out the [Visual Studio Code February Release Notes](https://code.visualstudio.com/updates/v1_21), and the [Visual Studio Code January Release Notes](https://code.visualstudio.com/updates/v1_20).
 
-For more information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/master/CHANGELOG.md).
+For more information, see the [Change Log](https://github.com/Microsoft/azuredatastudio/blob/main/CHANGELOG.md).
 
 ## March 2018
 
@@ -754,7 +802,7 @@ The *February Public Preview* includes some feature suggestions and high-priorit
 - Fix [issue 22](https://github.com/Microsoft/azuredatastudio/issues/22): 'Server Name' and 'Database Name' - Can these be drop downs instead of text boxes?
 - Fix [issue 549](https://github.com/Microsoft/azuredatastudio/issues/549): Silent/Very Silent Install results in application opening after installation.
 - Fix [issue 481](https://github.com/Microsoft/azuredatastudio/issues/481): Add "Check for updates" option.
-- SQL Editor colorization and auto-completion fixes:
+- SQL Editor colorization and autocompletion fixes:
   - Fix [issue 584](https://github.com/Microsoft/azuredatastudio/issues/584): Keyword "FULL" not highlighted by IntelliSense.
   - Fix [issue 345](https://github.com/Microsoft/azuredatastudio/issues/345): Colorize SQL functions within the editor.
   - Fix [issue 300](https://github.com/Microsoft/azuredatastudio/issues/300): [#tempData] latest "]" will display green color.
@@ -772,8 +820,8 @@ The *January Public Preview* includes some feature suggestions and high-priority
 | Change | Details |
 | :----- | :------ |
 | Saved Server connections are available in the Connection Dialog. | &nbsp; |
-| Enable Hot exit. Hot exit is off by default, to enable see [Hot exit setting](settings.md#hot-exit). | &nbsp; |
-| Tab-coloring based on Server Group. Tab coloring is off by default, to enable see [Tab color setting](settings.md#tab-color). | &nbsp; |
+| Enable Hot exit. Hot exit is off by default. To enable, see [Hot exit setting](settings.md#hot-exit). | &nbsp; |
+| Tab-coloring based on Server Group. Tab coloring is off by default. To enable, see [Tab color setting](settings.md#tab-color). | &nbsp; |
 | Change *Server name* to *Server* in the Connection Dialog. | &nbsp; |
 | Fix broken *Run Current Query* command. | &nbsp; |
 | Fix drag-and-drop breaking scripting bug. | &nbsp; |

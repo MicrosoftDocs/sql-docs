@@ -1,5 +1,6 @@
 ---
 title: "Best practices - natively compiled stored procedures"
+description: Learn about best practices for natively compiled stored procedures that are typically used in performance-critical parts of an application.
 ms.custom: seo-dt-2019
 ms.date: "03/24/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: "carlrab"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Best Practices for Calling Natively Compiled Stored Procedures
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Natively compiled stored procedures are:  
   
 -   Used typically in performance-critical parts of an application.  

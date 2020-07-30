@@ -21,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # dbo.sysproxylogin (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Records which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins are associated with each SQL Server Agent proxy account. This table is stored in the **msdb** database.  
   

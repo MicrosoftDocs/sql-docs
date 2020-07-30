@@ -24,7 +24,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # HAS_PERMS_BY_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Evaluates the effective permission of the current user on a securable. A related function is [fn_my_permissions](../../relational-databases/system-functions/sys-fn-my-permissions-transact-sql.md).  
   
@@ -38,7 +38,9 @@ HAS_PERMS_BY_NAME ( securable , securable_class , permission
     [ , sub-securable ] [ , sub-securable_class ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *securable*  
  Is the name of the securable. If the securable is the server itself, this value should be set to NULL. *securable* is a scalar expression of type **sysname**. There is no default.  
   

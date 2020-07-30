@@ -231,6 +231,14 @@
         href: ../machine-learning/r/how-to-create-mdx-queries-using-olapr.md
   - name: Data exploration and modeling
     items:
+    - name: Python
+      items:
+      - name: Plot Histogram in Python
+        href: ../machine-learning/data-exploration/python-plot-histogram.md 
+      - name: Import data into pandas dataframe
+        href: ../machine-learning/data-exploration/python-dataframe-pandas.md 
+      - name: Insert dataframe into SQL
+        href: ../machine-learning/data-exploration/python-dataframe-sql-server.md
     - name: R
       items:
       - name: Load R objects using ODBC
@@ -257,12 +265,12 @@
       href: ../machine-learning/r/how-to-create-a-stored-procedure-using-sqlrutils.md
   - name: Predictions
     items:
-    - name: How to generate predictions
-      href: ../machine-learning/r/how-to-do-realtime-scoring.md
-    - name: Real-time scoring with sp_rxPredict
-      href: ../machine-learning/real-time-scoring.md
     - name: Native scoring with PREDICT T-SQL
-      href: ../machine-learning/sql-native-scoring.md
+      href: ../machine-learning/predictions/native-scoring-predict-transact-sql.md
+    - name: How to generate predictions
+      href: ../machine-learning/predictions/how-to-do-realtime-scoring.md
+    - name: Real-time scoring with sp_rxPredict
+      href: ../machine-learning/predictions/real-time-scoring.md
   - name: Package management
     items:
     - name: Install new Python packages
@@ -361,19 +369,25 @@
       href: ../machine-learning/r/ref-r-sqlrutils.md
 - name: Resources
   items:
-  - name: Release notes >
+  - name: Release notes 2019 >
+    href: ../sql-server/sql-server-ver15-release-notes.md?toc=../toc.json
+  - name: Release notes 2017 >
     href: ../sql-server/sql-server-2017-release-notes.md?toc=../toc.json
+  - name: Release notes 2016 >
+    href: ../sql-server/sql-server-2016-release-notes.md?toc=../toc.json
+  - name: Release notes 2014 >
+    href: ../sql-server/sql-server-2014-release-notes.md?toc=../toc.json
   - name: Troubleshooting
     items:
     - name: Troubleshooting overview
-      href: ../machine-learning/machine-learning-troubleshooting-faq.md
+      href: ../machine-learning/troubleshooting/machine-learning-troubleshooting-overview.md
     - name: Known issues
-      href: ../machine-learning/known-issues-for-sql-server-machine-learning-services.md
-    - name: Data collection
-      href: ../machine-learning/data-collection-ml-troubleshooting-process.md
-    - name: Install and upgrade errors
-      href: ../machine-learning/r/upgrade-and-installation-faq-sql-server-r-services.md
-    - name: Launchpad and external script execution errors
-      href: ../machine-learning/common-issues-external-script-execution.md
-    - name: R scripting errors
-      href: ../machine-learning/r-script-execution-errors.md
+      href: ../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md
+    - name: Collect data for troubleshooting
+      href: ../machine-learning/troubleshooting/data-collection-ml-troubleshooting-process.md
+    - name: Install and upgrade FAQ
+      href: ../machine-learning/troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md
+    - name: Launchpad and external script issues
+      href: ../machine-learning/troubleshooting/common-issues-external-script-execution.md
+    - name: Common R scripting errors
+      href: ../machine-learning/troubleshooting/r-script-execution-errors.md

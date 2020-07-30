@@ -1,5 +1,6 @@
 ---
 title: "View or Configure Remote Server Connection Options (SQL Server) | Microsoft Docs"
+description: Learn how to view or configure remote server connection options at the server level. You can use SQL Server Management Studio or Transact-SQL for this purpose.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # View or Configure Remote Server Connection Options (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to view or configure remote server connection options at the server level in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   
  **In This Topic**  

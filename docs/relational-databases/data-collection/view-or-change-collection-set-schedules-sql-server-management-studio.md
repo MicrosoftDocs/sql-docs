@@ -20,7 +20,7 @@ ms.author: mathoma
 ms.custom: "seo-lt-2019"
 ---
 # View or Change Collection Set Schedules (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You can view or change collection set schedules by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  The collection mode, cached or non-cached, determines how you can make changes to a schedule. Cached mode uses separate schedules for collection and upload. Non-cached mode uses the same schedule for collection and upload. The type of collection mode for each of the System Datacollection sets is as follows:  

@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Install `azdata` to manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] with Windows Installer
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes how to install `azdata` for SQL Server 2019 Big Data Clusters on Windows. Before the Windows Installation was available, the installation of `azdata` required `pip`.
 

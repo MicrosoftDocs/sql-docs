@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # MSmerge_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSmerge_agents** table contains one row for each Merge Agent running at the Subscriber. This table is stored in the distribution database.  
   

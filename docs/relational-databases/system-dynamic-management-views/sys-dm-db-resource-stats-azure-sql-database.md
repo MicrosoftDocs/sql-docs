@@ -21,7 +21,7 @@ ms.author: jrasnick
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_db_resource_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns CPU, I/O, and memory consumption for an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] database. One row exists for every 15 seconds, even if there is no activity in the database. Historical data is maintained for approximately one hour.  
   

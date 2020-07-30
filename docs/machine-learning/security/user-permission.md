@@ -2,16 +2,16 @@
 title: Grant permissions to execute Python and R scripts
 description: Learn how you can give users permission to run external Python and R scripts in SQL Server Machine Learning Services and give read, write, or data definition language (DDL) permissions to databases.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.date: 06/03/2020
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019, contperfq4
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Grant users permission to execute Python and R scripts with SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Learn how you can give users permission to run external Python and R scripts in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) and give read, write, or data definition language (DDL) permissions to databases.
 

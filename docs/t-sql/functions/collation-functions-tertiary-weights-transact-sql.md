@@ -17,12 +17,12 @@ helpviewer_keywords:
   - "SQL tertiary collations"
   - "TERTIARY_WEIGHTS function"
 ms.assetid: 7e1f5350-260b-4c61-8c84-69bb1a214f1f
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Collation Functions - TERTIARY_WEIGHTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 For each character in a non-Unicode string expression - defined with a SQL tertiary collation - this function returns a binary string of weights.
   
@@ -34,7 +34,9 @@ For each character in a non-Unicode string expression - defined with a SQL terti
 TERTIARY_WEIGHTS( non_Unicode_character_string_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *non_Unicode_character_string_expression*  
 A string [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **char**, **varchar**, or **varchar(max)** defined on a tertiary SQL collation. For a list of these collations, see Remarks.
   

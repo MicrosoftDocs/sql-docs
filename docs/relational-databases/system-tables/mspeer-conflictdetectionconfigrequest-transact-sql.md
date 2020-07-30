@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # MSpeer_conflictdetectionconfigrequest (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Used in peer-to-peer replication to track topology wide configuration requests for a publication. This table is stored in the publication database.  
   

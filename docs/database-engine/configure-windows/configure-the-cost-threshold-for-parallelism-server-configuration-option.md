@@ -1,5 +1,6 @@
 ---
 title: "Configure the cost threshold for parallelism Server Configuration Option | Microsoft Docs"
+description: Learn about the cost threshold for parallelism option. See how its value affects whether SQL Server runs parallel plans for queries, and find out how to set it.
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Configure the cost threshold for parallelism Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to configure the **cost threshold for parallelism** server configuration option in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **cost threshold for parallelism** option specifies the threshold at which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates and runs parallel plans for queries. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] creates and runs a parallel plan for a query only when the estimated cost to run a serial plan for the same query is higher than the value set in **cost threshold for parallelism**. The cost refers to an estimated cost required to run the serial plan on a specific hardware configuration, and is not a unit of time. The **cost threshold for parallelism** option can be set to any value from 0 through 32767. The default value is 5.  
   

@@ -11,7 +11,7 @@ ms.author: chugu
 ---
 # Run an SSIS package from the command prompt with DTExec.exe
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This quickstart demonstrates how to run an SSIS package from the command prompt by running `DTExec.exe` with the appropriate parameters.

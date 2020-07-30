@@ -21,12 +21,11 @@ helpviewer_keywords:
 ms.assetid: 6309a1bc-a628-4141-8bb5-b35924bd19f9
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # Results Pane (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The Results pane shows the results of the most recently executed SELECT query. (The results of other query types are displayed in message boxes.) To open the results pane, open or create a query or view or return a table's data. If the results pane doesn't show by default, from the **Query Designer** menu, point to **Pane**, and then click **Results**.  
   
 ## What You Can Do in the Results Pane  

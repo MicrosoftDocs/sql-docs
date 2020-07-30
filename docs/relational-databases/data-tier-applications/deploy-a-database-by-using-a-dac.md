@@ -21,7 +21,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Deploy a Database By Using a DAC
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Use the **Deploy a Database to SQL Azure** Wizard to deploy a database between an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and a [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] server, or between two [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]servers.  
   
 ##  <a name="BeforeBegin"></a> Before You Begin  

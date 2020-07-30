@@ -11,12 +11,11 @@ helpviewer_keywords:
 ms.assetid: 5057a6ee-3ca8-4734-9e96-592b24624c55
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # Sort Multiple Columns in Queries (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can specify the order in which you want to use the columns to sort the data by using the **Sort Order** column in the [Criteria pane](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md).  
   
 ### To sort query results by more than one column  

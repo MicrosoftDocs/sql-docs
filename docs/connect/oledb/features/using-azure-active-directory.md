@@ -1,5 +1,6 @@
 ---
-title: "Using Azure Active Directory| Microsoft Docs for SQL Server"
+title: "Using Azure Active Directory"
+description: "Learn about the Azure Active Directory authentication methods available in the Microsoft OLE DB Driver for SQL Server that enable connecting to Azure SQL databases."
 ms.custom: ""
 ms.date: "10/11/2019"
 ms.prod: sql
@@ -11,7 +12,7 @@ author: bazizi
 ms.author: v-beaziz
 ---
 # Using Azure Active Directory
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

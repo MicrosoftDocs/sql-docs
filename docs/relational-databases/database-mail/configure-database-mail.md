@@ -41,7 +41,7 @@ author: stevestein
 ms.author: sstein
 ---
 # Configure Database Mail
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to enable and configure Database Mail using the Database Mail Configuration Wizard, and create a Database Mail Configuration script using templates.  
   
 -   **Before you begin:**  [Limitations and Restrictions](#Restrictions), [Security](#Security)  

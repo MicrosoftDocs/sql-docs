@@ -8,7 +8,6 @@ ms.topic: "language-reference"
 f1_keywords: 
   - "sp_add_jobstep_TSQL"
   - "sp_add_jobstep"
-dev_langs: "TSQL"
 helpviewer_keywords: 
   - "sp_add_jobstep"
 ms.assetid: 97900032-523d-49d6-9865-2734fba1c755
@@ -20,7 +19,7 @@ ms.date: 03/15/2017
 
 # sp_add_jobstep (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Adds a step (operation) to a SQL Agent job.
 

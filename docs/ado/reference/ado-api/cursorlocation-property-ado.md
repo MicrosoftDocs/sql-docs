@@ -36,10 +36,15 @@ Indicates the location of the cursor service.
 >  **Remote Data Service Usage** When used on a client-side **Recordset** or **Connection** object, the **CursorLocation** property can only be set to **adUseClient**.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

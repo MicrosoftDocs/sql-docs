@@ -1,5 +1,6 @@
 ---
 title: "Add a Chart to a Report (Report Builder) | Microsoft Docs"
+description: Learn how to add a chart to a paginated report when you want to summarize data in a visual format in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

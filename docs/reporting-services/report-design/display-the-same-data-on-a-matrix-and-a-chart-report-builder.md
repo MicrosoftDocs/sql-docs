@@ -1,5 +1,6 @@
 ---
 title: "Display the Same Data on a Matrix and a Chart (Report Builder) | Microsoft Docs"
+description: Show the same data in a matrix and in a chart in Report Builder. Set properties on these data regions to include the specifics.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

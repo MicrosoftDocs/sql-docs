@@ -1,5 +1,6 @@
 ---
 title: "Memory Optimization Advisor | Microsoft Docs"
+description: Use the memory optimization advisor in SQL Server Management Studio to help you migrate disk-based tables to memory-optimized tables.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Memory Optimization Advisor
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Transaction Performance Analysis reports (see [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md)) informs you about which tables in your database will benefit if ported to use In-Memory OLTP. After you identify a table that you would like to port to use In-Memory OLTP, you can use the memory optimization advisor in SQL Server Management Studio to help you migrate the disk-based table to a memory-optimized table.  
   

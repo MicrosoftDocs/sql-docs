@@ -1,5 +1,6 @@
 ---
 title: "Dataset Properties Dialog Box, Options (Report Builder) | Microsoft Docs"
+description: Learn how to use the Dataset Properties dialog box to change data options, such as collation options and treating subtotals as detail data.
 ms.date: 08/17/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

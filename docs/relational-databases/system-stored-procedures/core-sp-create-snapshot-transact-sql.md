@@ -22,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # core.sp_create_snapshot (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Inserts a row in the management data warehouse core.snapshots view. This procedure is called every time an upload package starts uploading data to the management data warehouse.  
   

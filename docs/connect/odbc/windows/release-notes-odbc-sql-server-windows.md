@@ -2,7 +2,7 @@
 title: "Release Notes for ODBC Driver for SQL Server on Windows"
 description: "This release notes article describes the changes in each release of the Microsoft ODBC driver for SQL Server on Windows."
 ms.custom: ""
-ms.date: "03/10/2020"
+ms.date: "07/29/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -43,7 +43,7 @@ GeneMi (and CraigG).  2019/03/30.
 ![download](../../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120140)  
 
 Version number: 17.5.2.1  
-Released: March 6, 2019
+Released: March 6, 2020
 
 If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
 For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40a)  
@@ -68,7 +68,7 @@ Download previous ODBC Driver versions by clicking the download links in the fol
 ![download](../../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120353)  
 
 Version number: 17.5.1.1  
-Released: January 31, 2019
+Released: January 31, 2020
 
 If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
 For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40a)  

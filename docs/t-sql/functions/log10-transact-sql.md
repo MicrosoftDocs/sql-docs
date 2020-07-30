@@ -18,12 +18,12 @@ helpviewer_keywords:
   - "base-10 logarithms"
   - "logarithm of expression"
 ms.assetid: 1eb7fb34-1937-4a39-a936-f5c0c7c7e06f
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LOG10 (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the base-10 logarithm of the specified **float** expression.  
   
@@ -31,11 +31,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 LOG10 ( float_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *float_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float** or of a type that can be implicitly converted to **float**.  
   
@@ -50,10 +52,10 @@ LOG10 ( float_expression )
 ### A. Calculating the base 10 logarithm for a variable.  
  The following example calculates the `LOG10` of the specified variable.  
   
-```  
-DECLARE @var float;  
+```sql  
+DECLARE @var FLOAT;  
 SET @var = 145.175643;  
-SELECT 'The LOG10 of the variable is: ' + CONVERT(varchar,LOG10(@var));  
+SELECT 'The LOG10 of the variable is: ' + CONVERT(VARCHAR,LOG10(@var));  
 GO  
 ```  
   
@@ -68,7 +70,7 @@ The LOG10 of the variable is: 2.16189
 ### B. Calculating the result of raising a base-10 logarithm to a specified power.  
  The following example returns the result of raising a base-10 logarithm to a specified power.  
   
-```  
+```sql  
 SELECT POWER (10, LOG10(5));   
 ```  
   
@@ -86,7 +88,7 @@ SELECT POWER (10, LOG10(5));
 ### C: Calculating the base 10 logarithm for a value.  
  The following example calculates the `LOG10` of the specified value.  
   
-```  
+```sql  
 SELECT LOG10(145.175642);  
 ```  
   

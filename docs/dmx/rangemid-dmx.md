@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # RangeMid (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns the midpoint of the predicted bucket that is discovered for a discretized column.  
   

@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_cursorprepare (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Compiles the cursor statement or batch into an execution plan, but does not create the cursor. The compiled statement can later be used by sp_cursorexecute. This procedure, coupled with sp_cursorexecute, has the same function as sp_cursoropen, but is split into two phases. sp_cursorprepare is invoked by specifying ID = 3 in a tabular data stream (TDS) packet.  
   

@@ -2,17 +2,17 @@
 title: Using data from OLAP cubes in R
 description: This article describes the olapR API, along with an overview of OLAP and MDX for R users who might be new to multidimensional cube databases.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 04/15/2018  
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Using data from OLAP cubes in R
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The **olapR** package is an R package, provided by Microsoft for use with Machine Learning Server and SQL Server, that lets you run MDX queries to get data from OLAP cubes. With this package, you don't need to create linked servers or clean up flattened rowsets; you can get OLAP data directly from R.
 
@@ -94,7 +94,7 @@ See the following article for general information about the two types of models:
 
 See the following article for information about querying server properties:
 
-+ [OLE DB for OLAP Schema Rowsets](https://docs.microsoft.com/bi-reference/schema-rowsets/ole-db-olap/ole-db-for-olap-schema-rowsets)
++ [OLE DB for OLAP Schema Rowsets](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126079(v=sql.110))
 
 ### Writeback is not supported
 

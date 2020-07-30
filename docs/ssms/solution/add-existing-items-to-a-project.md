@@ -15,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Add Existing Items to a Project
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Add new items to a project to extend application functionality. An existing item can be a query or a miscellaneous file. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] has two project types: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Script Project, and Analysis Services Script Project. The project type determines the query files that you can add to the project. For example, you can add a [!INCLUDE[tsql](../../includes/tsql-md.md)] query (a file with a .sql extension) to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Script project, but you cannot add it to an Analysis Services Script Project. To associate additional file extensions to a project type, see [How to: Associate File Extensions to a Code Editor](../../relational-databases/scripting/associate-file-extensions-to-a-code-editor.md).  
   
 ### To add an existing query or a miscellaneous file to a project  

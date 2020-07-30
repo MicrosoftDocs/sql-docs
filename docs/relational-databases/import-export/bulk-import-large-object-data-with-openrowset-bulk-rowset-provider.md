@@ -22,7 +22,7 @@ ms.author: mathoma
 ms.custom: "seo-lt-2019"
 ---
 # Bulk import large-object data with OPENROWSET Bulk Rowset Provider (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OPENROWSET Bulk Rowset Provider enables you to bulk import a data file as large-object data.  
   

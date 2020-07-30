@@ -1,5 +1,6 @@
 ---
 title: Security
+description: Learn about security in Master Data Services, including types of users, how to set security, security in the add-in for Excel, and related tasks.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # Security (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], use security to ensure that users have access to the specific master data necessary to do their jobs, and to prevent them from accessing data that should not be available to them.  
   

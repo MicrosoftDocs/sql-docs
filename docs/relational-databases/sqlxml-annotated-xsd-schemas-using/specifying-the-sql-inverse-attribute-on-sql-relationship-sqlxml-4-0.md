@@ -24,7 +24,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specifying the sql:inverse Attribute on sql:relationship (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The **sql:inverse** attribute is useful only when the XSD schema is used for either bulk load or by an updategram. The **sql:inverse** attribute can be specified on the **\<sql:relationship>** element. In updategrams, the updategram logic interprets the schema in determining the tables and columns that are updated by the updategram operation. The parent-child relationships that are specified in the schema determine the order in which the records are modified (inserted or deleted).  
   
  If you have an XSD schema in which the parent-child relationship is specified in the inverse order of the primary-key/foreign-key relationship between the corresponding database columns, the insert or delete updategram operation will fail because of the primary-key/foreign-key violation. In such cases, the **sql:inverse** attribute is specified (**sql:inverse="true"**) in the **\<sql:relationship>** element, and the updategram logic inverses its interpretation of the parent-child relationship specified in the schema.  

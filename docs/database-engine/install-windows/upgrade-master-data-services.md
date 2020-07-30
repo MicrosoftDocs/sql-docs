@@ -1,5 +1,6 @@
 ---
 title: "Upgrade Master Data Services | Microsoft Docs"
+description: Discover the four scenarios for upgrading Microsoft SQL Server Master Data Services. Learn about file locations and troubleshooting for upgrades.
 ms.custom: ""
 ms.date: "07/21/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Upgrade Master Data Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   The following are the scenarios for upgrading Microsoft [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] Master Data Services.  
   

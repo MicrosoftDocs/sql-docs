@@ -1,5 +1,5 @@
 ---
-title: "Fetching Rows | Microsoft Docs"
+title: "Fetching rows (OLE DB driver) | Microsoft Docs"
 description: "Fetching rows using the IRowset interface"
 ms.custom: ""
 ms.date: "06/14/2018"
@@ -18,7 +18,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Fetching Rows
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

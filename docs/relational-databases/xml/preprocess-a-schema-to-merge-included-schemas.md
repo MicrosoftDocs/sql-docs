@@ -22,7 +22,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Preprocess a Schema to Merge Included Schemas
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The W3C XSD **include** element provides support for schema modularity in which an XML schema can be partitioned into more than one physical file. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] currently does not support this element. XML schemas that include this element will be rejected by the server.  
   
  As a solution, XML schemas that include the \<xsd:include> directive can be preprocessed to copy and merge the contents of any included schemas into a single schema for uploading to the server. The following C# code can be used for the preprocessing. The comments in the early part of the code provide information about how to use it.  

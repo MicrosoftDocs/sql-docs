@@ -15,7 +15,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Publication Properties, Subscription Options
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **Subscription Options** page of the **Publication Properties** dialog box allows you to view and set publication level properties associated with subscriptions. The properties are grouped into the following categories:  
   
 -   Properties that apply to all publications.  

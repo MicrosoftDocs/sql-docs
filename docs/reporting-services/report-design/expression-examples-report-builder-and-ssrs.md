@@ -1,5 +1,6 @@
 ---
 title: "Expression Examples (Report Builder) | Microsoft Docs"
+description: Control content and report appearance using built-in functions, custom code, report and group variables, and user-defined variables in Report Builder.
 ms.date: 04/06/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

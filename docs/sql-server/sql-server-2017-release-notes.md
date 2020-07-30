@@ -13,7 +13,7 @@ ms.author: mikeray
 monikerRange: "= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # SQL Server 2017 Release Notes
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 This article describes limitations and issues with SQL Server 2017. For related information, see:
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [SQL Server on Linux release notes](../linux/sql-server-linux-release-notes.md)
@@ -146,7 +146,7 @@ There are no release notes for SQL Server on Windows related to this release. Se
 
 ## More information
 - [SQL Server Reporting Services release notes](../reporting-services/release-notes-reporting-services.md).
-- [Known Issues for Machine Learning Services](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
+- [Known Issues for Machine Learning Services](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md)
 - [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -18,7 +18,7 @@ ms.author: maggies
     
 ## Details  
   
-|||  
+|Category|Value|  
 |-|-|  
 |Product Name|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|  
 |Event ID|rrRenderingError|  

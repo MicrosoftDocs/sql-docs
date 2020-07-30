@@ -18,8 +18,11 @@ ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
 ---
+
 # Create a New Always On Failover Cluster Instance (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+
   To install or upgrade a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance (FCI), you must run the Setup program on each node of the underlying Windows Server failover cluster. To add a node to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance, you must run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup on the node that is to be added to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance. Do not run Setup on the active node to manage the other nodes.  
   
  Depending on how the nodes are clustered, the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance is configured in the following ways:  

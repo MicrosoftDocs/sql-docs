@@ -1,5 +1,5 @@
 ---
-title: Troubleshooting a hang or crash with SSMS
+title: Troubleshooting an unresponsive system or crash with SSMS
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
@@ -16,11 +16,11 @@ ms.date: 09/18/2019
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-## Get full memory dump after a hang or crash
+## Get full memory dump after an unresponsive system or crash
 
-Get a full memory dump of SQL Server Management Studio (SSMS) when it hangs or crashes.
+Get a full memory dump of SQL Server Management Studio (SSMS) when it stops responding or crashes.
 
-To capture diagnostic information to troubleshoot a crash or a hang of SSMS, follow the steps below.
+To capture diagnostic information to troubleshoot a crash or an unresponsive SSMS, follow the steps below.
 
 1. Download [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
 

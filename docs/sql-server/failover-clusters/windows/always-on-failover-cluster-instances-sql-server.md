@@ -1,6 +1,6 @@
 ---
 title: "Always On failover cluster instances"
-description: A description of the Always On failover cluster instance for SQL Server. 
+description: Learn how Always On Failover Cluster Instances provide local high availability through redundancy at the server-instance level in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "01/18/2017"
 ms.prod: sql
@@ -22,7 +22,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Always On Failover Cluster Instances (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   As part of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Always On offering, Always On Failover Cluster Instances leverages Windows Server Failover Clustering (WSFC) functionality to provide local high availability through redundancy at the server-instance level-a *failover cluster instance* (FCI). An FCI is a single instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that is installed across Windows Server Failover Clustering (WSFC) nodes and, possibly, across multiple subnets. On the network, an FCI appears to be an instance of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] running on a single computer, but the FCI provides failover from one WSFC node to another if the current node becomes unavailable.  
   

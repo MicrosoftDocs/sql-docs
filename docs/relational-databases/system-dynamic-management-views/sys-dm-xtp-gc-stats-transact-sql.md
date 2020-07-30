@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.dm_xtp_gc_stats (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Provides information (the overall statistics) about the current behavior of the [!INCLUDE[hek_2](../../includes/hek-2-md.md)] garbage-collection process.  
   

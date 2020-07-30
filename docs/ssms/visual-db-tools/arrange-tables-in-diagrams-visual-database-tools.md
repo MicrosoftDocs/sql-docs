@@ -11,7 +11,6 @@ helpviewer_keywords:
 ms.assetid: 25c6f3f5-aaef-42a5-ad00-1786436db2a6
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -19,7 +18,7 @@ ms.date: 01/19/2017
 
 # Arrange Tables in Diagrams (Visual Database Tools)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 You can quickly arrange the tables in a database diagram to see each table and relationship clearly.  
   

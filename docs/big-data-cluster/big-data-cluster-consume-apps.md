@@ -5,7 +5,7 @@ description: Consume an application deployed on SQL Server Big Data Clusters usi
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: bilia
-ms.date: 06/09/2020
+ms.date: 06/22/2020
 ms.metadata: seo-lt-2019
 ms.topic: conceptual
 ms.prod: sql
@@ -14,7 +14,7 @@ ms.technology: big-data-cluster
 
 # Consume an app deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] using a RESTful web service
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes how to consume an app deployed on a SQL Server big data cluster using a RESTful web service.
 
@@ -23,6 +23,9 @@ This article describes how to consume an app deployed on a SQL Server big data c
 - [SQL Server big data cluster](deployment-guidance.md)
 - [azdata command-line utility](deploy-install-azdata.md)
 - An app deployed using either [azdata](big-data-cluster-create-apps.md) or the [App Deploy extension](app-deployment-extension.md)
+
+> [!NOTE]
+> When the application’s yaml specification file specifies a schedule, the application will be triggered via a cron job. If your big data cluster is deployed on OpenShift, launching the cron job requires additional capabilities. See the details regarding [security considerations on OpenShift](concept-application-deployment.md#app-deploy-security) for specific instructions.
 
 ## Capabilities
 

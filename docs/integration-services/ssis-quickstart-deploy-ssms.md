@@ -11,7 +11,7 @@ ms.author: chugu
 ---
 # Deploy an SSIS project with SQL Server Management Studio (SSMS)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This quickstart how to use SQL Server Management Studio (SSMS) to connect to the SSIS Catalog database, and then run the Integration Services Deployment Wizard to deploy an SSIS project to the SSIS Catalog. 

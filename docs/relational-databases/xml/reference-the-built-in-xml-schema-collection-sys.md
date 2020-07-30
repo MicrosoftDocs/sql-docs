@@ -19,7 +19,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Reference the Built-in XML Schema Collection (sys)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Every database you create has a predefined **sys** XML schema collection in the **sys** relational schema. It reserves these predefined schemas, and they can be accessed from any other user-created XML schema collection. The prefixes used in these predefined schemas are meaningful in XQuery. Only **xml** is a reserved prefix.  
   
 ```  

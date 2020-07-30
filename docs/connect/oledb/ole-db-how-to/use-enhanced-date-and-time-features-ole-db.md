@@ -1,5 +1,5 @@
 ---
-title: "Use Enhanced Date and Time Features (OLE DB) | Microsoft Docs"
+title: Use enhanced date and time features (OLE DB driver)
 description: "Use enhanced date and time features (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"
@@ -12,7 +12,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Use Enhanced Date and Time Features (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

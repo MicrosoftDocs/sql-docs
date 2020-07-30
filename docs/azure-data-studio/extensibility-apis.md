@@ -1,8 +1,8 @@
 ---
 title: Extensibility APIs
-description: Learn about the extensibility APIs for Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+description: Learn about Azure Data Studio extensibility APIs, which enable extensions to interact with other parts of Azure Data Studio (such as Object Explorer).
+ms.prod: azure-data-studio
+ms.technology: 
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
@@ -13,7 +13,7 @@ ms.date: "09/24/2018"
 
 # Azure Data Studio extensibility APIs
 
-Azure Data Studio provides an API that extensions can use to interact with other parts of Azure Data Studio, such as Object Explorer. These APIs are available from the [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.d.ts) file and are described below.
+Azure Data Studio provides an API that extensions can use to interact with other parts of Azure Data Studio, such as Object Explorer. These APIs are available from the [`src/sql/azdata.d.ts`](https://github.com/Microsoft/azuredatastudio/blob/main/src/sql/azdata.d.ts) file and are described below.
 
 ## Connection Management
 `azdata.connection`
@@ -173,6 +173,6 @@ vscode.commands.registerCommand('mssql.objectexplorer.interact', () => {
 
 ## Proposed APIs
 
-We have added proposed APIs to allow extensions to display custom UI in dialogs, wizards, and document tabs, among other capabilities. See the [proposed API types file](https://github.com/Microsoft/azuredatastudio/blob/master/src/sql/azdata.proposed.d.ts) for more documentation, though be aware that these APIs are subject to change at any time. Examples of how to use some of these APIs can be found in the ["sqlservices" sample extension](https://github.com/Microsoft/azuredatastudio/tree/master/samples/sqlservices).
+We have added proposed APIs to allow extensions to display custom UI in dialogs, wizards, and document tabs, among other capabilities. See the [proposed API types file](https://github.com/Microsoft/azuredatastudio/blob/main/src/sql/azdata.proposed.d.ts) for more documentation, though be aware that these APIs are subject to change at any time. Examples of how to use some of these APIs can be found in the ["sqlservices" sample extension](https://github.com/Microsoft/azuredatastudio/tree/main/samples/sqlservices).
 
 

@@ -21,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.tcp_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each TCP endpoint that is in the system. The endpoints that are described by **sys.tcp_endpoints** provide an object to grant and revoke the connection privilege. The information that is displayed regarding ports and IP addresses is not used to configure the protocols and may not match the actual protocol configuration. To view and configure protocols, use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager.  
   

@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # - (Subtract) (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Subtracts the second numeric expression from the first one.  

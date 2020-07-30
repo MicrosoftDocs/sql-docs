@@ -24,7 +24,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.database_mirroring_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for the database mirroring endpoint of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

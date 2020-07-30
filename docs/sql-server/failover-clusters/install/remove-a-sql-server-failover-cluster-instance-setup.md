@@ -17,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Remove a SQL Server Failover Cluster Instance (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Use this procedure to uninstall a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover clustered instance.  
   
 > [!IMPORTANT]  

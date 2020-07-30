@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 2246a886-686b-44ca-9771-b155cedad8be
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -20,7 +19,7 @@ ms.date: 03/01/2017
 
 # Issue Element (ssbdiagnose)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Reports an issue that was found by the **ssbdiagnose** utility. The **ssbdiagnose** XML output file has one Issue element per issue reported.  
   

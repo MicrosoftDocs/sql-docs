@@ -16,7 +16,7 @@ monikerRange: ">= sql-server-linux-ver15 || >= sql-server-2016 || =sqlallproduct
 ---
 # PolyBase Transact-SQL reference
 
-[!INCLUDE[appliesto-ss-xxxx-asdw-pdw-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 To use  PolyBase, you must create external tables to reference your external data.  
   

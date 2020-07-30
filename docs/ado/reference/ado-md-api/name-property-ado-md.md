@@ -33,13 +33,23 @@ Indicates the name of an object.
  You can retrieve the **Name** property of an object by an ordinal reference, after which you can refer to the object directly by name. For example, if `cdf.CubeDefs(0).Name` yields "Bobs Video Store", you can refer to this [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) as `cdf.CubeDefs("Bobs Video Store")`.  
   
 ## Applies To  
-  
-||||  
-|-|-|-|  
-|[Axis Object (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|[Catalog Object (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[CubeDef Object (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|  
-|[Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Hierarchy Object (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|[Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|  
-|[Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|||  
-  
+
+:::row:::
+    :::column:::
+        [Axis Object (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)  
+        [Catalog Object (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)  
+        [CubeDef Object (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)  
+    :::column-end:::
+    :::column:::
+        [Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)  
+        [Hierarchy Object (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)  
+    :::column-end:::
+    :::column:::
+        [Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+        [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Catalog Example (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
  [Caption Property (ADO MD)](../../../ado/reference/ado-md-api/caption-property-ado-md.md)   

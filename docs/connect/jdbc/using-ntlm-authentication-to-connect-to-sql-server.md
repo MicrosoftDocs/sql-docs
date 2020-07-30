@@ -1,5 +1,6 @@
 ---
-title: "Using NTLM authentication to connect to SQL Server | Microsoft Docs"
+title: "Using NTLM authentication to connect to SQL Server"
+description: "Learn how to establish a SQL database connection using NTLM authentication with the JDBC driver."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

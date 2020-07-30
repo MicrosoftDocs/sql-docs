@@ -1,5 +1,5 @@
 ---
-title: "Updating Data in Rowsets | Microsoft Docs"
+title: Updating data in rowsets (OLE DB driver)
 description: "Updating data in rowsets using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"
@@ -19,7 +19,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Updating Data in Rowsets
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

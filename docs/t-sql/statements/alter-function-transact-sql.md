@@ -300,7 +300,7 @@ RETURNS return_data_type
  Indicates that the [!INCLUDE[ssDE](../../includes/ssde-md.md)] encrypts the catalog view columns that contains the text of the ALTER FUNCTION statement. Using ENCRYPTION prevents the function from being published as part of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] replication. ENCRYPTION cannot be specified for CLR functions.  
   
  SCHEMABINDING  
- Specifies that the function is bound to the database objects that it references. This condition will prevent changes to the function if other schema bound objects are referencing it.  
+ Specifies that the function is bound to the database objects that it references. When SCHEMABINDING is specified, the base objects cannot be modified in a way that would affect the function definition. The function definition itself must first be modified or dropped to remove dependencies on the object that is to be modified..  
   
  The binding of the function to the objects it references is removed only when one of the following actions occurs:  
   

@@ -16,7 +16,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # SqlDataRecord Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The **SqlDataRecord** object represents a single row of data, along with its related metadata.  
   
  Managed stored procedures may send to the client result sets that are not from a **SqlDataReader**. The **SqlDataRecord** class, along with **SendResultsStart**, **SendResultsRow**, and **SendResultsEnd** methods of the **SqlPipe** object, allows stored procedures to send custom result sets to the client.  

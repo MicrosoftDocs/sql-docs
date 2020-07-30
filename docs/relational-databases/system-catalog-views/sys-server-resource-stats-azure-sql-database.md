@@ -21,7 +21,7 @@ ms.author: jovanpop
 monikerRange: "=azuresqldb-current||=sqlallproducts-allversions"
 ---
 # sys.server_resource_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
 Returns CPU usage, IO, and storage data for an Azure SQL Managed Instance. The data is collected and aggregated within five-minute intervals. There is one row for every 15 seconds reporting. The data returned includes CPU usage, storage size, IO utilization, and managed instance SKU. Historical data is retained for approximately 14 days.
 

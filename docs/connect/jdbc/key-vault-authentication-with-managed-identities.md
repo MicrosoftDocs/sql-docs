@@ -27,7 +27,7 @@ The JDBC Driver supports Always Encrypted as of version 6.0 (or higher). See [Us
 
 For JDBC Driver 8.3.0 and later, the driver introduced the following connection properties:
 
-| ConnectionProperty    || Values||
+| ConnectionProperty    |&nbsp;| Values|&nbsp;|
 | ---|---|---|----|
 | keyStoreAuthentication| KeyVaultClientSecret   |KeyVaultManagedIdentity |JavaKeyStorePassword |  
 | keyStorePrincipalId   | \<Azure AD Application Client ID\>    | \<Azure AD Application object ID\> (optional)| n/a |
@@ -49,7 +49,7 @@ The following examples show how the connection properties are used in a connecti
 ```
 Users are encouraged to use these connection properties to specify the type of authentication used for the Key Stores instead of using the `SQLServerColumnEncryptionAzureKeyVaultProvider` interface as this interface will be deprecated in a future release.
 
-Note: Previously added connection properties `keyVaultProviderClientId` and `keyVaultProviderClientKey` are deprecated and replaced by the connection properties described above and will be removed in a future release.
+Note that previously added connection properties `keyVaultProviderClientId` and `keyVaultProviderClientKey` are deprecated and replaced by the connection properties described above and will be removed in a future release.
 
 For more information about using Azure Key Vaults, see [Azure Key Vault documentation](https://docs.microsoft.com/azure/key-vault/).
 

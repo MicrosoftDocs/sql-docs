@@ -23,16 +23,14 @@ The Conversion pane is available in the **Project Settings** and **Default Proje
   
 ## Conversion Messages  
   
-|||  
-|-|-|  
 |Term|Definition|  
+|-|-|  
 |**Generate messages about issues applied**|Specifies whether SSMA generates informational messages during conversion, displays them in the Output pane, and adds them to the converted code.<br /><br />When you select a conversion mode in the **Mode** box, SSMA applies the following setting:<br /><br />**Default/Optimistic Mode:** No<br /><br />**Full Mode:** No|  
   
 ## Miscellaneous Options  
   
-|||  
-|-|-|  
 |Term|Definition|  
+|-|-|  
 |**Cast ROWNUM expressions as integers**|When SSMA converts ROWNUM expressions, it converts the expression into a TOP clause, followed by the expression. The following example shows ROWNUM in an Oracle DELETE statement:<br /><br />`DELETE FROM Table1`<br /><br />`WHERE ROWNUM < expression and Field1 >= 2`<br /><br />The following example shows the resulting [!INCLUDE[tsql](../../includes/tsql-md.md)]:<br /><br />`DELETE TOP (expression-1)`<br /><br />`FROM Table1`<br /><br />`WHERE Field1>=2`<br /><br />The TOP requires that the TOP clauses expression evaluates to an integer. If the integer is negative, the statement will produce an error.<br /><br />If you select **Yes**, SSMA casts the expression as an integer.<br /><br />If you select **No**, SSMA will mark all non-integer expressions as an error in the converted code.<br /><br />When you select a conversion mode in the **Mode** box, SSMA applies the following setting:<br /><br />**Default/Full Mode:** No<br /><br />**Optimistic Mode:** Yes|  
 |**Default Schema Mapping**|This setting specifies how Oracle schemas are mapped to SQL Server schemas. Two options are available in this setting:<br /><br />**Schema to database:** In this mode Oracle schema 'sch1' will be mapped by default to 'dbo' SQL Server schema in SQL Server database 'sch1'.<br /><br />**Schema to schema:**In this mode Oracle schema 'sch1' will be mapped by default to 'sch1' SQL Server schema in default SQL Server database provided in the connection dialog.<br /><br />When you select a conversion mode in the **Mode** box, SSMA applies the following setting:<br /><br />**Default/Optimistic/Full Mode:** Schema to database|  
 |**Conversion ways of MERGE statement**|If you select **Using INSERT, UPDATE, DELETE statement**, SSMA converts MERGER statement into INSERT, UPDATE, DELETE statements.<br /><br />If you select **Using MERGE statement**, SSMA converts MERGER statement into MERGE statement in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br />**Note:** This project setting option is available only in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014.<br /><br />When you select a conversion mode in the **Mode** box, SSMA applies the following setting:<br /><br />**Default/Optimistic/Full Mode:** Using MERGE statement|  
@@ -63,18 +61,16 @@ The Conversion pane is available in the **Project Settings** and **Default Proje
   
 ## RETURNING Clause Conversion  
   
-|||  
-|-|-|  
 |Term|Definition|  
+|-|-|  
 |**Convert RETURNING clause in DELETE statement to OUTPUT**|Oracle provides a RETURNING clause as a way to immediately obtain deleted values. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides that functionality with the OUTPUT clause.<br /><br />If you select **Yes**, SSMA will convert RETURNING clauses in DELETE statements to OUTPUT clauses. Because triggers on a table can change values, the returned value might be different in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] than it was in Oracle.<br /><br />If you select **No**, SSMA will generate a SELECT statement before DELETE statements to retrieve returned values.<br /><br />When you select a conversion mode in the **Mode** box, SSMA applies the following setting:<br /><br />**Default/Optimistic/Full Mode:** Yes|  
 |**Convert RETURNING clause in INSERT statement to OUTPUT**|Oracle provides a RETURNING clause as a way to immediately obtain inserted values. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides that functionality with the OUTPUT clause.<br /><br />If you select **Yes**, SSMA will convert a RETURNING clause in an INSERT statement to OUTPUT. Because triggers on a table can change values, the returned value might be different in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] than it was in Oracle.<br /><br />If you select **No**, SSMA emulates Oracle functionality by inserting and then selecting values from a reference table.<br /><br />When you select a conversion mode in the **Mode** box, SSMA applies the following setting:<br /><br />**Default/Optimistic/Full Mode:** Yes|  
 |**Convert RETURNING clause in UPDATE statement to OUTPUT**|Oracle provides a RETURNING clause as a way to immediately obtain updated values. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides that functionality with the OUTPUT clause.<br /><br />If you select **Yes**, SSMA will convert RETURNING clauses in UPDATE statements to OUTPUT clauses. Because triggers on a table can change values, the returned value might be different in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] than it was in Oracle.<br /><br />If you select **No**, SSMA will generate SELECT statements after UPDATE statements to retrieve returning values.<br /><br />When you select a conversion mode in the **Mode** box, SSMA applies the following setting:<br /><br />**Default/Optimistic/Full Mode:** Yes|  
   
 ## Sequence Conversion  
   
-|||  
-|-|-|  
 |Term|Definition|  
+|-|-|  
 |**Convert Sequence Generator**|In Oracle, you can use a Sequence to generate unique identifiers.<br /><br />SSMA can convert Sequences to the following.<br /><br />Using SQL Server sequence generator (this option is only available when converting to SQL Server 2012 and SQL Server 2014).<br /><br />Using SSMA sequence generator.<br /><br />Using column identity.<br /><br />The default option when converting to SQL Server 2012 or SQL Server 2014 is to use SQL Server sequence generator. However, SQL Server 2012 and SQL Server 2014 does not support obtaining current sequence value (such as that of Oracle sequence currval method). Refer to SSMA team blog site for guidance on migrating Oracle sequence currval method.<br /><br />SSMA also provides an option to convert Oracle sequence to SSMA sequence emulator. This is the default option when you convert to SQL Server prior to 2012<br /><br />Finally, you can also convert sequence assigned to a column in table to SQL Server identity values. You must specify the mapping between the sequences to an identity column on Oracle **Table** tab|  
 |**Convert CURRVAL outside triggers**|Visible only when the Convert Sequence Generator is set to **using column identity**. Because Oracle Sequences are objects separate from tables, many tables that use Sequences use a trigger to generate and insert a new sequence value. SSMA comments out these statements, or marks them as errors when the commenting out would generate errors.<br /><br />If you select **Yes**, SSMA will mark all references to outside triggers on the converted sequence CURRVAL with a warning.<br /><br />If you select **No**, SSMA will mark all references to outside triggers on the converted sequence CURRVAL with an error.|  
   

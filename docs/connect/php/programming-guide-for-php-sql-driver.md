@@ -1,5 +1,6 @@
 ---
-title: "Programming Guide for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
+title: "Programming Guide for the Microsoft Drivers for PHP for SQL Server"
+description: "Learn how to get started with PHP programming using the Microsoft Drivers for PHP for SQL Server."
 ms.custom: ""
 ms.date: "03/26/2018"
 ms.prod: sql

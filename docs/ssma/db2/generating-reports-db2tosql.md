@@ -19,9 +19,8 @@ Use the following procedure to generate reports:
   
     The reports vis-à-vis commands are:  
   
-    ||||  
+    |Sl. No.|Command|Report Title|  
     |-|-|-|  
-    |**Sl. No.**|**Command**|**Report Title**|  
     |1|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
     |2|convert-schema|SchemaConversionReport&lt;n&gt;.XML|  
     |3|migrate-data|DataMigrationReport&lt;n&gt;.XML|  
@@ -36,9 +35,8 @@ Use the following procedure to generate reports:
   
 2.  Indicate the extent of detail you desire in the output report using the Report Verbosity settings:  
   
-    ||||  
+    |Sl. No.|Command and Parameter|Output Description|  
     |-|-|-|  
-    |**Sl. No.**|**Command and Parameter**|**Output Description**|  
     |1|verbose="false"|Generates a summarized report of the activity.|  
     |2|verbose="true"|Generates a summarized and detailed status report for each activity.|  
   
@@ -47,9 +45,8 @@ Use the following procedure to generate reports:
   
 3.  Indicate the extent of detail you desire in the error reports using the Error Reporting settings:  
   
-    ||||  
+    |Sl. No.|Command and Parameter|Output Description|  
     |-|-|-|  
-    |**Sl. No.**|**Command and Parameter**|**Output Description**|  
     |1|report-errors="false"|No details on error/ warning/ info messages.|  
     |2|report-errors="true"|Detailed error/ warning/ info messages.|  
   

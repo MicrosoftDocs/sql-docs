@@ -1,6 +1,6 @@
 ---
-title: "Finding More OLE DB Driver for SQL Server Information | Microsoft Docs"
-description: "Where to find more OLE DB Driver for SQL Server information"
+title: "Finding More OLE DB Driver for SQL Server Information"
+description: "Learn where to find more information about the Microsoft OLE DB Driver for SQL Server."
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

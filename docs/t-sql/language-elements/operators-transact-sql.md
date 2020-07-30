@@ -42,7 +42,7 @@ ms.author: jroth
         [Bitwise Operators](../../t-sql/language-elements/bitwise-operators-transact-sql.md)
     :::column-end:::
     :::column:::
-        [Set Operators](https://msdn.microsoft.com/library/1aa4c424-b92c-4409-a1c7-34a0264ee107)
+        Set Operators ([EXCEPT and INTERSECT](../../t-sql/language-elements/set-operators-except-and-intersect-transact-sql.md), [UNION](../../t-sql/language-elements/set-operators-union-transact-sql.md))
     :::column-end:::
 :::row-end:::  
 :::row:::
@@ -58,7 +58,7 @@ ms.author: jroth
         [Compound Operators](../../t-sql/language-elements/compound-operators-transact-sql.md)
     :::column-end:::
     :::column:::
-        [Unary Operators](https://msdn.microsoft.com/library/c4748146-4049-4040-8826-56c464410878)
+        [Unary Operators](../../t-sql/language-elements/unary-operators-positive.md)
     :::column-end:::
 :::row-end:::
  

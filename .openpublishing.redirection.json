@@ -42636,6 +42636,11 @@
       "redirect_document_id": true
     },
     {
+      "source_path": "docs/machine-learning/predictions/how-to-do-realtime-scoring.md",
+      "redirect_url": "/sql/machine-learning/predictions/native-scoring-predict-transact-sql",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
       "redirect_url": "/sql/linux/sql-server-linux-manage-ssms",
       "redirect_document_id": false

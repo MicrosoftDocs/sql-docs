@@ -267,8 +267,6 @@
     items:
     - name: Native scoring with PREDICT T-SQL
       href: ../machine-learning/predictions/native-scoring-predict-transact-sql.md
-    - name: How to generate predictions
-      href: ../machine-learning/predictions/how-to-do-realtime-scoring.md
     - name: Real-time scoring with sp_rxPredict
       href: ../machine-learning/predictions/real-time-scoring.md
   - name: Package management

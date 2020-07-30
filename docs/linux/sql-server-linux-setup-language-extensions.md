@@ -258,19 +258,19 @@ You can download packages from [https://packages.microsoft.com/](https://package
 
 #### RedHat/7 paths
 
-|||
+|Package|Link|
 |--|----|
 | mssql/extensibility-java packages | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### Ubuntu/16.04 paths
 
-|||
+|Package|Link|
 |--|----|
 | mssql/extensibility-java packages | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### SUSE/12 paths
 
-|||
+|Package|Link|
 |--|----|
 | mssql/extensibility-java packages | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 

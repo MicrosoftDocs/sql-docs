@@ -17,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 
-# Remove an Always On Failover Cluster Instance (Setup)
+# Remove a failover cluster instance (Setup)
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
@@ -38,7 +38,7 @@ Use this procedure to uninstall an Always On [!INCLUDE[ssNoVersion](../../../inc
   
 ### To uninstall a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance
   
-1.  To uninstall a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, use the Remove Node functionality provided by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup to remove each node individually. For more information, see [Add or Remove Nodes in an Always On Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-an-always-on-failover-cluster-setup.md).  
+1.  To uninstall a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, use the Remove Node functionality provided by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup to remove each node individually. For more information, see [Add or Remove Nodes in an Always On Failover Cluster &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
 ## See Also  
  [View and Read SQL Server Setup Log Files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)  

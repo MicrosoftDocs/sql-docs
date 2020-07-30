@@ -27,7 +27,7 @@ The JDBC Driver supports Always Encrypted as of version 6.0 (or higher). See [Us
 
 For JDBC Driver 8.3.0 and later, the driver introduced the following connection properties:
 
-| ConnectionProperty    |&nbsp;| Values|&nbsp;|
+| ConnectionProperty    | Possible Value Pairing 1 | Possible Value Pairing 2 | Possible Value Pairing 3 |
 | ---|---|---|----|
 | keyStoreAuthentication| KeyVaultClientSecret   |KeyVaultManagedIdentity |JavaKeyStorePassword |  
 | keyStorePrincipalId   | \<Azure AD Application Client ID\>    | \<Azure AD Application object ID\> (optional)| n/a |

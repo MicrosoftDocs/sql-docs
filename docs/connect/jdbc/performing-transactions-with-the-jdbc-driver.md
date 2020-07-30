@@ -1,5 +1,6 @@
 ---
-title: "Performing transactions with the JDBC driver | Microsoft Docs"
+title: "Performing transactions with the JDBC driver"
+description: "Learn how the JDBC Driver for SQL Server supports transactions including isolation levels, savepoints, and result set holdability."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

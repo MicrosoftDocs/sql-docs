@@ -1,6 +1,6 @@
 ---
 title: "Add, remove nodes Failover Cluster Instance"
-description: This article shows you how to add or remove nodes in an existing Always On failover cluster instance.
+description: This article shows you how to add or remove nodes in an existing SQL Server Always On failover cluster instance.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.reviewer: ""
@@ -20,13 +20,13 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 
-# Add or Remove Nodes in an Always On Failover Cluster Instance (Setup)
+# Add or remove nodes in a failover cluster instance (Setup)
 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
  Use this procedure to manage nodes to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance.  
   
- To update or remove a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI, you must be a local administrator with permission to log in as a service on all nodes of the underling Windows Server failover cluster (WSFC). For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
+ To update or remove a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI, you must be a local administrator with permission to log in as a service on all nodes of the underlying Windows Server failover cluster (WSFC). For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
   
  To add a node to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI, you must run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup on the node that is to be added to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance. Do not run Setup on the active node.  
   

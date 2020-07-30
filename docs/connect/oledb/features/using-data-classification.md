@@ -25,7 +25,7 @@ For more information on how to assign classification to columns, see [SQL Data D
 
 ## Code samples
 
-The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] queries can be executed in SSMS to create classified data on Microsoft SQL Server:
+The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] queries can be executed in SSMS to set up the prerequisites for the sample C++ application:
 
 ```sql
 CREATE DATABASE [mydb]

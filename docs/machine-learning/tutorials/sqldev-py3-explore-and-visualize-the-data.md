@@ -25,8 +25,6 @@ In this article, you'll:
 
 In [part one](sqldev-in-database-python-for-sql-developers.md), you installed the prerequisites and restored the sample database.
 
-In [part two](sqldev-py3-explore-and-visualize-the-data.md), you'll explore the sample data and generate some plots.
-
 In [part three](sqldev-py4-create-data-features-using-t-sql.md), you'll learn how to create features from raw data by using a Transact-SQL function. You'll then call that function from a stored procedure to create a table that contains the feature values.
 
 In [part four](sqldev-py5-train-and-save-a-model-using-t-sql.md), you'll load the modules and call the necessary functions to create and train the model using a SQL Server stored procedure.

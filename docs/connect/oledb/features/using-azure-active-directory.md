@@ -17,13 +17,15 @@ ms.author: v-beaziz
 
 ## Purpose
 
-Starting with version 18.2.1, Microsoft OLE DB Driver for SQL Server allows OLE DB applications to connect to an instance of Azure SQL Database using a federated identity. The new authentication methods include:
+
+Starting with version [18.2.1](../release-notes-for-oledb-driver-for-sql-server.md#1821), Microsoft OLE DB Driver for SQL Server allows OLE DB applications to connect to an instance of Azure SQL Database using a federated identity. The new authentication methods include:
 - Azure Active Directory login ID and password
 - Azure Active Directory access token
 - Azure Active Directory integrated authentication
 - SQL login ID and password
 
-Version 18.3 adds support for the following authentication methods:
+
+Version [18.3.0](../release-notes-for-oledb-driver-for-sql-server.md#1830) adds support for the following authentication methods:
 - Azure Active Directory interactive authentication
 - Azure Active Directory MSI authentication
 

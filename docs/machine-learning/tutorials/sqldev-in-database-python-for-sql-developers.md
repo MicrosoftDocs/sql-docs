@@ -46,21 +46,6 @@ In [part five](sqldev-py6-operationalize-the-model.md), you'll learn how to oper
 > [!NOTE]
 > This tutorial is available in both R and Python. For the R version, see [In-database analytics for R developers](sqldev-in-database-r-for-sql-developers.md).
 
-## Overview
-
-The process of building a machine learning solution is a complex one that can involve multiple tools, and the coordination of subject matter experts across several phases:
-
-+ obtaining and cleaning data
-+ exploring the data and building features useful for modeling
-+ training and tuning the model
-+ deployment to production
-
-Development and testing of the actual code is best performed using a dedicated development environment. However, after the script is fully tested, you can easily deploy it to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in the familiar environment of Azure Data Studio or  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Wrapping external code in stored procedures is the primary mechanism for operationalizing code in SQL Server.
-
-Whether you are a SQL programmer new to Python, or a Python developer new to SQL, this five-part tutorial series introduces a typical workflow for conducting in-database analytics with Python and SQL Server.
-
-After the model has been saved to the database, you can call the model for predictions from [!INCLUDE[tsql](../../includes/tsql-md.md)] by using stored procedures.
-
 ## Prerequisites
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
@@ -81,6 +66,21 @@ After the model has been saved to the database, you can call the model for predi
 All tasks can be done using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in Azure Data Studio or [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 
 This tutorial series assumes familiarity with basic database operations such as creating databases and tables, importing data, and writing SQL queries. It does not assume you know Python and all Python code is provided.
+
+## Overview
+
+The process of building a machine learning solution is a complex one that can involve multiple tools, and the coordination of subject matter experts across several phases:
+
++ obtaining and cleaning data
++ exploring the data and building features useful for modeling
++ training and tuning the model
++ deployment to production
+
+Development and testing of the actual code is best performed using a dedicated development environment. However, after the script is fully tested, you can easily deploy it to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in the familiar environment of Azure Data Studio or  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Wrapping external code in stored procedures is the primary mechanism for operationalizing code in SQL Server.
+
+Whether you are a SQL programmer new to Python, or a Python developer new to SQL, this five-part tutorial series introduces a typical workflow for conducting in-database analytics with Python and SQL Server.
+
+After the model has been saved to the database, you can call the model for predictions from [!INCLUDE[tsql](../../includes/tsql-md.md)] by using stored procedures.
 
 ## Next steps
 

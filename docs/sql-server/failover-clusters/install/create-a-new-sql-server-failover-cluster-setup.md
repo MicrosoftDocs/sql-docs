@@ -33,7 +33,7 @@ ms.author: mathoma
   
  The following options are available for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster installation:  
   
- **Option1: Integration Installation with Add Node**  
+ **Option1: Integration Installation with Add Node**   
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] integrated failover cluster installation consists of the following steps:  
   
@@ -41,7 +41,7 @@ ms.author: mathoma
   
 -   On each node to be added to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance, run Setup with Add Node functionality to add that node.  
   
-    -   If the node you are adding has additional or different subnets, Setup allows you to specify additional IP addresses. If the node you are adding is on a different subnet, you also need to confirm the IP address resource dependency change to OR. For more information on the different possible scenarios during Add Node operations, see [Add or Remove Nodes in an Always On Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-an-always-on-sql-server-failover-cluster-instance-setup.md).  
+    -   If the node you are adding has additional or different subnets, Setup allows you to specify additional IP addresses. If the node you are adding is on a different subnet, you also need to confirm the IP address resource dependency change to OR. For more information on the different possible scenarios during Add Node operations, see [Add or Remove Nodes in an Always On Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
  **Option 2: Advanced/Enterprise Installation**  
   
@@ -218,7 +218,7 @@ ms.author: mathoma
   
 29. If you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For information about Setup log files, see [View and Read SQL Server Setup Log Files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-30. To add nodes to the single-node failover you just created, run Setup on each additional node and follow the steps for AddNode operation. For more information, see [Add or Remove Nodes in an Always On Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/installadd-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
+30. To add nodes to the single-node failover you just created, run Setup on each additional node and follow the steps for AddNode operation. For more information, see [Add or Remove Nodes in an Always On Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
     > [!NOTE]  
     >  If you are adding more than one node, you can use the configuration file to deploy the installations. For more information, see [Install SQL Server 2016 Using a Configuration File](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  

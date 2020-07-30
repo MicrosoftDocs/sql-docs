@@ -1,5 +1,6 @@
 ---
-title: "sqlsrv_num_rows | Microsoft Docs"
+title: "sqlsrv_num_rows"
+description: "API reference for the sqlsrv_num_rows function in the Microsoft SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

@@ -25,7 +25,7 @@ In this five-part tutorial series for SQL programmers, you'll learn about Python
 
 You'll build and deploy a Python-based machine learning solution using a sample database on SQL Server. You'll use T-SQL, Azure Data Studio or SQL Server Management Studio, and a database instance with SQL machine learning and Python language support.
 
-This tutorial series introduces you to Python functions used in a data modeling workflow. Steps include data exploration, building and training a binary classification model, and model deployment. You'll use sample data from the New York City Taxi and Limousine Commission, and the model you'll build predicts whether a trip is likely to result in a tip based on the time of day, distance travelled, and pick-up location.
+This tutorial series introduces you to Python functions used in a data modeling workflow. Parts include data exploration, building and training a binary classification model, and model deployment. You'll use sample data from the New York City Taxi and Limousine Commission, and the model you'll build predicts whether a trip is likely to result in a tip based on the time of day, distance travelled, and pick-up location.
 
 In the first part of this series, you'll install the prerequisites and restore the sample database. In parts two and three, you'll develop some Python scripts in a notebook to prepare your data and train a machine learning model. Then, in part three, you'll run those Python scripts inside the database using T-SQL stored procedures.
 

@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-curr
 # Python tutorial: Run predictions using Python embedded in a stored procedure
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-In part five of this five-part tutorial series, you'll learn to *operationalize* the models that you trained and saved in the previous part.
+In part five of this five-part tutorial series, you'll learn how to *operationalize* the models that you trained and saved in the previous part.
 
 In this scenario, operationalization means deploying the model to production for scoring. The integration with SQL Server makes this fairly easy, because you can embed Python code in a stored procedure. To get predictions from the model based on new inputs, just call the stored procedure from an application and pass the new data.
 
@@ -182,9 +182,9 @@ In this section, you'll learn how to create single predictions by calling two st
 
 + [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) is designed for single-row scoring using the scikit-learn model.
 + [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) is designed for single-row scoring using the revoscalepy model.
-+ If you haven't trained a model yet, return to [Step 5](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
++ If you haven't trained a model yet, return to [part five](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
 
-Both models take as input a series of single values, such as passenger count, trip distance, and so forth. A table-valued function, `fnEngineerFeatures`, is used to convert latitude and longitude values from the inputs to a new feature, direct distance. [Lesson 4](sqldev-py4-create-data-features-using-t-sql.md) contains a description of this table-valued function.
+Both models take as input a series of single values, such as passenger count, trip distance, and so forth. A table-valued function, `fnEngineerFeatures`, is used to convert latitude and longitude values from the inputs to a new feature, direct distance. [Part four](sqldev-py4-create-data-features-using-t-sql.md) contains a description of this table-valued function.
 
 Both stored procedures create a score based on the Python model.
 

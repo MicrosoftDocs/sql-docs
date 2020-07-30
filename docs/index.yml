@@ -183,7 +183,5 @@ additionalContent:
             url: analytics-platform-system/index.md
           - text: SQL Server Machine Learning Services (R & Python)
             url: machine-learning/index.yml
-          - text: Azure Machine Learning
-            url: https://docs.microsoft.com/azure/machine-learning/
 
 

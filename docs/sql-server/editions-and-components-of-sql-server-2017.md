@@ -161,7 +161,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
 |Hybrid backup to Azure (backup to URL)|Yes|Yes|No|No|No|
-|Read-scale availability group<sup>3,4</sup>|Yes|Yes|No|No|No|No|
+|Read-scale availability group<sup>3,4</sup>|Yes|No|No|No|No|No|
 
 <sup>1</sup> For more information on installing SQL Server on Server Core,  see [Install SQL Server on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md). 
 
@@ -233,7 +233,7 @@ The Developer edition continues to support only 1 client for [SQL Server Distrib
 |SQL Server change tracking|Yes|Yes|Yes|Yes|Yes| 
 |Transactional replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|   
 |Transactional replication to Azure|Yes|Yes|No|No|No|   
-|Transactional replication updateable subscription|Yes|No|No|No|No|  
+|Transactional replication updateable subscription|Yes|Yes|No|No|No|  
   
 ##  <a name="SSMS"></a> Management tools  
   

@@ -54,14 +54,7 @@ In [part five](sqldev-py6-operationalize-the-model.md), you'll learn how to oper
 
 + [Grant permissions to execute Python scripts](../security/user-permission.md)
 
-::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 + Restore the [NYC Taxi demo database](demo-data-nyctaxi-in-sql.md)
-::: moniker-end
-
-
-::: moniker range=">=azuresqldb-mi-current||=sqlallproducts-allversions"
-+ Restore the NYC Taxi demo database - follow the instructions in [Quickstart: Restore a database to Azure SQL Managed Instance](/azure/azure-sql/managed-instance/restore-sample-database-quickstart) using the NYC Taxi demo database back file: [https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak](https://sqlmldoccontent.blob.core.windows.net/sqlml/NYCTaxi_Sample.bak)
-::: moniker-end
 
 All tasks can be done using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in Azure Data Studio or [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
 

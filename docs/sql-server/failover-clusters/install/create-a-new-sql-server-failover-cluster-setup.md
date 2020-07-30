@@ -1,6 +1,6 @@
 ---
 title: "Create new Failover Cluster Instance"
-description: This article describes how to use the Setup program to install or upgrade an Always On ailover cluster instance or add a node to an existing failover cluster instance.
+description: This article describes how to use the Setup program to install or upgrade a SQL Server Always On failover cluster instance or add a node to an existing failover cluster instance.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.reviewer: ""
@@ -60,7 +60,7 @@ ms.author: mathoma
     > [!NOTE]  
     >  Complete Failover Cluster requires that the underlying Windows Server failover cluster exists. If the Windows Server failover cluster does not exist, Setup gives an error and exits.  
   
- For more information about how to add nodes to or remove nodes from an existing failover cluster instance, see [Add or Remove Nodes in an Always On Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-an-always-on-failover-cluster-instance-setup.md).  
+ For more information about how to add nodes to or remove nodes from an existing failover cluster instance, see [Add or Remove Nodes in an Always On Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
  For more information about remote installation, see [Supported Version and Edition Upgrades](../../../database-engine/install-windows/supported-version-and-edition-upgrades.md).  
   
@@ -218,7 +218,7 @@ ms.author: mathoma
   
 29. If you are instructed to restart the computer, do so now. It is important to read the message from the Installation Wizard when you have finished with Setup. For information about Setup log files, see [View and Read SQL Server Setup Log Files](../../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
-30. To add nodes to the single-node failover you just created, run Setup on each additional node and follow the steps for AddNode operation. For more information, see [Add or Remove Nodes in an Always On Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/install/add-or-remove-nodes-in-a-sql-server-failover-cluster-instance-setup.md).  
+30. To add nodes to the single-node failover you just created, run Setup on each additional node and follow the steps for AddNode operation. For more information, see [Add or Remove Nodes in an Always On Failover Cluster Instance &#40;Setup&#41;](../../../sql-server/failover-clusters/installadd-or-remove-nodes-in-a-sql-server-failover-cluster-setup.md).  
   
     > [!NOTE]  
     >  If you are adding more than one node, you can use the configuration file to deploy the installations. For more information, see [Install SQL Server 2016 Using a Configuration File](../../../database-engine/install-windows/install-sql-server-2016-using-a-configuration-file.md).  

@@ -167,7 +167,9 @@ Azure Data Studio runs on Windows, macOS, and Linux, and is supported on the fol
 
 ## Check for updates
 
-To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**
+To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**.
+
+In an offline environment updates can be applied by [installing the latest version](#download-and-install-azure-data-studio) directly over a previously installed version.  Uninstalling prior versions of Azure Data Studio is not necessary as the installer updates a currently installed application, if present.
 
 ## Supported SQL offerings
 

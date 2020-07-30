@@ -125,7 +125,7 @@ As mentioned earlier, the query plan no longer has a user-defined function opera
 -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has also inferred the implicit `GROUP BY O_CUSTKEY on ORDERS` and has used the IndexSpool + StreamAggregate to implement it.
 -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is now using parallelism across all operators.
 
-Depending upon the complexity of the logic in the UDF, the resulting query plan might also get bigger and more complex. As we can see, the operations inside the UDF are now no longer a opaque box, and hence the query optimizer is able to cost and optimize those operations. Also, since the UDF is no longer in the plan, iterative UDF invocation is replaced by a plan that completely avoids function call overhead.
+Depending upon the complexity of the logic in the UDF, the resulting query plan might also get bigger and more complex. As we can see, the operations inside the UDF are now no longer an opaque box, and hence the query optimizer is able to cost and optimize those operations. Also, since the UDF is no longer in the plan, iterative UDF invocation is replaced by a plan that completely avoids function call overhead.
 
 ## Inlineable scalar UDFs requirements
 <a name="requirements"></a> A scalar T-SQL UDF can be inline if all of the following conditions are true:

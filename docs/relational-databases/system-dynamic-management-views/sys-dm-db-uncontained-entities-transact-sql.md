@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.dm_db_uncontained_entities (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Shows any uncontained objects used in the database. Uncontained objects are objects that cross the database boundary in a contained database. This view is accessible from both a contained database and a non-contained database. If sys.dm_db_uncontained_entities is empty, your database does not use any uncontained entities.  
   

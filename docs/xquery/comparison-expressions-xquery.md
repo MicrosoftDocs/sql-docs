@@ -22,7 +22,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Comparison Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery provides the following types of comparison operators:  
   

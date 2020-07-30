@@ -25,7 +25,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Controls the behavior of the [!INCLUDE[tsql](../../includes/tsql-md.md)] COMMIT TRANSACTION statement. The default value for this setting is OFF. This means that the server will not close cursors when you commit a transaction.  
   

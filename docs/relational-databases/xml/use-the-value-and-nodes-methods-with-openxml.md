@@ -17,7 +17,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Use the value() and nodes() Methods with OPENXML
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   You can use multiple **value()** methods on **xml** data type in a **SELECT** clause to generate a rowset of extracted values. The **nodes()** method yields an internal reference for each selected node that can be used for additional query. The combination of the **nodes()** and **value()** methods can be more efficient in generating the rowset when it has several columns and, perhaps, when the path expressions used in its generation are complex.  
   
  The **nodes()** method yields instances of a special **xml** data type, each of which has its context set to a different selected node. This kind of XML instance supports **query()**, **value()**, **nodes()**, and **exist()** methods and can be used in **count(\*)** aggregations. All other uses cause an error.  

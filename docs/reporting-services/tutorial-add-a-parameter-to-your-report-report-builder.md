@@ -1,5 +1,6 @@
 ---
 title: "Tutorial: Add a Parameter to Your Report (Report Builder) | Microsoft Docs"
+description: Learn how to add a parameter to a Reporting Services paginated report so report readers can filter report data for one or more values.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -17,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Replication, change tracking, & change data capture - Always On availability groups
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication, change data capture (CDC), and change tracking (CT) are supported on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] helps provide high availability and additional database recovery capabilities.  
   
@@ -199,9 +199,8 @@ If Change Data Capture needs to be disabled on a database which is part of an Al
 ### Restrictions  
  Supported combinations of replication on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
-|||||  
+|Replication|Publisher|Distributor|Subscriber|  
 |-|-|-|-|  
-||**Publisher**|**Distributor**|**Subscriber**|  
 |**Transactional**|Yes<br /><br /> Note: Does not include support for bi-directional and reciprocal transactional replication.|Yes|Yes| 
 |**P2P**|No|No|No|  
 |**Merge**|Yes|No|No|  

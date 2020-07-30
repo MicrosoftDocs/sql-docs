@@ -1,12 +1,12 @@
 ---
 title: Scripts in SQL Server Unit Tests
+description: Become familiar with SQL Server unit test scripts. Learn about pre-test, test, and post-test scripts and the common scripts TestInitialize and TestCleanup.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: 80c5cf62-a9c9-4e9d-8c6f-8eed50a595a7
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017

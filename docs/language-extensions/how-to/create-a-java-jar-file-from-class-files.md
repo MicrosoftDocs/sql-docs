@@ -10,7 +10,7 @@ ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Create a Java jar file from class files
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Learn how to package your class files into a jar file, when using [SQL Server Language Extensions](../language-extensions-overview.md) to execute Java code. We recommend you package your files.
 

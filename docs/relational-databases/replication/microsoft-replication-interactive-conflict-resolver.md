@@ -13,10 +13,10 @@ f1_keywords:
 ms.assetid: d3d4a480-782b-4b1d-b839-565c8cf6cb24
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Microsoft Replication Interactive Conflict Resolver
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The Interactive Conflict Resolver can be used for merge subscriptions that are synchronized using Windows Synchronization Manager. It allows you to view, compare, edit, and select the outcome for data conflicts. Replication also includes the Conflict Viewer, which allows you to view and modify conflict outcomes after they have been committed. The Interactive Conflict Resolver allows you to select the outcome during synchronization.  
   
 > [!NOTE]  

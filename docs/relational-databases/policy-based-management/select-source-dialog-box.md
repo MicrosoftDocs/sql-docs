@@ -14,7 +14,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Select Source Dialog Box
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to select the source of the policies to be run. To select one or more XML files that contain policies, select **Files**. To run the policies that are found on the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Server**.  
   
  You can open this dialog box in several ways.  

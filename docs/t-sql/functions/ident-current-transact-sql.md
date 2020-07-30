@@ -22,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # IDENT_CURRENT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns the last identity value generated for a specified table or view. The last identity value generated can be for any session and any scope.  
   
@@ -34,7 +34,9 @@ Returns the last identity value generated for a specified table or view. The las
 IDENT_CURRENT( 'table_or_view' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *table_or_view*  
 Is the name of the table or view whose identity value is returned. *table_or_view* is **varchar**, with no default.  
   

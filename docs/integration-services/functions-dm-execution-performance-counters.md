@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Functions - dm_execution_performance_counters
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
   Returns the performance statistics for an execution that is running on the [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] server.  
   

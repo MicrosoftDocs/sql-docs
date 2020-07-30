@@ -14,7 +14,7 @@ ms.date: 12/15/2019
 ---
 # Download SQL Server extended features and tools
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 This article provides a brief explanation of the various downloads and stand-alone packages Microsoft provides to add value for SQL Server.
 

@@ -23,7 +23,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversio
 ---
 # sys.index_resumable_operations (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 **sys.index_resumable_operations** is a system view that monitors and checks the current execution status for resumable Index rebuild or creation.  
 **Applies to**: SQL Server (2017 and newer), and Azure SQL Database
   

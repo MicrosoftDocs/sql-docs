@@ -22,7 +22,7 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_document_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a row for each document type that is available for full-text indexing operations. Each row represents the IFilter interface that is registered in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

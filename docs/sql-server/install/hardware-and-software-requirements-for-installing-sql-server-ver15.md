@@ -47,7 +47,7 @@ ms.author: mikeray
 author: MikeRayMSFT
 ---
 # SQL Server 2019: Hardware and software requirements
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 The article lists the minimum hardware and software requirements to install and run SQL Server 2019 on the Windows operating system.
 
@@ -117,11 +117,20 @@ The following table shows which editions of SQL Server 2019 are compatible with 
 
 Installing SQL Server 2019 on Server Core mode is supported by the following editions of Windows Server:
 
-|                              |
-| :------------------------  |
-| Windows Server 2019 Core | 
-| Windows Server 2016 Core |
-| &nbsp; | 
+:::row:::
+    :::column:::
+        Windows Server 2019 Core
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        Windows Server 2016 Core
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 For more information on installing SQL Server on Server Core, see [Install SQL Server on Server Core](../../database-engine/install-windows/install-sql-server-on-server-core.md). 
 

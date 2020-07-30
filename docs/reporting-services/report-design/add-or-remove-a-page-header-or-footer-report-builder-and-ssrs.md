@@ -1,5 +1,6 @@
 ---
 title: "Add or Remove a Page Header or Footer (Report Builder) | Microsoft Docs"
+description: Find out how you can add static text, images, lines, rectangles, and borders to page headers or footers in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -2,7 +2,7 @@
 title: "R tutorial: Explore data"
 description: Tutorial showing how to visualize and generate statistical summaries using R functions for in-database analytics on SQL Server.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 11/26/2018  
 ms.topic: tutorial
@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # View and summarize SQL Server data using R (walkthrough)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This lesson introduces you to functions in the **RevoScaleR** package and steps you through the following tasks:
 

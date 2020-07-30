@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # MSmerge_conflict_publication_article (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSmerge_conflict_publication_article** table contains information on rows that conflicted or row changes that were undone to achieve data convergence. A conflict table exists for each replicated table in a publication, where the name of the conflict table is appended with the publication and article name. These article-specific conflict tables exist in the database used for conflict logging, usually the publication database but can be the subscription database if there is decentralized conflict logging.  
   

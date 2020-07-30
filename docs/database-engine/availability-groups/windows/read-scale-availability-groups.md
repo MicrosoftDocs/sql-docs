@@ -12,7 +12,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Use read-scale with Always On availability groups
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 An availability group is a comprehensive solution that brings high-availability capabilities to SQL Server and offers integrated scaling solutions as well. In a typical database application, multiple clients run various types of workloads. Sometimes bottlenecks can develop due to resource constraints. 
 

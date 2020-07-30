@@ -42,7 +42,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # SELECT - ORDER BY Clause (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Sorts data returned by a query in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use this clause to:  
   
@@ -86,7 +86,9 @@ ORDER BY order_by_expression
 ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *order_by_expression*  
  Specifies a column or expression on which to sort the query result set. A sort column can be specified as a name or column alias, or a nonnegative integer representing the position of the column in the select list.  
   
@@ -118,7 +120,7 @@ ORDER BY SchemaName + ''; -- wrong
   
  In query execution plans, the offset row count value is displayed in the **Offset** attribute of the TOP query operator.  
   
- FETCH { FIRST | NEXT } { *integer_constant* | *fetch_row_count_expression* } { ROW | ROWS } ONLY  
+ FETCH { FIRST \| NEXT } { *integer_constant* \| *fetch_row_count_expression* } { ROW \| ROWS } ONLY  
  Specifies the number of rows to return after the OFFSET clause has been processed. The value can be an integer constant or expression that is greater than or equal to one.  
   
 **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  

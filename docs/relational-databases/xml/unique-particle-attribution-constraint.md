@@ -1,5 +1,6 @@
 ---
 title: "Unique Particle Attribution Constraint | Microsoft Docs"
+description: Learn how the unique particle attribution (UPA) constraint rule rejects an XSD schema if it contains a type with a potentially ambiguous content model.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -19,7 +20,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Unique Particle Attribution Constraint
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In XSD, complex content models are constrained by the unique particle attribution (UPA) constraint rule. This rule requires that each element in an instance document correspond unambiguously to exactly one `<xsd:element>` or `<xsd:any>` particle in its parent's content model. Any schema that contains a type with a potentially ambiguous content model is rejected.  
   
  The most common causes of ambiguity are `<xsd:any>` wildcard characters and particles that have variable occurrence ranges, such as minOccurs < maxOccurs. For example, the following content model is ambiguous, because an <`e1`> element could match either the `<xsd:element>` or the `<xsd:any>` element.  

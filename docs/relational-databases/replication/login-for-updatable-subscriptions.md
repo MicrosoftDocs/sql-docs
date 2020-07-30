@@ -14,7 +14,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Login for Updatable Subscriptions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   For immediate update, if you selected **Replicate** on the **Updatable Subscriptions** page of this wizard, you must specify an account with the Subscriber under which connections to the Publisher are made. 
   
  Connections are used by the triggers that fire at the Subscriber, and propagate changes to the Publisher. This account is required even if you selected **Queue changes and commit when possible** on the **Updatable Subscriptions** page. The New Subscription Wizard by default configures queued updating with the ability to switch to immediate updating if required.  

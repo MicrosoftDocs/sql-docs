@@ -1,7 +1,7 @@
 ---
 title: "SQLGetCursorName Function | Microsoft Docs"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "06/12/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -48,7 +48,7 @@ SQLRETURN SQLGetCursorName(
  If *CursorName* is NULL, *NameLengthPtr* will still return the total number of characters (excluding the null-termination character for character data) available to return in the buffer pointed to by *CursorName*.  
   
  *BufferLength*  
- [Input] Length of \**CursorName*, in characters. If the value in *\*CursorName* is a Unicode string (when calling **SQLGetCursorNameW**), the *BufferLength* argument must be an even number.  
+ [Input] Length of \**CursorName*, in characters. 
   
  *NameLengthPtr*  
  [Output] Pointer to memory in which to return the total number of characters (excluding the null-termination character) available to return in \**CursorName*. If the number of characters available to return is greater than or equal to *BufferLength*, the cursor name in \**CursorName* is truncated to *BufferLength* minus the length of a null-termination character.  

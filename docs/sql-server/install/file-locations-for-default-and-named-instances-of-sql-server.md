@@ -12,7 +12,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # File Locations for Default and Named Instances of SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   An installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] consists of one or more separate instances. An instance, whether default or named, has its own set of program and data files, as well as a set of common files shared between all instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the computer.  
   

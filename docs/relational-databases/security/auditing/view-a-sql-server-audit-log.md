@@ -1,5 +1,6 @@
 ---
 title: "View a SQL Server Audit Log | Microsoft Docs"
+description: Learn how to view a SQL Server audit log in SQL Server by using SQL Server Management Studio. Viewing requires CONTROL SERVER permission.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # View a SQL Server Audit Log
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to view a SQL Server audit log in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)].  
   
  **In This Topic**  

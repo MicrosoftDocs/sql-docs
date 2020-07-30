@@ -1,5 +1,6 @@
 ---
-title: "Connection Resiliency in the Windows ODBC Driver | Microsoft Docs"
+title: "Connection Resiliency in the Windows ODBC Driver"
+description: "Learn how connection resiliency in the ODBC Driver transparently restores connections and improves application behavior when the server closes idle connections."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

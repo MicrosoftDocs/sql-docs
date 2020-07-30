@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: 5b00e4eb-1742-43ec-98d8-d84216b6b840
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -20,7 +19,7 @@ ms.date: 03/01/2017
 
 # Simple XML Input File Sample (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Copy and paste this sample of a simple XML input file to use for tuning workloads into your favorite XML editor or text editor. Then replace the values specified for the **Server**, **Database**, **Schema**, **Table**, **Workload**, and **TuningOptions** elements with those for your specific tuning session. For more information about the attributes and child elements that you can use with these elements, see the [XML Input File Reference &#40;Database Engine Tuning Advisor&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md). The following sample uses only a subset of available attribute and child element options.  
   

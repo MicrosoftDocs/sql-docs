@@ -12,7 +12,7 @@ monikerRange: ">= sql-server-linux-ver15  || >= sql-server-ver15 || = sqlallprod
 ---
 # Configure persistent memory (PMEM) for SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article describes how to configure the persistent memory (PMEM) for [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] on Linux.
 

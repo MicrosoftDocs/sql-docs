@@ -24,7 +24,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Text and Image Functions - TEXTVALID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   A **text**, **ntext**, or **image** function that checks whether a specific text pointer is valid.  
   
@@ -40,7 +40,9 @@ ms.author: jrasnick
 TEXTVALID ( 'table.column' ,text_ ptr )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table*  
  Is the name of the table that will be used.  
   

@@ -11,7 +11,7 @@ ms.assetid: 64da74cc-14bf-4636-a55e-8cc1fce2aaff
 ---
 # Security limitations for SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 SQL Server on Linux currently has the following limitations:
 

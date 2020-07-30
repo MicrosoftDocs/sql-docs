@@ -19,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # PathName (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the path of a FILESTREAM binary large object (BLOB). The OpenSqlFilestream API uses this path to return a handle that an application can use to work with the BLOB data by using Win32 APIs. PathName is read-only.  
   

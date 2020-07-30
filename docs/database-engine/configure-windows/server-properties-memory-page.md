@@ -1,5 +1,6 @@
 ---
 title: "Server Properties (Memory Page) | Microsoft Docs"
+description: Get acquainted with server memory options in SQL Server. Learn about minimum and maximum server memory, index creation memory, and other settings.
 ms.custom: ""
 ms.date: "03/08/2016"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Server Properties - Memory Page
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to view or modify your server memory options. When **Minimum server memory** is set to 0 and **Maximum server memory** is set to 2147483647 MB, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can take advantage of the optimum amount of memory at any given time, subject to how much memory the operating system and other applications are currently using. As the load on the computer and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] changes, so does the memory allocated. You can further limit this dynamic memory allocation to the minimum and maximum values specified below.  
   
 ## Options  

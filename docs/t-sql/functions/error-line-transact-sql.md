@@ -20,11 +20,11 @@ helpviewer_keywords:
   - "ERROR_LINE function"
   - "CATCH block"
 ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # ERROR_LINE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns the line number of occurrence of an error that caused the CATCH block of a TRY...CATCH construct to execute.  
   

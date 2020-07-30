@@ -19,9 +19,12 @@ ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
 ---
+
 # Add or Remove Nodes in an Always On Failover Cluster Instance (Setup)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  Use this procedure to manage nodes to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance.  
+
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
+
+ Use this procedure to manage nodes to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance.  
   
  To update or remove a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI, you must be a local administrator with permission to log in as a service on all nodes of the underling Windows Server failover cluster (WSFC). For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
   

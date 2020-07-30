@@ -12,7 +12,6 @@ helpviewer_keywords:
 ms.assetid: caa3547a-2cd5-47ad-ace2-a36752835cfe
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 03/01/2017
@@ -20,7 +19,7 @@ ms.date: 03/01/2017
 
 # TestServer Element (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies the test server to use when tuning a production server.  
   

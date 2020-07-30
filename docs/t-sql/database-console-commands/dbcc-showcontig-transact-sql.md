@@ -1,5 +1,5 @@
 ---
-title: "DBCC SHOWCONTIG (Transact-SQL) | Microsoft Docs"
+title: DBCC SHOWCONTIG (Transact-SQL)
 ms.custom: ""
 ms.date: "07/17/2017"
 ms.prod: sql
@@ -24,8 +24,10 @@ ms.assetid: 1df2123a-1197-4fff-91a3-25e3d8848aaa
 author: pmasl
 ms.author: umajay
 ---
+
 # DBCC SHOWCONTIG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Displays fragmentation information for the data and indexes of the specified table or view.
   
@@ -55,11 +57,13 @@ DBCC SHOWCONTIG
     ]  
 ```  
   
-## Arguments  
- *table_name* | *table_id* | *view_name* | *view_id*  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+ *table_name* \| *table_id* \| *view_name* \| *view_id*  
  Is the table or view to check for fragmentation information. If not specified, all tables and indexed views in the current database are checked. To obtain the table or view ID, use the [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) function.  
   
- *index_name* | *index_id*  
+ *index_name* \| *index_id*  
  Is the index to check for fragmentation information. If not specified, the statement processes the base index for the specified table or view. To obtain the index ID, use the [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view.  
   
  WITH  

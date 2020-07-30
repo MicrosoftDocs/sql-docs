@@ -19,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # CLR Scalar-Valued Functions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   A scalar-valued function (SVF) returns a single value, such as a string, integer, or bit value. You can create scalar-valued user-defined functions in managed code using any .NET Framework programming language. These functions are accessible to [!INCLUDE[tsql](../../includes/tsql-md.md)] or other managed code. For information about the advantages of CLR integration and choosing between managed code and [!INCLUDE[tsql](../../includes/tsql-md.md)], see [Overview of CLR Integration](../../relational-databases/clr-integration/clr-integration-overview.md).  
   
 ## Requirements for CLR Scalar-Valued Functions  

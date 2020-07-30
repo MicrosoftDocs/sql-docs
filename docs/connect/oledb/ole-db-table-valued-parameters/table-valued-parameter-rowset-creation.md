@@ -1,5 +1,5 @@
 ---
-title: "Table-Valued Parameter Rowset Creation | Microsoft Docs"
+title: Table-valued parameter rowset creation (OLE DB driver)
 description: "Static and dynamic Table-Valued Parameter rowset creation"
 ms.custom: ""
 ms.date: "06/14/2018"
@@ -14,7 +14,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Table-Valued Parameter Rowset Creation
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -26,7 +26,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SUSER_SID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the security identification number (SID) for the specified login name.  
   
@@ -39,7 +39,9 @@ ms.author: vanto
 SUSER_SID ( [ 'login' ] [ , Param2 ] )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *login* **'**  
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   

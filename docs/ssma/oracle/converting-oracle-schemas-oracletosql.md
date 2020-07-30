@@ -28,9 +28,8 @@ Before converting objects, review the project conversion options in the **Projec
 ## Conversion Results  
 The following table shows which Oracle objects are converted, and the resulting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects:  
   
-|||  
-|-|-|  
 |Oracle Objects|Resulting SQL Server Objects|  
+|-|-|  
 |Functions|If the function can be directly converted to [!INCLUDE[tsql](../../includes/tsql-md.md)], SSMA creates a function.<br /><br />In some cases, the function must be converted to a stored procedure. In this case, SSMA creates a stored procedure and a function that calls the stored procedure.|  
 |Procedures|If the procedure can be directly converted to [!INCLUDE[tsql](../../includes/tsql-md.md)], SSMA creates a stored procedure.<br /><br />In some cases a stored procedure must be called in an autonomous transaction. In this case, SSMA creates two stored procedures: one that implements the procedure, and another that is used for calling the implementing stored procedure.|  
 |Packages|SSMA creates a set of stored procedures and functions that are unified by similar object names.|  

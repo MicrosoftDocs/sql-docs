@@ -1,5 +1,6 @@
 ---
 title: "Create Instances of XML Data | Microsoft Docs"
+description: Learn how to create instances of XML data using bulk load, constant assignments, the SELECT statement and FOR XML clause, or by type casting string instances.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -21,7 +22,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Create Instances of XML Data
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic describes how to generate XML instances.  
   
  In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can generate XML instances in the following ways:  

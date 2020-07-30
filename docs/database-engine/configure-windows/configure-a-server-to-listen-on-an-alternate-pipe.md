@@ -1,5 +1,6 @@
 ---
 title: "Configure a Server to Listen on an Alternate Pipe | Microsoft Docs"
+description: Find out how to configure the named pipe that the SQL Server Database Engine listens on. Learn how to connect a client application to a specific named pipe.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Configure a Server to Listen on an Alternate Pipe
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to configure a server to listen on an alternate pipe in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using SQL Server Configuration Manager. By default, the default instance of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] listens on named pipe \\\\.\pipe\sql\query. Named instances of [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] and [!INCLUDE[ssEW](../../includes/ssew-md.md)] listen on other pipes.  
   
  There are three ways to connect to a specific named pipe with a client application:  

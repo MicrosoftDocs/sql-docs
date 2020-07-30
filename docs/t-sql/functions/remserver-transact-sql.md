@@ -21,7 +21,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # &#x40;&#x40;REMSERVER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
     
 > [!IMPORTANT]  
@@ -36,8 +36,10 @@ ms.author: jrasnick
 ```  
 @@REMSERVER  
 ```  
-  
-## Return Types  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **nvarchar(128)**  
   
 ## Remarks  

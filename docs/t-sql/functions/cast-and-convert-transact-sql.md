@@ -32,12 +32,12 @@ helpviewer_keywords:
   - "time zones [SQL Server]"
   - "roundtrip conversions"
 ms.assetid: a87d0850-c670-4720-9ad5-6f5a22343ea8
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CAST and CONVERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 These functions convert an expression of one data type to another.  
 
@@ -53,7 +53,9 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *expression*  
 Any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).
   
@@ -159,7 +161,7 @@ For a **binary(n)**, **char(n)**, **varbinary(n)**, or **varchar(n)** *expressio
 |Value|Output|  
 |---|---|
 |**0** (default)|Translates ASCII characters to binary bytes, or binary bytes to ASCII characters. Each character or byte is converted 1:1.<br /><br /> For a binary *data_type*, the characters 0x are added to the left of the result.|  
-|**1**, **2**|For a binary *data_type*, the expression must be a character expression. The *expression* must have an **even** number of hexadecimal digits (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). If the *style* is set to 1, the expression must have 0x as the first two characters. If the expression contains an odd number of characters, or if any of the characters is invalid, an error is raised.<br /><br /> If the length of the converted expression exceeds the length of the *data_type*, the result is right truncated.<br /><br /> Fixed length *data_type*s larger than the converted result have zeros added to the right of the result.<br /><br /> A *data_type* of type character requires a binary expression. Each binary character is converted into two hexadecimal characters. If the length of the converted expression exceeds the length of the *data_type*, it will be right truncated.<br /><br /> For a fixed size character type *data_type*, if the length of the converted result is less than its length of the *data_type*, spaces are added to the right of the converted expression, to maintain an even number of hexadecimal digits.<br /><br /> The characters 0x will be added to the left of the converted result for *style* 1.|  
+|**1**, **2**|For a binary *data_type*, the expression must be a character expression. The *expression* must have an **even** number of hexadecimal digits (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F, a, b, c, d, e, f). If the *style* is set to 1, the expression must have 0x as the first two characters. If the expression contains an odd number of characters, or if any of the characters is invalid, an error is raised.<br /><br /> If the length of the converted expression exceeds the length of the *data_type*, the result is right truncated.<br /><br /> Fixed length *data_type*s larger than the converted result have zeros added to the right of the result.<br /><br /> A *data_type* of type character requires a binary expression. Each binary character is converted into two hexadecimal characters. If the length of the converted expression exceeds the length of the *data_type*, it will be right truncated.<br /><br /> For a fixed size character type *data_type*, if the length of the converted result is less than its length of the *data_type*, spaces are added to the right of the converted expression, to maintain an even number of hexadecimal digits.<br /><br /> The characters 0x will be added to the left of the converted result for *style* 2.|  
   
 ## Implicit conversions
 Implicit conversions do not require specification of either the CAST function or the CONVERT function. Explicit conversions require specification of the CAST function or the CONVERT function. The following illustration shows all explicit and implicit data type conversions allowed for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system-supplied data types. These include **bigint**, and **sql_variant**, and **xml**. There is no implicit conversion on assignment from the **sql_variant** data type, but there is implicit conversion to **sql_variant**.
@@ -296,13 +298,15 @@ When converting data types where the target data type has fewer decimal places t
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message when converting nonnumeric **char**, **nchar**, **nvarchar**, or **varchar** data to **decimal**, **float**, **int**, **numeric**. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] also returns an error when an empty string (" ") is converted to **numeric** or **decimal**.
   
 ## Certain datetime conversions are nondeterministic
-The following table lists the styles for which the string-to-datetime conversion is nondeterministic.
+
+The styles for which the string-to-datetime conversion is nondeterministic are as follows:
   
-|||  
-|-|-|  
-|All styles below 100<sup>1</sup>|106|  
-|107|109|  
-|113|130|  
+- All styles below 100<sup>1</sup>
+- 106  
+- 107
+- 109
+- 113
+- 130  
   
 <sup>1</sup> With the exception of styles 20 and 21
 

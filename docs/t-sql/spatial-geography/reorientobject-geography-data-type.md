@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # ReorientObject (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **geography** instance with interchanged interior regions and exterior regions.  
   
@@ -32,7 +32,9 @@ This **geography** data type method supports **FullGlobe** instances or spatial 
 .ReorientObject (geography)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 _geography_  
 Is another **geography** instance on which `ReorientObject()` is invoked.  
   

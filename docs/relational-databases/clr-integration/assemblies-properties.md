@@ -14,7 +14,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Assemblies - Properties
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to view or modify properties for the assembly.  
   
 ## Options  

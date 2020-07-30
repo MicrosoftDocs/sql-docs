@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "CUME_DIST function"
   - "analytic functions, CUME_DIST"
 ms.assetid: 491b07f3-9ffd-4cdd-93e5-5abb636fc5ef
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CUME_DIST (Transact-SQL)
@@ -33,9 +33,11 @@ For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this function cal
 CUME_DIST( )  
     OVER ( [ partition_by_clause ] order_by_clause )  
   
-```  
-  
-## Arguments  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_)  
 
 The _partition\_by\_clause_ divides the FROM clause result set into partitions, to which the function is applied. If the _partition\_by\_clause_ argument isn't specified, `CUME_DIST` treats all query result set rows as a single group. The _order\_by\_clause_ determines the logical order in which the operation occurs. `CUME_DIST` requires the _order\_by\_clause_. `CUME_DIST` won't accept the \<rows or range clause> of the OVER syntax. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).

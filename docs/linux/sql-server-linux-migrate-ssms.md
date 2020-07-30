@@ -11,7 +11,7 @@ ms.assetid: 2210cfc3-c23a-4025-a551-625890d6845f
 ---
 # Export and import a database on Linux with SSMS or SqlPackage.exe on Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article shows how to use [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) and [SqlPackage.exe](https://msdn.microsoft.com/library/hh550080.aspx) to export and import a database on SQL Server on Linux. SSMS and SqlPackage.exe are Windows applications, so use this technique when you have a Windows machine that can connect to a remote SQL Server instance on Linux.
 

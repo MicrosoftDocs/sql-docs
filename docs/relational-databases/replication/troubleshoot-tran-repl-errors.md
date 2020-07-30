@@ -2,7 +2,7 @@
 title: "Find errors with transactional replication"
 description: Describes how to locate and identify errors with Transactional Replication, as well as the troubleshooting methodology for addressing issues with replication.
 ms.custom: seo-lt-2019
-ms.date: "04/27/2018"
+ms.date: 07/01/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: replication
@@ -14,7 +14,7 @@ ms.author: mathoma
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Troubleshooter: Find errors with SQL Server transactional replication 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Troubleshooting replication errors can be frustrating without a basic understanding of how transactional replication works. The first step in creating a publication is having the Snapshot Agent create the snapshot and save it to the snapshot folder. Next, the Distribution Agent applies the snapshot to the subscriber. 
 
@@ -71,8 +71,10 @@ The Snapshot Agent generates the snapshot and writes it to the specified snapsho
 
     ![Snapshot Agent error for denied access](media/troubleshooting-tran-repl-errors/snapshot-access-denied.png)
 
-        The replication agent had encountered an exception.
-        Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```console
+    The replication agent had encountered an exception.
+    Exception Message: Access to path '\\node1\repldata.....' is denied.
+    ```
 
 If your Windows permissions are not configured correctly for your snapshot folder, you'll see an "access is denied" error for the Snapshot Agent. You'll need to verify permissions to the folder where your snapshot is stored, and make sure that the account used to run the Snapshot Agent has permissions to access the share.  
 
@@ -103,10 +105,12 @@ The Log Reader Agent connects to your publisher database and scans the transacti
     
     ![Error details for the Log Reader Agent](media/troubleshooting-tran-repl-errors/log-reader-error.png)
 
-       Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
-       The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
-       Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
-       Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```console
+    Status: 0, code: 20011, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.
+    The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.
+    Status: 0, code: 15517, text: 'Cannot execute as the database principal because the principal "dbo" does not exist, this type of principal cannot be impersonated, or you do not have permission.'.
+    Status: 0, code: 22037, text: 'The process could not execute 'sp_replcmds' on 'NODE1\SQL2016'.'.        
+    ```
 
 6. The error typically occurs when the owner of the publisher database is not set correctly. This can happen when a database is restored. To verify this:
 
@@ -122,7 +126,7 @@ The Log Reader Agent connects to your publisher database and scans the transacti
 
     ```sql
     -- set the owner of the database to 'sa' or a specific user account, without the brackets. 
-    EXEC sp_changedbowner '<useraccount>'
+    EXECUTE sp_changedbowner '<useraccount>'
     -- example for sa: exec sp_changedbowner 'sa'
     -- example for user account: exec sp_changedbowner 'sqlrepro\administrator' 
     ```
@@ -153,9 +157,11 @@ The Distribution Agent finds data in the distribution database and then applies 
 2. The **Distributor to Subscriber History** dialog box opens and clarifies what error the agent is encountering: 
 
      ![Error details for the Distribution Agent](media/troubleshooting-tran-repl-errors/dist-history-error.png)
-    
-        Error messages:
-        Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+
+    ```console
+    Error messages:
+    Agent 'NODE1\SQL2016-AdventureWorks2012-AdvWorksProductTrans-NODE2\SQL2016-7' is retrying after an error. 89 retries attempted. See agent job history in the Jobs folder for more details.
+    ```
 
 3. The error indicates that the Distribution Agent is retrying. To find more information, check the job history for the Distribution Agent: 
 
@@ -170,9 +176,11 @@ The Distribution Agent finds data in the distribution database and then applies 
 5. Select one of the error entries and view the error text at the bottom of the window:  
 
     ![Error text that indicates a wrong password for the distribution agent](media/troubleshooting-tran-repl-errors/dist-pw-wrong.png)
-    
-        Message:
-        Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+
+    ```console
+    Message:
+    Unable to start execution of step 2 (reason: Error authenticating proxy NODE1\repl_distribution, system error: The user name or password is incorrect.)
+    ```
 
 6. This error indicates that the password that the Distribution Agent used is incorrect. To resolve it:
 
@@ -189,11 +197,13 @@ The Distribution Agent finds data in the distribution database and then applies 
     Open the **Distribution to Subscriber** history by right-clicking the subscription in **Replication Monitor** > **View Details**. Here, the error is now different: 
 
     ![Error that indicates the Distribution Agent can't connect](media/troubleshooting-tran-repl-errors/dist-agent-cant-connect.png)
-           
-        Connecting to Subscriber 'NODE2\SQL2016'        
-        Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
-        Number:  18456
-        Message: Login failed for user 'NODE2\repl_distribution'.
+
+    ```console
+    Connecting to Subscriber 'NODE2\SQL2016'        
+    Agent message code 20084. The process could not connect to Subscriber 'NODE2\SQL2016'.
+    Number:  18456
+    Message: Login failed for user 'NODE2\repl_distribution'.
+    ```
 
 8. This error indicates that the Distribution Agent could not connect to the subscriber, because the login failed for user **NODE2\repl_distribution**. To investigate further, connect to the subscriber and open the *current* SQL Server error log under the **Management** node in Object Explorer: 
 
@@ -229,8 +239,10 @@ You can use verbose logging to see more detailed information about errors occurr
 
 1. In the **Command** box, start a new line, enter the following text, and select **OK**: 
 
-       -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
-    
+    ```console
+    -Output C:\Temp\OUTPUTFILE.txt -Outputverboselevel 3
+    ```
+
     You can modify the location and verbosity level according to your preference.
 
     ![Verbose output in the properties for the job step](media/troubleshooting-tran-repl-errors/verbose.png)

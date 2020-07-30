@@ -16,7 +16,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Monitoring and Troubleshooting Managed Database Objects
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic provides information about the tools that can be used to monitor and troubleshoot managed database objects and assemblies running in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Profiler Trace Events  

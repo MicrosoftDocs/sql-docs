@@ -40,7 +40,9 @@ text_of_comment
 */  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *text_of_comment*  
  Is the text of the comment. This is one or more character strings.  
   

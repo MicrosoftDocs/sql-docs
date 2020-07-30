@@ -13,7 +13,7 @@ ms.author: mathoma
 
 # IServerVirtualDeviceSet2::EndConfiguration (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 The **EndConfiguration** function informs the VDI that the server is finished with its configuration.
 

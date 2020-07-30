@@ -1,5 +1,6 @@
 ---
 title: "Creating a Valid Connection String Using TCP IP"
+description: Learn how to create a valid connection string when using TCP/IP to connect to an instance of SQL Server. View examples of valid strings.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -19,7 +20,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Creating a Valid Connection String Using TCP IP
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   To create a valid connection string using TCP/IP, you must:  
   
 -   Specify an **Alias Name**.  

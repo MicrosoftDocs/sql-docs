@@ -1,5 +1,6 @@
 ---
 title: "Change Resource Pool Settings | Microsoft Docs"
+description: Learn how to change resource pool settings by using SQL Server Management Studio or Transact-SQL. You must have the CONTROL SERVER permission.
 ms.custom: ""
 ms.date: "03/17/2016"
 ms.prod: sql
@@ -14,7 +15,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Change Resource Pool Settings
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   You can change resource pool settings by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)].  
   

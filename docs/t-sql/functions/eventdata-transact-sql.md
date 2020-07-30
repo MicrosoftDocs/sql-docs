@@ -22,11 +22,11 @@ helpviewer_keywords:
   - "status information [SQL Server], events"
   - "DDL triggers, returning event data"
 ms.assetid: 03a80e63-6f37-4b49-bf13-dc35cfe46c44
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # EVENTDATA (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns information about server or database events. When an event notification fires, and the specified service broker receives the results, `EVENTDATA` is called. A DDL or logon trigger also support internal use of `EVENTDATA`.  
   

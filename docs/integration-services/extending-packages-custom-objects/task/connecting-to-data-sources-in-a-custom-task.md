@@ -24,7 +24,7 @@ ms.author: chugu
 ---
 # Connecting to Data Sources in a Custom Task
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Tasks connect to external data sources to retrieve or save data by using a connection manager. At design time, a connection manager represents a logical connection, and describes key information such as the server name and any authentication properties. At run time, tasks call the <xref:Microsoft.SqlServer.Dts.Runtime.ConnectionManager.AcquireConnection%2A> method of the connection manager to establish the physical connection to the data source.  

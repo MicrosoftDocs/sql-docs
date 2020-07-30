@@ -24,7 +24,7 @@ author: rothja
 ms.author: jroth
 ---
 # XML Construction (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   In XQuery, you can use the **direct** and **computed** constructors to construct XML structures within a query.  
   

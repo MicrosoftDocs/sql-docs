@@ -23,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # DROP FULLTEXT STOPLIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Drops a full-text stoplist from the database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -40,7 +40,9 @@ DROP FULLTEXT STOPLIST stoplist_name
 ;  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *stoplist_name*  
  Is the name of the full-text stoplist to drop from the database.  
   

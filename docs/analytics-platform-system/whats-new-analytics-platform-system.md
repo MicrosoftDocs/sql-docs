@@ -2,7 +2,6 @@
 title: "What's new"
 description: "See what's new in Microsoft Analytics Platform System, a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse."
 author: "mzaman1"
-manager: "craigg"
 ms.prod: "sql"
 ms.technology: data-warehouse
 ms.topic: "conceptual"
@@ -60,6 +59,8 @@ APS CU7.3 improves query performance with common subexpression elimination in SQ
 
 ### APS Informatica connector for Informatica 10.2.0 published
 We have released a new version of Informatica connectors for APS that works with Informatica version 10.2.0 and 10.2.0 Hotfix 1. The new connectors can be downloaded from [download site](https://www.microsoft.com/download/details.aspx?id=57472).
+> [!NOTE]
+> APS Informatica connector for Informatica 10.2.0 or 10.2.0 Hotfix 1 does not work on strict TLS1.2 and requires TLS1.0 and 1.1 to be fully functional.
 
 #### Supported Versions
 

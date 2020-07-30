@@ -15,7 +15,7 @@ ms.author: mikeray
 ---
 # Back up Multiple Databases to Azure Blob Storage - PowerShell
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic provides sample scripts that can be used to automate backups to Azure Blob storage service using PowerShell cmdlets.  
   

@@ -11,12 +11,12 @@ author: stevestein
 ms.author: sstein
 ---
 # LOCALDB_ERROR_INVALID_INSTANCE_NAME
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| --------- | ----- |
 |Product Name|SQL Server|  
 |Event ID|283|  
 |Event Source|SQL Server Local Database Runtime 12.0|  

@@ -1,5 +1,6 @@
 ---
 title: "About Log Shipping (SQL Server) | Microsoft Docs"
+description: Learn about SQL Server log shipping, which sends transaction log backups from a primary database on a primary server instance to secondary databases.
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -28,7 +29,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # About Log Shipping (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Log shipping allows you to automatically send transaction log backups from a *primary database* on a *primary server* instance to one or more *secondary databases* on separate *secondary server* instances. The transaction log backups are applied to each of the secondary databases individually. An optional third server instance, known as the *monitor server*, records the history and status of backup and restore operations and, optionally, raises alerts if these operations fail to occur as scheduled.  
   

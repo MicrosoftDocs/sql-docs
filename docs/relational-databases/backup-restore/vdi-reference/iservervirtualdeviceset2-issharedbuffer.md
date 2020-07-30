@@ -13,7 +13,7 @@ ms.author: mathoma
 
 # IServerVirtualDeviceSet2::IsSharedBuffer (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 The **IsSharedBuffer** function determines if the given buffer address refers to one of the shared buffers made available by the AllocateBuffer method.
 

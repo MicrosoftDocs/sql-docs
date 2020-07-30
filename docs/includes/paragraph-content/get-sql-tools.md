@@ -1,4 +1,5 @@
-##  ![info_tip](../media/info-tip.png) Get SQL Tools
-- [![Download from Microsoft Download Center](../media/download2.png)](../../ssms/download-sql-server-management-studio-ssms.md) [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
-- [![Download from Microsoft Download Center](../media/download2.png)](../../ssdt/download-sql-server-data-tools-ssdt.md) [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)
-- [![Download from Microsoft Download Center](../media/download2.png)](../../azure-data-studio/download.md) [Download Azure Data Studio](../../azure-data-studio/download.md)
+## :::image type="icon" source="../media/info-tip.png" border="false"::: Get SQL Tools
+
+- [Download SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md)
+- [Download SQL Server Data Tools (SSDT)](../../ssdt/download-sql-server-data-tools-ssdt.md)
+- [Download Azure Data Studio](../../azure-data-studio/download.md)

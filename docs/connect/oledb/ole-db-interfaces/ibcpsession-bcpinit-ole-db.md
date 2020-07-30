@@ -1,5 +1,5 @@
 ---
-title: "IBCPSession::BCPInit (OLE DB) | Microsoft Docs"
+title: "IBCPSession::BCPInit (OLE DB driver) | Microsoft Docs"
 description: "IBCPSession::BCPInit (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"
@@ -17,7 +17,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # IBCPSession::BCPInit (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -19,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DENY System Object Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Denies permissions on system objects such as stored procedures, extended stored procedures, functions, and views.  
   
@@ -32,7 +32,9 @@ ms.author: vanto
 DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  [ **sys.**]  
  The **sys** qualifier is required only when you are referring to catalog views and dynamic management views.  
   

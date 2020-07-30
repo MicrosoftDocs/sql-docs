@@ -37,9 +37,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Remarks  
  This view has the following relationship cardinalities.  
   
-||||  
-|-|-|-|  
-|From|To|Relationship|  
+| From | To | Relationship |
+| ---- | -- | ------------ |
 |sys.database_event_session_events.event_session_id|sys.database_event_sessions.event_session_id|Many to one|  
   
 ## See Also  

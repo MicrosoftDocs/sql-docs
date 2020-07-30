@@ -17,7 +17,7 @@ ms.author: genemi
 ---
 # Use Full-Text Search with XML Columns
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   You can create a full-text index on XML columns that indexes the content of the XML values, but ignores the XML markup. Element tags are used as token boundaries. The following items are indexed:  
   

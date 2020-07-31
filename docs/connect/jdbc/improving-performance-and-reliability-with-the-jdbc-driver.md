@@ -32,7 +32,7 @@ The topics in this section describe various techniques for improving application
 |[Sparse columns](../../connect/jdbc/sparse-columns.md)|Discusses the JDBC driver's support for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sparse columns.|  
 |[Prepared statement metadata caching for the JDBC driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Discusses the techniques for improving performance with prepared statement queries.|
 |[Using bulk copy API for batch insert operation](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|Describes how to enable Bulk Copy API for batch insert operations and its benefits.|
-|Not sending String parameters as Unicode|When working with **CHAR**, **VARCHAR**, and **LONGVARCHAR** data, users can set the connection property **sendStringParametersAsUnicode** to `false` for optimal performance gain. For details, visit [Setting the connection properties](https://docs.microsoft.com/sql/connect/jdbc/setting-the-connection-properties?view=sql-server-ver15). |
+|Not sending String parameters as Unicode|When working with **CHAR**, **VARCHAR**, and **LONGVARCHAR** data, users can set the connection property **sendStringParametersAsUnicode** to `false` for optimal performance gain. For details, visit [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md). |
 
 ## See also
 

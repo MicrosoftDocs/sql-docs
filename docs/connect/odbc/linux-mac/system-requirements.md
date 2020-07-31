@@ -30,28 +30,28 @@ The Linux and macOS drivers SQL version compatibility is the same as the [Window
 
 Versions 17, 13.1, and 13 of the Linux and macOS drivers are supported on the x64 architecture of the following operating systems:
 
-|Supported Operating System     |17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
-|-------------------------------|----|----|----|----|----|----|----|--|
-|Apple OS X 10.11 (El Capitan)  | |Y|Y|Y|Y|Y|Y|Y|
-|Apple macOS 10.12 (Sierra)     | |Y|Y|Y|Y|Y|Y|Y|
-|Apple macOS 10.13 (High Sierra)|Y|Y|Y|Y|Y|Y|Y|Y|
-|Apple macOS 10.14 (Mojave)     |Y|Y|Y| | | | | |
-|Apple macOS 10.15 (Catalina)   |Y| | | | | | | |
-|Alpine Linux 3.11              |Y| | | | | | | |
-|Debian Linux 8                 | |Y|Y|Y|Y|Y|Y|Y|
-|Debian Linux 9                 |Y|Y|Y|Y|Y|Y|Y|Y|
-|Debian Linux 10                |Y|Y| | | | | | |
-|Oracle Linux 8                 |Y| | | | | | | |
-|RedHat Enterprise Linux 6      |Y|Y|Y|Y|Y|Y|Y|Y|
-|RedHat Enterprise Linux 7      |Y|Y|Y|Y|Y|Y|Y|Y|
-|RedHat Enterprise Linux 8      |Y|Y| | | | | | |
-|SUSE Linux Enterprise Server 11<sup>1</sup>|Y|Y|Y|Y|Y|Y|Y|Y|
-|SUSE Linux Enterprise Server 12|Y|Y|Y|Y|Y|Y|Y|Y|
-|SUSE Linux Enterprise Server 15|Y|Y|Y| | | | | |
-|Ubuntu Linux 14.04             | |Y|Y|Y|Y|Y|Y|Y|
-|Ubuntu Linux 16.04             |Y|Y|Y|Y|Y|Y|Y|Y|
-|Ubuntu Linux 18.04             |Y|Y|Y|Y| | | | |
-|Ubuntu Linux 19.10             |Y| | | | | | | |
+|Supported Operating System     |17.6|17.5|17.4|17.3|17.2|17.1|17.0|13.1|13|
+|-------------------------------|----|----|----|----|----|----|----|----|--|
+|Apple OS X 10.11 (El Capitan)  | | |Y|Y|Y|Y|Y|Y|Y|
+|Apple macOS 10.12 (Sierra)     | | |Y|Y|Y|Y|Y|Y|Y|
+|Apple macOS 10.13 (High Sierra)|Y|Y|Y|Y|Y|Y|Y|Y|Y|
+|Apple macOS 10.14 (Mojave)     |Y|Y|Y|Y| | | | | |
+|Apple macOS 10.15 (Catalina)   |Y|Y| | | | | | | |
+|Alpine Linux 3.11              |Y|Y| | | | | | | |
+|Debian Linux 8                 |Y|Y|Y|Y|Y|Y|Y|Y|Y|
+|Debian Linux 9                 |Y|Y|Y|Y|Y|Y|Y|Y|Y|
+|Debian Linux 10                |Y|Y|Y| | | | | | |
+|Oracle Linux 8                 |Y|Y| | | | | | | |
+|RedHat Enterprise Linux 6      |Y|Y|Y|Y|Y|Y|Y|Y|Y|
+|RedHat Enterprise Linux 7      |Y|Y|Y|Y|Y|Y|Y|Y|Y|
+|RedHat Enterprise Linux 8      |Y|Y|Y| | | | | | |
+|SUSE Linux Enterprise Server 11<sup>1</sup>|Y|Y|Y|Y|Y|Y|Y|Y|Y|
+|SUSE Linux Enterprise Server 12|Y|Y|Y|Y|Y|Y|Y|Y|Y|
+|SUSE Linux Enterprise Server 15|Y|Y|Y|Y| | | | | |
+|Ubuntu Linux 14.04             | | |Y|Y|Y|Y|Y|Y|Y|
+|Ubuntu Linux 16.04             |Y|Y|Y|Y|Y|Y|Y|Y|Y|
+|Ubuntu Linux 18.04             |Y|Y|Y|Y|Y| | | | |
+|Ubuntu Linux 20.04             |Y| | | | | | | | |
 
 <sup>1</sup> ODBC Driver 17 supports SUSE Linux Enterprise Server 11 SP4 only
 

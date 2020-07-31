@@ -50,7 +50,7 @@ In the original public dataset, the taxi identifiers and trip records were provi
 
 **Taxi identifiers**
   
-+ The _medallion_ column represents the taxi's unique id number.
++ The _medallion_ column represents the taxi's unique ID number.
   
 + The _hack\_license_ column contains the taxi driver's license number (anonymized).
   
@@ -288,11 +288,11 @@ To view the plot, open the destination folder and review the files that were cre
 
 3. Open `rHistograms_Tip_and_Fare_Amount.pdf` to view distribution of tip amounts, plotted against the fare amounts.
 
-  ![histogram showing tip_amount and fare_amount](media/rsql-devtut-tipamtfareamt.PNG "histogram showing tip_amount and fare_amount")
+   ![histogram showing tip_amount and fare_amount](media/rsql-devtut-tipamtfareamt.PNG "histogram showing tip_amount and fare_amount")
 
 4. Open `rXYPlots_Tip_vs_Fare_Amount.pdf` to view a scatterplot with the fare amount on the x-axis and the tip amount on the y-axis.
 
-  ![tip amount plotted over fare amount](media/rsql-devtut-tipamtbyfareamt.PNG "tip amount plotted over fare amount")
+   ![tip amount plotted over fare amount](media/rsql-devtut-tipamtbyfareamt.PNG "tip amount plotted over fare amount")
 
 ## Next steps
 

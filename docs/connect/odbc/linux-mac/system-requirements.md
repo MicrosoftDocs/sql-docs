@@ -50,7 +50,6 @@ Versions 17, 13.1, and 13 of the Linux and macOS drivers are supported on the x6
 |Ubuntu Linux 14.04             | | |Y|Y|Y|Y|Y|Y|Y|
 |Ubuntu Linux 16.04             |Y|Y|Y|Y|Y|Y|Y|Y|Y|
 |Ubuntu Linux 18.04             |Y|Y|Y|Y|Y| | | | |
-|Ubuntu Linux 19.10             |Y|Y| | | | | | | |
 |Ubuntu Linux 20.04             |Y| | | | | | | | |
 
 <sup>1</sup> ODBC Driver 17 supports SUSE Linux Enterprise Server 11 SP4 only

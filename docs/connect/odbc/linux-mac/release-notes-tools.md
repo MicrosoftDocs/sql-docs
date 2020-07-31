@@ -22,7 +22,7 @@ This article lists and describes what's new in the versioned releases of the [!I
 
 | Feature added | Details |
 | :------------ | :------ |
-| Sqlcmd Command Line Parser Updated | Fixed bugs where unexpected behavior occured when using certain options in different orders. |
+| Sqlcmd Command Line Parser Updated | Fixed bugs where unexpected behavior occurred when using certain options in different orders. |
 | Sqlcmd Error Messages Updated | Fixed various inconsistencies in how errors in sqlcmd were returned. |
 | Sqlcmd -Y Option Fixed | Fixed issue where -Y option was ineffective |
 | Sqlcmd Column Name Truncation Fixed | Fixed issue where column names would be truncated incorrectly |

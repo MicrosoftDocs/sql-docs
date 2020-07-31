@@ -83,21 +83,19 @@ The process of building a machine learning solution is a complex one that can in
 + training and tuning the model
 + deployment to production
 
-Development and testing of the actual code is best performed using a dedicated R development environment. However, after the script is fully tested, you can easily deploy it to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in the familiar environment of [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)].
+Development and testing of the actual code is best performed using a dedicated R development environment. However, after the script is fully tested, you can easily deploy it to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] using [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures in the familiar environment of Azure Data Studio or [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]. Wrapping external code in stored procedures is the primary mechanism for operationalizing code in SQL Server.
 
-The purpose of this multi-part tutorial is an introduction to a typical workflow for migrating "finished R code" to  SQL Server. 
+After the model has been saved to the database, you can call the model for predictions from [!INCLUDE[tsql](../../includes/tsql-md.md)] by using stored procedures.
 
-- [Lesson 1: Explore and visualize data shape and distribution by calling R functions in stored procedures](../tutorials/sqldev-explore-and-visualize-the-data.md)
-
-- [Lesson 2: Create data features using R in T-SQL functions](sqldev-create-data-features-using-t-sql.md)
-  
-- [Lesson 3: Train and save an R model using functions and stored procedures](sqldev-train-and-save-a-model-using-t-sql.md)
-  
-- [Lesson 4: Predict potential outcomes using an R model in a stored procedure](../tutorials/sqldev-operationalize-the-model.md)
-
-After the model has been saved to the database, call the model for predictions from [!INCLUDE[tsql](../../includes/tsql-md.md)] by using stored procedures.
+Whether you're a SQL programmer new to R, or an R developer new to SQL, this five-part tutorial series introduces a typical workflow for conducting in-database analytics with R and SQL Server.
 
 ## Next steps
 
+In this article, you:
+
+> [!div class="checklist"]
+> + Installed prerequisites
+> + Restored the sample database
+
 > [!div class="nextstepaction"]
-> [Explore and visualize data using R functions in stored procedures](../tutorials/sqldev-explore-and-visualize-the-data.md)
+> [Explore and visualize data using R functions in stored procedures](sqldev-explore-and-visualize-the-data.md)

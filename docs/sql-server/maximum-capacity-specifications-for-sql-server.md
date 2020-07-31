@@ -104,17 +104,17 @@ Maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](.
 
 Maximum sizes and numbers of various objects that were tested in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility.
 
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility object||Maximum sizes/numbers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|
-|----------------------------------------------|-|------------------------------------------------------------------|
-|Computers (physical computers or virtual machines) per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility||100|
-|Instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per computer||5|
-|Total number of instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility||200<sup>*</sup>|
-|User databases per instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], including data-tier applications||50|
-|Total number of user databases per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility||1,000|
-|File groups per database||1|
-|Data files per file group||1|
-|Log files per database||1|
-|Volumes per computer||3|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility object|Maximum sizes/numbers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|
+|----------------------------------------------|------------------------------------------------------------------|
+|Computers (physical computers or virtual machines) per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility|100|
+|Instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per computer|5|
+|Total number of instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility|200<sup>*</sup>|
+|User databases per instance of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], including data-tier applications|50|
+|Total number of user databases per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility|1,000|
+|File groups per database|1|
+|Data files per file group|1|
+|Log files per database|1|
+|Volumes per computer|3|
 
 <sup>*</sup> The maximum number of managed instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] supported by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility may vary based on the hardware configuration of the server. For getting started information, see [SQL Server Utility Features and Tasks](../relational-databases/manage/sql-server-utility-features-and-tasks.md). [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Utility control point is not available in every edition of [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. For a list of features that are supported by the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], see [Features Supported by the Editions of SQL Server 2016](https://msdn.microsoft.com/library/cc645993.aspx).
 
@@ -122,10 +122,10 @@ Maximum sizes and numbers of various objects that were tested in the [!INCLUDE[s
 
 Maximum sizes and numbers of various objects that were tested in the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] data-tier applications (DAC).
 
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC object||Maximum sizes/numbers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|
-|------------------------------------------|-|------------------------------------------------------------------|
-|Databases per DAC||1|
-|Objects per DAC <sup>*</sup>||Limited by the number of objects in a database, or available memory.|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] DAC object|Maximum sizes/numbers [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] (64-bit)|
+|------------------------------------------|------------------------------------------------------------------|
+|Databases per DAC|1|
+|Objects per DAC <sup>*</sup>|Limited by the number of objects in a database, or available memory.|
 
 <sup>*</sup> The types of objects included in the limit are users, tables, views, stored procedures, user-defined functions, user-defined data type, database roles, schemas, and user-defined table types.
 
@@ -133,15 +133,15 @@ Maximum sizes and numbers of various objects that were tested in the [!INCLUDE[s
 
 Maximum sizes and numbers of various objects defined in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Replication.
 
-|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Replication object||Maximum sizes/numbers SQL Server (64-bit)|
-|--------------------------------------------------|-|---------------------------------------------------|
-|Articles (merge publication)||2048|
-|Articles (snapshot or transactional publication)||32,767|
-|Columns in a table<sup>*</sup> (merge publication)||246|
-|Columns in a table<sup>**</sup> ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snapshot or transactional publication)||1,000|
-|Columns in a table<sup>**</sup> (Oracle snapshot or transactional publication)||995|
-|Bytes for a column used in a row filter (merge publication)||1,024|
-|Bytes for a column used in a row filter (snapshot or transactional publication)||8,000|
+|[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Replication object|Maximum sizes/numbers SQL Server (64-bit)|
+|--------------------------------------------------|---------------------------------------------------|
+|Articles (merge publication)|2048|
+|Articles (snapshot or transactional publication)|32,767|
+|Columns in a table<sup>*</sup> (merge publication)|246|
+|Columns in a table<sup>**</sup> ([!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] snapshot or transactional publication)|1,000|
+|Columns in a table<sup>**</sup> (Oracle snapshot or transactional publication)|995|
+|Bytes for a column used in a row filter (merge publication)|1,024|
+|Bytes for a column used in a row filter (snapshot or transactional publication)|8,000|
 
 <sup>*</sup>If row tracking is used for conflict detection (the default), the base table can include a maximum of 1,024 columns, but columns must be filtered from the article so that a maximum of 246 columns is published. If column tracking is used, the base table can include a maximum of 246 columns.
 

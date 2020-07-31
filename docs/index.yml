@@ -1,10 +1,10 @@
 ### YamlMime:Hub
 title: Microsoft SQL documentation
-summary: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud."
+summary: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud. (https://aka.ms/sqldocs)"
 brand: sql
 metadata:
    title: Microsoft SQL documentation | Microsoft Docs
-   description: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud."
+   description: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud. (https://aka.ms/sqldocs)"
    ms.topic: hub-page
 
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new

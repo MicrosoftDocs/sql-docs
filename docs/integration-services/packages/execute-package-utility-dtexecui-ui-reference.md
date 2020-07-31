@@ -62,9 +62,8 @@ ms.author: chugu
  **Package source**  
  Specify the location of the package to run, using the following options:  
   
-|||  
-|-|-|  
 |Value|Description|  
+|-|-|  
 |**SQL Server**|Select this option when the package resides in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Specify an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and provide a user name and password for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Each user name and password adds the **/USER** _username_ and **/PASSWORD** _password_ options to the command prompt.|  
 |**File system**|Select this option when the package resides in the file system.|  
 |**SSIS Package Store**|Select this option when the package resides in the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Package Store.|  

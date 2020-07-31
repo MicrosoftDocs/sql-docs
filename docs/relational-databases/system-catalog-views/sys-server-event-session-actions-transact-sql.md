@@ -22,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.server_event_session_actions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each action on each event of an event session.  
   

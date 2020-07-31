@@ -37,13 +37,13 @@ If you need to download the installer in a language other than the one detected 
 | Feature added | Details |
 | :------------ | :------ |
 | Support for [SQL Data Discovery and Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification) | [Using data classification](features/using-data-classification.md) |
-| Azure Active Directory authentication support (`ActiveDirectoryServicePrincipal`). | [Using Azure Active Directory](features/using-azure-active-directory.md). |
+| Azure Active Directory authentication support (`ActiveDirectoryServicePrincipal`) | [Using Azure Active Directory](features/using-azure-active-directory.md) |
 
 ### Bugs fixed
 
 | Bug fixed | Details |
 | :-------- | :------ |
-| Fixed an issue with embedded NUL characters | Fixed a bug which resulted in the driver returning an incorrect length of strings with embedded NUL characters. |
+| Fixed an issue with embedded NUL characters. | Fixed a bug which resulted in the driver returning an incorrect length of strings with embedded NUL characters. |
 
 ## Previous Releases
 
@@ -68,13 +68,13 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Bug fixed | Details |
 | :-------- | :------ |
-| Fixed various bugs in the [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) interface | A few bugs affecting multibyte code pages resulted in the interface prematurely reporting the end of the stream during the read operation.|
-| Fixed a memory leak in the [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) interface | Fixed a memory leak in the [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) interface when the `SSPROP_IRowsetFastLoad` property was enabled. |
+| Fixed various bugs in the [ISequentialStream](https://docs.microsoft.com/previous-versions/windows/desktop/ms718035(v=vs.85)) interface. | A few bugs affecting multibyte code pages resulted in the interface prematurely reporting the end of the stream during the read operation.|
+| Fixed a memory leak in the [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) interface. | Fixed a memory leak in the [IOpenRowset::OpenRowset](https://docs.microsoft.com/previous-versions/windows/desktop/ms716724(v=vs.85)) interface when the `SSPROP_IRowsetFastLoad` property was enabled. |
 | Fixed a bug in scenarios involving a `sql_variant` data type and non-ASCII strings. | Executing certain scenarios involving a `sql_variant` data type and non-ASCII strings may result in data corruption. For details, see: [Known issues](ole-db-data-types/ssvariant-structure.md#known-issues). |
-| Fixed issues with the *Test Connection* button in the [UDL configuration dialog](help-topics/data-link-pages.md) | The *Test Connection* button in the [UDL configuration dialog](help-topics/data-link-pages.md) now honors initialization properties set in the *All* tab. |
-| Fixed the `SSPROP_INIT_PACKETSIZE` property default value handling | Fixed an unexpected error when the `SSPROP_INIT_PACKETSIZE` property was set to its default value of `0`. For details about this property, see [Initialization and Authorization Properties](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
-| Fixed buffer overflow issues in [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) | Fixed buffer overflow issues when using malformed data files. |
-| Fixed accessibility issues | Fixed accessibility issues in the installer UI and the [SQL Server Login dialog](help-topics/sql-server-login-dialog.md) (reading content, tab stops). |
+| Fixed issues with the *Test Connection* button in the [UDL configuration dialog](help-topics/data-link-pages.md). | The *Test Connection* button in the [UDL configuration dialog](help-topics/data-link-pages.md) now honors initialization properties set in the *All* tab. |
+| Fixed the `SSPROP_INIT_PACKETSIZE` property default value handling. | Fixed an unexpected error when the `SSPROP_INIT_PACKETSIZE` property was set to its default value of `0`. For details about this property, see [Initialization and Authorization Properties](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
+| Fixed buffer overflow issues in [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md). | Fixed buffer overflow issues when using malformed data files. |
+| Fixed accessibility issues. | Fixed accessibility issues in the installer UI and the [SQL Server Login dialog](help-topics/sql-server-login-dialog.md) (reading content, tab stops). |
 
 ## 18.3.0
 
@@ -91,7 +91,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------------ | :------ |
-| Azure Active Directory authentication support (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`). | [Using Azure Active Directory](features/using-azure-active-directory.md). |
+| Azure Active Directory authentication support (`ActiveDirectoryInteractive`, `ActiveDirectoryMSI`) | [Using Azure Active Directory](features/using-azure-active-directory.md) |
 | Include Azure Active Directory Authentication Library (adal.dll) in the installer | Now included in the base driver installation, the OLE DB installer will upgrade existing installations of the Microsoft Active Directory Authentication Library for SQL Server, removing it from the list of installed applications in Windows. |
 | &nbsp; | &nbsp; |
 
@@ -119,7 +119,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------------ | :------ |
-| Support for driver upgrades from the SQL Server removable media. | This improvement allows driver upgrades directly from the SQL Server removable media. |
+| Support for driver upgrades from the SQL Server removable media | This improvement allows driver upgrades directly from the SQL Server removable media. |
 | &nbsp; | &nbsp; |
 
 ## 18.2.2
@@ -155,8 +155,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------------ | :------ |
-| Support for UTF-8 server encoding. | [UTF-8 Support in OLE DB Driver for SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md). |
-| Azure Active Directory authentication support. | [Using Azure Active Directory](features/using-azure-active-directory.md). |
+| Support for UTF-8 server encoding | [UTF-8 Support in OLE DB Driver for SQL Server](features/utf-8-support-in-oledb-driver-for-sql-server.md) |
+| Azure Active Directory authentication support | [Using Azure Active Directory](features/using-azure-active-directory.md) |
 | &nbsp; | &nbsp; |
 
 ## 18.1.0
@@ -174,7 +174,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------------ | :------ |
-| Support for the `UseFMTONLY` connection string keyword, and for the `SSPROP_INIT_USEFMTONLY` initialization property. | `UseFMTONLY` controls how metadata is retrieved when connecting to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and newer.<br/><br/>For more information, see: [Using Connection String Keywords with OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
+| Support for the `UseFMTONLY` connection string keyword, and for the `SSPROP_INIT_USEFMTONLY` initialization property | `UseFMTONLY` controls how metadata is retrieved when connecting to [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and newer.<br/><br/>For more information, see: [Using Connection String Keywords with OLE DB Driver for SQL Server](applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### Bugs fixed in 18.1.0

@@ -1,5 +1,5 @@
 ---
-title: "IBCPSession2::BCPSetBulkMode | Microsoft Docs"
+title: "IBCPSession2::BCPSetBulkMode (OLE DB driver) | Microsoft Docs"
 description: "Using IBCPSession2::BCPSetBulkMode to create bulk copy out of either a query or a table"
 ms.custom: ""
 ms.date: "06/14/2018"

@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Change Data Capture for Oracle by Attunity
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 The Change Data Capture for Oracle by Attunity download includes the following 2 components.

@@ -1,5 +1,5 @@
 ---
-title: "Isolation Levels (OLE DB) | Microsoft Docs"
+title: "Isolation levels (OLE DB driver) | Microsoft Docs"
 description: "Isolation Levels (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

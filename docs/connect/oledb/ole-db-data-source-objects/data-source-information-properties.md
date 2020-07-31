@@ -1,5 +1,5 @@
 ---
-title: "Data Source Information Properties | Microsoft Docs"
+title: "Data source information properties (OLE DB driver) | Microsoft Docs"
 description: "Data Source information properties"
 ms.custom: ""
 ms.date: "06/14/2018"

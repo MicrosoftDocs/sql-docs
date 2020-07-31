@@ -1,5 +1,5 @@
 ---
-title: "IBCPSession::BCPReadFmt (OLE DB) | Microsoft Docs"
+title: "IBCPSession::BCPReadFmt (OLE DB driver) | Microsoft Docs"
 description: "Using IBCPSession::BCPReadFmt for reading data from a format file (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

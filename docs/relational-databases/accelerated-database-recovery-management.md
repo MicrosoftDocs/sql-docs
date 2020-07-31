@@ -1,5 +1,5 @@
 ---
-title: "Accelerated database recovery | Microsoft Docs"
+title: "Manage accelerated database recovery | Microsoft Docs"
 ms.date: "08/12/2019"
 ms.prod: sql
 ms.prod_service: backup-restore
@@ -15,7 +15,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Manage accelerated database recovery
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 ## Enabling and controlling ADR
 

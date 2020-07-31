@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 6-2: Convert the project to the Project Deployment Model
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

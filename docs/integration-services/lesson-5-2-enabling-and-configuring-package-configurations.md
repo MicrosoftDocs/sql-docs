@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 5-2: Enable and configure package configurations
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

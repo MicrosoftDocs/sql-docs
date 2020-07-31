@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # Azure Blob Download Task
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 The Azure Blob Download Task enables an SSIS package to download files from an Azure blob storage.

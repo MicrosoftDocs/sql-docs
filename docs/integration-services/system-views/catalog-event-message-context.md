@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # catalog.event_message_context 
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -35,9 +35,8 @@ ms.author: chugu
 ## Remarks  
  The following table lists the context types.  
   
-||||  
-|-|-|-|  
 |Context type value|Type Name|Description|  
+|-|-|-|  
 |10|Task|State of a task when an error occurred.|  
 |20|Pipeline|Error from a pipeline component: source, destination, or transformation component.|  
 |30|Sequence|State of a sequence.|  

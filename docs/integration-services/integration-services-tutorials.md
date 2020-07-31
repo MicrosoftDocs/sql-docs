@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Integration Services Tutorials
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This section contains tutorials [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

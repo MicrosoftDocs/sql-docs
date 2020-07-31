@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 3-1: Copy the Lesson 2 package
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

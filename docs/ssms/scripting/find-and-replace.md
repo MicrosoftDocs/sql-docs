@@ -1,5 +1,6 @@
 ---
 title: "Find and Replace"
+description: Learn how to use the Find and Replace dialog box to find and replace text.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Tutorial: Using the OData Source
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This tutorial walks you through the process to extract the **Employees** collection from the sample **Northwind** OData service (https://services.odata.org/V3/Northwind/Northwind.svc/), and then load it into a flat file.  

@@ -1,5 +1,5 @@
 ---
-title: "Removing a Column from a SQL Server Table | Microsoft Docs"
+title: Remove column from SQL Server table (OLE DB driver)
 description: "Removing a column from a SQL Server table using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

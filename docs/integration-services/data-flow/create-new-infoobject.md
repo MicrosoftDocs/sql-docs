@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Create New InfoObject
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Create New InfoObject** dialog box to create a new InfoObject in the SAP Netweaver BW system.  

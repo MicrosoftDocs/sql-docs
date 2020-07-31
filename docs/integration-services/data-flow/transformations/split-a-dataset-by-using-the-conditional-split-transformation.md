@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # Split a Dataset by Using the Conditional Split Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To add and configure a Conditional Split transformation, the package must already include at least one Data Flow task and a source.  

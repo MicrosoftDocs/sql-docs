@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # ~ (Bitwise Not) (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Performs a bitwise negation of an integer. This operator can be applied to signed and unsigned integer data types.  

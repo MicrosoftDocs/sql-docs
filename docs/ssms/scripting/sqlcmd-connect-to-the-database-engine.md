@@ -1,5 +1,6 @@
 ---
 title: "Connect to the Database Engine With sqlcmd"
+description: "Learn how to select which protocol sqlcmd uses to communicate with SQL Server. The choices are: TCP/IP, named pipes, and shared memory." 
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # Connect Components in a Data Flow
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This procedure describes how to connect the output of components in a data flow to other components within the same data flow.  

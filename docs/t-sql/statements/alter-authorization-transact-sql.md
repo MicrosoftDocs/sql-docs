@@ -121,7 +121,7 @@ ALTER AUTHORIZATION ON
 \<class_type>
  Is the securable class of the entity for which the owner is being changed. OBJECT is the default.    
     
-|||    
+|Class|Product|    
 |-|-|    
 |OBJECT|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
 |ASSEMBLY|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    

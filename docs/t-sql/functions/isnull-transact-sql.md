@@ -1,5 +1,5 @@
 ---
-title: "ISNULL (Transact-SQL) | Microsoft Docs"
+title: ISNULL (Transact-SQL)
 ms.custom: ""
 ms.date: "03/06/2017"
 ms.prod: sql
@@ -12,7 +12,7 @@ f1_keywords:
   - "ISNULL_TSQL"
   - "IFNULL_TSQL"
 dev_langs: 
-  - "TSQL"
+  - "TSQL" 
 helpviewer_keywords: 
   - "replacing null values"
   - "null values [SQL Server], ISNULL"
@@ -23,7 +23,9 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# ISNULL (Transact-SQL)
+
+# ISNULL (Transact-SQL) 
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Replaces NULL with the specified replacement value.  
@@ -36,7 +38,9 @@ Replaces NULL with the specified replacement value.
 ISNULL ( check_expression , replacement_value )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *check_expression*  
  Is the [expression](../../t-sql/language-elements/expressions-transact-sql.md) to be checked for NULL. *check_expression* can be of any type.  
   

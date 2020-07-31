@@ -1,5 +1,5 @@
 ---
-title: "Dropping a SQL Server Table | Microsoft Docs"
+title: "Drop SQL Server table (OLE DB driver) | Microsoft Docs"
 description: "Dropping a SQL Server table using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

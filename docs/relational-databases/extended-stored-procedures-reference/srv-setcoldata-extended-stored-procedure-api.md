@@ -1,5 +1,6 @@
 ---
 title: "srv_setcoldata (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn srv_setcoldata in the Extended Stored Procedure API specifies the current address for a column's data. 
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

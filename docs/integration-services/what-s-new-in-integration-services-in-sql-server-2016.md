@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # What&#39;s New in Integration Services in SQL Server 2016
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

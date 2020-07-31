@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Column Pattern Profile Request Options (Data Profiling Task)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Request Properties** pane of the **Profile Requests** page to set the options for the **Column Pattern Profile Request** selected in the requests pane. A Column Pattern profile reports a set of regular expressions that cover the specified percentage of values in a string column. This profile can help you identify problems in your data, such as invalid strings, and can suggest regular expressions that can be used in the future to validate new values. For example, a pattern profile of a column of United States Zip Codes might produce the regular expressions \d{5}-\d{4}, \d{5}, and \d{9}. If you see other regular expressions, your data likely contains values that are invalid or in an incorrect format.  

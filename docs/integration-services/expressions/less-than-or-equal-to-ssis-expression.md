@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # &lt;= (Less Than or Equal To) (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Performs a comparison to determine if the first expression is less than or equal to the second one. The expression evaluator automatically converts many data types before it performs the comparison.  

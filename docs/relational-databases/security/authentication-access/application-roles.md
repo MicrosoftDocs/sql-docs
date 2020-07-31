@@ -51,8 +51,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 ## Related Tasks  
   
-|||  
-|-|-|  
+| Task | Type |
+| ---- | ---- |
 |Create an application role.|[Create an Application Role](../../../relational-databases/security/authentication-access/create-an-application-role.md) and [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/create-application-role-transact-sql.md)|  
 |Alter an application role.|[ALTER APPLICATION ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-application-role-transact-sql.md)|  
 |Delete an application role.|[DROP APPLICATION ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-application-role-transact-sql.md)|  

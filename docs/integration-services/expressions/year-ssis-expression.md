@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # YEAR (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns an integer that represents the year datepart of a date.  

@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # Validate XML with the XML Task
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Validate XML documents and get rich error output by enabling the **ValidationDetails** property of the XML Task.  

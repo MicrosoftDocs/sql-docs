@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 6: Use parameters with the Project Deployment Model in SSIS
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

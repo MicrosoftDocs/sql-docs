@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # TOKENCOUNT (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns the number of tokens in a string that contains tokens separated by the specified delimiters.  

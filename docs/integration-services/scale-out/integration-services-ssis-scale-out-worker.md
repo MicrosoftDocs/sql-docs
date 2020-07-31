@@ -13,7 +13,7 @@ ms.author: "haoqian"
 ---
 # Integration Services (SSIS) Scale Out Worker
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

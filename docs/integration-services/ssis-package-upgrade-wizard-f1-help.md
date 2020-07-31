@@ -21,7 +21,7 @@ ms.author: chugu
 ---
 # SSIS Package Upgrade Wizard F1 Help
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the SSIS Package Upgrade Wizard to upgrade packages created by earlier versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] to the package format for the current release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)].  

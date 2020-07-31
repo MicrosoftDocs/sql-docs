@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 1-4 - Adding Package Configurations
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 In this task, you will add a configuration to each package. Configurations update the values of package properties and package objects at run time.  

@@ -13,7 +13,7 @@ ms.reviewer: maghan
 ---
 # Run SQL Server Integration Services (SSIS) packages deployed in Azure
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

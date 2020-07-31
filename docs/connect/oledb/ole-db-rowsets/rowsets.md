@@ -1,5 +1,5 @@
 ---
-title: "Rowsets | Microsoft Docs"
+title: Rowsets (OLE DB driver)
 description: "Rowsets in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

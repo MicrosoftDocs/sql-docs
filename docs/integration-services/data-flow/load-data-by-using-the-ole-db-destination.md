@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # Load Data by Using the OLE DB Destination
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To add and configure an OLE DB destination, the package must already include at least one Data Flow task and a source.  

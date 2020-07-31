@@ -28,9 +28,8 @@ Job categories help you organize your jobs for easy filtering and grouping. For 
   
 ## Related Tasks  
   
-|||  
+|Description|Topic|  
 |-|-|  
-|**Description**|**Topic**|  
 |Describes how to create a job category.|[Create a Job Category](../../ssms/agent/create-a-job-category.md)|  
 |Describes how to delete a job category.|[Delete a Job Category](../../ssms/agent/delete-a-job-category.md)|  
 |Describes how to assign a job to a job category.|[Assign a Job to a Job Category](../../ssms/agent/assign-a-job-to-a-job-category.md)|  

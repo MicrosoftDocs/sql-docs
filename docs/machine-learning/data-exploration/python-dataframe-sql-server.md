@@ -1,20 +1,20 @@
 ---
 title: Insert Python dataframe into SQL table 
-description: How to insert data from a dataframe into SQL table
+description: How to insert data from a dataframe into SQL table.
 author: cawrites
 ms.author: chadam
-ms.date: 07/14/2020
+ms.date: 07/23/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=azuresqldb-current||=sqlallproducts-allversions"
 ---
 # Insert Python dataframe into SQL table
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE[sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-This article describes how to insert data into a SQL database from a `pandas` dataframe using the `pyodbc` package in Python. For more information, see the [pyodbc documentation](../../connect/python/pyodbc/python-sql-driver-pyodbc.md). By establishing a connection with SQL using Python `pandas`, data can be sent directly to a SQL table.
+This article describes how to insert a [pandas](https://pandas.pydata.org/) dataframe into a SQL database using the [pyodbc](../../connect/python/pyodbc/python-sql-driver-pyodbc.md) package in Python.
 
-## Prerequisites:
+## Prerequisites
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 * SQL Server. For how to install, see [SQL Server for Windows](../../database-engine/install-windows/install-sql-server.md) or [for Linux](../../linux/sql-server-linux-overview.md).
@@ -32,22 +32,9 @@ This article describes how to insert data into a SQL database from a `pandas` da
 
 * Azure Data Studio. For how to install, see [Azure Data Studio](../../azure-data-studio/what-is.md).
 
+* [Restore sample database](../../samples/adventureworks-install-configure.md) to get sample data used in this article.
 
-## Restore the sample database
-
-The sample database used in this article has been saved to a **.bak** database backup file for you to download and use.
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions"
-1. Follow the instructions in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#download-backup-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
-1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
-   - Import from the **AdventureWorks.bak** file - you downloaded.
-   - Name the target database "AdventureWorks".
-::: moniker-end   
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-1. Follow the instructions in [AdventureWorks sample databases](../../samples/adventureworks-install-configure.md#download-backup-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
-1. Follow the directions in [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
-   - Import from the **AdventureWorks.bak** file - you downloaded.
-   - Name the target database "AdventureWorks".
-::: moniker-end
+## Verify restored database
 
 You can verify that the restored database exists by querying the **HumanResources.Department** table:
 
@@ -58,17 +45,17 @@ SELECT * FROM HumanResources.Department;
 
 ## Install Python packages
 
-Install the following Python packages using [Azure Data Studio notebook with a Python kernel](../../azure-data-studio/notebooks-tutorial-python-kernel.md)
+* [Download and Install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md)
 
+Install the following Python packages:
   * pyodbc
   * pandas
 
   To install these packages:
+
   1. In your Azure Data Studio notebook, select **Manage Packages**.
   2. In the **Manage Packages** pane, select the **Add new** tab.
   3. For each of the following packages, enter the package name, click **Search**, then click **Install**.
-
-  As an alternative, you can open a **Command Prompt**, change to the installation path for the version of Python you use in Azure Data Studio (for example, `cd %LocalAppData%\Programs\Python\Python37-32`), then run `pip install` for each package.
 
 ## Connect to SQL Server using Azure Data Studio
 
@@ -85,8 +72,9 @@ CREATE TABLE [HumanResources].[DepartmentTest](
 GO
 ```
 
-## Create CVS file
-Copy text and save file as department.cvs for dataframe.
+## Create CSV file
+
+Copy text and save file as department.csv for dataframe.
 
 ```text
 DepartmentID,Name,GroupName,
@@ -111,14 +99,15 @@ DepartmentID,Name,GroupName,
 ## Connect to SQL using Python
 
 1. Edit the connection string variables 'server','database','username' and 'password' to connect to SQL database.
- 
+
 2. Edit path for CSV file.
- 
+
 ## Load dataframe from CSV file
 
 Use the Python `pandas` package to create a dataframe and load the CSV file. Connect to SQL to load dataframe into the new SQL table, HumanResources.DepartmentTest.
 
 To create a new notebook:
+
 1. In Azure Data Studio, select **File**, select **New Notebook**.
 2. In the notebook, select kernel **Python3**, select the **+code**.
 3. Paste code in notebook, select **Run All**.
@@ -160,3 +149,7 @@ Results
 (No column name)
 16
 ```
+
+## Next steps
+
++ [Plot a histogram for data exploration with Python](../data-exploration/python-plot-histogram.md)

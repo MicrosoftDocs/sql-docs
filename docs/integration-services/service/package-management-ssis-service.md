@@ -30,7 +30,7 @@ ms.author: chugu
 ---
 # Package Management (SSIS Service)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Package management includes monitoring, managing, importing and exporting packages.  

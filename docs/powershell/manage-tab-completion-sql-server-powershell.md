@@ -1,5 +1,6 @@
 ---
 title: "Manage Tab Completion (SQL Server PowerShell) | Microsoft Docs"
+description: Learn how to control Windows PowerShell tab completion by making proper use of three variables in the SQL Server PowerShell modules.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,7 +13,6 @@ ms.author: maghan
 ---
 # Manage Tab Completion (SQL Server PowerShell)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
-
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell snap-ins introduce three variables (**$SqlServerMaximumTabCompletion**, **$SqlServerMaximumChildItems**, and **$SqlServerIncludeSystemObjects**) to control Windows PowerShell tab completion. Tab completion reduces the amount of typing you must do by returning tables of items whose names start with the string you are typing.  
 

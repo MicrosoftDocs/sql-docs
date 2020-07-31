@@ -41528,7 +41528,7 @@
     {
       "source_path": "docs/advanced-analytics/r/sqldev-train-and-save-a-model-using-t-sql.md",
       "redirect_url": "/sql/advanced-analytics/tutorials/r-taxi-classification-train-model",
-      "redirect_document_id": true
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/performance/adaptive-query-processing.md",

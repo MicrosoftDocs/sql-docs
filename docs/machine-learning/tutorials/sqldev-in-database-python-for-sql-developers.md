@@ -44,7 +44,7 @@ In [part four](sqldev-py5-train-and-save-a-model-using-t-sql.md), you'll load th
 In [part five](sqldev-py6-operationalize-the-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
 
 > [!NOTE]
-> This tutorial is available in both R and Python. For the R version, see [In-database analytics for R developers](sqldev-in-database-r-for-sql-developers.md).
+> This tutorial is available in both R and Python. For the R version, see [R tutorial: Predict NYC taxi fares with binary classification](sqldev-in-database-r-for-sql-developers.md).
 
 ## Prerequisites
 

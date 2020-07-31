@@ -53,33 +53,37 @@ It is possible to use the new Azure AD authentication options when creating or e
 
 `Authentication=ActiveDirectoryIntegrated` for Azure Active Directory Integrated authentication to SQL Azure
 
-![CreateNewDSN_ADIntegrated.png](windows/CreateNewDSN_ADIntegrated.png)
+![create-dsn-ad-integrated.png](windows/create-dsn-ad-integrated.png)
 
 `Authentication=ActiveDirectoryPassword` for Azure Active Directory username/password authentication to SQL Azure
 
-![CreateNewDSN_ADPassword.png](windows/CreateNewDSN_ADPassword.png)
+![create-dsn-ad-password.png](windows/create-dsn-ad-password.png)
 
 `Authentication=ActiveDirectoryInteractive` for Azure Active Directory interactive authentication to SQL Azure
 
-![CreateNewDSN_ADInteractive.png](windows/CreateNewDSN_ADInteractive.png)
+![create-dsn-ad-interactive.png](windows/create-dsn-ad-interactive.png)
 
 `Authentication=SqlPassword` for username/password authentication to SQL Server (Azure or otherwise)
 
-![CreateNewDSN_SQLServer.png](windows/CreateNewDSN_SQLServer.png)
+![create-dsn-ad-sql-server.png](windows/create-dsn-ad-sql-server.png)
 
 `Trusted_Connection=Yes` for Windows legacy SSPI integrated authentication
 
-![CreateNewDSN_winSSPI.png](windows/CreateNewDSN_winSSPI.png)
+![create-dsn-win-sspi.png](windows/create-dsn-win-sspi.png)
 
-The five options correspond to `Trusted_Connection=Yes` (existing legacy Windows SSPI-only integrated authentication) and `Authentication=` `ActiveDirectoryIntegrated`, `SqlPassword`, `ActiveDirectoryPassword`, and `ActiveDirectoryInteractive`, respectively.
+`Authentication=ActiveDirectoryMsi` for Azure Active Directory Managed Service Identity authentication
+
+![create-dsn-ad-msi.png](windows/create-dsn-ad-msi.png)
+
+The six options correspond to `Trusted_Connection=Yes` (existing legacy Windows SSPI-only integrated authentication) and `Authentication=` `ActiveDirectoryIntegrated`, `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryInteractive`, and `ActiveDirectoryMsi` respectively.
 
 ### SQLDriverConnect Prompt (Windows driver only)
 
-The prompt dialog displayed by SQLDriverConnect when it requests information required to complete the connection contains three new options for Azure AD authentication:
+The prompt dialog displayed by SQLDriverConnect when it requests information required to complete the connection contains four new options for Azure AD authentication:
 
-![ServerLogin.png](windows/ServerLogin.png)
+![server-login.png](windows/server-login.png)
 
-These options correspond to the same five available in the DSN setup UI above.
+These options correspond to the same six available in the DSN setup UI above.
 
 ### Example connection strings
 1. SQL Server Authentication - legacy syntax. Server certificate is not validated, and encryption is used only if the server enforces it. The username/password is passed in the connection string.

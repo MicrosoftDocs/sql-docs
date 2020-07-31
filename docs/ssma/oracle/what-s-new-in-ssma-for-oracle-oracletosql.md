@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "7/2/2020"
+ms.date: "7/31/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,15 @@ ms.author: alexiva
 # What's New in SSMA for Oracle (OracleToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Oracle changes in each release.
+
+## SSMA v8.12
+
+The v8.12 release of SSMA for Oracle contains the following changes:
+
+* Support for subquery factoring clauses within `INSERT`/`UPDATE`/`MERGE`/`DELETE` statements
+* Conversion message for `ON DELETE SET NULL` clause in cases of multi-path or circular references
+* Improved conversion of cursors created from dynamic SQL string
+* Update ODP.NET to v19.8
 
 ## SSMA v8.11
 

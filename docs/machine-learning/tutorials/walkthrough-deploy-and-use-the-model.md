@@ -223,6 +223,6 @@ Now that you have learned how to work with [!INCLUDE[ssNoVersion](../../includes
 You might also want to explore these additional samples and resources:
 
 + [Data science scenarios and solution templates](data-science-scenarios-and-solution-templates.md)
-+ [In-database advanced analytics](sqldev-in-database-r-for-sql-developers.md)
++ [In-database advanced analytics](r-taxi-classification-introduction.md)
 + [Machine Learning Server How-to guides](https://docs.microsoft.com/machine-learning-server/r/how-to-introduction)
 + [Machine Learning Server Additional Resources](https://docs.microsoft.com//machine-learning-server/resources-more)

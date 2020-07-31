@@ -56,6 +56,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Bug fixes. | [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
+## Previous Releases
+
 ## 17.5.2
 
 ![download](../../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120137)  
@@ -76,8 +78,6 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Support for additional Azure Key Vault endpoints | See [Using Always Encrypted with the ODBC Driver](../using-always-encrypted-with-the-odbc-driver.md). |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
-
-## Previous Releases
 
 Download previous ODBC Driver versions by clicking the download links in the following sections:
 

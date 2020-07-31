@@ -130,4 +130,4 @@ In this article, you:
 > + Saved the features using another custom function
 
 > [!div class="nextstepaction"]
-> [Train and save a Python model using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+> [Python tutorial: Train and save a Python model using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)

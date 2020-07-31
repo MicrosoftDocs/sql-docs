@@ -30,7 +30,7 @@ Version [18.3.0](../release-notes-for-oledb-driver-for-sql-server.md#1830) adds 
 - Azure Active Directory interactive authentication
 - Azure Active Directory MSI authentication
 
-Version 18.5 adds support for the following authentication method:
+Version [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) adds support for the following authentication method:
 - Azure Active Directory service principal authentication
 
 > [!NOTE]

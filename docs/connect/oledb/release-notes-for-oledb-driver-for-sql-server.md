@@ -37,6 +37,7 @@ If you need to download the installer in a language other than the one detected 
 | Feature added | Details |
 | :------------ | :------ |
 | Support for [SQL Data Discovery and Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification) | [Using data classification](features/using-data-classification.md) |
+| Azure Active Directory authentication support (`ActiveDirectoryServicePrincipal`). | [Using Azure Active Directory](features/using-azure-active-directory.md). |
 
 ### Bugs fixed
 

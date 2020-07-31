@@ -141,4 +141,4 @@ In this article, you:
 > + Saved the features using another custom function
 
 > [!div class="nextstepaction"]
-> [Lesson 3: Train and save a model using T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
+> [R tutorial: Train and save model](sqldev-train-and-save-a-model-using-t-sql.md)

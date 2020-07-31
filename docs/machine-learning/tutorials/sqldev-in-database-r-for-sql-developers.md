@@ -98,4 +98,4 @@ In this article, you:
 > + Restored the sample database
 
 > [!div class="nextstepaction"]
-> [Explore and visualize data using R functions in stored procedures](sqldev-explore-and-visualize-the-data.md)
+> [R tutorial: Explore and visualize data](sqldev-explore-and-visualize-the-data.md)

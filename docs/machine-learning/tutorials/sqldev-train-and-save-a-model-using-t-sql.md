@@ -117,4 +117,4 @@ In this article, you:
 > + Saved the trained model to a SQL table
 
 > [!div class="nextstepaction"]
-> [Lesson 4: Predict potential outcomes using an R model in a stored procedure](sqldev-operationalize-the-model.md)
+> [R tutorial: Run predictions in SQL stored procedures](sqldev-operationalize-the-model.md)

@@ -304,4 +304,4 @@ In this article, you:
 > + Output plots in multiple file formats
 
 > [!div class="nextstepaction"]
-> [Lesson 2: Create data features using R and T-SQL](sqldev-create-data-features-using-t-sql.md)
+> [R tutorial: Create data features](sqldev-create-data-features-using-t-sql.md)

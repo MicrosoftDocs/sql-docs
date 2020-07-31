@@ -161,6 +161,6 @@ The following sections provide common questions and answers for SQL Server runni
    
  1. **Is Symbolic links supported for SQL Server data and log directories?** 
     
-    No, for now symbolic links are not supported for SQL Server data and log directories. To change the default data and log directories please see [Change the default data or log directory location](https://docs.microsoft.com/en-us/sql/linux/sql-server-linux-configure-mssql-conf?view=sql-server-ver15#datadir).
+    No, symbolic links are not supported for SQL Server data and log directories. To change the default data and log directories please see [Change the default data or log directory location](sql-server-linux-configure-mssql-conf.md#datadir).
     
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

@@ -354,15 +354,35 @@ public class BulkCopyMultiple {
 
 ## Extended Bulk Copy for Azure Data Warehouse
 
-Preview version v8.3.1 adds a new connection property, `sendTemporalDataTypesAsStringForBulkCopy`. This boolean property is TRUE by default.
+Driver version v8.4.0 adds a new connection property, `sendTemporalDataTypesAsStringForBulkCopy`. This boolean property is `true` by default.
 
 This connection property, when set to `false`, will send **DATE**, **DATETIME**, **DATIMETIME2**, **DATETIMEOFFSET**, **SMALLDATETIME**, and **TIME** datatypes as their respective types instead of sending them as String.
 
 Sending the temporal datatypes as their respective types allows the user to send data into those columns for Azure DW, which was not possible before due to the driver converting the data into String. Sending String data into temporal columns works for SQL Server because SQL Server would perform implicit conversion for us, but it is not the same with Azure DW.
 
-Additionally, even without setting this connection string to 'false', from **v8.3.1** and onward, **MONEY** and **SMALLMONEY** datatypes will be sent as **MONEY** / **SMALLMONEY** datatypes instead of **DECIMAL**, which also allows those datatypes to be bulk copied into Azure DW.
+Additionally, even without setting this connection string to 'false', from **v8.4.0** and onward, **MONEY** and **SMALLMONEY** datatypes will be sent as **MONEY** / **SMALLMONEY** datatypes instead of **DECIMAL**, which also allows those datatypes to be bulk copied into Azure DW.
 
-For more information and limitation, see [Extended Bulk Copy for Azure DW](https://github.com/microsoft/mssql-jdbc/wiki/Extended-Bulk-Copy-for-Azure-DW).
+### Extended Bulk Copy for Azure Data Warehouse limitations
+
+There are currently two limitations:
+
+1. With this connection property set to `false`, the driver will only accept the default string literal format of each temporal datatype, for example:
+
+`DATE: YYYY-MM-DD`
+
+`DATETIME: YYYY-MM-DD hh:mm:ss[.nnn]`
+
+`DATETIME2: YYYY-MM-DD hh:mm:ss[.nnnnnnn]`
+
+`DATETIMEOFFSET: YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+/-}hh:mm]`
+
+`SMALLDATETIME:YYYY-MM-DD hh:mm:ss`
+
+`TIME: hh:mm:ss[.nnnnnnn]`
+
+2. With this connection property set to `false`, the column type specified for bulk copy has to respect the data type mapping chart: https://docs.microsoft.com/sql/connect/jdbc/using-basic-data-types?view=sql-server-2017
+
+For example, previously users could specify `java.sql.Types.TIMESTAMP` to bulk copy data into a `DATE` column, but with this feature enabled, they must specify `java.sql.Types.DATE` to perform the same.
   
 ### Performing a non-transacted bulk copy operation
 
@@ -654,6 +674,17 @@ public class BulkCopyCSV {
     }
 }
 ```  
+
+### Bulk copy with delimiters as data in CSV file
+
+Driver version 8.4.0 adds a new API `SQLServerBulkCSVFileRecord.setEscapeColumnDelimitersCSV(boolean)`. When set to true, the following rules will apply:
+
+1. Each field may or may not be enclosed in double quotes.
+2. If fields are not enclosed with double quotes, then double quotes may not appear inside the fields.
+3. Fields containing double quotes, and delimiters should be enclosed in double quotes.
+4. If double-quotes are used to enclose fields, then a double-quote appearing inside a field must be escaped by preceding it with another double quote.
+
+For more information, visit [here](https://github.com/microsoft/mssql-jdbc/pull/1312).
 
 ### Bulk copy with Always Encrypted columns  
 

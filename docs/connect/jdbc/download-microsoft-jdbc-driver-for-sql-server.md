@@ -58,7 +58,7 @@ The JDBC driver can be added to a Maven project by adding it as a dependency in 
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.4.0.jre14</version>
+    <version>8.4.0.jre11</version>
 </dependency>
 ```  
 

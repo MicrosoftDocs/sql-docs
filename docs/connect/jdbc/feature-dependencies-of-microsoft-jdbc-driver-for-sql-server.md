@@ -39,7 +39,7 @@ Specific projects that require either of the preceding features need to explicit
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.4.0.jre14</version>
+    <version>8.4.0.jre11</version>
     <scope>compile</scope>
 </dependency>
 
@@ -62,7 +62,7 @@ Specific projects that require either of the preceding features need to explicit
 <dependency>
     <groupId>com.microsoft.sqlserver</groupId>
     <artifactId>mssql-jdbc</artifactId>
-    <version>8.4.0.jre14</version>
+    <version>8.4.0.jre11</version>
     <scope>compile</scope>
 </dependency>
 

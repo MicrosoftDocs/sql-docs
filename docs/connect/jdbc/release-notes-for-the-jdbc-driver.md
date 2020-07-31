@@ -52,7 +52,7 @@ Microsoft JDBC Driver 8.4 for SQL Server is now compatible with Java Development
 
 | Bulk copy changes for Azure Data Warehouse | Details |
 | :------------------- | :------ |
-| Preview version v8.3.1 adds a new connection property, `sendTemporalDataTypesAsStringForBulkCopy`. This boolean property is TRUE by default. | See [Using bulk copy with the JDBC driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md). |
+| Microsoft JDBC Driver 8.4 adds a new connection property, `sendTemporalDataTypesAsStringForBulkCopy`. This boolean property is TRUE by default. | See [Using bulk copy with the JDBC driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### Added support for Azure SQL DNS caching

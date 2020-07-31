@@ -23,13 +23,13 @@ In this article, you'll:
 > + Review the sample data
 > + Create plots using Python in T-SQL
 
-In [part one](sqldev-in-database-python-for-sql-developers.md), you installed the prerequisites and restored the sample database.
+In [part one](python-taxi-classification-introduction.md), you installed the prerequisites and restored the sample database.
 
-In [part three](sqldev-py4-create-data-features-using-t-sql.md), you'll learn how to create features from raw data by using a Transact-SQL function. You'll then call that function from a stored procedure to create a table that contains the feature values.
+In [part three](python-taxi-classification-create-features.md), you'll learn how to create features from raw data by using a Transact-SQL function. You'll then call that function from a stored procedure to create a table that contains the feature values.
 
-In [part four](sqldev-py5-train-and-save-a-model-using-t-sql.md), you'll load the modules and call the necessary functions to create and train the model using a SQL Server stored procedure.
+In [part four](python-taxi-classification-train-model.md), you'll load the modules and call the necessary functions to create and train the model using a SQL Server stored procedure.
 
-In [part five](sqldev-py6-operationalize-the-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
+In [part five](python-taxi-classification-deploy-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
 
 ## Review the data
 
@@ -194,4 +194,4 @@ In this article, you:
 > + Created plots using Python in T-SQL
 
 > [!div class="nextstepaction"]
-> [Python tutorial: Create Data Features using T-SQL](sqldev-py4-create-data-features-using-t-sql.md)
+> [Python tutorial: Create Data Features using T-SQL](python-taxi-classification-create-features.md)

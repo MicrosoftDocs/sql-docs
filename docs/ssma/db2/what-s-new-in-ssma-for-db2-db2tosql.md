@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "7/2/2020"
+ms.date: "7/31/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,13 @@ ms.author: alexiva
 # What's New in SSMA for DB2 (DB2ToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for DB2 changes in each release.
+
+## SSMA v8.12
+
+The v8.12 release of SSMA for DB2 contains the following changes:
+
+* Conversion of `STRIP` function
+* Improved parsing of procedure options
 
 ## SSMA v8.11
 

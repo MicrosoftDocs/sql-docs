@@ -36,7 +36,9 @@ ms.author: jrasnick
 OPENQUERY ( linked_server ,'query' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *linked_server*  
  Is an identifier representing the name of the linked server.  
   

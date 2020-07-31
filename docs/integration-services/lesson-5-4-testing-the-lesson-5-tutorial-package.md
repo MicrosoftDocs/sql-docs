@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 5-4: Test the Lesson 5 package
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

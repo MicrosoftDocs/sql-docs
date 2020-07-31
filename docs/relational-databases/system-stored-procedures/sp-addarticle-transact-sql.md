@@ -368,9 +368,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## Default Schema Options  
  This table describes the default value set by replication if *schema_options* is not specified by the user, where this value depends on the replication type (shown across the top) and the article type (shown down the first column).  
   
-|Article type|Replication type||  
+|Article type|Transactional replication|Snapshot replication|  
 |------------------|----------------------|------|  
-||Transactional|Snapshot|  
 |**aggregate schema only**|**0x01**|**0x01**|  
 |**func schema only**|**0x01**|**0x01**|  
 |**indexed view schema only**|**0x01**|**0x01**|  
@@ -392,9 +391,8 @@ sp_addarticle [ @publication = ] 'publication'
 ## Valid Schema Options  
  This table describes the allowable values of *schema_option* based upon the replication type (shown across the top) and the article type (shown down the first column).  
   
-|Article type|Replication type||  
+|Article type|Transactional replication|Snapshot replication|  
 |------------------|----------------------|------|  
-||Transactional|Snapshot|  
 |**logbased**|All options|All options but **0x02**|  
 |**logbased manualfilter**|All options|All options but **0x02**|  
 |**logbased manualview**|All options|All options but **0x02**|  

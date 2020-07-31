@@ -1,5 +1,5 @@
 ---
-title: "IBCPSession::BCPColFmt (OLE DB) | Microsoft Docs"
+title: "IBCPSession::BCPColFmt (OLE DB driver) | Microsoft Docs"
 description: "IBCPSession::BCPColFmt (OLE DB)"
 ms.custom: ""
 ms.date: "05/25/2020"

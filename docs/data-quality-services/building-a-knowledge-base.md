@@ -19,7 +19,7 @@ ms.author: sawinark
 ## In This Section  
  You can perform the following operations on a knowledge base:  
   
-|||  
+|Operation Description|Topic|  
 |-|-|  
 |Create a new knowledge base from scratch, from an existing knowledge base, or from a .dqs data file.|[Create a Knowledge Base](../data-quality-services/create-a-knowledge-base.md)|  
 |Open an existing knowledge base to perform knowledge discovery, domain management, or add a matching policy.|[Open a Knowledge Base](../data-quality-services/open-a-knowledge-base.md)|  

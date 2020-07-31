@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Hadoop File System Task
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Hadoop File System Task enables an SSIS package to copy files from, to, or within a Hadoop cluster.  

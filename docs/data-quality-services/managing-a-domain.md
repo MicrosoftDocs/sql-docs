@@ -38,7 +38,7 @@ ms.author: sawinark
 ## In This Section  
  Using a domain enables you to do the following:  
   
-|||  
+|Operation Description|Topic|  
 |-|-|  
 |Create a semantic representation for a data field with a specific data type, specify how the domain is populated, and format the output of the domain|[Create a Domain](../data-quality-services/create-a-domain.md)|  
 |Link a domain to another domain, enabling it to share the same settings and values|[Create a Linked Domain](../data-quality-services/create-a-linked-domain.md)|  

@@ -1,5 +1,6 @@
 ---
 title: "srv_rpcdb (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_rpcdb in the Extended Stored Procedure API returns the database name component for the current remote stored procedure.
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

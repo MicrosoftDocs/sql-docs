@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # Azure HDInsight Create Cluster Task
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 The **Azure HDInsight Create Cluster Task** enables an SSIS package to create an Azure HDInsight cluster in the specified Azure subscription and resource group.
@@ -31,9 +31,8 @@ To add an **Azure HDInsight Create Cluster Task**, drag-drop it to the SSIS Desi
   
 The following table provides a description of the fields in this dialog box.  
   
-|||  
+|Field|Description|  
 |-|-|  
-|**Field**|**Description**|  
 |AzureResourceManagerConnection|Select an existing Azure Resource Manager Connection Manager or create a new one that will be used to create the HDInsight cluster.|  
 |AzureStorageConnection|Select an existing Azure Storage Connection Manager or create a new one that refers to an Azure Storage Account that will be associated with the HDInsight cluster.|
 |SubscriptionId|Specify the ID of the subscription the HDInsight cluster will be created in.|

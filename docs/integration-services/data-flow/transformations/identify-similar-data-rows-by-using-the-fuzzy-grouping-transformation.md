@@ -18,7 +18,7 @@ ms.author: chugu
 ---
 # Identify Similar Data Rows with the Fuzzy Grouping Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To add and configure a Fuzzy Grouping transformation, the package must already include at least one Data Flow task and a source.  

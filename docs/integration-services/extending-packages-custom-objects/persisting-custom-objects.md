@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Persisting Custom Objects
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You do not need to implement custom persistence for the custom objects that you create as long as their properties use only simple data types such as **integer** and **string**. The default implementation of persistence saves the metadata for your object along with the values of all its properties.  

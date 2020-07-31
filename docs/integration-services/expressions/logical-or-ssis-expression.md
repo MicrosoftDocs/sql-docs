@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # || (Logical OR) (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Performs a logical OR operation. The expression evaluates to TRUE if one or both conditions are TRUE.  

@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Change Data Capture Designer for Oracle by Attunity How to Guide
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This section describes how to carry out tasks in the Change Data Capture Designer for Oracle by Attunity.  

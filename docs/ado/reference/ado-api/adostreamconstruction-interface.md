@@ -21,9 +21,9 @@ The **ADOStreamConstruction** interface is used to construct an ADO **Stream** o
   
 ## Properties  
   
-|||  
+|Property|Description|  
 |-|-|  
-|[Stream Property](../../../ado/reference/ado-api/stream-property.md)|Read/Write. Gets/sets an OLE DB **Stream** object.|  
+|[Stream](../../../ado/reference/ado-api/stream-property.md)|Read/Write. Gets/sets an OLE DB **Stream** object.|  
   
 ## Methods  
  None.  

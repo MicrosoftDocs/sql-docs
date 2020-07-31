@@ -33,7 +33,9 @@ monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-201
 TRY_PARSE ( string_value AS data_type [ USING culture ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *string_value*  
  **nvarchar(4000)** value representing the formatted value to parse into the specified data type.  
   

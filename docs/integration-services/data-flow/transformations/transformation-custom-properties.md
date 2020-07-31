@@ -44,7 +44,7 @@ ms.author: chugu
 ---
 # Transformation Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   In addition to the properties that are common to most data flow objects in the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] object model, many data flow objects have custom properties that are specific to the object. These custom properties are available only at run time, and are not documented in the [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] Managed Programming Reference Documentation.  
@@ -54,19 +54,42 @@ ms.author: chugu
  Some properties of transformations can be set by using property expressions. For more information, see [Data Flow Properties that Can Be Set by Using Expressions](https://msdn.microsoft.com/library/cd0e171a-08be-45d6-81dc-ed94f37698b8).  
   
 ## Transformations with Custom Properties  
-  
-||||  
-|-|-|-|  
-|[Aggregate](#aggregate)|[Export Column](#extract)|[Row Count](#rowcount)|  
-|[Audit](#audit)|[Fuzzy Grouping](#fgroup)|[Row Sampling](#rowsamp)|  
-|[Cache Transform](#cachetransform)|[Fuzzy Lookup](#flookup)|[Script Component](#script)|  
-|[Character Map](#charmap)|[Import Column](#insert)|[Slowly Changing Dimension](#scd)|  
-|[Conditional Split](#condsplit)|[Lookup](#lookup)|[Sort](#sort)|  
-|[Copy Column](#copymap)|[Merge Join](#mjoin)|[Term Extraction](#textract)|  
-|[Data Conversion](#dataconv)|[OLE DB Command](#oledbcmd)|[Term Lookup](#tlookup)|  
-|[Data Mining Query](#dmquery)|[Percentage Sampling](#percent)|[Unpivot](#unpivot)|  
-|[Derived Column](#derived)|[Pivot](#pivot)||  
-  
+
+:::row:::
+    :::column:::
+        [Aggregate](#aggregate)  
+        [Audit](#audit)  
+        [Cache Transform](#cachetransform)  
+        [Character Map](#charmap)  
+        [Conditional Split](#condsplit)  
+        [Copy Column](#copymap)  
+        [Data Conversion](#dataconv)  
+        [Data Mining Query](#dmquery)  
+        [Derived Column](#derived)  
+    :::column-end:::
+    :::column:::
+        [Export Column](#extract)  
+        [Fuzzy Grouping](#fgroup)  
+        [Fuzzy Lookup](#flookup)  
+        [Import Column](#insert)  
+        [Lookup](#lookup)  
+        [Merge Join](#mjoin)  
+        [OLE DB Command](#oledbcmd)  
+        [Percentage Sampling](#percent)  
+        [Pivot](#pivot)  
+    :::column-end:::
+    :::column:::
+        [Row Count](#rowcount)  
+        [Row Sampling](#rowsamp)  
+        [Script Component](#script)  
+        [Slowly Changing Dimension](#scd)  
+        [Sort](#sort)  
+        [Term Extraction](#textract)  
+        [Term Lookup](#tlookup)  
+        [Unpivot](#unpivot)  
+    :::column-end:::
+:::row-end:::
+
 ### Transformations Without Custom Properties  
  The following transformations have no custom properties at the component, input, or output levels: [Merge Transformation](../../../integration-services/data-flow/transformations/merge-transformation.md), [Multicast Transformation](../../../integration-services/data-flow/transformations/multicast-transformation.md), and [Union All Transformation](../../../integration-services/data-flow/transformations/union-all-transformation.md). They use only the properties common to all data flow components.  
   

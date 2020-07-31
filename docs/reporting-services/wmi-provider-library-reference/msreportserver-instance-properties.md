@@ -23,7 +23,7 @@ ms.author: maggies
   
 ## Public Properties  
   
-|||  
+|Property|Description|  
 |-|-|  
 |[EditionID Property &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Returns the edition of the report server.|  
 |[EditionName Property &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Returns the human readable name of the report server edition.|  

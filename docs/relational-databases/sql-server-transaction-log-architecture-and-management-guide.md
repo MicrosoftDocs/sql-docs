@@ -89,11 +89,11 @@ For more information on `FILEGROWTH` and `SIZE` arguments of `ALTER DATABASE`, s
   
  The transaction log is a wrap-around file. For example, consider a database with one physical log file divided into four VLFs. When the database is created, the logical log file begins at the start of the physical log file. New log records are added at the end of the logical log and expand toward the end of the physical log. Log truncation frees any virtual logs whose records all appear in front of the minimum recovery log sequence number (MinLSN). The *MinLSN* is the log sequence number of the oldest log record that is required for a successful database-wide rollback. The transaction log in the example database would look similar to the one in the following illustration.  
   
- ![tranlog3](../relational-databases/media/tranlog3.gif)  
+ ![Illustrates how a physical log file is divided into virtual logs](../relational-databases/media/tranlog3.png)  
   
  When the end of the logical log reaches the end of the physical log file, the new log records wrap around to the start of the physical log file.  
   
-![tranlog4](../relational-databases/media/tranlog4.gif)   
+![Illustrates how a logical transaction log wraps around in its physical log file](../relational-databases/media/tranlog4.png)   
   
  This cycle repeats endlessly, as long as the end of the logical log never reaches the beginning of the logical log. If the old log records are truncated frequently enough to always leave sufficient room for all the new log records created through the next checkpoint, the log never fills. However, if the end of the logical log does reach the start of the logical log, one of two things occurs:  
   
@@ -111,11 +111,11 @@ For more information on `FILEGROWTH` and `SIZE` arguments of `ALTER DATABASE`, s
   
  The following illustrations show a transaction log before and after truncation. The first illustration shows a transaction log that has never been truncated. Currently, four virtual log files are in use by the logical log. The logical log starts at the front of the first virtual log file and ends at virtual log 4. The MinLSN record is in virtual log 3. Virtual log 1 and virtual log 2 contain only inactive log records. These records can be truncated. Virtual log 5 is still unused and is not part of the current logical log.  
   
-![tranlog2](../relational-databases/media/tranlog2.gif)  
+![Illustrates how a transaction log appears before it is truncated](../relational-databases/media/tranlog2.png)  
   
  The second illustration shows how the log appears after being truncated. Virtual log 1 and virtual log 2 have been freed for reuse. The logical log now starts at the beginning of virtual log 3. Virtual log 5 is still unused, and it is not part of the current logical log.  
   
-![tranlog3](../relational-databases/media/tranlog3.gif)  
+![Illustrates how a transaction log appears after it is truncated](../relational-databases/media/tranlog3.png)  
   
  Log truncation occurs automatically after the following events, except when delayed for some reason:  
   
@@ -223,7 +223,7 @@ The section of the log file from the MinLSN to the last-written log record is ca
 
 The following illustration shows a simplified version of the end-of-a-transaction log with two active transactions. Checkpoint records have been compacted to a single record.
 
-![active_log](../relational-databases/media/active-log.gif) 
+![Illustrates an end-of-a-transaction log with two active transactions and a compacted checkpoint record](../relational-databases/media/active-log.png) 
 
 LSN 148 is the last record in the transaction log. At the time that the recorded checkpoint at LSN 147 was processed, Tran 1 had been committed and Tran 2 was the only active transaction. That makes the first log record for Tran 2 the oldest log record for a transaction active at the time of the last checkpoint. This makes LSN 142, the Begin transaction record for Tran 2, the MinLSN.
 

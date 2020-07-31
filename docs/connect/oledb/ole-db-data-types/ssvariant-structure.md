@@ -1,5 +1,5 @@
 ---
-title: "SSVARIANT Structure | Microsoft Docs"
+title: SSVARIANT structure (OLE DB driver)
 description: "SSVARIANT structure in OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/15/2018"

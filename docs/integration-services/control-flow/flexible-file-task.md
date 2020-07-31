@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Flexible File Task
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 The Flexible File Task enables users to perform file operations on various supported storage services.
 Currently supported storage services are

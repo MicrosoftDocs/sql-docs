@@ -34,7 +34,9 @@ Returns the angle, in radians, between the positive x-axis and the ray from the 
 ATN2 ( float_expression , float_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *float_expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of data type **float**.
   

@@ -21,7 +21,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Replicate Identity Columns
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   When you assign an IDENTITY property to a column, [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] automatically generates sequential numbers for new rows inserted in the table containing the identity column. For more information, see [IDENTITY &#40;Property&#41; &#40;Transact-SQL&#41;](../../../t-sql/statements/create-table-transact-sql-identity-property.md). Because identity columns might be included as a part of the primary key, it is important to avoid duplicate values in the identity columns. To use identity columns in a replication topology that has updates at more than one node, each node in the replication topology must use a different range of identity values, so that duplicates do not occur.  
   
  For example, the Publisher could be assigned the range 1-100, Subscriber A the range 101-200, and Subscriber B the range 201-300. If a row is inserted at the Publisher and the identity value is, for example, 65, that value is replicated to each Subscriber. When replication inserts data at each Subscriber, it does not increment the identity column value in the Subscriber table; instead, the literal value 65 is inserted. Only user inserts, but not replication agent inserts cause the identity column value to be incremented.  

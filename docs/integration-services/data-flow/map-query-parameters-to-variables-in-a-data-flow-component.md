@@ -18,7 +18,7 @@ ms.author: chugu
 ---
 # Map Query Parameters to Variables in a Data Flow Component
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   When you configure the OLE DB source to use parameterized queries, you can map the parameters to variables.  

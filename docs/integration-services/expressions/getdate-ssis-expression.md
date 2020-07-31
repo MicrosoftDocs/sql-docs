@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # GETDATE (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns the current date of the system in a DT_DBTIMESTAMP format. The GETDATE function takes no arguments.  

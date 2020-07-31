@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 2-1 - Building the Deployment Utility
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 In this task, you will configure and build a deployment utility for the Deployment Tutorial project.  

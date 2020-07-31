@@ -51,9 +51,8 @@ managed_backup.sp_get_backup_diagnostics [@xevent_channel = ] 'event type' [, [@
 ## Table Returned  
  This stored procedure returns a table with the following information:  
   
-||||  
-|-|-|-|  
-|Column Name|Data Type|Description|  
+| Column Name | Data Type | Description |  
+| ----------- | --------- | ----------- |
 |event_type|NVARCHAR(512)|Type of Extended Event.|  
 |Event|NVARCHAR(512)|Summary of the event logs.|  
 |Timestamp|TIMESTAMP|Timestamp of the event that shows when the event was raised.|  

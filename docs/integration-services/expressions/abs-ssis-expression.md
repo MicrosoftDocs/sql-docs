@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # ABS (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns the absolute, positive value of a numeric expression.  

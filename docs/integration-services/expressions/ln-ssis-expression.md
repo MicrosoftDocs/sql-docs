@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # LN (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns the natural logarithm of a numeric expression.  

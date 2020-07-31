@@ -14,7 +14,7 @@ ms.author: chugu
 ---
 # Complete the Wizard (SQL Server Import and Export Wizard)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 After you specify whether you want to run the copy operation immediately, and after you optionally save the package that the wizard created, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard shows **Complete the Wizard**. On this page, you review the choices that you made in the wizard, and then click **Finish** to start the copy operation.

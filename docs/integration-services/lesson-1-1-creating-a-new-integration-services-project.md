@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 1-1: Create a new Integration Services project
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

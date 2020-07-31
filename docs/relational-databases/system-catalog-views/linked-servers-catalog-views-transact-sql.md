@@ -17,15 +17,21 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Linked Servers Catalog Views (Transact-SQL)
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   This section contains the following catalog views.  
-  
-|||  
-|-|-|  
-|[sys.linked_logins](../../relational-databases/system-catalog-views/sys-linked-logins-transact-sql.md)|[sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)|  
-|[sys.remote_logins](../../relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md)||  
-  
+
+:::row:::
+    :::column:::
+        [sys.linked_logins](../../relational-databases/system-catalog-views/sys-linked-logins-transact-sql.md)
+        
+        [sys.remote_logins](../../relational-databases/system-catalog-views/sys-remote-logins-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.servers](../../relational-databases/system-catalog-views/sys-servers-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [System Views &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  

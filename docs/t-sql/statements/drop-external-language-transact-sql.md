@@ -12,7 +12,7 @@ manager: cgronlun
 monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 
-# DROP EXTERNAL LIBRARY (Transact-SQL)  
+# DROP EXTERNAL LANGUAGE (Transact-SQL)  
 [!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 Deletes an existing external language.

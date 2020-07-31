@@ -25,7 +25,7 @@ ms.author: chugu
 ---
 # Script Component
 
-[!INCLUDE[ssis-appliesto](../../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Script component hosts script and enables a package to include and run custom script code. You can use the Script component in packages for the following purposes:  

@@ -12,7 +12,7 @@ ms.author: "haoqian"
 ---
 # Integration Services Scale Out Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

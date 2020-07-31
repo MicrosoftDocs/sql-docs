@@ -21,11 +21,23 @@ ms.author: carlrab
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section contains the following catalog views.  
-  
-|||  
-|-|-|  
-|[sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|[sys.assembly_references](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|  
-|[sys.assembly_files](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)||  
+
+:::row:::
+    :::column:::
+        [sys.assemblies](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.assembly_references](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.assembly_files](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
   
 ## See Also  
  [Catalog Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   

@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Hadoop Hive Task
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the Hadoop Hive Task to run Hive script on a Hadoop cluster.  

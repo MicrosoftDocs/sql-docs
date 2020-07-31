@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # Select a Package
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Select a Package** dialog box to specify the package from which the Message Queue task can receive messages.  

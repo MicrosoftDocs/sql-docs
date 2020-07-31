@@ -19,7 +19,7 @@ ms.author: chugu
 ---
 # Loading the Output of a Local Package
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Client applications can read the output of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages when the output is saved to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] destinations by using [!INCLUDE[vstecado](../../includes/vstecado-md.md)], or when the output is saved to a flat file destination by using the classes in the **System.IO** namespace. However, a client application can also read the output of a package directly from memory, without the need for an intermediate step to persist the data. The key to this solution is the **Microsoft.SqlServer.Dts.DtsClient** namespace, which contains specialized implementations of the **IDbConnection**, **IDbCommand**, and **IDbDataParameter** interfaces from the **System.Data** namespace. The assembly Microsoft.SqlServer.Dts.DtsClient.dll is installed by default in **%ProgramFiles%\Microsoft SQL Server\100\DTS\Binn**.  

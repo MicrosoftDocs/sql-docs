@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 4-4: Add a Flat File destination
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

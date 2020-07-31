@@ -27,9 +27,8 @@ ms.reviewer: mikeray
   
  This catalog view is similar to [sys.fulltext_languages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md).  
     
-||||  
-|-|-|-|  
-|**Column name**|**Type**|**Description**|  
+|Column name|Type|Description|  
+|-|-|-|   
 |lcid|int|Microsoft Windows locale identifier (LCID) for the language.|  
 |name|sysname|Is either the value of the alias in [sys.syslanguages &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md) corresponding to the value of **lcid**, or the string representation of the numeric LCID.|  
   

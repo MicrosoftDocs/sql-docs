@@ -18,7 +18,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 **mssql-conf** is a configuration script that installs with SQL Server 2017 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. It modifies the [**mssql.conf file**](#mssql-conf-format) where configuration values are stored. You can use **mssql-conf** utility to set the following parameters:
 
-|||
+|Parameter|Description|
 |---|---|
 | [Agent](#agent) | Enable SQL Server Agent. |
 | [Collation](#collation) | Set a new collation for SQL Server on Linux. |
@@ -46,7 +46,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 **mssql-conf** is a configuration script that installs with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
 
-|||
+|Parameter|Description|
 |---|---|
 | [Agent](#agent) | Enable SQL Server Agent |
 | [Collation](#collation) | Set a new collation for SQL Server on Linux. |

@@ -1,6 +1,6 @@
 ---
 title: "Bulk copy API for batch insert in JDBC"
-description: "Microsoft JDBC Driver for SQL Server supports using Bulk Copy API for batch insert operations against Azure Data Warehouse."
+description: "Microsoft JDBC Driver for SQL Server supports using Bulk Copy for batch insert operations against Azure Data Warehouse for faster loading of data into the database."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

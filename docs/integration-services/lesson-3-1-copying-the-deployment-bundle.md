@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 3-1 - Copying the Deployment Bundle
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 In this task, you will copy the deployment bundle to the destination computer.  

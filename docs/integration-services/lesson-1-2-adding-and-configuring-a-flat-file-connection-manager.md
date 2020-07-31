@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 1-2: Add and configure a Flat File connection manager
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

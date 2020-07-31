@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # High Availability Support
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The CDC Service for Oracle is designed for high availability. The following features provide part of the high availability support:  

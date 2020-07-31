@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # MONTH (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns an integer that represents the month datepart of a date.  

@@ -18,7 +18,7 @@ ms.author: chugu
 ---
 # Variables Window
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Variables** window to create and modify user-defined variables and view system variables.  

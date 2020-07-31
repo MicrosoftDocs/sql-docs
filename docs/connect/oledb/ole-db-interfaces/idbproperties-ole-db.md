@@ -1,5 +1,5 @@
 ---
-title: "IDBProperties (OLE DB) | Microsoft Docs"
+title: "IDBProperties (OLE DB driver) | Microsoft Docs"
 description: "IDBProperties interface (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

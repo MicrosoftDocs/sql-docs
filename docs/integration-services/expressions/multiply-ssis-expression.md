@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # * (Multiply) (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Multiplies two numeric expressions.  

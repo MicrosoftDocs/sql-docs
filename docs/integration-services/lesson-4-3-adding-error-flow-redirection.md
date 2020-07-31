@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 4-3: Add error flow redirection
 
-[!INCLUDE[ssis-appliesto](../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

@@ -13,7 +13,7 @@ ms.reviewer: maghan
 ---
 # Connect to the SSIS Catalog (SSISDB) in Azure
 
-[!INCLUDE[ssis-appliesto](../../includes/applies-to-version/sqlserver-ssis.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

@@ -91,7 +91,6 @@
         "relational-databases/data-collection/**/*.md": "GitHub",
         "relational-databases/data-compression/**/*.md": "GitHub",
         "relational-databases/data-tier-applications/**/*.md": "GitHub",
-        "relational-databases/event-classes/**/*.md": "GitHub",
         "relational-databases/extended-stored-procedures-programming/**/*.md": "GitHub",
         "relational-databases/extended-stored-procedures-reference/**/*.md": "GitHub",
         "relational-databases/graphs/**/*.md": "GitHub",

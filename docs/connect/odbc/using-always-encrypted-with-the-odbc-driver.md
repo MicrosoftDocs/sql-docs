@@ -303,6 +303,8 @@ This section describes the built-in performance optimizations in the ODBC Driver
 
 If Always Encrypted is enabled for a connection, the driver will, by default, call [sys.sp_describe_parameter_encryption](../../relational-databases/system-stored-procedures/sp-describe-parameter-encryption-transact-sql.md) for each parameterized query, passing the query statement (without any parameter values) to SQL Server. This stored procedure analyzes the query statement to find out if any parameters need to be encrypted, and if so, returns the encryption-related information for each parameter to allow the driver to encrypt them. The above behavior ensures a high-level of transparency to the client application: The application (and the application developer) does not need to be aware of which queries access encrypted columns, as long as the values targeting encrypted columns are passed to the driver in parameters.
 
+Beginning in version 17.6, the driver also caches the encryption metadata for prepared statements, improving performance by allowing subsequent calls to `SQLExecute` to not require an additional round-trip to retrieve the encryption metadata.
+
 ### Per-Statement Always Encrypted Behavior
 
 To control the performance impact of retrieving encryption metadata for parameterized queries, you can alter the Always Encrypted behavior for individual queries if it has been enabled on the connection. This way, you can ensure that `sys.sp_describe_parameter_encryption` is invoked only for queries that you know have parameters targeting encrypted columns. Note, however, that by doing so, you reduce transparency of encryption: if you encrypt additional columns in your database, you may need to change the code of your application to align it with the schema changes.
@@ -324,6 +326,8 @@ If most of the queries of a client application access encrypted columns, the fol
 - Set the `SQL_SOPT_SS_COLUMN_ENCRYPTION` attribute to `SQL_CE_DISABLED` on statements which do not access any encrypted columns. This will disable both calling `sys.sp_describe_parameter_encryption` as well as attempts to decrypt any values in the result set.
     
 - Set the `SQL_SOPT_SS_COLUMN_ENCRYPTION` attribute to `SQL_CE_RESULTSETONLY` on statements which do not have any parameters requiring encryption, but retrieve data from encrypted columns. This will disable calling `sys.sp_describe_parameter_encryption` and parameter encryption. Results containing encrypted columns will continue to be decrypted.
+
+- Use prepared statements for queries which will be executed more than once; prepare the query with `SQLPrepare` and save the statement handle, reusing it with `SQLExecute` each time it is executed. This is the preferred approach for performance even when there are no encrypted columns, and allows the driver to take advantage of cached metadata.
 
 ## Always Encrypted Security Settings
 

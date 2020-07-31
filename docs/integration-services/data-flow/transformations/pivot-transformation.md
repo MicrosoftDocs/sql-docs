@@ -100,7 +100,7 @@ ms.author: chugu
   
  The following table shows a data set after the data has been pivoted on the **Year** column.  
   
-||2002|2003|2004|  
+|Product Name|2002|2003|2004|  
 |-|----------|----------|----------|  
 |HL Mountain Tire|141164.10|446297.775|1504884.15|  
 |Road Tire Tube|3592.05|35920.50|89801.25|  

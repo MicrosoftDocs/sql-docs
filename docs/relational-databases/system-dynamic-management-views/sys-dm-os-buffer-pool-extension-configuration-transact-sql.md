@@ -21,7 +21,7 @@ ms.author: carlrab
 ---
 # sys.dm_os_buffer_pool_extension_configuration (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Returns configuration information about the buffer pool extension in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Returns one row for each buffer pool extension file.  
   

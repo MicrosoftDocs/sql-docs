@@ -30,9 +30,8 @@ To add an **Azure HDInsight Delete Cluster Task**, drag-drop it to the SSIS Desi
   
 The following table provides a description for the fields in the dialog box.  
   
-|||  
+|Field|Description|  
 |-|-|  
-|**Field**|**Description**|  
 |AzureResourceManagerConnection|Select an existing Azure Resource Manager Connection Manager or create a new one that will be used to delete the HDInsight cluster.|
 |SubscriptionId|Specify the ID of the subscription the HDInsight cluster is in.|
 |ResourceGroup|Specify the Azure resource group the HDInsight cluster is in.|

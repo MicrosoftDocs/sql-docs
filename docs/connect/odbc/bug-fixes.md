@@ -19,6 +19,14 @@ manager: kenvh
 
 This page contains a listing of bugs fixed in each release, starting with [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
+### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.6 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- Fix ADAL error when authenticating with a federated account (Windows)
+- Fix a hang when a timeout occurs during an asynchronous notification operation
+- Fix driver reference count upon upgrade in Alpine Linux
+- Fix libc6 dependency version for Ubuntu
+- Add missing defines to Linux/Mac msodbcsql.h
+
 ### Bug fixes in the [!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC Driver 17.5.2.2 for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Alpine Linux only)
 
 - Fix a crash when using Always Encrypted with secure enclaves on Alpine Linux

@@ -9,7 +9,7 @@ ms.reviewer:
 ms.technology: connectivity
 ms.topic: conceptual
 author: v-zhangw
-ms.author:
+ms.author: v-zhangw
 manager: kenvh
 ---
 # Release Notes for the Microsoft SQL Server Tools on Linux and macOS

@@ -39,10 +39,6 @@ Specifies whether an object is open or closed, connecting to a data source, exec
 |AdoEnums.ObjectState.FETCHING|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|||
 
 :::row:::
     :::column:::

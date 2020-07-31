@@ -136,7 +136,7 @@ Consider the values that are used for resource classes as a guideline for reques
 *REQUEST_MAX_RESOURCE_GRANT_PERCENT* = value</br>         
 Sets the maximum amount of resources allocated per request. *value* is an optional decimal parameter with a default value equal to the request_min_resource_grant_percent. *value* must be greater than or equal to request_min_resource_grant_percent. When the value of request_max_resource_grant_percent is greater than request_min_resource_grant_percent and system resources are available, additional resources are allocated to a request.
 
-*IMPORTANCE* = { LOW | BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }</br>        
+*IMPORTANCE* = { LOW \| BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }</br>        
 Specifies the default importance of a request for the workload group. Importance is one of the following, with NORMAL being the default:
 
 - LOW

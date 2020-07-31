@@ -37,6 +37,25 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## 17.6
+
+![download](../../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2137027)  
+![download](../../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2137028)  
+
+Version number: 17.6.1.1  
+Released: July 31, 2020
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40a)  
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40a)
+
+| Feature added | Details |
+| :------- | :------ |
+| Metadata caching for prepared statements | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| SQL_COPT_SS_AUTOBEGINTXN connection attribute to control whether automatic BEGIN TRANSACTION happens after ROLLBACK or COMMIT | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## 17.5.2
 
 ![download](../../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120137)  

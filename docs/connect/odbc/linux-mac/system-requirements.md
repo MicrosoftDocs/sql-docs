@@ -37,7 +37,7 @@ Versions 17, 13.1, and 13 of the Linux and macOS drivers are supported on the x6
 |Apple macOS 10.14 (Mojave)     |Y|Y|Y|Y| | | | | |
 |Apple macOS 10.15 (Catalina)   |Y|Y| | | | | | | |
 |Alpine Linux 3.11              |Y|Y| | | | | | | |
-|Debian Linux 8                 | | |Y|Y|Y|Y|Y|Y|Y|
+|Debian Linux 8                 |Y|Y|Y|Y|Y|Y|Y|Y|Y|
 |Debian Linux 9                 |Y|Y|Y|Y|Y|Y|Y|Y|Y|
 |Debian Linux 10                |Y|Y|Y| | | | | | |
 |Oracle Linux 8                 |Y|Y| | | | | | | |

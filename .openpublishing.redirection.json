@@ -42543,6 +42543,11 @@
     {
       "source_path": "docs/advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md",
       "redirect_url": "/sql/machine-learning/tutorials/sqldev-in-database-python-for-sql-developers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sqldev-in-database-python-for-sql-developers.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-taxi-classification-introduction",
       "redirect_document_id": true
     },
     {
@@ -42568,21 +42573,41 @@
     {
       "source_path": "docs/advanced-analytics/tutorials/sqldev-py3-explore-and-visualize-the-data.md",
       "redirect_url": "/sql/machine-learning/tutorials/sqldev-py3-explore-and-visualize-the-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sqldev-py3-explore-and-visualize-the-data.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-taxi-classification-explore-data",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/advanced-analytics/tutorials/sqldev-py4-create-data-features-using-t-sql.md",
       "redirect_url": "/sql/machine-learning/tutorials/sqldev-py4-create-data-features-using-t-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sqldev-py4-create-data-features-using-t-sql.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-taxi-classification-create-features",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md",
       "redirect_url": "/sql/machine-learning/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-taxi-classification-train-model",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md",
       "redirect_url": "/sql/machine-learning/tutorials/sqldev-py6-operationalize-the-model",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sqldev-py6-operationalize-the-model.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-taxi-classification-deploy-model",
       "redirect_document_id": true
     },
     {

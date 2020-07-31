@@ -380,7 +380,7 @@ There are currently two limitations:
 
   `TIME: hh:mm:ss[.nnnnnnn]`
 
-2. With this connection property set to `false`, the column type specified for bulk copy has to respect the data type mapping chart: [Using Basic Data Types](../../connect/jdbc/using-basic-data-types.md)
+2. With this connection property set to `false`, the column type specified for bulk copy has to respect the data type mapping chart from [here](../../connect/jdbc/using-basic-data-types.md):
 
 For example, previously users could specify `java.sql.Types.TIMESTAMP` to bulk copy data into a `DATE` column, but with this feature enabled, they must specify `java.sql.Types.DATE` to perform the same.
   

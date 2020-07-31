@@ -1,6 +1,6 @@
 ---
 title: Power Query Source | Microsoft Docs
-description: Learn how to configure the Power Query Source in the SQL Server Integration Services data flow
+description: Learn how to configure the Power Query Source in the SQL Server Integration Services (SSIS) data flow.
 ms.date: 12/27/2019
 ms.prod: sql
 ms.prod_service: "integration-services"

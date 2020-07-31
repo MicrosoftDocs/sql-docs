@@ -194,4 +194,4 @@ In this article, you:
 > + Created plots using Python in T-SQL
 
 > [!div class="nextstepaction"]
-> [Create data features using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+> [Python tutorial: Create Data Features using T-SQL](sqldev-py4-create-data-features-using-t-sql.md)

@@ -1,7 +1,7 @@
 ---
 title: "Using spatial datatypes | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "07/31/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -100,7 +100,7 @@ These are the new public APIs that have been introduced with this addition, in t
 |Method|Description|
 |:------|:----------|
 |Geometry STGeomFromText(String wkt, int SRID)| Constructor for a Geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
-|Geometry STGeomFromCLR(byte[] clr)| Constructor for a Geometry instance from an internal SQL Server format(CLR) representation.
+|Geometry STGeomFromWKB(byte[] wkb)| Constructor for a Geometry instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation. Note: This method currently uses internal SQL Server format (CLR) to create a Geometry instance, but in the future this will be changed to accept WKB data instead, as the SQL Server counterpart of this method (STGeomFromWKB) uses WKB. For existing users who are already using this method, consider switching to deserialize(byte) instead.
 |Geometries deserialize(byte[] clr)| Constructor for a Geometry instance from an internal SQL Server format for spatial data.
 |Geometry parse(String wkt)| Constructor for a Geometry instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation. Spatial Reference Identifier is defaulted to 0.
 |Geometry point(double x, double y, int SRID)| Constructor for a Geometry instance that represents a Point instance from its X and Y values and a Spatial Reference Identifier.
@@ -125,7 +125,7 @@ These are the new public APIs that have been introduced with this addition, in t
 |Method|Description|
 |:------|:----------|
 |Geography STGeomFromText(String wkt, int SRID)| Constructor for a Geography instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation augmented with any Z (elevation) and M (measure) values carried by the instance.
-|Geography STGeomFromCLR(byte[] clr)| Constructor for a Geography instance from an internal SQL Server format (CLR) representation.
+|Geography STGeomFromWKB(byte[] wkb)| Constructor for a Geography instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation. Note: This method currently uses internal SQL Server format (CLR) to create a Geometry instance, but in the future this will be changed to accept WKB data instead, as the SQL Server counterpart of this method (STGeomFromWKB) uses WKB. For existing users who are already using this method, consider switching to deserialize(byte) instead.
 |Geography deserialize(byte[] clr)| Constructor for a Geography instance from an internal SQL Server format for spatial data.
 |Geography parse(String wkt)| Constructor for a Geography instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation. Spatial Reference Identifier is defaulted to 0.
 |Geography point(double lon, double lat, int SRID)| Constructor for a Geography instance that represents a Point instance from its longitude and latitude and a Spatial Reference Identifier.

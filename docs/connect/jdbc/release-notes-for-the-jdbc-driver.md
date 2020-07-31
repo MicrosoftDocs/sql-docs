@@ -45,7 +45,7 @@ Microsoft JDBC Driver 8.4 for SQL Server is now compatible with Java Development
 
 | Authentication type addition | Details |
 | :---------- | :------ |
-| Microsoft JDBC Driver 8.4 for SQL Server now supports authentication to Azure Key Vault using Managed Identity. | See [Key Vault authentication with Managed Identities](../../connect/jdbc/key-vault-authentication-with-managed-identities.md). |
+| Microsoft JDBC Driver 8.4 for SQL Server now supports authentication to Azure Key Vault using Managed Identity. | See [Using Always Encrypted with the JDBC driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### Extended support for bulk copy for Azure Data Warehouse
@@ -75,6 +75,8 @@ Microsoft JDBC Driver 8.4 for SQL Server is now compatible with Java Development
 | :------------------- | :------ |
 | Microsoft JDBC Driver 8.4 for SQL Server added a new authentication method called client certificate authentication for loopback scenarios. | See [Client Certificate Authentication for Loopback Scenarios](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios). |
 | &nbsp; | &nbsp; |
+
+## Previous releases
 
 ## <a id="82"></a> 8.2
 
@@ -133,8 +135,6 @@ Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development
 | :----------- | :------ |
 | When using Always Encrypted with secure enclaves with Java 8. | Users must include BouncyCastle Provider as a dependency OR map/load a security provider which supports the RSASSA-PSS signature algorithm. |
 | &nbsp; | &nbsp; |
-
-## Previous releases
 
 ## <a id="74"> 7.4.1
 

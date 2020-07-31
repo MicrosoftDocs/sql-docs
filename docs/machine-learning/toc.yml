@@ -102,15 +102,15 @@
     - name: Python for SQL developers
       items:
       - name: 1 - Introduction
-        href: ../machine-learning/tutorials/sqldev-in-database-python-for-sql-developers.md
+        href: ../machine-learning/tutorials/python-nyc-taxi-classification-introduction.md
       - name: 2 - Data exploration
-        href: ../machine-learning/tutorials/sqldev-py3-explore-and-visualize-the-data.md
+        href: ../machine-learning/tutorials/python-nyc-taxi-classification-explore-data.md
       - name: 3 - Feature engineering
-        href: ../machine-learning/tutorials/sqldev-py4-create-data-features-using-t-sql.md
+        href: ../machine-learning/tutorials/python-nyc-taxi-classification-create-features.md
       - name: 4 - Train and deploy
-        href: ../machine-learning/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+        href: ../machine-learning/tutorials/python-nyc-taxi-classification-train-model.md
       - name: 5 - Predictions
-        href: ../machine-learning/tutorials/sqldev-py6-operationalize-the-model.md
+        href: ../machine-learning/tutorials/python-nyc-taxi-classification-deploy-model.md
   - name: R
     items:
     - name: R tutorials

@@ -47,7 +47,7 @@ ms.author: v-daenge
 
   The JDBC Driver 8.4 is designed to work with and be supported by all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 14.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 14.0.
   
-  The following summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 8.4 for SQL Server:  
+  The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 8.4 for SQL Server:  
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
@@ -72,7 +72,7 @@ ms.author: v-daenge
 
   The JDBC Driver 8.2 is designed to work with and be supported by all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 13.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 13.0.
   
-  The following summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 8.2 for SQL Server:  
+  The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 8.2 for SQL Server:  
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
@@ -97,7 +97,7 @@ ms.author: v-daenge
 
   The JDBC Driver 7.4 is designed to work with and be supported by all major Java virtual machines, but is tested only on OpenJDK 1.8, OpenJDK 11.0, OpenJDK 12.0, Azul Zulu JRE 1.8, Azul Zulu JRE 11.0, and Azul Zulu JRE 12.0.
   
-  The following summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 7.4 for SQL Server:  
+  The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 7.4 for SQL Server:  
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
@@ -122,7 +122,7 @@ ms.author: v-daenge
 
   The JDBC Driver 7.2 is designed to work with and be supported by all major Java virtual machines, but is tested only on OpenJDK 8.0, OpenJDK 11.0, Azul Zulu JRE 8.0 and Azul Zulu JRE 11.0.
   
-  The following summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 7.2 for SQL Server:  
+  The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 7.2 for SQL Server:  
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
@@ -146,7 +146,7 @@ ms.author: v-daenge
 
   The JDBC Driver 7.0 is designed to work with and be supported by all major Java virtual machines, but is tested only on OpenJDK 8.0, and 10.0.
   
-  The following summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 7.0 for SQL Server:  
+  The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 7.0 for SQL Server:  
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
@@ -170,7 +170,7 @@ ms.author: v-daenge
 
   The JDBC Driver 6.4 is designed to work with and be supported by all major Java virtual machines, but is tested only on OpenJDK 7.0, 8.0, and 9.0.
   
-  The following summarizes support provided by the three JAR files included with Microsoft JDBC Drivers 6.4 for SQL Server:  
+  The following chart summarizes support provided by the three JAR files included with Microsoft JDBC Drivers 6.4 for SQL Server:  
   
   |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
@@ -194,7 +194,7 @@ The JDBC Driver 6.4 is also available on the Maven Central Repository and can be
   
  The JDBC Driver 6.2 is designed to work with and be supported by all major Java virtual machines, but is tested only on Sun JRE 5.0, 6.0, 7.0, and 8.0.
   
- The following summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server:  
+ The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server:  
   
 |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|
@@ -217,7 +217,7 @@ The JDBC Driver 6.4 is also available on the Maven Central Repository and can be
   
  The JDBC Drivers 6.0 and 4.2 are designed to work with and be supported by all major Java virtual machines, but is tested only on Sun JRE 5.0, 6.0, 7.0, and 8.0.
   
- The following summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server:  
+ The following chart summarizes support provided by the two JAR files included with Microsoft JDBC Drivers 6.0 and 4.2 for SQL Server:  
   
 |JAR|JDBC Version Compliance|Recommended Java Version|Description|  
 |---------|-----------------------------|----------------------|-----------------|   
@@ -234,7 +234,7 @@ The JDBC Driver 6.4 is also available on the Maven Central Repository and can be
   
  The JDBC driver is designed to work with and be supported by all major Java virtual machines, but is tested on Sun JRE 5.0, 6.0 and 7.0.
   
- The following summarizes support provided by the JAR file included with Microsoft JDBC Driver 4.1 for SQL Server.  
+ The following chart summarizes support provided by the JAR file included with Microsoft JDBC Driver 4.1 for SQL Server.  
   
 |JAR|JDBC Version|JRE (can run)|JDK (can compile)|  
 |---------|------------------|---------------------|-------------------------|   

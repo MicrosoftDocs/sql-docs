@@ -461,7 +461,7 @@ public class BulkCopyNonTransacted {
 
 ### Performing a dedicated bulk copy operation in a transaction
 
-By default, a bulk copy operation does not create transactions itself. When you want to perform a dedicated bulk copy operation, create a new instance of `SQLServerBulkCopy` with a connection string. In this scenario, each batch of the bulk copy operation is implicitly committed by the database. You can set the `UseInternalTransaction` option to `true` in `SQLServerBulkCopyOptions` to make the bulk copy operation create transactions, performing a commit after each each batch of the bulk copy operation.
+By default, a bulk copy operation does not create transactions itself. When you want to perform a dedicated bulk copy operation, create a new instance of `SQLServerBulkCopy` with a connection string. In this scenario, each batch of the bulk copy operation is implicitly committed by the database. You can set the `UseInternalTransaction` option to `true` in `SQLServerBulkCopyOptions` to make the bulk copy operation create transactions, performing a commit after each batch of the bulk copy operation.
   
 ```java
 SQLServerBulkCopyOptions copyOptions = new SQLServerBulkCopyOptions();

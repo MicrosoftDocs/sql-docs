@@ -1,7 +1,7 @@
 ---
 title: "Support policies for OLE DB Driver for SQL Server"
 description: "Learn about the support policies for OLE DB Driver for SQL Server and what operating systems and SQL database versions are supported with each version of the driver."
-ms.date: "05/25/2020"
+ms.date: "08/28/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -24,6 +24,7 @@ OLE DB Driver for SQL Server is tested with and supports connections to the foll
 
 | Driver version | Azure SQL Database | Azure SQL DW | Azure SQL Managed Instance | SQL Server 2019 | SQL Server 2017 | SQL Server 2016 | SQL Server 2014 | SQL Server 2012 |
 |----|-|-|-|-|-|-|-|-|
+|18.5|Y|Y|Y|Y|Y|Y|Y|Y|
 |18.4|Y|Y|Y|Y|Y|Y|Y|Y|
 |18.3|Y|Y|Y|Y|Y|Y|Y|Y|
 |18.2|Y|Y|Y|Y|Y|Y|Y|Y|
@@ -37,6 +38,7 @@ The following table lists which operating systems are supported by OLE DB Driver
 
 | Driver version | Windows Server 2019 | Windows Server 2016 | Windows Server 2012<sup>1</sup> | Windows Server 2012 R2<sup>2</sup> | Windows 10 | Windows 8.1<sup>3</sup> |
 |----|-|-|-|-|-|-|
+|18.5|Y|Y|Y|Y|Y|Y|
 |18.4|Y|Y|Y|Y|Y|Y|
 |18.3|Y|Y|Y|Y|Y|Y|
 |18.2|Y|Y|Y|Y|Y|Y|

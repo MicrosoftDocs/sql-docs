@@ -1,7 +1,7 @@
 ---
 title: "Release notes for OLE DB Driver"
 description: "This release notes article describes the changes in each release of the Microsoft OLE DB Driver for SQL Server."
-ms.date: "05/25/2020"
+ms.date: "08/28/2020"
 ms.prod: sql
 ms.technology: connectivity
 ms.topic: conceptual
@@ -21,6 +21,30 @@ Hello, from now on, please use the table-based format standard for all new Relea
 See section "## 18.2.1" for a live example in this article.
 Thank you. For questions, contact GeneMi. (2019/03/16)
 -->
+
+## 18.5.0
+![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2135577)  
+![download](../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2135722)  
+
+Released: September 2020
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+    For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2135577&clcid=0x40a)  
+    For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2135722&clcid=0x40a)  
+
+### Features added
+
+| Feature added | Details |
+| :------------ | :------ |
+| Support for [SQL Data Discovery and Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification) | [Using data classification](features/using-data-classification.md) |
+
+### Bugs fixed
+
+| Bug fixed | Details |
+| :-------- | :------ |
+| Fixed an issue with embedded NUL characters | Fixed a bug which resulted in the driver returning an incorrect length of strings with embedded NUL characters. |
+
+## Previous Releases
 
 ## 18.4.0
 ![download](../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2129954)  
@@ -50,8 +74,6 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Fixed the `SSPROP_INIT_PACKETSIZE` property default value handling | Fixed an unexpected error when the `SSPROP_INIT_PACKETSIZE` property was set to its default value of `0`. For details about this property, see [Initialization and Authorization Properties](ole-db-data-source-objects/initialization-and-authorization-properties.md). |
 | Fixed buffer overflow issues in [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) | Fixed buffer overflow issues when using malformed data files. |
 | Fixed accessibility issues | Fixed accessibility issues in the installer UI and the [SQL Server Login dialog](help-topics/sql-server-login-dialog.md) (reading content, tab stops). |
-
-## Previous Releases
 
 ## 18.3.0
 

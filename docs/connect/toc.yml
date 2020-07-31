@@ -5134,6 +5134,8 @@
       href: ../connect/oledb/features/table-valued-parameters-oledb-driver-for-sql-server.md
     - name: Using Azure Active Directory
       href: ../connect/oledb/features/using-azure-active-directory.md
+    - name: Using Data Classification
+      href: ../connect/oledb/features/using-data-classification.md
     - name: Using Database Mirroring
       href: ../connect/oledb/features/using-database-mirroring.md
     - name: Using Encryption Without Validation
@@ -5404,6 +5406,12 @@
           href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-getparameterproperties-ole-db.md
         - name: ISSCommandWithParameters::SetParameterProperties
           href: ../connect/oledb/ole-db-interfaces/isscommandwithparameters-setparameterproperties-ole-db.md
+        - name: ISSDataClassification
+          items:
+          - name: ISSDataClassification
+            href: oledb/ole-db-interfaces/issdataclassification-ole-db.md
+          - name: ISSDataClassification::GetSensitivityClassification
+            href: oledb/ole-db-interfaces/issdataclassification-getsensitivityclassification-ole-db.md
       - name: How to
         href: ../connect/oledb/ole-db-how-to/ole-db-how-to-topics.md
         items:

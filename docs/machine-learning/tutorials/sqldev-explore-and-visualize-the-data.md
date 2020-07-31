@@ -3,12 +3,13 @@ title: "R tutorial: Explore and visualize data"
 description: In part two of this five-part tutorial series, you'll explore sample data and generate some plots in preparation for using binary classification in R with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 03/03/2020
+
+ms.date: 07/30/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 
 # R tutorial: Explore and visualize data

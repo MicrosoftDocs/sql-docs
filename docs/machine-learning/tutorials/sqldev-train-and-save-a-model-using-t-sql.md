@@ -9,7 +9,7 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 
 # R tutorial: Train and save model
@@ -117,4 +117,4 @@ In this article, you:
 > + Saved the trained model to a SQL table
 
 > [!div class="nextstepaction"]
-> [Lesson 4: Predict potential outcomes using an R model in a stored procedure](../tutorials/sqldev-operationalize-the-model.md)
+> [Lesson 4: Predict potential outcomes using an R model in a stored procedure](sqldev-operationalize-the-model.md)

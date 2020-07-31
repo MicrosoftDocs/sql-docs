@@ -84,7 +84,7 @@ Col2=CustomerName Text Width 30
   
 ```  
   
-n=ColumnNametype [#]  
+n=ColumnName type [Width] [#]  
 ```  
   
 ## Remarks  

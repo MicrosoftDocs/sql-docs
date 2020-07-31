@@ -216,4 +216,4 @@ In this article, you:
 > + Saved the trained model to a SQL table
 
 > [!div class="nextstepaction"]
-> [Run predictions using Python embedded in a stored procedure](sqldev-py6-operationalize-the-model.md)
+> [Python tutorial: Run predictions using Python embedded in a stored procedure](sqldev-py6-operationalize-the-model.md)

@@ -36,7 +36,7 @@ You can use R Services to build and training machine learning and deep learning 
 
 Examples of the type of predictions that you can use SQL Server R Services for, include:
 
-|Type of prediction|Description|
+|Prediction type|Example|
 |-|-|
 |Classification/Categorization|Automatically divide customer feedback into positive and negative categories|
 |Regression/Predict continuous values|Predict the price of houses based on size and location|

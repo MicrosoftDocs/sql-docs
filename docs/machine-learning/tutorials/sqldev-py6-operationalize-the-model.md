@@ -25,6 +25,7 @@ This part of the tutorial demonstrates two methods for creating predictions base
 + **Individual scoring:** Pass a set of individual parameter values as input.  The stored procedure returns a single row or value.
 
 All the Python code needed for scoring is provided as part of the stored procedures.
+
 In this article, you'll:
 
 > [!div class="checklist"]

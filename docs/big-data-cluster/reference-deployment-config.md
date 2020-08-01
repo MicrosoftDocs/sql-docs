@@ -1,7 +1,7 @@
 ---
 title: Deployment configuration file
 titleSuffix: SQL Server Big Data Clusters
-description: Reference for a big data cluster deployment configuration file.
+description: Learn about a JSON file that documents the structure of a SQL Server 2019 big data cluster deployment configuration file.
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray

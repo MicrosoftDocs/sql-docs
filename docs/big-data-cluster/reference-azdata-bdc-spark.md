@@ -1,7 +1,7 @@
 ---
 title: azdata bdc spark reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc spark commands.
+description: Use this reference to understand SQL commands in the azdata tool, specifically the bdc spark command. 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab

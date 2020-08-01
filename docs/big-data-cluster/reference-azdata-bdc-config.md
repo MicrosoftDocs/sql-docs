@@ -1,7 +1,7 @@
 ---
 title: azdata bdc config reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc config commands.
+description: Use this reference to understand SQL commands in the azdata tool, specifically the bdc config commands. 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab

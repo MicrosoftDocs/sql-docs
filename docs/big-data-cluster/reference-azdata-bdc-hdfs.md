@@ -1,7 +1,7 @@
 ---
 title: azdata bdc hdfs reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc hdfs commands.
+description: Use this reference to understand SQL commands in the azdata tool, specifically the bdc hdfs commands. 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab

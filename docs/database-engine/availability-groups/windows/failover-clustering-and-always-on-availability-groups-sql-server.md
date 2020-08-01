@@ -21,7 +21,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Failover Clustering and Always On Availability Groups (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/sql-windows-only.md)]
 
    [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], the high availability and disaster recovery solution introduced in [!INCLUDE[sssql11](../../../includes/sssql11-md.md)], requires Windows Server Failover Clustering (WSFC). Also, though [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] is not dependent upon [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Failover Clustering, you can use a failover clustering instance (FCI) to host an availability replica for an availability group. It is important to know the role of each clustering technology, and to know what considerations are necessary as you design your [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] environment.  
   

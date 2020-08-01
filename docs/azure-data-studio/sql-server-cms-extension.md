@@ -1,6 +1,6 @@
 ---
 title: SQL Server Central Management Servers extension
-description: Install and use the SQL Server Central Management Servers extension (preview) for Azure Data Studio
+description: Learn how to install and use the SQL Server Central Management Servers extension (preview)—an extension for grouping servers and applying actions to the group.
 ms.reviewer: "alayu, maghan, sstein"
 ms.prod: azure-data-studio
 ms.technology: 

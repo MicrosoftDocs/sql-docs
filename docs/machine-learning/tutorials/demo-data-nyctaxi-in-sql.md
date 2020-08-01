@@ -21,7 +21,7 @@ To complete this exercise, you should have [SQL Server Management Studio](https:
 Tutorials and quickstarts using this data set include the following:
 
 + [Learn in-database analytics using R in SQL Server](sqldev-in-database-r-for-sql-developers.md)
-+ [Learn in-database analytics using Python in SQL Server](sqldev-in-database-python-for-sql-developers.md)
++ [Learn in-database analytics using Python in SQL Server](python-taxi-classification-introduction.md)
 
 ## Download files
 
@@ -111,4 +111,4 @@ Results should be similar to those showing in the following screenshot.
 NYC Taxi sample data is now available for hands-on learning.
 
 + [Learn in-database analytics using R in SQL Server](sqldev-in-database-r-for-sql-developers.md)
-+ [Learn in-database analytics using Python in SQL Server](sqldev-in-database-python-for-sql-developers.md)
++ [Learn in-database analytics using Python in SQL Server](python-taxi-classification-introduction.md)

@@ -25,13 +25,13 @@ In this article, you'll:
 > + Create and train a model using a SQL stored procedure
 > + Save the trained model to a SQL table
 
-In [part one](sqldev-in-database-python-for-sql-developers.md), you installed the prerequisites and restored the sample database.
+In [part one](python-taxi-classification-introduction.md), you installed the prerequisites and restored the sample database.
 
-In [part two](sqldev-py3-explore-and-visualize-the-data.md), you explored the sample data and generated some plots.
+In [part two](python-taxi-classification-explore-data.md), you explored the sample data and generated some plots.
 
-In [part three](sqldev-py4-create-data-features-using-t-sql.md), you learned how to create features from raw data by using a Transact-SQL function. You then called that function from a stored procedure to create a table that contains the feature values.
+In [part three](python-taxi-classification-create-features.md), you learned how to create features from raw data by using a Transact-SQL function. You then called that function from a stored procedure to create a table that contains the feature values.
 
-In [part five](sqldev-py6-operationalize-the-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
+In [part five](python-taxi-classification-deploy-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
 
 ## Split the sample data into training and testing sets
 
@@ -216,4 +216,4 @@ In this article, you:
 > + Saved the trained model to a SQL table
 
 > [!div class="nextstepaction"]
-> [Python tutorial: Run predictions using Python embedded in a stored procedure](sqldev-py6-operationalize-the-model.md)
+> [Python tutorial: Run predictions using Python embedded in a stored procedure](python-taxi-classification-deploy-model.md)

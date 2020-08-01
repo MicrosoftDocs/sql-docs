@@ -1,6 +1,6 @@
 ---
 title: "Scale Out Master | Microsoft Docs"
-description: "This article describes the Scale Out Master component of SSIS Scale Out"
+description: "Learn about the Scale Out Master component of SQL Server Integration Services (SSIS) Scale Out Master Service."
 ms.custom: performance
 ms.date: 01/19/2019
 ms.prod: sql

@@ -1,22 +1,37 @@
 ---
-title: "R + T-SQL tutorial: Data features"
-description: Tutorial showing how to add calculations to stored procedures for use in R machine learning models.
+title: "R tutorial: Create data features"
+description: In part three of this five-part tutorial series, you'll use T-SQL functions to create and store features from sample data with SQL machine learning.
 ms.prod: sql
-ms.technology: machine-learning-services
+ms.technology: machine-learning
 
-ms.date: 10/19/2018  
+ms.date: 07/30/2020 
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
-# Lesson 2: Create data features using R and T-SQL
+
+# R tutorial: Create data features
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article is part of a tutorial for SQL developers on how to use R in SQL Server.
+In part three of this five-part tutorial series, you'll learn how to create features from raw data by using a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. You'll then call that function from a SQL stored procedure to create a table that contains the feature values.
 
-In this step, you'll learn how to create features from raw data by using a [!INCLUDE[tsql](../../includes/tsql-md.md)] function. You'll then call that function from a stored procedure to create a table that contains the feature values.
+In this article, you'll:
+
+> [!div class="checklist"]
+> + Modify a custom function to calculate trip distance
+> + Save the features using another custom function
+
+In [part one](sqldev-in-database-r-for-sql-developers.md), you installed the prerequisites and restored the sample database.
+
+In [part two](sqldev-explore-and-visualize-the-data.md), you reviewed the sample data and generated some plots.
+
+In [part four](sqldev-train-and-save-a-model-using-t-sql.md), you'll load the modules and call the necessary functions to create and train the model using a SQL Server stored procedure.
+
+In [part five](sqldev-operationalize-the-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
+
+In [part five](sqldev-py6-operationalize-the-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
 
 ## About feature engineering
 
@@ -28,11 +43,11 @@ You'll use one custom T-SQL function, _fnCalculateDistance_, to compute the dist
 
 The overall process is as follows:
 
-- Create the T-SQL function that performs the calculations
++ Create the T-SQL function that performs the calculations
 
-- Call the function to generate the feature data
++ Call the function to generate the feature data
 
-- Save the feature data to a table
++ Save the feature data to a table
 
 ## Calculate trip distance using fnCalculateDistance
 
@@ -42,33 +57,33 @@ The function _fnCalculateDistance_ should have been downloaded and registered wi
 
 2. Right-click _fnCalculateDistance_, and select **Modify** to open the [!INCLUDE[tsql](../../includes/tsql-md.md)] script in a new query window.
   
-    ```sql
-    CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
-    -- User-defined function that calculates the direct distance between two geographical coordinates.  
-    RETURNS float  
-    AS  
-    BEGIN  
-      DECLARE @distance decimal(28, 10)  
-      -- Convert to radians  
-      SET @Lat1 = @Lat1 / 57.2958  
-      SET @Long1 = @Long1 / 57.2958  
-      SET @Lat2 = @Lat2 / 57.2958  
-      SET @Long2 = @Long2 / 57.2958  
-      -- Calculate distance  
-      SET @distance = (SIN(@Lat1) * SIN(@Lat2)) + (COS(@Lat1) * COS(@Lat2) * COS(@Long2 - @Long1))  
-      --Convert to miles  
-      IF @distance <> 0  
-      BEGIN  
-        SET @distance = 3958.75 * ATAN(SQRT(1 - POWER(@distance, 2)) / @distance);  
-      END  
-      RETURN @distance  
-    END
-    GO
-    ```
+   ```sql
+   CREATE FUNCTION [dbo].[fnCalculateDistance] (@Lat1 float, @Long1 float, @Lat2 float, @Long2 float)  
+   -- User-defined function that calculates the direct distance between two geographical coordinates.  
+   RETURNS float  
+   AS  
+   BEGIN  
+     DECLARE @distance decimal(28, 10)  
+     -- Convert to radians  
+     SET @Lat1 = @Lat1 / 57.2958  
+     SET @Long1 = @Long1 / 57.2958  
+     SET @Lat2 = @Lat2 / 57.2958  
+     SET @Long2 = @Long2 / 57.2958  
+     -- Calculate distance  
+     SET @distance = (SIN(@Lat1) * SIN(@Lat2)) + (COS(@Lat1) * COS(@Lat2) * COS(@Long2 - @Long1))  
+     --Convert to miles  
+     IF @distance <> 0  
+     BEGIN  
+       SET @distance = 3958.75 * ATAN(SQRT(1 - POWER(@distance, 2)) / @distance);  
+     END  
+     RETURN @distance  
+   END
+   GO
+   ```
   
-    - The function is a scalar-valued function, returning a single data value of a predefined type.
+   + The function is a scalar-valued function, returning a single data value of a predefined type.
   
-    - It takes latitude and longitude values as inputs, obtained from trip pick-up and drop-off locations. The Haversine formula converts locations to radians and uses those values to compute the direct distance in miles between those two locations.
+   + It takes latitude and longitude values as inputs, obtained from trip pick-up and drop-off locations. The Haversine formula converts locations to radians and uses those values to compute the direct distance in miles between those two locations.
 
 ## Generate the features using _fnEngineerFeatures_
 
@@ -76,51 +91,54 @@ To add the computed values to a table that can be used for training the model, y
 
 1. Take a minute to review the code for the custom T-SQL function, _fnEngineerFeatures_, which should have been created for you as part of the preparation for this walkthrough.
   
-    ```sql
-    CREATE FUNCTION [dbo].[fnEngineerFeatures] (  
-    @passenger_count int = 0,  
-    @trip_distance float = 0,  
-    @trip_time_in_secs int = 0,  
-    @pickup_latitude float = 0,  
-    @pickup_longitude float = 0,  
-    @dropoff_latitude float = 0,  
-    @dropoff_longitude float = 0)  
-    RETURNS TABLE  
-    AS
-      RETURN
-      (
-      -- Add the SELECT statement with parameter references here
-      SELECT
-        @passenger_count AS passenger_count,
-        @trip_distance AS trip_distance,
-        @trip_time_in_secs AS trip_time_in_secs,
-        [dbo].[fnCalculateDistance](@pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude) AS direct_distance
+   ```sql
+   CREATE FUNCTION [dbo].[fnEngineerFeatures] (  
+   @passenger_count int = 0,  
+   @trip_distance float = 0,  
+   @trip_time_in_secs int = 0,  
+   @pickup_latitude float = 0,  
+   @pickup_longitude float = 0,  
+   @dropoff_latitude float = 0,  
+   @dropoff_longitude float = 0)  
+   RETURNS TABLE  
+   AS
+     RETURN
+     (
+     -- Add the SELECT statement with parameter references here
+     SELECT
+       @passenger_count AS passenger_count,
+       @trip_distance AS trip_distance,
+       @trip_time_in_secs AS trip_time_in_secs,
+       [dbo].[fnCalculateDistance](@pickup_latitude, @pickup_longitude, @dropoff_latitude, @dropoff_longitude) AS direct_distance
   
-      )
-    GO
-    ```
+     )
+   GO
+   ```
 
-    + This table-valued function that takes multiple columns as inputs, and outputs a table with multiple feature columns.
+   + This table-valued function that takes multiple columns as inputs, and outputs a table with multiple feature columns.
 
-    + The purpose of this function is to create new features for use in building a model.
+   + The purpose of this function is to create new features for use in building a model.
 
-2.  To verify that this function works, use it to calculate the geographical distance for those trips where the metered distance was 0 but the pick-up and drop-off locations were different.
+2. To verify that this function works, use it to calculate the geographical distance for those trips where the metered distance was 0 but the pick-up and drop-off locations were different.
   
-    ```sql
-        SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
-        trip_distance, pickup_datetime, dropoff_datetime,
-        dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance
-        FROM nyctaxi_sample
-        WHERE pickup_longitude != dropoff_longitude and pickup_latitude != dropoff_latitude and trip_distance = 0
-        ORDER BY trip_time_in_secs DESC
-    ```
+   ```sql
+       SELECT tipped, fare_amount, passenger_count,(trip_time_in_secs/60) as TripMinutes,
+       trip_distance, pickup_datetime, dropoff_datetime,
+       dbo.fnCalculateDistance(pickup_latitude, pickup_longitude,  dropoff_latitude, dropoff_longitude) AS direct_distance
+       FROM nyctaxi_sample
+       WHERE pickup_longitude != dropoff_longitude and pickup_latitude != dropoff_latitude and trip_distance = 0
+       ORDER BY trip_time_in_secs DESC
+   ```
   
-    As you can see, the distance reported by the meter doesn't always correspond to geographical distance. This is why feature engineering is so important. You can use these improved data features to train a machine learning model using R.
+   As you can see, the distance reported by the meter doesn't always correspond to geographical distance. This is why feature engineering is so important. You can use these improved data features to train a machine learning model using R.
 
-## Next lesson
+## Next steps
 
-[Lesson 3: Train and save a model using T-SQL](sqldev-train-and-save-a-model-using-t-sql.md)
+In this article, you:
 
-## Previous lesson
+> [!div class="checklist"]
+> + Modified a custom function to calculate trip distance
+> + Saved the features using another custom function
 
-[Lesson 1: Explore and visualize the data using R and stored procedures](sqldev-explore-and-visualize-the-data.md)
+> [!div class="nextstepaction"]
+> [R tutorial: Train and save model](sqldev-train-and-save-a-model-using-t-sql.md)

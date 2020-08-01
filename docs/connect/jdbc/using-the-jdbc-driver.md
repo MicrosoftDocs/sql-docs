@@ -78,11 +78,11 @@ The **mssql-jdbc-8.4.0.jre8.jar**, **mssql-jdbc-8.4.0.jre11.jar**, or **mssql-jd
 
 The following snippet is an example of the CLASSPATH statement that is used for a Windows application:
 
-`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.4 for SQL Server\sqljdbc_8.4\enu\mssql-jdbc-8.4.0.jre14.jar`
+`CLASSPATH =.;C:\Program Files\Microsoft JDBC Driver 8.4 for SQL Server\sqljdbc_8.4\enu\mssql-jdbc-8.4.0.jre11.jar`
 
 The following snippet is an example of the CLASSPATH statement that is used for a Unix/Linux application:
 
-`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.4/enu/mssql-jdbc-8.4.0.jre14.jar`
+`CLASSPATH =.:/home/usr1/mssqlserverjdbc/Driver/sqljdbc_8.4/enu/mssql-jdbc-8.4.0.jre11.jar`
 
 Make sure that the CLASSPATH statement contains only one [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)], such as either **mssql-jdbc-8.4.0.jre8.jar**, **mssql-jdbc-8.4.0.jre11.jar**, or **mssql-jdbc-8.4.0.jre14.jar**.
 

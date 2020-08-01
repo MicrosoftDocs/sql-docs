@@ -1,7 +1,7 @@
 ---
 title: azdata bdc app status reference
 titleSuffix: SQL Server big data clusters
-description: Use this reference to understand SQL commands in the azdata tool, specifically the bdc app status command. 
+description: Use this reference article to understand SQL commands in the azdata tool, specifically the bdc app status command. 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab

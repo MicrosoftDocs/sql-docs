@@ -1,7 +1,7 @@
 ---
 title: azdata bdc reference
 titleSuffix: SQL Server big data clusters
-description: Use this reference to understand SQL commands in the azdata tool, specifically the many bdc commands. 
+description: Use this reference article to understand SQL commands in the azdata tool, specifically the many bdc commands. 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab

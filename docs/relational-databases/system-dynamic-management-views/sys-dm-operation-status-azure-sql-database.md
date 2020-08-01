@@ -22,7 +22,7 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 ---
 # sys.dm_operation_status (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
   Returns information about operations performed on databases in a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server.  
   

@@ -110,7 +110,9 @@ This document lists only arguments pertaining to SQL graph. For a full list and 
  Creates an edge table.  
  
  *table_constraint*   
- Specifies the properties of a PRIMARY KEY, UNIQUE, FOREIGN KEY, CONNECTION constraint, a CHECK constraint, or a DEFAULT definition added to a table
+ Specifies the properties of a PRIMARY KEY, UNIQUE, FOREIGN KEY, CONNECTION constraint, a CHECK constraint, or a DEFAULT definition added to a table  
+> [!NOTE]   
+>  CONNECTION constraint applies only to edge table type
  
  ON { partition_scheme | filegroup | "default" }    
  Specifies the partition scheme or filegroup on which the table is stored. If partition_scheme is specified, the table is to be a   partitioned table whose partitions are stored on a set of one or more filegroups specified in partition_scheme. If filegroup is specified, the table is stored in the named filegroup. The filegroup must exist within the database. If "default" is specified, or if ON is not specified at all, the table is stored on the default filegroup. The storage mechanism of a table as specified in CREATE TABLE cannot be subsequently altered.
@@ -158,6 +160,15 @@ The following examples show how to create `EDGE` tables
  -- Create a likes edge table, this table does not have any user defined attributes   
  CREATE TABLE likes AS EDGE;
 
+```
+
+This other example models a rule that **only** people can be friends with other people, this means this edge does not allow reference to any other node than Person.
+```
+/* Create friend edge table with CONSTRAINT, restricts for nodes and it direction */
+CREATE TABLE dbo.FriendOf(
+  CONSTRAINT cnt_Person_FriendOf_Person
+    CONNECTION (dbo.Person TO dbo.Person) 
+)AS EDGE;
 ```
 
 

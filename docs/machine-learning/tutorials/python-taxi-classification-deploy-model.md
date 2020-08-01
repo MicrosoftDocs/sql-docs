@@ -32,13 +32,13 @@ In this article, you'll:
 > + Create and use stored procedures for batch scoring
 > + Create and use stored procedures for scoring a single row
 
-In [part one](sqldev-in-database-python-for-sql-developers.md), you installed the prerequisites and restored the sample database.
+In [part one](python-taxi-classification-introduction.md), you installed the prerequisites and restored the sample database.
 
-In [part two](sqldev-py3-explore-and-visualize-the-data.md), you explored the sample data and generated some plots.
+In [part two](python-taxi-classification-explore-data.md), you explored the sample data and generated some plots.
 
-In [part three](sqldev-py4-create-data-features-using-t-sql.md), you learned how to create features from raw data by using a Transact-SQL function. You then called that function from a stored procedure to create a table that contains the feature values.
+In [part three](python-taxi-classification-create-features.md), you learned how to create features from raw data by using a Transact-SQL function. You then called that function from a stored procedure to create a table that contains the feature values.
 
-In [part four](sqldev-py5-train-and-save-a-model-using-t-sql.md), you loaded the modules and called the necessary functions to create and train the model using a SQL Server stored procedure.
+In [part four](python-taxi-classification-train-model.md), you loaded the modules and called the necessary functions to create and train the model using a SQL Server stored procedure.
 
 ## Batch scoring
 
@@ -183,9 +183,9 @@ In this section, you'll learn how to create single predictions by calling two st
 
 + [PredictTipSingleModeSciKitPy](#predicttipsinglemodescikitpy) is designed for single-row scoring using the scikit-learn model.
 + [PredictTipSingleModeRxPy](#predicttipsinglemoderxpy) is designed for single-row scoring using the revoscalepy model.
-+ If you haven't trained a model yet, return to [part five](sqldev-py5-train-and-save-a-model-using-t-sql.md)!
++ If you haven't trained a model yet, return to [part five](python-taxi-classification-train-model.md)!
 
-Both models take as input a series of single values, such as passenger count, trip distance, and so forth. A table-valued function, `fnEngineerFeatures`, is used to convert latitude and longitude values from the inputs to a new feature, direct distance. [Part four](sqldev-py4-create-data-features-using-t-sql.md) contains a description of this table-valued function.
+Both models take as input a series of single values, such as passenger count, trip distance, and so forth. A table-valued function, `fnEngineerFeatures`, is used to convert latitude and longitude values from the inputs to a new feature, direct distance. [Part four](python-taxi-classification-create-features.md) contains a description of this table-valued function.
 
 Both stored procedures create a score based on the Python model.
 

@@ -25,13 +25,13 @@ In this article, you'll:
 > + Modify a custom function to calculate trip distance
 > + Save the features using another custom function
 
-In [part one](sqldev-in-database-python-for-sql-developers.md), you installed the prerequisites and restored the sample database.
+In [part one](python-taxi-classification-introduction.md), you installed the prerequisites and restored the sample database.
 
-In [part two](sqldev-py3-explore-and-visualize-the-data.md), you explored the sample data and generated some plots.
+In [part two](python-taxi-classification-explore-data.md), you explored the sample data and generated some plots.
 
-In [part four](sqldev-py5-train-and-save-a-model-using-t-sql.md), you'll load the modules and call the necessary functions to create and train the model using a SQL Server stored procedure.
+In [part four](python-taxi-classification-train-model.md), you'll load the modules and call the necessary functions to create and train the model using a SQL Server stored procedure.
 
-In [part five](sqldev-py6-operationalize-the-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
+In [part five](python-taxi-classification-deploy-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
 
 ## Define the Function
 
@@ -130,4 +130,4 @@ In this article, you:
 > + Saved the features using another custom function
 
 > [!div class="nextstepaction"]
-> [Python tutorial: Train and save a Python model using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+> [Python tutorial: Train and save a Python model using T-SQL](python-taxi-classification-train-model.md)

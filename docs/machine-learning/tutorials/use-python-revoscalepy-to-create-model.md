@@ -171,5 +171,5 @@ For SQL Server compute contexts, you can set the batch size, or provide hints ab
 
 These additional Python samples and tutorials demonstrate end-to-end scenarios using more complex data sources, as well as the use of remote compute contexts.
 
-+ [In-Database Python for SQL developers](sqldev-in-database-python-for-sql-developers.md)
++ [In-Database Python for SQL developers](python-taxi-classification-introduction.md)
 + [Build a predictive model using Python and SQL Server](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/)

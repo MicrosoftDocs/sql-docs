@@ -39,9 +39,13 @@ Specifies that the driver authenticate to SQL Server using an Azure Active Direc
 
 Specifies that the driver authenticate to SQL Server using Azure Active Directory Interactive mode by providing login ID. This will trigger the Azure Authentication prompt dialog.
 
+### With Managed Service Identity authentication
+
+Specifies that the driver authenticate to SQL Server using a Managed Service Identity.
+
 ### Login ID
 
-Specifies the login ID the driver uses when connecting to SQL Server if **With SQL Server Authentication using a login ID and password entered by the user** or **With Active Directory Password authentication using a login ID and password entered by the user** or **With Active Directory Interactive authentication using a login ID entered by the user** is selected. This only applies to the connection made to determine the server default settings; it does not apply to subsequent connections made using the data source after it has been created.
+Specifies the login ID the driver uses when connecting to SQL Server if **With SQL Server Authentication using a login ID and password entered by the user** or **With Active Directory Password authentication using a login ID and password entered by the user** or **With Active Directory Interactive authentication using a login ID entered by the user** is selected. If **With Managed Service Identity authentication** is selected specify the object ID of the managed identity or leave blank to use the default identity. This only applies to the connection made to determine the server default settings; it does not apply to subsequent connections made using the data source after it has been created except in the case of using Managed Service Identity authentication.
 
 ### Password
 

@@ -1,5 +1,5 @@
 ---
-title: "sys.dm_operation_status (Azure SQL Database) | Microsoft Docs"
+title: "sys.dm_operation_status | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/05/2017"
 ms.service: sql-database
@@ -20,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# sys.dm_operation_status (Azure SQL Database)
+# sys.dm_operation_status
 
 [!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 

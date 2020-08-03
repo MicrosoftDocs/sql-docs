@@ -59,7 +59,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release          | BDC Version    | `azdata` Version| Release date |
 |------------------|----------------|-----------------|--------------|
-| [CU6](#cu6)      | 15.0.4053.10   | 20.0.0          | 2020-07-16   |
+| [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
 | [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
 | [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
 | [CU3](#cu3)      | 15.0.4023.6    | 15.0.4023       | 2020-03-12   |
@@ -71,13 +71,24 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
 
-## <a id="cu6"></a> CU6 (July 2020)
+## <a id="cu6"></a> CU6 (Aug 2020)
 
 Cumulative Update 6 (CU6) release for SQL Server 2019.
 
 |Package version | Image tag |
 |-----|-----|
-|15.0.4053.10 |[2019-CU6-ubuntu-16.04]
+|15.0.4053.23 |[2019-CU6-ubuntu-16.04]
+
+This release includes minor fixes and enhancements. The following articles include information related to these updates:
+
+- [Manage big data cluster access in Active Directory mode](manage-user-access.md)
+- [Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode](deploy-active-directory.md)
+- [Deploy SQL Server Big Data Cluster with high availability](deployment-high-availability.md)
+- [Configure a SQL Server Big Data Cluster](configure-cluster.md)
+- [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
+- [SQL Server master instance configuration properties.](reference-config-master-instance.md)
+- [Apache Spark & Apache Hadoop (HDFS) configuration properties](reference-config-spark-hadoop.md)
+- [Kubernetes RBAC model & impact on users and service accounts managing BDC](kubernetes-rbac.md)
 
 ## <a id="cu5"></a> CU5 (June 2020)
 

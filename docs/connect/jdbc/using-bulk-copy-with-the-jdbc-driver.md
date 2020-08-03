@@ -368,17 +368,17 @@ There are currently two limitations:
 
 1. With this connection property set to `false`, the driver will only accept the default string literal format of each temporal datatype, for example:
 
-  `DATE: YYYY-MM-DD`
+    `DATE: YYYY-MM-DD`
 
-  `DATETIME: YYYY-MM-DD hh:mm:ss[.nnn]`
+    `DATETIME: YYYY-MM-DD hh:mm:ss[.nnn]`
 
-  `DATETIME2: YYYY-MM-DD hh:mm:ss[.nnnnnnn]`
+    `DATETIME2: YYYY-MM-DD hh:mm:ss[.nnnnnnn]`
 
-  `DATETIMEOFFSET: YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+/-}hh:mm]`
+    `DATETIMEOFFSET: YYYY-MM-DD hh:mm:ss[.nnnnnnn] [{+/-}hh:mm]`
 
-  `SMALLDATETIME:YYYY-MM-DD hh:mm:ss`
+    `SMALLDATETIME:YYYY-MM-DD hh:mm:ss`
 
-  `TIME: hh:mm:ss[.nnnnnnn]`
+    `TIME: hh:mm:ss[.nnnnnnn]`
 
 2. With this connection property set to `false`, the column type specified for bulk copy has to respect the data type mapping chart from [here](../../connect/jdbc/using-basic-data-types.md):
 
@@ -679,10 +679,10 @@ public class BulkCopyCSV {
 
 Driver version 8.4.0 adds a new API `SQLServerBulkCSVFileRecord.setEscapeColumnDelimitersCSV(boolean)`. When set to true, the following rules will apply:
 
-1. Each field may or may not be enclosed in double quotes.
-2. If fields are not enclosed with double quotes, then double quotes may not appear inside the fields.
-3. Fields containing double quotes, and delimiters should be enclosed in double quotes.
-4. If double-quotes are used to enclose fields, then a double-quote appearing inside a field must be escaped by preceding it with another double quote.
+- Each field may or may not be enclosed in double quotes.
+- If fields are not enclosed with double quotes, then double quotes may not appear inside the fields.
+- Fields containing double quotes, and delimiters should be enclosed in double quotes.
+- If double-quotes are used to enclose fields, then a double-quote appearing inside a field must be escaped by preceding it with another double quote.
 
 ### Bulk copy with Always Encrypted columns  
 

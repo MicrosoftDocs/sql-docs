@@ -1,22 +1,35 @@
 ---
-title: "Python + T-SQL: Explore data"
-description: Tutorial showing how to embed Python in SQL Server stored procedures and T-SQL functions 
+title: "Python tutorial: Explore and visualize data"
+description: In part two of this five-part tutorial series, you'll explore sample data and generate some plots in preparation for using binary classification in Python with SQL machine learning.
 ms.prod: sql
-ms.technology: machine-learning-services
+ms.technology: machine-learning
 
-ms.date: 11/01/2018  
+ms.date: 07/29/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
-# Explore and visualize the data
+
+# Python tutorial: Explore and visualize data
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-This article is part of a tutorial, [In-database Python analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md). 
+In part two of this five-part tutorial series, you'll explore the sample data and generate some plots. Later, you'll learn how to serialize graphics objects in Python, and then deserialize those objects and make plots.
 
-In this step, you explore the sample data and generate some plots. Later, you learn how to serialize graphics objects in Python, and then deserialize those objects and make plots.
+In this article, you'll:
+
+> [!div class="checklist"]
+> + Review the sample data
+> + Create plots using Python in T-SQL
+
+In [part one](python-taxi-classification-introduction.md), you installed the prerequisites and restored the sample database.
+
+In [part three](python-taxi-classification-create-features.md), you'll learn how to create features from raw data by using a Transact-SQL function. You'll then call that function from a stored procedure to create a table that contains the feature values.
+
+In [part four](python-taxi-classification-train-model.md), you'll load the modules and call the necessary functions to create and train the model using a SQL Server stored procedure.
+
+In [part five](python-taxi-classification-deploy-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
 
 ## Review the data
 
@@ -145,13 +158,10 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
 	0xFFD8FFE000104A4649...
     ```
 
-  
 4. From a [Python client](../python/setup-python-client-tools-sql.md), you can now connect to the SQL Server instance that generated the binary plot objects, and view the plots. 
 
-    To do this, run the following Python code, replacing the server name, database name, and credentials as appropriate. Make sure the Python version is the same on the client and the server. Also make sure that the Python libraries on your client (such as matplotlib) are the same or higher version relative to the libraries installed on the server.
+    To do this, run the following Python code, replacing the server name, database name, and credentials as appropriate (for Windows authentication, replace the `UID` and `PWD` parameters with `Trusted_Connection=True`). Make sure the Python version is the same on the client and the server. Also make sure that the Python libraries on your client (such as matplotlib) are the same or higher version relative to the libraries installed on the server.
   
-    **Using SQL Server authentication:**
-    
     ```python
     %matplotlib notebook
     import pyodbc
@@ -167,36 +177,21 @@ The stored procedure returns a serialized Python `figure` object as a stream of 
     print("The plots are saved in directory: ",os.getcwd())
     ```
 
-    **Using Windows authentication:**
-
-    ```python
-    %matplotlib notebook
-    import pyodbc
-    import pickle
-    import os
-    cnxn = pyodbc.connect('DRIVER=SQL Server;SERVER={SERVER_NAME};DATABASE={DB_NAME};Trusted_Connection=True;')
-    cursor = cnxn.cursor()
-    cursor.execute("EXECUTE [dbo].[PyPlotMatplotlib]")
-    tables = cursor.fetchall()
-    for i in range(0, len(tables)):
-        fig = pickle.loads(tables[i][0])
-        fig.savefig(str(i)+'.png')
-    print("The plots are saved in directory: ",os.getcwd())
-    ```
-
-5.  If the connection is successful, you should see a message like the following:
+5. If the connection is successful, you should see a message like the following:
   
-	*The plots are saved in directory: xxxx*
+   *The plots are saved in directory: xxxx*
   
-6.  The output file is created in the Python working directory. To view the plot, locate the Python working directory, and open the file. The following image shows a plot saved on the client computer.
+6. The output file is created in the Python working directory. To view the plot, locate the Python working directory, and open the file. The following image shows a plot saved on the client computer.
   
-    ![Tip amount vs Fare amount](media/sqldev-python-sample-plot.png "Tip amount vs Fare amount") 
+   ![Tip amount vs Fare amount](media/sqldev-python-sample-plot.png "Tip amount vs Fare amount") 
 
-## Next step
+## Next steps
 
-[Create data features using T-SQL](sqldev-py5-train-and-save-a-model-using-t-sql.md)
+In this article, you:
 
-## Previous step
+> [!div class="checklist"]
+> + Reviewed the sample data
+> + Created plots using Python in T-SQL
 
-[Download the NYC Taxi data set](demo-data-nyctaxi-in-sql.md)
-
+> [!div class="nextstepaction"]
+> [Python tutorial: Create Data Features using T-SQL](python-taxi-classification-create-features.md)

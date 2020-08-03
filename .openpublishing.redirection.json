@@ -41527,8 +41527,8 @@
     },
     {
       "source_path": "docs/advanced-analytics/r/sqldev-train-and-save-a-model-using-t-sql.md",
-      "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql",
-      "redirect_document_id": true
+      "redirect_url": "/sql/advanced-analytics/tutorials/r-taxi-classification-train-model",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/relational-databases/performance/adaptive-query-processing.md",
@@ -42523,51 +42523,101 @@
     {
       "source_path": "docs/advanced-analytics/tutorials/sqldev-create-data-features-using-t-sql.md",
       "redirect_url": "/sql/machine-learning/tutorials/sqldev-create-data-features-using-t-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sqldev-create-data-features-using-t-sql.md",
+      "redirect_url": "/sql/machine-learning/tutorials/r-taxi-classification-create-features",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/advanced-analytics/tutorials/sqldev-explore-and-visualize-the-data.md",
       "redirect_url": "/sql/machine-learning/tutorials/sqldev-explore-and-visualize-the-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sqldev-explore-and-visualize-the-data.md",
+      "redirect_url": "/sql/machine-learning/tutorials/r-taxi-classification-explore-data",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/advanced-analytics/tutorials/sqldev-in-database-python-for-sql-developers.md",
       "redirect_url": "/sql/machine-learning/tutorials/sqldev-in-database-python-for-sql-developers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sqldev-in-database-python-for-sql-developers.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-taxi-classification-introduction",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md",
       "redirect_url": "/sql/machine-learning/tutorials/sqldev-in-database-r-for-sql-developers",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md",
+      "redirect_url": "/sql/machine-learning/tutorials/r-taxi-classification-introduction",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/advanced-analytics/tutorials/sqldev-operationalize-the-model.md",
       "redirect_url": "/sql/machine-learning/tutorials/sqldev-operationalize-the-model",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sqldev-operationalize-the-model.md",
+      "redirect_url": "/sql/machine-learning/tutorials/r-taxi-classification-deploy-model",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/advanced-analytics/tutorials/sqldev-py3-explore-and-visualize-the-data.md",
       "redirect_url": "/sql/machine-learning/tutorials/sqldev-py3-explore-and-visualize-the-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sqldev-py3-explore-and-visualize-the-data.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-taxi-classification-explore-data",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/advanced-analytics/tutorials/sqldev-py4-create-data-features-using-t-sql.md",
       "redirect_url": "/sql/machine-learning/tutorials/sqldev-py4-create-data-features-using-t-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sqldev-py4-create-data-features-using-t-sql.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-taxi-classification-create-features",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/advanced-analytics/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md",
       "redirect_url": "/sql/machine-learning/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-taxi-classification-train-model",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/advanced-analytics/tutorials/sqldev-py6-operationalize-the-model.md",
       "redirect_url": "/sql/machine-learning/tutorials/sqldev-py6-operationalize-the-model",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sqldev-py6-operationalize-the-model.md",
+      "redirect_url": "/sql/machine-learning/tutorials/python-taxi-classification-deploy-model",
       "redirect_document_id": true
     },
     {
       "source_path": "docs/advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql.md",
       "redirect_url": "/sql/machine-learning/tutorials/sqldev-train-and-save-a-model-using-t-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/machine-learning/tutorials/sqldev-train-and-save-a-model-using-t-sql.md",
+      "redirect_url": "/sql/machine-learning/tutorials/r-taxi-classification-train-model",
       "redirect_document_id": true
     },
     {
@@ -42634,6 +42684,11 @@
       "source_path": "docs/machine-learning/sql-native-scoring.md",
       "redirect_url": "/sql/machine-learning/predictions/native-scoring-predict-transact-sql",
       "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/machine-learning/predictions/how-to-do-realtime-scoring.md",
+      "redirect_url": "/sql/machine-learning/predictions/native-scoring-predict-transact-sql",
+      "redirect_document_id": false
     },
     {
       "source_path": "docs/linux/sql-server-linux-develop-use-ssms.md",
@@ -44192,7 +44247,7 @@
     },
     {
       "source_path": "docs/advanced-analytics/r-services/in-database-advanced-analytics-for-sql-developers-tutorial.md",
-      "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers",
+      "redirect_url": "/sql/advanced-analytics/tutorials/r-taxi-classification-introduction",
       "redirect_document_id": false
     },
     {
@@ -44207,22 +44262,22 @@
     },
     {
       "source_path": "docs/advanced-analytics/r-services/step-3-explore-and-visualize-the-data-in-database-advanced-analytics-tutorial.md",
-      "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-explore-and-visualize-the-data",
+      "redirect_url": "/sql/advanced-analytics/tutorials/r-taxi-classification-explore-data",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/advanced-analytics/r-services/step-4-create-data-features-using-t-sql-in-database-advanced-analytics-tutorial.md",
-      "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-create-data-features-using-t-sql",
+      "redirect_url": "/sql/advanced-analytics/tutorials/r-taxi-classification-create-features",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/advanced-analytics/r-services/step-5-train-and-save-a-model-using-t-sql.md",
-      "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-train-and-save-a-model-using-t-sql",
+      "redirect_url": "/sql/advanced-analytics/tutorials/r-taxi-classification-train-model",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/advanced-analytics/r-services/step-6-operationalize-the-model-in-database-advanced-analytics-tutorial.md",
-      "redirect_url": "/sql/advanced-analytics/tutorials/sqldev-operationalize-the-model",
+      "redirect_url": "/sql/advanced-analytics/tutorials/r-taxi-classification-deploy-model",
       "redirect_document_id": false
     },
     {

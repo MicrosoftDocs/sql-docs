@@ -5,7 +5,7 @@ author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "7/2/2020"
+ms.date: "7/31/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
@@ -15,6 +15,15 @@ ms.author: alexiva
 # What's New in SSMA for Access (AccessToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
+
+## SSMA v8.12
+
+The v8.12 release of SSMA for Access contains the following changes:
+
+* Support for `BigInt` (`Large Number`) data type
+* Improved column type resolution
+* Improved conversion of column validation rules
+* Using latest available ACE OLE DB provider for data migration
 
 ## SSMA v8.11
 

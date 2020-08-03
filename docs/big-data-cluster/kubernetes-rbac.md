@@ -95,8 +95,8 @@ If these settings are set to `false`, BDC deployment workflow will not attempt t
 
 ## Default service account usage from within a BDC pod
 
-For a tighter security model, SQL Server 2019 CU6 disabled mounting by default credentials for the default Kubernetes service account within the BDC pods. This applies to both new and upgraded deployments in CU6 or later versions.
-The credential token inside the pods can be used to access the Kubernetes API server, and the level of permissions depends on the Kubernetes authorization policy settings. If you have specific use cases that require reverting to the previous CU6 behavior, you can turn on the auto-mount at deployment time using the control.json configuration deployment file by setting *automountServiceAccountToken* to *true*. Run this command to update this setting in your *control.json* custom configuration file using `azdata` CLI: 
+For a tighter security model, SQL Server 2019 CU5 disabled mounting by default credentials for the default Kubernetes service account within the BDC pods. This applies to both new and upgraded deployments in CU5 or later versions.
+The credential token inside the pods can be used to access the Kubernetes API server, and the level of permissions depends on the Kubernetes authorization policy settings. If you have specific use cases that require reverting to the previous CU5 behavior, in CU6 we are introducing a new feature switch so you can turn on the auto-mount at deployment time only. You can do so by using the control.json configuration deployment file and setting *automountServiceAccountToken* to *true*. Run this command to update this setting in your *control.json* custom configuration file using `azdata` CLI: 
 
 ``` bash
 azdata bdc config replace -c custom-bdc/control.json -j "$.security.automountServiceAccountToken=true"

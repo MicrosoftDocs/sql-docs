@@ -23,7 +23,7 @@ Traditionally, integration of data science solutions has meant extensive recodin
 + [Create and run simple R scripts in SQL Server](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-A more comprehensive example of deploying R code into production by using stored procedures can be found at [Tutorial: R data analytics for SQL developers](../../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
+A more comprehensive example of deploying R code into production by using stored procedures can be found at [Tutorial: R data analytics for SQL developers](../../machine-learning/tutorials/r-taxi-classification-introduction.md)
 
 ## Guidelines for optimizing R code for SQl
 

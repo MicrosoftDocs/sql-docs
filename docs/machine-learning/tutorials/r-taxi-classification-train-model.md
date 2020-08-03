@@ -23,13 +23,13 @@ In this article, you'll:
 > + Create and train a model using a SQL stored procedure
 > + Save the trained model to a SQL table
 
-In [part one](sqldev-in-database-r-for-sql-developers.md), you installed the prerequisites and restored the sample database.
+In [part one](r-taxi-classification-introduction.md), you installed the prerequisites and restored the sample database.
 
-In [part two](sqldev-explore-and-visualize-the-data.md), you reviewed the sample data and generate some plots.
+In [part two](r-taxi-classification-explore-data.md), you reviewed the sample data and generate some plots.
 
-In [part three](sqldev-create-data-features-using-t-sql.md), you learned how to create features from raw data by using a Transact-SQL function. You then called that function from a stored procedure to create a table that contains the feature values.
+In [part three](r-taxi-classification-create-features.md), you learned how to create features from raw data by using a Transact-SQL function. You then called that function from a stored procedure to create a table that contains the feature values.
 
-In [part five](sqldev-operationalize-the-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
+In [part five](r-taxi-classification-deploy-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
 
 ## Create the stored procedure
 
@@ -117,4 +117,4 @@ In this article, you:
 > + Saved the trained model to a SQL table
 
 > [!div class="nextstepaction"]
-> [R tutorial: Run predictions in SQL stored procedures](sqldev-operationalize-the-model.md)
+> [R tutorial: Run predictions in SQL stored procedures](r-taxi-classification-deploy-model.md)

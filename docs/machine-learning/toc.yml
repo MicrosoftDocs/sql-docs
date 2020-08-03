@@ -137,18 +137,18 @@
         href: ../machine-learning/tutorials/r-clustering-model-deploy.md
     - name: Create partition-based models
       href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
-    - name: Use R in T-SQL
+    - name: R for SQL developers
       items:
       - name: 1. Introduction
-        href: ../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md
+        href: ../machine-learning/tutorials/r-taxi-classification-introduction.md
       - name: 2. Data exploration
-        href: ../machine-learning/tutorials/sqldev-explore-and-visualize-the-data.md
+        href: ../machine-learning/tutorials/r-taxi-classification-explore-data.md
       - name: 3. Feature engineering
-        href: ../machine-learning/tutorials/sqldev-create-data-features-using-t-sql.md
+        href: ../machine-learning/tutorials/r-taxi-classification-create-features.md
       - name: 4. Train and deploy
-        href: ../machine-learning/tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+        href: ../machine-learning/tutorials/r-taxi-classification-train-model.md
       - name: 5. Predictions
-        href: ../machine-learning/tutorials/sqldev-operationalize-the-model.md
+        href: ../machine-learning/tutorials/r-taxi-classification-deploy-model.md
     - name: Use SQL ML in R tools
       items:
       - name: 1. Introduction

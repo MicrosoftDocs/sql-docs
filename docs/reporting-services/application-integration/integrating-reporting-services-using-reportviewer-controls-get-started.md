@@ -260,7 +260,7 @@ Here are links to articles on the NuGet.org site about the WebForm and WinForm v
 [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/)
 
 
-## Feedback
+## Forum Feedback
 
 Let the team know about issues on the [Reporting Services forums](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices).
 

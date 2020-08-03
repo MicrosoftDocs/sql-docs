@@ -387,7 +387,7 @@ This solution presented in this article only requires the MDS backend database r
 
 In this white paper, we have seen how to set up and configure the Master Data Services backend database as part of an AG. This configuration provides high availability and disaster recovery on the Master Data Services backend database. To implement this configuration, you need to install and configure Windows Server Failover Cluster, AG, and Master Data Services.
 
-## Feedback
+## Feedback Comments
 
 Did this paper help you? Please give us your feedback by clicking **Comments** at the top of the article. 
 

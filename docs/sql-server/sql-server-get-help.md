@@ -51,7 +51,7 @@ There are a few communities that can help you with your SQL Server issues.
 - [Reddit](https://www.reddit.com/r/SQLServer/)
 - [Get help from the community with the #sqlhelp hash tag on twitter](https://twitter.com/hashtag/sqlhelp?src=hash) 
  
-## Feedback
+## Feedback Suggestions
 
 You can submit suggestions for improvement, as well as submit bugs for:
 

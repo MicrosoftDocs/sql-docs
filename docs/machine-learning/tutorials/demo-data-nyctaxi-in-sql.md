@@ -20,7 +20,7 @@ To complete this exercise, you should have [SQL Server Management Studio](https:
 
 Tutorials and quickstarts using this data set include the following:
 
-+ [Learn in-database analytics using R in SQL Server](sqldev-in-database-r-for-sql-developers.md)
++ [Learn in-database analytics using R in SQL Server](r-taxi-classification-introduction.md)
 + [Learn in-database analytics using Python in SQL Server](python-taxi-classification-introduction.md)
 
 ## Download files
@@ -64,19 +64,19 @@ The following table summarizes the objects created in the NYC Taxi demo database
 |**Object name**|**Object type**|**Description**|
 |----------|------------------------|---------------|
 |**NYCTaxi_Sample** | database | Creates a database and two tables:<br /><br />dbo.nyctaxi_sample table: Contains the main NYC Taxi dataset. A clustered columnstore index is added to the table to improve storage and query performance. The 1% sample of the NYC Taxi dataset is inserted into this table.<br /><br />dbo.nyc_taxi_models table: Used to persist the trained advanced analytics model.|
-|**fnCalculateDistance** |scalar-valued function | Calculates the direct distance between pickup and dropoff locations. This function is used in [Create data features](sqldev-create-data-features-using-t-sql.md), [Train and save a model](sqldev-train-and-save-a-model-using-t-sql.md)  and [Operationalize the R model](sqldev-operationalize-the-model.md).|
-|**fnEngineerFeatures** |table-valued function | Creates new data features for model training. This function is used in [Create data features](sqldev-create-data-features-using-t-sql.md) and [Operationalize the R model](sqldev-operationalize-the-model.md).|
+|**fnCalculateDistance** |scalar-valued function | Calculates the direct distance between pickup and dropoff locations. This function is used in [Create data features](r-taxi-classification-create-features.md), [Train and save a model](r-taxi-classification-train-model.md)  and [Operationalize the R model](r-taxi-classification-deploy-model.md).|
+|**fnEngineerFeatures** |table-valued function | Creates new data features for model training. This function is used in [Create data features](r-taxi-classification-create-features.md) and [Operationalize the R model](r-taxi-classification-deploy-model.md).|
 
 
 Stored procedures are created using R and Python script found in various tutorials. The following table summarizes the stored procedures that you can optionally add to the NYC Taxi demo database when you run script from various lessons.
 
 |**Stored procedure**|**Language**|**Description**|
 |-------------------------|------------|---------------|
-|**RxPlotHistogram** |R | Calls the RevoScaleR rxHistogram function to plot the histogram of a variable and then returns the plot as a binary object. This stored procedure is used in [Explore and visualize data](sqldev-explore-and-visualize-the-data.md).|
-|**RPlotRHist** |R| Creates a graphic using the Hist function and saves the output as a local PDF file. This stored procedure is used in [Explore and visualize data](sqldev-explore-and-visualize-the-data.md).|
-|**RxTrainLogitModel**  |R| Trains a logistic regression model by calling an R package. The model predicts the value of the  tipped column, and is trained using a randomly selected 70% of the data. The output of the stored procedure is the trained model, which is saved in the table nyc_taxi_models. This stored procedure is used in [Train and save a model](sqldev-train-and-save-a-model-using-t-sql.md).|
-|**RxPredictBatchOutput**  |R | Calls the trained model to create predictions using the model. The stored procedure accepts a query as its input parameter and returns a column of numeric values containing the scores for the input rows. This stored procedure is used in [Predict potential outcomes](sqldev-operationalize-the-model.md).|
-|**RxPredictSingleRow**  |R| Calls the trained model to create predictions using the model. This stored procedure accepts a new observation as input, with individual feature values passed as in-line parameters, and returns a value that predicts the outcome for the new observation. This stored procedure is used in [Predict potential outcomes](sqldev-operationalize-the-model.md).|
+|**RxPlotHistogram** |R | Calls the RevoScaleR rxHistogram function to plot the histogram of a variable and then returns the plot as a binary object. This stored procedure is used in [Explore and visualize data](r-taxi-classification-explore-data.md).|
+|**RPlotRHist** |R| Creates a graphic using the Hist function and saves the output as a local PDF file. This stored procedure is used in [Explore and visualize data](r-taxi-classification-explore-data.md).|
+|**RxTrainLogitModel**  |R| Trains a logistic regression model by calling an R package. The model predicts the value of the  tipped column, and is trained using a randomly selected 70% of the data. The output of the stored procedure is the trained model, which is saved in the table nyc_taxi_models. This stored procedure is used in [Train and save a model](r-taxi-classification-train-model.md).|
+|**RxPredictBatchOutput**  |R | Calls the trained model to create predictions using the model. The stored procedure accepts a query as its input parameter and returns a column of numeric values containing the scores for the input rows. This stored procedure is used in [Predict potential outcomes](r-taxi-classification-deploy-model.md).|
+|**RxPredictSingleRow**  |R| Calls the trained model to create predictions using the model. This stored procedure accepts a new observation as input, with individual feature values passed as in-line parameters, and returns a value that predicts the outcome for the new observation. This stored procedure is used in [Predict potential outcomes](r-taxi-classification-deploy-model.md).|
 
 ## Query the data
 
@@ -110,5 +110,5 @@ Results should be similar to those showing in the following screenshot.
 
 NYC Taxi sample data is now available for hands-on learning.
 
-+ [Learn in-database analytics using R in SQL Server](sqldev-in-database-r-for-sql-developers.md)
++ [Learn in-database analytics using R in SQL Server](r-taxi-classification-introduction.md)
 + [Learn in-database analytics using Python in SQL Server](python-taxi-classification-introduction.md)

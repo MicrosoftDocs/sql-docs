@@ -154,7 +154,7 @@ PRIVILEGES
 ### A. Granting SELECT permission on a table  
  The following example grants `SELECT` permission to user `RosaQdM` on table `Person.Address` in the `AdventureWorks2012` database.  
   
-```  
+```sql  
 GRANT SELECT ON OBJECT::Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -162,7 +162,7 @@ GO
 ### B. Granting EXECUTE permission on a stored procedure  
  The following example grants `EXECUTE` permission on stored procedure `HumanResources.uspUpdateEmployeeHireInfo` to an application role called `Recruiting11`.  
   
-```  
+```sql  
 USE AdventureWorks2012;   
 GRANT EXECUTE ON OBJECT::HumanResources.uspUpdateEmployeeHireInfo  
     TO Recruiting11;  
@@ -172,7 +172,7 @@ GO
 ### C. Granting REFERENCES permission on a view with GRANT OPTION  
  The following example grants `REFERENCES` permission on column `BusinessEntityID` in view `HumanResources.vEmployee` to user `Wanida` with `GRANT OPTION`.  
   
-```  
+```sql  
 GRANT REFERENCES (BusinessEntityID) ON OBJECT::HumanResources.vEmployee   
     TO Wanida WITH GRANT OPTION;  
 GO  
@@ -181,7 +181,7 @@ GO
 ### D. Granting SELECT permission on a table without using the OBJECT phrase  
  The following example grants `SELECT` permission to user `RosaQdM` on table `Person.Address` in the `AdventureWorks2012` database.  
   
-```  
+```sql  
 GRANT SELECT ON Person.Address TO RosaQdM;  
 GO  
 ```  
@@ -189,7 +189,7 @@ GO
 ### E. Granting SELECT permission on a table to a domain account  
  The following example grants `SELECT` permission to user `AdventureWorks2012\RosaQdM` on table `Person.Address` in the `AdventureWorks2012` database.  
   
-```  
+```sql  
 GRANT SELECT ON Person.Address TO [AdventureWorks2012\RosaQdM];  
 GO  
 ```  
@@ -197,7 +197,7 @@ GO
 ### F. Granting EXECUTE permission on a procedure to a role  
  The following example creates a role and then grants `EXECUTE` permission to the role on procedure `uspGetBillOfMaterials` in the `AdventureWorks2012` database.  
   
-```  
+```sql  
 CREATE ROLE newrole ;  
 GRANT EXECUTE ON dbo.uspGetBillOfMaterials TO newrole ;  
 GO  

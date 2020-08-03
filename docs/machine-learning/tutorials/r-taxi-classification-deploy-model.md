@@ -29,13 +29,13 @@ In this article, you'll:
 > + Create and use stored procedures for batch scoring
 > + Create and use stored procedures for scoring a single row
 
-In [part one](sqldev-in-database-r-for-sql-developers.md), you installed the prerequisites and restored the sample database.
+In [part one](r-taxi-classification-introduction.md), you installed the prerequisites and restored the sample database.
 
-In [part two](sqldev-explore-and-visualize-the-data.md), you reviewed the sample data and generated some plots.
+In [part two](r-taxi-classification-explore-data.md), you reviewed the sample data and generated some plots.
 
-In [part three](sqldev-create-data-features-using-t-sql.md), you learned how to create features from raw data by using a Transact-SQL function. You then called that function from a stored procedure to create a table that contains the feature values.
+In [part three](r-taxi-classification-create-features.md), you learned how to create features from raw data by using a Transact-SQL function. You then called that function from a stored procedure to create a table that contains the feature values.
 
-In [part four](sqldev-train-and-save-a-model-using-t-sql.md), you loaded the modules and called the necessary functions to create and train the model using a SQL Server stored procedure.
+In [part four](r-taxi-classification-train-model.md), you loaded the modules and called the necessary functions to create and train the model using a SQL Server stored procedure.
 
 ## Basic scoring
 

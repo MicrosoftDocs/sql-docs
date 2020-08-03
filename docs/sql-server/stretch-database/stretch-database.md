@@ -12,7 +12,7 @@ ms.author: jroth
 ms.custom: seo-dt-2019
 ---
 # Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   Stretch Database migrates your cold data transparently and securely to the Microsoft Azure cloud.  

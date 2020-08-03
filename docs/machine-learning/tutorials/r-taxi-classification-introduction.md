@@ -43,16 +43,16 @@ In this article, you'll:
 > + Install prerequisites
 > + Restore the sample database
 
-In [part two](sqldev-explore-and-visualize-the-data.md), you'll explore the sample data and generate some plots.
+In [part two](r-taxi-classification-explore-data.md), you'll explore the sample data and generate some plots.
 
-In [part three](sqldev-create-data-features-using-t-sql.md), you'll learn how to create features from raw data by using a Transact-SQL function. You'll then call that function from a stored procedure to create a table that contains the feature values.
+In [part three](r-taxi-classification-create-features.md), you'll learn how to create features from raw data by using a Transact-SQL function. You'll then call that function from a stored procedure to create a table that contains the feature values.
 
-In [part four](sqldev-train-and-save-a-model-using-t-sql.md), you'll load the modules and call the necessary functions to create and train the model using a SQL Server stored procedure.
+In [part four](r-taxi-classification-train-model.md), you'll load the modules and call the necessary functions to create and train the model using a SQL Server stored procedure.
 
-In [part five](sqldev-operationalize-the-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
+In [part five](r-taxi-classification-deploy-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
 
 > [!NOTE]
-> This tutorial is available in both R and Python. For the Python version, see [Python tutorial: Predict NYC taxi fares with binary classification](sqldev-in-database-r-for-sql-developers.md).
+> This tutorial is available in both R and Python. For the Python version, see [Python tutorial: Predict NYC taxi fares with binary classification](r-taxi-classification-introduction.md).
 
 ## Prerequisites
 
@@ -98,4 +98,4 @@ In this article, you:
 > + Restored the sample database
 
 > [!div class="nextstepaction"]
-> [R tutorial: Explore and visualize data](sqldev-explore-and-visualize-the-data.md)
+> [R tutorial: Explore and visualize data](r-taxi-classification-explore-data.md)

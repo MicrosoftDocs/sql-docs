@@ -48,7 +48,7 @@ In [part four](python-taxi-classification-train-model.md), you'll load the modul
 In [part five](python-taxi-classification-deploy-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
 
 > [!NOTE]
-> This tutorial is available in both R and Python. For the R version, see [R tutorial: Predict NYC taxi fares with binary classification](sqldev-in-database-r-for-sql-developers.md).
+> This tutorial is available in both R and Python. For the R version, see [R tutorial: Predict NYC taxi fares with binary classification](r-taxi-classification-introduction.md).
 
 ## Prerequisites
 

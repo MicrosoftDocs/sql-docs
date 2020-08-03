@@ -5,15 +5,15 @@ description: This article describes how SQL Server Big Data Clusters uses RBAC w
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 08/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Kubernetes RBAC model & impact on users managing BDC
+# Kubernetes RBAC model & impact on users and service accounts managing BDC
 
-This following section describes the permissions required for the users managing big data clusters.
+This article describes the permissions requirements for users managing big data clusters and the semantics around default service account and Kubernetes access from within the big data cluster.
 
 > [!NOTE]
 > For additional resources on Kubernetes RBAC model see [Using RBAC Authorization - Kubernetes](https://kubernetes.io/docs/reference/access-authn-authz/rbac/) and [Using RBAC to define and apply permissions - OpenShift](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html).
@@ -92,3 +92,12 @@ You can customize these settings in the security section in the `control.json` d
 ```
 
 If these settings are set to `false`, BDC deployment workflow will not attempt to create the service account, cluster role, and the binding for Telegraf.
+
+## Default service account usage from within a BDC pod
+
+For a tighter security model, SQL Server 2019 CU5 disabled mounting by default credentials for the default Kubernetes service account within the BDC pods. This applies to both new and upgraded deployments in CU5 or later versions.
+The credential token inside the pods can be used to access the Kubernetes API server, and the level of permissions depends on the Kubernetes authorization policy settings. If you have specific use cases that require reverting to the previous CU5 behavior, in CU6 we are introducing a new feature switch so you can turn on the auto-mount at deployment time only. You can do so by using the control.json configuration deployment file and setting *automountServiceAccountToken* to *true*. Run this command to update this setting in your *control.json* custom configuration file using `azdata` CLI: 
+
+``` bash
+azdata bdc config replace -c custom-bdc/control.json -j "$.security.automountServiceAccountToken=true"
+```

@@ -58,7 +58,7 @@ GRANT { SELECT | EXECUTE } ON [ sys.]system_object TO principal
   
  The following query returns information about permissions of system objects:  
   
-```  
+```sql  
 SELECT * FROM master.sys.database_permissions AS dp   
     JOIN sys.system_objects AS so  
     ON dp.major_id = so.object_id  
@@ -74,7 +74,7 @@ GO
 ### A. Granting SELECT permission on a view  
  The following example grants the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login `Sylvester1` permission to select a view that lists [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins. The example then grants the additional permission that is required to view metadata on [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logins that are not owned by the user.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GRANT SELECT ON sys.sql_logins TO Sylvester1;  
 GRANT VIEW SERVER STATE to Sylvester1;  
@@ -84,7 +84,7 @@ GO
 ### B. Granting EXECUTE permission on an extended stored procedure  
  The following example grants `EXECUTE` permission on `xp_readmail` to `Sylvester1`.  
   
-```  
+```sql  
 GRANT EXECUTE ON xp_readmail TO Sylvester1;  
 GO  
 ```  

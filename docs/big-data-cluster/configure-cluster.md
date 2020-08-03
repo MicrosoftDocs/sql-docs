@@ -5,7 +5,7 @@ description: Overview of how to configure a SQL Server big data cluster
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: rajul.ajmera
-ms.date: 07/16/2020
+ms.date: 08/04/2020
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster

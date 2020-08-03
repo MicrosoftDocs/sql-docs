@@ -5,7 +5,7 @@ description: Learn how to deploy SQL Server Big Data Cluster with high availabil
 author: mihaelablendea
 ms.author: mihaelab 
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

@@ -5,7 +5,7 @@ description: SQL Server Big Data Clusters allow Spark and HDFS solutions. Learn 
 author: rajmera3
 ms.author: raajmera
 ms.reviewer: mikeray
-ms.date: 02/21/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

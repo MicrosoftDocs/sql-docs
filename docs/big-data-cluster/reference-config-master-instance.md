@@ -5,7 +5,7 @@ description: Reference article for configuration properties for SQL Server maste
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: rahul.ajmera
-ms.date: 07/16/2020
+ms.date: 08/04/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster

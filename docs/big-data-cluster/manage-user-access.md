@@ -4,7 +4,7 @@ description: Manage access to the big data cluster
 author: NelGson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 12/06/2019
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster

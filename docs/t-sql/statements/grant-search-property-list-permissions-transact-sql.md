@@ -129,7 +129,7 @@ GRANT permission [ ,...n ] ON
 ### Granting permissions to a search property list  
  The following example grants `Mary` the `VIEW DEFINITION` permission on the search property list `DocumentTablePropertyList`.  
   
-```  
+```sql  
 GRANT VIEW DEFINITION  
     ON SEARCH PROPERTY LIST :: DocumentTablePropertyList  
     TO Mary ;  

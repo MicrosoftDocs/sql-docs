@@ -21,7 +21,7 @@ ms.author: maghan
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CUME_DIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this function calculates the cumulative distribution of a value within a group of values. In other words, `CUME_DIST` calculates the relative position of a specified value in a group of values. Assuming ascending ordering, the `CUME_DIST` of a value in row _r_ is defined as the number of rows with values less than or equal to that value in row _r_, divided by the number of rows evaluated in the partition or query result set. `CUME_DIST` is similar to the `PERCENT_RANK` function.
   

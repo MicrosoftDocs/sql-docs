@@ -23,13 +23,13 @@ In this article, you'll:
 > + Modify a custom function to calculate trip distance
 > + Save the features using another custom function
 
-In [part one](sqldev-in-database-r-for-sql-developers.md), you installed the prerequisites and restored the sample database.
+In [part one](r-taxi-classification-introduction.md), you installed the prerequisites and restored the sample database.
 
-In [part two](sqldev-explore-and-visualize-the-data.md), you reviewed the sample data and generated some plots.
+In [part two](r-taxi-classification-explore-data.md), you reviewed the sample data and generated some plots.
 
-In [part four](sqldev-train-and-save-a-model-using-t-sql.md), you'll load the modules and call the necessary functions to create and train the model using a SQL Server stored procedure.
+In [part four](r-taxi-classification-train-model.md), you'll load the modules and call the necessary functions to create and train the model using a SQL Server stored procedure.
 
-In [part five](sqldev-operationalize-the-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
+In [part five](r-taxi-classification-deploy-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
 
 In [part five](sqldev-py6-operationalize-the-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
 
@@ -141,4 +141,4 @@ In this article, you:
 > + Saved the features using another custom function
 
 > [!div class="nextstepaction"]
-> [R tutorial: Train and save model](sqldev-train-and-save-a-model-using-t-sql.md)
+> [R tutorial: Train and save model](r-taxi-classification-train-model.md)

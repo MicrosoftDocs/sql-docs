@@ -15,7 +15,7 @@ ms.author: jroth
 ms.custom: seo-dt-2019
 ---
 # Identify databases and tables for Stretch Database with Data Migration Assistant
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   To identify databases and tables that are candidates for Stretch Database, along with potential blocking issues, download and run Microsoft Data Migration Assistant.

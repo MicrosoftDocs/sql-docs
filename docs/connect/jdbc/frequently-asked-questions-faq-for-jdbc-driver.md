@@ -158,7 +158,7 @@ The driver supports the use of tracing (or logging) to help resolve issues and p
 These driver versions are not available for download as they are no longer supported. We are continually improving the Java connectivity support. As such, we highly recommend you work with the latest version of Microsoft JDBC driver.
 
 **I am using JRE 1.4. Which driver is compatible with JRE 1.4?**  
-For customers who are using SAP products and require JRE 1.4 support, you may contact [SAPService Marketplace](https://service.sap.com/) to obtain the 1.2 Microsoft JDBC driver.
+For customers who are using SAP products and require JRE 1.4 support, you may contact [SAP Service Marketplace](https://service.sap.com/) to obtain the 1.2 Microsoft JDBC driver.
 
 **Can the driver communicate using FIPS validated algorithms?**  
 The Microsoft JDBC Driver does not contain any cryptographic algorithms. If a customer leverages operating system, application, and JVM algorithms that are deemed acceptable by Federal Information Processing Standards (FIPS) and configures the driver to use those algorithms then the driver uses only the designated algorithms for communication.

@@ -155,9 +155,9 @@ The following examples show how the connection properties are used in a connecti
 ```
 "jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=keyStoreSecret;keyStorePrincipalId=<clientId>;keyStoreSecret=<clientSecret>"
 ```
-Users are encouraged to use these connection properties to specify the type of authentication used for the Key Stores instead of using the `SQLServerColumnEncryptionAzureKeyVaultProvider` interface as this interface will be deprecated in a future release.
+Users are encouraged to use these connection properties to specify the type of authentication used for the Key Stores instead of using the `SQLServerColumnEncryptionAzureKeyVaultProvider`.
 
-Note that previously added connection properties `keyVaultProviderClientId` and `keyVaultProviderClientKey` are deprecated and replaced by the connection properties described above and will be removed in a future release.
+Note that previously added connection properties `keyVaultProviderClientId` and `keyVaultProviderClientKey` are deprecated and replaced by the connection properties described above.
 
 For information on how to configure Managed Identities, see [Configure managed identities for Azure resources on a VM using the Azure portal](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm).
 

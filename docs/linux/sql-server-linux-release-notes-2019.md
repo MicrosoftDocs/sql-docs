@@ -3,7 +3,7 @@ title: Release notes for SQL Server 2019 on Linux
 description: This article contains the release notes and supported features for SQL Server 2019 running on Linux. Release notes are included for the most recent release and several previous releases.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 06/22/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -54,7 +54,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 
 ## <a id="cu6"></a> CU6 (July 2020)
 
-This is the Cumulative Update 6 (CU6) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4053.23. For information about the fixes and improvements, see <https://support.microsoft.com/help/4563110>
+This is the Cumulative Update 6 (CU6) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4053.23. For information about the fixes and improvements, see <https://support.microsoft.com/help/4563110>.
 
 ### Package details
 

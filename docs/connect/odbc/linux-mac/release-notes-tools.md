@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for mssql-tools on Linux and macOS"
+title: "Release notes for mssql-tools on Linux and macOS"
 description: "Learn what's new and changed in released versions of the Microsoft SQL Server Tools."
 ms.custom: ""
 ms.date: "07/13/2020"
@@ -12,7 +12,7 @@ author: v-zhangw
 ms.author: v-zhangw
 manager: kenvh
 ---
-# Release notes for the Microsoft SQL Server Tools on Linux and macOS
+# Release notes for the Microsoft SQL Server tools on Linux and macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 

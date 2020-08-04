@@ -2,7 +2,7 @@
 title: "Scalar UDF Inlining in Microsoft SQL Server | Microsoft Docs"
 description: "Scalar UDF Inlining feature to improve performance of queries that invoke scalar UDFs in SQL Server (starting with SQL Server 2019)."
 ms.custom: ""
-ms.date: 06/23/2020
+ms.date: 08/04/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -159,8 +159,8 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
 - The UDF is not called from a RETURN statement <sup>6</sup>.
 - The UDF does not reference the `STRING_AGG` function <sup>6</sup>. 
 - The UDF does not reference remote tables <sup>7</sup>.
-- The UDF-calling query does not use GROUPING SETS, CUBE, or ROLLUP <sup>7</sup>.
-- The UDF-calling query does not contain a variable that is used as a UDF parameter for assignment (for example, SELECT @y=2, @x=UDF(@y))<sup>7</sup>.
+- The UDF-calling query does not use `GROUPING SETS`, `CUBE`, or `ROLLUP` <sup>7</sup>.
+- The UDF-calling query does not contain a variable that is used as a UDF parameter for assignment (for example, `SELECT @y = 2`, `@x = UDF(@y)`)<sup>7</sup>.
 
 <sup>1</sup> `SELECT` with variable accumulation/aggregation is not supported for inlining (such as `SELECT @val += col1 FROM table1`).
 

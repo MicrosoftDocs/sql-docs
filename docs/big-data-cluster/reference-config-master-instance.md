@@ -24,7 +24,7 @@ You can configure the following SQL Server options for the master instance at de
 |`[sqlagent]`|`enabled = { true | false }` |
 |`[telemetry]`|`customerfeedback = { true | false }` |
 |`[telemetry]`|`userRequestedLocalAuditDirectory = </path/file>`|
-|`[DEFAULT]`| `pid = { Enterprise | Developer }`|
+|`[licensing]`| `pid = { Enterprise | Developer }`|
 |`[traceflag]`|` traceflag<#> = <####>`|
 
 ### Examples
@@ -39,7 +39,7 @@ enabled=true
 customerfeedback=true
 userRequestedLocalAuditDirectory = /tmp/audit
 
-[DEFAULT]
+[licensing]
 pid = Enterprise
 
 [traceflag]

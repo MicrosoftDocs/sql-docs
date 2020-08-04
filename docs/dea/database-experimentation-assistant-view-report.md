@@ -1,6 +1,6 @@
 ---
 title: View analysis reports for SQL Server upgrades
-description: View analysis reports in Database Experimentation Assistant
+description: Learn how to view and understand analysis reports for performance insights in Database Experimentation Assistant (DEA).
 ms.custom: "seo-lt-2019"
 ms.date: 02/04/2020
 ms.prod: sql

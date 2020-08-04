@@ -1,5 +1,5 @@
 ---
-title: "Release Notes for mssql-tools on Linux and macOS"
+title: "Release notes for mssql-tools on Linux and macOS"
 description: "Learn what's new and changed in released versions of the Microsoft SQL Server Tools."
 ms.custom: ""
 ms.date: "07/13/2020"
@@ -12,7 +12,7 @@ author: v-zhangw
 ms.author: v-zhangw
 manager: kenvh
 ---
-# Release notes for the Microsoft SQL Server Tools on Linux and macOS
+# Release notes for the Microsoft SQL Server tools on Linux and macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -31,4 +31,8 @@ This article lists and describes what's new in the versioned releases of the [!I
 
 ## Next steps
 
+<<<<<<< HEAD
 Learn more about connecting with [BCP](connecting-with-bcp.md) and [SQLCMD](connecting-with-sqlcmd.md)!
+=======
+Learn more about connecting with [!INCLUDE[BCP](connecting-with-bcp.md)] and [!INCLUDE[SQLCMD](connecting-with-sqlcmd.md)]!
+>>>>>>> 73e8e5ea46a650457f5b8d6170d31a0af0a2b870

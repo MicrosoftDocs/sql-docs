@@ -1,6 +1,6 @@
 ---
 title: "Availability modes for an availability group"
-description: "A description of the different availability modes for an Always On availability group."
+description: "Learn the three different availability modes for an Always On availability group: asynchronous-commit mode, synchronous-commit mode, and configuration only mode."
 ms.custom: seo-lt-2019
 ms.date: "10/16/2017"
 ms.prod: sql

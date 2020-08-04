@@ -2,7 +2,7 @@
 title: "Improving performance and reliability with the JDBC driver"
 description: "Learn about various techniques for improving application performance and reliability when using the Microsoft JDBC driver for SQL Server."
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "07/31/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -32,6 +32,7 @@ The topics in this section describe various techniques for improving application
 |[Sparse columns](../../connect/jdbc/sparse-columns.md)|Discusses the JDBC driver's support for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] sparse columns.|  
 |[Prepared statement metadata caching for the JDBC driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md)|Discusses the techniques for improving performance with prepared statement queries.|
 |[Using bulk copy API for batch insert operation](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md)|Describes how to enable Bulk Copy API for batch insert operations and its benefits.|
+|[Not sending String parameters as Unicode](../../connect/jdbc/setting-the-connection-properties.md)|When working with **CHAR**, **VARCHAR**, and **LONGVARCHAR** data, users can set the connection property **sendStringParametersAsUnicode** to `false` for optimal performance gain.|
 
 ## See also
 

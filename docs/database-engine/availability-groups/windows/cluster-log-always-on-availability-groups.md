@@ -1,6 +1,6 @@
 ---
 title: "Generate & analyze CLUSTER.LOG for availability groups"
-description: "Describes how to generate and analyze the cluster log for an Always On availability group. "
+description: "Learn details about how to generate and analyze the cluster log for an Always On availability group."
 ms.custom: seo-lt-2019
 ms.date: "06/14/2017"
 ms.prod: sql

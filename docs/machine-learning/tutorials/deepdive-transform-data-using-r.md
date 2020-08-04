@@ -1,6 +1,6 @@
 ---
 title: Transform data using RevoScaleR
-description: "RevoScaleR tutorial 9: How to transform data using the R language on SQL Server."
+description: "Learn about the RevoScaleR functions for transforming data at various stages of your analysis and how to transform data using the R language on SQL Server."
 ms.prod: sql
 ms.technology: machine-learning-services
 

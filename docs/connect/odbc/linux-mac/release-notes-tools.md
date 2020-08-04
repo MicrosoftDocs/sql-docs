@@ -12,7 +12,7 @@ author: v-zhangw
 ms.author: v-zhangw
 manager: kenvh
 ---
-# Release Notes for the Microsoft SQL Server Tools on Linux and macOS
+# Release notes for the Microsoft SQL Server Tools on Linux and macOS
 
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
@@ -28,3 +28,7 @@ This article lists and describes what's new in the versioned releases of the [!I
 | Sqlcmd Column Name Truncation Fixed | Fixed issue where column names would be truncated incorrectly |
 | Sqlcmd Linux Exit Codes | Fixed issue where process exit code was missing on Linux |
 | &nbsp; | &nbsp; |
+
+## Next steps
+
+Learn more about connecting with [!INCLUDE[BCP](connecting-with-bcp.md)] and [!INCLUDE[SQLCMD](connecting-with-sqlcmd.md)]!

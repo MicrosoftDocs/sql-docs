@@ -136,6 +136,8 @@
     items:
     - name: Configure
       items:
+      - name: Cluster
+        href: big-data-cluster/configure-cluster.md
       - name: SQL Server master instance
         href: big-data-cluster/configure-sql-server-master-instance.md
       - name: Configure Apache Spark & Apache Hadoop
@@ -345,6 +347,12 @@
       items:
       - name: Deployment configuration file
         href: big-data-cluster/reference-deployment-config.md
+    - name: Configuration
+      items:
+      - name: Master instance
+        href: big-data-cluster/reference-config-master-instance.md
+      - name: Apache Spark & Apache Hadoop
+        href: big-data-cluster/reference-config-spark-hadoop.md
     - name: azdata reference
       items:
       - name: azdata

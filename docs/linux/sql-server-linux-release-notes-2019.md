@@ -52,7 +52,7 @@ If you are updating existing SQL Server packages, run the appropriate update com
 - [Install PolyBase package](../relational-databases/polybase/polybase-linux-setup.md)
 - [Enable SQL Server Agent](sql-server-linux-setup-sql-agent.md)
 
-## <a id="cu5"></a> CU6 (July 2020)
+## <a id="cu6"></a> CU6 (July 2020)
 
 This is the Cumulative Update 6 (CU6) release of SQL Server 2019 (15.x). The SQL Server Database Engine version for this release is 15.0.4053.23. For information about the fixes and improvements, see <https://support.microsoft.com/help/4563110>.
 

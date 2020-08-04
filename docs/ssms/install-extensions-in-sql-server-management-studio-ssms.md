@@ -1,5 +1,5 @@
 ---
-title: "Install Extensions in SQL Server Management Studio (SSMS)"
+title: Install Extensions in SQL Server Management Studio (SSMS)
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -9,14 +9,13 @@ keywords:
   - "vsix"
   - "install extension"
   - "install vsix"
-ms.assetid: 25c1399e-afb1-4337-b74b-57a199cf26db
 author: dzsquared
 ms.author: drskwier
-manager: viharp
 ms.reviewer: maghan
 ms.custom: seo-lt-2019
 ms.date: 07/29/2020
 ---
+
 # Install Extensions in SQL Server Management Studio (SSMS)
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]

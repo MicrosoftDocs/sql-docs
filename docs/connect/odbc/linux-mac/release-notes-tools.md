@@ -31,4 +31,4 @@ This article lists and describes what's new in the versioned releases of the [!I
 
 ## Next steps
 
-Learn more about connecting with [!INCLUDE[BCP](connecting-with-bcp.md)] and [!INCLUDE[SQLCMD](connecting-with-sqlcmd.md)]!
+Learn more about connecting with [BCP](connecting-with-bcp.md) and [SQLCMD](connecting-with-sqlcmd.md)!

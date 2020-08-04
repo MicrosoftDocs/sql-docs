@@ -8,14 +8,9 @@ ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
-  - "bigint_TSQL"
-  - "smallint"
-  - "bigint"
-  - "smallint_TSQL"
-  - "tinyint_TSQL"
-  - "int_TSQL"
-  - "int"
-  - "tinyint"
+  - Int()_TSQL
+  - sql13.swb.tsqlresults.f1
+  - sql13.swb.tsqlquery.f1
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 

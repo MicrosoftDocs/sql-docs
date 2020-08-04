@@ -1,6 +1,6 @@
 ---
 title: Load data using rxImport
-description: "RevoScaleR tutorial 10: How to load data using the R language on SQL Server."
+description: "Learn how to get data from SQL Server, and then use the rxImport function to put the data of interest into a local file."
 ms.prod: sql
 ms.technology: machine-learning-services
 

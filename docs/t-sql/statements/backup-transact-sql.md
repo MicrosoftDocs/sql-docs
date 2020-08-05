@@ -1298,8 +1298,7 @@ BACKUP DATABASE errors under the following conditions:
 - The database does not exist.
 - The target directory already exists on the network share.
 - The target network share is not available.
-- The target network share does not have enough space for the backup. The BACKUP DATABASE command does not confirm that sufficient disk space exists prior to initiating the backup, making it possible to generate an out-of-disk-space error while running BACKUP DATABASE. When insufficient disk space occurs, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] rolls back the BACKUP DATABASE command. To decrease the size of your database, run [DBCC SHRINKLOG (Azure SQL Data 
-e)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
+- The target network share does not have enough space for the backup. The BACKUP DATABASE command does not confirm that sufficient disk space exists prior to initiating the backup, making it possible to generate an out-of-disk-space error while running BACKUP DATABASE. When insufficient disk space occurs, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] rolls back the BACKUP DATABASE command. To decrease the size of your database, run [DBCC SHRINKLOG (Azure SQL Data Warehouse)](../../t-sql/database-console-commands/dbcc-shrinklog-azure-sql-data-warehouse.md)
 - Attempt to start a backup within a transaction.
 
 ::: moniker-end

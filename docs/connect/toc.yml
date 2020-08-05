@@ -2826,6 +2826,8 @@
         href: ../connect/odbc/linux-mac/using-integrated-authentication.md
     - name: Release Notes
       href: ../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md
+    - name: Release Notes (mssql-tools)
+      href: ../connect/odbc/linux-mac/release-notes-tools.md
     - name: Known Issues
       href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
     - name: Frequently Asked Questions (FAQ) for ODBC Linux and macOS

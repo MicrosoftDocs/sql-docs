@@ -1,6 +1,6 @@
 ---
 title: Score data using RevoScaleR
-description: "RevoScaleR tutorial 8: How to score data using the R language on SQL Server."
+description: "Use the logistic regression model that you created in the previous tutorial to score another data set that uses the same independent variables as inputs."
 ms.prod: sql
 ms.technology: machine-learning-services
 

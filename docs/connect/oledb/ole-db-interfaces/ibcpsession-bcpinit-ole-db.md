@@ -1,6 +1,6 @@
 ---
 title: "IBCPSession::BCPInit (OLE DB driver) | Microsoft Docs"
-description: "IBCPSession::BCPInit (OLE DB)"
+description: Learn how the IBCPSession::BCPInit method initializes the bulk copy structure, does error checking, and opens them in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

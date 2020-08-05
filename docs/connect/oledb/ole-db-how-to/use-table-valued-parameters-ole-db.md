@@ -1,6 +1,6 @@
 ---
 title: Use table-valued parameters (OLE DB driver)
-description: "Use Table-Valued Parameters (OLE DB)"
+description: Learn how to creates table-valued parameters in OLE DB Driver for SQL Server in this examples that then shows how to work with the parameters.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

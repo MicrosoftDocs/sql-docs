@@ -12,9 +12,6 @@ f1_keywords:
   - "CONVERT_TSQL"
   - "CAST"
   - "CONVERT"
-  - CONVERT()_TSQL
-  - sql13.swb.tsqlresults.f1
-  - sql13.swb.tsqlquery.f1
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 

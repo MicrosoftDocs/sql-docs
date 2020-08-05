@@ -1,6 +1,6 @@
 ---
 title: "Initialization and authorization properties (OLE DB driver) | Microsoft Docs"
-description: "Initialization and authorization properties"
+description: Learn how the OLE DB Driver for SQL Server interprets OLE DB initialization and authorization properties.
 ms.custom: ""
 ms.date: "01/02/2020"
 ms.prod: sql

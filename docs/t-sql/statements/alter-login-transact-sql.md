@@ -483,12 +483,12 @@ GO
 
 &nbsp;
 
-## Azure SQL Managed Instance
+## Azure SQL Database managed instance
 
 ## Syntax
 
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Managed Instance
+-- Syntax for SQL Server and Azure SQL Database managed instance
 
 ALTER LOGIN login_name
     {
@@ -527,7 +527,7 @@ ALTER LOGIN login_name
 > The Azure AD admin for managed instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 ```syntaxsql
--- Syntax for Azure SQL Managed Instance using Azure AD logins
+-- Syntax for Azure SQL Database managed instance using Azure AD logins
 
 ALTER LOGIN login_name
   {
@@ -686,7 +686,7 @@ ALTER LOGIN John2 WITH CREDENTIAL = Custodian04;
 
 The following example maps the login `Mary5` to the EKM credential `EKMProvider1`.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, and Azure SQL Managed Instance.
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, and Azure SQL Database managed instance.
 
 ```sql
 ALTER LOGIN Mary5
@@ -716,7 +716,7 @@ GO
 
 The following example changes the password of the `TestUser` login to an already hashed value.
 
-**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, and Azure SQL Managed Instance.
+**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, and Azure SQL Database managed instance.
 
 ```sql
 ALTER LOGIN TestUser WITH

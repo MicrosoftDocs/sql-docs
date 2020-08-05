@@ -743,7 +743,7 @@ RESTORE DATABASE Sales
 
 &nbsp;
 
-## Azure SQL Managed Instance
+## Azure SQL Database managed instance
 
 This command enables you to restore an entire database from a full database backup (a complete restore) from Azure Blob Storage account.
 
@@ -755,7 +755,7 @@ For other supported RESTORE commands, see:
 - [RESTORE VERIFYONLY (Transact-SQL)](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
 
 > [!IMPORTANT]
-> To restore from SQL Managed Instance automatic backups, see [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
+> To restore from Azure SQL Database managed instance automatic backups, see [SQL Database Restore](https://docs.microsoft.com/azure/sql-database/sql-database-recovery-using-backups).
 
 ## Syntax
 
@@ -798,7 +798,7 @@ The following database options are set/overridden and cannot be changed later:
 - Memory optimized filegroup is added and called XTP if it was not in the source .bak file. Any existing memory optimized filegroup is renamed to XTP
 - SINGLE_USER and RESTRICTED_USER options are converted to MULTI_USER
 
-## Limitations - SQL Managed Instance
+## Limitations - SQL Database managed instance
 
 These limitations apply:
 

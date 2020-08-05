@@ -42,7 +42,7 @@ July 15, 2020 &nbsp; / &nbsp; version: 1.20.0
 | Added new Feature Tour | From welcome page and command palette, users can now launch a feature tour to get a walkthrough of commonly used features including Connections Viewlet, Notebooks viewlet, and Extensions Marketplace |
 | New notebook features | &bull; &nbsp; Header support in Markdown Toolbar<br/> &bull; &nbsp; Side-by-side Markdown Preview in Text Cells
 | Drag and Drop Columns and Tables in Query Editor | Users can now directly drag and drop columns and tables from connections viewlet to query editor |
-| Azure Account icon added to Activity Bar) | More discoverable to sign in to Azure |
+| Added Azure Account icon to Activity Bar | Users can now easily see where to sign in to Azure |
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed). |
 | &nbsp; | &nbsp; |
 

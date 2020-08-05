@@ -91,9 +91,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
 
 &nbsp;
 
-## Azure SQL Database managed instance
-
-
+## Azure SQL Managed Instance
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"

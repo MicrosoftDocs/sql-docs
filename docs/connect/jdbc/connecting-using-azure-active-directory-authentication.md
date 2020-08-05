@@ -18,7 +18,7 @@ ms.author: v-daenge
 
 This article provides information on how to develop Java applications that use the Azure Active Directory authentication feature with the Microsoft JDBC Driver for SQL Server.
 
-You can use Azure Active Directory (AAD) authentication, which is a mechanism of connecting to Azure SQL Database v12 using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC Driver allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL Database. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
+You can use Azure Active Directory (Azure AD) authentication, which is a mechanism of connecting to Azure SQL Database v12 using identities in Azure Active Directory. Use Azure Active Directory authentication to centrally manage identities of database users and as an alternative to SQL Server authentication. The JDBC Driver allows you to specify your Azure Active Directory credentials in the JDBC connection string to connect to Azure SQL Database. For information on how to configure Azure Active Directory authentication visit [Connecting to SQL Database By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). 
 
 Connection properties to support Azure Active Directory authentication in the Microsoft JDBC Driver for SQL Server are:
 *	**authentication**:  Use this property to indicate which SQL authentication method to use for the connection. 
@@ -219,7 +219,7 @@ Before building and running the example:
 	ds.setServerName("aad-managed-demo.database.windows.net"); // replace 'aad-managed-demo' with your server name
 	ds.setDatabaseName("demo"); // replace with your database name
 	```
-3.	Locate the following lines of code and replace user name, with the name of the AAD user you want to connect as.
+3.	Locate the following lines of code and replace user name, with the name of the Azure AD user you want to connect as.
 	```java
 	ds.setUser("bob@cqclinic.onmicrosoft.com"); // replace with your user name
 	ds.setPassword("password"); 	// replace with your password
@@ -291,7 +291,7 @@ provision a contained database user for your application principal. For more inf
 	CREATE USER [mytokentest] FROM EXTERNAL PROVIDER
 	```
 
-3.	On the client machine (on which, you want to run the example), download the [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) library and its dependencies, and include them in the Java build path. Note that the azure-activedirectory-library-for-java is only needed to run this specific example. The example uses the APIs from this library to retrieve the access token from Azure AAD. If you already have an access token, you can skip this step. Note that you also need to remove the section in the example that retrieves access token.
+3.	On the client machine (on which, you want to run the example), download the [azure-activedirectory-library-for-java](https://github.com/AzureAD/azure-activedirectory-library-for-java) library and its dependencies, and include them in the Java build path. Note that the azure-activedirectory-library-for-java is only needed to run this specific example. The example uses the APIs from this library to retrieve the access token from Azure Azure AD. If you already have an access token, you can skip this step. Note that you also need to remove the section in the example that retrieves access token.
 
 In the following example, replace the STS URL, Client ID, Client Secret, server and database name with your values.
 

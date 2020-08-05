@@ -1,20 +1,35 @@
 ---
 title: "What's New in SSMA for Access (AccessToSQL) | Microsoft Docs"
 description: Find out about changes to SQL Server Migration Assistant (SSMA) for Access (AccessToSQL) for each release.
-authors: "HJToland3;nahk-ivanov"
+author: nahk-ivanov
 
 ms.prod: sql
 ms.custom: ""
-ms.date: "6/2/2020"
+ms.date: "7/31/2020"
 ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
-ms.author: "jtoland;alexiva"
+ms.author: alexiva
 ---
 # What's New in SSMA for Access (AccessToSQL)
 
 This article lists SQL Server Migration Assistant (SSMA) for Access changes in each release.
+
+## SSMA v8.12
+
+The v8.12 release of SSMA for Access contains the following changes:
+
+* Support for `BigInt` (`Large Number`) data type
+* Improved column type resolution
+* Improved conversion of column validation rules
+* Using latest available ACE OLE DB provider for data migration
+
+## SSMA v8.11
+
+The v8.11 release of SSMA for Access contains the following changes:
+
+* Use MSAL.NET library for interactive Azure Active Directory authentication
 
 ## SSMA v8.10
 
@@ -203,7 +218,7 @@ The March 2016 preview release of SSMA for Access adds support for migration to 
 The January 2016 maintenance release of SSMA for Access contains the following changes:
 
 * Fixed invalid function for default of a GUID field (RFC 3894811).
-* Fixed hang on importing records to SQL Database (Azure) (RFC 4919573).
+* Fixed issue where system stops responding when importing records to SQL Database (Azure) (RFC 4919573).
 * Added View Log Menu Item to SSMA (RFC 5706203).
 * Added Telemetry.
 

@@ -13,7 +13,7 @@ ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
 ---
 # Configure SLES Cluster for SQL Server Availability Group
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This guide provides instructions to create a three-node cluster for SQL Server on SUSE Linux Enterprise Server (SLES) 12 SP2. For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). The clustering layer is based on SUSE [High Availability Extension (HAE)](https://www.suse.com/products/highavailability) built on top of [Pacemaker](https://clusterlabs.org/). 
 
@@ -22,11 +22,7 @@ For more information on cluster configuration, resource agent options, managemen
 >[!NOTE]
 >At this point, SQL Server's integration with Pacemaker on Linux is not as coupled as with WSFC on Windows. SQL Server service on Linux is not cluster aware. Pacemaker controls all of the orchestration of the cluster resources, including the availability group resource. On Linux, you should not rely on Always On Availability Group Dynamic Management Views (DMVs) that provide cluster information like sys.dm_hadr_cluster. Also, virtual network name is specific to WSFC, there is no equivalent of the same in Pacemaker. You can still create a listener to use it for transparent reconnection after failover, but you will have to manually register the listener name in the DNS server with the IP used to create the virtual IP resource (as explained in the following sections).
 
-> [!NOTE]
-> Bias-free communication
->
-> Microsoft supports a diverse and inclusionary environment. This article contains references to the word _slave_. The Microsoft [style guide for bias-free communication](https://github.com/MicrosoftDocs/microsoft-style-guide/blob/master/styleguide/bias-free-communication.md) recognizes this as an exclusionary word. The word is used in this article for consistency because it's currently the word that appears in the software. When the software is updated to remove the word, this article will be updated to be in alignment.
->
+[!INCLUDE [bias-sensitive-term-t](../includes/bias-sensitive-term-t.md)]
 
 ## Roadmap
 
@@ -313,8 +309,8 @@ The colocation constraint has an implicit ordering constraint. It moves the virt
 1. User issues resource migrate to the availability group master from node1 to node2.
 2. The virtual IP resource stops on node 1.
 3. The virtual IP resource starts on node 2. At this point, the IP address temporarily points to node 2 while node 2 is still a pre-failover secondary. 
-4. The availability group master on node 1 is demoted to slave.
-5. The availability group slave on node 2 is promoted to master. 
+4. The availability group master on node 1 is demoted.
+5. The availability group on node 2 is promoted to master. 
 
 To prevent the IP address from temporarily pointing to the node with the pre-failover secondary, add an ordering constraint. 
 To add an ordering constraint, run the following command on one node: 

@@ -1,5 +1,6 @@
 ---
 title: "Count Function (Report Builder) | Microsoft Docs"
+description: Learn about the Count function, which returns a count of non-null values specified by an expression, which is evaluated in the context of a specified scope.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

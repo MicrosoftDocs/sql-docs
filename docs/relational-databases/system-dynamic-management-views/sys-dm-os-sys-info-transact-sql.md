@@ -24,7 +24,7 @@ ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_sys_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a miscellaneous set of useful information about the computer, and about the resources available to and consumed by [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
@@ -40,7 +40,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |**physical_memory_kb**|**bigint**|**Applies to:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Specifies the total amount of physical memory on the machine. Not nullable.|  
 |**virtual_memory_in_bytes**|**bigint**|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Amount of virtual memory available to the process in user mode. This can be used to determine whether SQL Server was started by using a 3-GB switch.|  
 |**virtual_memory_kb**|**bigint**|**Applies to:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Specifies the total amount of virtual address space available to the process in user mode. Not nullable.|  
-|**bpool_commited**|**int**|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Represents the committed memory in kilobytes (KB) in the memory manager. Does not include reserved memory in the memory manager. Not nullable.|  
+|**bpool_committed**|**int**|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Represents the committed memory in kilobytes (KB) in the memory manager. Does not include reserved memory in the memory manager. Not nullable.|  
 |**committed_kb**|**int**|**Applies to:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Represents the committed memory in kilobytes (KB) in the memory manager. Does not include reserved memory in the memory manager. Not nullable.|  
 |**bpool_commit_target**|**int**|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Represents the amount of memory, in kilobytes (KB), that can be consumed by SQL Server memory manager.|  
 |**committed_target_kb**|**int**|**Applies to:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Represents the amount of memory, in kilobytes (KB), that can be consumed by SQL Server memory manager. The target amount is calculated using a variety of inputs like:<br /><br /> - the current state of the system including its load<br /><br /> - the memory requested by current processes<br /><br /> - the amount of memory installed on the computer<br /><br /> - configuration parameters<br /><br /> If **committed_target_kb** is larger than **committed_kb**, the memory manager will try to obtain additional memory. If **committed_target_kb** is smaller than **committed_kb**, the memory manager will try to shrink the amount of memory committed. The **committed_target_kb** always includes stolen and reserved memory. Not nullable.|  

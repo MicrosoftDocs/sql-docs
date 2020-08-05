@@ -20,7 +20,7 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
 ---
 # JSON_VALUE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
  Extracts a scalar value from a JSON string.  
   
@@ -34,6 +34,8 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
 JSON_VALUE ( expression , path )  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
  *expression*  
@@ -133,7 +135,7 @@ CREATE TABLE dbo.Store
  (
   StoreID INT IDENTITY(1,1) NOT NULL,
   Address VARCHAR(500),
-  jsonContent NVARCHAR(8000),
+  jsonContent NVARCHAR(4000),
   Longitude AS JSON_VALUE(jsonContent, '$.address[0].longitude'),
   Latitude AS JSON_VALUE(jsonContent, '$.address[0].latitude')
  )

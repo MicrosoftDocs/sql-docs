@@ -1,29 +1,26 @@
 ---
-title: MicrosoftML R function library
-description: Introduction to the MicrosoftML function library in SQL Server 2016 R Services and SQL Server Machine Learning Services with R.
+title: MicrosoftML R package
+description: MicrosoftML is an R package from Microsoft that provides high-performance machine learning algorithms. It includes functions for training and transformations, scoring, text and image analysis, and feature extraction for deriving values from existing data. The package is included in SQL Server Machine Learning Services and SQL Server 2016 R Services and supports high performance on big data, using multicore processing, and fast data streaming. MicrosoftML also includes numerous transformations for text and image processing.
 ms.prod: sql
-ms.technology: machine-learning
-
+ms.technology: machine-learning-services
 ms.date: 11/06/2019
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# MicrosoftML (R library in SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# MicrosoftML (R package in SQL Server Machine Learning Services)
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
-**MicrosoftML** is an R function library from Microsoft providing high-performance machine learning algorithms. It includes functions for training and transformations, scoring, text and image analysis, and feature extraction for deriving values from existing data.
-
-The machine learning APIs were developed by Microsoft for internal machine learning applications, and have been refined over the years to support high performance on big data, using multicore processing and fast data streaming. MicrosoftML also includes numerous transformations for text and image processing.
+**MicrosoftML** is an R package from Microsoft that provides high-performance machine learning algorithms. It includes functions for training and transformations, scoring, text and image analysis, and feature extraction for deriving values from existing data. The package is included in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) and [SQL Server 2016 R Services](sql-server-r-services.md) and supports high performance on big data, using multicore processing, and fast data streaming. MicrosoftML also includes numerous transformations for text and image processing.
 
 ## Full reference documentation
 
-The **MicrosoftML** library is distributed in multiple Microsoft products, but usage is the same whether you get the library in SQL Server or another product. Because the functions are the same, [documentation for individual RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) is published to just one location under the [R reference](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
+The **MicrosoftML** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual RevoScaleR functions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler) is published to just one location under the [R reference](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
 
 ## Versions and platforms
 
-The **MicrosoftML** library is based on R 3.4.3 and available only when you install one of the following Microsoft products or downloads:
+The **MicrosoftML** package is based on R 3.4.3 and available only when you install one of the following Microsoft products or downloads:
 
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 + [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
@@ -38,7 +35,7 @@ The **MicrosoftML** library is based on R 3.4.3 and available only when you inst
 Algorithms in **MicrosoftML** depend on [RevoScaleR](ref-r-revoscaler.md) for:
 
 + Data source objects. Data consumed by **MicrosoftML** functions are created using **RevoScaleR** functions.
-+ Remote computing (shifting function execution to a remote SQL Server instance). The **RevoScaleR** library provides functions for creating and activating a remote compute context for SQL server.
++ Remote computing (shifting function execution to a remote SQL Server instance). The **RevoScaleR** package provides functions for creating and activating a remote compute context for SQL server.
 
 In most cases, you will load the packages together whenever you are using **MicrosoftML**.
 
@@ -69,7 +66,7 @@ This section lists the functions by category to give you an idea of how each one
 |[concat](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/concat) | Transformation to create a single vector-valued column from multiple columns.  |
 |[categorical](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categorical) | Create indicator vector using categorical transform with dictionary.  |
 |[categoricalHash](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/categoricalhash) | Converts the categorical value into an indicator array by hashing. |
-|[featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizetext) | Produces a bag of counts of sequences of consecutive words, called n-grams, from a given corpus of text. It offers language detection, tokenization, stopwords removing, text normalization and feature generation.  |
+|[featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizetext) | Produces a bag of counts of sequences of consecutive words, called n-grams, from a given corpus of text. It offers language detection, tokenization, stopwords removing, text normalization, and feature generation.  |
 |[getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | Scores natural language text and creates a column that contains probabilities that the sentiments in the text are positive.|
 |[ngram](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/ngram) | allows defining arguments for count-based and hash-based feature extraction.|
 |[selectColumns](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectcolumns) | Selects a set of columns to retrain, dropping all others. |
@@ -149,6 +146,6 @@ logisticRegression(args);
 
 + [R tutorials](../tutorials/sql-server-r-tutorials.md)
 + [Learn to use compute contexts](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [R for SQL developers: Train and operationalize a model](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [R for SQL developers: Train and operationalize a model](../tutorials/r-taxi-classification-introduction.md)
 + [Microsoft product samples on GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
 + [R reference (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 

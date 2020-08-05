@@ -25,7 +25,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Recovery of Related  Databases That Contain Marked Transaction
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic is relevant only for databases that contain marked transactions and that use the full or bulk-logged recovery models.  
   
  For information about the requirements for restoring to a specific recovery point, see [Restore a SQL Server Database to a Point in Time &#40;Full Recovery Model&#41;](../../relational-databases/backup-restore/restore-a-sql-server-database-to-a-point-in-time-full-recovery-model.md).  

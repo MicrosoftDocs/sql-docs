@@ -17,7 +17,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Drop XML Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The [DROP INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/drop-index-transact-sql.md)[!INCLUDE[tsql](../../includes/tsql-md.md)] statement can be used to drop existing primary or secondary XML and non-XML indexes. However, no options of DROP INDEX apply to XML indexes. If you drop the primary XML index, any secondary indexes that are present are also deleted.  
   
  The DROP syntax with *TableName.IndexName* is being phased out and is not supported for XML indexes.  

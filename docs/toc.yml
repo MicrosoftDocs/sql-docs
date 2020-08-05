@@ -1,4 +1,3 @@
-
 - name: SQL Server
   href: sql-server/index.yml
 
@@ -105,10 +104,14 @@
           href: big-data-cluster/deploy-on-aks.md
         - name: Kubeadm
           href: big-data-cluster/deploy-with-kubeadm.md
+        - name: OpenShift
+          href: big-data-cluster/deploy-openshift.md
       - name: Deployment scripts
         items:
         - name: AKS python script
           href: big-data-cluster/quickstart-big-data-cluster-deploy.md
+        - name: ARO python script
+          href: big-data-cluster/quickstart-big-data-cluster-deploy-aro.md
         - name: Single node kubeadm script
           href: big-data-cluster/deployment-script-single-node-kubeadm.md
         - name: Deploy with notebooks
@@ -131,8 +134,10 @@
       href: big-data-cluster/concept-security.md
   - name: How-to guides
     items:
-    - name: Configuration
+    - name: Configure
       items:
+      - name: Cluster
+        href: big-data-cluster/configure-cluster.md
       - name: SQL Server master instance
         href: big-data-cluster/configure-sql-server-master-instance.md
       - name: Configure Apache Spark & Apache Hadoop
@@ -181,7 +186,6 @@
       items:
       - name: Use Machine Learning Services (Python, R)
         href: big-data-cluster/machine-learning-services.md
-
       - name: Machine learning quickstarts
         items:
         - name: Python
@@ -291,12 +295,26 @@
         href: big-data-cluster/notebooks-manage-bdc.md
       - name: Run a notebook with Spark
         href: big-data-cluster/notebooks-tutorial-spark.md
-      - name: Security
-        items:
-        - name: Update AZDATA_PASSWORD
-          href: big-data-cluster/change-azdata-password.md
-        - name: Manage user access
-          href: big-data-cluster/manage-user-access.md
+    - name: Performance
+      items:
+        - name: Tuning guide
+          href: big-data-cluster/performance-guidelines-tuned.md
+    - name: Secure
+      items:
+      - name: Kubernetes RBAC for BDC
+        href: big-data-cluster/kubernetes-rbac.md
+      - name: Update AZDATA_PASSWORD
+        href: big-data-cluster/change-azdata-password.md
+      - name: Manage user access
+        href: big-data-cluster/manage-user-access.md
+      - name: Non root containers
+        href: big-data-cluster/non-root-containers.md
+      - name: Multiple BDCs in the same AD domain
+        href: big-data-cluster/active-directory-deployment-background.md
+      - name: Auto-generated AD objects
+        href: big-data-cluster/active-directory-objects.md
+      - name: AD DNS reconciliation
+        href: big-data-cluster/active-directory-dns-reconciliation.md
     - name: Spark jobs
       items:
       - name: Submit Spark jobs in Azure Data Studio
@@ -315,9 +333,9 @@
         href: big-data-cluster/troubleshoot-pyspark-notebook.md
       - name: Active directory domain group scope
         href: big-data-cluster/troubleshoot-active-directory.md
-      - name: Active directory DNS
+      - name: Active Directory DNS
         href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
-      - name: Active directory login fails
+      - name: Active Directory login fails
         href: big-data-cluster/troubleshoot-ad-login-failed-untrusted-domain.md
       - name: HDFS admin permissions
         href: big-data-cluster/troubleshoot-hdfs-restore-admin.md
@@ -329,6 +347,12 @@
       items:
       - name: Deployment configuration file
         href: big-data-cluster/reference-deployment-config.md
+    - name: Configuration
+      items:
+      - name: Master instance
+        href: big-data-cluster/reference-config-master-instance.md
+      - name: Apache Spark & Apache Hadoop
+        href: big-data-cluster/reference-config-spark-hadoop.md
     - name: azdata reference
       items:
       - name: azdata
@@ -1908,12 +1932,13 @@
       - name: Interoperability
         href: relational-databases/track-changes/change-data-capture-and-other-sql-server-features.md
   - name: Triggers
-    href: relational-databases/triggers/logon-triggers.md
     items:
-    - name: Capture Logon Trigger Event Data
-      href: relational-databases/triggers/capture-logon-trigger-event-data.md
-    - name: Manage Trigger Security
-      href: relational-databases/triggers/manage-trigger-security.md
+    - name: Logon Triggers
+      items:
+      - name: Logon Triggers
+        href: relational-databases/triggers/logon-triggers.md
+      - name: Capture Logon Trigger Event Data
+        href: relational-databases/triggers/capture-logon-trigger-event-data.md
     - name: DDL Triggers
       href: relational-databases/triggers/ddl-triggers.md
       items:
@@ -1948,6 +1973,8 @@
         href: relational-databases/triggers/get-information-about-dml-triggers.md
       - name: Delete or Disable DML Triggers
         href: relational-databases/triggers/delete-or-disable-dml-triggers.md
+    - name: Manage Trigger Security
+      href: relational-databases/triggers/manage-trigger-security.md
   - name: User-defined functions
     href: relational-databases/user-defined-functions/user-defined-functions.md
     items:
@@ -2206,8 +2233,6 @@
   - name: Data tier applications
     href: relational-databases/data-tier-applications/data-tier-applications.md
     items:
-    - name: DAC Support For SQL Server Objects & Versions
-      href: relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md
     - name: Delete
       href: relational-databases/data-tier-applications/delete-a-data-tier-application.md
     - name: Deploy
@@ -2660,7 +2685,7 @@
       - name: Java to SQL data types
         href: language-extensions/how-to/java-to-sql-data-types.md
       - name: Create a Java jar file
-        href: language-extensions/how-to/call-java-from-sql.md
+        href: language-extensions/how-to/create-a-java-jar-file-from-class-files.md
     - name: Reference
       items:
       - name: Extensibility Framework API
@@ -4502,6 +4527,8 @@
         href: database-engine/configure-windows/affinity64-mask-server-configuration-option.md
       - name: Agent XPs
         href: database-engine/configure-windows/agent-xps-server-configuration-option.md
+      - name: allow polybase export
+        href: database-engine/configure-windows/allow-polybase-export.md
       - name: allow updates
         href: database-engine/configure-windows/allow-updates-server-configuration-option.md
       - name: backup checksum default
@@ -4620,6 +4647,8 @@
         href: database-engine/configure-windows/show-advanced-options-server-configuration-option.md
       - name: SMO & DMO XPs
         href: database-engine/configure-windows/smo-and-dmo-xps-server-configuration-option.md
+      - name: suppress recovery model errors
+        href: database-engine/configure-windows/suppress-recovery-model-errors-server-configuration-option.md
       - name: transform noise words
         href: database-engine/configure-windows/transform-noise-words-server-configuration-option.md
       - name: Configure the two digit year cutoff
@@ -7002,9 +7031,9 @@
           href: relational-databases/polybase/configure-scale-out-groups-windows.md
       - name: Data Virtualization Wizard
         items:
-        - name: Virtualize relational data
+        - name: Virtualize data
           href: relational-databases/polybase/data-virtualization.md
-        - name: Virtualize CSV data
+        - name: Virtualize CSV file
           href: relational-databases/polybase/data-virtualization-csv.md
       - name: Troubleshoot
         items:
@@ -8407,6 +8436,8 @@
         href: ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
       - name: Add an External Tool to the Tools Menu
         href: ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+      - name: Install Extensions in SQL Server Management Studio (SSMS)
+        href: ssms/install-extensions-in-sql-server-management-studio-ssms.md
       - name: SSMS Utility
         href: ssms/ssms-utility.md
       - name: SSMS Keyboard Shortcuts
@@ -10098,14 +10129,10 @@
   items:
   - name: Database samples
     items:
-    - name: Samples Overview
+    - name: Overview
       href: samples/sql-samples-where-are.md
-    - name: All GitHub Samples >>
-      href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
     - name: AdventureWorks
-      items:
-      - name: Install & configure
-        href: samples/adventureworks-install-configure.md
+      href: samples/adventureworks-install-configure.md
     - name: Wide World Importers
       items:
       - name: Overview
@@ -10130,6 +10157,8 @@
         href: samples/wide-world-importers-generate-data.md
       - name: ETL workflow
         href: samples/wide-world-importers-perform-etl.md
+    - name: All GitHub Samples >>
+      href: https://github.com/Microsoft/sql-server-samples/tree/master/samples
   - name: Errors & events
     href: relational-databases/errors-events/errors-and-events-reference-database-engine.md
     items:

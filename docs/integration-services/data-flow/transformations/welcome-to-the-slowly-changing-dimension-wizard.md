@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Welcome to the Slowly Changing Dimension Wizard
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Slowly Changing Dimension Wizard** to configure the loading of data into various types of slowly changing dimensions.  

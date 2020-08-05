@@ -15,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Set the Max Degree of Parallelism Option for Optimal Performance
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule determines whether the max degree of parallelism (MAXDOP) option for a value greater than 8. Setting this option to a larger value often causes unwanted resource consumption and performance degradation.  
   
 ## Best practice recommendations  

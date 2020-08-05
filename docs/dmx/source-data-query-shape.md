@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # &lt;source data query&gt; - SHAPE
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Combines queries from multiple data sources into a single hierarchical table (that is, a table with nested tables), which becomes the case table for the mining model.  
   
@@ -20,30 +20,30 @@ author: minewiskan
   
 ```  
   
-SHAPE {<master query>}  
+SHAPE {<primary query>}  
 APPEND ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS <column table name>  
 [  
      ({ <child table query> }   
-     RELATE <master column> TO <child column>)   
+     RELATE <primary column> TO <child column>)   
           AS < column table name>  
 ...  
 ]       
 ```  
   
 ## Arguments  
- *master query*  
+ *primary query*  
  The query returning the parent table.  
   
  *child table query*  
  The query returning the nested table.  
   
- *master column*  
+ *primary column*  
  The column in the parent table to identify child rows from the result of a child table query.  
   
  *child column*  
- The column in the child table to identify the parent row from the result of a master query.  
+ The column in the child table to identify the parent row from the result of a primary query.  
   
  *column table name*  
  The newly appended column name in the parent table for the nested table.  

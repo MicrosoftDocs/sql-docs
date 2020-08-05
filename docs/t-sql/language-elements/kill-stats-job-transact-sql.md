@@ -24,7 +24,7 @@ author: rothja
 ms.author: jroth
 ---
 # KILL STATS JOB (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Terminates an asynchronous statistics update job in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -37,7 +37,9 @@ ms.author: jroth
 KILL STATS JOB job_id   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *job_id*  
  Is the job_id field returned by the sys.dm_exec_background_job_queue dynamic management view for the job.  
   

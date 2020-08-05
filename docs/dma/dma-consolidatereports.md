@@ -31,8 +31,8 @@ The following step-by-step instructions help you use the Data Migration Assistan
   - [Power BI desktop](/power-bi/fundamentals/desktop-get-the-desktop).
   - [Azure PowerShell Modules](https://docs.microsoft.com/powershell/azure/install-az-ps?view=azps-1.0.0)
 - Download and extract:
-  - The [DMA Reports Power BI template](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/2/PowerBI-Reports.zip).
-  - The [LoadWarehouse script](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/1/LoadWarehouse1.zip).
+  - The [DMA Reports Power BI template](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/2/PowerBI-Reports.zip).
+  - The [LoadWarehouse script](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/3/LoadWarehouse1.zip).
 
 ## Loading the PowerShell modules
 
@@ -41,7 +41,7 @@ Saving the PowerShell modules into the PowerShell modules directory enables you 
 To load the modules, perform the following steps:
 
 1. Navigate to C:\Program Files\WindowsPowerShell\Modules, and then create a folder named **DataMigrationAssistant**.
-2. Open the [PowerShell-Modules](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/56/4/PowerShell-Modules2.zip), and then save them into the folder you created.
+2. Open the [PowerShell-Modules](https://techcommunity.microsoft.com/gxcuf89792/attachments/gxcuf89792/MicrosoftDataMigration/161/1/PowerShell-Modules2.zip), and then save them into the folder you created.
 
       ![PowerShell Modules](../dma/media//dma-consolidatereports/dma-powershell-modules.png)
 
@@ -75,7 +75,6 @@ This inventory can be in one of two forms:
 >
 > For default instances, set the instance name to MSSQLServer.
 
-
 When using a csv file to import the data, ensure there are only two columns of data - **Instance Name** and **Database Name**, and that the columns don't have header rows.
 
  ![csv file contents](../dma/media//dma-consolidatereports/dma-csv-file-contents.png)
@@ -92,7 +91,7 @@ Create a database called **EstateInventory** and a table called **DatabaseInvent
 - DatabaseName
 - AssessmentFlag
 
-![SQL Server table contents](../dma/media//dma-consolidatereports/dma-sql-server-table-contents.png)
+![SQL Server table contents](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-database-inventory.png)
 
 If this database isn't on the tools computer, ensure that the tools computer has network connectivity to this SQL Server instance.
 
@@ -100,10 +99,21 @@ The benefit of using a SQL Server table over a CSV file is that you can use the 
 
 Keep in mind that depending on the number of objects and their complexity, an assessment can take an exceptionally long time (hours+), so it's prudent to separate the assessment into manageable chunks.
 
+### If using an Instance Inventory
+
+Create a database called **EstateInventory** and a table called **InstanceInventory**. The table containing this inventory data can have any number of columns, as long as following four columns exist:
+
+- ServerName
+- InstanceName
+- Port
+- AssessmentFlag
+
+![SQL Server table contents](../dma/media//dma-consolidatereports/dma-sql-server-table-contents-instance-inventory.png)
+
 ## Running a scaled assessment
 
 After loading the PowerShell modules into the modules directory and creating an inventory, you need to run a scaled assessment by opening PowerShell and running the dmaDataCollector function.
- 
+
   ![dmaDataCollector function listings](../dma/media//dma-consolidatereports/dma-dmaDataCollector-function-listing.png)
 
 The parameters associated with the dmaDataCollector function are described in the following table.
@@ -112,21 +122,22 @@ The parameters associated with the dmaDataCollector function are described in th
 |---------|---------|
 |**getServerListFrom** | Your inventory. Possible values are **SqlServer** and **CSV**.<br/>For more info, see [Create an inventory of SQL Servers](#create-inventory). |
 |**csvPath** | The path to your CSV inventory file.  Used only when **getServerListFrom** is set to  **CSV**. |
-|**serverName**	| The SQL Server instance name of the inventory when using **SqlServer** in the **getServerListFrom** parameter. |
+|**serverName** | The SQL Server instance name of the inventory when using **SqlServer** in the **getServerListFrom** parameter. |
 |**databaseName** | The database hosting the inventory table. |
-|**AssessmentName**	| The name of the DMA assessment. |
-|**TargetPlatform** | The assessment target type that you want to perform.  Possible values are **AzureSQLDatabase**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**, and **ManagedSqlServer**. |
-|**AuthenticationMethod** |	The authentication method for connecting to the SQL Server targets you want to assess. Possible values are **SQLAuth** and **WindowsAuth**. |
+|**useInstancesOnly** | Bit flag to specify whether to use a list of Instances for assessment or not.  If set to 0, then the DatabaseInventory table will be used to build the assessment target list. |
+|**AssessmentName** | The name of the DMA assessment. |
+|**TargetPlatform** | The assessment target type that you want to perform.  Possible values are **AzureSQLDatabase**, **ManagedSqlServer**, **SQLServer2012**, **SQLServer2014**, **SQLServer2016**, **SQLServerLinux2017**, **SQLServerWindows2017**,  **SqlServerWindows2019**, and **SqlServerLinux2019**.  |
+|**AuthenticationMethod** | The authentication method for connecting to the SQL Server targets you want to assess. Possible values are **SQLAuth** and **WindowsAuth**. |
 |**OutputLocation** | The directory in which to storing the JSON assessment output file. Depending on the number of databases being assessed and the number of objects within the databases, the assessments can take an exceptionally long time. The file will be written after all assessments have completed. |
 
 If there is an unexpected error, then the command window that gets initiated by this process will be terminated.  Review the error log to determine why it failed.
- 
+
   ![Error log location](../dma/media//dma-consolidatereports/dma-error-log-file-location.png)
 
 ## Consuming the assessment JSON file
 
 After your assessment has finished, you're now ready to import the data into SQL Server for analysis. To consume the assessment JSON file, open PowerShell and run the dmaProcessor function.
- 
+
   ![dmaProcessor function listing](../dma/media//dma-consolidatereports/dma-dmaProcessor-function-listing.png)
 
 The parameters associated with the dmaProcessor function are described in the following table.
@@ -152,8 +163,8 @@ After the dmaProcessor has finishing processing the assessment files, the data w
     The script will take the data from the ReportData table in the DMAReporting database and load it into the warehouse.  If there are any errors during this load process, they're likely a result of missing entries in the dimension tables.
 
 2. Load the data warehouse.
- 
-      ![LoadWarehouse contents loaded](../dma/media//dma-consolidatereports/dma-LoadWarehouse-loaded.png)
+
+  ![LoadWarehouse contents loaded](../dma/media//dma-consolidatereports/dma-load-warehouse-loaded.png)
 
 ## Set your database owners
 
@@ -161,7 +172,7 @@ While it's not mandatory, to get the most value from the reports, it's recommend
 
 You can also use the LoadWarehouse script to provide the basic TSQL statements for you to set the database owners.
 
-  ![LoadWarehouse setting owners](../dma/media//dma-consolidatereports/dma-LoadWarehouse-set-owners.png)
+  ![LoadWarehouse setting owners](../dma/media//dma-consolidatereports/dma-load-warehouse-set-owners.png)
 
 ## DMA reports
 
@@ -245,7 +256,7 @@ This visual shows a breakdown of databases by the following readiness buckets:
 - NOT READY
 
 ### Issues Word Cloud
- 
+
   ![DMA issues WordCloud](../dma/media//dma-consolidatereports/dma-issues-word-cloud.png)
 
 This visual shows the issues that are currently occurring within in the selection context (everything, instance, database [multiples of]). The larger the word appears on-screen, the greater the number of issues in that category. Hovering the mouse pointer over a word shows the number of issues occurring in that category.
@@ -275,7 +286,7 @@ This task filters the remediation plan report to the current hierarchy level bas
   ![DMA Remediation Plan report](../dma/media//dma-consolidatereports/dma-remediation-plan-report.png)
 
 You can also use the Remediation Plan report on its own to build a custom remediation plan by using the filters in the **Visualizations Filters** blade.
- 
+
   ![DMA Remediation Plan report filter options](../dma/media//dma-consolidatereports/dma-remediation-plan-report-filter-options.png)
 
 ### Script Disclaimer

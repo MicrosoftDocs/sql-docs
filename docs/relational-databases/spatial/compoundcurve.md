@@ -1,6 +1,6 @@
 ---
 title: "CompoundCurve | Microsoft Docs"
-ms.date: "06/02/2016"
+ms.date: "07/16/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -12,13 +12,10 @@ ms.author: mlandzic
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CompoundCurve
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   A **CompoundCurve** is a collection of zero or more continuous **CircularString** or **LineString** instances of either geometry or geography types.  
   
-> [!IMPORTANT]  
->  For a detailed description and examples of the new spatial features in this release, including the **CompoundCurve** subtype, download the white paper, [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407).  
-  
- An empty **CompoundCurve** instance can be instantiated, but for a **CompoundCurve** to be valid it must meet the following criteria:  
+An empty **CompoundCurve** instance can be instantiated, but for a **CompoundCurve** to be valid it must meet the following criteria:  
   
 1.  It must contain at least one **CircularString** or **LineString** instance.  
   

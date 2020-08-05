@@ -21,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.database_mirroring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each database in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. If the database is not ONLINE or database mirroring is not enabled, the values of all columns except database_id will be NULL.  
   

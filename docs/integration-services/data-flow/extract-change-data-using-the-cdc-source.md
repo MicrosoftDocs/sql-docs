@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Extract Change Data Using the CDC Source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   To add and configure a CDC source, the package must already include at least one Data Flow task and a CDC Control task.  

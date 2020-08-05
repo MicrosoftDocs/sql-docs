@@ -39,7 +39,12 @@ Specifies whether an object is open or closed, connecting to a data source, exec
 |AdoEnums.ObjectState.FETCHING|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[State Property (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)|[State Property (ADO)](../../../ado/reference/ado-api/state-property-ado.md)|
+
+:::row:::
+    :::column:::
+        [State Property (ADO)](../../../ado/reference/ado-api/state-property-ado.md)  
+    :::column-end:::
+    :::column:::
+        [State Property (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)  
+    :::column-end:::
+:::row-end:::

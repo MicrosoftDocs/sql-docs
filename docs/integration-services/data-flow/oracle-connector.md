@@ -12,7 +12,7 @@ ms.author: chugu
 ---
 # Microsoft Connector for Oracle
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Microsoft Connector for Oracle enables the ability to export data from and load data into Oracle data source in an SSIS package.
 
@@ -30,6 +30,7 @@ The following Oracle database versions of data source are supported:
 - Oracle 11.x
 - Oracle 12c
 - Oracle 18c (without Windows Authentication support)
+- Oracle 19c (without Windows Authentication support)
 
 The Oracle database is supported on all operating systems and platforms.
 > [!NOTE]

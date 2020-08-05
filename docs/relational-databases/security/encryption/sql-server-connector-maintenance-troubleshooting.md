@@ -14,7 +14,7 @@ author: jaszymas
 ms.author: jaszymas
 ---
 # SQL Server Connector Maintenance & Troubleshooting
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Supplemental information about the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector is provided in this topic. For more information about the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] connector, see [Extensible Key Management Using Azure Key Vault &#40;SQL Server&#41;](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md), [Setup Steps for Extensible Key Management Using the Azure Key Vault](../../../relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md),  and [Use SQL Server Connector with SQL Encryption Features](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md).  
   
@@ -141,9 +141,9 @@ If the vault has been lost, you will need to recreate a vault and restore the as
 
 In summary, here are the steps:  
   
-* Back up the vault key (using the Backup-AzureKeyVaultKey Powershell cmdlet).  
+* Back up the vault key (using the Backup-AzureKeyVaultKey PowerShell cmdlet).  
 * In the case of vault failure, create a new vault in the same geographic region*. The user creating this should be in the same default directory as the service principal setup for SQL Server.  
-* Restore the key to the new vault (using the Restore-AzureKeyVaultKey Powershell cmdlet - this restores the key using the same name as before). If there is already a key with the same name, the restore will fail.  
+* Restore the key to the new vault (using the Restore-AzureKeyVaultKey PowerShell cmdlet - this restores the key using the same name as before). If there is already a key with the same name, the restore will fail.  
 * Grant permissions to the SQL Server service principal to use this new vault.  
 * Modify the SQL Server credential used by the Database Engine to reflect the new vault name (if needed).  
   
@@ -162,7 +162,7 @@ Key backups can be restored across Azure regions, as long as they remain in the 
 ### On Configuring [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]  
 
 **What are the endpoints that the SQL Server Connector needs access to?** 
- The Connector talks to two endpoints, which need to be whitelisted. The only port required for outbound communication to these other services is 443 for Https:
+ The Connector talks to two endpoints, which need to be allowed. The only port required for outbound communication to these other services is 443 for Https:
 -  login.microsoftonline.com/*:443
 -  *.vault.azure.net/*:443
 
@@ -211,7 +211,7 @@ Error code  |Symbol  |Description
 5 | scp_err_AuthFailure | The authentication has failed with EKM provider.    
 6 | scp_err_InvalidArgument | The provided argument is invalid.    
 7 | scp_err_ProviderError | There is an unspecified error happened in EKM provider that is caught by SQL engine.   
-401 | acquireToken | Server responded 401 for the request. Make sure the client Id and secret are correct, and the credential string is a concatenation of AAD client Id and secret without hyphens.
+401 | acquireToken | Server responded 401 for the request. Make sure the client ID and secret are correct, and the credential string is a concatenation of AAD client ID and secret without hyphens.
 404 | getKeyByName | The server responded 404, because the key name was not found. Please make sure the key name exists in your vault.
 2049 | scp_err_KeyNameDoesNotFitThumbprint | The key name is too long to fit into SQL engine's thumbprint. The key name must not exceed 26 characters.    
 2050 | scp_err_PasswordTooShort | The secret string that is the concatenation of AAD client ID and secret is shorter than 32 characters.    
@@ -251,7 +251,7 @@ If you don't see your error code in this table, here are some other reasons the 
   
 -   If you receive a "Cannot load library" error, make sure you have the appropriate version of the Visual Studio C++ redistributable installed based on the version of SQL Server that you are running. The table below specifies which version to install from the Microsoft Download Center.   
 
-The Windows event log also logs errors associated with the SQL Server Connnector, which can help with additional context on why the error is actually happening. The source in the Windows Application Event Log will be "SQL Server Connector for Microsoft Azure Key Vault".
+The Windows event log also logs errors associated with the SQL Server Connector, which can help with additional context on why the error is actually happening. The source in the Windows Application Event Log will be "SQL Server Connector for Microsoft Azure Key Vault".
   
 SQL Server Version  |Redistributable Install Link    
 ---------|--------- 

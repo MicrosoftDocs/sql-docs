@@ -14,8 +14,8 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ---
-# FILESTREAM Support
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# FILESTREAM Support in OLE DB Driver for SQL Server
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

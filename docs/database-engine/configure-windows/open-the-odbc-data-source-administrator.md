@@ -1,5 +1,6 @@
 ---
 title: "Open the ODBC Data Source Administrator | Microsoft Docs"
+description: Find out how to open the ODBC Data Source Administrator on various operating systems. You can use this Windows component to create and manage ODBC data sources.
 ms.custom: ""
 ms.date: "11/07/2016"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Open the ODBC Data Source Administrator
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to open the ODBC Data Source Administrator. The ODBC Data Source Administrator is a Windows component. Use the ODBC Data Source Administrator to create and manage ODBC data sources.  
   
@@ -41,7 +42,7 @@ ms.author: maghan
 
 
 > [!NOTE]  
->  For connections to Azure Active Directory Authentication for SQL Database install the latest driver, such as [ODBC Driver 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).   
+> For connections to Azure Active Directory Authentication for SQL Database install the latest driver, such as [ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql).  
   
 ## See Also  
  [Check the ODBC SQL Server Driver Version &#40;Windows&#41;](../../database-engine/configure-windows/check-the-odbc-sql-server-driver-version-windows.md)  

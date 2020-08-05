@@ -28,7 +28,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC CHECKTABLE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Checks the integrity of all the pages and structures that make up the table or indexed view.
 
@@ -56,7 +56,9 @@ DBCC CHECKTABLE
     ]    
 ```    
     
-## Arguments    
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table_name* | *view_name*  
  Is the table or indexed view for which to run integrity checks. Table or view names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
     

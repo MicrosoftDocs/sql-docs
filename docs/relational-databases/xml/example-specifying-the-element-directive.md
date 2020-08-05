@@ -15,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Example: Specifying the ELEMENT Directive
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This retrieves employee information and generates element-centric XML as shown in the following:  
   
 ```  

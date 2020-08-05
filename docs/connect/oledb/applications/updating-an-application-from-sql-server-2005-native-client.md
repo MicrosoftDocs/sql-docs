@@ -13,8 +13,8 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ---
-# Updating an Application from SQL Server 2005 Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Updating Applications from SQL Server 2005 Native Client
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

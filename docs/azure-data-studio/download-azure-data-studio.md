@@ -1,15 +1,14 @@
 ---
 title: Download and install Azure Data Studio
-description: Download and Install Azure Data Studio for Windows, macOS, or Linux
-ms.prod: sql
-ms.technology: azure-data-studio
+description: Download and Install Azure Data Studio for Windows, macOS, or Linux. This article provides release dates, version numbers, system requirements, and download links.
+ms.prod: azure-data-studio
+ms.technology: 
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: viharp
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 5/27/2020
+ms.date: 7/17/2020
 ---
 
 # Download and install Azure Data Studio
@@ -23,9 +22,9 @@ Download and install the latest release:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2127522)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2127432)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2127716) | May 27, 2020 | 1.18.1 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2127431) | May 27, 2020 | 1.18.1 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2127524)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2127433)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2127523) | May 27, 2020| 1.18.1 |
+| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2135512)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2135513)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2135514) | July 17, 2020 | 1.20.1 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2135266) | July 17, 2020 | 1.20.1 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267) | July 17, 2020| 1.20.1 |
 
 For details about the latest release, see the [release notes](release-notes.md).
 
@@ -37,32 +36,32 @@ The *user installer* is recommended because it does not require administrator pr
 
 **User Installer** (recommended)
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2127522).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2135512).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 **System Installer**
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2127432).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2135513).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 **.zip file**
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2127716).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2135514).
 2. Browse to the downloaded file and extract it.
 3. Run `\azuredatastudio-windows\azuredatastudio.exe`
 
 ## Get Azure Data Studio for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2127431).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2135266).
 2. To expand the contents of the zip, double-click it.
 3. To make Azure Data Studio available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
 
 ## Get Azure Data Studio for Linux
 
 1. Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux by using one of the installers or the tar.gz archive:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2127524)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2127433)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2127523)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2135515)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2135268)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2135267)
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
    **Debian Installation:**
@@ -121,7 +120,7 @@ The *user installer* is recommended because it does not require administrator pr
 
 ## Download Insiders build of Azure Data Studio
 
-In general, users should download the stable release of Azure Data Studio above. However, if you want to try out our beta features and give us feedback, you can download an [Insiders build of Azure Data Studio.](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)
+In general, users should download the stable release of Azure Data Studio above. However, if you want to try out our beta features and give us feedback, you can download an [Insiders build of Azure Data Studio.](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main)
 
 ## Uninstall Azure Data Studio
 
@@ -161,15 +160,16 @@ Azure Data Studio runs on Windows, macOS, and Linux, and is supported on the fol
 
 ## Recommended System Requirements
 
-|             | CPU Cores | Memory/RAM |
-|:-----------|:---------|:----------|
-| Recommended |     4     |      8 GB    |
-|   Minimum   |     2     |      4 GB     |
-|             |           |            |
+| Recommended/Minimum | CPU Cores | Memory/RAM |
+|---------------------|-----------|------------|
+| Recommended         |     4     |   8 GB     |
+|   Minimum           |     2     |   4 GB     |
 
 ## Check for updates
 
-To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**
+To check for latest updates, click the gear icon on the bottom left of the window and click **Check for Updates**.
+
+In an offline environment updates can be applied by [installing the latest version](#download-and-install-azure-data-studio) directly over a previously installed version.  Uninstalling prior versions of Azure Data Studio is not necessary as the installer updates a currently installed application, if present.
 
 ## Supported SQL offerings
 

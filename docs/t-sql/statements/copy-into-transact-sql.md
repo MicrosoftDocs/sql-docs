@@ -2,7 +2,7 @@
 title: COPY INTO (Transact-SQL) (preview) 
 titleSuffix: (SQL Data Warehouse) - SQL Server
 description: Use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts.
-ms.date: 04/30/2020
+ms.date: 06/19/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-data-warehouse"
 ms.reviewer: jrasnick
@@ -21,7 +21,7 @@ monikerRange: "=sqlallproducts-allversions||=azure-sqldw-latest"
 ---
 # COPY (Transact-SQL) (preview)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 This article explains how to use the COPY statement in Azure SQL Data Warehouse for loading from external storage accounts. The COPY statement provides the most flexibility for high-throughput data ingestion into SQL Data Warehouse. Use COPY for the following capabilities:
 
@@ -37,6 +37,12 @@ This article explains how to use the COPY statement in Azure SQL Data Warehouse 
 
 > [!NOTE]  
 > The COPY statement is currently in public preview.
+
+Visit the following documentation for comprehensive examples and quickstarts using the COPY statement:
+
+- [Quickstart: Bulk load data using the COPY statement](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql)
+- [Quickstart: Examples using the COPY statement and its supported authentication methods](https://docs.microsoft.com/azure/synapse-analytics/sql-data-warehouse/quickstart-bulk-load-copy-tsql-examples)
+- [Quickstart: Creating the COPY statement using the rich Synapse Studio UI (Workspace preview)](https://docs.microsoft.com/azure/synapse-analytics/quickstart-load-studio-sql-pool)
 
 ## Syntax  
 
@@ -109,7 +115,7 @@ Wildcards cards can be included in the path where
 
 Multiple file locations can only be specified from the same storage account and container via a comma-separated list such as:
 
-- ‘https://<account>.blob.core.windows.net/<container>/<path>’, ​‘https://<account>.blob.core.windows.net/<container>/<path>’…
+- ‘https://<account>.blob.core.windows.net/<container>/<path>’, ‘https://<account>.blob.core.windows.net/<container>/<path>’…
 
 *FILE_TYPE = { ‘CSV’ | ‘PARQUET’ | ‘ORC’ }*</br>
 *FILE_TYPE* specifies the format of the external data.
@@ -119,7 +125,7 @@ Multiple file locations can only be specified from the same storage account and 
 - ORC: Specifies an Optimized Row Columnar (ORC) format.
 
 >[!NOTE]  
-> The file type 'Delimited Text' in Polybase is replaced by the ‘CSV’ file format where the default comma delimiter can be configured via the FIELDTERMINATOR parameter. 
+>The file type 'Delimited Text' in Polybase is replaced by the ‘CSV’ file format where the default comma delimiter can be configured via the FIELDTERMINATOR parameter. 
 
 *FILE_FORMAT = external_file_format_name*</br>
 *FILE_FORMAT* applies to Parquet and ORC files only and specifies the name of the external file format object that stores the file type and compression method for the external data. To create an external file format, use [CREATE EXTERNAL FILE FORMAT](create-external-file-format-transact-sql.md?view=azure-sqldw-latest).
@@ -205,7 +211,7 @@ If ERRORFILE has the full path of the storage account defined, then the ERRORFIL
 *MAXERRORS = max_errors*</br>
 *MAXERRORS* specifies the maximum number of reject rows allowed in the load before the COPY operation is canceled. Each row that cannot be imported by the COPY operation is ignored and counted as one error. If max_errors is not specified, the default is 0.
 
-*COMPRESSION = { 'DefaultCodec '| ’Snappy’ | ‘GZIP’ | ‘NONE’}*</br>
+*COMPRESSION = { 'DefaultCodec '\| ’Snappy’ \| ‘GZIP’ \| ‘NONE’}*</br>
 *COMPRESSION* is optional and specifies the data compression method for the external data.
 
 - CSV supports GZIP
@@ -238,7 +244,7 @@ Extended ASCII and multi-byte characters and are not supported with UTF-8 for RO
 *FIRSTROW  = First_row_int*</br>
 *FIRSTROW* applies to CSV and specifies the row number that is read first in all files for the COPY command. Values start from 1, which is the default value. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators.
 
-*DATEFORMAT = { ‘mdy’ | ‘dmy’ | ‘ymd’ | ‘ydm’ | ‘myd’ | ‘dym’ }*</br>
+*DATEFORMAT = { ‘mdy’ \| ‘dmy’ \| ‘ymd’ \| ‘ydm’ \| ‘myd’ \| ‘dym’ }*</br>
 DATEFORMAT only applies to CSV and specifies the date format of the date mapping to SQL Server date formats. For an overview of all Transact-SQL date and time data types and functions, see [Date and Time Data Types and Functions (Transact-SQL)](../functions/date-and-time-data-types-and-functions-transact-sql.md?view=sql-server-ver15). DATEFORMAT within the COPY command takes precedence over [DATEFORMAT configured at the session level](set-dateformat-transact-sql.md?view=sql-server-ver15).
 
 *ENCODING = ‘UTF8’ | ‘UTF16’*</br>
@@ -350,7 +356,7 @@ WITH (
 COPY INTO test_parquet
 FROM 'https://myaccount.blob.core.windows.net/myblobcontainer/folder1/*.parquet'
 WITH (
-    FILE_FORMAT = myFileFormat
+    FILE_FORMAT = myFileFormat,
     CREDENTIAL=(IDENTITY= 'Shared Access Signature', SECRET='<Your_SAS_Token>')
 )
 ```
@@ -363,7 +369,7 @@ FROM
 'https://myaccount.blob.core.windows.net/myblobcontainer/folder0/*.txt', 
 	'https://myaccount.blob.core.windows.net/myblobcontainer/folder1'
 WITH ( 
-	FILE_TYPE = 'CSV'
+	FILE_TYPE = 'CSV',
 	CREDENTIAL=(IDENTITY= '<client_id>@<OAuth_2.0_Token_EndPoint>',SECRET='<key>'),
 	FIELDTERMINATOR = '|'
 )
@@ -416,9 +422,9 @@ There is no need to split Parquet and ORC files because the COPY command will au
 ### When will the COPY command be generally available?
 The COPY command will be generally available by the end of this calendar year (2020). 
 
-### Are there any known issues with the COPY command?
+### Are there any limitations on the number or size of files?
+Files should be at least 4MB.
 
-- LOB support such as (n)varchar(max) is not available in the COPY statement. This will be available early next year.
 
 Please send any feedback or issues to the following distribution list: sqldwcopypreview@service.microsoft.com
 

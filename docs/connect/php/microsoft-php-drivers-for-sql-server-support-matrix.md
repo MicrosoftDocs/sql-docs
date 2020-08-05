@@ -10,7 +10,6 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: David-Engel
 ms.author: v-daenge
-manager: ""
 ---
 # Microsoft PHP Drivers for SQL Server Support Matrix
 
@@ -105,6 +104,7 @@ The following Linux and macOS operating system versions (64-bit only) are suppor
 
 |PHP for SQL Server driver version &#8594;<br />&#8595; Operating system|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |--|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Ubuntu 20.04 (64-bit)               |Y  |   |   |   |   |   |   |
 |Ubuntu 19.10 (64-bit)               |Y  |   |   |   |   |   |   |
 |Ubuntu 18.10 (64-bit)               |   |Y  |   |   |   |   |   |
 |Ubuntu 18.04 (64-bit)               |Y  |Y  |Y  |   |   |   |   |

@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # Data Profiling Task and Viewer
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Data Profiling task provides data profiling functionality inside the process of extracting, transforming, and loading data. By using the Data Profiling task, you can achieve the following benefits:  

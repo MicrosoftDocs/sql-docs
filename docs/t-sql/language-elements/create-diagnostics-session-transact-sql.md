@@ -14,7 +14,7 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # CREATE DIAGNOSTICS SESSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Diagnostics sessions allow you to save detailed, user-defined diagnostic information on system or query performance.  
   
@@ -49,7 +49,9 @@ Removing results for a diagnostics session:
 DROP DIAGNOSTICS SESSION diagnostics_name ;  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *diagnostics_name*  
  The name of the diagnostics session. Diagnostics session names can include characters a-z, A-Z, and 0-9 only. Also, diagnostics session names must start with a character. *diagnostics_name* is limited to 127 characters.  
   

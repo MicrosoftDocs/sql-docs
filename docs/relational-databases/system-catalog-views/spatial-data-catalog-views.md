@@ -14,7 +14,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Spatial Data Catalog Views
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section describes the catalog views that provide information about spatial data.  
   

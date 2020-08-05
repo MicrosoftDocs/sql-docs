@@ -16,7 +16,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # CurveToLineWithTolerance (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a polygonal approximation of a **geometry** instance that contains circular arc segments.
   
@@ -27,7 +27,9 @@ Returns a polygonal approximation of a **geometry** instance that contains circu
 .CurveToLineWithTolerance ( tolerance, relative )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *tolerance*  
  Is a **double** expression that defines the maximum error between the original circular arc segment and its linear approximation.  
   

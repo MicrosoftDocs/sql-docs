@@ -25,7 +25,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Identifying Key Columns Using sql:key-fields (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   When an XPath query is specified against an XSD schema, key information is required in most cases to obtain proper nesting in the result. Specifying the **sql:key-fields** annotation is a way of ensuring that the appropriate hierarchy is generated.  
   
 > [!NOTE]  

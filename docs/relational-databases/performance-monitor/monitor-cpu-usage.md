@@ -1,5 +1,6 @@
 ---
 title: "Monitor CPU Usage | Microsoft Docs"
+description: Monitor a SQL Server instance to determine if CPU usage rates are in a normal range. Use System Monitor to see how much time the CPU spends running a thread.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -24,7 +25,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Monitor CPU Usage
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Monitor an instance of Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] periodically to determine whether CPU usage rates are within normal ranges. A continually high rate of CPU usage may indicate the need to upgrade the CPU or add multiple processors. Alternatively, a high CPU usage rate may indicate a poorly tuned or designed application. Optimizing the application can lower CPU utilization.  
   
  An efficient way to determine CPU usage is to use the **Processor:% Processor Time** counter in System Monitor. This counter monitors the amount of time the CPU spends executing a thread that is not idle. A consistent state of 80 percent to 90 percent may indicate the need to upgrade your CPU or add more processors. For multiprocessor systems, monitor a separate instance of this counter for each processor. This value represents the sum of processor time on a specific processor. To determine the average for all processors, use the **System: %Total Processor Time** counter instead.  

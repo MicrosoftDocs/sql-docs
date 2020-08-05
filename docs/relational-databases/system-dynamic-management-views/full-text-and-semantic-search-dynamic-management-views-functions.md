@@ -16,7 +16,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Full-Text and Semantic Search Dynamic Management Views - Functions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section contains the following dynamic management views and functions that are related to full-text search and semantic search.  
   

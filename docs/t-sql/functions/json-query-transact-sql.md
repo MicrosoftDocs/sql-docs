@@ -20,7 +20,7 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
 ---
 # JSON_QUERY (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
  Extracts an object or an array from a JSON string.  
   
@@ -34,6 +34,8 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
 JSON_QUERY ( expression [ , path ] )  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
  *expression*  
@@ -70,16 +72,16 @@ If the format of *path* isn't valid, **JSON_QUERY** returns an error.
   
 ```json  
 {
-	"info": {
-		"type": 1,
-		"address": {
-			"town": "Bristol",
-			"county": "Avon",
-			"country": "England"
-		},
-		"tags": ["Sport", "Water polo"]
-	},
-	"type": "Basic"
+   "info": {
+      "type": 1,
+      "address": {
+         "town": "Bristol",
+         "county": "Avon",
+         "country": "England"
+      },
+      "tags": ["Sport", "Water polo"]
+   },
+   "type": "Basic"
 } 
 ```  
   
@@ -127,5 +129,5 @@ FOR JSON PATH
   
 ## See also
 
- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

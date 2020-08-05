@@ -12,7 +12,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # SQL Server Back up Applications - Volume Shadow Copy Service (VSS) and SQL Writer
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server provides support for Volume Shadow Copy Service (VSS) by providing a writer (the SQL writer) so that a third party backup application can use the VSS framework to back up database files. This paper describes the SQL writer component and its role in the VSS snapshot creation and restore process for SQL Server databases. It also captures details on how to configure and use the SQL writer to work with backup applications in the VSS framework.
 

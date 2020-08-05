@@ -13,7 +13,7 @@ ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_event_session_targets (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Returns a row for each event target for an event session.  
   
@@ -35,9 +35,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ## Remarks  
  This view has the following relationship cardinalities.  
   
-||||  
-|-|-|-|  
 |From|To|Relationship|  
+|-|-|-|  
 |sys.database_event_session_targets.event_session_id|sys.database_event_sessions.event_session_id|Many to one|  
   
 ## See Also  

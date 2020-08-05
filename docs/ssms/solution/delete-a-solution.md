@@ -16,7 +16,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Delete a Solution
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Deleting a solution permanently erases files from physical storage as well as the file items in the solution.  
   
 > [!NOTE]  

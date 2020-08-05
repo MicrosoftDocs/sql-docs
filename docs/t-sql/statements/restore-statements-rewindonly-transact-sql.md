@@ -24,7 +24,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # RESTORE Statements - REWINDONLY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Rewinds and closes specified tape devices that were left open by BACKUP or RESTORE statements executed with the NOREWIND option. This command is supported only for tape devices.  
   
@@ -49,7 +49,9 @@ FROM <backup_device> [ ,...n ]
 }   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **\<backup_device> ::=** 
   
  Specifies the logical or physical backup devices to use for the restore operation.  

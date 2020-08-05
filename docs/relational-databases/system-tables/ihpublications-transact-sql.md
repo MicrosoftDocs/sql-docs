@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # IHpublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHpublications** system table contains one row for each non-SQL Server publication using the current Distributor. This table is stored in the distribution database.  
   

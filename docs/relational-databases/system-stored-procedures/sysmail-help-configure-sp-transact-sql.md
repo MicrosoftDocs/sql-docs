@@ -19,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sysmail_help_configure_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays configuration settings for Database Mail.  
   
@@ -42,9 +42,8 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ## Result Sets  
  When no **\@parameter_name** is specified, returns a result set with the following columns.  
   
-||||  
-|-|-|-|  
-|Column name|Data type|Description|  
+| Column name | Data type | Description |
+| ----------- | --------- | ----------- |
 |**paramname**|**nvarchar(256)**|The name of the configuration parameter.|  
 |**paramvalue**|**nvarchar(256)**|The value of the configuration parameter.|  
 |**description**|**nvarchar(256)**|A description of the configuration parameter.|  

@@ -1,10 +1,10 @@
 ### YamlMime:Hub
 title: Microsoft SQL documentation
-summary: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud."
+summary: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud. (quick link: https://aka.ms/sqldocs)"
 brand: sql
 metadata:
    title: Microsoft SQL documentation | Microsoft Docs
-   description: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud."
+   description: "Learn how to use SQL Server and Azure SQL to manage your database needs, both on-premises and in the cloud. (quick link: https://aka.ms/sqldocs)"
    ms.topic: hub-page
 
 # itemType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
@@ -183,7 +183,5 @@ additionalContent:
             url: analytics-platform-system/index.md
           - text: SQL Server Machine Learning Services (R & Python)
             url: machine-learning/index.yml
-          - text: Azure Machine Learning
-            url: https://docs.microsoft.com/azure/machine-learning/
 
 

@@ -14,7 +14,7 @@ ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Configure column encryption using Always Encrypted with a DAC package 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 A [data-tier application (DAC) package](../../data-tier-applications/data-tier-applications.md), also known as a DACPAC, is a portable unit of SQL Server database deployment that defines all of the SQL Server objects, including tables and columns inside the tables. When you publish a DACPAC to a database (when you upgrade a database using a DACPAC), the schema of the target database gets update to match the schema in the DACPAC. You can publish a DACPAC using [the Upgrade Data-tier Application Wizard](../../data-tier-applications/upgrade-a-data-tier-application.md#UsingDACUpgradeWizard) in SQL Server Management Studio, [PowerShell](../../data-tier-applications/upgrade-a-data-tier-application.md#UpgradeDACPowerShell), or [sqlpackage](../../../tools/sqlpackage.md#publish-parameters-properties-and-sqlcmd-variables).
 

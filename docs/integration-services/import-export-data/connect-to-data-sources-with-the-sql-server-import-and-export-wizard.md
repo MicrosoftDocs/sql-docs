@@ -12,7 +12,7 @@ ms.author: chugu
 ---
 # Connect to Data Sources with the SQL Server Import and Export Wizard
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 The topics in this section show you how to connect to many commonly used data sources when you run the SQL Server Import and Export Wizard. You have to provide connection info for your data sources on the **Choose a Data Source** and **Choose a Destination** pages of the wizard.

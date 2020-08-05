@@ -17,7 +17,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # General XQuery Use Cases
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   This topic provides general examples of XQuery use.  
   

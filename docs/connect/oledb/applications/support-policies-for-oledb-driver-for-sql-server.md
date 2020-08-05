@@ -1,6 +1,6 @@
 ---
-title: "Support policies for OLE DB Driver for SQL Server | Microsoft Docs"
-description: "Support policies for OLE DB Driver for SQL Server"
+title: "Support policies for OLE DB Driver for SQL Server"
+description: "Learn about the support policies for OLE DB Driver for SQL Server and what operating systems and SQL database versions are supported with each version of the driver."
 ms.date: "05/25/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -12,7 +12,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Support policies for OLE DB Driver for SQL Server
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # AND (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Performs a logical conjunction on two numeric expressions.  
   

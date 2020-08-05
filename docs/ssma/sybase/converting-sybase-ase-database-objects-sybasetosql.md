@@ -48,27 +48,57 @@ To convert ASE database objects, first select the objects you want to convert, a
   
 > [!NOTE]  
 > Some of the SAP ASE system functions do not exactly match the equivalent SQL Server system functions in behavior. To emulate the SAP ASE behavior, SSMA generates User Defined functions in the converted SQL Server database under a schema called 's2ss'. Depending on the project settings, some of the SQL Server system functions are replaced with these emulated functions. SSMA creates the following user-defined functions:  
-  
-||||  
-|-|-|-|  
-|**char_length_nvarchar**|**index_colorder**|**ssma_datepart**|  
-|**char_length_varchar**|**inttohex**|**substring_nvarchar**|  
-|**charindex_nvarchar**|**ssma_datediff**|**substring_varbinary**|  
-|**charindex_varchar**|**hextoint**|**substring_varchar**|  
-|**ulowsurr**|**to_unichar**|**ssma_current_time**|  
-|**uhighsurr**|||  
-  
+
+:::row:::
+    :::column:::
+        **char_length_nvarchar**  
+        **char_length_varchar**  
+        **charindex_nvarchar**  
+        **charindex_varchar**  
+        **hextoint**  
+        **index_colorder**  
+    :::column-end:::
+    :::column:::
+        **inttohex**  
+        **ssma_current_time**  
+        **ssma_datediff**  
+        **ssma_datepart**  
+        **substring_nvarchar**  
+        **substring_varbinary**  
+    :::column-end:::
+    :::column:::
+        **substring_varchar**  
+        **to_unichar**  
+        **uhighsurr**  
+        **ulowsurr**  
+    :::column-end:::
+:::row-end:::
+
 ## Objects not supported in Azure SQL  
 The following T-SQL keywords are used by SSMA for SAP ASE during conversion to SQL Server on-premises, but these keywords are not supported by SQL Azure T-SQL syntax:  
-  
-||||  
-|-|-|-|  
-|CHECKPOINT|CREATE/ALTER/DROP DEFAULT|CREATE/DROP RULE|  
-|DBCC TRACEOFF|DBCC TRACEON|GRANT/REVOKE/DENY ALL|  
-|KILL|READTEXT|SELECT INTO|  
-|SET OFFSETS|SETUSER|SHUTDOWN|  
-|WRITETEXT|||  
-  
+
+:::row:::
+    :::column:::
+        CHECKPOINT  
+        CREATE/ALTER/DROP DEFAULT  
+        CREATE/DROP RULE  
+        DBCC TRACEOFF  
+        DBCC TRACEON  
+    :::column-end:::
+    :::column:::
+        GRANT/REVOKE/DENY ALL  
+        KILL  
+        READTEXT  
+        SELECT INTO  
+        SET OFFSETS  
+    :::column-end:::
+    :::column:::
+        SETUSER  
+        SHUTDOWN  
+        WRITETEXT  
+    :::column-end:::
+:::row-end:::
+
 ## Viewing conversion problems  
 Some SAP ASE objects might not convert. You can determine the conversion success rates by viewing the summary conversion report.  
   

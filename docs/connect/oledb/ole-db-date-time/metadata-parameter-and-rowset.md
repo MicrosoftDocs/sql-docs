@@ -1,5 +1,5 @@
 ---
-title: "Parameter and Rowset Metadata | Microsoft Docs"
+title: Parameter and rowset metadata (OLE DB driver)
 description: "Parameter and rowset metadata"
 ms.custom: ""
 ms.date: "06/14/2018"
@@ -14,7 +14,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Metadata - Parameter and Rowset
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

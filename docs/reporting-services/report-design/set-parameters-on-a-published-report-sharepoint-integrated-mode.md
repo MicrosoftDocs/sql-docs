@@ -1,5 +1,6 @@
 ---
 title: "Set Parameters on a Published Report - SharePoint Integrated Mode | Microsoft Docs"
+description: Learn how to set parameters and run a parameterized report, in the report definition or after the report is published, in Report Builder.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -17,7 +18,7 @@ ms.author: maggies
 # Set Parameters on a Published Report - SharePoint Integrated Mode
   A parameterized report is a report that accepts input values that are used to filter data when you run the report. Parameters are defined when the report is created. Depending on how a report parameter is defined in the report definition, it can accept a single value, multiple values, or dynamic values, which change in response to a previous selection (for example, when you select product category, your next selection might be a specific product from that category). A parameter can have a default value, which can be used to run a filtered version of the report automatically or possibly be replaced with a different value.  
   
- These properties can be set in the report definition, or after the report is published. Although you can modify some parameter properties in a published to change the value and display properties, you cannot change a parameter name or the data type. The parameter name and data type can only be changed by the report author in the report definition.  
+ These properties can be set in the report definition, or after the report is published. Although you can modify some parameter properties in a published report to change the value and display properties, you cannot change a parameter name or the data type. The parameter name and data type can only be changed by the report author in the report definition.  
   
  To run a parameterized report, you typically must know which values to type, although a report might include drop-down lists of valid values from which to choose.  
   

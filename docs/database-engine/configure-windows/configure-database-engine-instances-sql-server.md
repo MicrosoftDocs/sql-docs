@@ -1,5 +1,6 @@
 ---
 title: "Configure Database Engine Instances (SQL Server) | Microsoft Docs"
+description: Get acquainted with SQL Server configuration tasks so that you can configure a Database Engine instance to meet performance and availability requirements.
 ms.custom: ""
 ms.date: "03/07/2017"
 ms.prod: sql
@@ -12,7 +13,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Configure Database Engine Instances (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Each instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] must be configured to meet the performance and availability requirements defined for the databases hosted by the instance. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] includes configuration options that control behaviors such as resource usage and the availability of features such as auditing or trigger recursion.  
   
 ## Instance Configuration  

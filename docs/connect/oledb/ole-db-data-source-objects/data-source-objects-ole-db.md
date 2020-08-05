@@ -1,6 +1,6 @@
 ---
 title: "Data source objects (OLE DB driver) | Microsoft Docs"
-description: "Data Source Objects (OLE DB)"
+description: Learn how an OLD DB Driver for SQL Server consumer creates an instance of a data source object for a provider.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

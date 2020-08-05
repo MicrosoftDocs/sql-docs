@@ -1,6 +1,6 @@
 ---
 title: "Fetch rows from a result set (OLE DB driver) | Microsoft Docs"
-description: "Fetch rows from a result set using OLE DB Driver for SQL Server"
+description: Learn how to fetch rows from a result set by using OLE DB Driver for SQL Server. This sample uses the AdventureWorks sample database.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

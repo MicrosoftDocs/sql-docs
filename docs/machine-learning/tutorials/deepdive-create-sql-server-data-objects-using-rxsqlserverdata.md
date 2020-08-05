@@ -1,6 +1,6 @@
 ---
 title: Create RxSqlServerData objects
-description: "RevoScaleR tutorial 2: How to create data objects using the R language on SQL Server."
+description: "Learn how to use RevoScaleR functions with SQL Server. This tutorial is a continuation of database creation: adding tables and loading data."
 ms.prod: sql
 ms.technology: machine-learning-services
 

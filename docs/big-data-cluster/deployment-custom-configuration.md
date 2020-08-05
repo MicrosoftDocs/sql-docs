@@ -1,7 +1,7 @@
 ---
 title: Configure deployments
 titleSuffix: SQL Server big data clusters
-description: Learn how to customize a big data cluster deployment with configuration files.
+description: Learn how to customize a big data cluster deployment with configuration files that are built into the azdata management tool.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab

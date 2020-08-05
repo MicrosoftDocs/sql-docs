@@ -193,7 +193,7 @@ To input provisioning information and make changes to the recommendations, updat
 
 **For single database recommendations**
 
-![Azure SQL DB SKU Recommendations screen](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
+![Azure SQL Database SKU Recommendations screen](../dma/media/dma-sku-recommend-single-db-recommendations1.png)
 
 1. Open the HTML file and enter the following information:
     - **Subscription ID** - The subscription ID of the Azure subscription to which you want to provision the databases.

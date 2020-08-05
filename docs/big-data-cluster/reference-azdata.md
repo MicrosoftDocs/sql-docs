@@ -22,7 +22,7 @@ The following article provides reference for the `sql` commands in the `azdata` 
 | --- | --- |
 |[azdata app](reference-azdata-app.md) | Create, delete, run, and manage applications. |
 |[azdata bdc](reference-azdata-bdc.md) | Select, manage, and operate SQL Server Big Data Clusters. |
-|[azdata sql](reference-azdata-sql.md) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL. |
+|[azdata sql](reference-azdata-sql.md) | The SQL Database CLI allows the user to interact with SQL Server via T-SQL. |
 [azdata login](#azdata-login) | Log in to the cluster's controller endpoint and set its namespace as your active context. To use a password on login, you must set the AZDATA_PASSWORD environment variable.
 [azdata logout](#azdata-logout) | Log out of cluster.
 |[azdata context](reference-azdata-context.md) | Context management commands. |

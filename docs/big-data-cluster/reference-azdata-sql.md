@@ -20,10 +20,10 @@ The following article provides reference for the `sql` commands in the `azdata` 
 ## Commands
 | Command | Description |
 | --- | --- |
-[azdata sql shell](#azdata-sql-shell) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
+[azdata sql shell](#azdata-sql-shell) | The SQL Database CLI allows the user to interact with SQL Server via T-SQL.
 [azdata sql query](#azdata-sql-query) | The query command allows execution of a T-SQL query.
 ## azdata sql shell
-The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
+The SQL Database CLI allows the user to interact with SQL Server via T-SQL.
 ```bash
 azdata sql shell 
 ```

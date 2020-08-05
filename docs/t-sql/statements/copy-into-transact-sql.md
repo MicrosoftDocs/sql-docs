@@ -422,9 +422,9 @@ There is no need to split Parquet and ORC files because the COPY command will au
 ### When will the COPY command be generally available?
 The COPY command will be generally available by the end of this calendar year (2020). 
 
-### Are there any known issues with the COPY command?
+### Are there any limitations on the number or size of files?
+Files should be at least 4MB.
 
-- LOB support such as (n)varchar(max) is not available in the COPY statement. This will be available early next year.
 
 Please send any feedback or issues to the following distribution list: sqldwcopypreview@service.microsoft.com
 

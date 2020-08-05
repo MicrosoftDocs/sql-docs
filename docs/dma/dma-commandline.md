@@ -311,7 +311,7 @@ These commands support recommendations for both Azure SQL Database single databa
 
 `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Azure SQL DB/MI SKU recommendation with price refresh (get latest prices) - Interactive authentication** 
+**Azure SQL Database / Azure SQL Managed Instance SKU recommendation with price refresh (get latest prices) - Interactive authentication** 
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -328,7 +328,7 @@ These commands support recommendations for both Azure SQL Database single databa
 /AzureAuthenticationInteractiveAuthentication=true 
 ```
 
-**Azure SQL DB/MI SKU recommendation with price refresh (get latest prices) - Certificate authentication**
+**Azure SQL Database / Azure SQL Managed Instance  SKU recommendation with price refresh (get latest prices) - Certificate authentication**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -346,7 +346,7 @@ These commands support recommendations for both Azure SQL Database single databa
 /AzureAuthenticationCertificateThumbprint=<Your Certificate Thumbprint>  
 ```
 
-**Azure SQL DB SKU/MI recommendation with price refresh (get latest prices) - Token authentication and specify databases to recommend**
+**Azure SQL Database / Azure SQL Managed Instance  recommendation with price refresh (get latest prices) - Token authentication and specify databases to recommend**
   
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -364,7 +364,7 @@ These commands support recommendations for both Azure SQL Database single databa
 /AzureAuthenticationToken=<Your Authentication Token> 
 ```
 
-**Azure SQL DB/MI SKU recommendation without price refresh (use static prices)** 
+**Azure SQL Database / Azure SQL Managed Instance  SKU recommendation without price refresh (use static prices)** 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"

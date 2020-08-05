@@ -511,7 +511,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | New item| Details|
 | :-------| :------|
 |Support for SQL Server 2019|SSMS 18.0 is the first release that is fully *aware* of SQL Server 2019 (compatLevel 150).|
-|Support for SQL Server 2019|Support for "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in SQL Server 2019 and SQL managed instance.|
+|Support for SQL Server 2019|Support for "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in SQL Server 2019 and SQL Managed Instance.|
 |Support for SQL Server 2019|SMO: Added support for UDF Inlining.|
 |Support for SQL Server 2019|GraphDB: Add a flag in showplan for Graph TC Sequence.|
 |Support for SQL Server 2019|Always Encrypted: added support for AEv2 / Enclave.|
@@ -546,7 +546,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Azure Data Studio integration|When right-clicking on a database node in OE, the user is presented with context menus to either run a query or create a new notebook in Azure Data Studio.|
 |Azure SQL support| SLO/Edition/MaxSize database properties now accept custom names, making it easier to support future editions of Azure SQL Databases.|
 |Azure SQL support| Added support for vCore SKUs (General Purpose and Business Critical): Gen4_24 and all the Gen5.|
-|Azure SQL managed instance|Added new "AAD logins" as a new login type in SMO and SSMS when connected to an Azure SQL managed instance.|
+|Azure SQL Managed Instance|Added new "AAD logins" as a new login type in SMO and SSMS when connected to Azure SQL Managed Instance.|
 |Always On|Rehash RTO (estimated recovery time)  and RPO (estimated data loss) in SSMS Always on Dashboard. See the updated documentation at [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).|
 |Always Encrypted| The Enable Always Encrypted checkbox in the new Always Encrypted tab in the Connect to Server dialog now provides an easy way to enable/disable Always Encrypted for a database connection.|
 |Always Encrypted with secure enclaves| Several enhancements have been made to support  Always Encrypted with secure enclaves in SQL Server 2019:  A text field for specifying enclave attestation URL in the Connect to Server dialog (the new Always Encrypted tab).  The new checkbox in the New Column Master Key dialog to control whether a new column master key allows enclave computations.  Other Always Encrypted key management dialogs now expose the information on which column master keys allow enclave computations.|
@@ -559,8 +559,8 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Data-tier Application Wizard|Added support to Import/Export data-tier application with graph tables.|
 |Flat File Import Wizard|Added logic to notify the user that an import may have resulted in a renaming of the columns.|
 |Integration Services (SSIS)|Added support to allow customers to schedule SSIS packages on Azure-SSIS IRs that are in Azure Government cloud.|
-|Integration Services (SSIS)|When you use SQL Agent of Azure SQL managed instance via SSMS, you can configure parameter and connection manager in SSIS agent job step.|
-|Integration Services (SSIS)|When connecting to Azure SQL DB/managed instance, you can connect to it with *default* as initial db.|
+|Integration Services (SSIS)|When you use SQL Agent of Azure SQL Managed Instance via SSMS, you can configure parameter and connection manager in SSIS agent job step.|
+|Integration Services (SSIS)|When connecting to Azure SQL Database / Azure SQL Managed Instance, you can connect to it with *default* as initial db.|
 |Integration Services (SSIS)|Added a new entry item **Try SSIS in Azure Data Factory** under "Integration Services Catalogs" node, which can be used to launch the "Integration Runtime Creation Wizard" and create "Azure-SSIS Integration Runtime" quickly.
 |Integration Services (SSIS)|Added **Create SSIS IR** button in "Catalog Creation Wizard," which can be used to launch the "Integration Runtime Creation Wizard" and create "Azure-SSIS Integration Runtime" quickly.|
 |Integration Services (SSIS)|ISDeploymentWizard now supports SQL Auth, Azure Active Directory Integrated Auth, and Azure Active Directory Password Auth in command-line mode.|
@@ -587,7 +587,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |SMO|Added cascade delete support to "Edge Constraints" in both SMO and SSMS.|
 |SMO|Added support for data classification "read-write" permissions.|
 |Vulnerability Assessment| Enabled Vulnerability Assessment tasks menu on Azure SQL DW.|
-|Vulnerability Assessment|Change the set of vulnerability assessment rules that are run on Azure SQL managed instance servers, so that "Vulnerability Assessment" scan results can be consistent with the ones in Azure SQL DB.|
+|Vulnerability Assessment|Change the set of vulnerability assessment rules that are run on Azure SQL Managed Instance, so that "Vulnerability Assessment" scan results can be consistent with the ones in Azure SQL DB.|
 |Vulnerability Assessment| "Vulnerability Assessment" now supports Azure SQL DW.|
 |Vulnerability Assessment|Added a new exporting feature to export the vulnerability assessment scan results to Excel.|
 |XEvent Viewer|XEvent Viewer: enabled showplan window for more XEvents.|
@@ -621,25 +621,25 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Azure SQL - General Support|Fixed issues in common Azure UI control that was preventing the user from displaying Azure subscriptions (if there were more than 50). Also, the sorting has been changed to be by name rather by Subscription ID. The user could run into this one when trying to restore a backup from URL, for example.|
 |Azure SQL - General Support|Fixed an issue in common Azure UI control when enumerating subscriptions, which could yield an "Index was out of range. Must be non-negative and less than the size of the collection." error when the user had no subscriptions in some tenants. The user could run into this one when trying to restore a backup from URL, for example.|
 |Azure SQL - General Support|Fixed issue where Service Level Objectives were hardcoded, thus making it harder for SSMS to support newer Azure SQL SLOs. Now, the user can sign in to Azure and allow SSMS to retrieve all the applicable SLO data (Edition and Max Size)|
-|Azure SQL DB managed instance support|Improved/polished the support for managed instances: disabled unsupported options in UI and a fix to the View Audit Logs option to handle URL audit target.|
-|Azure SQL DB managed instance support|"Generate and Publish scripts" wizard scripts unsupported CREATE DATABASE clauses.|
-|Azure SQL DB managed instance support|Enable Live Query Statistics for managed instances.|
-|Azure SQL DB managed instance support|Database properties->Files was incorrectly scripting ALTER DB ADD FILE.|
-|Azure SQL DB managed instance support|Fixed regression with SQL Agent scheduler where ONIDLE scheduling was chosen even when some other scheduling type was chosen.|
-|Azure SQL DB managed instance support|Adjusting MAXTRANSFERRATE, MAXBLOCKSIZE for doing backups on Azure Storage.|
-|Azure SQL DB managed instance support|The issue where tail log backup is scripted before RESTORE operation (this isn't supported on CL).|
-|Azure SQL DB managed instance support|Create database wizard not scripting correctly CREATE DATABASE statement.|
-|Azure SQL DB managed instance support|Special handling of SSIS packages within SSMS when connected to managed instances.|
-|Azure SQL DB managed instance support|Fixed an issue where an error was displayed while trying to use "Activity Monitor" when connected to managed instances.|
-|Azure SQL DB managed instance support|Improved support for AAD Logins (in SSMS Explorer).|
-|Azure SQL DB managed instance support|Improved scripting of SMO Filegroups objects.|
-|Azure SQL DB managed instance support|Improved UI for credentials.|
-|Azure SQL DB managed instance support|Added support for Logical Replication.|
-|Azure SQL DB managed instance support|Fixed an issue, which was causing right-clicking on a database and choosing 'Import data-tier application' to fail.|
-|Azure SQL DB managed instance support|Fixed an issue, which was causing right-clicking on a "TempDB" to show errors.|
-|Azure SQL DB managed instance support|Fixed an issue where trying to scripting ALTER DB ADD FILE statement in SMO was causing the generated T-SQL script to be empty.|
-|Azure SQL DB managed instance support|Improved display of managed instances server-specific properties (hardware generation, service tier, storage used and reserved).|
-|Azure SQL DB managed instance support|Fixed an issue where scripting of a database ("Script as Create...") wasn't scripting extra filegroups and files. For details, see [https://feedback.azure.com/forums/908035/suggestions/37326799](https://feedback.azure.com/forums/908035/suggestions/37326799). |
+|Azure SQL Managed Instance support|Improved/polished the support for managed instances: disabled unsupported options in UI and a fix to the View Audit Logs option to handle URL audit target.|
+|Azure SQL Managed Instance support|"Generate and Publish scripts" wizard scripts unsupported CREATE DATABASE clauses.|
+|Azure SQL Managed Instance support|Enable Live Query Statistics for managed instances.|
+|Azure SQL Managed Instance support|Database properties->Files was incorrectly scripting ALTER DB ADD FILE.|
+|Azure SQL Managed Instance support|Fixed regression with SQL Agent scheduler where ONIDLE scheduling was chosen even when some other scheduling type was chosen.|
+|Azure SQL Managed Instance support|Adjusting MAXTRANSFERRATE, MAXBLOCKSIZE for doing backups on Azure Storage.|
+|Azure SQL Managed Instance support|The issue where tail log backup is scripted before RESTORE operation (this isn't supported on CL).|
+|Azure SQL Managed Instance support|Create database wizard not scripting correctly CREATE DATABASE statement.|
+|Azure SQL Managed Instance support|Special handling of SSIS packages within SSMS when connected to managed instances.|
+|Azure SQL Managed Instance support|Fixed an issue where an error was displayed while trying to use "Activity Monitor" when connected to managed instances.|
+|Azure SQL Managed Instance support|Improved support for AAD Logins (in SSMS Explorer).|
+|Azure SQL Managed Instance support|Improved scripting of SMO Filegroups objects.|
+|Azure SQL Managed Instance support|Improved UI for credentials.|
+|Azure SQL Managed Instance support|Added support for Logical Replication.|
+|Azure SQL Managed Instance support|Fixed an issue, which was causing right-clicking on a database and choosing 'Import data-tier application' to fail.|
+|Azure SQL Managed Instance support|Fixed an issue, which was causing right-clicking on a "TempDB" to show errors.|
+|Azure SQL Managed Instance support|Fixed an issue where trying to scripting ALTER DB ADD FILE statement in SMO was causing the generated T-SQL script to be empty.|
+|Azure SQL Managed Instance support|Improved display of managed instances server-specific properties (hardware generation, service tier, storage used and reserved).|
+|Azure SQL Managed Instance support|Fixed an issue where scripting of a database ("Script as Create...") wasn't scripting extra filegroups and files. For details, see [https://feedback.azure.com/forums/908035/suggestions/37326799](https://feedback.azure.com/forums/908035/suggestions/37326799). |
 |Backup/Restore/Attach/Detach DB|Fixed an issue where the user was unable to attach a database when physical filename of .mdf file does not match the original filename.|
 |Backup/Restore/Attach/Detach DB|Fixed an issue where SSMS might not find a valid restore plan or might find one, which is suboptimal. For details, see [https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752](https://feedback.azure.com/forums/908035-sql-server/suggestions/32897752). |
 |Backup/Restore/Attach/Detach DB|Fixed issue where the "Attach Database" wizard wasn't displaying secondary files that were renamed. Now, the file is displayed, and a comment about it is added (for example "Not Found"). For details, see [https://feedback.azure.com/forums/908035/suggestions/32897434](https://feedback.azure.com/forums/908035/suggestions/32897434). |

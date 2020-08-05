@@ -272,9 +272,9 @@ DmaCmd.exe
 /EnableAssessmentUploadToAzureMigrate
 
 ```
-## Azure SQL Database/managed instance SKU recommendations using the CLI
+## Azure SQL Database / Azure SQL Managed Instance SKU recommendations using the CLI
 
-These commands support recommendations for both Azure SQL Database single database and managed instance deployment options.
+These commands support recommendations for both Azure SQL Database single database and Azure SQL Managed Instance deployment options.
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation

@@ -1,6 +1,6 @@
 ---
 title: "Service Principal Name (SPN) Support in Client Connections | Microsoft Docs"
-description: "Service Principal Name (SPN) support in client connections"
+description: Learn about how SQL Server supports Service Principal Name in client connections. See the most common usage scenarios.
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql

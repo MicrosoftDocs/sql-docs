@@ -1,6 +1,6 @@
 ---
 title: "Sparse Columns Support (OLE DB) | Microsoft Docs"
-description: "Sparse columns support (OLE DB)"
+description: Learn about OLE DB Driver for SQL Server support for sparse columns, which are columns optimized storage for null values.
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql

@@ -1,5 +1,5 @@
 ---
-title: "Connecting to Azure SQL DB (AccessToSQL) | Microsoft Docs"
+title: "Connecting to Azure SQL Database (AccessToSQL) | Microsoft Docs"
 description: Learn how to connect to a target instance of Azure SQL Database to migrate Access databases. SSMA obtains metadata about databases in Azure SQL Database.
 ms.prod: sql
 ms.custom: ""
@@ -20,7 +20,7 @@ ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
 author: "Shamikg"
 ms.author: "Shamikg"
 ---
-# Connecting to Azure SQL DB (AccessToSQL)
+# Connecting to Azure SQL Database (AccessToSQL)
 To migrate Access databases to SQL Azure, you must connect to the target instance of SQL Azure. When you connect, SSMA obtains metadata about all the databases in the instance of SQL Azure and displays database metadata in the SQL Azure Metadata Explorer. SSMA stores information about which instance of SQL Azure you are connected to, but does not store passwords.  
   
 Your connection to SQL Azure stays active until you close the project. When you reopen the project, you must reconnect to SQL Azure if you want an active connection to the server. You can work offline until you load database objects into SQL Azure and migrate data.  

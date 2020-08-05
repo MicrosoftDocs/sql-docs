@@ -56,7 +56,7 @@ DmaCmd.exe /AssessmentName="string"
 |`/ImportFeatureDiscoveryReportJson`    | Path to the feature discovery JSON report created earlier. Instead of source connections, this file will be used.   | N
 |`/EnableAssessmentUploadToAzureMigrate`    | Enables uploading and publishing assessment results to Azure Migrate   | N
 |`/AzureCloudEnvironment`    |Selects the Azure cloud environment to connect to, default is Azure Public Cloud. Supported values: Azure (default), AzureChina, AzureGermany,AzureUSGovernment.   | N 
-|`/SubscriptionId`    |Azure subscription id.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
+|`/SubscriptionId`    |Azure subscription ID.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
 |`/AzureMigrateProjectName`    |The Azure Migrate Project name to upload assessment results to.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
 |`/ResourceGroupName`    |Azure Migrate resource group name.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
 |`/AssessmentResultInputFolder`    |The input folder path containing .DMA assessment files to upload to Azure Migrate.   | Y <br> (Required if Action is AzureMigrateUpload)
@@ -264,7 +264,7 @@ DmaCmd.exe
 DmaCmd.exe 
 /Action="AzureMigrateUpload" 
 /AssessmentResultInputFolder="C:\assessments\results" 
-/SubscriptionId="subscription Id" 
+/SubscriptionId="Subscription Id" 
 /AzureMigrateProjectName="Azure Migrate project name" 
 /ResourceGroupName="Resource Group name" 
 /AzureAuthenticationInteractiveAuthentication
@@ -272,9 +272,9 @@ DmaCmd.exe
 /EnableAssessmentUploadToAzureMigrate
 
 ```
-## Azure SQL Database/managed instance SKU recommendations using the CLI
+## Azure SQL Database / Azure SQL Managed Instance SKU recommendations using the CLI
 
-These commands support recommendations for both Azure SQL Database single database and managed instance deployment options.
+These commands support recommendations for both Azure SQL Database single database and Azure SQL Managed Instance deployment options.
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation

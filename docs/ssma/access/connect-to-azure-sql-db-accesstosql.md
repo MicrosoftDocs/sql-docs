@@ -40,8 +40,8 @@ Enter the password for the user name.
   
 SSMA recommends encrypted connection to SQL Azure.  
   
-## Create Azure Database  
-To create a new azure database, follow the following steps  
+## Create database  
+To create a new database, follow the following steps  
   
 1.  click on browse button that is present in the Connect to SQL Azure dialog box  
   
@@ -49,7 +49,7 @@ To create a new azure database, follow the following steps
   
     1.  **(no databases found)** which is disabled and grayed out all the time  
   
-    2.  **Create new database** which is always enabled, enabling the user to create a new azure database on SQL Azure account. Upon clicking this menu item, create azure database dialog box is present with database name and size.  
+    2.  **Create new database** which is always enabled, enabling the user to create a new database. Upon clicking this menu item, create database dialog box is present with database name and size.  
   
 3.  At the time of database creation, these two parameters is given as input.  
   

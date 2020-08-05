@@ -68,7 +68,7 @@ When you define the connection properties, you also specify the database where o
   
 7.  Click **Connect**.  
   
-**Higher Version Compatability**  
+**Higher Version compatibility**
   
 -   You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 when the migration project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   

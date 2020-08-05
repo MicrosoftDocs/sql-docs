@@ -119,7 +119,7 @@ The v3.4 release of Data Migration Assistant includes the following additions:
 - Support for SQL Server 2017 as a source for migrations to Azure SQL Database.
 - Enhancements to stability, performance, and assessment rule correctness.
 
-## DData Migration Assistant v3.3
+## Data Migration Assistant v3.3
 
 The v3.3 release of Data Migration Assistant enables migration of an on-premises SQL Server instance to the new version of SQL Server 2017, on both Windows and Linux. While the overall migration workflow for Windows and Linux is the same, the move to SQL Server 2017 for Linux requires a couple of additional considerations.
 

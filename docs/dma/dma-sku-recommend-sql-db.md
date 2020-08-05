@@ -75,7 +75,7 @@ Use the performance counters output file you  created as input for this process.
 
 For the single database option, DMA will provide recommendations for the Azure SQL Database single database pricing tier, the compute level, and the maximum data size for each database on your computer. If you have multiple databases on your computer, you can also specify the databases for which you want recommendations. DMA will also provide you with the estimated monthly cost for each database.
 
-For managed instance, the recommendations support a lift-and-shift scenario. As a result, DMA will provide you with recommendations for the Azure SQL Database managed instance pricing tier, the compute level, and the maximum data size for the set of databases on your computer. Again, if you have multiple databases on your computer, you can also specify the databases for which you want recommendations. DMA will also provide you with the estimated monthly cost for managed instance.
+For managed instance, the recommendations support a lift-and-shift scenario. As a result, DMA will provide you with recommendations for the Azure SQL Managed Instance pricing tier, the compute level, and the maximum data size for the set of databases on your computer. Again, if you have multiple databases on your computer, you can also specify the databases for which you want recommendations. DMA will also provide you with the estimated monthly cost for managed instance.
 
 To use the DMA CLI to get SKU recommendations, at the command prompt, run dmacmd.exe with the following arguments:
 

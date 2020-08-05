@@ -998,7 +998,7 @@ WHERE r.command LIKE 'BACKUP%'
 
 &nbsp;
 
-## Azure SQL Database managed instance
+## Azure SQL Managed Instance
 
 Backs up a SQL database placed/hosted in an Azure SQL Databae managed instance. SQL Database [managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) has automatic backups, and enables users to create full database `COPY_ONLY` backups. Differential, log, and file snapshot backups are not supported.
 
@@ -1044,7 +1044,7 @@ Specifies a complete database backup. During a database backup, the managed inst
 > [!IMPORTANT]
 > A database backup created on a managed instance can only be restored on another managed instance. It cannot be restored to a SQL Server on-premises instance (similar to the way that a backup of a SQL Server 2016 database cannot be restored to a SQL Server 2012 instance).
 
-When you restore a backup created by BACKUP DATABASE (a *data backup*), the entire backup is restored. To restore from Azure SQL Database managed instance automatic backups, see [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore).
+When you restore a backup created by BACKUP DATABASE (a *data backup*), the entire backup is restored. To restore from SQL Managed Instance automatic backups, see [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore).
 
 { *database_name* | **@**_database\_name\_var_ }
 Is the database from which the complete database is backed up. If supplied as a variable (**@**_database\_name\_var_), this name can be specified either as a string constant (**@**_database\_name\_var_**=**_database name_) or as a variable of character string data type, except for the **ntext** or **text** data types.
@@ -1169,7 +1169,7 @@ Displays a message each time another *percentage* completes, and is used to gaug
 
 The STATS option reports the percentage complete as of the threshold for reporting the next interval. This is at approximately the specified percentage; for example, with STATS=10, if the amount completed is 40 percent, the option might display 43 percent. For large backup sets, this is not a problem, because the percentage complete moves very slowly between completed I/O calls.
 
-## Limitations for SQL Database managed instance
+## Limitations for SQL Managed Instance
 
 Max backup stripe size is 195 GB (maximum blob size). Increase the number of stripes in the backup command to reduce individual stripe size and stay within this limit.
 

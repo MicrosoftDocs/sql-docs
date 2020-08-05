@@ -100,7 +100,7 @@ To use managed identity authentication for Azure SQL Database, follow these step
     EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
-To use managed identity authentication for Azure SQL Database managed instance, follow these steps to configure your database:
+To use managed identity authentication for Azure SQL Managed Instance, follow these steps to configure your database:
     
 1. [Provision an Azure Active Directory administrator](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) for your managed instance on the Azure portal, if you haven't already done so. The Azure AD administrator can be an Azure AD user or Azure AD group. If you grant the group with managed identity an admin role, skip step 2-4. The administrator will have full access to the database.
 

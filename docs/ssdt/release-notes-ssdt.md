@@ -636,7 +636,7 @@ _SSDT for Visual Studio 2015._
 
 **AS projects**
 - Significant performance fixes made to improve experience when committing DAX measure changes and other model edits.
-- Fixed a number of issues with Power Query integration in Analysis Services projects using 1400-compatability level tabular models.
+- Fixed a number of issues with Power Query integration in Analysis Services projects using 1400-compatibility level tabular models.
 - Fixed an issue in Multi-Dimensional projects in VS2017 only where Design Aggregation designer may fail to load.
 - Fixed an issue when dragging an item in the Analysis Services multi-dimensional DSV diagram that could crash VS 2017.
 - Fixed an issue in AS projects where the Deploy Dialog was not always in the foreground on top of Visual Studio.

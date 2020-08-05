@@ -564,7 +564,7 @@ These remarks apply to authenticating as Windows users that have been federated 
 
 - Validation of Windows users or groups that are mapped to Azure AD is done by default through Graph API in all versions of the ALTER USER syntax used for migration purpose.
 - On-premises users that were aliased (use a different name from the original Windows account) will keep the aliased name.
-- For Azure AD authentication, the LOGIN parameter applies only to managed instance and can't be used with SQL DB.
+- For Azure AD authentication, the LOGIN parameter applies only to Azure SQL Managed Instance and can't be used with SQL Database.
 - To view logins for Azure AD Principals, use the following command:
 `select * from sys.server_principals`.
 - Check the login's indicated type is `E` or `X`.

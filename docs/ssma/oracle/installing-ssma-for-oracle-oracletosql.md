@@ -13,7 +13,7 @@ ms.author: "Shamikg"
 manager: shamikg
 ---
 # Installing SSMA  for Oracle (OracleToSQL)
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle consists of a client application that you use to perform a migration from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Azure SQL DB. It also contains an extension pack that supports data migration and the use of Oracle system functions in your migrated databases.  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Oracle consists of a client application that you use to perform a migration from Oracle to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and Azure SQL Database. It also contains an extension pack that supports data migration and the use of Oracle system functions in your migrated databases.  
   
 You install the client application on the computer from which you will perform the migration steps. You must install the extension pack files on the computer where the migrated databases will be hosted. That computer must be running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -34,5 +34,5 @@ Select one of the target database version from below list:
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
--   Azure SQL DB  
+-   Azure SQL Database  
   

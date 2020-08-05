@@ -1,6 +1,6 @@
 ---
 title: Manage SQL Server on Linux with PowerShell Core
-description: Learn about SQL Server PowerShell by walking through a couple of examples on how to use it with PowerShell Core (PS Core) on macOS & Linux.
+description: Learn about SQL Server PowerShell by walking through a couple of examples on how to use SQL Server PowerShell with PowerShell Core (PS Core) on macOS and Linux.
 ms.date: 04/22/2019
 ms.prod: sql
 ms.technology: linux

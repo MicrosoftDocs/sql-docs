@@ -1,6 +1,6 @@
 ---
 title: "Create an SSIS migration assessment with the Data Migration Assistant"
-description: Learn how to use Data Migration Assistant to assess an on-premises SQL Server Integration Service (SSIS) before migrating to Azure SQL Database or Azure SQL Database managed instance
+description: Learn how to use Data Migration Assistant to assess an on-premises SQL Server Integration Service (SSIS) before migrating to Azure SQL Database or Azure SQL Managed Instance
 ms.date: "08/23/2019"
 ms.prod: sql
 ms.prod_service: "dma"
@@ -29,7 +29,7 @@ DMA needs to run with **administrator** access to assess SSIS packages in Packag
 
 ## Performance assessments
 
-The following step-by-step instructions help you perform your first assessment for migrating SQL Server Integration Service (SSIS) packages to Azure SQL Database or Azure SQL Database managed instance, by using Data Migration Assistant.
+The following step-by-step instructions help you perform your first assessment for migrating SQL Server Integration Service (SSIS) packages to Azure SQL Database or Azure SQL Managed Instance, by using Data Migration Assistant.
 
 ## Create an assessment
 
@@ -37,7 +37,7 @@ The following step-by-step instructions help you perform your first assessment f
 
 1. Set the source and target server type.
 
-    Select the source as **SQL Server**, and set the target server type as **Azure SQL Database** or **Azure SQL Database managed instance**.
+    Select the source as **SQL Server**, and set the target server type as **Azure SQL Database** or **Azure SQL Managed Instance**.
 
 1. Click **Create**.
 
@@ -69,5 +69,5 @@ The Compatibility issues category provides partially supported or unsupported fe
 ## Next steps
 
 - [Migrate on-premises SSIS workloads to SSIS in ADF overview](https://docs.microsoft.com/azure/data-factory/scenario-ssis-migration-overview)
-- [Migrate SQL Server Integration Services packages to an Azure SQL Database managed instance](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
+- [Migrate SQL Server Integration Services packages to an Azure SQL Managed Instance](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance)
 - [Redeploy SQL Server Integration Services packages to Azure SQL Database](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages)

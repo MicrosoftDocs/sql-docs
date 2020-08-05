@@ -1,5 +1,5 @@
 ---
-title: "Connecting to Azure SQL DB (MySQLToSQL) | Microsoft Docs"
+title: "Connecting to Azure SQL Database (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,7 +13,7 @@ ms.assetid: d0b6f16a-1880-459d-a0c7-28b7ef15c56a
 author: "Shamikg"
 ms.author: "Shamikg"
 ---
-# Connecting to Azure SQL DB (MySQLToSQL)
+# Connecting to Azure SQL Database (MySQLToSQL)
 To migrate MySQL databases to SQL Azure, you must connect to the target instance of SQL Azure. When you connect, SSMA obtains metadata about all the databases in the instance of SQL Azure and displays database metadata in the SQL Azure Metadata Explorer. SSMA stores information of the instance of SQL Azure you are connected to, but does not store passwords.  
   
 Your connection to SQL Azure stays active until you close the project. When you reopen the project, you must reconnect to SQL Azure if you want an active connection to the server. You can work offline until you load database objects into SQL Azure and migrate data.  
@@ -81,5 +81,5 @@ The next step in the migration depends on your project needs:
 -   If you do not have to perform any of these tasks, you can convert the MySQL database object definitions into SQL Azure object definitions. For more information, see [Converting MySQL Databases &#40;MySQLToSQL&#41;](../../ssma/mysql/converting-mysql-databases-mysqltosql.md)  
   
 ## See Also  
-[Migrating MySQL Databases to SQL Server - Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

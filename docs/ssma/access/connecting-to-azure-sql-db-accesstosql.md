@@ -50,7 +50,7 @@ When you define the connection properties, you also specify the database where o
   
 2.  In the connection dialog box, enter or select the server name of SQL Azure.  
   
-3.  Enter, select or **Browse** the Database name.  
+3.  Enter, select, or **Browse** the Database name.  
   
 4.  Enter or select **UserName**.  
   
@@ -63,7 +63,7 @@ When you define the connection properties, you also specify the database where o
 > [!IMPORTANT]  
 > SSMA for Access does not support connection to **master** database in SQL Azure.  
   
-If there are no databases in the SQL Azure account, you can create the very first database using **Create Azure Database** option that appears on the click of **Browse** button.  
+If there are no databases in the SQL Azure account, you can create the first database using **Create Azure Database** option that appears on the click of **Browse** button.  
   
 ## Synchronizing SQL Azure Metadata  
 Metadata about SQL Azure databases is not automatically updated. The metadata in SQL Azure Metadata Explorer is a snapshot of the metadata when you first connected to SQL Azure, or the last time that you manually updated metadata. You can manually update metadata for all databases, or for any single database or database object.  
@@ -83,7 +83,7 @@ If SQL Azure schemas change after you connect, you can refresh metadata from the
   
 **To refresh SQL Azure metadata**  
   
--   In SQL Azure Metadata Explorer, right click **Databases**, and then select **Refresh from Database**.  
+-   In SQL Azure Metadata Explorer, right-click **Databases**, and then select **Refresh from Database**.  
   
 ## Reconnecting to SQL Azure  
 Your connection to SQL Azure stays active until you close the project. When you reopen the project, you must reconnect to SQL Azure if you want an active connection to the server. You can work offline until you load database objects into SQL Azure and migrate data.  

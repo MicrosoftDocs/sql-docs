@@ -1,6 +1,6 @@
 ---
 title: Create table using rxDataStep
-description: "RevoScaleR tutorial 11: How to create a SQL Server table using the R language on SQL Server."
+description: "Learn how to move data between in-memory data frames, the SQL Server context, and local files by using rxDataStep."
 ms.prod: sql
 ms.technology: machine-learning-services
 

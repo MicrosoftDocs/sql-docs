@@ -1,6 +1,6 @@
 ---
 title: Visualize data using RevoScaleR
-description: "RevoScaleR tutorial 6: How to visualize data using the R language on SQL Server."
+description: "Learn how to use R functions to visualize the distribution of values in the creditLine column by gender."
 ms.prod: sql
 ms.technology: machine-learning-services
 

@@ -1,6 +1,6 @@
 ---
 title: Get started with SQL Server security on Linux 
-description: This article describes typical security actions.  
+description: Walk through security features of SQL Server on Linux to get an idea of areas to investigate further.  
 author: VanMSFT 
 ms.author: vanto
 ms.date: 10/02/2017

@@ -1,7 +1,7 @@
 ---
 title: Install PolyBase on Linux
 titlesuffix: SQL Server
-description: This article describes how to install SQL Server PolyBase on Linux.
+description: Learn how to install SQL Server PolyBase on Linux. PolyBase enables you to run external queries against remote data sources.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 7/22/2019

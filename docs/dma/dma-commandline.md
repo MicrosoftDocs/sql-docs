@@ -56,7 +56,7 @@ DmaCmd.exe /AssessmentName="string"
 |`/ImportFeatureDiscoveryReportJson`    | Path to the feature discovery JSON report created earlier. Instead of source connections, this file will be used.   | N
 |`/EnableAssessmentUploadToAzureMigrate`    | Enables uploading and publishing assessment results to Azure Migrate   | N
 |`/AzureCloudEnvironment`    |Selects the Azure cloud environment to connect to, default is Azure Public Cloud. Supported values: Azure (default), AzureChina, AzureGermany,AzureUSGovernment.   | N 
-|`/SubscriptionId`    |Azure subscription id.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
+|`/SubscriptionId`    |Azure subscription ID.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
 |`/AzureMigrateProjectName`    |The Azure Migrate Project name to upload assessment results to.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
 |`/ResourceGroupName`    |Azure Migrate resource group name.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
 |`/AssessmentResultInputFolder`    |The input folder path containing .DMA assessment files to upload to Azure Migrate.   | Y <br> (Required if Action is AzureMigrateUpload)
@@ -264,7 +264,7 @@ DmaCmd.exe
 DmaCmd.exe 
 /Action="AzureMigrateUpload" 
 /AssessmentResultInputFolder="C:\assessments\results" 
-/SubscriptionId="subscription Id" 
+/SubscriptionId="Subscription Id" 
 /AzureMigrateProjectName="Azure Migrate project name" 
 /ResourceGroupName="Resource Group name" 
 /AzureAuthenticationInteractiveAuthentication
@@ -311,7 +311,7 @@ These commands support recommendations for both Azure SQL Database single databa
 
 `Dmacmd.exe /? or DmaCmd.exe /help`
 
-**Azure SQL DB/MI SKU recommendation with price refresh (get latest prices) - Interactive authentication** 
+**Azure SQL Database / Azure SQL Managed Instance SKU recommendation with price refresh (get latest prices) - Interactive authentication** 
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -328,7 +328,7 @@ These commands support recommendations for both Azure SQL Database single databa
 /AzureAuthenticationInteractiveAuthentication=true 
 ```
 
-**Azure SQL DB/MI SKU recommendation with price refresh (get latest prices) - Certificate authentication**
+**Azure SQL Database / Azure SQL Managed Instance  SKU recommendation with price refresh (get latest prices) - Certificate authentication**
 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -346,7 +346,7 @@ These commands support recommendations for both Azure SQL Database single databa
 /AzureAuthenticationCertificateThumbprint=<Your Certificate Thumbprint>  
 ```
 
-**Azure SQL DB SKU/MI recommendation with price refresh (get latest prices) - Token authentication and specify databases to recommend**
+**Azure SQL Database / Azure SQL Managed Instance  recommendation with price refresh (get latest prices) - Token authentication and specify databases to recommend**
   
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
@@ -364,7 +364,7 @@ These commands support recommendations for both Azure SQL Database single databa
 /AzureAuthenticationToken=<Your Authentication Token> 
 ```
 
-**Azure SQL DB/MI SKU recommendation without price refresh (use static prices)** 
+**Azure SQL Database / Azure SQL Managed Instance  SKU recommendation without price refresh (use static prices)** 
 ```
 .\DmaCmd.exe /Action=SkuRecommendation
 /SkuRecommendationInputDataFilePath="C:\TestOut\out.csv"

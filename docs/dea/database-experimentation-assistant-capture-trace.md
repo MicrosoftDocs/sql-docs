@@ -1,6 +1,6 @@
 ---
 title: Capture a trace for SQL Server upgrades
-description: Capture a trace in Database Experimentation Assistant for SQL Server upgrades
+description: Use Database Experimentation Assistant (DEA) to create a trace file with a log of captured server events.
 ms.custom: "seo-lt-2019"
 ms.date: 12/12/2019
 ms.prod: sql

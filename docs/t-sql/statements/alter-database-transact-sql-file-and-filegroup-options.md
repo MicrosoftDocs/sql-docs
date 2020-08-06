@@ -721,9 +721,9 @@ GO
 
 &nbsp;
 
-## Azure SQL Database managed instance
+## Azure SQL Managed Instance
 
-Use this statement with a database in Azure SQL Database managed instance.
+Use this statement with a database in Azure SQL Managed Instance.
 
 ## Syntax for databases in a managed instance
 

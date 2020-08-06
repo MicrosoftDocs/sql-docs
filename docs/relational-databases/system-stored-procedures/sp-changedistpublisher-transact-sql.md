@@ -44,7 +44,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  Is the value for the given property. *value* is **nvarchar(255)**, with a default of NULL.  
   
 `[ @storage_connection_string = ] 'storage_connection_string'`
- Is required for SQL Database managed instance, should match the access key for the Azure SQL Database storage volume. 
+ Is required for SQL Managed Instance, should match the access key for the Azure SQL Database storage volume. 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]

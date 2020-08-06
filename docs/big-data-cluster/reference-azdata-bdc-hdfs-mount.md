@@ -1,7 +1,7 @@
 ---
 title: azdata bdc hdfs mount reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc hdfs mount commands.
+description: Use this reference article to understand SQL commands in the azdata tool, specifically the bdc hdfs mount commands. 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab

@@ -75,7 +75,7 @@ To migrate data from Oracle databases to [!INCLUDE[ssNoVersion](../../includes/s
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Azure SQL DB  
+    -   Azure SQL Database  
   
 ## Customizing Project Settings  
 In addition to defining default project settings that apply to all new SSMA projects, you can customize the settings for each project. For more information, see [Setting Project Options &#40;OracleToSQL&#41;](../../ssma/oracle/setting-project-options-oracletosql.md).  

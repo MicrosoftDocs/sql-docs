@@ -1,6 +1,6 @@
 ---
 title: "R tutorial: Deploy model"
-description: Tutorial showing how to deploy an R model on SQL Server for in-database analytics.
+description: Learn to deploy R models in a production environment by calling a trained model from a stored procedure.
 ms.prod: sql
 ms.technology: machine-learning-services
 

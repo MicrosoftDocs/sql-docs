@@ -636,7 +636,7 @@ _SSDT for Visual Studio 2015._
 
 **AS projects**
 - Significant performance fixes made to improve experience when committing DAX measure changes and other model edits.
-- Fixed a number of issues with Power Query integration in Analysis Services projects using 1400-compatability level tabular models.
+- Fixed a number of issues with Power Query integration in Analysis Services projects using 1400-compatibility level tabular models.
 - Fixed an issue in Multi-Dimensional projects in VS2017 only where Design Aggregation designer may fail to load.
 - Fixed an issue when dragging an item in the Analysis Services multi-dimensional DSV diagram that could crash VS 2017.
 - Fixed an issue in AS projects where the Deploy Dialog was not always in the foreground on top of Visual Studio.
@@ -985,7 +985,7 @@ _For SQL Server 2016._
 **Updates and fixes**
 * **Database tools:**
     * From now on SSDT will never disable Transparent Data Encryption (TDE) on a database. Previously since the default encryption option in a project's database settings was disabled, it would turn off encryption. With this fix encryption can be enabled but never disabled during publish. 
-    * Increased the retry count and resiliency for Azure SQL DB connections during initial connection.
+    * Increased the retry count and resiliency for Azure SQL Database connections during initial connection.
     * If the default filegroup is not PRIMARY, Import/Publish to Azure V12 would fail. Now this setting is ignored when publishing.
     * Fixed an issue where when exporting a database with an object with Quoted Identifier on, export validation could fail in some instances.
     * Fixed an issue where the TEXTIMAGE_ON option was incorrectly added for Hekaton table creations where it is not allowed.

@@ -1,6 +1,6 @@
 ---
 title: "Configure replication with availability groups"
-description: "Configure replication with your Always On availability group." 
+description: "Learn the detailed process required to configure SQL Server replication with your Always On availability group." 
 ms.custom: "seodec18"
 ms.date: "01/25/2019"
 ms.prod: sql

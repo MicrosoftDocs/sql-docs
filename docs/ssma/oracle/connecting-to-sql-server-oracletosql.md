@@ -68,7 +68,7 @@ When you define the connection properties, you also specify the database where o
   
 7.  Click **Connect**.  
   
-**Higher Version Compatability**  
+**Higher Version compatibility**
   
 -   You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 when the migration project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   
@@ -76,14 +76,14 @@ When you define the connection properties, you also specify the database where o
   
 -   You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 when the project created is SQL Server 2012.  
   
-|PROJECT TYPE vs. TARGET SERVER VERSION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (Version: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (Version: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Version:13.x)|Azure SQL DB|  
+|PROJECT TYPE vs. TARGET SERVER VERSION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005<br /> (Version: 9.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008<br /> (Version: 10.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Version:13.x)|Azure SQL Database|  
 |-|-|-|-|-|-|-|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005|Yes|Yes|Yes|Yes|Yes||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008||Yes|Yes|Yes|Yes||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|||Yes|Yes|Yes||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||||Yes|Yes||
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|||||Yes||
-|Azure SQL DB||||||Yes|
+|Azure SQL Database||||||Yes|
   
 > [!IMPORTANT]
 > Conversion of the database objects is carried out as per the project type but not as per the version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you are connected to. In case of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 project, Conversion is carried out as per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005 even though you are connected to a higher version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016).  

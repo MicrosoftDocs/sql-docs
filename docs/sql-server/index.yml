@@ -21,7 +21,7 @@ landingContent:
       links:
       - text: Azure SQL Database single database
         url: /azure/sql-database/sql-database-single-database
-      - text: Azure SQL Database managed instance
+      - text: Azure SQL Managed Instance
         url: /azure/sql-database/sql-database-managed-instance
       - text: Azure Synapse Analytics (SQL DW)
         url: /azure/sql-data-warehouse/sql-data-warehouse-overview-what-is

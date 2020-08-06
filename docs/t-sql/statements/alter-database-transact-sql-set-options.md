@@ -53,7 +53,7 @@ In the following row, select whichever product name you're interested in. Doing 
         [SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -1463,7 +1463,7 @@ SET QUERY_STORE = ON
         **_\* SQL Database<br />single database/elastic pool \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -1826,7 +1826,7 @@ To change this state, you must have exclusive access to the database. For more i
 Controls user access to the database.
 
 RESTRICTED_USER     
-Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused. **RESTRICTED_USER** can't be modified with SQL Database managed instance.
+Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused. **RESTRICTED_USER** can't be modified with SQL Managed Instance.
 
 MULTI_USER     
 All users that have the appropriate permissions to connect to the database are allowed.
@@ -2355,7 +2355,7 @@ SET QUERY_STORE = ON
         [SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />managed instance \*_** &nbsp;
+        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -2364,7 +2364,7 @@ SET QUERY_STORE = ON
 
 &nbsp;
 
-## Azure SQL Database managed instance
+## Azure SQL Managed Instance
 
 Compatibility levels are `SET` options but are described in [ALTER DATABASE Compatibility Level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).
 
@@ -2656,7 +2656,7 @@ To change this state, you must have exclusive access to the database.
 Controls user access to the database.
 
 RESTRICTED_USER     
-Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused. **RESTRICTED_USER** can't be modified with SQL Database managed instance.
+Allows for only members of the `db_owner` fixed database role and `dbcreator` and `sysadmin` fixed server roles to connect to the database, but doesn't limit their number. All connections to the database are disconnected in the timeframe specified by the termination clause of the ALTER DATABASE statement. After the database has transitioned to the RESTRICTED_USER state, connection attempts by unqualified users are refused. **RESTRICTED_USER** can't be modified with SQL Managed Instance.
 
 MULTI_USER     
 All users that have the appropriate permissions to connect to the database are allowed.
@@ -3150,7 +3150,7 @@ SET QUERY_STORE = ON
         [SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;

@@ -94,7 +94,7 @@ These options correspond to the same six available in the DSN setup UI above.
 `server=Server;database=Database;Trusted_Connection=yes;`
 4. (_Windows driver only_.) Integrated Windows Authentication using SSPI (if the target database is in SQL Server or SQL IaaS) - new syntax. The client requests encryption (the default value of `Encrypt` is `true`) and the server certificate gets validated, regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`). 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
-5. AAD Username/Password Authentication (if the target database is in Azure SQL DB). Server certificate gets validated, regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`). The username/password is passed in the connection string. 
+5. AAD Username/Password Authentication (if the target database is in Azure SQL Database). Server certificate gets validated, regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`). The username/password is passed in the connection string. 
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`
 6. (_Windows, and Linux/macOS 17.6+, driver only_.) Integrated Windows Authentication using ADAL or Kerberos, which involves redeeming Windows account credentials for an AAD-issued access token, assuming the target database is in Azure SQL Database. Server certificate gets validated, regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`). On Linux/macOS, a suitable Kerberos ticket needs to be available; see the section below on Federated Accounts and [Using Integrated Authentication](linux-mac/using-integrated-authentication.md) for more information.
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
@@ -196,6 +196,6 @@ The system Kerberos library `kinit` supports Enterprise Principal with the `--en
 
 ## See Also
 
-[Token-based authentication support for Azure SQL DB using Azure AD auth](/archive/blogs/sqlsecurity/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)
+[Token-based authentication support for Azure SQL Database using Azure AD auth](/archive/blogs/sqlsecurity/token-based-authentication-support-for-azure-sql-db-using-azure-ad-auth)
 
 [Using Integrated Authentication](linux-mac/using-integrated-authentication.md)

@@ -274,7 +274,7 @@ Specifies that identity value or values in the imported data file are to be used
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com
    ```
 
-   If guest users exist in a specific Azure AD and are part of a group that exists in SQL DB that has database permissions to execute the bcp command, their guest user alias is used (for example, *keith0@adventureworks.com*).
+   If guest users exist in a specific Azure AD and are part of a group that exists in SQL Database that has database permissions to execute the bcp command, their guest user alias is used (for example, *keith0@adventureworks.com*).
   
 **-h** _**"load hints**_[ ,... *n*]**"**<a name="h"></a>
 Specifies the hint or hints to be used during a bulk import of data into a table or view.  

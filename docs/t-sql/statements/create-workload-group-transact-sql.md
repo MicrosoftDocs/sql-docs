@@ -31,7 +31,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -40,7 +40,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 
 &nbsp;
 
-## SQL Server and SQL Database managed instance
+## SQL Server and SQL Managed Instance
 
 [!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
   
@@ -52,7 +52,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
         [SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />managed instance \*_** &nbsp;
+        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-workload-group-transact-sql.md?view=azure-sqldw-latest)
@@ -61,7 +61,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 
 &nbsp;
 
-## SQL Server and SQL Database managed instance
+## SQL Server and SQL Managed Instance
 
 [!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
 
@@ -73,7 +73,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
         [SQL Server](create-workload-group-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-workload-group-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;

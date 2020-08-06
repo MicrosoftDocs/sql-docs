@@ -62,7 +62,7 @@ To import a bacpac into a new SQL Database, you can use Management Studio.
 
 ### Full-Text Indexing
 
-The sample database can make use of Full-Text Indexing. However, that feature is not installed by default with SQL Server - you need to select it during SQL Server setup (it is enabled by default in Azure SQL DB). Therefore, a post-installation step is required.
+The sample database can make use of Full-Text Indexing. However, that feature is not installed by default with SQL Server - you need to select it during SQL Server setup (it is enabled by default in Azure SQL Database). Therefore, a post-installation step is required.
 
 1. In SQL Server Management Studio, connect to the WideWorldImporters database and open a new query window.
 2. Run the following T-SQL command to enable the use of Full-Text Indexing in the database:

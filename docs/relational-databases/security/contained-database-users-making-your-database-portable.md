@@ -71,7 +71,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=azure-sqldw-latest||=sql
 
 ### Managed instance
 
-An Azure SQL Database managed instance behaves like SQL Server on-premises in the context of contained databases. Be sure to change the context of your database from the master database to the user database when creating your contained user. Additionally, there should be no active connections to the user database when setting the containment option. 
+Azure SQL Managed Instance behaves like SQL Server on-premises in the context of contained databases. Be sure to change the context of your database from the master database to the user database when creating your contained user. Additionally, there should be no active connections to the user database when setting the containment option. 
 
 For example: 
 

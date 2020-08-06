@@ -60,7 +60,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
     :::column-end:::
 :::row-end:::
 
@@ -715,17 +715,17 @@ GO
         [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />managed instance \*_**<br />&nbsp;
+        **_\* SQL Database<br />Managed Instance \*_**<br />&nbsp;
     :::column-end:::
 :::row-end:::
 
 &nbsp;
 
-## Azure SQL Database managed instance
+## Azure SQL Managed Instance
 
-Use this statement with a database in Azure SQL Database managed instance.
+Use this statement with a database in Azure SQL Managed Instance.
 
-## Syntax for databases in a managed instance
+## Syntax for Azure SQL Managed Instance
 
 ```syntaxsql
 ALTER DATABASE database_name

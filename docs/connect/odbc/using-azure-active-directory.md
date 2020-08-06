@@ -51,15 +51,15 @@ The DSN setup and connection UIs of the driver have been enhanced with the addit
 
 It is possible to use the new Azure AD authentication options when creating or editing an existing DSN using the driver's setup UI:
 
-`Authentication=ActiveDirectoryIntegrated` for Azure Active Directory Integrated authentication to SQL Azure
+`Authentication=ActiveDirectoryIntegrated` for Azure Active Directory Integrated authentication to Azure SQL Database
 
 ![create-dsn-ad-integrated.png](windows/create-dsn-ad-integrated.png)
 
-`Authentication=ActiveDirectoryPassword` for Azure Active Directory username/password authentication to SQL Azure
+`Authentication=ActiveDirectoryPassword` for Azure Active Directory username/password authentication to Azure SQL Database
 
 ![create-dsn-ad-password.png](windows/create-dsn-ad-password.png)
 
-`Authentication=ActiveDirectoryInteractive` for Azure Active Directory interactive authentication to SQL Azure
+`Authentication=ActiveDirectoryInteractive` for Azure Active Directory interactive authentication to Azure SQL Database
 
 ![create-dsn-ad-interactive.png](windows/create-dsn-ad-interactive.png)
 
@@ -112,7 +112,7 @@ For user-assigned identity with object ID equals to myObjectId,<br>
 > [!NOTE]
 >- When using the Active Directory options with the Windows ODBC driver ***prior to*** version 17.4.2, ensure that the [Active Directory Authentication Library for SQL Server](https://go.microsoft.com/fwlink/?LinkID=513072) has been installed. When using the Linux and macOS drivers, ensure that `libcurl` has been installed. For driver version 17.2 and later, this is not an explicit dependency since it is not required for the other authentication methods or ODBC operations.
 >- When AAD configuration includes Conditional Access policies, and the client is Windows 10 or Server 2016 or later, authentication via Integrated or username/password may fail since it requires the use of WAM, which is supported in driver version 17.6 or later for Windows; to use WAM, create a new string or DWORD value named `ADALuseWAM` in `HKLM\Software\ODBCINST.INI\ODBC Driver 17 for SQL Server` or `HKLM\Software\ODBC.INI\<your-DSN-name>` for global or DSN-scoped configuration respectively, and set it to a value of 1. Note that authentication with WAM does not support running the application as a different user with `runas`. Scenarios which require Condtitional Access policies are not supported for Linux or macOS.
->- To connect using a SQL Server account username and password, you may now use the new `SqlPassword` option, which is recommended especially for SQL Azure since this option enables more secure connection defaults.
+>- To connect using a SQL Server account username and password, you may now use the new `SqlPassword` option, which is recommended especially for Azure SQL Database since this option enables more secure connection defaults.
 >- To connect using an Azure Active Directory account username and password, specify `Authentication=ActiveDirectoryPassword` in the connection string and the `UID` and `PWD` keywords with the username and password, respectively.
 >- To connect using Windows Integrated or Active Directory Integrated (Windows, and Linux/macOS 17.6+, driver only) authentication, specify `Authentication=ActiveDirectoryIntegrated` in the connection string. The driver will choose the correct authentication mode automatically. `UID` and `PWD` must not be specified.
 >- To connect using Active Directory Interactive (Windows driver only) authentication, `UID` must be specified.

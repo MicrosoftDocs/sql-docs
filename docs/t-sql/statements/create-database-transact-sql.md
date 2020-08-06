@@ -58,7 +58,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -896,7 +896,7 @@ GO
         **_\* SQL Database<br />single database/elastic pool \*_**
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1310,7 +1310,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
         [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />managed instance \*_**
+        **_\* SQL Database<br />Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)
@@ -1326,7 +1326,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 ## Overview
 
-In Azure SQL Database Managed Instance, this statement is used to create a database. When creating a database on a managed instance, you specify the database name and collation.
+In Azure SQL Managed Instance, this statement is used to create a database. When creating a database on a managed instance, you specify the database name and collation.
 
 ## Syntax
 
@@ -1396,7 +1396,7 @@ See [ALTER DATABASE](alter-database-transact-sql.md?view=azuresqldb-mi-current)
         [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -1526,7 +1526,7 @@ CREATE DATABASE TestDW COLLATE Latin1_General_100_CI_AS_KS_WS
         [SQL Database<br />single database/elastic pool](create-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](create-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](create-database-transact-sql.md?view=azure-sqldw-latest)

@@ -143,7 +143,7 @@ EXEC ('CREATE CREDENTIAL Azure_EKM_TDE_cred
 
 ### D. Creating a Credential using a SAS Token
 
-**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658) and managed instances in Azure SQL Database.
+**Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658) and Azure SQL Managed Instance.
 
 The following example creates a shared access signature credential using a SAS token. For a tutorial on creating a stored access policy and a shared access signature on an Azure container, and then creating a credential using the shared access signature, see [Tutorial: Using the Microsoft Azure Blob storage service with SQL Server 2016 databases](../../relational-databases/tutorial-use-azure-blob-storage-service-with-sql-server-2016.md).
 

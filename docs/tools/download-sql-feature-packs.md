@@ -53,7 +53,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 |----|-----|
 | [Command Line Utilities for SQL Server](https://www.microsoft.com/download/details.aspx?id=52680) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
 | [Remote Blob Store](https://go.microsoft.com/fwlink/?linkid=2109005) | The SQL Server Remote Blob Store is a method for storing blobs of unstructured data in an external Content Addressable data store. The component consists of a client-side DLL that is linked into a user application, and a set of stored procedures to be installed on SQL Server. |
-| [SQL Server Upgrade Advisor](https://docs.microsoft.com/sql/sql-server/install/how-to-install-upgrade-advisor) | Microsoft Upgrade Advisor analyzes instances of SQL Server in preparation for upgrading to SQL Server. |
+| [SQL Server Upgrade Advisor](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades-version-15) | Microsoft Upgrade Advisor analyzes instances of SQL Server in preparation for upgrading to SQL Server. |
 |||
 
 ## Integration Services

@@ -24,7 +24,7 @@ ms.author: mathoma
   
  The data collector enables you to adjust the scope of data collection to suit your test and production environments. The data collector also uses a data warehouse, a relational database that enables you to manage the data that you collect by setting different retention periods for your data.  
   
- The data collector supports dynamic tuning for data collection and is extensible through its API. For more information, see [Data Collector Programming](https://msdn.microsoft.com/library/53b4752b-055d-4716-b2bc-75b4cce84101).  
+ The data collector supports dynamic tuning for data collection and is extensible through its API. For more information, see [Data Collector Programming](https://docs.microsoft.com/sql/relational-databases/data-collection/data-collection).  
   
  The following illustration shows how the data collector fits in the overall strategy for data collection and data management in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   

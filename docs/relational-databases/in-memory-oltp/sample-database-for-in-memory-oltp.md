@@ -20,7 +20,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
  This sample showcases the In-Memory OLTP feature. It shows  memory-optimized tables and natively compiled stored procedures, and can be used to demonstrate performance benefits of In-Memory OLTP.  
   
 > [!NOTE]  
->  To view this topic for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], see [Extensions to AdventureWorks to Demonstrate In-Memory OLTP](https://msdn.microsoft.com/library/dn511655\(v=sql.120\).aspx).  
+>  To view this topic for [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], see [Extensions to AdventureWorks to Demonstrate In-Memory OLTP](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/overview-and-usage-scenarios?view=sql-server-ver15#in-memory-oltp-overview.  
   
  The sample migrates five tables in the AdventureWorks database to memory-optimized, and it includes a demo workload for sales order processing. You can use this demo workload to see the performance benefit of using In-Memory OLTP on your server.  
   
@@ -177,12 +177,11 @@ Beginning with [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, c
   
  HASH indexes are can be used to further optimize the workload. They are particularly optimized for point lookups and row inserts. However, one must consider that they do not support range scans, ordered scans, or search on leading index key columns. Therefore, care needs to be taken when using these indexes. In addition, it is necessary to specify the bucket_count at create time. It should usually be set at between one and two times the number of index key values, but overestimating is usually not a problem.  
   
-For more information, see Books Online for more details about [index guidelines](https://technet.microsoft.com/library/dn133166\(v=sql.120\).aspx) and guidelines for [choosing the right bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
+For more information, see Books Online for more details about [index guidelines](https://docs.microsoft.com/sql/relational-databases/indexes/guidelines-for-online-index-operations) and guidelines for [choosing the right bucket_count](https://technet.microsoft.com/library/dn494956\(v=sql.120\).aspx).  
 
 
 The Books Online provide more information about the following topics:
-- [Index guidelines](https://docs.microsoft.com/sql/database-engine/guidelines-for-using-indexes-on-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
-- [Choosing the right bucket_count](https://docs.microsoft.com/sql/database-engine/determining-the-correct-bucket-count-for-hash-indexes) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn494956 -->
+- [Index guidelines](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/indexes-for-memory-optimized-tables) <!-- On MSDN-TechNet was version sql.120 (2014), library/dn133166 -->
 
  The indexes on the migrated tables have been tuned for the demo sales order processing workload. The workload relies on inserts and point lookups in the tables Sales.SalesOrderHeader_inmem and Sales.SalesOrderDetail_inmem, and it also relies on point lookups on the primary key columns in the tables Production.Product_inmem and Sales.SpecialOffer_inmem.  
   
@@ -270,7 +269,7 @@ The Books Online provide more information about the following topics:
   
     -   Update the shipping information for a given sales order. This will also update the shipping information for all line items of the sales order.  
   
-    -   This is a wrapper procedure for the natively compiled stored procedures Sales.usp_UpdateSalesOrderShipInfo_native with retry logic to deal with (unexpected) potential conflicts with concurrent transactions updating the same order. For more information about retry logic see the Books Online topic [here](https://technet.microsoft.com/library/dn169141\(v=sql.120\).aspx).  
+    -   This is a wrapper procedure for the natively compiled stored procedures Sales.usp_UpdateSalesOrderShipInfo_native with retry logic to deal with (unexpected) potential conflicts with concurrent transactions updating the same order. For more information about retry logic see the Books Online topic [here](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/transactions-with-memory-optimized-tables).  
   
 -   Sales.usp_UpdateSalesOrderShipInfo_native  
   

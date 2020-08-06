@@ -7,7 +7,7 @@ ms.technology: tools-other
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: markingmyname
 ms.author: maghan
-ms.date: 10/28/2019
+ms.date: 10/28/2019 
 ---
 
 # Use Visual Studio Code to create and run Transact-SQL scripts

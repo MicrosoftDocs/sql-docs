@@ -1,6 +1,6 @@
 ---
 title: SQL Server error detail (OLE DB driver)
-description: "SQL Server error detail"
+description: Learn about the provider-specific error interface ISQLServerErrorInfo in OLE DB Driver for SQL Server, which returns details about a SQL Server error.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

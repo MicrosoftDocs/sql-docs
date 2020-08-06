@@ -118,9 +118,11 @@ sqlpackage runs on Windows, macOS, and Linux, and is supported on the following 
 - Windows 10
 - Windows 8.1
 - Windows 7 SP1
+- Windows Server Core
 - Windows Server 2008 R2
 - Windows Server 2012 R2
 - Windows Server 2016
+- Windows Server 2019
 
 ### macOS
 

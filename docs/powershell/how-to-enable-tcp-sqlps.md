@@ -12,72 +12,80 @@ ms.custom: ""
 ms.date: 08/06/2020
 ---
 
-# How to enable TCP protocol with SQLPS
+# How to enable the TCP protocol with SQLPS
 
 How to enable the TCP protocol when connected to the console with SQLPS.
 
-Open a command prompt and type:
+1. Open a command prompt and type:
 
-```console
-C:\> SQLPS.EXE
-```
-`Tip: is SQLPS is not found, you may need to open a new command prompt or just log-off 
-and log back on.`
+    ```console
+    C:\> SQLPS.EXE
+    ```
 
-At the PowerShell command prompt, type:
+    > [!TIP]
+    > If SQLPS is not found, you may need to open a new command prompt or just log-off and log back on.
 
-```powershell
-# Instantiate a ManagedComputer object which exposes primitives to control the
-# installation of SQL Server on this machine.
-$wmi = New-Object 'Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer' localhost
+2. At the PowerShell command prompt, type:
 
-# Enable the TCP protocol on the default instance. If the instance is named, 
-# replace MSSQLSERVER with the instance name in the following line.
-$tcp = $wmi.ServerInstances['MSSQLSERVER'].ServerProtocols['Tcp']
-$tcp.IsEnabled = $true  
-$tcp.Alter()  
+    ```powershell
+    # Instantiate a ManagedComputer object which exposes primitives to control the
+    # installation of SQL Server on this machine.
 
-# You need to restart SQL Server for the change to persist
-# -Force takes care of any dependent services, like SQL Agent.
-# Note: if the instance is named, replace MSSQLSERVER with MSSQL$ followed by
-# the name of the instance (e.g. MSSQL$MYINSTANCE)
-Restart-Service -Name MSSQLSERVER -Force
-```
+    $wmi = New-Object 'Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer' localhost
+
+    # Enable the TCP protocol on the default instance. If the instance is named, 
+    # replace MSSQLSERVER with the instance name in the following line.
+
+    $tcp = $wmi.ServerInstances['MSSQLSERVER'].ServerProtocols['Tcp']
+    $tcp.IsEnabled = $true  
+    $tcp.Alter()  
+
+    # You need to restart SQL Server for the change to persist
+    # -Force takes care of any dependent services, like SQL Agent.
+    # Note: if the instance is named, replace MSSQLSERVER with MSSQL$ followed by
+    # the name of the instance (e.g. MSSQL$MYINSTANCE)
+
+    Restart-Service -Name MSSQLSERVER -Force
+    ```
 
 ## How to enable the TCP protocol not using SQLPS
 
-How to enable the TCP protocol when connected to the console using PowerShell instead.
+How to enable the TCP protocol when connected to the console not using SQLPS.
 
-Open a command prompt and type:
+1. Open a command prompt and type:
 
-```console
-C:\> PowerShell.exe
-```
+    ```console
+    C:\> PowerShell.exe
+    ```
 
-At the PowerShell command prompt, type:
+2. At the PowerShell command prompt, type:
 
-```powershell
-# Get access to SqlWmiManagement DLL on the machine with SQL
-# we are on, which is where SQL Server was installed.
-# Note: this is installed in the GAC by SQL Server Setup.
-[System.Reflection.Assembly]::LoadWithPartialName('Microsoft.SqlServer.SqlWmiManagement')
+    ```powershell
+    # Get access to SqlWmiManagement DLL on the machine with SQL
+    # we are on, which is where SQL Server was installed.
+    # Note: this is installed in the GAC by SQL Server Setup.
 
-# Instantiate a ManagedComputer object which exposes primitives to control the
-# installation of SQL Server on this machine.
-$wmi = New-Object 'Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer' localhost
+    [System.Reflection.Assembly]::LoadWithPartialName('Microsoft.SqlServer.SqlWmiManagement')
 
-# Enable the TCP protocol on the default instance. If the instance is named, 
-# replace MSSQLSERVER with the instance name in the following line.
-$tcp = $wmi.ServerInstances['MSSQLSERVER'].ServerProtocols['Tcp']
-$tcp.IsEnabled = $true  
-$tcp.Alter()  
+    # Instantiate a ManagedComputer object which exposes primitives to control the
+    # installation of SQL Server on this machine.
 
-# You need to restart SQL Server for the change to persist
-# -Force takes care of any dependent services, like SQL Agent.
-# Note: if the instance is named, replace MSSQLSERVER with MSSQL$ followed by
-# the name of the instance (e.g. MSSQL$MYINSTANCE)
-Restart-Service -Name MSSQLSERVER -Force
-```
+    $wmi = New-Object 'Microsoft.SqlServer.Management.Smo.Wmi.ManagedComputer' localhost
+
+    # Enable the TCP protocol on the default instance. If the instance is named, 
+    # replace MSSQLSERVER with the instance name in the following line.
+
+    $tcp = $wmi.ServerInstances['MSSQLSERVER'].ServerProtocols['Tcp']
+    $tcp.IsEnabled = $true  
+    $tcp.Alter()  
+
+    # You need to restart SQL Server for the change to persist
+    # -Force takes care of any dependent services, like SQL Agent.
+    # Note: if the instance is named, replace MSSQLSERVER with MSSQL$ followed by
+    # the name of the instance (e.g. MSSQL$MYINSTANCE)
+
+    Restart-Service -Name MSSQLSERVER -Force
+    ```
 
 ## Next Steps
 

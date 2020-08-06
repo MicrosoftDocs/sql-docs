@@ -511,7 +511,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | New item| Details|
 | :-------| :------|
 |Support for SQL Server 2019|SSMS 18.0 is the first release that is fully *aware* of SQL Server 2019 (compatLevel 150).|
-|Support for SQL Server 2019|Support for "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in SQL Server 2019 and SQL managed instance.|
+|Support for SQL Server 2019|Support for "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in SQL Server 2019 and SQL Managed Instance.|
 |Support for SQL Server 2019|SMO: Added support for UDF Inlining.|
 |Support for SQL Server 2019|GraphDB: Add a flag in showplan for Graph TC Sequence.|
 |Support for SQL Server 2019|Always Encrypted: added support for AEv2 / Enclave.|
@@ -546,7 +546,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Azure Data Studio integration|When right-clicking on a database node in OE, the user is presented with context menus to either run a query or create a new notebook in Azure Data Studio.|
 |Azure SQL support| SLO/Edition/MaxSize database properties now accept custom names, making it easier to support future editions of Azure SQL Databases.|
 |Azure SQL support| Added support for vCore SKUs (General Purpose and Business Critical): Gen4_24 and all the Gen5.|
-|Azure SQL managed instance|Added new "AAD logins" as a new login type in SMO and SSMS when connected to an Azure SQL managed instance.|
+|Azure SQL Managed Instance|Added new "AAD logins" as a new login type in SMO and SSMS when connected to Azure SQL Managed Instance.|
 |Always On|Rehash RTO (estimated recovery time)  and RPO (estimated data loss) in SSMS Always on Dashboard. See the updated documentation at [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).|
 |Always Encrypted| The Enable Always Encrypted checkbox in the new Always Encrypted tab in the Connect to Server dialog now provides an easy way to enable/disable Always Encrypted for a database connection.|
 |Always Encrypted with secure enclaves| Several enhancements have been made to support  Always Encrypted with secure enclaves in SQL Server 2019:  A text field for specifying enclave attestation URL in the Connect to Server dialog (the new Always Encrypted tab).  The new checkbox in the New Column Master Key dialog to control whether a new column master key allows enclave computations.  Other Always Encrypted key management dialogs now expose the information on which column master keys allow enclave computations.|
@@ -559,7 +559,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Data-tier Application Wizard|Added support to Import/Export data-tier application with graph tables.|
 |Flat File Import Wizard|Added logic to notify the user that an import may have resulted in a renaming of the columns.|
 |Integration Services (SSIS)|Added support to allow customers to schedule SSIS packages on Azure-SSIS IRs that are in Azure Government cloud.|
-|Integration Services (SSIS)|When you use SQL Agent of Azure SQL managed instance via SSMS, you can configure parameter and connection manager in SSIS agent job step.|
+|Integration Services (SSIS)|When you use SQL Agent of Azure SQL Managed Instance via SSMS, you can configure parameter and connection manager in SSIS agent job step.|
 |Integration Services (SSIS)|When connecting to Azure SQL Database / Azure SQL Managed Instance, you can connect to it with *default* as initial db.|
 |Integration Services (SSIS)|Added a new entry item **Try SSIS in Azure Data Factory** under "Integration Services Catalogs" node, which can be used to launch the "Integration Runtime Creation Wizard" and create "Azure-SSIS Integration Runtime" quickly.
 |Integration Services (SSIS)|Added **Create SSIS IR** button in "Catalog Creation Wizard," which can be used to launch the "Integration Runtime Creation Wizard" and create "Azure-SSIS Integration Runtime" quickly.|
@@ -587,7 +587,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |SMO|Added cascade delete support to "Edge Constraints" in both SMO and SSMS.|
 |SMO|Added support for data classification "read-write" permissions.|
 |Vulnerability Assessment| Enabled Vulnerability Assessment tasks menu on Azure SQL DW.|
-|Vulnerability Assessment|Change the set of vulnerability assessment rules that are run on Azure SQL managed instance servers, so that "Vulnerability Assessment" scan results can be consistent with the ones in Azure SQL Database.|
+|Vulnerability Assessment|Change the set of vulnerability assessment rules that are run on Azure SQL Managed Instance, so that "Vulnerability Assessment" scan results can be consistent with the ones in Azure SQL DB.|
 |Vulnerability Assessment| "Vulnerability Assessment" now supports Azure SQL DW.|
 |Vulnerability Assessment|Added a new exporting feature to export the vulnerability assessment scan results to Excel.|
 |XEvent Viewer|XEvent Viewer: enabled showplan window for more XEvents.|

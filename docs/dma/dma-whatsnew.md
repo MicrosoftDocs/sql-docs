@@ -78,7 +78,7 @@ The assessment workflow helps you detect the following issues, which can affect 
   - Behavioral changes: The schema objects reported may continue to work, but they may exhibit a different behavior, for example performance degradation.
   - Informational issues: These objects won't impact the migration but may have been deprecated from feature SQL Server releases.
 
-After the assessment is complete, use our [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) to perform the migration of your SQL Server databases to SQL Database Managed Instance.  DMS supports both [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (one-time) and [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (minimal-downtime) database migrations to SQL Database Managed Instance.
+After the assessment is complete, use our [Azure Database Migration Service](https://azure.microsoft.com/services/database-migration/) (DMS) to perform the migration of your SQL Server databases to SQL Managed Instance.  DMS supports both [offline](https://docs.microsoft.com/azure/dms/tutorial-sql-server-to-managed-instance) (one-time) and [online](https://docs.microsoft.com/azure/dms/tutorial-sql-server-managed-instance-online) (minimal-downtime) database migrations to SQL Managed Instance.
 
 ## Data Migration Assistant v4.0
 

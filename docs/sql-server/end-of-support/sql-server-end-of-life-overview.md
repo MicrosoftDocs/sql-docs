@@ -171,7 +171,7 @@ If you want to offload maintenance, reduce costs, and eliminate the need to upgr
 ### Considerations
 
 - **Limited migration options**:  You can only migrate a single database at a time, rather than an entire instance.   
-- **Feature limitation**:  Although the most commonly used [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features are available, the feature set for a single database is not as complete as for an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+- **Feature limitation**:  Although the most commonly used Azure SQL Database features are available, the feature set for a single database is not as complete as for Azure SQL Managed Instance, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Transact-SQL differences**:  There are some [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL) differences between a single database and an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Size limitations**:  A single database has a maximum database size of 100 TB, compared to a 524 PB size for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Maintenance time**: There is no guarantee for the exact maintenance time, though it's nearly transparent. 
@@ -222,7 +222,7 @@ If you'd like to take advantage of offloading maintenance and cost, but find the
 [SQL Managed Instance overview](/azure/sql-database/sql-database-managed-instance)       
 [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)       
 [SQL Database feature comparison](/azure/sql-database/sql-database-features)       
-[Migrate SQL Server to a managed instance](/azure/sql-database/sql-database-managed-instance-migrate)       
+[Migrate SQL Server to Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-migrate)       
 [Broader migration process](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
 
 Tools:

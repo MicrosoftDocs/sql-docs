@@ -38,7 +38,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 
 &nbsp;
 
-## SQL Server and SQL Database managed instance
+## SQL Server and SQL Managed Instance
 
 [!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
   
@@ -59,7 +59,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 
 &nbsp;
 
-##  SQL Server and SQL Database managed instance
+##  SQL Server and SQL Managed Instance
 
 [!INCLUDE [DROP WORKLOAD GROUP](../../includes/drop-workload-group.md)]
 

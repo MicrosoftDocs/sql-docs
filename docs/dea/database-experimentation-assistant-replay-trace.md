@@ -43,7 +43,7 @@ First, you need to perform a trace replay against target 1, which represents you
     - **Replay Trace Location**: Specify the path to store trace files/XEvents associated with the trace replay.
 
         > [!NOTE]
-        > For an Azure SQL Database or an Azure SQL Database managed instance, you need to provide the SAS URI of the Azure blob storage account.
+        > For an Azure SQL Database or an Azure SQL Managed Instance, you need to provide the SAS URI of the Azure blob storage account.
 
 3. Verify that you have restored the database(s) by selecting the **Yes, I have manually restored the database(s)** check box.
 

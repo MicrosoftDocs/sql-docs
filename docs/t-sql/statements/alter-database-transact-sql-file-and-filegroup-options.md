@@ -725,7 +725,7 @@ GO
 
 Use this statement with a database in Azure SQL Managed Instance.
 
-## Syntax forAzure SQL Managed Instance
+## Syntax for Azure SQL Managed Instance
 
 ```syntaxsql
 ALTER DATABASE database_name

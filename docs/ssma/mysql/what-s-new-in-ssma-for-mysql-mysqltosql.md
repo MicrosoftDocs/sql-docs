@@ -109,7 +109,7 @@ The v8.1 release of SSMA for MySQL is enhanced with targeted fixes that are desi
 
 The v8.0 release of SSMA for MySQL is enhanced with targeted fixes designed to improve quality and conversion metrics. This release also offers the following new features:
 
-* Support for **Azure SQL Database Managed Instance** as a target. You can now create new projects targeting Azure SQL Database Managed Instance:
+* Support for **Azure SQL Managed Instance** as a target. You can now create new projects targeting Azure SQL Managed Instance:
 
   ![SQL MI project](../media/ssma-newproject-sqldbmi.png)
 

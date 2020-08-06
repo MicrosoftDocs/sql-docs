@@ -58694,6 +58694,16 @@
       "source_path": "docs/relational-databases/data-tier-applications/dac-support-for-sql-server-objects-and-versions.md",
       "redirect_url": "https://docs.microsoft.com/en-us/previous-versions/sql/sql-server-2012/ee210549(v=sql.110)",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/sql-assessment-api/sql-assessment-api-overview.md",
+      "redirect_url": "/sql/tools/sql-assessment-api/sql-assessment-api-overview.md",
+      "redirect_document_id": true
+    },
+    {
+      "source_path": "docs/visual-studio-code/sql-server-develop-use-vscode.md",
+      "redirect_url": "/sql/tools/visual-studio-code/sql-server-develop-use-vscode.md",
+      "redirect_document_id": true
     }
   ]
 }

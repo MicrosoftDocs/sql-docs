@@ -232,7 +232,7 @@ This switch is used by the client when connecting to SQL Database or SQL Data Wa
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
 
-   If guest users exist in a specific Azure AD and are part of a group that exists in SQL DB that has database permissions to execute the sqlcmd command, their guest user alias is used (for example, *keith0@adventureworks.com*).
+   If guest users exist in a specific Azure AD and are part of a group that exists in SQL Database that has database permissions to execute the sqlcmd command, their guest user alias is used (for example, *keith0@adventureworks.com*).
 
   >[!IMPORTANT]
   >There is a known issue when using the `-G` and `-U` option with SQLCMD, where putting the `-U` option before the `-G` option may cause authentication to fail. Always start with the `-G` option followed by the `-U` option.

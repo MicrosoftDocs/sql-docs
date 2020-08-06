@@ -107,7 +107,7 @@ Before you can use SQL Server Agent on premises to schedule execution of package
 2.  **Set up linked server credentials**
 
     ```sql
-    -- Add your Azure SQL DB server admin credentials
+    -- Add your Azure SQL Database server admin credentials
     EXEC sp_addlinkedsrvlogin
         @rmtsrvname = 'myLinkedServer',
         @useself = 'false',

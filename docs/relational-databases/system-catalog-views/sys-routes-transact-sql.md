@@ -34,7 +34,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 |**remote_service_name**|**nvarchar(256)**|Name of the remote service. NULLABLE.|  
 |**broker_instance**|**nvarchar(128)**|Identifier of the broker that hosts the remote service. NULLABLE.|  
 |**lifetime**|**datetime**|The date and time when the route expires. Notice that this value does not use the local time zone. Instead, the value shows the expiration time for UTC. NULLABLE.|  
-|**address**|**nvarchar(256)**|Network address to which Service Broker sends messages for the remote service. NULLABLE. For SQL Database Managed Instance, address must be local.|  
+|**address**|**nvarchar(256)**|Network address to which Service Broker sends messages for the remote service. NULLABLE. For SQL Managed Instance, address must be local.|  
 |**mirror_address**|**nvarchar(256)**|Network address of the mirroring partner for the server specified in the address. NULLABLE.|  
   
 ## Permissions  

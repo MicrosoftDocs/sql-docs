@@ -151,7 +151,7 @@ sudo systemctl restart mssql-server
 
 PolyBase on Linux can access the following data sources. Follow the provided links for more information on how to create an external table from these sources on PolyBase is enabled. 
 
-- [SQL Server ( & SQL DB, Azure SQL DW)](../../relational-databases/polybase/polybase-configure-sql-server.md)
+- [SQL Server ( & SQL Database, Azure SQL Data Warehouse)](../../relational-databases/polybase/polybase-configure-sql-server.md)
 - [Oracle](../../relational-databases/polybase/polybase-configure-oracle.md)
 - [Teradata](../../relational-databases/polybase/polybase-configure-teradata.md)
 - [MongoDB (& Cosmos DB)](../../relational-databases/polybase/polybase-configure-mongodb.md)

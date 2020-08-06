@@ -85,5 +85,5 @@ The following procedure shows how to map data types at the project, database, or
 The next step in the migration process is to either [Create an assessment report](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md) or [Convert Sybase ASE database objects to SQL Server or SQL Azure syntax](converting-sybase-ase-database-objects-sybasetosql.md). If you create an assessment report, Sybase ASE objects are automatically converted during the assessment.  
   
 ## See Also  
-[Migrating Sybase ASE Databases to SQL Server - Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrating Sybase ASE Databases to SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

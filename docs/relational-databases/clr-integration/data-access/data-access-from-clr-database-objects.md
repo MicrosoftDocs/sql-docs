@@ -47,7 +47,7 @@ ms.author: "jroth"
  [CLR Integration and Transactions](../../../relational-databases/clr-integration-data-access-transactions/clr-integration-and-transactions.md)  
  Describes how the new transaction framework provided in the System.Transactions namespace integrates with ADO.NET and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] CLR integration.  
   
- [XML Serialization from CLR Database Objects](https://docs.microsoft.com/en-us/dotnet/standard/serialization/introducing-xml-serialization)  
+ [XML Serialization from CLR Database Objects](https://docs.microsoft.com/dotnet/standard/serialization/introducing-xml-serialization)  
  Explains how to enable XML serialization scenarios of CLR database objects inside [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)].  
   
   

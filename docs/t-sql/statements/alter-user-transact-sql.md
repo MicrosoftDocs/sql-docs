@@ -431,18 +431,18 @@ GO
 
 &nbsp;
 
-## Azure SQL Database managed instance
+## Azure SQL Managed Instance
 
 ## Syntax
 
 > [!IMPORTANT]
-> Only the following options are supported for Azure SQL Database managed instance when applying to users with Azure AD logins:
+> Only the following options are supported for Azure SQL Managed Instance when applying to users with Azure AD logins:
 > `DEFAULT_SCHEMA = { schemaName | NULL }` and
 > `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
 > </br> </br> There is a new syntax extension that was added to help remap users in a database that was migrated to managed instance. The ALTER USER syntax helps map database users in a federated and synchronized domain with Azure AD, to Azure AD logins.
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for SQL Managed Instance
 ALTER USER userName
  { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
 [;]
@@ -564,7 +564,7 @@ These remarks apply to authenticating as Windows users that have been federated 
 
 - Validation of Windows users or groups that are mapped to Azure AD is done by default through Graph API in all versions of the ALTER USER syntax used for migration purpose.
 - On-premises users that were aliased (use a different name from the original Windows account) will keep the aliased name.
-- For Azure AD authentication, the LOGIN parameter applies only to managed instance and can't be used with SQL DB.
+- For Azure AD authentication, the LOGIN parameter applies only to Azure SQL Managed Instance and can't be used with SQL Database.
 - To view logins for Azure AD Principals, use the following command:
 `select * from sys.server_principals`.
 - Check the login's indicated type is `E` or `X`.
@@ -682,7 +682,7 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 - [Contained Databases](../../relational-databases/databases/contained-databases.md)
 - [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
-- [Tutorial: Migrating SQL Server on-premises Windows users and groups to Azure SQL Database managed instance using T-SQL DDL syntax](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
+- [Tutorial: Migrating SQL Server on-premises Windows users and groups to SQL Managed Instance using T-SQL DDL syntax](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"

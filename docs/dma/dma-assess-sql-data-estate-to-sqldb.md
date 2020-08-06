@@ -154,7 +154,7 @@ After you successfully create a migration project, under **Assessment tools**, i
 
     **Assessed database instances**:  The number of SQL Server instances assessed so far.
     **Assessed databases**: Total number of databases assessed across one or more SQL Server instances assessed
-    **Databases ready for SQL DB**:  Number of databases ready to migrate to Azure SQL Database (PaaS).
+    **Databases ready for SQL Database**:  Number of databases ready to migrate to Azure SQL Database (PaaS).
     **Databases ready for Azure SQL VM**:  Number of databases consist one or more migration blockers to Azure SQL Database (PaaS), but ready to migrate to Azure SQL Server VMs.
 
 3. Select **Assessed database instances** to get to SQL Server instance level view.

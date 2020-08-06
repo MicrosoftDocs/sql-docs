@@ -40,7 +40,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 
 &nbsp;
 
-## SQL Server and SQL Database managed instance
+## SQL Server and SQL Managed Instance
 
 [!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
   
@@ -61,7 +61,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 
 &nbsp;
 
-## SQL Server and SQL Database managed instance
+## SQL Server and SQL Managed Instance
 
 [!INCLUDE [CREATE WORKLOAD GROUP](../../includes/create-workload-group.md)]
 

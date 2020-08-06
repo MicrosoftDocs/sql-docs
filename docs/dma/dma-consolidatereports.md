@@ -192,7 +192,7 @@ You can also use the LoadWarehouse script to provide the basic TSQL statements f
 
 To work with DMA reports, use bookmarks and slicers to filter by:
 
-- Assessment types (Azure SQL DB, Azure SQL MI, SQL on-premises) 
+- Assessment types (Azure SQL Database, Azure SQL Managed Instance, SQL Server) 
 - Instance Name
 - Database Name
 - Team Name
@@ -207,8 +207,8 @@ Selecting the filters bookmark enables the following blade:
 
 You can use Bookmarks to switch the reporting context between:
 
-- Azure SQL DB cloud assessments
-- Azure SQL MI cloud assessments
+- Azure SQL Database cloud assessments
+- Azure SQL Managed Instance cloud assessments
 - On-premises assessments
 
 ![DMA Report Views bookmarks](../dma/media//dma-consolidatereports/dma-report-bookmarks1.png)

@@ -428,12 +428,12 @@ GO
 
 &nbsp;
 
-## Azure SQL Database managed instance
+## Azure SQL Managed Instance
 
 ## Syntax
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for Azure SQL Managed Instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
 <option_list> ::=
@@ -484,7 +484,7 @@ Only the server-level principal login (created by the provisioning process) or m
 By default, the standard permission granted to a newly created Azure AD login in master is:
 **CONNECT SQL** and **VIEW ANY DATABASE**.
 
-### SQL Database managed instance Logins
+### SQL Managed Instance Logins
 
 - Must have **ALTER ANY LOGIN** permission on the server or membership in the one of the fixed server roles `securityadmin` or `sysadmin`. Only an Azure Active Directory (Azure AD) account with **ALTER ANY LOGIN** permission on the server or membership in one of those roles can execute the create command.
 - If the login is a SQL Principal, only logins that are part of the `sysadmin` role can use the create command to create logins for an Azure AD account.
@@ -495,7 +495,7 @@ By default, the standard permission granted to a newly created Azure AD login in
 > [!NOTE]
 > The Azure AD admin for managed instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
-After creating a login, the login can connect to a SQL Database managed instance, but only has the permissions granted to the **public** role. Consider performing some of the following activities.
+After creating a login, the login can connect to a managed instance, but only has the permissions granted to the **public** role. Consider performing some of the following activities.
 
 - To create an Azure AD user from an Azure AD login, see [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - To grant permissions to a user in a database, use the **ALTER SERVER ROLE** ... **ADD MEMBER** statement to add the user to one of the built-in database roles or a custom role, or grant permissions to the user directly using the [GRANT](../../t-sql/statements/grant-transact-sql.md) statement. For more information, see [Non-administrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Additional server-level administrative roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), and [GRANT](grant-transact-sql.md) statement.

@@ -2,7 +2,7 @@
 title: "SQL Data Developer | Microsoft Docs"
 description: "Use Microsoft's SQL data platform to create data-centric solutions across mobile devices and desktops for web servers, enterprise servers, and the cloud."
 ms.custom: ""
-ms.date: "05/06/2020"
+ms.date: "08/05/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -18,12 +18,13 @@ Use Microsoft's SQL data platform to create data-centric solutions across mobile
 ## SQL Data storage
 * [SQL Server Database Engine](../database-engine/configure-windows/sql-server-database-engine.md): Use the  SQL Server Database Engine to create relational databases for online transaction processing or online analytical processing data. 
 * [SQL Azure](https://docs.microsoft.com/azure/sql-database/): Use  SQL Azure to move your database to the cloud 
-* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709): SQL Server Compact to build standalone and occasionally connected applications for mobile devices, desktops, and Web clients.
+* [SQL Compact](https://www.microsoft.com/download/details.aspx?id=30709): Use SQL Server Compact to build standalone and occasionally connected applications for mobile devices, desktops, and Web clients.
 * [LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md): Use LocalDB during development to write and test Transact-SQL code without having to manage a full server instance of SQL Server.
 
 ## SQL Data tools
-* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md) : Use  SSDT to build relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports.
-* [SQL Server Management Tools](../ssms/download-sql-server-management-studio-ssms.md):  Use SSMS configure, monitor, and administer instances of SQL Server.
+* [Azure Data Studio](../azure-data-studio/download-azure-data-studio.md): Use Azure Data Studio on Windows, macOS, and Linux to run SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebooks and more.
+* [SQL Server Data Tools](../ssdt/download-sql-server-data-tools-ssdt.md): Use SSDT inside Visual Studio to build relational databases, Azure SQL databases, Integration Services packages, Analysis Services data models, and Reporting Services reports.
+* [SQL Server Management Tools](../ssms/download-sql-server-management-studio-ssms.md):  Use SSMS on Windows to configure, monitor, and administer instances of SQL Server.
 
 ## SQL Data access
 * [SQL Client Drivers](sql-connection-libraries.md):  Use SQL drivers to connect, query, update, insert, or delete data from a SQL database.

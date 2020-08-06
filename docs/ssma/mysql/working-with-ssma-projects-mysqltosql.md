@@ -51,7 +51,7 @@ SSMA contains several settings for converting and loading database, migrating da
   
 -   For information about data type mapping settings, see [Project Settings &#40;Type Mapping&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
   
--   For information about SQL Azure settings, see [Project Settings &#40;Azure SQL DB&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md).  
+-   For information about SQL Azure settings, see [Project Settings &#40;Azure SQL Database&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-azure-sql-db-mysqltosql.md).  
   
 > [!NOTE]  
 > The SQL Azure settings will be displayed only when you select **Migration to SQL Azure** while creating a project.  
@@ -77,7 +77,7 @@ To migrate data from MySQL databases to SQL Server or SQL Azure, you must create
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014  
   
-    -   Azure SQL DB  
+    -   Azure SQL Database  
   
 And then Click **OK**  
   
@@ -127,7 +127,7 @@ The next step in the migration process is [Connecting to MySQL &#40;MySQLToSQL&#
   
 ## See Also  
 [Connecting to MySQL &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-mysql-mysqltosql.md)  
-[Migrating MySQL Databases to SQL Server - Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
 [Connecting to SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-sql-server-mysqltosql.md)  
-[Connecting to Azure SQL DB &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
+[Connecting to Azure SQL Database &#40;MySQLToSQL&#41;](../../ssma/mysql/connecting-to-azure-sql-db-mysqltosql.md)  
   

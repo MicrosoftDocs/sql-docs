@@ -9774,7 +9774,7 @@
     items: 
     - name: Extended features and tools
       href: tools/download-sql-feature-packs.md
-  - name: Visual Studio Code
+  - name: Visual Studio Code 
     items: 
     - name: T-SQL scripts
       href: tools/visual-studio-code/sql-server-develop-use-vscode.md

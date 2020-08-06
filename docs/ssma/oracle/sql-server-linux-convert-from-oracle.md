@@ -1,6 +1,6 @@
 ---
 title: Migrate the Oracle HR Schema to SQL Server on Linux | Microsoft Docs
-description: Convert sample Oracle schema to SQL Server on Linux
+description: Learn how to migrate an Oracle HR schema to SQL Server 2017 on Linux with the SQL Server Migration Assistant (SSMA).
 author: shamikg
 ms.author: shamikg
 manager: shamikg

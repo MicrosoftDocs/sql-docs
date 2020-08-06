@@ -314,7 +314,7 @@ convert-schema
   
 1.  `conversion-report-folder:` Specifies folder where the assessment report can to be stored.(optional attribute)  
   
-2.  `object-name:` Specifies the object(s) considered for converting schema (It can have indivdual object names or a group object name).  
+2.  `object-name:` Specifies the object(s) considered for converting schema (It can have individual object names or a group object name).  
   
 3.  `object-type:` specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
@@ -376,7 +376,7 @@ migrate-data
   
 **Script**  
   
-1.  `object-name:` Specifies the source object(s) considered for migrating data (It can have indivdual object names or a group object name).  
+1.  `object-name:` Specifies the source object(s) considered for migrating data (It can have individual object names or a group object name).  
   
 2.  `object-type:` specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
@@ -470,7 +470,7 @@ synchronize-target
   
 **Script**  
   
-1.  `object-name:` Specifies the object(s) considered for synchronizing with target database (It can have indivdual object names or a group object name).  
+1.  `object-name:` Specifies the object(s) considered for synchronizing with target database (It can have individual object names or a group object name).  
   
 2.  `object-type:` specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
@@ -533,7 +533,7 @@ refresh-from-database
   
 **Script**  
   
-1.  `object-name:` Specifies the source object(s) considered for refreshing from source database (It can have indivdual object names or a group object name).  
+1.  `object-name:` Specifies the source object(s) considered for refreshing from source database (It can have individual object names or a group object name).  
   
 2.  `object-type:` Specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
@@ -598,7 +598,7 @@ Used to save the Scripts of the objects to a file mentioned when metabase=target
   
 Requires one or several metabase nodes as command line parameter.  
   
-1.  `object-name:` Specifies the object(s) whose scripts are to be saved . (It can have indivdual object names or a group object name)  
+1.  `object-name:` Specifies the object(s) whose scripts are to be saved . (It can have individual object names or a group object name)  
   
 2.  `object-type:` specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   

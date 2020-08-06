@@ -81,10 +81,10 @@ Use the **Configure OLE DB Connection Manager** dialog box to add a connection t
  Select a data connection, and then delete it by selecting **Delete**.  
   
 #### Managed identities for Azure resources authentication
-When running SSIS packages on [Azure-SSIS integration runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), use the [managed identity](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) associated with your data factory for Azure SQL Database (or managed instance) authentication. The designated factory can access and copy data from or to your database by using this identity.
+When running SSIS packages on [Azure-SSIS integration runtime in Azure Data Factory](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime), use the [managed identity](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) associated with your data factory for Azure SQL Database or Managed Instance authentication. The designated factory can access and copy data from or to your database by using this identity.
 
 > [!NOTE]
->  When you use Azure Active Directory (Azure AD) authentication (including managed identity authentication) to connect to Azure SQL Database (or managed instance), you might encounter a problem related to package execution failure or unexpected behavior change. For more information, see [Azure AD features and limitations](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
+>  When you use Azure Active Directory (Azure AD) authentication (including managed identity authentication) to connect to Azure SQL Database or Managed Instance, you might encounter a problem related to package execution failure or unexpected behavior change. For more information, see [Azure AD features and limitations](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations).
 
 To use managed identity authentication for Azure SQL Database, follow these steps to configure your database:
 
@@ -102,7 +102,7 @@ To use managed identity authentication for Azure SQL Database, follow these step
     EXEC sp_addrolemember [role name], [your data factory name];
     ```
 
-To use managed identity authentication for Azure SQL Database managed instance, follow these steps to configure your database:
+To use managed identity authentication for Azure SQL Managed Instance, follow these steps to configure your database:
     
 1. [Provision an Azure Active Directory administrator](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure#provision-an-azure-active-directory-administrator-for-your-managed-instance) for your managed instance on the Azure portal, if you haven't already done so. The Azure AD administrator can be an Azure AD user or Azure AD group. If you grant the group with managed identity an admin role, skip step 2-4. The administrator will have full access to the database.
 

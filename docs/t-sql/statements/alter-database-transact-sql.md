@@ -47,7 +47,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         [SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -299,7 +299,7 @@ GO
         **_\* SQL Database<br />single database/elastic pool \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -765,7 +765,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
         [SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />managed instance \*_** &nbsp;
+        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)
@@ -779,9 +779,9 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 &nbsp;
 
-## Overview: Azure SQL Database managed instance
+## Overview: Azure SQL Database Managed Instance
 
-In Azure SQL Database managed instance, use this statement to set database options.
+In Azure SQL Database Managed Instance, use this statement to set database options.
 
 Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.
 
@@ -907,7 +907,7 @@ ALTER DATABASE WideWorldImporters
         [SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;
@@ -1049,7 +1049,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
         [SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql.md?view=azure-sqldw-latest)

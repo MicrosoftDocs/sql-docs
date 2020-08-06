@@ -1,6 +1,6 @@
 ---
 title: "Working with Snapshot Isolation | Microsoft Docs"
-description: Learn how OLE DB Driver for SQL Server enhancements use snapshot isolation, which enhance concurrency for online transaction processing applications.
+description: Learn how OLE DB Driver for SQL Server enhancements use snapshot isolation, which enhances concurrency for online transaction processing applications.
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql

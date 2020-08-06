@@ -1,5 +1,5 @@
 ---
-title: SQL Database Projects extension
+title: Getting Started with the SQL Database Projects extension
 description: Install and use the SQL Database Projects extension (preview) for Azure Data Studio
 ms.custom: "seodec18"
 ms.date: "07/30/2020"
@@ -10,26 +10,7 @@ ms.topic: conceptual
 author: "dzsquared"
 ms.author: "drskwier"
 ---
-# SQL Database Projects extension (preview)
-
-The SQL Database Projects extension (preview) is an extension for developing SQL databases in a project-based development environment. This extension is currently in preview and is available in the [Azure Data Studio Insiders Build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main).
-
-
-## Install the SQL Database Projects extension
-
-1. To open the extensions manager and access the available extensions, select the extensions icon, or select **Extensions** in the **View** menu.
-2. Identify the *SQL Database Projects* extension by typing all or part of the name in the extension search box. Select an available extension to view its details.
-
-   ![Install extension](media/extensions/sql-database-projects-extension/install-database-projects.png)
-
-3. Select the extension you want and **Install** it.
-4. Select **Reload** to enable the extension (only required the first time you install an extension).
-5. Select the files icon from the activity bar or select **Explorer** from the **View** menu. A new viewlet for **Projects** is now available.
-
-   > [!NOTE]
-   > It is recommended to install the [Schema Compare extension](schema-compare-extension.md) alongside the SQL Database Projects extension for full functionality.
-
-## Getting Started with Database Projects
+# Getting Started with the SQL Database Projects extension (preview)
 
 * Create a new database project by going to the **Projects** viewlet under Explorer, or by searching for **New Database Project** in the command palette.
 * Existing database projects can be opened via **Open Database Project** in the command palette.

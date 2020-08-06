@@ -1322,7 +1322,7 @@ CREATE DATABASE TestDB3 COLLATE Japanese_XJIS_140 (MAXSIZE = 100 MB, EDITION = '
 
 &nbsp;
 
-## Azure SQL Database Managed Instance
+## Azure SQL Managed Instance
 
 ## Overview
 

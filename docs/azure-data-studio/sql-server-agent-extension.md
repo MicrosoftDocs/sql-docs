@@ -1,6 +1,6 @@
 ---
 title: SQL Server Agent extension
-description: Install and use the SQL Server Agent extension (preview) for Azure Data Studio
+description: Learn how to install and use the SQL Server Agent extension (preview) for Azure Data Studio—an extension for managing SQL Agent jobs and configurations. 
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu, maghan, sstein"

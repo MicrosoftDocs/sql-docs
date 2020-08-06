@@ -56,7 +56,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 <search_condition_without_match> ::= 
     { [ NOT ] <predicate> | ( <search_condition_without_match> ) }   
     [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition_without_match> ) } ]   
-[ ,...n ]   
+[ ...n ]   
   
 <predicate> ::=   
     { expression { = | < > | ! = | > | > = | ! > | < | < = | ! < } expression   
@@ -93,7 +93,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 < search_condition > ::=   
     { [ NOT ] <predicate> | ( <search_condition> ) }   
     [ { AND | OR } [ NOT ] { <predicate> | ( <search_condition> ) } ]   
-[ ,...n ]   
+[ ...n ]   
   
 <predicate> ::=   
     { expression { = | < > | ! = | > | > = | < | < = } expression   

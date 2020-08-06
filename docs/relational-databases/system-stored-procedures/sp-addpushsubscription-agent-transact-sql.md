@@ -91,7 +91,7 @@ sp_addpushsubscription_agent [ @publication= ] 'publication'
 >  Do not use a blank password. Use a strong password. When possible, prompt users to enter security credentials at runtime. If you must store credentials in a script file, you must secure the file to prevent unauthorized access.  
   
 `[ @job_login = ] 'job_login'`
- Is the login for the account under which the agent runs. On Azure SQL Database Managed Instance use a SQL Server account. *job_login* is **nvarchar(257)**, with a default value of NULL. This Windows account is always used for agent connections to the Distributor and for connections to the Subscriber when using Windows Integrated authentication.  
+ Is the login for the account under which the agent runs. On Azure SQL Managed Instance use a SQL Server account. *job_login* is **nvarchar(257)**, with a default value of NULL. This Windows account is always used for agent connections to the Distributor and for connections to the Subscriber when using Windows Integrated authentication.  
   
 `[ @job_password = ] 'job_password'`
  Is the password for the account under which the agent runs. *job_password* is **sysname**, with no default.  

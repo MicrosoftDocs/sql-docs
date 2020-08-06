@@ -98,7 +98,7 @@ GO
 
 Inputs to the `sp_execute_external_script` stored procedure include:
 
-| | |
+| Input | Description |
 |-|-|
 | @language | defines the language extension to call, in this case Python |
 | @script | defines the commands passed to the Python runtime. Your entire Python script must be enclosed in this argument, as Unicode text. You could also add the text to a variable of type **nvarchar** and then call the variable |

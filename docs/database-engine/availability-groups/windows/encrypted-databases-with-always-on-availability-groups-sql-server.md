@@ -1,6 +1,6 @@
 ---
 title: "Add an encrypted database to an availability group"
-description: "Steps to add an encrypted (or recently decrypted) database to an Always On availability group."
+description: "Learn the steps to add an encrypted (or recently decrypted) database to an Always On availability group."
 ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql

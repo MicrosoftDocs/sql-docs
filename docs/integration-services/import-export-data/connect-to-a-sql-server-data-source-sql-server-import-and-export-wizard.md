@@ -61,7 +61,7 @@ After you select **.NET Framework Data Provider for SQL Server** on the **Choose
 ODBC drivers aren't listed in the drop-down list of data sources. To connect with an ODBC driver, start by selecting the **.NET Framework Data Provider for ODBC** as the data source. This provider acts as a wrapper around the ODBC driver.
 
 > [!TIP]
-> **Get the latest driver**. Download the [Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).
+> **Get the latest driver**. Download the [Microsoft ODBC Driver for SQL Server](https://aka.ms/downloadmsodbcsql).
 
 Here's the generic screen that you see immediately after selecting the .NET Framework Data Provider for ODBC.
 

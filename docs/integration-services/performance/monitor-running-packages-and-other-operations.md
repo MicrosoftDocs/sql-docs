@@ -67,7 +67,7 @@ ms.author: chugu
  **Type**  
  Specifies the type of operation. The following are the possible values for the **Type** field and the corresponding values in the operations_type column of the Transact-SQL **catalog.operations** view.  
   
-|||  
+|Type field description|operations_type value|  
 |-|-|  
 |Integration Services initialization|1|  
 |Operations cleanup (SQL Agent job)|2|  

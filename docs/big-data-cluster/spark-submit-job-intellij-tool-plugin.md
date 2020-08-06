@@ -1,7 +1,7 @@
 ---
 title: "Run Spark jobs: Azure Toolkit for IntelliJ"
 titleSuffix: SQL Server Big Data Clusters
-description: Submit Spark jobs on SQL Server big data clusters in Azure Toolkit for IntelliJ.
+description: Learn how to submit Spark jobs on SQL Server big data clusters in Azure Toolkit for IntelliJ by submitting a local Jar or Py file.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray

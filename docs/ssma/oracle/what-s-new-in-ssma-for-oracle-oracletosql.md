@@ -156,7 +156,7 @@ The v8.0 release of SSMA for Oracle is enhanced with targeted fixes designed to 
 
 * Support for **Azure SQL Database Managed Instance** as a target. You can now create new projects targeting Azure SQL Database Managed Instance:
 
-  ![SQL DB MI project](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI project](../media/ssma-newproject-sqldbmi.png)
 
   > [!NOTE]
   > The SSMA for Oracle Extension Pack was also updated to allow remote installations on Azure SQL Database Managed Instance:
@@ -331,8 +331,8 @@ The January 2014 Maintenance release of SSMA for Oracle contains the following c
 
 The July 2014 release of SSMA for Oracle contains the following changes:
 
-* Added support for Azure SQL DB.
-* Extension pack functionality moved to schema to support Azure SQL DB.
+* Added support for Azure SQL Database.
+* Extension pack functionality moved to schema to support Azure SQL Database.
 * Added support for Oracle Materialized views.
 * Added support for SQL Server 2014 Memory optimized tables.
 * Included performance improvements tested for databases with over 10k objects.

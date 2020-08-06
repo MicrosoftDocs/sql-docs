@@ -1,6 +1,6 @@
 ---
 title: How to enable TCP protocol using SQLPS
-description: Learn about the two SQL Server PowerShell modules, SqlServer and SQLPS, which include PowerShell Providers and cmdlets.
+description: Learn how to enable TCP protocols using SQLPS
 ms.prod: sql
 ms.technology: scripting
 ms.topic: conceptual

@@ -1,6 +1,6 @@
 ---
 title: "IBCPSession::BCPColumns (OLE DB driver) | Microsoft Docs"
-description: "IBCPSession::BCPColumns (OLE DB)"
+description: Learn how the IBCPSession::BCPColumns sets the number of fields that are to be bound to the columns in a SQL Server table in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

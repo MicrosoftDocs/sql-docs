@@ -1,6 +1,6 @@
 ---
 title: Streaming support for BLOB output parameters (OLE DB driver)
-description: "Streaming support for BLOB output parameters"
+description: Learn about streaming support in OLE DB Driver for SQL Server for BLOB output parameters, which binds BLOB parameters as ISequentialStreams, with this sample.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

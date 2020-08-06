@@ -4,14 +4,15 @@ titleSuffix:
 description: R Services is a feature in SQL Server 2016 that gives the ability to run R scripts with relational data. You can use open-source packages and frameworks, and the Microsoft R packages for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server R Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/12/2019 
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 ---
 # What is SQL Server 2016 R Services?
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 R Services is a feature in SQL Server 2016 that gives the ability to run R scripts with relational data. You can use open-source packages and frameworks, and the [Microsoft R packages](#packages) for predictive analytics and machine learning. The scripts are executed in-database without moving data outside SQL Server or over the network. This article explains the basics of SQL Server R Services.
 
@@ -52,9 +53,18 @@ There are two ways to execute R scripts in R Services:
 
 <a name="version"></a>
 
-## R version
+## R versions
 
-R version 3.2.2 is included in SQL Server 2016 R Services. For newer versions of R, use [Machine Learning Services for SQL Server 2017 and later](../sql-server-machine-learning-services.md).
+The following lists the versions of the R runtime that are included in SQL Server 2016 R Services.
+
+SQL Server version | Default R runtime versions |
+|-|-|
+| SQL Server 2016 RTM - SP2 CU13 | 3.2.2 |
+| SQL Server 2016 SP2 CU14 and later | 3.2.2 and 3.5.2 |
+
+Cumulative Update (CU) 14 for SQL Server 2016 Service Pack (SP) 2 and later include newer R runtimes. For more information, see [Change the default language runtime version](../install/change-default-language-runtime-version.md).
+
+For other versions of R, or to run Python, use [Machine Learning Services for SQL Server 2017 and later](../sql-server-machine-learning-services.md).
 
 <a name="packages"></a>
 

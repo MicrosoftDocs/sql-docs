@@ -170,7 +170,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
 4.  Calculate the variable length data size:  
   
-     If there are variable-length columns in the index key, including any necessary clustering key columns as described previously in Step 2.2, determine how much space is used to store the columns within the index row:  
+     If there are variable-length columns (key columns or included), including any necessary clustering key columns as described previously in Step 2.2, determine how much space is used to store the columns within the index row:  
   
      ***Variable_Leaf_Size***  = 2 + (***Num_Variable_Leaf_Cols*** x 2) + ***Max_Var_Leaf_Size***  
   

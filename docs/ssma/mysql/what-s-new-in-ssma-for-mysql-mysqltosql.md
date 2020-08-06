@@ -109,9 +109,9 @@ The v8.1 release of SSMA for MySQL is enhanced with targeted fixes that are desi
 
 The v8.0 release of SSMA for MySQL is enhanced with targeted fixes designed to improve quality and conversion metrics. This release also offers the following new features:
 
-* Support for **Azure SQL Database Managed Instance** as a target. You can now create new projects targeting Azure SQL Database Managed Instance:
+* Support for **Azure SQL Managed Instance** as a target. You can now create new projects targeting Azure SQL Managed Instance:
 
-  ![SQL DB MI project](../media/ssma-newproject-sqldbmi.png)
+  ![SQL MI project](../media/ssma-newproject-sqldbmi.png)
 
 * Post-conversion **Fix advisor**. Learn more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 
@@ -233,8 +233,8 @@ The January 2016 maintenance release of SSMA for MySQL contains the following ch
 
 The July 2014 release of SSMA for MySQL contains the following changes:
   
-* Improved Azure SQL DB code conversion.
-* Extension pack functionality moved to schema to support Azure SQL DB.
+* Improved Azure SQL Database code conversion.
+* Extension pack functionality moved to schema to support Azure SQL Database.
 * Performance improvements tested for databases with over 10k objects.
 * UI improvements for dealing with large number of objects.
 * Highlighting of well-known LOB schemas (so they can be ignored in conversion).

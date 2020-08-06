@@ -1,6 +1,6 @@
 ---
 title: Azure SQL Managed Instance extension
-description: Use Azure Data Studio with Azure SQL managed instance
+description: Use Azure Data Studio with Azure SQL Managed Instance
 ms.custom: "seodec18"
 ms.date: "10/07/2019"
 ms.reviewer: alanyu, maghan, sstein
@@ -16,7 +16,7 @@ manager: alanyu
 
 The Azure SQL Managed Instance extension provides a dashboard for working with an [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). This extension provides the following features:
 
-- Shows managed instance properties, including vCores and used storage
+- Shows SQL Managed Instance properties, including vCores and used storage
 - Monitors CPU and storage usage for previous two hours
 - Displays configuration warnings and tuning recommendations
 - Shows state of database replicas
@@ -26,7 +26,7 @@ The Azure SQL Managed Instance extension provides a dashboard for working with a
 
 You can install the official release of this extension. Follow the steps
 in the [Azure Data Studio documentation](https://docs.microsoft.com/sql/azure-data-studio/extensions).
-In the **Extensions** pane, search for "managed instance", and install it there. After it's installed, you'll get notified automatically about any future extension updates.
+In the **Extensions** pane, search for "Managed Instance", and install it there. After it's installed, you'll get notified automatically about any future extension updates.
 
 With the extension installed, you'll see a **Managed Instance** tab in Azure Data Studio. Here you can find information specific for your managed instance.
 

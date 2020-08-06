@@ -11,7 +11,7 @@ author: "Shamikg"
 ms.author: "Shamikg"
 ---
 # Connect to Azure SQL Database (MySQLToSQL)
-Use the Connect to SQL Azure dialog box to connect to the SQL Azure database that you want to migrate.  
+Use the Connect to SQL Azure dialog box to connect to the database in Azure SQL Database that you want to migrate.  
   
 To access this dialog box, on the **File** menu, select **Connect to SQL Azure**. If you have previously connected, the command is **Reconnect to SQL Azure.**  
   
@@ -29,7 +29,7 @@ Select, enter or **Browse** the Database name.
   
 **User name**  
   
-Enter the user name that SSMA will use to connect to the SQL Azure database  
+Enter the user name that SSMA will use to connect to Azure SQL Database  
   
 **Password**  
   

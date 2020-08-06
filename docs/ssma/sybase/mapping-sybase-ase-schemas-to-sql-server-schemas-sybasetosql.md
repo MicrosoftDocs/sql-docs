@@ -13,7 +13,7 @@ author: "Shamikg"
 ms.author: "Shamikg"
 ---
 # Mapping Sybase ASE Schemas to SQL Server Schemas (SybaseToSQL)
-In Sybase Adaptive Server Enterprise (ASE), each database has one or more schemas. By default, SSMA migrates all objects within a database and schema to the same database and schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. However, you can customize the mapping between ASE and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure databases and schemas.  
+In Sybase Adaptive Server Enterprise (ASE), each database has one or more schemas. By default, SSMA migrates all objects within a database and schema to the same database and schema in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. However, you can customize the mapping between ASE and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database.  
   
 ## ASE and SQL Server or SQL Azure Schemas  
 ASE and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure both specify databases and their schemas by using two part notation as *database.schema*. For example, in an ASE **demo** database, there might be a **dbo** schema. That database and schema pair are specified as **demo.dbo**. If [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure has the same database and schema, the pair is also specified as **demo.dbo**.  
@@ -45,7 +45,7 @@ You can map source database to any target database. By default source database i
   
 -   Mapping to SQL Azure  
   
-You can map the source database to the connected target SQL Azure database or to any schema in the connected target SQL Azure database. If you map source Schema to any non-existing schema under connected target database, then you will be prompted with a message **"Schema does not exist in target metadata. It would be created during synchronization. Do you wish to continue? "** Click Yes.  
+You can map the source database to the connected target Azure SQL Database or to any schema in the connected target Azure SQL Database. If you map source Schema to any non-existing schema under connected target database, then you will be prompted with a message **"Schema does not exist in target metadata. It would be created during synchronization. Do you wish to continue? "** Click Yes.  
   
 ## Reverting to the Default Database and Schema  
 If you customize the mapping between an ASE schema and a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure schema, you can revert the mapping back to the default values.  

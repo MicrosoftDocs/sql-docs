@@ -14,7 +14,7 @@ author: "Shamikg"
 ms.author: "Shamikg"
 ---
 # Mapping Sybase ASE and SQL Server Data Types (SybaseToSQL)
-Sybase Adaptive Server Enterprise (ASE) database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database types. When you convert ASE database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects, you must specify how to map data types from ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can accept the default data type mappings, or you can customize the mappings as shown in the following sections.  
+Sybase Adaptive Server Enterprise (ASE) database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database types. When you convert ASE database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects, you must specify how to map data types from ASE to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can accept the default data type mappings, or you can customize the mappings as shown in the following sections.  
   
 ## Default Mappings  
 SSMA has a default set of data type mappings. For the list of default mappings, see [Project Settings &#40;Type Mapping&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  

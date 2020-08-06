@@ -101,7 +101,7 @@ Catalog=DatabaseName;Integrated Security=true"
 /AssessmentResultCsv="C:\\temp\\Results\\AssessmentReport.csv"
 ```
 
-**Single-database assessment for target platform SQL Azure Database, save results to .json and .csv file**
+**Single-database assessment for target platform Azure SQL Database, save results to .json and .csv file**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 
@@ -150,7 +150,7 @@ DmaCmd.exe /Action=AssessTargetReadiness
 
 ```
 
-**Single-database assessment for target platform SQL Azure Database, save results to .json and .csv file**
+**Single-database assessment for target platform Azure SQL Database, save results to .json and .csv file**
 
 ```
 DmaCmd.exe /AssessmentName="TestAssessment" 

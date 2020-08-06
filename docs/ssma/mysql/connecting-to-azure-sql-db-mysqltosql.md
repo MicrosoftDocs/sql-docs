@@ -57,7 +57,7 @@ When you define the connection properties, you also specify the database where o
 > SSMA for MySQL does not support connection to **master** database in SQL Azure.  
   
 ## Synchronizing SQL Azure Metadata  
-Metadata about SQL Azure databases is not automatically updated. The metadata in SQL Azure Metadata Explorer is a snapshot of the metadata when you first connected to SQL Azure, or the last time that you manually updated metadata. You can manually update metadata for all databases, or for any single database or database object.  
+Metadata about databases in Azure SQL Database is not automatically updated. The metadata in SQL Azure Metadata Explorer is a snapshot of the metadata when you first connected to SQL Azure, or the last time that you manually updated metadata. You can manually update metadata for all databases, or for any single database or database object.  
   
 **To synchronize metadata**  
   
@@ -72,7 +72,7 @@ Metadata about SQL Azure databases is not automatically updated. The metadata in
 ## Next Step  
 The next step in the migration depends on your project needs:  
   
--   To customize the mapping between MySQL schemas and SQL Azure databases and schemas, see [Mapping MySQL Databases to SQL Server Schemas &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
+-   To customize the mapping between MySQL schemas and Azure SQL Database, see [Mapping MySQL Databases to SQL Server Schemas &#40;MySQLToSQL&#41;](../../ssma/mysql/mapping-mysql-databases-to-sql-server-schemas-mysqltosql.md)  
   
 -   To customize configuration options for the projects, see [Setting Project Options &#40;MySQLToSQL&#41;](../../ssma/mysql/setting-project-options-mysqltosql.md)  
   

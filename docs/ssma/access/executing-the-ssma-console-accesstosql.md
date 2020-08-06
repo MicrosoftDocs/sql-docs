@@ -213,7 +213,7 @@ reconnect-source-database
   
 connect-target-database  
   
--   Connects to the target SQL Server or SQL Azure database and loads high level metadata of the target database but not the metadata entirely.  
+-   Connects to the target SQL Server or Azure SQL Database and loads high level metadata of the target database but not the metadata entirely.  
   
 -   If the connection to the target cannot be established, an error is generated and the console application stops further execution.  
   

@@ -11,7 +11,7 @@ author: "Shamikg"
 ms.author: "Shamikg"
 ---
 # Loading Converted Database Objects into SQL Server (MySQLToSQL)
-After you have converted MySQL Databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you can load the resulting database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can either have SSMA create the objects, or you can script the objects and run the scripts yourself. Also, SSMA lets you update target metadata with the actual contents of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database.  
+After you have converted MySQL Databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you can load the resulting database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can either have SSMA create the objects, or you can script the objects and run the scripts yourself. Also, SSMA lets you update target metadata with the actual contents of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database.  
   
 ## Choosing Between Synchronization and Scripts  
 If you want to load the converted database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure without modification, you can have SSMA directly create or recreate the database objects. That method is quick and easy, but does not allow for customization of the Transact-SQL code that defines the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects.  
@@ -19,10 +19,10 @@ If you want to load the converted database objects into [!INCLUDE[ssNoVersion](.
 If you want to modify the Transact-SQL that is used to create objects, or if you want more control over objects creation, use SSMA to create scripts. You can then modify these scripts, create each object individually, and even use SQL Server Agent to schedule creating these objects.  
   
 ## Using SSMA to Synchronize Objects with SQL Server  
-To use SSMA to create SQL Server or SQL Azure database objects, you select the objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure Metadata Explorer, and then synchronize the objects with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, as shown in the following procedure. By default, if the objects already exist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, and if the SSMA metadata has some local changes or updates to the definition of those very objects, then SSMA will alter the object definitions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can change the default behavior by editing **Project Settings**.  
+To use SSMA to create SQL Server or Azure SQL Database objects, you select the objects in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure Metadata Explorer, and then synchronize the objects with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, as shown in the following procedure. By default, if the objects already exist in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, and if the SSMA metadata has some local changes or updates to the definition of those very objects, then SSMA will alter the object definitions in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can change the default behavior by editing **Project Settings**.  
   
 > [!NOTE]  
-> You can select existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database objects that were not converted from MySQL databases. However, these objects will not be recreated or altered by SSMA.  
+> You can select existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database objects that were not converted from MySQL databases. However, these objects will not be recreated or altered by SSMA.  
   
 ##### To synchronize objects with SQL Server or SQL Azure  
   

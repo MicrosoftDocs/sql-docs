@@ -21,7 +21,7 @@ The **Snapshot Folder** page appears in the Configure Distribution Wizard and in
   
 The snapshot folder is simply a directory that you have designated as a share; agents that read from and write to this folder must have sufficient permissions to access it. For more information about securing the folder appropriately, see [Secure the Snapshot Folder](../../relational-databases/replication/security/secure-the-snapshot-folder.md). Prior to implementing replication, test that the replication agents will be able to connect to the snapshot folder. Log on under the account that will be used by each agent and then attempt to access the snapshot folder.  
 
-For a managed instance, the snapshot folder must be an Azure file share. 
+For Azure SQL Managed Instance, the snapshot folder must be an Azure file share. 
   
 ## Options  
  **Snapshot folder**  

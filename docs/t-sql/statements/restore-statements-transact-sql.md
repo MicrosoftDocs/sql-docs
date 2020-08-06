@@ -58,7 +58,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
@@ -734,7 +734,7 @@ RESTORE DATABASE Sales
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />managed instance \*_**
+        **_\* SQL Database<br />Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Analytics Platform<br />System (PDW)](restore-statements-transact-sql.md?view=aps-pdw-2016)
@@ -805,10 +805,10 @@ These limitations apply:
 - .BAK files containing multiple backup sets cannot be restored.
 - .BAK files containing multiple log files cannot be restored.
 - Restore will fail if .bak contains FILESTREAM data.
-- Backups containing databases that have active In-memory objects cannot be restored to a General Purpose managed instance.
+- Backups containing databases that have active In-memory objects cannot be restored to a General Purpose performance tier.
 - Backups containing databases in read-only mode cannot currently be restored. This limitation will be removed soon.
 
-For more information, see [managed instance](/azure/sql-database/sql-database-managed-instance)
+For more information, see [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance)
 
 ## Restoring an Encrypted Database
 To restore a database that is encrypted, you must have access to the certificate or asymmetric key that was used to encrypt the database. Without the certificate or asymmetric key, the database cannot be restored. As a result, the certificate that is used to encrypt the database encryption key must be retained as long as the backup is needed. For more information, see [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
@@ -882,7 +882,7 @@ WHERE r.command = 'RESTORE DATABASE'
         [SQL Server](restore-statements-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](restore-statements-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Analytics<br />Platform System (PDW) \*_**

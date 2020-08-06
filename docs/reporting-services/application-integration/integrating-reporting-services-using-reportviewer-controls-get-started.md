@@ -144,7 +144,7 @@ Make sure to update any assembly references to version *15.0.0.0*, including the
     ```
     Install-Package Microsoft.ReportingServices.ReportViewerControl.WinForms
     ```
-3. Add a new control from code or [add the control to the toolbox](#adding-control-to-visual-studio-toolbar).
+3. Add a new control from code or [add the control to the toolbox](#add-control-to-visual-studio-toolbar).
 
     ```csharp
     private Microsoft.Reporting.WinForms.ReportViewer reportViewer1;

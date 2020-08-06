@@ -58,7 +58,7 @@ Trace flags are used to customize certain characteristics by controlling how [!I
   
 After turning on a trace flag that affects query plans, execute `DBCC FREEPROCCACHE;` so that cached plans are recompiled using the new plan-affecting behavior.
 
-Azure SQL Database Managed Instance supports the following global Trace Flags: 460,2301,2389,2390,2453,2467,7471,8207,9389,10316, and 11024
+Azure SQL Managed Instance supports the following global Trace Flags: 460,2301,2389,2390,2453,2467,7471,8207,9389,10316, and 11024
 
 ## Result Sets  
  DBCC TRACEON returns the following result set (message):  

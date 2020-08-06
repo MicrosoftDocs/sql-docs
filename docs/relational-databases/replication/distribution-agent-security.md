@@ -156,7 +156,7 @@ Persist Security Info=False;Connection Pooling=True;
   
 ## See Also  
  [Transactional replication with Azure SQL Database](/azure/sql-database/sql-database-managed-instance-transactional-replication)
- [Configure replication for a managed instance](/azure/sql-database/replication-with-sql-database-managed-instance)
+ [Configure replication for Azure SQL Managed Instance](/azure/sql-database/replication-with-sql-database-managed-instance)
 ::: moniker-end
 
 

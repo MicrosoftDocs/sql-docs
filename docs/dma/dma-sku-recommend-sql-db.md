@@ -20,18 +20,18 @@ ms.author: rajpo
 
 Migrating  databases to the cloud can be complicated, especially when trying to select the best Azure database target and SKU for your database. Our goal with the Database Migration Assistant (DMA) is to help address these questions and make your database migration experience easier by providing these SKU recommendations in a user-friendly output.
 
-This article focuses on DMA's Azure SQL Database SKU recommendations feature. Azure SQL Database has several deployment options, including:
+This article focuses on DMA's Azure SQL Database SKU recommendations feature. Azure SQL Database and Azure SQL Managed Instance have several deployment options, including:
 
 - Single database
 - Elastic pools
 - Managed instance
 
-The SKU Recommendations feature allows you to identify both the minimum recommended Azure SQL Database single database or managed instance SKU based on performance counters collected from the computer(s) hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to bulk provision single databases and managed instances in Azure for all recommended databases.
+The SKU Recommendations feature allows you to identify both the minimum recommended Azure SQL Database single database or Azure SQL Managed Instance SKU based on performance counters collected from the computer(s) hosting your databases. The feature provides recommendations related to pricing tier, compute level, and max data size, as well as estimated cost per month. It also offers the ability to bulk provision single databases and managed instances for all recommended databases.
 
 > [!NOTE]
 > This functionality is currently available only via the Command Line Interface (CLI).
 
-The following are instructions to help you determine the Azure SQL Database SKU recommendations and provision corresponding single database(s) or managed instance(s) in Azure using DMA.
+The following are instructions to help you determine the SKU recommendations and provision corresponding single database(s) or managed instance(s) in Azure using DMA.
 
 ## Prerequisites
 
@@ -171,15 +171,15 @@ For managed instance recommendations, the TSV output file will look as follows:
 A description of each column in the output file follows.
 
 - **DatabaseName** - The name of your database.
-- **MetricType** - Recommended Azure SQL Database single database/managed instance tier.
-- **MetricValue** - Recommended Azure SQL Database single database/managed instance SKU.
+- **MetricType** - Recommended performance tier.
+- **MetricValue** - Recommended SKU.
 - **PricePerMonth** – The estimated price per month for the corresponding SKU.
 - **RegionName** – The region name for the corresponding SKU. 
 - **IsTierRecommended** - We make a minimum SKU recommendation for each tier. We then apply heuristics to determine the right tier for your database. This reflects which tier is recommended for the database. 
 - **ExclusionReasons** - This value is blank if a Tier is recommended. For each tier that isn't recommended, we provide the reasons why it wasn't picked.
 - **AppliedRules** - A short notation of the rules that were applied.
 
-The final recommended tier (i.e., **MetricType**) and value (i.e., **MetricValue**) - found where the **IsTierRecommended** column is TRUE - reflects the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For managed instance, DMA currently supports recommendations for the most commonly used 8vcore to 40vcore SKUs. For example, if the recommended minimum SKU is S4 for the standard tier, then choosing S3 or below will cause queries to time out or fail to execute.
+The final recommended tier (i.e., **MetricType**) and value (i.e., **MetricValue**) - found where the **IsTierRecommended** column is TRUE - reflects the minimum SKU required for your queries to run in Azure with a success rate similar to your on-premises databases. For Azure SQL Managed Instance, DMA currently supports recommendations for the most commonly used 8vcore to 40vcore SKUs. For example, if the recommended minimum SKU is S4 for the standard tier, then choosing S3 or below will cause queries to time out or fail to execute.
 
 The HTML file contains this information in a graphical format. It provides a user-friendly means of viewing the final recommendation and provisioning the next part of the process. More information on the HTML output is in the following section.
 
@@ -209,7 +209,7 @@ To input provisioning information and make changes to the recommendations, updat
 
     This process should create all the databases you selected in the HTML page.
 
-**For managed instance recommendations**
+**For Azure SQL Managed Instance recommendations**
 
 ![Azure SQL MI SKU Recommendations screen](../dma/media/dma-sku-recommend-mi-recommendations1.png)
 

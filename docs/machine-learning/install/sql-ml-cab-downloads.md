@@ -3,7 +3,7 @@ title: Download updates for offline install
 description: Download Python and R CAB files for SQL Server Machine Learning Services. These CAB files contain updates to the Machine Learning Services (Python and R) feature and are used when installing SQL Server on a server without internet access.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 03/24/2020
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph

@@ -62,7 +62,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ||**0**|Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher. *This cannot be changed for a non-*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*|  
 |**working_directory**||Working directory used to store data and schema files for the publication.|  
 |NULL (default)||All available *property* options are printed.| 
-|**storage_connection_string**| Access key | The access key for the working directory when the database is Azure SQL Database Managed Instance. 
+|**storage_connection_string**| Access key | The access key for the working directory when the database is Azure SQL Managed Instance. 
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

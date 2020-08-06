@@ -465,7 +465,7 @@ Used to recreate a login. Applies to SQL Server authentication logins only. Spec
 - New syntax is introduced for the creation of server-level principals mapped to Azure AD accounts (**FROM EXTERNAL PROVIDER**)
 - When **FROM EXTERNAL PROVIDER** is specified:
 
-  - The login_name must represent an existing Azure AD account (user, group, or application) that is accessible in Azure AD by the current Azure SQL managed instance. For Azure AD principals, the CREATE LOGIN syntax requires:
+  - The login_name must represent an existing Azure AD account (user, group, or application) that is accessible in Azure AD by the current Azure SQL Managed Instance. For Azure AD principals, the CREATE LOGIN syntax requires:
     - UserPrincipalName of the Azure AD object for Azure AD Users.
     - DisplayName of Azure AD object for Azure AD Groups and Azure AD Applications.
   - The **PASSWORD** option cannot be used.
@@ -488,12 +488,12 @@ By default, the standard permission granted to a newly created Azure AD login in
 
 - Must have **ALTER ANY LOGIN** permission on the server or membership in the one of the fixed server roles `securityadmin` or `sysadmin`. Only an Azure Active Directory (Azure AD) account with **ALTER ANY LOGIN** permission on the server or membership in one of those roles can execute the create command.
 - If the login is a SQL Principal, only logins that are part of the `sysadmin` role can use the create command to create logins for an Azure AD account.
-- Must be a member of Azure AD within the same directory used for Azure SQL managed instance.
+- Must be a member of Azure AD within the same directory used for Azure SQL Managed Instance.
 
 ## After creating a login
 
 > [!NOTE]
-> The Azure AD admin for managed instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> The Azure AD admin for Azure SQL Managed Instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 After creating a login, the login can connect to a managed instance, but only has the permissions granted to the **public** role. Consider performing some of the following activities.
 

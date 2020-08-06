@@ -53,7 +53,7 @@ In the following row, select whichever product name you're interested in. Doing 
         [SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -1463,7 +1463,7 @@ SET QUERY_STORE = ON
         **_\* SQL Database<br />single database/elastic pool \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -2355,7 +2355,7 @@ SET QUERY_STORE = ON
         [SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />managed instance \*_** &nbsp;
+        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-database-transact-sql-set-options.md?view=azure-sqldw-latest)
@@ -3150,7 +3150,7 @@ SET QUERY_STORE = ON
         [SQL Database<br />single database/elastic pool](alter-database-transact-sql-set-options.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-set-options.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_** &nbsp;

@@ -221,11 +221,11 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 >
 > We recommend updating your projects to use the 7.2.2 release jars. For more information, view release notes for [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) and [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2).
 
-### Active Directory _Managed Service Identity_ (MSI) authentication
+### Active Directory _Managed Identity_ (MSI) authentication
 
 | MSI change | Details |
 | :--------- | :------ |
-| Supports Active Directory Managed Service Identity (MSI) authentication mode. | This mode of authentication is applicable on Azure Resources with support for "Identity" feature enabled.<br/><br/>Both types of Managed System Identities (MSI) are supported by the driver to acquire **accessToken** for establishing secure connection. |
+| Supports Active Directory Managed Identity (MSI) authentication mode. | This mode of authentication is applicable on Azure Resources with support for the "Identity" feature enabled.<br/><br/>Both types of Managed Identities (MSI) are supported by the driver to acquire **accessToken** for establishing secure connection. |
 | More details and a sample application to use this authentication mode. | See [Connecting using Azure Active Directory Authentication](connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 

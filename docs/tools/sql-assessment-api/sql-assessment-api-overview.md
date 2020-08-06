@@ -27,11 +27,11 @@ Microsoft's shipped ruleset is available on GitHub. You can visit the [samples r
 
 ## SQL Assessment cmdlets and SMO extension
 
-SQL Assessment API is part of the [SQL Server Management Objects (SMO)](../relational-databases/server-management-objects-smo/installing-smo.md) July 2019 release version and higher and the [SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md) July 2019 release version and higher.
+SQL Assessment API is part of the [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/installing-smo.md) July 2019 release version and higher and the [SQL Server PowerShell module](../../powershell/download-sql-server-ps-module.md) July 2019 release version and higher.
 
-* [Install SMO](../relational-databases/server-management-objects-smo/installing-smo.md)
+* [Install SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)
 
-* [Install SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md)
+* [Install SQL Server PowerShell module](../../powershell/download-sql-server-ps-module.md)
 
 SqlServer module is getting two new cmdlets to work with SQL Assessment API:
 
@@ -130,4 +130,4 @@ You can string together rulesets by adding one or more JSON files as parameters 
 
 ## Next steps
 
-Take a look at [SQL Server Management Objects (SMO)](../relational-databases/server-management-objects-smo/overview-smo.md) and [PowerShell](../powershell/download-sql-server-ps-module.md).
+Take a look at [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/overview-smo.md) and [PowerShell](../powershell/download-sql-server-ps-module.md).

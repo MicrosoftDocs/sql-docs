@@ -11,6 +11,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Monitor PREDICT T-SQL statements with extended events in SQL Server Machine Learning Services
+[!INCLUDE [SQL Server 2017 and later ](../../includes/applies-to-version/sqlserver2017.md)]
 
 Learn how to use extended events to monitor and troubleshooting [PREDICT](../../t-sql/queries/predict-transact-sql.md) T-SQL statements in SQL Server Machine Learning Services.
 

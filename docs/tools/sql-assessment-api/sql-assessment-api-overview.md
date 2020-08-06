@@ -21,7 +21,7 @@ The API can be used to assess Azure SQL Managed Instance and SQL Server versions
 
 ## Rules
 
-Rules sometimes referred to as checks, are defined in JSON formatted files. Ruleset format requires a ruleset name and version to be specified. So when you use custom rulesets, you can easily know which recommendations from what ruleset come. 
+Rules sometimes referred to as checks, are defined in JSON formatted files. Ruleset format requires a ruleset name and version to be specified. So when you use custom rulesets, you can easily know which recommendations from what ruleset come.
 
 Microsoft's shipped ruleset is available on GitHub. You can visit the [samples repository](https://aka.ms/sql-assessment-api) for more details.
 
@@ -130,4 +130,5 @@ You can string together rulesets by adding one or more JSON files as parameters 
 
 ## Next steps
 
-Take a look at [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/overview-smo.md) and [PowerShell](../powershell/download-sql-server-ps-module.md).
+* [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/overview-smo.md)
+* [PowerShell](../../powershell/download-sql-server-ps-module.md).

@@ -64,7 +64,7 @@ When you view the **Type Mapping** tab in SSMA, the background is color-coded to
   
     1.  Some types require a target data type length. If required, enter the new data length in the **Replace With** box, and then click **OK**.  
   
-    2.  Some types require a target data type **precision** and **scale** . If required, enter the new precision and scale in the **Replace With** box, and then click **OK** .  
+    2.  Some types require a target data type **precision** and **scale**. If required, enter the new precision and scale in the **Replace With** box, and then click **OK**.  
   
 -   **To remove a data type mapping, do the following:**  
   

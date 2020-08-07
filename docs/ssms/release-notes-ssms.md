@@ -464,7 +464,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | High DPI | Fixed layout of controls in *New Availability Group* page, which is on some localized version of SSMS. |
 | High DPI | Fixed layout of *New Job Schedule* page. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37632094) for more details. |
 | Import flat file | Fixed in an issue where rows could be silently lost during the import.|
-| Intellisense/editor | Reduced SMO-based query traffic to Azure SQL Databases for IntelliSense. |
+| Intellisense/editor | Reduced SMO-based query traffic to Azure SQL Database for IntelliSense. |
 | Intellisense/editor | Fixed grammatical error in the tooltip displayed when typing T-SQL to create a user. Also, fixed the error message to disambiguate between users and logins. |
 | Log Viewer | Fixed an issue where SSMS always opens the current server (or agent) log, even if double-clicking an older archive sign in the Object Explorer. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37633648) for more details. |
 | SSMS setup | Fixed the issue that was causing SSMS setup to fail when the setup log path contained spaces. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37496110) for more details. |
@@ -544,7 +544,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Azure Data Studio integration|Added menu item to start/download Azure Data Studio.|
 |Azure Data Studio integration|Added "Start Azure Data Studio" menu item to Object Explorer.|
 |Azure Data Studio integration|When right-clicking on a database node in OE, the user is presented with context menus to either run a query or create a new notebook in Azure Data Studio.|
-|Azure SQL support| SLO/Edition/MaxSize database properties now accept custom names, making it easier to support future editions of Azure SQL Databases.|
+|Azure SQL support| SLO/Edition/MaxSize database properties now accept custom names, making it easier to support future editions of Azure SQL Database.|
 |Azure SQL support| Added support for vCore SKUs (General Purpose and Business Critical): Gen4_24 and all the Gen5.|
 |Azure SQL Managed Instance|Added new "AAD logins" as a new login type in SMO and SSMS when connected to Azure SQL Managed Instance.|
 |Always On|Rehash RTO (estimated recovery time)  and RPO (estimated data loss) in SSMS Always on Dashboard. See the updated documentation at [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).|

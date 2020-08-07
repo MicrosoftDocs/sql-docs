@@ -503,7 +503,7 @@ October 29, 2018 &nbsp; / &nbsp; version: 1.1.4
 
 | Change | Details |
 | :----- | :------ |
-| Introducing the Azure Resource Explorer to browse Azure SQL Databases. | &nbsp; |
+| Introducing the Azure Resource Explorer to browse Azure SQL Database. | &nbsp; |
 | Improve Object Explorer and Query Editor connectivity robustness. | &nbsp; |
 | SQL Agent extensions improvements. | &nbsp; |
 | Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md?view=sql-server-ver15). |
@@ -543,7 +543,7 @@ General Availability release of Azure Data Studio (formerly SQL Operations Studi
 | :----- | :------ |
 | Support for SQL Server 2019 preview features including [big data cluster](../big-data-cluster/big-data-cluster-overview.md) support. | Connect to the HDFS/Spark Gateway shipped with SQL Server 2019 preview.<br/><br/>Browse HDFS, upload files, save files, and launch useful actions such as Analyze in Notebook for CSV files.<br/><br/>Submit Spark jobs from the dashboard or right-click on a HDFS/Spark connection in Object Explorer. |
 | Azure Data Studio Notebooks. | Create or open Notebooks using an integrated Notebook viewer. In this release, the Notebook viewer supports connecting to local kernels and the SQL Server 2019 big data cluster only.<br/><br/>Use the PROSE Code Accelerator libraries in your Notebook to learn file format and data types for fast data preparation. |
-| Azure Resource Explorer. | The Azure Resource Explorer view lets you browse data-related endpoints for your Azure accounts and create connections to them in Object Explorer. In this release, Azure SQL Databases and servers are supported. |
+| Azure Resource Explorer. | The Azure Resource Explorer view lets you browse data-related endpoints for your Azure accounts and create connections to them in Object Explorer. In this release, Azure SQL Database is supported. |
 | SQL Server PolyBase Create External Table Wizard. | Create an external table and its supporting metadata structures with an easy to use wizard. In this release, remote SQL Server and Oracle servers are supported. |
 | &nbsp; | &nbsp; |
 

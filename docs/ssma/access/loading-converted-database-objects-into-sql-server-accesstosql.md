@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "uploading objects into SQL Azure"
   - "uploading objects into SQL Server"
 ms.assetid: 4e854eee-b10c-4f0b-9d9e-d92416e6f2ba
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Loading Converted Database Objects into SQL Server (AccessToSQL)
 After you have converted Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you can load the resulting database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can either have SSMA create the objects, or you can script the objects and run the scripts yourself. Also, SSMA lets you update target metadata with the actual contents of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database.  

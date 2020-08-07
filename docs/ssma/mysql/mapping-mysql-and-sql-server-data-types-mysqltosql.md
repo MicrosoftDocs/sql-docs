@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "Mapping, customize data type mapping"
   - "Mapping, Type mapping"
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Mapping MySQL and SQL Server Data Types (MySQLToSQL)
 MySQL database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database types. When you convert MySQL database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects, you must specify how to map data types from MySQL to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can accept the default data type mappings, or you can customize the mappings as shown in the following procedures.  

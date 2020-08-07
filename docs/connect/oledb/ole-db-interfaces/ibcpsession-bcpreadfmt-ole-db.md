@@ -49,7 +49,7 @@ HRESULT BCPReadFmt(
  The method succeeded.  
   
  E_FAIL  
- A provider-specific error occurred, for detailed information use the [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interface.  
+ A provider-specific error occurred, for detailed information use the [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) interface.  
   
  E_OUTOFMEMORY  
  Out of memory error.  

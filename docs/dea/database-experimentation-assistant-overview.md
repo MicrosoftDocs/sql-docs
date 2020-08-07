@@ -7,8 +7,8 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: HJToland3
-ms.author: rajsell
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ms.custom: "seo-lt-2019"
 ---

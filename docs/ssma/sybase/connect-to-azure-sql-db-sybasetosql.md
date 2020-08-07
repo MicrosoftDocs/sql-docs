@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 96538007-1099-40c8-9902-edd07c5620ee
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Connect to Azure SQL Database  (SybaseToSQL)
 Use the Connect to Azure SQL Database dialog box to connect to the Azure SQL Database database that you want to migrate.  

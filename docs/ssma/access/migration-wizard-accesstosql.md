@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "Migration Wizard, New Project"
   - "Migration Wizard, Selecting objects to migrate"
 ms.assetid: 5bab5914-b2ae-4795-8cf5-83e42d64bef2
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Migration Wizard (AccessToSQL)
 The Migration Wizard guides you through the migration of one or more databases from Access to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Or SQL Azure. By using the wizard, you will create a project, add databases to the project, select objects to migrate, and connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Or SQL Azure. You will also convert, load, and migrate Access schemas and data. Optionally, you can link Access tables to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Or SQL Azure tables.  

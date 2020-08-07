@@ -154,16 +154,16 @@ The v8.1 release of SSMA for Oracle is enhanced with targeted fixes that are des
 
 The v8.0 release of SSMA for Oracle is enhanced with targeted fixes designed to improve quality and conversion metrics. This release also offers the following new features:
 
-* Support for **Azure SQL Database Managed Instance** as a target. You can now create new projects targeting Azure SQL Database Managed Instance:
+* Support for **Azure SQL Managed Instance** as a target. You can now create new projects targeting Azure SQL Managed Instance:
 
   ![SQL MI project](../media/ssma-newproject-sqldbmi.png)
 
   > [!NOTE]
-  > The SSMA for Oracle Extension Pack was also updated to allow remote installations on Azure SQL Database Managed Instance:
+  > The SSMA for Oracle Extension Pack was also updated to allow remote installations on Azure SQL Managed Instance:
   >
   > ![SSMA for Oracle Extension Pack](../media/ssma-oracle-ext-pack.png)
 
-  Some features, including Tester and Server-side data migration, are not supported when targeting Azure SQL Database Managed Instance. Read more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
+  Some features, including Tester and Server-side data migration, are not supported when targeting Azure SQL Managed Instance. Read more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/migrate-your-oracle-database-to-azure-sql-database-managed-instance-using-ssma-8-0/).
 
 * Post-conversion **Fix advisor**. Learn more about it [here](https://blogs.msdn.microsoft.com/datamigration/2019/02/17/%20accelerate-your-oracle-migrations-with-new-machine-learning-capabilities-in-ssma/).
 

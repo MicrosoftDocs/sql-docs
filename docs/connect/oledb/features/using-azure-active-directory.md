@@ -28,7 +28,7 @@ Starting with version [18.2.1](../release-notes-for-oledb-driver-for-sql-server.
 
 Version [18.3.0](../release-notes-for-oledb-driver-for-sql-server.md#1830) adds support for the following authentication methods:
 - Azure Active Directory interactive authentication
-- Azure Active Directory MSI authentication
+- Azure Active Directory Managed Identity authentication
 
 Version [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) adds support for the following authentication method:
 - Azure Active Directory service principal authentication
@@ -39,7 +39,7 @@ Version [18.5.0](../release-notes-for-oledb-driver-for-sql-server.md#1850) adds 
 > - Azure Active Directory authentication using access token
 > - Azure Active Directory integrated authentication
 > - Azure Active Directory interactive authentication
-> - Azure Active Directory MSI authentication
+> - Azure Active Directory managed identities authentication
 > - Azure Active Directory service principal authentication
 
 ## Connection string keywords and properties
@@ -130,7 +130,7 @@ This section shows examples of new and existing connection string keywords to be
 - Using `DBPROP_INIT_PROVIDERSTRING`:
     > Server=[server];Database=[database];**Authentication=ActiveDirectoryInteractive**;UID=[username];Encrypt=yes
 
-### Azure Active Directory MSI authentication
+### Azure Active Directory Managed Identity authentication
 
 - Using `IDataInitialize::GetDataSource`:
     - User-assigned managed identity:

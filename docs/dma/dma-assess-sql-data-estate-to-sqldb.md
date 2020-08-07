@@ -93,7 +93,7 @@ After you successfully create a migration project, under **Assessment tools**, i
 1. On the left, select the **+** icon, and then select the assessment **Project type**
 2. Specify the project name, and then select the source server and target server types.
 
-    If you're upgrading your on-premises SQL Server instance to a later version of SQL Server or to SQL Server hosted on an Azure VM, set the source and target server type to **SQL Server**. Set the target server type to **Azure SQL Database Managed Instance** for an Azure SQL Database (PaaS) target readiness assessment.
+    If you're upgrading your on-premises SQL Server instance to a later version of SQL Server or to SQL Server hosted on an Azure VM, set the source and target server type to **SQL Server**. Set the target server type to **Azure SQL Managed Instance** for an Azure SQL Database (PaaS) target readiness assessment.
 
 3. Select **Create**.
 

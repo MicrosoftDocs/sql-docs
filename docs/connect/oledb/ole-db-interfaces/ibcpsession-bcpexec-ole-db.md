@@ -1,6 +1,6 @@
 ---
 title: "IBCPSession::BCPExec (OLE DB driver) | Microsoft Docs"
-description: The BCPExec method copies data from a user file to a database table or vice versa in OLE DB Driver for SQL Server.
+description: "The IBCPSession::BCPExec method copies data from a user file to a database table or vice versa in OLE DB Driver for SQL Server."
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

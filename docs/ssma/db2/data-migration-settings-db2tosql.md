@@ -7,7 +7,7 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 573e673e-a194-4cb2-9aba-aaac6e1a225c
-author: "Shanahk-ivanovmikg"
+author: "nahk-ivanov"
 ms.author: "alexiva"
 ---
 # Data Migration Settings (DB2ToSQL)

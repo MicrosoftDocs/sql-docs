@@ -58697,12 +58697,12 @@
     },
     {
       "source_path": "docs/sql-assessment-api/sql-assessment-api-overview.md",
-      "redirect_url": "/sql/tools/sql-assessment-api/sql-assessment-api-overview.md",
+      "redirect_url": "/sql/tools/sql-assessment-api/sql-assessment-api-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "docs/visual-studio-code/sql-server-develop-use-vscode.md",
-      "redirect_url": "/sql/tools/visual-studio-code/sql-server-develop-use-vscode.md",
+      "redirect_url": "/sql/tools/visual-studio-code/sql-server-develop-use-vscode",
       "redirect_document_id": false
     }
   ]

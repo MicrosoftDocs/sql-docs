@@ -1,6 +1,6 @@
 ---
 title: "Microsoft JDBC Driver for SQL Server support matrix"
-description: "This page contains the support matrix and support life cycle policy for the Microsoft JDBC Driver for SQL Server."
+description: "This page contains the support matrix and support life-cycle policy for the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/06/2020"
 ms.prod: sql
@@ -71,15 +71,15 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 |2.0|   |   |   |   |   |   |   |   |   |Yes<sup>3</sup>|Yes<sup>3</sup>|
 |1.2|   |   |   |   |   |   |   |   |   |   |Yes<sup>3</sup>|
 
- <sup>1</sup>Microsoft SQL Server JDBC Driver version 3.0 can connect to SQL Server 2012 as a down-level client.  
+ <sup>1</sup> Microsoft SQL Server JDBC Driver version 3.0 can connect to SQL Server 2012 as a down-level client.  
   
- <sup>2</sup>Support for Azure SQL Database was introduced in the 3.0 driver as a hotfix. We recommend that Azure SQL Database customers use the latest driver version available.  
+ <sup>2</sup> Support for Azure SQL Database was introduced in the 3.0 driver as a hotfix. We recommend that Azure SQL Database customers use the latest driver version available.  
   
- <sup>3</sup>Microsoft SQL Server JDBC Driver version 2.0 and Microsoft SQL Server 2005 JDBC Driver version 1.2 can connect to SQL Server 2008 as a down-level client. When down-level conversions are allowed, applications can execute queries and perform updates on the new SQL Server 2008 data types, such as time, date, datetime2, datetimeoffset, and FILESTREAM. For more information about how to use these new data types with the JDBC driver, see  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver](https://go.microsoft.com/fwlink/?LinkId=145198) and  [Working with SQL Server 2008 FileStream using JDBC Driver](https://go.microsoft.com/fwlink/?LinkId=145199). For more information about the down-level compatibility of these new data types, see  [Using Date and Time Data](https://go.microsoft.com/fwlink/?LinkId=145211)and  [FILESTREAM Support](https://go.microsoft.com/fwlink/?LinkId=145212) topics in SQL Server Books Online.  
+ <sup>3</sup> Microsoft SQL Server JDBC Driver version 2.0 and Microsoft SQL Server 2005 JDBC Driver version 1.2 can connect to SQL Server 2008 as a down-level client. When down-level conversions are allowed, applications can execute queries and perform updates on the new SQL Server 2008 data types, such as time, date, datetime2, datetimeoffset, and FILESTREAM. For more information about how to use these new data types with the JDBC driver, see  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver](https://go.microsoft.com/fwlink/?LinkId=145198) and  [Working with SQL Server 2008 FileStream using JDBC Driver](https://go.microsoft.com/fwlink/?LinkId=145199). For more information about the down-level compatibility of these new data types, see  [Using Date and Time Data](https://go.microsoft.com/fwlink/?LinkId=145211)and  [FILESTREAM Support](https://go.microsoft.com/fwlink/?LinkId=145212) topics in SQL Server Books Online.  
   
- <sup>4</sup>Support for connections between the Microsoft JDBC Driver and Parallel Data Warehouse was first introduced in the Microsoft JDBC Driver 4.0 for SQL Server and Microsoft SQL Server 2008 R2 Parallel Data Warehouse Appliance Update 3.  
+ <sup>4</sup> Support for connections between the Microsoft JDBC Driver and Parallel Data Warehouse was first introduced in the Microsoft JDBC Driver 4.0 for SQL Server and Microsoft SQL Server 2008 R2 Parallel Data Warehouse Appliance Update 3.  
   
- <sup>5</sup>Microsoft SQL Server JDBC Driver version 3.0 can connect to SQL Server 2014 as a down-level client.  
+ <sup>5</sup> Microsoft SQL Server JDBC Driver version 3.0 can connect to SQL Server 2014 as a down-level client.  
   
 ## Java and JDBC specification support
   

@@ -87,7 +87,7 @@ How to enable the TCP protocol when connected to the console not using SQLPS.
     Restart-Service -Name MSSQLSERVER -Force
     ```
 
-## Next Steps
+## Next steps
 
 - [Install the SQL Server PowerShell module](download-sql-server-ps-module.md)
 - [SQL Server PowerShell](sql-server-powershell.md)

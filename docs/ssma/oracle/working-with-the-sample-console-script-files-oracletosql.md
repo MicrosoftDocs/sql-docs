@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "Sample Console Script Files, SqlStatementConversionSample.xml"
   - "Sample Console Script Files,VariableValueFileSample.xml"
 ms.assetid: c6202dcc-b994-457b-9b2f-0cd89e79792d
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Working with the Sample Console Script Files (OracleToSQL)
 A few sample files have been provided along with the product for the user reference and usage. This section describes the way to easily customize these scripts to fit the end user needs.  

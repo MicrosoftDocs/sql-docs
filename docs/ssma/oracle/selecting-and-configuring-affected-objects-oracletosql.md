@@ -10,9 +10,9 @@ helpviewer_keywords:
   - "Columns Comparison Settings"
   - "Selection of Affected Objects"
 ms.assetid: 545eeda2-9829-4187-a858-619a96b4b71d
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Selecting and Configuring Affected Objects (OracleToSQL)
 At this page you can select tables and foreign keys, changes in which should be compared when SSMA verifies the results of execution for the objects chosen in the previous step. Also, you can customize the verification parameters.  

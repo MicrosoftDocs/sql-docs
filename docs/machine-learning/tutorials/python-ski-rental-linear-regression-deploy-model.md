@@ -4,7 +4,7 @@ titleSuffix: SQL machine learning
 description: In part four of this four-part tutorial series, you'll deploy a Python model to predict ski rentals into a database with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/21/2020
+ms.date: 08/06/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
@@ -44,12 +44,12 @@ In [part three](python-ski-rental-linear-regression-train-model.md), you learned
 
 ## Create a stored procedure that generates the model
 
-Now, using the Python scripts you developed, create a stored procedure **generate_rental_py_model** that trains and generates the linear regression model using LinearRegression from  scikit-learn.
+Now, using the Python scripts you developed, create a stored procedure **generate_rental_py_model** that trains and generates the linear regression model using LinearRegression from scikit-learn.
 
 Run the following T-SQL statement in Azure Data Studio to create the stored procedure to train the model.
 
 ```sql
--- Stored procedure that trains and generates a Python model using the rental_data and a decision tree algorithm
+-- Stored procedure that trains and generates a Python model using the rental_data and a linear regression algorithm
 DROP PROCEDURE IF EXISTS generate_rental_py_model;
 go
 CREATE PROCEDURE generate_rental_py_model (@trained_model varbinary(max) OUTPUT)

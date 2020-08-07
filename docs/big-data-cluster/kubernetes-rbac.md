@@ -42,39 +42,43 @@ The default `admin` role does not have these permissions, so the user deploying 
 
 Starting with SQL Server 2019 CU5, Telegraf requires a service account with cluster wide role permissions to collect the pod and node metrics. During the deployment (or upgrade for existing deployments), we attempt to create the necessary service account and cluster role, but if the user deploying the cluster or performing the upgrade does not have sufficient permissions, deployment or upgrade will still proceed with a warning and succeed. In this case, the pod & node metrics will not be collected. The user deploying the cluster must ask a cluster administrator to create the role and service account (either before or after the deployment or upgrade). After they are created, BDC uses them. 
 
-Here is a script that shows how to create the required artifacts:
-​
-```console
-export CLUSTER_NAME=mssql-cluster
-kubectl create -f - <<EOF
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRole
-metadata:
-  name: ${CLUSTER_NAME}:cr-mssql-metricsdc-reader
-rules:
-- apiGroups:
-  - '*'
-  resources:
-  - pods
-  - nodes/stats
-  verbs:
-  - get
----
-apiVersion: rbac.authorization.k8s.io/v1
-kind: ClusterRoleBinding
-metadata:
-  name: ${CLUSTER_NAME}:crb-mssql-metricsdc-reader
-roleRef:
-  apiGroup: rbac.authorization.k8s.io
-  kind: ClusterRole
-  name: ${CLUSTER_NAME}:cr-mssql-metricsdc-reader
-subjects:
-- kind: ServiceAccount
-  name: sa-mssql-metricsdc-reader
-  namespace: ${CLUSTER_NAME}
-EOF
-```
+Here are the steps to show how to create the required artifacts:
+
+1. Create a *metrics-role.yaml* file with below content. Make sure to replace the *<clusterName>* placeholders  with the name of your big data cluster.
+
+   ```yaml
+   apiVersion: rbac.authorization.k8s.io/v1
+   kind: ClusterRole
+   metadata:
+     name: <clusterName>:cr-mssql-metricsdc-reader
+   rules:
+   - apiGroups:
+     - '*'
+     resources:
+     - pods
+     - nodes/stats
+     verbs:
+     - get
+   ---
+   apiVersion: rbac.authorization.k8s.io/v1
+   kind: ClusterRoleBinding
+   metadata:
+     name: <clusterName>:crb-mssql-metricsdc-reader
+   roleRef:
+     apiGroup: rbac.authorization.k8s.io
+     kind: ClusterRole
+     name: <clusterName>:cr-mssql-metricsdc-reader
+   subjects:
+   - kind: ServiceAccount
+     name: sa-mssql-metricsdc-reader
+     namespace: <clusterName>
+   ```
+
+2. Create the cluster role and the cluster role binding:
+
+   ```bash
+   kubectl create -f metrics-role.yaml
+   ```
 
 The service account, cluster role and the cluster role binding can be created either before or post BDC deployment. Kubernetes automatically updates the permission for the Telegraf service account. If these are created as a pod deployment, you will see a few minutes' delay in the pod and node metrics being collected.
 

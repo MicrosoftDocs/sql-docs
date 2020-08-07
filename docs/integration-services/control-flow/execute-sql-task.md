@@ -1,5 +1,5 @@
 ---
-title: Execute SQL Task (SSIS)
+title: Execute SQL Task
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
@@ -22,7 +22,7 @@ author: chugugrace
 ms.author: chugu
 ---
 
-# Execute SQL Task (SSIS)
+# Execute SQL Task
 
 [!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 

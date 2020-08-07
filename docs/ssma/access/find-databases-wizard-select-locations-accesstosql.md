@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Find Databases Wizard"
 ms.assetid: 00b2d32a-998b-47a7-b25c-589b5bd6777a
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Find Databases Wizard (Select Locations) (AccessToSQL)
 On the Select Locations page of the Find Databases Wizard, you enter the search parameters for finding Access databases.  

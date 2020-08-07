@@ -61,12 +61,6 @@ EXEC sp_execute_external_script
 @script=N'library(randomForest)'
 ```
 
-The catalog view sys.external_libraries lists a row for each external library that has been uploaded into the database.
-
-```sql
-SELECT * from sys.external_libraries
-```
-
 ## See also
 
 + [Get R package information](r-package-information.md)

@@ -10,9 +10,9 @@ helpviewer_keywords:
   - "reference, user interface"
   - "user interface"
 ms.assetid: af24c303-4a41-449b-9c86-d6558a97e839
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: murato
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # User Interface Reference (AccessToSQL)
 This section includes Help topics for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) for Access.  

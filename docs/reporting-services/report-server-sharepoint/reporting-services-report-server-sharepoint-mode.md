@@ -24,7 +24,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
 
  For more information on installing and configuring, see the following:  
   
--   [Install Reporting Services SharePoint mode for SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c).  
+-   [Install Reporting Services SharePoint mode for SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode).  
   
 -   [Add an additional Report Server to a farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).  
   
@@ -124,7 +124,7 @@ monikerRange: ">=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions"
   
 |**Task**|**Link**|  
 |--------------|--------------|  
-|Detailed steps for installing and configuring Reporting Services in SharePoint mode.|[Install Reporting Services SharePoint mode for SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) and [Add an additional Report Server to a farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
+|Detailed steps for installing and configuring Reporting Services in SharePoint mode.|[Install Reporting Services SharePoint mode for SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode) and [Add an additional Report Server to a farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md).|  
 |Scale-out your Reporting Services SharePoint deployment by adding additional report servers.|[Add an additional Report Server to a Farm](../../reporting-services/install-windows/add-an-additional-report-server-to-a-farm-ssrs-scale-out.md) and [Deployment topologies for SQL Server BI features in SharePoint](https://msdn.microsoft.com/library/39f76bc7-94e6-4dbc-bfa5-d56f4430bb26).|  
 |Add additional SharePoint web front-ends that have the Reporting Services components installed for viewing and report items.|[Add an additional Reporting Services web front-end to a farm](../../reporting-services/install-windows/add-an-additional-reporting-services-web-front-end-to-a-farm.md)|  
 |Configure e-mail for your report server within SharePoint.|[Configure e-mail for a Reporting Services service application](../install-windows/configure-e-mail-for-a-reporting-services-service-application.md)|

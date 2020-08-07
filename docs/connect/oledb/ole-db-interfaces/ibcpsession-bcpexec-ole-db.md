@@ -47,7 +47,7 @@ HRESULT BCPExec(
  The method succeeded.  
   
  E_FAIL  
- A provider-specific error occurred; for detailed information, use the [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interface.  
+ A provider-specific error occurred; for detailed information, use the [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) interface.  
   
  E_UNEXPECTED  
  The call to the method was unexpected. For example, the **BCPInit** method was not called before calling this method. Also occurs if the operation has been aborted through using the BCP_OPTION_ABORT option, and the **BCPExec** method was called afterwards.  

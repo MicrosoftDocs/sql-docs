@@ -214,7 +214,7 @@ reconnect-source-database
   
 connect-target-database  
   
-- Connects to the target SQL Server or SQL Azure database and loads high-level metadata of the target database but not the metadata entirely.  
+- Connects to the target SQL Server or SQL Azure Database and loads high-level metadata of the target database but not the metadata entirely.  
   
 - If the connection to the target can't be established, an error is generated and the console application stops further execution.  
   
@@ -396,7 +396,7 @@ or
   
 migrate-data  
   
-1. Migrates the source data to the target.  
+- Migrates the source data to the target.  
   
 **Script**
   
@@ -540,19 +540,19 @@ The default console output setting for the migration commands is 'Full' output r
 
 synchronize-target  
   
-1. Synchronizes the target objects with the target database.  
+- Synchronizes the target objects with the target database.  
   
-2. If this command is executed against the source database, you get an error.  
+- If this command is executed against the source database, you get an error.  
   
-3. If the target database connection is not performed before executing this command or the connection to the target database server fails during the command execution, an error is generated and the console application exits.  
+- If the target database connection is not performed before executing this command or the connection to the target database server fails during the command execution, an error is generated and the console application exits.  
   
 **Script**
   
-1. `object-name:` Specifies the target object(s) considered for synchronizing with target database (It can have individual object names or a group object name).  
+- `object-name:` Specifies the target object(s) considered for synchronizing with target database (It can have individual object names or a group object name).  
   
-2. `object-type:` Specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
+- `object-type:` Specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
-3. `on-error:` Specifies whether to specify synchronization errors as warnings or error. Available options for on-error:  
+- `on-error:` Specifies whether to specify synchronization errors as warnings or error. Available options for on-error:  
   
     - report-total-as-warning  
   
@@ -560,7 +560,7 @@ synchronize-target
   
     - fail-script  
   
-4. `report-errors-to:` Specifies location of error report for the synchronization operation (optional attribute)           if only folder path is given, then file by name **TargetSynchronizationReport.XML** is created.  
+- `report-errors-to:` Specifies location of error report for the synchronization operation (optional attribute)           if only folder path is given, then file by name **TargetSynchronizationReport.XML** is created.  
   
 **Syntax Example:**  
   
@@ -616,11 +616,11 @@ refresh-from-database
   
 Requires one or several metabase nodes as command line parameter.  
   
-1. `object-name:` Specifies the source object(s) considered for refreshing from source database (It can have individual object names or a group object name).  
+- `object-name:` Specifies the source object(s) considered for refreshing from source database (It can have individual object names or a group object name).  
   
-2. `object-type:` Specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
+- `object-type:` Specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
-3. `on-error:` Specifies whether to specify refresh errors as warnings or error. Available options for on-error:  
+- `on-error:` Specifies whether to specify refresh errors as warnings or error. Available options for on-error:  
   
     - report-total-as-warning  
   
@@ -628,7 +628,7 @@ Requires one or several metabase nodes as command line parameter.
   
     - fail-script  
   
-4. `report-errors-to:` Specifies location of error report for the refresh operation (optional attribute) if only folder path is given, then file by name **SourceDBRefreshReport.XML** is created.  
+- `report-errors-to:` Specifies location of error report for the refresh operation (optional attribute) if only folder path is given, then file by name **SourceDBRefreshReport.XML** is created.  
   
 **Syntax Example:**  
   
@@ -726,7 +726,7 @@ or
 </save-as-script>  
 ```  
   
-## Next Steps
+## Next steps
 
 For information on command line options, see [Command Line Options in SSMA Console &#40;AccessToSQL&#41;](../../ssma/access/command-line-options-in-ssma-console-accesstosql.md) .  
   

@@ -83,10 +83,10 @@ SSMS 18.6 is the latest general availability (GA) release of SSMS. If you need a
 | Integration Services | Fixed a bug that customers can't edit a SQL agent job step when using SSMS versions 18.4 or earlier to execute SSIS packages in Azure SQL Managed Instance. |
 | Integration Services | Fixed a bug where the **Use 32-bit runtime** option is missing in the **Execution options** tab to execute an SSIS package in a SQL agent job step for an on-premises SQL Server. |
 | Intellisense / Editor | Fixed an issue where an error dialog may pop up when doing File -> New -> Database Engine Query. |
-| Object Explorer | Fixed an issue where *Properties window* was not available for SQL Azure Databases when right-clicking on a Table or Index node in Object Explorer. |
+| Object Explorer | Fixed an issue where *Properties window* was not available for Azure SQL Database when right-clicking on a Table or Index node in Object Explorer. |
 | Object Explorer | Addressed an issue where SSMS can't expand databases node for master in Azure if there's a control plane outage affecting sys.database_service_objectives. |
 | Reports | Fixed several standard reports that were broken on Linux </br></br> Example: Memory Consumption report was failing with an error similar to "/var/opt/mssql/log/log_116.trc\log.trc' is invalid…"). |
-| SMO / Scripting | Updated the logic to create new SQL Azure Databases to use Gen5_2 as the default SLO. |
+| SMO / Scripting | Updated the logic to create new databases in Azure SQL Database to use Gen5_2 as the default SLO. |
 | Xevent UI | Fixed long outstanding issue (introduced in SSMS 18.0) where "Save to XEL file…" was throwing an error. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37695592). |
 
 #### Known issues (18.6)

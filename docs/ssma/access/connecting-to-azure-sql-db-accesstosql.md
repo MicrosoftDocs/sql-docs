@@ -66,7 +66,7 @@ When you define the connection properties, you also specify the database where o
 If there are no databases in the SQL Azure account, you can create the first database using **Create Azure Database** option that appears on the click of **Browse** button.  
   
 ## Synchronizing SQL Azure Metadata  
-Metadata about SQL Azure databases is not automatically updated. The metadata in SQL Azure Metadata Explorer is a snapshot of the metadata when you first connected to SQL Azure, or the last time that you manually updated metadata. You can manually update metadata for all databases, or for any single database or database object.  
+Metadata about databases in Azure SQL Database is not automatically updated. The metadata in SQL Azure Metadata Explorer is a snapshot of the metadata when you first connected to SQL Azure, or the last time that you manually updated metadata. You can manually update metadata for all databases, or for any single database or database object.  
   
 **To synchronize metadata**  
   
@@ -90,10 +90,10 @@ Your connection to SQL Azure stays active until you close the project. When you 
   
 The procedure for reconnecting to SQL Azure is the same as the procedure for establishing a connection.  
   
-## Next Step  
+## Next steps  
 The next step in the migration depends on your project needs:  
   
--   To customize the mapping between Access schemas and SQL Azure databases and schemas, see [Mapping Access Databases to SQL Server Schemas](mapping-source-and-target-databases-accesstosql.md).  
+-   To customize the mapping between Access schemas and Azure SQL Database, see [Mapping Access Databases to SQL Server Schemas](mapping-source-and-target-databases-accesstosql.md).  
   
 -   To customize configuration options for the projects, see [Setting Project Options](setting-conversion-and-migration-options-accesstosql.md).  
   

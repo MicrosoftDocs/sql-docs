@@ -139,7 +139,7 @@ The Database Connection commands help connect to the database.
   
 connect-source-database  
   
--   Performs connection to the source database and loads high level metadata of the source database but not all of the metadata.  
+-   Performs connection to the source database and loads high-level metadata of the source database but not all of the metadata.  
   
 -   If the connection to the source cannot be established, an error is generated and the console application stops further execution  
   
@@ -164,7 +164,7 @@ force-load-source/target-database
   
 **Script**  
   
-Requires one or several metabase nodes as command line parameter.  
+Requires one or several metabase nodes as command-line parameter.  
   
 **Syntax Example:**  
   
@@ -194,7 +194,7 @@ reconnect-source-database
   
 connect-target-database  
   
-1.  Connects to the target SQL Server or SQL Azure database and loads high level metadata of the target database but not the metadata entirely.  
+1.  Connects to the target SQL Server or Azure SQL Database and loads high-level metadata of the target database but not the metadata entirely.  
   
 2.  If the connection to the target cannot be established, an error is generated and the console application stops further execution.  
   
@@ -238,7 +238,7 @@ generate-assessment-report
   
 **Script**  
   
-1.  `assessment-report-folder:` Specifies folder where the assessment report can to be stored.(optional attribute)  
+1.  `assessment-report-folder:` Specifies folder where the assessment report is stored.(optional attribute)  
   
 2.  `object-name:` Specifies the object(s) considered for assessment report generation (It can have individual object names or a group object name).  
   
@@ -250,7 +250,7 @@ generate-assessment-report
   
 5.  `write-summary-report-to:` Specifies the path where the summary report will be generated.  
   
-    If only the folder path is mentioned,then file by name **AssessmentReport&lt;n&gt;.XML** is created. (optional attribute)  
+    If only the folder path is mentioned, then file by name **AssessmentReport&lt;n&gt;.XML** is created. (optional attribute)  
   
     Report creation has two further sub-categories:  
   
@@ -312,9 +312,9 @@ convert-schema
   
 **Script**  
   
-1.  `conversion-report-folder:` Specifies folder where the assessment report can to be stored.(optional attribute)  
+1.  `conversion-report-folder:` Specifies folder where the assessment report is stored.(optional attribute)  
   
-2.  `object-name:` Specifies the object(s) considered for converting schema (It can have indivdual object names or a group object name).  
+2.  `object-name:` Specifies the object(s) considered for converting schema (It can have individual object names or a group object name).  
   
 3.  `object-type:` specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
@@ -324,7 +324,7 @@ convert-schema
   
 5.  `write-summary-report-to:` Specifies the path where the summary report will be generated.  
   
-    If only the folder path is mentioned,then file by name **SchemaConversionReport&lt;n&gt;.XML** is created. (optional attribute)  
+    If only the folder path is mentioned, then file by name **SchemaConversionReport&lt;n&gt;.XML** is created. (optional attribute)  
   
     Summary report creation has two further sub-categories:  
   
@@ -376,7 +376,7 @@ migrate-data
   
 **Script**  
   
-1.  `object-name:` Specifies the source object(s) considered for migrating data (It can have indivdual object names or a group object name).  
+1.  `object-name:` Specifies the source object(s) considered for migrating data (It can have individual object names or a group object name).  
   
 2.  `object-type:` specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
@@ -470,7 +470,7 @@ synchronize-target
   
 **Script**  
   
-1.  `object-name:` Specifies the object(s) considered for synchronizing with target database (It can have indivdual object names or a group object name).  
+1.  `object-name:` Specifies the object(s) considered for synchronizing with target database (It can have individual object names or a group object name).  
   
 2.  `object-type:` specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
@@ -533,7 +533,7 @@ refresh-from-database
   
 **Script**  
   
-1.  `object-name:` Specifies the source object(s) considered for refreshing from source database (It can have indivdual object names or a group object name).  
+1.  `object-name:` Specifies the source object(s) considered for refreshing from source database (It can have individual object names or a group object name).  
   
 2.  `object-type:` Specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
@@ -547,7 +547,7 @@ refresh-from-database
   
 4.  `report-errors-to:` Specifies location of error report for the synchronization operation (optional attribute)           if only folder path is given, then file by name **SourceDBRefreshReport.XML** is created.  
   
-Requires one or several metabase nodes as command line parameter.  
+Requires one or several metabase nodes as command-line parameter.  
   
 **Syntax Example:**  
   
@@ -596,9 +596,9 @@ Used to save the Scripts of the objects to a file mentioned when metabase=target
   
 **Script**  
   
-Requires one or several metabase nodes as command line parameter.  
+Requires one or several metabase nodes as command-line parameter.  
   
-1.  `object-name:` Specifies the object(s) whose scripts are to be saved . (It can have indivdual object names or a group object name)  
+1.  `object-name:` Specifies the object(s) whose scripts are to be saved . (It can have individual object names or a group object name)  
   
 2.  `object-type:` specifies the type of the object specified in the object-name attribute (if object category is specified then object type will be "category").  
   
@@ -650,7 +650,7 @@ convert-sql-statement
   
     If this attribute is not specified, then the converted T-SQL statement is displayed on the console. (optional attribute)  
   
-3.  `conversion-report-folder` specifies folder where the assessment report can to be stored.(optional attribute)  
+3.  `conversion-report-folder` specifies folder where the assessment report is stored.(optional attribute)  
   
 4.  `conversion-report-overwrite` specifies whether to overwrite the assessment report folder if it already exists.  
   
@@ -672,7 +672,7 @@ convert-sql-statement
   
 **Script**  
   
-Requires one or several metabase nodes as command line parameter.  
+Requires one or several metabase nodes as command-line parameter.  
   
 **Syntax Example:**  
   
@@ -743,7 +743,7 @@ or
 ```  
   
 ## Next Step  
-For information on command line options, see [Command Line Options in SSMA Console &#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md) .  
+For information on command-line options, see [command-line Options in SSMA Console &#40;MySQLToSQL&#41;](../../ssma/mysql/command-line-options-in-ssma-console-mysqltosql.md) .  
   
 For more information on Sample console script files, see [Working with the Sample Console Script Files &#40;MySQLToSQL&#41;](../../ssma/mysql/working-with-the-sample-console-script-files-mysqltosql.md)  
   

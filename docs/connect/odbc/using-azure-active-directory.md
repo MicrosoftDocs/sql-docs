@@ -2,7 +2,7 @@
 title: "Using Azure Active Directory with the ODBC Driver"
 description: "The Microsoft ODBC Driver for SQL Server allows ODBC applications to connect to an instance of Azure SQL Database using Azure Active Directory."
 ms.custom: ""
-ms.date: "05/06/2020"
+ms.date: "08/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -94,7 +94,7 @@ These options correspond to the same six available in the DSN setup UI above.
 `server=Server;database=Database;Trusted_Connection=yes;`
 4. (_Windows driver only_.) Integrated Windows Authentication using SSPI (if the target database is in SQL Server or SQL IaaS) - new syntax. The client requests encryption (the default value of `Encrypt` is `true`) and the server certificate gets validated, regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`). 
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
-5. Azure AD Username/Password Authentication (if the target database is in Azure SQL Database). Server certificate gets validated, regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`). The username/password is passed in the connection string. 
+5. Azure Active Directory Username/Password Authentication (if the target database is in Azure SQL Database). Server certificate gets validated, regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`). The username/password is passed in the connection string. 
 `server=Server;database=Database;UID=UserName;PWD=Password;Authentication=ActiveDirectoryPassword;`
 6. (_Windows, and Linux/macOS 17.6+, driver only_.) Integrated Windows Authentication using ADAL or Kerberos, which involves redeeming Windows account credentials for an Azure AD-issued access token, assuming the target database is in Azure SQL Database. Server certificate gets validated, regardless of the encryption setting (unless `TrustServerCertificate` is set to `true`). On Linux/macOS, a suitable Kerberos ticket needs to be available; see the section below on Federated Accounts and [Using Integrated Authentication](linux-mac/using-integrated-authentication.md) for more information.
 `server=Server;database=Database;Authentication=ActiveDirectoryIntegrated;`
@@ -103,7 +103,7 @@ These options correspond to the same six available in the DSN setup UI above.
 
 ![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
 
-8. Azure AD Managed Identity Authentication uses system-assigned or user-assigned identity for authentication to set up connection. For user-assigned identity, UID is set to the object ID of the user identity.<br>
+8. Azure Active Directory Managed Identity Authentication uses system-assigned or user-assigned identity for authentication to set up connection. For user-assigned identity, UID is set to the object ID of the user identity.<br>
 For system-assigned identity,<br>
 `server=Server;database=Database;Authentication=ActiveDirectoryMsi;`<br>
 For user-assigned identity with object ID equals to myObjectId,<br>

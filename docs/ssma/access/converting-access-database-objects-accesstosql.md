@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "translating Access to SQL Azure"
   - "translating Access to SQL Server"
 ms.assetid: e0ef67bf-80a6-4e6c-a82d-5d46e0623c6c
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Converting Access Database Objects (AccessToSQL)
 After you have added Access databases and connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, SSMA displays metadata for Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database objects. You can now select Access database objects, and then convert the schemas into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure schemas.  
@@ -109,7 +109,7 @@ After you convert Access metadata to [!INCLUDE[ssNoVersion](../../includes/ssnov
   
 You can now view the changes in the code on the **SQL** tab.  
   
-## Next Step  
+## Next steps  
 The next step in the migration process is [load converted database objects into SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md)  
   
 ## See Also  

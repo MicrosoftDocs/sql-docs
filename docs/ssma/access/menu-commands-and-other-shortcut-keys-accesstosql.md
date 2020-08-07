@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 04bba43a-7bed-4d3c-bb62-8e9ab2adf9e3
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Menu commands and other shortcut keys (AccessToSQL)
 The following sections describe the keyboard shortcuts to access menu commands and other shortcut keys used in various dialog boxes of SSMA for Access application.  

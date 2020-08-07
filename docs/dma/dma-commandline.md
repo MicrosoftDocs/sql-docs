@@ -55,7 +55,7 @@ DmaCmd.exe /AssessmentName="string"
 |`/FeatureDiscoveryReportJson`    | Path to the feature discovery JSON report. If this file is generated, then it can be used to run target readiness assessment again without connecting to source. | N
 |`/ImportFeatureDiscoveryReportJson`    | Path to the feature discovery JSON report created earlier. Instead of source connections, this file will be used.   | N
 |`/EnableAssessmentUploadToAzureMigrate`    | Enables uploading and publishing assessment results to Azure Migrate   | N
-|`/AzureCloudEnvironment`    |Selects the Azure cloud environment to connect to, default is Azure Public Cloud. Supported values: Azure (default), AzureChina, AzureGermany,AzureUSGovernment.   | N 
+|`/AzureCloudEnvironment`    |Selects the Azure cloud environment to connect to, default is Azure Public Cloud. Supported values: Azure (default), AzureChina, AzureGermany, AzureUSGovernment.   | N 
 |`/SubscriptionId`    |Azure subscription ID.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
 |`/AzureMigrateProjectName`    |The Azure Migrate Project name to upload assessment results to.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
 |`/ResourceGroupName`    |Azure Migrate resource group name.   | Y <br> (Required if EnableAssessmentUploadToAzureMigrate argument is specified)
@@ -299,7 +299,7 @@ These commands support recommendations for both Azure SQL Database single databa
 |`/SkuRecommendationSubscriptionId` | The subscription ID. | Y <br> (For the latest prices)
 |`/SkuRecommendationDatabasesToRecommend` | Space-separated list of databases to recommend for (e.g. “Database1” “Database2” “Database3”). Names are case-sensitive and must be surrounded by double-quotes. If omitted, recommendations are provided for all databases. | N
 |`/AzureAuthenticationTenantId` | The authentication tenant. | Y <br> (For the latest prices)
-|`/AzureAuthenticationClientId` | The client ID of the AAD app used for authentication. | Y <br> (For the latest prices)
+|`/AzureAuthenticationClientId` | The client ID of the Azure AD app used for authentication. | Y <br> (For the latest prices)
 |`/AzureAuthenticationInteractiveAuthentication` | Set to true to pop up the window. | Y <br> (For the latest prices) <br>(Pick one of the 3 authentication options - option 1)
 |`/AzureAuthenticationCertificateStoreLocation` | Set to the certificate store location (e.g. "CurrentUser"). | Y <br>(For the latest prices) <br> (Pick one of the 3 authentication options - option 2)
 |`/AzureAuthenticationCertificateThumbprint` | Set to the cert thumbprint. | Y <br> (For the latest prices) <br>(Pick one of the 3 authentication options - option 2)

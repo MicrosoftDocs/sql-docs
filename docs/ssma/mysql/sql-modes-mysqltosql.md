@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: d840ee51-b863-4e77-84aa-37d3f094bfed
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # SQL Modes (MySQLToSQL)
 The SSMA for MySQL can operate in different SQL Modes, and can apply these modes differently for different clients.  

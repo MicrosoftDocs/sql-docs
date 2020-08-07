@@ -21,9 +21,9 @@ helpviewer_keywords:
   - "slow performance"
   - "unlinking tables"
 ms.assetid: 82374ad2-7737-4164-a489-13261ba393d4
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: murato
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Linking Access applications to SQL Server - Azure SQL Database (AccessToSQL)
 If you want to use your existing Access applications with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can link your original Access tables to the migrated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure tables. Linking modifies your Access database so that your queries, forms, reports, and data access pages use the data in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database instead of the data in your Access database.  

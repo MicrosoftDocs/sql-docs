@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "procedure, migration"
   - "recommended migration process"
 ms.assetid: 76a3abcf-2998-4712-9490-fe8d872c89ca
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: murato
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Migrating Access databases to SQL Server - Azure SQL Database (AccessToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) is a tool that provides a comprehensive environment that helps you quickly migrate Access databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. By using SSMA, you can review Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database objects, assess the Access database for migration, convert Access database objects, load them into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, and then migrate data.  

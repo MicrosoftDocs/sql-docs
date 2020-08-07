@@ -32,7 +32,7 @@ You must have the following prerequisites to complete Report Builder tutorials:
   
 -   The name of a SQL Server instance and credentials sufficient for read-only access to any database. The dataset queries in the tutorials use literal data, but each query must be processed by a SQL Server instance to return the metadata that is required for a report dataset. For example, the following connection string specifies only a server: `data source=<servername>`. You must have read access to the default database that is assigned to you by the system administrator who grants you permission to access the server. You can also specify a database, as shown in the following connection string: `data source=<servername>;initial catalog=<database>`.  
   
--   For the [Tutorial: Map Report (Report Builder)](tutorial-map-report-report-builder.md), the report server must be configured to support Bing maps as a background. For more information, see [Plan for Map Report Support](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19).   
+-   For the [Tutorial: Map Report (Report Builder)](tutorial-map-report-report-builder.md), the report server must be configured to support Bing maps as a background. For more information, see [Plan for Map Report Support](https://docs.microsoft.com/sql/reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs).   
 
 -   The [Tutorial: Creating Drillthrough and Main Reports (Report Builder)](tutorial-creating-drillthrough-and-main-reports-report-builder.md) tutorial requires access to the Contoso Sales cube. See the tutorial for more information. 
   

@@ -146,7 +146,7 @@ The Extended Verification feature can also be used when developing an applicatio
   
 2.  In **Properties**, change the **Extended T-SQL Verification** property to **False**.  
   
-![File Properties](../ssdt/media/ssdt-evf.gif "File Properties")  
+    ![File Properties](../ssdt/media/ssdt-evf.gif "File Properties")  
   
 ### Special Considerations for Collations  
 For more information regarding collations in partially contained databases, see [Contained Database Collations](https://msdn.microsoft.com/library/ff929080%28v=sql.110%29.aspx).  

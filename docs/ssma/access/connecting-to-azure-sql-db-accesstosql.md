@@ -90,7 +90,7 @@ Your connection to SQL Azure stays active until you close the project. When you 
   
 The procedure for reconnecting to SQL Azure is the same as the procedure for establishing a connection.  
   
-## Next Step  
+## Next steps  
 The next step in the migration depends on your project needs:  
   
 -   To customize the mapping between Access schemas and Azure SQL Database, see [Mapping Access Databases to SQL Server Schemas](mapping-source-and-target-databases-accesstosql.md).  

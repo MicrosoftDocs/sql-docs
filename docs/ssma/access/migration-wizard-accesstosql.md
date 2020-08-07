@@ -75,7 +75,7 @@ On the Connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] page
 > As soon as the connection succeeds, you will encounter **Link Tables** page where you have an option of linking the tables. Click **Next** and the migration starts.  
   
 ## Connect to SQL Azure Page  
-On the Connect to SQL Azure page, you specify connection properties, and then connect to SQL Azure. To create a new azure database, you can do so by using **Create Azure Database** option that appears on the click of **Browse** button. For more information, see [Connect to SQL Azure](connect-to-azure-sql-db-accesstosql.md)  
+On the Connect to SQL Azure page, you specify connection properties, and then connect to SQL Azure. To create a new Azure database, you can do so by using **Create Azure Database** option that appears on the click of **Browse** button. For more information, see [Connect to SQL Azure](connect-to-azure-sql-db-accesstosql.md)  
   
 > [!IMPORTANT]  
 > As soon as the connection succeeds, you will encounter **Link Tables** page where you have an option of linking the tables. Click **Next** button on the Links page to start migration.  

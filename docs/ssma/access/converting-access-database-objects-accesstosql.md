@@ -109,7 +109,7 @@ After you convert Access metadata to [!INCLUDE[ssNoVersion](../../includes/ssnov
   
 You can now view the changes in the code on the **SQL** tab.  
   
-## Next Step  
+## Next steps  
 The next step in the migration process is [load converted database objects into SQL Server](loading-converted-database-objects-into-sql-server-accesstosql.md)  
   
 ## See Also  

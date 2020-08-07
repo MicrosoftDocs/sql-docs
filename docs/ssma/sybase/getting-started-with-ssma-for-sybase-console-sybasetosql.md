@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Sybase Console,Output Conventions"
   - "Sybase Console,Procedure for Using Console"
 ms.assetid: 43219dbe-bcfa-427d-9242-f07b1455f15f
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Getting Started with the SSMA for Sybase Console (SybaseToSQL)
 This section describes the procedure for launching and getting started with the SSMA for Sybase console application. Also listed herein are the conventions used in a typical SSMA Console output window.  

@@ -4727,6 +4727,8 @@
         href: database-engine/configure-windows/manage-certificates.md
       - name: Register a Service Principal Name for Kerberos Connections
         href: database-engine/configure-windows/register-a-service-principal-name-for-kerberos-connections.md
+      - name: How to enable the TCP protocol with SQLPS
+        href: powershell/how-to-enable-tcp-sqlps.md
     - name: Client Network Configuration
       href: database-engine/configure-windows/client-network-configuration.md
       items:

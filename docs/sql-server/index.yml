@@ -79,7 +79,7 @@ landingContent:
       - text: Transact-SQL (T-SQL)
         url: ../t-sql/language-reference.md
       - text: SQL Server 2014 docs
-        url: https://docs.microsoft.com/sql/2014-toc/index?view=sql-server-2014
+        url: https://docs.microsoft.com/sql/sql-server/sql-server-2014-release-notes
       - text: Educational SQL resources
         url: ../sql-server/educational-sql-resources.yml
       - text: Sample databases

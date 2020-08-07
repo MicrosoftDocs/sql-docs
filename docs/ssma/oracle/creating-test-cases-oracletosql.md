@@ -9,9 +9,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Test Case Wizard"
 ms.assetid: 22f38901-ec35-4707-a911-784e6ad8dafb
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Creating Test Cases (OracleToSQL)
 Use the Test Case Wizard to create a test. This wizard lets you create test cases by choosing tested and verified objects and by specifying the testing parameters.  

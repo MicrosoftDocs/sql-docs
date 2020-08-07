@@ -779,9 +779,9 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
 
 &nbsp;
 
-## Overview: Azure SQL Database Managed Instance
+## Overview: Azure SQL Managed Instance
 
-In Azure SQL Database Managed Instance, use this statement to set database options.
+In Azure SQL Managed Instance, use this statement to set database options.
 
 Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.
 

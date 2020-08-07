@@ -4719,6 +4719,8 @@
         href: database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md
       - name: Configure the Database Engine to Listen on Multiple TCP Ports
         href: database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md
+      - name: How to enable the TCP protocol with SQLPS
+        href: powershell/how-to-enable-tcp-sqlps.md
       - name: Determine Whether the Database Engine Is Installed & Started
         href: database-engine/configure-windows/determine-whether-the-database-engine-is-installed-and-started.md
       - name: Connect to the Database Engine Using Extended Protection

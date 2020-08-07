@@ -135,7 +135,7 @@ A Reporting Services report server runs in one of two deployment modes; Native m
 |Task|Link|  
 |----------|----------|  
 |Review Hardware and software requirements.|[Hardware and Software Requirements for Reporting Services in SharePoint Mode](https://msdn.microsoft.com/library/ed91877d-4f74-4266-a932-b824b4810c99).|  
-|Install Reporting Services in SharePoint mode.|[Install Reporting Services SharePoint Mode for SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c)|  
+|Install Reporting Services in SharePoint mode.|[Install Reporting Services SharePoint Mode for SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode)|  
 |Explains how to tune the memory settings for the Report Server Web service and Windows service.|[Configure Available Memory for Report Server Applications](../../reporting-services/report-server/configure-available-memory-for-report-server-applications.md)|  
 |Explains recommended steps to configure are report server for remote administration.|[Configure a Report Server for Remote Administration](../../reporting-services/report-server/configure-a-report-server-for-remote-administration.md)|  
 |Provides instructions for configuring the availability of **My Reports** on a Native report server instance.|[Enable and Disable My Reports](../../reporting-services/report-server/enable-and-disable-my-reports.md)|  

@@ -9,8 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Tester Component,Affected Objects"
 ms.assetid: a219df74-543a-4aec-aeeb-79f90ac3e2ee
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Selecting and Configuring Affected Objects (SybaseToSQL)
 At this page you can select tables and foreign keys, changes in which should be compared when SSMA verifies the results of execution for the objects chosen in the previous step. Also, you can customize the verification parameters.  

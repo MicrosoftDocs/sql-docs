@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: cbd6ddc9-8abd-4fa9-bffd-631e54894ce8
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Project Settings (GUI) (SybaseToSQL)
 The GUI project settings let you configure how data appears on the **Data** tab and whether to show the assessment report after conversion or not.  

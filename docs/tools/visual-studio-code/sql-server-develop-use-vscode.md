@@ -7,12 +7,12 @@ ms.technology: tools-other
 ms.assetid: 9766ee75-32d3-4045-82a6-4c7968bdbaa6
 author: markingmyname
 ms.author: maghan
-ms.date: 10/28/2019
+ms.date: 10/28/2019 
 ---
 
 # Use Visual Studio Code to create and run Transact-SQL scripts
 
-[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server - Linux](../../includes/applies-to-version/sql-linux.md)]
 
 This article shows how to use the **mssql** extension for Visual Studio Code to develop SQL Server databases. Because Visual Studio Code is cross-platform, you can use **mssql** extension on Linux, macOS, and Windows.
 
@@ -90,7 +90,7 @@ Follow these steps to create a connection profile and connect to a SQL Server.
    After you enter all values and select **Enter**, Visual Studio Code creates the connection profile and connects to the SQL Server.
 
    > [!TIP]
-   > If the connection fails, try to diagnose the problem from the error message in the **Output** panel in Visual Studio Code. To open the **Output** panel, select **View** > **Output**. Also review the [connection troubleshooting recommendations](../linux/sql-server-linux-troubleshooting-guide.md).
+   > If the connection fails, try to diagnose the problem from the error message in the **Output** panel in Visual Studio Code. To open the **Output** panel, select **View** > **Output**. Also review the [connection troubleshooting recommendations](../../linux/sql-server-linux-troubleshooting-guide.md).
 
 6. Verify your connection in the lower status bar.
 

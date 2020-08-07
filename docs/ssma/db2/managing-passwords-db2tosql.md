@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Managing Passwords (DB2ToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers:  

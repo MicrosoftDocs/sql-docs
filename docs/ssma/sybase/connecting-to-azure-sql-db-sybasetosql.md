@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 9e77e4b0-40c0-455c-8431-ca5d43849aa7
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Connecting to Azure SQL Database (SybaseToSQL)
 To migrate Sybase databases to Azure SQL Database, you must connect to the target instance of Azure SQL Database. When you connect, SSMA obtains metadata about all the databases in the instance of Azure SQL Database and displays database metadata in the Azure SQL Database Metadata Explorer. SSMA stores information of the instance of Azure SQL Database you are connected to, but does not store passwords.  

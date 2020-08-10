@@ -1,8 +1,8 @@
 ---
 title: "Microsoft JDBC Driver for SQL Server support matrix"
-description: "This page contains the support matrix and support life cycle policy for the Microsoft JDBC Driver for SQL Server."
+description: "This page contains the support matrix and support life-cycle policy for the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "07/31/2020"
+ms.date: "08/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -53,36 +53,33 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
   
 ## SQL version compatibility  
   
-|Driver Version|SQL Server 2008|SQL Server 2008R2|SQL Server 2012|Azure SQL Database|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2014|SQL Server 2016|SQL Server 2017|SQL Server 2019|  
-|-|-|-|-|-|-|-|-|-|-|-|
-|8.4|N|N|Y|Y|Y|Y|Y|Y|Y|
-|8.2|N|N|Y|Y|Y|Y|Y|Y|Y|
-|7.4|N|N|Y|Y|Y|Y|Y|Y|Y|
-|7.2|N|Y|Y|Y|Y|Y|Y|Y|N|
-|7.0|N|Y|Y|Y|Y|Y|Y|Y|N|
-|6.4|N|Y|Y|Y|Y|Y|Y|Y|N|
-|6.2|Y|Y|Y|Y|Y|Y|Y|Y|N|
-|6.1|Y|Y|Y|Y|Y|Y|Y|N|N|
-|6.0|Y|Y|Y|Y|Y|Y|Y|N|N|
-|4.2|Y|Y|Y|Y|Y|Y|Y|N|N|
-|4.1|Y|Y|Y|Y|Y|Y|Y|N|N|
-|4.0|Y|Y|Y|Y|Y|Y|Y|N|N|
-|3.0|Y|Y|Y<sup>1</sup>|Y<sup>2</sup>|N|Y<sup>5</sup>|N|N|N|
-|2.0|Y<sup>3</sup>|Y<sup>3</sup>|N|N|N|N|N|N|N|
-|1.2|Y<sup>3</sup>|N|N|N|N|N|N|N|N|
-|1.1|N|N|N|N|N|N|N|N|N|
-|1.0|N|N|N|N|N|N|N|N|N|
-|2000|N|N|N|N|N|N|N|N|N|
+|Database version&nbsp;&#8594;<br />&#8595; Driver Version|Azure SQL Database|Azure Synapse Analytics|Azure SQL Managed Instance|SQL Server 2019|SQL Server 2017|SQL Server 2016|SQL Server 2014|SQL Server 2012|PDW 2008R2 AU3<sup>4</sup>|SQL Server 2008 R2|SQL Server 2008|
+|---|---|---|---|---|---|---|---|---|---|---|---|
+|8.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+|8.2|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+|7.4|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|Yes|   |   |
+|7.2|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |
+|7.0|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |
+|6.4|Yes|Yes|Yes|   |Yes|Yes|Yes|Yes|Yes|Yes|   |
+|6.2|Yes|Yes|   |   |Yes|Yes|Yes|Yes|Yes|Yes|Yes|
+|6.1|Yes|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+|6.0|Yes|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+|4.2|Yes|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+|4.1|Yes|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+|4.0|Yes|   |   |   |   |Yes|Yes|Yes|Yes|Yes|Yes|
+|3.0|Yes<sup>2</sup>|   |   |   |   |   |Yes<sup>5</sup>|Yes<sup>1</sup>|   |Yes|Yes|
+|2.0|   |   |   |   |   |   |   |   |   |Yes<sup>3</sup>|Yes<sup>3</sup>|
+|1.2|   |   |   |   |   |   |   |   |   |   |Yes<sup>3</sup>|
+
+ <sup>1</sup> Microsoft SQL Server JDBC Driver version 3.0 can connect to SQL Server 2012 as a down-level client.  
   
- <sup>1</sup>Microsoft SQL Server JDBC Driver version 3.0 can connect to SQL Server 2012 as a down-level client.  
+ <sup>2</sup> Support for Azure SQL Database was introduced in the 3.0 driver as a hotfix. We recommend that Azure SQL Database customers use the latest driver version available.  
   
- <sup>2</sup>Support for Azure SQL Database was introduced in the 3.0 driver as a hotfix. We recommend that Azure SQL Database customers use the latest driver version available.  
+ <sup>3</sup> Microsoft SQL Server JDBC Driver version 2.0 and Microsoft SQL Server 2005 JDBC Driver version 1.2 can connect to SQL Server 2008 as a down-level client. When down-level conversions are allowed, applications can execute queries and perform updates on the new SQL Server 2008 data types, such as time, date, datetime2, datetimeoffset, and FILESTREAM. For more information about how to use these new data types with the JDBC driver, see  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver](https://go.microsoft.com/fwlink/?LinkId=145198) and  [Working with SQL Server 2008 FileStream using JDBC Driver](https://go.microsoft.com/fwlink/?LinkId=145199). For more information about the down-level compatibility of these new data types, see  [Using Date and Time Data](https://go.microsoft.com/fwlink/?LinkId=145211)and  [FILESTREAM Support](https://go.microsoft.com/fwlink/?LinkId=145212) topics in SQL Server Books Online.  
   
- <sup>3</sup>Microsoft SQL Server JDBC Driver version 2.0 and Microsoft SQL Server 2005 JDBC Driver version 1.2 can connect to SQL Server 2008 as a down-level client. When down-level conversions are allowed, applications can execute queries and perform updates on the new SQL Server 2008 data types, such as time, date, datetime2, datetimeoffset, and FILESTREAM. For more information about how to use these new data types with the JDBC driver, see  [Working with SQL Server 2008 Date/Time Data Types using JDBC Driver](https://go.microsoft.com/fwlink/?LinkId=145198) and  [Working with SQL Server 2008 FileStream using JDBC Driver](https://go.microsoft.com/fwlink/?LinkId=145199). For more information about the down-level compatibility of these new data types, see  [Using Date and Time Data](https://go.microsoft.com/fwlink/?LinkId=145211)and  [FILESTREAM Support](https://go.microsoft.com/fwlink/?LinkId=145212) topics in SQL Server Books Online.  
+ <sup>4</sup> Support for connections between the Microsoft JDBC Driver and Parallel Data Warehouse was first introduced in the Microsoft JDBC Driver 4.0 for SQL Server and Microsoft SQL Server 2008 R2 Parallel Data Warehouse Appliance Update 3.  
   
- <sup>4</sup>Support for connections between the Microsoft JDBC Driver and Parallel Data Warehouse was first introduced in the Microsoft JDBC Driver 4.0 for SQL Server and Microsoft SQL Server 2008 R2 Parallel Data Warehouse Appliance Update 3.  
-  
- <sup>5</sup>Microsoft SQL Server JDBC Driver version 3.0 can connect to SQL Server 2014 as a down-level client.  
+ <sup>5</sup> Microsoft SQL Server JDBC Driver version 3.0 can connect to SQL Server 2014 as a down-level client.  
   
 ## Java and JDBC specification support
   
@@ -109,7 +106,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
 
 ## Supported operating systems
 
-The Microsoft JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). Some commonly used platforms include Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Windows Vista, Linux, Unix, AIX, macOS, and others.  
+The Microsoft JDBC driver is designed to work on any operating system that supports the use of a Java Virtual Machine (JVM). Some commonly used platforms include Windows 10, Windows 8.1, Windows 8, Windows 7, Windows Server 2008 R2, Linux, Unix, AIX, macOS, and others.  
 
 The JDBC product team tests our driver on Windows, Sun Solaris, SUSE Linux, Ubuntu Linux, CentOS Linux, and macOS.
 

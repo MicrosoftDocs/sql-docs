@@ -1,6 +1,6 @@
 ---
 title: "INSERT (SQL Graph) | Microsoft Docs"
-description: INSERT syntax for SQL Graph node or edge tables. 
+description: Learn about the syntax, permissions, and arguments for the INSERT statement that adds one or more rows to an SQL Graph  node or edge table in SQL Server.
 ms.date: "05/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"

@@ -1,6 +1,6 @@
 ---
 title: Setting large data (OLE DB driver)
-description: "Setting large data using OLE DB Driver for SQL Server"
+description: Learn how to use OLE DB Driver for SQL Server to set BLOB data by passing a pointer to a consumer storage object.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

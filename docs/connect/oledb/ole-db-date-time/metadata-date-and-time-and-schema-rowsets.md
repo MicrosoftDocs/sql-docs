@@ -1,6 +1,6 @@
 ---
 title: "Date and Time and Schema Rowsets | Microsoft Docs"
-description: "Date and time and schema rowsets"
+description: Learn about the OLE DB date and time enhancements in relation to COLUMNS rowset and PROCEDURE_PARAMETERS rowset in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

@@ -236,15 +236,15 @@
           - name: NYC taxi tips (classification)
             items:
             - name: 1 - Introduction
-              href: machine-learning/tutorials/python-taxi-classification-introduction?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
             - name: 2 - Data exploration
-              href: machine-learning/tutorials/python-taxi-classification-explore-data?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
             - name: 3 - Feature engineering
-              href: machine-learning/tutorials/python-taxi-classification-create-features?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
             - name: 4 - Train and deploy
-              href: machine-learning/tutorials/python-taxi-classification-train-model?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
             - name: 5 - Predictions
-              href: machine-learning/tutorials/python-taxi-classification-deploy-model?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
 
         - name: R
           items:
@@ -271,15 +271,15 @@
           - name: NYC taxi tips (classification)
             items:
             - name: 1 - Introduction
-              href: machine-learning/tutorials/r-taxi-classification-introduction?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
             - name: 2 - Data exploration
-              href: machine-learning/tutorials/r-taxi-classification-explore-data?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
             - name: 3 - Feature engineering
-              href: machine-learning/tutorials/r-taxi-classification-create-features?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
             - name: 4 - Train and deploy
-              href: machine-learning/tutorials/r-taxi-classification-train-model?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
             - name: 5 - Predictions
-              href: machine-learning/tutorials/r-taxi-classification-deploy-model?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
       - name: Manage Python, R packages
         items:
         - name: Python

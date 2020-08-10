@@ -1,5 +1,5 @@
 ---
-title: "Resynchronizing Rows | Microsoft Docs"
+title: Resynchronizing rows (OLE DB driver)
 description: "Resynchronizing rows using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

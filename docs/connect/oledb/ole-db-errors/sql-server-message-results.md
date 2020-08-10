@@ -1,6 +1,6 @@
 ---
-title: "SQL Server Message Results | Microsoft Docs"
-description: "SQL Server message results"
+title: SQL Server message results (OLE DB driver)
+description: Learn about Transact-SQL statements that do not generate OLE DB Driver for SQL Server rowsets or a count, and their expected return values.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

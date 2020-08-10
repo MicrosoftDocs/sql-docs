@@ -12,7 +12,7 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Query columns using Always Encrypted with secure enclaves
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 This article captures general considerations for running queries on encrypted columns using a server-side secure enclave for [Always Encrypted with secure enclaves](always-encrypted-enclaves.md). 
 

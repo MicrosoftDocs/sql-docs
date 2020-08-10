@@ -1,6 +1,6 @@
 ---
 title: Common errors with customer-managed keys in Azure Key Vault
-description: Troubleshoot common errors with transparent data encryption (TDE) and customer-managed keys in Azure Key Vault.
+description: Learn how to identify and resolve access issues and common errors with transparent data encryption (TDE) and customer-managed keys in Azure Key Vault.
 ms.custom: seo-lt-2019
 helpviewer_keywords: 
   - "troublshooting, tde akv"
@@ -17,7 +17,8 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 ---
 # Common errors for transparent data encryption with customer-managed keys in Azure Key Vault
 
-[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[asdb-asdbmi-asa](../../../includes/applies-to-version/asdb-asdbmi-asa.md)]
+
 This article describes how to identify and resolve Azure Key Vault key access issues that caused a database configured to use [transparent data encryption (TDE) with customer-managed keys in Azure Key Vault](/azure/sql-database/transparent-data-encryption-byok-azure-sql) to become inaccessible.
 
 ## Introduction

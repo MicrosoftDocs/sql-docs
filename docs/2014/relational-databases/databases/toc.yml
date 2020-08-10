@@ -1,8 +1,0 @@
-- name: System Databases
-- name: Contained Databases
-- name: Estimate the Size of a Database
-- name: Copy Databases to Other Servers
-- name: Database Detach and Attach
-- name: Move Database Files
-- name: View or Change the Properties of a Database
-- name: Database Snapshots

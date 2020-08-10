@@ -1,5 +1,6 @@
 ---
-title: "sqlsrv_prepare | Microsoft Docs"
+title: "sqlsrv_prepare"
+description: "API reference for the sqlsrv_prepare function in the Microsoft SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
 ms.date: "04/11/2019"
 ms.prod: sql

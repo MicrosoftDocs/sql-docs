@@ -1,6 +1,6 @@
 ---
-title: "Tables and Indexes | Microsoft Docs"
-description: "Creating, altering, and droping tables and indexes using OLE DB Driver for SQL Server"
+title: Tables and indexes (OLE DB driver)
+description: Learn about the OLE DB Driver interfaces IIndexDefinition and ITableDefinition, which allow consumers to create, alter, and drop SQL Server tables and indexes.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

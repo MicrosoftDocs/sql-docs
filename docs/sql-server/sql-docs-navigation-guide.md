@@ -9,9 +9,9 @@ ms.custom: ""
 ms.topic: conceptual
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
+monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || sql-server-previousversions || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
-# SQL Server docs navigation guide 
+# SQL Server docs navigation guide
 
 This topic provides some tips and tricks for navigating the SQL Server technical documentation space.  
 

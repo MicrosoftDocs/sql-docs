@@ -7,9 +7,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 4e47bb04-cf9b-41a0-923e-bdab9ba0c51d
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Working with SSMA for Oracle Console (OracleToSQL)
 [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) release for Oracle is now accessible through a console application at command line. The script files form the input to the application for executing the commands. As a console application, SSMA enables script-level interfacing, reduces the migration cycle, and scales the migration effort.  
@@ -18,9 +18,8 @@ This section explains the procedure to migrate the Oracle database using the SSM
   
 Topics covered in this section include:  
   
-|||  
+|Topic|Description|  
 |-|-|  
-|**Topics**|**Description**|  
 |[Getting Started with SSMA  for Oracle Console &#40;OracleToSQL&#41;](../../ssma/oracle/getting-started-with-ssma-for-oracle-console-oracletosql.md)|Explains the procedure to execute the console application.|  
 |[Command Line Options in SSMA Console &#40;OracleToSQL&#41;](../../ssma/oracle/command-line-options-in-ssma-console-oracletosql.md)|Describes the command line options and parameters to operate the SSMA console application.|  
 |[Creating Script Files &#40;OracleToSQL&#41;](../../ssma/oracle/creating-script-files-oracletosql.md)|Explains how to create a script file.|  

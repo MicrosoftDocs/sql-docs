@@ -1,6 +1,6 @@
 ---
 title: "Enumerate OLE DB data sources (OLE DB driver) | Microsoft Docs"
-description: "Enumerate OLE DB data sources using MSOLEDBSQL enumerator"
+description: Learn how to use the MSOLEDBSQL enumerator to list the OLE DB Driver for SQL Server data sources available with this example.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

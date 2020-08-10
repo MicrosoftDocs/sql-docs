@@ -7,13 +7,13 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 11091d95-c488-48c3-891a-743cac94ac93
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Working with SSMA Projects (SybaseToSQL)
 To migrate Sybase Adaptive Server Enterprise (ASE) databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, you first create an SSMA project. The project is a file that contains metadata about the ASE databases that you want to migrate to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure, metadata about the target instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure that will receive the migrated objects and data, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure connection information, and project settings.  
   
-When you open a project, it is disconnected from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. This lets you work offline. You can reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. For more information, see [Connecting to SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md) / [Connecting to Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md).  
+When you open a project, it is disconnected from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. This lets you work offline. You can reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. For more information, see [Connecting to SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md) / [Connecting to Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md).  
   
 ## Reviewing Default Project Settings  
 SSMA contains several options for converting and loading database objects, migrating data, and synchronizing SSMA with ASE and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. The default settings for these options are appropriate for many users. However, before you create a new SSMA project, you should review the options and, if you want to, change the defaults that will be used for all your new projects.  
@@ -38,7 +38,7 @@ SSMA contains several options for converting and loading database objects, migra
   
     -   For more information about data type mapping settings, click [Project Settings &#40;Type Mapping&#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-type-mapping-sybasetosql.md).  
   
-    -   For more information about SQL Azure options, see [Project Settings &#40;Azure SQL DB &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md).  
+    -   For more information about SQL Azure options, see [Project Settings &#40;Azure SQL Database &#41; &#40;SybaseToSQL&#41;](../../ssma/sybase/project-settings-azure-sql-db-sybasetosql.md).  
   
     > [!NOTE]  
     > The SQL Azure settings will be displayed only when you select **Migration to SQL Azure** while creating a project.  
@@ -68,7 +68,7 @@ To migrate data from ASE databases to [!INCLUDE[ssNoVersion](../../includes/ssno
   
     -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016  
   
-    -   Azure SQL DB  
+    -   Azure SQL Database  
   
 And then Click **OK**.  
   
@@ -113,8 +113,8 @@ When you open a project, it is disconnected from ASE and from [!INCLUDE[ssNoVers
 The next step in the migration process is to [Connect to Sybase ASE](connecting-to-sybase-ase-sybasetosql.md).  
   
 ## See Also  
-[Migrating Sybase ASE Databases to SQL Server - Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrating Sybase ASE Databases to SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
 [Connecting to Sybase ASE &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sybase-ase-sybasetosql.md)  
 [Connecting to SQL Server &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-sql-server-sybasetosql.md)  
-[Connecting to Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
+[Connecting to Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/connecting-to-azure-sql-db-sybasetosql.md)  
   

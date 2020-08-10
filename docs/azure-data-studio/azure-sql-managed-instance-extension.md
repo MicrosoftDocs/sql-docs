@@ -1,6 +1,6 @@
 ---
-title: Azure SQL Database managed instance extension
-description: Use Azure Data Studio with Azure SQL managed instance
+title: Azure SQL Managed Instance extension
+description: Use Azure Data Studio with Azure SQL Managed Instance
 ms.custom: "seodec18"
 ms.date: "10/07/2019"
 ms.reviewer: alanyu, maghan, sstein
@@ -12,11 +12,11 @@ ms.author: jovanpop
 manager: alanyu
 ---
 
-# Azure SQL Database managed instance dashboard for Azure Data Studio (preview)
+# Azure SQL Managed Instance dashboard for Azure Data Studio (preview)
 
-The Azure SQL Database managed instance extension provides a dashboard for working with an [Azure SQL Database managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). This extension provides the following features:
+The Azure SQL Managed Instance extension provides a dashboard for working with an [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-index) in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). This extension provides the following features:
 
-- Shows managed instance properties, including vCores and used storage
+- Shows SQL Managed Instance properties, including vCores and used storage
 - Monitors CPU and storage usage for previous two hours
 - Displays configuration warnings and tuning recommendations
 - Shows state of database replicas
@@ -26,7 +26,7 @@ The Azure SQL Database managed instance extension provides a dashboard for worki
 
 You can install the official release of this extension. Follow the steps
 in the [Azure Data Studio documentation](https://docs.microsoft.com/sql/azure-data-studio/extensions).
-In the **Extensions** pane, search for "managed instance", and install it there. After it's installed, you'll get notified automatically about any future extension updates.
+In the **Extensions** pane, search for "Managed Instance", and install it there. After it's installed, you'll get notified automatically about any future extension updates.
 
 With the extension installed, you'll see a **Managed Instance** tab in Azure Data Studio. Here you can find information specific for your managed instance.
 
@@ -34,7 +34,7 @@ With the extension installed, you'll see a **Managed Instance** tab in Azure Dat
 
 The extension displays technical characteristics and some resource usage of your managed instance.
 
-[ ![Managed instance properties](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
+[ ![Managed Instance properties](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
 
 The top pane shows the following details:
 
@@ -47,7 +47,7 @@ The top pane shows the following details:
 
 When you select the second pane in the **Managed Instance** tab, you get recommendations and alerts to help optimize your managed instance.
 
-[ ![Managed instance recommendations](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
+[ ![Managed Instance recommendations](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
 
 You might see some of the following recommendations:
 
@@ -58,13 +58,13 @@ You might see some of the following recommendations:
 - **Data file limits**. If your data files approach the [file I/O limits on the general-purpose service tier](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-resource-limits#file-io-characteristics-in-general-purpose-tier), you might need to increase file size to get better performance. This issue might cause memory pressure and slow down backups.
 - **Availability issues**. A high number of virtual log files can affect performance. If there's a process failure, such issues might result in longer database recovery on the general-purpose service tier.
 
-Periodically review these recommendations, investigate the root causes, and take action to correct any issues. The Azure SQL Database managed instance extension provides scripts you can run to mitigate some of the reported issues.
+Periodically review these recommendations, investigate the root causes, and take action to correct any issues. The SQL Managed Instance extension provides scripts you can run to mitigate some of the reported issues.
 
 ## Replicas
 
 The third pane in the **Managed Instance** tab shows you the state of database replicas in your managed instance.
 
-[ ![Managed instance replicas](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
+[ ![Managed Instance replicas](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
 
 On the general-purpose service tier, every database has a single (primary) replica. On a business-critical tier instance, every database has one primary and three secondary replicas, one of which is used for read-only workloads. On the **Replicas** pane, you can monitor the synchronization process and verify that all secondary replicas are synchronized with the primary replica.
 
@@ -72,15 +72,15 @@ On the general-purpose service tier, every database has a single (primary) repli
 
 The fourth pane of **Managed Instance** shows the most recent and relevant SQL error log entries.
 
-[ ![Managed instance log entries](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
+[ ![Managed Instance log entries](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
 
 Although your managed instance generates a large number of log entries, most of them are internal/system information. Also, some log entries show physical database names (`GUID` values) instead of actual logical database names.
 
-The Azure SQL Database managed instance extension filters out unnecessary log entries based on the [Dimitri Furman method](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506). The extension also displays actual logical file names instead of physical names.
+The SQL Managed Instance extension filters out unnecessary log entries based on the [Dimitri Furman method](https://techcommunity.microsoft.com/t5/DataCAT/Azure-SQL-DB-Managed-Instance-sp-readmierrorlog/ba-p/305506). The extension also displays actual logical file names instead of physical names.
 
 ## Reporting problems
 
-If you experience any problems with the Azure SQL Database managed instance extension, go to the [Extension GitHub project](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues) and report your issue.
+If you experience any problems with the SQL Managed Instance extension, go to the [Extension GitHub project](https://github.com/JocaPC/AzureDataStudio-Managed-Instance/issues) and report your issue.
 
 ## Code of conduct
 

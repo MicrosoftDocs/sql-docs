@@ -1,5 +1,6 @@
 ---
-title: "Retrieve Date and Time Types as Strings Using the SQLSRV Driver | Microsoft Docs"
+title: "Retrieve Date and Time Types as Strings Using the SQLSRV Driver"
+description: "Learn how to retrieve date and time types as strings using the SQLSRV driver for PHP for SQL Server."
 ms.custom: ""
 ms.date: "02/11/2019"
 ms.prod: sql

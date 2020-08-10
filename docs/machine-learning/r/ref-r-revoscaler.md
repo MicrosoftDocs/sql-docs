@@ -145,6 +145,6 @@ When you are ready to encapsulate R script inside a stored procedure, [sp_execut
 
 + [R tutorials](../tutorials/sql-server-r-tutorials.md)
 + [Learn to use compute contexts](../tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)
-+ [R for SQL developers: Train and operationalize a model](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [R for SQL developers: Train and operationalize a model](../tutorials/r-taxi-classification-introduction.md)
 + [Microsoft product samples on GitHub](https://github.com/Microsoft/SQL-Server-R-Services-Samples)
 + [R reference (Microsoft Machine Learning Server)](https://docs.microsoft.com/machine-learning-server/r-reference/introducing-r-server-r-package-reference) 

@@ -14,7 +14,7 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # CREATE DIAGNOSTICS SESSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Diagnostics sessions allow you to save detailed, user-defined diagnostic information on system or query performance.  
   

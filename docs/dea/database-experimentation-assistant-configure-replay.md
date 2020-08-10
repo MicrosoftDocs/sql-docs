@@ -1,6 +1,6 @@
 ---
 title: Configure replay for SQL Server upgrades
-description: Configure Distributed Replay for Database Experimentation Assistant
+description: Use Database Experimentation Assistant (DEA) to access the Distributed Replay tools. Use the tools to replay a captured trace against an upgraded test environment.
 ms.custom: "seo-lt-2019"
 ms.date: 01/24/2020
 ms.prod: sql
@@ -9,8 +9,8 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ---
 

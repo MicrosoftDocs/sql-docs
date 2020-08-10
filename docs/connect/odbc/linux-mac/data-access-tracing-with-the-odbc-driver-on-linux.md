@@ -1,5 +1,6 @@
 ---
-title: "Data Access Tracing with the ODBC Driver on Linux and macOS | Microsoft Docs"
+title: "Data Access Tracing with the ODBC Driver on Linux and macOS"
+description: "Learn how to enable tracing on Linux and macOS with the Microsoft ODBC Driver for SQL Server to output a log file when troubleshooting application behavior."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

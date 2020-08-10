@@ -1,6 +1,6 @@
 ---
 title: revoscalepy Python package
-description: revoscalepy is a Python package from Microsoft that supports distributed computing, remote compute contexts, and high-performance data science algorithms. The package is included in SQL Server Machine Learning Services.
+description: revoscalepy is a Python package from Microsoft that supports distributed computing, remote compute contexts, and high-performance data science algorithms.
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 07/14/2020
@@ -99,7 +99,7 @@ When running locally, you typically run a Python script from the command line, o
 
 When you are ready to encapsulate Python script inside a stored procedure, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), we recommend rewriting the code as a single function that has clearly defined inputs and outputs. 
 
-Inputs and outputs must be **pandas** data frames. When this is done, you can call the stored procedure from any client that supports T-SQL, easily pass SQL queries as inputs, and save the results to SQL tables. For an example, see [Learn in-database Python analytics for SQL developers](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+Inputs and outputs must be **pandas** data frames. When this is done, you can call the stored procedure from any client that supports T-SQL, easily pass SQL queries as inputs, and save the results to SQL tables. For an example, see [Learn in-database Python analytics for SQL developers](../tutorials/python-taxi-classification-introduction.md).
 
 ### Using revoscalepy with microsoftml
 

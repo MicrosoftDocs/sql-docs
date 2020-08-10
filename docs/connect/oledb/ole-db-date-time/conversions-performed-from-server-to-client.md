@@ -1,6 +1,6 @@
 ---
 title: "Conversions Performed from Server to Client | Microsoft Docs"
-description: "Conversions performed from server to client"
+description: Learn about date/time conversions performed between SQL Server and a client application written with OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

@@ -8,9 +8,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a98a5e07-eb5e-47b9-a6f2-e2cb3a18309c
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Project Settings (Conversion) (OracleToSQL)
 The Conversion page of the **Project Settings** dialog box contains settings that customize how SSMA converts Oracle syntax to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntax.  

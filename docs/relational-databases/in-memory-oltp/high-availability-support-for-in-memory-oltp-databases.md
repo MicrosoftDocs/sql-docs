@@ -33,7 +33,7 @@ ms.author: "carlrab"
 
 ### Considerations
 
-- In SQL Server 2016 and 2017, disk-based tables do not have parallel redo if a database in an availability group is also memory optimized. SQL Server 2019 introduced parallel redo for memory optimized availability group databases. 
+- SQL Server 2019 introduced parallel redo for memory optimized availability group databases. In SQL Server 2016 and 2017, disk-based tables do not use parallel redo if a database in an availability group is also memory optimized. 
   
 ## Failover Clustering Instance (FCI) and In-Memory OLTP Databases  
  To achieve high-availability in a shared-storage configuration, you can set up a failover cluster instance with databases using memory-optimized tables. You need to consider the following factors as part of setting up an FCI.  

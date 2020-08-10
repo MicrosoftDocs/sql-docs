@@ -2767,6 +2767,8 @@
         href: ../connect/jdbc/using-sql-escape-sequences.md
       - name: Using Statements with Stored Procedures
         href: ../connect/jdbc/using-statements-with-stored-procedures.md
+      - name: Client Certificate Authentication for Loopback Scenarios
+        href: ../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md
       - name: Azure Key Vault samples, for 7.0 and others
         href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
         items:
@@ -2824,6 +2826,8 @@
         href: ../connect/odbc/linux-mac/using-integrated-authentication.md
     - name: Release Notes
       href: ../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md
+    - name: Release Notes (mssql-tools)
+      href: ../connect/odbc/linux-mac/release-notes-tools.md
     - name: Known Issues
       href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
     - name: Frequently Asked Questions (FAQ) for ODBC Linux and macOS

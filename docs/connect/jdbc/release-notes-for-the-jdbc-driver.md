@@ -2,7 +2,7 @@
 title: "Release notes for the JDBC Driver"
 description: "This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described."
 ms.custom: ""
-ms.date: "03/24/2020"
+ms.date: "07/31/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -15,6 +15,67 @@ ms.author: v-daenge
 # Release notes for the Microsoft JDBC Driver for SQL Server
 
 This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. For each release version, the changes are named and described.
+
+## <a id="84"></a> 8.4
+
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 8.4 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2137600)**  
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 8.4 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2137502)**  
+
+Version number: 8.4.0
+Released: July 31, 2020
+
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40a)  
+
+### Compliance
+
+| Compliance change | Details |
+| :---------------- | :------ |
+| Download the latest updates for JDBC Driver 8.4. | &bull; &nbsp; [GitHub, 8.4.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.4.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Fully compliant with JDBC API Specification 4.2. | The jars in the 8.4 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-8.4.0.jre14.jar file from the 8.4 package should be used with Java 14. |
+| Compatible with Java Development Kit (JDK) version 14.0, 11.0, and 1.8. | Microsoft JDBC Driver 8.4 for SQL Server is now compatible with Java Development Kit (JDK) version 14.0 in addition to JDK 11.0 and 1.8. |
+| &nbsp; | &nbsp; |
+
+### Support for JDK 14
+
+Microsoft JDBC Driver 8.4 for SQL Server is now compatible with Java Development Kit (JDK) version 14.0 in addition to JDK 11.0 and 1.8.
+
+### Added support for authentication to Azure Key Vault using Managed Identity
+
+| Authentication type addition | Details |
+| :---------- | :------ |
+| Microsoft JDBC Driver 8.4 for SQL Server now supports authentication to Azure Key Vault using Managed Identity. | See [Using Always Encrypted with the JDBC driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md). |
+| &nbsp; | &nbsp; |
+
+### Extended support for bulk copy for Azure Data Warehouse
+
+| Bulk copy changes for Azure Data Warehouse | Details |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 8.4 adds a new connection property, `sendTemporalDataTypesAsStringForBulkCopy`. This boolean property is TRUE by default. | See [Using bulk copy with the JDBC driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md). |
+| &nbsp; | &nbsp; |
+
+### Added support for Azure SQL DNS caching
+
+| DNS Caching | Details |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 8.4 for SQL Server now supports DNS caching against Azure SQL Servers. | &nbsp; |
+| &nbsp; | &nbsp; |
+
+### Added backwards compatibility for streaming LOB objects
+
+| LOB Streaming | Details |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 8.4 for SQL Server added a new connection property `delayLoadingLobs`. | Setting `delayLoadingLobs` to FALSE will cause all LOB objects retrieved from the ResultSet to not be streamed. This means that the driver will load the entire LOB object into memory at once, similar to how the driver was functioning before version 6.4 release. |
+| &nbsp; | &nbsp; |
+
+### Added support for client certificate authentication for loopback scenarios
+
+| Client certificate authentication | Details |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 8.4 for SQL Server added a new authentication method called client certificate authentication for loopback scenarios. | See [Client Certificate Authentication for Loopback Scenarios](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md). |
+
+## Previous releases
 
 ## <a id="82"></a> 8.2
 
@@ -73,8 +134,6 @@ Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development
 | :----------- | :------ |
 | When using Always Encrypted with secure enclaves with Java 8. | Users must include BouncyCastle Provider as a dependency OR map/load a security provider which supports the RSASSA-PSS signature algorithm. |
 | &nbsp; | &nbsp; |
-
-## Previous releases
 
 ## <a id="74"> 7.4.1
 
@@ -162,11 +221,11 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 >
 > We recommend updating your projects to use the 7.2.2 release jars. For more information, view release notes for [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) and [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2).
 
-### Active Directory _Managed Service Identity_ (MSI) authentication
+### Active Directory _Managed Identity_ (MSI) authentication
 
 | MSI change | Details |
 | :--------- | :------ |
-| Supports Active Directory Managed Service Identity (MSI) authentication mode. | This mode of authentication is applicable on Azure Resources with support for "Identity" feature enabled.<br/><br/>Both types of Managed System Identities (MSI) are supported by the driver to acquire **accessToken** for establishing secure connection. |
+| Supports Active Directory Managed Identity (MSI) authentication mode. | This mode of authentication is applicable on Azure Resources with support for the "Identity" feature enabled.<br/><br/>Both types of Managed Identities (MSI) are supported by the driver to acquire **accessToken** for establishing secure connection. |
 | More details and a sample application to use this authentication mode. | See [Connecting using Azure Active Directory Authentication](connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 

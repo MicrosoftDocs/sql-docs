@@ -1,6 +1,6 @@
 ---
 title: "Configure replication with availability groups"
-description: "Configure replication with your Always On availability group." 
+description: "Learn the detailed process required to configure SQL Server replication with your Always On availability group." 
 ms.custom: "seodec18"
 ms.date: "01/25/2019"
 ms.prod: sql
@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Configure replication with Always On availability groups
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   Configuring [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication and Always On availability groups involves seven steps. Each step is described in more detail in the following sections.  
   

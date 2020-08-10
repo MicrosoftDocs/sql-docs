@@ -1,5 +1,5 @@
 ---
-title: "Connect to Azure SQL DB"
+title: "Connect to Azure SQL Database"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.reviewer: ""

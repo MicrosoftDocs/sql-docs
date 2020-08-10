@@ -30,10 +30,10 @@ ms.author: mlandzic
 
 [!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
-This function returns the name of the time zone observed by a server or an instance. For SQL Database Managed Instance, return value is based on the time zone of the instance itself assigned during instance creation, not the time zone of the underlying operating system.
+This function returns the name of the time zone observed by a server or an instance. For SQL Managed Instance, return value is based on the time zone of the instance itself assigned during instance creation, not the time zone of the underlying operating system.
   
 > [!NOTE]  
-> For single and pooled SQL Databases time zone is always set to UTC and `CURRENT_TIMEZONE` returns the name of the UTC time zone.
+> For SQL Database, the time zone is always set to UTC and `CURRENT_TIMEZONE` returns the name of the UTC time zone.
   
 ## Syntax  
   
@@ -66,6 +66,6 @@ SELECT CURRENT_TIMEZONE();
   
 ## See also
 
-[SQL Database Managed Instance Time Zone](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
+[SQL Managed Instance Time Zone](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-timezone)
 
 [CURRENT_TIMEZONE_ID()](https://docs.microsoft.com/sql/t-sql/functions/current-timezone-id-transact-sql)

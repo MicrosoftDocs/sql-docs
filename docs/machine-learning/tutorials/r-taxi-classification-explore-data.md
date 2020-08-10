@@ -1,6 +1,6 @@
 ---
 title: "R tutorial: Explore and visualize data"
-description: In part two of this five-part tutorial series, you'll explore sample data and generate some plots in preparation for using binary classification in R with SQL machine learning.
+description: Explore sample data and generate some plots in preparation for using binary classification in R with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 
@@ -34,13 +34,13 @@ In this article, you'll:
 > + Create plots using R in T-SQL
 > + Output plots in multiple file formats
 
-In [part one](sqldev-in-database-r-for-sql-developers.md), you installed the prerequisites and restored the sample database.
+In [part one](r-taxi-classification-introduction.md), you installed the prerequisites and restored the sample database.
 
-In [part three](sqldev-create-data-features-using-t-sql.md), you'll learn how to create features from raw data by using a Transact-SQL function. You'll then call that function from a stored procedure to create a table that contains the feature values.
+In [part three](r-taxi-classification-create-features.md), you'll learn how to create features from raw data by using a Transact-SQL function. You'll then call that function from a stored procedure to create a table that contains the feature values.
 
-In [part four](sqldev-train-and-save-a-model-using-t-sql.md), you'll load the modules and call the necessary functions to create and train the model using a SQL Server stored procedure.
+In [part four](r-taxi-classification-train-model.md), you'll load the modules and call the necessary functions to create and train the model using a SQL Server stored procedure.
 
-In [part five](sqldev-operationalize-the-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
+In [part five](r-taxi-classification-deploy-model.md), you'll learn how to operationalize the models that you trained and saved in part four.
 
 ## Review the data
 
@@ -304,4 +304,4 @@ In this article, you:
 > + Output plots in multiple file formats
 
 > [!div class="nextstepaction"]
-> [R tutorial: Create data features](sqldev-create-data-features-using-t-sql.md)
+> [R tutorial: Create data features](r-taxi-classification-create-features.md)

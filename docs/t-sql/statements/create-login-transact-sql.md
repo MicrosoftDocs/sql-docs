@@ -45,7 +45,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Azure SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -292,7 +292,7 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Azure SQL Database<br />single database/elastic pool \*_**
+        **_\* Azure SQL Database \*_**
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -307,7 +307,7 @@ CHECK_EXPIRATION = OFF ;
 
 &nbsp;
 
-## Azure SQL Database single database/elastic pool
+## SQL Database
 
 ## Syntax
 
@@ -413,7 +413,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* Azure SQL<br />Managed Instance \*_**
@@ -428,12 +428,12 @@ GO
 
 &nbsp;
 
-## Azure SQL Database managed instance
+## Azure SQL Managed Instance
 
 ## Syntax
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for Azure SQL Managed Instance
 CREATE LOGIN login_name [FROM EXTERNAL PROVIDER] { WITH <option_list> [,..]}
 
 <option_list> ::=
@@ -465,7 +465,7 @@ Used to recreate a login. Applies to SQL Server authentication logins only. Spec
 - New syntax is introduced for the creation of server-level principals mapped to Azure AD accounts (**FROM EXTERNAL PROVIDER**)
 - When **FROM EXTERNAL PROVIDER** is specified:
 
-  - The login_name must represent an existing Azure AD account (user, group, or application) that is accessible in Azure AD by the current Azure SQL managed instance. For Azure AD principals, the CREATE LOGIN syntax requires:
+  - The login_name must represent an existing Azure AD account (user, group, or application) that is accessible in Azure AD by the current Azure SQL Managed Instance. For Azure AD principals, the CREATE LOGIN syntax requires:
     - UserPrincipalName of the Azure AD object for Azure AD Users.
     - DisplayName of Azure AD object for Azure AD Groups and Azure AD Applications.
   - The **PASSWORD** option cannot be used.
@@ -484,18 +484,18 @@ Only the server-level principal login (created by the provisioning process) or m
 By default, the standard permission granted to a newly created Azure AD login in master is:
 **CONNECT SQL** and **VIEW ANY DATABASE**.
 
-### SQL Database managed instance Logins
+### SQL Managed Instance Logins
 
 - Must have **ALTER ANY LOGIN** permission on the server or membership in the one of the fixed server roles `securityadmin` or `sysadmin`. Only an Azure Active Directory (Azure AD) account with **ALTER ANY LOGIN** permission on the server or membership in one of those roles can execute the create command.
 - If the login is a SQL Principal, only logins that are part of the `sysadmin` role can use the create command to create logins for an Azure AD account.
-- Must be a member of Azure AD within the same directory used for Azure SQL managed instance.
+- Must be a member of Azure AD within the same directory used for Azure SQL Managed Instance.
 
 ## After creating a login
 
 > [!NOTE]
-> The Azure AD admin for managed instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> The Azure AD admin for Azure SQL Managed Instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
-After creating a login, the login can connect to a SQL Database managed instance, but only has the permissions granted to the **public** role. Consider performing some of the following activities.
+After creating a login, the login can connect to a managed instance, but only has the permissions granted to the **public** role. Consider performing some of the following activities.
 
 - To create an Azure AD user from an Azure AD login, see [CREATE USER](../../t-sql/statements/create-user-transact-sql.md).
 - To grant permissions to a user in a database, use the **ALTER SERVER ROLE** ... **ADD MEMBER** statement to add the user to one of the built-in database roles or a custom role, or grant permissions to the user directly using the [GRANT](../../t-sql/statements/grant-transact-sql.md) statement. For more information, see [Non-administrator Roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#non-administrator-users), [Additional server-level administrative roles](https://docs.microsoft.com/azure/sql-database/sql-database-manage-logins#additional-server-level-administrative-roles), [ALTER SERVER ROLE](../../t-sql/statements/alter-server-role-transact-sql.md), and [GRANT](grant-transact-sql.md) statement.
@@ -617,7 +617,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -748,7 +748,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)

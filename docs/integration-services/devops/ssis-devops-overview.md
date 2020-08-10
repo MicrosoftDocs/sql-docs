@@ -89,7 +89,7 @@ Type of the destination. Currently SSIS Deploy task supports two types:
 
 #### Destination server
 
-Name of destination SQL server. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Database managed instance. This property is only visible when destination type is SSISDB.
+Name of destination SQL server. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Managed Instance. This property is only visible when destination type is SSISDB.
 
 #### Destination path
 
@@ -178,7 +178,7 @@ Whether to roll back the configuration made by this task when error occurs.
 
 #### Target server
 
-Name of target SQL server. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Database managed instance.
+Name of target SQL server. It can be the name of an on-premises SQL Server, Azure SQL Database, or Azure SQL Managed Instance.
 
 #### Authentication type
 

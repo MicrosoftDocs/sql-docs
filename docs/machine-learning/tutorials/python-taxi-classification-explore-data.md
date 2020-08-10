@@ -1,6 +1,6 @@
 ---
 title: "Python tutorial: Explore and visualize data"
-description: In part two of this five-part tutorial series, you'll explore sample data and generate some plots in preparation for using binary classification in Python with SQL machine learning.
+description: Explore sample data and generate some plots in preparation for using binary classification in Python with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 

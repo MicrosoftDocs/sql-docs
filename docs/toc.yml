@@ -136,6 +136,8 @@
     items:
     - name: Configure
       items:
+      - name: Cluster
+        href: big-data-cluster/configure-cluster.md
       - name: SQL Server master instance
         href: big-data-cluster/configure-sql-server-master-instance.md
       - name: Configure Apache Spark & Apache Hadoop
@@ -345,6 +347,12 @@
       items:
       - name: Deployment configuration file
         href: big-data-cluster/reference-deployment-config.md
+    - name: Configuration
+      items:
+      - name: Master instance
+        href: big-data-cluster/reference-config-master-instance.md
+      - name: Apache Spark & Apache Hadoop
+        href: big-data-cluster/reference-config-spark-hadoop.md
     - name: azdata reference
       items:
       - name: azdata
@@ -4711,6 +4719,8 @@
         href: database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md
       - name: Configure the Database Engine to Listen on Multiple TCP Ports
         href: database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md
+      - name: How to enable the TCP protocol with SQLPS
+        href: powershell/how-to-enable-tcp-sqlps.md
       - name: Determine Whether the Database Engine Is Installed & Started
         href: database-engine/configure-windows/determine-whether-the-database-engine-is-installed-and-started.md
       - name: Connect to the Database Engine Using Extended Protection
@@ -6352,7 +6362,7 @@
       - name: Utility Explorer F1 Help
         href: relational-databases/manage/utility-explorer-f1-help.md
     - name: SQL Assessment API
-      href: sql-assessment-api/sql-assessment-api-overview.md
+      href: tools/sql-assessment-api/sql-assessment-api-overview.md
   - name: Monitor
     href: relational-databases/performance/monitor-and-tune-for-performance.md
     items:
@@ -8428,6 +8438,8 @@
         href: ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
       - name: Add an External Tool to the Tools Menu
         href: ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+      - name: Install Extensions in SQL Server Management Studio (SSMS)
+        href: ssms/install-extensions-in-sql-server-management-studio-ssms.md
       - name: SSMS Utility
         href: ssms/ssms-utility.md
       - name: SSMS Keyboard Shortcuts
@@ -9764,10 +9776,10 @@
     items: 
     - name: Extended features and tools
       href: tools/download-sql-feature-packs.md
-  - name: Visual Studio Code
+  - name: Visual Studio Code 
     items: 
     - name: T-SQL scripts
-      href: visual-studio-code/sql-server-develop-use-vscode.md
+      href: tools/visual-studio-code/sql-server-develop-use-vscode.md
 - name: Tutorials
   items:
   - name: SQL Server

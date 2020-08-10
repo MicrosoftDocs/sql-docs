@@ -1,7 +1,7 @@
 ---
 title: azdata bdc spark session reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc spark session commands.
+description: Use this reference article to understand SQL commands in the azdata tool, specifically the bdc spark session command. 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab

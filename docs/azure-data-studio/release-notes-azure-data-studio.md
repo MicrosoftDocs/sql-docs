@@ -42,7 +42,7 @@ July 15, 2020 &nbsp; / &nbsp; version: 1.20.0
 | Added new Feature Tour | From welcome page and command palette, users can now launch a feature tour to get a walkthrough of commonly used features including Connections Viewlet, Notebooks viewlet, and Extensions Marketplace |
 | New notebook features | &bull; &nbsp; Header support in Markdown Toolbar<br/> &bull; &nbsp; Side-by-side Markdown Preview in Text Cells
 | Drag and Drop Columns and Tables in Query Editor | Users can now directly drag and drop columns and tables from connections viewlet to query editor |
-| Azure Account icon added to Activity Bar) | More discoverable to sign in to Azure |
+| Added Azure Account icon to Activity Bar | Users can now easily see where to sign in to Azure |
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22July+2020+Release%22+is%3Aclosed). |
 | &nbsp; | &nbsp; |
 
@@ -55,7 +55,7 @@ June 15, 2020 &nbsp; / &nbsp; version: 1.19.0
 
 | Change | Details |
 | :----- | :------ |
-| Added Azure Data Studio to Azure portal Integration | Users can now directly launch to Azure portal from an Azure SQL DB connection, Azure Postgres, and more. |
+| Added Azure Data Studio to Azure portal Integration | Users can now directly launch to Azure portal from an Azure SQL Database connection, Azure Postgres, and more. |
 | New notebook features | &bull; &nbsp; New Notebook toolbar <br/> &bull; &nbsp; New Edit Cell toolbar <br/> &bull; &nbsp; Python dependencies wizard UX updates <br/> &bull; &nbsp; Improved spacing across notebooks |
 | Announcing SQL Assessment API extension | This extension adds SQL Server best-practice assessment in ADS. It exposes SQL Assessment API, which was previously available for use in PowerShell SqlServer module and SMO only, to let you evaluate your SQL Server instances and receive for them recommendations by SQL Server Team. Learn more about SQL Assessment API and what it is capable of [in this article.](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15) |
 | [Machine Learning Extension improvements](https://go.microsoft.com/fwlink/?linkid=2129918) | Now supports Azure SQL Managed Instance. |
@@ -486,7 +486,7 @@ November 6, 2018 &nbsp; / &nbsp; version: 1.2.4
 
 ### Bug Fixes, November 2018
 
-- Fix [issue #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): Connection lost to Azure SQL DB
+- Fix [issue #2933](https://github.com/Microsoft/azuredatastudio/issues/2933): Connection lost to Azure SQL Database
 - Fix [issue #2914](https://github.com/Microsoft/azuredatastudio/issues/2914): "Invalid argument" exception expanding OE database node
 - Fix [issue #2935](https://github.com/Microsoft/azuredatastudio/pull/2935): Display multi-line messages correctly in query results
 - Fix [issue #2906](https://github.com/Microsoft/azuredatastudio/pull/2906): Fix Edit Data document name when table name contains special characters
@@ -503,7 +503,7 @@ October 29, 2018 &nbsp; / &nbsp; version: 1.1.4
 
 | Change | Details |
 | :----- | :------ |
-| Introducing the Azure Resource Explorer to browse Azure SQL Databases. | &nbsp; |
+| Introducing the Azure Resource Explorer to browse Azure SQL Database. | &nbsp; |
 | Improve Object Explorer and Query Editor connectivity robustness. | &nbsp; |
 | SQL Agent extensions improvements. | &nbsp; |
 | Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md?view=sql-server-ver15). |
@@ -543,7 +543,7 @@ General Availability release of Azure Data Studio (formerly SQL Operations Studi
 | :----- | :------ |
 | Support for SQL Server 2019 preview features including [big data cluster](../big-data-cluster/big-data-cluster-overview.md) support. | Connect to the HDFS/Spark Gateway shipped with SQL Server 2019 preview.<br/><br/>Browse HDFS, upload files, save files, and launch useful actions such as Analyze in Notebook for CSV files.<br/><br/>Submit Spark jobs from the dashboard or right-click on a HDFS/Spark connection in Object Explorer. |
 | Azure Data Studio Notebooks. | Create or open Notebooks using an integrated Notebook viewer. In this release, the Notebook viewer supports connecting to local kernels and the SQL Server 2019 big data cluster only.<br/><br/>Use the PROSE Code Accelerator libraries in your Notebook to learn file format and data types for fast data preparation. |
-| Azure Resource Explorer. | The Azure Resource Explorer view lets you browse data-related endpoints for your Azure accounts and create connections to them in Object Explorer. In this release, Azure SQL Databases and servers are supported. |
+| Azure Resource Explorer. | The Azure Resource Explorer view lets you browse data-related endpoints for your Azure accounts and create connections to them in Object Explorer. In this release, Azure SQL Database is supported. |
 | SQL Server PolyBase Create External Table Wizard. | Create an external table and its supporting metadata structures with an easy to use wizard. In this release, remote SQL Server and Oracle servers are supported. |
 | &nbsp; | &nbsp; |
 

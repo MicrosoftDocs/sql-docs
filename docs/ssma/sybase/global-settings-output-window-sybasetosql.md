@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 7efe8070-bb30-45c7-8619-7efc9cdfbd06
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Global Settings (Output Window)  (SybaseToSQL)
 Use the **Global Settings** dialog box to specify settings for SSMA.  

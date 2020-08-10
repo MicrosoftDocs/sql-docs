@@ -1,6 +1,6 @@
 ---
 title: "Create an availability group with Transact-SQL (T-SQL)"
-description: "Steps to creating an Always On availability group using Transact-SQL (T-SQL). "
+description: "Use Transact-SQL to create and configure an availability group on instances of SQL Server 2019 (15.x) on which the Always On availability groups feature is enabled."
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql

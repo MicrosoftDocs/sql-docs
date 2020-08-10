@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Installing SSMA 2008, Upgrading"
 ms.assetid: e89b45bd-59c1-4d23-8bd7-3dafc1947448
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Installing SSMA for MySQL (MySqlToSql)
 SQL Server Migration Assistant (SSMA) for MySQL consists of a client application that you use to perform a migration from MySQL to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. It also contains an extension pack that supports data migration and the use of MySQL system functions in your migrated databases.  
@@ -30,5 +30,5 @@ If you want to upgrade to a later version of SSMA for MySQL, you must first unin
 |[Removing the SSMA for MySQL Components &#40;MySQLToSql&#41;](../../ssma/mysql/removing-the-ssma-for-mysql-components-mysqltosql.md)|Provides instructions for uninstalling the client program.|  
   
 ## See Also  
-[Migrating MySQL Databases to SQL Server - Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

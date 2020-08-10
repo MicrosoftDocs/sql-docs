@@ -99,5 +99,5 @@ To manually fail over without data loss:
 
    ```sql
    ALTER DATABASE DB1
-      SET HADR RESUME
+        SET HADR RESUME
    ```

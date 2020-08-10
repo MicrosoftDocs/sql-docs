@@ -19,7 +19,7 @@ landingContent:
       links:
       - text: What is Linux?
         url: new-to-linux-resources.md
-      - text: Overview
+      - text: Overview -'SQL Server on Linux'
         url: https://docs.microsoft.com/en-us/learn/modules/introduction-sql-server-linux/
       - text: Additonal Learning - How SQL Server Runs on Linux
         url: https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-on-Linux-The-HOW?term=sql%20server%20on%20Linux&lang-en=true

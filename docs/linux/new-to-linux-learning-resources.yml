@@ -17,7 +17,7 @@ landingContent:
     linkLists:
     - linkListType: learn
       links:
-      - text: What is Linux?
+      - text: Introduction to Linux
         url: new-to-linux-resources.md
       - text: Overview -SQL Server on Linux
         url: https://docs.microsoft.com/en-us/learn/modules/introduction-sql-server-linux/

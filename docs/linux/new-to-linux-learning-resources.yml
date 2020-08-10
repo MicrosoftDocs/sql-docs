@@ -51,7 +51,7 @@ landingContent:
         url: quickstart-install-connect-ubuntu.md
       - text: Docker
         url: quickstart-install-connect-docker.md
-      - text: Tools
+      - text: Tools -Overview
         url: ../tools/overview-sql-tools.md
       - text: Azure Data Studio (Tool)
         url: ../azure-data-studio/what-is.md

@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 613a8368-b372-443f-8252-fb6dc31a003d
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Refresh from Database (DB2ToSQL)
 The **Refresh from Database** dialog box lets you select which objects to refresh from the DB2 database. Rows in the dialog box are color coded based on the state of the metadata:  

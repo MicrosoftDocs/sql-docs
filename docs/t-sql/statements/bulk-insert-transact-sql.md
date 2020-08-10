@@ -9,9 +9,9 @@ ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "BULK_TSQL"
-  - "BULK INSERT"
+  - "BULK_INSERT"
   - "BULK_INSERT_TSQL"
-  - "BULK"
+  - "BULK INSERT"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 

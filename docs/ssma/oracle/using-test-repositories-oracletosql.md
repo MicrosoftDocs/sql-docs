@@ -10,8 +10,8 @@ helpviewer_keywords:
   - "Test Cases Repository"
   - "Test Results Repository"
 ms.assetid: f941cce4-d3e3-4aeb-a88a-4f101a97a9f4
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Using Test Repositories (OracleToSQL)
 The SSMA Test Repository stores SSMA Tester test cases and test results for later use. The Repository data are saved in the SQL Server tables **TestCaseRepository** and **RunTestCaseResultRepository** in the schema **ssma_oracle_utilities** of **ssmatesterdb** database.  

@@ -10,9 +10,9 @@ helpviewer_keywords:
   - "Variable Value File Creation"
   - "Variable Value File, Variable Value File Validation"
 ms.assetid: f583d81a-8e34-41b1-8100-ee3a6a82213b
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Creating Variable Value Files (OracleToSQL)
 Variable Value File is an XML file comprising the parameter values of commands like, the source or destination server name that frequently change from one server migration to another. When a large number of database migrations occur, multiple variable files for storing the value of each source server will be created and referenced in a master script file with the **-v** switch at command line. This helps in maintaining static values in a few script files with the variable values in multiple variable files.  

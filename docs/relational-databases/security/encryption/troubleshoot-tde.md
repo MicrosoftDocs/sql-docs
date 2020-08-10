@@ -1,6 +1,6 @@
 ---
 title: Common errors with customer-managed keys in Azure Key Vault
-description: Troubleshoot common errors with transparent data encryption (TDE) and customer-managed keys in Azure Key Vault.
+description: Learn how to identify and resolve access issues and common errors with transparent data encryption (TDE) and customer-managed keys in Azure Key Vault.
 ms.custom: seo-lt-2019
 helpviewer_keywords: 
   - "troublshooting, tde akv"

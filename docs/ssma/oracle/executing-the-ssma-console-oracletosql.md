@@ -11,9 +11,9 @@ helpviewer_keywords:
   - "Script File Commands, Script Generation Commands,Manageability Commands"
   - "Script File Commands,Project Commands"
 ms.assetid: 7228ccba-c69f-4b4c-8664-01a2750183c5
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Executing the SSMA Console (OracleToSQL)
 Microsoft provides you with a robust set of script file commands to execute and control SSMA activities. The console application uses certain standard script file commands as enumerated in this section.  

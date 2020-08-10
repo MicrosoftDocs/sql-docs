@@ -1,7 +1,8 @@
 ---
-title: "How to: Specify PHP Data Types | Microsoft Docs"
+title: "How to: Specify PHP Data Types"
+description: "Learn how to specify PHP Data Types when retrieving data using the Microsoft Drivers for PHP for SQL Server"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

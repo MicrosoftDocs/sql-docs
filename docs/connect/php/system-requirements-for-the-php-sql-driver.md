@@ -2,7 +2,7 @@
 title: "System Requirements for the Microsoft Drivers for PHP"
 description: "The Microsoft Drivers for PHP for SQL Server support a wide range of PHP versions, operating systems, and SQL Server versions."
 ms.custom: ""
-ms.date: "01/31/2020"
+ms.date: "08/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -42,30 +42,18 @@ The correct version of the Microsoft ODBC Driver for SQL Server is required on t
 
 If you are downloading the Windows version of the driver on a 64-bit version of Windows, the ODBC 64-bit installer installs both 32-bit and 64-bit ODBC drivers. If you use a 32-bit version of Windows, use the ODBC x86 installer. On non-Windows platforms, only 64-bit versions of the driver are available.
 
-|PHP for SQL Server driver version &#8594;<br />&#8595; ODBC Driver version|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
+|PHP driver version &#8594;<br />&#8595; ODBC driver version|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|ODBC Driver 17+ |Y|Y|Y|Y| | | |
-|ODBC Driver 13.1|Y|Y|Y|Y|Y|Y| |
-|ODBC Driver 13  | | | | | |Y| |
-|ODBC Driver 11  |Y|Y|Y|Y|Y|Y|Y|
+|ODBC Driver 17+ |Yes|Yes|Yes|Yes|   |   |   |
+|ODBC Driver 13.1|Yes|Yes|Yes|Yes|Yes|Yes|   |
+|ODBC Driver 13  |   |   |   |   |   |Yes|   |
+|ODBC Driver 11  |Yes|Yes|Yes|Yes|Yes|Yes|Yes|
 
 If you are using the SQLSRV driver, [sqlsrv_client_info](sqlsrv-client-info.md) returns information about which version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Microsoft ODBC Driver for SQL Server is being used by the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]. If you are using the PDO_SQLSRV driver, you can use [PDO::getAttribute](pdo-getattribute.md) to discover the version.
 
 ## SQL Server
 
-For information about using PHP with Azure SQL Database, see [Connecting to Microsoft Azure SQL Database](connecting-to-microsoft-azure-sql-database.md).
-
-|PHP for SQL Server driver version &#8594;<br />&#8595; SQL Server version|5.8|5.6|5.3|5.2|4.3|4.0|3.2|
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|Azure SQL Database (all deployment options)        |Y|Y|Y|Y| | | |
-|Azure SQL Synapse  |Y|Y|Y|Y| | | |
-|SQL Server 2019           |Y|Y|Y|Y| | | |
-|SQL Server 2017           |Y|Y|Y|Y| | | |
-|SQL Server 2016           |Y|Y|Y|Y|Y| | |
-|SQL Server 2014           |Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2012           |Y|Y|Y|Y|Y|Y|Y|
-|SQL Server 2008 R2        | |Y|Y|Y|Y|Y|Y|
-|SQL Server 2008           | | | | |Y|Y|Y|
+See the [supported database versions](microsoft-php-drivers-for-sql-server-support-matrix.md#sql-server-version-certified-compatibility) for details on which SQL Server versions are supported.
 
 ## Operating Systems
 

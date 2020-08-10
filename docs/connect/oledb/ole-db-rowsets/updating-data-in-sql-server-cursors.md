@@ -1,6 +1,6 @@
 ---
 title: Update data in cursors (OLE DB driver)
-description: "Updating data in SQL Server cursors"
+description: Learn how an OLE DB Driver for SQL Server consumer application works with requests in a modifiable rowset by using SQL Server cursors.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

@@ -1,6 +1,6 @@
 ---
 title: "Updating an Application from SQL Server 2005 Native Client | Microsoft Docs"
-description: "Updating an application from SQL Server 2005 Native Client"
+description: Learn about the breaking changes in OLE DB Driver for SQL Server since SQL Server Native Client in SQL Server 2005 (9.x).
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql

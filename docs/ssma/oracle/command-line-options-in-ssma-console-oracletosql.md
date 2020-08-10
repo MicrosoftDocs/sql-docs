@@ -12,9 +12,9 @@ helpviewer_keywords:
   - "Command Line Options, Variable Value File Option"
   - "Command Line Options,Script File Option"
 ms.assetid: bf4a9313-349e-4ebf-9c89-9f5bb515f9ff
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Command Line Options in SSMA Console (OracleToSQL)
 Microsoft provides you with a robust set command line options to execute and control SSMA activities. The ensuing sections detail the same.  

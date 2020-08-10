@@ -10,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Customizing Project Settings"
 ms.assetid: ee5d94c0-c7a6-4779-bd32-729bdaf61e1b
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Working with SSMA Projects (OracleToSQL)
 To migrate Oracle databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you first create an SSMA project. The project is a file that contains the following information:  

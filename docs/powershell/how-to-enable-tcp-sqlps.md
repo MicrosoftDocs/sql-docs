@@ -1,5 +1,5 @@
 ---
-title: How to enable TCP protocol using SQLPS
+title: How to enable the TCP protocol using SQLPS
 description: Learn how to enable TCP protocols using SQLPS
 ms.prod: sql
 ms.technology: scripting
@@ -12,9 +12,12 @@ ms.custom: ""
 ms.date: 08/06/2020
 ---
 
-# How to enable the TCP protocol with SQLPS
+# How to enable the TCP protocol
 
-How to enable the TCP protocol when connected to the console with SQLPS.
+## How to enable the TCP protocol when connected to the console with SQLPS.
+
+> [!Note]
+> The **SQLPS** module is included with the SQL Server installation (for backwards compatibility), but is no longer being updated. The most up-to-date PowerShell module is the **[SqlServer](sql-server-powershell.md)** module.
 
 1. Open a command prompt and type:
 
@@ -48,9 +51,7 @@ How to enable the TCP protocol when connected to the console with SQLPS.
     Restart-Service -Name MSSQLSERVER -Force
     ```
 
-## How to enable the TCP protocol not using SQLPS
-
-How to enable the TCP protocol when connected to the console not using SQLPS.
+## How to enable the TCP protocol when connected to the console not using SQLPS.
 
 1. Open a command prompt and type:
 
@@ -86,6 +87,10 @@ How to enable the TCP protocol when connected to the console not using SQLPS.
 
     Restart-Service -Name MSSQLSERVER -Force
     ```
+
+
+
+
 
 ## Next steps
 

@@ -1,6 +1,6 @@
 ---
 title: "Getting large data (OLE DB driver) | Microsoft Docs"
-description: "Getting large data using OLE DB Driver for SQL Server"
+description: Learn how an OLE DB Driver for SQL Server consumer can retrieve a large data value from a single column in this example.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

@@ -87,7 +87,7 @@ Requires **ALTER ANY CREDENTIAL** permission.
 
 ## Examples
 
-### A. Basic Example
+### A. Creating a Credential for Windows Identity
 
 The following example creates the credential called `AlterEgo`. The credential contains the Windows user `Mary5` and a password.
 
@@ -157,6 +157,15 @@ USE master
 CREATE CREDENTIAL [https://<mystorageaccountname>.blob.core.windows.net/<mystorageaccountcontainername>] -- this name must match the container path, start with https and must not contain a trailing forward slash.
     WITH IDENTITY='SHARED ACCESS SIGNATURE' -- this is a mandatory string and do not change it.
     , SECRET = 'sharedaccesssignature' -- this is the shared access signature token
+GO
+```
+
+### E. Creating a Credential for Managed Identity
+
+The following example creates the credential that represent Managed Identity of Azure SQL or Azure Synapse service. Password and secret are not applicable in this case.
+
+```sql
+CREATE CREDENTIAL ServiceIdentity WITH IDENTITY = 'Managed Identity';
 GO
 ```
 

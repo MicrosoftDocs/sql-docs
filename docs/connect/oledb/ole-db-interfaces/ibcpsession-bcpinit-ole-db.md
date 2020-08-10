@@ -1,6 +1,6 @@
 ---
 title: "IBCPSession::BCPInit (OLE DB driver) | Microsoft Docs"
-description: "IBCPSession::BCPInit (OLE DB)"
+description: Learn how the IBCPSession::BCPInit method performs the necessary initializations for a bulk copy of data between the workstation and SQL Server. 
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

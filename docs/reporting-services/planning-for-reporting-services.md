@@ -19,7 +19,7 @@ ms.author: maggies
   
  [Plan for report design and report deployment | Reporting Services](https://msdn.microsoft.com/1c1e265e-52a2-4de3-96fd-ca4abae01c02)  
   
- [View Reporting Services Reports on Microsoft Surface Devices and  Apple iOS Devices](https://msdn.microsoft.com/library/2124bcf5-d60a-475f-a4ae-de6df44d2860)  
+ [View Reporting Services Reports on Microsoft Surface Devices and  Apple iOS Devices](https://docs.microsoft.com/sql/reporting-services/what-s-new-in-sql-server-reporting-services-ssrs)  
   
  ![Small File Folder Icon](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "Small File Folder Icon") **Reporting Services setup**  
  [Reporting Services Report Server](../reporting-services/report-server-sharepoint/reporting-services-report-server.md)  

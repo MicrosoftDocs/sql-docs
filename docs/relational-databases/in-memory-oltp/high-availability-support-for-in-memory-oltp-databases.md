@@ -29,6 +29,10 @@ ms.author: "carlrab"
   
 -   **Readable Secondary**   
     You can access and query memory-optimized tables on the secondary replica if it has been configured for read access. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the read timestamp on the secondary replica is in close synchronization with the read timestamp on the primary replica, which means that changes on the primary become visible on the secondary very quickly. This close synchronization behaviour is different from [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] In-Memory OLTP.  
+
+### Considerations
+
+- Disk-based tables will not have parallel redo enabled if a database in an availability group is also memory optimized.
   
 ## Failover Clustering Instance (FCI) and In-Memory OLTP Databases  
  To achieve high-availability in a shared-storage configuration, you can set up failover clustering on instances with one or more database with memory-optimized tables. You need to consider the following factors as part of setting up an FCI.  

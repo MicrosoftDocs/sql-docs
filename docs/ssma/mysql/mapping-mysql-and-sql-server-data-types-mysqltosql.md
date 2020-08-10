@@ -14,7 +14,7 @@ author: "nahk-ivanov"
 ms.author: "alexiva"
 ---
 # Mapping MySQL and SQL Server Data Types (MySQLToSQL)
-MySQL database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database types. When you convert MySQL database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects, you must specify how to map data types from MySQL to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can accept the default data type mappings, or you can customize the mappings as shown in the following procedures.  
+MySQL database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database types. When you convert MySQL database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects, you must specify how to map data types from MySQL to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure. You can accept the default data type mappings, or you can customize the mappings as shown in the following procedures.  
   
 ## Default Mappings  
 SSMA has a default set of data type mappings. For the list of default mappings, see [Project Settings &#40;Type Mapping&#41; &#40;MySQLToSQL&#41;](../../ssma/mysql/project-settings-type-mapping-mysqltosql.md).  
@@ -62,9 +62,9 @@ When you view the **Type Mapping** tab in SSMA, the background is color-coded to
   
     This lets you customize the data mapping for smaller and larger values of the same data type. Under **Target type**, select the target SQL Server or SQL Azure data type.  
   
-    1.  Some types require a target data type length. If required, enter the new data length in the **Replace With** box, and then click **OK**.  
+    -  Some types require a target data type length. If required, enter the new data length in the **Replace With** box, and then click **OK**.  
   
-    2.  Some types require a target data type **precision** and **scale** . If required, enter the new precision and scale in the **Replace With** box, and then click **OK** .  
+    -  Some types require a target data type **precision** and **scale**. If required, enter the new precision and scale in the **Replace With** box, and then click **OK**.  
   
 -   **To remove a data type mapping, do the following:**  
   

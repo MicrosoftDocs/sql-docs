@@ -1,6 +1,6 @@
 ---
 title: "IRowsetFastLoad::InsertRow (OLE DB driver) | Microsoft Docs"
-description: "IRowsetFastLoad::InsertRow (OLE DB)"
+description: Learn how the IRowsetFastLoad::InsertRow method adds a row to the bulk copy rowset in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

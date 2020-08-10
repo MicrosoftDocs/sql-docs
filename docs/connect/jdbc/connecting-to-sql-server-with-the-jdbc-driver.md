@@ -37,7 +37,7 @@ System.setProperty("java.net.preferIPv6Addresses", "true");
 |[Using database mirroring &#40;JDBC&#41;](../../connect/jdbc/using-database-mirroring-jdbc.md)|Describes how the JDBC driver supports the use of database mirroring.|  
 |[JDBC driver support for High Availability, disaster recovery](../../connect/jdbc/jdbc-driver-support-for-high-availability-disaster-recovery.md)|Describes how to develop an application that will connect to an AlwaysOn  availability group.|  
 |[Using Kerberos Integrated Authentication to Connect to SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)|Discusses a Java implementation for applications to connect to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database using Kerberos integrated authentication.|  
-|[Connecting to an Azure SQL database](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|Discusses connectivity issues for databases on SQL Azure.|  
+|[Connecting to an Azure SQL database](../../connect/jdbc/connecting-to-an-azure-sql-database.md)|Discusses connectivity issues for databases on Azure SQL.|  
   
 ## See also  
  [Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  

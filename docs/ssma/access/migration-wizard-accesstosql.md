@@ -75,13 +75,13 @@ On the Connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] page
 > As soon as the connection succeeds, you will encounter **Link Tables** page where you have an option of linking the tables. Click **Next** and the migration starts.  
   
 ## Connect to SQL Azure Page  
-On the Connect to SQL Azure page, you specify connection properties, and then connect to SQL Azure. To create a new azure database, you can do so by using **Create Azure Database** option that appears on the click of **Browse** button. For more information, see [Connect to SQL Azure](connect-to-azure-sql-db-accesstosql.md)  
+On the Connect to SQL Azure page, you specify connection properties, and then connect to SQL Azure. To create a new Azure database, you can do so by using **Create Azure Database** option that appears on the click of **Browse** button. For more information, see [Connect to SQL Azure](connect-to-azure-sql-db-accesstosql.md)  
   
 > [!IMPORTANT]  
 > As soon as the connection succeeds, you will encounter **Link Tables** page where you have an option of linking the tables. Click **Next** button on the Links page to start migration.  
   
 ## Link Tables Page  
-The Link Tables page lets you link your original Access tables to the migrated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure tables. Linking tables modifies your Access database so that your queries, forms, reports, and data access pages use the data in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database instead of the data in your Access database.  
+The Link Tables page lets you link your original Access tables to the migrated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure tables. Linking tables modifies your Access database so that your queries, forms, reports, and data access pages use the data in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database instead of the data in your Access database.  
   
 **Link tables**  
 Select the **Link tables** check box to link Access tables to the migrated [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure tables. To start migration you should click **Next** button.  

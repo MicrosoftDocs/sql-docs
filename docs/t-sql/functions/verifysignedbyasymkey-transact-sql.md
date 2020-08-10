@@ -37,7 +37,9 @@ ms.author: vanto
 VerifySignedByAsymKey( Asym_Key_ID , clear_text , signature )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Asym_Key_ID*  
  Is the ID of an asymmetric key certificate in the database.  
   

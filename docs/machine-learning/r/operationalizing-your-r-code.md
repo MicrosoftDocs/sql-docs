@@ -23,7 +23,7 @@ Traditionally, integration of data science solutions has meant extensive recodin
 + [Create and run simple R scripts in SQL Server](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
-A more comprehensive example of deploying R code into production by using stored procedures can be found at [Tutorial: R data analytics for SQL developers](../../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md)
+A more comprehensive example of deploying R code into production by using stored procedures can be found at [Tutorial: R data analytics for SQL developers](../../machine-learning/tutorials/r-taxi-classification-introduction.md)
 
 ## Guidelines for optimizing R code for SQl
 
@@ -41,7 +41,7 @@ Scoring is an important task that can easily be automated, or started from exter
 
 + [Real-time scoring, optimized  for small batches
 + Single-row scoring, for calling from an application
-+ [Native scoring](../sql-native-scoring.md), for fast batch prediction from SQL Server without calling R
++ [Native scoring](../predictions/native-scoring-predict-transact-sql.md), for fast batch prediction from SQL Server without calling R
 
 This walkthrough provides examples of scoring using a stored procedure in both batch and single-row modes:
 

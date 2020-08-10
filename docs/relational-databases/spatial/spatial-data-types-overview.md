@@ -29,7 +29,7 @@ The **geometry** and **geography** data types support 16 types of spatial data o
 
 The figure below shows the geometry hierarchy upon which the **geometry** and **geography** data types are based. The instantiable types of **geometry** and **geography** are indicated in blue.  
 
-![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.gif)
+![geom_hierarchy](../../relational-databases/spatial/media/geom-hierarchy.png)
 
 There's an additional instantiable type for the geography data type: **FullGlobe**. The **geometry** and **geography** types can recognize a specific instance as long as it's a well-formed instance, even if the instance isn't defined explicitly. For example, if you define a **Point** instance explicitly using the STPointFromText() method, **geometry** and **geography** recognize the instance as a **Point**, as long as the method input is well formed. If you define the same instance using the `STGeomFromText()` method, both the **geometry** and **geography** data types recognize the instance as a **Point**.  
 

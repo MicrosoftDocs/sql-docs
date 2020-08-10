@@ -1,5 +1,6 @@
 ---
-title: "SQL Server Login Dialog Box (ODBC) | Microsoft Docs"
+title: "SQL Server Login Dialog Box (ODBC)"
+description: "The SQL Server Login dialog may appear when an application makes an ODBC connection without specifying enough information to connect to the database."
 ms.custom: ""
 ms.date: "03/21/2018"
 ms.prod: sql
@@ -33,6 +34,7 @@ Selects the authentication mode from one of the following:
 - **Active Directory Password** with login ID and password
 - **Active Directory Integrated** authentication using the currently logged-in user's account
 - **Active Directory Interactive** authentication with login ID
+- **Managed Service Identity** authentication with Managed Service Identity
 
 See [Data Source Wizard Screen 2](../../../connect/odbc/windows/dsn-wizard-2.md) for more information on the authentication modes.
 
@@ -42,7 +44,7 @@ If you use a trusted connection, you can specify a service principal name (SPN) 
 
 ### Login ID
 
-Specifies the SQL Server or Azure Active Directory login ID to use for the connection if **Authentication Mode** is set to **SQL Server** or **Active Directory Password** or **Active Directory Interactive**. Otherwise, the **Login ID** box is disabled.
+Specifies the SQL Server or Azure Active Directory login ID to use for the connection if **Authentication Mode** is set to **SQL Server**, **Active Directory Password**, **Active Directory Interactive**, or **Managed Service Identity**. Otherwise, the **Login ID** box is disabled.
 
 ### Password
 

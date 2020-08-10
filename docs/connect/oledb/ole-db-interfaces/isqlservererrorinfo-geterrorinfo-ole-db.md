@@ -1,5 +1,5 @@
 ---
-title: "ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Microsoft Docs"
+title: "ISQLServerErrorInfo::GetErrorInfo (OLE DB driver) | Microsoft Docs"
 description: "ISQLServerErrorInfo::GetErrorInfo (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"
@@ -21,7 +21,7 @@ ms.author: pelopes
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Returns a pointer to a OLE DB Driver for SQL Server SSERRORINFO structure containing the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error details.  
+  Returns a pointer to an OLE DB Driver for SQL Server SSERRORINFO structure containing the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error details.  
   
  The OLE DB Driver for SQL Server defines the **ISQLServerErrorInfo** error interface. This interface returns details from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error, including its severity and state.  
 

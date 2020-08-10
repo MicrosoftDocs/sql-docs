@@ -34,7 +34,9 @@ This function returns the defined length of a column, in bytes.
 COL_LENGTH ( 'table' , 'column' )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 **'** *table* **'**  
 The name of the table whose column length information we want to determine. *table* is an expression of type **nvarchar**.
   

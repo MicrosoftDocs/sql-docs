@@ -1,6 +1,6 @@
 ---
 title: Move data with XDF file
-description: "RevoScaleR tutorial 13: How to move data using XDF and the R language on SQL Server."
+description: "Use an XDF file to transfer data between remote and local compute contexts. Storing the data in an XDF file allows you to perform transformations on the data."
 ms.prod: sql
 ms.technology: machine-learning-services
 

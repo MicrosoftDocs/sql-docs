@@ -1,5 +1,5 @@
 ---
-title: "ISSAsynchStatus::GetStatus (OLE DB) | Microsoft Docs"
+title: "ISSAsynchStatus::GetStatus (OLE DB driver) | Microsoft Docs"
 description: "ISSAsynchStatus::GetStatus (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

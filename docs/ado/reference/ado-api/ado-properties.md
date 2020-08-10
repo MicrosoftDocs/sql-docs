@@ -16,7 +16,7 @@ ms.author: jroth
 ---
 # ADO Properties
 
-|||  
+|Property|Description|  
 |-|-|  
 |[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)|Indicates on which page the current record resides.|  
 |[AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|Indicates the ordinal position of the current record of a **Recordset** object.|  

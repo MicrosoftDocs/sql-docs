@@ -1,5 +1,5 @@
 ---
-title: "ISSAbort::Abort (OLE DB) | Microsoft Docs"
+title: "ISSAbort::Abort (OLE DB driver) | Microsoft Docs"
 description: "ISSAbort::Abort (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

@@ -11,7 +11,7 @@ ms.topic: "reference"
 author: pmasl
 ms.author: pelopes
 ---
-# Service Principal Names (SPNs) in Client Connections (OLE DB)
+# Service Principal Names (SPNs) in Client Connections (OLE DB) in SQL Server Native Client
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

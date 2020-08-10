@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # PredictSupport (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns the support value for a specified state.  
   

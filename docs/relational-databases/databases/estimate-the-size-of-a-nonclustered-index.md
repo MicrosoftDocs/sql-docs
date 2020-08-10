@@ -176,7 +176,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
   
      The bytes added to ***Max_Var_Key_Size*** are for tracking each variable column.This formula assumes that all variable-length columns are 100 percent full. If you anticipate that a smaller percentage of the variable-length column storage space will be used, you can adjust the ***Max_Var_Leaf_Size*** value by that percentage to yield a more accurate estimate of the overall table size.  
   
-     If there are no variable-length columns, set ***Variable_Leaf_Size*** to 0.  
+     If there are no variable-length columns (key columns or included), set ***Variable_Leaf_Size*** to 0.  
   
 5.  Calculate the index row size:  
   

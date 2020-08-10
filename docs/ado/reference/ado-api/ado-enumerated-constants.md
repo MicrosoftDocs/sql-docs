@@ -16,7 +16,7 @@ ms.author: jroth
 # ADO Enumerated Constants
 To assist in debugging, the ADO enumerations list a value for each constant. However, this value is purely advisory, and may change from one release of ADO to another. Your code should only depend on the name, not the actual value, of each enumerated constant.  
   
-|||  
+|Constant|Description|  
 |-|-|  
 |[ADCPROP_ASYNCTHREADPRIORITY_ENUM](../../../ado/reference/ado-api/adcprop-asyncthreadpriority-enum.md)|For an RDS **Recordset** object, specifies the execution priority of the asynchronous thread that retrieves data.|  
 |[ADCPROP_AUTORECALC_ENUM](../../../ado/reference/ado-api/adcprop-autorecalc-enum.md)|Specifies when the **MSDataShape** provider re-calculates aggregate and calculated columns in a hierarchical **Recordset**.|  

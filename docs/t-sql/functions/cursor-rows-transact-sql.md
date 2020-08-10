@@ -33,7 +33,9 @@ This returns the number of qualifying rows currently in the last cursor opened o
 ```
 @@CURSOR_ROWS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return types
 **integer**
   

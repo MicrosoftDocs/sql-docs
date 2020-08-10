@@ -25,9 +25,8 @@ Before converting objects, review the project conversion options in the **Projec
 ## Conversion Results  
 The following table shows which MySQL objects are converted, and the resulting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects:  
   
-|||  
+|MySQL Objects|Resulting SQL Server Objects|  
 |-|-|  
-|**MySQL Objects**|**Resulting SQL Server Objects**|  
 |Tables with dependent objects such as indexes|SSMA creates tables with dependent objects. Table is converted with all indexes and constraints. Indexes are converted into separate [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects.<br /><br />**Spatial data type mapping** can be performed only at table node level.<br /><br />For more information on the Table Conversion settings, see [Conversion Settings](conversion-settings-mysqltosql.md)|  
 |Functions|If the function can be directly converted to Transact-SQL, SSMA creates a function. In some cases, the function must be converted to a stored procedure. This can be done by using **Function Conversion** in Project Settings. In this case, SSMA creates a stored procedure and a function that calls the stored procedure.<br /><br />**Choices Given:**<br /><br />Convert according to project settings<br /><br />Convert to function<br /><br />Convert to stored procedure<br /><br />For more information on Function Conversion settings, see [Conversion Settings](conversion-settings-mysqltosql.md)|  
 |Procedures|If the procedure can be directly converted to Transact-SQL, SSMA creates a stored procedure. In some cases a stored procedure must be called in an autonomous transaction. In this case, SSMA creates two stored procedures: one that implements the procedure, and another that is used for calling the implementing stored procedure.|  
@@ -104,5 +103,5 @@ For each item that could not be converted, you have to determine what you want t
 The next step in the migration process is [Loading Converted Database Objects into SQL Server &#40;MySQLToSQL&#41;](../../ssma/mysql/loading-converted-database-objects-into-sql-server-mysqltosql.md)  
   
 ## See Also  
-[Migrating MySQL Databases to SQL Server - Azure SQL DB &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
+[Migrating MySQL Databases to SQL Server - Azure SQL Database &#40;MySQLToSql&#41;](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)  
   

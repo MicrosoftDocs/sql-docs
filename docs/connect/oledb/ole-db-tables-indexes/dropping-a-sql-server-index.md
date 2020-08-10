@@ -1,5 +1,5 @@
 ---
-title: "Dropping a SQL Server Index | Microsoft Docs"
+title: "Drop SQL Server index (OLE DB driver) | Microsoft Docs"
 description: "Dropping a sql server index using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

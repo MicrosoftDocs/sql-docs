@@ -13,7 +13,7 @@ f1_keywords:
 ms.assetid: 5451561e-0ce3-4bb5-844a-88cd15b0b371
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Subscription, Undistributed Commands (Transactional Subscription)
 [!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]

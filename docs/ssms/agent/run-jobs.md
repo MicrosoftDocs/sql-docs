@@ -27,9 +27,8 @@ To manage [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent jobs, 
   
 ## Related Tasks  
   
-|||  
+|Description|Topic|  
 |-|-|  
-|**Description**|**Topic**|  
 |Describes how to start running a [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.|[Start a Job](../../ssms/agent/start-a-job.md)|  
 |Describes how to stop a [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.|[Stop a Job](../../ssms/agent/stop-a-job.md)|  
 |Describes how to disable or enable a [!INCLUDE[msCoName](../../includes/msconame_md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job.|[Disable or Enable a Job](../../ssms/agent/disable-or-enable-a-job.md)|  

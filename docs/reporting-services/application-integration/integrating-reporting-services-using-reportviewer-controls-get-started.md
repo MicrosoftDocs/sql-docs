@@ -246,9 +246,9 @@ The Report Viewer Control is now shipped as a NuGet package and no longer shows 
     
 The viewer control is designed for modern browsers. The control may not work as expected if the browser renders the page using IE compatibility mode. Intranet sites may require a meta tag to override default browser behavior.
 
-    ```
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    ```
+```html
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+```
 
 ## NuGet.org pages
 
@@ -260,7 +260,7 @@ Here are links to articles on the NuGet.org site about the WebForm and WinForm v
 [https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/](https://www.nuget.org/packages/Microsoft.ReportingServices.ReportViewerControl.WinForms/)
 
 
-## Feedback
+## Forum Feedback
 
 Let the team know about issues on the [Reporting Services forums](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices).
 

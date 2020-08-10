@@ -1,5 +1,5 @@
 ---
-title: "Setting Large Data | Microsoft Docs"
+title: Setting large data (OLE DB driver)
 description: "Setting large data using OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"

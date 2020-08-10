@@ -58,5 +58,5 @@ If you customize the mapping between an ASE schema and a [!INCLUDE[ssNoVersion](
 If you want to analyze the conversion of Sybase ASE objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure objects, you can [Create a conversion report](assessing-sybase-ase-database-objects-for-conversion-sybasetosql.md). Otherwise you can [Convert the ASE database object definitions](converting-sybase-ase-database-objects-sybasetosql.md) into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure object definitions.  
   
 ## See Also  
-[Migrating Sybase ASE Databases to SQL Server - Azure SQL DB &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
+[Migrating Sybase ASE Databases to SQL Server - Azure SQL Database &#40;SybaseToSQL&#41;](../../ssma/sybase/migrating-sybase-ase-databases-to-sql-server-azure-sql-db-sybasetosql.md)  
   

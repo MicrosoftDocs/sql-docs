@@ -212,7 +212,7 @@ dbname_log_yyyymmddhhmm.BAK
  **-VrfyBackup**  
  Specifies that RESTORE VERIFYONLY be run on the backup when it completes.  
   
- *number*[**minutes**| **hours**| **day**| **weeks**| **months**]  
+ *number*[**minutes**\| **hours**\| **day**\| **weeks**\| **months**]  
  Specifies the time interval used to determine if a report or backup file is old enough to be deleted. *number* is an integer followed (without a space) by a unit of time. Valid examples:  
   
 -   **12weeks**  

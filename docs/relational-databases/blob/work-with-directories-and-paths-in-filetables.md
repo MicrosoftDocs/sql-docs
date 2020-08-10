@@ -87,9 +87,8 @@ GO
 ##  <a name="is_directory"></a> The is_directory column in the FileTable schema  
  The following table describes the interaction between the **is_directory** column and the **file_stream** column that contains the FILESTREAM data in a FileTable.  
   
-||||  
-|-|-|-|  
-|*is_directory* **value**|*file_stream* **value**|**Behavior**|  
+|is_directory value|file_stream value|Behavior|  
+|-|-|-|    
 |FALSE|NULL|This is an invalid combination that will be caught by a system-defined constraint.|  
 |FALSE|\<value>|The item represents a file.|  
 |TRUE|NULL|The item represents a directory.|  

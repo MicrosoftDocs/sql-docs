@@ -1,5 +1,5 @@
 ---
-title: "Fetching a Single Row with IRow | Microsoft Docs"
+title: "Fetch single row with IRow (OLE DB driver) | Microsoft Docs"
 description: "Fetching a single row using IRow interface of OLE DB Driver for SQL Server"
 ms.custom: ""
 ms.date: "06/14/2018"
@@ -18,7 +18,7 @@ helpviewer_keywords:
 author: pmasl
 ms.author: pelopes
 ---
-# Fetching a Single Row with IRow
+# Fetching a Single Row with IRow (OLE DB Driver)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]

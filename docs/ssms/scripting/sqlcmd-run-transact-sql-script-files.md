@@ -1,5 +1,6 @@
 ---
 title: "Run Transact-SQL Script Files Using sqlcmd"
+description: Learn how to use sqlcmd to run a Transact-SQL script file. It can contain Transact-SQL statements, sqlcmd commands, and scripting variables.
 ms.custom: seo-lt-2019
 ms.date: "07/15/2016"
 ms.prod: sql

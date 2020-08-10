@@ -1,5 +1,6 @@
 ---
 title: "Reporting Services Data Alerts | Microsoft Docs"
+description: Learn how SQL Server Reporting Services data alerts help inform you about report data that is interesting or important to you.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -153,9 +154,8 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
   
  The following table summarizes the event handlers and when retry will fire:  
   
-|Error Category|<|\<|Event type||>|>|>|  
+|Error Category / Event Type|FireAlert|FireSchedule|CreateSchedule|UpdateSchedule|DeleteSchedule|GenerateAlert|DeliverAlert|  
 |--------------------|--------|--------|----------------|-|--------|--------|--------|  
-||**FireAlert**|**FireSchedule**|**CreateSchedule**|**UpdateSchedule**|**DeleteSchedule**|**GenerateAlert**|**DeliverAlert**|  
 |Out of memory|X|X|X|X|X|X|X|  
 |Thread abort|X|X|X|X|X|X|X|  
 |SQL Agent is not running|X||X|X|X|||  

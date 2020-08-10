@@ -13,7 +13,7 @@ ms.author: jroth
 ms.custom: seo-dt-2019
 ---
 # Backup Stretch-enabled databases (Stretch Database)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
  Database backups help you to recover from many types of failures, errors, and disasters.  

@@ -4,7 +4,7 @@ description: This Release Notes document describes known issues that you should 
 ms.prod: sql
 ms.technology: release-landing
 ms.custom: ""
-ms.date: "02/01/2017"
+ms.date: 07/22/2020
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -12,7 +12,7 @@ helpviewer_keywords:
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
 author: rothja
 ms.author: jroth
-monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server 2012 Release Notes
 [!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]

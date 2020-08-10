@@ -1,5 +1,5 @@
 ---
-title: "IRowsetFastLoad::InsertRow (OLE DB) | Microsoft Docs"
+title: "IRowsetFastLoad::InsertRow (OLE DB driver) | Microsoft Docs"
 description: "IRowsetFastLoad::InsertRow (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

@@ -1,5 +1,5 @@
 ---
-title: "ISSAsynchStatus::Abort (OLE DB) | Microsoft Docs"
+title: "ISSAsynchStatus::Abort (OLE DB driver) | Microsoft Docs"
 description: "ISSAsynchStatus::Abort (OLE DB)"
 ms.custom: ""
 ms.date: "06/14/2018"

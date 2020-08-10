@@ -35,7 +35,9 @@ A mathematical function that returns the absolute (positive) value of the specif
 ABS ( numeric_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *numeric_expression*  
 An expression of the exact numeric or approximate numeric data type category.
   

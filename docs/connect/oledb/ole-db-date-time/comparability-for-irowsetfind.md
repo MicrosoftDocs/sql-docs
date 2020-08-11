@@ -1,6 +1,6 @@
 ---
 title: "Comparability for IRowsetFind | Microsoft Docs"
-description: "Comparability for IRowsetFind"
+description: Learn about the comparisons that IRowsetFind supports for date/time types in OLE DB Driver for SQL Server. DB_E_BADCOMPAREOP is returned for other comparisons.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

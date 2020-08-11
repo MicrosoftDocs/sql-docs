@@ -1,6 +1,6 @@
 ---
 title: "Execute Stored Procedure with ODBC CALL and Process Output | Microsoft Docs"
-description: "Process return codes and output parameters using OLE DB Driver for SQL Server"
+description: Learn how to process return codes and output parameters in OLE DB Driver for SQL Server, which are received in the final packet after the rowset is released.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

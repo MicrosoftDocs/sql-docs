@@ -1,6 +1,6 @@
 ---
 title: "Data type support for date and time improvements (OLE DB driver) | Microsoft Docs"
-description: "Data type support for OLE DB date and time improvements"
+description: Learn about OLE DB types that support SQL Server date/time data types in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

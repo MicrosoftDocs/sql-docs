@@ -123,7 +123,7 @@ This section documents how to create and configure the cluster for each distribu
    sudo pcs cluster auth <Node1 Node2 ... NodeN> -u hacluster
    ```
    
-   where *NodeX* is the name of the node.
+   where *NodeN* is the name of the node.
 2. Create the cluster
    
    ```bash

@@ -175,7 +175,8 @@ Specifies the row number that is read first in all files during a PolyBase load.
  DATE\_FORMAT = *datetime_format*  
 Specifies a custom format for all date and time data that might appear in a delimited text file. If the source file uses default datetime formats, this option isn't necessary. Only one custom datetime format is allowed per file. You can't specify more than one custom datetime formats per file. However, you can use more than one datetime formats if each one is the default format for its respective data type in the external table definition.
 
-PolyBase only uses the custom date format for importing the data. It doesn't use the custom format for writing data to an external file.
+> [!IMPORTANT]
+> PolyBase only uses the custom date format for importing the data. It doesn't use the custom format for writing data to an external file.
 
  When DATE_FORMAT isn't specified or is the empty string, PolyBase uses the following default formats:
   
@@ -215,7 +216,9 @@ Notes about the table:
 |DateTimeOffset|DATE_FORMAT = 'yyyy-MM-dd hh:mm:ss.ffffffftt zzz'|In addition to year, month, and day, this date format includes 00-11 hours, 00-59 minutes, 00-59 seconds, 7 digits for milliseconds, (AM, am, PM, or pm), and the timezone offset. See the description in the previous row.|  
 |Time|DATE_FORMAT = 'HH:mm:ss'|There is no date value, only 00-23 hours, 00-59 minutes, and 00-59 seconds.|  
   
- All supported date formats:
+ #### Supported date and time formats
+ 
+ External file format can describe a large number of date and time formats:
   
 |datetime|smalldatetime|date|datetime2|datetimeoffset|  
 |--------------|-------------------|----------|---------------|--------------------|  

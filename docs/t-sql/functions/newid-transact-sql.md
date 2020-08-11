@@ -20,17 +20,18 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # NEWID (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-  Creates a unique value of type **uniqueidentifier**.  
+Creates a unique value of type **uniqueidentifier**.  
   
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql 
 NEWID ( )  
 ```  
   
@@ -45,7 +46,7 @@ NEWID ( )
 ### A. Using the NEWID function with a variable  
  The following example uses `NEWID()` to assign a value to a variable declared as the **uniqueidentifier** data type. The value of the **uniqueidentifier** data type variable is printed before the value is tested.  
   
-```  
+```sql
 -- Creating a local variable with DECLARE/SET syntax.  
 DECLARE @myid uniqueidentifier  
 SET @myid = NEWID()  
@@ -67,7 +68,7 @@ Value of @myid is: 6F9619FF-8B86-D011-B42D-00C04FC964FF
   
  The following example creates the `cust` table with a **uniqueidentifier** data type, and uses NEWID to fill the table with a default value. In assigning the default value of `NEWID()`, each new and existing row has a unique value for the `CustomerID` column.  
   
-```  
+```sql
 -- Creating a table using NEWID for uniqueidentifier data type.  
 CREATE TABLE cust  
 (  
@@ -86,20 +87,20 @@ CREATE TABLE cust
 GO  
 -- Inserting 5 rows into cust table.  
 INSERT cust  
-(CustomerID, Company, ContactName, Address, City, StateProvince,   
+(Company, ContactName, Address, City, StateProvince,   
  PostalCode, CountryRegion, Telephone, Fax)  
 VALUES  
- (NEWID(), 'Wartian Herkku', 'Pirkko Koskitalo', 'Torikatu 38', 'Oulu', NULL,  
+ ('Wartian Herkku', 'Pirkko Koskitalo', 'Torikatu 38', 'Oulu', NULL,  
  '90110', 'Finland', '981-443655', '981-443655')  
-,(NEWID(), 'Wellington Importadora', 'Paula Parente', 'Rua do Mercado, 12', 'Resende', 'SP',  
+,('Wellington Importadora', 'Paula Parente', 'Rua do Mercado, 12', 'Resende', 'SP',  
  '08737-363', 'Brasil', '(14) 555-8122', '')  
-,(NEWID(), 'Cactus Comidas para Ilevar', 'Patricio Simpson', 'Cerrito 333', 'Buenos Aires', NULL,   
+,('Cactus Comidas para Ilevar', 'Patricio Simpson', 'Cerrito 333', 'Buenos Aires', NULL,   
  '1010', 'Argentina', '(1) 135-5555', '(1) 135-4892')  
-,(NEWID(), 'Ernst Handel', 'Roland Mendel', 'Kirchgasse 6', 'Graz', NULL,  
+,('Ernst Handel', 'Roland Mendel', 'Kirchgasse 6', 'Graz', NULL,  
  '8010', 'Austria', '7675-3425', '7675-3426')  
-,(NEWID(), 'Maison Dewey', 'Catherine Dewey', 'Rue Joseph-Bens 532', 'Bruxelles', NULL,  
+,('Maison Dewey', 'Catherine Dewey', 'Rue Joseph-Bens 532', 'Bruxelles', NULL,  
  'B-1180', 'Belgium', '(02) 201 24 67', '(02) 201 24 68');  
-GO  
+GO
 ```  
   
 ### C. Using uniqueidentifier and variable assignment  

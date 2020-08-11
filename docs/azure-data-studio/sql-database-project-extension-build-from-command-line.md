@@ -42,7 +42,7 @@ These files are created by the extension during the first build completed in the
 
 Copy these 10 files to a new and accessible folder or note their location.  This location will be referred to as `DotNet Core build folder` in this document.
 
-3. If the project was created in Azure Data Studio - skip ahead to [Build the project from the command line](#Build-the-project-from-the-command-line). If the project was created in SQL Server Data Tools (SSDT), open the project in the Azure Data Studio SQL Database project extension.  Opening the project in Azure Data Studio automatically updates the `sqlproj` file with three edits, noted below for your information:
+3. If the project was created in Azure Data Studio - skip ahead to [Build the project from the command line](#build-the-project-from-the-command-line). If the project was created in SQL Server Data Tools (SSDT), open the project in the Azure Data Studio SQL Database project extension.  Opening the project in Azure Data Studio automatically updates the `sqlproj` file with three edits, noted below for your information:
     1. Import conditions 
     ```
     <Import Condition="'$(NetCoreBuild)' == 'true'" Project="$(NETCoreTargetsPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets"/> 

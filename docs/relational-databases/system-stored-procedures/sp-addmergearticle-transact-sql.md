@@ -217,7 +217,7 @@ sp_addmergearticle [ @publication = ] 'publication'
  **1** specifies that the signature will be verified to see if it is from a trusted source.  
   
 `[ @destination_object = ] 'destination_object'`
- Is the name of the object in the subscription database. *destination_object* is **sysname**, with a default value of what is in **\@source_object**. This parameter can be specified only if the article is a schema-only article, such as stored procedures, views, and UDFs. If the article specified is a table article, the value in *@source_object* overrides the value in *destination_object*.  
+ Is the name of the object in the subscription database. *destination_object* is **sysname**, with a default value of what is in **\@source_object**. This parameter can be specified only if the article is a schema-only article, such as stored procedures, views, and UDFs. If the article specified is a table article, the value in *\@source_object* overrides the value in *destination_object*.  
   
 `[ @allow_interactive_resolver = ] 'allow_interactive_resolver'`
  Enables or disables the use of the Interactive Resolver on an article. *allow_interactive_resolver* is **nvarchar(5)**, with a default of FALSE. **true** enables the use of the Interactive Resolver on the article; **false** disables it.  

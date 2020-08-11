@@ -41,7 +41,7 @@ To perform a manual failover on Red Hat Enterprise Linux (RHEL) or Ubuntu server
 
    \<NewHostNode> is the name of the cluster node that you want to host the FCI. 
 
-   You will not get any acknowledgement.
+   You will not get any acknowledgment.
 
 2.	During a manual failover, Pacemaker creates a location constraint on the resource that was chosen to move manually. To see this constraint, run `sudo pcs constraint`.
 

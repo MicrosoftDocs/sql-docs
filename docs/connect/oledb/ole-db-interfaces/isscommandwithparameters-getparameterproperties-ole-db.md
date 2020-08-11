@@ -1,6 +1,6 @@
 ---
 title: "ISSCommandWithParameters::GetParameterProperties (OLE DB) | Microsoft Docs"
-description: "ISSCommandWithParameters::GetParameterProperties (OLE DB)"
+description: ISSCommandWithParameters::GetParameterProperties returns an array of property set structures in OLE DB Driver for SQL Server, one for each UDT or XML parameter.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

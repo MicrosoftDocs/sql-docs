@@ -95,7 +95,7 @@ To manually fail over without data loss:
    > [!NOTE] 
    > To delete an availability group, use [DROP AVAILABILITY GROUP](https://docs.microsoft.com/sql/t-sql/statements/drop-availability-group-transact-sql). For an availability group that's created with cluster type NONE or EXTERNAL, execute the command on all replicas that are part of the availability group.
 
-1. Resume data movement, run the following command on the SQL Server instance that hosts the primary replica: 
+1. Resume data movement, run the following command for every database in the availability group on the SQL Server instance that hosts the primary replica: 
 
    ```sql
    ALTER DATABASE DB1

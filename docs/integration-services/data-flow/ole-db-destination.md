@@ -123,6 +123,7 @@ ms.author: chugu
   
 > [!NOTE]  
 >  The **CommandTimeout** property of the OLE DB destination is not available in the **OLE DB Destination Editor**, but can be set by using the **Advanced Editor**. In addition, certain fast load options are available only in the **Advanced Editor**. For more information on these properties, see the OLE DB Destination section of [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
+> 
 >  The **CommandTimeout** property only takes effective when data access mode is **SQL command**.
   
 ### Static Options  

@@ -1,5 +1,6 @@
 ---
 title: "Back Up and Restore Replicated Databases | Microsoft Docs"
+description: Review overview information and links to additional information about backup and restore strategies for each type of replication in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -28,7 +29,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Back Up and Restore Replicated Databases
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   Replicated databases require special attention with regards to backing up and restoring data. This topic provides introductory information and links to further information on backup and restore strategies for each type of replication.  
   

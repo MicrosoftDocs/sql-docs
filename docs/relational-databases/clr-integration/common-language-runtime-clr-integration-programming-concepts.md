@@ -1,6 +1,6 @@
 ---
 title: "Common Language Runtime (CLR) Programming"
-description: Links to Common Language Runtime (CLR) programming articles
+description: This article provides resources for using CLR integration with SQL Server, which allows you to write server-side modules using any .NET Framework language.
 ms.custom: "seo-lt-2019"
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -18,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Common Language Runtime (CLR) Integration Programming Concepts
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   Beginning with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)], [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features the integration of the common language runtime (CLR) component of the .NET Framework for [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows. This means that you can now write stored procedures, triggers, user-defined types, user-defined functions, user-defined aggregates, and streaming table-valued functions, using any .NET Framework language, including [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual Basic .NET and [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C#.  
   
  The Microsoft.SqlServer.Server namespace includes core functionality for CLR programming in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, the Microsoft.SqlServer.Server namespace is documented in the .NET Framework SDK. This documentation is not included in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Books Online.  

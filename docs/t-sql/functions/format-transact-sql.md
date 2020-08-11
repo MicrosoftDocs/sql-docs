@@ -15,13 +15,13 @@ dev_langs:
 helpviewer_keywords: 
   - "FORMAT function"
 ms.assetid: dad6f24c-b8d9-4dbe-a561-9b167b8f20c8
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions||=azure-sqldw-latest"
 ---
 # FORMAT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Returns a value formatted with the specified format and optional culture. Use the FORMAT function for locale-aware formatting of date/time and number values as strings. For general data type conversions, use CAST or CONVERT.  
   
@@ -29,10 +29,12 @@ Returns a value formatted with the specified format and optional culture. Use th
   
 ## Syntax  
   
-```sql
+```syntaxsql
 FORMAT ( value, format [, culture ] )  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
  *value*  
@@ -184,11 +186,11 @@ ORDER BY CurrencyRateID;
 ```
 CurrencyRateID EndOfDayRate  Numeric Format  General Format  Currency Format  
 -------------- ------------  --------------  --------------  ---------------  
-1              1.0002        1,00            1,0002          1,00 €  
-2              1.55          1,55            1,5500          1,55 €  
-3              1.9419        1,94            1,9419          1,94 €  
-4              1.4683        1,47            1,4683          1,47 €  
-5              8.2784        8,28            8,2784          8,28 €  
+1              1.0002        1,00            1,0002          1,00 &euro;  
+2              1.55          1,55            1,5500          1,55 &euro;  
+3              1.9419        1,94            1,9419          1,94 &euro;  
+4              1.4683        1,47            1,4683          1,47 &euro;  
+5              8.2784        8,28            8,2784          8,28 &euro;  
   
  (5 row(s) affected)  
 ```  
@@ -238,6 +240,6 @@ select FORMAT(CAST('2018-01-01 14:00' AS datetime2), N'HH:mm') -- returns 14:00
   
 ## See Also
 
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
- [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
- [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)
+- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
+- [STR &#40;Transact-SQL&#41;](../../t-sql/functions/str-transact-sql.md)  
+- [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)

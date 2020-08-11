@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, objects and collections"
 ms.assetid: 7a745aae-9372-49b6-8dae-b9c93e5f3216
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO Objects and Collections
 ADO consists of the following nine objects and four collections.  

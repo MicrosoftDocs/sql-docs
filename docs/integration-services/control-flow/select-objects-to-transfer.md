@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Select Objects to Transfer
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use this dialog box to select objects to transfer from one instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to another by using an [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] transfer task.  

@@ -1,5 +1,6 @@
 ---
 title: "Backup & restore: system databases"
+description: SQL Server maintains system databases essential for operation of a server instance. Several system databases must be backed up after every significant update.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.prod: sql
@@ -19,7 +20,7 @@ ms.author: mathoma
 ---
 # Backup & restore: system databases (SQL Server)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] maintains a set of system-level databases, s*ystem databases*, which are essential for the operation of a server instance. Several of the system databases must be backed up after every significant update. The system databases that you must always back up include **msdb**, **master**, and **model**. If any database uses replication on the server instance, there is a **distribution** system database that you must also back up. Backups of these system databases let you restore and recover the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] system in the event of system failure, such as the loss of a hard disk.  
   

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "cursors [ADO], static"
   - "static cursors [ADO]"
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Static Cursors
 The static cursor always displays the result set as it was when the cursor was first opened. Depending on implementation, static cursors are either read-only or read/write and provide forward and backward scrolling. The static cursor does not usually detect changes made to the membership, order, or values of the result set after the cursor is opened. Static cursors may detect their own updates, deletes, and inserts, although they are not required to do so.  

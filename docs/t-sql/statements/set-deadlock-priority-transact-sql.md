@@ -26,7 +26,7 @@ ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DEADLOCK_PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Specifies the relative importance that the current session continue processing if it is deadlocked with another session.  
   
@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var | @deadlock_intvar }  
   
@@ -77,7 +77,7 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
 ## Examples  
  The following example uses a variable to set the deadlock priority to `LOW`.  
   
-```  
+```sql
 DECLARE @deadlock_var NCHAR(3);  
 SET @deadlock_var = N'LOW';  
   
@@ -87,7 +87,7 @@ GO
   
  The following example sets the deadlock priority to `NORMAL`.  
   
-```  
+```sql
 SET DEADLOCK_PRIORITY NORMAL;  
 GO  
 ```  

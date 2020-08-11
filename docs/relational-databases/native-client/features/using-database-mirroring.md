@@ -15,12 +15,12 @@ helpviewer_keywords:
   - "SQL Server Native Client ODBC driver, database mirroring"
   - "SQL Server Native Client OLE DB provider, database mirroring"
 ms.assetid: 71b15712-7972-4465-9274-e0ddc271eedc
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Using Database Mirroring
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Using Database Mirroring in SQL Server Native Client
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
 > [!NOTE]  

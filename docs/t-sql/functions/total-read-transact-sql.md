@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "total read [SQL Server]"
   - "read activity since last started"
 ms.assetid: b505fbe9-9569-4f3d-80b9-b64b5109ac98
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # &#x40;&#x40;TOTAL_READ (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the number of disk reads, not cache reads, by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.  
   
@@ -36,7 +36,9 @@ ms.author: mikeray
 @@TOTAL_READ  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  

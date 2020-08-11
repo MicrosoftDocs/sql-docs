@@ -25,7 +25,7 @@ ms.author: carlrab
 monkerRange:  "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions"
 ---
 # SET IDENTITY_INSERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Allows explicit values to be inserted into the identity column of a table.  
 
@@ -33,7 +33,7 @@ Allows explicit values to be inserted into the identity column of a table.
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF }  
 ```  
@@ -61,7 +61,7 @@ SET IDENTITY_INSERT [ [ database_name . ] schema_name . ] table_name { ON | OFF 
 ## Examples  
  The following example creates a table with an identity column and shows how the `SET IDENTITY_INSERT` setting can be used to fill a gap in the identity values caused by a `DELETE` statement.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 -- Create tool table.  

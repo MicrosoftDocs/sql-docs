@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_certify_removable"
 ms.assetid: ca12767f-0ae5-4652-b523-c23473f100a1
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_certify_removable (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Verifies that a database is correctly configured for distribution on removable media and reports any problems to the user.  
   

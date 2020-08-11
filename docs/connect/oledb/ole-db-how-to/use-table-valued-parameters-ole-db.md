@@ -1,6 +1,6 @@
 ---
-title: "Use Table-Valued Parameters (OLE DB) | Microsoft Docs"
-description: "Use Table-Valued Parameters (OLE DB)"
+title: Use table-valued parameters (OLE DB driver)
+description: Learn how to creates table-valued parameters in OLE DB Driver for SQL Server in this example that then shows how to work with the parameters.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -12,7 +12,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Use Table-Valued Parameters (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -37,7 +37,7 @@ ms.author: pelopes
   
  Put the third code listing into a file called OLEDBUtils.hpp.  
   
- Compile with ole32.lib oleaut32.lib and execute the fourth (C++) code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains msoledbsql.h.  
+ Compile with ole32.lib oleaut32.lib and execute the fourth (C++) code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name", where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains msoledbsql.h.  
   
  The fifth ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing creates the database used by the sample.  
   

@@ -10,8 +10,8 @@ ms.topic: conceptual
 dev_langs: 
   - "VB"
 ms.assetid: 0db15a15-d597-4c04-9ade-1ac0f0ebec0a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO Event Instantiation: VBScript
 Microsoft Visual Basic Scripting Edition does not support ADO events.

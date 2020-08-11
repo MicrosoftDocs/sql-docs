@@ -1,7 +1,8 @@
 ---
 title: "Monitoring Performance By Using the Query Store | Microsoft Docs"
+description: The SQL Server Query Store provides insight on query plan choice and performance. Query Store captures history of queries, plans, and runtime statistics.
 ms.custom: ""
-ms.date: 03/17/2020
+ms.date: 04/09/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -17,7 +18,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Monitoring performance by using the Query Store
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Store feature provides you with insight on query plan choice and performance. It simplifies performance troubleshooting by helping you quickly find performance differences caused by query plan changes. Query Store automatically captures a history of queries, plans, and runtime statistics, and retains these for your review. It separates data by time windows so you can see database usage patterns and understand when query plan changes happened on the server. You can configure query store using the [ALTER DATABASE SET](../../t-sql/statements/alter-database-transact-sql-set-options.md) option.
 
@@ -28,9 +29,9 @@ For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../
 
 ## <a name="Enabling"></a> Enabling the Query Store
 
- Query Store is not active for new databases by default.
+ Query Store is not enabled by default for new SQL Server and Azure Synapse Analytics (SQL DW) databases, and is enabled by default for new Azure SQL Database databases.
 
-## Use the Query Store Page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+### Use the Query Store Page in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
 
 1. In Object Explorer, right-click a database, and then click **Properties**.
 
@@ -41,7 +42,7 @@ For information about operating the Query Store in Azure [!INCLUDE[ssSDS](../../
 
 3. In the **Operation Mode (Requested)** box, select **Read Write**.
 
-## Use Transact-SQL Statements
+### Use Transact-SQL Statements
 
 Use the **ALTER DATABASE** statement to enable the query store for a given database. For example:
 
@@ -137,9 +138,8 @@ Use the drop-down box at the top to filter queries based on various wait time cr
 
 Here are some examples how you can get more insights into your workload before and after introducing wait categories in Query Store:
 
-||||
-|-|-|-|
 |Previous experience|New experience|Action|
+|-|-|-|
 |High RESOURCE_SEMAPHORE waits per database|High Memory waits in Query Store for specific queries|Find the top memory consuming queries in Query Store. These queries are probably delaying further progress of the affected queries. Consider using MAX_GRANT_PERCENT query hint for these queries, or for the affected queries.|
 |High LCK_M_X waits per database|High Lock waits in Query Store for specific queries|Check the query texts for the affected queries and identify the target entities. Look in Query Store for other queries modifying the same entity, which are executed frequently and/or have high duration. After identifying these queries, consider changing the application logic to improve concurrency, or use a less restrictive isolation level.|
 |High PAGEIOLATCH_SH waits per database|High Buffer IO waits in Query Store for specific queries|Find the queries with a high number of physical reads in Query Store. If they match the queries with high IO waits, consider introducing an index on the underlying entity, in order to do seeks instead of scans, and thus minimize the IO overhead of the queries.|
@@ -147,38 +147,11 @@ Here are some examples how you can get more insights into your workload before a
 
 ## <a name="Options"></a> Configuration Options
 
-The following options are available to configure Query Store parameters.
-
-*OPERATION_MODE*
-Can be **READ_WRITE** (default) or READ_ONLY.
-
-*CLEANUP_POLICY (STALE_QUERY_THRESHOLD_DAYS)*
-Configure the `STALE_QUERY_THRESHOLD_DAYS` argument to specify the number of days to retain data in the Query Store. The default value is 30. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **7** days.
-
-*DATA_FLUSH_INTERVAL_SECONDS*
-Determines the frequency at which data written to the Query Store is persisted to disk. To optimize for performance, data collected by the query store is asynchronously written to the disk. The frequency at which this asynchronous transfer occurs is configured via `DATA_FLUSH_INTERVAL_SECONDS`. The default value is **900** (15 min).
-
-*MAX_STORAGE_SIZE_MB*
-Configures the maximum size of the Query Store. If the data in the Query Store hits the `MAX_STORAGE_SIZE_MB` limit, the Query Store automatically changes the state from read-write to read-only and stops collecting new data. The default value is **100 MB** for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the default value is **1 GB**. For [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Premium edition, default is **1 GB** and for [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] Basic edition, default is **10 MB**.
-
-*INTERVAL_LENGTH_MINUTES*
-Determines the time interval at which runtime execution statistics data is aggregated into the Query Store. To optimize for space usage, the runtime execution statistics in the Runtime Stats Store are aggregated over a fixed time window. This fixed time window is configured via `INTERVAL_LENGTH_MINUTES`. The default value is **60**.
-
-*SIZE_BASED_CLEANUP_MODE*
-Controls whether the cleanup process will be automatically activated when total amount of data gets close to maximum size. Can be **AUTO** (default) or OFF.
-
-*QUERY_CAPTURE_MODE*
-Designates if the Query Store captures all queries, or relevant queries based on execution count and resource consumption, or stops adding new queries and just tracks current queries. Can be **ALL** (capture all queries), AUTO (ignore infrequent and queries with insignificant compile and execution duration), CUSTOM (user defined capture policy), or NONE (stop capturing new queries). The default value is **ALL** for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the default value is **AUTO**. The default value for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] is **AUTO**.
-
-*MAX_PLANS_PER_QUERY*
-An integer representing the maximum number of plans maintained for each query. The default value is **200**.
-
-*WAIT_STATS_CAPTURE_MODE*
-Controls if Query Store captures wait statistics information. Can be OFF or **ON** (default).
+For the available options to configure Query Store parameters, see [ALTER DATABASE SET options (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql-set-options.md#query-store).
 
 Query the **sys.database_query_store_options** view to determine the current options of the Query Store. For more information about the values, see [sys.database_query_store_options](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md).
 
-For more information about setting options by using [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, see [Option Management](#OptionMgmt).
+For examples about setting configuration options using [!INCLUDE[tsql](../../includes/tsql-md.md)] statements, see [Option Management](#OptionMgmt).
 
 ## <a name="Related"></a> Related Views, Functions, and Procedures
 
@@ -188,31 +161,85 @@ View and manage Query Store through [!INCLUDE[ssManStudio](../../includes/ssmans
 
 Functions help operations with the Query Store.
 
-|||
-|-|-|
-|[sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)||
+:::row:::
+    :::column:::
+        [sys.fn_stmt_sql_handle_from_sql_stmt &#40;Transact-SQL&#41;](../../relational-databases/system-functions/sys-fn-stmt-sql-handle-from-sql-stmt-transact-sql.md)
+    :::column-end:::
+:::row-end:::
 
 ### Query Store Catalog Views
 
 Catalog views present information about the Query Store.
 
-|||
-|-|-|
-|[sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)|[sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)|
-|[sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)|[sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)|
-|[sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)|[sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)|
-|[sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)|[sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)|
+:::row:::
+    :::column:::
+        [sys.database_query_store_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-query-store-options-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.query_context_settings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-context-settings-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.query_store_plan &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.query_store_query &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.query_store_query_text &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-query-text-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.query_store_runtime_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sys.query_store_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-wait-stats-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sys.query_store_runtime_stats_interval &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-query-store-runtime-stats-interval-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+
 
 ### Query Store Stored Procedures
 
 Stored procedures configure the Query Store.
 
-|||
-|-|-|
-|[sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)|[sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)|
-|[sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)|[sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)|
-|[sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)|[sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)|
-|sp_query_store_consistency_check &#40;Transct-SQL&#41;||
+:::row:::
+    :::column:::
+        [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sp_query_store_reset_exec_stats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sp_query_store_force_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-force-plan-transact-sql.md)
+    :::column-end:::
+    :::column:::
+        [sp_query_store_unforce_plan &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [sp_query_store_remove_plan &#40;Transct-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-plan-transct-sql.md)
+    :::column-end:::
+    :::column:::
+        [sp_query_store_remove_query &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        sp_query_store_consistency_check &#40;Transct-SQL&#41;
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
 
 ## <a name="Scenarios"></a> Key Usage Scenarios
 
@@ -529,12 +556,12 @@ hist AS
 (
     SELECT
         p.query_id query_id,
-        CONVERT(float, SUM(rs.avg_duration*rs.count_executions)) total_duration,
-        SUM(rs.count_executions) count_executions,
-        COUNT(distinct p.plan_id) num_plans
+        ROUND(ROUND(CONVERT(FLOAT, SUM(rs.avg_duration * rs.count_executions)) * 0.001, 2), 2) AS total_duration,
+        SUM(rs.count_executions) AS count_executions,
+        COUNT(distinct p.plan_id) AS num_plans
      FROM sys.query_store_runtime_stats AS rs
-        JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id
-    WHERE  (rs.first_execution_time >= @history_start_time
+        JOIN sys.query_store_plan AS p ON p.plan_id = rs.plan_id
+    WHERE (rs.first_execution_time >= @history_start_time
                AND rs.last_execution_time < @history_end_time)
         OR (rs.first_execution_time <= @history_start_time
                AND rs.last_execution_time > @history_start_time)
@@ -546,11 +573,11 @@ recent AS
 (
     SELECT
         p.query_id query_id,
-        CONVERT(float, SUM(rs.avg_duration*rs.count_executions)) total_duration,
-        SUM(rs.count_executions) count_executions,
-        COUNT(distinct p.plan_id) num_plans
+        ROUND(ROUND(CONVERT(FLOAT, SUM(rs.avg_duration * rs.count_executions)) * 0.001, 2), 2) AS total_duration,
+        SUM(rs.count_executions) AS count_executions,
+        COUNT(distinct p.plan_id) AS num_plans
     FROM sys.query_store_runtime_stats AS rs
-        JOIN sys.query_store_plan p ON p.plan_id = rs.plan_id
+        JOIN sys.query_store_plan AS p ON p.plan_id = rs.plan_id
     WHERE  (rs.first_execution_time >= @recent_start_time
                AND rs.last_execution_time < @recent_end_time)
         OR (rs.first_execution_time <= @recent_start_time
@@ -560,25 +587,25 @@ recent AS
     GROUP BY p.query_id
 )
 SELECT
-    results.query_id query_id,
-    results.query_text query_text,
-    results.additional_duration_workload additional_duration_workload,
-    results.total_duration_recent total_duration_recent,
-    results.total_duration_hist total_duration_hist,
-    ISNULL(results.count_executions_recent, 0) count_executions_recent,
-    ISNULL(results.count_executions_hist, 0) count_executions_hist
+    results.query_id AS query_id,
+    results.query_text AS query_text,
+    results.additional_duration_workload AS additional_duration_workload,
+    results.total_duration_recent AS total_duration_recent,
+    results.total_duration_hist AS total_duration_hist,
+    ISNULL(results.count_executions_recent, 0) AS count_executions_recent,
+    ISNULL(results.count_executions_hist, 0) AS count_executions_hist
 FROM
 (
     SELECT
-        hist.query_id query_id,
-        qt.query_sql_text query_text,
+        hist.query_id AS query_id,
+        qt.query_sql_text AS query_text,
         ROUND(CONVERT(float, recent.total_duration/
                    recent.count_executions-hist.total_duration/hist.count_executions)
                *(recent.count_executions), 2) AS additional_duration_workload,
-        ROUND(recent.total_duration, 2) total_duration_recent,
-        ROUND(hist.total_duration, 2) total_duration_hist,
-        recent.count_executions count_executions_recent,
-        hist.count_executions count_executions_hist
+        ROUND(recent.total_duration, 2) AS total_duration_recent,
+        ROUND(hist.total_duration, 2) AS total_duration_hist,
+        recent.count_executions AS count_executions_recent,
+        hist.count_executions AS count_executions_hist
     FROM hist
         JOIN recent
             ON hist.query_id = recent.query_id

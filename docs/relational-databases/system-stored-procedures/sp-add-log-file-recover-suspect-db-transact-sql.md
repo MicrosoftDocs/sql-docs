@@ -19,7 +19,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # sp_add_log_file_recover_suspect_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a log file to a file group when recovery cannot complete on a database due to insufficient log space (error 9002). After the file is added, **sp_add_log_file_recover_suspect_db** turns off the suspect setting and completes the recovery of the database. The parameters are the same as those for ALTER DATABASE *database_name* ADD LOG FILE.  
   

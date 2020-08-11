@@ -22,7 +22,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # sys.sysindexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each index and table in the current database. XML indexes are not supported in this view. Partitioned tables and indexes are not fully supported in this view; use the [sys.indexes](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md) catalog view instead.  
   

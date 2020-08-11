@@ -17,12 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_process_memory dynamic management view"
 ms.assetid: e838130c-95d4-4605-9e3b-eb0ab71cd250
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_process_memory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Most memory allocations that are attributed to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process space are controlled through interfaces that allow for tracking and accounting of those allocations. However, memory allocations might be performed in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] address space that bypasses internal memory management routines. Values are obtained through calls to the base operating system. They are not manipulated by methods internal to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], except when it adjusts for locked or large page allocations.  
   

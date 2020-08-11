@@ -19,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Table Value Constructor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Specifies a set of row value expressions to be constructed into a table. The [!INCLUDE[tsql](../../includes/tsql-md.md)] table value constructor allows multiple rows of data to be specified in a single DML statement. The table value constructor can be specified either as the VALUES clause of an INSERT ... VALUES statement, or as a derived table in either the USING clause of the MERGE statement or the FROM clause.
   
@@ -27,7 +27,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 VALUES ( <row value expression list> ) [ ,...n ]   
   
@@ -38,7 +38,9 @@ VALUES ( <row value expression list> ) [ ,...n ]
     { DEFAULT | NULL | expression }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  VALUES  
  Introduces the row value expression lists. Each list must be enclosed in parentheses and separated by a comma.  
   

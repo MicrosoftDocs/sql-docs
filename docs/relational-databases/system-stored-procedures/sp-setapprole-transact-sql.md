@@ -20,7 +20,7 @@ ms.author: vanto
 ---
 # sp_setapprole (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Activates the permissions associated with an application role in the current database.  
   
@@ -48,7 +48,7 @@ sp_setapprole [ @rolename = ] 'role',
  The encrypt option is not supported on connections that are using **SqlClient**.  
   
 > [!IMPORTANT]  
-> The ODBC **encrypt** function does not provide encryption. You should not rely on this function to protect passwords that are transmitted over a network. If this information will be transmitted across a network, use SSL or IPSec.
+> The ODBC **encrypt** function does not provide encryption. You should not rely on this function to protect passwords that are transmitted over a network. If this information will be transmitted across a network, use TLS or IPSec.
   
  **@encrypt = 'none'**  
  Specifies that no obfuscation be used. The password is passed to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as plain text. This is the default.  

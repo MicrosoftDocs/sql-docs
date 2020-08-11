@@ -1,6 +1,7 @@
 ---
 title: Install the Microsoft ODBC driver for SQL Server (Linux)
-ms.date: 03/05/2020
+description: "Learn how to install the Microsoft ODBC Driver for SQL Server on Linux clients to enable database connectivity."
+ms.date: 07/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -8,9 +9,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "driver, installing"
 ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
-author: rothja
-ms.author: v-jizho2
-manager: jroth
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Install the Microsoft ODBC driver for SQL Server (Linux)
@@ -36,22 +36,22 @@ The following sections explain how to install the Microsoft ODBC driver 17 from 
 
 ```bash
 #Download the desired package(s)
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.apk
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.5.2.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.6.1.1-1_amd64.apk
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.6.1.1-1_amd64.apk
 
 
 #(Optional) Verify signature, if 'gpg' is missing install it using 'apk add gnupg':
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.5.2.1-1_amd64.sig
-curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.5.2.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/msodbcsql17_17.6.1.1-1_amd64.sig
+curl -O https://download.microsoft.com/download/e/4/e/e4e67866-dffd-428c-aac7-8d28ddafb39b/mssql-tools_17.6.1.1-1_amd64.sig
 
 curl https://packages.microsoft.com/keys/microsoft.asc  | gpg --import -
-gpg --verify msodbcsql17_17.5.2.1-1_amd64.sig msodbcsql17_17.5.2.1-1_amd64.apk
-gpg --verify mssql-tools_17.5.2.1-1_amd64.sig mssql-tools_17.5.2.1-1_amd64.apk
+gpg --verify msodbcsql17_17.6.1.1-1_amd64.sig msodbcsql17_17.6.1.1-1_amd64.apk
+gpg --verify mssql-tools_17.6.1.1-1_amd64.sig mssql-tools_17.6.1.1-1_amd64.apk
 
 
 #Install the package(s)
-sudo apk add --allow-untrusted msodbcsql17_17.5.2.1-1_amd64.apk
-sudo apk add --allow-untrusted mssql-tools_17.5.2.1-1_amd64.apk
+sudo apk add --allow-untrusted msodbcsql17_17.6.1.1-1_amd64.apk
+sudo apk add --allow-untrusted mssql-tools_17.6.1.1-1_amd64.apk
 ```
 
 > [!NOTE]
@@ -125,6 +125,8 @@ sudo yum install unixODBC-devel
 
 ```bash
 sudo su
+curl -O https://packages.microsoft.com/keys/microsoft.asc
+rpm --import microsoft.asc
 
 #Download appropriate package for the OS version
 #Choose only ONE of the following, corresponding to your OS version
@@ -167,8 +169,8 @@ curl https://packages.microsoft.com/config/ubuntu/16.04/prod.list > /etc/apt/sou
 #Ubuntu 18.04
 curl https://packages.microsoft.com/config/ubuntu/18.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
-#Ubuntu 19.10
-curl https://packages.microsoft.com/config/ubuntu/19.10/prod.list > /etc/apt/sources.list.d/mssql-release.list
+#Ubuntu 20.04
+curl https://packages.microsoft.com/config/ubuntu/20.04/prod.list > /etc/apt/sources.list.d/mssql-release.list
 
 exit
 sudo apt-get update

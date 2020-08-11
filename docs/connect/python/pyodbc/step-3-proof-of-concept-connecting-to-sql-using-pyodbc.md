@@ -1,5 +1,6 @@
 ---
-title: "Step 3: Proof of concept connecting to SQL using pyodbc | Microsoft Docs"
+title: "Step 3: Connecting to SQL using pyodbc"
+description: "Step 3 is a proof of concept, which shows how you can connect to SQL Server using Python and pyODBC. The basic examples demonstrate selecting and inserting data."
 ms.custom: ""
 ms.date: "03/01/2020"
 ms.prod: sql
@@ -55,7 +56,7 @@ while row:
   
 ## Insert a row  
   
-In this example, you see how to run an [INSERT](../../../t-sql/statements/insert-transact-sql.md) statement safely, and pass parameters, which protect your application from [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
+In this example, you see how to run an [INSERT](../../../t-sql/statements/insert-transact-sql.md) statement safely, and pass parameters. The parameters protect your application from [SQL injection](../../../relational-databases/tables/primary-and-foreign-key-constraints.md).    
   
   
 ```python

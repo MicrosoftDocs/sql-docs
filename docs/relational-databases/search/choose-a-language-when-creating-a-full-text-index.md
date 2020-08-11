@@ -22,7 +22,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || = sqlallproducts-al
 ---
 # Choose a Language When Creating a Full-Text Index
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   When creating a full-text index, you need to specify a column-level language for the indexed column. The [word breaker and stemmers](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md) of the specified language will be used by full-text queries on the column. There are a couple of things to consider when choosing the column language when creating a full-text index. These considerations relate to how your text is tokenized and then indexed by Full-Text Engine.  
   

@@ -15,12 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "CERTPRIVATEKEY"
 ms.assetid: 33e0f01e-39ac-46da-94ff-fe53b1116df4
-author: MikeRayMSFT
 author: VanMSFT
 ms.author: vanto
 ---
 # CERTPRIVATEKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns the private key of a certificate in binary format. This function takes three arguments.
 -   A certificate ID.  
@@ -31,7 +30,7 @@ Only users with access to the certificate private key can use this function. Thi
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CERTPRIVATEKEY   
     (  
           cert_ID   
@@ -40,7 +39,9 @@ CERTPRIVATEKEY
     )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *certificate_ID*  
 The **certificate_id** of the certificate. Obtain this value from sys.certificates or from the [CERT_ID &#40;Transact-SQL&#41;](../../t-sql/functions/cert-id-transact-sql.md) function. *cert_id* has data type **int**.
   

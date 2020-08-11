@@ -1,0 +1,79 @@
+### YamlMime:Landing
+
+title: Azure Data Studio
+summary: Learn how to use Azure Data Studio to run SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebooks and more.
+
+metadata:
+  title: Azure Data Studio
+  summary: Learn how to use Azure Data Studio to run SQL Server, Azure SQL Database, PostgreSQL, Jupyter Notebooks and more.
+  ms.prod: azure-data-studio
+  ms.technology: 
+  ms.topic: landing-page
+  author: markingmyname
+  ms.author: maghan
+  ms.date: 05/09/2020
+
+landingContent:
+  - title: About Azure Data Studio
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is Azure Data Studio?
+            url: what-is.md
+      - linkListType: download
+        links:
+          - text: Download Azure Data Studio
+            url: download-azure-data-studio.md
+          - text: Azure Data Studio Release Notes
+            url: release-notes-azure-data-studio.md
+
+  - title: Quickstarts
+    linkLists:
+      - linkListType: quickstart
+        links:
+          - text: Connect and query SQL Server
+            url: quickstart-sql-server.md
+          - text: Connect and query Azure SQL database
+            url: quickstart-sql-database.md
+          - text: Connect and query data in Azure SQL data warehouse
+            url: quickstart-sql-dw.md
+          - text: Connect and query data in  PostgreSQL
+            url: quickstart-postgres.md
+
+  - title: Azure Data Studio features
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Enable Kerberos
+            url: enable-kerberos.md
+          - text: Manage servers and databases with Insight widgets in Azure Data Studio
+            url: insight-widgets.md
+          - text: Modify User and Workspace Settings
+            url: settings.md
+
+  - title: Notebooks
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Notebooks in Azure Data Studio
+            url: notebooks-guidance.md
+          - text: How to use the SQL Kernel
+            url: notebooks-tutorial-sql-kernel.md
+          - text: How to use the Python Kernel
+            url: notebooks-tutorial-python-kernel.md
+          - text: Kqlmagic extension in Azure Data Studio
+            url: notebooks-kqlmagic.md
+
+  - title: Extensions
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Extend the functionality of Azure Data Studio
+            url: extensions.md
+          - text: Extend the functionality by creating Azure Data Studio extensions
+            url: extension-authoring.md
+          - text: PostgreSQL extension
+            url: postgres-extension.md
+          - text: PowerShell Editor Support
+            url: powershell-extension.md
+

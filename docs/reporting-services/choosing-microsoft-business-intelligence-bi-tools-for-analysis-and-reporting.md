@@ -1,5 +1,6 @@
 ---
 title: Analysis and reporting with Microsoft business intelligence (BI) tools
+description: Learn about the workloads mapped for data analysis and reporting, and about the Microsoft BI tools that are best suited for those workloads.
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""
@@ -8,7 +9,7 @@ ms.technology: reporting-services
 ms.prod_service: reporting-services-native
 ms.topic: conceptual
 ms.custom: seodec18
-ms.date: 12/14/2018
+ms.date: 07/22/2020
 ---
 # Analysis and reporting with Microsoft business intelligence (BI) tools
 
@@ -21,14 +22,13 @@ The following table maps workloads for data analysis and reporting to the Micros
 > [!NOTE]
 > Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
-|Workloads|User|||BI Tools|||  
+|Workloads|User|Excel-based BI&nbsp;tool|SharePoint-based BI&nbsp;tool|SharePoint&nbsp;Online-based BI&nbsp;tool|Power&nbsp;BI-based BI&nbsp;tool|SQL&nbsp;Server-based BI&nbsp;tool|  
 |---------------|----------|-|-|--------------|-|-|  
-|||**Excel**|**SharePoint**|**SharePoint Online**|**Power BI**|**SQL Server**|  
 |**Self-Service BI**|Analyst/End User||||||  
 |Easily discover, and access public and corporate data||[Excel 2016](https://support.office.com/article/What-s-new-in-Excel-2016-for-Windows-5fdb9208-ff33-45b6-9e08-1f5cdb3a6c73?ui=en-US&rs=en-US&ad=US)|||[Azure Data Catalog](https://azure.microsoft.com/services/data-catalog/)||  
-|Create powerful data models||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
-|Perform self-service predictive analytics||||||[Data Mining Add-ins for Excel](https://docs.microsoft.com/sql/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&viewFallbackFrom=sql-server-ver15) |  
-|Visualize and explore data||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [3D Maps](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
+|Create powerful data models||[Power Pivot](https://support.office.com/article/Power-Pivot-Overview-and-Learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
+|Perform self-service predictive analytics||||||[Data Mining Add-ins for Excel](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014) |  
+|Visualize and explore data||[Power View](https://support.office.com/article/Power-View-Explore-visualize-and-present-your-data-98268d31-97e2-42aa-a52b-a68cf460472e)<br /><br /> [3D Maps](https://support.office.com/article/Visualize-your-data-in-3D-Maps-ce6b1d5c-4602-4dae-b487-91ec0268e75d)|||[Power BI Desktop](/power-bi/fundamentals/desktop-get-the-desktop)||  
 |Ask questions using natural language query|||||[Q & A](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)|
 |Access reports using mobile devices||||[HTML 5 (supports viewing <10-MB files)](create-deploy-and-manage-mobile-and-paginated-reports.md)<br /><br /> | [HTML 5 (supports viewing <250 MB)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [Power BI mobile app on iOS devices](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Power BI mobile app on Android devices](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br /> [Power BI mobile app for Windows 10](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)|  
 |Collaborate and share|||[SharePoint Sites](https://docs.microsoft.com/sharepoint/getting-started)|[SharePoint Team Sites](https://go.microsoft.com/fwlink/?LinkId=391850)|[Power BI Sites](https://docs.microsoft.com/power-bi/service-how-to-collaborate-distribute-dashboards-reports)||  
@@ -39,7 +39,7 @@ The following table maps workloads for data analysis and reporting to the Micros
 |Create operational reports||||||*[Reporting Services](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |Create custom and embedded reports|||||[Power BI Embedded](create-deploy-and-manage-mobile-and-paginated-reports.md)|  
 |**Advanced Analytics**|Data Scientist||||||  
-|Perform self-service predictive analytics||||||[Data Mining Add-ins for Excel](https://docs.microsoft.com/sql/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014&viewFallbackFrom=sql-server-ver15) |  
+|Perform self-service predictive analytics||||||[Data Mining Add-ins for Excel](/previous-versions/sql/2014/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins?view=sql-server-2014) |  
 |Use data mining algorithms||||||[Data Mining in Analysis Services](https://docs.microsoft.com/analysis-services/data-mining/data-mining-ssas)<br/><br/>[SQL Server R Services](https://msdn.microsoft.com/library/mt604845.aspx)|  
 | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; | &nbsp; |
   

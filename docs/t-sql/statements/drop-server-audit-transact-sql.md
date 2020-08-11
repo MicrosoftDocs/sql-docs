@@ -19,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DROP SERVER AUDIT  (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a Server Audit Object using the SQL Server Audit feature. For more information on SQL Server Audit, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
   
@@ -27,7 +27,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP SERVER AUDIT audit_name  
     [ ; ]  

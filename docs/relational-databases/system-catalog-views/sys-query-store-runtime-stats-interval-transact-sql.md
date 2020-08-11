@@ -18,12 +18,12 @@ helpviewer_keywords:
   - "sys.query_store_runtime_stats_interval catalog view"
   - "query_store_runtime_stats_interval catalog view"
 ms.assetid: 2be83785-0569-41a3-88c8-59bfa0932e6e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_runtime_stats_interval (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Contains  information about the start and end time of each interval over which runtime execution statistics information for a query has been collected.  
   

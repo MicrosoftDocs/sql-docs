@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Tables collection [ADOX], members"
 ms.assetid: 98101a52-53a6-4287-a8d9-2a7c76c3e0b9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Tables Collection Properties, Methods, and Events
 ## Properties  

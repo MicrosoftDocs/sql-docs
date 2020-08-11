@@ -19,12 +19,12 @@ helpviewer_keywords:
   - "schema-scoped objects [SQL Server]"
   - "objects [SQL Server], schema-scoped"
 ms.assetid: 27569888-f8b5-4cec-a79f-6ea6d692b4ae
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OBJECTPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns information about schema-scoped objects in the current database. For a list of schema-scoped objects, see [sys.objects &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md). This function cannot be used for objects that are not schema-scoped, such as data definition language (DDL) triggers and event notifications.  
   
@@ -36,7 +36,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 OBJECTPROPERTY ( id , property )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *id*  
  Is an expression that represents the ID of the object in the current database. *id* is **int** and is assumed to be a schema-scoped object in the current database context.  
   

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetStmtAttr function [ODBC], Cursor Library"
 ms.assetid: 6018a733-c2c8-4047-92ec-92cf85031767
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetStmtAttr (Cursor Library)
 > [!IMPORTANT]  
@@ -20,15 +20,24 @@ ms.author: genemi
  This topic discusses the use of the **SQLSetStmtAttr** function in the cursor library. For general information about **SQLSetStmtAttr**, see [SQLSetStmtAttr Function](../../../odbc/reference/syntax/sqlsetstmtattr-function.md).  
   
  The cursor library supports the following statement attributes with **SQLSetStmtAttr**:  
-  
-|||  
-|-|-|  
-|SQL_ATTR_CONCURRENCY|SQL_ATTR_ROW_BIND_OFFSET_PTR|  
-|SQL_ATTR_CURSOR_TYPE|SQL_ATTR_ROW_BIND_TYPE|  
-|SQL_ATTR_FETCH_BOOKMARK_PTR|SQL_ATTR_ROWSET_ARRAY_SIZE|  
-|SQL_ATTR_PARAM_BIND_OFFSET_PTR|SQL_ATTR_SIMULATE_CURSOR|  
-|SQL_ATTR_PARAM_BIND_TYPE|SQL_ATTR_USE_BOOKMARKS|  
-  
+
+:::row:::
+    :::column:::
+        SQL_ATTR_CONCURRENCY  
+        SQL_ATTR_CURSOR_TYPE  
+        SQL_ATTR_FETCH_BOOKMARK_PTR  
+        SQL_ATTR_PARAM_BIND_OFFSET_PTR  
+        SQL_ATTR_PARAM_BIND_TYPE  
+    :::column-end:::
+    :::column:::
+        SQL_ATTR_ROW_BIND_OFFSET_PTR  
+        SQL_ATTR_ROW_BIND_TYPE  
+        SQL_ATTR_ROWSET_ARRAY_SIZE  
+        SQL_ATTR_SIMULATE_CURSOR  
+        SQL_ATTR_USE_BOOKMARKS  
+    :::column-end:::
+:::row-end:::
+
  The cursor library supports only the SQL_CURSOR_FORWARD_ONLY and SQL_CURSOR_STATIC values of the SQL_ATTR_CURSOR_TYPE statement attribute.  
   
  For forward-only cursors, the cursor library supports the SQL_CONCUR_READ_ONLY value of the SQL_ATTR_CONCURRENCY statement attribute. For static cursors, the cursor library supports the SQL_CONCUR_READ_ONLY and SQL_CONCUR_VALUES values of the SQL_ATTR_CONCURRENCY statement attribute.  

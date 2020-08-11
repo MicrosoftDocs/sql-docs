@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_trace_setstatus"
 ms.assetid: 29e7a7d7-b9c1-414a-968a-fc247769750d
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_trace_setstatus (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Modifies the current state of the specified trace.  
   

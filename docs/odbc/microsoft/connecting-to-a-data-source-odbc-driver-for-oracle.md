@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "connecting to data source [ODBC], ODBC driver for Oracle"
   - "ODBC driver for Oracle [ODBC], connecting to data sources"
 ms.assetid: f724a9c5-342a-4f4e-a030-ec34f7378eaf
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Connecting to a Data Source (ODBC Driver for Oracle)
 > [!IMPORTANT]  

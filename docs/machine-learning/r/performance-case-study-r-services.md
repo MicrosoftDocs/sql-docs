@@ -2,17 +2,17 @@
 title: Performance tuning for results
 description: This article summarizes the methods, findings, and conclusions of two case studies that tested various optimization methods.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 03/29/2019 
-ms.topic: conceptual
+ms.topic: how-to
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Performance for R Services: results and resources
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This article is the fourth and final in a series that describes performance optimization for R Services. This article summarizes the methods, findings, and conclusions of two case studies that tested various optimization methods.
 
@@ -333,7 +333,7 @@ We recommend that you read this blog article and the accompanying tutorial for a
 
 Many users have noted that there is a small pause as the R (or Python) runtime is loaded for the first time. For this reason, as described in these tests, the time for the first run is often measured but later discarded. Subsequent caching might result in notable performance differences between the first and second runs. There is also some overhead when data is moved between SQL Server and the external runtime, particularly if data is passed over the network rather than being loaded directly from SQL Server.
 
-For all these reasons, there is no single solution for mitigating this initial loading time, as the performance impact varies significantly depending on the task. For example, caching is performed for single-row scoring in batches; hence, successive scoring operations are much faster and neither the model nor the R runtime is reloaded. You can also use [native scoring](../sql-native-scoring.md) to avoid loading the R runtime entirely.
+For all these reasons, there is no single solution for mitigating this initial loading time, as the performance impact varies significantly depending on the task. For example, caching is performed for single-row scoring in batches; hence, successive scoring operations are much faster and neither the model nor the R runtime is reloaded. You can also use [native scoring](../predictions/native-scoring-predict-transact-sql.md) to avoid loading the R runtime entirely.
 
 For training large models, or scoring in large batches, the overhead might be minimal in comparison to the gains from avoiding data movement or from streaming and parallel processing. See this blog post for additional performance guidance:
 
@@ -347,7 +347,7 @@ The following are links to information, tools, and scripts used in the developme
 
 + Article describing the resume-matching solution: [Optimization tip and tricks for SQL Server R Services](https://azure.microsoft.com/blog/optimization-tips-and-tricks-on-azure-sql-server-for-machine-learning-services/)
 
-+ Scripts used in SQL optimization for resume-matching solution: [GitHub repository](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips)
++ Scripts used in SQL optimization for resume-matching solution: [GitHub repository](https://github.com/Microsoft/SQL-Server-R-Services-Samples/tree/master/SQLOptimizationTips-Resume-Matching)
 
 ### Learn about Windows server management
 

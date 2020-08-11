@@ -30,16 +30,24 @@ This article provides the syntax, arguments, remarks, permissions, and examples 
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## Click a product!
-
-In the following row, click whichever product name you are interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -58,7 +66,7 @@ See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-da
 
 ## Syntax
 
-```
+```syntaxsql
 -- Create a new external table
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )
@@ -577,10 +585,20 @@ WITH
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|**_\* SQL Database \*_** &nbsp;|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+:::row:::
+    :::column:::
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -593,7 +611,7 @@ See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-da
 
 ## Syntax
 
-```
+```syntaxsql
 -- Create a table for use with elastic query  
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
@@ -720,10 +738,20 @@ WITH
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+:::row:::
+    :::column:::
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        **_\* Azure Synapse<br />Analytics \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -739,7 +767,7 @@ See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-da
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
     WITH (
@@ -853,7 +881,9 @@ Requires these user permissions:
 - **ALTER ANY SCHEMA**
 - **ALTER ANY EXTERNAL DATA SOURCE**
 - **ALTER ANY EXTERNAL FILE FORMAT**
-- **CONTROL DATABASE**
+
+> [!NOTE]
+> CONTROL DATABASE permissions are required to create only the MASTER KEY, DATABASE SCOPED CREDENTIAL, and EXTERNAL DATA SOURCE
 
 Note, the login that creates the external data source must have permission to read and write to the external data source, located in Hadoop or Azure blob storage.
 
@@ -893,7 +923,7 @@ Constructs and operations not supported:
 
 Query limitations:
 
-PolyBase can consume a maximum of 33k files per folder when running 32 concurrent PolyBase queries. This maximum number includes both files and subfolders in each HDFS folder. If the degree of concurrency is less than 32, a user can run PolyBase queries against folders in HDFS that contain more than 33k files. We recommend that you keep external file paths short and use no more than 30k files per HDFS folder. When too many files are referenced, a Java Virtual Machine (JVM) out-of-memory exception might occur.
+It is recommended to not exceed no more than 30k files per folder. When too many files are referenced, a Java Virtual Machine (JVM) out-of-memory exception might occur or performance may degrade.
 
 Table width limitations:
 
@@ -959,10 +989,20 @@ AS SELECT * FROM
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
-||||||
+:::row:::
+    :::column:::
+        [SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](create-external-table-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        **_\* Analytics<br />Platform System (PDW) \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -977,7 +1017,7 @@ See also [CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-da
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( <column_definition> [ ,...n ] )  
     WITH (

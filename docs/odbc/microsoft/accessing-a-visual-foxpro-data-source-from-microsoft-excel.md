@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Visual FoxPro data [ODBC], accessing"
   - "Visual FoxPro ODBC driver [ODBC], Excel"
 ms.assetid: 2c143020-0403-4592-80e0-84229f3d40be
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Accessing a Visual FoxPro Data Source from Microsoft Excel
 If you have Microsoft Query installed, you can create a data source in Microsoft Excel that connects to Visual FoxPro data.  

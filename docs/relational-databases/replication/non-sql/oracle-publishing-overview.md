@@ -18,7 +18,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Oracle Publishing Overview  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Beginning with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], you can include Oracle Publishers in your replication topology, starting with Oracle version 9i. Publishing servers can be deployed on any Oracle supported hardware and operating system. The feature is built on the well-established foundation of [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] snapshot replication and transactional replication, providing similar performance and usability.  
   
@@ -28,7 +28,7 @@ Beginning with [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[
 
 -   Publishing data to and from Oracle has the following restrictions:  
 
-  |       | 2016 or earlier |2017 or later |
+  |Scenario| 2016 or earlier |2017 or later |
   |-------|-------|--------|
   |Replication from Oracle |Only support Oracle 10g or earlier |Only support Oracle 10g or earlier |
   |Replication to Oracle |Up to Oracle 12c |Not supported |

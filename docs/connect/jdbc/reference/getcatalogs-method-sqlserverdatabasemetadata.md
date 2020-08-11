@@ -13,8 +13,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 7f8bd0f1-f340-4bb9-b559-0a6176124033
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getCatalogs Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,7 +38,7 @@ public java.sql.ResultSet getCatalogs()
  This getCatalogs method is specified by the getCatalogs method in the java.sql.DatabaseMetaData interface.  
   
 > [!NOTE]  
->  On SQL Azure, you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**. SQL Azure does not support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** uses the sys.databases view to get the catalogs. Please refer to the discussion of permissions in [sys.database_usage (Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on SQL Azure.  
+>  On Azure SQL Database, you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**. SQL Database does not support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** uses the sys.databases view to get the catalogs. Please refer to the discussion of permissions in [sys.database_usage (Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on SQL >  On Azure SQL Database, you should connect to the master database to call **SQLServerDatabaseMetaData.getCatalogs**. SQL Database does not support returning the entire set of catalogs from a user database. **SQLServerDatabaseMetaData.getCatalogs** uses the sys.databases view to get the catalogs. Please refer to the discussion of permissions in [sys.database_usage (Azure SQL Database)](../../../relational-databases/system-catalog-views/sys-database-usage-azure-sql-database.md) to understand **SQLServerDatabaseMetaData.getCatalogs** behavior on SQL Database.                      .  
   
  The result set returned by the getCatalogs method will contain the following information:  
   

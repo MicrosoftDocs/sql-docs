@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "positioned updates [ODBC]"
   - "updating data [ODBC], positioned update or delete"
 ms.assetid: 0eafba50-02c7-46ca-a439-ef3307b935dc
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Positioned Update and Delete Statements
 Applications can update or delete the current row in a result set with a positioned update or delete statement. Positioned update and delete statements are supported by some data sources, but not all of them. To determine whether a data source supports positioned update and delete statements, an application calls **SQLGetInfo** with the SQL_DYNAMIC_CURSOR_ATTRIBUTES1, SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1, SQL_KEYSET_CURSOR_ATTRIBUTES1, or SQL_STATIC_CURSOR_ATTRIBUTES1 *InfoType* (depending on the type of the cursor). Note that the ODBC cursor library simulates positioned update and delete statements.  

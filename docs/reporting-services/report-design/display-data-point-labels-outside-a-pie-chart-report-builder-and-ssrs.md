@@ -1,5 +1,6 @@
 ---
 title: "Display Data Point Labels Outside a Pie Chart (Report Builder) | Microsoft Docs"
+description: Discover how displaying the labels outside a pie chart might create more room for longer data labels in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

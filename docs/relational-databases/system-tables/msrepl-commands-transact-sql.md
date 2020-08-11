@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSrepl_commands system table"
 ms.assetid: 53b9f9cd-9429-47a0-aba2-908fc60e7036
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSrepl_commands (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSrepl_commands** table contains rows of replicated commands. This table is stored in the distribution database.  
   

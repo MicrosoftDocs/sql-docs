@@ -1,8 +1,8 @@
 ---
 title: "R tutorial: Develop model in SQL"
-description: Tutorial showing how to create an end-to-end R solution for in-database analytics.
+description: Learn how to build end-to-end solution for predictive modeling based on R feature support in either SQL Server 2016 or SQL Server 2017.
 ms.prod: sql
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 
 ms.date: 10/11/2019  
 ms.topic: tutorial
@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Tutorial: SQL development for R data scientists
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 In this tutorial for data scientists, learn how to build end-to-end solution for predictive modeling based on R feature support in either SQL Server 2016 or SQL Server 2017. This tutorial uses a [NYCTaxi_sample](demo-data-nyctaxi-in-sql.md) database on SQL Server. 
 

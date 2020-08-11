@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLTransact function [ODBC]"
 ms.assetid: 496249e0-8eff-4c60-8358-5543bc3ead9c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLTransact Function
 **Conformance**  

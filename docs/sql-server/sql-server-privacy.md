@@ -2,6 +2,7 @@
 title: "SQL Server privacy supplement | Microsoft Docs"
 ms.date: 01/19/2019
 ms.prod: sql
+ms.technology: release-landing
 ms.reviewer: "mikeray"
 ms.custom: ""
 ms.topic: conceptual
@@ -12,7 +13,7 @@ ms.author: jaszymas
 ---
 # SQL Server privacy supplement
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 This article summarizes Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SQL Server may collect standard computer information and data about usage and performance may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of the product. If you install SQL Server in a virtual machine on the Microsoft Azure service, environment information may be sent to Microsoft so that Microsoft can register your SQL Server virtual machine resource with the resource provider within your Azure subscription, as further described [here](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-register-with-resource-provider). As part of registering the SQL Server virtual machine resource, the SQL Server IaaS Agent Extension may be installed on your virtual machine as further described [here](/azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-agent-extension). This article serves as an addendum to the overall [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839). The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
 

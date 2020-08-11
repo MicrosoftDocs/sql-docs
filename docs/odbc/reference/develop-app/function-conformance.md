@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data sources [ODBC], conformance levels"
   - "ODBC drivers [ODBC], conformance levels"
 ms.assetid: bb5d68cf-d238-481e-babc-2e9401b4700e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Function Conformance
 The following table indicates the conformance level of each ODBC function, where this is well defined.  

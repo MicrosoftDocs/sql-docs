@@ -13,11 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_registercustomresolver"
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_registercustomresolver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Registers a business logic handler or a COM-based custom resolver that can be invoked during the merge replication synchronization process. This stored procedure is executed at the Distributor.  
   

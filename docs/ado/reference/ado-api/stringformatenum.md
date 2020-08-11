@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "StringFormatEnum enumeration [ADO]"
 ms.assetid: 28f7d1ec-092b-4323-a39d-d3f882c6c81a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # StringFormatEnum
 Specifies the format when retrieving a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) as a string.  

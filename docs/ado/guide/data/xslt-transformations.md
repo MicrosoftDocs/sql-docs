@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "XSLT transformations in ADO"
 ms.assetid: 1a46196e-839f-4734-a59e-2c64609ffb9e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # XSLT Transformations
 XSLT can be applied to the generated XML to transform it into another format. Understanding the XML format in ADO helps in developing XSLT templates that can transform it into a more user-friendly form.  

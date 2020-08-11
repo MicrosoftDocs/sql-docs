@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_testlinkedserver"
 ms.assetid: e63ca7d4-47d6-455e-9aac-421f9683dadc
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_testlinkedserver (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Tests the connection to a linked server. If the test is unsuccessful the procedure raises an exception with the reason of the failure.  
   

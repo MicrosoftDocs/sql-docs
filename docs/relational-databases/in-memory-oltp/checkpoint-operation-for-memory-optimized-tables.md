@@ -1,5 +1,6 @@
 ---
 title: "Checkpoint Operation for Memory-Optimized Tables | Microsoft Docs"
+description: Learn about checkpoints for memory-optimized tables in SQL Server. The memory-optimized table checkpoint operation is distinct from that of disk-based tables.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: "carlrab"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Checkpoint Operation for Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   A checkpoint needs to occur periodically for memory-optimized data in data and delta files to advance the active part of transaction log. The checkpoint allows memory-optimized tables to restore or recover to the last successful checkpoint and then the active portion of transaction log is applied to update the memory-optimized tables to complete the recovery. The checkpoint operation for disk-based tables and memory-optimized tables are distinct operations. The following describes different scenarios and the checkpoint behavior for disk-based and memory-optimized tables:  
   
 ## Manual Checkpoint  

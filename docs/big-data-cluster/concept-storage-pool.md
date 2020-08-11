@@ -1,7 +1,7 @@
 ---
 title: What is the storage pool?
 titleSuffix: SQL Server big data clusters
-description: This article describes the storage pool in a SQL Server 2019 big data cluster.
+description: Learn the role of the SQL Server storage pool in a SQL Server 2019 Big Data Cluster, as well as the architecture and functionality of a SQL storage pool.
 author: MikeRayMSFT 
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # What is the storage pool ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)])?
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes the role of the *SQL Server storage pool* in a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. The following sections describe the architecture and functionality of a SQL storage pool.
 

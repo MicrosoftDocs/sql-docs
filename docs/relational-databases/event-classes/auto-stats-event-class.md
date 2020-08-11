@@ -13,7 +13,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Auto Stats Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **Auto Stats** event class indicates that an automatic updating of index and column statistics has occurred.  **Auto Stats** also fires when statistics are being loaded for use by the optimizer.
   
 ## Auto Stats Event Class Data Columns  

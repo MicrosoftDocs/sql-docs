@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], functions"
   - "API functions [ODBC]"
 ms.assetid: ece0034f-1ea6-4fbe-8a01-e8d2d1914d44
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # API Functions (ODBC Driver for Oracle)
 > [!IMPORTANT]  

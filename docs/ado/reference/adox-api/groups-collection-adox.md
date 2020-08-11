@@ -15,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Groups collection [ADOX]"
 ms.assetid: 09aa7b0a-69d5-4564-80a7-20ad8189670f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Groups Collection (ADOX)
 Contains all stored [Group](../../../ado/reference/adox-api/group-object-adox.md) objects of a catalog or user.  

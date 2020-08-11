@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "RightsEnum enumeration [ADOX]"
 ms.assetid: 55ee67c7-a583-42aa-849a-78264b4cb614
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RightsEnum
 Specifies the rights or permissions for a group or user on an object.  
@@ -41,7 +41,12 @@ Specifies the rights or permissions for a group or user on an object.
 |**adRightWritePermissions**|262144 (&H40000)|The user or group can modify the specific permissions for an object in the catalog.|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[GetPermissions Method (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)|[SetPermissions Method (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)|
+
+:::row:::
+    :::column:::
+        [GetPermissions Method (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+    :::column-end:::
+    :::column:::
+        [SetPermissions Method (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+    :::column-end:::
+:::row-end:::

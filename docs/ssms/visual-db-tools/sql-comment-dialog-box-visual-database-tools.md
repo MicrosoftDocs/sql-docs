@@ -11,12 +11,11 @@ f1_keywords:
 ms.assetid: a384b583-cec5-4f86-8353-954c989dd94d
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
 
 ---
 # SQL Comment Dialog Box (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 This dialog box provides an editable area where you can write a detailed description of the query. To access this dialog box, open the query or view in Query and View Designer, and in the **Properties** window, select **SQL Comment**, and click the ellipsis (**...**) to the right of the property field.  
   
 ## See Also  

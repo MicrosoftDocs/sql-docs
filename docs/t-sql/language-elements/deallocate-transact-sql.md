@@ -23,7 +23,7 @@ author: rothja
 ms.author: jroth
 ---
 # DEALLOCATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Removes a cursor reference. When the last cursor reference is deallocated, the data structures comprising the cursor are released by [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -31,11 +31,13 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql
 DEALLOCATE { { [ GLOBAL ] cursor_name } | @cursor_variable_name }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *cursor_name*  
  Is the name of an already declared cursor. If both a global and a local cursor exist with *cursor_name* as their name, *cursor_name* refers to the global cursor if `GLOBAL` is specified and to the local cursor if `GLOBAL` is not specified.  
   

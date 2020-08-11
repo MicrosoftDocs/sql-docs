@@ -4,13 +4,13 @@ ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # DELETE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Clears a mining model, a mining structure, or a mining structure and all its associated mining models, depending on the Data Mining Extensions (DMX) clauses that you use.  
   
@@ -40,7 +40,7 @@ DELETE FROM [MINING STRUCTURE] <structure>[.CONTENT]|[.CASES]
 |DELETE FROM MINING STRUCTURE*\<structure>*.CASES|Performs ProcessClearStructureOnly on the mining structure. All the content is cleared from the mining structure, leaving its associated mining models intact. Drillthrough on the associated mining models will fail after the mining structure has been cleared.|  
 |DELETE FROM MINING MODEL*\<model>*<br /><br /> or<br /><br /> DELETE FROM MINING MODEL*\<model>*.CONTENT|Performs ProcessClear on the mining model but leaves the state values intact. State values are the possible states of a column. For example, state values for a gender column would be male and female.|  
   
- For more information about processing types, see [Type Element &#40;XMLA&#41;](https://docs.microsoft.com/bi-reference/xmla/xml-elements-properties/type-element-xmla).  
+ For more information about processing types, see [Type Element &#40;XMLA&#41;](https://docs.microsoft.com/analysis-services/xmla/xml-elements-properties/type-element-xmla).  
   
 ## Examples  
  The following example removes all of the content from the NB_Sample model.  

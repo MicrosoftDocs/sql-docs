@@ -19,6 +19,13 @@ These are the release notes for the Report Viewer controls of WebForms and WinFo
 
 For the release notes for SSRS, see [Release notes for SQL Server Reporting Services (SSRS) 2017 and later](../release-notes-reporting-services.md).
 
+## 150.1404.0
+| Change description | Details |
+| :----------------- | :------ |
+| Bug Fixes | Fixed an issue with tab ordering of the toolbar in WebForms. |
+|           | Improved HTML rendering accessibility for tables. |
+| &nbsp; | &nbsp; |
+
 ## 150.1400.0
 | Change description | Details |
 | :----------------- | :------ |

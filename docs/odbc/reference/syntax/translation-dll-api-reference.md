@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "translation DLLs [ODBC]"
 ms.assetid: 69033376-c315-4f52-8ee5-f23f07694bf8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Translation DLL API Reference
 This section describes the syntax of the translation DLL API, which consists of two functions: **SQLDriverToDataSource** and **SQLDataSourceToDriver**. These functions must be included in the DLL that performs translation for the driver.  

@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "CommandTypeEnum enumeration [ADO]"
 ms.assetid: 4b1feb9c-a855-40fe-a906-efe688687e9f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CommandTypeEnum
 Specifies how a command argument should be interpreted.  
@@ -45,9 +45,17 @@ Specifies how a command argument should be interpreted.
 |AdoEnums.CommandType.TABLEDIRECT|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[CommandType Property (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)|[Execute Method (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)|  
-|[Execute Method (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|[Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|  
-|[Requery Method](../../../ado/reference/ado-api/requery-method.md)||
+
+:::row:::
+    :::column:::
+        [CommandType Property (ADO)](../../../ado/reference/ado-api/commandtype-property-ado.md)  
+        [Execute Method (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+    :::column-end:::
+    :::column:::
+        [Execute Method (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
+        [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+    :::column-end:::
+    :::column:::
+        [Requery Method](../../../ado/reference/ado-api/requery-method.md)  
+    :::column-end:::
+:::row-end:::

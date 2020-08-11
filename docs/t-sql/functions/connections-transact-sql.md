@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "number of connection attempts"
   - "attempted connections"
 ms.assetid: c59836a8-443c-4b9a-8b96-8863ada97ac7
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # &#x40;&#x40;CONNECTIONS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This function returns the number of attempted connections - both successful and unsuccessful - since [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] was last started.
   
@@ -34,7 +34,9 @@ This function returns the number of attempted connections - both successful and 
 ```sql
 @@CONNECTIONS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return types
 **integer**
   

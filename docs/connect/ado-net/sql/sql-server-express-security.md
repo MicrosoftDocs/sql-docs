@@ -7,8 +7,8 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # SQL Server Express security
@@ -34,7 +34,7 @@ Each user instance is isolated from its parent instance and from other user inst
 ## External resources  
 For more information about SQL Server Express, see the following resources.  
   
-|||  
+|Resource|Description|
 |-|-|  
 |[Microsoft SQL Server 2005 Express Edition Books Online](https://docs.microsoft.com/previous-versions/sql/sql-server-2005/ms165706(v=sql.90))|Complete documentation for SQL Server 2005 Express Edition.|  
 |[User Instances for Non-Administrators](https://docs.microsoft.com/previous-versions/sql/sql-server-2008/ms143684(v=sql.100)) in SQL Server Books Online|Describes how to create and deploy user instances.|  

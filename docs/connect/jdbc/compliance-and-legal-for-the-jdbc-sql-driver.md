@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 0ac8dc45-373c-4ac6-92fc-34b8455e5654
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # JDBC specification compliance
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

@@ -11,7 +11,7 @@ ms.technology: linux
 
 # What's new for SQL Server 2019 on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article describes the major features and services available for SQL Server 2019 running on Linux. For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes-2019.md?view=sql-server-linux-ver15).
 
@@ -36,7 +36,7 @@ The updates have been made in SQL Server 2019 on Linux:
 |`tempdb` improvements | By default, a new installation of SQL Server on Linux creates multiple `tempdb` data files based on the number of logical cores (with up to 8 data files). This does not apply to in-place minor or major version upgrades. Each `tempdb` file is 8 MB with an auto growth of 64 MB. This behavior is similar to the default SQL Server installation on Windows. |
 | PolyBase on Linux | [Install PolyBase](../relational-databases/polybase/polybase-linux-setup.md) on Linux for non-Hadoop connectors.<br/><br/>[PolyBase type mapping](../relational-databases/polybase/polybase-type-mapping.md). |
 | Change Data Capture (CDC) support | Change Data Capture (CDC) is now supported on Linux for SQL Server 2019. |
-| Microsoft Container Registry | The [Microsoft Container Registry](https://www.ntweekly.com/2019/09/23/microsoft-container-registry-to-replace-docker-hub-for-new-images/) now replaces Docker Hub for new official Microsoft container images, including [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
+| Microsoft Container Registry | The [Microsoft Container Registry](https://azure.microsoft.com/blog/microsoft-syndicates-container-catalog/) now replaces Docker Hub for new official Microsoft container images, including [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]. |
 | Non-root containers | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces the ability to create safer containers by starting the [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] process as a non-root user by default. See [build and run SQL Server containers as a non-root user](sql-server-linux-configure-docker.md#buildnonrootcontainer) for more details. |
 
 ## Next steps

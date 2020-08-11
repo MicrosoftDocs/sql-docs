@@ -14,7 +14,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Create a New Solution
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 When you create a project, [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] creates a solution to contain it. You can only open one solution at a time. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] does not allow you to create folders within projects. To organize your work, create multiple projects.  
   
 To access Solution Explorer, click **Solution Explorer** on the **View** menu.  
@@ -35,5 +35,5 @@ To access Solution Explorer, click **Solution Explorer** on the **View** menu.
   
 ## See Also  
 [Solution Explorer](../../ssms/solution/solution-explorer.md)  
-[Open Solutions from Source Control](https://msdn.microsoft.com/library/ms174216.aspx)  
+[Open Solutions from Source Control](https://docs.microsoft.com/sql/azure-data-studio/source-control)  
   

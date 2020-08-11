@@ -11,8 +11,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "Property object [ADOX]"
 ms.assetid: 6a56def6-dbe6-4ccc-a491-8d076889f019
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Property Object (ADOX)
 Represents a characteristic of an ADOX object.  

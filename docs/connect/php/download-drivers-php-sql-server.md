@@ -1,5 +1,6 @@
 ---
 title: "Download the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
+description: "Download the Microsoft Drivers for PHP for SQL Server to develop PHP applications that connect to SQL Server and Azure SQL Database."
 ms.custom: ""
 ms.date: "05/05/2020"
 ms.prod: sql
@@ -7,12 +8,12 @@ ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Download the Microsoft Drivers for PHP for SQL Server
 
-The Microsoft Drivers for PHP for SQL Server enable integration with SQL Server for PHP applications. The drivers are PHP extensions that allow the reading and writing of SQL Server data from within PHP scripts. The drivers provide interfaces for accessing data in Azure SQL Databases and in all editions of SQL Server 2005 and later (including Express Editions). The drivers make use of PHP features, including PHP streams, to read and write large objects.
+The Microsoft Drivers for PHP for SQL Server enable integration with SQL Server for PHP applications. The drivers are PHP extensions that allow the reading and writing of SQL Server data from within PHP scripts. The drivers provide interfaces for accessing data in Azure SQL Database and in all editions of SQL Server 2005 and later (including Express Editions). The drivers make use of PHP features, including PHP streams, to read and write large objects.
 
 On Linux and macOS, the drivers for PHP are easily downloaded and installed using PECL. See the [Linux and macOS installation tutorial](installation-tutorial-linux-mac.md) for details. If you need to download and install the drivers for PHP on Linux and macOS manually, packages for those platforms can be found on the GitHub release tags.
 

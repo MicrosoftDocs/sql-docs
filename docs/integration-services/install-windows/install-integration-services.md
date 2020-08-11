@@ -23,7 +23,7 @@ ms.author: chugu
 
 # Install Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a single setup program to install any or all of its components, including [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]. Use Setup to install [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] with or without other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components on a single computer.
 
@@ -126,7 +126,7 @@ For a complete installation of [!INCLUDE[ssISnoversion](../../includes/ssisnover
 
   - Microsoft® Connector for SAP BW for Microsoft SQL Server®. To get these components, see [Microsoft® SQL Server® 2017 Feature Pack](https://www.microsoft.com/download/details.aspx?id=55992).
 
-  - Microsoft Connector Version 5.0 for Oracle by Attunity and Microsoft Connector Version 5.0 for Teradata by Attunity. To get these components, see [Microsoft Connectors v5.0 for Oracle and Teradata](https://www.microsoft.com/download/details.aspx?id=55179).
+  - Microsoft Connectors for Oracle and Teradata by Attunity. To get these components, see [Attunity connectors](../attunity-connectors.md).
 
 ## Next steps
 

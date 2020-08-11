@@ -26,7 +26,7 @@ author: rothja
 ms.author: jroth
 ---
 # RETURN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Exits unconditionally from a query or procedure. RETURN is immediate and complete and can be used at any point to exit from a procedure, batch, or statement block. Statements that follow RETURN are not executed.  
   
@@ -34,7 +34,7 @@ ms.author: jroth
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 RETURN [ integer_expression ]   
 ```  
@@ -43,7 +43,9 @@ RETURN [ integer_expression ]
  *integer_expression*  
  Is the integer value that is returned. Stored procedures can return an integer value to a calling procedure or an application.  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  Optionally returns **int**.  
   
 > [!NOTE]  

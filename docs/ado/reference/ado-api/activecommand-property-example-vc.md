@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ActiveCommand property [ADO], VC++ example"
 ms.assetid: 8269ea29-912a-4d20-9360-f48b3746081f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ActiveCommand Property Example (VC++)
 This example demonstrates the [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) property.  

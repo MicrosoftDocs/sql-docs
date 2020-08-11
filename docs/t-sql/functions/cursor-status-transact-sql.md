@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "CURSOR_STATUS function"
   - "cursors [SQL Server], status information"
 ms.assetid: 3a4a840e-04f8-43bd-aada-35d78c3cb6b0
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # CURSOR_STATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 For a given parameter, `CURSOR_STATUS` shows whether or not a cursor declaration has returned a cursor and result set.
   
@@ -38,7 +38,9 @@ CURSOR_STATUS
      )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 'local'  
 Specifies a constant indicating that the cursor source is a local cursor name.
   

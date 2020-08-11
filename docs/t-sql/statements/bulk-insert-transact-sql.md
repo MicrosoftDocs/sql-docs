@@ -9,9 +9,9 @@ ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "BULK_TSQL"
-  - "BULK INSERT"
+  - "BULK_INSERT"
   - "BULK_INSERT_TSQL"
-  - "BULK"
+  - "BULK INSERT"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -29,7 +29,7 @@ ms.author: carlrab
 ---
 # BULK INSERT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Imports a data file into a database table or view in a user-specified format in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
@@ -37,7 +37,7 @@ Imports a data file into a database table or view in a user-specified format in 
 
 ## Syntax
 
-```
+```syntaxsql
 BULK INSERT
    { database_name.schema_name.table_or_view_name | schema_name.table_or_view_name | table_or_view_name }
       FROM 'data_file'
@@ -72,6 +72,8 @@ BULK INSERT
    [ [ , ] ROWTERMINATOR = 'row_terminator' ]
     )]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -120,7 +122,7 @@ A situation in which you might want constraints disabled (the default behavior) 
 > [!NOTE]
 > The MAXERRORS option does not apply to constraint checking.
 
-CODEPAGE **=** { **'**ACP**'** | **'**OEM**'** | **'**RAW**'** | **'**_code_page_**'** }
+CODEPAGE **=** { **'**ACP**'** \| **'**OEM**'** \| **'**RAW**'** \| **'**_code_page_**'** }
 Specifies the code page of the data in the data file. CODEPAGE is relevant only if the data contains **char**, **varchar**, or **text** columns with character values greater than **127** or less than **32**. For an example, see [Specifying a code page](#d-specifying-a-code-page).
 
 > [!IMPORTANT]
@@ -137,7 +139,7 @@ Specifies the code page of the data in the data file. CODEPAGE is relevant only 
 |*code_page*|Specific code page number, for example, 850.<br /><br /> **&#42;&#42; Important &#42;&#42;** Versions prior to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] do not support code page 65001 (UTF-8 encoding).|
 | &nbsp; | &nbsp; |
 
-DATAFILETYPE **=** { **'char'** | **'native'** | **'widechar'** | **'widenative'** }
+DATAFILETYPE **=** { **'char'** \| **'native'** \| **'widechar'** \| **'widenative'** }
 Specifies that BULK INSERT performs the import operation using the specified data-file type value.
 
 &nbsp;

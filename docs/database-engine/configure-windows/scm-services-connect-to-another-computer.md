@@ -1,5 +1,6 @@
 ---
 title: "Connect to Another Computer (SQL Server Configuration Manager) | Microsoft Docs"
+description: "Find out how to manage a remote computer's services. See how to use SQL Server Configuration Manager or SQL Server Management Studio for this task."
 ms.custom: ""
 ms.date: "11/19/2019"
 ms.prod: sql
@@ -10,12 +11,12 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [SQL Server], other computers"
 ms.assetid: c4c1e94f-4f5f-431e-8b5b-d5ff97baf723
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # SCM Services - Connect to Another Computer
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This article describes how to connect to another computer in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Follow the first procedure to open the Windows Computer Management [!INCLUDE[msCoName](../../includes/msconame-md.md)] Management Console (mmc), connect to the computer, and expand the Services and Applications tree. Follow the second procedure to create a file with a link to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager on a remote computer.
 

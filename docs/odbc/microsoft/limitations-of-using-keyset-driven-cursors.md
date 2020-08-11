@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ODBC driver for Oracle [ODBC], cursors"
   - "keyset-driven cursors [ODBC]"
 ms.assetid: 59d86fed-387c-4719-9550-36343e74da44
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Limitations of Using Keyset-Driven Cursors
 > [!IMPORTANT]  

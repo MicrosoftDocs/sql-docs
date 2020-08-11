@@ -15,12 +15,11 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Tool Windows in SQL Server Management Studio
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] provides many powerful tool windows for all phases of development and administration. Some tools can be used on any [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] component, and others are for certain components only. The following table identifies the tools that can be used for all components of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
   
-|||  
-|-|-|  
-|**Tool**|**Purpose**|  
+|Tool|Purpose|  
+|-|-|   
 |[Object Explorer](../ssms/object/object-explorer.md)|Browse servers, create and locate objects, manage data sources, and view logs. This tool is accessed from the **View** menu.|  
 |[Solution Explorer](../ssms/solution/solution-explorer.md)|Store and organize scripts and related connection information in projects called [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Scripts. You can store several [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Scripts as Solutions and use source control to manage scripts as they evolve over time. This tool is accessed from the **View** menu.|  
 |[Template Explorer](../ssms/template/template-explorer.md)|Create queries based on existing templates. You can also create your custom queries or alter the existing templates to fit your scenarios. This tool is accessed from the **View** menu.|  

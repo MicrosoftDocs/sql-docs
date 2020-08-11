@@ -13,11 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpsubscriptionerrors"
 ms.assetid: 01c8bc21-939e-490d-8cc8-219c068be31e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_helpsubscriptionerrors (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns all transactional replication errors for a given subscription. This stored procedure is executed at the Distributor on the distribution database.  
   

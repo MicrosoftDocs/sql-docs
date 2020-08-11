@@ -1,7 +1,7 @@
 ---
 title: "SET RESULT_SET_CACHING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2019"
+ms.date: 04/16/2020
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"
@@ -17,7 +17,7 @@ monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SET RESULT SET CACHING (Transact-SQL) 
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Controls the result set caching behavior for the current client session.  
 
@@ -27,7 +27,7 @@ Applies to Azure SQL Data Warehouse
   
 ## Syntax
 
-```
+```syntaxsql
 SET RESULT_SET_CACHING { ON | OFF };
 ```  
   
@@ -56,8 +56,9 @@ WHERE request_id = 'QID58286'
 Requires membership in the public role
 
 ## See also
-[Performance tuning with result set caching](/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
-[ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
-[ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
-[DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-showresultcachespaceused-transact-sql)</br>
-[DBCC DROPRESULTSETCACHE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-dropresultsetcache-transact-sql)
+
+- [Performance tuning with result set caching](/azure/sql-data-warehouse/performance-tuning-result-set-caching)
+- [ALTER DATABASE SET Options &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)
+- [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)
+- [DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-showresultcachespaceused-transact-sql)
+- [DBCC DROPRESULTSETCACHE (Transact-SQL)](/sql/t-sql/database-console-commands/dbcc-dropresultsetcache-transact-sql)

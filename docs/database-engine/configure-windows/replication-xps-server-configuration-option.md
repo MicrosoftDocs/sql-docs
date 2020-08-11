@@ -1,5 +1,6 @@
 ---
 title: "Replication XPs Server Configuration Option | Microsoft Docs"
+description: 'View information on the "XPs Server" configuration option. This option is only available for internal use in SQL Server.'
 ms.custom: ""
 ms.date: "03/02/2017"
 ms.prod: sql
@@ -10,11 +11,11 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Replication XPs option"
 ms.assetid: e170326f-d126-4ed5-bb01-246e1934b710
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Replication XPs Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This option is for internal use only.  
   

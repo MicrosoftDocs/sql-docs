@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "LevelDepth property [ADO MD]"
 ms.assetid: 8a1cfe2c-f207-4445-b152-ade090f64608
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # LevelDepth Property (ADO MD)
 Indicates the number of levels between the root of the hierarchy and a [member](../../../ado/reference/ado-md-api/member-object-ado-md.md).  

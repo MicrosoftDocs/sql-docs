@@ -19,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # fn_syscollector_get_execution_details (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a portion of the [!INCLUDE[ssIS](../../includes/ssis-md.md)] log (sysssislog) matching the package_execution_id for the given package. The table contains one row for each logging entry that is generated at run time by packages or their tasks and containers.  
   

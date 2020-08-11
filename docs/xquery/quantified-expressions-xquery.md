@@ -1,5 +1,6 @@
 ---
 title: "Quantified Expressions (XQuery) | Microsoft Docs"
+description: Learn how to use quantified expressions in XQuery to apply either existential or universal quantification to an expression over one or several sequences.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -24,7 +25,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Quantified Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Existential and universal quantifiers specify different semantics for Boolean operators that are applied to two sequences. This is shown in the following table.  
   

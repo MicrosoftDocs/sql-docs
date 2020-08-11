@@ -1,5 +1,6 @@
 ---
 title: "Create a Pull Subscription | Microsoft Docs"
+description: Learn how create a pull subscription in SQL Server by using SQL Server Management Studio, Transact-SQL, or Replication Management Objects.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -27,7 +28,7 @@ No article in 2016+ should ever have the moniker 'sql-server-2014' on its metada
 Presently 'sql-server-2014' moniker is on this 'monikerRange'. This situation deserves further investigation.
 -->
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   This topic describes how create a pull subscription in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../includes/tsql-md.md)], or Replication Management Objects (RMO).  
   
  Setting up a pull subscription for P2P replication is possible by script, but is not available through the wizard.  

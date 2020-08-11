@@ -1,7 +1,7 @@
 ---
 title: "BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "04/23/2019"
+ms.date: "04/16/2020"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw, sql-database"
 ms.reviewer: ""
@@ -27,10 +27,10 @@ helpviewer_keywords:
 ms.assetid: 509b9462-819b-4c45-baae-3d2d90d14a1c
 author: VanMSFT
 ms.author: vanto
-monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
+monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest"
 ---
 # BACKUP CERTIFICATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asa-pdw](../../includes/applies-to-version/sql-asa-pdw.md)]
 
   Exports a certificate to a file.  
   
@@ -38,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server  
   
 BACKUP CERTIFICATE certname TO FILE = 'path_to_file'  
@@ -51,8 +51,11 @@ BACKUP CERTIFICATE certname TO FILE = 'path_to_file'
     ]  
 ```  
   
-```  
--- Syntax for Parallel Data Warehouse  
+> [!Note]
+> [!INCLUDE [Synapse preview note](../../includes/synapse-preview-note.md)]
+   
+```syntaxsql
+-- Syntax for Azure Synapse Analytics and Parallel Data Warehouse  
   
 BACKUP CERTIFICATE certname TO FILE ='path_to_file'  
       WITH PRIVATE KEY   
@@ -62,7 +65,9 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
       )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *certname*  
  Is the name of the certificate to backup.
 
@@ -102,7 +107,7 @@ BACKUP CERTIFICATE certname TO FILE ='path_to_file'
 ### A. Exporting a certificate to a file  
  The following example exports a certificate to a file.  
   
-```  
+```sql
 BACKUP CERTIFICATE sales05 TO FILE = 'c:\storedcerts\sales05cert';  
 GO  
 ```  
@@ -110,7 +115,7 @@ GO
 ### B. Exporting a certificate and a private key  
  In the following example, the private key of the certificate that is backed up will be encrypted with the password `997jkhUbhk$w4ez0876hKHJH5gh`.  
   
-```  
+```sql
 BACKUP CERTIFICATE sales05 TO FILE = 'c:\storedcerts\sales05cert'  
     WITH PRIVATE KEY ( FILE = 'c:\storedkeys\sales05key' ,   
     ENCRYPTION BY PASSWORD = '997jkhUbhk$w4ez0876hKHJH5gh' );  
@@ -120,7 +125,7 @@ GO
 ### C. Exporting a certificate that has an encrypted private key  
  In the following example, the private key of the certificate is encrypted in the database. The private key must be decrypted with the password `9875t6#6rfid7vble7r`. When the certificate is stored to the backup file, the private key will be encrypted with the password `9n34khUbhk$w4ecJH5gh`.  
   
-```  
+```sql
 BACKUP CERTIFICATE sales09 TO FILE = 'c:\storedcerts\sales09cert'   
     WITH PRIVATE KEY ( DECRYPTION BY PASSWORD = '9875t6#6rfid7vble7r' ,  
     FILE = 'c:\storedkeys\sales09key' ,   

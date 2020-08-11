@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_server_diagnostics"
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_server_diagnostics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Captures diagnostic data and health information about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to detect potential failures. The procedure runs in repeat mode and sends results periodically. It can be invoked from either a regular or a DAC connection.  
   
@@ -53,7 +53,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 |Column|Data type|Description|  
 |------------|---------------|-----------------|  
-|**creation_time**|**datetime**|Indicates the time stamp of row creation. Each row in a single rowset has the same time stamp.|  
+|**create_time**|**datetime**|Indicates the time stamp of row creation. Each row in a single rowset has the same time stamp.|  
 |**component_type**|**sysname**|Indicates whether the row contains information for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance level component or for an Always On availability group:<br /><br /> instance<br /><br /> Always On:AvailabilityGroup|  
 |**component_name**|**sysname**|Indicates the name of component or the name of the availability group:<br /><br /> system<br /><br /> resource<br /><br /> query_processing<br /><br /> io_subsystem<br /><br /> events<br /><br /> *\<name of the availability group>*|  
 |**state**|**int**|Indicates the health status of the component:<br /><br /> 0<br /><br /> 1<br /><br /> 2<br /><br /> 3|  

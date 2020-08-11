@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "record jumping [ADO]"
   - "jumping to record [ADO]"
 ms.assetid: 6caf6299-2eea-4d34-9b0e-b75aab07b740
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Jumping to a Record
 The [Move](../../../ado/reference/ado-api/move-method-ado.md) method allows you to move forward or backward in the **Recordset** a specified number of records by using the following syntax:  

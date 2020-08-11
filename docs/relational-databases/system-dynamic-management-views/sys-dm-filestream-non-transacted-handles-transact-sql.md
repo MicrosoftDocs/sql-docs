@@ -16,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_filestream_non_transacted_handles dynamic management view"
 ms.assetid: 507ec125-67dc-450a-9081-94cde5444a92
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_filestream_non_transacted_handles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays the currently open non-transactional file handles associated with FileTable data.  
   

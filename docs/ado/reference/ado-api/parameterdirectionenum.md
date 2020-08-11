@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ParameterDirectionEnum enumeration [ADO]"
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ParameterDirectionEnum
 Specifies whether the [Parameter](../../../ado/reference/ado-api/parameter-object.md) represents an input parameter, an output parameter, both an input and an output parameter, or the return value from a stored procedure.  
@@ -39,7 +39,12 @@ Specifies whether the [Parameter](../../../ado/reference/ado-api/parameter-objec
 |AdoEnums.ParameterDirection.UNKNOWN|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)|[Direction Property](../../../ado/reference/ado-api/direction-property.md)|
+
+:::row:::
+    :::column:::
+        [CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Direction Property](../../../ado/reference/ado-api/direction-property.md)  
+    :::column-end:::
+:::row-end:::

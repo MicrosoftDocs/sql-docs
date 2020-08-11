@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLPrimaryKeys function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 8dbe2903-efdc-45e0-a079-9e357c5fd81b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLPrimaryKeys (Visual FoxPro ODBC Driver)
 > [!NOTE]  

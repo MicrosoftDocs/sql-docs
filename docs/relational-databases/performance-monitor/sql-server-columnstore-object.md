@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Columnstore Object | Microsoft Docs"
+description: Learn about the SQLServer:Columnstore object, which provides counters to monitor columnstore index execution in SQL Server.
 ms.custom: ""
 ms.date: "04/12/2016"
 ms.prod: sql
@@ -12,7 +13,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server, Columnstore Object
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **SQLServer:Columnstore** object provides counters to monitor columnstore index execution in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

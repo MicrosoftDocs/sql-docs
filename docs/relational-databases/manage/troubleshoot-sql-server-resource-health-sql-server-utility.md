@@ -1,5 +1,6 @@
 ---
 title: "Troubleshoot SQL Server Resource Health (SQL Server Utility) | Microsoft Docs"
+description: Learn about troubleshooting resource health issues that a SQL Server UCP identifies, such as overutilized CPU, file space, or allocated disk space.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,7 +13,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Troubleshoot SQL Server Resource Health (SQL Server Utility)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Troubleshooting resource health issues identified by a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP might include mitigating overutilized CPU on a computer or on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or mitigating overutilized CPU for a data-tier application. Other issues might include resolving overutilized file space for database files or resolving overutilization of allocated disk space on a storage volume.  
   
  Note that if a database is in "emergency" state, the health state will display overutilized log file space.  

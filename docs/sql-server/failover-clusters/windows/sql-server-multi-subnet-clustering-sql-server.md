@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Multi-Subnet Clustering"
-description: Learn about configuring a SQL Server failover cluster instance in a multi-subnet environment. 
+description: Learn about configuring a SQL Server failover cluster instance in a multi-subnet environment, which provides disaster recovery in addition to high availability.
 ms.custom: seo-lt-2019
 ms.date: "09/01/2016"
 ms.prod: sql
@@ -18,7 +18,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # SQL Server Multi-Subnet Clustering (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   A [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] multi-subnet failover cluster is a configuration where each failover cluster node is connected to a different subnet or different set of subnets. These subnets can be in the same location or in geographically dispersed sites. Clustering across geographically dispersed sites is sometimes referred to as stretch clusters. As there is no shared storage that all the nodes can access, data should be replicated between the data storage on the multiple subnets. With data replication, there is more than one copy of the data available. Therefore, a multi-subnet failover cluster provides a disaster recovery solution in addition to high availability.  
   
    

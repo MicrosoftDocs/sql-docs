@@ -23,7 +23,7 @@ ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # UPDATE STATISTICS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Updates query optimization statistics on a table or indexed view. By default, the query optimizer already updates statistics as necessary to improve the query plan; in some cases you can improve query performance by using `UPDATE STATISTICS` or the stored procedure [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) to update statistics more frequently than the default updates.  
   
@@ -33,7 +33,7 @@ Updating statistics ensures that queries compile with up-to-date statistics. How
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 UPDATE STATISTICS table_or_indexed_view_name   
@@ -65,7 +65,7 @@ UPDATE STATISTICS table_or_indexed_view_name
     [ PAGECOUNT = numeric_contant ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 UPDATE STATISTICS [ schema_name . ] table_name   
@@ -80,7 +80,9 @@ UPDATE STATISTICS [ schema_name . ] table_name
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table_or_indexed_view_name*  
  Is the name of the table or indexed view that contains the statistics object.  
   
@@ -206,7 +208,7 @@ Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/
 ### PDW / SQL Data Warehouse  
  The following syntax is not supported by PDW / SQL Data Warehouse  
   
-```sql  
+```syntaxsql
 update statistics t1 (a,b);   
 ```  
   

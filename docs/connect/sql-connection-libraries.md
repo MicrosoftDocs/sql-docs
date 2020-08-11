@@ -1,17 +1,17 @@
 ---
-title: "Connection libraries for Microsoft SQL Databases | Microsoft Docs"
+title: "Connection libraries for Microsoft SQL Database | Microsoft Docs"
 description: "Provides download links for modules, which enable connection to Microsoft SQL Server and Azure SQL Database, from a variety of client programming languages."
-author: RothJa
+author: David-Engel
 ms.prod: sql
-ms.technology: 
+ms.technology: connectivity
 ms.custom: ""
 ms.topic: article
-ms.date: 03/05/2020
-ms.author: JRoth
+ms.date: 03/06/2020
+ms.author: v-daenge
 ---
-# Connection modules for Microsoft SQL databases
+# Connection modules for Microsoft SQL Database
 
-This article provides download links to connection modules or *drivers* that your client programs can use for interacting with [Microsoft SQL Server](../relational-databases/database-features.md), and with its twin in the cloud [Azure SQL Database](https://docs.microsoft.com/azure/sql-database/). Drivers are available for a variety of programming languages, running on the following operating systems:
+This article provides download links to connection modules or *drivers* that your client programs can use for interacting with [Microsoft SQL Server](../relational-databases/database-features.md), and with its twin in the cloud [Azure SQL Database](/azure/sql-database/). Drivers are available for a variety of programming languages, running on the following operating systems:
 
 - Linux
 - macOS
@@ -38,23 +38,23 @@ The present article devotes separate sections to these two kinds of connection d
 | PHP | [PHP](./php/download-drivers-php-sql-server.md) |
 | Python | [pyodbc, install instructions](./python/pyodbc/step-1-configure-development-environment-for-pyodbc-python-development.md)<br />[Download ODBC](./odbc/download-odbc-driver-for-sql-server.md) |
 | Ruby | [Ruby driver, install instructions](./ruby/step-1-configure-development-environment-for-ruby-development.md)<br />[Ruby download page](https://rubyinstaller.org/downloads/) |
-| &nbsp; | <br/> |
+| &nbsp; | &nbsp; |
 
 <a name="anchor-40-drivers-orm-access" />
 
 ## Drivers for ORM access
 
-The following table lists examples of Object Relational Mapping (ORM) frameworks that client applications use to connect to Microsoft SQL databases.
+The following table lists examples of Object Relational Mapping (ORM) frameworks that client applications use to connect to Microsoft SQL Database.
 
 | Language | ORM driver download |
 | :------- | :------------------ |
 | C# | [Entity Framework Core](https://docs.microsoft.com/ef/core/)<br />[Entity Framework (6.x or later)](https://docs.microsoft.com/ef/) |
 | Java | [Hibernate ORM](https://hibernate.org/orm)|
 | PHP | [Eloquent ORM, included in Laravel install](https://laravel.com/docs/) |
-| Node.js | [Sequelize ORM](https://docs.sequelizejs.com) |
+| Node.js | [Sequelize ORM](https://sequelize.org/) |
 | Python | [Django](https://www.djangoproject.com/) |
 | Ruby | [Ruby on Rails](https://rubyonrails.org/) |
-| &nbsp; | <br/> |
+| &nbsp; | &nbsp; |
 
 <a name="anchor-60-build-an-app-webpages" />
 

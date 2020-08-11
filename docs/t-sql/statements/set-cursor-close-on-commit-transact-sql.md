@@ -25,7 +25,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Controls the behavior of the [!INCLUDE[tsql](../../includes/tsql-md.md)] COMMIT TRANSACTION statement. The default value for this setting is OFF. This means that the server will not close cursors when you commit a transaction.  
   
@@ -33,7 +33,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }  
 ```  
@@ -56,7 +56,7 @@ SET CURSOR_CLOSE_ON_COMMIT { ON | OFF }
   
  To view the current setting for this setting, run the following query.  
   
-```  
+```sql
 DECLARE @CURSOR_CLOSE VARCHAR(3) = 'OFF';  
 IF ( (4 & @@OPTIONS) = 4 ) SET @CURSOR_CLOSE = 'ON';  
 SELECT @CURSOR_CLOSE AS CURSOR_CLOSE_ON_COMMIT;  
@@ -68,7 +68,7 @@ SELECT @CURSOR_CLOSE AS CURSOR_CLOSE_ON_COMMIT;
 ## Examples  
  The following example defines a cursor in a transaction and attempts to use it after the transaction is committed.  
   
-```  
+```sql
 -- SET CURSOR_CLOSE_ON_COMMIT  
 -------------------------------------------------------------------------------  
 SET NOCOUNT ON;  

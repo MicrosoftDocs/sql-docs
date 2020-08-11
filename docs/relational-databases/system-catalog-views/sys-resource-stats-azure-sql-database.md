@@ -21,7 +21,7 @@ ms.author: jrasnick
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.resource_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns CPU usage and storage data for an Azure SQL Database. The data is collected and aggregated within five-minute intervals. For each user database, there is one row for every five-minute reporting window in which there is a change in resource consumption. The data returned includes CPU usage, storage size change, and database SKU modification. Idle databases with no changes may not have rows for every five-minute interval. Historical data is retained for approximately 14 days.  
   
@@ -44,10 +44,10 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |dtu_limit|**int**|Current max database DTU setting for this database during this interval. |
 |xtp_storage_percent|**decimal (5,2)**|Storage utilization for In-Memory OLTP in percentage of the limit of the service tier (at the end of the reporting interval). This includes memory used for storage of the following In-Memory OLTP objects: memory-optimized tables, indexes, and table variables. It also includes memory used for processing ALTER TABLE operations.<br /><br /> Returns 0 if In-Memory OLTP is not used in the database.|
 |avg_login_rate_percent|**decimal (5,2)**|Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
-|avg_instance_cpu_percent|**decimal (5,2)**|Average database CPU usage as a percentage of the SQL DB process.|
-|avg_instance_memory_percent|**decimal (5,2)**|Average database memory usage as a percentage of the SQL DB process.|
+|avg_instance_cpu_percent|**decimal (5,2)**|Average database CPU usage as a percentage of the SQL Database process.|
+|avg_instance_memory_percent|**decimal (5,2)**|Average database memory usage as a percentage of the SQL Database process.|
 |cpu_limit|**decimal (5,2)**|Number of vCores for this database during this interval. For databases using the DTU-based model, this column is NULL.|
-|allocated_storage_in_megabytes|**float**|The amount of formatted file space in MB made available for storing database data. Formatted file space is also referred to as data space allocated.  For more information, see: [File space management in SQL DB](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
+|allocated_storage_in_megabytes|**float**|The amount of formatted file space in MB made available for storing database data. Formatted file space is also referred to as data space allocated.  For more information, see: [File space management in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-file-space-management)|
   
 > [!TIP]  
 >  For more context about these limits and service tiers, see the topics [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/).  

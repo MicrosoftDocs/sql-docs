@@ -17,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Replication, change tracking, & change data capture - Always On availability groups
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Replication, change data capture (CDC), and change tracking (CT) are supported on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] helps provide high availability and additional database recovery capabilities.  
   
@@ -199,9 +199,8 @@ If Change Data Capture needs to be disabled on a database which is part of an Al
 ### Restrictions  
  Supported combinations of replication on [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]:  
   
-|||||  
+|Replication|Publisher|Distributor|Subscriber|  
 |-|-|-|-|  
-||**Publisher**|**Distributor**|**Subscriber**|  
 |**Transactional**|Yes<br /><br /> Note: Does not include support for bi-directional and reciprocal transactional replication.|Yes|Yes| 
 |**P2P**|No|No|No|  
 |**Merge**|Yes|No|No|  
@@ -211,11 +210,15 @@ If Change Data Capture needs to be disabled on a database which is part of an Al
   
 ### Considerations  
   
--   The distribution database is not supported for use with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] or database mirroring. Replication configuration is coupled to the SQL Server instance where the Distributor is configured; therefore the distribution database cannot be mirrored or replicated. To provide high availability for the Distributor, use a SQL Server failover cluster. For more information, see [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
+-   The distribution database is not supported for use with database mirroring but is supported with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] subject to certain limitations, see [Configure Distribution Availability Group](../../../relational-databases/replication/configure-distribution-availability-group.md#limitations-or-exclusions). Replication configuration is coupled to the SQL Server instance where the Distributor is configured; therefore the distribution database cannot be mirrored or replicated. It is also possible to provide high availability for the Distributor using a SQL Server failover cluster. For more information, see [Always On Failover Cluster Instances &#40;SQL Server&#41;](../../../sql-server/failover-clusters/windows/always-on-failover-cluster-instances-sql-server.md).  
   
 -   Subscriber failover to a secondary database, while supported, is a manual procedure for merge replication subscribers. The procedure is essentially identical to the method used to fail over a mirrored subscriber database. Transactional replication subscribers do not need special handling while participating in [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]. Subscribers must be running [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] or later to participate in an availability group.  For more information, see [Replication Subscribers and Always On Availability Groups (SQL Server)](../../../database-engine/availability-groups/windows/replication-subscribers-and-always-on-availability-groups-sql-server.md)
   
 -   Metadata and objects that exist outside the database are not propagated to the secondary replicas, including logins, jobs, linked servers. If you require the metadata and objects at the new primary database after failover, you must copy them manually. For more information, see [Management of Logins and Jobs for the Databases of an Availability Group &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/logins-and-jobs-for-availability-group-databases.md).  
+
+### Distributed Availability Groups
+
+The publisher, or distribution database in an Availability Group cannot be configured as part of a Distributed Availability Group. The publisher database in an Availability Group and the distribution database in an Availability Group both require a listener endpoint for proper configuration and usage. However, it is not possiblle to configure a listener endpoint for a Distributed Availability group.
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
  **Replication**  

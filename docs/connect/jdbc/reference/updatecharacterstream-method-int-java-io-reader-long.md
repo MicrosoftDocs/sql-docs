@@ -1,5 +1,5 @@
 ---
-title: "updateCharacterStream Method (java.io.Reader, long) | Microsoft Docs"
+title: updateCharacterStream method (int, java.io.Reader, long)
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c426b0e3-2f9d-425a-b7da-1d0325e292d1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # updateCharacterStream Method (int, java.io.Reader, long)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

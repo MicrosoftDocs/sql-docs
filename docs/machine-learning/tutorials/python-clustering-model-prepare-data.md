@@ -1,35 +1,42 @@
 ---
 title: "Python tutorial: Prepare cluster data"
-description: In part two of this four-part tutorial series, you'll prepare SQL data to perform clustering in Python with SQL Server Machine Learning Services.
+titleSuffix: SQL machine learning
+description: In part two of this four-part tutorial series, you'll prepare SQL data to perform clustering in Python with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
-ms.date: 12/17/2019
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
+# Python tutorial: Prepare data to categorize customers with SQL machine learning
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-# Tutorial: Prepare data to categorize customers in Python with SQL Server Machine Learning Services
-
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-
-In part two of this four-part tutorial series, you'll restore and prepare the data from a SQL database using Python. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL Server Machine Learning Services.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In part two of this four-part tutorial series, you'll restore and prepare the data from a database using Python. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL Server Machine Learning Services or on Big Data Clusters.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+In part two of this four-part tutorial series, you'll restore and prepare the data from a database using Python. Later in this series, you'll use this data to train and deploy a clustering model in Python with SQL Server Machine Learning Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In part two of this four-part tutorial series, you'll restore and prepare the data from a database using Python. Later in this series, you'll use this data to train and deploy a clustering model in Python with Azure SQL Managed Instance Machine Learning Services.
+::: moniker-end
 
 In this article, you'll learn how to:
 
 > [!div class="checklist"]
 > * Separate customers along different dimensions using Python
-> * Load the data from the SQL database into a Python data frame
+> * Load the data from the database into a Python data frame
 
 In [part one](python-clustering-model.md), you installed the prerequisites and restored the sample database.
 
 In [part three](python-clustering-model-build.md), you'll learn how to create and train a K-Means clustering model in Python.
 
-In [part four](python-clustering-model-deploy.md), you'll learn how to create a stored procedure in a SQL database that can perform clustering in Python based on new data.
+In [part four](python-clustering-model-deploy.md), you'll learn how to create a stored procedure in a database that can perform clustering in Python based on new data.
 
 ## Prerequisites
 
@@ -64,7 +71,7 @@ from sklearn import cluster as sk_cluster
 ################################################################################################
 
 # Connection string to connect to SQL Server named instance.
-conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=localhost; DATABASE=tpcxbb_1gb; Trusted_Connection=yes')
+conn_str = pyodbc.connect('DRIVER={ODBC Driver 17 for SQL Server}; SERVER=<server>; DATABASE=tpcxbb_1gb; UID=<username>; PWD=<password>')
 
 input_query = '''SELECT
 ss_customer_sk AS customer,
@@ -134,16 +141,16 @@ Data frame:     customer  orderRatio  itemsRatio  monetaryRatio  frequency
 
 ## Clean up resources
 
-If you're not going to continue with this tutorial, delete the tpcxbb_1gb database from SQL Server.
+If you're not going to continue with this tutorial, delete the tpcxbb_1gb database.
 
 ## Next steps
 
 In part two of this tutorial series, you completed these steps:
 
 * Separate customers along different dimensions using Python
-* Load the data from the SQL database into a Python data frame
+* Load the data from the database into a Python data frame
 
 To create a machine learning model that uses this customer data, follow part three of this tutorial series:
 
 > [!div class="nextstepaction"]
-> [Tutorial: Create a predictive model in Python with SQL Server Machine Learning Services](python-clustering-model-build.md)
+> [Python tutorial: Create a predictive model](python-clustering-model-build.md)

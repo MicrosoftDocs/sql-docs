@@ -37,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
 In Transact-SQL, the FROM clause is available on the following statements:
 
@@ -57,7 +57,7 @@ This article also discusses the following keywords that can be used on the FROM 
 
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 [ FROM { <table_source> } [ ,...n ] ]   
@@ -130,7 +130,7 @@ This article also discusses the following keywords that can be used on the FROM 
         <date_time_literal> | @date_time_variable  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 FROM { <table_source> [ ,...n ] }  
@@ -222,7 +222,7 @@ FROM { <table_source> [ ,...n ] }
  *derived_table*  
  Is a subquery that retrieves rows from the database. *derived_table* is used as input to the outer query.  
   
- *derived* *_table* can use the [!INCLUDE[tsql](../../includes/tsql-md.md)] table value constructor feature to specify multiple rows. For example, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. For more information, see [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
+ *derived_table* can use the [!INCLUDE[tsql](../../includes/tsql-md.md)] table value constructor feature to specify multiple rows. For example, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. For more information, see [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
  *column_alias*  
  Is an optional alias to replace a column name in the result set of the derived table. Include one column alias for each column in the select list, and enclose the complete list of column aliases in parentheses.  

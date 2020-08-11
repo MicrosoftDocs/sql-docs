@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "DataControl object [ADO], members"
 ms.assetid: 9a8f9b0c-8452-4e95-a561-cfc4b7165c5e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DataControl Object (RDS) Properties, Methods, and Events
 > [!IMPORTANT]

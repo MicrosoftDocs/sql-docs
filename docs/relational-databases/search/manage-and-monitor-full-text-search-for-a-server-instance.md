@@ -16,7 +16,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ms.custom: "seo-lt-2019"
 ---
 # Manage and Monitor Full-Text Search for a Server Instance
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Full-text administration for a server instance includes:  
   
 -   System management tasks such as managing the FDHOST Launcher service (MSSQLFDLauncher), restarting filter daemon host process if you change the service account credentials, configuring server-wide full-text properties, and backing up full-text catalogs. At the server level, for example, you can specify a default full-text language that differs from the default language of the server instance as a whole.  

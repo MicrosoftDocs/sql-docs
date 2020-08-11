@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdistributor system table"
 ms.assetid: 981e9903-0b4b-4508-ac6d-2ee4c813a3d0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSdistributor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSdistributor** table contains the Distributor properties. This table is stored in the **msdb** database.  
   

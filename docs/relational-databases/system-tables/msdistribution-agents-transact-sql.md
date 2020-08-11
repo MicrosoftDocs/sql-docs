@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdistribution_agents system table"
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSdistribution_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSdistribution_agents** table contains one row for each Distribution Agent running at the local Distributor. This table is stored in the distribution database.  
   

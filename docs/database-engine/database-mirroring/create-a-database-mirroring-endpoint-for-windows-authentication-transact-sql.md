@@ -1,6 +1,6 @@
 ---
 title: "Create a database mirroring endpoint (Transact-SQL)"
-description: Use Transact-SQL to create a database mirroring endpoint using Windows Authentication.
+description: Use Transact-SQL to create a database mirroring endpoint using Windows Authentication in SQL Server.
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -19,7 +19,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Create a Database Mirroring Endpoint for Windows Authentication (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to create a database mirroring endpoint that uses Windows Authentication in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[tsql](../../includes/tsql-md.md)]. To support database mirroring or [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] each instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires a database mirroring endpoint. A server instance can have only one database mirroring endpoint, which has a single port. A database mirroring endpoint can use any port that is available on the local system when the endpoint is created. All database mirroring sessions on a server instance listen on that port, and all incoming connections for database mirroring use that port.  
   
 > [!IMPORTANT]  

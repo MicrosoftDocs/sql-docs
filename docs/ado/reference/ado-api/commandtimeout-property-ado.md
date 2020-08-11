@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "CommandTimeout property [ADO]"
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CommandTimeout Property (ADO)
 Indicates how long to wait while executing a command before terminating the attempt and generating an error.  
@@ -30,11 +30,16 @@ Indicates how long to wait while executing a command before terminating the atte
  On a **Connection** object, the **CommandTimeout** property remains read/write after the **Connection** is opened.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VC++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   

@@ -29,7 +29,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # CREATE XML INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates an XML index on a specified table. An index can be created before there is data in the table. XML indexes can be created on tables in another database by specifying a qualified database name.  
   
@@ -40,7 +40,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 Create XML Index   
 CREATE [ PRIMARY ] XML INDEX index_name   
@@ -68,7 +68,9 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  [PRIMARY] XML  
  Creates an XML index on the specified **xml** column. When PRIMARY is specified, a clustered index is created with the clustered key formed from the clustering key of the user table and an XML node identifier. Each table can have up to 249 XML indexes. Note the following when you create an XML index:  
   

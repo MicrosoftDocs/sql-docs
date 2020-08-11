@@ -4,13 +4,13 @@ ms.date: 10/23/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # DMX Statements - Data Manipulation
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   The following table lists the statements that are part of the data mining data manipulation language (DML) in Data Mining Extensions (DMX).  
   

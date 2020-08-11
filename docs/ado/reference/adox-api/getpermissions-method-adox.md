@@ -16,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "GetPermissions method [ADOX]"
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # GetPermissions Method (ADOX)
 Returns the permissions for a [group](../../../ado/reference/adox-api/group-object-adox.md) or [user](../../../ado/reference/adox-api/user-object-adox.md) on an object or object container.  
@@ -43,11 +43,16 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
  Optional. A **Variant** value that specifies the GUID for a provider object type not defined by the OLE DB specification. This parameter is required if *ObjectType* is set to **adPermObjProviderSpecific**; otherwise, it is not used.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Group Object (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Group Object (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [GetPermissions and SetPermissions Methods Example (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Name Property (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   

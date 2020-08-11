@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmergepublications system table"
 ms.assetid: 7f82c6c3-22d1-47c0-a92b-4d64b98cc455
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysmergepublications (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each merge publication defined in the database. This table is stored in the publication and subscription databases.  
   

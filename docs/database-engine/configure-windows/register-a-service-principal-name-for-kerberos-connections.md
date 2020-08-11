@@ -1,5 +1,6 @@
 ---
 title: "Register a Service Principal Name for Kerberos Connections | Microsoft Docs"
+description: "Find out how to register a Service Principal Name (SPN) with Active Directory. This registration is required for using Kerberos authentication with SQL Server."
 ms.custom: ""
 ms.date: "08/06/2019"
 ms.prod: sql
@@ -14,11 +15,11 @@ helpviewer_keywords:
   - "Server Principal Names"
   - "SPNs [SQL Server]"
 ms.assetid: e38d5ce4-e538-4ab9-be67-7046e0d9504e
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Register a Service Principal Name for Kerberos Connections
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   To use Kerberos authentication with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] requires both the following conditions to be true:  
   
 -   The client and server computers must be part of the same Windows domain, or in trusted domains.  
@@ -87,9 +88,9 @@ SELECT auth_scheme FROM sys.dm_exec_connections WHERE session_id = @@spid ;
     > [!NOTE]
     > The new SPN format does not require a port number. This means that a multiple-port server or a protocol that does not use port numbers can use Kerberos authentication.  
    
-|||  
+|SPN format|Description|  
 |-|-|  
-|MSSQLSvc/\<FQDN>:<port>|The provider-generated, default SPN when TCP is used. \<port> is a TCP port number.|  
+|MSSQLSvc/\<FQDN>:\<port>|The provider-generated, default SPN when TCP is used. \<port> is a TCP port number.|  
 |MSSQLSvc/\<FQDN>|The provider-generated, default SPN for a default instance when a protocol other than TCP is used. \<FQDN> is a fully-qualified domain name.|  
 |MSSQLSvc/\<FQDN>:\<instancename>|The provider-generated, default SPN for a named instance when a protocol other than TCP is used. \<instancename> is the name of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
 
@@ -136,9 +137,9 @@ For named pipes and shared memory connections, an SPN in the format *MSSQLSvc/\<
   
 Service accounts can be used as an SPN. They are specified through the connection attribute for the Kerberos authentication and take the following formats:  
   
--   **username@domain** or **domain\username** for a domain user account  
+-   **username\@domain** or **domain\username** for a domain user account  
   
--   **machine$@domain** or **host\FQDN** for a computer domain account such as Local System or NETWORK SERVICES.  
+-   **machine$\@domain** or **host\FQDN** for a computer domain account such as Local System or NETWORK SERVICES.  
   
 To determine the authentication method of a connection, execute the following query.  
   

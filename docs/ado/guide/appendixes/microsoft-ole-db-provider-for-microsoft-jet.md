@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "providers [ADO], OLE DB provider for Microsoft Jet"
   - "OLE DB provider for Microsoft Jet [ADO]"
 ms.assetid: fd956da1-5203-40af-aa7e-fc13a6c6581f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Microsoft OLE DB Provider for Microsoft Jet Overview
 The OLE DB Provider for Microsoft Jet allows ADO to access Microsoft Jet databases.

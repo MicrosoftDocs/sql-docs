@@ -16,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SetPermissions method [ADOX]"
 ms.assetid: b7f925d7-b05c-4376-bb49-f8d2c17b8b24
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # SetPermissions Method (ADOX)
 Specifies the permissions for a [group](../../../ado/reference/adox-api/group-object-adox.md) or [user](../../../ado/reference/adox-api/user-object-adox.md) on an object.  
@@ -55,11 +55,16 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 >  When calling **SetPermissions**, setting Actions to **adAccessRevoke** overrides any settings of the *Rights* parameter. Do not set *Actions* to **adAccessRevoke** if you want the rights specified in the *Rights* parameter to take effect.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Group Object (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Group Object (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [GetPermissions and SetPermissions Methods Example (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [GetPermissions Method (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   

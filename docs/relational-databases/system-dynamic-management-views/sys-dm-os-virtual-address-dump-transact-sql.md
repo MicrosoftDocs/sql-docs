@@ -17,12 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_virtual_address_dump dynamic management view"
 ms.assetid: 7b24ea55-3873-42fd-a86c-441c92eb6175
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_virtual_address_dump (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Returns information about a range of pages in the virtual address space of the calling process.  
   

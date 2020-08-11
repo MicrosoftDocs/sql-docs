@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "command streams [ADO]"
   - "streams [ADO], command"
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Command Streams
 ADO has always supported command input in string format specified by the **CommandText** property. As an alternative, with ADO 2.7 or later, you can also use a stream of information for command input by assigning the stream to the **CommandStream** property. You can assign an ADO **Stream** object, or any object that supports the COM **IStream** interface.  

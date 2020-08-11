@@ -57,7 +57,7 @@ author: pmasl
 ms.author: vanto
 ---
 # Hints (Transact-SQL) - Query
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Query hints specify that the indicated hints should be used throughout the query. They affect all operators in the statement. If UNION is involved in the main query, only the last query involving a UNION operation can have the OPTION clause. Query hints are specified as part of the [OPTION clause](../../t-sql/queries/option-clause-transact-sql.md). Error 8622 occurs if one or more query hints cause the Query Optimizer not to generate a valid plan.  
   
@@ -78,7 +78,7 @@ Query hints specify that the indicated hints should be used throughout the query
   
 ## Syntax  
   
-```  
+```syntaxsql
 <query_hint > ::=   
 { { HASH | ORDER } GROUP   
   | { CONCAT | HASH | MERGE } UNION   
@@ -132,7 +132,9 @@ Query hints specify that the indicated hints should be used throughout the query
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 { HASH | ORDER } GROUP  
 Specifies that aggregations that the query's GROUP BY or DISTINCT clause describes should use hashing or ordering.  
   
@@ -233,7 +235,7 @@ Is a literal constant value to be assigned _\@variable\_name_ for use with the O
 OPTIMIZE FOR can counteract the optimizer's default parameter detection behavior. Also use OPTIMIZE FOR when you create plan guides. For more information, see [Recompile a Stored Procedure](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md).  
   
 OPTIMIZE FOR UNKNOWN  
-Instructs the Query Optimizer to use statistical data instead of the initial values for all local variables when the query is compiled and optimized. This optimization includes parameters created with forced parameterization.  
+Instructs the Query Optimizer to use the average selectivity of the predicate across all column values instead of using the runtime parameter value when the query is compiled and optimized.  
   
 If you use OPTIMIZE FOR @variable_name = _literal\_constant_ and OPTIMIZE FOR UNKNOWN in the same query hint, the Query Optimizer will use the _literal\_constant_ specified for a specific value. The Query Optimizer will use UNKNOWN for the rest of the variable values. The values are used only during query optimization, and not during query execution.  
 
@@ -315,7 +317,7 @@ The following hint names are supported:
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
    Forces the Query Optimizer to use [Cardinality Estimation](../../relational-databases/performance/cardinality-estimation-sql-server.md) model of [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and earlier versions. This hint name is equivalent to [trace flag](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 or [Database Scoped Configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md) setting `LEGACY_CARDINALITY_ESTIMATION = ON`.
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
- Forces the Query Optimizer behavior at a query level. This behavior happens as if the query was compiled with database compatibility level _n_, where _n_ is a supported database compatibility level. Refer to [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) for a list of currently supported values for _n_.      
+ Forces the Query Optimizer behavior at a query level. This behavior happens as if the query was compiled with database compatibility level _n_, where _n_ is a supported database compatibility level (for example 100, 130, etc.). Refer to [sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md) for a list of currently supported values for _n_.      
    **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10).    
 
    > [!NOTE]
@@ -355,12 +357,12 @@ TABLE HINT **(**_exposed\_object\_name_ [ **,** \<table_hint> [ [**,** ]..._n_ ]
   
  When you specify _exposed\_object\_name_ without also specifying a table hint, any indexes you specify in the query as part of a table hint for the object are disregarded. The Query Optimizer then determines index usage. You can use this technique to eliminate the effect of an INDEX table hint when you can't modify the original query. See Example J.  
   
-**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) | INDEX = ( _index\_value_ ) | FORCESEEK [**(**_index\_value_**(**_index\_column\_name_ [**,**... ] **))** ]| FORCESCAN | HOLDLOCK | NOLOCK | NOWAIT | PAGLOCK | READCOMMITTED | READCOMMITTEDLOCK | READPAST | READUNCOMMITTED | REPEATABLEREAD | ROWLOCK | SERIALIZABLE | SNAPSHOT | SPATIAL_WINDOW_MAX_CELLS | TABLOCK | TABLOCKX | UPDLOCK | XLOCK }
+**\<table_hint> ::=** { [ NOEXPAND ] { INDEX ( _index\_value_ [ ,..._n_ ] ) \| INDEX = ( _index\_value_ ) \| FORCESEEK [**(**_index\_value_**(**_index\_column\_name_ [**,**... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK }
  Is the table hint to apply to the table or view that corresponds to *exposed_object_name* as a query hint. For a description of these hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Table hints other than INDEX, FORCESCAN, and FORCESEEK are disallowed as query hints unless the query already has a WITH clause specifying the table hint. For more information, see Remarks.  
   
-> [!CAUTION] 
+> [!CAUTION]
 > Specifying FORCESEEK with parameters limits the number of plans that can be considered by the optimizer more than when specifying FORCESEEK without parameters. This may cause a "Plan cannot be generated" error to occur in more cases. In a future release, internal modifications to the optimizer may allow more plans to be considered.  
   
 ## Remarks  
@@ -401,17 +403,17 @@ GO
 ```  
   
 ### B. Using OPTIMIZE FOR  
- The following example instructs the Query Optimizer to use the value `'Seattle'` for local variable `@city_name` and to use statistical data to determine the value for the local variable `@postal_code` when optimizing the query. The example uses the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
+ The following example instructs the Query Optimizer to use the value `'Seattle'` for `@city_name` and to use the average selectivity of the predicate across all column values for `@postal_code` when optimizing the query. The example uses the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database.  
   
 ```sql  
-DECLARE @city_name nvarchar(30);  
-DECLARE @postal_code nvarchar(15);  
-SET @city_name = 'Ascheim';  
-SET @postal_code = 86171;  
+CREATE PROCEDURE dbo.RetrievePersonAddress
+@city_name nvarchar(30),  
+ @postal_code nvarchar(15)
+AS
 SELECT * FROM Person.Address  
 WHERE City = @city_name AND PostalCode = @postal_code  
 OPTION ( OPTIMIZE FOR (@city_name = 'Seattle', @postal_code UNKNOWN) );  
-GO  
+GO
 ```  
   
 ### C. Using MAXRECURSION  

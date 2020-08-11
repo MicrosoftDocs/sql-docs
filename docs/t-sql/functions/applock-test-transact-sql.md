@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "sessions [SQL Server], application locks"
   - "testing application locks"
 ms.assetid: 4ea33d04-f8e9-46ff-ae61-985bd3eaca2c
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # APPLOCK_TEST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns information as to whether or not a lock can be granted on a particular application resource, for a specified lock owner, without acquisition of the lock. As an application lock function, APPLOCK_TEST operates on the current database. The database is the scope of the application locks.
   
@@ -35,7 +35,9 @@ This function returns information as to whether or not a lock can be granted on 
 APPLOCK_TEST ( 'database_principal' , 'resource_name' , 'lock_mode' , 'lock_owner' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 **'** *database_principal* **'**  
 The user, role, or application role that can be granted permissions to objects in the database. To successfully call the function, the function caller must be a member of *database_principal*, dbo, or the db_owner fixed database role.
   
@@ -123,5 +125,3 @@ GO
 [APPLOCK_MODE &#40;Transact-SQL&#41;](../../t-sql/functions/applock-mode-transact-sql.md)  
 [sp_getapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getapplock-transact-sql.md)  
 [sp_releaseapplock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-releaseapplock-transact-sql.md)
-  
-  

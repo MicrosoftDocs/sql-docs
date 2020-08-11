@@ -1,6 +1,6 @@
 ---
 title: Configure SQL Server Always On Availability Group on Windows and Linux
-description: Configure SQL Server Availability Group with replicas on Windows and Linux.
+description: Learn how to create a SQL Server Always On Availability Group (AG) with one replica on a Windows server and the other replica on a Linux server.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -13,7 +13,7 @@ monikerRange: ">= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # Configure SQL Server Always On Availability Group on Windows and Linux (cross-platform)
 
-[!INCLUDE[tsql-appliesto-sslinux-only](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-sslinux-only](../includes/applies-to-version/sqlserver2017.md)]
 
 This article explains the steps to create an Always On Availability Group (AG) with one replica on a Windows server and the other replica on a Linux server. This configuration is cross-platform because the replicas are on different operating systems. Use this configuration for migration from one platform to the other or disaster recovery (DR). This configuration does not support high-availability because there is no cluster solution to manage a cross-platform configuration. 
 

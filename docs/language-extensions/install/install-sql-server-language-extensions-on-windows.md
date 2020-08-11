@@ -1,7 +1,7 @@
 ---
 title: Install SQL Server Language Extensions on Windows
 titleSuffix:
-description: Learn how to install SQL Server Language Extensions on Windows. 
+description: Learn how to install the Language Extensions feature on SQL Server on Windows by running the SQL Server setup wizard.
 author: dphansen
 ms.author: davidph 
 ms.date: 11/06/2019
@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Install SQL Server Language Extensions on Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Learn how to install the Language Extensions component on SQL Server by running the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup wizard.
 

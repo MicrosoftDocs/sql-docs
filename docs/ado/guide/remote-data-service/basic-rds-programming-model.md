@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS programming model [ADO]"
 ms.assetid: 0bdd236b-edff-4aac-94c3-93e1465ca6c5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Basic RDS Programming Model
 > [!IMPORTANT]

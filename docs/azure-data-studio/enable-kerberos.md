@@ -1,22 +1,21 @@
 ---
-title: Use Active Directory Authentication (Kerberos)
-titleSuffix: Azure Data Studio
-description: Learn how to enable Kerberos to use Active Directory Authentication for Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
+title: Connect your SQL Server using Windows authentication (Kerberos)
+description: Learn how to connect Azure Data Studio to SQL Server using Microsoft Kerberos integrated authentication.
+ms.prod: azure-data-studio
+ms.technology: 
+author: markingmyname
+ms.author: maghan
+ms.reviewer: alayu, maghan, sstein
 ms.topic: conceptual
-author: "meet-bhagdev"
-ms.author: "meetb"
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
+ms.custom: seodec18
+ms.date: 09/24/2018
 ---
 
-# Connect [!INCLUDE[name-sos](../includes/name-sos-short.md)] to your SQL Server using Windows authentication - Kerberos 
+# Connect Azure Data Studio to your SQL Server using Windows authentication - Kerberos
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] supports connecting to SQL Server using Kerberos.
+Azure Data Studio supports connecting to SQL Server using Kerberos.
 
-In order to use Integrated Authentication (Windows Authentication) on macOS or Linux, you need to set up a **Kerberos ticket** linking your current user to a Windows domain account. 
+In order to use Integrated Authentication (Windows Authentication) on macOS or Linux, you need to set up a **Kerberos ticket** linking your current user to a Windows domain account.
 
 ## Prerequisites
 
@@ -162,7 +161,7 @@ klist
 krbtgt/DOMAIN.COMPANY.COM@ DOMAIN.COMPANY.COM.
 ```
 
-## Connect using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
+## Connect using Azure Data Studio
 
 * Create a new connection profile
 

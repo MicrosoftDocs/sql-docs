@@ -19,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DENY Certificate Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Denies permissions on a certificate.  
 
@@ -28,7 +28,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DENY permission  [ ,...n ]   
     ON CERTIFICATE :: certificate_name   
@@ -37,7 +37,9 @@ DENY permission  [ ,...n ]
     [ AS denying_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on a certificate. Listed below.  
   

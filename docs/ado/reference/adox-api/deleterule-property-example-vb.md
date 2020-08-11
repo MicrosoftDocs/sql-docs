@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DeleteRule property [ADOX], Visual Basic example"
 ms.assetid: 9ba00118-a80d-4a6d-a7d6-4f5492fb7ded
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DeleteRule Property Example (VB)
 This example demonstrates the [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) property of a [Key](../../../ado/reference/adox-api/key-object-adox.md) object. The code appends a new [Table](../../../ado/reference/adox-api/table-object-adox.md) and then defines a new primary key, setting **DeleteRule** to **adRICascade**.  

@@ -1,19 +1,28 @@
 ---
 title: "Python tutorial: Train model"
-description: In part three of this four-part tutorial series, you'll train a linear regression model in Python to predict ski rentals in SQL Server Machine Learning Services. 
+titleSuffix: SQL machine learning
+description: In part three of this four-part tutorial series, you'll train a linear regression model in Python to predict ski rentals with SQL machine learning. 
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/20/2020
+ms.date: 05/21/2020
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
-# Python Tutorial: Train a linear regression model in SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# Python tutorial: Train a linear regression model with SQL machine learning
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In part three of this four-part tutorial series, you'll train a linear regression model in Python. In the next part of this series, you'll deploy this model in a SQL Server database with Machine Learning Services or on Big Data Clusters.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 In part three of this four-part tutorial series, you'll train a linear regression model in Python. In the next part of this series, you'll deploy this model in a SQL Server database with Machine Learning Services.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In part three of this four-part tutorial series, you'll train a linear regression model in Python. In the next part of this series, you'll deploy this model in an Azure SQL Managed Instance database with Machine Learning Services.
+::: moniker-end
 
 In this article, you'll learn how to:
 
@@ -23,9 +32,9 @@ In this article, you'll learn how to:
 
 In [part one](python-ski-rental-linear-regression.md), you learned how to restore the sample database.
 
-In [part two](python-ski-rental-linear-regression-prepare-data.md), you learned how to load the data from SQL Server into a Python data frame, and prepare the data in Python.
+In [part two](python-ski-rental-linear-regression-prepare-data.md), you learned how to load the data from a database into a Python data frame, and prepare the data in Python.
 
-In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll learn how to store the model to SQL Server, and then create stored procedures from the Python scripts you developed in parts two and three. The stored procedures will run in SQL Server to make predictions based on new data.
+In [part four](python-ski-rental-linear-regression-deploy-model.md), you'll learn how to store the model in a database, and then create stored procedures from the Python scripts you developed in parts two and three. The stored procedures will run in on the server to make predictions based on new data.
 
 ## Prerequisites
 

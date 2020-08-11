@@ -17,7 +17,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # table (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Is a special data type used to store a result set for processing at a later time. **table** is primarily used for temporarily storing a set of rows that are returned as the table-valued function result set. Functions and variables can be declared to be of type **table**. **table** variables can be used in functions, stored procedures, and batches. To declare variables of type **table**, use [DECLARE @local_variable](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
   
@@ -28,7 +28,7 @@ Is a special data type used to store a result set for processing at a later time
   
 ## Syntax  
   
-```sql
+```syntaxsql
 table_type_definition ::=   
     TABLE ( { <column_definition> | <table_constraint> } [ ,...n ] )   
   
@@ -51,7 +51,9 @@ table_type_definition ::=
      }   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *table_type_definition*  
 Is the same subset of information that is used to define a table in CREATE TABLE. The table declaration includes column definitions, names, data types, and constraints. The only constraint types allowed are PRIMARY KEY, UNIQUE KEY, and NULL.  
 For more information about the syntax, see [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md), [CREATE FUNCTION &#40;Transact-SQL&#41;](../../t-sql/statements/create-function-transact-sql.md), and [DECLARE @local_variable &#40;Transact-SQL&#41;](../../t-sql/language-elements/declare-local-variable-transact-sql.md).
@@ -76,7 +78,7 @@ JOIN Employee on (m.EmployeeID =Employee.EmployeeID AND
 ```  
   
 **table** variables provide the following benefits for small-scale queries that have query plans that don't change and when recompilation concerns are dominant:
--   A **table** variable behaves like a local variable. It has a well-defined scope. This variable is the function, stored procedure, or batch that it's declared in.  
+-   A **table** variable behaves like a local variable. It has a well-defined scope. This variable can be used in the function, stored procedure, or batch in which it's declared.  
      Within its scope, a **table** variable can be used like a regular table. It may be applied anywhere a table or table expression is used in SELECT, INSERT, UPDATE, and DELETE statements. However, **table** can't be used in the following statement:  
   
 ```sql

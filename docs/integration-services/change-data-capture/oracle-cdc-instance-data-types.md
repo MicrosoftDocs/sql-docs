@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Oracle CDC Instance Data Types
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Oracle CDC Instance supports most Oracle data types. The following sections describe the supported data types and the non-supported data types.  

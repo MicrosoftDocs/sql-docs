@@ -34,7 +34,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # LOGINPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about login policy settings.  
   
@@ -47,7 +47,9 @@ ms.author: vanto
 LOGINPROPERTY ( 'login_name' , 'property_name' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *login_name*  
  Is the name of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login for which login property status will be returned.  
   

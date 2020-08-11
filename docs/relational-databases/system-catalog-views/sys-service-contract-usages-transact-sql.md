@@ -17,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_contract_usages catalog view"
 ms.assetid: 20af425e-1152-4a46-b1ac-94cff5fc9f02
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.service_contract_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This catalog view contains a row per (service, contract) pair.  
   

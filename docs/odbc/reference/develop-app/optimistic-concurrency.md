@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "concurrency control [ODBC]"
   - "optimistic concurrency [ODBC]"
 ms.assetid: 9d71e09e-bc68-4c1f-9229-ed2a7be7d324
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Optimistic Concurrency
 *Optimistic concurrency* derives its name from the optimistic assumption that collisions between transactions will rarely occur; a collision is said to have occurred when another transaction updates or deletes a row of data between the time it is read by the current transaction and the time it is updated or deleted. It is the opposite of *pessimistic concurrency,* or locking, in which the application developer believes that such collisions are commonplace.  

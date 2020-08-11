@@ -1,15 +1,15 @@
 ---
-title: "Microsoft ADO.NET for SQL Server | Microsoft Docs"
-description: "Introduction to Microsoft ADO.NET for SQL Server."
+title: "Microsoft ADO.NET"
+description: "Microsoft ADO.NET for SQL Server is the core data access technology for .NET languages. Use the Microsoft.Data.SqlClient namespace to access SQL Server."
 ms.custom: ""
-ms.date: "09/30/2019"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 5e467fce-7237-4678-bafa-a16f32323d0c
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Microsoft ADO.NET for SQL Server
@@ -25,7 +25,7 @@ ADO.NET is the core data access technology for .NET languages. Use the Microsoft
 * [Step 4: Connect resiliently to SQL with ADO.NET](step-4-connect-resiliently-sql-ado-net.md)  
   
 ## Documentation  
-* [ADO.NET Overview](https://msdn.microsoft.com/library/e80y5yhx.aspx)
+* [ADO.NET Overview](/dotnet/framework/data/adonet/)
 * [Getting started with the SqlClient driver](get-started-sqlclient-driver.md)  
 * [Overview of the SqlClient driver](overview-sqlclient-driver.md)  
 * [SQL Server and ADO.NET](./sql/index.md)
@@ -35,7 +35,7 @@ ADO.NET is the core data access technology for .NET languages. Use the Microsoft
 * [ADO.NET DataSet Forum](https://social.msdn.microsoft.com/Forums/adodotnetdataset/threads)  
   
 ## More samples  
-* [ADO.NET Code Examples](https://msdn.microsoft.com/library/dw70f090.aspx)  
+* [ADO.NET Code Examples](/dotnet/framework/data/adonet/ado-net-code-examples)  
 * [Getting Started with .NET Framework on Windows](https://www.microsoft.com/sql-server/developer-get-started/csharp/win/)
 * [Getting Started with .NET Core on macOS](https://www.microsoft.com/sql-server/developer-get-started/csharp/macos/)
 * [Getting Started with .NET Core on Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/csharp/ubuntu/)

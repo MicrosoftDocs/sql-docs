@@ -1,7 +1,7 @@
 ---
 title: "SqlClient driver support lifecycle"
 description: "Page that contains product support lifecycle information."
-ms.date: "11/25/2019"
+ms.date: "08/05/2020"
 dev_langs: 
   - "csharp"
   - "vb"
@@ -10,8 +10,8 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # SqlClient driver support lifecycle
@@ -30,7 +30,8 @@ New stable (GA) releases will be published every six months on a regular cadence
 
 | Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level  | End of Support |
 | -- | -- | -- | -- | -- | -- |
-| 1.1 | November 20, 2019 |  |  | Current |  |
+| 2.0 | June 16, 2020 | 2.0.0 | | Current | |
+| 1.1 | November 20, 2019 | 1.1.3 | May 15, 2020 | LTS | November 21, 2022 |
 | 1.0 | August 28, 2019 | 1.0.19269.1 | September 26, 2019 | Current | February 20, 2020 |
 
 ## Long Term Support (LTS) Releases

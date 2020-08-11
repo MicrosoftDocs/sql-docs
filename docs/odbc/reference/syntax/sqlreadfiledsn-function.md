@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLReadFileDSN function [ODBC]"
 ms.assetid: ead464aa-cdc3-47dd-a0c0-997711205d31
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLReadFileDSN Function
 **Conformance**  

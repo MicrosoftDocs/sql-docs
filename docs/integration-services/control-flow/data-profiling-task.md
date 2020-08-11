@@ -19,7 +19,7 @@ ms.author: chugu
 ---
 # Data Profiling Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Data Profiling task computes various profiles that help you become familiar with a data source and identify problems in the data that have to be fixed.  

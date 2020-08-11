@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS related technologies [ADO]"
 ms.assetid: a98a7245-06a7-455c-82ef-950807b9f1e7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Using Related Technologies with RDS
 This section contains the following topics.  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "data conversions from C to SQL types [ODBC], character"
   - "converting data from c to SQL types [ODBC], character"
 ms.assetid: be66188a-ebdb-4c9e-af72-c379886766fa
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # C to SQL: Character
 The identifiers for the character ODBC C data type are:  

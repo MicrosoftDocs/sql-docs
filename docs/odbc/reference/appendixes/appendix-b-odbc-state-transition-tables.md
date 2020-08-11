@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "transitioning states [ODBC], about state transitions"
   - "state transitions [ODBC], about state transitions"
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Appendix B: ODBC State Transition Tables
 The tables in this appendix show how ODBC functions cause transitions of the environment, connection, statement, and descriptor states. The state of the environment, connection, statement, or descriptor usually dictates when functions that use the corresponding type of handle (environment, connection, statement, or descriptor) can be called. The environment, connection, statement, and descriptor states overlap roughly as shown in the following illustrations. For example, the exact overlap of connection states C5 and C6 and statement states S1 through S12 is data source-dependent, since transactions begin at different times on different data sources, and descriptor state D1i (implicitly allocated descriptor) depends on the state of the statement with which the descriptor is associated, while state D1e (explicitly allocated descriptor) is independent of the state of any statement. For a description of each state, see [Environment Transitions](../../../odbc/reference/appendixes/environment-transitions.md), [Connection Transitions](../../../odbc/reference/appendixes/connection-transitions.md), [Statement Transitions](../../../odbc/reference/appendixes/statement-transitions.md), and [Descriptor Transitions](../../../odbc/reference/appendixes/descriptor-transitions.md), later in this appendix.  

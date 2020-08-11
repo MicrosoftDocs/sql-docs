@@ -1,9 +1,10 @@
 ---
 title: "Database-Level Roles | Microsoft Docs"
+description: SQL Server provides several roles that are security principals that group other principals to manage the permissions in your databases.
 ms.custom: ""
-ms.date: 07/11/2019
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
+ms.prod_service: "database-engine, sql-database, azure-synapse, pdw"
 ms.reviewer: ""
 ms.technology: security
 ms.topic: conceptual
@@ -41,11 +42,11 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Database-Level Roles
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   To easily manage the permissions in your databases, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] provides several *roles* which are security principals that group other principals. They are like ***groups*** in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows operating system. Database-level roles are database-wide in their permissions scope.  
 
-To add and remove users to a database role, use the `ADD MEMBER` and `DROP MEMBER` options of the [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) statement. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] does not support this use of `ALTER ROLE`. Use the older [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) and [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) procedures instead.
+To add and remove users to a database role, use the `ADD MEMBER` and `DROP MEMBER` options of the [ALTER ROLE](../../../t-sql/statements/alter-role-transact-sql.md) statement. [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] and Azure Synapse does not support this use of `ALTER ROLE`. Use the older [sp_addrolemember](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) and [sp_droprolemember](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md) procedures instead.
   
  There are two types of database-level roles: *fixed-database roles* that are predefined in the database and *user-defined database roles* that you can create.  
   
@@ -58,7 +59,7 @@ To add and remove users to a database role, use the `ADD MEMBER` and `DROP MEMBE
 
 The permissions of user-defined database roles can be customized by using the GRANT, DENY, and REVOKE statements. For more information, see [Permissions (Database Engine)](../../../relational-databases/security/permissions-database-engine.md).
 
-For a list of all the permissions, see the [Database Engine Permissions](https://aka.ms/sql-permissions-poster) poster. (Server-level permissions cannot be granted to database roles. Logins and other server-level principals (such as server roles) cannot be added to database roles. For server-level security in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], use [server roles](../../../relational-databases/security/authentication-access/server-level-roles.md) instead. Server-level permissions cannot be granted through roles in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)].)
+For a list of all the permissions, see the [Database Engine Permissions](https://aka.ms/sql-permissions-poster) poster. Server-level permissions cannot be granted to database roles. Logins and other server-level principals (such as server roles) cannot be added to database roles. For server-level security in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)], use [server roles](../../../relational-databases/security/authentication-access/server-level-roles.md) instead. Server-level permissions cannot be granted through roles in [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse.
 
 ## Fixed-Database Roles
   
@@ -66,7 +67,7 @@ For a list of all the permissions, see the [Database Engine Permissions](https:/
   
 |Fixed-Database role name|Description|  
 |-------------------------------|-----------------|  
-|**db_owner**|Members of the **db_owner** fixed database role can perform all configuration and maintenance activities on the database, and can also drop the database in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (In [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)], some maintenance activities require server-level permissions and cannot be performed by **db_owners**.)|  
+|**db_owner**|Members of the **db_owner** fixed database role can perform all configuration and maintenance activities on the database, and can also drop the database in [!INCLUDE[ssNoVersion_md](../../../includes/ssnoversion-md.md)]. (In [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse, some maintenance activities require server-level permissions and cannot be performed by **db_owners**.)|  
 |**db_securityadmin**|Members of the **db_securityadmin** fixed database role can modify role membership for custom roles only and manage permissions. Members of this role can potentially elevate their privileges and their actions should be monitored.|  
 |**db_accessadmin**|Members of the **db_accessadmin** fixed database role can add or remove access to the database for Windows logins, Windows groups, and [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] logins.|  
 |**db_backupoperator**|Members of the **db_backupoperator** fixed database role can back up the database.|  
@@ -80,7 +81,7 @@ The permissions assigned to the fixed-database roles cannot be changed. The foll
 
 ![fixed_database_role_permissions](../../../relational-databases/security/authentication-access/media/permissions-of-database-roles.png)
 
-## Special Roles for [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)]
+## Special Roles for [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse
 
 These database roles exist only in the virtual master database. Their permissions are restricted to actions performed in master. Only database users in master can be added to these roles. Logins cannot be added to these roles, but users can be created based on logins and then those users can be added to the roles. Contained database users in master can also be added to these roles. However, contained database users added to the **dbmanager** role in master cannot be used to create new databases.
 
@@ -90,7 +91,7 @@ These database roles exist only in the virtual master database. Their permission
 |**loginmanager** | Can create and delete logins in the virtual master database.|
 
 > [!NOTE]
-> The server-level principal and the Azure Active Directory Administrator (if configured) have all permissions in the [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and [!INCLUDE[ssSDW_md](../../../includes/sssdw-md.md)] without needing to be members of any roles. For more information, see [SQL Database Authentication and Authorization: Granting Access](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
+> The server-level principal and the Azure Active Directory Administrator (if configured) have all permissions in the [!INCLUDE[ssSDS_md](../../../includes/sssds-md.md)] and Azure Synapse without needing to be members of any roles. For more information, see [SQL Database Authentication and Authorization: Granting Access](https://azure.microsoft.com/documentation/articles/sql-database-manage-logins/). 
   
 ## msdb Roles  
  The msdb database contains the special-purpose roles that are shown in the following table.  
@@ -122,10 +123,10 @@ These database roles exist only in the virtual master database. Their permission
 |[DROP ROLE &#40;Transact-SQL&#41;](../../../t-sql/statements/drop-role-transact-sql.md)|Command|Removes a role from the database.|  
 |[sp_addrole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)|Command|Creates a new database role in the current database.|  
 |[sp_droprole &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprole-transact-sql.md)|Command|Removes a database role from the current database.|  
-|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|Adds a database user, database role, Windows login, or Windows group to a database role in the current database. All platforms except [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] should use `ALTER ROLE` instead.|  
-|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|Removes a security account from a SQL Server role in the current database. All platforms except [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] should use `ALTER ROLE` instead.|
+|[sp_addrolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md)|Command|Adds a database user, database role, Windows login, or Windows group to a database role in the current database. All platforms except [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] and Azure Synapse should use `ALTER ROLE` instead.|  
+|[sp_droprolemember &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-droprolemember-transact-sql.md)|Command|Removes a security account from a SQL Server role in the current database. All platforms except [!INCLUDE[ssPDW_md](../../../includes/sspdw-md.md)] and Azure Synapse should use `ALTER ROLE` instead.|
 |[GRANT](../../../t-sql/statements/grant-transact-sql.md)| Permissions | Adds permission to a role.
-|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | Denys a permission to a role.
+|[DENY](../../../t-sql/statements/deny-transact-sql.md)| Permissions | Denies a permission to a role.
 |[REVOKE](../../../t-sql/statements/revoke-transact-sql.md)| Permissions | Removes a previously granted or denied permissions.
   
   

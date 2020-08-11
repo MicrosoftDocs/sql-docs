@@ -11,7 +11,7 @@ ms.reviewer: martinle
 ms.custom: seo-dt-2019
 ---
 
-# What is PolyBase?
+# Configure PolyBase connectivity
 PolyBase enables your Analytics Platform System (APS) to process Transact-SQL queries that can read data from and write data to external data sources. The same queries that access external data can also include relation tables in your APS. This allows you to combine data from external sources with high-value relational data in your APS databases.
 
 ![PolyBase logical](media/polybase/polybase-logical.png)

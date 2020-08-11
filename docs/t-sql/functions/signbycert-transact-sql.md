@@ -25,7 +25,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SIGNBYCERT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Signs text with a certificate and returns the signature.  
   
@@ -33,12 +33,14 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SignByCert ( certificate_ID , @cleartext [ , 'password' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *certificate_ID*  
  Is the ID of a certificate in the current database. *certificate_ID* is **int**.  
   

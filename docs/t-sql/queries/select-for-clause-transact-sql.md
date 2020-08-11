@@ -24,7 +24,7 @@ ms.author: vanto
 ---
 # SELECT - FOR Clause (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Use the FOR clause to specify one of the following options for query results.
   
@@ -38,7 +38,7 @@ Use the FOR clause to specify one of the following options for query results.
   
 ## Syntax  
   
-```
+```syntaxsql
 [ FOR { BROWSE | <XML> | <JSON>} ]  
   
 <XML> ::=  

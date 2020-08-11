@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "installing ODBC components [ODBC], setup program"
 ms.assetid: 9cc5d75d-b293-41e5-927c-10f4af2e7af1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Setup Program
 > **NOTE:** Starting with Windows XP and Windows Server 2003, **ODBC is included in the Windows operation system**. You should only explicitly install ODBC on earlier versions of Windows.  

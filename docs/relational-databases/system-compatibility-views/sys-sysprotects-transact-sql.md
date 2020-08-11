@@ -22,7 +22,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # sys.sysprotects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains information about permissions that have been applied to security accounts in the database by using the GRANT and DENY statements.  
   

@@ -17,7 +17,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # Parse (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **geography** instance from an Open Geospatial Consortium (OGC) Well-Known Text (WKT) representation. Parse() is equivalent to [STGeomFromText](../../t-sql/spatial-geography/stgeomfromtext-geography-data-type.md), except that it assumes a spatial reference ID (SRID) of 4326 as a parameter. The input may carry optional Z (elevation) and M (measure) values.
   
@@ -30,7 +30,9 @@ This **geography** data type method supports **FullGlobe** instances or spatial 
 Parse ( 'geography_tagged_text' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *geography_tagged_text*  
  Is the WKT representation of the **geography** instance to return. *geography_tagged_text* is an **nvarchar** expression.  
   

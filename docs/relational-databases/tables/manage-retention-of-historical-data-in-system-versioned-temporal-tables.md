@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Manage retention of historical data in system-versioned temporal tables
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 With system-versioned temporal tables, the history table may increase database size more than regular tables, particularly under the following conditions:
 
@@ -36,11 +36,13 @@ Once you determine your data retention period, your next step is to develop a pl
 
  With each of these approaches, the logic for migrating or cleaning history data is based on the column that corresponds to end of period in the current table. The end of period value for each row determines the moment when the row version becomes "closed", i.e. when it lands in the history table. For example, the condition `SysEndTime < DATEADD (DAYS, -30, SYSUTCDATETIME ())` specifies that historical data older than one month needs to be removed or moved out from the history table.
 
-> **NOTE:** The examples in this topic use this [Temporal Table example](creating-a-system-versioned-temporal-table.md).
+> [!NOTE]
+> The examples in this topic use this [Temporal Table example](creating-a-system-versioned-temporal-table.md).
 
 ## Using stretch database approach
 
-> **NOTE:** Using the Stretch Database approach only applies to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and does not apply to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
+> [!NOTE]
+> Using the Stretch Database approach only applies to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and does not apply to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)].
 
 [Stretch Database](../../sql-server/stretch-database/stretch-database.md) in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] migrates your historical data transparently to Azure. For additional security, you can encrypt data in motion using SQL Server's [Always Encrypted](https://msdn.microsoft.com/library/mt163865.aspx) feature. Additionally, you can use [Row-Level Security](../../relational-databases/security/row-level-security.md) and other advanced SQL Server security features with Temporal and Stretch Database to protect your data.
 
@@ -52,7 +54,8 @@ Using the Stretch Database approach, you can stretch some or all of your tempora
 
   Using a deterministic predicate function, you can keep portion of history in the same database with the current data, while the rest is migrated to Azure. For examples and limitations, see [Select rows to migrate by using a filter function (Stretch Database)](../../sql-server/stretch-database/select-rows-to-migrate-by-using-a-filter-function-stretch-database.md). Because non-deterministic functions are not valid, if you want to transfer history data in sliding window manner, you would need to regularly alter definition of the inline predicate function so that window of rows you keep locally is constant in terms of age. Sliding window allows you to constantly move historical data older than one month to Azure. An example of this approach appears below.
 
-> **NOTE:** Stretch Database migrates data to Azure. Therefore, you have to have an Azure account and a subscription for billing. To get a free trial Azure account, click [Free One-Month Trial](https://azure.microsoft.com/pricing/free-trial/).
+> [!NOTE]
+> Stretch Database migrates data to Azure. Therefore, you have to have an Azure account and a subscription for billing. To get a free trial Azure account, click [Free One-Month Trial](https://azure.microsoft.com/pricing/free-trial/).
 
 You can configure a temporal history table for Stretch using either the Stretch Wizard or Transact-SQL, and you can stretch-enable a temporal history table while system-versioning is set to **ON**. Stretching the current table is not allowed because it does not make sense to stretch the current table.
 
@@ -75,7 +78,8 @@ The easiest method for beginners is to use the Stretch Wizard to enable stretch 
     ![Select IP address page of the Stretch Database wizard](../../relational-databases/tables/media/stretch-wizard-7.png "Select IP address page of the Stretch Database wizard")
 6. When the wizard completes, verify that your database was successfully stretch-enabled. Notice the icons in Object Explorer indicating the database was stretched.
 
-> **NOTE:** If the Enable Database for Stretch fails, review the error log. A common error is improperly configuring the firewall rule.
+> [!NOTE]
+> If the Enable Database for Stretch fails, review the error log. A common error is improperly configuring the firewall rule.
 
 See also:
 
@@ -153,7 +157,8 @@ Use SQL Server Agent or some other scheduling mechanism to ensure valid predicat
 
 With table partitioning, you can implement a sliding window approach to move out oldest portion of the historical data from the history table and keep the size of the retained part constant in terms of age - maintaining data in the history table equal to required retention period. The operation of switching data out from the history table is supported while SYSTEM_VERSIONING is ON, which means that you can clean a portion of the history data without introducing a maintenance windows or blocking your regular workloads.
 
-> **NOTE:** In order to perform partition switching, your clustered index on history table must be aligned with the partitioning schema (it has to contain SysEndTime). The default history table created by the system contains a clustered index that includes the SysEndTime and SysStartTime columns, which is optimal for partitioning, inserting new history data, and typical temporal querying. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
+> [!NOTE]
+> In order to perform partition switching, your clustered index on history table must be aligned with the partitioning schema (it has to contain SysEndTime). The default history table created by the system contains a clustered index that includes the SysEndTime and SysStartTime columns, which is optimal for partitioning, inserting new history data, and typical temporal querying. For more information, see [Temporal Tables](../../relational-databases/tables/temporal-tables.md).
 
 A sliding window approach has two sets of tasks that you need to perform:
 
@@ -168,7 +173,8 @@ The following picture shows initial partitioning configuration to keep 6 months 
 
 ![Partitioning](../../relational-databases/tables/media/partitioning.png "Partitioning")
 
-> **NOTE:** See Performance considerations with table partitioning below for the performance implications of using RANGE LEFT versus RANGE RIGHT when configuring partitioning.
+> [!NOTE]
+> See Performance considerations with table partitioning below for the performance implications of using RANGE LEFT versus RANGE RIGHT when configuring partitioning.
 
 The first and last partition are "open" on lower and upper boundaries respectively to ensure that every new row has destination partition regardless of the value in partitioning column. As time goes by, new rows in history table will land in higher partitions. When 6th partition gets filled up, we will have reached the targeted retention period. This is the moment to start the recurring partition maintenance task for the first time (it needs to be scheduled to run periodically, once per month in this example).
 
@@ -252,7 +258,7 @@ BEGIN TRANSACTION
             DATA_COMPRESSION = PAGE
         )
 /*(2) Create index on the same filegroups as the partition that will be switched out*/
-    CREATE CLUSTERED INDEX [ox_staging_DepartmentHistory_September_2015]
+    CREATE CLUSTERED INDEX [ix_staging_DepartmentHistory_September_2015]
         ON [dbo].[staging_DepartmentHistory_September_2015]
         (
             [SysEndTime] ASC
@@ -404,7 +410,8 @@ COMMIT;
 
 ## Using temporal history retention policy approach
 
-> **NOTE:** Using the Temporal History Retention Policy approach applies to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and SQL Server 2017 starting from CTP 1.3.
+> [!NOTE]
+> Using the Temporal History Retention Policy approach applies to [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] and SQL Server 2017 starting from CTP 1.3.
 
 Temporal history retention can be configured at the individual table level, which allows users to create flexible aging polices. Applying temporal retention is simple: it requires only one parameter to be set during table creation or schema change.
 

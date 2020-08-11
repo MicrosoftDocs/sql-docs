@@ -18,12 +18,12 @@ helpviewer_keywords:
   - "code [SQL Server], ASCII"
   - "leftmost character of expression"
 ms.assetid: 45c2044a-0593-4805-8bae-0fad4bde2e6b
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ASCII (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Returns the ASCII code value of the leftmost character of a character expression.
   
@@ -31,11 +31,13 @@ Returns the ASCII code value of the leftmost character of a character expression
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ASCII ( character_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *character_expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **char** or **varchar**.
   

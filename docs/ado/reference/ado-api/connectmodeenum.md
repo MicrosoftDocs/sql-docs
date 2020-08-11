@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ConnectModeEnum enumeration [ADO]"
 ms.assetid: 3792c294-5161-4538-a908-22a5fc50b85f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ConnectModeEnum
 Specifies the available permissions for modifying data in a [Connection](../../../ado/reference/ado-api/connection-object-ado.md), opening a [Record](../../../ado/reference/ado-api/record-object-ado.md), or specifying values for the [Mode](../../../ado/reference/ado-api/mode-property-ado.md) property of the **Record** and [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objects.  
@@ -47,8 +47,14 @@ Specifies the available permissions for modifying data in a [Connection](../../.
 |AdoEnums.ConnectMode.WRITE|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Mode Property (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)|[Open Method (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)|  
-|[Open Method (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)|[Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|
+
+:::row:::
+    :::column:::
+        [Mode Property (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)  
+        [Open Method (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)  
+    :::column-end:::
+    :::column:::
+        [Open Method (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
+        [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::

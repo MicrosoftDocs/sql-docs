@@ -1,10 +1,8 @@
 ---
 title: "JSON_VALUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/21/2019"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
@@ -17,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: cd016e14-11eb-4eaf-bf05-c7cfcc820a10
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: genemi
+ms.reviewer: jroth
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # JSON_VALUE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
  Extracts a scalar value from a JSON string.  
   
@@ -32,10 +30,12 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
   
 ## Syntax  
   
-```
+```syntaxsql
 JSON_VALUE ( expression , path )  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
  *expression*  
@@ -117,7 +117,7 @@ ORDER BY JSON_VALUE(jsonInfo,'$.info.address[0].town')
 ### Example 2
  The following example extracts the value of the JSON property `town` into a local variable.  
   
-```sql  
+```sql
 DECLARE @jsonInfo NVARCHAR(MAX)
 DECLARE @town NVARCHAR(32)
 
@@ -135,7 +135,7 @@ CREATE TABLE dbo.Store
  (
   StoreID INT IDENTITY(1,1) NOT NULL,
   Address VARCHAR(500),
-  jsonContent NVARCHAR(8000),
+  jsonContent NVARCHAR(4000),
   Longitude AS JSON_VALUE(jsonContent, '$.address[0].longitude'),
   Latitude AS JSON_VALUE(jsonContent, '$.address[0].latitude')
  )

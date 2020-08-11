@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "CREATE INDEX [ODBC]"
   - "SQL grammar [ODBC], create index"
 ms.assetid: 69438247-eef3-44c5-bef2-acef4e146f41
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # CREATE INDEX Statement
 The syntax of the CREATE INDEX statement is:  

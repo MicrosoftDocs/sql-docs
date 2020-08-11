@@ -23,7 +23,7 @@ ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # COALESCE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Evaluates the arguments in order and returns the current value of the first expression that initially doesn't evaluate to `NULL`. For example, `SELECT COALESCE(NULL, NULL, 'third_value', 'fourth_value');` returns the third value because the third value is the first value that isn't null. 
   
@@ -31,7 +31,7 @@ Evaluates the arguments in order and returns the current value of the first expr
   
 ## Syntax  
   
-```  
+```syntaxsql
 COALESCE ( expression [ ,...n ] )   
 ```  
   
@@ -39,7 +39,9 @@ COALESCE ( expression [ ,...n ] )
 _expression_  
 Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of any type.  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
 Returns the data type of _expression_ with the highest data type precedence. If all expressions are nonnullable, the result is typed as nonnullable.  
   
 ## Remarks  
@@ -63,7 +65,7 @@ For example, when the code `COALESCE((subquery), 1)` is executed, the subquery i
   
 ```sql  
 SELECT CASE WHEN x IS NOT NULL THEN x ELSE 1 END  
-from  
+FROM  
 (  
 SELECT (SELECT Nullable FROM Demo WHERE SomeCol = 1) AS x  
 ) AS T;  
@@ -87,9 +89,9 @@ The `ISNULL` function and the `COALESCE` expression have a similar purpose but c
     -- evaluates to NULL.  
     CREATE TABLE #Demo   
     (   
-    col1 integer NULL,   
-    col2 AS COALESCE(col1, 0) PRIMARY KEY,   
-    col3 AS ISNULL(col1, 0)   
+      col1 INTEGER NULL,   
+      col2 AS COALESCE(col1, 0) PRIMARY KEY,   
+      col3 AS ISNULL(col1, 0)   
     );   
   
     -- This statement succeeds because the nullability of the   
@@ -97,9 +99,9 @@ The `ISNULL` function and the `COALESCE` expression have a similar purpose but c
   
     CREATE TABLE #Demo   
     (   
-    col1 integer NULL,   
-    col2 AS COALESCE(col1, 0),   
-    col3 AS ISNULL(col1, 0) PRIMARY KEY   
+      col1 INTEGER NULL,   
+      col2 AS COALESCE(col1, 0),   
+      col3 AS ISNULL(col1, 0) PRIMARY KEY   
     );  
     ```  
   
@@ -130,11 +132,11 @@ IF OBJECT_ID('dbo.wages') IS NOT NULL
 GO  
 CREATE TABLE dbo.wages  
 (  
-    emp_id        tinyint   identity,  
-    hourly_wage   decimal   NULL,  
-    salary        decimal   NULL,  
-    commission    decimal   NULL,  
-    num_sales     tinyint   NULL  
+    emp_id        TINYINT   IDENTITY,  
+    hourly_wage   DECIMAL   NULL,  
+    salary        DECIMAL   NULL,  
+    commission    DECIMAL   NULL,  
+    num_sales     TINYINT   NULL  
 );  
 GO  
 INSERT dbo.wages (hourly_wage, salary, commission, num_sales)  
@@ -219,11 +221,11 @@ The following example uses `COALESCE` to compare the values in three columns  an
 ```sql  
 CREATE TABLE dbo.wages  
 (  
-    emp_id        tinyint   NULL,  
-    hourly_wage   decimal   NULL,  
-    salary        decimal   NULL,  
-    commission    decimal   NULL,  
-    num_sales     tinyint   NULL  
+    emp_id        TINYINT   NULL,  
+    hourly_wage   DECIMAL   NULL,  
+    salary        DECIMAL   NULL,  
+    commission    DECIMAL   NULL,  
+    num_sales     TINYINT   NULL  
 );  
 INSERT INTO dbo.wages (emp_id, hourly_wage, salary, commission, num_sales)  
 VALUES (1, 10.00, NULL, NULL, NULL);  
@@ -263,7 +265,7 @@ VALUES (12, NULL, NULL, 14000, 4);
   
 SELECT CAST(COALESCE(hourly_wage * 40 * 52,   
    salary,   
-   commission * num_sales) AS decimal(10,2)) AS TotalSalary   
+   commission * num_sales) AS DECIMAL(10,2)) AS TotalSalary   
 FROM dbo.wages  
 ORDER BY TotalSalary;  
 ```  

@@ -1,5 +1,6 @@
 ---
 title: "local-name Function (XQuery) | Microsoft Docs"
+description: Learn how to use the XQuery function local-name() to return the local-name part of a node.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Functions on Nodes - local-name
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns the local part of the name of *$arg* as an xs:string that will either be the zero-length string or will have the lexical form of an xs:NCName. If the argument is not provided, the default is the context node.  
   

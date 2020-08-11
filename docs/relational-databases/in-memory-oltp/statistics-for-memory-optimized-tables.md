@@ -1,5 +1,6 @@
 ---
 title: "Statistics for Memory-Optimized Tables | Microsoft Docs"
+description: Learn how the query optimizer uses statistics about columns in memory-optimized tables to create query plans that improve query performance for In-Memory OLTP.
 ms.custom: ""
 ms.date: "10/23/2016"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Statistics for Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   The query optimizer uses statistics about columns to create query plans that improve query performance. Statistics are collected from the tables in the database and stored in the database metadata.  
   

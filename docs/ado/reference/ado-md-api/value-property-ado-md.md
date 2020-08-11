@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Value property [ADO MD]"
 ms.assetid: 70dc5cff-0b05-456d-b86b-2686fe4e7ce6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Value Property (ADO MD)
 Indicates the value of the current [cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md).  

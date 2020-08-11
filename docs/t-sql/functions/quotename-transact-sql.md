@@ -19,12 +19,12 @@ helpviewer_keywords:
   - "QUOTENAME function"
   - "valid identifiers [SQL Server]"
 ms.assetid: 34d47f1e-2ac7-4890-8c9c-5f60f115e076
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # QUOTENAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a Unicode string with the delimiters added to make the input string a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delimited identifier.  
   
@@ -32,11 +32,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```sql
 QUOTENAME ( 'character_string' [ , 'quote_character' ] )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  '*character_string*'  
  Is a string of Unicode character data. *character_string* is **sysname** and is limited to 128 characters. Inputs greater than 128 characters return NULL.  
   
@@ -49,24 +51,33 @@ QUOTENAME ( 'character_string' [ , 'quote_character' ] )
 ## Examples  
  The following example takes the character string `abc[]def` and uses the `[` and `]` characters to create a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delimited identifier.  
   
-```  
-SELECT QUOTENAME('abc[]def');  
+```sql
+SELECT QUOTENAME('abc[]def');
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
   
 ```  
-[abc[]]def]  
+[abc[]]def]
   
 (1 row(s) affected)  
 ```  
   
  Notice that the right bracket in the string `abc[]def` is doubled to indicate an escape character.  
+ 
+ The following example prepares a quoted string to use in naming a column.  
+  
+```sql
+DECLARE @columnName NVARCHAR(255)='user''s "custom" name'
+DECLARE @sql NVARCHAR(MAX) = 'SELECT FirstName AS ' + QUOTENAME(@columnName) + ' FROM dbo.DimCustomer'
+
+EXEC sp_executesql @sql
+```
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example takes the character string `abc def` and uses the `[` and `]` characters to create a valid [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] delimited identifier.  
   
-```  
+```sql
 SELECT QUOTENAME('abc def');   
 ```  
   
@@ -90,6 +101,3 @@ SELECT QUOTENAME('abc def');
  [STUFF &#40;Transact-SQL&#41;](../../t-sql/functions/stuff-transact-sql.md)  
  [TRANSLATE &#40;Transact-SQL&#41;](../../t-sql/functions/translate-transact-sql.md)  
  [String Functions &#40;Transact-SQL&#41;](../../t-sql/functions/string-functions-transact-sql.md)  
-  
-  
-

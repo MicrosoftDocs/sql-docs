@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ActiveCommand property [ADO], JScript example"
 ms.assetid: be09e2af-ba31-4168-8ccd-2461bb24e49a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ActiveCommand Property Example (JScript)
 This example demonstrates the [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) property. Cut and paste the following code to Notepad or another text editor, and save it as **ActiveCommandJS.asp**.  

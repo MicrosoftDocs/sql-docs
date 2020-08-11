@@ -1,5 +1,6 @@
 ---
 title: "Compare Execution Plans | Microsoft Docs"
+description: Learn how to compare similarities and differences between actual graphical execution plans by using SQL Server Management Studio Plan Comparison feature.
 ms.custom: ""
 ms.date: "11/21/2018"
 ms.prod: sql
@@ -19,7 +20,7 @@ ms.author: pelopes
 manager: amitban
 ---
 # Compare execution plans
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 This topic describes how to compare similarities and differences between actual graphical execution plans by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] Plan Comparison feature. This feature is available starting with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v16.
   
 > [!NOTE]

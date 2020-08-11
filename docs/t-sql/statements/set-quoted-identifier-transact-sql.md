@@ -28,7 +28,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # SET QUOTED_IDENTIFIER (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to follow the ISO rules regarding quotation mark delimiting identifiers and literal strings. Identifiers delimited by double quotation marks can be either [!INCLUDE[tsql](../../includes/tsql-md.md)] reserved keywords or can contain characters not generally allowed by the [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax rules for identifiers.
 
@@ -36,13 +36,13 @@ Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to follow the I
 
 ## Syntax
 
-```
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database
 
 SET QUOTED_IDENTIFIER { ON | OFF }
 ```
 
-```
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse
 
 SET QUOTED_IDENTIFIER ON

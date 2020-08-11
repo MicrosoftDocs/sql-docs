@@ -1,26 +1,38 @@
 ---
 title: "Quickstart: Train a model in R"
-description: In this quickstart, you'll create and train a predictive model using T. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using SQL Server Machine Learning Services.
+titleSuffix: SQL machine learning
+description: In this quickstart, you'll create and train a predictive model using T. You'll save the model to a table, and then use the model to predict values from new data with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020  
+ms.date: 04/23/2020
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 
-# Quickstart: Create and score a predictive model in R with SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# Quickstart: Create and score a predictive model in R with SQL machine learning
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-In this quickstart, you'll create and train a predictive model using T. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md).
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In this quickstart, you'll create and train a predictive model using T. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+In this quickstart, you'll create and train a predictive model using T. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+In this quickstart, you'll create and train a predictive model using T. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using [SQL Server R Services](../r/sql-server-r-services.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In this quickstart, you'll create and train a predictive model using T. You'll save the model to a table in your SQL Server instance, and then use the model to predict values from new data using [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+::: moniker-end
 
 You'll create and execute two stored procedures running in SQL. The first one uses the **mtcars** dataset included with R and generates a simple generalized linear model (GLM) that predicts the probability that a vehicle has been fitted with a manual transmission. The second procedure is for scoring - it calls the model generated in the first procedure to output a set of predictions based on new data. By placing R code in a SQL stored procedure, operations are contained in SQL, are reusable, and can be called by other stored procedures and client applications.
 
 > [!TIP]
-> If you need a refresher on linear models, try this tutorial which describes the process of fitting a model using rxLinMod:  [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model)
+> If you need a refresher on linear models, try this tutorial which describes the process of fitting a model using rxLinMod: [Fitting Linear Models](/machine-learning-server/r/how-to-revoscaler-linear-model)
 
 By completing this quickstart, you'll learn:
 
@@ -31,19 +43,30 @@ By completing this quickstart, you'll learn:
 
 ## Prerequisites
 
-- This quickstart requires access to an instance of SQL Server with [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R language installed.
+You need the following prerequisites to run this quickstart.
 
-  Your SQL Server instance can be in an Azure virtual machine or on-premises. Just be aware that the external scripting feature is disabled by default, so you might need to [enable external scripting](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) and verify that **SQL Server Launchpad service** is running before you start.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. For how to install R Services, see the [Windows installation guide](../install/sql-r-services-windows-install.md).
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL Managed Instance Machine Learning Services. For how to sign up, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+::: moniker-end
 
-- You also need a tool for running SQL queries that contain R scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- A tool for running SQL queries that contain R scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## Create the model
 
-To create the model, you'll create source data for training, create the model and train it using the data, then store the model in a SQL database where it can be used to generate predictions with new data.
+To create the model, you'll create source data for training, create the model and train it using the data, then store the model in a database where it can be used to generate predictions with new data.
 
 ### Create the source data
 
-1. Open SSMS, connect to your SQL Server instance, and open a new query window.
+1. Open Azure Data Studio, connect to your instance, and open a new query window.
 
 1. Create a table to save the training data.
 
@@ -103,9 +126,9 @@ GO
 - The first argument to `glm` is the *formula* parameter, which defines `am` as dependent on `hp + wt`.
 - The input data is stored in the variable `MTCarsData`, which is populated by the SQL query. If you don't assign a specific name to your input data, the default variable name would be _InputDataSet_.
 
-### Store the model in the SQL database
+### Store the model in the database
 
-Next, store the model in a SQL database so you can use it for prediction or retrain it. 
+Next, store the model in a database so you can use it for prediction or retrain it. 
 
 1. Create a table to store the model.
 
@@ -215,6 +238,6 @@ It's also possible to use the [PREDICT (Transact-SQL)](../../t-sql/queries/predi
 
 ## Next steps
 
-For more information on SQL Server Machine Learning Services, see:
+For more information on tutorials for R with SQL machine learning, see:
 
-- [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)
+- [R tutorials](r-tutorials.md)

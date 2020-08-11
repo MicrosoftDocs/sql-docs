@@ -1,5 +1,6 @@
 ---
-title: "Inserting Data into Table-Valued Parameters | Microsoft Docs"
+title: "Insert data into table-valued parameters (Native Client OLE DB provider) | Microsoft Docs"
+description: Learn about the two models that the SQL Server Native Client OLE DB Provider supports for the consumer to specify data for table-valued parameter rows.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -10,19 +11,19 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "table-valued parameters, inserting data into"
 ms.assetid: 9c1a3234-4675-40d3-b473-8df06208f880
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Inserting Data into Table-Valued Parameters
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Inserting Data into Table-Valued Parameters (Native Client OLE DB Provider)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider supports two models for the consumer to specify data for table valued parameter rows: a push model and a pull model. A sample that demonstrates the pull model is available; see [SQL Server Data Programming Samples](https://msftdpprodsamples.codeplex.com/).  
+  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB Provider supports two models for the consumer to specify data for table-valued parameter rows: a push model and a pull model. A sample that demonstrates the pull model is available; see [SQL Server Data Programming Samples](https://msftdpprodsamples.codeplex.com/).  
   
 > [!NOTE]  
 >  A table-valued parameter column must have either non-default values in all rows or default values in all rows. It is not possible to have default values in some rows but not others. Therefore, in table-valued parameter bindings, the only status values allowed for table-valued parameter rowset column data are DBSTATUS_S_ISNULL and DBSTATUS_S_OK. DBSTATUS_S_DEFAULT will result in a failure and the bound status value will be set to DBSTATUS_E_BADSTATUS.  
   
-## Push Model (Loads All Table-Valued Paremeter Data in Memory)  
+## Push Model (Loads All Table-Valued Parameter Data in Memory)  
  The push model is similar to the use of parameter sets (that is, the DBPARAMS parameter in ICommand::Execute). The push model is only used if table-valued parameter rowset objects are used without a customized implementation of IRowset interfaces. The push model is recommended when the number of rows in the table-valued parameter rowset is small and is not expected to put excessive memory pressure on the application. This is simpler than the pull model, because it does not require any more functionality from the consumer application than what is currently common in typical OLE DB applications.  
   
  The consumer is expected to provide all the table-valued parameter data to the provider before executing a command. To provide the data, the consumer populates a table-valued parameter rowset object for each table-valued parameter. The table-valued parameter rowset object exposes rowset Insert, Set, and Delete operations, which the consumer will use to manipulate the table-valued parameter data. The provider will fetch the data from this table-valued parameter rowset object at execution time.  

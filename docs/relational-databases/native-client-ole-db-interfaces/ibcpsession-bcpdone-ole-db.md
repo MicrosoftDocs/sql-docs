@@ -1,5 +1,5 @@
 ---
-title: "IBCPSession::BCPDone (OLE DB) | Microsoft Docs"
+title: "IBCPSession::BCPDone (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,12 +13,12 @@ apitype: "COM"
 helpviewer_keywords: 
   - "BCPDone method"
 ms.assetid: 19cd6e55-432a-450e-a15c-54d50eb53dee
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# IBCPSession::BCPDone (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# IBCPSession::BCPDone (Native Client OLE DB Provider)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Commits the remaining rows to be sent to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

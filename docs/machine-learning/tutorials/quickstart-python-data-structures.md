@@ -1,22 +1,31 @@
 ---
 title: "Quickstart: Python data structures"
-description: In this quickstart, learn how to work with data structures and data objects in Python and SQL Server Machine Learning Services.
+titleSuffix: SQL machine learning
+description: In this quickstart, learn how to work with data structures and data objects in Python using SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2020
+ms.date: 05/21/2020  
 ms.topic: quickstart
-author: garyericson
-ms.author: garye
+author: cawrites
+ms.author: chadam
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
-# Quickstart: Data structures and objects using Python in SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# Quickstart: Data structures and objects using Python with SQL machine learning
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-In this quickstart, you'll learn how to use data structures when using Python in SQL Server Machine Learning Services.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In this quickstart, you'll learn how to use data structures and data types when using Python in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). You'll learn about moving data between Python and SQL Server, and the common issues that might occur.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+In this quickstart, you'll learn how to use data structures and data types when using Python in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). You'll learn about moving data between Python and SQL Server, and the common issues that might occur.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In this quickstart, you'll learn how to use data structures and data types when using Python in [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). You'll learn about moving data between Python and Azure SQL Managed Instance, and the common issues that might occur.
+::: moniker-end
 
-SQL Server relies on the Python **pandas** package, which is great for working with tabular data. However, you cannot pass a scalar from Python to SQL Server and expect it to "just work". In this quickstart, you'll review some basic data structure definitions, to prepare you for additional issues that you might run across when passing tabular data between Python and SQL Server.
+SQL machine learning relies on the Python **pandas** package, which is great for working with tabular data. However, you cannot pass a scalar from Python to your database and expect it to *just work*. In this quickstart, you'll review some basic data structure definitions, to prepare you for additional issues that you might run across when passing tabular data between Python and the database.
 
 Concepts to know up front include:
 
@@ -24,16 +33,26 @@ Concepts to know up front include:
 - A single column of a data frame is a list-like object called a series.
 - A single value of a data frame is called a cell and is accessed by index.
 
-How would you expose the single result of a calculation as a data frame, if a data.frame requires a tabular structure? One answer is to represent the single scalar value as a series, which is easily converted to a data frame. 
+How would you expose the single result of a calculation as a data frame, if a data.frame requires a tabular structure? One answer is to represent the single scalar value as a series, which is easily converted to a data frame.
 
 > [!NOTE]
-> When returning dates, Python in SQL uses DATETIME which has a restricted date range of 1753-01-01(-53690) through 9999-12-31(2958463). 
+> When returning dates, Python in SQL uses DATETIME which has a restricted date range of 1753-01-01(-53690) through 9999-12-31(2958463).
 
 ## Prerequisites
 
-- This quickstart requires access to an instance of SQL Server with [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the Python language installed.
+You need the following prerequisites to run this quickstart.
 
-- You also need a tool for running SQL queries that contain Python scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL Managed Instance Machine Learning Services. For how to sign up, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+::: moniker-end
+
+- A tool for running SQL queries that contain Python scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## Scalar value as a series
 
@@ -64,7 +83,7 @@ This example does some simple math and converts a scalar into a series.
    dtype: float64
    ```
 
-1. To increase the length of the series, you can add new values, using an array. 
+1. To increase the length of the series, you can add new values, using an array.
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'Python'
@@ -83,7 +102,7 @@ This example does some simple math and converts a scalar into a series.
    **Results**
 
    ```text
-   STDOUT message(s) from external script: 
+   STDOUT message(s) from external script:
    0    0.5
    1    2.0
    dtype: float64
@@ -105,7 +124,7 @@ This example does some simple math and converts a scalar into a series.
    **Results**
 
    ```text
-   STDOUT message(s) from external script: 
+   STDOUT message(s) from external script:
    0.5
    simple math example 1    0.5
    simple math example 2    0.5
@@ -114,7 +133,7 @@ This example does some simple math and converts a scalar into a series.
 
 ## Convert series to data frame
 
-Having converted the scalar math results to a tabular structure, you still need to convert them to a format that SQL Server can handle.
+Having converted the scalar math results to a tabular structure, you still need to convert them to a format that SQL machine learning can handle.
 
 1. To convert a series to a data.frame, call the pandas [DataFrame](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe) method.
 
@@ -200,12 +219,7 @@ Now you'll output specific values from two series of math results in a data.fram
 
 ## Next steps
 
-To learn about writing advanced Python functions in SQL Server, follow this quickstart:
+To learn about writing advanced Python functions with SQL machine learning, follow this quickstart:
 
 > [!div class="nextstepaction"]
-> [Write advanced Python functions with SQL Server Machine Learning Services](quickstart-python-functions.md)
-
-For more information on using Python in SQL Server Machine Learning Services, see the following articles:
-
-- [Create and score a predictive model in Python](quickstart-python-train-score-model.md)
-- [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)
+> [Write advanced Python functions](quickstart-python-functions.md)

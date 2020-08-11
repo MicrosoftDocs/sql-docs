@@ -1,6 +1,6 @@
 ---
 title: "Generate & analyze CLUSTER.LOG for availability groups"
-description: "Describes how to generate and analyze the cluster log for an Always On availability group. "
+description: "Learn details about how to generate and analyze the cluster log for an Always On availability group."
 ms.custom: seo-lt-2019
 ms.date: "06/14/2017"
 ms.prod: sql
@@ -12,13 +12,13 @@ author: rothja
 ms.author: jroth
 ---
 # Generate and analyze the CLUSTER.LOG for an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   As a failover cluster resource, there are external interactions between SQL Server, the Windows Server Failover Cluster service (WSFC) cluster, and the SQL Server resource DLL (hadrres.dll), that cannot be monitored within SQL Server. The WSFC log, CLUSTER.LOG, can diagnose issues in the WSFC cluster or in the SQL Server resource DLL. 
   
 ## Generate cluster log  
  You can generate the cluster logs in two ways:  
   
-1.  Use the `cluster /log /g` command at the command prompt. This command generates the cluster logs to the \windows\cluster\reports directory on each WSFC node. The advantage of this method is that you can specify the level of detail in the generated logs by using the `/level` option. The disadvantage is that you cannot specify the destination directory for the generated cluster logs. For more information, see [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://blogs.msdn.com/b/clustering/archive/2008/09/24/8962934.aspx).  
+1.  Use the `cluster /log /g` command at the command prompt. This command generates the cluster logs to the \windows\cluster\reports directory on each WSFC node. The advantage of this method is that you can specify the level of detail in the generated logs by using the `/level` option. The disadvantage is that you cannot specify the destination directory for the generated cluster logs. For more information, see [How to create the cluster.log in Windows Server 2008 Failover Clustering](https://techcommunity.microsoft.com/t5/failover-clustering/how-to-create-the-cluster-log-in-windows-server-2008-failover/ba-p/371283).  
   
 2.  Use the [Get-ClusterLog](https://technet.microsoft.com/library/ee461045.aspx) PowerShell cmdlet. The advantage of this method is that you can generate the cluster log from all nodes to one destination directory on the node that you run the cmdlet. The disadvantage is that you cannot specify the level of detail in the generated logs.  
   

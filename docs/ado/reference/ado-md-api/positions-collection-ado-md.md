@@ -15,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Positions collection [ADO MD]"
 ms.assetid: 5b9e7545-cf30-464d-80ef-5c99c8306bab
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Positions Collection (ADO MD)
 Contains the [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) objects that define a point on an axis.  

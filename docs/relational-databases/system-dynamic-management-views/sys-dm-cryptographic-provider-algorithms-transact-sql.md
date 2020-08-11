@@ -16,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_cryptographic_provider_algorithms dynamic management function"
 ms.assetid: 8bcccb37-5cfb-4e1e-a0bb-7ff4c279fe8e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_cryptographic_provider_algorithms (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the algorithms supported by an Extensible Key Management (EKM) provider.  
   

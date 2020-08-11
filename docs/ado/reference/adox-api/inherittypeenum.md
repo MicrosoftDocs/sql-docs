@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "InheritTypeEnum enumeration [ADOX]"
 ms.assetid: c2f6ce79-c4b3-4d40-ac95-21025208f991
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # InheritTypeEnum
 Specifies how objects will inherit permissions set with [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md).  

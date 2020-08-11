@@ -12,7 +12,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Projects (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 A [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] project is a collection of logically related scripts and files that can be saved together for database administration and development.  
   
 ## Script Project Overview  
@@ -53,5 +53,5 @@ To modify information about a connection, use the properties window in [!INCLUDE
 ## See Also  
 [Solution Explorer](../../ssms/solution/solution-explorer.md)  
 [Solutions &#40;SQL Server Management Studio&#41;](../../ssms/solution/solutions-sql-server-management-studio.md)  
-[Solution Explorer Source Control](https://msdn.microsoft.com/library/ms173879.aspx)  
+[Solution Explorer Source Control](https://docs.microsoft.com/sql/ssms/solution/solution-explorer)  
   

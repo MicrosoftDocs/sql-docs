@@ -20,12 +20,12 @@ helpviewer_keywords:
   - "LTRIM function"
   - "blank characters [SQL Server]"
 ms.assetid: 369ed340-1a09-4597-a9eb-6720156cd39a
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LTRIM (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a character expression after it removes leading blanks.  
   
@@ -33,11 +33,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 LTRIM ( character_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *character_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of character or binary data. *character_expression* can be a constant, variable, or column. *character_expression* must be of a data type, except **text**, **ntext**, and **image**, that is implicitly convertible to **varchar**. Otherwise, use [CAST](../../t-sql/functions/cast-and-convert-transact-sql.md) to explicitly convert *character_expression*.  
   
@@ -65,8 +67,8 @@ SELECT LTRIM('     Five spaces are at the beginning of this string.') FROM sys.d
   
  The following example uses `LTRIM` to remove leading spaces from a character variable.  
   
-```  
-DECLARE @string_to_trim varchar(60);  
+```sql  
+DECLARE @string_to_trim VARCHAR(60);  
 SET @string_to_trim = '     5 spaces are at the beginning of this string.';  
 SELECT 
     @string_to_trim AS 'Original string',

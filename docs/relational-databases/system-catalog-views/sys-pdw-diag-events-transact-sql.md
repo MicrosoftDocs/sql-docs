@@ -3,7 +3,6 @@ title: "sys.pdw_diag_events (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql
-ms.technology: data-warehouse
 ms.reviewer: ""
 ms.technology: system-objects
 ms.topic: "language-reference"
@@ -15,7 +14,7 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = sqlallproducts-allversions"
 ---
 # sys.pdw_diag_events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [pdw](../../includes/applies-to-version/pdw.md)]
 
   Holds information about events that can be included in diagnostic sessions on the system.  
   

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "argument value checks [ODBC]"
   - "driver manager [ODBC], error checking"
 ms.assetid: 37a65f8b-83aa-456c-b7cf-500404abb38a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Argument Value Checks
 The Driver Manager checks the following types of arguments. Unless otherwise noted, the Driver Manager returns SQL_ERROR for errors in argument values.  

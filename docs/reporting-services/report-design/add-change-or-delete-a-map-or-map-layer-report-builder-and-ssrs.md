@@ -1,5 +1,6 @@
 ---
 title: "Add, Change, or Delete a Map or Map Layer (Report Builder) | Microsoft Docs"
+description: Learn how to add, remove, or change map options manually or by using the map layer wizard in Report Builder.
 ms.date: 05/24/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -216,7 +217,7 @@ ms.author: maggies
   
 3.  In the Properties pane, set UseSecureConnection to **True**.  
   
- The connection for the Bing Maps Web service will use the HTTP SSL (Secure Sockets Layer) service to retrieve Bing map tiles for this layer.  
+ The connection for the Bing Maps Web service will use the HTTP SSL service to retrieve Bing map tiles for this layer. Transport Layer Security (TLS) was previously known as Secure Sockets Layer (SSL).
   
 ##  <a name="Language"></a> To specify the language for tile labels  
   

@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_sentitems database mail view"
 ms.assetid: 16eb2a44-cebb-4cec-93ac-e2498c39989f
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysmail_sentitems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains one row for each message sent by Database Mail. Use **sysmail_sentitems** when you want to see which messages were successfully sent.  
   

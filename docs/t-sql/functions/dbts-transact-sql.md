@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "@@DBTS function"
   - "timestamp data type"
 ms.assetid: 91842ddd-91c0-4445-a03f-116f6bc991d0
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # &#x40;&#x40;DBTS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns the value of the current **timestamp** data type for the current database. The current database will have a guaranteed unique timestamp value.
   

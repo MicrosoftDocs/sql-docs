@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "updating data [ODBC]"
   - "data updates [ODBC], about data updates"
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Updating Data Overview
 Applications can update data either by executing SQL statements or by calling **SQLSetPos** or **SQLBulkOperations**. **UPDATE**, **DELETE**, and **INSERT** statements act directly on the data source and are usually supported by drivers. Searched update and delete statements contain a specification of the rows to change. Positioned update and delete statements and **SQLSetPos** act on the data source through a cursor and are less widely supported.  

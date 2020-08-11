@@ -12,7 +12,7 @@ keywords: ""
 helpviewer_keywords: 
   - "Data Migration Assistant, Assess"
 ms.assetid: ""
-author: HJToland3
+author: rajeshsetlem
 ms.author: rajpo
 ms.custom: "seo-lt-2019"
 ---
@@ -75,7 +75,7 @@ The following step-by-step instructions help you perform your first assessment f
     DROP EVENT SESSION [DatalayerSession] ON SERVER
     go
     CREATE EVENT SESSION [DatalayerSession] ON SERVER  
-    ADD EVENT sqlserver.sql_statement_completed( 
+    ADD EVENT sqlserver.sql_batch_completed( 
         ACTION (sqlserver.sql_text,sqlserver.client_app_name,sqlserver.client_hostname,sqlserver.database_id))
     ADD TARGET package0.asynchronous_file_target(SET filename=N'C:\temp\Demos\DataLayerAppassess\DatalayerSession.xel')  
     WITH (MAX_MEMORY=2048 KB,EVENT_RETENTION_MODE=ALLOW_SINGLE_EVENT_LOSS,MAX_DISPATCH_LATENCY=3 SECONDS,MAX_EVENT_SIZE=0 KB,MEMORY_PARTITION_MODE=NONE,TRACK_CAUSALITY=OFF,STARTUP_STATE=OFF)

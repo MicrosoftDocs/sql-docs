@@ -1,7 +1,7 @@
 ---
 title: "UPDATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "11/27/2019"
+ms.date: "05/19/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -40,7 +40,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # UPDATE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Changes existing data in a table or view in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. For examples, see [Examples](#UpdateExamples).  
   
@@ -48,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
 
 [ WITH <common_table_expression> [...n] ]  
@@ -97,8 +97,29 @@ UPDATE
     table_or_view_name}  
 ```  
   
-```  
--- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
+```syntaxsql 
+-- Syntax for Azure Synapse Analysis (formerly SQL Data Warehouse) 
+
+[ WITH <common_table_expression> [ ,...n ] ]
+UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name
+SET { column_name = { expression | NULL } } [ ,...n ]  
+FROM [ database_name . [ schema_name ] . | schema_name . ] table_name   
+JOIN {<join_table_source>}[ ,...n ] 
+ON <join_condition>
+[ WHERE <search_condition> ]   
+[ OPTION ( LABEL = label_name ) ]  
+[;]  
+
+<join_table_source> ::=   
+{  
+    [ database_name . [ schema_name ] . | schema_name . ] table_or_view_name [ AS ] table_or_view_alias 
+    [ <tablesample_clause>]  
+    | derived_table [ AS ] table_alias [ ( column_alias [ ,...n ] ) ]  
+}  
+```
+
+```syntaxsql
+-- Syntax for Parallel Data Warehouse
 
 UPDATE [ database_name . [ schema_name ] . | schema_name . ] table_name   
 SET { column_name = { expression | NULL } } [ ,...n ]  
@@ -108,7 +129,9 @@ SET { column_name = { expression | NULL } } [ ,...n ]
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH \<common_table_expression>  
  Specifies the temporary named result set or view, also known as common table expression (CTE), defined within the scope of the UPDATE statement. The CTE result set is derived from a simple query and is referenced by UPDATE statement.  
   
@@ -160,7 +183,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  DEFAULT  
  Specifies that the default value defined for the column is to replace the existing value in the column. This can also be used to change the column to NULL if the column has no default and is defined to allow null values.  
   
- { **+=** | **-=** | **\*=** | **/=** | **%=** | **&=** | **^=** | **|=** }  
+ { **+=** \| **-=** \| **\*=** \| **/=** \| **%=** \| **&=** \| **^=** \| **|=** }  
  Compound assignment operator:  
  +=                       Add and assign  
  -=                        Subtract and assign  
@@ -197,7 +220,7 @@ SET { column_name = { expression | NULL } } [ ,...n ]
  SET **@**_variable_ = *column* = *expression* sets the variable to the same value as the column. This differs from SET **@**_variable_ = _column_, _column_ = _expression_, which sets the variable to the pre-update value of the column.  
   
  \<OUTPUT_Clause>  
- Returns updated data or expressions based on it as part of the UPDATE operation. The OUTPUT clause is not supported in any DML statements that target remote tables or views. For more information, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
+ Returns updated data or expressions based on it as part of the UPDATE operation. The OUTPUT clause is not supported in any DML statements that target remote tables or views. For more information about the arguments and behavior of this clause, see [OUTPUT Clause &#40;Transact-SQL&#41;](../../t-sql/queries/output-clause-transact-sql.md).  
   
  FROM \<table_source>  
  Specifies that a table, view, or derived table source is used to provide the criteria for the update operation. For more information, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
@@ -452,7 +475,7 @@ ID     Value
 ```  
 
 ## Locking behavior  
- An UPDATE statement always acquires an exclusive (X) lock on the table it modifies, and holds that lock until the transaction completes. With an exclusive lock, no other transactions can modify data. You can specify table hints to override this default behavior for the duration of the UPDATE statement by specifying another locking method, however, we recommend that hints be used only as a last resort by experienced developers and database administrators. For more information, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
+ An UPDATE statement acquires an exclusive (X) lock on any rows that it modifies, and holds these locks until the transaction completes. Depending on the query plan for the UPDATE statement, the number of rows being modified, and the isolation level of the transaction, locks may be acquired at the PAGE level or TABLE level rather than the ROW level. To avoid these higher level locks, consider dividing update statements that affect thousands of rows or more into batches, and ensure that any join and filter conditions are supported by indexes. See the article on [Locking in the Database Engine](../../relational-databases/sql-server-transaction-locking-and-row-versioning-guide.md#Lock_Engine) for more details on locking mechanics in SQL Server.  
   
 ## Logging behavior  
  The UPDATE statement is logged; however, partial updates to large value data types using the **\.WRITE** clause are minimally logged. For more information, see "Updating Large Value Data Types" in the earlier section "Data Types".  
@@ -1130,85 +1153,30 @@ WHERE Year=2004;
 SELECT * FROM YearlyTotalSales;   
 ```  
 
-### AH. ANSI join replacement for update statements
-You may find you have a complex update that joins more than two tables together using ANSI joining syntax to perform the UPDATE or DELETE.  
-
-Imagine you had to update this table:  
+### AH. ANSI join for update statements
+This example shows how to update data based on the result from joining another table.
 
 ```sql
-CREATE TABLE [dbo].[AnnualCategorySales]
-(   [EnglishProductCategoryName]    NVARCHAR(50)    NOT NULL
-,   [CalendarYear]                  SMALLINT        NOT NULL
-,   [TotalSalesAmount]              MONEY           NOT NULL
-)
-WITH
-(
-    DISTRIBUTION = ROUND_ROBIN
-)
-;  
+CREATE TABLE dbo.Table1   
+    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+CREATE TABLE dbo.Table2   
+    (ColA int NOT NULL, ColB decimal(10,3) NOT NULL);  
+GO  
+INSERT INTO dbo.Table1 VALUES(1, 10.0);  
+INSERT INTO dbo.Table2 VALUES(1, 0.0);  
+GO  
+UPDATE dbo.Table2   
+SET dbo.Table2.ColB = dbo.Table2.ColB + dbo.Table1.ColB  
+FROM dbo.Table2   
+    INNER JOIN dbo.Table1   
+    ON (dbo.Table2.ColA = dbo.Table1.ColA);  
+GO  
+SELECT ColA, ColB   
+FROM dbo.Table2;
+GO
 ```
 
-The original query might have looked something like this:  
-
-```
-UPDATE  acs
-SET     [TotalSalesAmount] = [fis].[TotalSalesAmount]
-FROM    [dbo].[AnnualCategorySales]     AS acs
-JOIN    (
-        SELECT  [EnglishProductCategoryName]
-        ,       [CalendarYear]
-        ,       SUM([SalesAmount])              AS [TotalSalesAmount]
-        FROM    [dbo].[FactInternetSales]       AS s
-        JOIN    [dbo].[DimDate]                 AS d    ON s.[OrderDateKey]             = d.[DateKey]
-        JOIN    [dbo].[DimProduct]              AS p    ON s.[ProductKey]               = p.[ProductKey]
-        JOIN    [dbo].[DimProductSubCategory]   AS u    ON p.[ProductSubcategoryKey]    = u.[ProductSubcategoryKey]
-        JOIN    [dbo].[DimProductCategory]      AS c    ON u.[ProductCategoryKey]       = c.[ProductCategoryKey]
-        WHERE   [CalendarYear] = 2004
-        GROUP BY
-                [EnglishProductCategoryName]
-        ,       [CalendarYear]
-        ) AS fis
-ON  [acs].[EnglishProductCategoryName]  = [fis].[EnglishProductCategoryName]
-AND [acs].[CalendarYear]                = [fis].[CalendarYear]
-;  
-```
-
-Since [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] does not support ANSI joins in the FROM clause of an UPDATE statement, you cannot copy this code over without changing it slightly.  
-
-You can use a combination of a CTAS and an implicit join to replace this code:  
-
-```sql
--- Create an interim table
-CREATE TABLE CTAS_acs
-WITH (DISTRIBUTION = ROUND_ROBIN)
-AS
-SELECT  ISNULL(CAST([EnglishProductCategoryName] AS NVARCHAR(50)),0)    AS [EnglishProductCategoryName]
-,       ISNULL(CAST([CalendarYear] AS SMALLINT),0)                      AS [CalendarYear]
-,       ISNULL(CAST(SUM([SalesAmount]) AS MONEY),0)                     AS [TotalSalesAmount]
-FROM    [dbo].[FactInternetSales]       AS s
-JOIN    [dbo].[DimDate]                 AS d    ON s.[OrderDateKey]             = d.[DateKey]
-JOIN    [dbo].[DimProduct]              AS p    ON s.[ProductKey]               = p.[ProductKey]
-JOIN    [dbo].[DimProductSubCategory]   AS u    ON p.[ProductSubcategoryKey]    = u.[ProductSubcategoryKey]
-JOIN    [dbo].[DimProductCategory]      AS c    ON u.[ProductCategoryKey]       = c.[ProductCategoryKey]
-WHERE   [CalendarYear] = 2004
-GROUP BY
-        [EnglishProductCategoryName]
-,       [CalendarYear]
-;
-
--- Use an implicit join to perform the update
-UPDATE  AnnualCategorySales
-SET     AnnualCategorySales.TotalSalesAmount = CTAS_ACS.TotalSalesAmount
-FROM    CTAS_acs
-WHERE   CTAS_acs.[EnglishProductCategoryName] = AnnualCategorySales.[EnglishProductCategoryName]
-AND     CTAS_acs.[CalendarYear]               = AnnualCategorySales.[CalendarYear]
-;
-
---Drop the interim table
-DROP TABLE CTAS_acs
-;
-```
-  
 ## See Also  
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

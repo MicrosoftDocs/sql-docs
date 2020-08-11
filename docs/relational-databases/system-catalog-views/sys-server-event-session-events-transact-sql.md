@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "sys.server_event_session_events catalog view"
   - "xe"
 ms.assetid: 75986e91-1fc7-4f14-98ac-4e90154a74db
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.server_event_session_events (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each event in an event session.  
   
@@ -42,9 +42,8 @@ ms.author: sstein
 ## Remarks  
  This view has the following relationship cardinalities.  
   
-||||  
-|-|-|-|  
-|From|To|Relationship|  
+| From | To | Relationship |
+| ---- | -- | ------------ |
 |sys.server_event_session_events.event_session_id|sys.server_event_sessions.event_session_id|Many to one|  
   
 ## See Also  

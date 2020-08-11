@@ -1,6 +1,6 @@
 ---
 title: "SQL Server installation guide"
-ms.description: "An index of content that helps you install SQL Server and associated components through various options such as the installation wizard, command prompt, or sysprep. "
+description: An index of content that helps you install SQL Server and associated components using options such as the installation wizard, command prompt, or sysprep.
 ms.custom: ""
 ms.date: "11/14/2019"
 ms.prod: sql
@@ -18,7 +18,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server installation guide
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 This article is an index of content that provides guidance for installing SQL Server on Windows.
 

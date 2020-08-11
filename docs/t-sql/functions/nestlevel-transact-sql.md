@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "nesting stored procedures"
   - "stored procedure nesting levels [SQL Server]"
 ms.assetid: 8c0b2134-8616-44f6-addc-6583c432fb62
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # &#x40;&#x40;NESTLEVEL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the nesting level of the current stored procedure execution (initially 0) on the local server.  
   
@@ -33,7 +33,9 @@ ms.author: mikeray
 @@NESTLEVEL  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **int**  
   
 ## Remarks  

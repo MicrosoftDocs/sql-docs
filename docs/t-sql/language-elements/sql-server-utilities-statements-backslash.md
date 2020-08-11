@@ -31,7 +31,7 @@ ms.author: jroth
 ---
 # Backslash (Line Continuation) (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 `\`  breaks a long string constant, character or binary, into two or more lines for readability.  
   
@@ -44,7 +44,9 @@ ms.author: jroth
 <continued section of string>  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  \<first section of string>  
  Is the start of a string.  
   

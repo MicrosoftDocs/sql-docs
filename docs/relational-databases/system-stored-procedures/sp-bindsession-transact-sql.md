@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_bindsession"
 ms.assetid: 1436fe21-ad00-4a98-aca1-1451a5e571d2
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_bindsession (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Binds or unbinds a session to other sessions in the same instance of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Binding sessions allows two or more sessions to participate in the same transaction and share locks until a ROLLBACK TRANSACTION or COMMIT TRANSACTION is issued.  
   

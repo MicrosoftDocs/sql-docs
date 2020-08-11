@@ -36,7 +36,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE ASSEMBLY assembly_name  
 [ AUTHORIZATION owner_name ]  
 FROM { <client_assembly_specifier> | <assembly_bits> [ ,...n ] }  
@@ -169,7 +169,7 @@ The following permissions required to create a CLR assembly when `CLR strict sec
   
 ```sql  
 CREATE ASSEMBLY HelloWorld   
-FROM <system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll  
+FROM '<system_drive>:\Program Files\Microsoft SQL Server\100\Samples\HelloWorld\CS\HelloWorld\bin\debug\HelloWorld.dll'  
 WITH PERMISSION_SET = SAFE;  
 ```  
 

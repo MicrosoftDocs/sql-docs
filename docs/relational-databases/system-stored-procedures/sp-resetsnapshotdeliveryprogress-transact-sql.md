@@ -13,11 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_resetsnapshotdeliveryprogress"
 ms.assetid: 5df7d86b-d343-4d9b-88b1-74429ed092e6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_resetsnapshotdeliveryprogress (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Resets the snapshot delivery process for a pull subscription so that snapshot delivery can be restarted. Executed at the Subscriber on the subscription database.  
   

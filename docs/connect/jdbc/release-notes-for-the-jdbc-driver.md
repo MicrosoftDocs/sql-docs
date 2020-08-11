@@ -1,19 +1,81 @@
 ---
 title: "Release notes for the JDBC Driver"
+description: "This article lists the releases of the Microsoft JDBC Driver for SQL Server. For each release version, the changes are named and described."
 ms.custom: ""
-ms.date: "03/24/2020"
+ms.date: "07/31/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Release notes for the Microsoft JDBC Driver for SQL Server
 
 This article lists the releases of the _Microsoft JDBC Driver for SQL Server_. For each release version, the changes are named and described.
+
+## <a id="84"></a> 8.4
+
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 8.4 for SQL Server (zip)](https://go.microsoft.com/fwlink/?linkid=2137600)**  
+**[![Download](../../ssms/media/download-icon.png) Download Microsoft JDBC Driver 8.4 for SQL Server (tar.gz)](https://go.microsoft.com/fwlink/?linkid=2137502)**  
+
+Version number: 8.4.0
+Released: July 31, 2020
+
+If you need to download the driver in a language other than the one detected for you, you can use these direct links.  
+For the driver in a zip file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2137600&clcid=0x40a)  
+For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2137502&clcid=0x40a)  
+
+### Compliance
+
+| Compliance change | Details |
+| :---------------- | :------ |
+| Download the latest updates for JDBC Driver 8.4. | &bull; &nbsp; [GitHub, 8.4.0](https://github.com/Microsoft/mssql-jdbc/releases/tag/v8.4.0)<br/>&bull; &nbsp; [Maven Central](https://search.maven.org/search?q=g:com.microsoft.sqlserver) |
+| Fully compliant with JDBC API Specification 4.2. | The jars in the 8.4 package are named according to Java version compatibility.<br/><br/>For example, the mssql-jdbc-8.4.0.jre14.jar file from the 8.4 package should be used with Java 14. |
+| Compatible with Java Development Kit (JDK) version 14.0, 11.0, and 1.8. | Microsoft JDBC Driver 8.4 for SQL Server is now compatible with Java Development Kit (JDK) version 14.0 in addition to JDK 11.0 and 1.8. |
+| &nbsp; | &nbsp; |
+
+### Support for JDK 14
+
+Microsoft JDBC Driver 8.4 for SQL Server is now compatible with Java Development Kit (JDK) version 14.0 in addition to JDK 11.0 and 1.8.
+
+### Added support for authentication to Azure Key Vault using Managed Identity
+
+| Authentication type addition | Details |
+| :---------- | :------ |
+| Microsoft JDBC Driver 8.4 for SQL Server now supports authentication to Azure Key Vault using Managed Identity. | See [Using Always Encrypted with the JDBC driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md). |
+| &nbsp; | &nbsp; |
+
+### Extended support for bulk copy for Azure Data Warehouse
+
+| Bulk copy changes for Azure Data Warehouse | Details |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 8.4 adds a new connection property, `sendTemporalDataTypesAsStringForBulkCopy`. This boolean property is TRUE by default. | See [Using bulk copy with the JDBC driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md). |
+| &nbsp; | &nbsp; |
+
+### Added support for Azure SQL DNS caching
+
+| DNS Caching | Details |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 8.4 for SQL Server now supports DNS caching against Azure SQL Servers. | &nbsp; |
+| &nbsp; | &nbsp; |
+
+### Added backwards compatibility for streaming LOB objects
+
+| LOB Streaming | Details |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 8.4 for SQL Server added a new connection property `delayLoadingLobs`. | Setting `delayLoadingLobs` to FALSE will cause all LOB objects retrieved from the ResultSet to not be streamed. This means that the driver will load the entire LOB object into memory at once, similar to how the driver was functioning before version 6.4 release. |
+| &nbsp; | &nbsp; |
+
+### Added support for client certificate authentication for loopback scenarios
+
+| Client certificate authentication | Details |
+| :------------------- | :------ |
+| Microsoft JDBC Driver 8.4 for SQL Server added a new authentication method called client certificate authentication for loopback scenarios. | See [Client Certificate Authentication for Loopback Scenarios](../../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md). |
+
+## Previous releases
 
 ## <a id="82"></a> 8.2
 
@@ -45,7 +107,7 @@ Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development
 | Always Encrypted change | Details |
 | :--------- | :------ |
 | Microsoft JDBC Driver 8.2 for SQL Server now supports Always Encrypted with secure enclaves. The details can be found here: Always Encrypted with secure enclaves. |
-| More details and sample code. | See [Always Encrypted with Secure Enclaves](../../connect/jdbc/always-encrypted-with-secure-enclaves.md). |
+| More details and sample code. | See [Always Encrypted with Secure Enclaves](../../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md). |
 | &nbsp; | &nbsp; |
 
 ### Performance Improvement when Retrieving Temporal Datatypes from SQL Server <sup>1</sup>
@@ -72,8 +134,6 @@ Microsoft JDBC Driver 8.2 for SQL Server is now compatible with Java Development
 | :----------- | :------ |
 | When using Always Encrypted with secure enclaves with Java 8. | Users must include BouncyCastle Provider as a dependency OR map/load a security provider which supports the RSASSA-PSS signature algorithm. |
 | &nbsp; | &nbsp; |
-
-## Previous releases
 
 ## <a id="74"> 7.4.1
 
@@ -105,7 +165,7 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 | NTLM change | Details |
 | :--------- | :------ |
 | Supports NTLM authentication mode. | This mode of authentication allows both Windows and non-Windows clients to authenticate themselves against SQL Server using Windows domain users. |
-| More details and a sample application to use this authentication mode. | See [Connecting using NTLM Authentication](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md). |
+| More details and a sample application to use this authentication mode. | See [Connecting using NTLM Authentication](using-ntlm-authentication-to-connect-to-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### Introduces querying ParameterMetaData via _useFmtOnly_
@@ -113,7 +173,7 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 | useFmtOnly change | Details |
 | :---------- | :------ |
 | **useFmtOnly** connection property added. | This feature allows users to optionally query ParameterMetaData via the `SET FMTONLY ON` legacy API. This is useful for scenarios where `sp_describe_undeclared_parameters` doesn't perform as expected. |
-| More details and limitations. | See [Using useFmtOnly](../../connect/jdbc/using-usefmtonly.md) |
+| More details and limitations. | See [Using useFmtOnly](using-usefmtonly.md) |
 | &nbsp; | &nbsp; |
 
 ### Updated _Microsoft Azure Key Vault SDK for Java_, version 1.2.1
@@ -122,7 +182,7 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 | :------------------- | :------ |
 | Updated its Maven dependency on _Microsoft Azure Key Vault SDK for Java_ to version 1.2.1. | &nbsp; |
 | Removes _Microsoft Azure SDK for Key Vault WebKey_ as a Maven dependency. | &nbsp; |
-| Additional details. | See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
+| Additional details. | See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### Known issues
@@ -130,7 +190,7 @@ Microsoft JDBC Driver 7.4 for SQL Server is now compatible with Java Development
 | Known issues | Details |
 | :----------- | :------ |
 | When using NTLM Authentication. | Enabling Extended Protection and encrypted connections at the same time is currently not supported. |
-| When using useFmtOnly. | There are some issues with the feature, which are caused by deficiencies in SQL parsing logic. See [Using useFmtOnly](../../connect/jdbc/using-usefmtonly.md) for more details and workaround suggestions. |
+| When using useFmtOnly. | There are some issues with the feature, which are caused by deficiencies in SQL parsing logic. See [Using useFmtOnly](using-usefmtonly.md) for more details and workaround suggestions. |
 | &nbsp; | &nbsp; |
 
 ## <a id="72"> 7.2.2
@@ -161,12 +221,12 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 >
 > We recommend updating your projects to use the 7.2.2 release jars. For more information, view release notes for [GitHub, 7.2.1](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.1) and [GitHub, 7.2.2](https://github.com/Microsoft/mssql-jdbc/releases/tag/v7.2.2).
 
-### Active Directory _Managed Service Identity_ (MSI) authentication
+### Active Directory _Managed Identity_ (MSI) authentication
 
 | MSI change | Details |
 | :--------- | :------ |
-| Supports Active Directory Managed Service Identity (MSI) authentication mode. | This mode of authentication is applicable on Azure Resources with support for "Identity" feature enabled.<br/><br/>Both types of Managed System Identities (MSI) are supported by the driver to acquire **accessToken** for establishing secure connection. |
-| More details and a sample application to use this authentication mode. | See [Connecting using Azure Active Directory Authentication](../../connect/jdbc/connecting-using-azure-active-directory-authentication.md). |
+| Supports Active Directory Managed Identity (MSI) authentication mode. | This mode of authentication is applicable on Azure Resources with support for the "Identity" feature enabled.<br/><br/>Both types of Managed Identities (MSI) are supported by the driver to acquire **accessToken** for establishing secure connection. |
+| More details and a sample application to use this authentication mode. | See [Connecting using Azure Active Directory Authentication](connecting-using-azure-active-directory-authentication.md). |
 | &nbsp; | &nbsp; |
 
 ### Introduces _Open Service Gateway Initiative_ (OSGi) support
@@ -182,7 +242,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | Error API change | Details |
 | :--------------- | :------ |
 | SQLServerError API introduced. | Getter APIs to retrieve additional details about the error generated from the server.<br/><br/>&bull; &nbsp; `SQLServerException.getSQLServerError()`<br/>&bull; &nbsp; `SQLServerError` |
-| Additional details. | See [Handling Errors](../../connect/jdbc/handling-errors.md). |
+| Additional details. | See [Handling Errors](handling-errors.md). |
 | &nbsp; | &nbsp; |
 
 ### Updated _Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java_, version 1.6.3
@@ -191,7 +251,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | :------------ | :------ |
 | Updated its Maven dependency on ADAL4J to version 1.6.3. | &nbsp; |
 | Introduces _Java Client Runtime for AutoRest_ as a Maven dependency, version 1.6.5. | &nbsp; |
-| Additional details. | See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
+| Additional details. | See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### Updated _Microsoft Azure Key Vault SDK for Java_, version 1.2.0
@@ -200,7 +260,7 @@ For the driver in a tar.gz file: [Chinese (Simplified)](https://go.microsoft.com
 | :------------------- | :------ |
 | Updated its Maven dependency on _Microsoft Azure Key Vault SDK for Java_ to version 1.2.0. | &nbsp; |
 | Introduces _Microsoft Azure SDK for Key Vault WebKey_ as a Maven dependency, version 1.2.0. | &nbsp; |
-| Additional details. | See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
+| Additional details. | See [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ### Known Issues
@@ -231,23 +291,23 @@ Microsoft JDBC Driver 7.0 for SQL Server is now compatible with Java Development
 
 ### Support for spatial datatypes
 
-Microsoft JDBC Driver 7.0 for SQL Server now provides support for SQL Server spatial datatypes Geography and Geometry. For more information about spatial datatype APIs and how to use them, see [Using spatial datatypes](../../connect/jdbc/use-spatial-datatypes.md).
+Microsoft JDBC Driver 7.0 for SQL Server now provides support for SQL Server spatial datatypes Geography and Geometry. For more information about spatial datatype APIs and how to use them, see [Using spatial datatypes](use-spatial-datatypes.md).
 
 ### Implementation for JDBC 4.3 introduced java.sql.Connection APIs beginRequest() and endRequest()
 
-Microsoft JDBC Driver 7.0 for SQL Server now implements `beginRequest()` and `endRequest()` APIs from the `java.sql.Connection` class. These APIs were introduced with JDBC 4.3 specifications and JDK 9. For more information about the driver's implementation of these APIs, see [JDBC 4.3 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
+Microsoft JDBC Driver 7.0 for SQL Server now implements `beginRequest()` and `endRequest()` APIs from the `java.sql.Connection` class. These APIs were introduced with JDBC 4.3 specifications and JDK 9. For more information about the driver's implementation of these APIs, see [JDBC 4.3 compliance for the JDBC Driver](jdbc-4-3-compliance-for-the-jdbc-driver.md).
 
 ### Support for SQL Data Discovery and Classification
 
 Microsoft JDBC Driver 7.0 for SQL Server provides support for SQL Data Discovery and Classification with any target database that supports this feature. The driver now exposes `SQLServerResultSet.getSensitivityClassification()` APIs to extract this information from the fetched `ResultSet`.
 
-For more information about how to use this feature with the JDBC Driver, see the sample in [SQL Data Discovery and Classification](../../connect/jdbc/data-discovery-classification-sample.md).
+For more information about how to use this feature with the JDBC Driver, see the sample in [SQL Data Discovery and Classification](data-discovery-classification-sample.md).
 
 ### Added connection property: useBulkCopyForBatchInsert
 
 Microsoft JDBC Driver 7.0 for SQL Server introduces a new connection property, `useBulkCopyForBatchInsert`. This property is supported only for Azure SQL Data Warehouse.
 
-This property is disabled by default. You can enable it to increase performance of user applications when you're pushing large amounts data to Azure SQL Data Warehouse. Enabling this property changes the behavior of batch insert operations to switch to bulk copy operations with user-provided data. For more information about this property and its limitations, see [Using Bulk Copy API for batch insert operation](../../connect/jdbc/use-bulk-copy-api-batch-insert-operation.md).
+This property is disabled by default. You can enable it to increase performance of user applications when you're pushing large amounts data to Azure SQL Data Warehouse. Enabling this property changes the behavior of batch insert operations to switch to bulk copy operations with user-provided data. For more information about this property and its limitations, see [Using Bulk Copy API for batch insert operation](use-bulk-copy-api-batch-insert-operation.md).
 
 ### Added connection property: cancelQueryTimeout
 
@@ -276,7 +336,7 @@ public SQLServerColumnEncryptionAzureKeyVaultProvider(
 
 ### Updated "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" version: 1.6.0
 
-Microsoft JDBC Driver 7.0 for SQL Server has updated its Maven dependency on "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" to version 1.6.0. For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+Microsoft JDBC Driver 7.0 for SQL Server has updated its Maven dependency on "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" to version 1.6.0. For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## 6.4
 
@@ -298,7 +358,7 @@ The driver supports JDK version 9.0 in addition to JDK 8.0 and 7.0.
 
 ### JDBC 4.3 compliance
 
-The driver supports the Java Database Connectivity API 4.3 specification, in addition to 4.1 and 4.2. The JDBC 4.3 API methods are added but not implemented yet. For details, see [JDBC 4.3 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-3-compliance-for-the-jdbc-driver.md).
+The driver supports the Java Database Connectivity API 4.3 specification, in addition to 4.1 and 4.2. The JDBC 4.3 API methods are added but not implemented yet. For details, see [JDBC 4.3 compliance for the JDBC Driver](jdbc-4-3-compliance-for-the-jdbc-driver.md).
 
 ### Added connection property: sslProtocol
 
@@ -334,15 +394,15 @@ The JDBC Driver now supports `sql_variant` datatypes to be used with SQL Server.
 
 ### Implemented prepared statement metadata caching
 
-The JDBC Driver has implemented prepared statement metadata caching for performance improvement. The driver now supports caching prepared statement metadata in the driver with `disableStatementPooling` and `statementPoolingCacheSize` connection properties. This feature is disabled by default. For more information, see [Prepared statement metadata caching for the JDBC Driver](../../connect/jdbc/prepared-statement-metadata-caching-for-the-jdbc-driver.md).
+The JDBC Driver has implemented prepared statement metadata caching for performance improvement. The driver now supports caching prepared statement metadata in the driver with `disableStatementPooling` and `statementPoolingCacheSize` connection properties. This feature is disabled by default. For more information, see [Prepared statement metadata caching for the JDBC Driver](prepared-statement-metadata-caching-for-the-jdbc-driver.md).
 
-### Added support for Azure AD Integrated Authentication on Linux/Mac
+### Added support for Azure AD Integrated Authentication on Linux/macOS
 
-The JDBC Driver now supports Azure Active Directory (Azure AD) Integrated Authentication on all supported operating systems (Windows, Linux, and Mac) with Kerberos. Alternatively, on Windows operating systems, users can authenticate with mssql-jdbc_auth-\<version>-\<arch>.dll.
+The JDBC Driver now supports Azure Active Directory (Azure AD) Integrated Authentication on all supported operating systems (Windows, Linux, and macOS) with Kerberos. Alternatively, on Windows operating systems, users can authenticate with mssql-jdbc_auth-\<version>-\<arch>.dll.
 
 ### Updated "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" version: 1.4.0
 
-The JDBC Driver has updated its Maven dependency on "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" to version 1.4.0. For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
+The JDBC Driver has updated its Maven dependency on "Microsoft Azure Active Directory Authentication Library (ADAL4J) for Java" to version 1.4.0. For more information about dependencies, see [Feature dependencies of the Microsoft JDBC Driver for SQL Server](feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md).
 
 ## 6.2
 
@@ -418,11 +478,11 @@ System.out.println("Driver version: " + conn.getMetaData().getDriverVersion());
 
 ### Always Encrypted
 
-The driver supports the Always Encrypted feature in SQL Server 2016. This feature ensures that sensitive data is never seen in plaintext in a SQL Server instance. Always Encrypted works by transparently encrypting the data in the application, so that SQL Server will handle only the encrypted data and not plaintext values. Even if the SQL Server instance or the host machine is compromised, all an attacker can get is ciphertext of sensitive data. For details, see [Using Always Encrypted with the JDBC Driver](../../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md).
+The driver supports the Always Encrypted feature in SQL Server 2016. This feature ensures that sensitive data is never seen in plaintext in a SQL Server instance. Always Encrypted works by transparently encrypting the data in the application, so that SQL Server will handle only the encrypted data and not plaintext values. Even if the SQL Server instance or the host machine is compromised, all an attacker can get is ciphertext of sensitive data. For details, see [Using Always Encrypted with the JDBC Driver](using-always-encrypted-with-the-jdbc-driver.md).
 
 ### Internationalized domain names
 
-The driver supports internationalized domain names (IDNs) for server names. For details, see "Using International Domain Names" in the [International features of the JDBC Driver](../../connect/jdbc/international-features-of-the-jdbc-driver.md) article.
+The driver supports internationalized domain names (IDNs) for server names. For details, see "Using International Domain Names" in the [International features of the JDBC Driver](international-features-of-the-jdbc-driver.md) article.
 
 ### Parameterized queries
 
@@ -432,11 +492,11 @@ The driver now supports retrieving parameter metadata with prepared statements f
 
 Azure AD authentication is a mechanism of connecting to Azure SQL Database v12 by using identities in Azure AD. Use Azure AD authentication to centrally manage identities of database users and as an alternative to SQL Server authentication.
 
-You can use JDBC Driver 6.0 to specify your Azure AD credentials in the JDBC connection string to connect to Azure SQL Database. For details, see the authentication property in the [Setting the connection properties](../../connect/jdbc/setting-the-connection-properties.md) article.
+You can use JDBC Driver 6.0 to specify your Azure AD credentials in the JDBC connection string to connect to Azure SQL Database. For details, see the authentication property in the [Setting the connection properties](setting-the-connection-properties.md) article.
 
 ### Table-valued parameters
 
-TVPs provide an easy way to marshal multiple rows of data from a client application to SQL Server without requiring multiple round trips or special server-side logic for processing the data. You can use TVPs to encapsulate rows of data in a client application and send the data to the server in a single parameterized command. The incoming data rows are stored in a table variable that you can then operate on by using Transact-SQL. For details, see [Using table-valued parameters](../../connect/jdbc/using-table-valued-parameters.md).
+TVPs provide an easy way to marshal multiple rows of data from a client application to SQL Server without requiring multiple round trips or special server-side logic for processing the data. You can use TVPs to encapsulate rows of data in a client application and send the data to the server in a single parameterized command. The incoming data rows are stored in a table variable that you can then operate on by using Transact-SQL. For details, see [Using table-valued parameters](using-table-valued-parameters.md).
 
 ### Always On Availability Groups
 
@@ -469,19 +529,19 @@ The driver supports JDK version 8.0 in addition to JDK 7.0, 6.0, and 5.0.
 
 ### JDBC 4.1 and 4.2 compliance
 
-The driver supports Java Database Connectivity API 4.1 and 4.2 specifications, in addition to 4.0. For details, see [JDBC 4.1 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-1-compliance-for-the-jdbc-driver.md) and [JDBC 4.2 compliance for the JDBC Driver](../../connect/jdbc/jdbc-4-2-compliance-for-the-jdbc-driver.md).
+The driver supports Java Database Connectivity API 4.1 and 4.2 specifications, in addition to 4.0. For details, see [JDBC 4.1 compliance for the JDBC Driver](jdbc-4-1-compliance-for-the-jdbc-driver.md) and [JDBC 4.2 compliance for the JDBC Driver](jdbc-4-2-compliance-for-the-jdbc-driver.md).
 
 ### Bulk copy
 
-You use the bulk copy feature to quickly copy large amounts of data into tables or views in SQL Server databases. For details, see [Using bulk copy with the JDBC Driver](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md).
+You use the bulk copy feature to quickly copy large amounts of data into tables or views in SQL Server databases. For details, see [Using bulk copy with the JDBC Driver](using-bulk-copy-with-the-jdbc-driver.md).
 
 ### XA transaction rollback option
 
-The driver has new timeout options for existing automatic rollback of unprepared transactions. For details, see [Understanding XA transactions](../../connect/jdbc/understanding-xa-transactions.md).
+The driver has new timeout options for existing automatic rollback of unprepared transactions. For details, see [Understanding XA transactions](understanding-xa-transactions.md).
 
 ### New Kerberos principal connection property
 
-The driver uses a new connection property to facilitate flexibility with Kerberos connections. For details, see [Using Kerberos Integrated Authentication to connect to SQL Server](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md).
+The driver uses a new connection property to facilitate flexibility with Kerberos connections. For details, see [Using Kerberos Integrated Authentication to connect to SQL Server](using-kerberos-integrated-authentication-to-connect-to-sql-server.md).
 
 ## 4.1
 
@@ -498,4 +558,4 @@ Microsoft JDBC Driver for SQL Server applications aren't supported to run on an 
 
 ## See also
 
-[Overview of the JDBC Driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)
+[Overview of the JDBC Driver](overview-of-the-jdbc-driver.md)

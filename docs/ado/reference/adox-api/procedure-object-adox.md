@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Procedure object [ADOX]"
 ms.assetid: 927bcf3e-32f5-4a80-98d3-600779f0732e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Procedure Object (ADOX)
 Represents a stored procedure. When used in conjunction with the ADO [Command](../../../ado/reference/ado-api/command-object-ado.md) object, the **Procedure** object can be used for adding, deleting, or modifying stored procedures.  

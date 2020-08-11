@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_operator"
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_add_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates an operator (notification recipient) for use with alerts and jobs.  
   

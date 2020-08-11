@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "date formats [ODBC]"
   - "ODBC driver for Oracle [ODBC], date formats"
 ms.assetid: ba0d5123-db52-448b-8e19-b7647ce4b361
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Setting the Date Format on Connection
 > [!IMPORTANT]  

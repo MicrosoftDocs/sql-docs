@@ -4,8 +4,6 @@ description: A SQL Server Integration Services (SSIS) package can use the Azure 
 ms.custom: ""
 ms.date: "05/18/2018"
 ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
@@ -16,10 +14,9 @@ author: "yanancai"
 ms.author: "yanacai"
 ms.reviewer: maghan
 ---
-
 # Azure Data Lake Analytics connection manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

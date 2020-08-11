@@ -1,6 +1,6 @@
 ---
-title: "Use Enhanced Date and Time Features (OLE DB) | Microsoft Docs"
-description: "Use enhanced date and time features (OLE DB)"
+title: Use enhanced date and time features (OLE DB driver)
+description: Learn how to use the date/time features date, time, datetime2, and datetimeoffset to run commands and retrieve rowset results in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -12,7 +12,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Use Enhanced Date and Time Features (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

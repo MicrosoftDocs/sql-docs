@@ -1,6 +1,6 @@
 ---
-title: "Updating an Application to OLE DB Driver for SQL Server from MDAC | Microsoft Docs"
-description: "Updating an application to OLE DB Driver for SQL Server from MDAC"
+title: "Updating an Application to OLE DB Driver for SQL Server from MDAC"
+description: "Learn what's changed from the old OLE DB Provider for SQL Server and the new OLE DB Driver for SQL Server and what you need to know to update to the new driver."
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
@@ -18,7 +18,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Updating an Application to OLE DB Driver for SQL Server from MDAC
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

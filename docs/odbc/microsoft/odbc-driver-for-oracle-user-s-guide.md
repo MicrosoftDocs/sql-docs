@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ODBC driver for Oracle [ODBC], using ODBC driver for Oracle"
 ms.assetid: c506aaa1-0b4f-440b-b069-98e0a463a5f6
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ODBC Driver for Oracle User&#39;s Guide
 > [!IMPORTANT]  

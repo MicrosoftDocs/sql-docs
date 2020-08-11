@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_605
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|605|  
 |Event Source|MSSQLSERVER|  
@@ -48,6 +48,7 @@ If the 605 error is not transient, the problem is severe and must be corrected b
   
 1.  Identify the tables associated with the allocation units specified in the message by running the following query. Replace `allocation_unit_id` with the allocation units specified in the error message.  
   
+    ```sql  
     USE`database_name`;  
   
     GO  
@@ -67,6 +68,7 @@ If the 605 error is not transient, the problem is severe and must be corrected b
     ORDER BY au.allocation_unit_id;  
   
     GO  
+    ```
   
 2.  Execute DBCC CHECKTABLE without a REPAIR clause on the table associated with the second allocation unit ID specified in the error message.  
   

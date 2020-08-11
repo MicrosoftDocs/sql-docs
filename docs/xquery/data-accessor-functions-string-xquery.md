@@ -1,5 +1,6 @@
 ---
 title: "string Function (XQuery) | Microsoft Docs"
+description: Learn about the XQuery function string() that returns the value of its argument represented as a string.
 ms.custom: ""
 ms.date: "03/09/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Data Accessor Functions - string (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns the value of *$arg* represented as a string.  
   

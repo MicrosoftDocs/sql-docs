@@ -1,6 +1,6 @@
 ---
 title: "Create an availability group with Transact-SQL (T-SQL)"
-description: "Steps to creating an Always On availability group using Transact-SQL (T-SQL). "
+description: "Use Transact-SQL to create and configure an availability group on instances of SQL Server 2019 (15.x) on which the Always On availability groups feature is enabled."
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -14,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Create an Always On availability group using Transact-SQL (T-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to use [!INCLUDE[tsql](../../../includes/tsql-md.md)] to create and configure an availability group on instances of [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] on which the [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] feature is enabled. An *availability group* defines a set of user databases that will fail over as a single unit and a set of failover partners, known as *availability replicas*, that support failover.  
   
 > [!NOTE]  
@@ -503,7 +503,7 @@ GO
   
 -   **Blogs:**  
   
-     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

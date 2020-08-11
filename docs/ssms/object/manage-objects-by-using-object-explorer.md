@@ -18,7 +18,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Manage Objects by Using Object Explorer
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can use Object Explorer to manage objects such as databases, tables and stored procedures.  
   
 ## Viewing Objects in Object Explorer  

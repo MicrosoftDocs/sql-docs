@@ -13,10 +13,10 @@ ms.author: chugu
 ---
 # catalog.check_schema_version 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Determines whether the SSISDB catalog schema and the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] binaries (ISServerExec and SQLCLR assembly) are compatible.  
   
@@ -27,7 +27,7 @@ ms.author: chugu
 ## Syntax  
   
 ```sql  
-catalog.check_schema_version [@use32bitruntime = ] use32bitruntime  
+catalog.check_schema_version [ @use32bitruntime = ] use32bitruntime  
 ```  
   
 ## Arguments  

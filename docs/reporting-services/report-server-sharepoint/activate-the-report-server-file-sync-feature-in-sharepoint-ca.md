@@ -1,5 +1,6 @@
 ---
 title: "Activate the report server file sync feature in SharePoint | Microsoft Docs"
+description: The Report Server File Sync feature of Reporting Services uses SharePoint event handlers to sync the report server catalog with items in document libraries.
 ms.date: 09/25/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -45,7 +46,6 @@ The [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] Report Server 
 
 ## See also
 
- [Troubleshoot Report Parts (Report Builder and SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
  [Activate the Report Server and Power View Integration Features in SharePoint](../../reporting-services/report-server-sharepoint/site-collection-features-report-server-and-power-view.md)   
  [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)   
  [Install or Uninstall the Reporting Services Add-in for SharePoint](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)  

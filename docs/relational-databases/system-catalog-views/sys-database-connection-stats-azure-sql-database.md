@@ -16,14 +16,14 @@ helpviewer_keywords:
   - "sys.database_connection_stats"
   - "database_connection_stats"
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ms.custom: seo-dt-2019
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.database_connection_stats (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Contains statistics for [!INCLUDE[ssSDS](../../includes/sssds-md.md)] database **connectivity** events, providing an overview of database connection successes and failures. For more information about connectivity events, see Event Types in [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md).  
   

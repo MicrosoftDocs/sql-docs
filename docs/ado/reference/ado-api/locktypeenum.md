@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "LockTypeEnum enumeration [ADO]"
 ms.assetid: d2894eaf-4450-4ace-aa51-c8b875fd3010
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # LockTypeEnum
 Specifies the type of lock placed on records during editing.  
@@ -39,8 +39,14 @@ Specifies the type of lock placed on records during editing.
 |AdoEnums.LockType.UNSPECIFIED|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Clone Method (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)|[LockType Property (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)|  
-|[Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[WillExecute Event (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)|
+
+:::row:::
+    :::column:::
+        [Clone Method (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)  
+        [LockType Property (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [WillExecute Event (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+    :::column-end:::
+:::row-end:::

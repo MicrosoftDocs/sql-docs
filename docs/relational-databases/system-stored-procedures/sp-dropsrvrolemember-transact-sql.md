@@ -20,7 +20,7 @@ author: VanMSFT
 ---
 # sp_dropsrvrolemember (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Removes a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or a Windows user or group from a fixed server role.
 

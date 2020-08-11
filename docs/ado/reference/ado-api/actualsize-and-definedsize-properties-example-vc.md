@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ActualSize property [ADO], VC++ example"
   - "DefinedSize property [ADO], VC++ example"
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ActualSize and DefinedSize Properties Example (VC++)
 This example uses the [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) and [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) properties to display the defined size and actual size of a field.  

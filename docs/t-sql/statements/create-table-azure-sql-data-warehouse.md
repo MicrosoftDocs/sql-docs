@@ -14,7 +14,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 ---
 # CREATE TABLE (Azure SQL Data Warehouse)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Creates a new table in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] or [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
 
@@ -29,7 +29,7 @@ To understand tables and how to use them, see [Tables in SQL Data Warehouse](htt
 
 ## Syntax
   
-```
+```syntaxsql
 -- Create a new table.
 CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( 
@@ -41,8 +41,15 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <column_options> ::=
     [ COLLATE Windows_collation_name ]  
     [ NULL | NOT NULL ] -- default is NULL  
-    [ [ CONSTRAINT constraint_name ] DEFAULT constant_expression  ]
-  
+    [ <column_constraint> ]
+
+<column_constraint>::=
+    {
+        DEFAULT DEFAULT constant_expression
+        | PRIMARY KEY NONCLUSTERED  NOT ENFORCED -- Applies to Azure Synapse Analytics only
+        | UNIQUE NOT ENFORCED -- Applies to Azure Synapse Analytics only
+    }
+
 <table_option> ::=
     {
        CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
@@ -248,7 +255,7 @@ Same as `datetime`, except that you can specify the number of fractional seconds
 | `money`|8|  
 | `smallmoney` |4|  
   
- `bigint` | `int` | `smallint` | `tinyint`  
+ `bigint` \| `int` \| `smallint` \| `tinyint`  
  Exact-number data types that use integer data. The storage is shown in the following table.  
   
 | Data Type | Storage bytes |  

@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_help_profileaccount_sp"
 ms.assetid: 3ea68271-0a6b-4d77-991c-4757f48f747a
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysmail_help_profileaccount_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists the accounts associated with one or more Database Mail profiles.  
     
@@ -55,9 +55,8 @@ sysmail_help_profileaccount_sp
 ## Result Sets  
  Returns a result set with the following columns.  
   
-||||  
-|-|-|-|  
-|Column name|Data type|Description|  
+| Column name | Data type | Description |
+| ----------- | --------- | ----------- |
 |**profile_id**|**int**|The profile ID of the profile.|  
 |**profile_name**|**sysname**|The name of the profile.|  
 |**account_id**|**int**|The account ID of the account.|  

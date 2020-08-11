@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_10519
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |  
+| :-------- | :---- |  
 |Product Name|SQL Server|  
 |Event ID|10519|  
 |Event Source|MSSQLSERVER|  

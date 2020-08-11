@@ -1,5 +1,6 @@
 ---
 title: "XML System Stored Procedures | Microsoft Docs"
+description: Learn about the XML system stored procedures provided by SQL Server that are used to write queries with OPENXML.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # XML System Stored Procedures
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   SQL Server provides the following system stored procedures that are used together with OPENXML:  
   
 -   [sp_xml_preparedocument &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xml-preparedocument-transact-sql.md)  

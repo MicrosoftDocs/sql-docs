@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "7343 (Database Engine error)"
   - "sp_serveroption"
 ms.assetid: 47d04a2b-dbf0-4f15-bd9b-81a2efc48131
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_serveroption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Sets server options for remote servers and linked servers.  
   

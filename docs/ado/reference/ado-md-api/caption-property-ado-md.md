@@ -15,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Caption property [ADO MD]"
 ms.assetid: d90763b8-ba3f-48f8-95b2-e6a0e52296e1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Caption Property (ADO MD)
 Indicates the text caption to use when displaying a [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) or [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) object.  
@@ -25,11 +25,16 @@ Indicates the text caption to use when displaying a [Level](../../../ado/referen
  Returns a **String** and is read-only.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+    :::column-end:::
+    :::column:::
+        [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Cellset Example (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Description Property (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)

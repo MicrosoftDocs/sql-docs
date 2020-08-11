@@ -15,14 +15,11 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set or Change the Database Collation
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how set and change the database collation in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. If no collation is specified, the server collation is used.  
   
 > [!IMPORTANT]
-> Altering database collation is not explicitly forbidden in Azure SQL Database. However, altering database collation reqiures exclusive lock on database and other user or background processes (for example background that is taking the backups) might hold the database locks and prevent collation change. `ALTER DATABASE COLLATE` statement on Azure SQL Database will fail if it is executed while the background processes are accessing database. You would need to retry the statement if you are getting lock timeout error. 
- 
-> [!NOTE]
-> Collation cannot be changed using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] after database has been created on [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. It can be changed only through [!INCLUDE[tsql](../../includes/tsql-md.md)].
+> Altering database collation is not explicitly forbidden in Azure SQL Database. However, altering database collation reqiures exclusive lock on database and other user or background processes (for example background that is taking the backups) might hold the database locks and prevent collation change. `ALTER DATABASE COLLATE` statement on Azure SQL Database is not supported.
 
  **In This Topic**  
   

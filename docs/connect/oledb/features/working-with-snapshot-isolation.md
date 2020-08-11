@@ -1,6 +1,6 @@
 ---
 title: "Working with Snapshot Isolation | Microsoft Docs"
-description: "Working with snapshot isolation in OLE DB Driver for SQL Server"
+description: Learn how OLE DB Driver for SQL Server enhancements use snapshot isolation, which enhances concurrency for online transaction processing applications.
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
@@ -23,7 +23,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Working with Snapshot Isolation
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

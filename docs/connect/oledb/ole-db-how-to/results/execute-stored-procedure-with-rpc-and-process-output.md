@@ -1,6 +1,6 @@
 ---
 title: "Execute Stored Procedure with RPC and Process Output | Microsoft Docs"
-description: "Execute Stored Procedure with RPC and process output"
+description: Learn how to run SQL Server stored procedures with RPC, and process return codes and output parameters in this example.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -15,7 +15,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Execute Stored Procedure with RPC and Process Output
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 

@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_altermessage"
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_altermessage (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Alters the state of user-defined or system messages in an instance of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]. User-defined messages can be viewed using the **sys.messages** catalog view.  
 

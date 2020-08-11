@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Integration Services (SSIS) in a Cluster
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Clustering [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is not recommended because the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is not a clustered or cluster-aware service, and does not support failover from one cluster node to another. Therefore, in a clustered environment, [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] should be installed and started as a stand-alone service on each node in the cluster.  
@@ -122,7 +122,7 @@ For those customers who conclude that the advantages of configuring the [!INCLUD
   
 4.  Change the value of the **StorePath** element to the fully-qualified path of the **Packages** folder created on the shared disk in a previous step.  
   
-5.  Update the value of **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** in the Registry to the fully-qualified path and file name of the service configuration file on the shared disk.  
+5.  On each node, update the value of **HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\100\SSIS\ServiceConfigFile** in the Registry to the fully-qualified path and file name of the service configuration file on the shared disk.  
   
 ### To bring the Integration Services service online  
   

@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "parameters [SQL Server], properties"
   - "COLUMNPROPERTY function"
 ms.assetid: 2408c264-6eca-4120-bb71-df043c7c2792
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # COLUMNPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns column or parameter information.
   
@@ -33,7 +33,9 @@ This function returns column or parameter information.
 COLUMNPROPERTY ( id , column , property )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *id*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing the identifier (ID) of the table or procedure.
   

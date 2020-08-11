@@ -1,5 +1,6 @@
 ---
 title: "Planning a Report (Report Builder) | Microsoft Docs"
+description: Plan and create reports with richly formatted text that shows sales data, marketing trends, operational reports, or dashboards in Report Builder.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

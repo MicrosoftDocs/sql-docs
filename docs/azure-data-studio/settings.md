@@ -1,23 +1,22 @@
 ---
 title: User and Workspace Settings
-titleSuffix: Azure Data Studio
-description: How to customize Azure Data Studio by modifying User and Workspace Settings.
+description: Learn how to use settings to customize Azure Data Studio's editor, user interface, and functional behavior to suit your preferences.
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
+ms.prod: azure-data-studio
+ms.technology: 
+ms.reviewer: "alayu, maghan, sstein"
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
 ---
 # Modify User and Workspace Settings
 
-It is easy to configure [!INCLUDE[name-sos](../includes/name-sos-short.md)] to your liking through settings. Nearly every part of [!INCLUDE[name-sos](../includes/name-sos-short.md)]'s editor, user interface, and functional behavior has options you can modify.
+It is easy to configure Azure Data Studio to your liking through settings. Nearly every part of Azure Data Studio's editor, user interface, and functional behavior has options you can modify.
 
-[!INCLUDE[name-sos](../includes/name-sos-short.md)] provides two different scopes for settings:
+Azure Data Studio provides two different scopes for settings:
 
-* **User** These settings apply globally to any instance of [!INCLUDE[name-sos](../includes/name-sos-short.md)] you open.
+* **User** These settings apply globally to any instance of Azure Data Studio you open.
 * **Workspace** Workspace settings are settings specific to a folder on your computer, and are only available when the folder is open in the Explorer sidebar. Settings defined on this scope override the user scope.
 
 ## Creating User and Workspace Settings
@@ -30,9 +29,10 @@ The following example disables line numbers in the editor and configures lines o
 
 ![Example Settings](media/settings/sample-settings.png)
 
-Changes to settings are reloaded by [!INCLUDE[name-sos](../includes/name-sos-short.md)] after the modified `settings.json` file is saved.
+Changes to settings are reloaded by Azure Data Studio after the modified `settings.json` file is saved.
 
->**Note:** Workspace settings are useful for sharing project-specific settings across a team.
+> [!NOTE] 
+> Workspace settings are useful for sharing project-specific settings across a team.
 
 ## Settings File Locations
 
@@ -42,7 +42,7 @@ Depending on your platform, the user settings file is located here:
 * **Mac** `$HOME/Library/Application Support/azuredatastudio/User/settings.json`
 * **Linux** `$HOME/.config/azuredatastudio/User/settings.json`
 
-The workspace setting file is located under the `.[!INCLUDE[name-sos](../includes/name-sos-short.md)]` folder in your project.
+The workspace setting file is located under the `.Azure Data Studio` folder in your project.
 
 ## Hot Exit
 
@@ -57,4 +57,4 @@ To simplify identifying what connections you are working with, open tabs in the 
 
 ## Additional resources
 
-Because [!INCLUDE[name-sos](../includes/name-sos-short.md)] inherits its user and workspace settings functionality from Visual Studio Code, detailed information about settings is in the [Settings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings) article.
+Because Azure Data Studio inherits its user and workspace settings functionality from Visual Studio Code, detailed information about settings is in the [Settings for Visual Studio Code](https://code.visualstudio.com/docs/getstarted/settings) article.

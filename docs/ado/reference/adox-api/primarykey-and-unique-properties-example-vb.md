@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Unique property [ADOX], Visual Basic example"
   - "PrimaryKey property [ADOX], Visual Basic example"
 ms.assetid: f536acac-06ea-4b39-bfba-ee9902b01615
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # PrimaryKey and Unique Properties Example (VB)
 This example demonstrates the [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) and [Unique](../../../ado/reference/adox-api/unique-property-adox.md) properties of an [Index](../../../ado/reference/adox-api/index-object-adox.md). The code creates a new table with two columns. The **PrimaryKey** and **Unique** properties are used to make one column the primary key for which duplicate values are not allowed.  

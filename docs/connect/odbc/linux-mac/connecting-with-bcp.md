@@ -1,5 +1,6 @@
 ---
-title: "Connecting with bcp | Microsoft Docs"
+title: "Connecting with bcp"
+description: "Learn how to use the bcp utility with the Microsoft ODBC Driver for SQL Server on Linux and macOS."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
@@ -10,13 +11,13 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "bcp"
 ms.assetid: 3eca5717-e50f-40db-be16-a1cebbdfee70
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Connecting with bcp
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
 
-The [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) utility is available in the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS. This page documents the differences from the Windows version of `bcp`.
+The [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) utility is available with the [!INCLUDE[msCoName](../../../includes/msconame_md.md)] ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on Linux and macOS. This page documents the differences from the Windows version of `bcp`.
   
 - The field terminator is a tab ("\t").  
   
@@ -31,7 +32,7 @@ The [bcp](https://go.microsoft.com/fwlink/?LinkID=190626) utility is available i
 > -   -r"\n"  
 > -   -r'\n'  
   
-The following is a sample command invocation of `bcp` to copy table rows to a text file:  
+The following example is a command invocation of `bcp` to copy table rows to a text file:  
   
 ```  
 bcp AdventureWorks2008R2.Person.Address out test.dat -Usa -Pxxxx -Sxxx.xxx.xxx.xxx  
@@ -55,7 +56,7 @@ Uses a character data type.
 Specifies the database to connect to.  
   
 - -D  
-Causes the value passed to the `bcp` -S option to be interpreted as a data source name (DSN). For more information, see "DSN Support in sqlcmd and bcp" in [Connecting with sqlcmd](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md).  
+Causes the value passed to the `bcp` -S option to be interpreted as a data source name (DSN). For more information, see "DSN Support in sqlcmd and bcp" in [Connecting with sqlcmd](connecting-with-sqlcmd.md).  
   
 - -e *error_file*
 Specifies the full path of an error file used to store any rows that the `bcp` utility cannot transfer from the file to the database.  
@@ -79,7 +80,7 @@ Specifies a login timeout. The -l option specifies the number of seconds before 
 Specifies the number of the last row to export from a table or import from a data file.  
   
 - -m *max_errors*  
-Specifies the maximum number of syntax errors that can occur before the `bcp` operation is cancelled.  
+Specifies the maximum number of syntax errors that can occur before the `bcp` operation is canceled.  
   
 - -n  
 Uses the native (database) data types of the data to perform the bulk-copy operation.  
@@ -142,4 +143,5 @@ Used with the format and -f format_file options, generates an XML-based format f
   
 ## See Also
 
-[Connecting with **sqlcmd**](../../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)  
+[Connecting with **sqlcmd**](connecting-with-sqlcmd.md)  
+[Release Notes](release-notes-tools.md)

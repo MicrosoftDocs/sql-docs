@@ -20,7 +20,7 @@ ms.author: chugu
 ---
 # Enumerated Constants in Property Expressions
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   If property expressions include values from an enumerator member list, the expression must use the numeric value of the enumerator member instead of the friendly name of the member. For example, if an expression sets the **LoggingMode** property then you must use the numeric value 2 instead of the friendly name Disabled.  

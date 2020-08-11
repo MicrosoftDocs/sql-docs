@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "IHsubscriptions system table"
 ms.assetid: 9ec21119-35f1-4e39-abaa-b2c790c485b1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # IHsubscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHsubscriptions** system table contains one row for each subscription to a publication from a non-SQL Server Publisher using the current Distributor. This table is stored in the distribution database.  
   

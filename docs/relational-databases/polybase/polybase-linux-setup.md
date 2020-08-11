@@ -1,7 +1,7 @@
 ---
 title: Install PolyBase on Linux
 titlesuffix: SQL Server
-description: This article describes how to install SQL Server PolyBase on Linux.
+description: Learn how to install SQL Server PolyBase on Linux. PolyBase enables you to run external queries against remote data sources.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.date: 7/22/2019
@@ -151,7 +151,7 @@ sudo systemctl restart mssql-server
 
 PolyBase on Linux can access the following data sources. Follow the provided links for more information on how to create an external table from these sources on PolyBase is enabled. 
 
-- [SQL Server ( & SQL DB, Azure SQL DW)](../../relational-databases/polybase/polybase-configure-sql-server.md)
+- [SQL Server ( & SQL Database, Azure SQL Data Warehouse)](../../relational-databases/polybase/polybase-configure-sql-server.md)
 - [Oracle](../../relational-databases/polybase/polybase-configure-oracle.md)
 - [Teradata](../../relational-databases/polybase/polybase-configure-teradata.md)
 - [MongoDB (& Cosmos DB)](../../relational-databases/polybase/polybase-configure-mongodb.md)

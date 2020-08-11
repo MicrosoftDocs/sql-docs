@@ -1,6 +1,6 @@
 ---
-title: "OLE DB How-to Topics | Microsoft Docs"
-description: "OLE DB how-to topics"
+title: How-to topics (OLE DB driver)
+description: Use these how-to articles to understand how the OLE DB Driver for SQL Server connects to a server, runs a command, and processes results.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -14,7 +14,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # OLE DB How-to Topics
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

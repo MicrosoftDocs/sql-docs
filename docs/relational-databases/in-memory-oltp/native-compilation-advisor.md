@@ -1,5 +1,6 @@
 ---
 title: "Native Compilation Advisor | Microsoft Docs"
+description: Learn how to use the Native Compilation Advisor to migrate an interpreted stored procedure to native compilation as part of migrating to In-Memory OLTP.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Native Compilation Advisor
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Transaction Performance Analysis reports tells you which interpreted stored procedures in your database will benefit if ported to use native compilation. For details see [Determining if a Table or Stored Procedure Should Be Ported to In-Memory OLTP](../../relational-databases/in-memory-oltp/determining-if-a-table-or-stored-procedure-should-be-ported-to-in-memory-oltp.md).  
   

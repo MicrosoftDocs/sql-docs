@@ -1,7 +1,5 @@
 ---
 title: Create and Update Tables
-ms.custom: seo-lt-2019
-ms.date: "08/25/2017"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -16,47 +14,49 @@ helpviewer_keywords:
 ms.assetid: c49e0155-5dcb-481f-9538-e1bde77105e2
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: 
-
+ms.custom: seo-lt-2019
+ms.date: 08/25/2017
 ---
-# Create and update database tables
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
-The Table Designer is a visual tool where you design and visualize [database tables](../../relational-databases/tables/tables.md). Use the SQL Server Management Studio (SSMS) Table Designer to create, edit, or delete tables, columns, keys, indexes, relationships, and constraints.  
 
-  
-## Create a table  
-  
-1. Right-click the **Tables** node in your database and select  **New** > **Table**:  
-  
+# Create and update database tables
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+The Table Designer is a visual tool where you design and visualizes [database tables](../../relational-databases/tables/tables.md). Use the SQL Server Management Studio (SSMS) Table Designer to create, edit, or delete tables, columns, keys, indexes, relationships, and constraints.  
+
+## Create a table
+
+1. Right-click the **Tables** node in your database and select  **New** > **Table**:
+
     ![New table](../media/design-tables/new-table.png)
-  
-1. Add [columns](column-properties-visual-database-tools.md) to your table:
-  
+
+2. Add [columns](column-properties-visual-database-tools.md) to your table:
+
     ![design table](../media/design-tables/new-table2.png)
 
-1. Close the designer and save your changes.
-  
-## Update a table  
-  
-1. Right-click the table under the **Tables** node of your database and select **Design**:  
-  
-   ![Update table](../media/design-tables/update-table.png)
+3. Close the designer and save your changes.
 
-1. Update the desired table settings:
+## Update a table
 
-   ![](../media/design-tables/update-table2.png)
+1. Right-click the table under the **Tables** node of your database and select **Design**:
 
-1. Close the designer and save your changes.
+    ![Update table](../media/design-tables/update-table.png)
+
+2. Update the desired table settings:
+
+    ![Create a table](../media/design-tables/update-table2.png)
+
+3. Close the designer and save your changes.
 
 ## See Also
 
-[Tables](../../relational-databases/tables/tables.md)  
-[Table Properties &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)  
-[Column Properties](column-properties-visual-database-tools.md)  
-[Add Columns to a Table](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)  
-[Primary and Foreign Keys](../../relational-databases/tables/primary-and-foreign-key-constraints.md)  
-[Indexes](../../relational-databases/indexes/indexes.md)  
-[Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)  
-[Download SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)  
-[Create a database and add tables in Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)
+- [Tables](../../relational-databases/tables/tables.md)
+- [Table Properties &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/table-properties-visual-database-tools.md)
+- [Column Properties](column-properties-visual-database-tools.md)
+- [Add Columns to a Table](../../relational-databases/tables/add-columns-to-a-table-database-engine.md)
+- [Primary and Foreign Keys](../../relational-databases/tables/primary-and-foreign-key-constraints.md)
+- [Indexes](../../relational-databases/indexes/indexes.md)
+- [Data types (Transact-SQL)](../../t-sql/data-types/data-types-transact-sql.md)
+- [Download SQL Server Management Studio (SSMS)](../download-sql-server-management-studio-ssms.md)
+- [Create a database and add tables in Visual Studio](/visualstudio/data-tools/create-a-sql-database-by-using-a-designer)

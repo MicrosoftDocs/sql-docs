@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ODBC SQL grammar, SELECT statement limitations"
   - "SELECT statement limitations [ODBC]"
 ms.assetid: c6b05955-f8fd-4706-a1a7-a8dbd74870c2
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SELECT Statement Limitations
 An aggregate-function column cannot be mixed with a non-aggregate column in a SELECT statement.  

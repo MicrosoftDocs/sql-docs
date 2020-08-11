@@ -11,12 +11,12 @@ helpviewer_keywords:
   - "ADO, methods"
   - "methods [ADO]"
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO Methods
 
-|||  
+|Method|Description|  
 |-|-|  
 |[AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)|Creates a new record for an updatable **Recordset** object.|  
 |[Append](../../../ado/reference/ado-api/append-method-ado.md)|Appends an object to a collection. If the collection is **Fields**, a new **Field** object may be created before it is appended to the collection.|  

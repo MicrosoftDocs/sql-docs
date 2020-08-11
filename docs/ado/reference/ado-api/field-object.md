@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Field object [ADO]"
 ms.assetid: b10a72fc-3c4b-4186-a70b-993dc9f7a092
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Field Object
 Represents a column of data with a common data type.  

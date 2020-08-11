@@ -1,5 +1,6 @@
 ---
 title: "DTA recommended performance improvements"
+description: Learn how Database Engine Tuning Advisor can recommend a combination of rowstore and columnstore indexes by analyzing a database workload in SQL Server.
 ms.custom: seo-dt-2019
 ms.date: "03/07/2017"
 ms.prod: sql
@@ -13,7 +14,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Performance Improvements using Database Engine Tuning Advisor (DTA) recommendations
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 
 ---

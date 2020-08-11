@@ -11,11 +11,11 @@ author: stevestein
 ms.author: sstein
 ---
 # LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## Details  
   
-|||  
+|Category|Value|  
 |-|-|  
 |Product Name|SQL Server|  
 |Event ID|286|  

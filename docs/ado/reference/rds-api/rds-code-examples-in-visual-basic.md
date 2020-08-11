@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Visual Basic RDS examples [ADO]"
   - "RDS samples [ADO], Visual Basic"
 ms.assetid: d9cb84a1-4ec2-4d41-8f92-dec2e17cde67
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RDS Code Examples in Visual Basic
 > [!IMPORTANT]

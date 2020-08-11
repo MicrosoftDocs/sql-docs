@@ -1,5 +1,5 @@
 ---
-title: "Data Type Support for OLE DB Date and Time Improvements | Microsoft Docs"
+title: "Data type support for date and time improvements (OLE DB driver) | Microsoft Docs"
 description: "Data type support for OLE DB date and time improvements"
 ms.custom: ""
 ms.date: "06/14/2018"
@@ -15,7 +15,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Data Type Support for OLE DB Date and Time Improvements
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -69,7 +69,7 @@ ms.author: pelopes
   
  Implementations for the following existing OLE DB structs have been modified to support the new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] date and time data types. The definitions, however, have not changed.  
   
--   DBTYPE_DATE (This is an automation DATE type. It is internally represented as a **double**.. The whole part is the number of days since December 30, 1899 and the fractional part is the fraction of a day. This type has an accuracy of 1 second, so has an effective scale of 0.)  
+-   DBTYPE_DATE (This is an automation DATE type. It is internally represented as a **double**. The whole part is the number of days since December 30, 1899 and the fractional part is the fraction of a day. This type has an accuracy of 1 second, so has an effective scale of 0.)  
   
 -   DBTYPE_DBDATE  
   

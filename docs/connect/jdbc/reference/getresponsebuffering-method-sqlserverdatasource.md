@@ -13,8 +13,8 @@ apilocation:
   - "SQLServerDataSource.getResponseBuffering()"
 apitype: "Assembly"
 ms.assetid: 19585a93-88a4-415e-a20e-12ba58cddeaa
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getResponseBuffering Method (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

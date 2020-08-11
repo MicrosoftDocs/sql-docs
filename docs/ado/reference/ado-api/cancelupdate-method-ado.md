@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "CancelUpdate method [ADO]"
 ms.assetid: eaa856cc-c786-462e-890c-c896261b1741
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CancelUpdate Method (ADO)
 Cancels any changes made to the current or new row of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object, or the [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection of a [Record](../../../ado/reference/ado-api/record-object-ado.md) object, before calling the [Update](../../../ado/reference/ado-api/update-method.md) method.  
@@ -39,11 +39,16 @@ recordset.CancelUpdaterecord.Fields.CancelUpdate
  The **CancelUpdate** method cancels any pending insertions or deletions of [Field](../../../ado/reference/ado-api/field-object.md) objects, and cancels pending updates of existing fields and restores them to their original values. The [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) property of all fields in the **Fields** collection is set to **adFieldOK**.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)|[Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Update and CancelUpdate Methods Example (VB)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vb.md)   
  [Update and CancelUpdate Methods Example (VC++)](../../../ado/reference/ado-api/update-and-cancelupdate-methods-example-vc.md)   

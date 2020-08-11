@@ -1,7 +1,8 @@
 ---
 title: "Release Notes for ODBC Driver for SQL Server on Windows"
+description: "This release notes article describes the changes in each release of the Microsoft ODBC driver for SQL Server on Windows."
 ms.custom: ""
-ms.date: "03/10/2020"
+ms.date: "07/29/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -36,13 +37,34 @@ Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
 
+## 17.6
+
+![download](../../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2137027)  
+![download](../../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2137028)  
+
+Version number: 17.6.1.1  
+Released: July 31, 2020
+
+If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
+For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2137027&clcid=0x40a)  
+For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2137028&clcid=0x40a)
+
+| Feature added | Details |
+| :------- | :------ |
+| Metadata caching for prepared statements | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| SQL_COPT_SS_AUTOBEGINTXN connection attribute to control whether automatic BEGIN TRANSACTION happens after ROLLBACK or COMMIT | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## Previous Releases
+
 ## 17.5.2
 
 ![download](../../../ssms/media/download-icon.png) [Download x64 installer](https://go.microsoft.com/fwlink/?linkid=2120137)  
 ![download](../../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120140)  
 
 Version number: 17.5.2.1  
-Released: March 6, 2019
+Released: March 6, 2020
 
 If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
 For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2120137&clcid=0x40a)  
@@ -57,8 +79,6 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
 | &nbsp; | &nbsp; |
 
-## Previous Releases
-
 Download previous ODBC Driver versions by clicking the download links in the following sections:
 
 ## 17.5
@@ -67,7 +87,7 @@ Download previous ODBC Driver versions by clicking the download links in the fol
 ![download](../../../ssms/media/download-icon.png) [Download x86 installer](https://go.microsoft.com/fwlink/?linkid=2120353)  
 
 Version number: 17.5.1.1  
-Released: January 31, 2019
+Released: January 31, 2020
 
 If you need to download the installer in a language other than the one detected for you, you can use these direct links.  
 For the x64 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x804) | [Chinese (Traditional)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x404) | [English (United States)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x409) | [French](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40c) | [German](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x407) | [Italian](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x410) | [Japanese](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x411) | [Korean](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x412) | [Portuguese (Brazil)](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x416) | [Russian](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x419) | [Spanish](https://go.microsoft.com/fwlink/?linkid=2120248&clcid=0x40a)  
@@ -140,7 +160,7 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------------ | :------ |
-| Azure Active Directory Managed Service Identity (system and user-assigned) authentication mode. | See [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md). |
+| Azure Active Directory Managed Identity (system and user-assigned) authentication mode. | See [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md). |
 | Ability to stream input parameters against Always Encrypted columns. | See [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | XA distributed transactions. | [Using XA Transactions](../use-xa-with-dtc.md). |
 | Bug fixes. | See [Bug fixes](../bug-fixes.md). |
@@ -249,8 +269,8 @@ For the x86 driver: [Chinese (Simplified)](https://go.microsoft.com/fwlink/?link
 
 | Feature added | Details |
 | :------------ | :------ |
-| ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] adds support for [Always Encrypted](../../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md) and [Azure Active Directory](../../../connect/odbc/using-azure-active-directory.md). | These added supports are available when connecting to Microsoft SQL Server 2016, or to a later version. |
-| There are connection pooling keywords and attributes, that correspond to the supports for Always Encrypted and Azure Active Directory. | These keywords and attributes are described in [Driver Aware Connection Pooling in the ODBC Driver for SQL Server](../../../connect/odbc/windows/driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
+| ODBC Driver 13.1 for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] adds support for [Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md) and [Azure Active Directory](../using-azure-active-directory.md). | These added supports are available when connecting to Microsoft SQL Server 2016, or to a later version. |
+| There are connection pooling keywords and attributes, that correspond to the supports for Always Encrypted and Azure Active Directory. | These keywords and attributes are described in [Driver Aware Connection Pooling in the ODBC Driver for SQL Server](driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server.md). |
 | &nbsp; | &nbsp; |
 
 ## 13

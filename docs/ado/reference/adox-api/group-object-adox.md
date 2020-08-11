@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "group object [ADOX]"
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Group Object (ADOX)
 Represents a group account that has access permissions within a secured database.  

@@ -1,5 +1,6 @@
 ---
 title: "Performance Counters MSRS 2011 SharePoint Mode Performance Objects | Microsoft Docs"
+description: Learn about performance counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint Mode performance objects.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

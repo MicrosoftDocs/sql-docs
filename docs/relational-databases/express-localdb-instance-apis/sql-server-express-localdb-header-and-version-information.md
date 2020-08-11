@@ -15,7 +15,7 @@ ms.author: "carlrab"
 ms.custom: seo-dt-2019
 ---
 # SQL Server Express LocalDB Header and Version Information
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   There is no separate header file for the SQL Server Express LocalDB instance API; the LocalDB function signatures and error codes are defined in the SQL Server Native Client header file (sqlncli.h). To use the LocalDB instance API, you must include the sqlncli.h header file in your project.  
   
 ## LocalDB Versioning  

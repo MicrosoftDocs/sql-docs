@@ -1,6 +1,6 @@
 ---
-title: "Return Codes | Microsoft Docs"
-description: "Return codes"
+title: Return codes (OLE DB driver)
+description: Learn about return codes for OLE DB Driver for SQL Server member functions and how to get more information about results besides success.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -24,7 +24,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Return Codes
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

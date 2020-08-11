@@ -15,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Filter Published Data for Merge Replication
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   In addition to the static row filters and column filters you can define with other types of replication, merge replication offers parameterized row filters and join filters. For more information about static row filters and column filters, see [Filter Published Data](../../../relational-databases/replication/publish/filter-published-data.md).  
   
  Merge replication is used in many applications that support mobile users; these applications usually have a large number of subscriptions with each subscription receiving a unique data set. Parameterized filters combined with join filters allow an administrator to set up one publication (or at most a small number of publications) and yet provide different data sets to users, reducing the management overhead introduced by creating multiple publications.  

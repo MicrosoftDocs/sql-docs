@@ -1,10 +1,11 @@
 ---
 title: "SQL Server 2017 Release Notes | Microsoft Docs"
+description: This article describes limitations and issues with SQL Server 2017 and provides links to related information.
 ms.custom: ""
 ms.date: "11/01/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
@@ -12,7 +13,7 @@ ms.author: mikeray
 monikerRange: "= sql-server-2017 || = sqlallproducts-allversions"
 ---
 # SQL Server 2017 Release Notes
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[SQL Server 2017](../includes/applies-to-version/sqlserver2017.md)]
 This article describes limitations and issues with SQL Server 2017. For related information, see:
 - [What's New in SQL Server 2017](../sql-server/what-s-new-in-sql-server-2017.md)
 - [SQL Server on Linux release notes](../linux/sql-server-linux-release-notes.md)
@@ -69,7 +70,7 @@ There are no release notes for SQL Server on Windows related to this release. Se
 - **Issue and customer impact:** The parameter *runincluster* of the stored procedure **[catalog].[create_execution]** is renamed to *runinscaleout* for consistency and readability.
 - **Work around:** If you have existing scripts to run packages in Scale Out, you have to change the parameter name from *runincluster* to *runinscaleout* to make the scripts work in RC1.
 
-- **Issue and customer impact:** SQL Server Management Studio (SSMS) 17.1 and earlier versions can't trigger package execution in Scale Out in RC1. The error message is: "*@runincluster* is not a parameter for procedure **create_execution**." This issue is fixed in the next release of SSMS, version 17.2. Versions 17.2 and later of SSMS support the new parameter name and package execution in Scale Out. 
+- **Issue and customer impact:** SQL Server Management Studio (SSMS) 17.1 and earlier versions can't trigger package execution in Scale Out in RC1. The error message is: "*\@runincluster* is not a parameter for procedure **create_execution**." This issue is fixed in the next release of SSMS, version 17.2. Versions 17.2 and later of SSMS support the new parameter name and package execution in Scale Out. 
 - **Work around:** Until SSMS version 17.2 is available:
   1. Use your existing version of SSMS to generate the package execution script.
   2. Change the name of the *runincluster* parameter to *runinscaleout* in the script.
@@ -145,7 +146,7 @@ There are no release notes for SQL Server on Windows related to this release. Se
 
 ## More information
 - [SQL Server Reporting Services release notes](../reporting-services/release-notes-reporting-services.md).
-- [Known Issues for Machine Learning Services](../machine-learning/known-issues-for-sql-server-machine-learning-services.md)
+- [Known Issues for Machine Learning Services](../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md)
 - [SQL Server Update Center - links and information for all supported versions](https://msdn.microsoft.com/library/ff803383.aspx)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

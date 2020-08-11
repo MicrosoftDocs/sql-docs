@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "drivers [ODBC]"
   - "drivers [ODBC], about drivers"
 ms.assetid: d6795d92-877e-44e1-b7d5-2ff2fd3989bd
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Drivers
 *Drivers* are libraries that implement the functions in the ODBC API. Each is specific to a particular DBMS; for example, a driver for Oracle cannot directly access data in an Informix DBMS. Drivers expose the capabilities of the underlying DBMSs; they are not required to implement capabilities not supported by the DBMS. For example, if the underlying DBMS does not support outer joins, then neither should the driver. The only major exception to this is that drivers for DBMSs that do not have stand-alone database engines, such as Xbase, must implement a database engine that at least supports a minimal amount of SQL.  

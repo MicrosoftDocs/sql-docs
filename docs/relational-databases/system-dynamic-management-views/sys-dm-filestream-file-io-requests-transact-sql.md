@@ -16,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_filestream_file_io_requests catalog view"
 ms.assetid: d41e39a5-14d5-4f3d-a2e3-a822b454c1ed
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_filestream_file_io_requests (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays a list of I/O requests being processed by the Namespace Owner (NSO) at the given moment.  
   

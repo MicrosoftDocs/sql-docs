@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "subkeys [ODBC], for components"
   - "registry entries for components [ODBC], about registry entries"
 ms.assetid: c90aa8a4-6ece-48de-901c-17d23739a9ff
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Registry Entries for ODBC Components
 > [!NOTE]  

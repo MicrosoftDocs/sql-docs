@@ -13,11 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_restoredbreplication"
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_restoredbreplication (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Removes replication settings if restoring a database to the non-originating server, database, or system that is otherwise not capable of running replication processes. When restoring a replicated database to a server or database other than the one where the backup was taken, replication settings cannot be preserved. On the restore, the server calls **sp_restoredbreplication** directly to automatically remove replication metadata from the restored database.  
   

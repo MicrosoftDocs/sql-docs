@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLGetStmtOption function [ODBC], Cursor Library"
 ms.assetid: 986170b3-fba8-4323-9224-60b381c7effb
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetStmtOption (Cursor Library)
 > [!IMPORTANT]  
@@ -20,10 +20,17 @@ ms.author: genemi
  This topic discusses the use of the **SQLGetStmtOption** function in the cursor library. For general information about **SQLGetStmtOption**, see [SQLGetStmtOption Function](../../../odbc/reference/syntax/sqlgetstmtoption-function.md).  
   
  The cursor library supports the following statement options with **SQLGetStmtOption**:  
-  
-|||  
-|-|-|  
-|SQL_BIND_TYPE|SQL_ROW_NUMBER|  
-|SQL_CONCURRENCY|SQL_ROWSET_SIZE|  
-|SQL_CURSOR_TYPE|SQL_SIMULATE_CURSOR|  
-|SQL_GET_BOOKMARK||
+
+:::row:::
+    :::column:::
+        SQL_BIND_TYPE  
+        SQL_CONCURRENCY  
+        SQL_CURSOR_TYPE  
+        SQL_GET_BOOKMARK  
+    :::column-end:::
+    :::column:::
+        SQL_ROW_NUMBER  
+        SQL_ROWSET_SIZE  
+        SQL_SIMULATE_CURSOR  
+    :::column-end:::
+:::row-end:::

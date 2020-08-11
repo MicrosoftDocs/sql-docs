@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Attributes property [ADO], VC++ example"
   - "Name property [ADO], VC++ example"
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Attributes and Name Properties Example (VC++)
 This example displays the value of the [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) property for [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Field](../../../ado/reference/ado-api/field-object.md), and [Property](../../../ado/reference/ado-api/property-object-ado.md) objects. It uses the [Name](../../../ado/reference/ado-api/name-property-ado.md) property to display the name of each **Field** and **Property** object.  

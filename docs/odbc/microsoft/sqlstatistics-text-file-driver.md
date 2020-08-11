@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "text file driver [ODBC], SQLStatistics"
   - "SQLStatistics function [ODBC], Text File Driver"
 ms.assetid: 311afc01-d656-425f-be43-4a8e7cbc9a97
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLStatistics (Text File Driver)
 > [!NOTE]  

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "drivers [ODBC], about ODBC drivers"
   - "ODBC drivers [ODBC]"
 ms.assetid: 0a1fa7c0-7494-4706-bec1-1ac2c764f6be
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Microsoft-Supplied ODBC Drivers
 *Drivers* are libraries that implement the functions in the ODBC API. Each driver is specific to a particular database management system (DBMS). In most cases, drivers expose the capabilities of the underlying DBMS; they are not required to implement capabilities not supported by the DBMS. Drivers perform specific tasks and can be classified into two categories: file-based and DBMS-based. For more information about drivers and driver architecture, see [Drivers](../../odbc/reference/drivers.md).  

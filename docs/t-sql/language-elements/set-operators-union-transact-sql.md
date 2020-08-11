@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Set Operators - UNION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Concatenates the results of two queries into a single result set. You control whether the result set includes duplicate rows:
 
@@ -45,14 +45,16 @@ The following are basic rules for combining the result sets of two queries by us
   
 ## Syntax  
   
-```  
+```syntaxsql
 { <query_specification> | ( <query_expression> ) }   
 { UNION [ ALL ]   
   { <query_specification> | ( <query_expression> ) } 
   [ ...n ] }
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 \<query_specification> | ( \<query_expression> )
 Is a query specification or query expression that returns data to be combined with the data from another query specification or query expression. The definitions of the columns that are part of a UNION operation don't have to be the same, but they must be compatible through implicit conversion. When data types differ, the resulting data type is determined based on the rules for [data type precedence](../../t-sql/data-types/data-type-precedence-transact-sql.md). When the types are the same but differ in precision, scale, or length, the result is based on the same rules for combining expressions. For more information, see [Precision, Scale, and Length (Transact-SQL)](../../t-sql/data-types/precision-scale-and-length-transact-sql.md).  
   

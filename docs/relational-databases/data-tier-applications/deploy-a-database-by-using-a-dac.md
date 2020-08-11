@@ -21,8 +21,8 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Deploy a Database By Using a DAC
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
-  Use the **Deploy a Database to SQL Azure** Wizard to deploy a database between an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and a [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] server, or between two [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]servers.  
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+  Use the **Deploy Database to Microsoft Azure SQL Database** Wizard to deploy a database between an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] and a [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] server, or between two [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]servers.  
   
 ##  <a name="BeforeBegin"></a> Before You Begin  
  The wizard uses a Data-tier Application (DAC) BACPAC archive file to deploy both the data and the definitions of database objects. It performs a DAC export operation from the source database, and a DAC import to the destination.  
@@ -62,7 +62,7 @@ ms.author: "sstein"
   
 3.  Expand the **Databases** node.  
   
-4.  Right click the database you want to deploy, select **Tasks**, and then select **Deploy Database to SQL Azure...**  
+4.  Right click the database you want to deploy, select **Tasks**, and then select **Deploy Database to Microsoft Azure SQL Database**  
   
 5.  Complete the Wizard dialogs:  
   

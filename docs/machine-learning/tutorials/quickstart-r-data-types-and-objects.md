@@ -1,21 +1,33 @@
 ---
 title: "Quickstart: R data structures, data types, and objects"
-description: In this quickstart, you'll learn how to use data structures, data types, and objects when using R in SQL Server Machine Learning Services. You'll learn about moving data between R and SQL Server, and the common issues that might occur.
+titleSuffix: SQL machine learning
+description: In this quickstart, you'll learn how to use data structures, data types, and objects when using R with SQL machine learning. 
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/27/2019  
+ms.date: 05/21/2020  
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 
-# Quickstart: Data structures, data types, and objects using R in SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# Quickstart: Data structures, data types, and objects using R with SQL machine learning
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
-In this quickstart, you'll learn how to use data structures and data types when using R in SQL Server Machine Learning Services. You'll learn about moving data between R and SQL Server, and the common issues that might occur.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+In this quickstart, you'll learn how to use data structures and data types when using R in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). You'll learn about moving data between R and SQL Server, and the common issues that might occur.
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+In this quickstart, you'll learn how to use data structures and data types when using R in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). You'll learn about moving data between R and SQL Server, and the common issues that might occur.
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+In this quickstart, you'll learn how to use data structures and data types when using R in [SQL Server R Services](../r/sql-server-r-services.md). You'll learn about moving data between R and SQL Server, and the common issues that might occur.
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+In this quickstart, you'll learn how to use data structures and data types when using R in [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). You'll learn about moving data between R and SQL Managed Instance, and the common issues that might occur.
+::: moniker-end
 
 Common issues to know up front include:
 
@@ -26,11 +38,22 @@ Common issues to know up front include:
 
 ## Prerequisites
 
-- This quickstart requires access to an instance of SQL Server with [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) with the R language installed.
+You need the following prerequisites to run this quickstart.
 
-  Your SQL Server instance can be in an Azure virtual machine or on-premises. Just be aware that the external scripting feature is disabled by default, so you might need to [enable external scripting](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature) and verify that **SQL Server Launchpad service** is running before you start.
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md) or the [Linux installation guide](../../linux/sql-server-linux-setup-machine-learning.md?toc=%2Fsql%2Fmachine-learning%2Ftoc.json). You can also [enable Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+::: moniker-end
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
+- SQL Server Machine Learning Services. For how to install Machine Learning Services, see the [Windows installation guide](../install/sql-machine-learning-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+- SQL Server 2016 R Services. For how to install R Services, see the [Windows installation guide](../install/sql-r-services-windows-install.md). 
+::: moniker-end
+::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
+- Azure SQL Managed Instance Machine Learning Services. For how to sign up, see the [Azure SQL Managed Instance Machine Learning Services overview](/azure/azure-sql/managed-instance/machine-learning-services-overview).
+::: moniker-end
 
-- You also need a tool for running SQL queries that contain R scripts. You can run these scripts using any database management or query tool, as long as it can connect to a SQL Server instance, and run a T-SQL query or stored procedure. This quickstart uses [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms).
+- A tool for running SQL queries that contain R scripts. This quickstart uses [Azure Data Studio](../../azure-data-studio/what-is.md).
 
 ## Always return a data frame
 
@@ -63,7 +86,7 @@ EXECUTE sp_execute_external_script
 
 Why are the results so different?
 
-The answer can usually be found by using the R `str()` command. Add the function `str(object_name)` anywhere in your R script to have the data schema of the specified R object returned as an informational message. To view messages, see in the **Messages** pane of Visual Studio Code, or the **Messages** tab in SSMS.
+The answer can usually be found by using the R `str()` command. Add the function `str(object_name)` anywhere in your R script to have the data schema of the specified R object returned as an informational message.
 
 To figure out why Example 1 and Example 2 have such different results, insert the line `str(OutputDataSet)` at the end of the `@script` variable definition in each statement, like this:
 
@@ -183,7 +206,7 @@ Now R returns a single value as the result.
 Why? In this case, because the two arguments can be handled as vectors of the same length, R returns the inner product as a matrix.  This is the expected behavior according to the rules of linear algebra; however, it could cause problems if your downstream application expects the output schema to never change!
 
 > [!TIP]
-> 
+>
 > Getting errors? Make sure that you're running the stored procedure in the context of the database that contains the table, and not in **master** or another database.
 >
 > Also, we suggest that you avoid using temporary tables for these examples. Some R clients will terminate a connection between batches, deleting temporary tables.
@@ -220,7 +243,7 @@ To fill out the data frame, R repeats the elements retrieved from RTestData as m
 
 Remember that a data frame only looks like a table, and is actually a list of vectors.
 
-## Cast or convert SQL Server data
+## Cast or convert data
 
 R and SQL Server don't use the same data types, so when you run a query in SQL Server to get data and then pass that to the R runtime, some type of implicit conversion usually takes place. Another set of conversions takes place when you return data from R to SQL Server.
 
@@ -270,7 +293,7 @@ After you get the query working, review the results of the `str` function to see
 
 **Results**
 
-```sql
+```text
 STDOUT message(s) from external script: 'data.frame':    37 obs. of  3 variables:
 STDOUT message(s) from external script: $ ReportingDate: POSIXct, format: "2010-12-24 23:00:00" "2010-12-24 23:00:00"
 STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M200 Europe",..: 1 1 1 1 1 1 1 1 1 1
@@ -287,20 +310,13 @@ From even these short examples, you can see the need to check the effects of dat
 - Test your data in advance and verify columns or values in your schema that could be a problem when passed to R code.
 - Specify columns in your input data source individually, rather than using `SELECT *`, and know how each column will be handled.
 - Perform explicit casts as necessary when preparing your input data, to avoid surprises.
-- Avoid passing columns of data (such as GUIDS or rowguids) that cause errors and aren't useful for modeling.
+- Avoid passing columns of data (such as GUIDs or rowguids) that cause errors and aren't useful for modeling.
 
 For more information on supported and unsupported data types, see [R libraries and data types](../r/r-libraries-and-data-types.md).
 
-For information about the performance impact of run-time conversion of strings to numerical factors, see [SQL Server R Services performance tuning](../r/sql-server-r-services-performance-tuning.md).
-
 ## Next steps
 
-To learn about writing advanced R functions in SQL Server, follow this quickstart:
+To learn about writing advanced R functions with SQL machine learning, follow this quickstart:
 
 > [!div class="nextstepaction"]
-> [Write advanced R functions with SQL Server Machine Learning Services](quickstart-r-functions.md)
-
-For more information on using R in SQL Server Machine Learning Services, see the following articles:
-
-- [Create and score a predictive model in R with SQL Server Machine Learning Services](quickstart-r-train-score-model.md)
-- [What is SQL Server Machine Learning Services (Python and R)?](../what-is-sql-server-machine-learning.md)
+> [Write advanced R functions with SQL machine learning](quickstart-r-functions.md)

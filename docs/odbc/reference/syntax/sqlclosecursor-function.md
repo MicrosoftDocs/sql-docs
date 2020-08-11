@@ -18,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLCloseCursor function [ODBC]"
 ms.assetid: 05b0a054-e28d-4e16-b5b0-07418486b372
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLCloseCursor Function
 **Conformance**  

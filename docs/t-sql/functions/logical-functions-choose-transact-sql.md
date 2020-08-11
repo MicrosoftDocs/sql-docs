@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "CHOOSE function"
 ms.assetid: 1c382c83-7500-4bae-bbdc-c1dbebd3d83f
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Logical Functions - CHOOSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the item at the specified index from a list of values in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -27,12 +27,14 @@ ms.author: mikeray
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CHOOSE ( index, val_1, val_2 [, val_n ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *index*  
  Is an integer expression that represents a 1-based index into the list of the items following it.  
   

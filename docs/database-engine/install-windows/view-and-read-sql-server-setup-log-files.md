@@ -1,5 +1,6 @@
 ---
 title: "View and Read SQL Server Setup Log Files | Microsoft Docs"
+description: This article describes the log files that SQL Server Setup creates. Log files are placed in a dated and time-stamped folder.
 ms.custom: ""
 ms.date: "09/09/2016"
 ms.prod: sql
@@ -21,7 +22,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # View and Read SQL Server Setup Log Files
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 SQL Server Setup creates log files in a dated and time-stamped folder within **\%programfiles%\Microsoft SQL Server\\*nnn*\Setup Bootstrap\Log** by default, where *nnn* are numbers that correspond to the version of SQL that's being installed. The time-stamped log folder name format is YYYYMMDD_hhmmss. When Setup is executed in unattended mode, the logs are created within %temp%\sqlsetup*.log. All files in the log folder are archived into the Log\*.cab file in their respective log folder.  
 

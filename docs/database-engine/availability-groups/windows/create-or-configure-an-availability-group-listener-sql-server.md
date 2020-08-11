@@ -18,7 +18,7 @@ ms.author: mathoma
 manager: erikre
 ---
 # Configure a listener for an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to create or configure a single *availability group listener* for an Always On availability group by using [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)], [!INCLUDE[tsql](../../../includes/tsql-md.md)], or PowerShell in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   
 > [!IMPORTANT]  
@@ -273,6 +273,7 @@ Get-ClusterResource yourListenerName | Set-ClusterParameter RegisterAllProviders
 Get-ClusterResource yourListenerName | Set-ClusterParameter HostRecordTTL 300  
 Stop-ClusterResource yourListenerName  
 Start-ClusterResource yourListenerName  
+Start-Clustergroup yourListenerGroupName
 ```  
   
  For more information about recovery times during failover, see [Client Recovery Latency During Failover](../../../sql-server/failover-clusters/windows/sql-server-multi-subnet-clustering-sql-server.md#DNS).  

@@ -1,21 +1,22 @@
 ---
 title: "SQL Server 2012 Release Notes | Microsoft Docs"
+description: This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2012.
 ms.prod: sql
-ms.technology: install
+ms.technology: release-landing
 ms.custom: ""
-ms.date: "02/01/2017"
+ms.date: 07/22/2020
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Release Notes, SQL Server"
 ms.assetid: 9ccb390a-67a9-4593-85ea-2b4c41c4620f
-author: craigg-msft
-ms.author: craigg
-monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
+author: rothja
+ms.author: jroth
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server 2012 Release Notes
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
-This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2012 ([click here to download it](https://go.microsoft.com/fwlink/?LinkId=238647)). This Release Notes document is available online only, not on the installation media, and it is updated periodically.  
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
+This Release Notes document describes known issues that you should read about before you install or troubleshoot [Microsoft SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=238647)). This Release Notes document is available online only, not on the installation media, and it is updated periodically.  
   
 For information about how to get started and install SQL Server 2012, see the SQL Server 2012 Readme. The Readme document is available on the installation media and from the [Readme](https://download.microsoft.com/download/3/B/D/3BD9DD65-D3E3-43C3-BB50-0ED850A82AD5/ENU/Readme.htm) download page. You can also find more information in [SQL Server Books Online](https://go.microsoft.com/fwlink/?LinkId=190948) and on the [SQL Server Forums](https://go.microsoft.com/fwlink/?LinkId=213599).  
   
@@ -55,13 +56,17 @@ Before installing [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)], consider t
 ### 1.3 SQL Server Setup might fail while trying to start the SQL Server Browser service  
 **Issue:** SQL Server Setup might fail while trying to start the SQL Server Browser service, with errors similar to the following:  
   
-<pre>The following error has occurred:  
-Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.</pre>  
+```
+The following error has occurred:  
+Service 'SQLBrowser' start request failed. Click 'Retry' to retry the failed action, or click 'Cancel' to cancel this action and continue setup.
+```
   
 or  
   
-<pre>The following error has occurred:  
-SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.</pre>  
+```
+The following error has occurred:  
+SQL Server Browser configuration for feature 'SQL_Browser_Redist_SqlBrowser_Cpu32' was cancelled by user after a previous installation failure. The last attempted step: Starting the SQL Server Browser service 'SQLBrowser', and waiting for up to '900' seconds for the process to complete.
+```
   
 **Workaround:** This can happen when SQL Server Engine or Analysis Services fails to install. To fix this issue, refer the SQL Server Setup logs, and troubleshoot the SQL Server Engine and Analysis Services failures. For more information, see View and Read SQL Server Setup Log Files. For more information, see [View and Read SQL Server Setup Log Files](../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
   
@@ -98,8 +103,10 @@ You can install SQL Server on Windows Server 2008 R2 Server Core SP1, with the f
   
 If these tasks are not completed, you will see the following error message when you try to create a semantic index.  
   
-<pre>Msg 41209, Level 16, State 3, Line 1  
-A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.</pre>  
+```
+Msg 41209, Level 16, State 3, Line 1  
+A semantic language statistics database is not registered. Full-text indexes using 'STATISTICAL_SEMANTICS' cannot be created or populated.
+```
   
 ### 1.7 Installation Prerequisite Handling During SQL Server 2012 Setup  
 The following items describe the prerequisite installation behavior during SQL Server 2012 Setup:  
@@ -336,7 +343,7 @@ There are problems with the AS Processing Task when you work with tabular models
 ### 4.5 Controls Do Not Scale Properly On Large Font Sizes  
 **Issue:** If you change the size of text to "Larger - 150%" (in Windows Server 2008 or Windows 7), or change the Custom DPI setting to 200% (in Windows 7), the **Cancel** and **Create** buttons on the **New Knowledge Base** page are not accessible.  
   
-**Workaround:**To resolve the issue, set the font to a smaller size.  
+**Workaround:** To resolve the issue, set the font to a smaller size.  
   
 ### 4.6 Screen Resolution of 800x600 Is Not Supported  
 **Issue:** The Data Quality Client application does not display correctly if the screen resolution is set to 800x600.  
@@ -371,9 +378,9 @@ In a cleansing data quality project, if you have mapped a field in your source d
 ### 4.14 Issue with Date or DateTime Values in Unmapped Source Fields in Excel during Cleansing and Matching  
 **Issue**: If your source data is Excel and you have not mapped the source fields containing values of **Date** or **DateTime** data type, the following happens during the cleansing and matching activities:  
   
--   The unmapped **Date** values are displayed and exported in the yyyymmdd format.  
+-   The unmapped **Date** values are displayed and exported in the yyyy-mm-dd format.  
   
--   The time value is lost for the unmapped **DateTime** values, and they are displayed and exported in the yyyymmdd format.  
+-   The time value is lost for the unmapped **DateTime** values, and they are displayed and exported in the yyyy-mm-dd format.  
   
 **Workaround:** You can view the unmapped field values in the right-lower pane on the **Manage and view results** page in the cleansing activity, and on the **Matching** page in the matching activity.  
   
@@ -457,12 +464,12 @@ Let us illustrate this with an example. Consider a user, Domain\user1. The user 
 ### 5.4 An Error Might Occur When Navigating in the Generate Script Wizard  
 **Issue:** After generating a script in the Generate Script Wizard by clicking **Save or Publish Scripts**, then navigating by clicking **Choose Options** or **Set Scripting Options**, clicking **Save or Publish Scripts** again might result in the following error:  
   
-<pre>
+```
 An exception occurred while executing a Transact-SQL statement or batch. (Microsoft.SqlServer.ConnectionInfo)  
 ------------------------------  
 ADDITIONAL INFORMATION:  
 Invalid object name 'sys.federations'. (Microsoft SQL Server, Error: 208)
-</pre>  
+```
   
 **Workaround:** Close and reopen the Generate Scripts Wizard.  
   
@@ -624,9 +631,8 @@ SQL Server 2012 includes StreamInsight 2.0. StreamInsight 2.0 requires a Microso
 ## <a name="UA"></a>10.0 Upgrade Advisor  
   
 ### 10.1 Link to Install Upgrade Advisor Is Not Enabled on Chinese (HK) Operating Systems  
-Issue: When you try to install Upgrade Advisor on any supported Windows version in Chinese (Hong Kong) operating systems (OS), you might find that the link to install Upgrade Advisor is not enabled.  
+Issue: When you try to install Upgrade Advisor on any supported Windows version in Chinese (Hong Kong SAR) operating systems (OS), you might find that the link to install Upgrade Advisor is not enabled.  
   
 **Workaround**: Locate the **SQLUA.msi** file on your SQL Server 2012 media at `\1028_CHT_LP\x64\redist\Upgrade Advisor` or at `\1028_CHT_LP\x86\redist\Upgrade Advisor`, depending on your operating system architecture.  
   
 ![horizontal_bar](media/horizontal-bar.png "horizontal_bar")  
-  

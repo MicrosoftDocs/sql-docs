@@ -1,5 +1,5 @@
 ---
-title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
+title: CREATE TABLE (Transact-SQL)
 ms.custom: ""
 ms.date: 02/24/2020
 ms.prod: sql
@@ -49,7 +49,7 @@ ms.author: carlrab
 ---
 # CREATE TABLE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Creates a new table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
@@ -337,6 +337,8 @@ column_name <data_type>
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 *database_name*
@@ -390,7 +392,7 @@ Indicates that the **text**, **ntext**, **image**, **xml**, **varchar(max)**, **
 `TEXTIMAGE_ON` is not allowed if there are no large value columns in the table. `TEXTIMAGE_ON` cannot be specified if *partition_scheme* is specified. If **"default"** is specified, or if `TEXTIMAGE_ON` is not specified at all, the large value columns are stored in the default filegroup. The storage of any large value column data specified in `CREATE TABLE` cannot be subsequently altered.
 
 > [!NOTE]
-> Varchar(max), nvarchar(max), varbinary(max), xml and large UDT values are stored directly in the data row, up to a limit of 8,000 bytes and as long as the value can fit the record. If the value does not fit in the record, a pointer is sorted in-row and the rest is stored out of row in the LOB storage space. 0 is the default value, which indicates that all values are stored directly in the data row.
+> Varchar(max), nvarchar(max), varbinary(max), xml and large UDT values are stored directly in the data row, up to a limit of 8,000 bytes and as long as the value can fit the record. If the value does not fit in the record, a pointer is stored in-row and the rest is stored out of row in the LOB storage space. 0 is the default value, which indicates that all values are stored directly in the data row.
 >
 > `TEXTIMAGE_ON` only changes the location of the "LOB storage space", it does not affect when data is stored in-row. Use large value types out of row option of sp_tableoption to store the entire LOB value out of the row.
 >
@@ -622,7 +624,7 @@ Is the name of the table referenced by the FOREIGN KEY constraint, and the schem
 **(** *ref_column* [ **,**... *n* ] **)**
 Is a column, or list of columns, from the table referenced by the FOREIGN KEY constraint.
 
-ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }
+ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }
 Specifies what action happens to rows in the table created, if those rows have a referential relationship and the referenced row is deleted from the parent table. The default is NO ACTION.
 
 NO ACTION
@@ -647,7 +649,7 @@ If a `DELETE` statement is executed on a row in the **Vendor** table, and an `ON
 
 Conversely, if `NO ACTION` is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the delete action on the **Vendor** row if there is at least one row in the **ProductVendor** table that references it.
 
-ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }
+ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT }
 Specifies what action happens to rows in the table altered when those rows have a referential relationship and the referenced row is updated in the parent table. The default is NO ACTION.
 
 NO ACTION
@@ -878,7 +880,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 - Specify `PAUSED` to pause or postpone data migration. For more info, see [Pause and resume data migration -Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
 MEMORY_OPTIMIZED
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance does not support memory optimized tables.
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Azure SQL Managed Instance does not support memory optimized tables.
 
 The value ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimized the performance of transaction processing. To get started with In-Memory OLTP see [Quickstart 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).
 

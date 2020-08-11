@@ -18,12 +18,12 @@ helpviewer_keywords:
   - "row numbers [SQL Server]"
   - "sequential row numbers [SQL Server]"
 ms.assetid: 82fa9016-77db-4b42-b4c8-df6095b81906
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ROW_NUMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Numbers the output of a result set. More specifically, returns the sequential number of a row within a partition of a result set, starting at 1 for the first row in each partition. 
   
@@ -37,12 +37,14 @@ Numbers the output of a result set. More specifically, returns the sequential nu
   
 ## Syntax  
   
-```  
+```syntaxsql
 ROW_NUMBER ( )   
     OVER ( [ PARTITION BY value_expression , ... [ n ] ] order_by_clause )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  PARTITION BY *value_expression*  
  Divides the result set produced by the [FROM](../../t-sql/queries/from-transact-sql.md) clause into partitions to which the ROW_NUMBER function is applied. *value_expression* specifies the column by which the result set is partitioned. If `PARTITION BY` is not specified, the function treats all rows of the query result set as a single group. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   

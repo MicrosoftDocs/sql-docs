@@ -16,12 +16,12 @@ helpviewer_keywords:
   - "FIRST_VALUE function"
   - "analytic functions, FIRST_VALUE"
 ms.assetid: 1990c3c7-dad2-48db-b2cd-3e8bd2c49d17
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # FIRST_VALUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the first value in an ordered set of values in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
   
@@ -29,13 +29,15 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 FIRST_VALUE ( [scalar_expression ] )   
     OVER ( [ partition_by_clause ] order_by_clause [ rows_range_clause ] )  
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *scalar_expression*  
  Is the value to be returned. *scalar_expression* can be a column, subquery, or other arbitrary expression that results in a single value. Other analytic functions are not permitted.  
   

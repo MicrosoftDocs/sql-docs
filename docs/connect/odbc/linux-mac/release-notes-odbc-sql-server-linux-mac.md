@@ -1,7 +1,8 @@
 ---
 title: "Release Notes ODBC Driver for SQL Server on Linux and macOS"
+description: "Learn what's new and changed in released versions of the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "03/10/2020"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: "v-jizho2"
@@ -29,6 +30,25 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+
+
+## 17.6, July 2020
+
+| New item | Details |
+| :------- | :------ |
+| New distributions supported. | Ubuntu 20.04 |
+| Support for Federated Authentication | See [Using Azure Active Directory](../using-azure-active-directory.md). |
+| Metadata caching for prepared statements | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| SQL_COPT_SS_AUTOBEGINTXN connection attribute to control whether automatic BEGIN TRANSACTION happens after ROLLBACK or COMMIT | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
+## 17.5.2.2, April 2020 (Alpine Linux only)
+
+| Feature added | Details |
+| :------------ | :------ |
+| Bug fixed. | See [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
 
 ## 17.5.2, March 2020
 
@@ -77,7 +97,7 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 | New item | Details |
 | :------- | :------ |
 | New distributions supported. | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
-| Azure Active Directory Managed Service Identity (system and user-assigned) authentication mode. | See [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md). |
+| Azure Active Directory Managed Identity (system and user-assigned) authentication mode. | See [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md). |
 | Ability to stream input parameters against Always Encrypted columns. | For more information, see [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | XA distributed transactions. | See [Using XA Transactions](../use-xa-with-dtc.md).<br/><br/>XA is an initialism for _eXtended Architecture_, which is a standard for the execution of a global transaction that accesses more than one server-side data storage system. |
 | &nbsp; | &nbsp; |
@@ -164,6 +184,6 @@ The ODBC driver on SUSE Linux (Preview) supports 64-bit SUSE Linux Enterprise 11
 
 The ODBC driver on Linux supports [!INCLUDE[ssHADR](../../../includes/sshadr_md.md)]. For more information, see [ODBC Driver on Linux Support for High Availability, Disaster Recovery](../../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md).  
 
-The ODBC driver on Linux supports connections to Microsoft Azure SQL Database. For more information, see [How to: Connect to Azure SQL Database Using ODBC](https://msdn.microsoft.com/library/hh974312.aspx).  
+The ODBC driver on Linux supports connections to Azure SQL Database.
 
 The `-l` option (login timeout) has been added to `bcp`. For more information, see [Connecting with **bcp**](../../../connect/odbc/linux-mac/connecting-with-bcp.md).

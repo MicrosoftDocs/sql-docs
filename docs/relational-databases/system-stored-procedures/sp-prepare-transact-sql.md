@@ -15,12 +15,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_prepare"
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_prepare (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
 Prepares a parameterized [!INCLUDE[tsql](../../includes/tsql-md.md)] statement and returns a statement *handle* for execution.  `sp_prepare` is invoked by specifying ID = 11 in a tabular data stream (TDS) packet.  
   

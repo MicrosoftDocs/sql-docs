@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLCloseCursor function [ODBC], ODBC"
 ms.assetid: 5e47e3f7-e1b8-451f-bf75-daa19b7c7271
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLCloseCursor_ODBC
 > [!IMPORTANT]  

@@ -1,6 +1,6 @@
 ---
-title: "Rowsets and SQL Server Cursors | Microsoft Docs"
-description: "Rowsets and SQL Server cursors"
+title: Rowsets and SQL Server cursors (OLE DB driver)
+description: Learn about how SQL Server returns result sets to consumers and default result sets differ from server cursors in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -18,7 +18,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Rowsets and SQL Server Cursors
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -71,7 +71,7 @@ ms.author: pelopes
 |DBPROP_IMMOBILEROWS|VARIANT_FALSE|Cannot update [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data through the rowset. The rowset supports forward scrolling only. Relative row positioning is supported. Command text can include an ORDER BY clause if an index exists on the referenced columns.<br /><br /> DBPROP_IMMOBILEROWS is only available in rowsets that can show [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] rows inserted by commands on other sessions or by other users. Trying to open a rowset with the property set to VARIANT_FALSE on any rowset for which DBPROP_OTHERINSERT cannot be VARIANT_TRUE causes an error.|  
 |DBPROP_REMOVEDELETED|VARIANT_TRUE|Cannot update [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] data through the rowset. The rowset supports forward scrolling only. Relative row positioning is supported. Command text can contain an ORDER BY clause unless constrained by another property.|  
   
- A OLE DB Driver for SQL Server rowset supported by a server cursor can be easily created on a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base table or view by using the **IOpenRowset::OpenRowset** method. Specify the table or view by name, passing the required rowset property sets in the *rgPropertySets* parameter.  
+ An OLE DB Driver for SQL Server rowset supported by a server cursor can be easily created on a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] base table or view by using the **IOpenRowset::OpenRowset** method. Specify the table or view by name, passing the required rowset property sets in the *rgPropertySets* parameter.  
   
  Command text that creates a rowset is restricted when the consumer requires that the rowset be supported by a server cursor. Specifically, the command text is restricted to either a single SELECT statement that returns a single rowset result or a stored procedure that implements a single SELECT statement returning a single rowset result.  
   
@@ -139,10 +139,10 @@ ms.author: pelopes
   
  For a particular set of rowset properties, the cursor model that is selected is determined as follows.  
   
- From the specified collection of rowset properties, obtain a subset of properties listed in the previous tables. Divide these properties into two subgroups depending on the flag value-required (T, F) or optional (-)-of each rowset property. For each cursor model, start in the first table and move from left to right., Compare the values of the properties in the two subgroups with the values of the corresponding properties in that column. The cursor model that has no mismatch with the required properties and the least number of mismatches with the optional properties is selected. If there is more than one cursor model, the leftmost is chosen.  
+ From the specified collection of rowset properties, obtain a subset of properties listed in the previous tables. Divide these properties into two subgroups depending on the flag value-required (T, F) or optional (-)-of each rowset property. For each cursor model, start in the first table and move from left to right. Compare the values of the properties in the two subgroups with the values of the corresponding properties in that column. The cursor model that has no mismatch with the required properties and the least number of mismatches with the optional properties is selected. If there is more than one cursor model, the leftmost is chosen.  
   
 ## SQL Server Cursor Block Size  
- When a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursor supports a OLE DB Driver for SQL Server rowset, the number of elements in the row handle array parameter of the **IRowset::GetNextRows** or the **IRowsetLocate::GetRowsAt** methods defines the cursor block size. The rows indicated by the handles in the array are the members of the cursor block.  
+ When a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] cursor supports an OLE DB Driver for SQL Server rowset, the number of elements in the row handle array parameter of the **IRowset::GetNextRows** or the **IRowsetLocate::GetRowsAt** methods defines the cursor block size. The rows indicated by the handles in the array are the members of the cursor block.  
   
  For rowsets supporting bookmarks, the row handles retrieved by using the **IRowsetLocate::GetRowsByBookmark** method define the members of the cursor block.  
   

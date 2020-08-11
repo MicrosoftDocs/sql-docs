@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "08/07/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE EXTERNAL RESOURCE POOL"
@@ -24,7 +24,7 @@ manager: cgronlund
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Creates an external pool used to define resources for external processes. A resource pool represents a subset of the physical resources (memory and CPUs) of a Database Engine instance. Resource Governor enables a database administrator to distribute server resources among resource pools, up to a maximum of 64 pools.
 
@@ -40,7 +40,7 @@ For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
 [ WITH (  
     [ MAX_CPU_PERCENT = value ]  
@@ -60,6 +60,8 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 *pool_name*  

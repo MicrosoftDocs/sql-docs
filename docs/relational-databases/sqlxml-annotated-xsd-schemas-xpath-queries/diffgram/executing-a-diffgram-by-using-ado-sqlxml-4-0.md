@@ -1,5 +1,6 @@
 ---
 title: "Executing a DiffGram by Using ADO (SQLXML)"
+description: Learn how to execute a DiffGram file in a Microsoft Visual Basic application using ADO (SQLXML 4.0) to establish a connection to an instance of Microsoft SQL Server.
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -19,7 +20,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing a DiffGram by Using ADO (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   This [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Visual Basic application uses ADO to establish a connection to an instance of Microsoft [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and then executes a DiffGram. In this application, the DiffGram and the XSD schema are stored in a file. The application loads the DiffGram from the specified file. You can use any of the DiffGrams (and the associated XSD schema) described in [DiffGram Examples](../../../relational-databases/sqlxml-annotated-xsd-schemas-xpath-queries/diffgram/diffgram-examples-sqlxml-4-0.md).  
   
  This is the process for the sample application:  

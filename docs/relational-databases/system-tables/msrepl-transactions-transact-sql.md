@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSrepl_transactions system table"
 ms.assetid: d325288d-47ae-4488-8799-122f7ab43459
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSrepl_transactions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSrepl_transactions** table contains one row for each replicated transaction. This table is stored in the distribution database.  
   

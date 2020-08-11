@@ -1,6 +1,6 @@
 ---
 title: "Change a SQL Server Authentication User Password (OLE DB) | Microsoft Docs"
-description: "Change a SQL Server authentication user password (OLE DB)"
+description: Learn how to use OLE DB to change the password of a user account under SQL Server Authentication with this example.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -12,7 +12,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Change a SQL Server Authentication User Password (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

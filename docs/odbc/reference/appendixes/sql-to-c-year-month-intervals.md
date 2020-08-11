@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "intervals [ODBC], converting"
   - "year-month intervals [ODBC]"
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQL to C: Year-Month Intervals
 

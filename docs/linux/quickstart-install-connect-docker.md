@@ -17,7 +17,7 @@ zone_pivot_groups: cs1-command-shell
 
 # Quickstart: Run SQL Server container images with Docker
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -94,7 +94,8 @@ Before starting the following steps, make sure that you have selected your prefe
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2017-latest
+      -d \
+      mcr.microsoft.com/mssql/server:2017-latest
    ```
    ::: zone-end
 
@@ -102,7 +103,8 @@ Before starting the following steps, make sure that you have selected your prefe
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2017-latest
+      -d `
+      mcr.microsoft.com/mssql/server:2017-latest
    ```
    ::: zone-end
 
@@ -110,7 +112,8 @@ Before starting the following steps, make sure that you have selected your prefe
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2017-latest
+      -d `
+      mcr.microsoft.com/mssql/server:2017-latest
    ```
    ::: zone-end
 
@@ -128,7 +131,8 @@ Before starting the following steps, make sure that you have selected your prefe
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least 8 characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1433, on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you cannot reuse this same name. |
-   | **-d mcr.microsoft.com/mssql/server:2017-latest** | The SQL Server 2017 Linux container image. |
+   | **-d** | Run the container in the background (daemon) |
+   | ** mcr.microsoft.com/mssql/server:2017-latest** | The SQL Server 2017 Linux container image. |
 
 3. To view your Docker containers, use the `docker ps` command.
 
@@ -168,6 +172,8 @@ SELECT @@SERVERNAME,
 
 Setting `-h` and `--name` to the same value is a good way to easily identify the target container.
 
+5. As a final step, change your SA password because the `SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
+
 ::: moniker-end
 <!--End of 2017 "Pull and run" section-->
 
@@ -178,23 +184,23 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
 Before starting the following steps, make sure that you have selected your preferred shell (bash, PowerShell, or cmd) at the top of this article.
 
-1. Pull the SQL Server 2019 Linux container image from Docker Hub.
+1. Pull the SQL Server 2019 Linux container image from Microsoft Container Registry.
 
    ::: zone pivot="cs1-bash"
    ```bash
-   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+   sudo docker pull mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-powershell"
    ```PowerShell
-   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
    ::: zone pivot="cs1-cmd"
    ```cmd
-   docker pull mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+   docker pull mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -213,7 +219,7 @@ Before starting the following steps, make sure that you have selected your prefe
    ```bash
    sudo docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" \
       -p 1433:1433 --name sql1 \
-      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+      -d mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -221,7 +227,7 @@ Before starting the following steps, make sure that you have selected your prefe
    ```PowerShell
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+      -d mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -229,7 +235,7 @@ Before starting the following steps, make sure that you have selected your prefe
    ```cmd
    docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=<YourStrong@Passw0rd>" `
       -p 1433:1433 --name sql1 `
-      -d mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04
+      -d mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04
    ```
    ::: zone-end
 
@@ -247,7 +253,7 @@ Before starting the following steps, make sure that you have selected your prefe
    | **-e "SA_PASSWORD=\<YourStrong@Passw0rd\>"** | Specify your own strong password that is at least 8 characters and meets the [SQL Server password requirements](../relational-databases/security/password-policy.md). Required setting for the SQL Server image. |
    | **-p 1433:1433** | Map a TCP port on the host environment (first value) with a TCP port in the container (second value). In this example, SQL Server is listening on TCP 1433 in the container and this is exposed to the port, 1433, on the host. |
    | **--name sql1** | Specify a custom name for the container rather than a randomly generated one. If you run more than one container, you cannot reuse this same name. |
-   | **mcr.microsoft.com/mssql/server:2019-CU3-ubuntu-18.04** | The SQL Server 2019 Ubuntu Linux container image. |
+   | **mcr.microsoft.com/mssql/server:2019-CU5-ubuntu-18.04** | The SQL Server 2019 Ubuntu Linux container image. |
 
 3. To view your Docker containers, use the `docker ps` command.
 
@@ -286,8 +292,14 @@ SELECT @@SERVERNAME,
 
 Setting `-h` and `--name` to the same value is a good way to easily identify the target container.
 
+
+5. As a final step, change your SA password because the `SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
+
+
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
+
+
 
 ## <a id="sapassword"></a> Change the SA password
 

@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Query and text editors (SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   You can use one of the [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] editors to interactively edit and test a [!INCLUDE[tsql](../../includes/tsql-md.md)], MDX, DMX, or XML/A script, or to edit an XML or plain text file. Each editor is supported by a language-specific service that colors keywords, and checks for syntax and usage errors. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Query Editor includes a [!INCLUDE[tsql](../../includes/tsql-md.md)] debugger that you can use to help fix problems in [!INCLUDE[tsql](../../includes/tsql-md.md)] code.  
   

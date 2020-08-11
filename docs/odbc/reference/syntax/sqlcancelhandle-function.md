@@ -12,14 +12,12 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLCancelHandle function [ODBC]"
 ms.assetid: 16049b5b-22a7-4640-9897-c25dd0f19d21
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLCancelHandle Function
 **Conformance**  
- Version Introduced: ODBC 3.8  
-  
- Standards Compliance: None  
+ Version Introduced: ODBC 3.8 Standards Compliance: None  
   
  It is expected that most ODBC 3.8 (and later) drivers will implement this function. If a driver does not, a call to **SQLCancelHandle** with a connection handle in the *Handle* parameter will return SQL_ERROR with a SQLSTATE of IM001 and message 'Driver does not support this function'' A call to **SQLCancelHandle** with a statement handle as the *Handle* parameter will be mapped to a call to **SQLCancel** by the Driver Manager and can be processed if the driver implements **SQLCancel**. An application can use **SQLGetFunctions** to determine if a driver supports **SQLCancelHandle**.  
   

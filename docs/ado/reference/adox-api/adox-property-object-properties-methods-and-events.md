@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Property object [ADOX], members"
 ms.assetid: 640780dc-5733-4f0c-9c11-6f43c1db5901
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADOX Property Object Properties, Methods, and Events
 ## Properties  

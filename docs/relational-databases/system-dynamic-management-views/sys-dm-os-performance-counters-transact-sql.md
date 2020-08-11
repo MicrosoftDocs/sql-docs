@@ -17,12 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_performance_counters dynamic management view"
 ms.assetid: a1c3e892-cd48-40d4-b6be-2a9246e8fbff
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_performance_counters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a row per performance counter maintained by the server. For information about each performance counter, see [Use SQL Server Objects](../../relational-databases/performance-monitor/use-sql-server-objects.md).  
   
@@ -41,24 +41,29 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Remarks  
  If the installation instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] fails to display the performance counters of the Windows operating system, use the following [!INCLUDE[tsql](../../includes/tsql-md.md)] query to confirm that performance counters have been disabled.  
   
-```  
+```sql  
 SELECT COUNT(*) FROM sys.dm_os_performance_counters;  
 ```  
   
- If the return value is 0 rows, this means that the performance counters have been disabled. You should then look at the setup log and search for error 3409, "Reinstall sqlctr.ini for this instance, and ensure that the instance login account has correct registry permissions."  This denotes that performance counters were not enabled. The errors immediately before the 3409 error should indicate the root cause for the failure of performance counter enabling. For more information about setup log files, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
-  
+If the return value is 0 rows, this means that the performance counters have been disabled. You should then look at the setup log and search for error 3409, `Reinstall sqlctr.ini for this instance, and ensure that the instance login account has correct registry permissions.`
+This denotes that performance counters were not enabled. The errors immediately before the 3409 error should indicate the root cause for the failure of performance counter enabling. For more information about setup log files, see [View and Read SQL Server Setup Log Files](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md).  
+
+Performance counters where the `cntr_type` column value is 65792, 272696320, and 537003264 display an instant snapshot counter value.
+
+Performance counters where the `cntr_type` column value is 272696576, 1073874176, and 1073939712 display cumulative counter values instead of an instant snapshot. As such, to get a snapshot-like reading, you must compare the delta between two collection points.
+
 ## Permission
 
 On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW SERVER STATE` permission.   
 On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
  
 ## Examples  
- The following example returns performance counter values.  
+ The following example returns all performance counters that display snapshot counter values.  
   
-```  
+```sql  
 SELECT object_name, counter_name, instance_name, cntr_value, cntr_type  
-FROM sys.dm_os_performance_counters;  
-  
+FROM sys.dm_os_performance_counters
+WHERE cntr_type = 65792 OR cntr_type = 272696320 OR cntr_type = 537003264;  
 ```  
   
 ## See Also  

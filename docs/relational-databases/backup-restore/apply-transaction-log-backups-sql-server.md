@@ -1,5 +1,6 @@
 ---
 title: "Apply Transaction Log Backups (SQL Server) | Microsoft Docs"
+description: This article describes applying transaction log backups as part of restoring a SQL Server database in the full recovery model or bulk-logged recovery model.
 ms.custom: ""
 ms.date: "10/23/2019"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 # Apply Transaction Log Backups (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The topic is relevant only for the full recovery model or bulk-logged recovery model.  
   
  This topic describes applying transaction log backups as part of restoring a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  

@@ -25,7 +25,7 @@ ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Controls whether concatenation results are treated as null or empty string values.  
   
@@ -36,13 +36,13 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```sql
+```syntaxsql
 -- Syntax for SQL Server  
     
 SET CONCAT_NULL_YIELDS_NULL { ON | OFF }   
 ```  
   
-```sql
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 SET CONCAT_NULL_YIELDS_NULL ON    

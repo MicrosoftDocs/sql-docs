@@ -11,12 +11,12 @@ helpviewer_keywords:
   - "methods [ADOX]"
   - "ADOX, methods"
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADOX Methods
 
-|||  
+|Method|Description|  
 |-|-|  
 |[Append (Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)|Adds a new **Column** object to the **Columns** collection.|  
 |[Append (Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)|Adds a new **Group** object to the **Groups** collection.|  

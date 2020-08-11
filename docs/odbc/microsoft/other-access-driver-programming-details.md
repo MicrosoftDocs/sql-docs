@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "Jet-based ODBC drivers [ODBC], Access driver"
   - "desktop database drivers [ODBC], Access driver"
 ms.assetid: cbd46df1-cc6d-4fd4-b401-c68ca85e15c6
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Other Access Driver Programming Details
 > [!NOTE]  

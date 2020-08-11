@@ -1,6 +1,6 @@
 ---
-title: "ISQLServerErrorInfo::GetErrorInfo (OLE DB) | Microsoft Docs"
-description: "ISQLServerErrorInfo::GetErrorInfo (OLE DB)"
+title: "ISQLServerErrorInfo::GetErrorInfo (OLE DB driver) | Microsoft Docs"
+description: Learn how the ISQLServerErrorInfo::GetErrorInfo method returns a pointer to an OLE DB Driver for SQL Server SSERRORINFO structure with SQL Server error details.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -17,11 +17,11 @@ author: pmasl
 ms.author: pelopes
 ---
 # ISQLServerErrorInfo::GetErrorInfo (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  Returns a pointer to a OLE DB Driver for SQL Server SSERRORINFO structure containing the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error details.  
+  Returns a pointer to an OLE DB Driver for SQL Server SSERRORINFO structure containing the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error details.  
   
  The OLE DB Driver for SQL Server defines the **ISQLServerErrorInfo** error interface. This interface returns details from a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] error, including its severity and state.  
 
@@ -84,7 +84,7 @@ SSERRORINFO;
  Pointers in the structure reference addresses in the string returned in the *ppErrorStrings* argument.  
   
 ## See Also  
- [ISQLServerErrorInfo &#40;OLE DB&#41;](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1)   
+ [ISQLServerErrorInfo &#40;OLE DB&#41;](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15)   
  [RAISERROR &#40;Transact-SQL&#41;](../../../t-sql/language-elements/raiserror-transact-sql.md)  
   
   

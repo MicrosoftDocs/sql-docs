@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MStracer_tokens system table"
 ms.assetid: b273aa48-8188-4213-8e2c-311543c3236f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MStracer_tokens (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MStracer_tokens** table maintains a record of tracer token records inserted into a publication. This table is stored in the distribution database and is used by replication for performance monitoring.  
   

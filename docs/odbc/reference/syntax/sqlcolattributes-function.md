@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLColAttributes function [ODBC]"
 ms.assetid: 3ece37af-db56-47fc-bc9d-6a7d0d8a00ec
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLColAttributes Function
 **Conformance**  

@@ -1,9 +1,8 @@
 ---
 title: "Set or Change the Server Collation | Microsoft Docs"
 ms.custom: ""
-ms.date: "12/05/2019"
+ms.date: "05/10/2020"
 ms.prod: sql
-ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -16,7 +15,7 @@ ms.reviewer: carlrab
 ---
 # Set or Change the Server Collation
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The server collation acts as the default collation for all system databases that are installed with the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and also any newly created user databases. You should carefully choose server-level collation because it affects:
  - Sorting and comparison rules in `=`, `JOIN`, `ORDER BY` and other operators that compare textual data.
  - Collation of the `CHAR`, `VARCHAR`, `NCHAR`, and `NVARCHAR` columns in system views, system functions, and the objects in TempDB (for example, temporary tables).
@@ -24,8 +23,11 @@ ms.reviewer: carlrab
   
 ## Setting the server collation in SQL Server
 
-  The server collation is specified during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. Default server-level collation is **SQL_Latin1_General_CP1_CI_AS**. Unicode-only collations cannot be specified as the server-level collation. For more information, see [Collation and Unicode Support](collation-and-unicode-support.md).
-  
+  The server collation is specified during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation. The default server-level collation is based upon the locale of the operating system. For example, the default collation for systems using US English (en-US) is **SQL_Latin1_General_CP1_CI_AS**. Unicode-only collations cannot be specified as the server-level collation. For more information, including the list of OS locale to default collation mappings, see the "Server-level collations" section of [Collation and Unicode Support](collation-and-unicode-support.md#Server-level-collations).
+
+> [!NOTE]  
+> The server-level collation for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express LocalDB is **SQL_Latin1_General_CP1_CI_AS** and cannot be changed, either during or after installation.  
+
 ## Changing the server collation in SQL Server
 
  Changing the default collation for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be a complex operation and involves the following steps:  
@@ -51,7 +53,7 @@ ms.reviewer: carlrab
 - Import all your data.  
   
 > [!NOTE]  
-> Instead of changing the default collation of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can specify a default collation for each new database you create.  
+> Instead of changing the default collation of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can specify a default collation for each new database you create via the `COLLATE` clause of the `CREATE DATABASE` and `ALTER DATABASE` statements. For more information, see [Set or Change the Database Collation](set-or-change-the-database-collation.md).  
   
 ## Setting the server collation in Managed Instance
 Server-level collation in Azure SQL Managed Instance can be specified when the instance is created and cannot be changed later. You can set server-level collation via [Azure portal](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started#create-a-managed-instance) or [PowerShell and Resource Manager template](https://docs.microsoft.com/azure/sql-database/scripts/sql-managed-instance-create-powershell-azure-resource-manager-template) while you are creating the instance. Default server-level collation is **SQL_Latin1_General_CP1_CI_AS**. Unicode-only and new UTF-8 collations cannot be specified as server-level collation.

@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLTablePrivileges function [ODBC]"
 ms.assetid: 8cfdb64f-64c5-47e6-ad57-0533ac630afa
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLTablePrivileges Function
 **Conformance**  

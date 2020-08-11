@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ODBC desktop database drivers [ODBC]"
   - "desktop database drivers [ODBC]"
 ms.assetid: ec1da65f-c69d-415d-bf75-8fda8aa2b39f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # String Limitations
 The maximum length of an SQL statement string is 65,000 characters.  

@@ -1,5 +1,6 @@
 ---
 title: "Install SQL Server Database Engine | Microsoft Docs"
+description: Learn about features that can be installed when you select SQL Server Database Engine from Components to Install of the SQL Server Installation Wizard.
 ms.custom: ""
 ms.date: 07/26/2019
 ms.prod: sql
@@ -15,7 +16,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server Database Engine
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 ## Overview
 The [!INCLUDE[ssDE](../../includes/ssde-md.md)] component of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is the core service for storing, processing, and securing data. The [!INCLUDE[ssDE](../../includes/ssde-md.md)] provides controlled access and rapid transaction processing to meet the requirements of the most demanding data consuming applications in your enterprise.  

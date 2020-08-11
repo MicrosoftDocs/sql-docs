@@ -1,5 +1,6 @@
 ---
 title: "Start SQL Server with Minimal Configuration | Microsoft Docs"
+description: Become familiar with the minimal configuration startup option in SQL Server. See when and how to use it, and learn about how it limits functionality.
 ms.custom: ""
 ms.date: "01/20/2017"
 ms.prod: sql
@@ -11,11 +12,11 @@ helpviewer_keywords:
   - "minimal configuration [SQL Server]"
   - "starting SQL Server, minimal configuration"
 ms.assetid: 4d733c99-28b3-42d8-b7f6-7b943b548173
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Start SQL Server with Minimal Configuration
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   If you have configuration problems that prevent the server from starting, you can start an instance of [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using the minimal configuration startup option. This is the startup option **-f**. Starting an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] with minimal configuration automatically puts the server in single-user mode.  
   

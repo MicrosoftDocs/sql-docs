@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # BufferWithTolerance (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a geometric object representing the union of all point values whose distance from a **geography** instance is less than or equal to a specified value, allowing for a specified tolerance.  
   
@@ -32,7 +32,9 @@ This geography data type method supports **FullGlobe** instances or spatial inst
 .BufferWithTolerance ( distance, tolerance, relative )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 _distance_  
 Is a **float** expression specifying the distance from the **geography** instance around which to calculate the buffer.  
   

@@ -17,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_attributes catalog view"
 ms.assetid: dd0c98aa-5e72-4df6-96d9-482786c8dbb1
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.xml_schema_attributes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row per XML schema component that is an attribute, **symbol_space** of **A**.  
 

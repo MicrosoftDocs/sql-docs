@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Supports method [ADO], Visual Basic example"
 ms.assetid: 135aab26-ff5c-4fd9-910f-65cdead0b47e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Supports Method Example (VB)
 This example uses the [Supports](../../../ado/reference/ado-api/supports-method.md) method to display the options supported by a recordset opened with different cursor types. The DisplaySupport procedure is required for this procedure to run.  

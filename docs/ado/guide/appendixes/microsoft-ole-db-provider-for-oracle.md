@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "OLE DB provider for Oracle [ADO]"
   - "Oracle provider [ADO]"
 ms.assetid: 44fae9dd-5585-4cd6-8bbd-3248a78931b4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Microsoft OLE DB Provider for Oracle Overview
 > [!IMPORTANT]

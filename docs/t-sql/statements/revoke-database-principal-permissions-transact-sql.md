@@ -22,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # REVOKE Database Principal Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Revokes permissions granted or denied on a database user, database role, or application role.  
   
@@ -30,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]    
     ON   
@@ -53,7 +53,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
     | Database_user_with_no_login   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be revoked on the database principal. For a list of the permissions, see the Remarks section later in this topic.  
   

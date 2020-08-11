@@ -13,11 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changemergearticle"
 ms.assetid: 0dc3da5c-4af6-45be-b5f0-074da182def2
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_changemergearticle (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the properties of a merge article. This stored procedure is executed at the Publisher on the publication database.  
   

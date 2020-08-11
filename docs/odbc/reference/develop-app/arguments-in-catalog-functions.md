@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "arguments in catalog functions [ODBC], about arguments"
   - "functions [ODBC], catalog functions"
 ms.assetid: f5e0abec-8f24-42e0-b94f-16dd1f2004fd
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Arguments in Catalog Functions
 All catalog functions accept arguments with which an application can restrict the scope of the data returned. For example, the first and second calls to **SQLTables** in the following code return a result set containing information about all tables, while the third call returns information about the Orders table:  

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetStmtOption function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 76b813e3-c7dc-4bb2-a710-d2aa9dcfdc36
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetStmtOption (Visual FoxPro ODBC Driver)
 > [!NOTE]  

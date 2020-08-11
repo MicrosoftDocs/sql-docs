@@ -14,7 +14,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Migrate to a Partially Contained Database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic discusses how to prepare to change to the partially contained database model and then provides the migration steps.  
   
  **In this topic:**  

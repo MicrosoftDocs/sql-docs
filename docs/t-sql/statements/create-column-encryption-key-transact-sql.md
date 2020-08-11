@@ -30,7 +30,7 @@ author: jaszymas
 ms.author: jaszymas
 ---
 # CREATE COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Creates a column encryption key metadata object for [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) or [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md). A column encryption key metadata object contains one or two encrypted values of a column encryption key that is used to encrypt data in a column. Each value is encrypted using a column master key. 
   
@@ -38,7 +38,7 @@ Creates a column encryption key metadata object for [Always Encrypted](../../rel
   
 ## Syntax  
   
-```sql  
+```syntaxsql
 CREATE COLUMN ENCRYPTION KEY key_name   
 WITH VALUES  
   (  
@@ -53,8 +53,8 @@ WITH VALUES
   ) ]   
 [;]  
 ```  
-  
-## Arguments  
+
+## Arguments
 _key\_name_  
 Is the name by which the column encryption key will be known in the database.  
   

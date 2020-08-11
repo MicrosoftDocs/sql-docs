@@ -16,7 +16,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Monitoring and Troubleshooting Managed Database Objects
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic provides information about the tools that can be used to monitor and troubleshoot managed database objects and assemblies running in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Profiler Trace Events  
@@ -24,7 +24,7 @@ ms.author: "jroth"
   
 |Event|Description|  
 |-----------|-----------------|  
-|[Assembly Load Event Class](/sql/database-engine/assembly-load-event-class)|Used to monitor assembly load requests (success and failures).|  
+|[Assembly Load Event Class](https://docs.microsoft.com/sql/relational-databases/event-classes/sql-server-event-class-reference)|Used to monitor assembly load requests (success and failures).|  
 |[SQL:BatchStarting Event Class](../../relational-databases/event-classes/sql-batchstarting-event-class.md), [SQL:BatchCompleted Event Class](../../relational-databases/event-classes/sql-batchcompleted-event-class.md)|Provides information about [!INCLUDE[tsql](../../includes/tsql-md.md)] batches that have started or completed.|  
 |[SP:Starting Event Class](../../relational-databases/event-classes/sp-starting-event-class.md), [SP:Completed Event Class](../../relational-databases/event-classes/sp-completed-event-class.md)|Used to monitor the execution of [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedures.|  
 |[SQL:StmtStarting Event Class](../../relational-databases/event-classes/sql-stmtstarting-event-class.md), [SQL:StmtCompleted Event Class](../../relational-databases/event-classes/sql-stmtcompleted-event-class.md)|Used to monitor the execution of CLR and [!INCLUDE[tsql](../../includes/tsql-md.md)] routines.|  

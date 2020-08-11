@@ -1,8 +1,8 @@
 ---
-title: "BLOBs and OLE Objects | Microsoft Docs"
+title: "BLOBs and OLE Objects (OLE DB driver) | Microsoft Docs"
 description: "BLOBs and OLE Objects"
 ms.custom: ""
-ms.date: "06/14/2018"
+ms.date: "05/25/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -18,12 +18,14 @@ author: pmasl
 ms.author: pelopes
 ---
 # BLOBs and OLE Objects
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  The OLE DB Driver for SQL Server exposes the **ISequentialStream** interface to support consumer access to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and xml data types as binary large objects (BLOBs). The **Read** method on **ISequentialStream** lets the consumer retrieve much data in manageable chunks.  
-  
+  The OLE DB Driver for SQL Server exposes the **ISequentialStream** interface to support consumer access to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] **ntext**, **text**<a href="#text_note"><sup>**1**</sup></a>, **image**, **varchar(max)**, **nvarchar(max)**, **varbinary(max)**, and xml data types as binary large objects (BLOBs). The **Read** method on **ISequentialStream** lets the consumer retrieve much data in manageable chunks.
+
+ <b id="text_note">[1]:</b> Using the ISequentialStream interface for inserting UTF-8 encoded data into a legacy text column is only limited to servers that support UTF-8. An attempt to execute this scenario when targeting a server that doesn't support UTF-8 will result in the driver posting the following error message: "*Streaming not supported over the selected column type*".
+
  For a sample demonstrating this feature, see [Set Large Data &#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md).  
   
  The OLE DB Driver for SQL Server can use a consumer-implemented **IStorage** interface when the consumer provides the interface pointer in an accessor bound for data modification.  

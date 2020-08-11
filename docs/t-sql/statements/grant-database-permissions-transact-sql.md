@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # GRANT Database Permissions (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Grants permissions on a database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
@@ -31,7 +31,7 @@ Grants permissions on a database in [!INCLUDE[ssNoVersion](../../includes/ssnove
 
 ## Syntax
 
-```
+```syntaxsql
 
 GRANT <permission> [ ,...n ]
     TO <database_principal> [ ,...n ] [ WITH GRANT OPTION ]
@@ -51,16 +51,18 @@ permission | ALL [ PRIVILEGES ]
   | Database_user_with_no_login
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 *permission*
 Specifies a permission that can be granted on a database. For a list of the permissions, see the Remarks section later in this topic.
 
 ALL
-This option does not grant all possible permissions. Granting ALL is equivalent to granting the following permissions: BACKUP DATABASE, BACKUP LOG, CREATE DATABASE, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, and CREATE VIEW.
+This option does not grant all possible permissions. Granting ALL is equivalent to granting the following permissions: BACKUP DATABASE, BACKUP LOG, CREATE DEFAULT, CREATE FUNCTION, CREATE PROCEDURE, CREATE RULE, CREATE TABLE, and CREATE VIEW.
 
 PRIVILEGES
-Included for ISO compliance. Does not change the behavior of ALL.
+Included for ANSI-92 compliance. Does not change the behavior of ALL.
 
 WITH GRANT OPTION
 Indicates that the principal will also be given the ability to grant the specified permission to other principals.

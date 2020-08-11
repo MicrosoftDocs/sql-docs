@@ -1,5 +1,6 @@
 ---
 title: "Compatibility Certification | Microsoft Docs"
+description: Compatibility certification eliminates risks of application compatibility, which allows you to upgrade a SQL Server database on-premises and in the cloud.
 ms.custom: ""
 ms.date: "08/26/2019"
 ms.prod: sql
@@ -22,7 +23,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 # Compatibility Certification
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Compatibility certification allows businesses to upgrade and modernize a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database on-premises, in the cloud, and on the edge, eliminating risks of application compatibility. 
 

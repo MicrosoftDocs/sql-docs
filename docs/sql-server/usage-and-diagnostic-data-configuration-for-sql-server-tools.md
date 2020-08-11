@@ -1,5 +1,6 @@
 ---
 title: "Configure usage and diagnostic data collection for SQL Server tools (CEIP) | Microsoft Docs"
+description: "Learn about the information that CEIP collects from users to improve products. See how to opt in or out of the program in SQL Server Data Tools (SSDT)."
 ms.custom: ""
 ms.date: "10/21/2016"
 ms.prod: sql
@@ -13,7 +14,7 @@ monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest |
 ---
 # Configure usage and diagnostic data collection for SQL Server tools (CEIP)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Learn how the Customer Experience Improvement Program (CEIP) helps Microsoft identify ways to make our software better.  You can configure tools to opt in or out at any time.  
   

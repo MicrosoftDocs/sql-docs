@@ -98,6 +98,6 @@ To manually fail over without data loss:
 1. Resume data movement, run the following command for every database in the availability group on the SQL Server instance that hosts the primary replica: 
 
    ```sql
-   ALTER DATABASE DB1
+   ALTER DATABASE [db1]
         SET HADR RESUME
    ```

@@ -1,6 +1,6 @@
 ---
 title: "Next fetch position (OLE DB driver) | Microsoft Docs"
-description: "Fetching rows - next fetch position"
+description: The OLE DB Driver for SQL Server keeps track of the next fetch position so that a sequence of calls to the GetNextRows method reads the whole rowset.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

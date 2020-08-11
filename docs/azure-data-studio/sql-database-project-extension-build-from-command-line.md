@@ -40,9 +40,9 @@ The build process in the SQL Database Projects extension for Azure Data Studio a
 
 These files are created by the extension during the first build completed in the Azure Data Studio interface and placed in the extension's folder under `BuildDirectory`.  For example, on Linux, these files are placed in `~\.azuredatastudio\extensions\microsoft.sql-database-projects-x.x.x\BuildDirectory\`.
 
-Copy these ten files to a new and accesible folder or note their location.  This location will be referred to as `DotNet Core build folder` in this document.
+Copy these 10 files to a new and accessible folder or note their location.  This location will be referred to as `DotNet Core build folder` in this document.
 
-3. If the project was created in Azure Data Studio - skip ahead to [Build the project from the command line](#Build-the-project-from-the-command-line). If the project was created in SSDT, open the project in the Azure Data Studio SQL Database project extension.  This automatically updates the `sqlproj` file with 3 edits, noted below for your information:
+3. If the project was created in Azure Data Studio - skip ahead to [Build the project from the command line](#Build-the-project-from-the-command-line). If the project was created in SQL Server Data Tools (SSDT), open the project in the Azure Data Studio SQL Database project extension.  Opening the project in Azure Data Studio automatically updates the `sqlproj` file with three edits, noted below for your information:
     1. Import conditions 
     ```
     <Import Condition="'$(NetCoreBuild)' == 'true'" Project="$(NETCoreTargetsPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets"/> 
@@ -63,7 +63,7 @@ Copy these ten files to a new and accesible folder or note their location.  This
     ```
 
 ## Build the project from the command line
-From the full .Net folder, use the following command:
+From the full .NET folder, use the following command:
 ```
 dotnet build "<sqlproj file path>" /p:NetCoreBuild=true /p:NETCoreTargetsPath="<DotNet Core build folder>"
 ```

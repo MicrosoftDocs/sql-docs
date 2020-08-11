@@ -28,12 +28,12 @@ ms.author: mathoma
 > [!IMPORTANT]  
 >  Before you deploy [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], we strongly recommend that you read every section of this topic.  
     
-##  <a name="DotNetHotfixes"></a> .Net Hotfixes that Support Availability Groups  
- Depending on the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] components and features you will use with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], you may need to install additional .Net hotfixes identified in the following table. The hotfixes can be installed in any order.  
+##  <a name="DotNetHotfixes"></a> .NET Hotfixes that Support Availability Groups  
+ Depending on the [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] components and features you will use with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], you may need to install additional .NET hotfixes identified in the following table. The hotfixes can be installed in any order.  
   
 |Dependent Feature|Hotfix|Link|  
 |-----------------------|------------|----------|  
-|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Hotfix for .Net 3.5 SP1 adds support to SQL Client for Always On features of Read-intent, readonly, and multisubnetfailover. The hotfix needs to be installed on each [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server.|KB 2654347: [Hotfix for .Net 3.5 SP1 to add support for Always On features](https://go.microsoft.com/fwlink/?LinkId=242896)|  
+|[!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)]|Hotfix for .NET 3.5 SP1 adds support to SQL Client for Always On features of Read-intent, readonly, and multisubnetfailover. The hotfix needs to be installed on each [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] report server.|KB 2654347: [Hotfix for .NET 3.5 SP1 to add support for Always On features](https://go.microsoft.com/fwlink/?LinkId=242896)|  
   
 
 ###  <a name="SystemRequirements"></a> Checklist: Requirements (Windows System)  

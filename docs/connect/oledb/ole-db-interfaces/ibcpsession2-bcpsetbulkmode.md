@@ -1,6 +1,6 @@
 ---
 title: "IBCPSession2::BCPSetBulkMode (OLE DB driver) | Microsoft Docs"
-description: "Using IBCPSession2::BCPSetBulkMode to create bulk copy out of either a query or a table"
+description: Learn how to use the IBCPSession2::BCPSetBulkMode method to create bulk copy out of either a query or a table in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

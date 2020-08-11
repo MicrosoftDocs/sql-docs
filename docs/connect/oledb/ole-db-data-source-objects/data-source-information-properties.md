@@ -1,6 +1,6 @@
 ---
 title: "Data source information properties (OLE DB driver) | Microsoft Docs"
-description: "Data Source information properties"
+description: Learn about the data source information properties for the provider-specific property set DBPROPSET_SQLSERVERDATASOURCEINFO in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

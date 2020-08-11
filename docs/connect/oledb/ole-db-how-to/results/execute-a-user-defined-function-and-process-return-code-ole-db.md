@@ -1,6 +1,6 @@
 ---
 title: "Execute a User-Defined Function and Process Return Code (OLE DB) | Microsoft Docs"
-description: "Execute a User-Defined function and process return code using OLE DB Driver for SQL Server"
+description: See how to run user-defined function and print a return code using OLE DB Driver for SQL Server. This example uses the AdventureWorks sample database.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

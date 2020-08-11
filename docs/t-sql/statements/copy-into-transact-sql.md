@@ -423,7 +423,7 @@ There is no need to split Parquet and ORC files because the COPY command will au
 The COPY command will be generally available by the end of this calendar year (2020). 
 
 ### Are there any limitations on the number or size of files?
-Files should be at least 4MB.
+There are no limitations on the number or size of files; however, for best performance, we recommend files that are at least 4MB.
 
 
 Please send any feedback or issues to the following distribution list: sqldwcopypreview@service.microsoft.com

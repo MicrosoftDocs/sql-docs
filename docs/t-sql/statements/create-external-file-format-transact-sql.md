@@ -109,7 +109,8 @@ WITH (
 ## Arguments  
 *file_format_name*  
 Specifies a name for the external file format.
-  
+ 
+### FORMAT_TYPE 
 FORMAT_TYPE = [ PARQUET \| ORC \| RCFILE \| DELIMITEDTEXT]
 Specifies the format of the external data.
   
@@ -134,6 +135,7 @@ Specifies the format of the external data.
 - JSON
   Specifies a JSON format. Applies to Azure SQL Edge only. 
   
+### FIELD_TERMINATOR
 FIELD_TERMINATOR = *field_terminator*  
 Applies only to delimited text files. The field terminator specifies one or more characters that mark the end of each field (column) in the text-delimited file. The default is the pipe character ꞌ|ꞌ. For guaranteed support, we recommend using one or more ascii characters.
   
@@ -148,7 +150,8 @@ Examples:
   
 -   FIELD_TERMINATOR = '~|~'  
   
-STRING_DELIMITER = *string_delimiter*  
+### STRING_DELIMITER
+`STRING_DELIMITER = *string_delimiter*`
 Specifies the field terminator for data of type string in the text-delimited file. The string delimiter is one or more characters in length and is enclosed with single quotes. The default is the empty string "". For guaranteed support, we recommend using one or more ascii characters.
  
   
@@ -164,9 +167,11 @@ Specifies the field terminator for data of type string in the text-delimited fil
   
 -   STRING_DELIMITER = '0x7E0x7E'  -- Two tildes (for example, ~~)
  
+### FIRST_ROW
  FIRST_ROW = *First_row_int*  
 Specifies the row number that is read first in all files during a PolyBase load. This parameter can take values 1-15. If the value is set to two, the first row in every file (header row) is skipped when the data is loaded. Rows are skipped based on the existence of row terminators (/r/n, /r, /n). When this option is used for export, rows are added to the data to make sure the file can be read with no data loss. If the value is set to >2, the first row exported is the Column names of the external table.
 
+### DATE\_FORMAT
  DATE\_FORMAT = *datetime_format*  
 Specifies a custom format for all date and time data that might appear in a delimited text file. If the source file uses default datetime formats, this option isn't necessary. Only one custom datetime format is allowed per file. You can't specify more than one custom datetime formats per file. However, you can use more than one datetime formats if each one is the default format for its respective data type in the external table definition.
 
@@ -240,7 +245,8 @@ Notes about the table:
 -   The letters 'tt' designate [AM|PM|am|pm]. AM is the default. When 'tt' is specified, the hour value (hh) must be in the range of 0 to 12.
   
 -   The letters 'zzz' designate the time zone offset for the system's current time zone in the format {+|-}HH:ss].
-  
+ 
+### USE_TYPE_DEFAULT 
  USE_TYPE_DEFAULT = { TRUE | **FALSE** }  
  Specifies how to handle missing values in delimited text files when PolyBase retrieves data from the text file.
   
@@ -258,7 +264,8 @@ Notes about the table:
   
    Encoding = {'UTF8' | 'UTF16'}  
  In Azure SQL Data Warehouse and PDW (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
-  
+
+### DATA\_COMPRESSION
  DATA_COMPRESSION = *data_compression_method*  
  Specifies the data compression method for the external data. When DATA_COMPRESSION isn't specified, the default is uncompressed data.
  To work properly, Gzip compressed files must have the ".gz" file extension.

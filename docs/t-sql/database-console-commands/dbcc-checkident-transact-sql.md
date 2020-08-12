@@ -41,7 +41,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
   
 ## Syntax  
   
-```console
+```syntaxsql
 
 -- Syntax for SQL Server and Azure SQL Database  
 
@@ -63,6 +63,8 @@ DBCC CHECKIDENT
 [ WITH NO_INFOMSGS ]  
 
 ```
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
  *table_name*  

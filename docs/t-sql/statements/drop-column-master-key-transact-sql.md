@@ -34,8 +34,6 @@ ms.author: jaszymas
 DROP COLUMN MASTER KEY key_name;  
 ```  
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *key_name*  
  The name of the column master key.  

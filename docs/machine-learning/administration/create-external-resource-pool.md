@@ -11,7 +11,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Create a resource pool for SQL Server Machine Learning Services
-[!INCLUDE [SQL Server 2016 and later ](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Learn how you can create and use a resource pool for managing Python and R workloads in SQL Server Machine Learning Services. 
 

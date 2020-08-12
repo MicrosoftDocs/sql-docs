@@ -11,7 +11,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Install SQL Server Machine Learning Services with Python and R on an Azure virtual machine
-[!INCLUDE [SQL Server 2017 and later ](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 Learn how to install Python and R with SQL Server Machine Learning Services on a virtual machine in Azure. This eliminates the installation and configuration tasks for Machine Learning Services.
 

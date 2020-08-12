@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Using data from OLAP cubes in R
-[!INCLUDE [SQL Server 2016 and later ](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 The **olapR** package is an R package, provided by Microsoft for use with Machine Learning Server and SQL Server, that lets you run MDX queries to get data from OLAP cubes. With this package, you don't need to create linked servers or clean up flattened rowsets; you can get OLAP data directly from R.
 

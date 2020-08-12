@@ -12,7 +12,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # CAB downloads for cumulative updates of SQL Server Machine Learning Services
 
-[!INCLUDE [SQL Server 2016 and later ](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
 Download Python and R CAB files for SQL Server Machine Learning Services. These CAB files contain updates to the Machine Learning Services (Python and R) feature and are used when installing SQL Server on a server without internet access.

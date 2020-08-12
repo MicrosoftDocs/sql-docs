@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 ---
 # Security overview for the extensibility framework in SQL Server Machine Learning Services
 
-[!INCLUDE [SQL Server 2016 and later ](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 This article describes the overall security architecture that is used to integrate the SQL Server database engine and related components with the extensibility framework in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). It examines the securables, services, process identity, and permissions. For more information about the key concepts and components of extensibility in SQL Server, see [Extensibility architecture in SQL Server Machine Learning Services](extensibility-framework.md).
 

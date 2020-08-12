@@ -10,7 +10,7 @@ ms.author: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # revoscalepy (Python package in SQL Server Machine Learning Services)
-[!INCLUDE [SQL Server 2017 and later ](../../includes/applies-to-version/sqlserver2017.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 **revoscalepy** is a Python package from Microsoft that supports distributed computing, remote compute contexts, and high-performance data science algorithms. The package is included in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
 

@@ -145,7 +145,37 @@ Specifies the format of the external data.
    
 - JSON
   Specifies a JSON format. Applies to Azure SQL Edge only. 
+
+### DATA\_COMPRESSION
+ `DATA_COMPRESSION = *data_compression_method*`  
+ Specifies the data compression method for the external data. When DATA_COMPRESSION isn't specified, the default is uncompressed data.
+ To work properly, Gzip compressed files must have the ".gz" file extension.
+ 
+ #### [Delimited text](#tab/delimited)
+ The DELIMITEDTEXT format type supports these compression methods:
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
+
+#### [RC](#tab/rc)
+ The RCFILE format type supports this compression method:
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
+#### [ORC](#tab/orc)
+ The ORC file format type supports these compression methods:
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+
+#### [Parquet](#tab/parquet)
+ The PARQUET file format type supports the following compression methods:
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+
+#### [JSON](#tab/json)
+ The JSON file format type supports the following compression methods:
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
+-   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
+---  
 ### Delimited text format options
 
 The format options described in this section are optional and only apply to delimited text files.
@@ -287,36 +317,6 @@ Notes about the table:
    
  In Azure SQL Data Warehouse and PDW (APS CU7.4), PolyBase can read UTF8 and UTF16-LE encoded delimited text files. In SQL Server, PolyBase doesn't support reading UTF16 encoded files.
 
-### DATA\_COMPRESSION
- `DATA_COMPRESSION = *data_compression_method*`  
- Specifies the data compression method for the external data. When DATA_COMPRESSION isn't specified, the default is uncompressed data.
- To work properly, Gzip compressed files must have the ".gz" file extension.
- 
- #### [Delimited text](#tab/delimited)
- The DELIMITEDTEXT format type supports these compression methods:
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
-
-#### [RC](#tab/rc)
- The RCFILE format type supports this compression method:
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
-  
-#### [ORC](#tab/orc)
- The ORC file format type supports these compression methods:
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
-
-#### [Parquet](#tab/parquet)
- The PARQUET file format type supports the following compression methods:
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
-
-#### [JSON](#tab/json)
- The JSON file format type supports the following compression methods:
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
--   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
----
 
 ## Permissions  
  Requires ALTER ANY EXTERNAL FILE FORMAT permission.

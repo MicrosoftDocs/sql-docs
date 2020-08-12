@@ -22,7 +22,7 @@ The [What is Linux](https://www.linux.org/threads/what-is-linux.4106/) module in
 
 ## Selecting a distribution
 
-After you know the history of Linux, decide which which [distribution of Linux](https://www.linux.org/threads/selecting-a-linux-distribution.4117/) best suits your business needs. SQL Server is supported on various distributions such as RedHat Enterprise Linux (RHEL), SUSE Enterprise Linux Server (SUSE) and Ubuntu.
+After you know the history of Linux, decide which [distribution of Linux](https://www.linux.org/threads/selecting-a-linux-distribution.4117/) best suits your business needs. SQL Server is supported on various distributions such as RedHat Enterprise Linux (RHEL), SUSE Enterprise Linux Server (SUSE) and Ubuntu.
 
 
 ## Getting around directories
@@ -52,7 +52,7 @@ After you're familiar with recognizing different users and groups in Linux, lear
 
 ## Commands for system administration
 
-Introduce yourself to the [frequently-used commands system administrators](https://www.linux.org/threads/commands-for-system-administration.4126/) rely on to control their Linux operating systems. These commands include: `df`, `du`, `TOP`, `ps`, `mkdir`, `rmdir`, `rm`, and `mv`. 
+Introduce yourself to the [frequently-used commands](https://www.linux.org/threads/commands-for-system-administration.4126/) system administrators rely on to control their Linux operating systems. These commands include: `df`, `du`, `TOP`, `ps`, `mkdir`, `rmdir`, `rm`, and `mv`. 
 
 
 ## Next steps

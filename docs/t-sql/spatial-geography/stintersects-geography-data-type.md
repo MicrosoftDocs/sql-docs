@@ -35,7 +35,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
  *other_geography*  
  Is another **geography** instance to compare to the instance on which `STIntersects()` is invoked.  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
   
  CLR return type: **SqlBoolean**  

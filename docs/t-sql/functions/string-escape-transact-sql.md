@@ -41,6 +41,8 @@ STRING_ESCAPE( text , type )
  *type*  
  Escaping rules that will be applied. Currently the value supported is `'json'`.  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return Types
 
  **nvarchar(max)** text with escaped special and control characters. Currently **STRING_ESCAPE** can only escape JSON special characters shown in the following tables.  

@@ -35,7 +35,9 @@ Creates a unique value of type **uniqueidentifier**.
 NEWID ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **uniqueidentifier**  
   
 ## Remarks  

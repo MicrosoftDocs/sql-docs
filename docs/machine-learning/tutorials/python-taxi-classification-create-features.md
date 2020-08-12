@@ -1,5 +1,6 @@
 ---
 title: "Python tutorial: Create data features"
+titleSuffix: SQL machine learning
 description: In part three of this five-part tutorial series, you'll add calculations to stored procedures for use in Python machine learning models with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning

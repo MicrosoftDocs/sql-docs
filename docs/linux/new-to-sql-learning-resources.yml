@@ -75,7 +75,8 @@ landingContent:
         url: sql-server-linux-active-directory-authentication.md
       - text: Load sample data 
         url: ../samples/adventureworks-install-configure.md
-
+      - text: Migrate
+        url: sql-server-linux-migrate-restore-database.md
 
   - title: "Module 5: Configure business continuity"
     linkLists:

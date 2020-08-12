@@ -19,11 +19,11 @@ landingContent:
       links:
       - text: Introduction to Linux
         url: new-to-linux-resources.md
-      - text: Overview -SQL Server on Linux
+      - text: "Learn: SQL Server on Linux"
         url: https://docs.microsoft.com/en-us/learn/modules/introduction-sql-server-linux/
-      - text: Additonal Learning - How SQL Server Runs on Linux
+      - text: "Channel9: How SQL Server Runs on Linux"
         url: https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-on-Linux-The-HOW?term=sql%20server%20on%20Linux&lang-en=true
-      - text: Additonal Learning - SQL Server on Linux - Overview
+      - text: "Channnel9: SQL Server on Linux"
         url: https://channel9.msdn.com/events/Connect/2016/101?term=sql%20server%20on%20Linux&lang-en=true 
 
 
@@ -71,6 +71,8 @@ landingContent:
         url: sql-server-linux-configure-mssql-conf.md#traceflags
       - text: Join domain
         url: sql-server-linux-active-directory-authentication.md
+      - text: Load sample data 
+        url: ../samples/adventureworks-install-configure.md
       - text: Migrate
         url: sql-server-linux-migrate-restore-database.md
 
@@ -96,5 +98,5 @@ landingContent:
         url: ../relational-databases/performance/monitoring-performance-by-using-the-query-store.md
       - text: DMVs
         url: ../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
-      - text: Additional resources - Performance Features of SQL Server on Linux
+      - text: Performance Features of SQL Server on Linux
         url: sql-server-linux-performance-get-started.md

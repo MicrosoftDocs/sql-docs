@@ -12,115 +12,52 @@ ms.assetid:
 ---
 # New to Linux resources for SQL users
 
-This article is intended to provide resources to SQL Server users that
-are new to the Linux environment.
-
-Before we get started with SQL Server on Linux module. It is necessary to
-understand the basics of Linux, some vital concepts that you need to be
-familiar with before you go further with this learning module on SQL on
-Linux are:
-
-> 1\) What is Linux
->
-> 2\) Selecting a Linux Distribution
->
-> 3\) Getting around in Linux directories.
->
-> 4\) Installing a new software (Debian, Redhat)
->
-> 5\) When to work as root and where to work as system user.
->
-> 6\) Linux file systems & file permissions -chmod/chown
->
-> 7\) Commands for System Administration like
-> (df/du/TOP/ps/mkdir/rmdir/rm/mv etc)
-
+This article is intended to provide a learning path through an introduction of Linux concepts. Use the sections in the article as a guided learning path to familiarize yourself with the Linux environment. 
  
-
-This is not a comprehensive list but the bare minimum topics,
-you need to be aware of to help you administrate and navigate your SQL
-on Linux environments.
-
-So, let's get started.
+This is not intended to be a comprehensive list but instead provides the bare minimum you need to be aware to help you administrate and navigate your SQL on Linux environment. See the [full list of tutorials](https://www.linux.org/forums/linux-beginner-tutorials.123/) to learn more. 
 
 ## What is Linux?
 
-[This](https://www.linux.org/threads/what-is-linux.4106/) module talks
-about the history of Linux as the operating system. It also talks about
-'The Kernel' and where Linux is today. This tutorial should help you get
-started with the introduction to Linux.
+The [What is Linux](https://www.linux.org/threads/what-is-linux.4106/) module introduces the history of Linux as an operating system. The module explains "The Kernel" and where Linux is today. This tutorial serves as an introduction to Linux, helping you get started. 
 
-## Selecting a Linux Distribution:
+## Selecting a distribution
 
-After you know the history of Linux, it's time to understand which
-distribution of Linux you choose to get started with SQL Server on
-Linux. SQL Server is supported on various distributions like RedHat
-Enterprise Linux (RHEL), SUSE (SUSE Enterprise Linux Server) and Ubuntu.
-So, it is essential to realize about the various Linux distributions,
-[this](https://www.linux.org/threads/selecting-a-linux-distribution.4117/)
-article helps you take that choice.
+After you know the history of Linux, decide which which [distribution of Linux](https://www.linux.org/threads/selecting-a-linux-distribution.4117/) best suits your business needs. SQL Server is supported on various distributions such as RedHat Enterprise Linux (RHEL), SUSE Enterprise Linux Server (SUSE) and Ubuntu.
 
-## Getting around in Linux directories.
 
-Now it is time to start learning about the basics of Linux Filesystem
-and answer questions like:
+## Getting around directories
 
-1.  How can you navigate between different files?
+After you have chosen the appropriate distribution of Linux, familiarize yourself with [getting around Linux directories](https://www.linux.org/threads/getting-around-in-linux-directories.4120/).
 
-2.  How to identify a file from a directory?
+This module will help you answer the following questions:
 
-3.  And understand the different directories that exist?
+- How to navigate between different files 
+- How to identify a file from a directory
+- Identify different directories 
 
-Hopefully,
-[this](https://www.linux.org/threads/getting-around-in-linux-directories.4120/)
-article should help answer the above questions.
 
-## Installing a new software (Debian, Redhat)
+## Installing new software 
 
-Let's now learn how new software installation is done in Linux Operating
-system, you can go through
-[this](https://www.linux.org/threads/installing-new-software-debian-red-hat-slackware.4119/)
-article to understand the basics of how new programs are installed on
-Debian and Red Hat Linux operating systems. This article should help you
-get started with the process to install new software.
+Next, you need to learn how to [install new software](https://www.linux.org/threads/installing-new-software-debian-red-hat-slackware.4119/) on your new Linux operating system. This module details installing new software to the Debian and Red Hat Linux operating systems. 
 
-## Root Vs System User
 
-Understand the different users in Linux operating system. And when
-should you work as root and when should you work as a normal user? Learn
-about how users can be added and more.
-[This](https://www.linux.org/threads/when-to-work-as-root-when-to-work-as-a-system-user.4136/)
-article should help you answer the above questions.
+## Root vs System User
 
-## Linux File System & File Permission
+Next, you need to understand user permissions, and the difference between a [root user and a system user](https://www.linux.org/threads/when-to-work-as-root-when-to-work-as-a-system-user.4136/). This module helps you decide which user permissions are appropriate to use for which scenario. 
 
-Now since you recognize the different users and groups in Linux
-operating system. Its time to understand how you can change ownership
-and file permissions on different files and directories in Linux
-operating system. These articles introduce commands like
-[Chown](https://www.linux.org/threads/file-permisions-chown.4125/) and
-[chmod](https://www.linux.org/threads/file-permissions-chmod.4124/) to
-change ownership and permissions respectively.
+## File system & permissions
 
-## Commands for System Administration
+After you're familiar with recognizing different users and groups in Linux, learn how you can change ownership and file permissions on different files in Linux operating systems using the [chown (change ownership)](https://www.linux.org/threads/file-permisions-chown.4125/)  and [chmod (change permissoins)](https://www.linux.org/threads/file-permissions-chmod.4124) commands. 
 
-Introduce yourself to the frequently used commands by the system
-administrators to keep an eye on what's going on with their Linux
-systems.
-[This](https://www.linux.org/threads/commands-for-system-administration.4126/)
-article introduces you to the basic commands like last,df,free,du,ps
-etc.
 
-You can also refer to the other articles of  \"[Linux Beginner
-Tutorials](https://www.linux.org/forums/linux-beginner-tutorials.123/)\" as a good first step towards understanding
-Linux Operating System.
+## Commands for system administration
+
+Introduce yourself to the [frequently-used commands system administrators](https://www.linux.org/threads/commands-for-system-administration.4126/) rely on to control their Linux operating systems. These commands include: `df`, `du`, `TOP`, `ps`, `mkdir`, `rmdir`, `rm`, and `mv`. 
+
 
 ## Next steps
 
-Once you\'ve familiarized yourself with the Linux environment, review
-the [editions and
-components](https://review.docs.microsoft.com/en-us/sql/linux/sql-server-linux-editions-and-components-2019?view=sql-server-ver15) for
-SQL Server on Linux, as well as the [supported
-platforms](https://review.docs.microsoft.com/en-us/sql/linux/sql-server-linux-release-notes-2019?view=sql-server-ver15) and [frequently
-asked
-questions](https://review.docs.microsoft.com/en-us/sql/linux/sql-server-linux-faq?view=sql-server-ver15)/.
+After you've familiarized yourself with the Linux environment, review the [editions and components](sql-server-linux-editions-and-components-2019.md) for
+SQL Server on Linux, as well as the [supported Linux platforms](sql-server-linux-release-notes-2019.md). 
+
+To learn more, see the [other Linux tutorials](https://www.linux.org/forums/linux-beginner-tutorials.123/) as well as the [frequently asked questions](sql-server-linux-faq.md).

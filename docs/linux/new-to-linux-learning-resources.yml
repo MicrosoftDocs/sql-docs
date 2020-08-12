@@ -85,3 +85,16 @@ landingContent:
         url: sql-server-linux-deploy-pacemaker-cluster.md
       - text: Configure availability group
         url: sql-server-linux-create-availability-group.md
+
+  - title: "Module 6: Monitor and tune"
+    linkLists:
+    - linkListType: learn
+      links:
+      - text: Performance dashboard 
+        url: https://www.youtube.com/watch?v=cVdfhBVmeig
+      - text: Query store
+        url: ../relational-databases/performance/monitoring-performance-by-using-the-query-store.md
+      - text: DMVs
+        url: ../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
+      - text: Additional resources - Performance Features of SQL Server on Linux
+        url: sql-server-linux-performance-get-started.md

@@ -278,7 +278,7 @@ Notes about the table:
  Specifies the data compression method for the external data. When DATA_COMPRESSION isn't specified, the default is uncompressed data.
  To work properly, Gzip compressed files must have the ".gz" file extension.
  
- #### [Delimited text](#tabs/delimited)
+ #### [Delimited text](#tab/delimited)
  
  The DELIMITEDTEXT format type supports these compression methods:
   
@@ -286,13 +286,13 @@ Notes about the table:
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.GzipCodec'
 
-#### [RC](#tabs/rc)
+#### [RC](#tab/rc)
 
  The RCFILE format type supports this compression method:
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec'
   
-#### [ORC](#tabs/orc)
+#### [ORC](#tab/orc)
 
  The ORC file format type supports these compression methods:
   
@@ -300,7 +300,7 @@ Notes about the table:
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
 
-#### [Parquet](#tabs/parquet)
+#### [Parquet](#tab/parquet)
 
  The PARQUET file format type supports the following compression methods:
   
@@ -308,7 +308,7 @@ Notes about the table:
   
 -   DATA COMPRESSION = 'org.apache.hadoop.io.compress.SnappyCodec'
 
-#### [JSON](#tabs/json)
+#### [JSON](#tab/json)
 
  The JSON file format type supports the following compression methods:
   

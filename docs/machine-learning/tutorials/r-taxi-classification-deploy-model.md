@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-curr
 ---
 
 # R tutorial: Run predictions in SQL stored procedures
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 In part five of this five-part tutorial series, you'll learn to *operationalize* the model that you trained and saved in the previous part by using the model to predict potential outcomes. The model is wrapped in a stored procedure which can be called directly by other applications.
 

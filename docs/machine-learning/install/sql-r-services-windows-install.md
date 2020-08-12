@@ -12,12 +12,8 @@ ms.custom: contperfq4
 monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server 2016 R Services
-<<<<<<< HEAD
-[!INCLUDE [SQL Server 2016 only ](../../includes/applies-to-version/sqlserver2016-only.md)]
-=======
 
 [!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
->>>>>>> 783124dbeb83e1e46968d598f406b80e30b127ed
 
 Learn how to install SQL Server 2016 R Services on Windows. You can use R Services to execute R scripts in-database.
 

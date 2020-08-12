@@ -3,7 +3,7 @@ title: Upgrade Python and R components
 description: Upgrade Python and R in SQL Server Machine Learning Services or SQL Server R Services using sqlbindr.exe to bind to Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 04/03/2020
+ms.date: 08/12/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
@@ -49,8 +49,8 @@ The rest of this article explains the binding mechanism and how it works for eac
 For SQL Server 2016 R Services customers, binding provides:
 
 - Updated R packages.
-- New packages not part of the original installation ([MicrosoftML](https://  docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package))
-- Pre-trained machine learning [models](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models)for sentiment analysis and image detection.
+- New packages not part of the original installation ([MicrosoftML](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/microsoftml-package))
+- Pre-trained machine learning [models](https://docs.microsoft.com/machine-learning-server/install/microsoftml-install-pretrained-models) for sentiment analysis and image detection.
 
 All of the binding can further be refreshed at each new major and minor release of [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/index).
 ::: moniker-end

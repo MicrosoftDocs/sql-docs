@@ -237,7 +237,10 @@ Specifies a custom format for all date and time data that might appear in a deli
 -   DateTimeOffset: 'yyyy-MM-dd HH:mm:ss'  
   
 -   Time: 'HH:mm:ss'  
-  
+
+> [!IMPORTANT]
+> Specifying custom `DATE_FORMAT` will override all default type formats. This means that you will need to have the same date formats in all datetime, date, and time cells in your files. With the overriden `DATE_FORMAT` you cannot have date and time values in different format.
+
 **Example date formats** are in the following table:
   
 Notes about the table:  

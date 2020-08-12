@@ -40,6 +40,8 @@ CREATE MASTER KEY [ ENCRYPTION BY PASSWORD ='password' ]
 [ ; ]
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 PASSWORD ='*password*'

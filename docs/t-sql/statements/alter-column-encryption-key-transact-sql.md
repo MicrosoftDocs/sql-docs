@@ -38,8 +38,8 @@ ALTER COLUMN ENCRYPTION KEY key_name
         [, ALGORITHM = 'algorithm_name' , ENCRYPTED_VALUE =  varbinary_literal ]   
     ) [;]  
 ```  
-  
-## Arguments  
+
+## Arguments
  *key_name*  
  The column encryption key that you are changing.  
   

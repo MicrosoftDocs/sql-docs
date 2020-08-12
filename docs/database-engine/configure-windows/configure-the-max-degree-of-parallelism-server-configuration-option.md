@@ -32,7 +32,7 @@ ms.custom: contperfq4
   
 -   If the affinity mask option is not set to the default, it may restrict the number of processors available to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on symmetric multiprocessing (SMP) systems.  
 
--   The **max degree of parallelism (MAXDOP)** limit is set per [task](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It is not a per [request](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks which are assigned to a scheduler. For more information, see the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md). 
+-   The **max degree of parallelism (MAXDOP)** limit is set per [task](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md). It is not a per [request](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md) or per query limit. This means that during a parallel query execution, a single request can spawn multiple tasks up to the MAXDOP limit, and each task will use one worker and one scheduler. For more information, see the *Scheduling parallel tasks* section in the [Thread and Task Architecture Guide](../../relational-databases/thread-and-task-architecture-guide.md). 
   
 ###  <a name="Recommendations"></a> Recommendations  
   
@@ -56,7 +56,7 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], during service 
 
 Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use the following guidelines when you configure the **max degree of parallelism** server configuration value:
 
-||||
+|Server configuration|Number of processors|Guidance|
 |----------------|-----------------|-----------------|
 |Server with single NUMA node|Less than or equal to 8 logical processors|Keep MAXDOP at or below # of logical processors|
 |Server with single NUMA node|Greater than 8 logical processors|Keep MAXDOP at 8|
@@ -69,7 +69,7 @@ Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], use the followi
   
 From [!INCLUDE[ssKatmai](../../includes/ssKatmai-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], use the following guidelines when you configure the **max degree of parallelism** server configuration value:
 
-||||
+|Server configuration|Number of processors|Guidance|
 |----------------|-----------------|-----------------|
 |Server with single NUMA node|Less than or equal to 8 logical processors|Keep MAXDOP at or below # of logical processors|
 |Server with single NUMA node|Greater than 8 logical processors|Keep MAXDOP at 8|

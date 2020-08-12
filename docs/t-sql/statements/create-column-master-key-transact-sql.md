@@ -49,8 +49,8 @@ CREATE COLUMN MASTER KEY key_name
          )   
 [;]  
 ```  
-  
-## Arguments  
+
+## Arguments
 *key_name*  
 The name of the column master key in the database.  
   

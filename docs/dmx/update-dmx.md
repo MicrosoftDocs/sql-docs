@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # UPDATE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Changes the **NODE_CAPTION** column in the data mining model.  
   

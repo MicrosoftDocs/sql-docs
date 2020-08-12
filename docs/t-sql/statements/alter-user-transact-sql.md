@@ -32,16 +32,27 @@ Renames a database user or changes its default schema.
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
-## Click a product!
-
-In the following row, click whichever product name you are interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||||
-|-|-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />single database/elastic pool](alter-user-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
-||||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -95,7 +106,7 @@ NAME = newUserName
 > [!NOTE]
 > This option is available only for contained users.
 
- DEFAULT_LANGUAGE **=**_{ NONE | \<lcid> | \<language name> | \<language alias> }_
+ DEFAULT_LANGUAGE **=**_{ NONE \| \<lcid> \| \<language name> \| \<language alias> }_
  **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.
 
  Specifies a default language to be assigned to the user. If this option is set to NONE, the default language is set to the current default language of the database. If the default language of the database is later changed, the default language of the user will remain unchanged. *DEFAULT_LANGUAGE* can be the local ID (lcid), the name of the language, or the language alias.
@@ -208,13 +219,27 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-> ||||||
-> |-|-|-|-|-|
-> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />single database/elastic pool \*_**|[SQL Database<br />managed instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+:::row:::
+    :::column:::
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database \*_**
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
-## Azure SQL Database single database/elastic pool
+## SQL Database
 
 ## Syntax
 
@@ -386,24 +411,38 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> ||||||
-> |-|-|-|-|-|
-> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-user-transact-sql.md?view=azuresqldb-current)|**_\* SQL Database<br />managed instance \*_**|[Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+:::row:::
+    :::column:::
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />Managed Instance \*_**
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
-## Azure SQL Database managed instance
+## Azure SQL Managed Instance
 
 ## Syntax
 
 > [!IMPORTANT]
-> Only the following options are supported for Azure SQL Database managed instance when applying to users with Azure AD logins:
+> Only the following options are supported for Azure SQL Managed Instance when applying to users with Azure AD logins:
 > `DEFAULT_SCHEMA = { schemaName | NULL }` and
 > `DEFAULT_LANGUAGE = { NONE | lcid | language name | language alias }`
-> </br> </br> There is a new syntax extension that was added to help remap users in a database that was migrated to managed instance. The ALTER USER syntax helps map database users in a federated and synchronized domain with Azure AD, to Azure AD logins.
+> </br> </br> There is a new syntax extension that was added to help remap users in a database that was migrated to Azure SQL Managed Instance. The ALTER USER syntax helps map database users in a federated and synchronized domain with Azure AD, to Azure AD logins.
 
 ```syntaxsql
--- Syntax for Azure SQL Database managed instance
+-- Syntax for SQL Managed Instance
 ALTER USER userName
  { WITH <set_item> [ ,...n ] | FROM EXTERNAL PROVIDER }
 [;]
@@ -497,7 +536,7 @@ ALTER USER userName
  The WITH LOGIN clause enables the remapping of a user to a different login. Users without a login, users mapped to a certificate, or users mapped to an asymmetric key can't be remapped with this clause. Only SQL users and Windows users (or groups) can be remapped. The WITH LOGIN clause can't be used to change the type of user, such as changing a Windows account to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login. The only exception is when changing a Windows user to an Azure AD user.
 
 > [!NOTE]
-> The following rules do not apply to Windows users on managed instance as we do not support creating Windows logins on managed instance. The WITH LOGIN option can only be used if Azure AD logins are present.
+> The following rules do not apply to Windows users on Azure SQL Managed Instance as we do not support creating Windows logins on Azure SQL Managed Instance. The WITH LOGIN option can only be used if Azure AD logins are present.
 
  The name of the user will be automatically renamed to the login name if the following conditions are true.
 
@@ -516,22 +555,22 @@ The name of a user mapped to a [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 > [!CAUTION]
 > [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]
 
-### Remarks for Windows users in SQL on-premises migrated to managed instance
+### Remarks for Windows users in SQL on-premises migrated to Azure SQL Managed Instance
 
 These remarks apply to authenticating as Windows users that have been federated and synchronized with Azure AD.
 
 > [!NOTE]
-> The Azure AD admin for managed instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
+> The Azure AD admin for Azure SQL Managed Instance functionality after creation has changed. For more information, see [New Azure AD admin functionality for MI](/azure/sql-database/sql-database-aad-authentication-configure#new-azure-ad-admin-functionality-for-mi).
 
 - Validation of Windows users or groups that are mapped to Azure AD is done by default through Graph API in all versions of the ALTER USER syntax used for migration purpose.
 - On-premises users that were aliased (use a different name from the original Windows account) will keep the aliased name.
-- For Azure AD authentication, the LOGIN parameter applies only to managed instance and can't be used with SQL DB.
+- For Azure AD authentication, the LOGIN parameter applies only to Azure SQL Managed Instance and can't be used with SQL Database.
 - To view logins for Azure AD Principals, use the following command:
 `select * from sys.server_principals`.
 - Check the login's indicated type is `E` or `X`.
 - PASSWORD option can't be used for Azure AD users.
 - In all migration cases, the roles and permissions of Windows users or groups will automatically be transferred to the new Azure AD users or groups.
-- A new syntax extension, **FROM EXTERNAL PROVIDER** is available for altering Windows users and groups from SQL on-premises to Azure AD users and groups. The Windows domain must be federated with Azure AD and all Windows domain members must exist in Azure AD when using this extension. The **FROM EXTERNAL PROVIDER** syntax applies to managed instance and should be used in case Windows users do not have logins on the original SQL instance and need to be mapped to standalone Azure AD database users.
+- A new syntax extension, **FROM EXTERNAL PROVIDER** is available for altering Windows users and groups from SQL on-premises to Azure AD users and groups. The Windows domain must be federated with Azure AD and all Windows domain members must exist in Azure AD when using this extension. The **FROM EXTERNAL PROVIDER** syntax applies to Azure SQL Managed Instance and should be used in case Windows users do not have logins on the original SQL instance and need to be mapped to standalone Azure AD database users.
 - In this case, the allowable userName can be:
 - A Widows user (_domain\user_).
 - A Windows group (_MyWidnowsGroup_).
@@ -606,13 +645,13 @@ GO
 
 ### D. Map the user in the database to an Azure AD login after migration
 
-The following example remaps the user, `westus/joe` to an Azure AD user, `joe@westus.com`. This example is for logins that already exist in the managed instance. This needs to be performed after you have completed a database migration to managed instance, and want to use the Azure AD login to authenticate.
+The following example remaps the user, `westus/joe` to an Azure AD user, `joe@westus.com`. This example is for logins that already exist in the managed instance. This needs to be performed after you have completed a database migration to Azure SQL Managed Instance, and want to use the Azure AD login to authenticate.
 
 ```sql
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com
 ```
 
-### E. Map an old Windows user in the database without a login in managed instance to an Azure AD user
+### E. Map an old Windows user in the database without a login in Azure SQL Managed Instance to an Azure AD user
 
 The following example remaps the user, `westus/joe` without a login, to an Azure AD user, `joe@westus.com`. The federated user must exist in Azure AD.
 
@@ -628,7 +667,7 @@ The following example remaps the user name, `westus\joe` to `joe_alias`. The cor
 ALTER USER [westus/joe] WITH LOGIN = joe@westus.com, name= joe_alias
 ```
 
-### G. Map a Windows group that was migrated in managed instance to an Azure AD group
+### G. Map a Windows group that was migrated in Azure SQL Managed Instance to an Azure AD group
 
 The following example remaps the old on-premises group, `westus\mygroup` to an Azure AD group `mygroup` in the managed instance. The group must exist in Azure AD.
 
@@ -643,14 +682,28 @@ ALTER USER [westus\mygroup] WITH LOGIN = mygroup
 - [Contained Databases](../../relational-databases/databases/contained-databases.md)
 - [EVENTDATA &#40;Transact-SQL&#41;](../../t-sql/functions/eventdata-transact-sql.md)
 - [sp_migrate_user_to_contained &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-migrate-user-to-contained-transact-sql.md)
-- [Tutorial: Migrating SQL Server on-premises Windows users and groups to Azure SQL Database managed instance using T-SQL DDL syntax](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
+- [Tutorial: Migrating SQL Server on-premises Windows users and groups to SQL Managed Instance using T-SQL DDL syntax](/azure/sql-database/tutorial-managed-instance-azure-active-directory-migration)
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-> ||||||
-> |-|-|-|-|-|
-> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-user-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_**|[Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+:::row:::
+    :::column:::
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Azure Synapse<br />Analytics \*_**
+    :::column-end:::
+    :::column:::
+        [Analytics Platform<br />System (PDW)](alter-user-transact-sql.md?view=aps-pdw-2016)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -763,9 +816,23 @@ GO
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-> ||||||
-> |-|-|-|-|-|
-> |[SQL Server](alter-user-transact-sql.md?view=sql-server-2017)|[SQL Database<br />single database/elastic pool](alter-user-transact-sql.md?view=azuresqldb-current)|[SQL Database<br />managed instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)|[Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_**
+:::row:::
+    :::column:::
+        [SQL Server](alter-user-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database](alter-user-transact-sql.md?view=azuresqldb-current)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](alter-user-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-user-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+    :::column:::
+        **_\* Analytics<br />Platform System (PDW) \*_**
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 

@@ -1,6 +1,6 @@
 ---
-title: "ISSAbort::Abort (OLE DB) | Microsoft Docs"
-description: "ISSAbort::Abort (OLE DB)"
+title: "ISSAbort::Abort (OLE DB driver) | Microsoft Docs"
+description: Learn how the ISSAbort::Abort method cancels the current rowset and any batched commands associated with the current command in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -56,7 +56,7 @@ HRESULT Abort(void);
  The batch was not canceled.  
   
  E_FAIL  
- A provider-specific error occurred; for detailed information, use the [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interface.  
+ A provider-specific error occurred; for detailed information, use the [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) interface.  
   
  E_UNEXPECTED  
  The call to the method was unexpected. For example, the object is in a zombie state because **ISSAbort::Abort** has already been called.  

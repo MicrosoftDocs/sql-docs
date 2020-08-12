@@ -1,5 +1,6 @@
 ---
 title: "Subqueries (SQL Server) | Microsoft Docs"
+description: Look at an example of a subquery, which is a query that is nested in a SELECT, INSERT, UPDATE, or DELETE statement, or inside another subquery in SQL Server.
 ms.custom: ""
 ms.date: "02/18/2018"
 ms.prod: sql

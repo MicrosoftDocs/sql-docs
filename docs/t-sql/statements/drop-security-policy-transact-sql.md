@@ -33,8 +33,8 @@ ms.author: vanto
 DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name    
 [;]  
 ```  
-  
-## Arguments  
+
+## Arguments
  *IF EXISTS*  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   

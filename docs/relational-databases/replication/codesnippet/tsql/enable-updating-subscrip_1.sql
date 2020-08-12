@@ -14,7 +14,7 @@ SET @publication = N'AdvWorksProductTran';
 SET @login = $(Login); 
 SET @password = $(Password); 
 
-USE [AdventureWorks]
+USE [AdventureWorks2012]
 -- Enable transactional replication on the publication database.
 EXEC sp_replicationdboption 
 	@dbname=@publicationDB, 

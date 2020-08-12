@@ -106,8 +106,8 @@ After installing SQL Server on Linux, review the best practices for configuring 
 
 In addition to **sqlcmd**, you can use the following cross-platform tools to manage SQL Server:
 
-|||
-|---|---|
+| Tool | Description |
+| ---- | ----------- |
 | [Azure Data Studio](../azure-data-studio/index.yml) | A cross-platform GUI database management utility. |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | A cross-platform GUI code editor that run Transact-SQL statements with the mssql extension. |
 | [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | A cross-platform automation and configuration tool based on cmdlets. |
@@ -129,12 +129,10 @@ For other tools that run on Windows but connect to SQL Server on Linux, see:
 
 For other installation scenarios, see the following resources:
 
-|||
-|---|---|
-| [Upgrade](../linux/sql-server-linux-setup.md#upgrade) | Learn how to upgrade an existing installation of SQL Server on Linux |
-| [Uninstall](../linux/sql-server-linux-setup.md#uninstall) | Uninstall SQL Server on Linux |
-| [Unattended install](../linux/sql-server-linux-setup.md#unattended) | Learn how to script the installation without prompts |
-| [Offline install](../linux/sql-server-linux-setup.md#offline) | Learn how to manually download the packages for offline installation |
+* [Upgrade](../linux/sql-server-linux-setup.md#upgrade): Learn how to upgrade an existing installation of SQL Server on Linux
+* [Uninstall](../linux/sql-server-linux-setup.md#uninstall): Uninstall SQL Server on Linux
+* [Unattended install](../linux/sql-server-linux-setup.md#unattended): Learn how to script the installation without prompts
+* [Offline install](../linux/sql-server-linux-setup.md#offline): Learn how to manually download the packages for offline installation
 
 > [!TIP]
 > For answers to frequently asked questions, see the [SQL Server on Linux FAQ](../linux/sql-server-linux-faq.md).

@@ -46,7 +46,10 @@ ALTER SEARCH PROPERTY LIST list_name
 ;  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *list_name*  
  Is the name of the property list being altered. *list_name* is an identifier.  
   

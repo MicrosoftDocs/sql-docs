@@ -13,7 +13,7 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_pdw_log_user_data_masking (SQL Data Warehouse)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Use **sp_pdw_log_user_data_masking** to enable user data masking in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] activity logs. User data masking affects the statements on all databases on the appliance.  
   

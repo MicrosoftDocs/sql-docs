@@ -60,7 +60,7 @@ Each service in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] repres
 
  Most services and their properties can be configured by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager. Here are the paths to the last four versions when Windows is installed on the C drive.
 
-|||
+|SQL Server version|Path|
 |-|-|
 |SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016|C:\Windows\SysWOW64\SQLServerManager13.msc|
@@ -77,6 +77,9 @@ Depending on the components that you decide to install, [!INCLUDE[ssNoVersion](.
 - **[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]** - Provides online analytical processing (OLAP) and data mining functionality for business intelligence applications. The executable file is \<MSSQLPATH>\OLAP\Bin\msmdsrv.exe.
 - **[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]** - Manages, executes, creates, schedules, and delivers reports. The executable file is \<MSSQLPATH>\Reporting Services\ReportServer\Bin\ReportingServicesService.exe.
 - **[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]** - Provides management support for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package storage and execution. The executable path is \<MSSQLPATH>\130\DTS\Binn\MsDtsSrvr.exe
+
+   [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] may include additional services for scale out deployments. For more information, see [Walkthrough: Set up Integration Services (SSIS) Scale Out](../../integration-services/scale-out/walkthrough-set-up-integration-services-scale-out.md).
+
 - **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser** - The name resolution service that provides [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] connection information for client computers. The executable path is c:\Program Files (x86)\Microsoft SQL Server\90\Shared\sqlbrowser.exe
 - **Full-text search** - Quickly creates full-text indexes on content and properties of structured and semistructured data to provide document filtering and word-breaking for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 - **SQL Writer** - Allows backup and restore applications to operate in the Volume Shadow Copy Service (VSS) framework.

@@ -53,7 +53,9 @@ CONVERT ( data_type [ ( length ) ] , expression [ , style ] )
 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
 
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *expression*  
 Any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).
   

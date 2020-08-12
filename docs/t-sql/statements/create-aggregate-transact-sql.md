@@ -47,7 +47,9 @@ EXTERNAL NAME assembly_name [ .class_name ]
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of the schema to which the user-defined aggregate function belongs.  
   

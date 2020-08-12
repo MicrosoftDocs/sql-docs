@@ -1,6 +1,6 @@
 ---
-title: "System requirements for OLE DB Driver for SQL Server | Microsoft Docs"
-description: "Requirements for OLE DB Driver for SQL Server"
+title: "System requirements for OLE DB Driver for SQL Server"
+description: Learn about the software prerequisites necessary to use data access features of SQL Server such as MARS in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "03/18/2020"
 ms.prod: sql

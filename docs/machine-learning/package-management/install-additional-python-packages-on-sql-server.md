@@ -58,6 +58,8 @@ For more information about package location and installation paths, see [Get Pyt
     + Packages that require elevated file system access
     + Packages used for web development or other tasks that don't benefit by running inside SQL Server
 
+  + The Python package **tensorflow** cannot be installed using sqlmlutils. For more information and a workaround, see [Known issues in SQL Server Machine Learning Services](../troubleshooting/known-issues-for-sql-server-machine-learning-services.md#9-cannot-install-tensorflow-package-using-sqlmlutils).
+
 ## Install sqlmlutils on the client computer
 
 To use **sqlmlutils**, you first need to install it on the client computer that you use to connect to SQL Server.

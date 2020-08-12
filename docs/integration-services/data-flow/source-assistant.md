@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # Source Assistant
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Source Assistant component helps create a source component and connection manager. The component is located in the **Favorites** section of the SSIS Toolbox.  

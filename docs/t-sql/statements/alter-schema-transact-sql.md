@@ -53,7 +53,10 @@ ALTER SCHEMA schema_name
 [;]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of a schema in the current database, into which the securable will be moved. Cannot be SYS or INFORMATION_SCHEMA.  
   
@@ -77,6 +80,8 @@ ALTER SCHEMA schema_name
  Moving an object such as a table or synonym will not automatically update references to that object. You must modify any objects that reference the transferred object manually. For example, if you move a table and that table is referenced in a trigger, you must modify the trigger to reflect the new schema name. Use [sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) to list dependencies on the object before moving it.  
 
  To change the schema of a table by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], in Object Explorer, right-click on the table and then click **Design**. Press **F4** to open the Properties window. In the **Schema** box, select a new schema.  
+ 
+ ALTER SCHEMA uses a schema level lock.
   
 > [!CAUTION]  
 >  [!INCLUDE[ssCautionUserSchema](../../includes/sscautionuserschema-md.md)]  
@@ -93,7 +98,7 @@ ALTER SCHEMA schema_name
 ### A. Transferring ownership of a table  
  The following example modifies the schema `HumanResources` by transferring the table `Address` from schema `Person` into the 'HumanResources` schema.  
   
-```sql 
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER SCHEMA HumanResources TRANSFER Person.Address;  
@@ -134,7 +139,7 @@ GO
 ### C. Transferring ownership of a table  
  The following example creates a table `Region` in the `dbo` schema, creates a `Sales` schema, and then moves the `Region` table from the `dbo` schema to the `Sales` schema.  
   
-```  
+```sql  
 CREATE TABLE dbo.Region   
     (Region_id INT NOT NULL,  
     Region_Name CHAR(5) NOT NULL)  

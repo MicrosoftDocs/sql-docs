@@ -4,7 +4,7 @@ titleSuffix:
 description: Learn how to install SQL Server 2016 R Services on Windows. You can use R Services to execute R scripts in-database.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 06/03/2020
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -12,14 +12,15 @@ ms.custom: contperfq4
 monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server 2016 R Services
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+
+[!INCLUDE[SQL Server 2016 only](../../includes/applies-to-version/sqlserver2016-only.md)]
 
 Learn how to install SQL Server 2016 R Services on Windows. You can use R Services to execute R scripts in-database.
 
 > [!NOTE]
-> In SQL Server 2017 and later, R is included in [Machine Learning Services](../sql-server-machine-learning-services.md) along with Python. If you want R  and have SQL Server 2017 or later, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) to add the feature.
+> In SQL Server 2017 and later, R is included in [Machine Learning Services](../sql-server-machine-learning-services.md) along with Python. If you want R and have SQL Server 2017 or later, see [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md) to add the feature.
 
-<a name="bkmk_prereqs"> </a> 
+<a name="bkmk_prereqs"></a>
 
 ## Pre-install checklist
 
@@ -182,7 +183,10 @@ On disconnected servers, extra steps are required. For more information, see [In
 
 1. Continue through the wizard, accepting the licensing terms for the R distribution.
 
-<a name="bkmk_FollowUp"></a> 
+> [!NOTE]
+> Cumulative Update (CU) 14 and later for SQL Server 2016 SP2 include a newer version of the R runtime. For more information, see [Change the default language runtime version](change-default-language-runtime-version.md).
+
+<a name="bkmk_FollowUp"></a>
 
 ## Additional configuration
 
@@ -206,7 +210,7 @@ On the database, you might need the following configuration updates:
 * [Add SQLRUserGroup as a database user](../../machine-learning/security/create-a-login-for-sqlrusergroup.md)
 
 > [!NOTE]
-> Not all the listed changes are required, and none might be required. Requirements depend on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. Additional troubleshooting tips can be found here: [Upgrade and installation FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)
+> Not all the listed changes are required, and none might be required. Requirements depend on your security schema, where you installed SQL Server, and how you expect users to connect to the database and run external scripts. Additional troubleshooting tips can be found here: [Upgrade and installation FAQ](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md)
 
 ## Suggested optimizations
 

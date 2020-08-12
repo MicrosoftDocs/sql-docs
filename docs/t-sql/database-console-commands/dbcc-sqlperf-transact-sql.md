@@ -44,7 +44,9 @@ DBCC SQLPERF
      [WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 LOGSPACE  
 Returns the current size of the transaction log and the percentage of log space used for each database. Use this information to monitor the amount of space used in a transaction log.
 

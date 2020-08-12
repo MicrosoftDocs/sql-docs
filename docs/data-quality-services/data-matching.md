@@ -67,7 +67,7 @@ ms.author: sawinark
 ## In This Section  
  You can perform the following tasks related to matching in DQS:  
   
-|||  
+|Task Description|Topic|  
 |-|-|  
 |Create and test matching rules in a matching policy|[Create a Matching Policy](../data-quality-services/create-a-matching-policy.md)|  
 |Run matching in a data quality project|[Run a Matching Project](../data-quality-services/run-a-matching-project.md)|  

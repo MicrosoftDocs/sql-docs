@@ -36,7 +36,9 @@ DBCC USEROPTIONS
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 NO_INFOMSGS  
 Suppresses all informational messages that have severity levels from 0 through 10.
   

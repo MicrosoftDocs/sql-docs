@@ -45,9 +45,8 @@ sysmail_help_profile_sp  [   [ @profile_id = ] profile_id | [ @profile_name = ] 
 ## Result Sets  
  Returns a result set with the following columns.  
   
-||||  
-|-|-|-|  
-|Column name|Data type|Description|  
+| Column name | Data type | Description |
+| ----------- | --------- | ----------- |
 |**profile_id**|**int**|The profile id for the profile.|  
 |**name**|**sysname**|The profile name for the profile.|  
 |**description**|**nvarchar(256)**|The description for the profile.|  

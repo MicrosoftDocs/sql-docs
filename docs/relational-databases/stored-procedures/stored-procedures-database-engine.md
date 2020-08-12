@@ -1,5 +1,6 @@
 ---
 title: "Stored Procedures (Database Engine) | Microsoft Docs"
+description: Learn how a stored procedure in SQL Server is a group of one or more Transact-SQL statements or a reference to a .NET Framework common runtime language method.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -73,9 +74,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Related Tasks  
   
-|||  
-|-|-|  
-|**Task Description**|**Topic**|  
+| Task Description | Topic |
+| ---------------- | ----- |
 |Describes how to create a stored procedure.|[Create a Stored Procedure](../../relational-databases/stored-procedures/create-a-stored-procedure.md)|  
 |Describes how to modify a stored procedure.|[Modify a Stored Procedure](../../relational-databases/stored-procedures/modify-a-stored-procedure.md)|  
 |Describes how to delete a stored procedure.|[Delete a Stored Procedure](../../relational-databases/stored-procedures/delete-a-stored-procedure.md)|  

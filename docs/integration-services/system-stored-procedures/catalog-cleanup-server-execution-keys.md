@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # catalog.cleanup_server_execution_keys 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

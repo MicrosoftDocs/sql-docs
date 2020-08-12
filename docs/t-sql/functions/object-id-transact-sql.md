@@ -44,7 +44,9 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
   object_name' [ ,'object_type' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *object_name* **'**  
  Is the object to be used. *object_name* is either **varchar** or **nvarchar**. If *object_name* is **varchar**, it is implicitly converted to **nvarchar**. Specifying the database and schema names is optional.  
   

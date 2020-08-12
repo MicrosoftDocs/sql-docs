@@ -1,5 +1,6 @@
 ---
-title: "Statistics | Microsoft Docs"
+title: Statistics
+description: The Query Optimizer uses statistics to create query plans that improve query performance. Learn about concepts and guidelines for using query optimization.
 ms.custom: ""
 ms.date: "06/03/2020"
 ms.prod: sql
@@ -24,7 +25,9 @@ author: julieMSFT
 ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # Statistics
+
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The Query Optimizer uses statistics to create query plans that improve query performance. For most queries, the Query Optimizer already generates the necessary statistics for a high quality query plan; in some cases, you need to create additional statistics or modify the query design for best results. This topic discusses statistics concepts and provides guidelines for using query optimization statistics effectively.  
   
@@ -53,7 +56,7 @@ In more detail, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] create
 
 The following diagram shows a histogram with six steps. The area to the left of the first upper boundary value is the first step.
   
-![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram") 
+![Histogram](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram") 
   
 For each histogram step above:
 -   Bold line represents the upper boundary value (*range_high_key*) and the number of times it occurs (*equal_rows*)  
@@ -105,16 +108,25 @@ ORDER BY s.name;
     * If the table cardinality was 500 or less at the time statistics were evaluated, update for every 500 modifications.
     * If the table cardinality was above 500 at the time statistics were evaluated, update for every 500 + 20 percent of modifications.
 
-* Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and under the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a decreasing, dynamic statistics update threshold that adjusts according to the number of rows in the table. This is calculated as the square root of the product of 1000 and the current table cardinality. For example if your table contains 2 million rows, then the calculation is? sqrt (1000 * 2000000) = 44721.359. With this change, statistics on large tables will be updated more often. However, if a database has a compatibility level below 130, then the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] threshold applies. ?
+* Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and under the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 130, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a decreasing, dynamic statistics update threshold that adjusts according to the number of rows in the table. This is calculated as the square root of the product of 1000 and the current table cardinality. For example if your table contains 2 million rows, then the calculation is sqrt(1000 * 2000000) = 44721.359. With this change, statistics on large tables will be updated more frequently. However, if a database has a compatibility level below 130, then the [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] threshold applies. ?
 
 > [!IMPORTANT]
-> Starting with [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later under [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) lower than 130, use [trace flag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will use a decreasing, dynamic statistics update threshold that adjusts according to the number of rows in the table.
+> In [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] through [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], or in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later under [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) 120 and lower, enable [trace flag 2371](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) so that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses a decreasing, dynamic statistics update threshold.
+
+You can use the following guidance for enabling the trace flag 2371 in your pre-[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] environment:
+
+ - If you have not observed performance issues due to outdated statistics, there is no need to enable this trace flag.
+ - If you are on SAP systems, enable this trace flag.  Refer to this [blog](https://docs.microsoft.com/archive/blogs/saponsqlserver/changes-to-automatic-update-statistics-in-sql-server-traceflag-2371) for additional information.
+ - If you have to rely on nightly job to update statistics because current automatic update is not triggered frequently enough, consider enabling trace flag 2371 to reduce the threshold.
   
 The Query Optimizer checks for out-of-date statistics before compiling a query and before executing a cached query plan. Before compiling a query, the Query Optimizer uses the columns, tables, and indexed views in the query predicate to determine which statistics might be out-of-date. Before executing a cached query plan, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] verifies that the query plan references up-to-date statistics.  
   
 The AUTO_UPDATE_STATISTICS option applies to statistics objects created for indexes, single-columns in query predicates, and statistics created with the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement. This option also applies to filtered statistics.  
  
-For more information about controlling AUTO_UPDATE_STATISTICS, see [Controlling Autostat (AUTO_UPDATE_STATISTICS) behavior in SQL Server](https://support.microsoft.com/help/2754171).
+You can use the [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) to accurately track the number of rows changed in a table and decide if you wish to update statistics manually.
+
+
+
   
 #### AUTO_UPDATE_STATISTICS_ASYNC  
  The asynchronous statistics update option, [AUTO_UPDATE_STATISTICS_ASYNC](../../t-sql/statements/alter-database-transact-sql-set-options.md#auto_update_statistics_async), determines whether the Query Optimizer uses synchronous or asynchronous statistics updates. By default, the asynchronous statistics update option is OFF, and the Query Optimizer updates statistics synchronously. The AUTO_UPDATE_STATISTICS_ASYNC option applies to statistics objects created for indexes, single columns in query predicates, and statistics created with the [CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md) statement.  

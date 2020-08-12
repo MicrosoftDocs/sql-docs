@@ -28,12 +28,12 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 HOST_NAME ()  
 ```  
-  
-## Return Types  
+
+## Return Types
  **nvarchar(128)**  
   
 ## Remarks  

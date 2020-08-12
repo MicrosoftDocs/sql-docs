@@ -49,7 +49,9 @@ WHILE Boolean_expression
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Boolean_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) that returns **TRUE** or **FALSE**. If the Boolean expression contains a SELECT statement, the SELECT statement must be enclosed in parentheses.  
   

@@ -1,5 +1,6 @@
 ---
 title: "Replace in Files"
+description: Learn how to use the Replace in Files feature of the Find and Replace window to search the text of a set of files for a string or expression and change some or all of the found text.
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

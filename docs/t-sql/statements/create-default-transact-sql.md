@@ -40,7 +40,9 @@ CREATE DEFAULT [ schema_name . ] default_name
 AS constant_expression [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *schema_name*  
  The name of the schema to which the default belongs.  
   

@@ -26,7 +26,7 @@ ms.author: chugu
 ---
 # OLE DB Destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The OLE DB destination loads data into a variety of OLE DB-compliant databases using a database table or view or an SQL command. For example, the OLE DB source can load data into tables in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Office Access and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases.  
@@ -123,6 +123,8 @@ ms.author: chugu
   
 > [!NOTE]  
 >  The **CommandTimeout** property of the OLE DB destination is not available in the **OLE DB Destination Editor**, but can be set by using the **Advanced Editor**. In addition, certain fast load options are available only in the **Advanced Editor**. For more information on these properties, see the OLE DB Destination section of [OLE DB Custom Properties](../../integration-services/data-flow/ole-db-custom-properties.md).  
+> 
+>  The **CommandTimeout** property only takes effective when data access mode is **SQL command**.
   
 ### Static Options  
  **OLE DB connection manager**  

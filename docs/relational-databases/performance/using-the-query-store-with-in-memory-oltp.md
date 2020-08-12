@@ -1,5 +1,6 @@
 ---
 title: "Using the Query Store with In-Memory OLTP | Microsoft Docs"
+description: Learn how SQL Server Query Store allows you to monitor the performance of natively compiled code for workloads running in-memory OLTP.
 ms.custom: ""
 ms.date: "03/29/2016"
 ms.prod: sql

@@ -38,7 +38,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 OBJECT_NAME ( object_id [, database_id ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *object_id*  
  Is the ID of the object to be used. *object_id* is **int** and is assumed to be a schema-scoped object in the specified database, or in the current database context.  
   
@@ -89,7 +91,7 @@ GO
 ```  
 USE AdventureWorks2012;  
 GO  
-DECLARE @MyID int;  
+DECLARE @MyID INT;  
 SET @MyID = (SELECT OBJECT_ID('AdventureWorks2012.Production.Product',  
     'U'));  
 SELECT name, object_id, type_desc  
@@ -122,7 +124,7 @@ SELECT QUOTENAME(DB_NAME(database_id))
     + N'.'   
     + QUOTENAME(OBJECT_NAME(object_id, database_id))  
     , *   
-FROM sys.dm_db_index_operational_stats(null, null, null, null);  
+FROM sys.dm_db_index_operational_stats(NULL, NULL, NULL, NULL);  
 GO  
 ```  
   

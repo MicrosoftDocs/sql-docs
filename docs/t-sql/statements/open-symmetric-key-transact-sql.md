@@ -42,7 +42,9 @@ OPEN SYMMETRIC KEY Key_name DECRYPTION BY <decryption_mechanism>
     PASSWORD = 'decryption_password'  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Key_name*  
  Is the name of the symmetric key to be opened.  
   

@@ -35,7 +35,9 @@ Flushes the distributed query connection cache used by distributed queries again
 DBCC FREESESSIONCACHE [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH NO_INFOMSGS  
  Suppresses all informational messages.  
   

@@ -32,32 +32,44 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 > [!IMPORTANT]
 > Below pre-requisites must be performed by a OpenShift cluster admin (cluster-admin cluster role) that has sufficient permissions to create these cluster level objects. For more information on cluster roles in OpenShift see [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.4/authentication/using-rbac.html).
 
-1. Create a custom security context constraint (SCC) using the attached [`bdc-scc.yaml`](#bdc-sccyaml-file).
+1. Ensure the **pidsLimit** setting on the OpenShift is updated to accommodate SQL Server workloads. The default value in OpenShift is too low for production like workloads. We recommend a value of at least **4096**, but the optimal value will depend of the *max worker threads* setting in SQL Server and the number of CPU processors on the OpenShift host node. 
+    - To find out how to update **pidsLimit** for your OpenShift cluster use [these instructions]( https://github.com/openshift/machine-config-operator/blob/master/docs/ContainerRuntimeConfigDesign.md). Note that OpenShift versions before **4.3.5** had a defect causing the updated value to not take effect. Make sure you upgrade OpenShift to the latest version. 
+    - To help you compute the optimal value depending on your environment and planned SQL Server workloads, you can use the estimation and examples below:
 
-   ```console
-   oc apply -f bdc-scc.yaml
-   ```
+    |Number of processors|Default max worker threads|Default workers per processor|Minimum pidsLimit value|
+    |--------------------|--------------------------|-----------------------------|-----------------------|
+    |          64        |           512            |             16              | 512 + (64 *16) = 1536 |
+    |         128        |           512            |             32              | 512 + (128*32) = 4608 |
 
-   > [!NOTE]
-   > The custom SCC for BDC is based on the built-in *nonroot* SCC in OpenShift, with additional permissions. To learn more about security context constraints in OpenShift see [Managing Security Context Constraints](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html). For a detailed information on what additional permissions are required for big data clusters on top of the *nonroot* SCC, download the whitepaper [here](https://aka.ms/sql-bdc-openshift-security).
+    > [!NOTE]
+    > Other processes (e.g. backups, CLR, Fulltext, SQLAgent) also add some overhead, so add a buffer to the estimated value.
 
-2. Create a namespace/project:
+2. Create a custom security context constraint (SCC) using the attached [`bdc-scc.yaml`](#bdc-sccyaml-file).
+
+    ```console
+    oc apply -f bdc-scc.yaml
+    ```
+
+    > [!NOTE]
+    > The custom SCC for BDC is based on the built-in *nonroot* SCC in OpenShift, with additional permissions. To learn more about security context constraints in OpenShift see [Managing Security Context Constraints](https://docs.openshift.com/container-platform/4.3/authentication/managing-security-context-constraints.html). For a detailed information on what additional permissions are required for big data clusters on top of the *nonroot* SCC, download the whitepaper [here](https://aka.ms/sql-bdc-openshift-security).
+
+3. Create a namespace/project:
 
    ```console
    oc new-project <namespaceName>
    ```
 
-3. Assign the custom SCC to the service accounts for users within the namespace where BDC is deployed:
+4. Assign the custom SCC to the service accounts for users within the namespace where BDC is deployed:
 
    ```console
    oc adm policy add-scc-to-group bdc-scc system:serviceaccounts:<namespaceName>
    ```
 
-4. Assign appropriate permission to the user deploying BDC. Do one of the following. 
+5. Assign appropriate permission to the user deploying BDC. Do one of the following. 
 
-   1. If the user deploying BDC has cluster-admin role, proceed to [deploy big data cluster](#deploy-big-data-cluster).
+   - If the user deploying BDC has cluster-admin role, proceed to [deploy big data cluster](#deploy-big-data-cluster).
 
-   1. If the user deploying BDC is a namespace admin, assign the user cluster-admin local role for the namespace created. This is the preferred option for the user deploying and managing the big data cluster to have namespace level admin permissions.
+   - If the user deploying BDC is a namespace admin, assign the user cluster-admin local role for the namespace created. This is the preferred option for the user deploying and managing the big data cluster to have namespace level admin permissions.
 
    ```console
    oc adm policy add-role-to-user cluster-admin <deployingUser> -n <namespaceName>
@@ -73,10 +85,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 
 1. Install latest [azdata](deploy-install-azdata.md).
 
-2. Clone one of the built-in configuration files for OpenShift.
-
-    1. If your target environment is OpenShift.
-    2. Clone one of the built-in configuration files for OpenShift, depending on your target environment (OpenShift on premises or ARO) and deployment scenario. See this section [link](//TODO add link) on settings that are specific to OpenShift in the built-in configuration files. For more details on available configuration files see [deployment guidance](deployment-guidance.md).
+1. Clone one of the built-in configuration files for OpenShift, depending on your target environment (OpenShift on premises or ARO) and deployment scenario. See the *OpenShift specific settings in the deployment configuration files* section below for settings that are specific to OpenShift in the built-in configuration files. For more details on available configuration files see [deployment guidance](deployment-guidance.md).
 
    List all the available built-in configuration files.
 
@@ -96,24 +105,24 @@ This article outlines deployment steps that are specific to the OpenShift platfo
    azdata bdc config init --source aro-dev-test --target custom-openshift
    ```
 
-3. Customize the configuration files control.json and bdc.json. Here are some additional resources that guide you through the customizations supported for various use cases:
+1. Customize the configuration files control.json and bdc.json. Here are some additional resources that guide you through the customizations supported for various use cases:
 
-   1. [Storage](concept-data-persistence.md)
-   1. [AD related settings](deploy-active-directory.md)
-   1. [Other customizations](deployment-custom-configuration.md)
+   - [Storage](concept-data-persistence.md)
+   - [AD related settings](deploy-active-directory.md)
+   - [Other customizations](deployment-custom-configuration.md)
 
    > [!NOTE]
    > Integrating with Azure Active Directory for BDC is not supported, hence you can not use this authentication method when deploying on ARO.
 
-4. Set [environment variables](deployment-guidance.md#env)
+1. Set [environment variables](deployment-guidance.md#env)
 
-5. Deploy big data cluster
+1. Deploy big data cluster
 
    ```console
    azdata bdc create --config custom-openshift --accept-eula yes
    ```
 
-6. Upon successful deployment, you can log in and list the external cluster endpoints:
+1. Upon successful deployment, you can log in and list the external cluster endpoints:
 
 ```console
    azdata login -n mssql-cluster
@@ -122,7 +131,7 @@ This article outlines deployment steps that are specific to the OpenShift platfo
 
 ## OpenShift specific settings in the deployment configuration files
 
-SQL Server 2019 CU5 introduces two feature switches to control the collection of pod and node metrics. These parameters  are set to *false*  by default in the built-in profiles for OpenShift since the monitoring containers require [privileged security context](https://www.openshift.com/blog/managing-sccs-in-openshift), which will relax some of the secuirty constraints for the namespace BDC is deployed on.
+SQL Server 2019 CU5 introduces two feature switches to control the collection of pod and node metrics. These parameters  are set to *false*  by default in the built-in profiles for OpenShift since the monitoring containers require [privileged security context](https://www.openshift.com/blog/managing-sccs-in-openshift), which will relax some of the security constraints for the namespace BDC is deployed on.
 
 ```json
     "security": {
@@ -137,13 +146,11 @@ The name of the default storage class in ARO is managed-premium (as opposed to A
     },
     "storage": {
       "data": {
-        "className": "default",
         "className": "managed-premium",
         "accessMode": "ReadWriteOnce",
         "size": "15Gi"
       },
       "logs": {
-        "className": "default",
         "className": "managed-premium",
         "accessMode": "ReadWriteOnce",
         "size": "10Gi"
@@ -157,7 +164,7 @@ apiVersion: security.openshift.io/v1
 kind: SecurityContextConstraints
 metadata:
   annotations:
-    kubernetes.io/description: SQL Server BDC Nonroot scc is based on 'nonroot' scc plus additional capabilities.
+    kubernetes.io/description: SQL Server BDC custom scc is based on 'nonroot' scc plus additional capabilities.
   generation: 2
   name: bdc-scc
 allowHostDirVolumePlugin: false
@@ -168,17 +175,17 @@ allowHostPorts: false
 allowPrivilegeEscalation: true
 allowPrivilegedContainer: false
 allowedCapabilities:
-- SETUID
-- SETGID
-- CHOWN
-- SYS_PTRACE
+  - SETUID
+  - SETGID
+  - CHOWN
+  - SYS_PTRACE
 defaultAddCapabilities: null
 fsGroup:
   type: RunAsAny
 readOnlyRootFilesystem: false
 requiredDropCapabilities:
-- KILL
-- MKNOD
+  - KILL
+  - MKNOD
 runAsUser:
   type: MustRunAsNonRoot
 seLinuxContext:
@@ -186,12 +193,12 @@ seLinuxContext:
 supplementalGroups:
   type: RunAsAny
 volumes:
-- configMap
-- downwardAPI
-- emptyDir
-- persistentVolumeClaim
-- projected
-- secret
+  - configMap
+  - downwardAPI
+  - emptyDir
+  - persistentVolumeClaim
+  - projected
+  - secret
 ```
 
 ## Next steps

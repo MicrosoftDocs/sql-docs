@@ -35,8 +35,8 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
 ```
 DATEDIFF_BIG ( datepart , startdate , enddate )  
 ```  
-  
-## Arguments  
+
+## Arguments
 *datepart*  
 The part of *startdate* and *enddate* that specifies the type of boundary crossed.
 

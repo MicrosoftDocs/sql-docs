@@ -1,6 +1,6 @@
 ---
 title: Create R models with RevoScaleR
-description: "RevoScaleR tutorial 7: How to build a model using the R language on SQL Server."
+description: "Learn how to create a linear regression model to analyze the data that you enriched in a previous tutorial."
 ms.prod: sql
 ms.technology: machine-learning-services
 

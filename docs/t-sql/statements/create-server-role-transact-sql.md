@@ -38,7 +38,9 @@ ms.author: vanto
 CREATE SERVER ROLE role_name [ AUTHORIZATION server_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *role_name*  
  Is the name of the server role to be created.  
   

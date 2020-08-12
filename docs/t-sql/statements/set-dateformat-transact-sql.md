@@ -43,7 +43,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 SET DATEFORMAT { format | @format_var }   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *format* | **@**_format_var_  
  Is the order of the date parts. Valid parameters are **mdy**, **dmy**, **ymd**, **ydm**, **myd**, and **dym**. Can be either Unicode or double-byte character sets (DBCS) converted to Unicode. The U.S. English default is **mdy**. For the default DATEFORMAT of all support languages, see [sp_helplanguage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplanguage-transact-sql.md).  
   
@@ -68,13 +70,13 @@ SET DATEFORMAT { format | @format_var }
 -- Set date format to day/month/year.  
 SET DATEFORMAT dmy;  
 GO  
-DECLARE @datevar datetime2 = '31/12/2008 09:01:01.1234567';  
+DECLARE @datevar DATETIME2 = '31/12/2008 09:01:01.1234567';  
 SELECT @datevar;  
 GO  
 -- Result: 2008-12-31 09:01:01.123  
 SET DATEFORMAT dmy;  
 GO  
-DECLARE @datevar datetime2 = '12/31/2008 09:01:01.1234567';  
+DECLARE @datevar DATETIME2 = '12/31/2008 09:01:01.1234567';  
 SELECT @datevar;  
 GO  
 -- Result: Msg 241: Conversion failed when converting date and/or time -- from character string.  

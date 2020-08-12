@@ -49,7 +49,10 @@ ALTER DATABASE AUDIT SPECIFICATION audit_specification_name
   
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *audit_specification_name*  
  The name of the audit specification.  
   

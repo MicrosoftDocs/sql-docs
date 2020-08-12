@@ -1,5 +1,5 @@
 ---
-title: "DBCC INDEXDEFRAG (Transact-SQL) | Microsoft Docs"
+title: DBCC INDEXDEFRAG (Transact-SQL)
 ms.custom: ""
 ms.date: "07/16/2017"
 ms.prod: sql
@@ -24,7 +24,9 @@ ms.assetid: 3c7df676-4843-44d0-8c1c-a9ab7e593b70
 author: pmasl
 ms.author: umajay
 ---
+
 # DBCC INDEXDEFRAG (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Defragments indexes of the specified table or view.
@@ -48,17 +50,19 @@ DBCC INDEXDEFRAG
     [ WITH NO_INFOMSGS ]   
 ```  
   
-## Arguments  
- *database_name* | *database_id* | 0  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+ *database_name* \| *database_id* \| 0  
  Is the database containing the index to defragment. If 0 is specified, the current database is used. Database names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   
- *table_name* | *table_id* | *view_name* | *view_id*  
+ *table_name* \| *table_id* \| *view_name* \| *view_id*  
  Is the table or view containing the index to defragment. Table and view names must comply with the rules for identifiers.  
   
- *index_name* | *index_id*  
+ *index_name* \| *index_id*  
  Is the name or ID of the index to defragment. If not specified, the statement defragments all indexes of the specified table or view. Index names must comply with the rules for identifiers.  
   
- *partition_number* | 0  
+ *partition_number* \| 0  
  Is the partition number of the index to defragment. If not specified or if 0 is specified, the statement defragments all partitions in the specified index.  
   
  WITH NO_INFOMSGS  

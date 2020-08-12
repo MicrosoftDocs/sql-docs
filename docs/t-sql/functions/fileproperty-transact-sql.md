@@ -37,7 +37,9 @@ ms.author: maghan
 FILEPROPERTY ( file_name , property )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *file_name*  
  Is an expression that contains the name of the file associated with the current database for which to return property information. *file_name* is **nchar(128)**.  
   

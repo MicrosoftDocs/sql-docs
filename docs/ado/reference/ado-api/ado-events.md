@@ -16,7 +16,7 @@ ms.author: jroth
 ---
 # ADO Events
 
-|||  
+|Event|Description|  
 |-|-|  
 |[BeginTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Called after the **BeginTrans** operation.|  
 |[CommitTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Called after the **CommitTrans** operation.|  

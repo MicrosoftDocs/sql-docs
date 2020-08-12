@@ -1,10 +1,7 @@
 ---
-title: "ISDATE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
-ms.date: "03/14/2017"
+title: ISDATE (Transact-SQL)
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
@@ -30,9 +27,14 @@ helpviewer_keywords:
 ms.assetid: 8e2c9ee7-388a-432f-b2c9-7b398f26bf85
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
+ms.custom: ""
+ms.date: 03/14/2017
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # ISDATE (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns 1 if the *expression* is a valid **date**, **time**, or **datetime** value; otherwise, 0.  
@@ -45,11 +47,13 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
-ISDATE ( expression )  
-```  
-  
-## Arguments  
+```syntaxsql
+ISDATE ( expression )
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is a character string or [expression](../../t-sql/language-elements/expressions-transact-sql.md) that can be converted to a character string. The expression must be less than 4,000 characters. Date and time data types, except datetime and smalldatetime, are not allowed as the argument for ISDATE.  
   
@@ -147,7 +151,4 @@ ELSE
 ```  
   
 ## See Also  
- [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)  
-  
-  
-
+ [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)

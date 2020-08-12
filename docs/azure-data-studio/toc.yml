@@ -104,10 +104,8 @@
       href: notebooks-tutorial-sql-kernel.md
     - name: Use Python Kernel
       href: notebooks-tutorial-python-kernel.md
-    - name: Kqlmagic
+    - name: Kqlmagic extension
       href: notebooks-kqlmagic.md
-    - name: Manage a notebook
-      href: notebooks-manage-sql-server.md
   - name: Dashboards & insight widgets
     href: insight-widgets.md
   - name: Code snippets
@@ -124,8 +122,6 @@
     href: usage-data-collection.md
 - name: References
   items:
-  - name: SQL tools
-    href: ../tools/overview-sql-tools.md
   - name: SQL tools
     href: ../tools/overview-sql-tools.md
   - name: Azure Developer tools

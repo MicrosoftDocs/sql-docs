@@ -2,7 +2,7 @@
 title: "Using Always Encrypted with the JDBC driver"
 description: "Learn how to use Always Encrypted in your Java application with the JDBC driver for SQL Server to encrypt sensitive data on the server."
 ms.custom: ""
-ms.date: "05/06/2020"
+ms.date: "07/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -39,11 +39,11 @@ The Microsoft JDBC Driver for SQL Server communicates with a keystore using a co
 ### Using built-in column master key store providers
 The Microsoft JDBC Driver for SQL Server comes with the following built-in column master key store providers. Some of these providers are pre-registered with the specific provider names (used to look up the provider) and some require either additional credentials or explicit registration.
 
-| Class                                                 | Description                                        | Provider (lookup) name  | Is pre-registered? |
-| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- |
-| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | A provider for a keystore for the Azure Key Vault. | AZURE_KEY_VAULT         | _No_ before JDBC driver version 7.4.1, but _yes_ starting with JDBC driver version 7.4.1. |
-| **SQLServerColumnEncryptionCertificateStoreProvider** | A provider for the Windows Certificate Store.      | MSSQL_CERTIFICATE_STORE | _Yes_                |
-| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | A provider for the Java keystore.                  | MSSQL_JAVA_KEYSTORE     | _Yes_                |
+| Class                                                 | Description                                        | Provider (lookup) name  | Is pre-registered? | Platform |
+| :---------------------------------------------------- | :------------------------------------------------- | :---------------------- | :----------------- | :------- |
+| **SQLServerColumnEncryptionAzureKeyVaultProvider**    | A provider for a keystore for the Azure Key Vault. | AZURE_KEY_VAULT         | _No_ before JDBC driver version 7.4.1, but _yes_ starting with JDBC driver version 7.4.1. | Windows, Linux, macOS |
+| **SQLServerColumnEncryptionCertificateStoreProvider** | A provider for the Windows Certificate Store.      | MSSQL_CERTIFICATE_STORE | _Yes_                | Windows |
+| **SQLServerColumnEncryptionJavaKeyStoreProvider**     | A provider for the Java keystore.                  | MSSQL_JAVA_KEYSTORE     | _Yes_                | Windows, Linux, macOS |
 |||||
 
 For the pre-registered keystore providers, you don't need to make any application code changes to use these providers but note the following items:
@@ -93,6 +93,9 @@ String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<p
 ```
 The JDBC driver automatically instantiates a **SQLServerColumnEncryptionAzureKeyVaultProvider** object when these credentials are present among the connection properties.
 
+> [!IMPORTANT]
+> The connection properties **keyVaultProviderClientId** and **keyVaultProviderClientKey** have been deprecated as of v8.4.0. Users are encouraged to use **keyStoreAuthentication**, **KeyStorePrincipalId**, and **KeyStoreSecret** instead.
+
 #### JDBC driver version prior to 7.4.1
 
 This section involves JDBC driver versions prior to 7.4.1.
@@ -121,6 +124,42 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 >  [azure-activedirectory-library-for-java libraries](https://github.com/AzureAD/azure-activedirectory-library-for-java)
 >
 > For an example of how to include these dependencies in a Maven project, see [Download ADAL4J And AKV Dependencies with Apache Maven](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)
+
+### Using Azure Key Vault authentication with Managed Identities
+
+Starting with JDBC Driver **8.4.0**, the driver added support to authenticate to Azure Key Vaults using Managed Identities.
+
+If the application is hosted in Azure, the user can use [Managed Identities](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) to authenticate to the Azure Key Vault, thus eliminating the need to provide and expose any credentials in the code. 
+
+#### Connection properties for Key Vault authentication with Managed Identities
+
+For JDBC Driver 8.4.0 and later, the driver introduced the following connection properties:
+
+| ConnectionProperty    | Possible Value Pairing 1 | Possible Value Pairing 2 | Possible Value Pairing 3 |
+| ---|---|---|----|
+| keyStoreAuthentication| KeyVaultClientSecret   |KeyVaultManagedIdentity |JavaKeyStorePassword |  
+| keyStorePrincipalId   | \<Azure AD Application Client ID\>    | \<Azure AD Application object ID\> (optional)| n/a |
+| keyStoreSecret        | \<Azure AD Application Client Secret\>|n/a|\<secret/password for the Java Key Store\> |
+
+The following examples show how the connection properties are used in a connection string.
+
+#### Use Managed Identity to authenticate to AKV
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=keyStoreManagedIdentity;"
+```
+#### Use Managed Identity and the principal ID to authenticate to AKV
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=keyStoreManagedIdentity;keyStorePrincipal=<principalId>"
+```
+#### Use clientId and clientSecret to authentication to AKV
+```
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=keyStoreSecret;keyStorePrincipalId=<clientId>;keyStoreSecret=<clientSecret>"
+```
+Users are encouraged to use these connection properties to specify the type of authentication used for the Key Stores instead of using the `SQLServerColumnEncryptionAzureKeyVaultProvider`.
+
+Note that previously added connection properties `keyVaultProviderClientId` and `keyVaultProviderClientKey` are deprecated and replaced by the connection properties described above.
+
+For information on how to configure Managed Identities, see [Configure managed identities for Azure resources on a VM using the Azure portal](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/qs-configure-portal-windows-vm).
 
 ### Using Windows Certificate Store provider
 The SQLServerColumnEncryptionCertificateStoreProvider can be used to store column master keys in the Windows Certificate Store. Use the SQL Server Management Studio (SSMS) Always Encrypted wizard or other supported tools to create the column master key and column encryption key definitions in the database. The same wizard can be used to generate a self-signed certificate in the Windows Certificate Store that can be used as a column master key for the Always Encrypted data. For more information on column master key and column encryption key T-SQL syntax, see [CREATE COLUMN MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) and [CREATE COLUMN ENCRYPTION KEY](../../t-sql/statements/create-column-encryption-key-transact-sql.md) respectively.

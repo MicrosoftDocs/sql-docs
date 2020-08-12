@@ -29,10 +29,10 @@ Escapes special characters in texts and returns text with escaped characters. **
   
 ## Syntax  
   
-```sql
+```syntaxsql
 STRING_ESCAPE( text , type )  
 ```  
-  
+
 ## Arguments
 
  *text*  

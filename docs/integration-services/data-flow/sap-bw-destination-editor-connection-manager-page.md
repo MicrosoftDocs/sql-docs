@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # SAP BW Destination Editor (Connection Manager Page)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Connection Manager** page of the **SAP BW Destination Editor** to select the SAP BW connection manager that the SAP BW destination will use. On this page, you also select the parameters for loading the data into the SAP Netweaver BW system.  

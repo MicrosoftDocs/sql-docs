@@ -22,7 +22,7 @@ author: rothja
 ms.author: jroth
 ---
 # Conditional Expressions (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery supports the following conditional **if-then-else** statement:  
   

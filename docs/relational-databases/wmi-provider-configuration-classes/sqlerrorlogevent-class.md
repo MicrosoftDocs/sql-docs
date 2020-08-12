@@ -15,7 +15,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # SqlErrorLogEvent Class
-[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
   Provides properties for viewing events in a specified [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] log file.  
   
 ## Syntax  
@@ -35,8 +35,8 @@ class SQLErrorLogEvent
 ## Properties  
  The SQLErrorLogEvent class defines the following properties.  
   
-|||  
-|-|-|  
+| Property | Description |
+| -------- | ----------- |
 |FileName|Data type: **string**<br /><br /> Access type: Read-only<br /><br /> <br /><br /> The name of the error log file.|  
 |InstanceName|Data type: **string**<br /><br /> Access type: Read-only<br /><br /> Qualifiers: Key<br /><br /> The name of the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] where the log file resides.|  
 |LogDate|Data type: **datetime**<br /><br /> Access type: Read-only<br /><br /> Qualifiers: Key<br /><br /> <br /><br /> The date and time that the event was recorded in the log file.|  
@@ -45,8 +45,8 @@ class SQLErrorLogEvent
   
 ## Remarks  
   
-|||  
-|-|-|  
+| Type | Name |
+| ---- | ---- |
 |MOF|Sqlmgmproviderxpsp2up.mof|  
 |DLL|Sqlmgmprovider.dll|  
 |Namespace|\root\Microsoft\SqlServer\ComputerManagement10|  

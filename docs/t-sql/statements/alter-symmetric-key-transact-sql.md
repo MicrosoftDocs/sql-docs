@@ -48,8 +48,10 @@ ALTER SYMMETRIC KEY Key_name <alter_option>
    |  
    ASYMMETRIC KEY Asym_Key_Name  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Key_name*  
  Is the name by which the symmetric key to be changed is known in the database.  
   

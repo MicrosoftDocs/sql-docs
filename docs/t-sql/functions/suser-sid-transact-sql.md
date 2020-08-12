@@ -39,7 +39,9 @@ ms.author: vanto
 SUSER_SID ( [ 'login' ] [ , Param2 ] )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *login* **'**  
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   

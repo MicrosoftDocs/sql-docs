@@ -1,6 +1,6 @@
 ---
-title: "Adding a Column to a SQL Server Table | Microsoft Docs"
-description: "Adding a column to a SQL Server table using OLE DB Driver for SQL Server"
+title: "Add column to SQL Server table (OLE DB driver) | Microsoft Docs"
+description: Learn how the ITableDefinition::AddColumn method allows consumers to add a column to a SQL Server table in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

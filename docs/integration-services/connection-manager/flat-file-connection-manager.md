@@ -25,7 +25,7 @@ ms.author: chugu
 ---
 # Flat File Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   A Flat File connection manager enables a package to access data in a flat file. For example, the Flat File source and destination can use Flat File connection managers to extract and load data.  

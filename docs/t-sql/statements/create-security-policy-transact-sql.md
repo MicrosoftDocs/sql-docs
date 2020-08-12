@@ -48,8 +48,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
     [ { AFTER { INSERT | UPDATE } }   
     | { BEFORE { UPDATE | DELETE } } ]  
 ```  
-  
-## Arguments  
+
+## Arguments
  *security_policy_name*  
  The name of the security policy. Security policy names must comply with the rules for identifiers and must be unique within the database and to its schema.  
   

@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # LEN (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns the number of characters in a character expression. If the string includes leading and trailing blanks, the function includes them in the count. LEN returns identical values for the same string of single and double byte characters.  

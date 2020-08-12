@@ -37,7 +37,9 @@ ms.author: carlrab
 SET QUERY_GOVERNOR_COST_LIMIT value  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *value*  
  Is a numeric or integer value specifying the longest time in which a query can run. Values are rounded down to the nearest integer. Negative values are rounded up to 0. The query governor disallows execution of any query that has an estimated cost exceeding that value. Specifying 0 (the default) for this option turns off the query governor, and all queries are allowed to run indefinitely.  
   

@@ -142,7 +142,7 @@ The basic steps that [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] uses
 - Arithmetic expressions, such as 1+1, 5/3*2, that contain only constants.
 - Logical expressions, such as 1=1 and 1>2 AND 3>4, that contain only constants.
 - Built-in functions that are considered foldable by [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)], including `CAST` and `CONVERT`. Generally, an intrinsic function is foldable if it is a function of its inputs only and not other contextual information, such as SET options, language settings, database options, and encryption keys. Nondeterministic functions are not foldable. Deterministic built-in functions are foldable, with some exceptions.
-- Deterministic methods of CLR user-defined types and deterministic scalar-valued CLR user-defined functions (starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). For more information, see [Constant Folding for CLR User-Defined Functions and Methods](https://docs.microsoft.com/sql/database-engine/behavior-changes-to-database-engine-features-in-sql-server-2014#constant-folding-for-clr-user-defined-functions-and-methods).
+- Deterministic methods of CLR user-defined types and deterministic scalar-valued CLR user-defined functions (starting with [!INCLUDE[ssSQL11](../includes/sssql11-md.md)]). For more information, see [Constant Folding for CLR User-Defined Functions and Methods](https://docs.microsoft.com/sql/database-engine/breaking-changes-to-database-engine-features-in-sql-server-version-15?view=sql-server-ver15).
 
 > [!NOTE] 
 > An exception is made for large object types. If the output type of the folding process is a large object type (text,ntext, image, nvarchar(max), varchar(max), varbinary(max), or XML), then [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not fold the expression.
@@ -476,13 +476,61 @@ GO
 
 Changing any of the following SET options for a given execution will affect the ability to reuse plans, because the [!INCLUDE[ssde_md](../includes/ssde_md.md)] performs [constant folding](#ConstantFolding) and these options affect the results of such expressions:
 
-|||   
-|-----------|------------|------------|    
-|ANSI_NULL_DFLT_OFF|FORCEPLAN|ARITHABORT|    
-|DATEFIRST|ANSI_PADDING|NUMERIC_ROUNDABORT|    
-|ANSI_NULL_DFLT_ON|LANGUAGE|CONCAT_NULL_YIELDS_NULL|    
-|DATEFORMAT|ANSI_WARNINGS|QUOTED_IDENTIFIER|    
-|ANSI_NULLS|NO_BROWSETABLE|ANSI_DEFAULTS|    
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_OFF
+    :::column-end:::
+    :::column:::
+        FORCEPLAN
+    :::column-end:::
+    :::column:::
+        ARITHABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFIRST
+    :::column-end:::
+    :::column:::
+        ANSI_PADDING
+    :::column-end:::
+    :::column:::
+        NUMERIC_ROUNDABORT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULL_DFLT_ON
+    :::column-end:::
+    :::column:::
+        LANGUAGE
+    :::column-end:::
+    :::column:::
+        CONCAT_NULL_YIELDS_NULL
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DATEFORMAT
+    :::column-end:::
+    :::column:::
+        ANSI_WARNINGS
+    :::column-end:::
+    :::column:::
+        QUOTED_IDENTIFIER
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ANSI_NULLS
+    :::column-end:::
+    :::column:::
+        NO_BROWSETABLE
+    :::column-end:::
+    :::column:::
+        ANSI_DEFAULTS
+    :::column-end:::
+:::row-end:::
 
 ### Caching multiple plans for the same query 
 Queries and execution plans are uniquely identifiable in the [!INCLUDE[ssde_md](../includes/ssde_md.md)], much like a fingerprint:
@@ -666,16 +714,70 @@ Statement-level recompilation benefits performance because, in most cases, a sma
 The `sql_statement_recompile` extended event (xEvent) reports statement-level recompilations. This xEvent occurs when a statement-level recompilation is required by any kind of batch. This includes stored procedures, triggers, ad hoc batches and queries. Batches may be submitted through several interfaces, including sp_executesql, dynamic SQL, Prepare methods or Execute methods.
 The `recompile_cause` column of `sql_statement_recompile` xEvent contains an integer code that indicates the reason for the recompilation. The following table contains the possible reasons:
 
-|||
-|----|----|  
-|Schema changed|Statistics changed|  
-|Deferred compile|SET option changed|  
-|Temporary table changed|Remote rowset changed|  
-|`FOR BROWSE` permission changed|Query notification environment changed|  
-|Partitioned view changed|Cursor options changed|  
-|`OPTION (RECOMPILE)` requested|Parameterized plan flushed|  
-|Plan affecting database version changed|Query Store plan forcing policy changed|  
-|Query Store plan forcing failed|Query Store missing the plan|
+:::row:::
+    :::column:::
+        Schema changed
+    :::column-end:::
+    :::column:::
+        Statistics changed
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Deferred compile
+    :::column-end:::
+    :::column:::
+        SET option changed
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Temporary table changed
+    :::column-end:::
+    :::column:::
+        Remote rowset changed
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `FOR BROWSE` permission changed
+    :::column-end:::
+    :::column:::
+        Query notification environment changed
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Partitioned view changed
+    :::column-end:::
+    :::column:::
+        Cursor options changed
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        `OPTION (RECOMPILE)` requested
+    :::column-end:::
+    :::column:::
+        Parameterized plan flushed
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Plan affecting database version changed
+    :::column-end:::
+    :::column:::
+        Query Store plan forcing policy changed
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        Query Store plan forcing failed
+    :::column-end:::
+    :::column:::
+        Query Store missing the plan
+    :::column-end:::
+:::row-end:::
 
 > [!NOTE]
 > In [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] versions where xEvents are not available, then the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Profiler [SP:Recompile](../relational-databases/event-classes/sp-recompile-event-class.md) trace event can be used for the same purpose of reporting statement-level recompilations.

@@ -7,9 +7,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 12f7b46f-9228-46d8-9877-cc6a7948c64b
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Legal Notice (SSMA for Oracle)
 This documentation, including sample applications herein, is provided for information purposes only, and this documentation is provided without any warranties, either express or implied. Information in this documentation, including URL and other Internet Web site references, is subject to change without notice. The entire risk of the use or the results of the use of this documentation remains with the user.  

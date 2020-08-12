@@ -53,8 +53,8 @@ WITH VALUES
   ) ]   
 [;]  
 ```  
-  
-## Arguments  
+
+## Arguments
 _key\_name_  
 Is the name by which the column encryption key will be known in the database.  
   

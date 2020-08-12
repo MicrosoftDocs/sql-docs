@@ -30,7 +30,9 @@ Returns 1 if the start and end points of the given **geometry** instance are the
 .STIsClosed ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
   
  CLR return type: **SqlBoolean**  

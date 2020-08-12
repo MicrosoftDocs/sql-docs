@@ -1,5 +1,6 @@
 ---
 title: "Add a New or Existing Report to a Report Project | Microsoft Docs"
+description: Learn how to add a new or existing report to a report project using the Report Wizard in SQL Server Reporting Services.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

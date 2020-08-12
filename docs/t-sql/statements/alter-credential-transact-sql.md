@@ -37,7 +37,10 @@ ALTER CREDENTIAL credential_name WITH IDENTITY = 'identity_name'
     [ , SECRET = 'secret' ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *credential_name*  
  Specifies the name of the credential that is being altered.  
   

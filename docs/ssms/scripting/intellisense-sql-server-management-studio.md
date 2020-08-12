@@ -1,5 +1,6 @@
 ---
 title: "IntelliSense (SQL Server Management Studio)"
+description: Microsoft IntelliSense can assist the code-writing process in many ways. See an overview of how to use IntelliSense, with links to articles that provide the details.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

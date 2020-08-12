@@ -34,7 +34,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 SPACE ( integer_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *integer_expression*  
  Is a positive integer that indicates the number of spaces. If *integer_expression* is negative, a null string is returned.  
   

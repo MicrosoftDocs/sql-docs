@@ -108,11 +108,12 @@ ON SERVER
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
   
-|||  
-|-|-|  
 |Term|Definition|  
+|-|-|
 |*event_session_name*|Is the name of an existing event session.|  
 |STATE = START &#124; STOP|Starts or stops the event session. This argument is only valid when ALTER EVENT SESSION is applied to an event session object.|  
 |ADD EVENT \<event_specifier>|Associates the event identified by \<event_specifier>with the event session.|

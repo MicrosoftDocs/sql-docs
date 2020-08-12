@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, General Statistics Object | Microsoft Docs"
+description: Learn about the SQLServer:General Statistics object, which provides counters to monitor general server-wide activity, such as the number of current connections.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

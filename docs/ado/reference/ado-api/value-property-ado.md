@@ -37,11 +37,19 @@ ADO allows setting and returning long binary data with the **Value** property.
 > For new **Field** objects that have been appended to the [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection of a [Record](../../../ado/reference/ado-api/record-object-ado.md) object, the **Value** property must be set before any other **Field** properties can be specified. First, a specific value for the **Value** property must have been assigned and [Update](../../../ado/reference/ado-api/update-method.md) on the **Fields** collection called. Then, other properties such as [Type](../../../ado/reference/ado-api/type-property-ado.md) or [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) can be accessed.
   
 ## Applies To
-  
-||||  
-|-|-|-|  
-|[Field Object](../../../ado/reference/ado-api/field-object.md)|[Parameter Object](../../../ado/reference/ado-api/parameter-object.md)|[Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|
-  
+
+:::row:::
+    :::column:::
+        [Field Object](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+    :::column:::
+        [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also
 
 [Value Property Example (VB)](../../../ado/reference/ado-api/value-property-example-vb.md)

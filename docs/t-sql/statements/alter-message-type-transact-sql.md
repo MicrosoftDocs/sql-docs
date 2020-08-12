@@ -40,7 +40,10 @@ ALTER MESSAGE TYPE message_type_name
 [ ; ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *message_type_name*  
  The name of the message type to change. Server, database, and schema names cannot be specified.  
   

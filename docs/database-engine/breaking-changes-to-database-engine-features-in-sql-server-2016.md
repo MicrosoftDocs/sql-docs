@@ -3,7 +3,7 @@ title: "Database Engine: Breaking changes | Microsoft Docs"
 titleSuffix: "SQL Server 2016"
 description: Learn about Database Engine changes in SQL Server 2016 (13.x) and earlier that might break previous-version functionality when you upgrade.
 ms.custom: "seo-lt-2019"
-ms.date: "12/13/2019"
+ms.date: 07/22/2020
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -34,7 +34,7 @@ ms.author: mikeray
 
 ## <a name="previous-versions"></a> Previous Versions  
 
-For information about breaking changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], and in some earlier versions, see [Breaking Changes to Database Engine Features in SQL Server 2014](../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md?view=sql-server-2014).
+For information about breaking changes in [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], and in some earlier versions, see [Breaking Changes to Database Engine Features in SQL Server 2014](/previous-versions/sql/2014/database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016).
 
 #### Archived Documentation for Very Old Versions of SQL Server
 

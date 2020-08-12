@@ -17,7 +17,7 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Fetching BLOB Data Using IRow::Open and ISequentialStream
+# Fetching BLOB Data by Using IRow::Open and ISequentialStream
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   **IRow::Open** supports only DBGUID_STREAM and DBGUID_NULL type of objects to be opened.  

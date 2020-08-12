@@ -15,8 +15,8 @@ ms.author: "sstein"
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| --------- | ----- | 
 |Product Name|SQL Server|  
 |Event ID|260|  
 |Event Source|SQL Server Local Database Runtime 12.0|  

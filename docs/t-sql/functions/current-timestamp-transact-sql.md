@@ -52,7 +52,9 @@ See [Date and Time Data Types and Functions](../../t-sql/functions/date-and-time
 CURRENT_TIMESTAMP  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 This function takes no arguments.
   
 ## Return Type  
@@ -88,12 +90,12 @@ GETUTCDATE()       2007-04-30 20:10:02.047
 ### B. Get the Current System Date  
   
 ```sql
-SELECT CONVERT (date, SYSDATETIME())  
-    ,CONVERT (date, SYSDATETIMEOFFSET())  
-    ,CONVERT (date, SYSUTCDATETIME())  
-    ,CONVERT (date, CURRENT_TIMESTAMP)  
-    ,CONVERT (date, GETDATE())  
-    ,CONVERT (date, GETUTCDATE());  
+SELECT CONVERT (DATE, SYSDATETIME())  
+    ,CONVERT (DATE, SYSDATETIMEOFFSET())  
+    ,CONVERT (DATE, SYSUTCDATETIME())  
+    ,CONVERT (DATE, CURRENT_TIMESTAMP)  
+    ,CONVERT (DATE, GETDATE())  
+    ,CONVERT (DATE, GETUTCDATE());  
   
 /* Returned   
 SYSDATETIME()      2007-05-03  
@@ -108,12 +110,12 @@ GETUTCDATE()       2007-05-04
 ### C. Get the Current System Time  
   
 ```sql
-SELECT CONVERT (time, SYSDATETIME())  
-    ,CONVERT (time, SYSDATETIMEOFFSET())  
-    ,CONVERT (time, SYSUTCDATETIME())  
-    ,CONVERT (time, CURRENT_TIMESTAMP)  
-    ,CONVERT (time, GETDATE())  
-    ,CONVERT (time, GETUTCDATE());  
+SELECT CONVERT (TIME, SYSDATETIME())  
+    ,CONVERT (TIME, SYSDATETIMEOFFSET())  
+    ,CONVERT (TIME, SYSUTCDATETIME())  
+    ,CONVERT (TIME, CURRENT_TIMESTAMP)  
+    ,CONVERT (TIME, GETDATE())  
+    ,CONVERT (TIME, GETUTCDATE());  
   
 /* Returned  
 SYSDATETIME()      13:18:45.3490361  

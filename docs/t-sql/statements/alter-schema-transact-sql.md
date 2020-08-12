@@ -98,7 +98,7 @@ ALTER SCHEMA schema_name
 ### A. Transferring ownership of a table  
  The following example modifies the schema `HumanResources` by transferring the table `Address` from schema `Person` into the 'HumanResources` schema.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER SCHEMA HumanResources TRANSFER Person.Address;  
@@ -108,7 +108,7 @@ GO
 ### B. Transferring ownership of a type  
  The following example creates a type in the `Production` schema, and then transfers the type to the `Person` schema.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
@@ -139,7 +139,7 @@ GO
 ### C. Transferring ownership of a table  
  The following example creates a table `Region` in the `dbo` schema, creates a `Sales` schema, and then moves the `Region` table from the `dbo` schema to the `Sales` schema.  
   
-```  
+```sql  
 CREATE TABLE dbo.Region   
     (Region_id int NOT NULL,  
     Region_Name char(5) NOT NULL)  

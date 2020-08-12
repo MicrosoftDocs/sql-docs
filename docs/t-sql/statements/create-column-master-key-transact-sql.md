@@ -159,9 +159,8 @@ Specifies that the column master key is enclave-enabled. You can share all colum
 
 *signature*  
 A binary literal that's a result of digitally signing *key path* and the ENCLAVE_COMPUTATIONS setting with the column master key. The signature reflects whether ENCLAVE_COMPUTATIONS is specified or not. The signature protects the signed values from being altered by unauthorized users. An Always Encrypted-enabled client driver verifies the signature and returns an error to the application if the signature is invalid. The signature must be generated using client-side tools. For more information, see [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md).
-  
-  
-## Remarks  
+
+## Remarks
 
 Create a column master key metadata entry before you create a column encryption key metadata entry in the database and before any column in the database can be encrypted using Always Encrypted. A column master key entry in the metadata doesn't contain the actual column master key. The column master key must be stored in an external column key store (outside of SQL Server). The key store provider name and the column master key path in the metadata must be valid for a client application. The client application needs to use the column master key to decrypt a column encryption key. The column encryption key is encrypted with the column master key. The client application also needs to query encrypted columns.
 

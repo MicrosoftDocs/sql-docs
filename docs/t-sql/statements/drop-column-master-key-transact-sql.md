@@ -38,7 +38,7 @@ DROP COLUMN MASTER KEY key_name;
  *key_name*  
  The name of the column master key.  
   
-## Remarks  
+## Remarks
  The column master key can only be dropped if there are no column encryption key values encrypted with the column master key. To drop column encryption key values, use the [DROP COLUMN ENCRYPTION KEY](../../t-sql/statements/drop-column-encryption-key-transact-sql.md) statement.  
   
 ## Permissions  

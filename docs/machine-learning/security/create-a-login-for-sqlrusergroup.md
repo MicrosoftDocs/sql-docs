@@ -11,7 +11,7 @@ ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Create a login for SQLRUserGroup
-[!INCLUDE [SQL Server 2016 and later ](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Create a [login in SQL Server](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/create-a-login) for [SQLRUserGroup](../concepts/security.md#sqlrusergroup) when a [loop back connection](../../machine-learning/concepts/security.md#implied-authentication) in your script specifies a *trusted connection*, and the identity used to execute an object contains your code is a Windows user account.
 

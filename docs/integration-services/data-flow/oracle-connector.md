@@ -50,6 +50,10 @@ To execute SSIS package targeting SQL Server 2017 and below, in addition to **Mi
 - [SQL Server 2014: Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012: Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
 
+## Limitations and known issues
+
+- Views are not listed under Oracle source *Name of the table or the view*. As work-around, use the SQL command and do a select * from view, or set view name to property [Oracle Source].[TableName] in Advanced Editor.
+
 ## Uninstallation
 
 You can run uninstall wizard to remove Microsoft Connector for Oracle database from SQL Server.

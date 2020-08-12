@@ -47,7 +47,9 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
 | CALLER  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  LOGIN  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.  
   

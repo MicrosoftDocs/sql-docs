@@ -30,7 +30,7 @@ Drops an existing user-defined workload management classifier.  If requests are 
   
 ## Syntax  
 
-```
+```syntaxsql
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
 

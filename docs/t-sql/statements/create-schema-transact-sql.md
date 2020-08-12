@@ -140,7 +140,7 @@ CREATE SCHEMA schema_name [ AUTHORIZATION owner_name ] [;]
 ### A. Creating a schema and granting permissions  
  The following example creates schema `Sprockets` owned by `Annik` that contains table `NineProngs`. The statement grants `SELECT` to `Mandar` and denies `SELECT` to `Prasanna`. Note that `Sprockets` and `NineProngs` are created in a single statement.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE SCHEMA Sprockets AUTHORIZATION Annik  
@@ -155,13 +155,13 @@ GO
 ### B. Creating a schema and a table in the schema  
  The following example creates schema `Sales` and then creates a table `Sales.Region` in that schema.  
   
-```  
+```sql  
 CREATE SCHEMA Sales;  
 GO
   
 CREATE TABLE Sales.Region   
-(Region_id int NOT NULL,  
-Region_Name char(5) NOT NULL)  
+(Region_id INT NOT NULL,  
+Region_Name CHAR(5) NOT NULL)  
 WITH (DISTRIBUTION = REPLICATE);  
 GO  
 ```  
@@ -169,7 +169,7 @@ GO
 ### C. Setting the owner of a schema  
  The following example creates a schema `Production` owned by `Mary`.  
   
-```  
+```sql  
 CREATE SCHEMA Production AUTHORIZATION [Contoso\Mary];  
 GO  
 ```  

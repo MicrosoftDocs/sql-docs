@@ -35,7 +35,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 YEAR ( date )  
 ```  
   
@@ -56,20 +56,20 @@ YEAR ( date )
 ## Examples  
  The following statement returns `2010`. This is the number of the year.  
   
-```  
+```sql  
 SELECT YEAR('2010-04-30T01:01:01.1234567-07:00');  
 ```  
   
  The following statement returns `1900, 1, 1`. The argument for *date* is the number `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets `0` as January 1, 1900.  
   
-```  
+```sql 
 SELECT YEAR(0), MONTH(0), DAY(0);  
 ```  
   
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following statement returns `1900, 1, 1`. The argument for *date* is the number `0`. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] interprets `0` as January 1, 1900.  
   
-```  
+```sql  
 SELECT TOP 1 YEAR(0), MONTH(0), DAY(0);  
 ```  
   

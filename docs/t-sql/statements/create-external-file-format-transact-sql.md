@@ -355,7 +355,7 @@ Notes about the table:
   
  For a delimited text file, the data compression method can either be the default Codec, 'org.apache.hadoop.io.compress.DefaultCodec', or the Gzip Codec, 'org.apache.hadoop.io.compress.GzipCodec'.
   
-```  
+```sql  
 CREATE EXTERNAL FILE FORMAT textdelimited1  
 WITH (  
     FORMAT_TYPE = DELIMITEDTEXT,  
@@ -369,7 +369,7 @@ WITH (
 ### B. Create an RCFile external file format  
  This example creates an external file format for a RCFile that uses the serialization/deserialization method org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe. It also specifies to use the Default Codec for the data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.
   
-```  
+```sql  
 CREATE EXTERNAL FILE FORMAT rcfile1  
 WITH (  
     FORMAT_TYPE = RCFILE,  
@@ -381,7 +381,7 @@ WITH (
 ### C. Create an ORC external file format  
  This example creates an external file format for an ORC file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.
   
-```  
+```sql 
 CREATE EXTERNAL FILE FORMAT orcfile1  
 WITH (  
     FORMAT_TYPE = ORC,  
@@ -392,7 +392,7 @@ WITH (
 ### D. Create a PARQUET external file format  
  This example creates an external file format for a Parquet file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.  
   
-```  
+```sql  
 CREATE EXTERNAL FILE FORMAT parquetfile1  
 WITH (  
     FORMAT_TYPE = PARQUET,  
@@ -402,7 +402,7 @@ WITH (
 ### E. Create a Delimited Text File Skipping Header Row (Azure SQL DW Only)
  This example creates an external file format for CSV file with a single header row. 
   
-```  
+```sql  
 CREATE EXTERNAL FILE FORMAT skipHeader_CSV
 WITH (FORMAT_TYPE = DELIMITEDTEXT,
       FORMAT_OPTIONS(
@@ -415,7 +415,7 @@ WITH (FORMAT_TYPE = DELIMITEDTEXT,
 ### F. Create a JSON external file format  
  This example creates an external file format for a JSON file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression. This example applies to Azure SQL Edge and is currently not supported for other SQL products. 
   
-```  
+```sql  
 CREATE EXTERNAL FILE FORMAT jsonFileFormat  
 WITH (  
     FORMAT_TYPE = JSON,  

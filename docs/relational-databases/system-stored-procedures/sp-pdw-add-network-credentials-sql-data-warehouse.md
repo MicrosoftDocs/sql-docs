@@ -22,7 +22,7 @@ ms.custom: seo-dt-2019
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpasswordꞌ  
@@ -61,7 +61,7 @@ sp_pdw_add_network_credentials 'target_server_name',  'user_name', ꞌpassword�
 ### A. Add credentials for performing a database backup  
  The following example associates the user name and password credentials for the domain user seattle\david with a target server that has an IP address of 10.172.63.255. The user seattle\david has read/write permissions to the target server. [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] will store these credentials and use them to read and write to and from the target server, as necessary for backup and restore operations.  
   
-```  
+```sql  
 EXEC sp_pdw_add_network_credentials '10.172.63.255', 'seattle\david', '********';  
 ```  
   

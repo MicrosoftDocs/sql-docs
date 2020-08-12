@@ -45,6 +45,7 @@ To create an External Table, see [CREATE EXTERNAL TABLE &#40;Transact-SQL&#41;](
   
 ## Syntax
   
+### [Delimited text](#tab/delimited)
 ```syntaxsql
 -- Create an external file format for PARQUET files.  
 CREATE EXTERNAL FILE FORMAT file_format_name  
@@ -54,7 +55,9 @@ WITH (
         'org.apache.hadoop.io.compress.SnappyCodec'  
       | 'org.apache.hadoop.io.compress.GzipCodec'      }  
     ]);  
-  
+```
+### [RC](#tab/rc)
+```syntaxsql
 --Create an external file format for ORC files.  
 CREATE EXTERNAL FILE FORMAT file_format_name  
 WITH (  
@@ -63,7 +66,9 @@ WITH (
         'org.apache.hadoop.io.compress.SnappyCodec'  
       | 'org.apache.hadoop.io.compress.DefaultCodec'      }  
     ]);  
-  
+```
+### [ORC](#tab/orc)
+```syntaxsql  
 --Create an external file format for RCFILE.  
 CREATE EXTERNAL FILE FORMAT file_format_name  
 WITH (  
@@ -73,7 +78,9 @@ WITH (
       | 'org.apache.hadoop.hive.serde2.columnar.ColumnarSerDe'  
     }  
     [ , DATA_COMPRESSION = 'org.apache.hadoop.io.compress.DefaultCodec' ]);  
-  
+```
+### [Parquet](#tab/parquet)
+```syntaxsql
 --Create an external file format for DELIMITED TEXT files.  
 CREATE EXTERNAL FILE FORMAT file_format_name  
 WITH (  
@@ -84,7 +91,9 @@ WITH (
          | 'org.apache.hadoop.io.compress.DefaultCodec'  
         }  
      ]);  
-
+```
+### [JSON](#tab/json)
+```syntaxsql
 -- Create an external file format for JSON files.
 CREATE EXTERNAL FILE FORMAT file_format_name  
 WITH (  
@@ -94,7 +103,9 @@ WITH (
       | 'org.apache.hadoop.io.compress.GzipCodec'      
       | 'org.apache.hadoop.io.compress.DefaultCodec'  }  
     ]);  
- 
+```
+---
+```syntaxsql 
 <format_options> ::=  
 {  
     FIELD_TERMINATOR = field_terminator  

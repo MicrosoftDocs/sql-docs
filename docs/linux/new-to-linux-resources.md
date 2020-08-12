@@ -47,7 +47,7 @@ Understand user permissions, and the difference between a [root user and a syste
 
 ## File system & permissions
 
-After you're familiar with recognizing different users and groups in Linux, learn how you can change ownership and file permissions on different files in Linux operating systems using the [chown (change ownership)](https://www.linux.org/threads/file-permisions-chown.4125/) and [chmod (change permissoins)](https://www.linux.org/threads/file-permissions-chmod.4124) commands. 
+After you're familiar with recognizing different users and groups in Linux, learn how you can change ownership and file permissions on different files in Linux operating systems using the [chown (change ownership)](https://www.linux.org/threads/file-permisions-chown.4125/) and [chmod (change permissions)](https://www.linux.org/threads/file-permissions-chmod.4124) commands. 
 
 
 ## Commands for system administration

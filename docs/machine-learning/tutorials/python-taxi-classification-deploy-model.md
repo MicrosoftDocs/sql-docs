@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||>=azuresqldb-mi-curr
 ---
 
 # Python tutorial: Run predictions using Python embedded in a stored procedure
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 In part five of this five-part tutorial series, you'll learn how to *operationalize* the models that you trained and saved in the previous part.
 

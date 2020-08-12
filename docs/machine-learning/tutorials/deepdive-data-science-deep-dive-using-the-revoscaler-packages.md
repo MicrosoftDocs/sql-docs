@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Tutorial: Use RevoScaleR R functions with SQL Server data
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 In this multi-part tutorial series, you're introduced to a range of **RevoScaleR** functions for tasks associated with data science. In the process, you'll learn how to create a remote compute context, move data between local and remote compute contexts, and execute R code on a remote SQL Server. You'll also learn how to analyze and plot data both locally and on the remote server, and how to create and deploy models.
 

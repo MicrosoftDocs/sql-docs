@@ -46,7 +46,9 @@ ms.author: carlrab
 { database_name.schema_name.queue_name | schema_name.queue_name | queue_name }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WAITFOR  
  Specifies that the GET CONVERSATION GROUP statement waits for a message to arrive on the queue if no messages are currently present.  
   

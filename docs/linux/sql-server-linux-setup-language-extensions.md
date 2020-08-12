@@ -1,7 +1,7 @@
 ---
 title: Install SQL Server Language Extensions on Linux
 titleSuffix:
-description: Learn how to install SQL Server Language Extensions on Red Hat, Ubuntu, and SUSE. 
+description: Learn how to install SQL Server Language Extensions on Red Hat, Ubuntu, and SUSE Linux.
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Install SQL Server Language Extensions on Linux
 
-[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+[!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
 Language Extensions is an add-on to the database engine. Although you can [install the database engine and Language Extensions concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
 
@@ -258,19 +258,20 @@ You can download packages from [https://packages.microsoft.com/](https://package
 
 #### RedHat/7 paths
 
-|||
+|Package|Download location|
 |--|----|
 | mssql/extensibility-java packages | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### Ubuntu/16.04 paths
 
-|||
+|Package|Download location|
 |--|----|
 | mssql/extensibility-java packages | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### SUSE/12 paths
 
-|||
+
+|Package|Download location|
 |--|----|
 | mssql/extensibility-java packages | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 

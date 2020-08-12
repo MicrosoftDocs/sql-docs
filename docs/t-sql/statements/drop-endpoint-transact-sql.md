@@ -36,7 +36,9 @@ ms.author: carlrab
 DROP ENDPOINT endPointName  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *endPointName*  
  Is the name of the endpoint to be removed.  
   

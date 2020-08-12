@@ -140,7 +140,7 @@ ms.author: sawinark
 ## In This Section  
  You can perform the following operations on a knowledge base and its domains:  
   
-|||  
+|Operation Description|Topic|  
 |-|-|  
 |Create, open, add knowledge to, and perform discovery on a knowledge base|[Building a Knowledge Base](../data-quality-services/building-a-knowledge-base.md)|  
 |Perform import and export operations on domains and knowledge bases|[Importing and Exporting Knowledge](../data-quality-services/importing-and-exporting-knowledge.md)|  

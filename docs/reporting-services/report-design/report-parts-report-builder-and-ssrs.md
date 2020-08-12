@@ -104,7 +104,7 @@ ms.author: maggies
  Every time you open a report, Report Builder checks to see if the server instances of report parts in that report have been updated on the server. It also checks for changes in the report parts' dependent items, such as the dataset and parameters. If any published report parts or their dependencies have been updated on the server, an information bar in your report displays the number that have been updated. You can choose to view and accept or reject the updates, or dismiss the information bar. If you choose to view the updates, you see a thumbnail of the report part, who last modified it, and when. Then you can accept any or all of the updated items.  
   
 > [!NOTE]  
->  You can disable the information bar and not be informed if a report part has changed. You set this option when you add the report part to your report. Even if you have disabled the information bar, you can still check for updates. For more information, see [Check for Updates or Turn Updates Off (Report Builder and SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606).  
+>  You can disable the information bar and not be informed if a report part has changed. You set this option when you add the report part to your report. Even if you have disabled the information bar, you can still check for updates.
   
  Report Builder checks for differences between the date the report part was last updated on the server and the date when you last synchronized the report part with the server. It does not check the date that you modified the report part in your report. Thus, the report part in your report and the report part on the server could be quite different, but when Report Builder checks for updates, it will not find any.  
   
@@ -133,11 +133,6 @@ ms.author: maggies
   
  [Browse for Report Parts and Set a Default Folder &#40;Report Builder and SSRS&#41;](../../reporting-services/report-design/browse-for-report-parts-and-set-a-default-folder-report-builder-and-ssrs.md)  
   
- [Check for Updates or Turn Updates Off (Report Builder and SSRS)](https://msdn.microsoft.com/9c69792d-d7c4-453b-ae2f-6d2d071d8606)  
-  
 ## See Also  
  [Report Parts and Datasets in Report Builder](../../reporting-services/report-data/report-parts-and-datasets-in-report-builder.md)   
- [Troubleshoot Report Parts (Report Builder and SSRS)](https://msdn.microsoft.com/d9fe1932-46e7-421b-a8a9-4c54d9576e94)   
- [Managing Report Parts](../../reporting-services/report-design/managing-report-parts.md)  
-  
-  
+ [Managing Report Parts](../../reporting-services/report-design/managing-report-parts.md) 

@@ -20,7 +20,7 @@ ms.author: davidph
 manager: cgronlund
 ---
 # DROP EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Deletes a Resource Governor external resource pool used to define resources for external processes. 
 
@@ -42,6 +42,8 @@ External resource pools are created by using [CREATE EXTERNAL RESOURCE POOL &#40
 DROP EXTERNAL RESOURCE POOL pool_name  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 *pool_name*  

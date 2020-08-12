@@ -1,6 +1,6 @@
 ---
-title: "Preparing Commands | Microsoft Docs"
-description: "Preparing commands using OLE DB Driver for SQL Server"
+title: Preparing commands (OLE DB driver)
+description: For a single command that is run multiple times, the OLE DB Driver for SQL Server supports command preparation to improve performance.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

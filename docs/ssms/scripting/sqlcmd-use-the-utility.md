@@ -1,5 +1,6 @@
 ---
 title: "Use the sqlcmd Utility"
+description: Learn how to use the sqlcmd utility for ad hoc interactive execution of Transact-SQL statements and scripts, and for automating Transact-SQL scripting tasks.
 ms.custom: seo-lt-2019
 ms.date: "06/06/2017"
 ms.prod: sql

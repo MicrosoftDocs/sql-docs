@@ -109,7 +109,7 @@ On the **Start** menu, point to **All Programs**, point to **Microsoft SQL Serve
 
 Because the SQL Server Configuration Manager is a snap-in for the Microsoft Management Console program and not a stand-alone program, SQL Server Configuration Manager does not appear as an application in newer versions of Windows. Here are the paths to the last four versions when Windows is installed on the C drive.  
 
-|||
+|Version|Path|
 |-|-|
 |SQL Server 2019|C:\Windows\SysWOW64\SQLServerManager15.msc|
 |SQL Server 2017|C:\Windows\SysWOW64\SQLServerManager14.msc|

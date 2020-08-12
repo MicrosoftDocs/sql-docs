@@ -30,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Aggregate Function Syntax   
 VARP ( [ ALL | DISTINCT ] expression )  
   
@@ -38,7 +38,9 @@ VARP ( [ ALL | DISTINCT ] expression )
 VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **ALL**  
  Applies the function to all values. ALL is the default.  
   
@@ -64,7 +66,7 @@ VARP ([ ALL ] expression) OVER ( [ partition_by_clause ] order_by_clause)
 ### A: Using VARP  
  The following example returns the variance for the population for all bonus values in the `SalesPerson` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 SELECT VARP(Bonus)  
 FROM Sales.SalesPerson;  
 GO  
@@ -75,7 +77,7 @@ GO
 ### B: Using VARP  
  The following example returns the `VARP`of the sales quota values in the table `dbo.FactSalesQuota`. The first column contains the variance of all distinct values and the second column contains the variance of all values including any duplicates values.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT VARP(DISTINCT SalesAmountQuota)AS Distinct_Values, VARP(SalesAmountQuota) AS All_Values  
@@ -93,7 +95,7 @@ Distinct_Values   All_Values
 ### C. Using VARP with OVER  
  The following example returns the `VARP` of the sales quota values for each quarter in a calendar year. Notice that the ORDER BY in the OVER clause orders the statistical variance and the ORDER BY of the SELECT statement orders the result set.  
   
-```  
+```sql 
 -- Uses AdventureWorks  
   
 SELECT CalendarYear AS Year, CalendarQuarter AS Quarter, SalesAmountQuota AS SalesQuota,  

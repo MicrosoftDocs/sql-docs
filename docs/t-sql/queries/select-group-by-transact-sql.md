@@ -99,7 +99,9 @@ GROUP BY {
 
 ```  
     
-## Arguments 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  
 ### *column-expression*  
 Specifies a column or a non-aggregate calculation on a column. This column can belong to a table, derived table, or view. The column must appear in the FROM clause of the SELECT statement, but is not required to appear in the SELECT list. 

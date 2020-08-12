@@ -1,6 +1,6 @@
 ---
-title: "ICommandWithParameters | Microsoft Docs"
-description: "ICommandWithParameters interface"
+title: "ICommandWithParameters (OLE DB driver) | Microsoft Docs"
+description: Learn how improvements allow ICommandWithParameters::GetParameterInfo to obtain more accurate descriptions of expected results for OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

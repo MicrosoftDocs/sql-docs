@@ -21,7 +21,7 @@ ms.author: maghan
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CUME_DIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this function calculates the cumulative distribution of a value within a group of values. In other words, `CUME_DIST` calculates the relative position of a specified value in a group of values. Assuming ascending ordering, the `CUME_DIST` of a value in row _r_ is defined as the number of rows with values less than or equal to that value in row _r_, divided by the number of rows evaluated in the partition or query result set. `CUME_DIST` is similar to the `PERCENT_RANK` function.
   
@@ -33,9 +33,11 @@ For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this function cal
 CUME_DIST( )  
     OVER ( [ partition_by_clause ] order_by_clause )  
   
-```  
-  
-## Arguments  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_)  
 
 The _partition\_by\_clause_ divides the FROM clause result set into partitions, to which the function is applied. If the _partition\_by\_clause_ argument isn't specified, `CUME_DIST` treats all query result set rows as a single group. The _order\_by\_clause_ determines the logical order in which the operation occurs. `CUME_DIST` requires the _order\_by\_clause_. `CUME_DIST` won't accept the \<rows or range clause> of the OVER syntax. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).

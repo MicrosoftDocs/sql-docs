@@ -37,7 +37,9 @@ ms.author: vanto
 DROP CREDENTIAL credential_name  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *credential_name*  
  Is the name of the credential to remove from the server.  
   

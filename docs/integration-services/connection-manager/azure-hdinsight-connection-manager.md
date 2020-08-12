@@ -16,7 +16,7 @@ ms.author: "lingxl"
 ---
 # Azure HDInsight Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 The **Azure HDInsight Connection Manager** enables an SSIS package to connect to an Azure HDInsight cluster.

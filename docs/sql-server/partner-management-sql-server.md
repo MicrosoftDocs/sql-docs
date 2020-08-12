@@ -10,7 +10,7 @@ ms.author: mikeray
 author: MikeRayMSFT
 ---
 # SQL Server managing partners
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 To manage your SQL Server services, choose from a wide variety of industry-leading tools.  This article highlights Microsoft partner companies with management solutions supporting Microsoft SQL Server.
 
 ## Our management partners

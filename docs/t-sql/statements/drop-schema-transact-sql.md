@@ -32,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server and Azure SQL Database  
   
 DROP SCHEMA  [ IF EXISTS ] schema_name  
@@ -44,7 +44,9 @@ DROP SCHEMA  [ IF EXISTS ] schema_name
 DROP SCHEMA schema_name  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *IF EXISTS*  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
@@ -66,9 +68,9 @@ DROP SCHEMA schema_name
 ## Examples  
  The following example starts with a single `CREATE SCHEMA` statement. The statement creates the schema `Sprockets` that is owned by `Krishna` and a table `Sprockets.NineProngs`, and then grants `SELECT` permission to `Anibal` and denies `SELECT` permission to `Hung-Fu`.  
   
-```  
+```sql  
 CREATE SCHEMA Sprockets AUTHORIZATION Krishna   
-    CREATE TABLE NineProngs (source int, cost int, partnumber int)  
+    CREATE TABLE NineProngs (source INT, cost INT, partnumber INT)  
     GRANT SELECT TO Anibal   
     DENY SELECT TO [Hung-Fu];  
 GO  
@@ -76,7 +78,7 @@ GO
   
  The following statements drop the schema. Note that you must first drop the table that is contained by the schema.  
   
-```  
+```sql  
 DROP TABLE Sprockets.NineProngs;  
 DROP SCHEMA Sprockets;  
 GO  

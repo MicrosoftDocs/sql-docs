@@ -78,7 +78,7 @@ The setting of SET ARITHABORT happens at execute or run time and not at parse ti
   
 To view the current setting for SET ARITHABORT, run the following query:
   
-```  
+```sql  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
 IF ( (64 & @@OPTIONS) = 64 ) SET @ARITHABORT = 'ON';  
 SELECT @ARITHABORT AS ARITHABORT;  

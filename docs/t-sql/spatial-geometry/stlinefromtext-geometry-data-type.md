@@ -30,7 +30,9 @@ Returns a **geometry** instance from an Open Geospatial Consortium (OGC) Well-Kn
 STLineFromText ( 'linestring_tagged_text' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *linestring_tagged_text*  
  Is the WKT representation of the **geometryLineString** instance you want to return. *linestring_tagged_text* is an **nvarchar(max)** expression.  
   

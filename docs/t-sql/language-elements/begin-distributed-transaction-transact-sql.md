@@ -44,7 +44,9 @@ BEGIN DISTRIBUTED { TRAN | TRANSACTION }
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *transaction_name*  
  Is a user-defined transaction name used to track the distributed transaction within MS DTC utilities. *transaction_name* must conform to the rules for identifiers and must be \<= 32 characters.  
   

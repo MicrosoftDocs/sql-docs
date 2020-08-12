@@ -21,44 +21,63 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 ---
 # ALTER WORKLOAD GROUP (Transact-SQL)
 
-## Click a product!
-
-In the following row, click whichever product name you're interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-|||||
-|---|---|---|---|
-|**_\* SQL Server \*_** &nbsp;||[SQL Database<br />managed instance](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)||[Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)|
-||||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
-## SQL Server and SQL Database managed instance
+## SQL Server and SQL Managed Instance
 
 [!INCLUDE [ALTER WORKLOAD GROUP](../../includes/alter-workload-group.md)]
   
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-||||
-|---|---|---|
-|[SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)|**_\* SQL Database<br />managed instance \*_** &nbsp;|[Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)|
-||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />Managed Instance \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [Azure Synapse<br />Analytics](alter-workload-group-transact-sql.md?view=azure-sqldw-latest)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
-## SQL Server and SQL Database managed instance
+## SQL Server and SQL Managed Instance
 
 [!INCLUDE [ALTER WORKLOAD GROUP](../../includes/alter-workload-group.md)]
 
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-||||
-|---|---|---|
-|[SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)|[SQL Database<br />managed instance](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)|**_\* Azure Synapse<br />Analytics \*_** &nbsp;|
-||||
+:::row:::
+    :::column:::
+        [SQL Server](alter-workload-group-transact-sql.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](alter-workload-group-transact-sql.md?view=azuresqldb-mi-current)
+    :::column-end:::
+    :::column:::
+        **_\* Azure Synapse<br />Analytics \*_** &nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -101,7 +120,7 @@ Value is a decimal with a range between 0.75 to 100.00.  The value for request_m
 REQUEST_MAX_RESOURCE_GRANT_PERCENT = value  
 Value is a decimal and must be greater than request_min_resource_grant_percent.
 
-IMPORTANCE = { LOW |  BELOW_NORMAL | NORMAL | ABOVE_NORMAL | HIGH }  
+IMPORTANCE = { LOW \|  BELOW_NORMAL \| NORMAL \| ABOVE_NORMAL \| HIGH }  
 Alters the default importance of a request for the workload group.
 
 QUERY_EXECUTION_TIMEOUT_SEC = value  

@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Create InfoPackage
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Create InfoPackage** dialog box to create a new InfoPackage in the SAP Netweaver BW system.  

@@ -1,5 +1,6 @@
 ---
 title: "OLE Automation Return Codes and Error Information | Microsoft Docs"
+description: Learn the details about OLE automation return codes and how to use a ample stored procedure to display OLE Automation error information. 
 ms.custom: ""
 ms.date: "07/05/2017"
 ms.prod: sql

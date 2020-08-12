@@ -20,7 +20,7 @@ ms.author: "mathoma"
 ms.custom: "seo-lt-2019"
 ---
 # Administer multiple servers using Central Management Servers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   You can administer multiple servers by designating Central Management Servers and creating server groups.  
   
 ## What is a Central Management Server and server groups?  

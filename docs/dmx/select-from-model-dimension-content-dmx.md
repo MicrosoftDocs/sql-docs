@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # SELECT FROM &lt;model&gt;.DIMENSION_CONTENT (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   A mining model can be used as a dimension in an OLAP cube, where each node in the model is represented as a member of the dimension. **The SELECT FROM \<model>.Dimension_CONTENT** statement returns the content of the model that pertains to its usage as a dimension.  
   

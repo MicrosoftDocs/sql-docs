@@ -30,7 +30,9 @@ Returns 1 (true) if a spatial object contains at least one M value; otherwise, i
 .HasM  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
   
 CLR return type: **Boolean**  

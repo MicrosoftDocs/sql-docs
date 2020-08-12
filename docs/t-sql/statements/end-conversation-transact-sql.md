@@ -43,7 +43,9 @@ END CONVERSATION conversation_handle
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *conversation_handle*  
  Is the conversation handle for the conversation to end.  
   

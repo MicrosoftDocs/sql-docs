@@ -91,6 +91,7 @@ The following table lists the available keywords and the attributes for each pla
 | | [SQL_ATTR_TXN_ISOLATION](../../odbc/reference/syntax/sqlsetconnectattr-function.md) <br> (SQL_TXN_ISOLATION) | LMW |
 | | [SQL_COPT_SS_ACCESS_TOKEN](dsn-connection-string-attribute.md#sql_copt_ss_access_token) | LMW |
 | | [SQL_COPT_SS_ANSI_OEM](dsn-connection-string-attribute.md#sql_copt_ss_ansi_oem)| W |
+| | [SQL_COPT_SS_AUTOBEGINTXN](dsn-connection-string-attribute.md#sql_copt_ss_autobegintxn)| LMW |
 | | [SQL_COPT_SS_BCP](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbcp) | LMW |
 | | [SQL_COPT_SS_BROWSE_CACHE_DATA](../../relational-databases/native-client-odbc-api/sqlbrowseconnect.md) | LMW |
 | | [SQL_COPT_SS_BROWSE_CONNECT](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssbrowseconnect) | LMW |
@@ -131,6 +132,16 @@ Controls ANSI to OEM conversion of data.
 | SQL_AO_OFF | (Default) Translation is not performed. |
 | SQL_AO_ON | Translation is performed. |
 
+### SQL_COPT_SS_AUTOBEGINTXN
+
+Version 17.6+
+While autocommit is off, controls automatic BEGIN TRANSACTION after ROLLBACK or COMMIT.
+
+| Attribute Value | Description |
+|-|-|
+| SQL_AUTOBEGINTXN_ON | (Default) Automatic BEGIN TRANSACTION after ROLLBACK or COMMIT. |
+| SQL_AUTOBEGINTXN_OFF | No automatic BEGIN TRANSACTION after ROLLBACK or COMMIT. |
+
 ### SQL_COPT_SS_FALLBACK_CONNECT
 
 Controls the use of SQL Server Fallback Connections. This one is no longer supported.
@@ -155,7 +166,7 @@ Sets the authentication mode to use when connecting to SQL Server. For more info
 |ActiveDirectoryIntegrated|SQL_AU_AD_INTEGRATED|Azure Active Directory Integrated authentication.|
 |ActiveDirectoryPassword|SQL_AU_AD_PASSWORD|Azure Active Directory Password authentication.|
 |ActiveDirectoryInteractive|SQL_AU_AD_INTERACTIVE|Azure Active Directory Interactive authentication.|
-|ActiveDirectoryMsi|SQL_AU_AD_MSI|Azure Active Directory Managed Service Identity authentication. For user-assigned identity, UID is set to the object ID of the user identity. |
+|ActiveDirectoryMsi|SQL_AU_AD_MSI|Azure Active Directory Managed Identity authentication. For user-assigned identity, UID is set to the object ID of the user identity. |
 | |SQL_AU_RESET|Unset. Overrides any DSN or connection string setting.|
 
 > [!NOTE]

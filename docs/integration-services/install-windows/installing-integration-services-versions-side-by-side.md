@@ -16,7 +16,7 @@ ms.author: chugu
 ---
 # Installing Integration Services Versions Side by Side
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   You can install   

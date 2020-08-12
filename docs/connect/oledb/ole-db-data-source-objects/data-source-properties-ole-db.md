@@ -1,6 +1,6 @@
 ---
-title: "Data Source Properties (OLE DB) | Microsoft Docs"
-description: "Data Source properties (OLE DB)"
+title: "Data source properties (OLE DB driver) | Microsoft Docs"
+description: Learn how OLE DB Driver for SQL Server implements data source properties, including a provider-specific property set with additional data source properties.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

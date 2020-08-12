@@ -142,13 +142,22 @@ SQLRETURN SQLColumns(
 |RADIX|NUM_PREC_RADIX|  
   
  The following columns have been added to the result set returned by **SQLColumns** for ODBC 3.*x*:  
-  
-|||  
-|-|-|  
-|CHAR_OCTET_LENGTH|ORDINAL_POSITION|  
-|COLUMN_DEF|SQL_DATA_TYPE|  
-|IS_NULLABLE|SQL_DATETIME_SUB|  
-  
+
+:::row:::
+    :::column:::
+        CHAR_OCTET_LENGTH  
+        COLUMN_DEF  
+    :::column-end:::
+    :::column:::
+        IS_NULLABLE  
+        ORDINAL_POSITION  
+    :::column-end:::
+    :::column:::
+        SQL_DATA_TYPE  
+        SQL_DATETIME_SUB  
+    :::column-end:::
+:::row-end:::
+
  The following table lists the columns in the result set. Additional columns beyond column 18 (IS_NULLABLE) can be defined by the driver. An application should gain access to driver-specific columns by counting down from the end of the result set instead of specifying an explicit ordinal position. For more information, see [Data Returned by Catalog Functions](../../../odbc/reference/develop-app/data-returned-by-catalog-functions.md).  
   
 |Column name|Column<br /><br /> number|Data type|Comments|  

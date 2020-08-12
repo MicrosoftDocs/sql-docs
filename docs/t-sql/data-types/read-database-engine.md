@@ -35,8 +35,8 @@ I am making this fix now, from ```sql to ```cs, on 2020/04/16.  GeneMi.
 ```csharp
 void Read( BinaryReader r )   
 ```  
-  
-## Arguments  
+
+## Arguments
 *r*  
  The **BinaryReader** object that produces a binary stream corresponding to a binary representation of a **hierarchyid** node.  
   

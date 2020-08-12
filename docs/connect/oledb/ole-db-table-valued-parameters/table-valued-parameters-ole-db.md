@@ -1,6 +1,6 @@
 ---
-title: "Table-Valued Parameters (OLE DB) | Microsoft Docs"
-description: "Table-Valued Parameters (OLE DB)"
+title: Table-valued parameters (OLE DB driver)
+description: These articles describe support for table-valued parameters in OLE DB Driver for SQL Server, including parameter rowset creation and parameter type discovery.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

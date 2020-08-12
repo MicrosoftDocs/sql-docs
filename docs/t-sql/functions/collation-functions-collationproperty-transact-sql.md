@@ -33,7 +33,9 @@ This function returns the requested property of a specified collation.
 COLLATIONPROPERTY( collation_name , property )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *collation_name*  
 The name of the collation. The *collation_name* argument has an **nvarchar(128)** data type, with no default value.
   

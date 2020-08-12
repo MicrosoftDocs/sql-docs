@@ -1,7 +1,7 @@
 ---
 title: Unattended install for SQL Server on SUSE Linux Enterprise Server
 titleSuffix: SQL Server
-description: SQL Server Script Sample - Unattended Install on SUSE Linux Enterprise Server
+description: Use a sample Bash script to install SQL Server 2017 on SUSE Linux Enterprise Server (SLES) v12 SP2 without interactive input.
 author: VanMSFT 
 ms.author: vanto
 ms.date: 11/04/2019

@@ -165,7 +165,7 @@ OR UPPER(text) LIKE '%SP_EXECUTESQL%';
 ### Wrapping Parameters with QUOTENAME() and REPLACE()  
  In each selected stored procedure, verify that all variables that are used in dynamic Transact-SQL are handled correctly. Data that comes from the input parameters of the stored procedure or that is read from a table should be wrapped in QUOTENAME() or REPLACE(). Remember that the value of @variable that is passed to QUOTENAME() is of sysname, and has a maximum length of 128 characters.  
   
-|@variable|Recommended wrapper|  
+|\@variable|Recommended wrapper|  
 |---------------|-------------------------|  
 |Name of a securable|`QUOTENAME(@variable)`|  
 |String of ≤128 characters|`QUOTENAME(@variable, '''')`|  

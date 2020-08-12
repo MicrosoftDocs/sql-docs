@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # Add File Connection Manager Dialog Box UI Reference
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Add File Connection Manager** dialog box to define a connection to a group of files or folders.  

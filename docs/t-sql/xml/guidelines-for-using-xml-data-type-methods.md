@@ -1,5 +1,5 @@
 ---
-title: "Guidelines for Using xml Data Type Methods | Microsoft Docs"
+title: Guidelines for Using xml Data Type Methods
 ms.custom: ""
 ms.date: "03/04/2017"
 ms.prod: sql

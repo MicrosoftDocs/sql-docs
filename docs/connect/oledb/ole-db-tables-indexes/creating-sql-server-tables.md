@@ -1,6 +1,6 @@
 ---
-title: "Creating SQL Server Tables | Microsoft Docs"
-description: "Creating SQL Server tables using OLE DB Driver for SQL Server"
+title: "Create SQL Server tables (OLE DB driver) | Microsoft Docs"
+description: Learn how the ITableDefinition::CreateTable function in the OLE DB Driver for SQL Server allows consumers to create SQL Server tables.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

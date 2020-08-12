@@ -33,7 +33,9 @@ DROP EVENT SESSION event_session_name
 ON SERVER  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *event_session_name*  
  Is the name of an existing event session.  
   

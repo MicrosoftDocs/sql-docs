@@ -1,6 +1,6 @@
 ---
 title: "Walkthrough: Set Up SSIS Scale Out | Microsoft Docs"
-description: "This article walks you through the setup and configuration of SSIS Scale Out"
+description: "Learn details about the setup and configuration of SQL Server Integration Services (SSIS) Scale Out Master."
 ms.custom: performance
 ms.date: "12/13/2017"
 ms.prod: sql
@@ -13,7 +13,7 @@ ms.reviewer: maghan
 ---
 # Walkthrough: Set up Integration Services (SSIS) Scale Out
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 Set up [!INCLUDE[ssISnoversion_md](../../includes/ssisnoversion-md.md)] (SSIS) Scale Out by completing the following tasks. 

@@ -1,5 +1,6 @@
 ---
 title: "srv_paramdata (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn about srv_paramdata. srv_paramdata returns the value of a remote stored procedure call parameter.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

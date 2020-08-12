@@ -1,6 +1,6 @@
 ---
-title: "ISSCommandWithParameters (OLE DB) | Microsoft Docs"
-description: "ISSCommandWithParameters (OLE DB)"
+title: ISSCommandWithParameters (OLE DB driver)
+description: Learn how the ISSCommandWithParameters interface supports SQL Server XML and user-defined types in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

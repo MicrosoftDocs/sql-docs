@@ -36,6 +36,8 @@ This function returns the name of the current user. This function is equivalent 
 CURRENT_USER  
 ```  
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return types
 **sysname**
   

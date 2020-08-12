@@ -1,5 +1,6 @@
 ---
 title: "Monitor Resource Usage (System Monitor) | Microsoft Docs"
+description: Use System Monitor to measure the performance of SQL Server objects, performance counters, and the behavior of other objects, such as processors and memory.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

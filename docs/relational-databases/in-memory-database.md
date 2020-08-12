@@ -21,7 +21,7 @@ ms.author: "brcarrig"
 
 # In-memory database systems and technologies
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 This page is intended to serve as a reference page for in-memory features and technologies within SQL Server. The concept of an in-memory database system refers to a database system that has been designed to take advantage of larger memory capacities available on modern database systems. An in-memory database may be relational or non-relational in nature.
 
@@ -31,19 +31,19 @@ A fast volatile cache that fronts a considerably slower but durable media has be
 
 ## Hybrid buffer pool
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [Hybrid buffer pool](../database-engine/configure-windows/hybrid-buffer-pool.md) expands the buffer pool for database files residing on byte-addressable persistent memory storage devices for both Windows and Linux platforms with [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 ## Memory-optimized `tempdb` metadata
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] introduces a new feature that is [memory-optimized tempdb metadata](./databases/tempdb-database.md#memory-optimized-tempdb-metadata), which effectively removes some contention bottlenecks and unlocks a new level of scalability for tempdb-heavy workloads.
 
 ## In-memory OLTP
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
 [In-memory OLTP](./in-memory-oltp/in-memory-oltp-in-memory-optimization.md) is a database technology available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and [!INCLUDE[ssSDS](../includes/sssds-md.md)] for optimizing performance of transaction processing, data ingestion, data load, and transient data scenarios.
 

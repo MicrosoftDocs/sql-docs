@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # PredictTimeSeries (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns predicted future values for time series data. Time series data is continuous and can be stored in a nested table or in a case table. The **PredictTimeSeries** function always returns a nested table.  
   
@@ -141,7 +141,7 @@ ON
   
  Original predictions:  
   
-||||  
+|Model Region|ReportingDate|Quantity|  
 |-|-|-|  
 |M200 Pacific|7/25/2008 12:00:00 AM|46|  
 |M200 Pacific|8/25/2008 12:00:00 AM|44|  
@@ -149,7 +149,7 @@ ON
   
  Updated predictions:  
   
-||||  
+|Model Region|ReportingDate|Quantity|  
 |-|-|-|  
 |M200 Pacific|7/25/2008 12:00:00 AM|91|  
 |M200 Pacific|8/25/2008 12:00:00 AM|89|  
@@ -187,7 +187,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Returns new predictions for the remaining three time slices based on the newly expanded model.  
   
- The following table lists the results of the Example 2 query. Notice that the first two values returned for M200 Europe are exactly the same as the new values that you provided. This behavior is by design; if you want to start predictions after the end of the new data, you must specify a starting and ending time step. For an example of how to do this, see [Lesson 5: Extending the Time Series Model](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
+ The following table lists the results of the Example 2 query. Notice that the first two values returned for M200 Europe are exactly the same as the new values that you provided. This behavior is by design; if you want to start predictions after the end of the new data, you must specify a starting and ending time step.  
   
  Also, notice that you did not supply new data for the Pacific region. Therefore, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] returns new predictions for all five time slices.  
   

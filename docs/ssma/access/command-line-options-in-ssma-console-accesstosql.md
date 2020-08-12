@@ -7,9 +7,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: c1f3b3f0-0f3e-4e07-b745-2fbdde85c67e
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: murato
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Command-line options in the SSMA Console (AccessToSQL)
 Microsoft provides you with a robust set of command-line options to execute and control SSMA activities. The ensuing sections provide additional detail.  
@@ -110,10 +110,6 @@ This optional switch denotes the project environment settings folder for the cur
 `C:\>SSMAforAccessConsole.EXE -s`  
   
 `"C:\Program Files\Microsoft SQL Server Migration Assistant for Access\Sample Console Scripts\ConversionAndDataMigrationSample.xml"  -e c:\SsmaProjects\CommonEnvironment`  
-  
-||  
-|-|  
-||  
   
 ### Secure password option: -p/securepassword  
 This option indicates the encrypted password for server connections. It differs from all other options in that it does not execute any script or help in any migration-related activities, but helps manage password-encryption for the server connections used in the migration project.  

@@ -1,6 +1,6 @@
 ---
-title: "Rowsets | Microsoft Docs"
-description: "Rowsets in OLE DB Driver for SQL Server"
+title: Rowsets (OLE DB driver)
+description: Learn about interfaces that support a consumer creating a rowset in a session in OLE DB Driver for SQL Server. Refer to articles in this section for details.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

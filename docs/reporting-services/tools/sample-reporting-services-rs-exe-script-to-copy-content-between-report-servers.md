@@ -1,5 +1,6 @@
 ---
 title: "Sample Reporting Services rs.exe Script to Copy Content between Report Servers | Microsoft Docs"
+description: Learn how to copy content items and settings from one SQL Server Reporting Services report server to another by using the RS.exe utility to run a Reporting Services RSS script.
 ms.date: 05/23/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

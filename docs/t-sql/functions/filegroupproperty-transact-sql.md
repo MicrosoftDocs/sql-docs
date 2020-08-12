@@ -34,7 +34,9 @@ This function returns the filegroup property value for a specified name  and fil
 FILEGROUPPROPERTY ( filegroup_name, property )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *filegroup_name*  
 An expression of type **sysname** that represents the filegroup name for which `FILEGROUPPROPERTY` returns the named property information.  
   

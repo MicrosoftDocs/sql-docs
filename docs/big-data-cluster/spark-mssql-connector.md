@@ -8,7 +8,7 @@ ms.reviewer: mikeray
 ms.date: 11/04/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.technology: big-data-cluster
+ms.technology: machine-learning-bdc
 ---
 
 # How to read and write to SQL Server from Spark using the Apache Spark Connector for SQL Server and Azure SQL

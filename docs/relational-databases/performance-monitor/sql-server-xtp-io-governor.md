@@ -1,5 +1,6 @@
 ---
 title: "SQL Server XTP IO Governor | Microsoft Docs"
+description: Learn about the SQL Server XTP IO Governor performance object, which contains counters related to the In-Memory OLTP IO Rate Governor.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

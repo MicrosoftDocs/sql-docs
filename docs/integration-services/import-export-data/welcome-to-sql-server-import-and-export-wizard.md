@@ -14,7 +14,7 @@ ms.author: chugu
 ---
 # Welcome to SQL Server Import and Export Wizard
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   When you start the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, the first page is **Welcome to SQL Server Import and Export Wizard**. You don't have to take any action on this page.

@@ -1,6 +1,6 @@
 ---
-title: "Data Type Mapping in Rowsets and Parameters | Microsoft Docs"
-description: "Data Type mapping in rowsets and parameters"
+title: "Data type mapping in rowsets and parameters (OLE DB driver) | Microsoft Docs"
+description: Learn how the OLE DB Driver for SQL Server represents SQL Server data in rowsets and as parameter values, by using the OLE DB defined data types.
 ms.custom: ""
 ms.date: "02/21/2020"
 ms.prod: sql
@@ -85,7 +85,7 @@ ms.author: pelopes
 ## SSPROP_ALLOWNATIVEVARIANT  
  SSPROP_ALLOWNATIVEVARIANT is a session property and is part of DBPROPSET_SQLSERVERSESSION  property set.  
   
-|||  
+|Property|Description|  
 |-|-|  
 |SSPROP_ALLOWNATIVEVARIANT|Type: VT_BOOL<br /><br /> R/W: Read/Write<br /><br /> Default: VARIANT_FALSE<br /><br /> Description: Determines if the data fetched in is as DBTYPE_VARIANT or DBTYPE_SQLVARIANT.<br /><br /> VARIANT_TRUE: Column type is returned as DBTYPE_SQLVARIANT in which case the buffer will hold SSVARIANT structure.<br /><br /> VARIANT_FALSE: Column type is returned as DBTYPE_VARIANT and the buffer will have VARIANT structure.|  
   

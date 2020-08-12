@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # SAP BW Destination Editor (Advanced Page)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Advanced** page of the **SAP BW Destination Editor** to set advanced settings such as package size and time-out information.  

@@ -1,6 +1,6 @@
 ---
-title: "Retrieving Error Information | Microsoft Docs"
-description: "Retrieving error information using OLE DB Driver for SQL Server"
+title: Retrieving error information (OLE DB driver)
+description: This example obtains information from the various error interfaces exposed by the OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

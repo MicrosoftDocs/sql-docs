@@ -39,7 +39,9 @@ Returns the login identification name of the user.
 SUSER_NAME ( [ server_user_id ] )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 _server\_user\_id_  
 Is the login identification number of the user. _server\_user\_id_, which is optional, is **int**. _server\_user\_id_ can be the login identification number of any [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] login or [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows user or group that has permission to connect to an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When _server\_user\_id_ isn't specified, the login identification name for the current user is returned. If the parameter contains the word NULL, it will return NULL.  
   

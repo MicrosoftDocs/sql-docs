@@ -1,7 +1,7 @@
 ---
 title: azdata bdc config reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc config commands.
+description: Use this reference article to understand SQL commands in the azdata tool, specifically the bdc config commands. 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -15,10 +15,10 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md)
+The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
-|     |     |
+| Command | Description |
 | --- | --- |
 [azdata bdc config init](#azdata-bdc-config-init) | Initializes a Big Data Cluster configuration profile that can be used with bdc create.
 [azdata bdc config list](#azdata-bdc-config-list) | Lists available configuration profile choices.

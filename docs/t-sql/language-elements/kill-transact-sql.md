@@ -59,7 +59,9 @@ KILL 'session_id'
 [;]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 _session ID_  
 Is the session ID of the process to end. _session ID_ is a unique integer (**int**) that is assigned to each user connection when the connection is made. The session ID value is tied to the connection for the duration of the connection. When the connection ends, the integer value is released and can be reassigned to a new connection.  
 The following query can help you identify the `session_id` that you want to kill:  

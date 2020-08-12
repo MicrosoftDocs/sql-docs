@@ -34,9 +34,8 @@ ms.author: mikeray
 ## Related Tasks  
  Use the following topics to get started with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] utility.  
   
-|||  
+|Description|Topic|  
 |-|-|  
-|**Description**|**Topic**|  
 |Describes considerations to configure a server to run utility and non-utility collection sets on the same instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|[Considerations for Running Utility and non-Utility Collection Sets on the Same Instance of SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md)|  
 |Describes how to create a SQL Server utility control point.|[Create a SQL Server Utility Control Point &#40;SQL Server Utility&#41;](../../relational-databases/manage/create-a-sql-server-utility-control-point-sql-server-utility.md)|  
 |Describes how to connect to a SQL Server Utility.|[Connect to a SQL Server Utility](../../relational-databases/manage/connect-to-a-sql-server-utility.md)|  

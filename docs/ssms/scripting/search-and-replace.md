@@ -1,5 +1,6 @@
 ---
 title: "Search and Replace"
+description: Learn about the four different ways to find and replace text, each of which displays its own version of the Find and Replace dialog box. The Find and Replace option settings affect all these ways of searching. 
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -12,7 +12,7 @@ ms.author: jaszymas
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Rotate enclave-enabled keys
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 In Always Encrypted, a key rotation is a process of replacing an existing column master key or a column encryption key with a new key. This article describes use cases and considerations for key rotation specific to  [Always Encrypted with secure enclaves](always-encrypted-enclaves.md) when either the initial key and/or the target (new) key is an enclave-enabled key. For general guidelines and processes for managing Always Encrypted keys, see [Overview of key management for Always Encrypted](overview-of-key-management-for-always-encrypted.md). 
 

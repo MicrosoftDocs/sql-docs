@@ -40,7 +40,9 @@ ms.author: genemi
 CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expression  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *relational_schema*  
  Identifies the relational schema name. If not specified, default relational schema is assumed.  
   

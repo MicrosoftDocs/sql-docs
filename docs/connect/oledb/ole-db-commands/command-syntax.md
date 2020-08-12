@@ -1,6 +1,6 @@
 ---
-title: "Command Syntax | Microsoft Docs"
-description: "Command syntax and Stored Procedures"
+title: "Command syntax (OLE DB driver) | Microsoft Docs"
+description: Learn about command syntax that the OLE DB Driver for SQL Server recognizes and how to run a SQL Server stored procedure.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

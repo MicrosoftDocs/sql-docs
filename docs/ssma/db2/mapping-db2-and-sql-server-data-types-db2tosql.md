@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: e7e939a8-5e76-4509-beaf-5acd1cab505e
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Mapping DB2 and SQL Server Data Types (DB2ToSQL)
 DB2 database types differ from [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database types. When you convert DB2 database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] objects, you must specify how to map data types from DB2 to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can accept the default data type mappings, or you can customize the mappings as shown in the following sections.  

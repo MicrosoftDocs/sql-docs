@@ -1,6 +1,6 @@
 ---
-title: "Add, remove nodes Failover Cluster"
-description: This article shows you how to add or remove nodes in an existing SQL Server failover cluster instance.
+title: "Add, remove nodes Failover Cluster Instance"
+description: This article shows you how to add or remove nodes in an existing SQL Server Always On failover cluster instance.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.reviewer: ""
@@ -19,28 +19,31 @@ ms.assetid: fe20dca9-a4c1-4d32-813d-42f1782dfdd3
 author: MashaMSFT
 ms.author: mathoma
 ---
-# Add or Remove Nodes in a SQL Server Failover Cluster (Setup)
+
+# Add or remove nodes in a failover cluster instance (Setup)
+
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
-  Use this procedure to manage nodes to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance.  
+
+ Use this procedure to manage nodes to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance.  
   
- To update or remove a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you must be a local administrator with permission to log in as a service on all nodes of the failover cluster. For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
+ To update or remove a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI, you must be a local administrator with permission to log in as a service on all nodes of the underlying Windows Server failover cluster (WSFC). For local installations, you must run Setup as an administrator. If you install [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] from a remote share, you must use a domain account that has read and execute permissions on the remote share.  
   
- To add a node to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you must run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup on the node that is to be added to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance. Do not run Setup on the active node.  
+ To add a node to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI, you must run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup on the node that is to be added to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance. Do not run Setup on the active node.  
   
- To remove a node from an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster, you must run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup on the node that is to be removed from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance.  
+ To remove a node from an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] FCI, you must run [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Setup on the node that is to be removed from the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance.  
   
  To view procedural steps to add or remove nodes, select one of the following operations:  
   
--   [Add a node to an existing SQL Server failover cluster](#Add)  
+-   [Add a node to an existing Always On failover cluster instance](#Add)  
   
--   [Remove a node from an existing SQL Server failover cluster](#Remove)  
+-   [Remove a node from an existing Always On failover cluster instance](#Remove)  
   
 > [!IMPORTANT]  
->  The operating system drive letter for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] install locations must match on all the nodes added to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster.  
+>  The operating system drive letter for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] install locations must match on all the nodes added to the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance.  
   
 ##  <a name="Add"></a> Add Node  
   
-#### To add a node to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster  
+#### To add a node to an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance  
   
 1.  Insert the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation media, and from the root folder, double-click Setup.exe. To install from a network share, navigate to the root folder on the share, and then double-click Setup.exe.  
   
@@ -60,7 +63,7 @@ ms.author: mathoma
   
 8.  On the Cluster Node Configuration page, use the drop-down box to specify the name of the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance that will be modified during this Setup operation.  
   
-9. On the Server Configuration - Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features you selected to install. For failover cluster installations, account name and startup type information will be pre-populated on this page based on settings provided for the active node. You must provide passwords for each account. For more information, see [Server Configuration - Service Accounts](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) and [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
+9. On the Server Configuration - Service Accounts page, specify login accounts for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] services. The actual services that are configured on this page depend on the features you selected to install. For failover cluster instance installations, account name and startup type information will be pre-populated on this page based on settings provided for the active node. You must provide passwords for each account. For more information, see [Server Configuration - Service Accounts](https://msdn.microsoft.com/library/c283702d-ab20-4bfa-9272-f0c53c31cb9f) and [Configure Windows Service Accounts and Permissions](../../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
      **Security Note** [!INCLUDE[ssNoteStrongPass](../../../includes/ssnotestrongpass-md.md)]  
   
@@ -80,7 +83,7 @@ ms.author: mathoma
   
 ##  <a name="Remove"></a> Remove Node  
   
-#### To remove a node from an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster  
+#### To remove a node from an existing [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance  
   
 1.  Insert the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] installation media. From the root folder, double-click setup.exe. To install from a network share, navigate to the root folder on the share, and then double-click Setup.exe.  
   

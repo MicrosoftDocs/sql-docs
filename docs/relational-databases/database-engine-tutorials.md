@@ -1,5 +1,6 @@
 ---
 title: "Database Engine Tutorials | Microsoft Docs"
+description: Use these tutorials to learn about the SQL Server Database Engine, including getting started and using the SQL Server Management Studio.
 ms.custom: ""
 ms.date: "08/02/2016"
 ms.prod: sql

@@ -1,6 +1,6 @@
 ---
-title: "Return Codes | Microsoft Docs"
-description: "Return codes"
+title: Return codes (OLE DB driver)
+description: Learn about return codes for OLE DB Driver for SQL Server member functions and how to get more information about results besides success.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

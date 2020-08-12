@@ -29,11 +29,16 @@ Indicates the number of milliseconds to wait before a request times out.
  Requests in a three-tier environment can take several minutes to execute. Use this property to specify additional time for long-running requests.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)|  
-  
+
+:::row:::
+    :::column:::
+        [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [InternetTimeout Property Example (VB)](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)   
  [InternetTimeout Property Example (VC++)](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)   

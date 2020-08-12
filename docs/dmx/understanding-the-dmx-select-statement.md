@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # Understanding the DMX Select Statement
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   The [SELECT](../dmx/select-dmx.md) statement is the basis for most queries that you create with Data Mining Extensions (DMX) in [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]. It can perform many different kinds of tasks, such as browsing and predicting against data mining models.  
   
@@ -69,7 +69,7 @@ author: minewiskan
 |SELECT DISTINCT FROM *\<model>*|Returns all the state values from the mining model for the specified column.<br /><br /> The data domain for this query type is the data mining model.<br /><br /> [SELECT DISTINCT FROM &#60;model &#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)<br /><br /> [Content Queries &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
 |SELECT FROM *\<model>*.CONTENT|Returns content that describes the mining model.<br /><br /> The data domain for this query type is the content schema rowset.<br /><br /> [SELECT FROM &#60;model&#62;.CONTENT &#40;DMX&#41;](../dmx/select-from-model-content-dmx.md)<br /><br /> [Content Queries &#40;Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/content-queries-data-mining)|  
 |SELECT FROM *\<model>*.DIMENSION_CONTENT|Returns content that describes the mining model.<br /><br /> The data domain for this query type is the content schema rowset.<br /><br /> [SELECT FROM &#60;model&#62;.DIMENSION_CONTENT &#40;DMX&#41;](../dmx/select-from-model-dimension-content-dmx.md)|  
-|SELECT FROM *\<model>*.PMML|Returns the Predictive Model Markup Language (PMML) representation of the mining model, for algorithms that support this functionality.<br /><br /> The domain for this query type is the PMML schema rowset.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-model-content-pmml-rowset)|  
+|SELECT FROM *\<model>*.PMML|Returns the Predictive Model Markup Language (PMML) representation of the mining model, for algorithms that support this functionality.<br /><br /> The domain for this query type is the PMML schema rowset.<br /><br /> [DMSCHEMA_MINING_MODEL_CONTENT_PMML Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126283(v=sql.110))|  
   
  [Back to Select Types](#Select_Types)  
   

@@ -59,7 +59,9 @@ Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse:
 SET @local_variable {+= | -= | *= | /= | %= | &= | ^= | |= } expression  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 **@** _local_variable_  
 The name of a variable of any type except **cursor**, **text**, **ntext**, **image**, or **table**. Variable names must start with one at sign (**@**). Variable names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
   

@@ -10,11 +10,11 @@ helpviewer_keywords:
   - "conversion, options described"
   - "Project Settings dialog box, Conversion"
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Project Settings (Conversion) (AccessToSQL)
-The Conversion project settings let you configure how objects are converted from Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or SQL Azure database objects.  
+The Conversion project settings let you configure how objects are converted from Access database objects to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or Azure SQL Database objects.  
   
 The Conversion pane is available in the **Project Settings** and **Default Project Settings** dialog boxes.  
   

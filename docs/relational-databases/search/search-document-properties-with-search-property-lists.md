@@ -82,7 +82,7 @@ ms.custom: "seo-lt-2019"
   
     -   **Create from an existing search property list**  
   
-     For more information, see [New Search Property List](/sql/database-engine/new-search-property-list).  
+     For more information, see [New Search Property List](https://docs.microsoft.com/sql/t-sql/statements/create-search-property-list-transact-sql).  
   
 8.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -195,7 +195,7 @@ GO
   
     2.  To add a document property, click in the empty row at the bottom of the list, to the right of the **\***, and enter the values for the new property.  
   
-         For information about these values, see [Search Property List Editor](/sql/database-engine/search-property-list-editor). For information about how to obtain these values for properties defined by Microsoft, see [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). For information about properties defined by an independent software vendor (ISV), see the documentation of that vendor.  
+         For information about these values, see [Search Property List Editor](https://docs.microsoft.com/sql/t-sql/statements/create-search-property-list-transact-sql). For information about how to obtain these values for properties defined by Microsoft, see [Find Property Set GUIDs and Property Integer IDs for Search Properties](../../relational-databases/search/find-property-set-guids-and-property-integer-ids-for-search-properties.md). For information about properties defined by an independent software vendor (ISV), see the documentation of that vendor.  
   
 7.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   

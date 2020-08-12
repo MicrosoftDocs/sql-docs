@@ -34,7 +34,7 @@ Selects the authentication mode from one of the following:
 - **Active Directory Password** with login ID and password
 - **Active Directory Integrated** authentication using the currently logged-in user's account
 - **Active Directory Interactive** authentication with login ID
-- **Managed Service Identity** authentication with Managed Service Identity
+- **Managed Service Identity** authentication with Managed Identity
 
 See [Data Source Wizard Screen 2](../../../connect/odbc/windows/dsn-wizard-2.md) for more information on the authentication modes.
 

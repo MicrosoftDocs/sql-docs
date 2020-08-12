@@ -8,11 +8,11 @@ ms.topic: conceptual
 helpviewer_keywords:
   - "Connect to SQL Azure dialog box"
 ms.assetid: bf44b236-d9be-41ae-a5fd-bd73038e505f
-author: Shamikg
-ms.author: Shamikg
+author: nahk-ivanov
+ms.author: alexiva
 ---
 # Connect To Azure SQL Database (AccessToSQL)
-Use the Connect to SQL Azure dialog box to connect to the SQL Azure database that you want to migrate.  
+Use the Connect to SQL Azure dialog box to connect to the database in Azure SQL Database that you want to migrate.  
   
 To access this dialog box, on the **File** menu, select **Connect to SQL Azure**. If you have previously connected, the command is **Reconnect to SQL Azure.**  
   
@@ -30,7 +30,7 @@ Select, enter or **Browse** the Database name.
   
 **User name**  
   
-Enter the user name that SSMA will use to connect to the SQL Azure database  
+Enter the user name that SSMA will use to connect to Azure SQL Database  
   
 **Password**  
   

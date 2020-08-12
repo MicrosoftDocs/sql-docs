@@ -48,7 +48,7 @@ Use the `DBCC TRACESTATUS` command to determine which trace flags are currently 
 The following table lists and describes the trace flags that are available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
 > [!NOTE]
-> Azure SQL Database Managed Instance supports the following global Trace Flags: 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 10316, and 11024. Session trace-flags are not yet supported in Managed Instance.
+> Azure SQL Managed Instance supports the following global Trace Flags: 460, 2301, 2389, 2390, 2453, 2467, 7471, 8207, 9389, 10316, and 11024. Session trace-flags are not yet supported in Managed Instance.
  
 > [!NOTE]
 > Some trace flags were introduced in specific [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions. For more information on the applicable version, see the Microsoft Support article associated with a specific trace flag.

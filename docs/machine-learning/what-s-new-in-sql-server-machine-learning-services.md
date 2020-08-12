@@ -12,8 +12,7 @@ ms.technology: machine-learning-services
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # What's new in SQL Server Machine Learning Services
-
-[!INCLUDE [SQL Server 2016](../../includes/applies-to-version/sqlserver2016.md)]
+[!INCLUDE [SQL Server 2016](../includes/applies-to-version/sqlserver2016.md)]
 
 Machine learning capabilities are added to SQL Server in each release as we continue to expand, extend, and deepen the integration between the data platform, advanced analytics, and data science. 
 

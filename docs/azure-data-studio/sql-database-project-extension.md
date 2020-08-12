@@ -2,7 +2,7 @@
 title: SQL Database Projects extension
 description: Install and use the SQL Database Projects extension (preview) for Azure Data Studio
 ms.custom: "seodec18"
-ms.date: "06/25/2020"
+ms.date: "07/30/2020"
 ms.reviewer: "drskwier, maghan, sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
@@ -15,9 +15,20 @@ ms.author: "drskwier"
 The SQL Database Projects extension (preview) is an extension for developing SQL databases in a project-based development environment. This extension is currently in preview and is available in the [Azure Data Studio Insiders Build](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-main).
 
 
+## Features
+1. Create project from a connected database 
+2. Create a new blank project
+3. Open a Project previously created in [Azure Data Studio](sql-database-project-extension-getting-started.md) or in [SQL Server Data Tools](../ssdt/sql-server-data-tools.md) 
+4. Edit project by adding or removing Table, View, Stored Procedure, or custom scripts in the project 
+5. Organize files/scripts in folders 
+6. Add references to system databases or user dacpac
+7. Build single project 
+8. Deploy single project
+9. Load connection details (SQL Windows authentication) and SQLCMD variables from deployment profile 
+
 ## Install the SQL Database Projects extension
 
-1. To open the extensions manager and access the available extensions, select the extensions icon, or select **Extensions** in the **View** menu.
+1. Open the extensions manager to access the available extensions.  To do so, either select the extensions icon or select **Extensions** in the **View** menu.
 2. Identify the *SQL Database Projects* extension by typing all or part of the name in the extension search box. Select an available extension to view its details.
 
    ![Install extension](media/extensions/sql-database-projects-extension/install-database-projects.png)
@@ -29,40 +40,16 @@ The SQL Database Projects extension (preview) is an extension for developing SQL
    > [!NOTE]
    > It is recommended to install the [Schema Compare extension](schema-compare-extension.md) alongside the SQL Database Projects extension for full functionality.
 
-## Getting Started with Database Projects
-
-* Create a new database project by going to the **Projects** viewlet under Explorer, or by searching for **New Database Project** in the command palette.
-* Existing database projects can be opened via **Open Database Project** in the command palette.
-* Start from an existing database by using **Import New Database Project** from the command palette.
-
-   ![New viewlet](media/extensions/sql-database-projects-extension/projects-viewlet.png)
-
-
-### Create an Empty Database Project
-
- In the **Projects** viewlet under **Explorer**, click the **New Project** button and enter a project name in the text input that appears.  In the "Select a Folder" dialog that appears, select a directory for the project's folder, .sqlproj file, and other contents to reside in.
- The empty project is opened and visible in the **Projects** viewlet for editing.
-
-### Open an Existing Project
-
-In the **Projects** viewlet, click the **Open Project** button and open an existing *.sqlproj* file from the file picker that appears. Existing projects can originate from Azure Data Studio or [Visual Studio SQL Server Data Tools](../ssdt/sql-server-data-tools.md).
-
-The existing project is opened and its contents are visible in the **Projects** viewlet for editing.
-
-### Create a Database Project from an Existing Database
-
-In the **Project** viewlet, click the **Import Project from Database** button and connect to a SQL Server.  Once the connection is established, select a database from the list available databases and set the name of the project.
-
-Finally, select a target structure of the extraction.  The new project is opened and contains SQL scripts for the contents of the selected database.
-
-## Build and Publish
-
-Deploying the database project is achieved in the SQL Database Projects extension for Azure Data Studio by building the project into a [data-tier application file](../relational-databases/data-tier-applications/data-tier-applications.md) (DACPAC) and publishing to a supported platform. For more on this process, please see [Build and Publish a Project](sql-database-project-extension-build.md).
-
-## Schema Compare
-The SQL Database Projects extension interacts with the [Schema Compare extension](schema-compare-extension.md), if installed, to compare the contents of a project to a dacpac or existing database.  The resulting schema comparison can be used to view and apply the differences from source to target.
+## Known limitations
+1. Adding project references and loading existing project references in Azure Data Studio viewlet is not currently supported. 
+2. Loading files as link is not supported in Azure Data Studio viewlet today, however the files will be loaded at the top level in tree and build will incorporate these files as expected. 
+3. Pre-Post deploy script adding and loading in viewlet is not supported as of today, however if you manually add these files in project they will be honored at build time. 
+3. SQLCLR objects in project are not supported in .NET Core version of DacFx. 
+3. Tasks (build/publish) are not user-defined
+3. Publish targets defined by DacFx
+3. Source control integration and new project creation do not automatically create .gitignore file 
+3. WSL environment support is limited 
 
 ## Next steps
-
+- [Getting Started with the SQL Database Projects extension](sql-database-project-extension-getting-started.md)
 - [Build and Publish a project with SQL Database Projects extension for Azure Data Studio](sql-database-project-extension-build.md)
-- [Data Tier Applications](../relational-databases/data-tier-applications/data-tier-applications.md)

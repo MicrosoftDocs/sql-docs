@@ -1,6 +1,6 @@
 ---
 title: "OLE DB Driver for SQL Server (OLE DB) Reference | Microsoft Docs"
-description: "OLE DB Driver for SQL Server (OLE DB) reference"
+description: Learn about the OLE DB interfaces and methods that exhibit provider-specific behavior when using the OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

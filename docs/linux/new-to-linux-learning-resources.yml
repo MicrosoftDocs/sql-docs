@@ -21,9 +21,9 @@ landingContent:
         url: new-to-linux-resources.md
       - text: "Learn: SQL Server on Linux"
         url: https://docs.microsoft.com/en-us/learn/modules/introduction-sql-server-linux/
-      - text: "Channel9: How SQL Server Runs on Linux"
+      - text: "Channel9 - How SQL Server runs on Linux"
         url: https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-on-Linux-The-HOW?term=sql%20server%20on%20Linux&lang-en=true
-      - text: "Channnel9: SQL Server on Linux"
+      - text: "Channnel9 - SQL Server on Linux"
         url: https://channel9.msdn.com/events/Connect/2016/101?term=sql%20server%20on%20Linux&lang-en=true 
 
 

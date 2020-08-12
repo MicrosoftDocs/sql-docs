@@ -34,8 +34,6 @@ Converts an *inputdate* to the corresponding *datetimeoffset* value in the targe
 inputdate AT TIME ZONE timezone  
 ```
 
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
 
 *inputdate*  

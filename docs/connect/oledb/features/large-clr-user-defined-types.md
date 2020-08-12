@@ -1,6 +1,6 @@
 ---
 title: "Large CLR User-Defined Types | Microsoft Docs"
-description: "Large CLR user-defined types in OLE DB Driver for SQL Server"
+description: Learn about size restrictions and related behavior for user-defined types in the common language runtime for different versions of SQL Server.
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql

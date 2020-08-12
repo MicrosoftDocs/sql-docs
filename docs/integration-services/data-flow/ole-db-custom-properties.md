@@ -26,7 +26,7 @@ ms.author: chugu
 |-------------------|---------------|-----------------|  
 |AccessMode|Integer|The mode used to access the database. The possible values are **Open Rowset**, **Open Rowset from Variable**, **SQL Command**, and **SQL Command from Variable**. The default value is **Open Rowset**.|  
 |AlwaysUseDefaultCodePage|Boolean|A value that indicates whether to use the value of the **DefaultCodePage** property for each column, or to try to derive the codepage from each column's locale. The default value of this property is **False**.|  
-|CommandTimeout|Integer|The number of seconds before a command times out. A value of 0 indicates an infinite time-out.<br /><br /> Note: This property is not available in the **OLE DB Source Editor**, but can be set by using the **Advanced Editor**.|  
+|CommandTimeout|Integer|The number of seconds before a command times out. A value of 0 indicates an infinite time-out. <br /><br /> Note: <br> This property only takes effective when data access mode is **SQL command**. <br> This property is not available in the **OLE DB Source Editor**, but can be set by using the **Advanced Editor**.|  
 |DefaultCodePage|Integer|The code page to use when code page information is unavailable from the data source.|  
 |OpenRowset|String|The name of the database object that is used to open a rowset.|  
 |OpenRowsetVariable|String|The variable that contains the name of the database object that is used to open a rowset.|  

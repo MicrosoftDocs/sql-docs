@@ -1,5 +1,5 @@
 ---
-title: @@CPU_BUSY (Transact-SQL)
+title: CPU_BUSY (Transact-SQL)
 ms.custom: ""
 ms.date: "09/18/2017"
 ms.prod: sql

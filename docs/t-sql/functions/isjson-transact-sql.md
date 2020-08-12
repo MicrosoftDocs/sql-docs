@@ -30,8 +30,6 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
 ISJSON ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *expression*  
  The string to test.  

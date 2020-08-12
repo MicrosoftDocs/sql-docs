@@ -31,7 +31,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 .STIntersects ( other_geography )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geography*  
  Is another **geography** instance to compare to the instance on which `STIntersects()` is invoked.  
   

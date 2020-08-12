@@ -90,7 +90,9 @@ FOR DATABASE_MIRRORING (
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
   
 > [!NOTE]  
 >  The following arguments are specific to ALTER ENDPOINT. For descriptions of the remaining arguments, see [CREATE ENDPOINT &#40;Transact-SQL&#41;](../../t-sql/statements/create-endpoint-transact-sql.md).  

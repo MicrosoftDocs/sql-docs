@@ -1,5 +1,6 @@
 ---
 title: "Python tutorial: Run predictions in SQL stored procedures"
+titleSuffix: SQL machine learning
 description: In part five of this five-part tutorial series, you'll operationalize embedded Python script in SQL stored procedures with T-SQL functions with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning

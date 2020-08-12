@@ -1,5 +1,6 @@
 ---
 title: "R tutorial: Train and save model"
+titleSuffix: SQL machine learning
 description: In part four of this five-part tutorial series, you'll train and save a model in R using Transact-SQL on SQL Server with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning

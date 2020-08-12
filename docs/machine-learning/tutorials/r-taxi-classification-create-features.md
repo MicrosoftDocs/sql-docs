@@ -1,5 +1,6 @@
 ---
 title: "R tutorial: Create data features"
+titleSuffix: SQL machine learning
 description: In part three of this five-part tutorial series, you'll use T-SQL functions to create and store features from sample data with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning

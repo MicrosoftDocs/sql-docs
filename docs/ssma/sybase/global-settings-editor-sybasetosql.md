@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 0bc0d5e8-b092-413e-a0ee-7ef2c516d324
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Global Settings (Editor) (SybaseToSQL)
 Use the Editor page of the **Global Settings** dialog box to specify settings for code editor windows.  

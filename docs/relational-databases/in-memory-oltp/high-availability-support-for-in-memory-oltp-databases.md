@@ -14,9 +14,10 @@ ms.author: "carlrab"
 ---
 # High Availability Support for In-Memory OLTP databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
-  Databases containing memory-optimized tables, with or without native compiled stored procedures, are fully supported with Always On Availability Groups.  There is no difference in the configuration and support for databases which contain [!INCLUDE[hek_2](../../includes/hek-2-md.md)] objects as compared to those without.  
-  
- When an in-memory OLTP database is deployed in an Always On Availability Group configuration, changes to memory-optimized tables on the primary replica are applied in memory to the tables on the secondary replicas, when REDO is applied. This means that failover to a secondary replica can be very quick, since the data is already in memory. In addition,  the tables are available for queries on secondary replicas that have been configured for read access.  
+  Databases containing memory-optimized tables, with or without native compiled stored procedures, are fully supported with Always On Availability Groups.  There is no difference in the configuration and support for databases that contain [!INCLUDE[hek_2](../../includes/hek-2-md.md)] objects as compared to those without.  
+
+ Changes to memory-optimized tables on the primary replica are applied to the tables on the secondary replica during redo. This allows for rapid failover to the secondary replica since the data is already in memory. Tables are available for read queries on the secondary for replicas that have been configured for read access.  
+
   
 ## Always On Availability Groups and In-Memory OLTP Databases  
  Configuring databases with [!INCLUDE[hek_2](../../includes/hek-2-md.md)] components provides the following:  
@@ -25,13 +26,17 @@ ms.author: "carlrab"
     You can configure your databases containing memory-optimized tables using the same wizard with the same level of support for both synchronous and asynchronous secondary replicas. Additionally, health monitoring is provided using the familiar Always On dashboard in SQL Server Management Studio.  
   
 -   **Comparable Failover time**   
-    Secondary replicas maintain the in-memory state of the durable memory-optimized tables. In the event of automatic or forced failover, the time to failover to the new primary is comparable to disk-bases tables as no recovery is needed. Memory-optimized tables created as SCHEMA_ONLY are supported in this configuration. However changes to these tables are not logged and therefore no data will exist in these tables on the secondary replica.  
+    Secondary replicas maintain the in-memory state of the durable memory-optimized tables. In the event of automatic or forced failover, the time to fail over to the new primary is comparable to disk-bases tables as no recovery is needed. Memory-optimized tables created as SCHEMA_ONLY are supported in this configuration. However changes to these tables are not logged and therefore no data will exist in these tables on the secondary replica.  
   
 -   **Readable Secondary**   
-    You can access and query memory-optimized tables on the secondary replica if it has been configured for read access. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the read timestamp on the secondary replica is in close synchronization with the read timestamp on the primary replica, which means that changes on the primary become visible on the secondary very quickly. This close synchronization behaviour is different from [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] In-Memory OLTP.  
+    You can access and query memory-optimized tables on the secondary replica if2 it has been configured for read access. In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the read timestamp on the secondary replica is in close synchronization with the read timestamp on the primary replica, which means that changes on the primary become visible on the secondary quickly. This close synchronization behavior is different from [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] In-Memory OLTP.  
+
+### Considerations
+
+- SQL Server 2019 introduced parallel redo for memory optimized availability group databases. In SQL Server 2016 and 2017, disk-based tables do not use parallel redo if a database in an availability group is also memory optimized. 
   
 ## Failover Clustering Instance (FCI) and In-Memory OLTP Databases  
- To achieve high-availability in a shared-storage configuration, you can set up failover clustering on instances with one or more database with memory-optimized tables. You need to consider the following factors as part of setting up an FCI.  
+ To achieve high-availability in a shared-storage configuration, you can set up a failover cluster instance with databases using memory-optimized tables. You need to consider the following factors as part of setting up an FCI.  
   
 -   **Recovery Time Objective**   
     Failover time will likely to be higher as the memory-optimized tables must be loaded into memory before the database is made available.  
@@ -40,7 +45,7 @@ ms.author: "carlrab"
     Be aware that SCHEMA_ONLY tables will be empty with no rows after the failover. This is as designed and defined by the application. This is exactly the same behavior when you restart an [!INCLUDE[hek_2](../../includes/hek-2-md.md)] database with one or more SCHEMA_ONLY tables.  
   
 ## Support for transaction replication in In-Memory OLTP  
- Tables acting as transactional replication subscribers, excluding Peer-to-peer transactional replication, can be configured as memory-optimized tables. Other replication configurations are not compatible with memory-optimized tables.  For more information see [Replication to Memory-Optimized Table Subscribers](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).  
+ Tables acting as transactional replication subscribers, excluding Peer-to-peer transactional replication, can be configured as memory-optimized tables. Other replication configurations are not compatible with memory-optimized tables.  For more information, see [Replication to Memory-Optimized Table Subscribers](../../relational-databases/replication/replication-to-memory-optimized-table-subscribers.md).  
   
 ## See Also  
  [Always On Availability Groups (SQL Server)](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   

@@ -79,14 +79,15 @@ SSMS 18.6 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Addressed three common sources of hangs in SSMS. |
 | General SSMS | Fixed a few issues related to SSMS Connection Dialog *forgetting* entries (server/user/passwords). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40256401) and [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40015519). |
 | General SSMS | Fixed an issue on the **Statistic Properties** dialog where selecting the **Update statistics for these columns** checkbox and selecting **OK** yields no effect. Statistics are not updated, and trying to script the action yields a *There is no action to be scripted* message). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37799992). |
+| General SSMS | Addressed issues related to [CVE-2020-1455](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1455). | 
 | Import/Export Data-Tier Application | Fixed an issue where the SSMS was throwing an error when importing a bacpac file. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40229137). |
 | Integration Services | Fixed a bug that customers can't edit a SQL agent job step when using SSMS versions 18.4 or earlier to execute SSIS packages in Azure SQL Managed Instance. |
 | Integration Services | Fixed a bug where the **Use 32-bit runtime** option is missing in the **Execution options** tab to execute an SSIS package in a SQL agent job step for an on-premises SQL Server. |
 | Intellisense / Editor | Fixed an issue where an error dialog may pop up when doing File -> New -> Database Engine Query. |
-| Object Explorer | Fixed an issue where *Properties window* was not available for SQL Azure Databases when right-clicking on a Table or Index node in Object Explorer. |
+| Object Explorer | Fixed an issue where *Properties window* was not available for Azure SQL Database when right-clicking on a Table or Index node in Object Explorer. |
 | Object Explorer | Addressed an issue where SSMS can't expand databases node for master in Azure if there's a control plane outage affecting sys.database_service_objectives. |
 | Reports | Fixed several standard reports that were broken on Linux </br></br> Example: Memory Consumption report was failing with an error similar to "/var/opt/mssql/log/log_116.trc\log.trc' is invalid…"). |
-| SMO / Scripting | Updated the logic to create new SQL Azure Databases to use Gen5_2 as the default SLO. |
+| SMO / Scripting | Updated the logic to create new databases in Azure SQL Database to use Gen5_2 as the default SLO. |
 | Xevent UI | Fixed long outstanding issue (introduced in SSMS 18.0) where "Save to XEL file…" was throwing an error. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37695592). |
 
 #### Known issues (18.6)
@@ -321,7 +322,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | SMO/Scripting | Data Classification </br> - Added support for SQL version 10 (SQL 2008) and higher. </br> - Added new sensitivity attribute 'rank' for SQL version 15 (SQL 2019) and higher and Azure SQL Database. |
 | SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added versioning to ruleset format. |
 | SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added new checks. |
-| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added support for Azure SQL Database Managed Instance. |
+| SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Added support for Azure SQL Managed Instance. |
 | SMO/Scripting | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Updated default view of cmdlets to display results as a table. |
 
 #### Bug fixes in 18.3.1
@@ -464,7 +465,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | High DPI | Fixed layout of controls in *New Availability Group* page, which is on some localized version of SSMS. |
 | High DPI | Fixed layout of *New Job Schedule* page. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37632094) for more details. |
 | Import flat file | Fixed in an issue where rows could be silently lost during the import.|
-| Intellisense/editor | Reduced SMO-based query traffic to Azure SQL Databases for IntelliSense. |
+| Intellisense/editor | Reduced SMO-based query traffic to Azure SQL Database for IntelliSense. |
 | Intellisense/editor | Fixed grammatical error in the tooltip displayed when typing T-SQL to create a user. Also, fixed the error message to disambiguate between users and logins. |
 | Log Viewer | Fixed an issue where SSMS always opens the current server (or agent) log, even if double-clicking an older archive sign in the Object Explorer. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37633648) for more details. |
 | SSMS setup | Fixed the issue that was causing SSMS setup to fail when the setup log path contained spaces. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37496110) for more details. |
@@ -511,7 +512,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | New item| Details|
 | :-------| :------|
 |Support for SQL Server 2019|SSMS 18.0 is the first release that is fully *aware* of SQL Server 2019 (compatLevel 150).|
-|Support for SQL Server 2019|Support for "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in SQL Server 2019 and SQL managed instance.|
+|Support for SQL Server 2019|Support for "BATCH_STARTED_GROUP" and "BATCH_COMPLETED_GROUP" in SQL Server 2019 and SQL Managed Instance.|
 |Support for SQL Server 2019|SMO: Added support for UDF Inlining.|
 |Support for SQL Server 2019|GraphDB: Add a flag in showplan for Graph TC Sequence.|
 |Support for SQL Server 2019|Always Encrypted: added support for AEv2 / Enclave.|
@@ -544,9 +545,9 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Azure Data Studio integration|Added menu item to start/download Azure Data Studio.|
 |Azure Data Studio integration|Added "Start Azure Data Studio" menu item to Object Explorer.|
 |Azure Data Studio integration|When right-clicking on a database node in OE, the user is presented with context menus to either run a query or create a new notebook in Azure Data Studio.|
-|Azure SQL support| SLO/Edition/MaxSize database properties now accept custom names, making it easier to support future editions of Azure SQL Databases.|
+|Azure SQL support| SLO/Edition/MaxSize database properties now accept custom names, making it easier to support future editions of Azure SQL Database.|
 |Azure SQL support| Added support for vCore SKUs (General Purpose and Business Critical): Gen4_24 and all the Gen5.|
-|Azure SQL managed instance|Added new "AAD logins" as a new login type in SMO and SSMS when connected to an Azure SQL managed instance.|
+|Azure SQL Managed Instance|Added new "AAD logins" as a new login type in SMO and SSMS when connected to Azure SQL Managed Instance.|
 |Always On|Rehash RTO (estimated recovery time)  and RPO (estimated data loss) in SSMS Always on Dashboard. See the updated documentation at [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).|
 |Always Encrypted| The Enable Always Encrypted checkbox in the new Always Encrypted tab in the Connect to Server dialog now provides an easy way to enable/disable Always Encrypted for a database connection.|
 |Always Encrypted with secure enclaves| Several enhancements have been made to support  Always Encrypted with secure enclaves in SQL Server 2019:  A text field for specifying enclave attestation URL in the Connect to Server dialog (the new Always Encrypted tab).  The new checkbox in the New Column Master Key dialog to control whether a new column master key allows enclave computations.  Other Always Encrypted key management dialogs now expose the information on which column master keys allow enclave computations.|
@@ -559,7 +560,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Data-tier Application Wizard|Added support to Import/Export data-tier application with graph tables.|
 |Flat File Import Wizard|Added logic to notify the user that an import may have resulted in a renaming of the columns.|
 |Integration Services (SSIS)|Added support to allow customers to schedule SSIS packages on Azure-SSIS IRs that are in Azure Government cloud.|
-|Integration Services (SSIS)|When you use SQL Agent of Azure SQL managed instance via SSMS, you can configure parameter and connection manager in SSIS agent job step.|
+|Integration Services (SSIS)|When you use SQL Agent of Azure SQL Managed Instance via SSMS, you can configure parameter and connection manager in SSIS agent job step.|
 |Integration Services (SSIS)|When connecting to Azure SQL Database / Azure SQL Managed Instance, you can connect to it with *default* as initial db.|
 |Integration Services (SSIS)|Added a new entry item **Try SSIS in Azure Data Factory** under "Integration Services Catalogs" node, which can be used to launch the "Integration Runtime Creation Wizard" and create "Azure-SSIS Integration Runtime" quickly.
 |Integration Services (SSIS)|Added **Create SSIS IR** button in "Catalog Creation Wizard," which can be used to launch the "Integration Runtime Creation Wizard" and create "Azure-SSIS Integration Runtime" quickly.|
@@ -587,7 +588,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |SMO|Added cascade delete support to "Edge Constraints" in both SMO and SSMS.|
 |SMO|Added support for data classification "read-write" permissions.|
 |Vulnerability Assessment| Enabled Vulnerability Assessment tasks menu on Azure SQL DW.|
-|Vulnerability Assessment|Change the set of vulnerability assessment rules that are run on Azure SQL managed instance servers, so that "Vulnerability Assessment" scan results can be consistent with the ones in Azure SQL Database.|
+|Vulnerability Assessment|Change the set of vulnerability assessment rules that are run on Azure SQL Managed Instance, so that "Vulnerability Assessment" scan results can be consistent with the ones in Azure SQL DB.|
 |Vulnerability Assessment| "Vulnerability Assessment" now supports Azure SQL DW.|
 |Vulnerability Assessment|Added a new exporting feature to export the vulnerability assessment scan results to Excel.|
 |XEvent Viewer|XEvent Viewer: enabled showplan window for more XEvents.|

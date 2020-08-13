@@ -7,9 +7,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 62e2d30f-a73f-42d9-a6ab-3510a8198f4e
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # New GUI features in SSMA for Oracle (OracleToSQL)
 This chapter describes new features of SSMA User Interface.  

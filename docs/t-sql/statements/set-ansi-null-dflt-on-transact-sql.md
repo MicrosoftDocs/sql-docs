@@ -63,7 +63,7 @@ SET ANSI_NULL_DFLT_ON ON
   
  To view the current setting for this setting, run the following query.  
   
-```  
+```sql  
 DECLARE @ANSI_NULL_DFLT_ON VARCHAR(3) = 'OFF';  
 IF ( (1024 & @@OPTIONS) = 1024 ) SET @ANSI_NULL_DFLT_ON = 'ON';  
 SELECT @ANSI_NULL_DFLT_ON AS ANSI_NULL_DFLT_ON;  
@@ -76,7 +76,7 @@ SELECT @ANSI_NULL_DFLT_ON AS ANSI_NULL_DFLT_ON;
 ## Examples  
  The following example shows the effects of `SET ANSI_NULL_DFLT_ON` with both settings for the **ANSI null default** database option.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   

@@ -55,7 +55,7 @@ OPENROWSET
    [ , DATASOURCE = 'data_source_name' ]
 
    [ , ERRORFILE = 'file_name' ]
-   [ , ERRORFILE_DATASOURCE = 'data_source_name' ]
+   [ , ERRORFILE_DATA_SOURCE = 'data_source_name' ]
    [ , MAXERRORS = maximum_errors ]
 
    [ , FIRSTROW = first_row ]
@@ -68,7 +68,7 @@ OPENROWSET
    [ , FORMAT = 'CSV' ]
    [ , FIELDQUOTE = 'quote_characters']
    [ , FORMATFILE = 'format_file_path' ]
-   [ , FORMATFILE_DATASOURCE = 'data_source_name' ]
+   [ , FORMATFILE_DATA_SOURCE = 'data_source_name' ]
 ```
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]

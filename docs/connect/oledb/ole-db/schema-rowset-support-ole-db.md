@@ -1,6 +1,6 @@
 ---
 title: "Schema Rowset Support (OLE DB) | Microsoft Docs"
-description: "Schema rowset support (OLE DB)"
+description: The OLE DB Driver for SQL Server supports returning schema information from a linked server when processing Transact-SQL distributed queries.
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql

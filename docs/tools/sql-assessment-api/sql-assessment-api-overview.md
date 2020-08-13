@@ -1,6 +1,6 @@
 ---
 title: SQL Server Assessment API
-description: Describing what is the SQL Server Assessment API.
+description: Learn about the SQL Assessment API that provides a mechanism to evaluate the configuration of your SQL Server for best practices.
 ms.prod: sql
 ms.technology: tools-other
 ms.topic: conceptual
@@ -13,25 +13,25 @@ ms.date: 11/04/2019
 
 # SQL Assessment API
 
-SQL Assessment API provides a mechanism to evaluate the configuration of your SQL Server for best practices. The API is delivered with a ruleset containing best practice rules suggested by SQL Server Team. This ruleset is enhancing with the release of new versions but at the same time, the API is built with the intent to give a highly customizable and extensible solution. So, users can tune the default rules and create their own ones.
+SQL Assessment API provides a mechanism to evaluate the configuration of your SQL Server for best practices. The API is delivered with a ruleset containing best practice rules suggested by SQL Server Team. This ruleset is enhanced with the release of new versions but at the same time, the API is built with the intent to give a highly customizable and extensible solution. So, users can tune the default rules and create their own.
 
 SQL Assessment API is useful when you want to make sure your SQL Server configuration is in line with recommended best practices. After an initial assessment, configuration stability can be tracked by regularly scheduled assessments.
 
-The API can be used to assess Azure SQL Database Managed Instance and SQL Server versions 2012 and higher. SQL on Linux is supported.
+The API can be used to assess Azure SQL Managed Instance and SQL Server versions 2012 and higher. SQL on Linux is supported.
 
 ## Rules
 
-Rules sometimes referred to as checks, are defined in JSON formatted files. Ruleset format requires a ruleset name and version to be specified. So when you use custom rulesets, you can easily know which recommendations from what ruleset come. 
+Rules sometimes referred to as checks, are defined in JSON formatted files. Ruleset format requires a ruleset name and version to be specified. So when you use custom rulesets, you can easily know which recommendations from what ruleset come.
 
 Microsoft's shipped ruleset is available on GitHub. You can visit the [samples repository](https://aka.ms/sql-assessment-api) for more details.
 
 ## SQL Assessment cmdlets and SMO extension
 
-SQL Assessment API is part of the [SQL Server Management Objects (SMO)](../relational-databases/server-management-objects-smo/installing-smo.md) July 2019 release version and higher and the [SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md) July 2019 release version and higher.
+SQL Assessment API is part of the [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/installing-smo.md) July 2019 release version and higher and the [SQL Server PowerShell module](../../powershell/download-sql-server-ps-module.md) July 2019 release version and higher.
 
-* [Install SMO](../relational-databases/server-management-objects-smo/installing-smo.md)
+* [Install SMO](../../relational-databases/server-management-objects-smo/installing-smo.md)
 
-* [Install SQL Server PowerShell module](../powershell/download-sql-server-ps-module.md)
+* [Install SQL Server PowerShell module](../../powershell/download-sql-server-ps-module.md)
 
 SqlServer module is getting two new cmdlets to work with SQL Assessment API:
 
@@ -130,4 +130,5 @@ You can string together rulesets by adding one or more JSON files as parameters 
 
 ## Next steps
 
-Take a look at [SQL Server Management Objects (SMO)](../relational-databases/server-management-objects-smo/overview-smo.md) and [PowerShell](../powershell/download-sql-server-ps-module.md).
+* [SQL Server Management Objects (SMO)](../../relational-databases/server-management-objects-smo/overview-smo.md)
+* [PowerShell](../../powershell/download-sql-server-ps-module.md).

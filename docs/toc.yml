@@ -233,6 +233,19 @@
               href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
             - name: 4 - Deploy the model
               href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+          - name: NYC taxi tips (classification)
+            items:
+            - name: 1 - Introduction
+              href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 2 - Data exploration
+              href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 3 - Feature engineering
+              href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 4 - Train and deploy
+              href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 5 - Predictions
+              href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+
         - name: R
           items:
           - name: Ski rental (decision tree)
@@ -255,7 +268,18 @@
               href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
             - name: 4 - Deploy the model
               href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
-
+          - name: NYC taxi tips (classification)
+            items:
+            - name: 1 - Introduction
+              href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 2 - Data exploration
+              href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 3 - Feature engineering
+              href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 4 - Train and deploy
+              href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 5 - Predictions
+              href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
       - name: Manage Python, R packages
         items:
         - name: Python
@@ -4719,6 +4743,8 @@
         href: database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md
       - name: Configure the Database Engine to Listen on Multiple TCP Ports
         href: database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md
+      - name: How to enable the TCP protocol with SQLPS
+        href: powershell/how-to-enable-tcp-sqlps.md
       - name: Determine Whether the Database Engine Is Installed & Started
         href: database-engine/configure-windows/determine-whether-the-database-engine-is-installed-and-started.md
       - name: Connect to the Database Engine Using Extended Protection
@@ -6360,7 +6386,7 @@
       - name: Utility Explorer F1 Help
         href: relational-databases/manage/utility-explorer-f1-help.md
     - name: SQL Assessment API
-      href: sql-assessment-api/sql-assessment-api-overview.md
+      href: tools/sql-assessment-api/sql-assessment-api-overview.md
   - name: Monitor
     href: relational-databases/performance/monitor-and-tune-for-performance.md
     items:
@@ -9774,10 +9800,10 @@
     items: 
     - name: Extended features and tools
       href: tools/download-sql-feature-packs.md
-  - name: Visual Studio Code
+  - name: Visual Studio Code 
     items: 
     - name: T-SQL scripts
-      href: visual-studio-code/sql-server-develop-use-vscode.md
+      href: tools/visual-studio-code/sql-server-develop-use-vscode.md
 - name: Tutorials
   items:
   - name: SQL Server

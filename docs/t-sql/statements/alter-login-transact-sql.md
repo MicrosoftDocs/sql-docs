@@ -40,10 +40,10 @@ Changes the properties of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -291,10 +291,10 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />single database/elastic pool \*_**
+        **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -306,7 +306,7 @@ GO
 
 &nbsp;
 
-## Azure SQL Database single database/elastic pool
+## SQL Database
 
 ## SQL Server
 
@@ -468,10 +468,10 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />managed instance \*_**
+        **_\* SQL Database<br />Managed Instance \*_**
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)
@@ -749,10 +749,10 @@ ALTER LOGIN [joe@contoso.com] DISABLE
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         **_\* Azure Synapse<br />Analytics \*_**
@@ -923,10 +923,10 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
-        [SQL Database<br />managed instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
+        [SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
     :::column-end:::
     :::column:::
         [Azure Synapse<br />Analytics](alter-login-transact-sql.md?view=azure-sqldw-latest)

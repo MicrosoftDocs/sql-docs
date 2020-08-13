@@ -92,8 +92,8 @@ The given value of type String from the data source cannot be converted to type 
 String or binary data would be truncated. (System.Data)
 ```
 Tactics to alleviate this error:
-1. Expanding the data type size(s) in the [Modify Columns step](#step-4:-modify-columns), such as the length of a nvarchar column, may compensate for variations in the data from the remainder of the flat file.
-2. Enabling error reporting in the [Modify Columns step](#step-4:-modify-columns), especially by a smaller number, will reveal which row(s) in the flat file contain data that does not fit the selected data types. For example, in a flat file where the second row introduces an error, running the import with error reporting with a range of 1 provides a specific error message.  Examining the file directly at the location can provide more targeted changes to the data types based on the data in the identified rows.
+1. Expanding the data type size(s) in the [Modify Columns step](#step-4-modify-columns), such as the length of a nvarchar column, may compensate for variations in the data from the remainder of the flat file.
+2. Enabling error reporting in the [Modify Columns step](#step-4-modify-columns), especially by a smaller number, will reveal which row(s) in the flat file contain data that does not fit the selected data types. For example, in a flat file where the second row introduces an error, running the import with error reporting with a range of 1 provides a specific error message.  Examining the file directly at the location can provide more targeted changes to the data types based on the data in the identified rows.
 
 ![Error Reporting Results](media/import-flat-file-wizard/importfferror.png)
 

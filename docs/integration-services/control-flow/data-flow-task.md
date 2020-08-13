@@ -9,6 +9,7 @@ ms.technology: integration-services
 ms.topic: conceptual
 f1_keywords: 
   - "sql13.dts.designer.dataflowtask.f1"
+  - sql14.dts.designer.controlflowwindow.dataflowtask.f1
 helpviewer_keywords: 
   - "data flow task [Integration Services]"
   - "performance [Integration Services]"

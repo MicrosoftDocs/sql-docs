@@ -9,13 +9,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Provider statistics for SQL Server
 
-![Download-DownArrow-Circled](../../../ssdt/media/download.png)[Download ADO.NET](../../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../../includes/driver_adonet_download.md)]
 
 Starting with the .NET Framework version 2.0 and .NET Core version 1.0, the Microsoft SqlClient Data Provider for SQL Server supports run-time statistics. You must enable statistics by setting the <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> property of the <xref:Microsoft.Data.SqlClient.SqlConnection> object to `True` after you have a valid connection object created. After statistics are enabled, you can review them as a "snapshot in time" by retrieving an <xref:System.Collections.IDictionary> reference via the <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> method of the <xref:Microsoft.Data.SqlClient.SqlConnection> object. You enumerate through the list as a set of name/value pair dictionary entries. These name/value pairs are unordered. At any time, you can call the <xref:Microsoft.Data.SqlClient.SqlConnection.ResetStatistics%2A> method of the <xref:Microsoft.Data.SqlClient.SqlConnection> object to reset the counters. If statistic gathering has not been enabled, an exception is not generated. In addition, if <xref:Microsoft.Data.SqlClient.SqlConnection.RetrieveStatistics%2A> is called without <xref:Microsoft.Data.SqlClient.SqlConnection.StatisticsEnabled%2A> having been called first, the values retrieved are the initial values for each entry. If you enable statistics, run your application for a while, and then disable statistics, the values retrieved will reflect the values collected up to the point where statistics were disabled. All statistical values gathered are on a per-connection basis.  
   

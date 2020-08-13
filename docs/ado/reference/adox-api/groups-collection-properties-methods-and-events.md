@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Groups collection [ADOX], members"
 ms.assetid: 0776457f-bf78-4a79-96bf-a17136d45811
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Groups Collection Properties, Methods, and Events
 ## Properties  

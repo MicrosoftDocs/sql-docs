@@ -1,5 +1,6 @@
 ---
 title: "Access external data: MongoDB - PolyBase"
+description: The article explains how to use PolyBase on a SQL Server instance to query external data in MongoDB. Create external tables to reference the external data.
 ms.date: 12/13/2019
 ms.metadata: seo-lt-2019
 ms.prod: sql
@@ -12,7 +13,7 @@ monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproduc
 ---
 # Configure PolyBase to access external data in MongoDB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The article explains how to use PolyBase on a SQL Server instance to query external data in MongoDB.
 
@@ -68,20 +69,20 @@ The following Transact-SQL commands are used in this section:
 >Once you have created an external data source, you can use the [CREATE EXTERNAL TABLE](../../t-sql/statements/create-external-table-transact-sql.md) command to create a queryable table over that source. 
 
 ## Flattening
- flattening  is enabled for nested and repeated data from MongoDB document collections. User is required to enable `create an external table` and explicitly specify a relational schema over MongoDB document collections that may have nested and/or repeated data. We will enable auto-schema detection over mongo document collections in future milestones.
+Flattening  is enabled for nested and repeated data from MongoDB document collections. User is required to enable `create an external table` and explicitly specify a relational schema over MongoDB document collections that may have nested and/or repeated data. 
 JSON nested/repeated data types will be flattened as follows
 
 * Object: unordered key/value collection enclosed in curly braces (nested)
 
-   - We will create a table column for each object key
+   - SQL Server creates a table column for each object key
 
      * Column Name: objectname_keyname
 
 * Array: ordered values, separated by commas, enclosed in square brackets (repeated)
 
-   - We will add a new table row for each array item
+   - SQL Server adds a new table row for each array item
 
-   - We will create a column per array to store the array item index
+   - SQL Server creates a column per array to store the array item index
 
      * Column Name: arrayname_index
 
@@ -89,11 +90,11 @@ JSON nested/repeated data types will be flattened as follows
 
 There are several potential issues with this technique, two of them being:
 
-* an empty repeated field will effectively mask the data contained in the flat fields of the same record
+* An empty repeated field will effectively mask the data contained in the flat fields of the same record
 
-* the presence of multiple repeated fields can result in an explosion of the number of produced rows
+* The presence of multiple repeated fields can result in an explosion of the number of produced rows
 
-As an example, we evaluate the MongoDB sample dataset restaurant collection stored in non-relational JSON format. Each restaurant has a nested address field and an array of grades it was assigned on different days. The figure below illustrates a typical restaurant with nested address and nested-repeated grades.
+As an example, SQL Server evaluates the MongoDB sample dataset restaurant collection stored in non-relational JSON format. Each restaurant has a nested address field and an array of grades it was assigned on different days. The figure below illustrates a typical restaurant with nested address and nested-repeated grades.
 
 ![MongoDB flattening](../../relational-databases/polybase/media/mongo-flattening.png "MongoDB restaurant flattening")
 

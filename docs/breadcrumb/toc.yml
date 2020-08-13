@@ -13,8 +13,8 @@
       topicHref: /sql/analytics-platform-system/index
 
     - name: ML
-      tocHref: /sql/advanced-analytics/
-      topicHref: /sql/advanced-analytics/
+      tocHref: /sql/machine-learning/
+      topicHref: /sql/machine-learning/
 
     - name: Connect
       tocHref: /sql/connect/
@@ -28,3 +28,6 @@
       tocHref: /sql/reporting-services/
       topicHref: /sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports
 
+    - name: Azure Data Studio
+      tocHref: /sql/azure-data-studio/
+      topicHref: /sql/azure-data-studio/

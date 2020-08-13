@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Querying data in a system-versioned temporal table
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 When you want to get latest (actual) state of data in a temporal table, you can query completely the same way as you query non-temporal table. If the PERIOD columns are not hidden, their values will appear in a SELECT \* query. If you specified **PERIOD** columns as hidden, their values won't appear in a SELECT \* query. When the **PERIOD** columns are hidden, reference the **PERIOD** columns specifically in the SELECT clause to return the values for these columns.
 
@@ -26,7 +26,7 @@ To perform any type of time-based analysis, use the new **FOR SYSTEM_TIME** clau
 - CONTAINED IN (<start_date_time> , <end_date_time>)
 - ALL
 
-**FOR SYSTEM_TIME** can be specified independently for each table in a query. It can be used inside common table expressions, table-valued functions and stored procedures.
+**FOR SYSTEM_TIME** can be specified independently for each table in a query. It can be used inside common table expressions, table-valued functions and stored procedures. When using a table alias with a temporal tables, the **FOR SYSTEM_TIME** clause must included between the temporal table name and the alias (see "Query for a specific time using the AS OF sub-clause" second example, below).
 
 ## Query for a specific time using the AS OF sub-clause
 

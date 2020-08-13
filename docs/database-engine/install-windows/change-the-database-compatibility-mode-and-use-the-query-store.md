@@ -1,5 +1,6 @@
 ---
 title: "Use Query Store after upgrade"
+description: This article explains the place of using the query store to establish a baseline and changing the database compatibility level in a SQL Server upgrade.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
@@ -17,7 +18,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Change the Database Compatibility Level and use the Query Store
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 In [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, some changes are only enabled once the [database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md) has been changed. This was done for several reasons:  
   

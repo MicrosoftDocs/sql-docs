@@ -1,5 +1,6 @@
 ---
 title: "SQL Server XTP Transaction Log | Microsoft Docs"
+description: Learn about the SQL Server XTP Transaction Log performance object, which contains counters related to In-Memory OLTP transaction log activity in SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -12,7 +13,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # SQL Server XTP Transaction Log
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The SQL Server XTP Transaction Log performance object contains counters related to In-Memory OLTP transaction log activity in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

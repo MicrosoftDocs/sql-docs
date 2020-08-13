@@ -20,7 +20,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # DENY Full-Text Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Denies permissions on a full-text catalog and full-text stoplists.  
   
@@ -29,7 +29,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ] ON  
     FULLTEXT   
         {  
@@ -41,7 +41,9 @@ DENY permission [ ,...n ] ON
         [ AS denying_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Is the name of a permission. The valid mappings of permissions to securables are described in the "Remarks" section, later in this topic.  
   

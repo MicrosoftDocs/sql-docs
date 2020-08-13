@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Recordset dynamic properties in XML [ADO]"
 ms.assetid: 52f8e379-812a-4db8-9210-94458926301c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Recordset Dynamic Properties in XML
 The following Recordset provider-specific properties (from the Client Cursor Engine) are currently persisted into the XML format:  

@@ -1,5 +1,6 @@
 ---
 title: "Customize the Report Viewer web part | Microsoft Docs"
+description: You can use the Report Viewer web part to view reports that run on a SQL Server Reporting Services server configured for SharePoint integration.
 ms.date: 11/26/2018
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

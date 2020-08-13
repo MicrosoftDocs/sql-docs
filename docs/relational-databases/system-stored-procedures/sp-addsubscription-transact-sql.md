@@ -1,6 +1,7 @@
 ---
 title: "sp_addsubscription (Transact-SQL) | Microsoft Docs"
-ms.date: "10/28/2015"
+description: Adds a subscription to a publication and sets the Subscriber status. This stored procedure runs at the Publisher on the publication database.
+ms.date: "06/09/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addsubscription"
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_addsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   Adds a subscription to a publication and sets the Subscriber status. This stored procedure is executed at the Publisher on the publication database.  
   
@@ -77,6 +78,9 @@ sp_addsubscription [ @publication = ] 'publication'
   
  [ @subscriber=] '*subscriber*'  
  Is the name of the Subscriber. *subscriber* is **sysname**, with a default of NULL.  
+
+> [!NOTE]
+> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled.
   
  [ @destination_db=] '*destination_db*'  
  Is the name of the destination database in which to place replicated data. *destination_db* is **sysname**, with a default of NULL. When NULL, *destination_db* is set to the name of the publication database. For Oracle Publishers, *destination_db* must be specified. For a non-SQL Server Subscriber, specify a value of (default destination) for *destination_db*.  
@@ -249,7 +253,7 @@ sp_addsubscription [ @publication = ] 'publication'
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
  [ @password= ] '*password*'  
- Specifies a password for the backup if a password was set when the backup was created. *password*is **sysname**, with a default value of NULL.  
+ Specifies a password for the backup if a password was set when the backup was created. *password* is **sysname**, with a default value of NULL.  
   
  [ @fileidhint= ] *fileidhint*  
  Identifies an ordinal value of the backup set to be restored. *fileidhint* is **int**, with a default value of NULL.  

@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_allitems database mail view"
 ms.assetid: 21fb8432-7677-4435-902f-64a58bba4cbb
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysmail_allitems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains one row for each message processed by Database Mail. Use this view when you want to see the status of all messages.  
   

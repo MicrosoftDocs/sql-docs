@@ -1,5 +1,6 @@
 ---
 title: "Hybrid Buffer Pool | Microsoft Docs"
+description: See how Hybrid Buffer Pool makes persistent memory devices accessible via the memory bus. Turn this SQL Server 2019 feature on or off, and view best practices.
 ms.custom: ""
 ms.date: 10/31/2019
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: brcarrig
 manager: amitban
 ---
 # Hybrid Buffer Pool
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Hybrid Buffer Pool enables buffer pool objects to reference data pages in database files residing on persistent memory (PMEM) devices, instead of copies of the data pages cached in volatile DRAM. This feature is introduced in [!INCLUDE[sqlv15](../../includes/sssqlv15-md.md)].
 
@@ -80,27 +81,20 @@ SELECT * FROM
 sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
-The following example returns two tables:
-
-- The first shows the current status of hybrid buffer pool system configuration for an instance of SQL Server.
-- The second lists the databases and the database level setting for hybrid buffer pool (`is_memory_optimized_enabled`).
+The following example lists the databases and the database level setting for hybrid buffer pool (`is_memory_optimized_enabled`).
 
 ```sql
-SELECT * FROM sys.configurations WHERE name = 'hybrid_buffer_pool';
-
 SELECT name, is_memory_optimized_enabled FROM sys.databases;
 ```
 
 ## Best Practices for hybrid buffer pool
 
-When formatting your PMEM device on Windows, use the largest allocation unit size available for NTFS (2 MB in Windows Server 2019) and ensure the device has been formatted for DAX (Direct Access).
+ - When formatting your PMEM device on Windows, use the largest allocation unit size available for NTFS (2 MB in Windows Server 2019) and ensure the device has been formatted for DAX (Direct Access).
 
-Use the large page memory allocation model, which can be enabled with [trace flag 834](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md). Trace flag 834 is a startup trace flag.
+ - Use [Locked Pages in Memory](./enable-the-lock-pages-in-memory-option-windows.md) on Windows.
 
-Using the large page memory allocation model requires the use of [Locked Pages in Memory](./enable-the-lock-pages-in-memory-option-windows.md) on Windows.
+ - Files sizes should be a multiple of 2 MB (modulo 2 MB should equal zero).
 
-Files sizes should be a multiple of 2 MB (modulo 2 MB should equal zero).
+ - If the server scoped setting for hybrid buffer pool is disabled, the feature will not be used by any user database.
 
-If the server scoped setting for hybrid buffer pool is disabled, the feature will not be used by any user database.
-
-If the server scoped setting for hybrid buffer pool is enabled, you can use the database scoped setting to disable the feature for individual user databases.
+ - If the server scoped setting for hybrid buffer pool is enabled, you can use the database scoped setting to disable the feature for individual user databases.

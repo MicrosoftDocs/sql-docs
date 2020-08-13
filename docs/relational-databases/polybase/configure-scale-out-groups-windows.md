@@ -1,5 +1,6 @@
 ---
 title: "Configure PolyBase scale-out groups on Windows | Microsoft Docs"
+description: Set up a PolyBase scale-out group to create a cluster of SQL Server instances. This improves query performance for large data sets from external sources.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -11,7 +12,7 @@ monikerRange: ">= sql-server-2016 || =sqlallproducts-allversions"
 ---
 # Configure PolyBase scale-out groups on Windows
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 This article describes how to set up a [PolyBase scale-out group](polybase-scale-out-groups.md) on Windows. This creates a cluster of SQL Server instances to process large data sets from external data sources, such as Hadoop or Azure Blob Storage, in a scale-out fashion for better query performance.
 
@@ -80,7 +81,10 @@ After setup is complete, both machines can function as PolyBase Group head nodes
 3. Run services.msc on the compute node (PQTH4A-CMP02).
   
 4. Shutdown the PolyBase engine and restart the PolyBase data movement service.
-  
+
+> [!NOTE] 
+> When the Polybase Engine service gets restarted or stopped in the head node, the Data Movement Service (DMS) services gets stopped as soon as the communication channel is closed between DMS and Polybase Engine Service (DW). If the DW engine gets restarted more than 2 times, the DMS goes to a quiet period for 90 minutes and it must wait 90 minutes for the next auto start attempt. In such situation, you should start this service manually on all nodes.
+
 ## Optional: Remove a compute node  
   
 1. Connect to the compute node SQL Server (PQTH4A-CMP02).

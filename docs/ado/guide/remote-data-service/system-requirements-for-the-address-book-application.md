@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "address book application scenario [ADO]"
   - "RDS scenarios [ADO]"
 ms.assetid: da385405-1c9a-478b-9bf6-fba70015324c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # System Requirements for the Address Book Application
 To set up the Address Book sample application, you need to meet the following software and database requirements:  

@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "backward compatibility [ODBC], cursor library"
   - "cursor library [ODBC], backward compatibility"
 ms.assetid: 04d514b1-dc4d-4b84-bf35-60f4657ef1f6
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Cursor Library Operations
 > [!IMPORTANT]  

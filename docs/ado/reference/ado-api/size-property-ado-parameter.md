@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Size property [ADO Parameter]"
 ms.assetid: e6bad449-ebdb-4dd3-886a-9e6f1e7ee5d2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Size Property (ADO Parameter)
 Indicates the maximum size, in bytes or characters, of a [Parameter](../../../ado/reference/ado-api/parameter-object.md) object.  

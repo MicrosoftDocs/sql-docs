@@ -17,12 +17,12 @@ helpviewer_keywords:
   - "ATAN function"
   - "tangent"
 ms.assetid: 6d3dd28e-4fa6-40ba-94cf-b33c0ff614ec
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ATAN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A function that returns the angle, in radians, whose tangent is a specified **float** expression. This is also called arctangent.
   
@@ -30,11 +30,13 @@ A function that returns the angle, in radians, whose tangent is a specified **fl
   
 ## Syntax  
   
-```sql
+```syntaxsql
 ATAN ( float_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *float_expression*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) of either type **float** or of a type that implicitly convert to **float**.
   

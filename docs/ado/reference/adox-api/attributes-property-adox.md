@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Attributes property [ADOX]"
 ms.assetid: e3abb359-79a3-4c22-b3a8-2900817e0d23
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Attributes Property (ADOX)
 Describes column characteristics.  

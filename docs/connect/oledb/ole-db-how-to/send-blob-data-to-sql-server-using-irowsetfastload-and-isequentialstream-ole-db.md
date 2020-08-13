@@ -1,8 +1,8 @@
 ---
 title: "Send BLOB Data to SQL Server Using IROWSETFASTLOAD and ISEQUENTIALSTREAM | Microsoft Docs"
-description: "Send BLOB data to SQL Server using IROWSETFASTLOAD and ISEQUENTIALSTREAM"
+description: Learn how to use IRowsetFastLoad to stream varying length BLOB data per row to SQL Server. This example also demonstrates ISequentialStream.
 ms.custom: ""
-ms.date: "06/14/2018"
+ms.date: "05/25/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -12,40 +12,42 @@ author: pmasl
 ms.author: pelopes
 ---
 # Send BLOB Data to SQL SERVER Using IROWSETFASTLOAD and ISEQUENTIALSTREAM (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
   This sample shows how to use IRowsetFastLoad to stream varying length BLOB data per row.  
   
- By default, this sample shows how to use IRowsetFastLoad to send variable length BLOB data per row by using in-line bindings. The in-line BLOB data must fit in available memory. This method performs best when the BLOB data is less than a few megabytes, because there is no additional stream overhead. For data larger than a few megabytes, especially data that is not available in a block, streaming provides better performance.  
+ By default, this sample shows how to use IRowsetFastLoad to send variable length BLOB data per row by using in-line bindings. The in-line BLOB data must fit in available memory. This method performs best when the BLOB data is less than a few megabytes, because there isn't any additional stream overhead. For data larger than a few megabytes, especially data that isn't available in a block, streaming provides better performance.  
   
- In the source code, when you uncomment #define USE_ISEQSTREAM , the sample will use ISequentialStream. The stream implementation is defined in the sample, and can send any size BLOB data simply by changing MAX_BLOB . Stream data does not have to fit in memory or be available in one block. You call this provider by using IRowsetFastLoad::InsertRow. Pass a pointer using IRowsetFastLoad::InsertRow to the stream implementation in the data buffer (rgBinding.obValue offset) along with the amount of data available to read from the stream. Some providers might not have to know the length of the data when binding occurs. In this case, the length can be omitted from the binding.  
+ In the source code, when you uncomment `#define USE_ISEQSTREAM`, the sample will use ISequentialStream. The stream implementation is defined in the sample, and can send any size BLOB data simply by changing MAX_BLOB. Stream data does not have to fit in memory or be available in one block. You call this provider by using IRowsetFastLoad::InsertRow. Pass a pointer using IRowsetFastLoad::InsertRow to the stream implementation in the data buffer (rgBinding.obValue offset) along with the amount of data available to read from the stream. Some providers might not have to know the length of the data when binding occurs. In this case, the length can be omitted from the binding.  
   
- The sample does not use the provider's stream interface to write data to the provider. Instead, the sample passes a pointer to the stream object that the provider will consume to read the data. Typically, Microsoft providers (SQLOLEDB, SQLNCLI, and MSOLEDBSQL) will read data in 1024-byte chunks from the object until all data has been processed. Neither SQLOLEDB nor SQLNCLI nor MSOLEDBSQL have full implementations for allowing the consumer to write data to the provider's stream object. Only zero length data can be sent through the provider's stream object.  
+ The sample doesn't use the provider's stream interface to write data to the provider. Instead, the sample passes a pointer to the stream object that the provider will consume to read the data. Typically, Microsoft providers (SQLOLEDB, SQLNCLI, and MSOLEDBSQL) will read data in 1024-byte chunks. Providers read from the object until all data has been processed. None of SQLOLEDB, SQLNCLI, and MSOLEDBSQL have full implementations for allowing the consumer to write data to the provider's stream object. Only zero length data can be sent through the provider's stream object.  
   
- The consumer-implemented ISequentialStream object can be used with rowset data (IRowsetChange::InsertRow, IRowsetChange::SetData) and with parameters by binding a parameter as DBTYPE_IUNKNOWN.  
+ The consumer-implemented ISequentialStream object can be used with rowset data (IRowsetChange::InsertRow, IRowsetChange::SetData). Also, it can be used with parameters by binding a parameter as DBTYPE_IUNKNOWN.  
   
- Because DBTYPE_IUNKNOWN is specified as the data type in the binding, it must match the type of the column or target parameter. Conversions are not possible when sending data through ISequentialStream from rowset interfaces. For parameters, you should avoid using ICommandWithParameters::SetParameterInfo and specify a different type to force a conversion; this would require the provider to cache all the BLOB data locally, to convert it before sending to SQL Server. Caching a large BLOB and converting it locally does not provide good performance.  
-  
- For more information, see [BLOBs and OLE Objects](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).  
+ Because DBTYPE_IUNKNOWN is specified as the data type in the binding, it must match the type of the column or target parameter. Conversions are not possible when sending data through ISequentialStream from rowset interfaces <a href="#conversion_note"><sup>**1**</sup></a>. For parameters, you should avoid using ICommandWithParameters::SetParameterInfo and specify a different type to force a conversion. Doing so would require the provider to cache all the BLOB data locally, to convert it before sending to SQL Server. Caching a large BLOB and converting it locally doesn't provide good performance.  
+
+ For more information, see [BLOBs and OLE Objects](../../oledb/ole-db-blobs/blobs-and-ole-objects.md).
+
+ <b id="conversion_note">[1]:</b> While conversions are not possible, translations between UTF-8 and the database collation code page can still occur if the server doesn't support UTF-8. For more information, see [UTF-8 Support in OLE DB Driver for SQL Server](../features/utf-8-support-in-oledb-driver-for-sql-server.md).
   
 > [!IMPORTANT]  
 >  When possible, use Windows Authentication. If Windows Authentication is not available, prompt users to enter their credentials at run time. Avoid storing credentials in a file. If you must persist credentials, you should encrypt them with the [Win32 crypto API](https://go.microsoft.com/fwlink/?LinkId=64532).  
   
 ## Example  
- Execute the first ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to create the table used by the application.  
+ Execute the first ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to create the table used by the application.  
   
- Compile with ole32.lib oleaut32.lib and execute the following C++ code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains msoledbsql.h.  
+ Compile with ole32.lib oleaut32.lib and execute the following C++ code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name", where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains msoledbsql.h.  
   
- Execute the third ( [!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to delete the table used by the application.  
+ Execute the third ([!INCLUDE[tsql](../../../includes/tsql-md.md)]) code listing to delete the table used by the application.  
   
-```  
+```sql
 use master  
 create table fltest(col1 int, col2 int, col3 image)  
 ```  
   
-```  
+```cpp
 // compile with: ole32.lib oleaut32.lib  
 #include <windows.h>  
   
@@ -473,7 +475,7 @@ void wmain() {
 }  
 ```  
   
-```  
+```sql
 use master  
 drop table fltest  
 ```  

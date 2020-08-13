@@ -1,5 +1,6 @@
 ---
-title: "sqlsrv_prepare | Microsoft Docs"
+title: "sqlsrv_prepare"
+description: "API reference for the sqlsrv_prepare function in the Microsoft SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
 ms.date: "04/11/2019"
 ms.prod: sql
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "API Reference, sqlsrv_prepare"
   - "sqlsrv_prepare"
 ms.assetid: 8c74c697-3296-4f5d-8fb9-e361f53f19a6
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

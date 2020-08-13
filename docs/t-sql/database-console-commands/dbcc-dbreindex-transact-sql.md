@@ -24,7 +24,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC DBREINDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Rebuilds one or more indexes for a table in the specified database.
   
 > [!IMPORTANT]  
@@ -36,7 +36,7 @@ Rebuilds one or more indexes for a table in the specified database.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC DBREINDEX   
 (   
     table_name   
@@ -45,7 +45,9 @@ DBCC DBREINDEX
     [ WITH NO_INFOMSGS ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table_name*  
  Is the name of the table containing the specified index or indexes to rebuild. Table names must follow the rules for [identifiers](../../relational-databases/databases/database-identifiers.md)*.*  
   

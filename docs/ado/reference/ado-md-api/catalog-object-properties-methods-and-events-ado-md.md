@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Catalog object [ADO MD], members"
 ms.assetid: e9566718-9122-490d-8a8e-da8f605246f2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Catalog Object Properties, Methods, and Events (ADO MD)
 ## Properties/Collections  

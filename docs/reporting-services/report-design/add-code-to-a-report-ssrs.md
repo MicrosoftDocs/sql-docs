@@ -1,5 +1,6 @@
 ---
 title: "Add Code to a Report | Microsoft Docs"
+description: Find out how to call your own custom code for any expression you have in your report in Report Builder.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

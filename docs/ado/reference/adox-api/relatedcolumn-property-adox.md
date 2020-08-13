@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "RelatedColumn property [ADOX]"
 ms.assetid: 2f2ca019-c785-4c08-beb1-3a2d3b47823e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RelatedColumn Property (ADOX)
 Indicates the name of the related [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md) in the related table (key columns only).  

@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_detach_schedule"
 ms.assetid: 9a1fc335-1bef-4638-a33a-771c54a5dd19
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_detach_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes an association between a schedule and a job.  
   

@@ -23,7 +23,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```syntaxsql
 DROP EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_name | table_name }
 [;]  
 ```  
@@ -44,7 +44,7 @@ DROP EXTERNAL TABLE { database_name.schema_name.table_name | schema_name.table_n
   
 ### A. Using basic syntax  
   
-```  
+```sql  
 DROP EXTERNAL TABLE SalesPerson;  
 DROP EXTERNAL TABLE dbo.SalesPerson;  
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
@@ -53,14 +53,14 @@ DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;
 ### B. Dropping an external table from the current database  
  The following example removes the `ProductVendor1` table, its data, indexes, and any dependent views from the current database.  
   
-```  
+```sql  
 DROP EXTERNAL TABLE ProductVendor1;  
 ```  
   
 ### C. Dropping a table from another database  
  The following example drops the `SalesPerson` table in the `EasternDivision` database.  
   
-```  
+```sql  
 DROP EXTERNAL TABLE EasternDivision.dbo.SalesPerson;  
 ```  
   

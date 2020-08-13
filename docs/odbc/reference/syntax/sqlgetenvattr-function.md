@@ -18,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetEnvAttr function [ODBC]"
 ms.assetid: 01f4590f-427a-4280-a1c3-18de9f7d86c1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetEnvAttr Function
 **Conformance**  

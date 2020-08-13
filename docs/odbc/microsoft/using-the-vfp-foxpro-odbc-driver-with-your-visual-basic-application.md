@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "FoxPro ODBC driver [ODBC], visual basic applications"
   - "Visual FoxPro data [ODBC], visual basic applications"
 ms.assetid: 5223ca23-5df6-4ebc-aa3b-70682ff27a8c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using the VFP FoxPro ODBC Driver with Your Visual Basic Application
 Your Microsoft® Visual Basic® application can communicate with Visual FoxPro data by creating a data control that connects to a Visual FoxPro data source.  

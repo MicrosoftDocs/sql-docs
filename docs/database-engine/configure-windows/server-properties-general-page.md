@@ -1,5 +1,6 @@
 ---
 title: "Server Properties (General Page) - SQL Server Management Studio | Microsoft Docs"
+description: Become familiar with read-only properties in SQL Server. Examples include the server name, the operating system, the collation, and the SQL Server version.
 ms.custom: ""
 ms.date: "08/25/2016"
 ms.prod: sql
@@ -12,11 +13,11 @@ f1_keywords:
   - "sql13.swb.serverproperties.activedirectory.f1"
   - "sql13.swb.serverproperties.prodinfo.f1"
 ms.assetid: 10ac57f1-b4bd-4528-bb66-3e47ccf663e7
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # Server Properties - General Page
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to view read-only information about your [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation.  
   
 ## Property Grid  

@@ -1,8 +1,8 @@
 ---
 title: Manage availability group failover - SQL Server on Linux
-description: 
-author: MikeRayMSFT
-ms.author: mikeray
+description: "This article describes types of failover: automatic, planned manual failover, and forced manual failover. Automatic and planned manual preserve all your data."
+author: tejasaks
+ms.author: tejasaks
 ms.reviewer: vanto
 ms.date: 03/01/2018
 ms.topic: conceptual
@@ -12,7 +12,7 @@ ms.assetid:
 ---
 # Always On Availability Group failover on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Within the context of an availability group (AG), the primary role and secondary role of availability replicas are typically interchangeable in a process known as failover. Three forms of failover exist: automatic failover (without data loss), planned manual failover (without data loss), and forced manual failover (with possible data loss), typically called *forced failover*. Automatic and planned manual failovers preserve all your data. An AG fails over at the availability-replica level. That is, an AG fails over to one of its secondary replicas (the current failover target). 
 
@@ -75,14 +75,29 @@ During a manual failover, the `pcs` command `move` or `crm` command `migrate` ad
 An example of the constraint which gets created because of a manual failover. 
  `Enabled on: Node1 (score:INFINITY) (role: Master) (id:cli-prefer-ag_cluster-master)`
 
+   > [!NOTE]
+   > The AG resource name in pacemaker clusters on Red Hat Enterprise Linux 8.x and Ubuntu 18.04 may resemble *ag_cluster-clone* as the nomenclature regarding resources has been evolving to use *promotable clone*. 
+
 - **RHEL/Ubuntu example**
 
    In the following command `cli-prefer-ag_cluster-master` is the ID of the constraint that needs to be removed. `sudo pcs constraint list --full` returns this ID. 
    
    ```bash
+   sudo pcs resource clear ag_cluster-master  
+   ```
+   Or
+   
+   ```bash
    sudo pcs constraint remove cli-prefer-ag_cluster-master  
    ```
-   
+  
+   Alternatively, you can perform both move and clearing of auto generated constraints in a single line as follows. The following example uses the *clone* terminology as per Red Hat Enterprise Linux 8.x. 
+  
+   ```bash
+   sudo pcs resource move ag_cluster-clone --master nodeName2 && sleep 30 && sudo pcs resource clear ag_cluster-clone
+
+   ```
+  
 - **SLES example**
 
    In the following command `cli-prefer-ms-ag_cluster` is the ID of the constraint. `crm config show` returns this ID. 
@@ -98,7 +113,7 @@ An example of the constraint which gets created because of a manual failover.
 
 For more information:
 - [Red Hat - Managing Cluster Resources](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-manageresource-HAAR.html)
-- [Pacemaker - Move Resources Manually](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_manually_moving_resources_around_the_cluster.html)
+- [Pacemaker - Move Resources Manually](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/_move_resources_manually.html)
  [SLES Administration Guide - Resources](https://www.suse.com/documentation/sle-ha-12/singlehtml/book_sleha/book_sleha.html#sec.ha.troubleshooting.resource) 
  
 ## <a name="forceFailover"></a> Force failover 

@@ -1,5 +1,6 @@
 ---
 title: "Power Pivot Connection Type | Microsoft Docs"
+description: Use the information in this article about the Power Pivot connection type to learn how to build a data source.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -19,7 +20,7 @@ ms.author: maggies
 ## Prerequisites  
  The [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] data source must be published in a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Gallery on a SharePoint site.  
   
- To support connections from Report Builder to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook, you must have SQL Server 2008 R2 ADOMD.NET on your workstation computer. This client library is installed with [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel, but if you are using a computer that does not have this application, you must download and install ADOMD.NET from the [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=16978).  
+ To support connections from Report Builder to a [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] workbook, you must have SQL Server 2008 R2 ADOMD.NET on your workstation computer. This client library is installed with [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel, but if you are using a computer that does not have this application, you must download and install ADOMD.NET from the [SQL Server 2008 R2 Feature Pack](https://www.microsoft.com/download/details.aspx?id=44272).  
   
 ## Data Source Type  
  Use report data source type **Microsoft SQL Server Analysis Services**.  

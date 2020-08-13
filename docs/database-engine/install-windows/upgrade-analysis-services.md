@@ -25,7 +25,7 @@ manager: erikre
 ---
 # Upgrade Analysis Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
   
   Analysis Services instances can be upgraded to a SQL Server version of the same server mode to take advantage of features introduced in the current release, as described in [What's new in Analysis Services](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services).  
   
@@ -72,7 +72,7 @@ manager: erikre
   
  For background purposes, the following table summarizes the compatibility levels, but you should review the detail articles to understand what each level provides.  
   
-||||  
+|Database model|Compatibility level|Compatible versions|  
 |-|-|-|  
 |Tabular|1400|SQL Server 2017|
 |Tabular|1200|SQL Server 2016|  

@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Keys collection [ADOX], members"
 ms.assetid: eeb3746d-1c75-4bb0-97b5-2c2d073c8c0e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Keys Collection Properties, Methods, and Events
 ## Properties  

@@ -1,7 +1,7 @@
 ---
 title: "Run Spark jobs: Azure Toolkit for IntelliJ"
 titleSuffix: SQL Server Big Data Clusters
-description: Submit Spark jobs on SQL Server big data clusters in Azure Toolkit for IntelliJ.
+description: Learn how to submit Spark jobs on SQL Server big data clusters in Azure Toolkit for IntelliJ by submitting a local Jar or Py file.
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -14,7 +14,7 @@ ms.technology: big-data-cluster
 
 # Submit Spark jobs on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in IntelliJ
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 One of the key scenarios for [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] is the ability to submit Spark jobs. The Spark job submission feature allows you to submit a local Jar or Py files with references to [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]. It also enables you to execute a Jar or Py files, which are already located in the HDFS file system. 
 
@@ -28,9 +28,9 @@ One of the key scenarios for [!INCLUDE[big-data-clusters-2019](../includes/ssbig
 ## Link SQL Server big data cluster
 1. Open the IntelliJ IDEA tool.
 
-2. If you are using self-signed certificate, disable SSL certificate validation from **Tools** menu, select **Azure**, **Validate Spark Cluster SSL Certificate**, then **Disable**.
+2. If you are using self-signed certificate, disable TLS/SSL certificate validation from **Tools** menu, select **Azure**, **Validate Spark Cluster SSL Certificate**, then **Disable**.
 
-    ![link SQL Server big data cluster - disable SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
+    ![link SQL Server big data cluster - disable TLS/SSL](./media/spark-submit-job-intellij-tool-plugin/link-ariscluster-disableSSL.png)
 
 3. Open Azure Explorer from **View** menu, select **Tool Windows**, and then select **Azure Explorer**.
 4. Right click on **SQL Server big data cluster**, select **Link SQL Server big data cluster**. Enter the **Server**, **User Name**, and **Password**, then click **OK**.

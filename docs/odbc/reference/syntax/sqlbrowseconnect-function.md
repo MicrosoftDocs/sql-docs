@@ -18,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLBrowseConnect function [ODBC]"
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLBrowseConnect Function
 **Conformance**  

@@ -15,7 +15,7 @@ helpviewer_keywords:
 ---
 # Tutorial: Use Active Directory authentication with SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This tutorial explains how to configure [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux to support Active Directory (AD) authentication, also known as integrated authentication. For an overview, see [Active Directory authentication for SQL Server on Linux](sql-server-linux-active-directory-auth-overview.md).
 
@@ -119,6 +119,7 @@ Configuring AD authentication for SQL Server on Linux requires an AD account (MS
 
    > [!NOTE]
    > The commands above allow both AES and RC4 encryption ciphers for AD authentication. RC4 is an older encryption cipher and if a higher degree of security is required, you can choose to create the keytab entries with only the AES encryption cipher.
+   > The last two `UserName` entries must be in lowercase, or the permssion authentication might fail.
 
 1. After executing the above command, you should have a keytab file named mssql.keytab. Copy the file over to the SQL Server machine under the folder `/var/opt/mssql/secrets`.
 

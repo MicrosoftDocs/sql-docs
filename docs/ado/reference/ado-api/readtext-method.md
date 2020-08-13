@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ReadText method [ADO]"
 ms.assetid: be5a409e-cf87-4859-9ea5-713401755a77
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ReadText Method
 Reads specified number of characters from a text [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

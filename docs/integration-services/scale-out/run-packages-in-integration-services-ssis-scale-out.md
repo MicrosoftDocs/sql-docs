@@ -1,11 +1,9 @@
 ---
 title: "Run Packages in SQL Server Integration Services (SSIS) Scale Out | Microsoft Docs"
-description: "This article describes how to run SSIS packages in Scale Out"
+description: "Learn how to run SQL Server Integration Services (SSIS) packages in Scale Out using a variety of methods."
 ms.custom: performance
 ms.date: "12/13/2017"
 ms.prod: sql
-ms.prod_service: "integration-services"
-ms.reviewer: ""
 ms.technology: integration-services
 ms.topic: conceptual
 author: "haoqian"
@@ -16,7 +14,7 @@ f1_keywords:
 ---
 # Run packages in Integration Services (SSIS) Scale Out
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 After you deploy packages to the Integration Services server, you can run them in Scale Out by using one of the following methods:

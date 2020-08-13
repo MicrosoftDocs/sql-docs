@@ -24,7 +24,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # SET NOEXEC (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Compiles each query but does not execute it.  
   
@@ -32,13 +32,15 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET NOEXEC { ON | OFF }  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Remarks  
- When SET NOEXEC is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] compiles each batch of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements but does not execute them. When SET NOEXEC is OFF, all batches are executed after compilation.  
+ When SET NOEXEC is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] parses and compiles each batch of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements but does not execute them. When SET NOEXEC is OFF, all batches are executed after compilation.  NOEXEC supports deferred name resolution; if one or more referenced objects in the batch don't exist, no error will be thrown.
   
  The execution of statements in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has two phases: compilation and execution. This setting is useful for having [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] validate the syntax and object names in [!INCLUDE[tsql](../../includes/tsql-md.md)] code when executing. It is also useful for debugging statements that would generally be part of a larger batch of statements.  
   
@@ -50,7 +52,7 @@ SET NOEXEC { ON | OFF }
 ## Examples  
  The following example uses `NOEXEC` with a valid query, a query with an object name that is not valid, and a query with incorrect syntax.  
   
-```  
+```sql
 USE AdventureWorks2012;  
 GO  
 PRINT 'Valid query';  

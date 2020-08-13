@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "text file driver [ODBC], SQLGetInfo"
   - "Jet-based ODBC drivers [ODBC], text file driver"
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetInfo Returned Values for Text Files
 The following table lists the C-language #defines for the *fInfoType* argument and the corresponding values returned by **SQLGetInfo**. This information can be retrieved by passing the listed C-language #defines to **SQLGetInfo** in the *fInfoType* argument. For more information about the values returned by **SQLGetInfo**, see the [ODBC Programmer's Reference](../../odbc/reference/odbc-programmer-s-reference.md).  

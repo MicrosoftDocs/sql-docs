@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "AddNew method [ADO], Visual Basic example"
 ms.assetid: d439e097-65f3-471d-8799-5a1263beb3c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # AddNew Method Example (VB)
 This example uses the [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) method to create a new record with the specified name.  

@@ -13,11 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_setsubscriptionxactseqno"
 ms.assetid: cdb4e0ba-5370-4905-b03f-0b0c6f080ca6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_setsubscriptionxactseqno (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Used during troubleshooting to specify the last delivered transaction using the log sequence number (LSN), allowing the Distribution Agent to begin delivering at the next transaction. Upon restarting, the Distribution Agent returns transactions greater than this watermark (LSN) from the Distribution database cache (msrepl_commands). This stored procedure is executed at the Subscriber on the subscription database. Not supported for non-SQL Server Subscribers.  
   

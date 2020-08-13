@@ -19,11 +19,11 @@ helpviewer_keywords:
   - "IDs [SQL Server], filegroups"
   - "names [SQL Server], filegroups"
 ms.assetid: 852a76d8-9e61-4a31-84ee-c7edb84a061c
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
 # FILEGROUP_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This function returns the filegroup identification (ID) number for a specified filegroup name.  
   
@@ -35,7 +35,9 @@ This function returns the filegroup identification (ID) number for a specified f
 FILEGROUP_ID ( 'filegroup_name' )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *filegroup_name*
 An expression of type **sysname**, representing the filegroup name whose filegroup ID `FILEGROUP_ID` will return.  
   

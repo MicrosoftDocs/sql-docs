@@ -16,7 +16,7 @@ ms.author: lle
 ---
 # Model Object Permissions (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Model object permissions are mandatory. They determine the attributes a user can access in the **Explorer** functional area of the UI.  
   

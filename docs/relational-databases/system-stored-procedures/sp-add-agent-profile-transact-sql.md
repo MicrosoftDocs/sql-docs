@@ -17,7 +17,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 # sp_add_agent_profile (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a new profile for a replication agent. This stored procedure is executed at the Distributor on any database.  
   

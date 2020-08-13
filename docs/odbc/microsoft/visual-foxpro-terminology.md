@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], glossary"
   - "FoxPro ODBC driver [ODBC], glossary"
 ms.assetid: a379b3cb-0393-46e7-b03b-724a56d8f31c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Visual FoxPro Terminology
 **database**  

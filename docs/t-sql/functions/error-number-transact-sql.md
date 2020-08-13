@@ -19,12 +19,12 @@ helpviewer_keywords:
   - "ERROR_NUMBER function"
   - "CATCH block"
 ms.assetid: 1de85fff-1ca2-4b31-841b-926e571cb150
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ERROR_NUMBER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns the error number of the error that caused the CATCH block of a TRY...CATCH construct to execute.  
 
@@ -36,7 +36,9 @@ This function returns the error number of the error that caused the CATCH block 
 ERROR_NUMBER ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **int**  
   
 ## Return Value  

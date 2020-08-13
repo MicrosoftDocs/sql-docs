@@ -1,5 +1,6 @@
 ---
-title: "Step 1: Configure pyodbc Python development environment | Microsoft Docs"
+title: "Step 1: Configure pyodbc Python environment"
+description: "Step 1 of this getting started guide involves installing Python, the Microsoft ODBC Driver for SQL Server, and pyODBC into your development environment."
 ms.custom: ""
 ms.date: "07/06/2018"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 74e69704-e63c-450b-9207-5c1491d0e0f5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 1: Configure development environment for pyodbc Python development
 

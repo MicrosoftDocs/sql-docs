@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "WriteText method [ADO]"
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # WriteText Method
 Writes a specified text string to a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

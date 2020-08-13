@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SET EXCLUSIVE command [ODBC]"
 ms.assetid: d4fe12c5-7e8b-4d20-9ea4-2bcaffb271f2
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SET EXCLUSIVE Command
 Specifies whether table files are opened for exclusive or shared use on a network.  

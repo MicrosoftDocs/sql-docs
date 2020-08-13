@@ -1,5 +1,6 @@
 ---
 title: "Plot Data on a Secondary Axis (Report Builder) | Microsoft Docs"
+description:  Find out about the uses for the secondary axis type for comparing two distinct data ranges in Report Builder. 
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

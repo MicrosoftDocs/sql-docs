@@ -1,5 +1,6 @@
 ---
 title: "Hide an Item (Report Builder) | Microsoft Docs"
+description: In Report Builder, you can set the visibility of a report item. You can specify a report parameter or other expression to conditionally hide an item.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

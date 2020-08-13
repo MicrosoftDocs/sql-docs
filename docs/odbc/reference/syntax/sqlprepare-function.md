@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLPrepare function [ODBC]"
 ms.assetid: 332e1b4b-b0ed-4e7a-aa4d-4f35f4f4476b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLPrepare Function
 **Conformance**  

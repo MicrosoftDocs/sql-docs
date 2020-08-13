@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ActiveCommand property [ADO]"
 ms.assetid: fb4088d5-5968-42d6-aeaa-3955046bb4da
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ActiveCommand Property (ADO)
 Indicates the [Command](../../../ado/reference/ado-api/command-object-ado.md) object that created the associated [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Execute method [ADO]"
 ms.assetid: 03c69320-96b2-4d85-8d49-a13b13e31578
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Execute Method (ADO Connection)
 Executes the specified query, SQL statement, stored procedure, or provider-specific text.  

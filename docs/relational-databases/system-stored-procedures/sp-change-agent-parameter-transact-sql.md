@@ -13,11 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_change_agent_parameter"
 ms.assetid: f1fbecc7-e64f-405c-8067-6b38c1f3c0a0
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_change_agent_parameter (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes a parameter of a replication agent profile stored in the [MSagent_parameters](../../relational-databases/system-tables/msagent-parameters-transact-sql.md) system table. This stored procedure is executed at the Distributor where the agent is running, on any database.  
   

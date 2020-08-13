@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_jobstep"
 ms.assetid: 421ede8e-ad57-474a-9fb9-92f70a3e77e3
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_delete_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes a job step from a job.  
   

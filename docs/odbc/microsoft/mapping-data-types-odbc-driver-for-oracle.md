@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "data types [ODBC], ODBC driver for Oracle"
   - "ODBC driver for Oracle [ODBC], data types"
 ms.assetid: a5d9ce12-19da-4943-8493-e3d56fa08348
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Mapping Data Types (ODBC Driver for Oracle)
 > [!IMPORTANT]  

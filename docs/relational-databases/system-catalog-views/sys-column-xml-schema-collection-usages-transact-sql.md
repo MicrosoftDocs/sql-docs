@@ -17,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.column_xml_schema_collection_usages catalog view"
 ms.assetid: 4fd1ec7f-b9dc-4ddb-ab3a-0d59ab05ad20
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.column_xml_schema_collection_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each column that is validated by an XML schema.  
   

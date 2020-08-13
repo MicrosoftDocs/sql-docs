@@ -1,7 +1,7 @@
 ---
 title: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2019"
+ms.date: "03/04/2020"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"
@@ -40,7 +40,7 @@ monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 This article explains the CREATE MATERIALIZED VIEW AS SELECT T-SQL statement in Azure SQL Data Warehouse for developing solutions. The article also provides code examples.
 
@@ -50,7 +50,7 @@ A Materialized View persists the data returned from the view definition query an
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
     WITH (  
       <distribution_option>
@@ -98,7 +98,7 @@ When MIN/MAX aggregates are used in the SELECT list of materialized view definit
   GROUP BY i.i_item_sk, i.i_item_id, i.i_category_id
   ```
 
-- The materialized view will be disabled when an UPDATE or DELETE occurs in the referenced base tables.  This restriction doesn't  apply to INSERTs.  To re-enable the materialized view, run ALTER MATERIALIZED INDEX with REBUILD.
+- The materialized view will be disabled when an UPDATE or DELETE occurs in the referenced base tables.  This restriction doesn't  apply to INSERTs.  To re-enable the materialized view, run ALTER MATERIALIZED VIEW with REBUILD.
   
 ## Remarks
 
@@ -119,9 +119,9 @@ ALTER TABLE SWITCH is not supported on tables that are referenced in materialize
 |Scenario|New columns to add to materialized view|Comment|  
 |-----------------|---------------|-----------------|
 |COUNT_BIG() is missing in the SELECT list of a materialized view definition| COUNT_BIG (*) |Automatically added by materialized view creation.  No user action is required.|
-|SUM(a) is specified by users in the SELECT list of a materialized view definition AND ‘a’ is a nullable expression |COUNT_BIG (a) |Users need to add the expression ‘a’ manually in the materialized view definition.|
-|AVG(a) is specified by users in the SELECT list of a materialized view definition where ‘a’ is an expression.|SUM(a), COUNT_BIG(a)|Automatically added by materialized view creation.  No user action is required.|
-|STDEV(a) is specified by users in the SELECT list of a materialized view definition where ‘a’ is an expression.|SUM(a), COUNT_BIG(a), SUM(square(a))|Automatically added by materialized view creation.  No user action is required. |
+|SUM(a) is specified by users in the SELECT list of a materialized view definition AND 'a' is a nullable expression |COUNT_BIG (a) |Users need to add the expression 'a' manually in the materialized view definition.|
+|AVG(a) is specified by users in the SELECT list of a materialized view definition where 'a' is an expression.|SUM(a), COUNT_BIG(a)|Automatically added by materialized view creation.  No user action is required.|
+|STDEV(a) is specified by users in the SELECT list of a materialized view definition where 'a' is an expression.|SUM(a), COUNT_BIG(a), SUM(square(a))|Automatically added by materialized view creation.  No user action is required. |
 | | | |
 
 Once created, materialized views are visible within SQL Server Management Studio under the views folder of the Azure SQL Data Warehouse instance.
@@ -136,12 +136,14 @@ To find out if a SQL statement can benefit from a new materialized view, run the
 
 ## Permissions
 
-Requires CREATE VIEW permission in the database and ALTER permission on the schema in which the view is being created. 
+Requires 1) REFERENCES and CREATE VIEW permission OR 2) CONTROL permission on the schema in which the view is being created. 
+
   
 ## See also
 
 [Performance tuning with Materialized View](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)      
+[DROP VIEW](/sql/t-sql/statements/drop-view-transact-sql?view=azure-sqldw-latest)  
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   

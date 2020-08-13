@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_sessions system table"
 ms.assetid: 09ada8fc-c148-4379-9524-7826b1b0216c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSmerge_sessions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSmerge_sessions** table contains history rows with the outcomes of previous Merge Agent job sessions. Each time that the Merge Agent is run, a new row is added to this table. This table is stored in the distribution database.  
   

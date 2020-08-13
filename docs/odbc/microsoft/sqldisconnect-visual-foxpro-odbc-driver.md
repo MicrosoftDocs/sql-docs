@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLDisconnect function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 78ae1695-b53e-48ff-be49-ecff1f599e61
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDisconnect (Visual FoxPro ODBC Driver)
 > [!NOTE]  

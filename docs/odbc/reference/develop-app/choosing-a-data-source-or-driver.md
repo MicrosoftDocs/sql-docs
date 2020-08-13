@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data sources [ODBC], selecting"
   - "ODBC drivers [ODBC], selecting"
 ms.assetid: 10aaf570-01ab-4478-8339-bdde2a5e3dd1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Choosing a Data Source or Driver
 The data source or driver used by an application is sometimes hard-coded in the application. For example, a custom application written by an MIS department to transfer data from one data source to another would contain the names of those data sources-the application simply would not work with any other data sources. Another example is a vertical application, such as one used for order entry. Such an application always uses the same data source, which has a predefined schema known by the application.  

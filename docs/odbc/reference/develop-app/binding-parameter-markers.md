@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "parameter markers [ODBC]"
   - "binding parameter markers [ODBC]"
 ms.assetid: fe88c1c2-4ee4-45e0-8500-b8c25c047815
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Binding Parameter Markers
 The application binds parameters by calling **SQLBindParameter**. **SQLBindParameter** binds one parameter at a time. With it, the application specifies the following:  

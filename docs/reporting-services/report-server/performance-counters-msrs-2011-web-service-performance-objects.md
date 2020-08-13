@@ -1,5 +1,6 @@
 ---
 title: "Performance Counters MSRS 2011 Web Service, Performance Objects | Microsoft Docs"
+description: Learn about performance counters for the MSRS 2011 Web Service and MSRS 2011 Windows Service performance objects.
 ms.date: 06/26/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

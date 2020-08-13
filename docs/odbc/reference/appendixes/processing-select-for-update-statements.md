@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "ODBC cursor library [ODBC], select for update statements"
   - "cursor library [ODBC], statement processing"
 ms.assetid: 8d2e79a4-5daf-458e-a536-d8b6e588753e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Processing SELECT FOR UPDATE Statements
 > [!IMPORTANT]  

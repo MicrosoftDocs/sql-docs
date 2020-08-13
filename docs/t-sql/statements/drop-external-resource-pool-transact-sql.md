@@ -5,7 +5,7 @@ ms.date: "08/07/2019"
 ms.prod: sql
 ms.prod_service: "sql-database"
 ms.reviewer: ""
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: "language-reference"
 f1_keywords: 
   - "DROP EXTERNAL RESOURCE POOL"
@@ -20,7 +20,7 @@ ms.author: davidph
 manager: cgronlund
 ---
 # DROP EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Deletes a Resource Governor external resource pool used to define resources for external processes. 
 
@@ -42,6 +42,8 @@ External resource pools are created by using [CREATE EXTERNAL RESOURCE POOL &#40
 DROP EXTERNAL RESOURCE POOL pool_name  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 *pool_name*  
@@ -73,8 +75,6 @@ GO
 ## See Also
 
 + [external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
-+ [SQL Server R Services](../../advanced-analytics/r-services/sql-server-r-services.md)
-+ [Known Issues for SQL Server R Services](../../advanced-analytics/r-services/known-issues-for-sql-server-r-services.md)
 + [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
 + [ALTER EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/alter-external-resource-pool-transact-sql.md)
 + [DROP WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/drop-workload-group-transact-sql.md)

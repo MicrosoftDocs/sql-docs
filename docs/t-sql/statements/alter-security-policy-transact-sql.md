@@ -21,7 +21,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ALTER SECURITY POLICY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 Alters a security policy.  
   
@@ -29,7 +29,7 @@ Alters a security policy.
   
 ## Syntax  
   
-```sql  
+```syntaxsql
 ALTER SECURITY POLICY schema_name.security_policy_name   
     (  
         { ADD { FILTER | BLOCK } PREDICATE tvf_schema_name.security_predicate_function_name   
@@ -48,8 +48,8 @@ ALTER SECURITY POLICY schema_name.security_policy_name
     [ { AFTER { INSERT | UPDATE } }   
     | { BEFORE { UPDATE | DELETE } } ]  
 ```  
-  
-## Arguments  
+
+## Arguments
 security_policy_name  
 The name of the security policy. Security policy names must fulfill the rules for identifiers and must be unique within the database and to its schema.  
   
@@ -82,7 +82,7 @@ Indicates the security policy shouldn't be executed when a replication agent mod
 table_schema_name.table_name  
 Is the target table for the applied security predicate. Multiple disabled security policies can target a single table, but only one can be enabled at any given time.  
   
-## Remarks  
+## Remarks
 The ALTER SECURITY POLICY statement is in a transaction's scope. If the transaction is rolled back, the statement is also rolled back.  
   
 When using predicate functions with memory-optimized tables, security policies must include **SCHEMABINDING** and use the **WITH NATIVE_COMPILATION** compilation hint. The SCHEMABINDING argument can't be changed with the ALTER statement because it applies to all predicates. To change schema binding, you must drop and recreate the security policy.  

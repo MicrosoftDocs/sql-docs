@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLColumns function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: b588a875-0153-43a0-9b76-f89e728cfa65
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLColumns (Visual FoxPro ODBC Driver)
 > [!NOTE]  

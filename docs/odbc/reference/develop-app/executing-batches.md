@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "batches [ODBC], executing"
   - "SQL statements [ODBC], batches"
 ms.assetid: f082c717-4f82-4820-a2fa-ba607d8fd872
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Executing Batches
 Before an application executes a batch of statements, it should first check whether they are supported. To do this, the application calls **SQLGetInfo** with the SQL_BATCH_SUPPORT, SQL_PARAM_ARRAY_ROW_COUNTS, and SQL_PARAM_ARRAY_SELECTS options. The first option returns whether row count-generating and result set-generating statements are supported in explicit batches and procedures, while the latter two options return information about the availability of row counts and result sets in parameterized execution.  

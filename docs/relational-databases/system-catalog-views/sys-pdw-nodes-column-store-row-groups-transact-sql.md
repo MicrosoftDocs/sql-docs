@@ -1,7 +1,7 @@
 ---
 title: "sys.pdw_nodes_column_store_row_groups (Transact-SQL)"
 ms.custom: seo-dt-2019
-ms.date: "03/03/2017"
+ms.date: 08/05/2020
 ms.prod: sql
 ms.technology: data-warehouse
 ms.reviewer: ""
@@ -14,7 +14,7 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_column_store_row_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Provides clustered columnstore index information on a per-segment basis to help the administrator make system management decisions in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. **sys.pdw_nodes_column_store_row_groups** has a column for the total number of rows physically stored (including those marked as deleted) and a column for the number of rows marked as deleted. Use **sys.pdw_nodes_column_store_row_groups** to determine which row groups have a high percentage of deleted rows and should be rebuilt.  
   
@@ -50,7 +50,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 ## Examples: [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example joins the **sys.pdw_nodes_column_store_row_groups** table to other system tables to return information about specific tables. The calculated `PercentFull` column is an estimate of the efficiency of the row group. To find information on a single table remove the comment hyphens in front of the WHERE clause and provide a table name.  
   
-```  
+```sql
 SELECT IndexMap.object_id,   
   object_name(IndexMap.object_id) AS LogicalTableName,   
   i.name AS LogicalIndexName, IndexMap.index_id, NI.type_desc,   
@@ -69,14 +69,15 @@ JOIN sys.pdw_nodes_indexes AS NI
 JOIN sys.pdw_nodes_column_store_row_groups AS CSRowGroups  
     ON CSRowGroups.object_id = NI.object_id   
     AND CSRowGroups.pdw_node_id = NI.pdw_node_id  
-AND CSRowGroups.index_id = NI.index_id      
+    AND CSRowGroups.index_id = NI.index_id      
+WHERE total_rows > 0
 --WHERE t.name = '<table_name>'   
 ORDER BY object_name(i.object_id), i.name, IndexMap.physical_name, pdw_node_id;  
 ```  
 
 The following [!INCLUDE[ssSDW_md](../../includes/sssdw-md.md)] example counts the rows per partition for clustered column stores as well as how many rows are in Open, Closed, or Compressed Row groups:  
 
-```
+```sql
 SELECT
     s.name AS [Schema Name]
     ,t.name AS [Table Name]
@@ -86,14 +87,16 @@ SELECT
     ,SUM(CASE WHEN rg.State = 2 THEN rg.Total_Rows ELSE 0 END) AS [Rows in Closed Row Groups]
     ,SUM(CASE WHEN rg.State = 3 THEN rg.Total_Rows ELSE 0 END) AS [Rows in COMPRESSED Row Groups]
 FROM sys.pdw_nodes_column_store_row_groups rg
-JOIN sys.pdw_nodes_tables pt
-ON rg.object_id = pt.object_id AND rg.pdw_node_id = pt.pdw_node_id AND pt.distribution_id = rg.distribution_id
-JOIN sys.pdw_table_mappings tm
-ON pt.name = tm.physical_name
-INNER JOIN sys.tables t
-ON tm.object_id = t.object_id
-INNER JOIN sys.schemas s
-ON t.schema_id = s.schema_id
+  JOIN sys.pdw_nodes_tables pt
+    ON rg.object_id = pt.object_id
+    AND rg.pdw_node_id = pt.pdw_node_id
+    AND pt.distribution_id = rg.distribution_id
+  JOIN sys.pdw_table_mappings tm
+    ON pt.name = tm.physical_name
+  INNER JOIN sys.tables t
+    ON tm.object_id = t.object_id
+  INNER JOIN sys.schemas s
+    ON t.schema_id = s.schema_id
 GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```

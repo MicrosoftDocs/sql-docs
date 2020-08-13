@@ -14,7 +14,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # OGC Static Geography Methods
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports the static geography methods of the Open Geospatial Consortium (OGC).  
   

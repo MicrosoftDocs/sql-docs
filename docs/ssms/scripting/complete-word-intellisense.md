@@ -1,5 +1,6 @@
 ---
 title: "Complete Word (IntelliSense)"
+description: The Microsoft IntelliSense Complete Word feature can complete what you are typing once you have typed enough to uniquely identify it, or it can provide a list of possibilities for you to choose from. Learn the four ways to invoke this feature.  
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Complete Word (IntelliSense)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The [!INCLUDE[msCoName](../../includes/msconame-md.md)] IntelliSense Complete Word option types the rest of a variable, command, or function name once you have entered enough characters to uniquely identify the term.  
   
  There are four ways to invoke the Complete Word feature:  

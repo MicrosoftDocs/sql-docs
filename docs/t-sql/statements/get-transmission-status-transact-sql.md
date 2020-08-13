@@ -27,7 +27,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # GET_TRANSMISSION_STATUS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns the status for the last transmission for one side of a conversation.  
   
@@ -40,7 +40,9 @@ ms.author: carlrab
 GET_TRANSMISSION_STATUS ( conversation_handle )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *conversation_id*  
  Is the conversation handle for the conversation. This parameter is of type **uniqueidentifier**.  
   

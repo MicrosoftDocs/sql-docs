@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: "08/07/2019"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: "language-reference"
 f1_keywords: 
   - "CREATE EXTERNAL RESOURCE POOL"
@@ -24,7 +24,7 @@ manager: cgronlund
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Creates an external pool used to define resources for external processes. A resource pool represents a subset of the physical resources (memory and CPUs) of a Database Engine instance. Resource Governor enables a database administrator to distribute server resources among resource pools, up to a maximum of 64 pools.
 
@@ -40,7 +40,7 @@ For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
 [ WITH (  
     [ MAX_CPU_PERCENT = value ]  
@@ -60,6 +60,8 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 *pool_name*  
@@ -87,7 +89,7 @@ The [!INCLUDE[ssDE](../../includes/ssde-md.md)] implements the resource pool whe
 
 For general information about resource pools, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), and [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md).
 
-For information specific to managing external resource pools that are used for machine learning, see [Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md). 
+For information specific to managing external resource pools that are used for machine learning, see [Resource governance for machine learning in SQL Server](../../machine-learning/administration/resource-governor.md). 
 
 ## Permissions
 

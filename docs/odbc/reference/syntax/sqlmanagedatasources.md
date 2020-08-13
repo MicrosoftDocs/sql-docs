@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLManageDataSources [ODBC]"
 ms.assetid: ac6d186f-b394-406c-94c4-c6331d1ca468
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLManageDataSources
 **Conformance**  

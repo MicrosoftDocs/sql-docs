@@ -1,5 +1,6 @@
 ---
 title: "Connect to a Microsoft Azure Subscription | Microsoft Docs"
+description: Register an Azure blob container with your instance of SQL Server, which creates a shared access signature, stored access policy, and SQL Server Credential.
 ms.custom: ""
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -11,7 +12,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Connect to a Microsoft Azure Subscription
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 Use **Connect to a Microsoft Subscription** to register an existing Azure blob container with your instance of SQL Server.  The dialog box will create a shared access signature and stored access policy on an Azure blob container and then create a SQL Server Credential.  This dialog box appears when using the Back Up or Restore task from SQL Server Management Studio and the operation involves a URL device.
 
 ## Limitation

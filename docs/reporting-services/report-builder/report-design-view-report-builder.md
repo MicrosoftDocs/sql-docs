@@ -1,5 +1,6 @@
 ---
 title: "Report Design View (Report Builder) | Microsoft Docs"
+description: This article describes the controls in the Report Builder window used to add, select, and organize your report resources, and change report item properties.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

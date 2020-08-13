@@ -1,10 +1,7 @@
 ---
 title: F1 Help for Server Connections
-ms.custom: seo-lt-2019
-ms.date: "01/19/2017"
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -14,11 +11,17 @@ helpviewer_keywords:
   - "connections [SQL Server Management Studio]"
   - "Connect to Server dialog box"
 ms.assetid: 6a72e24f-9e11-4032-ab9e-5ecc6edd4890
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ""
+ms.custom: seo-lt-2019
+ms.date: 01/19/2017
 ---
+
 # F1 Help for Server Connections (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
 This section contains the F1 Help for the **Connect to Server** dialog box pages in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
 [Browse for Servers &#40;Local Servers&#41;](../../ssms/f1-help/browse-for-servers-local-servers.md)  
@@ -49,5 +52,4 @@ This section contains the F1 Help for the **Connect to Server** dialog box pages
   
 [Connect to Server &#40;Reporting Services&#41;](../../ssms/f1-help/connect-to-server-reporting-services.md)  
   
-[Password Expired](../../ssms/f1-help/password-expired.md)  
-  
+[Password Expired](../../ssms/f1-help/password-expired.md)

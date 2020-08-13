@@ -27,7 +27,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CREATE SECURITY POLICY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Creates a security policy for row level security.  
   
@@ -35,7 +35,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```     
+```syntaxsql
 CREATE SECURITY POLICY [schema_name. ] security_policy_name    
     { ADD [ FILTER | BLOCK ] } PREDICATE tvf_schema_name.security_predicate_function_name   
       ( { column_name | expression } [ , ...n] ) ON table_schema_name. table_name    
@@ -48,8 +48,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
     [ { AFTER { INSERT | UPDATE } }   
     | { BEFORE { UPDATE | DELETE } } ]  
 ```  
-  
-## Arguments  
+
+## Arguments
  *security_policy_name*  
  The name of the security policy. Security policy names must comply with the rules for identifiers and must be unique within the database and to its schema.  
   
@@ -71,11 +71,11 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  *\<block_dml_operation>* 
  The particular DML operation for which the block predicate will be applied. AFTER specifies that the predicate will be evaluated on the values of the rows after the DML operation was performed (INSERT or UPDATE). BEFORE specifies that the predicate will be evaluated on the values of the rows before the DML operation is performed (UPDATE or DELETE). If no operation is specified, the predicate will apply to all operations.  
   
- [ STATE = { ON | **OFF** } ]  
+ [ STATE = { **ON** | OFF } ]  
  Enables or disables the security policy from enforcing its security predicates against the target tables. If not specified the security policy being created is enabled.  
   
- [ SCHEMABINDING = { ON | OFF } ]  
- Indicates whether all predicate functions in the policy must be created with the SCHEMABINDING option. By default, all functions must be created with SCHEMABINDING.  
+ [ SCHEMABINDING = { **ON** | OFF } ]  
+ Indicates whether all predicate functions in the policy must be created with the SCHEMABINDING option. By default this setting is **ON** and all functions must be created with SCHEMABINDING.  
   
  NOT FOR REPLICATION  
  Indicates that the security policy should not be executed when a replication agent modifies the target object. For more information, see [Control the Behavior of Triggers and Constraints During Synchronization &#40;Replication Transact-SQL Programming&#41;](../../relational-databases/replication/control-behavior-of-triggers-and-constraints-in-synchronization.md).  
@@ -83,7 +83,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  [*table_schema_name*.] *table_name*  
  Is the target table to which the security predicate will be applied. Multiple disabled security policies can target a single table, but only one can be enabled at any given time.  
   
-## Remarks  
+
+## Remarks
  When using predicate functions with memory-optimized tables, you must include **SCHEMABINDING** and use the **WITH NATIVE_COMPILATION** compilation hint.  
   
  Block predicates are evaluated after the corresponding DML operation is executed. Therefore, a READ UNCOMMITTED query can see transient values that will be rolled back.  

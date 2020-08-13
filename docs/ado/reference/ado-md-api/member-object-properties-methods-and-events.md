@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Member object [ADO MD]"
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Member Object Properties, Methods, and Events
 ## Properties/Collections  

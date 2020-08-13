@@ -1,7 +1,7 @@
 ---
 title: Data persistence on Kubernetes
 titleSuffix: SQL Server big data clusters
-description: Learn about how data persistence works in a SQL Server 2019 big data cluster.
+description: Learn how persistent volumes provide a plug-in model for storage in Kubernetes. Also learn how data persistence works in a SQL Server 2019 Big Data Cluster.
 author: mihaelablendea 
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Data persistence with SQL Server big data cluster in Kubernetes
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 [Persistent volumes](https://kubernetes.io/docs/concepts/storage/persistent-volumes/) provide a plug-in model for storage in Kubernetes. In this model, the way that storage is provided is abstracted from how it's consumed. Therefore, you can bring your own highly available storage and plug it into the SQL Server big data cluster. This gives you full control over the type of storage, availability, and performance you require. Kubernetes supports [various kinds of storage solutions](https://kubernetes.io/docs/concepts/storage/storage-classes/#provisioner), including Azure disks and files, Network File System (NFS), and local storage.
 
@@ -28,6 +28,8 @@ Here are some important aspects to consider when you're planning storage configu
 - If the storage provisioner for the storage class you're providing in the configuration doesn't support dynamic provisioning, you must pre-create the persisted volumes. For example, the `local-storage` provisioner doesn't enable dynamic provisioning. See this [sample script](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu) for guidance on how to proceed in a Kubernetes cluster deployed with `kubeadm`.
 
 - When you deploy a big data cluster, you can configure the same storage class for use by all the components in the cluster. But as a best practice for a production deployment, various components will require different storage configurations to accommodate various workloads in terms of size or throughput. You can overwrite the default storage configuration specified in the controller for each of the SQL Server master instances, datasets, and storage pools. This article provides examples of how to do this.
+
+- When computing the storage pool sizing requirements, you must consider the replication factor that HDFS is configured with.  Replication factor is configurable at deployment time in the cluster deployment configuration file. The default value for the dev-test profiles (i.e. `aks-dev-test` or `kubeadm-dev-test`) is 2, and for the profiles that we recomend for production deployments (i.e. `kubeadm-prod`) the default value is 3. As a best practice, we recomd you configure your production deployment of big data cluster with a replication factor for HDFS of at least 3. The value of the replication factor will impact the number of instances in the storage pool: at a minimum, you must deploy at least as many storage pool instances as the value of the replication factor. In addition, you must size the storage accordingly, and acount for data being replicated in HDFS as many times as the value of the replication factor. You can find more about data replication in HDFS [here](https://hadoop.apache.org/docs/r3.2.1/hadoop-project-dist/hadoop-hdfs/HdfsDesign.html#Data_Replication). 
 
 - As of the SQL Server 2019 CU1 release, you can't modify a storage configuration setting post-deployment. This constraint prevents you not only from modifying the size of the persistent volume claim for each instance but also from scaling operations post-deployment. Therefore, it's very important that you plan the storage layout before you deploy a big data cluster.
 

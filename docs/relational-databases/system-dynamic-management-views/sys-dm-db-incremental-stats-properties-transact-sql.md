@@ -16,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_incremental_stats_properties"
 ms.assetid: aa0db893-34d1-419c-b008-224852e71307
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_db_incremental_stats_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Returns properties of incremental statistics for the specified database object (table) in the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. The use of `sys.dm_db_incremental_stats_properties` (which contains a partition number) is similar to `sys.dm_db_stats_properties` which is used for non-incremental statistics. 
   

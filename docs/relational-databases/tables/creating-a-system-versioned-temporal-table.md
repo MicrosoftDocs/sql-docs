@@ -14,7 +14,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Creating a system-versioned temporal table
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 There are three ways to create a system-versioned temporal table with regards to how the history table is specified:
 
@@ -128,7 +128,7 @@ For example, you may have a set of tables where versioning is implemented with t
 - Better DML performance
 - Minimal maintenance costs
 
- When converting an existing table, consider using the **HIDDEN** clause to hide the new **PERIOD** columns (the datetime2 columns **SysStartTime** and **SysEndTime**) to avoid impacting existing applications that are not designed to handle new columns.
+ When converting an existing table, consider using the **HIDDEN** clause to hide the new **PERIOD** columns (the datetime2 columns **SysStartTime** and **SysEndTime**) to avoid impacting existing applications that do not explicitly specify column names (e.g. SELECT * or INSERT without column list) are not designed to handle new columns.
 
 ### Adding versioning to non-temporal tables
 
@@ -143,7 +143,7 @@ ALTER TABLE InsurancePolicy
         SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN
             CONSTRAINT DF_SysStart DEFAULT SYSUTCDATETIME()
       , SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN
-            CONSTRAINT DF_SysEnd DEFAULT CONVERT(DATETIME2, '9999-12-31 23:59:59'),
+            CONSTRAINT DF_SysEnd DEFAULT CONVERT(DATETIME2, '9999-12-31 23:59:59.9999999'),
         PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime);
 GO
 
@@ -158,9 +158,8 @@ ALTER TABLE InsurancePolicy
 
 - Adding non-nullable columns with defaults to an existing table with data is a size of data operation on all editions other than SQL Server Enterprise Edition (on which it is a metadata operation). With a large existing history table with data on SQL Server Standard Edition, adding a non-null column can be an expensive operation.
 - Constraints for period start and period end columns must be carefully chosen:
-
   - Default for start column specifies from which point in time you consider existing rows to be valid. It cannot be specified as a datetime point in the future.
-  - End time must be specified as the maximum value for a given datetime2 precision
+  - End time must be specified as the maximum value for a given datetime2 precision, for example `9999-12-31 23:59:59` or `9999-12-31 23:59:59.9999999`.
 - Adding period will perform a data consistency check on the current table to make sure that the defaults for period columns are valid.
 - When an existing history table is specified when enabling **SYSTEM_VERSIONING**, a data consistency check will be performed across both the current and the history table. It can be skipped if you specify **DATA_CONSISTENCY_CHECK = OFF** as an additional parameter.
 

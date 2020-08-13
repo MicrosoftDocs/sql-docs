@@ -13,11 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_dropmergealternatepublisher"
 ms.assetid: a7dee4e2-2a60-41da-9d1d-6f991d7e2c5e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_dropmergealternatepublisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes an alternate Publisher from a merge publication. This stored procedure is executed at the Subscriber on the subscription database.  
   

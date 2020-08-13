@@ -1,6 +1,6 @@
 ---
-title: "Processing Results How-to Topics (OLE DB) | Microsoft Docs"
-description: "Processing results how-to topics (OLE DB)"
+title: Processing results how-to topics (OLE DB driver)
+description: Use these articles to understand processing results in an OLE DB Driver for SQL Server application, including commands that execute stored procedures.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -14,7 +14,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Processing Results How-to Topics (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 

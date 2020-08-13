@@ -1,5 +1,6 @@
 ---
 title: Rename and Refactoring to Make Changes to your Database Objects
+description: Learn about the Rename and Refactor menus in the Transact-SQL Editor. See how to rename types, switch object schemas, expand wildcards, and fully qualify names.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual
@@ -12,7 +13,6 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: “”
 ms.custom: seo-lt-2019
 ms.date: 02/09/2017

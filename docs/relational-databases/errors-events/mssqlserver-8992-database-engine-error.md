@@ -13,12 +13,12 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_8992
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   
-|||  
-|-|-|  
+|Item|Value|
+|:---|:---|
 |Product Name|SQL Server|  
 |Event ID|8992|  
 |Event Source|MSSQLSERVER|  
@@ -37,9 +37,9 @@ This error can occur when one or more system tables has been manually updated in
 This error can occur when running DBCC CHECKDB against a database that has been upgraded from SQL Server 2000 to SQL Server 2005 or later. In SQL Server 2000, DBCC CHECKDB did not include DBCC CHECKCATALOG functionality, so the error would not be caught before upgrade unless DBCC CHECKCATALOG was specifically executed against the database in SQL Server 2000.  
   
 You may see any of the following errors in conjunction with error 8992:  
-|||
-|-|-| 
+
 |Msg ID|Msg text|
+|:---|:---|
 |3851|An invalid row (%ls) was found in the system table sys.%ls%ls.|
 |3852|Row (%ls) in sys.%ls%ls does not have a matching row (%ls) in sys.%ls%ls.|
 |3853|Attribute (%ls) of row (%ls) in sys.%ls%ls does not have a matching row (%ls) in sys.%ls%ls.|

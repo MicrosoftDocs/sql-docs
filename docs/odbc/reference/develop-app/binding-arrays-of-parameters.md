@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "arrays of parameter values [ODBC]"
   - "parameter arrays [ODBC]"
 ms.assetid: 037afe23-052d-4f3a-8aa7-45302b199ad0
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Binding Arrays of Parameters
 Applications that use arrays of parameters bind the arrays to the parameters in the SQL statement. There are two binding styles:  

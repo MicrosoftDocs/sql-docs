@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Resync method [ADO], Visual Basic example"
 ms.assetid: ab95315c-fe15-458c-9e0c-937ae5596592
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Resync Method Example (VB)
 This example demonstrates using the [Resync](../../../ado/reference/ado-api/resync-method.md) method to refresh data in a static recordset.  

@@ -1,5 +1,6 @@
 ---
 title: "Start System Monitor (Windows) | Microsoft Docs"
+description: Use System Monitor to collect performance data counters, such as processor and memory use, and for SQL Server resources, such as locks and transactions.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Start System Monitor (Windows)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use System Monitor to monitor the utilization of system resources. Collect and view real-time performance data in the form of counters. You can use counters for server resources, such as processor and memory use. You also can use them for many Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] resources, such as locks and transactions.  
   
 ## Start System Monitor in Windows  

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "translation DLLs [ODBC]"
   - "functions [ODBC], translation DLL functions"
 ms.assetid: 76436acc-e6b8-42ec-a4bf-0edea65d0286
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Translation DLL Function Summary
 The following table describes translation DLL functions. For more information about the syntax and semantics for each function, see [Translation DLL Function Reference](../../../odbc/reference/syntax/translation-dll-api-reference.md).  

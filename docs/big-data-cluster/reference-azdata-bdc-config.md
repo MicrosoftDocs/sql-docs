@@ -1,11 +1,11 @@
 ---
 title: azdata bdc config reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc config commands.
+description: Use this reference article to understand SQL commands in the azdata tool, specifically the bdc config commands. 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 11/04/2019
+ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,27 +13,31 @@ ms.technology: big-data-cluster
 
 # azdata bdc config
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]  
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following article provides reference for the `bdc config` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md)
+The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
-|     |     |
+| Command | Description |
 | --- | --- |
-[azdata bdc config init](#azdata-bdc-config-init) | Initializes a Big Data Cluster configuration profile that can be used with cluster create.
+[azdata bdc config init](#azdata-bdc-config-init) | Initializes a Big Data Cluster configuration profile that can be used with bdc create.
 [azdata bdc config list](#azdata-bdc-config-list) | Lists available configuration profile choices.
 [azdata bdc config show](#azdata-bdc-config-show) | Shows the BDC's current config or the config of a local file you specify, i.e. custom/bdc.json.
 [azdata bdc config add](#azdata-bdc-config-add) | Add a value for a json path in a config file.
 [azdata bdc config remove](#azdata-bdc-config-remove) | Remove a value for a json path in a config file.
 [azdata bdc config replace](#azdata-bdc-config-replace) | Replace a value for a json path in a config file.
 [azdata bdc config patch](#azdata-bdc-config-patch) | Patches a config file based on a json patch file.
+[azdata bdc config set](#azdata-bdc-config-set) | This is ongoing work, sets the configuration for Big Data cluster.
+[azdata bdc config upgrade](#azdata-bdc-config-upgrade) | This is ongoing work, upgrade the configuration of Big Data cluster.
 ## azdata bdc config init
-Initializes a Big Data Cluster configuration  profile that can be used with cluster create. The specific source of the configuration profile can be specified in the arguments from 3 choices.
+Initializes a Big Data Cluster configuration  profile that can be used with bdc create. The specific source of the configuration profile can be specified in the arguments.
 ```bash
 azdata bdc config init [--target -t] 
                        [--source -s]  
-                       [--force -f]  
-                       [--accept-eula -a]
+                       
+[--force -f]  
+                       
+[--accept-eula -a]
 ```
 ### Examples
 Guided BDC config init experience - you will receive prompts for needed values.
@@ -48,7 +52,7 @@ azdata bdc config init --source aks-dev-test --target custom
 #### `--target -t`
 File path of where you would like the config profile placed, defaults to <cwd>/custom.
 #### `--source -s`
-Config profile source: ['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
+Config profile source: ['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
 #### `--force -f`
 Force overwrite of the target file.
 #### `--accept-eula -a`
@@ -61,7 +65,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc config list
@@ -69,7 +73,8 @@ Lists available configuration profile choices for use in `bdc config init`
 ```bash
 azdata bdc config list [--config-profile -c] 
                        [--type -t]  
-                       [--accept-eula -a]
+                       
+[--accept-eula -a]
 ```
 ### Examples
 Shows all available configuration profile names.
@@ -82,10 +87,9 @@ azdata bdc config list --config-profile aks-dev-test
 ```
 ### Optional Parameters
 #### `--config-profile -c`
-Default config profile: ['kubeadm-dev-test', 'kubeadm-prod', 'aks-dev-test', 'aks-dev-test-ha']
+Default config profile: ['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
 #### `--type -t`
 What config type you would like to see.
-`cluster`
 #### `--accept-eula -a`
 Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for this product can be viewed at https://aka.ms/eula-azdata-en.
 ### Global Arguments
@@ -96,7 +100,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc config show
@@ -104,8 +108,10 @@ Shows the BDC's current config or the config of a local file you specify, i.e. c
 ```bash
 azdata bdc config show [--config-file -c] 
                        [--target -t]  
-                       [--json-path -j]  
-                       [--force -f]
+                       
+[--json-path -j]  
+                       
+[--force -f]
 ```
 ### Examples
 Show the BDC config in your console
@@ -114,11 +120,11 @@ azdata bdc config show
 ```
 In a local config file, get a value at the end of a simple json key path.
 ```bash
-azdata bdc config show --config-file custom-config/bdc.json --json-path 'metadata.name' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json --json-path "metadata.name" --target section.json
 ```
 In a local config file, gets the resources within a service
 ```bash
-azdata bdc config show --config-file custom-config/bdc.json --json-path '$.spec.services.sql.resources' --target section.json
+azdata bdc config show --config-file custom-config/bdc.json --json-path "$.spec.services.sql.resources" --target section.json
 ```
 ### Optional Parameters
 #### `--config-file -c`
@@ -137,7 +143,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc config add
@@ -149,7 +155,7 @@ azdata bdc config add --config-file -c
 ### Examples
 Ex 1 - Add control plane storage.
 ```bash
-azdata bdc config add --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
+azdata bdc config add --config-file custom/control.json --json-values "spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}"
 ```
 ### Required Parameters
 #### `--config-file -c`
@@ -164,7 +170,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc config remove
@@ -176,7 +182,7 @@ azdata bdc config remove --config-file -c
 ### Examples
 Ex 1 - Remove control plane storage.
 ```bash
-azdata bdc config remove --config-file custom/control.json --json-path '.spec.storage'
+azdata bdc config remove --config-file custom/control.json --json-path ".spec.storage"
 ```
 ### Required Parameters
 #### `--config-file -c`
@@ -191,7 +197,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc config replace
@@ -203,15 +209,15 @@ azdata bdc config replace --config-file -c
 ### Examples
 Ex 1 - Replace the port of a single endpoint (Controller Endpoint).
 ```bash
-azdata bdc config replace --config-file custom/control.json --json-values '$.spec.endpoints[?(@.name=="Controller")].port=30080'
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.endpoints[?(@.name=="Controller")].port=30080"
 ```
 Ex 2 - Replace control plane storage.
 ```bash
-azdata bdc config replace --config-file custom/control.json --json-values 'spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}'
+azdata bdc config replace --config-file custom/control.json --json-values "spec.storage={"accessMode":"ReadWriteOnce","className":"managed-premium","size":"10Gi"}"
 ```
 Ex 3 - Replace storage-0 resource spec, including replicas.
 ```bash
-azdata bdc config replace --config-file custom/bdc.json --json-values '$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}'
+azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.resources.storage-0.spec={"replicas": 2,"storage": {"className": "managed-premium","size": "10Gi","accessMode": "ReadWriteOnce"},"type": "Storage"}"
 ```
 ### Required Parameters
 #### `--config-file -c`
@@ -226,7 +232,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc config patch
@@ -241,7 +247,7 @@ Ex 1 - Replace the port of a single endpoint (Controller Endpoint) with patch fi
 azdata bdc config patch --config-file custom/control.json --patch ./patch.json
 
     Patch File Example (patch.json):
-        {"patch":[{"op":"replace","path":"$.spec.endpoints[?(@.name=='Controller')].port","value":30080}]}
+        {"patch":[{"op":"replace","path":"$.spec.endpoints[?(@.name=="Controller")].port","value":30080}]}
 ```
 Ex 2 - Replace control plane storage with patch file.
 ```bash
@@ -270,7 +276,57 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org/) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
+#### `--verbose`
+Increase logging verbosity. Use --debug for full debug logs.
+## azdata bdc config set
+This is ongoing work, sets the configuration for Big Data cluster.
+```bash
+azdata bdc config set --name -n 
+                      
+```
+### Examples
+Configuration is set for Big Data Cluster test.
+```bash
+azdata config set --name test
+```
+### Required Parameters
+#### `--name -n`
+Big data cluster name, used for kubernetes namespaces.
+### Global Arguments
+#### `--debug`
+Increase logging verbosity to show all debug logs.
+#### `--help -h`
+Show this help message and exit.
+#### `--output -o`
+Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+#### `--query -q`
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
+#### `--verbose`
+Increase logging verbosity. Use --debug for full debug logs.
+## azdata bdc config upgrade
+This is ongoing work, upgrade the configuration of Big Data cluster.
+```bash
+azdata bdc config upgrade --name -n 
+                          
+```
+### Examples
+Configuration upgrade of Big Data Cluster test.
+```bash
+azdata config upgrade --name test
+```
+### Required Parameters
+#### `--name -n`
+Big data cluster name, used for kubernetes namespaces.
+### Global Arguments
+#### `--debug`
+Increase logging verbosity to show all debug logs.
+#### `--help -h`
+Show this help message and exit.
+#### `--output -o`
+Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
+#### `--query -q`
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 

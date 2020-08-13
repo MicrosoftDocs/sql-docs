@@ -1,6 +1,6 @@
 ---
 title: Manually fail an FCI over - SQL Server on Linux
-description: Learn to manually fail a failover cluster instance (FCI) on SQL Server on Linux. 
+description: Learn to manually fail a failover cluster instance (FCI) on SQL Server on Linux, specifically Red Hat Linux Enterprise, Ubuntu, and Suse Linux Enterprise Server.
 ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
@@ -13,7 +13,7 @@ ms.assetid:
 ---
 # Operate failover cluster instance - SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article explains how to operate a SQL Server failover cluster instance (FCI) on Linux. If you have not created a SQL Server FCI on Linux, see [Configure failover cluster instance - SQL Server on Linux](sql-server-linux-shared-disk-cluster-configure.md). 
 
@@ -41,7 +41,7 @@ To perform a manual failover on Red Hat Enterprise Linux (RHEL) or Ubuntu server
 
    \<NewHostNode> is the name of the cluster node that you want to host the FCI. 
 
-   You will not get any acknowledgement.
+   You will not get any acknowledgment.
 
 2.	During a manual failover, Pacemaker creates a location constraint on the resource that was chosen to move manually. To see this constraint, run `sudo pcs constraint`.
 

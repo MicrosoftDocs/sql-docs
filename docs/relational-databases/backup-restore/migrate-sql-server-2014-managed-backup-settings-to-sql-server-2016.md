@@ -1,5 +1,6 @@
 ---
 title: "Migrate managed backup settings"
+description: This topic covers migration considerations for SQL Server Managed Backup to Microsoft Azure when upgrading from SQL Server 2014 to SQL Server 2016.
 ms.custom: seo-lt-2019
 ms.date: "12/17/2019"
 ms.prod: sql
@@ -12,7 +13,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Migrate managed backup settings
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic covers migration considerations for [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] when upgrading from [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] to [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
  The procedures and underlying behavior of [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] has changed in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]. The following sections describe the functional changes and their implications.  

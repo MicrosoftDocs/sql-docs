@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLConfigDataSource function [ODBC], ODBC driver for Oracle"
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using SQLConfigDatasource with the ODBC Driver for Oracle
 > [!IMPORTANT]  

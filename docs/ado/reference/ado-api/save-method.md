@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Save method [ADO]"
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Save Method
 Saves the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) in a file or [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  
@@ -82,11 +82,16 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
  A **Recordset** saved in XML format is saved using UTF-8 format. When such a file is loaded into an ADO Stream, the Stream object will not attempt to open a **Recordset** from the stream unless the Charset property of the stream is set to the appropriate value for UTF-8 format.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Save and Open Methods Example (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [Save and Open Methods Example (VC++)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   

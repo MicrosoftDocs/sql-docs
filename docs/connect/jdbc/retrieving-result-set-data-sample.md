@@ -1,5 +1,6 @@
 ---
-title: "Retrieving result set data sample | Microsoft Docs"
+title: "Retrieving result set data sample"
+description: "Learn how to retrieve a set of data from a SQL database and display that information in a Java application."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 1b190c36-3d38-49a2-8599-612329675851
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Retrieving result set data sample
@@ -26,16 +27,16 @@ The code file for this sample is named RetrieveResultSet.java, and it can be fou
 
 ## Requirements
 
-To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](../../connect/jdbc/using-the-jdbc-driver.md).
+To run this sample application, you must set the classpath to include the mssql-jdbc jar file. You'll also need access to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. For more information about how to set the classpath, see [Using the JDBC Driver](using-the-jdbc-driver.md).
 
-> [!NOTE]  
-> The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](../../connect/jdbc/system-requirements-for-the-jdbc-driver.md).
+> [!NOTE]
+> The [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides mssql-jdbc class library files to be used depending on your preferred Java Runtime Environment (JRE) settings. For more information about which JAR file to choose, see [System Requirements for the JDBC Driver](system-requirements-for-the-jdbc-driver.md).
 
 ## Example
 
-In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. Then, using an SQL statement with the [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) object, it runs the SQL statement and places the data that it returns into a [SQLServerResultSet](../../connect/jdbc/reference/sqlserverresultset-class.md) object.
+In the following example, the sample code makes a connection to the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] sample database. Then, using an SQL statement with the [SQLServerStatement](reference/sqlserverstatement-class.md) object, it runs the SQL statement and places the data that it returns into a [SQLServerResultSet](reference/sqlserverresultset-class.md) object.
 
-Next, the sample code calls the custom displayRow method to iterate through the rows of data that are in the result set, and uses the [getString](../../connect/jdbc/reference/getstring-method-sqlserverresultset.md) method to display some of the data.
+Next, the sample code calls the custom displayRow method to iterate through the rows of data that are in the result set, and uses the [getString](reference/getstring-method-sqlserverresultset.md) method to display some of the data.
 
 ```java
 import java.sql.Connection;
@@ -100,9 +101,8 @@ public class RetrieveResultSet {
         stmt.execute(sql);
     }
 }
-
 ```
 
 ## See also
 
-[Working with result sets](../../connect/jdbc/working-with-result-sets.md)
+[Working with result sets](working-with-result-sets.md)

@@ -19,7 +19,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # ShortestLineTo (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a **LineString** instance with two points that represent the shortest distance between the two **geography** instances. The length of the **LineString** instance returned is the distance between the two **geography** instances.  
   
@@ -30,7 +30,9 @@ ms.author: mlandzic
 .ShortestLineTo ( geography_other )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *geography_other*  
  Specifies the second **geography** instance that the calling **geography** instance is trying to determine the shortest distance to.  
   
@@ -64,5 +66,5 @@ ms.author: mlandzic
   
 ## See Also  
  [Extended Methods on Geography Instances](../../t-sql/spatial-geography/extended-methods-on-geography-instances.md)  
-  
+ [ShortestLineTo (geometry Data Type)](../../t-sql/spatial-geometry/shortestlineto-geometry-data-type.md)  
   

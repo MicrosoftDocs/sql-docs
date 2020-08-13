@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "Close method [ADO], VBScript example"
   - "Open method [ADO], VBScript example"
 ms.assetid: 66eca011-e258-4d8f-bd67-e017bcf0871b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Open and Close Methods Example (VBScript)
 This example uses the [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) and [Close](../../../ado/reference/ado-api/close-method-ado.md) methods on both [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) and [Connection](../../../ado/reference/ado-api/connection-object-ado.md) objects that have been opened.  

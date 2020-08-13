@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ODBC functions [ODBC], cursor library"
   - "ODBC cursor library [ODBC], functions"
 ms.assetid: 2f1d3386-7e59-4d55-a5b4-3440b61343a3
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ODBC Functions Executed by the Cursor Library
 > [!IMPORTANT]  

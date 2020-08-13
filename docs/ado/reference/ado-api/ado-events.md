@@ -11,12 +11,12 @@ helpviewer_keywords:
   - "events [ADO]"
   - "ADO, events"
 ms.assetid: 0ded5ad9-8f83-4224-95af-38512783b972
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO Events
 
-|||  
+|Event|Description|  
 |-|-|  
 |[BeginTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Called after the **BeginTrans** operation.|  
 |[CommitTransComplete](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|Called after the **CommitTrans** operation.|  

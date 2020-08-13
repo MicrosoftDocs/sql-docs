@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ExecuteComplete event [ADO]"
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ExecuteComplete Event (ADO)
 The **ExecuteComplete** event is called after a command has finished executing.  

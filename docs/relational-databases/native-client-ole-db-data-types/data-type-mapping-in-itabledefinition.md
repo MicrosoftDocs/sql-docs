@@ -1,5 +1,5 @@
 ---
-title: "Data Type Mapping in ITableDefinition | Microsoft Docs"
+title: "Data type mapping in ITableDefinition (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,12 +16,12 @@ helpviewer_keywords:
   - "CreateTable function"
   - "OLE DB, data types"
 ms.assetid: 13292d1f-c17e-4d11-bf98-3460a10cbb18
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Data Type Mapping in ITableDefinition
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# SQL Server Native Client Data Type Mapping in ITableDefinition
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   When creating tables by using the **ITableDefinition::CreateTable** function, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider consumer can specify [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data types in the *pwszTypeName* member of the DBCOLUMNDESC array that is passed. If the consumer specifies the data type of a column by name, OLE DB data type mapping, represented by the *wType* member of the DBCOLUMNDESC structure, is ignored.  
   

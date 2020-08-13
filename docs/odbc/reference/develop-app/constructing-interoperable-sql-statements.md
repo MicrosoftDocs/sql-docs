@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQL statements [ODBC], interoperability"
   - "interoperability of SQL statements [ODBC], constructing statements"
 ms.assetid: dee6f7e2-bcc4-4c74-8c7c-12aeda8a90eb
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Constructing Interoperable SQL Statements
 As mentioned in the previous sections, interoperable applications should use the ODBC SQL grammar. Beyond using this grammar, however, a number of additional problems are faced by interoperable applications. For example, what does an application do if it wants to use a feature, such as outer joins, that is not supported by all data sources?  

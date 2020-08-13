@@ -18,11 +18,11 @@ helpviewer_keywords:
   - "number of characters"
 ms.assetid: fa20fee4-884d-4301-891a-c03e901345ae
 author: pmasl
-ms.author: mikeray
+ms.author: pelopes
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LEN (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Returns the number of characters of the specified string expression, excluding trailing spaces.  
   
@@ -33,11 +33,13 @@ Returns the number of characters of the specified string expression, excluding t
   
 ## Syntax  
   
-```  
+```syntaxsql
 LEN ( string_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *string_expression*  
  Is the string [expression](../../t-sql/language-elements/expressions-transact-sql.md) to be evaluated. *string_expression* can be a constant, variable, or column of either character or binary data.  
   
@@ -50,13 +52,13 @@ LEN ( string_expression )
 LEN excludes trailing spaces. If that is a problem, consider using the [DATALENGTH &#40;Transact-SQL&#41;](../../t-sql/functions/datalength-transact-sql.md) function which does not trim the string. If processing a unicode string, DATALENGTH will return a number that may not be equal to the number of characters. The following example demonstrates LEN and DATALENGTH with a trailing space.  
   
 ```sql  
-DECLARE @v1 varchar(40),  
-    @v2 nvarchar(40);  
+  DECLARE @v1 VARCHAR(40),  
+    @v2 NVARCHAR(40);  
 SELECT   
 @v1 = 'Test of 22 characters ',   
 @v2 = 'Test of 22 characters ';  
-SELECT LEN(@v1) AS [varchar LEN] , DATALENGTH(@v1) AS [varchar DATALENGTH];  
-SELECT LEN(@v2) AS [nvarchar LEN], DATALENGTH(@v2) AS [nvarchar DATALENGTH];  
+SELECT LEN(@v1) AS [VARCHAR LEN] , DATALENGTH(@v1) AS [VARCHAR DATALENGTH];  
+SELECT LEN(@v2) AS [NVARCHAR LEN], DATALENGTH(@v2) AS [NVARCHAR DATALENGTH];  
 ```  
 
 > [!NOTE]

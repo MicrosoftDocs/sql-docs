@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "StayInSync property [ADO], VC++ example"
 ms.assetid: 3a5db5f0-094b-46e1-939b-d9fa9417a406
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # StayInSync Property Example (VC++)
 This example demonstrates how the [StayInSync](../../../ado/reference/ado-api/stayinsync-property.md) property facilitates accessing rows in a hierarchical [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

@@ -20,7 +20,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # SqlService Class
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The [SqlService Class](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) represents an instance of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service.  
   
  The [SqlService Class](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) is used to programmatically manage the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] service. With the [SqlService Class](../../../relational-databases/wmi-provider-configuration-classes/sqlservice-class/sqlservice-class.md) object, you can perform the following tasks:  

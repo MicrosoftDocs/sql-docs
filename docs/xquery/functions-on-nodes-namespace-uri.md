@@ -1,5 +1,6 @@
 ---
 title: "namespace-uri Function (XQuery) | Microsoft Docs"
+description: Learn how to use the namespace-uri function in an XQuery to return the namespace URI of a specified QName.
 ms.custom: ""
 ms.date: "08/09/2016"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Functions on Nodes - namespace-uri
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Returns the namespace URI of the QName specified in *$arg* as a xs:string.  
   

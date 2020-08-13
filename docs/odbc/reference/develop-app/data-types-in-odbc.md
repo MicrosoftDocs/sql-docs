@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "data types [ODBC]"
   - "data types [ODBC], about data types"
 ms.assetid: 7332d93e-44db-4132-9c10-988dbc13369e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Data Types in ODBC
 ODBC uses two sets of data types: SQL data types and C data types. SQL data types are used in the data source, and C data types are used in C code in the application.  

@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLDriverConnect function [ODBC]"
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDriverConnect Function
 **Conformance**  

@@ -1,5 +1,5 @@
 ---
-title: "Creating Rowsets with ICommand::Execute | Microsoft Docs"
+title: "Create rowset with ICommand::Execute (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -13,12 +13,12 @@ helpviewer_keywords:
   - "OLE DB rowsets, creating"
   - "Execute method"
 ms.assetid: 9b530b7d-8165-49d4-a978-5ced17c6705e
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Creating Rowsets with ICommand::Execute
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Creating Rowsets with ICommand::Execute in SQL Server Native Client
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   For rowsets created by using the **ICommand::Execute** method, the properties that you want in the resulting rowset can constrain the text of the command. This is especially critical for consumers that support dynamic command text.  
   

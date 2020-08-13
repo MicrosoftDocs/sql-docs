@@ -17,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_help_jobs"
 ms.assetid: 9399b4bc-8293-408f-b3cb-f904e0657fb5
-author: rothja
-ms.author: jroth
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.sp_cdc_help_jobs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reports information about all change data capture cleanup or capture jobs in the current database.  
   

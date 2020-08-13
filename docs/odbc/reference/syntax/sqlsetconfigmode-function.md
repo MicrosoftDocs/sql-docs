@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetConfigMode function [ODBC]"
 ms.assetid: 09eb88ea-b6f6-4eca-b19d-0951cebc6c0a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetConfigMode Function
 **Conformance**  

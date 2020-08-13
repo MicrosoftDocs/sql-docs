@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "descriptors [ODBC], copying"
   - "copying descriptors [ODBC]"
 ms.assetid: 949a860d-6579-4218-882e-8c061688dd87
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Copying Descriptors
 The **SQLCopyDesc** function is called to copy the fields of one descriptor to another descriptor. Fields can be copied only to an application descriptor or an IPD, but not to an IRD. Fields can be copied from any type of descriptor. Only those fields that are defined for both the source and target descriptors are copied. **SQLCopyDesc** does not copy the SQL_DESC_ALLOC_TYPE field, because a descriptor's allocation type cannot be changed. Copied fields overwrite the existing fields.  

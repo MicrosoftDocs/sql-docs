@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "record count [ODBC]"
   - "descriptors [ODBC], record count"
 ms.assetid: 46eec3cc-0ecc-4980-9020-fb74a9af5730
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Record Count
 The SQL_DESC_COUNT header field of a descriptor is the one-based index of the highest-numbered record that contains data. This field is not a count of all columns or parameters that are bound. When a descriptor is allocated, the initial value of SQL_DESC_COUNT is 0.  

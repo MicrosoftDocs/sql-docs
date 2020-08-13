@@ -12,15 +12,15 @@ helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], error messages"
   - "FoxPro ODBC driver [ODBC], error messages"
 ms.assetid: 7b2622e8-ccee-4853-9171-4fb10de0461d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Visual FoxPro ODBC Driver Native Error Messages
 The following tables list error messages native to the Visual FoxPro ODBC Driver.  
   
 ## 001  
   
-|||  
+|Error code|Error message|  
 |-|-|  
 |1|Feature is not available.|  
 |2|Input/output operation failure.|  
@@ -30,7 +30,7 @@ The following tables list error messages native to the Visual FoxPro ODBC Driver
   
 ## 100  
   
-|||  
+|Error code|Error message|  
 |-|-|  
 |100|Too many files open.|  
 |101|Cannot open file.|  
@@ -86,7 +86,7 @@ The following tables list error messages native to the Visual FoxPro ODBC Driver
   
 ## 200  
   
-|||  
+|Error code|Error message|  
 |-|-|  
 |200|Syntax error.|  
 |201|Too many names used.|  
@@ -126,7 +126,7 @@ The following tables list error messages native to the Visual FoxPro ODBC Driver
   
 ## 300  
   
-|||  
+|Error code|Error message|  
 |-|-|  
 |301|Operator/operand type mismatch.|  
 |302|Data type mismatch.|  
@@ -137,7 +137,7 @@ The following tables list error messages native to the Visual FoxPro ODBC Driver
   
 ## 400  
   
-|||  
+|Error code|Error message|  
 |-|-|  
 |406|Printer is not ready.|  
 |407|Invalid argument used with the SET function.|  
@@ -166,7 +166,7 @@ The following tables list error messages native to the Visual FoxPro ODBC Driver
   
 ## 500  
   
-|||  
+|Error code|Error message|  
 |-|-|  
 |502|Cannot write to the record because it is in use.|  
 |503|File cannot be locked.|  
@@ -227,7 +227,7 @@ The following tables list error messages native to the Visual FoxPro ODBC Driver
   
 ## 600  
   
-|||  
+|Error code|Error message|  
 |-|-|  
 |601|Alias name is already in use.|  
 |602|Operation is invalid for a Memo, General, or Picture field.|  
@@ -245,7 +245,7 @@ The following tables list error messages native to the Visual FoxPro ODBC Driver
   
 ## 700  
   
-|||  
+|Error code|Error message|  
 |-|-|  
 |700|Record is in use by another user.|  
 |701|File must be opened exclusively.|  
@@ -271,7 +271,7 @@ The following tables list error messages native to the Visual FoxPro ODBC Driver
   
 ## 800  
   
-|||  
+|Error code|Error message|  
 |-|-|  
 |802|SQL: Cannot locate table.|  
 |872|Too many columns.|  
@@ -284,7 +284,7 @@ The following tables list error messages native to the Visual FoxPro ODBC Driver
   
 ## 900  
   
-|||  
+|Error code|Error message|  
 |-|-|  
 |901|Function argument value, type, or count is invalid.|  
 |902|Expression evaluator failed.|  

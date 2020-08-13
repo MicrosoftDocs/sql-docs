@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Positions collection [ADO MD], members"
 ms.assetid: 56091fcb-71e1-463a-b8ae-c09108eece2f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Positions Collection Properties, Methods, and Events
 ## Properties  

@@ -13,11 +13,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_script_synctran_commands"
 ms.assetid: f132694a-dd05-405b-9d84-21acce9e564a
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_script_synctran_commands (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Generates a script that contains the **sp_addsynctrigger** calls to be applied at Subscribers for updatable subscriptions. There is one **sp_addsynctrigger** call for each article in the publication. The generated script also contains the **sp_addqueued_artinfo** calls that create the **MSsubsciption_articles** table that is needed to process queued publications. This stored procedure is executed at the Publisher on the publication database.  
   

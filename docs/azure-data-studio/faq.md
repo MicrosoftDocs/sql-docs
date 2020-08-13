@@ -1,25 +1,23 @@
 ---
-title: FAQ
-titleSuffix: Azure Data Studio
-description: Frequently asked questions (FAQ) about Azure Data Studio.
-ms.prod: sql
-ms.technology: azure-data-studio
+title: Azure Data Studio FAQ
+description: 'Get answers to questions frequently asked about Azure Data Studio, such as "What does it do?", "Who should use it?", and "How much does it cost?".'
+ms.prod: azure-data-studio
+ms.technology: 
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "alayu, maghan, sstein"
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ---
 
-# [!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
+# Azure Data Studio FAQ
 
 ## What is Azure Data Studio?
 
-Azure Data Studio is a new open source, cross-platform desktop environment for data professionals using the Azure Data family of on-premises and cloud data platforms on Windows, MacOS, and Linux. Previously released under the preview name SQL Operations Studio, Azure Data Studio offers a modern editor experience with lightning fast IntelliSense, code snippets, source control integration, and an integrated terminal. It is engineered with the data platform user in mind, with built in charting of query result sets and customizable dashboards.
+Azure Data Studio is a new open source, cross-platform desktop environment for data professionals using the Azure Data family of on-premises and cloud data platforms on Windows, macOS, and Linux. Previously released under the preview name SQL Operations Studio, Azure Data Studio offers a modern editor experience with lightning fast IntelliSense, code snippets, source control integration, and an integrated terminal. It is engineered with the data platform user in mind, with built in charting of query result sets and customizable dashboards.
 
 Research has shown that users spend an order of magnitude more time working on query editing than on any other task with SQL Server Management Studio. For that reason, Azure Data Studio has been designed to focus deeply on the functionality that is used the most, with additional experiences made available as optional extensions into the product. This allows every user to customize their environment to the workflows that they use most often.
-
 
 ## How much does Azure Data Studio cost?
 
@@ -54,8 +52,8 @@ No. Investments in flagship Windows tools (SSMS, SSDT, PowerShell) will continue
 *Use Azure Data Studio if you:*
 
 - Spend most of your time editing or executing queries.
-- Need the ability to quickly chart and visualize resultsets.
-- Can execute most administrative tasks via the integrated terminal using sqlcmd or Powershell.
+- Need the ability to quickly chart and visualize result sets.
+- Can execute most administrative tasks via the integrated terminal using sqlcmd or PowerShell.
 - Have minimal need for wizard experiences.
 - Do not need to do deep administrative or platform related configuration.
 - Need to run on macOS or Linux.
@@ -180,7 +178,7 @@ Developers and DBAs are usually the users of Azure Data Studio.
 
 ## Does Azure Data Studio integrate with Azure SQL Data Warehouse?
 
-Yes. Azure Data Studio support for Azure SQL Data Warehouse is currently in preview, together with Azure SQL Database Managed Instance, and SQL Server 2019 Big Data.
+Yes. Azure Data Studio support for Azure SQL Data Warehouse is currently in preview, together with Azure SQL Managed Instance, and SQL Server 2019 Big Data.
 
 ## Why is Azure Data Studio important for the new version of SQL Server?
 

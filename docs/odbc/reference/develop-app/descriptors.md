@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "descriptor handles [ODBC]"
   - "handles [ODBC], descriptor"
 ms.assetid: ef2cbb93-cd00-40f8-b1d2-5f5723a991aa
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Descriptors
 A descriptor handle refers to a data structure that holds information about either columns or dynamic parameters.  

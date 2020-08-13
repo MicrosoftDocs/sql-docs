@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "data types [ODBC], desktop database drivers"
   - "desktop database drivers [ODBC], data types"
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Data Type Limitations
 The Microsoft ODBC Desktop Database Drivers impose the following limitations on data types:  

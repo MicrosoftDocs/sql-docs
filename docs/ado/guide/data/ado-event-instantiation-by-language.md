@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "events [ADO], instantiation by language"
   - "event handlers [ADO], instantiation by language"
 ms.assetid: eded7e8c-a25f-46a6-bc2b-32d89a54d1bc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO Event Instantiation by Language
 Each programming language creates instances of ADO events differently. All of the following examples create a **ConnectComplete** event handler.  

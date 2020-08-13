@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "OLE DB providers [ADO]"
   - "ADO, OLE DB providers"
 ms.assetid: 877b9f25-60c4-4ab6-8052-2c28a3849e89
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Data Providers
 Data providers represent diverse sources of data such as SQL databases, indexed-sequential files, spreadsheets, document stores, and mail files. Providers expose data uniformly using a common abstraction called the rowset.  

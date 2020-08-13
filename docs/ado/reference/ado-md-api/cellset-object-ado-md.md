@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Cellset object [ADO MD]"
 ms.assetid: 5e2452c0-cac0-49b2-8099-836c35794d50
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Cellset Object (ADO MD)
 Represents the results of a multidimensional query. It is a collection of cells selected from cubes or other cellsets.  

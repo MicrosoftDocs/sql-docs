@@ -17,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_model_groups catalog view"
 ms.assetid: 566556dc-a8c8-465c-9196-c7e0ae092a8a
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.xml_schema_model_groups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row per XML schema component that is a Model-Group, **symbol_space** of **M**..  
   

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "ODBC SQL grammar, NOT NULL limitations"
   - "NOT NULL limitations [ODBC]"
 ms.assetid: bb1a04f0-111b-412e-b2fb-090b62e74d59
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # NOT NULL Limitations
 The NOT NULL constraint in the CREATE TABLE statement is not supported.

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "committing transactions [ODBC]"
   - "transaction commit [ODBC]"
 ms.assetid: 311685e2-f7b5-4ddc-8020-59380cd2f035
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 5: Commit the Transaction
 The next step is to commit the transaction, as shown in the following illustration.  

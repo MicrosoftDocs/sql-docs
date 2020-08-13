@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "sp_syscollector_create_collection_item"
   - "data collector [SQL Server], stored procedures"
 ms.assetid: 60dacf13-ca12-4844-b417-0bc0a8bf0ddb
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_syscollector_create_collection_item (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a collection item in a user-defined collection set. A collection item defines the data to be collected and the frequency with which the data is collected.  
   

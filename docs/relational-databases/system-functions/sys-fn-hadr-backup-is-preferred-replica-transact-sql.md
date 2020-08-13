@@ -23,7 +23,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Used to determine if the current replica is the preferred backup replica.  
   
@@ -41,7 +41,7 @@ sys.fn_hadr_backup_is_preferred_replica ( 'dbname' )
  Is the name of the database to be backed up. *dbname* is type sysname.  
   
 ## Returns  
- Returns 1 if the database on the current instance is on the preferred replica. Otherwise returns 0.  
+ Returns data type **bool**: 1 if the database on the current instance is on the preferred replica, otherwise 0.  
   
 ## Remarks  
  Use this function in a backup script to determine if the current database is on the replica that is preferred for backups. You can run a script on every availability replica. Each of these jobs looks at the same data to determine which job should run, so only one of the scheduled jobs actually proceeds to the backup stage. Sample code could be similar to the following.  

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQLColumns function [ODBC], Excel Driver"
   - "Excel driver [ODBC], SQLColumns"
 ms.assetid: 4bae3fcd-0287-4f79-ad7c-8f7ab2f6f940
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLColumns (Excel Driver)
 > [!NOTE]  

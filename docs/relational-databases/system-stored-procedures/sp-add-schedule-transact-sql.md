@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_schedule"
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_add_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a schedule that can be used by any number of jobs.  
   
@@ -43,7 +43,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
     [ , [ @active_end_time = ] active_end_time ]   
     [ , [ @owner_login_name = ] 'owner_login_name' ]  
     [ , [ @schedule_uid = ] schedule_uid OUTPUT ]  
-    [ , [ @schedule_id = ] schedule_id OUTPUT ]  
+    [ , [ @schedule_id = ] schedule_id OUTPUT ]
     [ , [ @originating_server = ] server_name ] /* internal */  
 ```  
   
@@ -65,7 +65,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|Monthly|  
 |**32**|Monthly, relative to *freq_interval*|  
 |**64**|Run when SQL Agent service starts|  
-|**128**|Run when the computer is idle (not supported in [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
+|**128**|Run when the computer is idle (not supported in [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
   
 `[ @freq_interval = ] freq_interval`
  The days that a job is executed. *freq_interval* is **int**, with a default of **1**, and depends on the value of *freq_type*.  

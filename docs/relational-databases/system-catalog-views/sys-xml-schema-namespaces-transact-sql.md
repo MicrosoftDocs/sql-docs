@@ -17,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.xml_schema_namespaces catalog view"
 ms.assetid: 3ed42dd6-929a-41de-80e8-d3a0a488bc7a
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.xml_schema_namespaces (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row per XSD-defined XML namespace. The following tuples are unique: **collection_id**, **namespace_id**, and **collection_id**, and **name**.  
   

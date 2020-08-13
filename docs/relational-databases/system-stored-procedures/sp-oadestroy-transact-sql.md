@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_OADestroy"
 ms.assetid: 0bd1cff4-ceff-4095-9ae4-e1e65a80f5d6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_OADestroy (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Destroys a created OLE object.  
   

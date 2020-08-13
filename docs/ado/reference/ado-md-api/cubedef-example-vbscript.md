@@ -12,8 +12,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ADO MD code examples [ADO MD], VBScript"
 ms.assetid: 4d72a912-ef53-4989-9fca-214937574116
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CubeDef Example (VBScript)
 This example displays cube metadata on a web page.  

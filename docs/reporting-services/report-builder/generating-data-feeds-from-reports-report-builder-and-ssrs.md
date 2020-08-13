@@ -1,5 +1,6 @@
 ---
 title: "Generating Data Feeds from Reports (Report Builder) | Microsoft Docs"
+description: The Reporting Services Atom rendering extension generates a service document of the data feeds in a paginated report and feeds from the data regions in it.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

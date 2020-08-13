@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQLGetDescField function [ODBC], Cursor Library"
   - "SQLGetDescRec function [ODBC], Cursor Library"
 ms.assetid: 1a801f22-6fea-48aa-a723-3187a2ad852b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetDescField and SQLGetDescRec (Cursor Library)
 > [!IMPORTANT]  

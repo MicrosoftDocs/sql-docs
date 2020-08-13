@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "diagnostic information [ODBC], SqlGetDiagRec"
   - "retrieving diagnostic information [ODBC]"
 ms.assetid: 11ba1857-b533-4517-8131-a2a8a0154a0a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Implementing SQLGetDiagRec and SQLGetDiagField
 **SQLGetDiagRec** and **SQLGetDiagField** are implemented by the Driver Manager and each driver. The Driver Manager and each driver maintain diagnostic records for each environment, connection, statement, and descriptor handle, and free those records only when another function is called with that handle or the handle is freed.  

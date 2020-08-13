@@ -1,5 +1,6 @@
 ---
 title: "Access external data: ODBC generic types - PolyBase"
+description: PolyBase in SQL Server allows you to connect to compatible data sources through the ODBC connector. Install the ODBC driver and create external tables.
 ms.date: 02/19/2020
 ms.custom: seo-lt-2019
 ms.prod: sql
@@ -10,9 +11,9 @@ ms.author: mikeray
 ms.reviewer: mikeray
 monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 ---
-# Configure PolyBase to access external data in SQL Server
+# Configure PolyBase to access external data with ODBC generic types
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 PolyBase in SQL Server 2019 allows you to connect to ODBC -compatible data sources through the ODBC connector.
 
@@ -64,7 +65,7 @@ The following Transact-SQL commands are used in this section:
 
     ```sql
     CREATE EXTERNAL DATA SOURCE <external_data_source_name>
-    WITH ( LOCATION = odbc://<ODBC server address>[:<port>],
+    WITH ( LOCATION = 'odbc://<ODBC server address>[:<port>]',
     CONNECTION_OPTIONS = 'Driver={<Name of Installed Driver>};
     ServerNode = <name of server  address>:<Port>',
     -- PUSHDOWN = [ON] | OFF,
@@ -81,7 +82,7 @@ The following Transact-SQL commands are used in this section:
 
     ```sql
     CREATE EXTERNAL DATA SOURCE external_data_source_name
-    WITH ( LOCATION = odbc://SERVERNAME:4444,
+    WITH ( LOCATION = 'odbc://SERVERNAME:4444',
     CONNECTION_OPTIONS = 'Driver={CData ODBC Driver For SAP 2015};
     ServerNode = sap_server_node:5555',
     PUSHDOWN = ON,

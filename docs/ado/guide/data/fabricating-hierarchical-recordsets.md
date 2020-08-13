@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "fabricating hierarchical Recordsets [ADO]"
   - "data shaping [ADO], hierarchical Recordsets"
 ms.assetid: a584e642-a4a3-418e-bc20-3aff81a5625a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Fabricating Hierarchical Recordsets
 The following example shows how to fabricate a hierarchical Recordset without an underlying data source by using the data shaping grammar to define columns for parent, child, and grandchild **Recordsets**.  

@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "SQLFreeEnv function [ODBC], mapping"
   - "mapping deprecated functions [ODBC], SQLFreeEnv"
 ms.assetid: c0f76455-d072-4bae-bee7-452277dfa479
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLFreeEnv Mapping
 When an application calls **SQLFreeEnv** through an ODBC *3.x* driver, the call to  

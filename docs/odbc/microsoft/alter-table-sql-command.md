@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "alter table [ODBC]"
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ALTER TABLE - SQL Command
 Programmatically modifies the structure of a table.  

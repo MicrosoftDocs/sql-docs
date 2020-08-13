@@ -1,5 +1,6 @@
 ---
 title: "DataSources and DataSets Collection References (Report Builder) | Microsoft Docs"
+description: Learn about the collections of datasources and datasets. Find out how to make them available after the report is published to a report server in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

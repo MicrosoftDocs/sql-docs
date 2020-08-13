@@ -1,7 +1,7 @@
 ---
 title: Join SQL Server on Linux to Active Directory
 titleSuffix: SQL Server
-description: 
+description: This article provides guidance joining a SQL Server Linux host machine to an AD domain. You can use a built-in SSSD package or use third-party AD providers.
 author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
@@ -12,7 +12,7 @@ ms.technology: linux
 ---
 # Join SQL Server on a Linux host to an Active Directory domain
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article provides general guidance on how to join a SQL Server Linux host machine to an Active Directory (AD) domain. There are two methods: use a built-in SSSD package or use third-party Active Directory providers. Examples of third-party domain join products are [PowerBroker Identity Services (PBIS)](https://www.beyondtrust.com/), [One Identity](https://www.oneidentity.com/products/authentication-services/), and [Centrify](https://www.centrify.com/). This guide includes steps to check your Active Directory configuration. However, it is not intended to provide instructions on how to join a machine to a domain when using third-party utilities.
 

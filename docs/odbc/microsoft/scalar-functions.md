@@ -13,20 +13,39 @@ helpviewer_keywords:
   - "scalar functions [ODBC], desktop database drivers"
   - "SQL grammar [ODBC], scalar functions"
 ms.assetid: 18e1e0c1-b43f-44d9-b310-7d9e1d499e8b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Scalar Functions
 The Microsoft ODBC Desktop Database Drivers support the following scalar functions:  
-  
-||||  
-|-|-|-|  
-|CONCAT|LCASE|RIGHT|  
-|CONVERT|LEFT|RTRIM|  
-|CURDATE|LENGTH|SUBSTRING|  
-|CURTIME|LOCATE|UCASE|  
-|DATABASE|LTRIM|USER|  
-|DAYOFMONTH|MOD|YEAR|  
-|DAYOFWEEK|MONTH||  
-  
+
+:::row:::
+    :::column:::
+        CONCAT  
+        CONVERT  
+        CURDATE  
+        CURTIME  
+        DATABASE  
+        DAYOFMONTH  
+        DAYOFWEEK  
+    :::column-end:::
+    :::column:::
+        LCASE  
+        LEFT  
+        LENGTH  
+        LOCATE  
+        LTRIM  
+        MOD  
+        MONTH  
+    :::column-end:::
+    :::column:::
+        RIGHT  
+        RTRIM  
+        SUBSTRING  
+        UCASE  
+        USER  
+        YEAR  
+    :::column-end:::
+:::row-end:::
+
  For information about the arguments and return values of scalar functions, see Appendix F of the *ODBC Programmer's Reference.*

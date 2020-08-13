@@ -1,5 +1,6 @@
 ---
 title: "RSReportDesigner Configuration File | Microsoft Docs"
+description: Learn about the configuration file that stores settings about the rendering and data processing extensions available to Report Designer.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

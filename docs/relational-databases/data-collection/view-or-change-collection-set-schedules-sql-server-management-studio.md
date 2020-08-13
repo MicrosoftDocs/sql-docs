@@ -1,7 +1,6 @@
 ---
 title: "View or change collection set schedules"
-ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 06/03/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -21,7 +20,7 @@ ms.author: mathoma
 ms.custom: "seo-lt-2019"
 ---
 # View or Change Collection Set Schedules (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   You can view or change collection set schedules by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  The collection mode, cached or non-cached, determines how you can make changes to a schedule. Cached mode uses separate schedules for collection and upload. Non-cached mode uses the same schedule for collection and upload. The type of collection mode for each of the System Datacollection sets is as follows:  
@@ -105,10 +104,11 @@ ms.custom: "seo-lt-2019"
  **Data collection and upload**  
  Specifies how data is collected and uploaded to the management data warehouse. Pick one of the following options.  
   
-|||  
-|-|-|  
+| Option | Description |
+| :----- | :---------- |
 |**Non-cached. Collection and data upload on the same schedule.**|When selected, specify one of the following:<br /><br /> **Schedule**. Data is collected and uploaded according to a schedule. Click **Pick** to select from a predefined list of schedules, or click **New** to create a new schedule.<br /><br /> **On-demand**. Data is collected and uploaded on demand.|  
 |**Cached. Collect and cache data at a set of collection frequencies. Upload cached data on a separate schedule.**|Collect and cache data for a specified collection frequency. Upload the collected data on a separate schedule.|  
+|||
   
  **Collection items**  
  Displays the collection items in the collection set. The following information is provided for each collection item:  
@@ -128,11 +128,12 @@ ms.custom: "seo-lt-2019"
  **Set how long collected data will be retained in the management data warehouse.**  
  Specifies how long collected data is retained. Pick one of the following options.  
   
-|||  
-|-|-|  
+| Option | Description |
+| :----- | :---------- |
 |**Retain data for**|This option is selected by default, and the default retention period is 14 days.|  
 |**Retain data indefinitely**|There is no time limit on the length of time that data is retained.|  
-  
+|||
+
  **Uploads Page**  
   
  Use this page to configure the upload schedule for data that is collected by this collection set.  

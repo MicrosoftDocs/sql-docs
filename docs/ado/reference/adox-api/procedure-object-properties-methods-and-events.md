@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Procedure object [ADOX], members"
 ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Procedure Object Properties, Methods, and Events
 ## Properties  

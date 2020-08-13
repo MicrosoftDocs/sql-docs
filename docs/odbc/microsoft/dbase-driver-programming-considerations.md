@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "DBase driver [ODBC]"
   - "ODBC desktop database drivers [ODBC], DBasedriver"
 ms.assetid: ce5e8efc-6a2d-40d5-a658-8dd35cd1dd09
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # dBASE Driver Programming Considerations
 This section contains the following topics.  

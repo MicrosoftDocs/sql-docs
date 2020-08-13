@@ -1,6 +1,6 @@
 ---
 title: "Working with query notifications | Microsoft Docs"
-description: "Working with query notifications in the OLE DB Driver for SQL Server"
+description: Learn how query notifications allow applications to be notified when data has changed in the OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.author: pelopes
 ---
 # Working with query notifications
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

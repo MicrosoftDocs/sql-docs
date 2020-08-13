@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "identifiers [ODBC], SQL type"
   - "SQL type identifiers [ODBC]"
 ms.assetid: d4f8b152-ab9e-4d05-a720-d10a08a6df81
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Retrieving Data Type Information with SQLGetTypeInfo
 Because the mappings from underlying SQL data types to ODBC type identifiers are approximate, ODBC provides a function (**SQLGetTypeInfo**) through which a driver can completely describe each SQL data type in the data source. This function returns a result set, each row of which describes the characteristics of a single data type, such as name, type identifier, precision, scale, and nullability.  

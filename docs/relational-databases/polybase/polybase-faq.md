@@ -1,5 +1,6 @@
 ---
 title: "Frequently Asked Questions in PolyBase | Microsoft Docs"
+description: Compare PolyBase and linked servers and compare PolyBase in big data clusters and PolyBase in stand-alone instances. Find out what's new in PolyBase 2019.
 ms.date: 04/23/2019
 ms.prod: sql
 ms.technology: polybase
@@ -11,7 +12,7 @@ ms.reviewer: mikeray
 
 # Frequently asked questions
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## PolyBase VS. linked servers
 The following table highlights the differences between PolyBase and linked server features:

@@ -26,7 +26,7 @@ ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET NUMERIC_ROUNDABORT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Specifies the level of error reporting generated when rounding in an expression causes a loss of precision.  
   
@@ -34,12 +34,14 @@ Specifies the level of error reporting generated when rounding in an expression 
 
 ## Syntax
 
-```sql
+```syntaxsql
 
 SET NUMERIC_ROUNDABORT { ON | OFF }
 ```
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
 When SET NUMERIC_ROUNDABORT is ON, an error is generated after a loss of precision occurs in an expression. If set to OFF, losses of precision don't generate error messages. The result is rounded to the precision of the column or variable storing the result.  
   
 Loss of precision occurs when you attempt to store a value with fixed precision in a column or variable with less precision.  

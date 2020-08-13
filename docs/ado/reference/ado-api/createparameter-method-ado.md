@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "CreateParameter method [RDS]"
 ms.assetid: 9666fdcc-0544-4ed7-a97b-c415f2a56d7e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CreateParameter Method (ADO)
 Creates a new [Parameter](../../../ado/reference/ado-api/parameter-object.md) object with the specified properties.  

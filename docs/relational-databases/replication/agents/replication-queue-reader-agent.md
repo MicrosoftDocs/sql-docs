@@ -17,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Replication Queue Reader Agent
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The Replication Queue Reader Agent is an executable that reads messages stored in a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] queue or a [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Message Queue and then applies those messages to the Publisher. Queue Reader Agent is used with snapshot and transactional publications that allow queued updating.  
   
 > [!NOTE]  
@@ -69,24 +69,24 @@ qrdrsvc [-?]
  **-DistributorPassword** _distributor_password_  
  Is the Distributor password.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  Specifies the security mode of the Distributor. A value of **0** indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication Mode (default), and a value of **1** indicates Windows Authentication Mode.  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
- Is the level of Secure Sockets Layer (SSL) encryption used by the Queue Reader Agent when making connections.  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
+ Is the level of Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), encryption used by the Queue Reader Agent when making connections.  
   
 |EncryptionLevel value|Description|  
 |---------------------------|-----------------|  
-|**0**|Specifies that SSL is not used.|  
-|**1**|Specifies that SSL is used, but the agent does not verify that the SSL server certificate is signed by a trusted issuer.|  
-|**2**|Specifies that SSL is used, and that the certificate is verified.|  
+|**0**|Specifies that TLS is not used.|  
+|**1**|Specifies that TLS is used, but the agent does not verify that the TLS/SSL server certificate is signed by a trusted issuer.|  
+|**2**|Specifies that TLS is used, and that the certificate is verified.|  
 
  > [!NOTE]  
- >  A valid SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The ‘Alias Name’ parameter should be the server name and the ‘Server’ parameter should be set to the fully qualified name of the SQL Server.
+ >  A valid TLS/SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The ‘Alias Name’ parameter should be the server name and the ‘Server’ parameter should be set to the fully qualified name of the SQL Server.
   
  For more information, see [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
- **-HistoryVerboseLevel** [ **0**| **1**| **2**| **3**]  
+ **-HistoryVerboseLevel** [ **0**\| **1**\| **2**\| **3**]  
  Specifies the amount of history logged during a queue reader operation. You can minimize the effect of history logging on performance by selecting **1**.  
   
 |HistoryVerboseLevel value|Description|  
@@ -102,7 +102,7 @@ qrdrsvc [-?]
  **-Output** _output_path_and_file_name_  
  Is the path of the agent output file. If the file name is not provided, the output is sent to the console. If the specified file name exists, the output is appended to the file.  
   
- **-OutputVerboseLevel** [ **0**| **1**| **2**]  
+ **-OutputVerboseLevel** [ **0**\| **1**\| **2**]  
  Specifies whether the output should be verbose. If the verbose level is **0**, only error messages are printed. If the verbose level is **1**, all the progress report messages are printed. If the verbose level is **2** (default), all error messages and progress report messages are printed, which is useful for debugging.  
   
  **-PollingInterval** _polling_interval_  
@@ -117,7 +117,7 @@ qrdrsvc [-?]
  **-QueryTimeOut** _query_time_out_seconds_  
  Is the number of seconds before the query times out. The default is 1800 seconds.  
   
- **-ResolverState** [ **1**| **2**| **3**]  
+ **-ResolverState** [ **1**\| **2**\| **3**]  
  Specifies how queued updating conflicts are resolved. A value of **1** indicates the Publisher wins the conflict, and the current conflicting queued transaction will be rolled back on the Publisher and the originating updating Subscriber; the processing of subsequent queued transactions will continue. A value of **2** indicates the Subscriber wins the conflict, and the queued transaction will override the values on the Publisher. A value of **3** indicates that any conflict will result in Subscriber re-initialization; the Publisher wins the conflict, processing of subsequent queued transactions will be terminated, and the subscription will be reinitialized. The default setting is **1** for transactional publications and **3** for snapshot publications.  
   
 ## Remarks  

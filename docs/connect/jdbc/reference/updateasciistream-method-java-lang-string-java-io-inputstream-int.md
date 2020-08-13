@@ -1,5 +1,5 @@
 ---
-title: "updateAsciiStream Method (java.io.InputStream, int) | Microsoft Docs"
+title: updateAsciiStream method (java.lang.String, java.io.InputStream, int)
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql
@@ -13,8 +13,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 4e2997a0-c18e-4114-bce9-0ab4b2b9f92c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # updateAsciiStream Method (java.lang.String, java.io.InputStream, int)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

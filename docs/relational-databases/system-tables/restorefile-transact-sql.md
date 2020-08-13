@@ -17,11 +17,11 @@ helpviewer_keywords:
   - "restoring files [SQL Server], restorefile system table"
   - "file restores [SQL Server], restorefile system table"
 ms.assetid: 8e40145a-8559-4abe-8e2a-39b818928009
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # restorefile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each restored file, including files restored indirectly by filegroup name. This table is stored in the **msdb** database.  
   

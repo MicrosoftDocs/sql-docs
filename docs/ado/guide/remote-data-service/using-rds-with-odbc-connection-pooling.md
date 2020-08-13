@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "connection pooling in RDS [ADO]"
 ms.assetid: e8b912c1-da5b-4e85-a000-1e6648a94237
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Using RDS with ODBC Connection Pooling
 If you're using an ODBC data source, you can use the connection pooling option in Internet Information Services (IIS) to achieve high performance handling of client load. Connection pooling is a resource manager for connections, maintaining the open state on frequently used connections.  

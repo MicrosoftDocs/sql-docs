@@ -1,5 +1,6 @@
 ---
 title: Report Data pane
+description: Learn how to use the Report Data pane to view the currently defined parameters, data sources, datasets, field collections, and images in your report.
 author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ""

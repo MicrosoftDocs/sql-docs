@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "data shaping [ADO]"
 ms.assetid: 62bd7dc9-45b5-4ca9-8b52-457325e0ce9e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Data Shaping
 This section contains the following topics.  

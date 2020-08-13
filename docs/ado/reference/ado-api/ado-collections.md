@@ -11,15 +11,15 @@ helpviewer_keywords:
   - "ADO collections [ADO]"
   - "collections [ADO]"
 ms.assetid: b5e1d26d-b41d-4e35-8c7c-972426473dfb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO Collections
 The relationships between these collections and the ADO objects are represented in the [ADO Object Model](../../../ado/reference/ado-api/ado-object-model.md).  
   
  Each collection can contain its corresponding object. For example, an [Error](../../../ado/reference/ado-api/error-object.md) object can be contained in an [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) collection. For more information about objects, see [ADO Objects](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) or a specific object topic.  
   
-|||  
+|Collection|Description|  
 |-|-|  
 |[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)|Contains all the **Error** objects created in response to a single provider-related failure.|  
 |[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Contains all the **Field** objects of a **Recordset** object.|  

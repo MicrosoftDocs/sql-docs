@@ -1,5 +1,6 @@
 ---
 title: "Use My Subscriptions (Native Mode Report Server) | Microsoft Docs"
+description: Learn to use the My Subscriptions page in the Reporting Services web portal to view, modify, enable, disable, or delete existing subscriptions.
 ms.date: 07/01/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -50,6 +51,6 @@ $subscriptions | select Path, report, Description, Owner, SubscriptionID, lastex
 ## See Also  
  [Data-Driven Subscriptions](../../reporting-services/subscriptions/data-driven-subscriptions.md)   
  [Subscriptions and Delivery &#40;Reporting Services&#41;](../../reporting-services/subscriptions/subscriptions-and-delivery-reporting-services.md)   
- [old_Create and Manage Subscriptions for Native Mode Report Servers](https://msdn.microsoft.com/7f46cbdb-5102-4941-bca2-5e0ff9012c6b)  
+ [old_Create and Manage Subscriptions for Native Mode Report Servers](https://docs.microsoft.com/sql/reporting-services/subscriptions/create-and-manage-subscriptions-for-native-mode-report-servers)  
   
   

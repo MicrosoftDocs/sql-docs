@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cleanup_log_shipping_history"
 ms.assetid: 96d236a9-1d0e-4f83-a4d3-f825b7381e46
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_cleanup_log_shipping_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This stored procedure cleans up history locally and on the monitor server based on retention period.  
   

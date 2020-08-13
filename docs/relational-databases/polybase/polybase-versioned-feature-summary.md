@@ -1,5 +1,6 @@
 ---
 title: "PolyBase features and limitations | Microsoft Docs"
+descriptions: This article summarizes PolyBase features available for SQL Server products and services. It lists T-SQL operators supported for pushdown and known limitations.
 ms.date: 09/24/2018
 ms.prod: sql
 ms.technology: polybase
@@ -19,28 +20,26 @@ This article is a summary of PolyBase features available for SQL Server products
 ## Feature summary for product releases
 
 This table lists the key features for PolyBase and the products in which they're available.  
-  
-||||||
-|-|-|-|-|-|   
-|**Feature**|**SQL Server 2016**|**Azure SQL Database**|**Azure SQL Data Warehouse**|**Parallel Data Warehouse**| 
+
+|**Feature** |**SQL Server 2016** |**Azure SQL Database** |**Azure Synapse Analytics** |**Parallel Data Warehouse** |
+|---------|---------|---------|---------|---------|
 |Query Hadoop data with [!INCLUDE[tsql](../../includes/tsql-md.md)]|Yes|No|No|Yes|
 |Import data from Hadoop|Yes|No|No|Yes|
 |Export data to Hadoop  |Yes|No|No| Yes|
 |Query, import from, export to Azure HDInsight |No|No|No|No
 |Push down query computations to Hadoop|Yes|No|No|Yes|  
-|Import data from Azure Blob storage|Yes|No|Yes|Yes| 
+|Import data from Azure Blob storage|Yes|No|Yes|Yes|
 |Export data to Azure Blob storage|Yes|No|Yes|Yes|  
-|Import data from Azure Data Lake Store|No|No|Yes|No|    
+|Import data from Azure Data Lake Store|No|No|Yes|No|
 |Export data from Azure Data Lake Store|No|No|Yes|No|
-|Run PolyBase queries from Microsoft BI tools|Yes|No|Yes|Yes|   
+|Run PolyBase queries from Microsoft BI tools|Yes|No|Yes|Yes|
 
 ## Pushdown computation supported by T-SQL operators
 
-In SQL Server and APS, not all T-SQL operators can be pushed down to the Hadoop cluster. This table lists all the supported operators and a subset of the unsupported operators. 
+In SQL Server and APS, not all T-SQL operators can be pushed down to the Hadoop cluster. This table lists all the supported operators and a subset of the unsupported operators.
 
-||||
-|-|-|-| 
-|**Operator type**|**Pushable to Hadoop**|**Pushable to Blob storage**|
+|**Operator type** |**Pushable to Hadoop** |**Pushable to Blob storage** |
+|---------|---------|---------|
 |Column projections|Yes|No|
 |Predicates|Yes|No|
 |Aggregates|Partial|No|
@@ -54,11 +53,11 @@ Partial aggregation means that a final aggregation must occur after the data rea
 
 PolyBase has the following limitations:
 
-- In order to use PolyBase you must have sysadmin or CONTROL SERVER level permissions on the database.
+- In order to use PolyBase, you must have sysadmin or CONTROL SERVER level permissions on the database.
 
-- The maximum possible row size, which includes the full length of variable length columns, can't exceed 32 KB in SQL Server or 1 MB in Azure SQL Data Warehouse.
+- The maximum possible row size, which includes the full length of variable length columns, can't exceed 32 KB in SQL Server or 1 MB in Azure Synapse Analytics.
 
-- When data is exported into an ORC file format from SQL Server or SQL Data Warehouse, text-heavy columns might be limited. They can be limited to as few as 50 columns because of Java out-of-memory error messages. To work around this issue, export only a subset of the columns.
+- When data is exported into an ORC file format from SQL Server or Azure Synapse Analytics, text-heavy columns might be limited. They can be limited to as few as 50 columns because of Java out-of-memory error messages. To work around this issue, export only a subset of the columns.
 
 - PolyBase can't connect to a Hortonworks instance if Knox is enabled.
 

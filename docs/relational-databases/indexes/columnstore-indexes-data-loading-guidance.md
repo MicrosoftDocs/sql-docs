@@ -14,7 +14,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Columnstore indexes - Data loading guidance
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Options and recommendations for loading data into a columnstore index by using the standard SQL bulk loading and trickle insert methods. Loading data into a columnstore index is an essential part of any data warehousing process because it moves data into the index in preparation for analytics.
   
@@ -41,7 +41,7 @@ Bulk loading has these built-in performance optimizations:
 
 -   **Reduced Logging:** The data that is directly loaded into compressed row groups leads to significant reduction in the size of the log. For example, if data was compressed 10x, the corresponding transaction log will be roughly 10x smaller without requiring TABLOCK or Bulk-logged/Simple recovery model. Any data that goes to a delta rowgroup is fully logged. This includes any batch sizes that are less than 102,400 rows.  Best practice is to use batchsize >= 102400. Since there is no TABLOCK required, you can load the data in parallel. 
 
--   **Minimal logging:** You can get further reduction in logging if you follow the prerequisites for [minimal logging](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md). However, unlike loading data into a rowstore, TABLOCK leads to an X lock on the table rather than a BU (Bulk Update) lock and therefore parallel data load cannot be done. For more information on locking, see [Locking and row versioning[(../sql-server-transaction-locking-and-row-versioning-guide.md).
+-   **Minimal logging:** You can get further reduction in logging if you follow the prerequisites for [minimal logging](../import-export/prerequisites-for-minimal-logging-in-bulk-import.md). However, unlike loading data into a rowstore, TABLOCK leads to an X lock on the table rather than a BU (Bulk Update) lock and therefore parallel data load cannot be done. For more information on locking, see [Locking and row versioning](../sql-server-transaction-locking-and-row-versioning-guide.md).
 
 -   **Locking Optimization:** The X lock on a row group is automatically acquired when loading data into a compressed row group. However, when bulk loading into a delta rowgroup, an X lock is acquired at rowgroup but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still locks the PAGE/EXTENT because X rowgroup lock is not part of locking hierarchy.  
   
@@ -91,7 +91,7 @@ SELECT <list of columns> FROM <Staging Table>
 -   **Log Optimization:** Reduced logging when the data is loaded into compressed rowgroup.   
 -   **Locking Optimization:** When loading into compressed rowgroup, the X lock on rowgroup is acquired. However, with delta rowgroup, an X lock is acquired at rowgroup but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still locks the locks PAGE/EXTENT because X rowgroup lock is not part of locking hierarchy.  
   
- If you have or more nonclustered indexes, there is no locking or logging optimization for the index itself but the optimizations on clustered columnstore index as described above are still there  
+ If you have one or more nonclustered indexes, there is no locking or logging optimization for the index itself, but the optimizations on the clustered columnstore index as described above are still there.  
   
 ## What is trickle insert?
 

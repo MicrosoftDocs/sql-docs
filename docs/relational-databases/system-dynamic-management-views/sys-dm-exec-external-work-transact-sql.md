@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "PolyBase,views"
   - "PolyBase"
 ms.assetid: 7597d97b-1fde-4135-ac35-4af12968f300
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_external_work (Transact-SQL)

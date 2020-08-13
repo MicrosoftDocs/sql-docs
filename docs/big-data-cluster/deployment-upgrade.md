@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 The upgrade path depends on the current version of SQL Server Big Data Cluster (BDC). To upgrade from a supported release, including general distribution release (GDR), cumulative update (CU), or quick fix engineering (QFE) update, you can upgrade in place. In-place upgrade from a customer technology preview (CTP) or release candidate version of BDC is not supported. You need to remove and recreate the cluster. The following sections describe the steps for each scenario:
 
@@ -61,10 +61,10 @@ This section explains how to upgrade a SQL Server BDC from a supported release (
    azdata bdc upgrade -n <clusterName> -t <imageTag> -r <containerRegistry>/<containerRepository>
    ```
 
-   For example, the following script uses `2019-CU1-ubuntu-16.04` image tag:
+   For example, the following script uses `2019-CU4-ubuntu-16.04` image tag:
 
    ```
-   azdata bdc upgrade -n bdc -t 2019-CU1-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
+   azdata bdc upgrade -n bdc -t 2019-CU4-ubuntu-16.04 -r mcr.microsoft.com/mssql/bdc
    ```
 
 >[!NOTE]
@@ -91,7 +91,7 @@ A timeout can occur if certain components are not upgraded in the allocated time
 To increase the timeouts for an upgrade, use **--controller-timeout** and **--component-timeout** parameters to specify higher values when you issue the upgrade. This option is only available starting with SQL Server 2019 CU2 release. For example:
 
    ```bash
-   azdata bdc upgrade -t 2019-CU2-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
+   azdata bdc upgrade -t 2019-CU4-ubuntu-16.04 --controller-timeout=40 --component-timeout=40 --stability-threshold=3
    ```
 **--controller-timeout** designates the number of minutes to wait for the controller or controller db to finish upgrading.
 **--component-timeout** designates the amount of time that each subsequent phase of the upgrade has to complete.

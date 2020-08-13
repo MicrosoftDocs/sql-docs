@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "AdLockOptimistic [ADO]"
   - "AdLockPessimistic [ADO]"
 ms.assetid: 12a978c0-b8a0-4ef0-87f0-a43c13659272
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Types of Locks
 ## adLockBatchOptimistic  

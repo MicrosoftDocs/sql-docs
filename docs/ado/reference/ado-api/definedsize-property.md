@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "DefinedSize property [ADO]"
 ms.assetid: 3ee27314-a305-4fbc-8433-9ee9a909afd6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DefinedSize Property
 Indicates the data capacity of a [Field](../../../ado/reference/ado-api/field-object.md) object.  

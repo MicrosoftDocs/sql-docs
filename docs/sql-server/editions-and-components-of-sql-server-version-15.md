@@ -4,7 +4,7 @@ ms.custom: ""
 ms.date: 11/04/2019
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: install
+ms.technology: release-landing
 ms.topic: conceptual
 helpviewer_keywords:
   - "Enterprise Edition [SQL Server]"
@@ -32,12 +32,11 @@ helpviewer_keywords:
 ms.assetid:
 author: "MikeRayMSFT"
 ms.author: "mikeray"
-manager: rothj
 monikerRange: ">= sql-server-ver15 || = sqlallproducts-allversions"
 ---
 # Editions and supported features of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)]
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx](../includes/applies-to-version/sqlserver.md)]
 
 This topic provides details of features supported by the various editions of [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)].
 
@@ -45,7 +44,6 @@ For information about older versions, see:
 
 * [SQL Server 2017](editions-and-components-of-sql-server-2017.md)
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md)
-* [SQL Server 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014)
 
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
@@ -56,11 +54,10 @@ For the latest release notes and what's new information, see the following:
 * [[!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] release notes](../sql-server/sql-server-version-15-release-notes.md)
 * [What's new in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 2019](../sql-server/what-s-new-in-sql-server-ver15.md)
 
-### Try [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]!
-
->**[Download [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] from the Evaluation Center](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
+**Try [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]!: [Download [!INCLUDE[sssqlv15-md](../includes/sssqlv15-md.md)] from the Evaluation Center](https://www.microsoft.com//evalcenter/evaluate-sql-server)**
 
 ## [!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] editions
+
 The following table describes the editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] edition|Definition|
@@ -122,68 +119,76 @@ For features supported by Developer and Evaluation editions, see features listed
 
 The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Distributed Replay](../tools/distributed-replay/sql-server-distributed-replay.md).
 
-##  <a name="Cross-BoxScaleLimits"></a> Scale limits
+## <a name="Cross-BoxScaleLimits"></a> Scale limits
 
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
+|-------|--------:|------:|---:|-------------------------------:|-----:|
 |Maximum compute capacity used by a single instance - [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]<sup>1</sup>|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|Limited to lesser of 1 socket or 4 cores|
 |Maximum compute capacity used by a single instance - [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] or [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Operating system maximum|Limited to lesser of 4 sockets or 24 cores|Limited to lesser of 4 sockets or 16 cores|Limited to lesser of 1 socket or 4 cores|Limited to lesser of 1 socket or 4 cores|
-|Maximum memory for buffer pool per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Operating System Maximum|128 GB|64 GB|1410 MB|1410 MB|
-|Maximum memory for Columnstore segment cache per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB| 16 GB| 352 MB| 352 MB|
-|Maximum memory-optimized data size per database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 GB| 16 GB| 352 MB| 352 MB|
-|Maximum memory utilized per instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Operating System Maximum|Tabular: 16 GB<br /><br /> MOLAP: 64 GB|N/A|N/A|N/A|
-|Maximum memory utilized per instance of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Operating System Maximum|64 GB|64 GB|4 GB|N/A|
-|Maximum relational database size|524 PB|524 PB|524 PB|10 GB|10 GB|
+|Maximum memory for buffer pool per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Operating System Maximum|128 <nobr/>GB|64 <nobr/>GB|1410 <nobr/>MB|1410<nobr/> MB|
+|Maximum memory for Columnstore segment cache per instance of [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 <nobr/>GB| 16 <nobr/>GB| 352 <nobr/>MB| 352 <nobr/>MB|
+|Maximum memory-optimized data size per database in [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)]|Unlimited memory| 32 <nobr/>GB| 16 <nobr/>GB| 352 <nobr/>MB| 352 <nobr/>MB|
+|Maximum memory utilized per instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]|Operating System Maximum|16 <nobr/>GB<sup>2</sup><br /><br /> 64 <nobr/>GB<sup>3</sup>|N/A|N/A|N/A|
+|Maximum memory utilized per instance of [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]|Operating System Maximum|64 <nobr/>GB|64 <nobr/>GB|4 <nobr/>GB|N/A|
+|Maximum relational database size|524 <nobr/> PB|524 <nobr/> PB|524 <nobr/> PB|10 <nobr/>GB|10 <nobr/>GB|
 
 <sup>1</sup> Enterprise Edition with Server + Client Access License (CAL) based licensing (not available for new agreements) is limited to a maximum of 20 cores per [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] instance. There are no limits under the Core-based Server Licensing model. For more information, see [Compute Capacity Limits by Edition of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](../sql-server/compute-capacity-limits-by-edition-of-sql-server.md).
 
-##  <a name="RDBMSHA"></a> RDBMS high availability
+<sup>2</sup> Tabular
 
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|
-|Server core support <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|
+<sup>3</sup> MOLAP
+
+## <a name="RDBMSHA"></a> RDBMS high availability
+
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
+|-------|:--------:|:------:|:-:|--------------------------------:|:-----:|
+|Server core support<sup>1</sup>|Yes|Yes|Yes|Yes|Yes|
 |Log shipping|Yes|Yes|Yes|No|No|
-|Database mirroring|Yes|Yes<br /><br /> Full safety only|Witness only|Witness only|Witness only|
+|Database mirroring|Yes|Yes<sup>2</sup>|Yes<sup>3</sup>|Yes<sup>3</sup>|Yes<sup>3</sup>|
 |Backup compression|Yes|Yes|No|No|No|
 |Database snapshot|Yes|Yes|Yes|Yes|Yes|
-|Always On failover cluster instances<sup>2</sup>|Yes|Yes|No|No|No|
-|Always On availability groups<sup>3</sup>|Yes|No|No|No|No|
-|Basic availability groups <sup>4</sup>|No|Yes|No|No|No|
+|Always On failover cluster instances<sup>4</sup>|Yes|Yes|No|No|No|
+|Always On availability groups<sup>5</sup>|Yes|No|No|No|No|
+|Basic availability groups<sup>6</sup>|No|Yes|No|No|No|
 |Automatic read write connection re-routing |Yes|No|No|No|No|
 |Online page and file restore|Yes|No|No|No|No|
 |Online index create and rebuild|Yes|No|No|No|No|
 |Resumable online index rebuilds|Yes|No|No|No|No|
 |Online schema change|Yes|No|No|No|No|
 |Fast recovery|Yes|No|No|No|No|
-|Accelerated database recovery|Yes|Yes|No|No|No|
+|Accelerated database recovery|Yes|Yes|Yes|No|No|
 |Mirrored backups|Yes|No|No|No|No|
 |Hot add memory and CPU|Yes|No|No|No|No|
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
 |Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|
-|Cluster-less availability group|Yes|Yes|No|No|No|
-|Failover servers for disaster recovery <sup>5</sup>|Yes|Yes|No|No|No|
-|Failover servers for high availability <sup>5</sup>|Yes|Yes|No|No|No|
-|Failover servers for disaster recovery in Azure <sup>5</sup>|Yes|Yes|No|No|No|
+|Cluster-less availability group <sup>5,6</sup>|Yes|Yes|No|No|No|
+|Failover servers for disaster recovery<sup>7</sup>|Yes|Yes|No|No|No|
+|Failover servers for high availability<sup>7</sup>|Yes|Yes|No|No|No|
+|Failover servers for disaster recovery in Azure<sup>7</sup>|Yes|Yes|No|No|No|
 
 <sup>1</sup> For more information on installing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Server Core,  see [Install [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Server Core](../database-engine/install-windows/install-sql-server-on-server-core.md).
 
-<sup>2</sup> On Enterprise Edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes.
+<sup>2</sup> Full safety only
 
-<sup>3</sup> On Enterprise Edition, provides support for up to 8 secondary replicas - including 5 synchronous secondary replicas.
+<sup>3</sup> Witness only
 
-<sup>4</sup> Standard Edition supports basic availability groups. A basic availability group supports two replicas, with one database. For more information about basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).
+<sup>4</sup> On Enterprise Edition, the number of nodes is the operating system maximum. On Standard edition there is support for two nodes.
 
-<sup>5</sup> [Software assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) required.
+<sup>5</sup> On Enterprise Edition, provides support for up to 8 secondary replicas - including 5 synchronous secondary replicas.
 
-##  <a name="RDBMSSP"></a> RDBMS scalability and performance
+<sup>6</sup> Standard Edition supports basic availability groups. A basic availability group supports two replicas, with one database. For more information about basic availability groups, see [Basic Availability Groups](../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).
 
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|
-|Columnstore <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|
+<sup>7</sup> [Software assurance](https://www.microsoft.com/licensing/licensing-programs/software-assurance-default) required.
+
+## <a name="RDBMSSP"></a> RDBMS scalability and performance
+
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
+|------:|:--------:|:------:|:-:|:-------------------------------:|:------:|
+|Columnstore<sup>1</sup> <sup>2</sup>|Yes|Yes|Yes|Yes|Yes|
 |Large object binaries in clustered columnstore indexes|Yes|Yes|Yes|Yes|Yes|
 |Online non-clustered columnstore index rebuild|Yes|No|No|No|No|
-|In-Memory Database: In-Memory OLTP <sup>1</sup>|Yes|Yes|Yes|Yes, <sup>2</sup>|Yes|
+|In-Memory Database: In-Memory OLTP<sup>1</sup>|Yes|Yes|Yes|Yes<sup>3</sup>|Yes|
 |In-Memory Database: hybrid buffer pool|Yes|Yes|No|No|No|
 |In-Memory Database: memory-optimized tempdb metadata|Yes|No|No|No|No|
 |In-Memory Database: persistent memory support|Yes|Yes|Yes|Yes|Yes|
@@ -196,12 +201,12 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Multiple filestream containers|Yes|Yes|Yes|Yes|Yes|
 |NUMA aware and large page memory and buffer array allocation|Yes|No|No|No|No|
 |Buffer pool extension|Yes|Yes|No|No|No|
-|IO resource governance|Yes|No|No|No|No|
+|I/O resource governance|Yes|No|No|No|No|
 |Read-ahead|Yes|No|No|No|No|
 |Advanced scanning|Yes|No|No|No|No|
 |Delayed durability|Yes|Yes|Yes|Yes|Yes|
 |Intelligent Database: automatic tuning|Yes|No|No|No|No|
-|Intelligent Database: batch mode for row store|Yes|No|No|No|No|
+|Intelligent Database: batch mode for row store <sup>1</sup>|Yes|No|No|No|No|
 |Intelligent Database: row mode memory grant feedback|Yes|No|No|No|No|
 |Intelligent Database: approximate count distinct|Yes|Yes|Yes|Yes|Yes|
 |Intelligent Database: table variable deferred compilation|Yes|Yes|Yes|Yes|Yes|
@@ -211,14 +216,16 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Interleaved execution for multi-statement table valued functions|Yes|Yes|Yes|Yes|Yes|
 |Bulk insert improvements|Yes|Yes|Yes|Yes|Yes|
 
-<sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the Scale Limits section. The max degrees of parallelism is limited. The degrees of process parallelism (DOP) for an index build is limited to 2 DOP for the Standard Edition and 1 DOP for the Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
+<sup>1</sup> In-Memory OLTP data size and Columnstore segment cache are limited to the amount of memory specified by edition in the [Scale Limits](#Cross-BoxScaleLimits) section. The degree of parallelism (DOP) for [batch mode](../relational-databases/query-processing-architecture-guide.md#batch-mode-execution) operations is limited to 2 for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard Edition and 1 for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web and Express Editions. This refers to columnstore indexes created over disk-based tables and memory-optimized tables.
 
-<sup>2</sup> This feature is not included in the LocalDB installation option.
+<sup>2</sup> Aggregate Pushdown, String Predicate Pushdown, and SIMD Optimizations are [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise Edition scalability enhancements. For more detail, see [Columnstore indexes - what's new](../relational-databases/indexes/columnstore-indexes-what-s-new.md).
 
-##  <a name="RDBMSS"></a> RDBMS security
+<sup>3</sup> This feature is not included in the LocalDB installation option.
 
-|Feature|Enterprise|Standard|Web|Express|Express with Advanced Services|
-|-------------|----------------|--------------|---------|-------------|------------------------------------|
+## <a name="RDBMSS"></a> RDBMS security
+
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
+|-------|:--------:|:------:|:-:|:-----:|:-----------------------:|:-----:|
 |Row-level security|Yes|Yes|Yes|Yes|Yes|
 |Always Encrypted|Yes|Yes|Yes|Yes|Yes|
 |Always Encrypted with Secure Enclaves|Yes|Yes|Yes|Yes|Yes|
@@ -232,24 +239,26 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Encryption for backups|Yes|Yes|No|No|No|
 |Data classification and auditing|Yes|Yes|Yes|Yes|Yes|
 
-##  <a name="Replication"></a> Replication
+## <a name="Replication"></a> Replication
 
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
+|-------|:---------:|:-------:|:--:|:--------------------------------:|:------:|
 |Heterogeneous subscribers|Yes|Yes|No|No|No|
-|Merge replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|
+|Merge replication|Yes|Yes|Yes<sup>1</sup>|Yes<sup>1</sup>|Yes<sup>1</sup>|
 |Oracle publishing|Yes|No|No|No|No|
 |Peer to peer transactional replication|Yes|No|No|No|No|
-|Snapshot replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|
+|Snapshot replication|Yes|Yes|Yes<sup>1</sup>|Yes<sup>1</sup>|Yes<sup>1</sup>|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] change tracking|Yes|Yes|Yes|Yes|Yes|
-|Transactional replication|Yes|Yes|Yes (Subscriber only)|Yes (Subscriber only)|Yes (Subscriber only)|
+|Transactional replication|Yes|Yes|Yes<sup>1</sup>|Yes<sup>1</sup>|Yes<sup>1</sup>|
 |Transactional replication to Azure|Yes|Yes|No|No|No|
-|Transactional replication updateable subscription|Yes|No|No|No|No|
+|Transactional replication updateable subscription|Yes|Yes|No|No|No|
 
-##  <a name="SSMS"></a> Management tools
+<sup>1</sup> Subscriber only
+
+## <a name="SSMS"></a> Management tools
 
 |Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|
+|-------|:--------:|:------:|:-:|:----------------------------:|:-----:|
 |SQL Management Objects (SMO)|Yes|Yes|Yes|Yes|Yes|
 |SQL Assessment API|Yes|Yes|Yes|Yes|Yes|
 |SQL Vulnerability Assessment |Yes|Yes|Yes|Yes|Yes|
@@ -257,25 +266,29 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |SQL CMD (Command Prompt tool)|Yes|Yes|Yes|Yes|Yes|
 |Distributed Replay - Admin Tool|Yes|Yes|Yes|Yes|No|
 |Distribute Replay - Client|Yes|Yes|Yes|No|No|
-|Distributed Replay - Controller|Yes (Up to 16 clients)|Yes (1 client)|Yes (1 client)|No|No|
-|SQL Profiler|Yes|Yes|No <sup>1</sup>|No <sup>1</sup>|No <sup>1</sup>|
+|Distributed Replay - Controller|Yes<sup>1</sup>|Yes<sup>2</sup>|Yes<sup>2</sup>|No|No|
+|SQL Profiler|Yes|Yes|No<sup>3</sup>|No<sup>3</sup>|No<sup>3</sup>|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Agent|Yes|Yes|Yes|No|No|
 |Microsoft System Center Operations Manager Management Pack|Yes|Yes|Yes|No|No|
-|Database Tuning Advisor (DTA)|Yes|Yes <sup>2</sup>|Yes <sup>2</sup>|No|No|
+|Database Tuning Advisor (DTA)|Yes|Yes<sup>4</sup>|Yes<sup>4</sup>|No|No|
 
-<sup>1</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express with Tools, and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express with Advanced Services can be profiled using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise editions.
+<sup>1</sup> Up to 16 clients
 
-<sup>2</sup> Tuning enabled only on Standard edition features
+<sup>2</sup> 1 client
 
-##  <a name="RDBMSM"></a> RDBMS manageability
+<sup>3</sup> [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Web, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express, [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express with Tools, and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Express with Advanced Services can be profiled using [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Standard and [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Enterprise editions.
 
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|
+<sup>4</sup> Tuning enabled only on Standard edition features
+
+## <a name="RDBMSM"></a> RDBMS manageability
+
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
+|-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |User instances|No|No|No|Yes|Yes|
 |LocalDB|No|No|No|Yes|No|
-|Dedicated admin connection|Yes|Yes|Yes|Yes with trace flag|Yes with trace flag|
-|SysPrep support <sup>1</sup>|Yes|Yes|Yes|Yes|Yes|
-|PowerShell scripting support<sup>2</sup>|Yes|Yes|Yes|Yes|Yes|
+|Dedicated admin connection|Yes|Yes|Yes|Yes<sup>1</sup>|Yes<sup>1</sup>|
+|SysPrep support<sup>2</sup>|Yes|Yes|Yes|Yes|Yes|
+|PowerShell scripting support<sup>3</sup>|Yes|Yes|Yes|Yes|Yes|
 |Support for data-tier application component operations - extract, deploy, upgrade, delete|Yes|Yes|Yes|Yes|Yes|
 |Policy automation (check on schedule and change)|Yes|Yes|Yes|No|No|
 |Performance data collector|Yes|Yes|Yes|No|No|
@@ -294,29 +307,32 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Master instance for big data cluster|Yes|Yes|No|No|No|
 |Compatibility certification|Yes|Yes|Yes|Yes|Yes|
 
-<sup>1</sup> For more information, see [Considerations for Installing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Using SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).
+<sup>1</sup> With trace flag
 
-<sup>2</sup> On Linux, PowerShell scripts are supported, from Windows computers targeting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux.
-##  <a name="DevTools"></a> Development tools
+<sup>2</sup> For more information, see [Considerations for Installing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Using SysPrep](../database-engine/install-windows/considerations-for-installing-sql-server-using-sysprep.md).
 
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|
+<sup>3</sup> On Linux, PowerShell scripts are supported, from Windows computers targeting [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux.
+
+## <a name="DevTools"></a> Development tools
+
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
+|-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |Microsoft Visual Studio integration|Yes|Yes|Yes|Yes|Yes|
 |Intellisense (Transact-SQL and MDX)|Yes|Yes|Yes|Yes|Yes|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Data Tools (SSDT)|Yes|Yes|Yes|Yes|No|
 |MDX edit, debug, and design tools|Yes|Yes|No|No|No|
 
-##  <a name="Programmability"></a> Programmability
+## <a name="Programmability"></a> Programmability
 
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|
-|Basic R integration <sup>1</sup>|Yes|Yes|Yes|Yes|No|
-|Advanced R integration <sup>2</sup>|Yes|No|No|No|No|
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express
+|-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
+|Basic R integration<sup>1</sup>|Yes|Yes|Yes|Yes|No|
+|Advanced R integration<sup>2</sup>|Yes|No|No|No|No|
 |Basic Python integration|Yes|Yes|Yes|Yes|No|
 |Advanced Python integration|Yes|No|No|No|No|
 |Machine Learning Server (Standalone)|Yes|No|No|No|No|
-|PolyBase compute node|Yes|Yes <sup>3</sup>|Yes <sup>3</sup>|Yes <sup>3</sup>|Yes <sup>3</sup> |
-|PolyBase head node <sup>4</sup>|Yes|Yes|No|No|No|
+|PolyBase compute node|Yes|Yes<sup>3</sup>|Yes<sup>3</sup>|Yes<sup>3</sup>|Yes<sup>3</sup> |
+|PolyBase head node<sup>4</sup>|Yes|Yes|No|No|No|
 |JSON|Yes|Yes|Yes|Yes|Yes|
 |Query Store|Yes|Yes|Yes|Yes|Yes|
 |Temporal|Yes|Yes|Yes|Yes|Yes|
@@ -331,11 +347,10 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Internationalization support|Yes|Yes|Yes|Yes|Yes|
 |Full-text and semantic search|Yes|Yes|Yes|Yes|No|
 |Specification of language in query|Yes|Yes|Yes|Yes|No|
-|Service Broker (messaging)|Yes|Yes|No (Client only)|No (Client only)|No (Client only)|
+|Service Broker (messaging)|Yes|Yes|No<sup>5</sup>|No<sup>5</sup>|No<sup>5</sup>|
 |Transact-SQL endpoints|Yes|Yes|Yes|No|No|
 |Graph|Yes|Yes|Yes|Yes|Yes|
 |UTF-8 support|Yes|Yes|Yes|Yes|Yes|
-
 
 <sup>1</sup> Basic integration is limited to 2 cores and in-memory data sets.
 
@@ -345,64 +360,65 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 
 <sup>4</sup> Prior to SQL Server 2019 PolyBase head node requires Enterprise Edition.
 
+<sup>5</sup> Client only
+
 ## <a name="IS"></a> Integration Services
 
 For info about [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Integration Services (SSIS) features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Integration Services Features Supported by the Editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](../integration-services/integration-services-features-supported-by-the-editions-of-sql-server.md).
 
-##  <a name="MDS"></a> Master Data Services
+## <a name="MDS"></a> Master Data Services
+
 For information about the [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] and Data Quality Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Master Data Services and Data Quality Services Features Supported by the Editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](../master-data-services/master-data-services-and-data-quality-services-features-support.md).
 
+## <a name="DW"></a> Data warehouse
 
-##  <a name="DW"></a> Data warehouse
-
-|Feature|Enterprise|Standard|Web|Express with Advanced Services|Express|
-|-------------|----------------|--------------|---------|------------------------------------|------------------------|
+|Feature|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
+|-------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |Auto-generate staging and data warehouse schema|Yes|Yes|No|No|No|
 |Change data capture|Yes|Yes|No|No|No|
 |Star join query optimizations|Yes|No|No|No|No|
 |Parallel query processing on partitioned tables and indexes|Yes|No|No|No|No|
 |Global batch aggregation|Yes|No|No|No|No|
 
-##  <a name="SSAS"></a> Analysis Services
+## <a name="SSAS"></a> Analysis Services
 
 For information about the Analysis Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
-
-##  <a name="SSRS"></a> Reporting Services
+## <a name="SSRS"></a> Reporting Services
 
 For information about the Reporting Services features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Reporting Services Features Supported by the Editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
-##  <a name="BIC"></a> Business intelligence clients
+## <a name="BIC"></a> Business intelligence clients
 
 For information about the Business Intelligence Client features supported by the editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)], see [Analysis Services Features Supported by the Editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](../analysis-services/analysis-services-features-supported-by-the-editions-of-sql-server-2016.md) or [Reporting Services Features Supported by the Editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](../reporting-services/reporting-services-features-supported-by-the-editions-of-sql-server-2016.md).
 
-##  <a name="SLS"></a> Spatial and location services
+## <a name="SLS"></a> Spatial and location services
 
-|Feature Name|Enterprise|Standard|Web|Express with Advanced Services|Express|
-|------------------|----------------|--------------|---------|------------------------------------|------------------------|
+|Feature Name|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
+|-------------|:-------:|:------:|:-:|:-------------------------------:|:-----:|
 |Spatial indexes|Yes|Yes|Yes|Yes|Yes|
 |Planar and geodetic datatypes|Yes|Yes|Yes|Yes|Yes|
 |Advanced spatial libraries|Yes|Yes|Yes|Yes|Yes|
 |Import/export of industry-standard spatial data formats|Yes|Yes|Yes|Yes|Yes|
 
-##  <a name="ADS"></a> Additional database services
+## <a name="ADS"></a> Additional database services
 
-|Feature Name|Enterprise|Standard|Web|Express with Advanced Services|Express|
-|------------------|----------------|--------------|---------|------------------------------------|------------------------|
+|Feature Name|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
+|------------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Migration Assistant|Yes|Yes|Yes|Yes|Yes|
 |Database mail|Yes|Yes|Yes|No|No|
 
-##  <a name="Other"></a> Other components
+## <a name="Other"></a> Other components
 
-|Feature Name|Enterprise|Standard|Web|Express with Advanced Services|Express|
-|------------------|----------------|--------------|---------|------------------------------------|------------------------|
+|Feature Name|Enterprise|Standard|Web|Express with<br/>Advanced Services|Express|
+|------------|:--------:|:------:|:-:|:-------------------------------:|:-----:|
 |StreamInsight|StreamInsight Premium Edition|StreamInsight Standard Edition|StreamInsight Standard Edition|No|No|
 |StreamInsight HA|StreamInsight Premium Edition|No|No|No|No|
 
-> [![Download SSMS](https://docs.microsoft.com/analysis-services/media/download.png)](../ssms/download-sql-server-management-studio-ssms.md) **[Download the latest version of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Studio](../ssms/download-sql-server-management-studio-ssms.md)**
-
 ## Next steps
+
 [Product Specifications for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
+
 [Installation for [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]](../database-engine/install-windows/installation-for-sql-server-2016.md)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_updatenotification"
 ms.assetid: 3e1c3d40-8c24-46ce-a68e-ce6c6a237fda
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_update_notification (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates the notification method of an alert notification.  
 

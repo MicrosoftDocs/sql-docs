@@ -1,5 +1,6 @@
 ---
 title: "Add Dataset Filters, Data Region Filters, and Group Filters | Microsoft Docs"
+description: Find out how filters can help you control which data is displayed and processed in your reports in Report Builder.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -14,7 +14,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Options (SQL Server Object Explorer - Commands)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 When you right-click a table or view in Object Explorer, the following two options for displaying rows in the table are presented:  
   
 -   **Select Top 1000 Rows**  

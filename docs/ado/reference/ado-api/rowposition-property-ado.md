@@ -17,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "RowPosition property [ADO]"
 ms.assetid: 9d068fed-39bf-4842-afc3-686a2af2145d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RowPosition Property (ADO)
 Gets or sets an OLE DB **RowPosition** object from/on an **ADORecordsetConstruction** object. When you use **put_RowPosition** to set the **RowPosition** object, the resulting **Recordset** object uses the **RowPosition** object to determine the current row.  

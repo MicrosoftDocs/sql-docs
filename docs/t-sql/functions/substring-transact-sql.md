@@ -1,6 +1,6 @@
 ---
 title: "SUBSTRING (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the SUBSTRING function. This function returns a portion of a specified character, binary, text, or image expression."
 ms.date: "10/21/2016"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -21,12 +21,12 @@ helpviewer_keywords:
   - "expressions [SQL Server], part returned"
   - "characters [SQL Server], returning part of"
 ms.assetid: a19c808f-aaf9-4a69-af59-b1a5fc3e5c4c
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SUBSTRING (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Returns part of a character, binary, text, or image expression in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -38,7 +38,9 @@ Returns part of a character, binary, text, or image expression in [!INCLUDE[ssNo
 SUBSTRING ( expression ,start , length )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is a **character**, **binary**, **text**, **ntext**, or **image** [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
@@ -81,10 +83,10 @@ WHERE database_id < 5;
 
 |name |Initial |ThirdAndFourthCharacters|
 |---|--|--|
-|master	 |m	 |st |
-|tempdb	 |t	 |mp |
-|model	 |m	 |de |
-|msdb	 |m	 |db |
+|master    |m    |st |
+|tempdb    |t    |mp |
+|model    |m    |de |
+|msdb    |m    |db |
 
 
   

@@ -1,5 +1,6 @@
 ---
 title: "Targets for Extended Events in SQL Server"
+description: This article explains package0 targets for extended events in SQL Server. Learn about target abilities in gathering and reporting data and target parameters.
 ms.date: "09/07/2018"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -13,7 +14,7 @@ monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=
 ---
 # Targets for Extended Events in SQL Server
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 
 This article explains when and how to use the package0 targets for extended events in SQL Server. For each target, the present article explains:
@@ -149,7 +150,7 @@ The **event_file** target writes event session output from buffer to a disk file
 > [!NOTE]
 > Azure SQL Database only supports storing `xel` files on Azure blob storage. 
 >
-> For an **event_file** code example particular to SQL Database (and to SQL Database Managed Instance), see [Event File target code for extended events in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
+> For an **event_file** code example particular to SQL Database (and to SQL Managed Instance), see [Event File target code for extended events in SQL Database](https://docs.microsoft.com/azure/sql-database/sql-database-xevent-code-event-file).
 
 ::: moniker-end
 

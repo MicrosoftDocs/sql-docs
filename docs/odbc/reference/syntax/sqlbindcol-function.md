@@ -18,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLBindCol function [ODBC]"
 ms.assetid: 41a37655-84cd-423f-9daa-e0b47b88dc54
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLBindCol Function
 **Conformance**  

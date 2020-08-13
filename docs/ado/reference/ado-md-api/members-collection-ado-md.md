@@ -15,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Members collection [ADO MD]"
 ms.assetid: 3a647cde-efdc-4394-b1b9-8cbb1b9d689f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Members Collection (ADO MD)
 Contains the [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) objects from a level or a position along an axis.  

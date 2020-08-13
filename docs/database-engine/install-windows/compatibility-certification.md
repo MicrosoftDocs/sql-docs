@@ -1,5 +1,6 @@
 ---
 title: "Compatibility Certification | Microsoft Docs"
+description: Compatibility certification eliminates risks of application compatibility, which allows you to upgrade a SQL Server database on-premises and in the cloud.
 ms.custom: ""
 ms.date: "08/26/2019"
 ms.prod: sql
@@ -22,7 +23,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 
 # Compatibility Certification
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Compatibility certification allows businesses to upgrade and modernize a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database on-premises, in the cloud, and on the edge, eliminating risks of application compatibility. 
 
@@ -94,6 +95,7 @@ To upgrade the [!INCLUDE[ssde_md](../../includes/ssde_md.md)] to the latest vers
 >
 > - The new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version (target) runs on hardware that is comparable to the hardware where the previous [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] version (source) was running.
 > - The same [supported database compatibility level](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md#supported-dbcompats) is used both at the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
+> - The **same** database and workload is used both at the target [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 >
 > Any query plan shape regression (as compared to the source [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) that occurs in the above conditions will be addressed. Please contact Microsoft Customer Support if this is the case.
   

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "concurrency options [ODBC]"
   - "ODBC driver for Oracle [ODBC], cursor options"
 ms.assetid: db63d610-f86f-4029-9d66-fed616c8a818
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Cursor Type and Concurrency Combinations
 > [!IMPORTANT]  

@@ -15,11 +15,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsnapshot_agents system table"
 ms.assetid: aeae0a2e-4c21-4c45-be65-1e426fa52bdd
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSsnapshot_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSsnapshot_agents** table contains one row for each Snapshot Agent associated with the local Distributor. This table is stored in the distribution database.  
   

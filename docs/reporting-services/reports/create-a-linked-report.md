@@ -1,5 +1,6 @@
 ---
 title: "Create a Linked Report | Microsoft Docs"
+description: Learn how to create a linked report so that you can create additional versions of an existing report.
 ms.date: 05/30/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

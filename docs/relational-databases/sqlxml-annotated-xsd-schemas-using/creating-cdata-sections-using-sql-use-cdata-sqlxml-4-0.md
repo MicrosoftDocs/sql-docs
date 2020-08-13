@@ -1,5 +1,6 @@
 ---
 title: "Creating CDATA sections using sql:use-cdata (SQLXML)"
+description: Learn how to create CDATA sections in SQLXML 4.0 using the sql:use-cdata annotation to escape blocks of text that contain markup characters.
 ms.date: 01/11/2019
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -23,7 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Creating CDATA Sections Using sql:use-cdata (SQLXML 4.0)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   In XML, CDATA sections are used to escape blocks of text that contain characters that would otherwise be recognized as markup characters.  
   
  A database in Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can sometimes contain characters that are treated as markup characters by the XML parser; for example, angle brackets (< and >), the less-than-or-equal-to symbol (<=), and the ampersand (&) are treated as markup characters. However, you can wrap this type of special characters in a CDATA section to prevent them from being treated as markup characters. The text within the CDATA section is treated by the XML parser as plain text.  

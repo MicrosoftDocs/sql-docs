@@ -1,7 +1,7 @@
 ---
 title: "Finding additional SqlClient driver information"
 description: "Page that contains useful information regarding the driver."
-ms.date: "09/30/2019"
+ms.date: "06/15/2019"
 dev_langs: 
   - "csharp"
   - "vb"
@@ -10,13 +10,13 @@ ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
 ms.topic: conceptual
-author: rothja
-ms.author: jroth
+author: David-Engel
+ms.author: v-daenge
 ms.reviewer: v-kaywon
 ---
 # Finding additional SqlClient driver information
 
-![Download-DownArrow-Circled](../../ssdt/media/download.png)[Download ADO.NET](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+[!INCLUDE[Driver_ADONET_Download](../../includes/driver_adonet_download.md)]
 
 For more information about the Microsoft SqlClient Data Provider for SQL Server development in general, see the following online resources:
 
@@ -24,7 +24,7 @@ For more information about the Microsoft SqlClient Data Provider for SQL Server 
   
 |Resource|Description|  
 |--------------|-----------------|  
-|[.Net CoreFX GitHub Repository](https://github.com/dotnet/corefx)|This repo contains the library implementation for .NET Core.|
+|[.NET Runtime GitHub Repository](https://github.com/dotnet/runtime)|This repo contains the library implementation for .NET Core.|
 |[Microsoft SqlClient Data Provider for SQL Server GitHub Repository](https://github.com/dotnet/SqlClient)|This repo contains the source code for the SqlClient driver.|  
 |[.NET API Browser](https://docs.microsoft.com/dotnet/api/)|This site contains .NET API information for the driver.|  
   

@@ -1,15 +1,16 @@
 ---
-title: "Microsoft ODBC Driver for SQL Server | Microsoft Docs"
+title: "Microsoft ODBC Driver for SQL Server"
+description: "The Microsoft ODBC Driver for SQL Server provides connectivity to SQL Server and Azure SQL Database via standard ODBC APIs."
 ms.custom: ""
-ms.date: "02/05/2019"
+ms.date: "05/06/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 9f2ae91b-06af-4c9a-9d24-062df7bc4662
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Microsoft ODBC Driver for SQL Server
 
@@ -29,7 +30,7 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 
 ## Download
 
-- ![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download ODBC driver](download-odbc-driver-for-sql-server.md)
+- ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[To download ODBC driver](download-odbc-driver-for-sql-server.md)
 
 ## Documentation
 
@@ -46,7 +47,8 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 
 ### Linux and macOS
 
-- [Installing the Driver](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installing the driver on Linux](../../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)
+- [Installing the driver on macOS](../../connect/odbc/linux-mac/install-microsoft-odbc-driver-sql-server-macos.md)
 - [Connecting to SQL Server](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)
 - [Connecting with **bcp**](../../connect/odbc/linux-mac/connecting-with-bcp.md)
 - [Connecting with **sqlcmd**](../../connect/odbc/linux-mac/connecting-with-sqlcmd.md)
@@ -56,6 +58,7 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 - [Known Issues](../../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md)
 - [Programming Guidelines](../../connect/odbc/linux-mac/programming-guidelines.md)
 - [Release Notes](../../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md)
+- [Release Notes (mssql-tools)](../../connect/odbc/linux-mac/release-notes-tools.md)
 - [Support for High Availability and Disaster Recovery](../../connect/odbc/linux-mac/odbc-driver-on-linux-support-for-high-availability-disaster-recovery.md)
 - [Using Integrated Authentication (Kerberos)](../../connect/odbc/linux-mac/using-integrated-authentication.md)
 
@@ -68,8 +71,7 @@ The following C++ sample demonstrates how to use the ODBC APIs to connect to and
 - [Release Notes for ODBC to SQL Server on Windows](windows/release-notes-odbc-sql-server-windows.md)
 - [System Requirements, Installation, and Driver Files](../../connect/odbc/windows/system-requirements-installation-and-driver-files.md)
 
+## Community
 
-
-## Community  
-- [Microsoft ODBC Driver For SQL Server Team blog](https://blogs.msdn.com/sqlnativeclient/default.aspx)  
+- [SQL Server Drivers blog](https://techcommunity.microsoft.com/t5/SQL-Server/bg-p/SQLServer/label-name/SQLServerDrivers)  
 - [SQL Server Data Access Forum](https://social.technet.microsoft.com/Forums/en/sqldataaccess/threads)  

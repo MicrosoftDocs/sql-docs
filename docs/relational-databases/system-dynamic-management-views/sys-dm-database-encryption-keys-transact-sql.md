@@ -17,12 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_database_encryption_keys dynamic management view"
 ms.assetid: 56fee8f3-06eb-4fff-969e-abeaa0c4b8e4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_database_encryption_keys (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns information about the encryption state of a database and its associated database encryption keys. For more information about database encryption, see [Transparent Data Encryption &#40;TDE&#41;](../../relational-databases/security/encryption/transparent-data-encryption.md).  
  
@@ -41,8 +41,8 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |encryptor_type|**nvarchar(32)**|**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).<br /><br /> Describes the encryptor.|  
 |percent_complete|**real**|Percent complete of the database encryption state change. This will be 0 if there is no state change.|
 |encryption_state_desc|**nvarchar(32)**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.<br><br> String that indicates whether the database is encrypted or not encrypted.<br><br>NONE<br><br>UNENCRYPTED<br><br>ENCRYPTED<br><br>DECRYPTION_IN_PROGRESS<br><br>ENCRYPTION_IN_PROGRESS<br><br>KEY_CHANGE_IN_PROGRESS<br><br>PROTECTION_CHANGE_IN_PROGRESS|
-|encryption_scan_state|**int**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.<br><br>Indicates the current state of the encryption scan. <br><br>0 = No scan has been initiated, TDE is not enabled<br><br>1 = Scan is in progress.<br><br>2 = Scan is in progress but has been suspended, user can resume.<br><br>3 = Scan has been successfully completed, TDE is enabled and encryption is complete.<br><br>4 = Scan was aborted for some reason, manual intervention is required. Contact Microsoft Support for more assistance.|
-|encryption_scan_state_desc|**nvarchar(32)**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.<br><br>String that indicates the current state of the encryption scan.<br><br> NONE<br><br>RUNNING<br><br>SUSPENDED<br><br>COMPLETE<br><br>ABORTED|
+|encryption_scan_state|**int**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.<br><br>Indicates the current state of the encryption scan. <br><br>0 = No scan has been initiated, TDE is not enabled<br><br>1 = Scan is in progress.<br><br>2 = Scan is in progress but has been suspended, user can resume.<br><br>3 = Scan was aborted for some reason, manual intervention is required. Contact Microsoft Support for more assistance.<br><br>4 = Scan has been successfully completed, TDE is enabled and encryption is complete.|
+|encryption_scan_state_desc|**nvarchar(32)**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.<br><br>String that indicates the current state of the encryption scan.<br><br> NONE<br><br>RUNNING<br><br>SUSPENDED<br><br>ABORTED<br><br>COMPLETE|
 |encryption_scan_modify_date|**datetime**|**Applies to**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and later.<br><br> Displays the date (in UTC) the encryption scan state was last modified.|
   
 ## Permissions

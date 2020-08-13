@@ -1,10 +1,8 @@
 ---
 title: "JSON_QUERY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/02/2016"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
@@ -17,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1ab0d90f-19b6-4988-ab4f-22fdf28b7c79
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: genemi
+ms.reviewer: jroth
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # JSON_QUERY (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
  Extracts an object or an array from a JSON string.  
   
@@ -32,7 +30,7 @@ monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>
   
 ## Syntax  
   
-```sql  
+```syntaxsql
 JSON_QUERY ( expression [ , path ] )  
 ```  
   
@@ -72,16 +70,16 @@ If the format of *path* isn't valid, **JSON_QUERY** returns an error.
   
 ```json  
 {
-	"info": {
-		"type": 1,
-		"address": {
-			"town": "Bristol",
-			"county": "Avon",
-			"country": "England"
-		},
-		"tags": ["Sport", "Water polo"]
-	},
-	"type": "Basic"
+   "info": {
+      "type": 1,
+      "address": {
+         "town": "Bristol",
+         "county": "Avon",
+         "country": "England"
+      },
+      "tags": ["Sport", "Water polo"]
+   },
+   "type": "Basic"
 } 
 ```  
   
@@ -111,7 +109,7 @@ If you're returning results with FOR JSON, and you're including data that's alre
   
 ```sql  
 SELECT PersonID,FullName,
- JSON_QUERY(CustomFields,'$.OtherLanguages') AS Languages
+  JSON_QUERY(CustomFields,'$.OtherLanguages') AS Languages
 FROM Application.People
 ```  
   
@@ -129,5 +127,5 @@ FOR JSON PATH
   
 ## See also
 
- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  
+- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [JSON Data &#40;SQL Server&#41;](../../relational-databases/json/json-data-sql-server.md)  

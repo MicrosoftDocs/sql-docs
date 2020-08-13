@@ -1,5 +1,5 @@
 ---
-title: "ERROR_MESSAGE (Transact-SQL) | Microsoft Docs"
+title: ERROR_MESSAGE (Transact-SQL)
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -19,12 +19,12 @@ helpviewer_keywords:
   - "TRY...CATCH [SQL Server]"
   - "CATCH block"
 ms.assetid: f32877a6-5f17-418c-a32c-5a1a344b3c45
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ERROR_MESSAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns the message text of the error that caused the CATCH block of a TRY...CATCH construct to execute.  
   
@@ -35,8 +35,10 @@ This function returns the message text of the error that caused the CATCH block 
 ```  
 ERROR_MESSAGE ( )   
 ```  
-  
-## Return Types  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **nvarchar(4000)**  
   
 ## Return Value  

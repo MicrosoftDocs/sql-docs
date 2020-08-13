@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "bit data type [ODBC]"
   - "data conversions from SQL to C types [ODBC], bit"
 ms.assetid: 0eeaab8b-ad82-4a36-b464-9a1211d5f72c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQL to C: Bit
 The identifier for the bit ODBC SQL data type is:  

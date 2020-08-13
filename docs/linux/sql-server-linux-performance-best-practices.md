@@ -12,7 +12,7 @@ ms.technology: linux
 
 # Performance best practices and configuration guidelines for SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article provides best practices and recommendations to maximize performance for database applications that connect to SQL Server on Linux. These recommendations are specific to running on the Linux platform. All normal SQL Server recommendations, such as index design, still apply.
 
@@ -92,11 +92,11 @@ sysctl -w vm.max_map_count=262144
 #
 # A tuned configuration for SQL Server on Linux
 #
-	
+    
 [main]
 summary=Optimize for Microsoft SQL Server
 include=throughput-performance
-	
+    
 [cpu]
 force_latency=5
 
@@ -157,7 +157,7 @@ vm.transparent_hugepages=madvice
 and make the mssql profile active after the modification
 ```bash
 tuned-adm off
-tuned-amd profile mssql
+tuned-adm profile mssql
 ```
 
 ### swapfile

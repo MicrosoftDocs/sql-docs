@@ -1,7 +1,7 @@
 ---
 title: "sys.objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 05/30/2017
+ms.date: 05/20/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -20,12 +20,12 @@ helpviewer_keywords:
   - "user-defined table types [SQL Server]"
   - "table types [SQL Server]"
 ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Contains a row for each user-defined, schema-scoped object that is created within a database, including natively compiled scalar user-defined function.  
   
@@ -44,7 +44,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |type|**char(2)**|Object type:<br /><br /> AF = Aggregate function (CLR)<br /><br /> C = CHECK constraint<br /><br /> D = DEFAULT (constraint or stand-alone)<br /><br /> F = FOREIGN KEY constraint<br /><br /> FN = SQL scalar function<br /><br /> FS = Assembly (CLR) scalar-function<br /><br /> FT = Assembly (CLR) table-valued function<br /><br /> IF = SQL inline table-valued function<br /><br /> IT = Internal table<br /><br /> P = SQL Stored Procedure<br /><br /> PC = Assembly (CLR) stored-procedure<br /><br /> PG = Plan guide<br /><br /> PK = PRIMARY KEY constraint<br /><br /> R = Rule (old-style, stand-alone)<br /><br /> RF = Replication-filter-procedure<br /><br /> S = System base table<br /><br /> SN = Synonym<br /><br /> SO = Sequence object<br /><br /> U = Table (user-defined)<br /><br /> V = View<br /><br /> EC = Edge constraint <br /><br /> <br /><br /> **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> <br /><br /> SQ = Service queue<br /><br /> TA = Assembly (CLR) DML trigger<br /><br /> TF = SQL table-valued-function<br /><br /> TR = SQL DML trigger<br /><br /> TT = Table type<br /><br /> UQ = UNIQUE constraint<br /><br /> X = Extended stored procedure<br /><br /> <br /><br /> **Applies to**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].<br /><br /> <br /><br /> ET = External Table|  
 |type_desc|**nvarchar(60)**|Description of the object type:<br /><br /> AGGREGATE_FUNCTION<br /><br /> CHECK_CONSTRAINT<br /><br /> CLR_SCALAR_FUNCTION<br /><br /> CLR_STORED_PROCEDURE<br /><br /> CLR_TABLE_VALUED_FUNCTION<br /><br /> CLR_TRIGGER<br /><br /> DEFAULT_CONSTRAINT<br /><br /> EXTENDED_STORED_PROCEDURE<br /><br /> FOREIGN_KEY_CONSTRAINT<br /><br /> INTERNAL_TABLE<br /><br /> PLAN_GUIDE<br /><br /> PRIMARY_KEY_CONSTRAINT<br /><br /> REPLICATION_FILTER_PROCEDURE<br /><br /> RULE<br /><br /> SEQUENCE_OBJECT<br /><br /> <br /><br /> **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> <br /><br /> SERVICE_QUEUE<br /><br /> SQL_INLINE_TABLE_VALUED_FUNCTION<br /><br /> SQL_SCALAR_FUNCTION<br /><br /> SQL_STORED_PROCEDURE<br /><br /> SQL_TABLE_VALUED_FUNCTION<br /><br /> SQL_TRIGGER<br /><br /> SYNONYM<br /><br /> SYSTEM_TABLE<br /><br /> TABLE_TYPE<br /><br /> UNIQUE_CONSTRAINT<br /><br /> USER_TABLE<br /><br /> VIEW|  
 |create_date|**datetime**|Date the object was created.|  
-|modify_date|**datetime**|Date the object was last modified by using an ALTER statement. If the object is a table or a view, modify_date also changes when a clustered index on the table or view is created or altered.|  
+|modify_date|**datetime**|Date the object was last modified by using an ALTER statement. If the object is a table or a view, modify_date also changes when an index on the table or view is created or altered.|  
 |is_ms_shipped|**bit**|Object is created by an internal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] component.|  
 |is_published|**bit**|Object is published.|  
 |is_schema_published|**bit**|Only the schema of the object is published.|  

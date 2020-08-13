@@ -10,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "TempDB space in RDS [ADO]"
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Ensuring Sufficient TempDB Space
 If errors occur while handling [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objects that need processing space on Microsoft SQL Server 6.5, you may need to increase the size of the TempDB. (Some queries require temporary processing space; for example, a query with an ORDER BY clause requires a sort of the **Recordset**, which requires some temporary space.)  

@@ -1,5 +1,6 @@
 ---
 title: "Backward Compatibility | Reporting Services | Microsoft Docs"
+description: Learn about changes in behavior of SQL Server Reporting Services, including features that are no longer available or are scheduled to be removed in a future release.
 ms.date: 09/12/2016
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

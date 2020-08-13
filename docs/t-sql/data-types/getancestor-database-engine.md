@@ -19,7 +19,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # GetAncestor (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **hierarchyid** representing the *n*th ancestor of *this*.
   
@@ -30,12 +30,14 @@ Returns a **hierarchyid** representing the *n*th ancestor of *this*.
 child.GetAncestor ( n )   
 ```  
   
-```sql
+```syntaxsql
 -- CLR syntax  
 SqlHierarchyId GetAncestor ( int n )  
-```  
-  
-## Arguments  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *n*  
 An **int**, representing the number of levels to go up in the hierarchy.
   

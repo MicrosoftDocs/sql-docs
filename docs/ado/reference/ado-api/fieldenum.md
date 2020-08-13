@@ -13,8 +13,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "FieldEnum enumeration [ADO]"
 ms.assetid: be4eda13-d4e4-4d6b-bb0d-3310b0a96fc2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # FieldEnum
 Specifies the special fields referenced in a [Record](../../../ado/reference/ado-api/record-object-ado.md) object's [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection.  

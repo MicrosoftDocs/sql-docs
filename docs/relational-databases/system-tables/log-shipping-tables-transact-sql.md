@@ -13,11 +13,11 @@ helpviewer_keywords:
   - "log shipping [SQL Server], system tables"
   - "system tables [SQL Server], log shipping"
 ms.assetid: f8910aae-2013-4645-880c-134577cbcbe0
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Log Shipping Tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The following topics describe the system tables that store the information used by log-shipping operations.  
   

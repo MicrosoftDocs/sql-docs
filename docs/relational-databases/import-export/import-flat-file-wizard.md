@@ -84,6 +84,26 @@ This page indicates whether the import was successful. If a green check mark app
 
 ![Wizard Results](media/import-flat-file-wizard/importffresults.png)
 
+## Troubleshooting
+The Import Flat File Wizard detects the data types based on the first 200 rows.  In scenarios where data further in the flat file does not conform to the automatically detected data types, an error will occur during import. The error message would be similar to the following:
+```
+Error inserting data into table. (Microsoft.SqlServer.Prose.Import)
+The given value of type String from the data source cannot be converted to type nvarchar of the specified target column. (System.Data)
+String or binary data would be truncated. (System.Data)
+```
+Tactics to alleviate this error:
+1. Expanding the data type size(s) in the [Modify Columns step](#step-4:-modify-columns), such as the length of a nvarchar column, may compensate for variations in the data from the remainder of the flat file.
+2. Enabling error reporting in the [Modify Columns step](#step-4:-modify-columns), especially by a smaller number, will reveal which row(s) in the flat file contain data that does not fit the selected data types. For example, in a flat file where the second row introduces an error, running the import with error reporting with a range of 1 provides a specific error message.  Examining the file directly at the location can provide more targeted changes to the data types based on the data in the identified rows.
+
+![Error Reporting Results](media/import-flat-file-wizard/importfferror.png)
+
+```
+Error inserting data into table occured while inserting rows 1 - 2. (Microsoft.SqlServer.Prose.Import)
+The given value of type String from the data source cannot be converted to type float of the specified target column. (System.Data)
+Failed to convert parameter value from a String to a Double. (System.Data)
+```
+
+
 ## Learn More
 
 Learn more about the wizard.

@@ -808,7 +808,7 @@ WITH
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH
   -- Please note the abfss endpoint when your account has secure transfer enabled
-  ( LOCATION = 'abfss://newyorktaxidataset.azuredatalakestore.net' , 
+  ( LOCATION = 'abfss://data@newyorktaxidataset.dfs.core.windows.net' , 
     CREDENTIAL = ADLS_credential ,
     TYPE = HADOOP
   ) ;

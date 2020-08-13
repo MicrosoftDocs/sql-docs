@@ -112,7 +112,7 @@ GO
 USE AdventureWorks2012;  
 GO  
   
-CREATE TYPE Production.TestType FROM [varchar](10) NOT NULL ;  
+CREATE TYPE Production.TestType FROM [VARCHAR](10) NOT NULL ;  
 GO  
   
 -- Check the type owner.  
@@ -141,8 +141,8 @@ GO
   
 ```sql  
 CREATE TABLE dbo.Region   
-    (Region_id int NOT NULL,  
-    Region_Name char(5) NOT NULL)  
+    (Region_id INT NOT NULL,  
+    Region_Name CHAR(5) NOT NULL)  
 WITH (DISTRIBUTION = REPLICATE);  
 GO  
   

@@ -1,12 +1,12 @@
 ---
 title: Versioning system SQL docs
-ms.date: 07/22/2020
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>=aps-pdw-2016||>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 
 # Versioning system for SQL documentation
@@ -159,7 +159,7 @@ The versioning system is fully implemented for SQL Server version 2016 onward.
     - [SQL Server 2014 offline documentation](/sql/sql-server/sql-server-offline-documentation)
 
 - _2016 and later:_ &nbsp; The versioning system is fully implemented for SQL Server 2016 and later versions.
-    - [Welcome to SQL Server documentation 2016 and later](/sql/sql-server/?view=sql-server-2016)
+    - [Welcome to SQL Server documentation 2016 and later](/sql/sql-server/?view=sql-server-2016&preserve-view=true)
     - [SQL Server 2016 offline documentation](sql-server-offline-documentation.md)
 
 ## See also

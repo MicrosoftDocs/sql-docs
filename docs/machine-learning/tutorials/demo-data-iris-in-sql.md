@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # Iris demo data for Python and R tutorials with SQL machine learning
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 In this exercise, create a database to store data from the [Iris flower data set](https://en.wikipedia.org/wiki/Iris_flower_data_set) and models based on the same data. Iris data is included in both the R and Python distributions, and is used in machine learning tutorials for SQL machine learning.
 

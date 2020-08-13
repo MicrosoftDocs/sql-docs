@@ -26,7 +26,6 @@ The build process in the SQL Database Projects extension for Azure Data Studio a
 
  ``` ... exited with code: 0 ```
 
-
 ## Publish a Database Project
 
 After a project is successfully compiled through the build process, the database can be published to a SQL Server instance. To publish a database project, in the **Projects** viewlet under **Explorer**, right-click the *.sqlproj* root node and select **Publish**.
@@ -36,6 +35,4 @@ In the **Publish Database** dialog that appears, specify a server connection and
 ## Next steps
 
 - [SQL Database Projects extension for Azure Data Studio](sql-database-project-extension.md)
-- [Data Tier Applications](../relational-databases/data-tier-applications/data-tier-applications.md)
-
-
+- [Build SQL database projects from command line](sql-database-project-extension-build-from-command-line.md)

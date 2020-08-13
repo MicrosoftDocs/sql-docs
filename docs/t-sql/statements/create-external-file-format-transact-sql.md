@@ -237,7 +237,10 @@ Specifies a custom format for all date and time data that might appear in a deli
 -   DateTimeOffset: 'yyyy-MM-dd HH:mm:ss'  
   
 -   Time: 'HH:mm:ss'  
-  
+
+> [!IMPORTANT]
+> Specifying custom `DATE_FORMAT` will override all default type formats. This means that you will need to have the same date formats in all datetime, date, and time cells in your files. With the overriden `DATE_FORMAT` you cannot have date and time values in different format.
+
 **Example date formats** are in the following table:
   
 Notes about the table:  
@@ -355,7 +358,7 @@ Notes about the table:
   
  For a delimited text file, the data compression method can either be the default Codec, 'org.apache.hadoop.io.compress.DefaultCodec', or the Gzip Codec, 'org.apache.hadoop.io.compress.GzipCodec'.
   
-```  
+```sql  
 CREATE EXTERNAL FILE FORMAT textdelimited1  
 WITH (  
     FORMAT_TYPE = DELIMITEDTEXT,  
@@ -369,7 +372,7 @@ WITH (
 ### B. Create an RCFile external file format  
  This example creates an external file format for a RCFile that uses the serialization/deserialization method org.apache.hadoop.hive.serde2.columnar.LazyBinaryColumnarSerDe. It also specifies to use the Default Codec for the data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.
   
-```  
+```sql  
 CREATE EXTERNAL FILE FORMAT rcfile1  
 WITH (  
     FORMAT_TYPE = RCFILE,  
@@ -381,7 +384,7 @@ WITH (
 ### C. Create an ORC external file format  
  This example creates an external file format for an ORC file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.
   
-```  
+```sql 
 CREATE EXTERNAL FILE FORMAT orcfile1  
 WITH (  
     FORMAT_TYPE = ORC,  
@@ -392,7 +395,7 @@ WITH (
 ### D. Create a PARQUET external file format  
  This example creates an external file format for a Parquet file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression.  
   
-```  
+```sql  
 CREATE EXTERNAL FILE FORMAT parquetfile1  
 WITH (  
     FORMAT_TYPE = PARQUET,  
@@ -402,7 +405,7 @@ WITH (
 ### E. Create a Delimited Text File Skipping Header Row (Azure SQL DW Only)
  This example creates an external file format for CSV file with a single header row. 
   
-```  
+```sql  
 CREATE EXTERNAL FILE FORMAT skipHeader_CSV
 WITH (FORMAT_TYPE = DELIMITEDTEXT,
       FORMAT_OPTIONS(
@@ -415,7 +418,7 @@ WITH (FORMAT_TYPE = DELIMITEDTEXT,
 ### F. Create a JSON external file format  
  This example creates an external file format for a JSON file that compresses the data with the org.apache.io.compress.SnappyCodec data compression method. If DATA_COMPRESSION isn't specified, the default is no compression. This example applies to Azure SQL Edge and is currently not supported for other SQL products. 
   
-```  
+```sql  
 CREATE EXTERNAL FILE FORMAT jsonFileFormat  
 WITH (  
     FORMAT_TYPE = JSON,  

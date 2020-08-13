@@ -42,13 +42,10 @@ To download the latest Cumulative Update, see the [Latest updates for Microsoft 
 
 If you have installed one of the above Cumulative Updates for SQL Server 2016 or 2017, you may have multiple versions of R in a SQL instance. Each version is contained in a subfolder of the instance folder with the name `R_SERVICES.`*&lt;major&gt;*.*&lt;minor&gt;* (the folder from the original installation may not have a version number appended to the folder name).
 
-If you install a CU containing R 3.5 on SQL Server 2016, the new `R_SERVICES` folder is:
+If you install a CU containing R 3.5, the new `R_SERVICES` folder is:
 
-`C:\Program Files\Microsoft SQL Server\MSSQL13.<INSTANCE_NAME>\R_SERVICES.3.5`
-
-If you install a CU containing R 3.5 on SQL Server 2017, the new `R_SERVICES` folder is:
-
-`C:\Program Files\Microsoft SQL Server\MSSQL14.<INSTANCE_NAME>\R_SERVICES.3.5`
+- SQL Server 2016: `C:\Program Files\Microsoft SQL Server\MSSQL13.<INSTANCE_NAME>\R_SERVICES.3.5`
+- SQL Server 2017: `C:\Program Files\Microsoft SQL Server\MSSQL14.<INSTANCE_NAME>\R_SERVICES.3.5`
 
 Each SQL instance uses one of these versions as the default version of R. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is located under the R folder in each SQL instance:
 
@@ -69,6 +66,8 @@ Each SQL instance uses one of these versions as the default version of R. You ca
 
 ### Example
 
+### Change R runtime version in SQL Server 2016
+
 For example, to configure **R 3.5** as the default version of R for the instance MSSQLSERVER01 on SQL Server 2016:
 
 ```cmd
@@ -76,6 +75,8 @@ cd "C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES.3.5\l
 
 .\RegisterRext.exe /configure /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES.3.5" /instance:MSSQLSERVER01
 ```
+
+### Change R runtime version in SQL Server 2017
 
 For example, to configure **R 3.5** as the default version of R for the instance MSSQLSERVER01 on SQL Server 2017:
 

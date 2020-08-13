@@ -80,7 +80,7 @@ GO
 ```
 
 > [!Note]
-> The permissions required to change the authentication mode are [sysadmin](../../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles) or [Control Server](../../relational-databases/security/permissions-database-engine.md#a-name_permissionsa-sql-server-permissions).
+> The permissions required to change the authentication mode are [sysadmin](../../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles) or [Control Server](../../relational-databases/security/permissions-database-engine.md)
 
 ## See also
 

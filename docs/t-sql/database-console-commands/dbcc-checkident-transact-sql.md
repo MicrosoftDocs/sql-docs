@@ -1,5 +1,5 @@
 ---
-title: "DBCC CHECKIDENT (Transact-SQL) | Microsoft Docs"
+title: DBCC CHECKIDENT (Transact-SQL)
 ms.custom: ""
 ms.date: "03/07/2019"
 ms.prod: sql
@@ -30,9 +30,10 @@ author: pmasl
 ms.author: umajay
 monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = azure-sqldw-latest||= sqlallproducts-allversions"
 ---
+
 # DBCC CHECKIDENT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Checks the current identity value for the specified table in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and, if it's needed, changes the identity value. You can also use DBCC CHECKIDENT to manually set a new current identity value for the identity column.  
   
@@ -40,7 +41,7 @@ monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux
   
 ## Syntax  
   
-```console
+```syntaxsql
 
 -- Syntax for SQL Server and Azure SQL Database  
 
@@ -62,6 +63,8 @@ DBCC CHECKIDENT
 [ WITH NO_INFOMSGS ]  
 
 ```
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
  *table_name*  

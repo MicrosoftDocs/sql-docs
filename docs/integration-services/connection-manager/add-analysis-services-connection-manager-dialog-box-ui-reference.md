@@ -17,7 +17,7 @@ ms.author: chugu
 ---
 # Add Analysis Services Connection Manager Dialog Box UI Reference
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Add Analysis Services Connection Manager** dialog box to create a connection to a server running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)], or to edit connection properties.  

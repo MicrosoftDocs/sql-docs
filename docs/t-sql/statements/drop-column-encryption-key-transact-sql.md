@@ -34,12 +34,12 @@ ms.author: jaszymas
   
 DROP COLUMN ENCRYPTION KEY key_name [;]  
 ```  
-  
-## Arguments  
+
+## Arguments
  *key_name*  
  Is the name by which the column encryption key to be dropped from the database.  
   
-## Remarks  
+## Remarks
  A column encryption key cannot be dropped if it is used to encrypt any column in the database. All columns using the column encryption key must first be dropped.  
   
 ## Permissions  

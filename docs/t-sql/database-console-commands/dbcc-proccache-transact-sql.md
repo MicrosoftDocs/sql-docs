@@ -22,7 +22,9 @@ ms.assetid: 7a4f9f8a-13ff-4bf2-ba29-c17012a23659
 author: pmasl
 ms.author: umajay
 ---
+
 # DBCC PROCCACHE (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Displays information in a table format about the procedure cache.
@@ -35,7 +37,9 @@ Displays information in a table format about the procedure cache.
 DBCC PROCCACHE [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH  
  Allows for options to be specified.  
   

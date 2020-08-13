@@ -35,7 +35,9 @@ GRANT permission  [ ,...n ] ON SCHEMA :: schema_name
     [ AS granting_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on a schema. For a list of the permissions, see the Remarks section later in this topic..  
   

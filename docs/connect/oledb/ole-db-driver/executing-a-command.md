@@ -1,6 +1,6 @@
 ---
-title: "Executing a Command | Microsoft Docs"
-description: "Executing a command"
+title: "Executing a command (OLE DB driver) | Microsoft Docs"
+description: Learn how a consumer in OLE DB Driver for SQL Server executes a command by first creating a session, getting a rowset, and using Execute.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

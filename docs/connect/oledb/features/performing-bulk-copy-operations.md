@@ -1,6 +1,6 @@
 ---
-title: "Performing Bulk Copy Operations | Microsoft Docs"
-description: "Performing bulk copy operations using OLE DB Driver for SQL Server"
+title: "Performing Bulk Copy Operations"
+description: "Learn about performing bulk copy operations using OLE DB Driver for SQL Server and how it enables fast transfer of data into the database."
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql

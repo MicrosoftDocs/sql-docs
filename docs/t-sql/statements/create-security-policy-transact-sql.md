@@ -48,8 +48,6 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
     [ { AFTER { INSERT | UPDATE } }   
     | { BEFORE { UPDATE | DELETE } } ]  
 ```  
-  
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
  *security_policy_name*  
@@ -85,7 +83,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  [*table_schema_name*.] *table_name*  
  Is the target table to which the security predicate will be applied. Multiple disabled security policies can target a single table, but only one can be enabled at any given time.  
   
-## Remarks  
+
+## Remarks
  When using predicate functions with memory-optimized tables, you must include **SCHEMABINDING** and use the **WITH NATIVE_COMPILATION** compilation hint.  
   
  Block predicates are evaluated after the corresponding DML operation is executed. Therefore, a READ UNCOMMITTED query can see transient values that will be rolled back.  

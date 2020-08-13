@@ -42,7 +42,9 @@ COUNT ( { [ [ ALL | DISTINCT ] expression ] | * } )
 COUNT ( [ ALL ]  { expression | * } ) OVER ( [ <partition_by_clause> ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 **ALL**  
 Applies the aggregate function to all values. ALL serves as the default.
   

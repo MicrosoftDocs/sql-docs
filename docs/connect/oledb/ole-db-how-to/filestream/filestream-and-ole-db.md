@@ -1,6 +1,6 @@
 ---
-title: "Filestream and OLE DB | Microsoft Docs"
-description: "Filestream and OLE DB"
+title: "Filestream and OLE DB (OLE DB driver) | Microsoft Docs"
+description: Learn how to use OLE DB Driver for SQL Server with the filestream feature with the four examples in this section.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

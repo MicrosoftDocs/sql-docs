@@ -17,22 +17,23 @@ ms.author: mlandzic
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # BufferWithCurves (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Returns a **geometry** instance that represents the set of all points whose distance from the calling **geometry** instance is less than or equal to the *distance* parameter.  
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 .BufferWithCurves ( distance )  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments  
  *distance*  
  Is a **float** indicating the maximum distance that points forming the buffer can be from the **geometry** instance.  
   
-## Return Types  
+## Return Types
 SQL Server return type: **geometry**  
   
  CLR return type: **SqlGeometry**  

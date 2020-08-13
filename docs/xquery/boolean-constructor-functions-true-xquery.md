@@ -18,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Boolean Constructor Functions - true (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Returns the xs:boolean value True. This is equivalent to `xs:boolean("1")`.  
   

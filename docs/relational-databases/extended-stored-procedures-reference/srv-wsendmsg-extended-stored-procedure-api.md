@@ -1,5 +1,6 @@
 ---
 title: "srv_wsendmsg (Extended Stored Procedure API) | Microsoft Docs"
+description: Learn how srv_wsendmsg in the Extended Stored Procedure API can send a Unicode message to the client.
 ms.custom: ""
 ms.date: "03/03/2017"
 ms.prod: sql

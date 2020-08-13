@@ -1,6 +1,6 @@
 ---
 title: "Retrieve Data from a FILESTREAM Column Using ISequentialStream (OLE DB) | Microsoft Docs"
-description: "Retrieve data from a FILESTREAM column using ISequentialStream (OLE DB)"
+description: Learn how to use an ISequentialStream interface in an ICommandText interface to retrieve a record from a Filestream column in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

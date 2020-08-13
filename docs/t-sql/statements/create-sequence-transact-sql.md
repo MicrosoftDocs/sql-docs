@@ -248,8 +248,9 @@ SELECT * FROM sys.sequences WHERE name = 'TestSequence' ;
 |`is_cached`|`1`|  
 |`current_value`|`-9223372036854775808`|  
   
-### F. Creating a sequence with a specific data type  
- The following example creates a sequence using the **smallint** data type, with a range from -32,768 to 32,767.  
+### F. Creating a sequence with a specific data type
+
+The following example creates a sequence using the **smallint** data type, with a range from -32,768 to 32,767.  
   
 ```sql  
 CREATE SEQUENCE SmallSeq 

@@ -1,5 +1,5 @@
 ---
-title: "DBCC DROPCLEANBUFFERS (Transact-SQL) | Microsoft Docs"
+title: DBCC DROPCLEANBUFFERS (Transact-SQL)
 ms.custom: ""
 ms.date: "07/16/2017"
 ms.prod: sql
@@ -26,26 +26,30 @@ author: pmasl
 ms.author: umajay
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # DBCC DROPCLEANBUFFERS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
 Removes all clean buffers from the buffer pool, and columnstore objects from the columnstore object pool.
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax
-Syntax for SQL Server: 
+Syntax for SQL Server:
 
-```sql
+```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
 ```  
 Syntax for Azure SQL Warehouse and Parallel Data Warehouse:
 
 ```sql  
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
-```  
-  
-## Arguments  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH NO_INFOMSGS  
  Suppresses all informational messages. Informational messages are always suppressed on [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   

@@ -48,7 +48,9 @@ See [DATEDIFF_BIG &#40;Transact-SQL&#41;](../../t-sql/functions/datediff-big-tra
 DATEDIFF ( datepart , startdate , enddate )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 
 *datepart*  
 The units in which **DATEDIFF** reports the difference between the _startdate_ and _enddate_. Commonly used _datepart_ units include `month` or `second`.

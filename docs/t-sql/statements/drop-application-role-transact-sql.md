@@ -36,7 +36,9 @@ ms.author: vanto
 DROP APPLICATION ROLE rolename  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *rolename*  
  Specifies the name of the application role to be dropped.  
   

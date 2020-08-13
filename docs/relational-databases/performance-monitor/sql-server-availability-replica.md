@@ -1,5 +1,6 @@
 ---
 title: "SQL Server, Availability Replica | Microsoft Docs"
+description: Learn about SQLServer:Availability Replica performance object, which contains performance counters about availability replicas in Always On availability groups.
 ms.custom: ""
 ms.date: "08/25/2016"
 ms.prod: sql

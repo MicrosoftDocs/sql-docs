@@ -1,6 +1,6 @@
 ---
-title: "ICommand (OLE DB) | Microsoft Docs"
-description: "ICommand interface (OLE DB)"
+title: "ICommand (OLE DB driver) | Microsoft Docs"
+description: Learn about behavior of the ICommand::Execute method that is specific to OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

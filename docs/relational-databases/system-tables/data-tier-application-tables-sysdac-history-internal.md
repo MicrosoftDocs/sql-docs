@@ -48,9 +48,8 @@ ms.author: carlrab
 ## Remarks  
  DAC management actions, such as deploying or deleting a DAC, generate multiple steps. Each action is assigned an action identifier. Each step is assigned a sequence number and a row in **sysdac_history_internal**, where the status of the step is recorded. Each row is created when the action step starts, and is updated as needed to reflect the status of the operation. For example, a deploy DAC action could be assigned **action_id** 12 and get four rows in **sysdac_history_internal**:  
   
-|||||  
-|-|-|-|-|  
-|**action_id**|**sequence_id**|**action_type_name**|**dac_object_type_name**|  
+| action_id | sequence_id | action_type_name | dac_object_type_name |
+| --------- | ----------- | ---------------- | -------------------- |
 |12|0|create|dacpac|  
 |12|1|create|login|  
 |12|2|create|database|  

@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # Lesson 1-3: Add and configure an OLE DB connection manager
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

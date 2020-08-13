@@ -1,5 +1,5 @@
 ---
-title: Scale concurrent scripts
+title: Configure parallel or concurrent R and Python script execution
 description: Configure parallel or concurrent R and Python script execution in a user account pool to scale SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning-services
@@ -11,7 +11,7 @@ ms.custom: seo-lt-2019
 monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Scale concurrent execution of external scripts in SQL Server Machine Learning Services
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Learn about worker accounts for SQL Server Machine Learning Services and how to change the default configuration to scale the number of concurrent execution of external scripts.
 

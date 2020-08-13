@@ -19,7 +19,7 @@ manager: cgronlund
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # DROP EXTERNAL LIBRARY (Transact-SQL)  
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Deletes an existing package library. Package libraries are used by supported external runtimes, such as R, Python, or Java.
 
@@ -61,6 +61,8 @@ To delete a library requires the privilege ALTER ANY EXTERNAL LIBRARY. By defaul
 ### Return values
 
 An informational message is returned if the statement was successful.
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Remarks
 

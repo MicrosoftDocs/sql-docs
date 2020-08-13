@@ -15,7 +15,7 @@ ms.author: chugu
 ---
 # Flexible File Source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 The **Flexible File Source** component enables an SSIS package to read data from various supported storage services.
 Currently supported storage services are

@@ -12,7 +12,7 @@ ms.author: chugu
 ---
 # Microsoft Connector for Oracle
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 Microsoft Connector for Oracle enables the ability to export data from and load data into Oracle data source in an SSIS package.
 
@@ -49,6 +49,10 @@ To execute SSIS package targeting SQL Server 2017 and below, in addition to **Mi
 - [SQL Server 2016: Microsoft Connector Version 4.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=52950)
 - [SQL Server 2014: Microsoft Connector Version 3.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=44582)
 - [SQL Server 2012: Microsoft Connector Version 2.0 for Oracle by Attunity](https://www.microsoft.com/download/details.aspx?id=29283)
+
+## Limitations and known issues
+
+- Views are not listed under Oracle source *Name of the table or the view*. As work-around, use the SQL command and do a select * from view, or set view name to property [Oracle Source].[TableName] in Advanced Editor.
 
 ## Uninstallation
 

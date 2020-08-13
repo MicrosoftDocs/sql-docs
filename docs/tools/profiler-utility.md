@@ -19,7 +19,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Profiler Utility
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   The **profiler** utility launches the [!INCLUDE[ssSqlProfiler](../includes/sssqlprofiler-md.md)] tool. The optional arguments listed later in this topic allow you to control how the application starts.  
   
 > [!NOTE]  

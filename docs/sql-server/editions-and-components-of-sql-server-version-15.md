@@ -44,7 +44,6 @@ For information about older versions, see:
 
 * [SQL Server 2017](editions-and-components-of-sql-server-2017.md)
 * [SQL Server 2016](editions-and-components-of-sql-server-2016.md)
-* [SQL Server 2014](https://docs.microsoft.com/sql/getting-started/features-supported-by-the-editions-of-sql-server-2014)
 
 Installation requirements vary based on your application needs. The different editions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] accommodate the unique performance, runtime, and price requirements of organizations and individuals. The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] components that you install also depend on your specific requirements. The following sections help you understand how to make the best choice among the editions and components available in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].
 
@@ -163,7 +162,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |Database recovery advisor|Yes|Yes|Yes|Yes|Yes|
 |Encrypted backup|Yes|Yes|No|No|No|
 |Hybrid backup to Windows Azure (backup to URL)|Yes|Yes|No|No|No|
-|Cluster-less availability group|Yes|Yes|No|No|No|
+|Cluster-less availability group <sup>5,6</sup>|Yes|Yes|No|No|No|
 |Failover servers for disaster recovery<sup>7</sup>|Yes|Yes|No|No|No|
 |Failover servers for high availability<sup>7</sup>|Yes|Yes|No|No|No|
 |Failover servers for disaster recovery in Azure<sup>7</sup>|Yes|Yes|No|No|No|
@@ -252,7 +251,7 @@ The Developer edition continues to support only 1 client for [[!INCLUDE[ssNoVers
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] change tracking|Yes|Yes|Yes|Yes|Yes|
 |Transactional replication|Yes|Yes|Yes<sup>1</sup>|Yes<sup>1</sup>|Yes<sup>1</sup>|
 |Transactional replication to Azure|Yes|Yes|No|No|No|
-|Transactional replication updateable subscription|Yes|No|No|No|No|
+|Transactional replication updateable subscription|Yes|Yes|No|No|No|
 
 <sup>1</sup> Subscriber only
 

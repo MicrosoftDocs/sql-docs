@@ -32,7 +32,9 @@ ms.author: vanto
 SYMKEYPROPERTY ( Key_ID , 'algorithm_desc' | 'string_sid' | 'sid' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Key_ID*  
  Is the Key_ID of a symmetric key in the database. To find the Key_ID when you only know the key name, use SYMKEY_ID. *Key_ID* is data type **int**.  
   

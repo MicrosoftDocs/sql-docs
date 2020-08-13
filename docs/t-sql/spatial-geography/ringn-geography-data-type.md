@@ -25,12 +25,13 @@ ms.author: mlandzic
   
 ## Syntax  
   
-```  
-  
-.RingN (expression )  
-```  
-  
-## Arguments  
+```syntaxsql
+.RingN (expression )
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression*  
  Is an **int** expression between 1 and the number of rings in a **polygon** instance.  
   

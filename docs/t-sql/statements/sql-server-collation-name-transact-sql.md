@@ -38,6 +38,8 @@ SQL_SortRules[_Pref]_CPCodepage_<ComparisonStyle>
 _CaseSensitivity_AccentSensitivity | _BIN
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 *SortRules*

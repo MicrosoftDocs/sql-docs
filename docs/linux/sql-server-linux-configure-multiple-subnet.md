@@ -2,10 +2,10 @@
 title: Configure multiple-subnet availability group & FCI (Linux) 
 description: Learn to configure multiple-subnet Always On availability groups and failover cluster instances (FCI) for SQL Server on Linux. 
 ms.custom: seo-lt-2019
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: vanto
-ms.date: 12/01/2017
+author: liweiSecurity
+ms.author: liweiyin
+ms.reviewer: VanMSFT
+ms.date: 07/28/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -52,28 +52,42 @@ In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports
 2. Edit the file that was generated. Look for the `<resources>` section. You will see the various resources that were created for the AG or FCI. Find the one associated with the IP address. Add a `<instance attributes>` section with the information for the second IP address either above or below the existing one, but before `<operations>`. It is similar to the following syntax:
 
     ```xml
-    <instance attributes id="<NameForAttribute>" score="<Score>">
-        <rule id="<RuleName>" score="INFINITY">
-            <expression id="<ExpressionName>" attribute="\#uname" operation="eq" value="<NodeNameInSubnet2>" />
-        </rule>
-        <nvpair id="<NameForSecondIP>" name="ip" value="<IPAddress>"/>
-        <nvpair id="<NameForSecondIPNetmask>" name="cidr\_netmask" value="<Netmask>"/>
+    <instance attributes id="<NameForAttribute>">
+        <nvpair id="<NameForIP>" name="ip" value="<IPAddress>"/>
     </instance attributes>
     ```
     
-    where *NameForAttribute* is the unique name for this attribute, *Score* is the number assigned to the attribute, which must be higher than the primary subnet's, *RuleName* is the name of the rule, *ExpressionName* is the name of the expression, *NodeNameInSubnet2* is the name of the node in the other subnet, *NameForSecondIP* is the name associated with the second IP address, *IPAddress* is the IP address for the second subnet, *NameForSecondIPNetmask* is the name associated with the netmask, and *Netmask* is the netmask for the second subnet.
+    where *NameForAttribute* is the unique name for this attribute, *NameForIP* is the name associated with the IP address, *IPAddress* is the IP address for the second subnet.
     
     The following shows an example.
     
     ```xml
-    <instance attributes id="Node3-2nd-IP" score="2">
-        <rule id="Subnet2-IP" score="INFINITY">
-            <expression id="Subnet2-Node" attribute="\#uname" operation="eq" value="Node3" />
-        </rule>
-        <nvpair id="IP-In-Subnet-2" name="ip" value="192.168.2.102"/>
-        <nvpair id="Netmask-For-IP2" name="cidr\_netmask" value="24" />
+    <instance attributes id="virtualip-instance_attributes">
+        <nvpair id="virtualip-instance_attributes-ip" name="ip" value="192.168.1.102"/>
     </instance attributes>
     ```
+    
+    By default, there is only one <instance/> in the CIB XML file exported. Let's say there are two subnets, you need to have two <instance/> entries.
+    Here is an example of entries for two subnets
+    
+    ```xml
+    <instance attributes id="virtualip-instance_attributes1">
+        <rule id="Subnet1-IP" score="INFINITY" boolean-op="or">
+            <expression id="Subnet1-Node1" attribute="#uname" operation="eq" value="Node1" />
+            <expression id="Subnet1-Node2" attribute="#uname" operation="eq" value="Node2" />
+        </rule>
+        <nvpair id="IP-In-Subnet1" name="ip" value="192.168.1.102"/>
+    </instance attributes>
+    <instance attributes id="virtualip-instance_attributes2">
+        <rule id="Subnet2-IP" score="INFINITY">
+            <expression id="Subnet2-Node1" attribute="#uname" operation="eq" value="Node3" />
+        </rule>
+        <nvpair id="IP-In-Subnet2" name="ip" value="192.168.2.102"/>
+    </instance attributes>
+    ```
+   
+   The 'boolean-op="or"' is used when the subnet has more than one server.
+
 
 3. Import the modified CIB and reconfigure Pacemaker.
 
@@ -94,6 +108,12 @@ In the Windows world, a Windows Server Failover Cluster (WSFC) natively supports
 ### Check and verify failover
 
 1. After the CIB is successfully applied with the updated configuration, ping the DNS name associated with the IP address resource in Pacemaker. It should reflect the IP address associated with the subnet currently hosting the AG or FCI.
+
 2. Fail the AG or FCI to the other subnet.
+
 3. After the AG or FCI is fully online, ping the DNS name associated with the IP address. It should reflect the IP address in the second subnet.
+
 4. If desired, fail the AG or FCI back to the original subnet.
+
+Here is a CSS post showing how to configure the CIB for three subnets, please review for detail: 
+[Configure multiple-subnet AlwaysOn Availability Group by modifying CIB](https://techcommunity.microsoft.com/t5/sql-server-support/configure-multiple-subnet-alwayson-availability-groups-by/ba-p/1544838).

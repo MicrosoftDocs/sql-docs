@@ -26,7 +26,7 @@ ms.author: carlrab
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET NOCOUNT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Stops the message that shows the count of the number of rows affected by a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement or stored procedure from being returned as part of the result set.  
   
@@ -39,7 +39,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  When SET NOCOUNT is ON, the count is not returned. When SET NOCOUNT is OFF, the count is returned.  
   
  The @@ROWCOUNT function is updated even when SET NOCOUNT is ON.  

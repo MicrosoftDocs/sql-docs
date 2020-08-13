@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # StructureColumn (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns the value of the structure column corresponding to the specified case, or the table value for a nested table in the specified case.  
   

@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 ---
 
 # Quickstart: Run simple Python scripts with SQL machine learning
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 In this quickstart, you'll run a set of simple Python scripts using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
@@ -98,7 +98,7 @@ GO
 
 Inputs to the `sp_execute_external_script` stored procedure include:
 
-| | |
+| Input | Description |
 |-|-|
 | @language | defines the language extension to call, in this case Python |
 | @script | defines the commands passed to the Python runtime. Your entire Python script must be enclosed in this argument, as Unicode text. You could also add the text to a variable of type **nvarchar** and then call the variable |

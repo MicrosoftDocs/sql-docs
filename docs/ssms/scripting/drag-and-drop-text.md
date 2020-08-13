@@ -1,5 +1,6 @@
 ---
 title: "Drag and Drop Text"
+description: Learn how to drag text from an editor or Object Explorer and then drop it in an editor location or the Recycle Bin.
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql

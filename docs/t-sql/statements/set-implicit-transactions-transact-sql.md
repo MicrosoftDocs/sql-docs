@@ -38,18 +38,67 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 SET IMPLICIT_TRANSACTIONS { ON | OFF }  
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  When ON, the system is in *implicit* transaction mode. This means that if @@TRANCOUNT = 0, any of the following Transact-SQL statements begins a new transaction. It is equivalent to an unseen BEGIN TRANSACTION being executed first:  
-  
-||||  
-|-|-|-|  
-|ALTER TABLE|FETCH|REVOKE|  
-|BEGIN TRANSACTION|GRANT|SELECT (See exception below.)|  
-|CREATE|INSERT|TRUNCATE TABLE|  
-|DELETE|OPEN|UPDATE|  
-|DROP|.|.|  
-||||
-  
+
+:::row:::
+    :::column:::
+        ALTER TABLE
+    :::column-end:::
+    :::column:::
+        FETCH
+    :::column-end:::
+    :::column:::
+        REVOKE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        BEGIN TRANSACTION
+    :::column-end:::
+    :::column:::
+        GRANT
+    :::column-end:::
+    :::column:::
+        SELECT (See exception below.)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        CREATE
+    :::column-end:::
+    :::column:::
+        INSERT
+    :::column-end:::
+    :::column:::
+        TRUNCATE TABLE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DELETE
+    :::column-end:::
+    :::column:::
+        OPEN
+    :::column-end:::
+    :::column:::
+        UPDATE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DROP
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+
+&nbsp;
+
  When OFF, each of the preceding T-SQL statements is bounded by an unseen BEGIN TRANSACTION and an unseen COMMIT TRANSACTION statement. When OFF, we say the transaction mode is *autocommit*. If your T-SQL code visibly issues a BEGIN TRANSACTION, we say the transaction mode is *explicit*.  
   
  There are several clarifying points to understand:  

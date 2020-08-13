@@ -1,6 +1,6 @@
 ---
-title: "OLE DB API Support for Date and Time Enhancements | Microsoft Docs"
-description: "OLE DB API support for date and time enhancements"
+title: API support for date and time enhancements (OLE DB driver)
+description: Learn about the OLE DB APIs that support enhanced date/time features, including function names and descriptions.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

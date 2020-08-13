@@ -120,9 +120,8 @@ END;
   
  The behavior of various objects in both non-contained and contained databases is summarized in this table:  
   
-||||  
+|Item|Non-Contained Database|Contained Database|  
 |-|-|-|  
-|**Item**|**Non-Contained Database**|**Contained Database**|  
 |User Data (default)|DATABASE_DEFAULT|DATABASE_DEFAULT|  
 |Temp Data (default)|TempDB Collation|DATABASE_DEFAULT|  
 |Metadata|DATABASE_DEFAULT / CATALOG_DEFAULT|CATALOG_DEFAULT|  

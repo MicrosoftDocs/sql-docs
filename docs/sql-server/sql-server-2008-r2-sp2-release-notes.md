@@ -4,7 +4,7 @@ description: This Release Notes document describes known issues that you should 
 ms.prod: sql
 ms.technology: release-landing
 ms.custom: ""
-ms.date: "10/15/2019"
+ms.date: 07/22/2020
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -13,10 +13,10 @@ helpviewer_keywords:
 ms.assetid: e2bd3de7-674c-4ea7-8d53-bb40bba86fae
 author: rothja
 ms.author: jroth
-monikerRange: "= sql-server-2014 || = sqlallproducts-allversions"
+monikerRange: "= sql-server-2016 || = sqlallproducts-allversions"
 ---
 # SQL Server 2008 R2 SP2 Release Notes
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 This Release Notes document describes known issues that you should read about before you install or troubleshoot Microsoft SQL Server 2008 R2 Service Pack 2. This Release Notes document applies to all editions of SQL Server 2008 R2 SP2 and is available online only. It is updated periodically.  
   
 ## 1.0 What's New in Service Pack 2  

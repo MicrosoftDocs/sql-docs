@@ -1,6 +1,6 @@
 ---
 title: Plot a histogram for data exploration with Python
-description: Learn how to create a histogram to visualize data 
+description: Learn how to create a histogram to visualize data using Python.
 author: cawrites
 ms.author: chadam
 ms.date: 07/14/2020
@@ -11,7 +11,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 ---
 
 # Plot histograms in Python 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
+[!INCLUDE[SQL Server SQL DB SQL MI](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This article describes how to plot data using the Python package [pandas'.hist()](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.hist.html). A SQL database is the source used to visualize the histogram data intervals that have consecutive, non-overlapping values.
 
@@ -33,21 +33,9 @@ This article describes how to plot data using the Python package [pandas'.hist()
 
 * Azure Data Studio. For how to install, see [Azure Data Studio](../../azure-data-studio/what-is.md).
 
-## Restore the sample database
+* [Restore sample DW database](../../samples/adventureworks-install-configure.md) to get sample data used in this article.
 
-The sample database used in this article has been saved to a **.bak** database backup file for you to download and use.
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=azuresqldb-current||=sqlallproducts-allversions"
-1. Follow the instructions in [AdventureWorksDW sample databases](../../samples/adventureworks-install-configure.md#download-bak-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
-1. Follow the directions in [Restore a database from a backup file](../../azure-data-studio/tutorial-backup-restore-sql-server.md#restore-a-database-from-a-backup-file) in Azure Data Studio, using these details:
-   - Import from the **AdventureWorksDW.bak** file - you downloaded.
-   - Name the target database "AdventureWorks".
-::: moniker-end   
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-1. Follow the instructions in [AdventureWorksDW sample databases](../../samples/adventureworks-install-configure.md#download-bak-files) to download the correct OLTP version of the AdventureWorks file and restore it as a database. This database will be used as a datasource.
-1. Follow the directions in [Restore a database to a Managed Instance](/azure/sql-database/sql-database-managed-instance-get-started-restore) in SQL Server Management Studio, using these details:
-   - Import from the **AdventureWorksDW.bak** file - you downloaded.
-   - Name the target database "AdventureWorks".
-::: moniker-end
+## Verify restored Database
 
 You can verify that the restored database exists by querying the **Person.CountryRegion** table:
 ```sql
@@ -57,24 +45,25 @@ SELECT * FROM Person.CountryRegion;
   
 ## Install Python packages
 
-Install the following Python packages using [Azure Data Studio notebook with a Python kernel](../../azure-data-studio/notebooks-tutorial-python-kernel.md).
+[Download and Install Azure Data Studio](../../azure-data-studio/download-azure-data-studio.md).
 
+Install the following Python packages:
   * pyodbc
   * pandas
 
-To install these packages:
-1. In your Azure Data Studio notebook, select **Manage Packages**.
-2. In the **Manage Packages** pane, select the **Add new** tab.
-3. For each of the following packages, enter the package name, click **Search**, then click **Install**.
+  To install these packages:
 
-As an alternative, you can open a **Command Prompt**, change to the installation path for the version of Python you use in Azure Data Studio (for example, `cd %LocalAppData%\Programs\Python\Python37-32`), then run `pip install` for each package.
+  1. In your Azure Data Studio notebook, select **Manage Packages**.
+  2. In the **Manage Packages** pane, select the **Add new** tab.
+  3. For each of the following packages, enter the package name, click **Search**, then click **Install**.
 
-## Plot histogram 
+## Plot histogram
 
 The distributed data displayed in the histogram is based on a SQL query from AdventureWorksDW. The histogram visualizes data and the frequency of data values. 
 Edit the connection string variables: 'server', 'database', 'username', and 'password' to connect to SQL database.
-   
+
 To create a new notebook:
+
 1. In Azure Data Studio, select **File**, select **New Notebook**.
 2. In the notebook, select kernel **Python3**, select the **+code**.
 3. Paste code in notebook, select **Run All**.

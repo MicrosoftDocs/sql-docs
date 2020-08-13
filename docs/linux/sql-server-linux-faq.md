@@ -1,6 +1,6 @@
 ---
 title:  SQL Server on Linux FAQ
-description: This article provides answers to frequently asked questions about SQL Server running on Linux.
+description: This article provides answers to frequently asked questions (FAQ) about SQL Server running on Linux.
 author: VanMSFT 
 ms.author: vanto
 ms.date: 10/23/2019
@@ -158,5 +158,9 @@ The following sections provide common questions and answers for SQL Server runni
 1. **Can I change the ownership of SQL Server files and directories from the installed mssql account and group?**
 
    We do not support changing the ownership of SQL Server directory and files from the default installation. The mssql account and group is specifically used for SQL Server and has no interactive login access.
-
+   
+ 1. **Is Symbolic links supported for SQL Server data and log directories?** 
+    
+    No, symbolic links are not supported for SQL Server data and log directories. To change the default data and log directories, see [Change the default data or log directory location](sql-server-linux-configure-mssql-conf.md#datadir).
+    
 [!INCLUDE[Get Help Options](../includes/paragraph-content/get-help-options.md)]

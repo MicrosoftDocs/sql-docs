@@ -101,10 +101,14 @@ In addition to the SET options and deterministic function requirements, the foll
 
 - The view must be created by using the `WITH SCHEMABINDING` option.
 - The view must reference only base tables that are in the same database as the view. The view cannot reference other views.
+
+- If `GROUP BY` is present, the VIEW definition must contain `COUNT_BIG(*)` and must not contain `HAVING`. These `GROUP BY` restrictions are applicable only to the indexed view definition. A query can use an indexed view in its execution plan even if it does not satisfy these `GROUP BY` restrictions.
+- If the view definition contains a `GROUP BY` clause, the key of the unique clustered index can reference only the columns specified in the `GROUP BY` clause.
+
 - The SELECT statement in the view definition must not contain the following Transact-SQL elements:
 
-   ||||
-   |-|-|-|
+   | Transact-SQL elements | (continued) | (continued) |
+   | --------------------- | ----------- | ----------- |
    |`COUNT`|ROWSET functions (`OPENDATASOURCE`, `OPENQUERY`, `OPENROWSET`, AND `OPENXML`)|`OUTER` joins (`LEFT`, `RIGHT`, or `FULL`)|
    |Derived table (defined by specifying a `SELECT` statement in the `FROM` clause)|Self-joins|Specifying columns by using `SELECT *` or `SELECT <table_name>.*`|
    |`DISTINCT`|`STDEV`, `STDEVP`, `VAR`, `VARP`, or `AVG`|Common table expression (CTE)|
@@ -115,15 +119,11 @@ In addition to the SET options and deterministic function requirements, the foll
    |Table variables|`OUTER APPLY` or `CROSS APPLY`|`PIVOT`, `UNPIVOT`|
    |Sparse column sets|Inline (TVF) or multi-statement table-valued functions (MSTVF)|`OFFSET`|
    |`CHECKSUM_AGG`|||
-   |&nbsp;|&nbsp;|&nbsp;|
-  
-    <sup>1</sup> The indexed view can contain **float** columns; however, such columns cannot be included in the clustered index key.
 
-- If `GROUP BY` is present, the VIEW definition must contain `COUNT_BIG(*)` and must not contain `HAVING`. These `GROUP BY` restrictions are applicable only to the indexed view definition. A query can use an indexed view in its execution plan even if it does not satisfy these `GROUP BY` restrictions.
-- If the view definition contains a `GROUP BY` clause, the key of the unique clustered index can reference only the columns specified in the `GROUP BY` clause.
+   <sup>1</sup> The indexed view can contain **float** columns; however, such columns cannot be included in the clustered index key.
 
-> [!IMPORTANT]
-> Indexed views are not supported on top of temporal queries (queries that use `FOR SYSTEM_TIME` clause).
+   > [!IMPORTANT]
+   > Indexed views are not supported on top of temporal queries (queries that use `FOR SYSTEM_TIME` clause).
 
 ### <a name="Recommendations"></a> Recommendations
 

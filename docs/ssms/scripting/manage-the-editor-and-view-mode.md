@@ -1,5 +1,6 @@
 ---
 title: "Manage the Editor and View Mode"
+description: "Learn how to select either of two view modes of SQL Server Management Studio: Tabbed Documents mode and Multiple Document Interface mode. Learn also about split views, word wrap, Virtual Space mode, displaying line numbers, Full Screen mode, and Auto Hide All." 
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql

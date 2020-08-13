@@ -1,6 +1,6 @@
 ---
 title: "Using Encryption Without Validation | Microsoft Docs"
-description: "Using encryption without validation"
+description: Learn about encryption without validation for SQL Server connections. The OLE DB Driver for SQL Server supports encryption without validation.
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql

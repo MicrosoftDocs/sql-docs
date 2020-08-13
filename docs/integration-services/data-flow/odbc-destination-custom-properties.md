@@ -13,7 +13,7 @@ ms.author: chugu
 ---
 # ODBC Destination Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The following table describes the custom properties of the ODBC destination. All properties can be set from SSIS property expressions.  

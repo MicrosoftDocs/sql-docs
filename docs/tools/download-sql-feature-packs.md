@@ -38,8 +38,8 @@ This article provides a brief explanation of the various downloads and stand-alo
 | Feature | Description |
 |----|-----|
 | [Command Line Utilities for SQL Server](https://www.microsoft.com/download/details.aspx?id=52680) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
-| [Drivers for PHP for Microsoft SQL Server](https://go.microsoft.com/fwlink/?LinkID=239640) | The Microsoft Drivers for PHP for SQL Server are PHP 5 extensions that allow for the reading and writing of SQL Server data from within PHP scripts. |
-| [JDBC Drivers for Microsoft SQL Server®](https://www.microsoft.com/download/details.aspx?displaylang=en&id=11774) | The Microsoft JDBC Driver for SQL Server provides access to SQL Server from any Java application, application server, or Java-enabled applet.|
+| [Drivers for PHP for SQL Server](https://aka.ms/downloadmsphpsql) | The Microsoft Drivers for PHP for SQL Server are PHP extensions that allow for the reading and writing of SQL Server data from within PHP scripts. |
+| [JDBC Driver for SQL Server](https://aka.ms/downloadmssqljdbc) | The Microsoft JDBC Driver for SQL Server provides access to SQL Server from any Java application, application server, or Java-enabled applet.|
 | [SQL Server Data-Tier Application Framework](https://www.microsoft.com/download/details.aspx?id=56508) | The SQL Server Data-tier Application (DAC) framework is a component based on the .NET Framework that provides application lifecycle services for database development and management. |
 | [SQL Server Semantic Language Statistics](https://docs.microsoft.com/sql/relational-databases/search/install-and-configure-semantic-search) | The Semantic Language Statistics Database is a required component for the Statistical Semantic Search feature in Microsoft SQL Server. |
 | [SQL Server Shared Management Objects](https://docs.microsoft.com/sql/relational-databases/server-management-objects-smo/sql-server-management-objects-smo-programming-guide) | SQL Server Management Objects (SMO) is a .NET Framework object model that enables software developers to create client-side applications to manage and administer SQL Server objects and services. |
@@ -53,7 +53,7 @@ This article provides a brief explanation of the various downloads and stand-alo
 |----|-----|
 | [Command Line Utilities for SQL Server](https://www.microsoft.com/download/details.aspx?id=52680) | The SQLCMD utility allows users to connect to, send Transact-SQL batches from, and output rowset information from SQL Server instances. |
 | [Remote Blob Store](https://go.microsoft.com/fwlink/?linkid=2109005) | The SQL Server Remote Blob Store is a method for storing blobs of unstructured data in an external Content Addressable data store. The component consists of a client-side DLL that is linked into a user application, and a set of stored procedures to be installed on SQL Server. |
-| [SQL Server Upgrade Advisor](https://docs.microsoft.com/sql/sql-server/install/how-to-install-upgrade-advisor) | Microsoft Upgrade Advisor analyzes instances of SQL Server in preparation for upgrading to SQL Server. |
+| [SQL Server Upgrade Advisor](https://docs.microsoft.com/sql/database-engine/install-windows/supported-version-and-edition-upgrades-version-15) | Microsoft Upgrade Advisor analyzes instances of SQL Server in preparation for upgrading to SQL Server. |
 |||
 
 ## Integration Services

@@ -52,7 +52,9 @@ DBCC CHECKFILEGROUP
 ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *filegroup_name*  
  Is the name of the filegroup in the current database for which to check table allocation and structural integrity. If not specified, or if 0 is specified, the default is the primary filegroup. Filegroup names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
  *filegroup_name* cannot be a FILESTREAM filegroup.  

@@ -12,7 +12,7 @@ ms.author: chugu
 ---
 # Generating Dump Files for Package Execution
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 In [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], you can create debug dump files that provide information about the execution of a package. The information in these files can help you with troubleshooting package execution issues.  
   

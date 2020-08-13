@@ -22,7 +22,7 @@ manager: cgronlun
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # sys.dm_resource_governor_external_resource_pools (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Returns information about the current external resource pool state, the current configuration of resource pools, and resource pool statistics. 
   

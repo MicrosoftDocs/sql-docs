@@ -10,7 +10,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # Cluster (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns the cluster that is most likely to contain the input case.  
   

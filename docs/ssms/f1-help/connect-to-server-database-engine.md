@@ -1,8 +1,7 @@
 ---
 title: Connect to Server (Database Engine)
 ms.prod: sql
-ms.prod_service: "sql-tools"
-ms.reviewer: ""
+ms.prod_service: sql-tools
 ms.technology: ssms
 ms.topic: conceptual
 f1_keywords: 
@@ -15,6 +14,7 @@ f1_keywords:
 ms.assetid: ee9017b4-8a19-4360-9003-9e6484082d41
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 04/07/2020
 ---

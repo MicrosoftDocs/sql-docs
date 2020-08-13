@@ -1,6 +1,6 @@
 ---
-title: "Establishing a Connection to a Data Source | Microsoft Docs"
-description: "Establishing a connection to a data source using OLE DB Driver for SQL Server"
+title: "Establish connection to data source (OLE DB driver) | Microsoft Docs"
+description: Learn how a consumer establishes a connection to a data source by using OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

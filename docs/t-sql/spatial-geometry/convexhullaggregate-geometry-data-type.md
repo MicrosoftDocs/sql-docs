@@ -27,7 +27,9 @@ Returns a convex hull for a given set of **geometry** objects.
 ConvexHullAggregate ( geometry_operand )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *geometry_operand*  
  Is a **geometry** type table column that represents a set of geometry objects.  
   

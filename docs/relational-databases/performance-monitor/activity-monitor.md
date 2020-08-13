@@ -1,5 +1,6 @@
 ---
 title: "Activity Monitor | Microsoft Docs"
+description: Learn how to use Activity Monitor to display information about SQL Server processes and how these processes affect the current instance of SQL Server.
 ms.custom: ""
 ms.date: "04/07/2019"
 ms.prod: sql
@@ -30,7 +31,7 @@ For columns included in the **Processes**, **Resource Waits**, **Data File I/O**
 
 ## More information  
    
-|||  
+|Description|Topic|  
 |-|-|  
 |Describes how to open Activity Monitor and how to set the Activity Monitor refresh interval.|[Open Activity Monitor &#40;SQL Server Management Studio&#41;](../../relational-databases/performance-monitor/open-activity-monitor-sql-server-management-studio.md)|  
 |Links to topics for server performance and activity monitoring.|[Server Performance and Activity Monitoring](../../relational-databases/performance/server-performance-and-activity-monitoring.md)|  

@@ -30,7 +30,9 @@ Returns a **geometryMultiPolygon** instance from an Open Geospatial Consortium (
 STMPolyFromWKB ( 'WKB_multipolygon' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *WKB_multipolygon*  
  Is the WKB representation of the **geometryMultiPolygon** instance you wish to return. *WKB_multipolygon* is a **varbinary(max)** expression.  
   

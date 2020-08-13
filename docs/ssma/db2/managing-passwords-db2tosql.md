@@ -7,8 +7,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 56d546e3-8747-4169-aace-693302667e94
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Managing Passwords (DB2ToSQL)
 This section is about securing database passwords and the procedure to import or export them across servers:  
@@ -40,24 +40,28 @@ Specify a valid password using one of the following three methods:
             
             Example 1:
             
-                Specify password
-                C:\SSMA\SSMAforDB2Console.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml"
-                
-                Enter password for server_id 'XXX_1': xxxxxxx
-                
-                Re-enter password for server_id 'XXX_1': xxxxxxx
+            ```console
+            Specify password
+            C:\SSMA\SSMAforDB2Console.EXE -securepassword -add all -s "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\AssessmentReportGenerationSample.xml" -v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml"
+            
+            Enter password for server_id 'XXX_1': xxxxxxx
+            
+            Re-enter password for server_id 'XXX_1': xxxxxxx
+            ```
             
             Example 2:
             
-                C:\SSMA\SSMAforDB2Console.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml" -o
-                
-                Enter password for server_id 'source_1': xxxxxxx
-                
-                Re-enter password for server_id 'source_1': xxxxxxx
-                
-                Enter password for server_id 'target_1': xxxxxxx
-                
-                Re-enter password for server_id 'target _1': xxxxxxx  
+            ```console
+            C:\SSMA\SSMAforDB2Console.EXE -securepassword -add "source_1,target_1" -c "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ServersConnectionFileSample.xml" - v "D:\Program Files\Microsoft SQL Server Migration Assistant for DB2\Sample Console Scripts\ VariableValueFileSample.xml" -o
+            
+            Enter password for server_id 'source_1': xxxxxxx
+            
+            Re-enter password for server_id 'source_1': xxxxxxx
+            
+            Enter password for server_id 'target_1': xxxxxxx
+            
+            Re-enter password for server_id 'target _1': xxxxxxx  
+            ```
     
     -   **Removing Encrypted Passwords**  
   

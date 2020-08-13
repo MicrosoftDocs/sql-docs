@@ -1,6 +1,6 @@
 ---
-title: "IRowsetFastLoad (OLE DB) | Microsoft Docs"
-description: "IRowsetFastLoad (OLE DB)"
+title: "IRowsetFastLoad (OLE DB driver) | Microsoft Docs"
+description: OLE DB Driver for SQL Server consumers can use the IRowsetFastLoad interface to rapidly add data to an existing SQL Server table.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

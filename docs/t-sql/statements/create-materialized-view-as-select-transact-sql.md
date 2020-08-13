@@ -40,7 +40,7 @@ monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 This article explains the CREATE MATERIALIZED VIEW AS SELECT T-SQL statement in Azure SQL Data Warehouse for developing solutions. The article also provides code examples.
 
@@ -136,7 +136,8 @@ To find out if a SQL statement can benefit from a new materialized view, run the
 
 ## Permissions
 
-Requires CREATE VIEW permission in the database and ALTER permission on the schema in which the view is being created. 
+Requires 1) REFERENCES and CREATE VIEW permission OR 2) CONTROL permission on the schema in which the view is being created. 
+
   
 ## See also
 

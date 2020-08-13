@@ -74,4 +74,4 @@ To install the extension pack:
 ## See also
 
 - [Installing SSMA for MySQL Client](../../ssma/mysql/installing-ssma-for-mysql-client-mysqltosql.md)
-- [Migrating MySQL Databases to SQL Server - Azure SQL DB](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)
+- [Migrating MySQL Databases to SQL Server - Azure SQL Database](../../ssma/mysql/migrating-mysql-databases-to-sql-server-azure-sql-db-mysqltosql.md)

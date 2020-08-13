@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Install SQL Server machine learning R and Python on computers with no internet access
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 By default, installers connect to Microsoft download sites to get required and updated components for machine learning on SQL Server. If firewall constraints prevent the installer from reaching these sites, you can use an internet-connected device to download files, transfer files to an offline server, and then run setup.
 
@@ -210,4 +210,4 @@ An initial offline installation of SQL Server R Services requires the same confi
 
 ## Next steps
 
-For help with any unfamiliar messages or log entries, see [Upgrade and installation FAQ - Machine Learning Services](../upgrade-and-installation-faq-sql-server-r-services.md).
+For help with any unfamiliar messages or log entries, see [Upgrade and installation FAQ - Machine Learning Services](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md).

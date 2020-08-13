@@ -48,9 +48,6 @@ ALTER SECURITY POLICY schema_name.security_policy_name
     [ { AFTER { INSERT | UPDATE } }   
     | { BEFORE { UPDATE | DELETE } } ]  
 ```  
-  
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 security_policy_name  
@@ -85,7 +82,7 @@ Indicates the security policy shouldn't be executed when a replication agent mod
 table_schema_name.table_name  
 Is the target table for the applied security predicate. Multiple disabled security policies can target a single table, but only one can be enabled at any given time.  
   
-## Remarks  
+## Remarks
 The ALTER SECURITY POLICY statement is in a transaction's scope. If the transaction is rolled back, the statement is also rolled back.  
   
 When using predicate functions with memory-optimized tables, security policies must include **SCHEMABINDING** and use the **WITH NATIVE_COMPILATION** compilation hint. The SCHEMABINDING argument can't be changed with the ALTER statement because it applies to all predicates. To change schema binding, you must drop and recreate the security policy.  

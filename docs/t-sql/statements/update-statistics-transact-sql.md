@@ -80,7 +80,9 @@ UPDATE STATISTICS [ schema_name . ] table_name
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table_or_indexed_view_name*  
  Is the name of the table or indexed view that contains the statistics object.  
   
@@ -207,23 +209,23 @@ Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/
  The following syntax is not supported by PDW / SQL Data Warehouse  
   
 ```syntaxsql
-update statistics t1 (a,b);   
+UPDATE STATISTICS t1 (a,b);   
 ```  
   
 ```sql  
-update statistics t1 (a) with sample 10 rows;  
+UPDATE STATISTICS t1 (a) WITH SAMPLE 10 ROWS;  
 ```  
   
 ```sql  
-update statistics t1 (a) with NORECOMPUTE;  
+UPDATE STATISTICS t1 (a) WITH NORECOMPUTE;  
 ```  
   
 ```sql  
-update statistics t1 (a) with INCREMENTAL=ON;  
+UPDATE STATISTICS t1 (a) WITH INCREMENTAL = ON;  
 ```  
   
 ```sql  
-update statistics t1 (a) with stats_stream = 0x01;  
+UPDATE STATISTICS t1 (a) WITH stats_stream = 0x01;  
 ```  
   
 ## Permissions  

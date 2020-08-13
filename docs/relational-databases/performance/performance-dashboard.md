@@ -1,5 +1,6 @@
 ---
 title: "Performance Dashboard | Microsoft Docs"
+description: Learn about SQL Server Management Studio Performance Dashboard, which provides fast insight into SQL Server and Azure SQL Managed Instance.
 ms.custom: ""
 ms.date: 12/14/2019
 ms.prod: sql

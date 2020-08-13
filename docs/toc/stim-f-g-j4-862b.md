@@ -1,6 +1,6 @@
 ---
-title: Initialize a Subscription with a Snapshot | Microsoft Docs
-ms.date: 02/29/2020
+title: Initialize a Subscription with a Snapshot (862b) | Microsoft Docs
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: replication
 ms.topic: conceptual
@@ -12,8 +12,8 @@ ROBOTS: NOINDEX, NOFOLLOW
 ms.localizationpriority: "null"
 localization_priority: "None"
 ---
-# Initialize a Subscription with a Snapshot
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../includes/applies-to-version/sql-asdbmi.md)]
+# Initialize a Subscription with a Snapshot (862b)
+[!INCLUDE[sql-asdbmi](../includes/applies-to-version/sql-asdbmi.md)]
   After a publication has been created, an initial snapshot is typically created and copied to the snapshot folder (this occurs by default for merge publications created with the New Publication Wizard). It is then applied to the Subscriber by the Distribution Agent (for transactional and snapshot publications) or the Merge Agent (for merge publications) during the initial synchronization of the subscription. The snapshot process depends on the type of publication:  
   
 -   If the snapshot is for a snapshot publication, a transactional publication, or a merge publication that doesn't use parameterized filters, the snapshot contains the schema and data in bulk copy program (bcp) files, as well as constraints, extended properties, indexes, triggers, and the system tables necessary for replication. For more information about creating and applying the snapshot, see [Create and Apply the Snapshot](../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  

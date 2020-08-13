@@ -1,6 +1,6 @@
 ---
-title: "Enumerate OLE DB Data Sources (OLE DB) | Microsoft Docs"
-description: "Enumerate OLE DB data sources using MSOLEDBSQL enumerator"
+title: "Enumerate OLE DB data sources (OLE DB driver) | Microsoft Docs"
+description: Learn how to use the MSOLEDBSQL enumerator to list the OLE DB Driver for SQL Server data sources available with this example.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -46,7 +46,7 @@ ms.author: pelopes
 6.  Retrieve data from the rowset's copy of the row by calling **IRowset::GetData**, and process it.  
   
 ## Example  
- Compile with ole32.lib and execute the following C++ code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name" , where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains msoledbsql.h.  
+ Compile with ole32.lib and execute the following C++ code listing. This application connects to your computer's default [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. On some Windows operating systems, you will need to change (localhost) or (local) to the name of your [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance. To connect to a named instance, change the connection string from L"(local)" to L"(local)\\\name", where name is the named instance. By default, [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Express installs to a named instance. Make sure your INCLUDE environment variable includes the directory that contains msoledbsql.h.  
   
 ```  
 // compile with: ole32.lib  

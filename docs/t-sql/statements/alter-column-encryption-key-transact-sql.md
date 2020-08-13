@@ -38,9 +38,6 @@ ALTER COLUMN ENCRYPTION KEY key_name
         [, ALGORITHM = 'algorithm_name' , ENCRYPTED_VALUE =  varbinary_literal ]   
     ) [;]  
 ```  
-  
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
  *key_name*  
@@ -57,8 +54,8 @@ ALTER COLUMN ENCRYPTION KEY key_name
   
 > [!WARNING]  
 >  Never pass plaintext CEK values in this statement. Doing so will comprise the benefit of this feature.  
-  
-## Remarks  
+
+## Remarks
 Typically, a column encryption key is created with just one encrypted value. When a column master key needs to be rotated (the current column master key needs to be replaced with the new column master key), you can add a new value of the column encryption key, encrypted with the new column master key. This workflow allows you to ensure client applications can access data encrypted with the column encryption key, while the new column master key is being made available to client applications. An Always Encrypted enabled driver in a client application that does not have access to the new master key, will be able to use the column encryption key value encrypted with the old column master key to access sensitive data. The encryption algorithms, Always Encrypted supports, require the plaintext value to have 256 bits. 
  
 It is recommended you use tools, such as SQL Server Management Studio (SSMS) or PowerShell to rotate column master keys. See [Rotate Always Encrypted keys using SQL Server Management Studio](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-ssms.md) and [Rotate Always Encrypted keys using PowerShell](../../relational-databases/security/encryption/rotate-always-encrypted-keys-using-powershell.md).

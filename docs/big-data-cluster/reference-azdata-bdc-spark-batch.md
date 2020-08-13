@@ -1,7 +1,7 @@
 ---
 title: azdata bdc spark batch reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc spark batch commands.
+description: Use this reference article to understand SQL commands in the azdata tool, specifically the bdc spark batch commands. 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -15,10 +15,10 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md)
+The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
-|     |     |
+| Command | Description |
 | --- | --- |
 [azdata bdc spark batch create](#azdata-bdc-spark-batch-create) | Create a new Spark batch.
 [azdata bdc spark batch list](#azdata-bdc-spark-batch-list) | List all the batches in Spark.

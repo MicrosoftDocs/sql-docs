@@ -30,7 +30,9 @@ Returns an object that represents the union of a **geometry** instance with anot
 .STUnion ( other_geometry )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geometry*  
  Is another **geometry** instance to form a union with the instance on which `STUnion()` is being invoked.  
   

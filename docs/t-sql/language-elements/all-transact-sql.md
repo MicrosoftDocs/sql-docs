@@ -33,11 +33,13 @@ ms.author: jroth
 scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *scalar_expression*  
  Is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
   
- { = | <> | != | > | >= | !> | < | <= | !< }  
+ { = \| <> \| != \| > \| >= \| !> \| < \| <= \| !< }  
  Is a comparison operator.  
   
  *subquery*  

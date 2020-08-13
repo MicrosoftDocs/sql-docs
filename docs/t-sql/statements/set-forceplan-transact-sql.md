@@ -38,7 +38,9 @@ ms.author: carlrab
 SET FORCEPLAN { ON | OFF }  
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  SET FORCEPLAN essentially overrides the logic used by the query optimizer to process a [!INCLUDE[tsql](../../includes/tsql-md.md)] SELECT statement. The data returned by the SELECT statement is the same regardless of this setting. The only difference is the way in which [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processes the tables to satisfy the query.  
   
  Query optimizer hints can also be used in queries to affect how [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] processes the SELECT statement.  

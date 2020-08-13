@@ -1,5 +1,5 @@
 ---
-title: "COMMIT WORK (Transact-SQL) | Microsoft Docs"
+title: COMMIT WORK (Transact-SQL)
 ms.custom: ""
 ms.date: "06/10/2016"
 ms.prod: sql
@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "marking end of transactions [SQL Server]"
   - "COMMIT WORK statement"
 ms.assetid: 4de76f33-399e-4912-a617-6eb6c560a058
-author: rothja
-ms.author: jroth
+author: markingmyname
+ms.author: maghan
 ---
 # COMMIT WORK (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
@@ -30,14 +30,15 @@ ms.author: jroth
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
+## Syntax
   
 ```syntaxsql
-  
 COMMIT [ WORK ]  
 [ ; ]  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Remarks  
  This statement functions identically to COMMIT TRANSACTION, except COMMIT TRANSACTION accepts a user-defined transaction name. This COMMIT syntax, with or without specifying the optional keyword WORK, is compatible with SQL-92.  
   

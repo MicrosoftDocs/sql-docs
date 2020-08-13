@@ -9,7 +9,7 @@ ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
-monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Change the default language runtime version
 

@@ -28,7 +28,7 @@ If **Windows Authentication mode** is selected during installation, the sa login
 
 ## Before you begin
 
-The sa account is a well-known [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account and it is often targeted by malicious users. Do not enable the sa account unless your application requires it. It is very important that you use a strong password for the sa login.
+The sa account is a well known [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account and it is often targeted by malicious users. Do not enable the sa account unless your application requires it. It is important that you use a strong password for the sa login.
 
 ## Change authentication mode with SSMS
 
@@ -42,7 +42,7 @@ The sa account is a well-known [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 ## Enable sa login
 
-You can enable the **sa** log in with SSMS or T-SQL.
+You can enable the **sa** login with SSMS or T-SQL.
 
 ### Use SSMS
 

@@ -64,7 +64,9 @@ Each SQL instance uses one of these versions as the default version of R. You ca
 
   If you don't specify /rhome, the path used is the path under which **RegisterRext.exe** is located.
 
-### Example
+### Examples
+
+Below are examples on how to change the R runtime version in SQL Server 2016 and 2017.
 
 #### Change R runtime version in SQL Server 2016
 

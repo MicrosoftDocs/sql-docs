@@ -27,8 +27,7 @@ This **geography** data type method supports **FullGlobe** instances or spatial 
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 .ReorientObject (geography)  
 ```  
   

@@ -47,7 +47,9 @@ SET ANSI_NULLS { ON | OFF }
 SET ANSI_NULLS ON
 ```
 
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
 When ANSI_NULLS is ON, a SELECT statement that uses WHERE *column_name* = **NULL** returns zero rows even if there are null values in *column_name*. A SELECT statement that uses WHERE *column_name* <> **NULL** returns zero rows even if there are nonnull values in *column_name*.  
   
 When ANSI_NULLS is OFF, the Equals (=) and Not Equal To (<>) comparison operators do not follow the ISO standard. A SELECT statement that uses WHERE *column_name* = **NULL** returns the rows that have null values in *column_name*. A SELECT statement that uses WHERE *column_name* <> **NULL** returns the rows that have nonnull values in the column. Also, a SELECT statement that uses WHERE *column_name* <> *XYZ_value* returns all rows that are not *XYZ_value* and that are not NULL.  

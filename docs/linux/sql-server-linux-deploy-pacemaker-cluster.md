@@ -127,7 +127,7 @@ This section documents how to create and configure the cluster for each distribu
 2. Create the cluster
    
    ```bash
-   Test
+   sudo pcs cluster setup --name <PMClusterName Nodelist> --start --all --enable
    ```
    
    where *PMClusterName* is the name assigned to the Pacemaker cluster and *Nodelist* is the list of names of the nodes separated by a space.

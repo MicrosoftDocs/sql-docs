@@ -66,7 +66,7 @@ Each SQL instance uses one of these versions as the default version of R. You ca
 
 ### Example
 
-### Change R runtime version in SQL Server 2016
+#### Change R runtime version in SQL Server 2016
 
 For example, to configure **R 3.5** as the default version of R for the instance MSSQLSERVER01 on SQL Server 2016:
 
@@ -76,7 +76,7 @@ cd "C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES.3.5\l
 .\RegisterRext.exe /configure /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES.3.5" /instance:MSSQLSERVER01
 ```
 
-### Change R runtime version in SQL Server 2017
+#### Change R runtime version in SQL Server 2017
 
 For example, to configure **R 3.5** as the default version of R for the instance MSSQLSERVER01 on SQL Server 2017:
 

@@ -15,22 +15,22 @@ monikerRange: "=sql-server-2016||=sqlallproducts-allversions"
 
 [!INCLUDE[SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-This article describes how to change the default version of R or Python used by a SQL instance in [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md) or [SQL Server 2016 R Services](../r/sql-server-r-services.md).
+This article describes how to change the default version of R or Python used by a SQL instance in [SQL Server 2016 R Services](../r/sql-server-r-services.md) or [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md).
 
-The following lists the versions of the R and Python runtime that are included in SQL Server 2017 Machine Learning Services and  SQL Server 2016 R Services.
+The following lists the versions of the R and Python runtime that are included in the different SQL Server versions.
 
-| SQL Server Version | R runtime versions | Python runtime version |
+| SQL Server version | Cumulative Update | R runtime versions | Python runtime version |
 |-|-|-|
-| SQL Server 2016 RTM - SP2 CU13 | 3.2.2 | Not available |
-| SQL Server 2016 SP2 CU14 and later | 3.2.2 and 3.5.2 | Not available |
-| SQL Server 2017 RTM - CU21 | 3.3.3 | 3.5.2 |
-| SQL Server 2017 CU22 and later | 3.3.3 and 3.5.2 | 3.5.2 and 3.7.2 |
+| SQL Server 2016 R Services | RTM - SP2 CU13 | 3.2.2 | Not available |
+| SQL Server 2016 R Services | SP2 CU14 and later | 3.2.2 and 3.5.2 | Not available |
+| SQL Server 2017 Machine Learning Services | RTM - CU21 | 3.3.3 | 3.5.2 |
+| SQL Server 2017 Machine Learning Services | CU22 and later | 3.3.3 and 3.5.2 | 3.5.2 and 3.7.2 |
 
 ## Prerequisites
 
 You need to install a Cumulative Update (CU) to change the default R or Python language runtime version:
 
-- **SQL Server 2016 R Services:** Cumulative Update (CU) 14 or later for Services Pack (SP) 2
+- **SQL Server 2016 R Services:** Services Pack (SP) 2 Cumulative Update (CU) 14 or later
 - **SQL Server 2017 Machine Learning Services:** Cumulative Update (CU) 22 or later
 
 To download the latest Cumulative Update, see the [Latest updates for Microsoft SQL Server](../../database-engine/install-windows/latest-updates-for-microsoft-sql-server.md).
@@ -38,7 +38,55 @@ To download the latest Cumulative Update, see the [Latest updates for Microsoft 
 > [!NOTE]
 > If you slipstream the Cumulative Update with a new installation of SQL Server, only the newest versions of the R and Python runtime will be installed.
 
-## Change runtime version in SQL Server 2017
+## Change runtime version
+
+## Change R runtime version
+
+If you have installed one of the above Cumulative Updates, you may have multiple versions of R in a SQL instance. Each version is contained in a subfolder of the instance folder with the name `R_SERVICES.`*&lt;major&gt;*.*&lt;minor&gt;* (the folder from the original installation may not have a version number appended to the folder name).
+
+If you install a CU containing R 3.5 on SQL Server 2016, the new `R_SERVICES` folder is (for a default instance):
+
+`C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES.3.5`
+
+If you install a CU containing R 3.5 on SQL Server 2017, the new `R_SERVICES` folder is (for a default instance):
+
+`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES.3.5`
+
+Each SQL instance uses one of these versions as the default version of R. You can change the default version by using the **RegisterRext.exe** command-line utility. The utility is located under the R folder in each SQL instance:
+
+*&lt;SQL instance path&gt;*\R_SERVICES.n.n\library\RevoScaleR\rxLibs\x64\RegisterRext.exe
+
+> [!Note]
+> The functionality described in this article is available only with the copy of **RegisterRext.exe** included in SQL CUs. Don't use the copy that came with the original SQL installation.
+
+**RegisterRext.exe** accepts these command-line arguments:
+
+- `/configure` - Required, specifies that you're configuring the default R version.
+
+- `/instance:`*&lt;instance name&gt;* - Optional, the instance you want to configure. If not specified, the default instance is configured.
+
+- `/rhome:`*&lt;path to the R_SERVICES[n.n] folder&gt;* - Optional, the version you want to set as the default R version.
+
+  If you don't specify /rhome, the path used is the path under which **RegisterRext.exe** is located.
+
+For example, to configure **R 3.5** as the default version of R for the instance MSSQLSERVER01:
+
+```cmd
+cd "C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES.3.5\library\RevoScaleR\rxLibs\x64"
+
+.\RegisterRext.exe /configure /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES.3.5" /instance:MSSQLSERVER01
+```
+
+In this example, you don't need to include the `/rhome` argument since you're specifying the same folder where **RegisterRext.exe** is located.
+
+
+
+
+
+
+
+
+### Change runtime version in SQL Server 2017
 
 If you have installed CU22 or later for SQL Server 2017, you may have multiple versions of R or Python in a SQL instance. Each version is contained in a subfolder of the instance folder with the name `R_SERVICES.`*&lt;major&gt;*.*&lt;minor&gt;* or `PYTHON_SERVICES.`*&lt;major&gt;*.*&lt;minor&gt;* (the folder from the original installation may not have a version number appended to the folder name).
 
@@ -52,7 +100,7 @@ Each SQL instance uses one of these versions as the default version of R or Pyth
 *&lt;SQL instance path&gt;*`\R_SERVICES.n.n\library\RevoScaleR\rxLibs\x64\RegisterRExt.exe`  
 *&lt;SQL instance path&gt;*`\PYTHON_SERVICES.n.n\Lib\site-packages\revoscalepy\rxLibs\RegisterRExt.exe`
 
-## Change runtime version in SQL Server 2016
+### Change runtime version in SQL Server 2016
 
 If you have installed CU14 or later for SQL Server 2016 SP2, you may have multiple versions of R in a SQL instance. Each version is contained in a subfolder of the instance folder with the name `R_SERVICES.`*&lt;major&gt;*.*&lt;minor&gt;* (the folder from the original installation may not have a version number appended to the folder name).
 

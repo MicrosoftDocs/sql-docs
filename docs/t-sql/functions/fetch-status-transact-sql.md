@@ -1,5 +1,5 @@
 ---
-title: "@@FETCH_STATUS (Transact-SQL) | Microsoft Docs"
+title: FETCH_STATUS (Transact-SQL)
 ms.custom: ""
 ms.date: "09/18/2017"
 ms.prod: sql
@@ -20,6 +20,7 @@ ms.assetid: 93659193-e4ff-4dfb-9043-0c4114921b91
 author: markingmyname
 ms.author: maghan
 ---
+
 # &#x40;&#x40;FETCH_STATUS (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
@@ -29,10 +30,12 @@ This function returns the status of the last cursor FETCH statement issued again
   
 ## Syntax  
   
-```  
+```syntaxsql
 @@FETCH_STATUS  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return Type  
  **integer**  
   

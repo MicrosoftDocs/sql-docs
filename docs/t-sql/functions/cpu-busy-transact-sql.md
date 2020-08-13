@@ -1,5 +1,5 @@
 ---
-title: "@@CPU_BUSY (Transact-SQL) | Microsoft Docs"
+title: CPU_BUSY (Transact-SQL)
 ms.custom: ""
 ms.date: "09/18/2017"
 ms.prod: sql
@@ -24,7 +24,9 @@ ms.assetid: 81ae0e64-79fa-4a74-9aa5-37045c4cd211
 author: markingmyname
 ms.author: maghan
 ---
+
 # &#x40;&#x40;CPU_BUSY (Transact-SQL)
+
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This function returns the amount of time that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has spent in active operation since its latest start. `@@CPU_BUSY` returns a result measured in CPU time increments, or "ticks." This value is cumulative for all CPUs, so it may exceed the actual elapsed time. To convert to microseconds, multiply by [@@TIMETICKS](./timeticks-transact-sql.md).
@@ -36,10 +38,13 @@ This function returns the amount of time that [!INCLUDE[ssNoVersion](../../inclu
   
 ## Syntax  
   
-```
+```syntaxsql
 @@CPU_BUSY  
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+
 ## Return types
 **integer**
   

@@ -143,7 +143,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 
  When creating the external table, the database attempts to connect to the external Hadoop cluster or Azure Storage Blob. If the connection fails, the command will fail and the external table will not be created. It can take a minute or more for the command to fail since the database retries the connection at least 3 times.  
 
- If CREATE EXTERNAL TABLE AS SELECT is cancelled or fails, the database will make a one-time attempt to remove any new files and folders already created on the external data source.  
+ If CREATE EXTERNAL TABLE AS SELECT is canceled or fails, the database will make a one-time attempt to remove any new files and folders already created on the external data source.  
 
  The database will report any Java errors that occur on the external data source during the data export.  
 
@@ -156,7 +156,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 
  The CETAS statement always creates a non-partitioned table, even if the source table is partitioned.  
 
- For query plans, created with EXPLAIN, the databaseuses these query plan operations for external tables:  
+ For query plans, created with EXPLAIN, the database uses these query plan operations for external tables:  
 
 -   External shuffle move  
   
@@ -172,7 +172,7 @@ CREATE EXTERNAL TABLE [ [database_name  . [ schema_name ] . ] | schema_name . ] 
 
  The database does not verify the connection to the external data source when restoring a   database backup that contains an external table. If the original source is not accessible, the metadata restore of the external table will still succeed, but SELECT operations on the external table will fail.  
 
- The database does not guarantee data consistency between the databaseand the external data. You, the customer, are solely responsible to maintain consistency between the external data and the database.  
+ The database does not guarantee data consistency between the database and the external data. You, the customer, are solely responsible to maintain consistency between the external data and the database.  
 
  Data manipulation language (DML) operations are not supported on external tables. For example, you cannot use the [!INCLUDE[tsql](../../includes/tsql-md.md)] update, insert, or delete [!INCLUDE[tsql](../../includes/tsql-md.md)]statements to modify the external data.  
 

@@ -46,6 +46,8 @@ Bulk loading has these built-in performance optimizations:
 -   **Locking Optimization:** The X lock on a row group is automatically acquired when loading data into a compressed row group. However, when bulk loading into a delta rowgroup, an X lock is acquired at rowgroup but [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] still locks the PAGE/EXTENT because X rowgroup lock is not part of locking hierarchy.  
   
 If you have a nonclustered B-tree index on a columnstore index, there is no locking or logging optimization for the index itself but the optimizations on clustered columnstore index as described above are applicable.  
+
+Please note, DML (insert, delete, update) is not a batch mode operation because it is not parallel.
   
 ## Plan bulk load sizes to minimize delta rowgroups
 Columnstore indexes perform best when most of the rows are compressed into the columnstore and not sitting in delta rowgroups. It's best to size your loads so that rows go directly to the columnstore and bypass the deltastore as much as possible.

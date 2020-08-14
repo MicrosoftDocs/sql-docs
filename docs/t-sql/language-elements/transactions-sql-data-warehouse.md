@@ -97,7 +97,7 @@ SET IMPLICIT_TRANSACTIONS { ON | OFF } [;]
   
 ### A. Using an explicit transaction  
   
-```  
+```sql  
 BEGIN TRANSACTION;  
 DELETE FROM HumanResources.JobCandidate  
     WHERE JobCandidateID = 13;  
@@ -107,8 +107,8 @@ COMMIT;
 ### B. Rolling back a transaction  
  The following example shows the effect of rolling back a transaction.  In this example, the ROLLBACK statement will roll back the INSERT statement, but the created table will still exist.  
   
-```  
-CREATE TABLE ValueTable (id int);  
+```sql  
+CREATE TABLE ValueTable (id INT);  
 BEGIN TRANSACTION;  
        INSERT INTO ValueTable VALUES(1);  
        INSERT INTO ValueTable VALUES(2);  
@@ -118,21 +118,21 @@ ROLLBACK;
 ### C. Setting AUTOCOMMIT  
  The following example sets the AUTOCOMMIT setting to `ON`.  
   
-```  
+```sql  
 SET AUTOCOMMIT ON;  
 ```  
   
  The following example sets the AUTOCOMMIT setting to `OFF`.  
   
-```  
+```sql  
 SET AUTOCOMMIT OFF;  
 ```  
   
 ### D. Using an implicit multi-statement transaction  
   
-```  
+```sql  
 SET AUTOCOMMIT OFF;  
-CREATE TABLE ValueTable (id int);  
+CREATE TABLE ValueTable (id INT);  
 INSERT INTO ValueTable VALUES(1);  
 INSERT INTO ValueTable VALUES(2);  
 COMMIT;  

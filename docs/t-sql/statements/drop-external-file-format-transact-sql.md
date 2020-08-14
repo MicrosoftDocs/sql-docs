@@ -36,7 +36,7 @@ DROP EXTERNAL FILE FORMAT external_file_format_name
 ## Metadata  
  To view a list of external file formats use the [sys.external_file_formats &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-external-file-formats-transact-sql.md) system view.  
   
-```  
+```sql  
 SELECT * FROM sys.external_file_formats;  
 ```  
   
@@ -53,7 +53,7 @@ SELECT * FROM sys.external_file_formats;
   
 ### A. Using basic syntax  
   
-```  
+```sql  
 DROP EXTERNAL FILE FORMAT myfileformat;  
 ```  
   

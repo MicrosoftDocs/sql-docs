@@ -1,6 +1,6 @@
 ---
 title: "SQL Server Login Dialog Box (OLE DB) | Microsoft Docs"
-description: "Using SQL Server Login Dialog Box"
+description: When you attempt to connect without specifying enough information, the OLE DB Driver for SQL Server prompts you with the SQL Server Login dialog box.
 ms.custom: ""
 ms.date: "08/28/2020"
 ms.prod: sql

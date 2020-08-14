@@ -30,7 +30,7 @@ You can construct your **INSERT** statement when you have visible **PERIOD** col
 
   ```sql
   -- Insert with column list and without period columns
-  INSERT INTO [dbo].[Department]0
+  INSERT INTO [dbo].[Department]
     (  [DeptID]
           , [DeptName]
           , [ManagerID]

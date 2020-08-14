@@ -3,7 +3,7 @@ title: Create a resource pool
 description: Learn how you can create and use a resource pool for managing Python and R workloads in SQL Server Machine Learning Services. 
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 02/28/2020
+ms.date: 08/06/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -17,7 +17,7 @@ Learn how you can create and use a resource pool for managing Python and R workl
 
 The process includes multiple steps:
 
-1. Review status of any existing resource pools. It is important that you understand what services are using existing resources.
+1. Review status of any existing resource pools. It's important that you understand what services are using existing resources.
 2. Modify server resource pools.
 3. Create a new resource pool for external processes.
 4. Create a classification function to identify external script requests.
@@ -27,7 +27,7 @@ The process includes multiple steps:
 
 ##  Review the status of existing resource pools
   
-1.  Use a statement such as the following to check the resources allocated to the default pool for the server.
+1.  Use a statement such as the following to check the resources assigned to the default pool for the server.
   
     ```sql
     SELECT * FROM sys.resource_governor_resource_pools WHERE name = 'default'
@@ -39,7 +39,7 @@ The process includes multiple steps:
     |-|-|-|-|-|-|-|-|-|
     |2|default|0|100|0|100|100|0|0|
 
-2.  Check the resources allocated to the default **external** resource pool.
+2.  Check the resources assigned to the default **external** resource pool.
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools WHERE name = 'default'
@@ -51,7 +51,7 @@ The process includes multiple steps:
     |-|-|-|-|-|-|
     |2|default|100|20|0|2|
  
-3.  Under these server default settings, the external runtime will probably have insufficient resources to complete most tasks. To change this, you must modify the server resource usage as follows:
+3.  Under these server default settings, the external runtime will probably have insufficient resources to complete most tasks. To improve resources, you must modify the server resource usage as follows:
   
     -   Reduce the maximum computer memory that can be used by the database engine.
   
@@ -65,7 +65,7 @@ The process includes multiple steps:
     ALTER RESOURCE POOL "default" WITH (max_memory_percent = 60);
     ```
   
-2.  Similarly, run the following statement to limit the use of memory by external processes to **40%** of total computer resources.
+2. Run the following statement to limit the use of memory by external processes to **40%** of total computer resources.
   
     ```sql
     ALTER EXTERNAL RESOURCE POOL "default" WITH (max_memory_percent = 40);
@@ -82,11 +82,11 @@ The process includes multiple steps:
 
 ## Create a user-defined external resource pool
   
-1.  Any changes to the configuration of Resource Governor are enforced across the server as a whole and affect  workloads that use the default pools for the server, as well as workloads that use the external pools.
+1.  All changes to the configuration of Resource Governor are enforced across the server as a whole. The changes affect workloads that use the default pools for the server, as well as workloads that use the external pools.
   
-     Therefore, to provide more fine-grained control over which workloads should have precedence, you can create a new user-defined external resource pool. You should also define a classification function and assign it to the external resource pool. The **EXTERNAL** keyword is new.
+     To provide more fine-grained control over which workloads should have precedence, you can create a new user-defined external resource pool. Define a classification function and assign it to the external resource pool. The **EXTERNAL** keyword is new.
   
-     Begin by creating a new *user-defined external resource pool*. In the following example, the pool is named **ds_ep**.
+     Create a new *user-defined external resource pool*. In the following example, the pool is named **ds_ep**.
   
     ```sql
     CREATE EXTERNAL RESOURCE POOL ds_ep WITH (max_memory_percent = 40);
@@ -98,13 +98,16 @@ The process includes multiple steps:
     CREATE WORKLOAD GROUP ds_wg WITH (importance = medium) USING "default", EXTERNAL "ds_ep";
     ```
   
-     Requests are assigned to the default group whenever the request cannot be classified, or if there is any other classification failure.
+     Requests are assigned to the default group whenever the request can't be classified, or if there's any other classification failure.
+
+> [!NOTE]
+> SQL Machine Learning Services 2019 for Linux does not support the ability to set CPU affinity.
   
-     For more information, see [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md) and [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md).
+For more information, see [Resource Governor Workload Group](../../relational-databases/resource-governor/resource-governor-workload-group.md) and [CREATE WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-workload-group-transact-sql.md).
   
 ## Create a classification function for machine learning
   
-A classification function examines incoming tasks and determines whether the task is one that can be run using the current resource pool. Tasks that do not meet the criteria of the classification function are assigned back to the server's default resource pool.
+A classification function examines incoming tasks. It determines whether the task is one that can be run using the current resource pool. Tasks that do not meet the criteria of the classification function are assigned back to the server's default resource pool.
   
 1. Begin by specifying that a classifier function should be used by Resource Governor to determine resource pools. You can assign a **null** as a placeholder for the classifier function.
   
@@ -143,7 +146,7 @@ A classification function examines incoming tasks and determines whether the tas
 
 ## Verify new resource pools and affinity
 
-To verify that the changes have been made, you should check the configuration of server memory and CPU for each of the workload groups associated with these instance resource pools:
+Check the server memory configuration and CPU for each of the workload groups. Verify the instance resource changes have been made, by reviewing:
 
 + the default pool for the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] server
 + the default resource pool for external processes
@@ -184,7 +187,7 @@ To verify that the changes have been made, you should check the configuration of
     SELECT * FROM sys.resource_governor_external_resource_pool_affinity;
     ```
   
-     In this case, because the pools were created with an affinity of AUTO, no information is displayed. For more information, see [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md).
+     No information will be displayed because the pools were created with an affinity of AUTO. For more information, see [sys.dm_resource_governor_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pool-affinity-transact-sql.md).
 
 ## Next steps
 

@@ -20,7 +20,7 @@ ms.author: davidph
 manager: cgronlund
 ---
 # DROP EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Deletes a Resource Governor external resource pool used to define resources for external processes. 
 

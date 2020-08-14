@@ -39,7 +39,9 @@ ms.author: carlrab
 SET STATISTICS TIME { ON | OFF }  
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  When SET STATISTICS TIME is ON, the time statistics for a statement are displayed. When OFF, the time statistics are not displayed.  
   
  The setting of SET STATISTICS TIME is set at execute or run time and not at parse time.  

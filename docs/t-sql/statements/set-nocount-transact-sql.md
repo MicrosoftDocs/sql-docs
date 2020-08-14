@@ -39,7 +39,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 SET NOCOUNT { ON | OFF }   
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  When SET NOCOUNT is ON, the count is not returned. When SET NOCOUNT is OFF, the count is returned.  
   
  The @@ROWCOUNT function is updated even when SET NOCOUNT is ON.  

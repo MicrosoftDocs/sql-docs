@@ -9,11 +9,11 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # DROP EXTERNAL LANGUAGE (Transact-SQL)  
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Deletes an existing external language.
 
@@ -39,6 +39,8 @@ To delete a language requires the privilege ALTER ANY EXTERNAL LANGUAGE. By defa
 ### Return values
 
 An informational message is returned if the statement was successful.
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Remarks
 

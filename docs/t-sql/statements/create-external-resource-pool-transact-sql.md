@@ -24,7 +24,7 @@ manager: cgronlund
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # CREATE EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Creates an external pool to define resources for external processes. A resource pool represents a subset of the physical resources (memory and CPUs) of a Database Engine instance. A Resource Governor can distribute server resources among resource pools, up to a maximum of 64 pools.
 

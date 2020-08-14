@@ -26,7 +26,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;  
@@ -63,7 +63,7 @@ sp_pdw_log_user_data_masking [ [ @masking_mode = ] value ] ;
 ## Example  
  The following example enables TDE log user data masking on the appliance.  
   
-```  
+```sql  
 EXEC sp_pdw_log_user_data_masking 1;  
 ```  
   

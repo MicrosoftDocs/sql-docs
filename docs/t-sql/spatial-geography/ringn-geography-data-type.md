@@ -25,11 +25,10 @@ ms.author: mlandzic
   
 ## Syntax  
   
-```  
-  
-.RingN (expression )  
-```  
-  
+```syntaxsql
+.RingN (expression )
+```
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments

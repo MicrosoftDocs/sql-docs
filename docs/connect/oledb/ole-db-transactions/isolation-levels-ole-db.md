@@ -1,6 +1,6 @@
 ---
 title: "Isolation levels (OLE DB driver) | Microsoft Docs"
-description: "Isolation Levels (OLE DB)"
+description: Learn how an OLE DB Driver for SQL Server consumer can control the transaction-isolation level for a connection.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

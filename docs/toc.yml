@@ -7081,8 +7081,8 @@
         href: https://dba.stackexchange.com/questions/tagged/sql-server
       - name: Stack Overflow >>
         href: https://stackoverflow.com/questions/tagged/sql-server
-      - name: MSDN Forums >>
-        href: https://social.msdn.microsoft.com/Forums/home?category=sqlserver
+      - name: Microsoft Q & A >>
+        href: https://https://docs.microsoft.com/answers/products/sql-server
       - name: Submit feedback >>
         href: https://feedback.azure.com/forums/908035-sql-server
       - name: Reddit >>
@@ -10083,8 +10083,8 @@
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow >>
       href: https://stackoverflow.com/questions/tagged/sql-server  # Note: this S.O. https address occurs multiple times in this toc/toc.yml file. Is okay if beneficial.
-    - name: MSDN Forums >>
-      href: https://social.msdn.microsoft.com/Forums/home
+    - name: Microsoft Q & A >>
+      href: https://docs.microsoft.com/answers/products/sql-server
     - name: Submit feedback >>
       href: https://feedback.azure.com/forums/908035-sql-server
     - name: Reddit >>
@@ -10113,16 +10113,16 @@
     items:
     - name: Get help
       href: sql-server/sql-server-get-help.md
-    - name: Versioning of SQL docs
-      href: sql-server/versioning-system-monikers-ui-sql-server.md
+    - name: Microsoft Q & A >>
+      href: https://docs.microsoft.com/answers/products/sql-server
     - name: DBA Stack Exchange >>
       href: https://dba.stackexchange.com/questions/tagged/sql-server
     - name: Stack Overflow >>
       href: https://stackoverflow.com/questions/tagged/sql-server
-    - name: MSDN Forums >>
-      href: https://social.msdn.microsoft.com/Forums/home
     - name: Reddit >>
       href: https://www.reddit.com/r/SQLServer
+    - name: Docs navigation tips
+      href: sql-server/sql-docs-navigation-guide
   - name: Blogs  # TODO: Blog websites on MSDN & TechNet are being retired in 2019.
     items:
     - name: SQL Server >>

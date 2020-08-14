@@ -59,8 +59,8 @@ Another example, the following label indicates a topic that applies only to Azur
 
 In some cases, the topic is used by a product or service, but all of the arguments are not supported. In this case, additional **Applies to** sections are inserted into the appropriate argument descriptions in the body of the topic.  
  
-## Get help from the MSDN forum  
-For online help, see the [MSDN Transact-SQL Forum](https://social.msdn.microsoft.com/Forums/home).  
+## Get help from Microsoft Q & A  
+For online help, see the [Microsoft Q & A Transact-SQL Forum](https://docs.microsoft.com/answers/topics/sql-server-transact-sql.html).  
  
 ## See other language references
 The SQL docs include these other language references:

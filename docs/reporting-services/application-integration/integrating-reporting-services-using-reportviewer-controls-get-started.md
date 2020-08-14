@@ -266,7 +266,7 @@ Here are links to articles on the NuGet.org site about the WebForm and WinForm v
 
 ## Forum feedback
 
-Let the team know about issues on the [Reporting Services forums](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=sqlreportingservices).
+Let the team know about issues on the [Reporting Services forums](https://docs.microsoft.com/answers/topics/sql-server-reporting-services.html).
 
 ## See also
 

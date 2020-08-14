@@ -49,7 +49,9 @@ SET ARITHABORT { ON | OFF }
 SET ARITHABORT ON
 ```
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
 Always set ARITHABORT to ON in your logon sessions. Setting ARITHABORT to OFF can negatively impact query optimization, leading to performance issues.  
   
 > [!WARNING]  
@@ -78,7 +80,7 @@ The setting of SET ARITHABORT happens at execute or run time and not at parse ti
   
 To view the current setting for SET ARITHABORT, run the following query:
   
-```  
+```sql  
 DECLARE @ARITHABORT VARCHAR(3) = 'OFF';  
 IF ( (64 & @@OPTIONS) = 64 ) SET @ARITHABORT = 'ON';  
 SELECT @ARITHABORT AS ARITHABORT;  

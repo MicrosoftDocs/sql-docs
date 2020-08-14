@@ -26,17 +26,20 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 .STIntersects ( other_geography )  
 ```  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
   
-## Arguments  
- *other_geography*  
- Is another **geography** instance to compare to the instance on which `STIntersects()` is invoked.  
+## Arguments
+
+*other_geography*  
+Is another **geography** instance to compare to the instance on which `STIntersects()` is invoked.  
   
-## Return Types  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
+## Return Types
+
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
   
  CLR return type: **SqlBoolean**  
   

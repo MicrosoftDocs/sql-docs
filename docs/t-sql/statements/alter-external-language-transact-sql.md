@@ -9,11 +9,11 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
 # ALTER EXTERNAL LANGUAGE (Transact-SQL)
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Modifies the content in an existing external language extension in the database.
 
@@ -100,6 +100,8 @@ This provides a possibility to give a set of environment variables to the extern
 **platform**
 
 This parameter is needed for hybrid OS scenarios. In a hybrid architecture, the language needs to be registered once per platform. Platform and language name will be the unique key per external language. If no platform is specified, the current OS is assumed.
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Remarks
 

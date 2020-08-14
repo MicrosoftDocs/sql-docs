@@ -1,8 +1,6 @@
 ---
-title: "Change Server Authentication Mode | Microsoft Docs"
+title: Change Server Authentication Mode
 description: Learn how to change the server authentication mode in SQL Server. You can use either SQL Server Management Studio or Transact-SQL for this task.
-ms.custom: ""
-ms.date: "02/18/2020"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -16,18 +14,21 @@ helpviewer_keywords:
 ms.assetid: 79babcf8-19fd-4495-b8eb-453dc575cac0
 author: markingmyname
 ms.author: maghan
+ms.custom: ""
+ms.date: 02/18/2020
 ---
 
 # Change server authentication mode
 
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+
 This topic describes how to change the server authentication mode in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. During installation, [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] is set to either **Windows Authentication mode** or **SQL Server and Windows Authentication mode**. After installation, you can change the authentication mode at any time.
 
 If **Windows Authentication mode** is selected during installation, the sa login is disabled and a password is assigned by setup. If you later change authentication mode to **SQL Server and Windows Authentication mode**, the sa login remains disabled. To use the sa login, use the ALTER LOGIN statement to enable the sa login and assign a new password. The sa login can only connect to the server by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication.
 
 ## Before you begin
 
-The sa account is a well-known [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account and it is often targeted by malicious users. Do not enable the sa account unless your application requires it. It is very important that you use a strong password for the sa login.
+The sa account is a well known [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] account and it is often targeted by malicious users. Do not enable the sa account unless your application requires it. It is important that you use a strong password for the sa login.
 
 ## Change authentication mode with SSMS
 
@@ -41,7 +42,7 @@ The sa account is a well-known [!INCLUDE[ssNoVersion](../../includes/ssnoversion
 
 ## Enable sa login
 
-You can enable the **sa** log in with SSMS or T-SQL.
+You can enable the **sa** login with SSMS or T-SQL.
 
 ### Use SSMS
 
@@ -78,9 +79,12 @@ EXEC xp_instance_regwrite N'HKEY_LOCAL_MACHINE',
 GO
 ```
 
+> [!Note]
+> The permissions required to change the authentication mode are [sysadmin](../../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles) or [Control Server](../../relational-databases/security/permissions-database-engine.md)
+
 ## See also
 
- [Strong Passwords](../../relational-databases/security/strong-passwords.md)   
- [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)
- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)
- [Connect to SQL Server When System Administrators Are Locked Out](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)
+- [Strong Passwords](../../relational-databases/security/strong-passwords.md)
+- [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)
+- [ALTER LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/alter-login-transact-sql.md)
+- [Connect to SQL Server When System Administrators Are Locked Out](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md)

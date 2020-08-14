@@ -1,5 +1,5 @@
 ---
-title: "CASE (Transact-SQL) | Microsoft Docs"
+title: CASE (Transact-SQL)
 description: "Transact-SQL reference for the CASE expression. CASE evaluates a list of conditions to return specific results."
 ms.date: "06/28/2017"
 ms.prod: sql
@@ -22,7 +22,9 @@ author: rothja
 ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # CASE (Transact-SQL)
+
 [!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Evaluates a list of conditions and returns one of multiple possible result expressions.  
@@ -62,9 +64,11 @@ END
 CASE  
      WHEN when_expression THEN result_expression [ ...n ]   
      [ ELSE else_result_expression ]   
-END  
-```  
-  
+END
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments  
  *input_expression*  
  Is the expression evaluated when the simple CASE format is used. *input_expression* is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).  

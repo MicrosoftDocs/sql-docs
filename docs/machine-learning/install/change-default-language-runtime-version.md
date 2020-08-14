@@ -1,17 +1,17 @@
 ---
-title: Change the default language runtime version
+title: Change the default R or Python language runtime version
 description: Learn how to change the default version of the R or Python runtime used by a SQL instance with SQL Server 2017 Machine Learning Services or SQL Server R Services.
 ms.custom: ""
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/13/2020
+ms.date: 08/14/2020
 ms.topic: how-to
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ---
-# Change the default language runtime version
+# Change the default R or Python language runtime version
 
 [!INCLUDE[SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 

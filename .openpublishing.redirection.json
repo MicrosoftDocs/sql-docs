@@ -42278,8 +42278,7 @@
     {
       "source_path": "/docs/machine-learning/troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md",
       "redirect_url": "/sql/machine-learning/install/sql-machine-learning-services-windows-install",
-
-"\\"      "redirect_document_id": true
+      "redirect_document_id": true
     },
     {
       "source_path": "docs/advanced-analytics/r/using-data-from-olap-cubes-in-r.md",

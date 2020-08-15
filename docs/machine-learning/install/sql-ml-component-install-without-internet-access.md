@@ -210,4 +210,4 @@ An initial offline installation of SQL Server R Services requires the same confi
 
 ## Next steps
 
-For help with any unfamiliar messages or log entries, see [Upgrade and installation FAQ - Machine Learning Services](../troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md).
+To use Machine Learning Services to execute Python and R scripts in-database, see [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md).

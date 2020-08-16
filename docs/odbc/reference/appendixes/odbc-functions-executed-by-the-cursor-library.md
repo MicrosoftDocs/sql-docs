@@ -1,4 +1,5 @@
 ---
+description: "ODBC Functions Executed by the Cursor Library"
 title: "ODBC Functions Executed by the Cursor Library | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

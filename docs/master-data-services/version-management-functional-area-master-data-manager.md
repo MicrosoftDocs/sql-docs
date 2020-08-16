@@ -1,4 +1,5 @@
 ---
+description: "Version Management Functional Area (Master Data Manager)"
 title: Version Management Functional Area
 ms.custom: ""
 ms.date: "03/01/2017"

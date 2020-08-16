@@ -1,4 +1,5 @@
 ---
+description: "CREATE INDEX Statement"
 title: "CREATE INDEX Statement | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

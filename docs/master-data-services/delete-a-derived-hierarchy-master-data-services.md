@@ -1,4 +1,5 @@
 ---
+description: "Delete a Derived Hierarchy (Master Data Services)"
 title: Delete a Derived Hierarchy
 ms.custom: ""
 ms.date: "03/01/2017"

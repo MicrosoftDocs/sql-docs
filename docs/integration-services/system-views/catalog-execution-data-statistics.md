@@ -1,4 +1,5 @@
 ---
+description: "catalog.execution_data_statistics"
 title: "catalog.execution_data_statistics | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

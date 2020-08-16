@@ -1,4 +1,5 @@
 ---
+description: "Using Synonyms with Stored Procedures"
 title: "Using Synonyms with Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Assign Hierarchy Member Permissions (Master Data Services)"
 title: Assign Hierarchy Member Permissions
 ms.custom: ""
 ms.date: "03/01/2017"

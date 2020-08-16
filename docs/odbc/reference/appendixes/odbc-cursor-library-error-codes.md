@@ -1,4 +1,5 @@
 ---
+description: "ODBC Cursor Library Error Codes"
 title: "ODBC Cursor Library Error Codes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

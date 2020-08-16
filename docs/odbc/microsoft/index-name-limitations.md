@@ -1,4 +1,5 @@
 ---
+description: "Index Name Limitations"
 title: "Index Name Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

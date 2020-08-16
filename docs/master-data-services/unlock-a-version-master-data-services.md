@@ -1,4 +1,5 @@
 ---
+description: "Unlock a Version (Master Data Services)"
 title: Unlock a Version
 ms.custom: ""
 ms.date: "03/01/2017"

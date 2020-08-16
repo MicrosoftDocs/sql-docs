@@ -1,4 +1,5 @@
 ---
+description: "SQLSTATE"
 title: "SQLSTATE | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

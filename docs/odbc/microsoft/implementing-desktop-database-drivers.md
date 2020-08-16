@@ -1,4 +1,5 @@
 ---
+description: "Implementing Desktop Database Drivers"
 title: "Implementing Desktop Database Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

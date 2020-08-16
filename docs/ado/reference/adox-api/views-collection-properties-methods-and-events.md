@@ -1,4 +1,5 @@
 ---
+description: "Views Collection Properties, Methods, and Events"
 title: "Views Collection Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

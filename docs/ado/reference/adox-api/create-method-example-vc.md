@@ -1,4 +1,5 @@
 ---
+description: "Create Method Example (VC++)"
 title: "Create Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

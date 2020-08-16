@@ -1,4 +1,5 @@
 ---
+description: "Configuring Virtual Servers on IIS"
 title: "Configuring Virtual Servers on IIS | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

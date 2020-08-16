@@ -1,4 +1,5 @@
 ---
+description: "IsolationLevel and Mode Properties Example (VC++)"
 title: "IsolationLevel and Mode Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

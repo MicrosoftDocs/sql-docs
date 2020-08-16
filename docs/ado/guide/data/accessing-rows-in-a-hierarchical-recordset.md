@@ -1,4 +1,5 @@
 ---
+description: "Accessing Rows in a Hierarchical Recordset (Example)"
 title: "Accessing Rows in a Hierarchical Recordset | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

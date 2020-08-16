@@ -1,4 +1,5 @@
 ---
+description: "Move Method Example (VBScript)"
 title: "Move Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

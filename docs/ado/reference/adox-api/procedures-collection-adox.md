@@ -1,4 +1,5 @@
 ---
+description: "Procedures Collection (ADOX)"
 title: "Procedures Collection (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

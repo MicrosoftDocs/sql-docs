@@ -1,4 +1,5 @@
 ---
+description: "GetObjectOwner and SetObjectOwner Methods Example (VB)"
 title: "GetObjectOwner and SetObjectOwner Methods Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Step 6: Changes are Sent to the Server (RDS Tutorial)"
 title: "Step 6: Changes are Sent to the Server (RDS Tutorial) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "RDS Code Examples in Visual Basic"
 title: "RDS Code Examples in Visual Basic | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

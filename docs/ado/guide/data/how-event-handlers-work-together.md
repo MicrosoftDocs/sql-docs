@@ -1,4 +1,5 @@
 ---
+description: "How Event Handlers Work Together"
 title: "How Event Handlers Work Together | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

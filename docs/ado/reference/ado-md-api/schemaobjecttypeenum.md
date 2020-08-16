@@ -1,4 +1,5 @@
 ---
+description: "SchemaObjectTypeEnum"
 title: "SchemaObjectTypeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

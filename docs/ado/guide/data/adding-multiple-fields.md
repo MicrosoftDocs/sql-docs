@@ -1,4 +1,5 @@
 ---
+description: "Adding Multiple Fields and Values"
 title: "Adding Multiple Fields | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

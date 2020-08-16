@@ -1,4 +1,5 @@
 ---
+description: "Provider and DefaultDatabase Properties Example (VC++)"
 title: "Provider and DefaultDatabase Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

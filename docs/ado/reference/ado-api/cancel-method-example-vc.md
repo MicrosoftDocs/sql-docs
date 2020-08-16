@@ -1,4 +1,5 @@
 ---
+description: "Cancel Method Example (VC++)"
 title: "Cancel Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

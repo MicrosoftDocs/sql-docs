@@ -1,4 +1,5 @@
 ---
+description: "Determining Edit Mode"
 title: "Determining Edit Mode | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

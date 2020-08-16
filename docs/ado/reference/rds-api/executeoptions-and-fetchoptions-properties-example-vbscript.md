@@ -1,4 +1,5 @@
 ---
+description: "ExecuteOptions and FetchOptions Properties Example (VBScript)"
 title: "ExecuteOptions and FetchOptions Properties Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

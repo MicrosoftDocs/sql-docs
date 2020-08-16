@@ -1,4 +1,5 @@
 ---
+description: "Microsoft OLE DB Simple Provider Overview"
 title: "Microsoft OLE DB Simple Provider | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

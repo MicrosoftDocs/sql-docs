@@ -1,4 +1,5 @@
 ---
+description: "Microsoft OLE DB Provider for ODBC Overview"
 title: "Microsoft OLE DB Provider for ODBC | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

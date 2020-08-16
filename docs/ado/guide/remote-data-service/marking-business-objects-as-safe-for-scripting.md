@@ -1,4 +1,5 @@
 ---
+description: "Marking Business Objects as Safe for Scripting"
 title: "Marking Business Objects as Safe for Scripting | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

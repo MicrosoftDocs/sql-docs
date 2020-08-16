@@ -1,4 +1,5 @@
 ---
+description: "CancelBatch Method (ADO)"
 title: "CancelBatch Method (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

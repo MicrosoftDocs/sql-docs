@@ -1,4 +1,5 @@
 ---
+description: "Refresh Method (ADO)"
 title: "Refresh Method (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

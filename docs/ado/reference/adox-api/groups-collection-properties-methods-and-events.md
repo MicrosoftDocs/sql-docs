@@ -1,4 +1,5 @@
 ---
+description: "Groups Collection Properties, Methods, and Events"
 title: "Groups Collection Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

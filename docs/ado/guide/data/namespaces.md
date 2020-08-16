@@ -1,4 +1,5 @@
 ---
+description: "Namespaces"
 title: "Namespaces | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

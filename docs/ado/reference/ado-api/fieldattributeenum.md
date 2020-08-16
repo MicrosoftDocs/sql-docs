@@ -1,4 +1,5 @@
 ---
+description: "FieldAttributeEnum"
 title: "FieldAttributeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

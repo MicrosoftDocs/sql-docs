@@ -1,4 +1,5 @@
 ---
+description: "AppendChunk Method (ADO)"
 title: "AppendChunk Method (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

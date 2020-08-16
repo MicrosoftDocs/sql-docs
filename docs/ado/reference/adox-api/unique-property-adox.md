@@ -1,4 +1,5 @@
 ---
+description: "Unique Property (ADOX)"
 title: "Unique Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

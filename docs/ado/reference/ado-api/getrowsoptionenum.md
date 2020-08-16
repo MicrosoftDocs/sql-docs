@@ -1,4 +1,5 @@
 ---
+description: "GetRowsOptionEnum"
 title: "GetRowsOptionEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

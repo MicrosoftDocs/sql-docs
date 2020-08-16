@@ -1,4 +1,5 @@
 ---
+description: "AbsolutePage, PageCount, and PageSize Properties Example (VC++)"
 title: "AbsolutePage, PageCount, and PageSize Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "ADOX Object Model"
 title: "ADOX Object Model | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "ADO - WFC Syntax Index"
 title: "ADO - WFC Syntax Index | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: 

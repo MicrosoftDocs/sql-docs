@@ -1,4 +1,5 @@
 ---
+description: "Unique Table, Unique Schema, Unique Catalog Properties-Dynamic (ADO)"
 title: "Control Changes to Recordset Base Table (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

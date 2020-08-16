@@ -1,4 +1,5 @@
 ---
+description: "ExecuteComplete Event (ADO)"
 title: "ExecuteComplete Event (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

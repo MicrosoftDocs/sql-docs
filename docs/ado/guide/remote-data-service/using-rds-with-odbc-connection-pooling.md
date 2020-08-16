@@ -1,4 +1,5 @@
 ---
+description: "Using RDS with ODBC Connection Pooling"
 title: "Using RDS with ODBC Connection Pooling | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

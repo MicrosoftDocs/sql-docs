@@ -1,4 +1,5 @@
 ---
+description: "Index Property"
 title: "Index Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

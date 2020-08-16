@@ -1,4 +1,5 @@
 ---
+description: "ADO Dynamic Properties"
 title: "ADO Dynamic Properties | Microsoft Docs"
 ms.prod: sql
 ms.technology: connectivity

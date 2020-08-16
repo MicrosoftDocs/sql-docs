@@ -1,4 +1,5 @@
 ---
+description: "Remote Data Service (RDS)"
 title: "Remote Data Service (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

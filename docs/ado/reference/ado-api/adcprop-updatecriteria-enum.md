@@ -1,4 +1,5 @@
 ---
+description: "ADCPROP_UPDATECRITERIA_ENUM"
 title: "ADCPROP_UPDATECRITERIA_ENUM | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

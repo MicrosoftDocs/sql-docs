@@ -1,4 +1,5 @@
 ---
+description: "Type Property Example (Property) (VC++)"
 title: "Type Property Example (Property) (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

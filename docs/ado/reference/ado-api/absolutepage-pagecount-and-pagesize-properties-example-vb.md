@@ -1,4 +1,5 @@
 ---
+description: "AbsolutePage, PageCount, and PageSize Properties Example (VB)"
 title: "AbsolutePage, PageCount, and PageSize Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Position Object (ADO MD)"
 title: "Position Object (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Execute21 Method (RDS)"
 title: "Execute21 Method (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

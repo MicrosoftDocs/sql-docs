@@ -1,4 +1,5 @@
 ---
+description: "Append Method (ADOX Indexes)"
 title: "Append Method (ADOX Indexes) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

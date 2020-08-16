@@ -1,4 +1,5 @@
 ---
+description: "Registering Business Objects on the Client for Use with DCOM"
 title: "Registering Business Objects on the Client for Use with DCOM | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

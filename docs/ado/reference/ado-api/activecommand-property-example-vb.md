@@ -1,4 +1,5 @@
 ---
+description: "ActiveCommand Property Example (VB)"
 title: "ActiveCommand Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "ADO Programmer's Guide for using ADO Objects"
 title: "ADO Programmer's Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

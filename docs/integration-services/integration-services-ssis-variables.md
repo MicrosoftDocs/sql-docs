@@ -1,4 +1,5 @@
 ---
+description: "Integration Services (SSIS) Variables"
 title: "Integration Services (SSIS) Variables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

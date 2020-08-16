@@ -1,4 +1,5 @@
 ---
+description: "Validating a Data Flow Component"
 title: "Validating a Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

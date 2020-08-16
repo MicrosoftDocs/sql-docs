@@ -1,4 +1,5 @@
 ---
+description: "Data Profiling and Notifications in DQS"
 title: "Data Profiling and Notifications in DQS"
 ms.date: 04/01/2020
 ms.prod: sql

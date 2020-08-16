@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1: Preparing to Create the Deployment Bundle"
 title: "Lesson 1: Preparing to Create the Deployment Bundle | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

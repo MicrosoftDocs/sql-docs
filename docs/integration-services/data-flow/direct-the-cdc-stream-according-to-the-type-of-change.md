@@ -1,4 +1,5 @@
 ---
+description: "Direct the CDC Stream According to the Type of Change"
 title: "Direct the CDC Stream According to the Type of Change | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

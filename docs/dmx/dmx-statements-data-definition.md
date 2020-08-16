@@ -1,4 +1,5 @@
 ---
+description: "Data Definition Statements (DMX)"
 title: "Data Definition Statements (DMX) | Microsoft Docs"
 ms.date: 10/23/2019
 ms.prod: sql

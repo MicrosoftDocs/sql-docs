@@ -1,4 +1,5 @@
 ---
+description: "Slowly Changing Dimension Columns (Slowly Changing Dimension Wizard)"
 title: "Slowly Changing Dimension Columns (Slowly Changing Dimension Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

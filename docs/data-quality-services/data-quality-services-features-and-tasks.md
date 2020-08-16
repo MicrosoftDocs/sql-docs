@@ -1,4 +1,5 @@
 ---
+description: "Data Quality Services Features and Tasks"
 title: "Data Quality Services Features and Tasks"
 ms.date: "03/01/2017"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-2: Add and configure a Flat File connection manager"
 title: "Step 2: Add and configure a Flat File connection manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"

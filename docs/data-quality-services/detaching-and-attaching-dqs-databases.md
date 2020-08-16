@@ -1,4 +1,5 @@
 ---
+description: "Detaching and Attaching DQS Databases"
 title: "Detaching and Attaching DQS Databases"
 ms.date: "03/01/2017"
 ms.prod: sql

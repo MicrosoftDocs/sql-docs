@@ -1,4 +1,5 @@
 ---
+description: "Working with Excel Files with the Script Task"
 title: "Working with Excel Files with the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2018"

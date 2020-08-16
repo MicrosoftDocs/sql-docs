@@ -1,4 +1,5 @@
 ---
+description: "Create and Edit an Oracle CDC Service"
 title: "Create and Edit an Oracle CDC Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"

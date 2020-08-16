@@ -1,4 +1,5 @@
 ---
+description: "Developing Data Flow Components with Multiple Inputs"
 title: "Developing Data Flow Components with Multiple Inputs | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

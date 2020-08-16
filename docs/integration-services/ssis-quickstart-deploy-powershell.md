@@ -1,4 +1,5 @@
 ---
+description: "Deploy an SSIS project with PowerShell"
 title: "Deploy an SSIS project with PowerShell | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart

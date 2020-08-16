@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Connection for Instance Creation"
 title: "SQL Server Connection for Instance Creation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

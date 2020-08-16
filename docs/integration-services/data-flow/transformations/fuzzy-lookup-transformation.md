@@ -1,4 +1,5 @@
 ---
+description: "Fuzzy Lookup Transformation"
 title: "Fuzzy Lookup Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

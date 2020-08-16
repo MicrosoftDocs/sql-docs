@@ -1,4 +1,5 @@
 ---
+description: "How to: Disable Multiple Active Resultsets (MARS)"
 title: "How to: Disable Multiple Active Resultsets (MARS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

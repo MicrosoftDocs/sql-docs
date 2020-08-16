@@ -1,4 +1,5 @@
 ---
+description: "Step 3: Proof of concept connecting to SQL using Ruby"
 title: "Step 3: Proof of concept connecting to SQL using Ruby | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/22/2020

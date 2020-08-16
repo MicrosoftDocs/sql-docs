@@ -1,4 +1,5 @@
 ---
+description: "PDOStatement::getAttribute"
 title: "PDOStatement::getAttribute | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/13/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Azure HDInsight Delete Cluster Task"
 title: "Azure HDInsight Delete Cluster Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2017"

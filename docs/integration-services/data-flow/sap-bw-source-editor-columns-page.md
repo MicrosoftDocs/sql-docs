@@ -1,4 +1,5 @@
 ---
+description: "SAP BW Source Editor (Columns Page)"
 title: "SAP BW Source Editor (Columns Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

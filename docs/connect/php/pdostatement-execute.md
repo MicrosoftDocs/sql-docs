@@ -1,4 +1,5 @@
 ---
+description: "PDOStatement::execute"
 title: "PDOStatement::execute | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2018"

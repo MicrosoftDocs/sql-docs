@@ -1,4 +1,5 @@
 ---
+description: "Dimensions Collection (ADO MD)"
 title: "Dimensions Collection (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

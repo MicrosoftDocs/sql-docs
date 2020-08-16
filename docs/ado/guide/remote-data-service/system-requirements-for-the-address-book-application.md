@@ -1,4 +1,5 @@
 ---
+description: "System Requirements for the Address Book Application"
 title: "System Requirements for the Address Book Application | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

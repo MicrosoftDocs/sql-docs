@@ -1,4 +1,5 @@
 ---
+description: "Recordset, SourceRecordset Properties (RDS)"
 title: "Recordset, SourceRecordset Properties (RDS) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

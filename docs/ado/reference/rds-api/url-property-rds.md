@@ -1,4 +1,5 @@
 ---
+description: "URL Property (RDS)"
 title: "URL Property (RDS) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

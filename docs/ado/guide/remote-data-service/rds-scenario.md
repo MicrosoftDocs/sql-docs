@@ -1,4 +1,5 @@
 ---
+description: "RDS Scenario"
 title: "RDS Scenario | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "DeleteRecord Method (ADO)"
 title: "DeleteRecord Method (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

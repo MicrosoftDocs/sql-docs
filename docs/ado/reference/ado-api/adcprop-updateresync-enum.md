@@ -1,4 +1,5 @@
 ---
+description: "ADCPROP_UPDATERESYNC_ENUM"
 title: "ADCPROP_UPDATERESYNC_ENUM | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

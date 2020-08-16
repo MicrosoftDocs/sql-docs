@@ -1,4 +1,5 @@
 ---
+description: "ConnectionTimeout Property (ADO)"
 title: "ConnectionTimeout Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

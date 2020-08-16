@@ -1,4 +1,5 @@
 ---
+description: "ActiveCommand Property Example (VC++)"
 title: "ActiveCommand Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

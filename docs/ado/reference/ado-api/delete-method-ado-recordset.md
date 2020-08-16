@@ -1,4 +1,5 @@
 ---
+description: "Delete Method (ADO Recordset)"
 title: "Delete Method (ADO Recordset) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

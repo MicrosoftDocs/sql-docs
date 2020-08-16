@@ -1,4 +1,5 @@
 ---
+description: "Users Collection (ADOX)"
 title: "Users Collection (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

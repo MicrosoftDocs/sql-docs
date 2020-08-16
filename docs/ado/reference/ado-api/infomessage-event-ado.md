@@ -1,4 +1,5 @@
 ---
+description: "InfoMessage Event (ADO)"
 title: "InfoMessage Event (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

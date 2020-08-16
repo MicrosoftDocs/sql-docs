@@ -1,4 +1,5 @@
 ---
+description: "ParentCatalog Property Example (VC++)"
 title: "ParentCatalog Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Running the Address Book Sample Application"
 title: "Running the Address Book Sample Application | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

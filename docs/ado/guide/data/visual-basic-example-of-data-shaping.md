@@ -1,4 +1,5 @@
 ---
+description: "Visual Basic Example of Data Shaping"
 title: "Visual Basic Example of Data Shaping | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

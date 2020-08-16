@@ -1,4 +1,5 @@
 ---
+description: "BOF, EOF, and Bookmark Properties Example (VB)"
 title: "BOF, EOF, and Bookmark Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

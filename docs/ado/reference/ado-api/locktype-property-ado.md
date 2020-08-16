@@ -1,4 +1,5 @@
 ---
+description: "LockType Property (ADO)"
 title: "LockType Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

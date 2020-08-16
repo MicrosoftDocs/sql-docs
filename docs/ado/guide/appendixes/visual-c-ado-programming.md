@@ -1,4 +1,5 @@
 ---
+description: "Visual C++ ADO Programming"
 title: "Visual C++ ADO Programming | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

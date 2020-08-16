@@ -1,4 +1,5 @@
 ---
+description: "Parameterized Commands with Intervening COMPUTE Commands"
 title: "Parameterized Commands with Intervening COMPUTE Commands | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

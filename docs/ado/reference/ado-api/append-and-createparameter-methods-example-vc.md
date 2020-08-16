@@ -1,4 +1,5 @@
 ---
+description: "Append and CreateParameter Methods Example (VC++)"
 title: "Append and CreateParameter Methods Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

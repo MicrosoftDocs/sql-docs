@@ -1,4 +1,5 @@
 ---
+description: "ADO for Visual C++ Syntax Index for COM"
 title: "ADO for Visual C++ Syntax Index for COM | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

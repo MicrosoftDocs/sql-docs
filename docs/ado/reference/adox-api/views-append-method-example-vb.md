@@ -1,4 +1,5 @@
 ---
+description: "Views Append Method Example (VB)"
 title: "Views Append Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

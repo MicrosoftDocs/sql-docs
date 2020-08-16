@@ -1,4 +1,5 @@
 ---
+description: "Types of Cursors (ADO)"
 title: "Types of Cursors (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

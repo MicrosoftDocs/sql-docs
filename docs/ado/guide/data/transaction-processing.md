@@ -1,4 +1,5 @@
 ---
+description: "Transaction Processing"
 title: "Transaction Processing | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

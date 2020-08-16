@@ -1,4 +1,5 @@
 ---
+description: "LevelName Property (ADO MD)"
 title: "LevelName Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

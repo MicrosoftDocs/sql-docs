@@ -1,4 +1,5 @@
 ---
+description: "Errors Collection (ADO)"
 title: "Errors Collection (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

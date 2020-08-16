@@ -1,4 +1,5 @@
 ---
+description: "HelpContext, HelpFile Properties"
 title: "HelpContext, HelpFile Properties | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

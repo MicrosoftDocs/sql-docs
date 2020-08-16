@@ -1,4 +1,5 @@
 ---
+description: "ADO Syntax Indexes"
 title: "ADO Syntax Indexes | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

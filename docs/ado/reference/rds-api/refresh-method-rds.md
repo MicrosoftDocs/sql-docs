@@ -1,4 +1,5 @@
 ---
+description: "Refresh Method (RDS)"
 title: "Refresh Method (RDS) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

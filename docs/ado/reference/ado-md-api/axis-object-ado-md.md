@@ -1,4 +1,5 @@
 ---
+description: "Axis Object (ADO MD)"
 title: "Axis Object (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

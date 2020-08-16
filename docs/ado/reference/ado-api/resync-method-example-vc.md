@@ -1,4 +1,5 @@
 ---
+description: "Resync Method Example (VC++)"
 title: "Resync Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

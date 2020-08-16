@@ -1,4 +1,5 @@
 ---
+description: "What is a Lock?"
 title: "What is a Lock? | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

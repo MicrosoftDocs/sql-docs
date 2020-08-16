@@ -1,4 +1,5 @@
 ---
+description: "Batch Mode"
 title: "Batch Mode | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

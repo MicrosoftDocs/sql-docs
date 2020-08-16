@@ -1,4 +1,5 @@
 ---
+description: "Using ADO for Internet Publishing"
 title: "Using ADO for Internet Publishing | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

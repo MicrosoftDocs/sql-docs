@@ -1,4 +1,5 @@
 ---
+description: "Creating and Executing a Simple Command"
 title: "Creating and Executing a Simple Command | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

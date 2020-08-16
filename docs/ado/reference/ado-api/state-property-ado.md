@@ -1,4 +1,5 @@
 ---
+description: "State Property (ADO)"
 title: "State Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

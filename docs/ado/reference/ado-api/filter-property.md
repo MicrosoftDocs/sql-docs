@@ -1,4 +1,5 @@
 ---
+description: "Filter Property"
 title: "Filter Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

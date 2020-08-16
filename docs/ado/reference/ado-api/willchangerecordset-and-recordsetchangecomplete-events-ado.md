@@ -1,4 +1,5 @@
 ---
+description: "WillChangeRecordset and RecordsetChangeComplete Events (ADO)"
 title: "WillChangeRecordset and RecordsetChangeComplete Events (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

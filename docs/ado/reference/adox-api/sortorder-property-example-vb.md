@@ -1,4 +1,5 @@
 ---
+description: "SortOrder Property Example (VB)"
 title: "SortOrder Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

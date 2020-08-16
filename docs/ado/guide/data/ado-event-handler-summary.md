@@ -1,4 +1,5 @@
 ---
+description: "ADO Connection and Recordset Events"
 title: "ADO Event Handler Summary | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

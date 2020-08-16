@@ -1,4 +1,5 @@
 ---
+description: "ADORecordConstruction Interface"
 title: "ADORecordConstruction Interface | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

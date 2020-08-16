@@ -1,4 +1,5 @@
 ---
+description: "ADO MD Object Model"
 title: "ADO MD Object Model | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

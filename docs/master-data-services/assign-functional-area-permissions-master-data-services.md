@@ -1,4 +1,5 @@
 ---
+description: "Assign Functional Area Permissions (Master Data Services)"
 title: Assign Functional Area Permissions
 ms.custom: ""
 ms.date: "03/01/2017"

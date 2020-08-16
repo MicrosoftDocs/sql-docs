@@ -1,4 +1,5 @@
 ---
+description: "SQLBindCol (Cursor Library)"
 title: "SQLBindCol (Cursor Library) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

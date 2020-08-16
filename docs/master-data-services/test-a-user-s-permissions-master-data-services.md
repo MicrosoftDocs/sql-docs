@@ -1,4 +1,5 @@
 ---
+description: "Test a User&#39;s Permissions (Master Data Services)"
 title: Test a User&#39;s Permissions
 ms.custom: ""
 ms.date: "03/01/2017"

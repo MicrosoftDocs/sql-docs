@@ -1,4 +1,5 @@
 ---
+description: "MDX Data Definition Statements (MDX)"
 title: "MDX Data Definition Statements (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

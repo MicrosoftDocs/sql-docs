@@ -1,4 +1,5 @@
 ---
+description: "SQLGetInfo Returned Values for Text Files"
 title: "SQLGetInfo Returned Values for Text Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Add a Group (Master Data Services)"
 title: Add a Group
 ms.custom: ""
 ms.date: "03/01/2017"

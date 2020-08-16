@@ -1,4 +1,5 @@
 ---
+description: "Edit Model (Master Data Services)"
 title: Edit Model
 ms.custom: ""
 ms.date: "03/01/2017"

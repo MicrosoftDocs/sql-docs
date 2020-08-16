@@ -1,4 +1,5 @@
 ---
+description: "Filter Operators (Master Data Services)"
 title: Filter Operators
 ms.custom: ""
 ms.date: "03/06/2017"

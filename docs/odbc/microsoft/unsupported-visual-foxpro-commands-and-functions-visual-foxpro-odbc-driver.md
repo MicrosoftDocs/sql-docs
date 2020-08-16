@@ -1,4 +1,5 @@
 ---
+description: "Unsupported Visual FoxPro Commands and Functions (Visual FoxPro ODBC Driver)"
 title: "Unsupported Visual FoxPro Commands and Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

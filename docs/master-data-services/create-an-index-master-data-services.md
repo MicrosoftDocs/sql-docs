@@ -1,4 +1,5 @@
 ---
+description: "Create an Index (Master Data Services)"
 title: Create an Index
 ms.custom: ""
 ms.date: "03/01/2017"

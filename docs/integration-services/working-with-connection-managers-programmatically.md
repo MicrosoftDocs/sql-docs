@@ -1,4 +1,5 @@
 ---
+description: "Working with Connection Managers Programmatically"
 title: "Working with Connection Managers Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

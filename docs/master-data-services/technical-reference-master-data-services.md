@@ -1,4 +1,5 @@
 ---
+description: "Technical Reference (Master Data Services)"
 title: Technical Reference
 ms.custom: ""
 ms.date: "03/01/2017"

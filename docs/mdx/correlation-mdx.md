@@ -1,4 +1,5 @@
 ---
+description: "Correlation (MDX)"
 title: "Correlation (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

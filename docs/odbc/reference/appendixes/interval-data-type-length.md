@@ -1,4 +1,5 @@
 ---
+description: "Interval Data Type Length"
 title: "Interval Data Type Length | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

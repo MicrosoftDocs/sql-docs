@@ -1,4 +1,5 @@
 ---
+description: "catalog.set_folder_description (SSISDB Database)"
 title: "catalog.set_folder_description (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

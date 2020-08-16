@@ -1,4 +1,5 @@
 ---
+description: "Delete a Row (MDS Add-in for Excel)"
 title: Delete a Row
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"

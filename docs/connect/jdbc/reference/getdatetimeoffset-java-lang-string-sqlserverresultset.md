@@ -1,4 +1,5 @@
 ---
+description: "getDateTimeOffset(java.lang.string) (SQLServerResultSet)"
 title: "getDateTimeOffset(java.lang.string) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

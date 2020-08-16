@@ -1,4 +1,5 @@
 ---
+description: "deleteRow Method (SQLServerResultSet)"
 title: "deleteRow Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/20/2017"

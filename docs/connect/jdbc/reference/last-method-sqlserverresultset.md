@@ -1,4 +1,5 @@
 ---
+description: "last Method (SQLServerResultSet)"
 title: "last Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

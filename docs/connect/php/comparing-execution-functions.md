@@ -1,4 +1,5 @@
 ---
+description: "Comparing Execution Functions"
 title: "Comparing Execution Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"

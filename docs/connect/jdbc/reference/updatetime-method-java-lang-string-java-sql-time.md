@@ -1,4 +1,5 @@
 ---
+description: "updateTime Method (java.lang.String, java.sql.Time)"
 title: "updateTime Method (java.lang.String, java.sql.Time) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

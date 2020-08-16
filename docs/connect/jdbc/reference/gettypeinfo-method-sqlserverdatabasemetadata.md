@@ -1,4 +1,5 @@
 ---
+description: "getTypeInfo Method (SQLServerDatabaseMetaData)"
 title: "getTypeInfo Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

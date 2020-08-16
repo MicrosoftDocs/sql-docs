@@ -1,4 +1,5 @@
 ---
+description: "isWrapperFor Method (SQLServerConnectionPoolDataSource)"
 title: "isWrapperFor Method (SQLServerConnectionPoolDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

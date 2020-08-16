@@ -1,4 +1,5 @@
 ---
+description: "getCatalogSeparator Method (SQLServerDatabaseMetaData)"
 title: "getCatalogSeparator Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

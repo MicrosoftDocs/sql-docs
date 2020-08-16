@@ -1,4 +1,5 @@
 ---
+description: "Using Integrated Authentication"
 title: "Using Integrated Authentication"
 descrption: "The Microsoft ODBC Driver for SQL Server on Linux and macOS supports connections that use Kerberos integrated authentication."
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "getBinaryStream Method (long, long)"
 title: "getBinaryStream Method (long, long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

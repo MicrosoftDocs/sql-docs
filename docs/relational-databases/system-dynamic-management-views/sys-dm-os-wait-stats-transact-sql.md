@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_wait_stats (Transact-SQL)"
 title: "sys.dm_os_wait_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/19/2019"

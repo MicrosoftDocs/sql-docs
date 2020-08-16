@@ -1,4 +1,5 @@
 ---
+description: "sp_bindrule (Transact-SQL)"
 title: "sp_bindrule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/25/2015"

@@ -1,4 +1,5 @@
 ---
+description: "sp_configure (Transact-SQL)"
 title: "sp_configure (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/04/2019

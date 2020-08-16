@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_server_diagnostics_log_configurations"
 title: "sys.dm_os_server_diagnostics_log_configurations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

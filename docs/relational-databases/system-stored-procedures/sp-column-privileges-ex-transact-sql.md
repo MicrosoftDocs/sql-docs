@@ -1,4 +1,5 @@
 ---
+description: "sp_column_privileges_ex (Transact-SQL)"
 title: "sp_column_privileges_ex (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

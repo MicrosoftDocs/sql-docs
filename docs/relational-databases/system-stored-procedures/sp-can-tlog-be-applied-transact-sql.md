@@ -1,4 +1,5 @@
 ---
+description: "sp_can_tlog_be_applied (Transact-SQL)"
 title: "sp_can_tlog_be_applied (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sys.symmetric_keys (Transact-SQL)"
 title: "sys.symmetric_keys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"

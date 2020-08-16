@@ -1,4 +1,5 @@
 ---
+description: "Showplan Logical and Physical Operators Reference"
 title: "Showplan Logical & Physical Operators Reference"
 ms.custom: seo-dt-2019
 ms.date: "10/12/2017"

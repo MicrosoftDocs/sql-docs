@@ -1,4 +1,5 @@
 ---
+description: "Change Tracking Functions (Transact-SQL)"
 title: "Change Tracking Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"

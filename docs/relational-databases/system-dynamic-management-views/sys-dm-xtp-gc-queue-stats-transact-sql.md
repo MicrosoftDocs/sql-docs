@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_xtp_gc_queue_stats (Transact-SQL)"
 title: "sys.dm_xtp_gc_queue_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"

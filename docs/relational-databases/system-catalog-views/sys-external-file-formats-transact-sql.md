@@ -1,4 +1,5 @@
 ---
+description: "sys.external_file_formats (Transact-SQL)"
 title: "sys.external_file_formats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

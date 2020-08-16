@@ -1,4 +1,5 @@
 ---
+description: "sys.external_data_sources (Transact-SQL)"
 title: "sys.external_data_sources (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

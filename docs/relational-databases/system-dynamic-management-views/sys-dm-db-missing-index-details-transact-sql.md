@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_missing_index_details (Transact-SQL)"
 title: "sys.dm_db_missing_index_details (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"

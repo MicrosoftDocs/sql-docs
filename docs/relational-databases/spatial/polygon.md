@@ -1,4 +1,5 @@
 ---
+description: "Polygon"
 title: "Polygon | Microsoft Docs"
 ms.date: "03/07/2017"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "System Compatibility Views (Transact-SQL)"
 title: "System Compatibility Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

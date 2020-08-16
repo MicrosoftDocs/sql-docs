@@ -17,7 +17,7 @@ This article describes known problems or limitations with the Python and R compo
 
 ## Setup and configuration issues
 
-For a description of processes and common questions that are related to initial setup and configuration, see [Upgrade and installation FAQ](upgrade-and-installation-faq-sql-server-r-services.md). It contains information about upgrades, side-by-side installation, and installation of new R or Python components.
+For a description of processes related to initial setup and configuration, see [Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md). It contains information about upgrades, side-by-side installation, and installation of new R or Python components.
 
 ### 1. Inconsistent results in MKL computations due to missing environment variable
 

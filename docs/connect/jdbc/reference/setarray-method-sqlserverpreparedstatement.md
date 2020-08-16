@@ -1,4 +1,5 @@
 ---
+description: "setArray Method (SQLServerPreparedStatement)"
 title: "setArray Method (SQLServerPreparedStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

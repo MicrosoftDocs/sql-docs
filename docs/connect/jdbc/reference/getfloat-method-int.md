@@ -1,4 +1,5 @@
 ---
+description: "getFloat Method (int)"
 title: "getFloat Method (int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

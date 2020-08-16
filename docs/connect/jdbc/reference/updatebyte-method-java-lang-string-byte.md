@@ -1,4 +1,5 @@
 ---
+description: "updateByte Method (java.lang.String, byte)"
 title: "updateByte Method (java.lang.String, byte) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

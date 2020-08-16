@@ -1,4 +1,5 @@
 ---
+description: "supportsSchemasInDataManipulation Method (SQLServerDatabaseMetaData)"
 title: "supportsSchemasInDataManipulation Method | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

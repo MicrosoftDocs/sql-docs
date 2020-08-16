@@ -1,4 +1,5 @@
 ---
+description: "setClob Method (SQLServerPreparedStatement)"
 title: "setClob Method (SQLServerPreparedStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

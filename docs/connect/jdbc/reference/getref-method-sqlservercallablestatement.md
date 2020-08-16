@@ -1,4 +1,5 @@
 ---
+description: "getRef Method (SQLServerCallableStatement)"
 title: "getRef Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

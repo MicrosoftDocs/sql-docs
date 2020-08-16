@@ -1,4 +1,5 @@
 ---
+description: "previous Method (SQLServerResultSet)"
 title: "previous Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

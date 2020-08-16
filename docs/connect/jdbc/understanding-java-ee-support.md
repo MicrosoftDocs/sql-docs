@@ -1,4 +1,5 @@
 ---
+description: "Understanding Java EE support"
 title: "Understanding Java EE support | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2020"

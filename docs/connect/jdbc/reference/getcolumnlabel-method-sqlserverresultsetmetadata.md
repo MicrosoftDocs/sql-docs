@@ -1,4 +1,5 @@
 ---
+description: "getColumnLabel Method (SQLServerResultSetMetaData)"
 title: "getColumnLabel Method (SQLServerResultSetMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

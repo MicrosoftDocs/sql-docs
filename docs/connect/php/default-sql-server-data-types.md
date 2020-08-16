@@ -1,4 +1,5 @@
 ---
+description: "Default SQL Server Data Types"
 title: "Default SQL Server Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

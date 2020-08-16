@@ -1,4 +1,5 @@
 ---
+description: "updateClob Method (SQLServerResultSet)"
 title: "updateClob Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

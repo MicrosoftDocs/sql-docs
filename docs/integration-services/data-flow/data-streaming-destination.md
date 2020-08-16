@@ -1,4 +1,5 @@
 ---
+description: "Data Streaming Destination"
 title: "Data Streaming Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

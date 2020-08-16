@@ -1,4 +1,5 @@
 ---
+description: "Microsoft Connector for SAP BW"
 title: "Microsoft Connector for SAP BW | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

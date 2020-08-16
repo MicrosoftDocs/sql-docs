@@ -1,4 +1,5 @@
 ---
+description: "Excel Destination"
 title: "Excel Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/02/2018"

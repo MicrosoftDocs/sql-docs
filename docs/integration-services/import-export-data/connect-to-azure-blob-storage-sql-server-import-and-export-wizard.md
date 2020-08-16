@@ -1,4 +1,5 @@
 ---
+description: "Connect to Azure Blob Storage (SQL Server Import and Export Wizard)"
 title: "Connect to Azure Blob Storage (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"

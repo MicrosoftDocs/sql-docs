@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-3: Add and configure an OLE DB connection manager"
 title: "Step 3: Add and configure an OLE DB connection manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"

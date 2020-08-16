@@ -1,4 +1,5 @@
 ---
+description: "Azure Data Lake Store File System Task"
 title: "Azure Data Lake Store File System Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/22/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Examples of Advanced Integration Services Expressions"
 title: "Examples of Advanced Integration Services Expressions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

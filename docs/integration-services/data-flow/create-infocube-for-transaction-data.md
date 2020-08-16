@@ -1,4 +1,5 @@
 ---
+description: "Create InfoCube for Transaction Data"
 title: "Create InfoCube for Transaction Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

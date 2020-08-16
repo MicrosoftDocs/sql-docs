@@ -1,4 +1,5 @@
 ---
+description: "XML Source Custom Properties"
 title: "XML Source Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

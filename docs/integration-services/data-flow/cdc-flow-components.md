@@ -1,4 +1,5 @@
 ---
+description: "CDC Flow Components"
 title: "CDC Flow Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

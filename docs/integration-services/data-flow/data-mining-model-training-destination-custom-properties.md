@@ -1,4 +1,5 @@
 ---
+description: "Data Mining Model Training Destination Custom Properties"
 title: "Data Mining Model Training Destination Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Enumerating Available Packages Programmatically"
 title: "Enumerating Available Packages Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

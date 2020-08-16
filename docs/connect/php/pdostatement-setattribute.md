@@ -1,4 +1,5 @@
 ---
+description: "PDOStatement::setAttribute"
 title: "PDOStatement::setAttribute | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2020"

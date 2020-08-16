@@ -1,4 +1,5 @@
 ---
+description: "Logging and Defining Log Entries in a Data Flow Component"
 title: "Logging and Defining Log Entries in a Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

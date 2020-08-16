@@ -1,4 +1,5 @@
 ---
+description: "ALTER MINING STRUCTURE (DMX)"
 title: "ALTER MINING STRUCTURE (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

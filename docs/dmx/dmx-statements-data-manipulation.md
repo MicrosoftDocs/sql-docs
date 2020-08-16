@@ -1,4 +1,5 @@
 ---
+description: "Data Manipulation Statements (DMX)"
 title: "Data Manipulation Statements (DMX)| Microsoft Docs"
 ms.date: 10/23/2019
 ms.prod: sql

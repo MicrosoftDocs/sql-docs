@@ -1,4 +1,5 @@
 ---
+description: "Run the Data Quality Client Application"
 title: "Run the Data Quality Client Application"
 ms.date: "03/01/2017"
 ms.prod: sql

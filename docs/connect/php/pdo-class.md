@@ -1,4 +1,5 @@
 ---
+description: "PDO Class"
 title: "PDO Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"

@@ -1,4 +1,5 @@
 ---
+description: "Audit Statement Permission Event Class"
 title: "Audit Statement Permission Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Attention Event Class"
 title: "Attention Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Step 1: Connect to the Data Source"
 title: "Step 1: Connect to the Data Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

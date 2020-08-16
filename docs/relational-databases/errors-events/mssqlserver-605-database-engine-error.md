@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_605"
 title: "MSSQLSERVER_605 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"

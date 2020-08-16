@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INSTANCE_EXISTS_WITH_LOWER_VERSION"
 title: "LOCALDB_ERROR_INSTANCE_EXISTS_WITH_LOWER_VERSION | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Reorganize Index Task (Maintenance Plan)"
 title: "Reorganize Index Task (Maintenance Plan) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/21/2017"

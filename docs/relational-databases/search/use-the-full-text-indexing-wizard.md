@@ -1,4 +1,5 @@
 ---
+description: "Use the Full-Text Indexing Wizard"
 title: "Use the Full-Text Indexing Wizard | Microsoft Docs"
 ms.date: "08/19/2016"
 ms.prod: sql

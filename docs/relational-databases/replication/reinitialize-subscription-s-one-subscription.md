@@ -1,4 +1,5 @@
 ---
+description: "Reinitialize Subscription(s) - One Subscription"
 title: "Reinitialize Subscription(s) - One Subscription | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

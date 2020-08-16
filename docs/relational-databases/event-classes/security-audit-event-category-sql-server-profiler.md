@@ -1,4 +1,5 @@
 ---
+description: "Security Audit Event Category (SQL Server Profiler)"
 title: "Security Audit Event Category - Profiler"
 ms.date: 06/03/2020
 ms.prod: sql

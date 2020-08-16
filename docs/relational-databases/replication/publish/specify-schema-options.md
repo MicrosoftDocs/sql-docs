@@ -1,4 +1,5 @@
 ---
+description: "Specify Schema Options for SQL Server replication"
 title: "Specify Schema Options for SQL Server replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

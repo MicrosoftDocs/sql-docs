@@ -1,4 +1,5 @@
 ---
+description: "Verify Max Worker Threads Setting"
 title: "Verify Max Worker Threads Setting | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

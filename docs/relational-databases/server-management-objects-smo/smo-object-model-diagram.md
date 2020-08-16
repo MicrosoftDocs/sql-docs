@@ -1,4 +1,5 @@
 ---
+description: "SMO Object Model Diagram"
 title: "SMO Object Model Diagram | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

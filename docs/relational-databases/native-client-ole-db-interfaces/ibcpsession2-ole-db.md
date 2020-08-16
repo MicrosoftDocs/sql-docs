@@ -1,4 +1,5 @@
 ---
+description: "IBCPSession2 (Native Client OLE DB provider)"
 title: "IBCPSession2 (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

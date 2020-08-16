@@ -1,4 +1,5 @@
 ---
+description: "QN:Template Event Class"
 title: "QN:Template Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

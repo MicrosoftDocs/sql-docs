@@ -1,4 +1,5 @@
 ---
+description: "Set Cursor Options (ODBC)"
 title: "Set Cursor Options (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

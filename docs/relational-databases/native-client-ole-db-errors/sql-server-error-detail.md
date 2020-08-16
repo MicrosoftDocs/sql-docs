@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Native Client Error Detail"
 title: SQL Server error detail (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/16/2017"

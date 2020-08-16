@@ -1,4 +1,5 @@
 ---
+description: "bcp_columns"
 title: "bcp_columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

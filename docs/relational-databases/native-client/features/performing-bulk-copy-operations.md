@@ -1,4 +1,5 @@
 ---
+description: "Performing Bulk Copy Operations in SQL Server Native Client"
 title: "Performing Bulk Copy Operations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

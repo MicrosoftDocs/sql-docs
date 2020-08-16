@@ -1,4 +1,5 @@
 ---
+description: "Log File Auto Grow Event Class"
 title: "Log File Auto Grow Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

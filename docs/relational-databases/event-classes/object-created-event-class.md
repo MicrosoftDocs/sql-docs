@@ -1,4 +1,5 @@
 ---
+description: "Object:Created Event Class"
 title: "Object:Created Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

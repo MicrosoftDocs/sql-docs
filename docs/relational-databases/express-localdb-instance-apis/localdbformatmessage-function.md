@@ -1,4 +1,5 @@
 ---
+description: "LocalDBFormatMessage Function"
 title: "LocalDBFormatMessage Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

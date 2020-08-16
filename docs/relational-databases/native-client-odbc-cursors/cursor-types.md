@@ -1,4 +1,5 @@
 ---
+description: "Cursor Types"
 title: "Cursor Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

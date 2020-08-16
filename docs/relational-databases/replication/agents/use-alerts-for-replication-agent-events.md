@@ -1,4 +1,5 @@
 ---
+description: "Use Alerts for Replication Agent Events"
 title: "Use Alerts for Replication Agent Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

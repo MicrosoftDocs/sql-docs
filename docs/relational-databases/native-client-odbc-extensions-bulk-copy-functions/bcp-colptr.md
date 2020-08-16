@@ -1,4 +1,5 @@
 ---
+description: "bcp_colptr"
 title: "bcp_colptr | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

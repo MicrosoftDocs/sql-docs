@@ -1,4 +1,5 @@
 ---
+description: "Oracle Publishing Overview"
 title: "Oracle Publishing Overview | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"

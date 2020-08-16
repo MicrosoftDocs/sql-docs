@@ -1,4 +1,5 @@
 ---
+description: "Hash Warning Event Class"
 title: "Hash Warning Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

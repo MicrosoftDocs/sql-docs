@@ -1,4 +1,5 @@
 ---
+description: "Process ODBC Errors (ODBC)"
 title: "Process ODBC Errors (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

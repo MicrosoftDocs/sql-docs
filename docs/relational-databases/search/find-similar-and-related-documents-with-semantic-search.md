@@ -1,4 +1,5 @@
 ---
+description: "Find Similar and Related Documents with Semantic Search"
 title: "Find similar & related documents with Semantic Search"
 ms.date: "03/06/2017"
 ms.prod: sql

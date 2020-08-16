@@ -1,4 +1,5 @@
 ---
+description: "SQL to C: Timestamp"
 title: "SQL to C: Timestamp | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2019"

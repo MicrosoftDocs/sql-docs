@@ -1,4 +1,5 @@
 ---
+description: "Broker:Connection Event Class"
 title: "Broker:Connection Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2019"

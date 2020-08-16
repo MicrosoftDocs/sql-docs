@@ -1,4 +1,5 @@
 ---
+description: "Setting the Transaction Isolation Level"
 title: "Setting the Transaction Isolation Level | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

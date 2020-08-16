@@ -1,4 +1,5 @@
 ---
+description: "Obtaining Descriptor Handles"
 title: "Obtaining Descriptor Handles | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

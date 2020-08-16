@@ -1,4 +1,5 @@
 ---
+description: "Result-Generating and Result-Free Statements"
 title: "Result-Generating and Result-Free Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

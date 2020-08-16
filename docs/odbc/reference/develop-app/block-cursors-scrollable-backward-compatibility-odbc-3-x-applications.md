@@ -1,4 +1,5 @@
 ---
+description: "Block Cursors, Scrollable Cursors, and Backward Compatibility for ODBC 3.x Applications"
 title: "Block and Scrollable Cursors Compatibility for ODBC 3.x | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

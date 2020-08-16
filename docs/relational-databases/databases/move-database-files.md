@@ -1,4 +1,5 @@
 ---
+description: "Move Database Files"
 title: "Move Database Files | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

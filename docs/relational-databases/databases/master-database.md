@@ -1,4 +1,5 @@
 ---
+description: "master Database"
 title: "master Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/28/2019"

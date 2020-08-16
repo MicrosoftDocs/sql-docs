@@ -1,4 +1,5 @@
 ---
+description: "Deploy a Data-tier Application"
 title: "Deploy a Data-tier Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2017"

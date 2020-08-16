@@ -1,4 +1,5 @@
 ---
+description: "Retrieving Output Parameters Using SQLGetData"
 title: "Retrieving Output Parameters Using SQLGetData | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

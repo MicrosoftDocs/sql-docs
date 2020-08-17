@@ -1,4 +1,5 @@
 ---
+description: "Data Migration Report  (OracleToSQL)"
 title: "Data Migration Report  (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "DataSource Property (ADO)"
 title: "DataSource Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

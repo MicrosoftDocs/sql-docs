@@ -1,4 +1,5 @@
 ---
+description: "Index Related Dynamic Management Views and Functions (Transact-SQL)"
 title: "Index Related Dynamic Management Views and Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Global Settings (Editor) (OracleToSQL)"
 title: "Global Settings (Editor) (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "Status Property Example (VC++)"
 title: "Status Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

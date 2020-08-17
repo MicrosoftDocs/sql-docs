@@ -1,4 +1,5 @@
 ---
+description: "BREAK (Transact-SQL)"
 title: "BREAK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/19/2018"

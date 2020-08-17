@@ -1,4 +1,5 @@
 ---
+description: "sp_changesubscriptiondtsinfo (Transact-SQL)"
 title: "sp_changesubscriptiondtsinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

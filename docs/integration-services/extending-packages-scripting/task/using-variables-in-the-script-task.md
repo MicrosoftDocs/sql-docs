@@ -1,4 +1,5 @@
 ---
+description: "Using Variables in the Script Task"
 title: "Using Variables in the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

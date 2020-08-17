@@ -1,4 +1,5 @@
 ---
+description: "OPENQUERY (Transact-SQL)"
 title: "OPENQUERY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

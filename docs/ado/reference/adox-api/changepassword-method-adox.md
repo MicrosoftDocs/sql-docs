@@ -1,4 +1,5 @@
 ---
+description: "ChangePassword Method (ADOX)"
 title: "ChangePassword Method (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

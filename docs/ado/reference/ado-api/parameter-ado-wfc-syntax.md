@@ -1,4 +1,5 @@
 ---
+description: "Parameter (ADO - WFC Syntax)"
 title: "Parameter (ADO - WFC Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "OriginalValue and UnderlyingValue Properties Example (VC++)"
 title: "OriginalValue and UnderlyingValue Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

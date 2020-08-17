@@ -1,4 +1,5 @@
 ---
+description: "StringFormatEnum"
 title: "StringFormatEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

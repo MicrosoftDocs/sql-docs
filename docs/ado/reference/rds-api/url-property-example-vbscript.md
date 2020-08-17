@@ -1,4 +1,5 @@
 ---
+description: "URL Property Example (VBScript)"
 title: "URL Property Example (VBScript) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

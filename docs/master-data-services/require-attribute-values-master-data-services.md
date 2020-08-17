@@ -1,4 +1,5 @@
 ---
+description: "Require Attribute Values (Master Data Services)"
 title: Require Attribute Values
 ms.custom: ""
 ms.date: "03/01/2017"

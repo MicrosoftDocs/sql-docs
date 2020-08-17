@@ -1,4 +1,5 @@
 ---
+description: "DDL Event Groups"
 title: "DDL Event Groups | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2018"

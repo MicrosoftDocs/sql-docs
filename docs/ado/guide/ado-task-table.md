@@ -1,4 +1,5 @@
 ---
+description: "ADO Programming Task Table"
 title: "ADO Task Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

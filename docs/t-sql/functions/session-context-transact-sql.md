@@ -1,4 +1,5 @@
 ---
+description: "SESSION_CONTEXT (Transact-SQL)"
 title: "SESSION_CONTEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/14/2019"
@@ -31,8 +32,6 @@ ms.author: vanto
 SESSION_CONTEXT(N'key')  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  'key'  
  The key (type sysname) of the value being retrieved.  

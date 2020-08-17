@@ -1,4 +1,5 @@
 ---
+description: "bcp_writefmt"
 title: "bcp_writefmt | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

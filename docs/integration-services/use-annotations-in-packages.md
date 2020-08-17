@@ -1,4 +1,5 @@
 ---
+description: "Use Annotations in Packages"
 title: "Use Annotations in Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "DimensionCount Property (ADO MD)"
 title: "DimensionCount Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

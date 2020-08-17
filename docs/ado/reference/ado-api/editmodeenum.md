@@ -1,4 +1,5 @@
 ---
+description: "EditModeEnum"
 title: "EditModeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

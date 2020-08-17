@@ -1,4 +1,5 @@
 ---
+description: "Management Data Warehouse Stored Procedures (Transact-SQL)"
 title: "Management Data Warehouse Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

@@ -1,4 +1,5 @@
 ---
+description: "IS_ROLEMEMBER (Transact-SQL)"
 title: "IS_ROLEMEMBER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

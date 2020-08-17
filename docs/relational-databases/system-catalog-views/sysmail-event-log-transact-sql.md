@@ -1,4 +1,5 @@
 ---
+description: "sysmail_event_log (Transact-SQL)"
 title: "sysmail_event_log (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

@@ -1,4 +1,5 @@
 ---
+description: "ODBC Driver for Oracle Conformance Levels"
 title: "ODBC Driver for Oracle Conformance Levels | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

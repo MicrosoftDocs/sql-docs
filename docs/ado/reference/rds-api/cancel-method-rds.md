@@ -1,4 +1,5 @@
 ---
+description: "Cancel Method (RDS)"
 title: "Cancel Method (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

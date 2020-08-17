@@ -1,4 +1,5 @@
 ---
+description: "Apply Data Quality Rules to Data Source"
 title: "Apply Data Quality Rules to Data Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_articleview (Transact-SQL)"
 title: "sp_articleview (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

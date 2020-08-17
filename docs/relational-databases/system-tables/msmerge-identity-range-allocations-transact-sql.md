@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_identity_range_allocations (Transact-SQL)"
 title: "MSmerge_identity_range_allocations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Lesson 3-2 - Running the Package Installation Wizard"
 title: "Step 2: Running the Package Installation Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

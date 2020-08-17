@@ -1,4 +1,5 @@
 ---
+description: "Symmetric Keys on System Databases"
 title: "Symmetric Keys on System Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

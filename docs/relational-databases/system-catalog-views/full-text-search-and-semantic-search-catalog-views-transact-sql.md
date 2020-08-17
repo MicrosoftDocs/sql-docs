@@ -1,4 +1,5 @@
 ---
+description: "Full-Text Search and Semantic Search Catalog Views (Transact-SQL)"
 title: "Full-Text Search and Semantic Search Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

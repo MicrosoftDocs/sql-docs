@@ -1,4 +1,5 @@
 ---
+description: "DECOMPRESS (Transact-SQL)"
 title: "DECOMPRESS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/11/2018"
@@ -29,8 +30,6 @@ This function will decompress an input expression value, using the GZIP algorith
 DECOMPRESS ( expression )  
 ```  
   
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
-
 ## Arguments
  *expression*  
 A **varbinary(**_n_**)**, **varbinary(max)**, or **binary(**_n_**)** value. See [Expressions &#40;Transact-SQL&#41;](../../t-sql/language-elements/expressions-transact-sql.md) for more information.  

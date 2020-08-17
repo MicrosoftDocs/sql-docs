@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_rows_affected"
 title: "sqlsrv_rows_affected | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

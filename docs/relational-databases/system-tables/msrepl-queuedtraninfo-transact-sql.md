@@ -1,4 +1,5 @@
 ---
+description: "MSrepl_queuedtraninfo (Transact-SQL)"
 title: "MSrepl_queuedtraninfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

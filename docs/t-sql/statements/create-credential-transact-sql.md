@@ -1,4 +1,5 @@
 ---
+description: "CREATE CREDENTIAL (Transact-SQL)"
 title: "CREATE CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2019"

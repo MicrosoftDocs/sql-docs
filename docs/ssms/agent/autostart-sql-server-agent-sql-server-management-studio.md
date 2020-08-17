@@ -1,4 +1,5 @@
 ---
+description: "Autostart SQL Server Agent"
 title: Autostart SQL Server Agent
 ms.prod: sql
 ms.prod_service: sql-tools

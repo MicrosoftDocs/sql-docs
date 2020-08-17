@@ -1,4 +1,5 @@
 ---
+description: "SubmitChanges Method (RDS)"
 title: "SubmitChanges Method (RDS) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

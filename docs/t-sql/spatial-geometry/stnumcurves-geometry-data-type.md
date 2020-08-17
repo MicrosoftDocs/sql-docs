@@ -1,4 +1,5 @@
 ---
+description: "STNumCurves (geometry Data Type)"
 title: "STNumCurves (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"

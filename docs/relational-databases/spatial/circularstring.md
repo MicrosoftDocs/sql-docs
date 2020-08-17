@@ -1,4 +1,5 @@
 ---
+description: "CircularString"
 title: "CircularString | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2020"

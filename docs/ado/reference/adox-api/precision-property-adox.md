@@ -1,4 +1,5 @@
 ---
+description: "Precision Property (ADOX)"
 title: "Precision Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

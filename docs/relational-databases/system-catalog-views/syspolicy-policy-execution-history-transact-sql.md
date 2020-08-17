@@ -1,4 +1,5 @@
 ---
+description: "syspolicy_policy_execution_history (Transact-SQL)"
 title: "syspolicy_policy_execution_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

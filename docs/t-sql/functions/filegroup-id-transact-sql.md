@@ -1,4 +1,5 @@
 ---
+description: "FILEGROUP_ID (Transact-SQL)"
 title: "FILEGROUP_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Update Resync Property-Dynamic (ADO)"
 title: "Update Resync Property-Dynamic (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

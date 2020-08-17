@@ -1,4 +1,5 @@
 ---
+description: "dbo.syscategories (Transact-SQL)"
 title: "dbo.syscategories (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

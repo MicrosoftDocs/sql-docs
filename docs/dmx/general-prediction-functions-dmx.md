@@ -1,4 +1,5 @@
 ---
+description: "General Prediction Functions (DMX)"
 title: "General Prediction Functions (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

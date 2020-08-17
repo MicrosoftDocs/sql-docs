@@ -1,4 +1,5 @@
 ---
+description: "SIGN (SSIS Expression)"
 title: "SIGN (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

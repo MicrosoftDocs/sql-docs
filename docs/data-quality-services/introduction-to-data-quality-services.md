@@ -1,4 +1,5 @@
 ---
+description: "Introduction to Data Quality Services"
 title: "Introduction to Data Quality Services"
 ms.date: "03/05/2012"
 ms.prod: sql

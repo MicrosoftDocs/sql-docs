@@ -1,4 +1,5 @@
 ---
+description: "Display Query and View Designer Panes (Visual Database Tools)"
 title: Display Query and View Designer Panes
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

@@ -1,4 +1,5 @@
 ---
+description: "Other Non-SQL Server Subscribers"
 title: "Other Non-SQL Server Subscribers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2016"

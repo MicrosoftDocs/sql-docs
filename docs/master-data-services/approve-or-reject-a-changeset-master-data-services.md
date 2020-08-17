@@ -1,4 +1,5 @@
 ---
+description: "Approve or Reject a Changeset (Master Data Services)"
 title: Approve or Reject a Changeset
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "SQLGetConnectAttr"
 title: "SQLGetConnectAttr | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

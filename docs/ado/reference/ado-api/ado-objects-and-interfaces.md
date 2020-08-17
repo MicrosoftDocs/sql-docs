@@ -1,4 +1,5 @@
 ---
+description: "ADO Objects and Interfaces"
 title: "ADO Objects and Interfaces | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

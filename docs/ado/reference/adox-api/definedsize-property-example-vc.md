@@ -1,4 +1,5 @@
 ---
+description: "DefinedSize Property Example (VC++)"
 title: "DefinedSize Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

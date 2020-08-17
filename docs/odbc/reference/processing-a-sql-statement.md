@@ -1,4 +1,5 @@
 ---
+description: "Processing a SQL Statement"
 title: "Processing a SQL Statement | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

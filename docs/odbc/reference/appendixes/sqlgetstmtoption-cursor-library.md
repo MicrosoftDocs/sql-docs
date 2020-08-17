@@ -1,4 +1,5 @@
 ---
+description: "SQLGetStmtOption (Cursor Library)"
 title: "SQLGetStmtOption (Cursor Library) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

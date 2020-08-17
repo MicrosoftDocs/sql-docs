@@ -1,4 +1,5 @@
 ---
+description: "DataControl Object Example (VBScript)"
 title: "DataControl Object Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

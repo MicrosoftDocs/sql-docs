@@ -1,4 +1,5 @@
 ---
+description: "ObjectStateEnum"
 title: "ObjectStateEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

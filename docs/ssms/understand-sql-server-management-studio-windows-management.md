@@ -1,4 +1,5 @@
 ---
+description: "Understand SQL Server Management Studio Windows Management"
 title: "Understand SQL Server Management Studio Windows Management"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

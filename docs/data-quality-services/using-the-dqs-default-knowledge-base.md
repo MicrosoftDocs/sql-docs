@@ -1,4 +1,5 @@
 ---
+description: "Using the DQS Default Knowledge Base"
 title: "Using the DQS Default Knowledge Base"
 ms.custom: ""
 ms.date: "07/31/2012"

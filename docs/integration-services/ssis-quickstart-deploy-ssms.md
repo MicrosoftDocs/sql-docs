@@ -1,4 +1,5 @@
 ---
+description: "Deploy an SSIS project with SQL Server Management Studio (SSMS)"
 title: "Deploy an SSIS project with SSMS | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart

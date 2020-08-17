@@ -1,4 +1,5 @@
 ---
+description: "CREATE QUEUE (Transact-SQL)"
 title: "CREATE QUEUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2019"

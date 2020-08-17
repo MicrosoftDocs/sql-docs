@@ -1,4 +1,5 @@
 ---
+description: "DROP SERVER ROLE (Transact-SQL)"
 title: "DROP SERVER ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

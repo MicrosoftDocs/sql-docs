@@ -1,4 +1,5 @@
 ---
+description: "Delete Primary Keys"
 title: "Delete Primary Keys | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"

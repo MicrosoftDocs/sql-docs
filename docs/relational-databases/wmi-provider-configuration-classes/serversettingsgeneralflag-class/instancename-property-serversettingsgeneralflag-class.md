@@ -1,4 +1,5 @@
 ---
+description: "InstanceName Property (ServerSettingsGeneralFlag Class)"
 title: "InstanceName Property (ServerSettingsGeneralFlag)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

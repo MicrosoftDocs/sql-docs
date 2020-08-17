@@ -1,4 +1,5 @@
 ---
+description: "Filter and RecordCount Properties Example (VC++)"
 title: "Filter and RecordCount Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

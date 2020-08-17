@@ -1,4 +1,5 @@
 ---
+description: "Connect to Server (Database Engine)"
 title: Connect to Server (Database Engine)
 ms.prod: sql
 ms.prod_service: sql-tools

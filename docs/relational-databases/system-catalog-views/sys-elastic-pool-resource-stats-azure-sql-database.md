@@ -1,4 +1,5 @@
 ---
+description: "sys.elastic_pool_resource_stats (Azure SQL Database)"
 title: "sys.elastic_pool_resource_stats"
 titleSuffix: Azure SQL Database
 ms.date: "01/28/2019"

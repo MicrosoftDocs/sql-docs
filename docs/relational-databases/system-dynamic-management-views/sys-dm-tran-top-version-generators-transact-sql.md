@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_tran_top_version_generators (Transact-SQL)"
 title: "sys.dm_tran_top_version_generators (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Multidimensional Expressions (MDX) Reference"
 title: "Multidimensional Expressions (MDX) Reference | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

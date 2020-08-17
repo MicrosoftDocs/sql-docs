@@ -1,4 +1,5 @@
 ---
+description: "USE (Transact-SQL)"
 title: "USE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/28/2016"

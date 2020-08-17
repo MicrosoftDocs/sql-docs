@@ -1,4 +1,5 @@
 ---
+description: "cdc.index_columns (Transact-SQL)"
 title: "cdc.index_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

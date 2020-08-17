@@ -1,4 +1,5 @@
 ---
+description: "MIN_ACTIVE_ROWVERSION (Transact-SQL)"
 title: "MIN_ACTIVE_ROWVERSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

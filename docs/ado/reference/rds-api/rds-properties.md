@@ -1,4 +1,5 @@
 ---
+description: "RDS Properties"
 title: "RDS Properties | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

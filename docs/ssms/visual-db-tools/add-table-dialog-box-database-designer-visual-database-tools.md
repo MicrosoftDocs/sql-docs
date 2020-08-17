@@ -1,4 +1,5 @@
 ---
+description: "Add Table Dialog Box (Database Designer) (Visual Database Tools)"
 title: Add Table Dialog Box (Database Designer)
 ms.prod: sql
 ms.prod_service: sql-tools

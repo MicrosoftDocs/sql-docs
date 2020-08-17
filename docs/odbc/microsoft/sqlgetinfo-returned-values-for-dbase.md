@@ -1,4 +1,5 @@
 ---
+description: "SQLGetInfo Returned Values for dBASE"
 title: "SQLGetInfo Returned Values for dBASE | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

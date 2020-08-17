@@ -1,4 +1,5 @@
 ---
+description: "Dialect Property"
 title: "Dialect Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

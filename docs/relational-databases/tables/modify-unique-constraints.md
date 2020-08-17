@@ -1,4 +1,5 @@
 ---
+description: "Modify Unique Constraints"
 title: "Modify Unique Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/12/2016"

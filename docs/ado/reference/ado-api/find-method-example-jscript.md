@@ -1,4 +1,5 @@
 ---
+description: "Find Method Example (JScript)"
 title: "Find Method Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

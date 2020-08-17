@@ -1,4 +1,5 @@
 ---
+description: "Get started with Columnstore for real-time operational analytics"
 title: "Get started with Columnstore for real-time operational analytics | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2016"

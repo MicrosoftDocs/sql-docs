@@ -1,4 +1,5 @@
 ---
+description: "Edit Tables"
 title: "Edit Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

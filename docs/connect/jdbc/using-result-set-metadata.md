@@ -1,4 +1,5 @@
 ---
+description: "Using result set metadata"
 title: "Using result set metadata | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

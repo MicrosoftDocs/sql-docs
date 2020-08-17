@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Express LocalDB Reference - Instance APIs"
 title: "SQL Server Express LocalDB Instance API Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

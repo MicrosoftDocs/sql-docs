@@ -1,4 +1,5 @@
 ---
+description: "Oracle Connection Manager"
 title: "Oracle Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2019"

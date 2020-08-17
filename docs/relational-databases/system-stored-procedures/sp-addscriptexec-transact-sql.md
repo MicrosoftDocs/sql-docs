@@ -1,4 +1,5 @@
 ---
+description: "sp_addscriptexec (Transact-SQL)"
 title: "sp_addscriptexec (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

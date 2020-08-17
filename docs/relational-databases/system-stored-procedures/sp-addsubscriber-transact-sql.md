@@ -1,4 +1,5 @@
 ---
+description: "sp_addsubscriber (Transact-SQL)"
 title: "sp_addsubscriber (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Check Constraint Dialog Box (Visual Database Tools)"
 title: Check Constraint Dialog Box
 ms.prod: sql
 ms.prod_service: sql-tools

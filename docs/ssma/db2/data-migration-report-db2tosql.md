@@ -1,4 +1,5 @@
 ---
+description: "Data Migration Report (DB2ToSQL)"
 title: "Data Migration Report (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

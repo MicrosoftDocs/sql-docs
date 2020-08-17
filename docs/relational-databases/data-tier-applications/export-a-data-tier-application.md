@@ -1,4 +1,5 @@
 ---
+description: "Export a Data-tier Application"
 title: "Export a Data-tier Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

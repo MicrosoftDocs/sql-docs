@@ -1,4 +1,5 @@
 ---
+description: "Coding and Debugging the Script Component"
 title: "Coding and Debugging the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

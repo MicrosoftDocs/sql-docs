@@ -1,4 +1,5 @@
 ---
+description: "RecordsetEvents (Visual C++ Syntax Index with #import)"
 title: "RecordsetEvents (Visual C++ Syntax Index with #import) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

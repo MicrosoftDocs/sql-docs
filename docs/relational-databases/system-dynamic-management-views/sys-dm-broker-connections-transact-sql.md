@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_broker_connections (Transact-SQL)"
 title: "sys.dm_broker_connections (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/08/2016"

@@ -1,4 +1,5 @@
 ---
+description: "Count Property Example (VB)"
 title: "Count Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

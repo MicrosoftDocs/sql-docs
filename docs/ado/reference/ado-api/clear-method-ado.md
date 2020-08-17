@@ -1,4 +1,5 @@
 ---
+description: "Clear Method (ADO)"
 title: "Clear Method (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

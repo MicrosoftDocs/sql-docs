@@ -1,4 +1,5 @@
 ---
+description: "RDS Programming Model with Objects"
 title: "RDS Programming Model with Objects | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

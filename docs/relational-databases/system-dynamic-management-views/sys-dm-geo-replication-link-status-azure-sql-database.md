@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_geo_replication_link_status (Azure SQL Database)"
 title: "sys.dm_geo_replication_link_status"
 titleSuffix: Azure SQL Database
 ms.date: "01/28/2019"

@@ -1,4 +1,5 @@
 ---
+description: "Preparing Commands in SQL Server Native Client"
 title: Preparing commands (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"

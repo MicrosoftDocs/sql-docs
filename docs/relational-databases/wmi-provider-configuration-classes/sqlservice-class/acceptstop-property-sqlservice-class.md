@@ -1,4 +1,5 @@
 ---
+description: "AcceptStop Property (SqlService Class)"
 title: "AcceptStop Property (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/06/2017"

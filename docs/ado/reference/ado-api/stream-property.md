@@ -1,4 +1,5 @@
 ---
+description: "Stream Property"
 title: "Stream Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

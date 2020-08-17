@@ -1,4 +1,5 @@
 ---
+description: "Windows Collation Name (Transact-SQL)"
 title: "Windows Collation Name (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2019"

@@ -1,4 +1,5 @@
 ---
+description: "sp_prepexecrpc (Transact-SQL)"
 title: "sp_prepexecrpc (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"

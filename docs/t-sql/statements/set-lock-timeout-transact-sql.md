@@ -1,4 +1,5 @@
 ---
+description: "SET LOCK_TIMEOUT (Transact-SQL)"
 title: "SET LOCK_TIMEOUT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/11/2017"

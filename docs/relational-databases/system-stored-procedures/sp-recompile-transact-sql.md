@@ -1,4 +1,5 @@
 ---
+description: "sp_recompile (Transact-SQL)"
 title: "sp_recompile (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

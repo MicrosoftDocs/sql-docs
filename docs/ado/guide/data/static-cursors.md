@@ -1,4 +1,5 @@
 ---
+description: "Static Cursors"
 title: "Static Cursors | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

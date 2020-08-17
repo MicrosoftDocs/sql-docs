@@ -1,4 +1,5 @@
 ---
+description: "Azure SQL DW Upload Task"
 title: "Azure SQL DW Upload Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"

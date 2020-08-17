@@ -1,4 +1,5 @@
 ---
+description: "exist() Method (xml Data Type)"
 title: exist() Method (xml Data Type)
 ms.custom: ""
 ms.date: "07/26/2017"

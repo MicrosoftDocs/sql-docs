@@ -1,4 +1,5 @@
 ---
+description: "Create Term-Based Relations"
 title: "Create Term-Based Relations"
 ms.date: "11/08/2011"
 ms.prod: sql

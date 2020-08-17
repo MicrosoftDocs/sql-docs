@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-2 - Creating the Deployment Project"
 title: "Step 2: Creating the Deployment Project | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

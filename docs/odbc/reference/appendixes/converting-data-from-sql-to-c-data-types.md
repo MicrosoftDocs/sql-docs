@@ -1,4 +1,5 @@
 ---
+description: "Converting Data from SQL to C Data Types"
 title: "Converting Data from SQL to C Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

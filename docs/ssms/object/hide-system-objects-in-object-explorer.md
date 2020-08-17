@@ -1,4 +1,5 @@
 ---
+description: "Hide System Objects in Object Explorer"
 title: "Hide System Objects in Object Explorer"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

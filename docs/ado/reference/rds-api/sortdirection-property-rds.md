@@ -1,4 +1,5 @@
 ---
+description: "SortDirection Property (RDS)"
 title: "SortDirection Property (RDS) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

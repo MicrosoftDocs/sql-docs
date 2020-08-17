@@ -1,4 +1,5 @@
 ---
+description: "catalog.create_environment_variable (SSISDB Database)"
 title: "catalog.create_environment_variable (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

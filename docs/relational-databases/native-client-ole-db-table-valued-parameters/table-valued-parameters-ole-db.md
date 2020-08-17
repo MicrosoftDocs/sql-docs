@@ -1,4 +1,5 @@
 ---
+description: "Table-Valued Parameters  in SQL Server Native Client (OLE DB)"
 title: Table-valued parameters (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"

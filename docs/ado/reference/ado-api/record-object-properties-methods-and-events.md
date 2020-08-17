@@ -1,4 +1,5 @@
 ---
+description: "Record Object Properties, Methods, and Events"
 title: "Record Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

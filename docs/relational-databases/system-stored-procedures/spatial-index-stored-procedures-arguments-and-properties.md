@@ -1,4 +1,5 @@
 ---
+description: "Arguments and Properties of Spatial Index Stored Procedures"
 title: "Arguments and Properties of Spatial Index Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

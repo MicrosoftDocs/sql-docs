@@ -1,4 +1,5 @@
 ---
+description: "Data Section"
 title: "Data Section | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

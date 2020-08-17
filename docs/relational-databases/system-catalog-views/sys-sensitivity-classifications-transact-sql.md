@@ -1,4 +1,5 @@
 ---
+description: "sys.sensitivity_classifications (Transact-SQL)"
 title: "sys.sensitivity_classifications (Transact-SQL) | Microsoft Docs"
 ms.date: 03/25/2019
 ms.reviewer: ""

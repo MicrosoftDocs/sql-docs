@@ -1,4 +1,5 @@
 ---
+description: "ADCPROP_AUTORECALC_ENUM"
 title: "ADCPROP_AUTORECALC_ENUM | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

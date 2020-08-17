@@ -1,4 +1,5 @@
 ---
+description: "Selecting and Configuring Affected Objects (OracleToSQL)"
 title: "Selecting and Configuring Affected Objects (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

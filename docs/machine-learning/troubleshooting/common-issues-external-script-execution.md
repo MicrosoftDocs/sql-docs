@@ -11,7 +11,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Troubleshoot issues with Launchpad service and external script execution in SQL Server
-[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 This article provides troubleshooting guidance for issues involving the SQL Server Trusted Launchpad service. The Launchpad service supports external script execution for R and Python. Multiple issues can prevent Launchpad from starting, including configuration problems or changes, or missing network protocols.  
 
@@ -235,6 +235,6 @@ As a workaround, you can enable the 8dot3 notation on the volume where SQL Serve
 
 [Data collection for troubleshooting machine learning](data-collection-ml-troubleshooting-process.md)
 
-[Upgrade and installation FAQ](upgrade-and-installation-faq-sql-server-r-services.md)
+[Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 
 [Troubleshoot database engine connections](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

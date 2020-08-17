@@ -1,4 +1,5 @@
 ---
+description: "Append Method (ADOX Views)"
 title: "Append Method (ADOX Views) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

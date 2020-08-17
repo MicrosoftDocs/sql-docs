@@ -1,4 +1,5 @@
 ---
+description: "ODBC Driver for Oracle User&#39;s Guide"
 title: "ODBC Driver for Oracle User&#39;s Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

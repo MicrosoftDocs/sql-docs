@@ -1,4 +1,5 @@
 ---
+description: "Show Many-to-Many Relationships in Derived Hierarchies (Master Data Services)"
 title: Show Many-to-Many Relationships in Derived Hierarchies
 ms.custom: "seo-lt-2019"
 ms.date: "03/01/2017"

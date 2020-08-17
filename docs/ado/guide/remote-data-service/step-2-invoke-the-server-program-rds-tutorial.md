@@ -1,4 +1,5 @@
 ---
+description: "Step 2: Invoke the Server Program (RDS Tutorial)"
 title: "Step 2: Invoke the Server Program (RDS Tutorial) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

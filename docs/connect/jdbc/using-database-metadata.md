@@ -1,4 +1,5 @@
 ---
+description: "Using database metadata"
 title: "Using database metadata | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

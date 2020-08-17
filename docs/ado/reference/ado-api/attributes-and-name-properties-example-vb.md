@@ -1,4 +1,5 @@
 ---
+description: "Attributes and Name Properties Example (VB)"
 title: "Attributes and Name Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Customization File UserList Section"
 title: "Customization File UserList Section | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

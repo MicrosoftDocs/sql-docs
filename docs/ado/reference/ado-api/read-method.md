@@ -1,4 +1,5 @@
 ---
+description: "Read Method"
 title: "Read Method | Microsoft Docs"
 ms.prod: sql
 ms.technology: connectivity

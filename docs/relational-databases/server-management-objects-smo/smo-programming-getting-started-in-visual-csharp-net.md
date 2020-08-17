@@ -1,4 +1,5 @@
 ---
+description: "SMO Programming - Getting Started in Visual C# .NET"
 title: "Getting Started in Visual C# .NET | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"

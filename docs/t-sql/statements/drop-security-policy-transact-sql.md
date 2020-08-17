@@ -1,4 +1,5 @@
 ---
+description: "DROP SECURITY POLICY (Transact-SQL)"
 title: "DROP SECURITY POLICY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2017"
@@ -46,7 +47,7 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
  *security_policy_name*  
  The name of the security policy. Security policy names must comply with the rules for identifiers and must be unique within the database and to its schema.  
   
-## Remarks  
+## Remarks
   
 ## Permissions  
  Requires the ALTER ANY SECURITY POLICY permission and ALTER permission on the schema.  

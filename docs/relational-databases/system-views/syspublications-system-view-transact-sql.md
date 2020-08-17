@@ -1,4 +1,5 @@
 ---
+description: "syspublications (System View) (Transact-SQL)"
 title: "syspublications (System View) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

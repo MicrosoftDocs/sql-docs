@@ -1,4 +1,5 @@
 ---
+description: "Handling Errors in Visual C++"
 title: "Handling Errors in Visual C++ | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

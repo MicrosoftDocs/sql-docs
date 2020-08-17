@@ -1,4 +1,5 @@
 ---
+description: "MSdynamicsnapshotviews (Transact-SQL)"
 title: "MSdynamicsnapshotviews (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

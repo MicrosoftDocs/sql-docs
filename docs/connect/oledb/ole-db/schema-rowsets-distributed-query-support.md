@@ -1,6 +1,6 @@
 ---
 title: "Distributed Query Support in Schema Rowsets | Microsoft Docs"
-description: "Distributed query support in schema rowsets"
+description: The OLE DB Driver for SQL Server IDBSchemaRowset interface returns metadata on linked servers to support SQL Server distributed queries.
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql

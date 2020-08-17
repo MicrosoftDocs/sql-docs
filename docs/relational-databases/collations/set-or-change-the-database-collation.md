@@ -1,4 +1,5 @@
 ---
+description: "Set or Change the Database Collation"
 title: "Set or Change the Database Collation | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/11/2019"

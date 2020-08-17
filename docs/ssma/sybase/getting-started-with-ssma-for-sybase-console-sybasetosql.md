@@ -1,4 +1,5 @@
 ---
+description: "Getting Started with the SSMA for Sybase Console (SybaseToSQL)"
 title: "Getting Started with the SSMA for Sybase Console (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2017"

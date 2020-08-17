@@ -1,4 +1,5 @@
 ---
+description: "Columns and Tables Append Methods, Name Property Example (VC++)"
 title: "Columns and Tables Append Methods, Name Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

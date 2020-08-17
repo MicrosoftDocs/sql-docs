@@ -1,4 +1,5 @@
 ---
+description: "Script to Grant Oracle Permissions"
 title: "Script to Grant Oracle Permissions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

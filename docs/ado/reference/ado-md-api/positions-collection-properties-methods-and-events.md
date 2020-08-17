@@ -1,4 +1,5 @@
 ---
+description: "Positions Collection Properties, Methods, and Events"
 title: "Positions Collection Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

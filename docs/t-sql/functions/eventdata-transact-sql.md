@@ -1,4 +1,5 @@
 ---
+description: "EVENTDATA (Transact-SQL)"
 title: "EVENTDATA (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -34,11 +35,12 @@ This function returns information about server or database events. When an event
   
 ## Syntax  
   
-```  
-  
-EVENTDATA( )  
-```  
-  
+```syntaxsql
+EVENTDATA( )
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Remarks  
 `EVENTDATA` returns data only when referenced directly inside of a DDL or logon trigger. `EVENTDATA` returns null if other routines call it, even if a DDL or logon trigger calls those routines.
   

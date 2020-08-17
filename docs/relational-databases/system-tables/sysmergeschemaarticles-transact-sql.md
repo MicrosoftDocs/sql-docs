@@ -1,4 +1,5 @@
 ---
+description: "sysmergeschemaarticles (Transact-SQL)"
 title: "sysmergeschemaarticles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

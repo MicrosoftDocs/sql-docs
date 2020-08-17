@@ -1,4 +1,5 @@
 ---
+description: "CREATE REMOTE SERVICE BINDING (Transact-SQL)"
 title: "CREATE REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

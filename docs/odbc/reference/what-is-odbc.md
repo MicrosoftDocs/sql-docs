@@ -1,4 +1,5 @@
 ---
+description: "What Is ODBC?"
 title: "What Is ODBC? | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

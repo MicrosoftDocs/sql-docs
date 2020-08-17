@@ -1,4 +1,5 @@
 ---
+description: "Updating Data in Rowsets in SQL Server Native Client"
 title: Updating data in rowsets (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"

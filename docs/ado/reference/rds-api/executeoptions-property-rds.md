@@ -1,4 +1,5 @@
 ---
+description: "ExecuteOptions Property (RDS)"
 title: "ExecuteOptions Property (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "sp_addlinkedserver (Transact-SQL)"
 title: "sp_addlinkedserver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2016"

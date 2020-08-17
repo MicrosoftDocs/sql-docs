@@ -1,4 +1,5 @@
 ---
+description: "Provide a Source Query (SQL Server Import and Export Wizard)"
 title: "Provide a Source Query (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

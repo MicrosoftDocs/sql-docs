@@ -1,4 +1,5 @@
 ---
+description: "sp_fkeys (Transact-SQL)"
 title: "sp_fkeys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2017"
@@ -28,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 sp_fkeys [ @pktable_name = ] 'pktable_name'   
      [ , [ @pktable_owner = ] 'pktable_owner' ]   
      [ , [ @pktable_qualifier = ] 'pktable_qualifier' ]   

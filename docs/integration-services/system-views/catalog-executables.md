@@ -1,4 +1,5 @@
 ---
+description: "catalog.executables"
 title: "catalog.executables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

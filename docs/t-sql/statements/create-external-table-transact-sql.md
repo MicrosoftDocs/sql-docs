@@ -1,4 +1,5 @@
 ---
+description: "CREATE EXTERNAL TABLE (Transact-SQL)"
 title: "CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/27/2020
@@ -935,18 +936,20 @@ Shared lock on the SCHEMARESOLUTION object.
 
 ## Examples
 
-### A. Importing Data from ADLS into Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]
+### A. Importing Data from ADLS Gen 2 into Azure [!INCLUDE[ssDW](../../includes/ssdw-md.md)]. 
+
+For examples for Gen ADLS Gen 1, see [Create external data source](create-external-data-source-transact-sql.md).
 
 ```sql
 
--- These values come from your Azure Active Directory Application used to authenticate to ADLS
+-- These values come from your Azure Active Directory Application used to authenticate to ADLS Gen 2. 
 CREATE DATABASE SCOPED CREDENTIAL ADLUser
 WITH IDENTITY = '<clientID>@\<OAuth2.0TokenEndPoint>',
 SECRET = '<KEY>' ;
 
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH (TYPE = HADOOP,
-      LOCATION = 'adl://pbasetr.azuredatalakestore.net'
+      LOCATION = 'abfss://data@pbasetr.azuredatalakestore.net'
 )
 
 CREATE EXTERNAL FILE FORMAT TextFileFormat

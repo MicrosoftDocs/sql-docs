@@ -1,4 +1,5 @@
 ---
+description: "The Fields Collection"
 title: "The Fields Collection | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

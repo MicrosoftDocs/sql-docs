@@ -1,4 +1,5 @@
 ---
+description: "Lesson 6-1: Copy the Lesson 5 package"
 title: "Step 1: Copy the Lesson 5 package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2019"

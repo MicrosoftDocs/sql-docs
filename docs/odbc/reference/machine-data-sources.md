@@ -1,4 +1,5 @@
 ---
+description: "Machine Data Sources"
 title: "Machine Data Sources | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

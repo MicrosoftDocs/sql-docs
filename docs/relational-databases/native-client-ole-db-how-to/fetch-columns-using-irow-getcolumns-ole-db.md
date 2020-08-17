@@ -1,4 +1,5 @@
 ---
+description: "Fetch Columns in SQL Server Native Client Using IRow::GetColumns (OLE DB)"
 title: "Fetch columns using IRow::GetColumns (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

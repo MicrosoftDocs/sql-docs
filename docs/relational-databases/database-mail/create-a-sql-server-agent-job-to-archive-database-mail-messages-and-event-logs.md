@@ -1,4 +1,5 @@
 ---
+description: "Create a SQL Server Agent Job to Archive Database Mail Messages and Event Logs"
 title: "Create SQL Server Agent job to archive Database Mail messages & events"
 ms.date: "08/09/2016"
 ms.prod: sql

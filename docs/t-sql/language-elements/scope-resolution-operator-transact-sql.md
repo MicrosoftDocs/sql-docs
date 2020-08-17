@@ -1,4 +1,5 @@
 ---
+description: ":: (Scope Resolution) (Transact-SQL)"
 title: ":: (Scope Resolution) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

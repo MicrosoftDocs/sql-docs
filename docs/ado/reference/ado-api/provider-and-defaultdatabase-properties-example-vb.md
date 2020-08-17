@@ -1,4 +1,5 @@
 ---
+description: "Provider and DefaultDatabase Properties Example (VB)"
 title: "Provider and DefaultDatabase Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Execute Method (RDS)"
 title: "Execute Method (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

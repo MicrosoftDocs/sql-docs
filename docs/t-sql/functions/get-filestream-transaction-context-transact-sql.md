@@ -1,5 +1,6 @@
 ---
-title: "GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL) | Microsoft Docs"
+description: "GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)"
+title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -27,11 +28,13 @@ ms.author: maghan
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 GET_FILESTREAM_TRANSACTION_CONTEXT ()  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return Type  
  **varbinary(max)**  
   

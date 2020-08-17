@@ -1,4 +1,5 @@
 ---
+description: "sys.column_store_segments (Transact-SQL)"
 title: "sys.column_store_segments (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/15/2018"

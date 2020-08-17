@@ -1,4 +1,5 @@
 ---
+description: "GetString Method Example (VC++)"
 title: "GetString Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

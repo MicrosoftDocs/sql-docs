@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_hadr_is_primary_replica (Transact-SQL)"
 title: "sys.fn_hadr_is_primary_replica (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

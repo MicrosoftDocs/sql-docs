@@ -1,4 +1,5 @@
 ---
+description: "Creating, Altering, and Removing Schemas"
 title: "Creating, Altering, and Removing Schemas"
 ms.date: "08/06/2017"
 ms.prod: sql

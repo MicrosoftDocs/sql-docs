@@ -1,4 +1,5 @@
 ---
+description: "put_OLEDBCommand Method"
 title: "put_OLEDBCommand Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "supportsMultipleOpenResults Method (SQLServerDatabaseMetaData)"
 title: "supportsMultipleOpenResults Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

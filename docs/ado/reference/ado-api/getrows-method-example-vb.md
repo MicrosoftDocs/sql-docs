@@ -1,4 +1,5 @@
 ---
+description: "GetRows Method Example (VB)"
 title: "GetRows Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

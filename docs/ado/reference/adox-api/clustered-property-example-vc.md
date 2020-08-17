@@ -1,4 +1,5 @@
 ---
+description: "Clustered Property Example (VC++)"
 title: "Clustered Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

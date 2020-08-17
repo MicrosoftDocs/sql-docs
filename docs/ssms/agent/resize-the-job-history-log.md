@@ -1,4 +1,5 @@
 ---
+description: "Resize the Job History Log"
 title: Resize the Job History Log
 ms.prod: sql
 ms.prod_service: sql-tools

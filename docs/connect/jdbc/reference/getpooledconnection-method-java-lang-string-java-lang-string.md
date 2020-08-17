@@ -1,4 +1,5 @@
 ---
+description: "getPooledConnection Method (java.lang.String, java.lang.String)"
 title: "getPooledConnection Method (java.lang.String, java.lang.String) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

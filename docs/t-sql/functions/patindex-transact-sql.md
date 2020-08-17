@@ -1,4 +1,5 @@
 ---
+description: "PATINDEX (Transact-SQL)"
 title: "PATINDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2016"

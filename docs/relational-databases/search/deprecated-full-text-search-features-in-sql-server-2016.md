@@ -1,4 +1,5 @@
 ---
+description: "Deprecated Full-Text Search features in SQL Server 2016"
 title: "Deprecated Full-Text Search features in SQL Server 2016"
 ms.date: "08/19/2016"
 ms.prod: sql

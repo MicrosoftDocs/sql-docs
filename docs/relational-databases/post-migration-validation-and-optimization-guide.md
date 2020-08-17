@@ -1,4 +1,5 @@
 ---
+description: "Post-migration Validation and Optimization Guide"
 title: "Post-migration Validation and Optimization Guide | Microsoft Docs"
 ms.date: 01/09/2019
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "&lt;= (Less Than or Equal To) (MDX)"
 title: "&lt;= (Less Than or Equal To) (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "Understanding the Customization File"
 title: "Understanding the Customization File | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

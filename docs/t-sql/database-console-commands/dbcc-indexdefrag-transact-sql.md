@@ -1,4 +1,5 @@
 ---
+description: "DBCC INDEXDEFRAG (Transact-SQL)"
 title: DBCC INDEXDEFRAG (Transact-SQL)
 ms.custom: ""
 ms.date: "07/16/2017"

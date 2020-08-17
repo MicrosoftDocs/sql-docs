@@ -1,4 +1,5 @@
 ---
+description: "sp_addsrvrolemember (Transact-SQL)"
 title: "sp_addsrvrolemember (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"

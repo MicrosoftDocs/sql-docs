@@ -1,4 +1,5 @@
 ---
+description: "ntext, text, and image (Transact-SQL)"
 title: "ntext, text, and image (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"

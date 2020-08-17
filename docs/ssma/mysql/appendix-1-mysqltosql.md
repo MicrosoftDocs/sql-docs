@@ -1,4 +1,5 @@
 ---
+description: "Appendix - 1 (MySQLToSQL)"
 title: "Appendix - 1 (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

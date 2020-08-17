@@ -1,4 +1,5 @@
 ---
+description: "MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VC++)"
 title: "Move Record Pointer of Recordset Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

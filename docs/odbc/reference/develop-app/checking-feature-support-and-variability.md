@@ -1,4 +1,5 @@
 ---
+description: "Checking Feature Support and Variability"
 title: "Checking Feature Support and Variability | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

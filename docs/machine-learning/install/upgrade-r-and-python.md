@@ -3,7 +3,7 @@ title: Upgrade Python and R components
 description: Upgrade Python and R in SQL Server Machine Learning Services or SQL Server R Services using sqlbindr.exe to bind to Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 08/12/2020
+ms.date: 08/17/2020
 ms.topic: how-to
 author: cawrites
 ms.author: chadam
@@ -11,6 +11,9 @@ monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Upgrade machine learning (Python and R) components in SQL Server instances
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
+
+> [!IMPORTANT]
+> If you have installed Cumulative Update (CU) 14 or later for SQL Server 2016 Services Pack (SP) 2 or Cumulative Update (CU) 22 for SQL Server 2017, [change the default R or Python language runtime version](change-default-language-runtime-version.md) to a later version instead of the steps outlined in this article.
 
 Python and R integration in SQL Server includes open-source and Microsoft-proprietary packages.
                                                                                

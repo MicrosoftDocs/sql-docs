@@ -21,6 +21,9 @@ ms.author: mathoma
 ms.custom: "seo-lt-2019"
 ---
 # Examples of bulk import and export of XML documents (SQL Server)
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 ## <a name="top"></a>

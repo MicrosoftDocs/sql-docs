@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysoperators (Transact-SQL)"
 title: "dbo.sysoperators (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

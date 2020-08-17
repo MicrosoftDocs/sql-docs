@@ -1,4 +1,5 @@
 ---
+description: "Working with Memory-Optimized System-Versioned Temporal Tables"
 title: "Working with Memory-Optimized System-Versioned Temporal Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2016"

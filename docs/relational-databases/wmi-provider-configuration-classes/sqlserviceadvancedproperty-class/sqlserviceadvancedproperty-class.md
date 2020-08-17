@@ -1,4 +1,5 @@
 ---
+description: "SqlServiceAdvancedProperty Class"
 title: "SqlServiceAdvancedProperty Class"
 ms.custom: ""
 ms.date: "03/03/2017"

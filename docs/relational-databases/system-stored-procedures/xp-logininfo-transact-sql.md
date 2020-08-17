@@ -1,4 +1,5 @@
 ---
+description: "xp_logininfo (Transact-SQL)"
 title: "xp_logininfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

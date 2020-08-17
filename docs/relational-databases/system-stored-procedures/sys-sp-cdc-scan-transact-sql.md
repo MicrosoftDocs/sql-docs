@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_scan (Transact-SQL)"
 title: "sys.sp_cdc_scan (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

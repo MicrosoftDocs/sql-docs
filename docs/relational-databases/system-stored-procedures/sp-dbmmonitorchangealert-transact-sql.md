@@ -1,4 +1,5 @@
 ---
+description: "sp_dbmmonitorchangealert (Transact-SQL)"
 title: "sp_dbmmonitorchangealert (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"

@@ -1,4 +1,5 @@
 ---
+description: "sp_datatype_info (Transact-SQL)"
 title: "sp_datatype_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/25/2018"

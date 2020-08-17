@@ -1,4 +1,5 @@
 ---
+description: "sp_helpdistributor_properties (Transact-SQL)"
 title: "sp_helpdistributor_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Changing the Schema of a System-Versioned Temporal Table"
 title: "Changing the Schema of a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"

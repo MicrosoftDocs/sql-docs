@@ -1,4 +1,5 @@
 ---
+description: "sp_send_dbmail (Transact-SQL)"
 title: "sp_send_dbmail (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2016"

@@ -1,4 +1,5 @@
 ---
+description: "sp_describe_cursor_columns (Transact-SQL)"
 title: "sp_describe_cursor_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

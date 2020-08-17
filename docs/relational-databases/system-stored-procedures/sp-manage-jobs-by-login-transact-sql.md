@@ -1,4 +1,5 @@
 ---
+description: "sp_manage_jobs_by_login (Transact-SQL)"
 title: "sp_manage_jobs_by_login (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_scriptpublicationcustomprocs (Transact-SQL)"
 title: "sp_scriptpublicationcustomprocs (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

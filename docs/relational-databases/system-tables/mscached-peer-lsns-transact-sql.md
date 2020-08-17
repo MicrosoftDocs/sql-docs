@@ -1,4 +1,5 @@
 ---
+description: "MScached_peer_lsns (Transact-SQL)"
 title: "MScached_peer_lsns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

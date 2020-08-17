@@ -1,4 +1,5 @@
 ---
+description: "dbo.syssessions (Transact-SQL)"
 title: "dbo.syssessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/30/2019"

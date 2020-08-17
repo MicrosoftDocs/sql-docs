@@ -1,4 +1,5 @@
 ---
+description: "sp_query_store_flush_db (Transact-SQL)"
 title: "sp_query_store_flush_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/24/2017"

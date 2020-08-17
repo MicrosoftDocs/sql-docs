@@ -24,8 +24,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # sys.memory_optimized_tables_internal_attributes (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
-
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Contains a row for each internal memory-optimized table used for storing user memory-optimized tables. Each user table corresponds to one or more internal tables. A single table is used for the core data storage. Additional internal tables are used to support features such as temporal, columnstore index and off-row (LOB) storage for memory-optimized tables.
  

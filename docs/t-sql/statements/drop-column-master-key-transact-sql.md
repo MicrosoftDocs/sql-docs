@@ -23,8 +23,7 @@ ms.author: jaszymas
 ---
 # DROP COLUMN MASTER KEY (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
-
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Drops a column master key from a database. This is a metadata operation.  
   

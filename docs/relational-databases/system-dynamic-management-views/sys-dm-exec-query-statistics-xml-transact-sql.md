@@ -20,8 +20,7 @@ ms.author: "pelopes"
 ---
 # sys.dm_exec_query_statistics_xml (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
-
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
 Returns query execution plan for in-flight requests. Use this DMV to retrieve showplan XML with transient statistics. 
 

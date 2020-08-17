@@ -29,8 +29,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # sys.column_master_keys (Transact-SQL)
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
-
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Returns a row for each database master key added by using the [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) statement. Each row represents a single column master key (CMK).  
     

@@ -208,6 +208,8 @@ The reverse lookup zone entry for the domain controller in the DC’s DNS server
 
 Add the missing reverse DNS entry (PTR record) for the zone referred in the logs. For this example, we added 244.10.
 	
+:::image type="content" source="media/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods/Missing_reverse_lookup_zone_entry_for_the domain_controller_add.png" alt-text="Add missing reverse lookup zone entry for the domain controller":::
+
 NOTE: Make sure that there is a reverse DNS entry (PTR record) for the domain controller itself, registered in the DNS server for all different networks of your cluster nodes. 
 
 [Verify reverse DNS entry (PTR record) for domain controller](deploy-active-directory.md#verify-reverse-dns-entry-for-domain-controller).

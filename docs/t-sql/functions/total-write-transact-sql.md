@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;TOTAL_WRITE (Transact-SQL)"
 title: "@@TOTAL_WRITE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"

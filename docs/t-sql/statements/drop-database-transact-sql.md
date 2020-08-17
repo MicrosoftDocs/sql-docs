@@ -1,4 +1,5 @@
 ---
+description: "DROP DATABASE (Transact-SQL)"
 title: "DROP DATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2019"

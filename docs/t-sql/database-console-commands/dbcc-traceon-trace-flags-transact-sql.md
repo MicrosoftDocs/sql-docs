@@ -1,4 +1,5 @@
 ---
+description: "DBCC TRACEON - Trace Flags (Transact-SQL)"
 title: "Trace Flags (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/27/2020

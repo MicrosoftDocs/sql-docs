@@ -1,4 +1,5 @@
 ---
+description: "CURRENT_TIMEZONE (Transact-SQL)"
 title: "CURRENT_TIMEZONE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/28/2020"

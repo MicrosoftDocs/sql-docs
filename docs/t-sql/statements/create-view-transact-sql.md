@@ -1,4 +1,5 @@
 ---
+description: "CREATE VIEW (Transact-SQL)"
 title: CREATE VIEW (Transact-SQL)
 ms.custom: ""
 ms.date: 04/16/2020

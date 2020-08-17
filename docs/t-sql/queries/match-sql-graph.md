@@ -1,4 +1,5 @@
 ---
+description: "MATCH (Transact-SQL)"
 title: "MATCH (SQL Graph) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/26/2019"

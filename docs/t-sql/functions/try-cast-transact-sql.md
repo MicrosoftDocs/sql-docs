@@ -1,4 +1,5 @@
 ---
+description: "TRY_CAST (Transact-SQL)"
 title: "TRY_CAST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

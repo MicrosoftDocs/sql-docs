@@ -1,4 +1,5 @@
 ---
+description: "RESTORE Statements (Transact-SQL)"
 title: "RESTORE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/04/2019"

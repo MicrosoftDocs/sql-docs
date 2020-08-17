@@ -1,4 +1,5 @@
 ---
+description: "DROP EXTERNAL RESOURCE POOL (Transact-SQL)"
 title: "DROP EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2020"

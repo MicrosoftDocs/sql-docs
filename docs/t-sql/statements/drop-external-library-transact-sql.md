@@ -1,4 +1,5 @@
 ---
+description: "DROP EXTERNAL LIBRARY (Transact-SQL)"
 title: "DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/10/2020

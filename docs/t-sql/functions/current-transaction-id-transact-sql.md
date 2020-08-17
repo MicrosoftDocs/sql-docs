@@ -1,4 +1,5 @@
 ---
+description: "CURRENT_TRANSACTION_ID (Transact-SQL)"
 title: CURRENT_TRANSACTION_ID (Transact-SQL)
 ms.custom: ""
 ms.date: "07/24/2017"

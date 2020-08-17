@@ -1,4 +1,5 @@
 ---
+description: "DATABASEPROPERTYEX (Transact-SQL)"
 title: "DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/23/2018"

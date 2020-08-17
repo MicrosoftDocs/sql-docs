@@ -1,4 +1,5 @@
 ---
+description: "Point (geography Data Type)"
 title: "Point (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/10/2019"

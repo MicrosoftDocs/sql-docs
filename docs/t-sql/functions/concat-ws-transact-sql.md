@@ -1,4 +1,5 @@
 ---
+description: "CONCAT_WS (Transact-SQL)"
 title: "CONCAT_WS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/25/2018"

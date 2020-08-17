@@ -1,4 +1,5 @@
 ---
+description: "CREATE TABLE AS SELECT (Azure SQL Data Warehouse)"
 title: "CREATE TABLE AS SELECT (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/07/2016"

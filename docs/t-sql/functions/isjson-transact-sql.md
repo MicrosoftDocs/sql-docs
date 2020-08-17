@@ -1,4 +1,5 @@
 ---
+description: "ISJSON (Transact-SQL)"
 title: "ISJSON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/03/2020

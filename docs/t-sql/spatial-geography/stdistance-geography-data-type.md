@@ -1,4 +1,5 @@
 ---
+description: "STDistance (geography Data Type)"
 title: "STDistance (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/19/2019"

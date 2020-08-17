@@ -1,4 +1,5 @@
 ---
+description: "DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)"
 title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 ms.custom: ""
 ms.date: "07/16/2017"

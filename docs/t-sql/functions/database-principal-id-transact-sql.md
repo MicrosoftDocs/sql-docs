@@ -1,4 +1,5 @@
 ---
+description: "DATABASE_PRINCIPAL_ID (Transact-SQL)"
 title: "DATABASE_PRINCIPAL_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/14/2019"

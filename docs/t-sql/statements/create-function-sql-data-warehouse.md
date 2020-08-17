@@ -1,4 +1,5 @@
 ---
+description: "CREATE FUNCTION (SQL Data Warehouse)"
 title: "CREATE FUNCTION (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"

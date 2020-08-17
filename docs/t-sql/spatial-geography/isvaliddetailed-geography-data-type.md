@@ -1,4 +1,5 @@
 ---
+description: "IsValidDetailed (geography Data Type)"
 title: "IsValidDetailed (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

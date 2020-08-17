@@ -1,4 +1,5 @@
 ---
+description: "IsValidDetailed (geometry DataType)"
 title: "IsValidDetailed (geometry DataType) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"

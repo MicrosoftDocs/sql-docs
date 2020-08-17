@@ -1,4 +1,5 @@
 ---
+description: "DBCC PDW_SHOWSPACEUSED (Transact-SQL)"
 title: DBCC PDW_SHOWSPACEUSED (Transact-SQL)
 ms.custom: ""
 ms.date: "07/17/2017"

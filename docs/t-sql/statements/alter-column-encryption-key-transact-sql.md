@@ -1,4 +1,5 @@
 ---
+description: "ALTER COLUMN ENCRYPTION KEY (Transact-SQL)"
 title: "ALTER COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/15/2019"

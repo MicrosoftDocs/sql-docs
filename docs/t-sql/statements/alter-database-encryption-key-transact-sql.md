@@ -1,4 +1,5 @@
 ---
+description: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL)"
 title: "ALTER DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.date: "04/16/2018"
 ms.prod: sql

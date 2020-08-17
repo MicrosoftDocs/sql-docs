@@ -1,4 +1,5 @@
 ---
+description: "Save Metadata  (MySQLToSQL)"
 title: "Save Metadata  (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

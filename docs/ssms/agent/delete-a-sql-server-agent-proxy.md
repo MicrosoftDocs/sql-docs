@@ -1,4 +1,5 @@
 ---
+description: "Delete a SQL Server Agent Proxy"
 title: "Delete a SQL Server Agent Proxy"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

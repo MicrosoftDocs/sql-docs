@@ -1,4 +1,5 @@
 ---
+description: "Initializing Test Cases (SybaseToSQL)"
 title: "Initializing Test Cases (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Set the Polling Interval for Target Servers"
 title: "Set the Polling Interval for Target Servers"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

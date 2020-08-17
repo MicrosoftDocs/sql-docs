@@ -1,4 +1,5 @@
 ---
+description: "Project Settings (GUI)  (MySQLToSQL)"
 title: "Project Settings (GUI)  (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

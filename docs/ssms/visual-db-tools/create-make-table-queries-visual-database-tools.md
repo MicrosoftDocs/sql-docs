@@ -1,4 +1,5 @@
 ---
+description: "Create Make Table Queries (Visual Database Tools)"
 title: Create Make Table Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

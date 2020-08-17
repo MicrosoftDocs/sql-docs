@@ -1,4 +1,5 @@
 ---
+description: "Write Execution Trace Messages to the SQL Server Agent Error Log"
 title: Write Execution Trace Messages to SQL Server Agent Error Log
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

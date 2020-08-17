@@ -1,4 +1,5 @@
 ---
+description: "Command Line Options in SSMA Console (OracleToSQL)"
 title: "Command Line Options in SSMA Console (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

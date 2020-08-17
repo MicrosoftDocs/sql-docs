@@ -1,4 +1,5 @@
 ---
+description: "Options (Environment - Startup page)"
 title: " SQL Server Options page - Environment - Startup"
 ms.date: 11/05/2018
 ms.prod: sql

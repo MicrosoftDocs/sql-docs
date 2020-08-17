@@ -1,4 +1,5 @@
 ---
+description: "Project Settings(Synchronization) (DB2ToSQL)"
 title: "Project Settings(Synchronization) (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

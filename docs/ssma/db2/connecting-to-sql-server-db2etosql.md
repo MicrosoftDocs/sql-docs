@@ -1,4 +1,5 @@
 ---
+description: "Connecting to SQL Server (DB2eToSQL)"
 title: "Connecting to SQL Server (DB2eToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

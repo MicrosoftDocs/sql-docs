@@ -1,4 +1,5 @@
 ---
+description: "Disable Stretch Database and bring back remote data"
 title: "Disable Stretch Database and bring back remote data"
 ms.date: "08/05/2016"
 ms.service: sql-server-stretch-database

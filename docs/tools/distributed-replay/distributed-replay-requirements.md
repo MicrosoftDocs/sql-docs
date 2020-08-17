@@ -1,4 +1,5 @@
 ---
+description: "Distributed Replay Requirements"
 title: Distributed Replay requirements
 titleSuffix: SQL Server Distributed Replay
 ms.prod: sql

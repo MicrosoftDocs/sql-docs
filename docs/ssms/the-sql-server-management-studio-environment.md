@@ -1,4 +1,5 @@
 ---
+description: "The SQL Server Management Studio Environment"
 title: "The SQL Server Management Studio Environment"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

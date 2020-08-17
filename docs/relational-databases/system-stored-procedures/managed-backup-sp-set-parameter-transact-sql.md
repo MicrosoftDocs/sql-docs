@@ -1,4 +1,5 @@
 ---
+description: "managed_backup.sp_set_parameter (Transact-SQL)"
 title: "managed_backup.sp_set_parameter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

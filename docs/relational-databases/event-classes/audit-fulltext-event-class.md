@@ -1,4 +1,5 @@
 ---
+description: "Audit Fulltext Event Class"
 title: "Audit Fulltext Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

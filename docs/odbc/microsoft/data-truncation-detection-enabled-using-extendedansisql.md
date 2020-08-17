@@ -1,4 +1,5 @@
 ---
+description: "Data Truncation Detection Enabled Using ExtendedAnsiSQL"
 title: "Data Truncation Detection Enabled Using ExtendedAnsiSQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

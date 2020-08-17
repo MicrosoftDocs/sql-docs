@@ -1,4 +1,5 @@
 ---
+description: "Remove or Delete an Item or Project"
 title: "Remove or Delete an Item or Project"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

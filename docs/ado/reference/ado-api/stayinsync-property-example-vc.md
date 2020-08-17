@@ -1,4 +1,5 @@
 ---
+description: "StayInSync Property Example (VC++)"
 title: "StayInSync Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_table_distribution_properties (Transact-SQL)"
 title: "sys.pdw_table_distribution_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/03/2019"

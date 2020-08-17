@@ -1,4 +1,5 @@
 ---
+description: "Microsoft Cursor Service for OLE DB (ADO Service Component)"
 title: "Microsoft Cursor Service for OLE DB (ADO Service Component) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Groups and Users Append, ChangePassword Methods Example (VC++)"
 title: "Groups and Users Append, ChangePassword Methods Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

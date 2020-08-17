@@ -1,4 +1,5 @@
 ---
+description: "Import and Export Data with the SQL Server Import and Export Wizard"
 title: "Import and Export Data with the SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/17/2017"

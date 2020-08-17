@@ -1,4 +1,5 @@
 ---
+description: "Filter and RecordCount Properties Example (JScript)"
 title: "Filter and RecordCount Properties Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

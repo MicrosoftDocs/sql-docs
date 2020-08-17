@@ -1,4 +1,5 @@
 ---
+description: "Transactions (SQL Data Warehouse)"
 title: "Transactions (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

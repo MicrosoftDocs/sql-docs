@@ -1,4 +1,5 @@
 ---
+description: "LocalDBGetInstances Function"
 title: "LocalDBGetInstances Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

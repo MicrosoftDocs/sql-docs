@@ -1,4 +1,5 @@
 ---
+description: "AbsolutePosition and CursorLocation Properties Example (JScript)"
 title: "AbsolutePosition and CursorLocation Properties Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

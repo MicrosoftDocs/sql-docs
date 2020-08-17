@@ -1,4 +1,5 @@
 ---
+description: "Shape Commands in General"
 title: "Shape Commands in General | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

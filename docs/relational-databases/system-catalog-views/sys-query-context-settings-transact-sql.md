@@ -1,4 +1,5 @@
 ---
+description: "sys.query_context_settings (Transact-SQL)"
 title: "sys.query_context_settings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/29/2018"

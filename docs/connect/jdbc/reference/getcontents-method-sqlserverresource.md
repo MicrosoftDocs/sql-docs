@@ -1,4 +1,5 @@
 ---
+description: "getContents Method (SQLServerResource)"
 title: "getContents Method (SQLServerResource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

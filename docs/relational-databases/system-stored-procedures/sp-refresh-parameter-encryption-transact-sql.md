@@ -1,4 +1,5 @@
 ---
+description: "sp_refresh_parameter_encryption (Transact-SQL)"
 title: "sp_refresh_parameter_encryption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2017"

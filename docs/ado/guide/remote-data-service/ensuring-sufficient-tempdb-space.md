@@ -1,4 +1,5 @@
 ---
+description: "Ensuring Sufficient TempDB Space"
 title: "Ensuring Sufficient TempDB Space | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

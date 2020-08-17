@@ -1,4 +1,5 @@
 ---
+description: "sp_getsubscriptiondtspackagename (Transact-SQL)"
 title: "sp_getsubscriptiondtspackagename (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

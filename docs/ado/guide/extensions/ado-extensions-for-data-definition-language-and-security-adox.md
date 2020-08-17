@@ -1,4 +1,5 @@
 ---
+description: "ADO Extensions for Data Definition Language and Security (ADOX)"
 title: "ADO Extensions for Data Definition Language and Security (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

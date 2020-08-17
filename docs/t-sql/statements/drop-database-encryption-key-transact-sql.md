@@ -1,4 +1,5 @@
 ---
+description: "DROP DATABASE ENCRYPTION KEY (Transact-SQL)"
 title: "DROP DATABASE ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Delete a Job Step Log"
 title: "Delete a Job Step Log"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

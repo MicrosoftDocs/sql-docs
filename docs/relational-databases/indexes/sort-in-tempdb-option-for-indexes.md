@@ -1,4 +1,5 @@
 ---
+description: "SORT_IN_TEMPDB Option For Indexes"
 title: "SORT_IN_TEMPDB Option For Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Handling Errors in JScript"
 title: "Handling Errors in JScript | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

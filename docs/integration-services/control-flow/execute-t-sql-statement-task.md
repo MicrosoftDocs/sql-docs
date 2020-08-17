@@ -1,4 +1,5 @@
 ---
+description: "Execute T-SQL Statement Task"
 title: "Execute T-SQL Statement Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"

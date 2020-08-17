@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_xtp_transactions (Transact-SQL)"
 title: "sys.dm_db_xtp_transactions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2016"

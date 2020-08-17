@@ -1,7 +1,8 @@
 ---
+description: "ALTER EXTERNAL RESOURCE POOL (Transact-SQL)"
 title: "ALTER EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/07/2019"
+ms.date: "08/06/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning-services
@@ -16,18 +17,18 @@ ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Changes a Resource Governor external pool that specifies resources that can be used by external processes. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 For [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the external pool governs `rterm.exe`, `BxlServer.exe`, and other processes spawned by them.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], the external pool governs `rterm.exe`, `python.exe`, `BxlServer.exe`, and other processes spawned by them.
 ::: moniker-end
 
@@ -103,6 +104,9 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
+
+> [!NOTE]
+> SQL Machine Learning Services 2019 for Linux does not support the ability to set CPU affinity.
 
 ## See also
 

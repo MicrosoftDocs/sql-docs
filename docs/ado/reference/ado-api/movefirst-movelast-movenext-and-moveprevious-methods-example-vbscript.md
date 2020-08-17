@@ -1,4 +1,5 @@
 ---
+description: "MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VBScript)"
 title: "Move Record Pointer of Recordset Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

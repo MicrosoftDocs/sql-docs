@@ -1,4 +1,5 @@
 ---
+description: "MaxRecords Property (ADO)"
 title: "MaxRecords Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

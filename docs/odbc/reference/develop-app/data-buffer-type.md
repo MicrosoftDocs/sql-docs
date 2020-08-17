@@ -1,4 +1,5 @@
 ---
+description: "Data Buffer Type"
 title: "Data Buffer Type | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

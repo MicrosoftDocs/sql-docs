@@ -1,4 +1,5 @@
 ---
+description: "Intervening Shape COMPUTE Clauses"
 title: "Intervening Shape COMPUTE Clauses | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

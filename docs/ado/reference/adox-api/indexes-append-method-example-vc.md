@@ -1,4 +1,5 @@
 ---
+description: "Indexes Append Method Example (VC++)"
 title: "Indexes Append Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

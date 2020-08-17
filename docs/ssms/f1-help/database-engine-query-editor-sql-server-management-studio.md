@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Management Studio (SSMS) Query Editor"
 title: SSMS Query Editor
 ms.prod: sql
 ms.prod_service: sql-tools

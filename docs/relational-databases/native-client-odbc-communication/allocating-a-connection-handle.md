@@ -1,4 +1,5 @@
 ---
+description: "Allocating a Connection Handle"
 title: "Allocating a Connection Handle | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

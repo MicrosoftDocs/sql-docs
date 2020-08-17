@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_subscriptions (Transact-SQL)"
 title: "MSmerge_subscriptions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

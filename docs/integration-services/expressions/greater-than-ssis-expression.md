@@ -1,4 +1,5 @@
 ---
+description: "&gt; (Greater Than) (SSIS Expression)"
 title: "&gt; (Greater Than) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

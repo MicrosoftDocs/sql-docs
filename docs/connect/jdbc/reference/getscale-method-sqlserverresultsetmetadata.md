@@ -1,4 +1,5 @@
 ---
+description: "getScale Method (SQLServerResultSetMetaData)"
 title: "getScale Method (SQLServerResultSetMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

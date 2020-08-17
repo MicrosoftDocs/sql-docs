@@ -1,4 +1,5 @@
 ---
+description: "sp_changearticle (Transact-SQL)"
 title: "sp_changearticle (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/28/2015"

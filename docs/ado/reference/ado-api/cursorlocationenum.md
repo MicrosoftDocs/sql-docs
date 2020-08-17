@@ -1,4 +1,5 @@
 ---
+description: "CursorLocationEnum"
 title: "CursorLocationEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

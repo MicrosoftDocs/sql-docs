@@ -1,4 +1,5 @@
 ---
+description: "EOS Property"
 title: "EOS Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

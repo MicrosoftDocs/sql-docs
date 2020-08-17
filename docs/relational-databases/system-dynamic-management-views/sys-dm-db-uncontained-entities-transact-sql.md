@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_uncontained_entities (Transact-SQL)"
 title: "sys.dm_db_uncontained_entities (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

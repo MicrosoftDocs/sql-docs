@@ -1,4 +1,5 @@
 ---
+description: "Change a SQL Server Native Client Authentication User Password (OLE DB)"
 title: "SQL Authentication User Password (OLE DB)"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sys.database_scoped_configurations (Transact-SQL)"
 title: "sys.database_scoped_configurations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/14/2018"

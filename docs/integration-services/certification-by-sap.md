@@ -1,4 +1,5 @@
 ---
+description: "Certification by SAP"
 title: "Certification by SAP | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

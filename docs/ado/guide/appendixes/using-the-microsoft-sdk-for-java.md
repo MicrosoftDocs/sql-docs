@@ -1,4 +1,5 @@
 ---
+description: "Using the Microsoft SDK for Java"
 title: "Using the Microsoft SDK for Java | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

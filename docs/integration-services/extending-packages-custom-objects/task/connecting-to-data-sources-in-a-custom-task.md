@@ -1,4 +1,5 @@
 ---
+description: "Connecting to Data Sources in a Custom Task"
 title: "Connecting to Data Sources in a Custom Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

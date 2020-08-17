@@ -1,4 +1,5 @@
 ---
+description: "GetObjectOwner and SetObjectOwner Methods Example (VC++)"
 title: "GetObjectOwner and SetObjectOwner Methods Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

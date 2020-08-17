@@ -1,4 +1,5 @@
 ---
+description: "Clustered Property Example (VB)"
 title: "Clustered Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

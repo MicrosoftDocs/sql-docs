@@ -1,4 +1,5 @@
 ---
+description: "Implicit Cursor Conversions (ODBC)"
 title: "Implicit Cursor Conversions (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

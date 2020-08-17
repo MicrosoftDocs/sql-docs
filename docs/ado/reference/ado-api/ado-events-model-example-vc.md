@@ -1,4 +1,5 @@
 ---
+description: "ADO Events Model Example (VC++)"
 title: "ADO Events Model Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

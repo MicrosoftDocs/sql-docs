@@ -1,4 +1,5 @@
 ---
+description: "sp_xtp_flush_temporal_history (Transact-SQL)"
 title: "sp_xtp_flush_temporal_history | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2016"

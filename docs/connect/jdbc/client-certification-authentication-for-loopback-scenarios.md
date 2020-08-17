@@ -1,4 +1,5 @@
 ---
+description: "Client Certificate Authentication for loopback scenarios"
 title: "Client Certificate Authentication for loopback scenarios | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2020"

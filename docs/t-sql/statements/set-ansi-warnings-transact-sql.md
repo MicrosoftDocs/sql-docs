@@ -1,4 +1,5 @@
 ---
+description: "SET ANSI_WARNINGS (Transact-SQL)"
 title: "SET ANSI_WARNINGS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/15/2020"

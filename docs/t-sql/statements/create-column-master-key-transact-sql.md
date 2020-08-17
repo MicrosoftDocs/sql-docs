@@ -1,4 +1,5 @@
 ---
+description: "CREATE COLUMN MASTER KEY (Transact-SQL)"
 title: "CREATE COLUMN MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/15/2019"

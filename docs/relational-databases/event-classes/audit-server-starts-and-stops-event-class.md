@@ -1,4 +1,5 @@
 ---
+description: "Audit Server Starts and Stops Event Class"
 title: "Audit Server Starts and Stops Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "~ (Bitwise NOT) (Transact-SQL)"
 title: "~ (Bitwise NOT) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"

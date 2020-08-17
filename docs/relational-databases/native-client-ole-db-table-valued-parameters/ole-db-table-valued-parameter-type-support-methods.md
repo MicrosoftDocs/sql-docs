@@ -1,4 +1,5 @@
 ---
+description: "OLE DB Table-Valued Parameter Type Support in SQL Server Native Client (Methods)"
 title: "OLE DB Table-Valued Parameter type (Methods)"
 ms.custom: ""
 ms.date: "03/14/2017"

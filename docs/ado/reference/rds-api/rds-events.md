@@ -1,4 +1,5 @@
 ---
+description: "RDS Events"
 title: "RDS Events | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

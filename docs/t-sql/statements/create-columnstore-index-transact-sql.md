@@ -1,4 +1,5 @@
 ---
+description: "CREATE COLUMNSTORE INDEX (Transact-SQL)"
 title: "CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2019"

@@ -1,4 +1,5 @@
 ---
+description: "Microsoft OLE DB Persistence Provider (ADO Service Provider)"
 title: "Microsoft OLE DB Persistence Provider (ADO Service Provider) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

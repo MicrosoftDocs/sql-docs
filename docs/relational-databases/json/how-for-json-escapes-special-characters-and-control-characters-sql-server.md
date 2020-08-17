@@ -1,4 +1,5 @@
 ---
+description: "How FOR JSON escapes special characters and control characters (SQL Server)"
 title: "How FOR JSON escapes special characters and control characters"
 ms.date: 06/03/2020
 ms.prod: sql

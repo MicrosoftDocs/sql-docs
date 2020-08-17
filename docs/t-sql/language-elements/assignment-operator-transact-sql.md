@@ -1,4 +1,5 @@
 ---
+description: "= (Assignment Operator) (Transact-SQL)"
 title: "= (Assignment Operator) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

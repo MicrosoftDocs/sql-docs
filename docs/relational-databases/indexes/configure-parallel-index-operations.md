@@ -1,4 +1,5 @@
 ---
+description: "Configure Parallel Index Operations"
 title: "Configure Parallel Index Operations | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"

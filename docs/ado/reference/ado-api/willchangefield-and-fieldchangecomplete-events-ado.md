@@ -1,4 +1,5 @@
 ---
+description: "WillChangeField and FieldChangeComplete Events (ADO)"
 title: "WillChangeField and FieldChangeComplete Events (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

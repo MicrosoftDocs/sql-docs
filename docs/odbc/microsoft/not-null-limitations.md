@@ -1,4 +1,5 @@
 ---
+description: "NOT NULL Limitations"
 title: "NOT NULL Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

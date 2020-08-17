@@ -1,4 +1,5 @@
 ---
+description: "SQLServerNClob Members"
 title: "SQLServerNClob Members | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

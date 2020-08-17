@@ -1,4 +1,5 @@
 ---
+description: "Vertical Applications"
 title: "Vertical Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

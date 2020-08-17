@@ -1,4 +1,5 @@
 ---
+description: "Temporal Tables"
 title: "Temporal Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/11/2016"

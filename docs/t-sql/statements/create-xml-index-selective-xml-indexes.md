@@ -1,4 +1,5 @@
 ---
+description: "CREATE XML INDEX (Selective XML Indexes)"
 title: "CREATE XML INDEX (Selective XML Indexes) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"

@@ -1,4 +1,5 @@
 ---
+description: "SET ANSI_NULL_DFLT_ON (Transact-SQL)"
 title: "SET ANSI_NULL_DFLT_ON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/04/2017"

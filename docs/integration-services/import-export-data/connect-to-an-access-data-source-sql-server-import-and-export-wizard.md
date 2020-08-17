@@ -1,4 +1,5 @@
 ---
+description: "Connect to an Access Data Source (SQL Server Import and Export Wizard)"
 title: "Connect to an Access Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/20/2017"

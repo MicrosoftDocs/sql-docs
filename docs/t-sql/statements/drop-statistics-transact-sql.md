@@ -1,4 +1,5 @@
 ---
+description: "DROP STATISTICS (Transact-SQL)"
 title: "DROP STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/22/2016"

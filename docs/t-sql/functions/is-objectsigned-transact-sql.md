@@ -1,4 +1,5 @@
 ---
+description: "IS_OBJECTSIGNED (Transact-SQL)"
 title: "IS_OBJECTSIGNED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/10/2016"

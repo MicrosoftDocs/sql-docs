@@ -1,4 +1,5 @@
 ---
+description: "char and varchar (Transact-SQL)"
 title: char and varchar (Transact-SQL)
 ms.custom: ""
 ms.date: "11/19/2019"

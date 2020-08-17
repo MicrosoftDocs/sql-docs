@@ -1,4 +1,5 @@
 ---
+description: "Automatically Generate Attribute Values Other Than Code (Master Data Services)"
 title: Automatically Generate Attribute Values
 titleSuffix: Master Data Services
 ms.custom: "seo-lt-2019"

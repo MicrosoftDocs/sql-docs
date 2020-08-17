@@ -1,4 +1,5 @@
 ---
+description: "SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL)"
 title: "SET CURSOR_CLOSE_ON_COMMIT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"

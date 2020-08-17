@@ -1,4 +1,5 @@
 ---
+description: "Disable or Enable a Job"
 title: "Disable or Enable a Job"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

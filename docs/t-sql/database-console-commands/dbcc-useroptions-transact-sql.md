@@ -1,4 +1,5 @@
 ---
+description: "DBCC USEROPTIONS (Transact-SQL)"
 title: "DBCC USEROPTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"

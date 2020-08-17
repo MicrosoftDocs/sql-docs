@@ -1,4 +1,5 @@
 ---
+description: "CreateRecordset Method Example (VB)"
 title: "CreateRecordset Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

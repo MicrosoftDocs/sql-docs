@@ -1,4 +1,5 @@
 ---
+description: "sys.workload_management_workload_groups (Transact-SQL)"
 title: "sys.workload_management_workload_groups (Transact-SQL) | Microsoft Docs"
 ms.custom:
 ms.date: 11/05/2019

@@ -1,4 +1,5 @@
 ---
+description: "Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)"
 title: "Create a New Foreign Key Relationship between Tables Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

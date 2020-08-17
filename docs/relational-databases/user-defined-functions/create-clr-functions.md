@@ -1,4 +1,5 @@
 ---
+description: "Create CLR Functions"
 title: "Create CLR Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

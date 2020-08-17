@@ -1,4 +1,5 @@
 ---
+description: "MSsubscriptions (Transact-SQL)"
 title: "MSsubscriptions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "General database mail troubleshooting steps"
 title: "General database mail troubleshooting"
 ms.date: 06/03/2020
 ms.prod: sql

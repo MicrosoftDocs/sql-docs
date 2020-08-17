@@ -1,4 +1,5 @@
 ---
+description: "sys.sql_expression_dependencies (Transact-SQL)"
 title: "sys.sql_expression_dependencies (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

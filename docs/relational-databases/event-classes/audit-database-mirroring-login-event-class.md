@@ -1,4 +1,5 @@
 ---
+description: "Audit Database Mirroring Login Event Class"
 title: "Audit Database Mirroring Login Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

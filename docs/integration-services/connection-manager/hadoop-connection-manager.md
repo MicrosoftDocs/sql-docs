@@ -1,4 +1,5 @@
 ---
+description: "Hadoop Connection Manager"
 title: "Hadoop Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/29/2020

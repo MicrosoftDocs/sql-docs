@@ -1,4 +1,5 @@
 ---
+description: "AppendChunk and GetChunk Methods Example (VB)"
 title: "AppendChunk and GetChunk Methods Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

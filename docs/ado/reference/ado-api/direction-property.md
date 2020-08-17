@@ -1,4 +1,5 @@
 ---
+description: "Direction Property"
 title: "Direction Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

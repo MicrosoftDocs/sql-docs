@@ -1,4 +1,5 @@
 ---
+description: "Data Source Specification Subkeys"
 title: "Data Source Specification Subkeys | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

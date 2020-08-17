@@ -1,4 +1,5 @@
 ---
+description: "Pages and Extents Architecture Guide"
 title: "Pages and Extents Architecture Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/12/2019"

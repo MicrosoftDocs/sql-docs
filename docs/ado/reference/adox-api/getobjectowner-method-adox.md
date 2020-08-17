@@ -1,4 +1,5 @@
 ---
+description: "GetObjectOwner Method (ADOX)"
 title: "GetObjectOwner Method (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

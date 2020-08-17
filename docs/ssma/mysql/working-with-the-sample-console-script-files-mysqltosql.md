@@ -1,4 +1,5 @@
 ---
+description: "Working with the Sample Console Script Files (MySQLToSQL)"
 title: "Working with the Sample Console Script Files (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

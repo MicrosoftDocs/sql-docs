@@ -1,4 +1,5 @@
 ---
+description: "Alerts"
 title: Alerts
 ms.prod: sql
 ms.prod_service: sql-tools

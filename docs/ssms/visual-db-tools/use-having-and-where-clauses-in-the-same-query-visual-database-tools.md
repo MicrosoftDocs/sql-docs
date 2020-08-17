@@ -1,4 +1,5 @@
 ---
+description: "Use HAVING and WHERE Clauses in the Same Query (Visual Database Tools)"
 title: Use HAVING and WHERE Clauses in the Same Query
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

@@ -1,4 +1,5 @@
 ---
+description: "Performance Tuning for Oracle Publishers"
 title: "Performance Tuning for Oracle Publishers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "CacheSize Property Example (JScript)"
 title: "CacheSize Property Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

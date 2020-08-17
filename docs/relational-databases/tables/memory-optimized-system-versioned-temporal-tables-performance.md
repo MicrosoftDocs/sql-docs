@@ -1,4 +1,5 @@
 ---
+description: "Memory-Optimized System-Versioned Temporal Tables Performance"
 title: "Memory-Optimized System-Versioned Temporal Tables Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"

@@ -1,4 +1,5 @@
 ---
+description: "sys.geo_replication_links (Azure SQL Database)"
 title: "sys.geo_replication_links (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/28/2019"

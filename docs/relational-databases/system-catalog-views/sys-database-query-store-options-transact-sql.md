@@ -1,4 +1,5 @@
 ---
+description: "sys.database_query_store_options (Transact-SQL)"
 title: "sys.database_query_store_options (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/27/2020"

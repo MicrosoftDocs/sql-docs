@@ -1,4 +1,5 @@
 ---
+description: "Using a Recordset Object"
 title: "Using a Recordset Object | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

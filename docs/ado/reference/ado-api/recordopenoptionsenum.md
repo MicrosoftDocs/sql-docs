@@ -1,4 +1,5 @@
 ---
+description: "RecordOpenOptionsEnum"
 title: "RecordOpenOptionsEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "ConnectionString, ConnectionTimeout, and State Properties Example (VB)"
 title: "Connection Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

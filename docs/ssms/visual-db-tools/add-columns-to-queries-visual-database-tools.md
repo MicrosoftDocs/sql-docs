@@ -1,4 +1,5 @@
 ---
+description: "Add Columns to Queries (Visual Database Tools)"
 title: Add Columns to Queries
 ms.prod: sql
 ms.prod_service: sql-tools

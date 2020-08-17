@@ -1,4 +1,5 @@
 ---
+description: "Refresh Method Example (VC++)"
 title: "Refresh Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

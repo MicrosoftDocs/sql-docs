@@ -1,4 +1,5 @@
 ---
+description: "Data Flow Performance Features"
 title: "Data Flow Performance Features | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Connect Property (RDS)"
 title: "Connect Property (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

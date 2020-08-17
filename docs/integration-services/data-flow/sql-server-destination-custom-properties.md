@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Destination Custom Properties"
 title: "SQL Server Destination Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

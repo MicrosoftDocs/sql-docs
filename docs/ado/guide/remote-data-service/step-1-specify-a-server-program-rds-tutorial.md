@@ -1,4 +1,5 @@
 ---
+description: "Step 1: Specify a Server Program (RDS Tutorial)"
 title: "Step 1: Specify a Server Program (RDS Tutorial) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

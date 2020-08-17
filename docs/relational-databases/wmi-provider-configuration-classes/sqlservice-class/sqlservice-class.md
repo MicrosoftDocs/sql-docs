@@ -1,4 +1,5 @@
 ---
+description: "SqlService Class"
 title: "SqlService Class"
 ms.custom: ""
 ms.date: "03/14/2017"

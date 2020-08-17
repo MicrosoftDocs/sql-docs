@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysnotifications (Transact-SQL)"
 title: "dbo.sysnotifications (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

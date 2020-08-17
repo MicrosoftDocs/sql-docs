@@ -1,4 +1,5 @@
 ---
+description: "DataSpace Object (RDS)"
 title: "DataSpace Object (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

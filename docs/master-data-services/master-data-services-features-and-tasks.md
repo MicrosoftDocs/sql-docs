@@ -1,4 +1,5 @@
 ---
+description: "Master Data Services Features and Tasks"
 title: Features and Tasks
 ms.custom: ""
 ms.date: "04/01/2016"

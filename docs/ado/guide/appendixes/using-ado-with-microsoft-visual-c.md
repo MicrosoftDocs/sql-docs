@@ -1,4 +1,5 @@
 ---
+description: "Using ADO with Microsoft Visual C++"
 title: "Using ADO with Microsoft Visual C++ | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

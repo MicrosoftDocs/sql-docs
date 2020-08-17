@@ -1,4 +1,5 @@
 ---
+description: "sys.database_service_objectives (Azure SQL Database)"
 title: "sys.database_service_objectives"
 titleSuffix: Azure SQL Database
 ms.date: "03/21/2018"

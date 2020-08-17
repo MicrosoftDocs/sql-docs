@@ -1,4 +1,5 @@
 ---
+description: "ServerSettings Class"
 title: "ServerSettings Class"
 ms.custom: ""
 ms.date: "03/14/2017"

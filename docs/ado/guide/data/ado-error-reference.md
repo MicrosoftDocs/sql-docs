@@ -1,4 +1,5 @@
 ---
+description: "ADO Error Reference"
 title: "ADO Error Reference | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

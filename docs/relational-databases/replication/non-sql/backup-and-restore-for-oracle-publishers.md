@@ -1,4 +1,5 @@
 ---
+description: "Backup and Restore for Oracle Publishers"
 title: "Backup and Restore for Oracle Publishers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

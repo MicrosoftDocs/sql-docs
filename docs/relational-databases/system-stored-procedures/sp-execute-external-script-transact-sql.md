@@ -1,4 +1,5 @@
 ---
+description: "sp_execute_external_script (Transact-SQL)"
 title: "sp_execute_external_script (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 08/06/2020

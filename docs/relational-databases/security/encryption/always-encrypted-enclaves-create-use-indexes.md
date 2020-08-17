@@ -1,4 +1,5 @@
 ---
+description: "Create and use indexes on columns using Always Encrypted with secure enclaves"
 title: "Create and use indexes on columns using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/30/2019

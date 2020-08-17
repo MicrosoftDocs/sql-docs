@@ -1,4 +1,5 @@
 ---
+description: "Declaring the Application&#39;s ODBC Version"
 title: "Declaring the Application&#39;s ODBC Version | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

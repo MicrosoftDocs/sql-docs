@@ -1,4 +1,5 @@
 ---
+description: "CREATE DIAGNOSTICS SESSION (Transact-SQL)"
 title: "CREATE DIAGNOSTICS SESSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

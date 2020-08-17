@@ -1,4 +1,5 @@
 ---
+description: "Size Property (ADO Parameter)"
 title: "Size Property (ADO Parameter) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

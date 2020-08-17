@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL)"
 title: "sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

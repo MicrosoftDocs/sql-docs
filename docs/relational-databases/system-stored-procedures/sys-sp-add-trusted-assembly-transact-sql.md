@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_add_trusted_assembly (Transact-SQL)"
 title: "sys.sp_add_trusted_assembly (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2017"

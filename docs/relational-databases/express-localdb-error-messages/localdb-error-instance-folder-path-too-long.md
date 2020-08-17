@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG"
 title: "LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

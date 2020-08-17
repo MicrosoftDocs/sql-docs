@@ -1,4 +1,5 @@
 ---
+description: "DROP TRIGGER (Transact-SQL)"
 title: "DROP TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/12/2017"

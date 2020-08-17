@@ -1,4 +1,5 @@
 ---
+description: "getDate Method (int, java.util.Calendar)"
 title: "getDate Method (int, java.util.Calendar) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

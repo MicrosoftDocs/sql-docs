@@ -1,4 +1,5 @@
 ---
+description: "xp_cmdshell (Transact-SQL)"
 title: "xp_cmdshell (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2019"

@@ -1,4 +1,5 @@
 ---
+description: "Start, Stop, or Pause the SQL Server Agent Service"
 title: Start, Stop, or Pause the Service
 ms.prod: sql
 ms.prod_service: sql-tools

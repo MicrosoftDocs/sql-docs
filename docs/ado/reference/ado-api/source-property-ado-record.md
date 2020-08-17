@@ -1,4 +1,5 @@
 ---
+description: "Source Property (ADO Record)"
 title: "Source Property (ADO Record) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

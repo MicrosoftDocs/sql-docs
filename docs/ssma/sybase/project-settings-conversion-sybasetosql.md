@@ -1,4 +1,5 @@
 ---
+description: "Project Settings (Conversion) (SybaseToSQL)"
 title: "Project Settings (Conversion) (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Direct Execution ODBC"
 title: "Direct Execution ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

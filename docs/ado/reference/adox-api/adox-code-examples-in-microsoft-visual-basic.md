@@ -1,4 +1,5 @@
 ---
+description: "ADOX Code Examples in Microsoft Visual Basic"
 title: "ADOX Code Examples in Microsoft Visual Basic | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

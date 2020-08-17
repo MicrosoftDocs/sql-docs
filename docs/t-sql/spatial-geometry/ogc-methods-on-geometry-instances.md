@@ -1,4 +1,5 @@
 ---
+description: "OGC Methods on Geometry Instances"
 title: "OGC Methods on Geometry Instances | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

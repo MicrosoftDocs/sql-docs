@@ -1,4 +1,5 @@
 ---
+description: "sys.partitions (Transact-SQL)"
 title: "sys.partitions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

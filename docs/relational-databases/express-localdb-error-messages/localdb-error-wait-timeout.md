@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_WAIT_TIMEOUT"
 title: "LOCALDB_ERROR_WAIT_TIMEOUT | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

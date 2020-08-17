@@ -1,4 +1,5 @@
 ---
+description: "Recordset Destination"
 title: "Recordset Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

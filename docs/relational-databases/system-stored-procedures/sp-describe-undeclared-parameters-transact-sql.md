@@ -1,4 +1,5 @@
 ---
+description: "sp_describe_undeclared_parameters (Transact-SQL)"
 title: "sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/24/2018"

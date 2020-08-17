@@ -1,4 +1,5 @@
 ---
+description: "Microsoft OLE DB Provider for SQL Server Overview"
 title: "Microsoft OLE DB Provider for SQL Server | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

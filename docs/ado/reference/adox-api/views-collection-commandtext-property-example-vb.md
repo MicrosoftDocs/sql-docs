@@ -1,4 +1,5 @@
 ---
+description: "Views Collection, CommandText Property Example (VB)"
 title: "Views Collection, CommandText Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Passing Parameters to a Named Command"
 title: "Passing Parameters to a Named Command | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Source Property Example (VC++)"
 title: "Source Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

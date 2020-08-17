@@ -1,4 +1,5 @@
 ---
+description: "Project Settings (Type Mapping) (DB2ToSQL)"
 title: "Project Settings (Type Mapping) (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

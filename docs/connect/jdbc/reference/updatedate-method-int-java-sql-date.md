@@ -1,4 +1,5 @@
 ---
+description: "updateDate Method (int, java.sql.Date)"
 title: "updateDate Method (int, java.sql.Date) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Minimizing Log File Space Usage"
 title: "Minimizing Log File Space Usage | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

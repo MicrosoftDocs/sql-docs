@@ -1,4 +1,5 @@
 ---
+description: "Selecting and Configuring Affected Objects (SybaseToSQL)"
 title: "Selecting and Configuring Affected Objects (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

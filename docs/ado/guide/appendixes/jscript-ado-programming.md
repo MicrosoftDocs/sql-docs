@@ -1,4 +1,5 @@
 ---
+description: "JScript ADO Programming"
 title: "JScript ADO Programming | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

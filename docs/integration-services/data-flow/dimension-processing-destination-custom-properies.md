@@ -1,4 +1,5 @@
 ---
+description: "Dimension Processing Destination Custom Properies"
 title: "Dimension Processing Destination Custom Properies | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

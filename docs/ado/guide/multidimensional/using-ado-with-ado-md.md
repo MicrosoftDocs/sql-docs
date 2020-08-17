@@ -1,4 +1,5 @@
 ---
+description: "Using ADO with ADO MD"
 title: "Using ADO with ADO MD | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

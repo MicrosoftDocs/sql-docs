@@ -1,4 +1,5 @@
 ---
+description: "StartDate Property (SecurityCertificate Class)"
 title: "StartDate Property (SecurityCertificate)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"

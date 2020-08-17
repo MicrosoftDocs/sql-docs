@@ -1,4 +1,5 @@
 ---
+description: "ConnectionString, ConnectionTimeout, and State Properties Example (VC++)"
 title: "Connection Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

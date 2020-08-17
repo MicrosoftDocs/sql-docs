@@ -1,4 +1,5 @@
 ---
+description: "Deploy an SSIS project from Visual Studio Code with Transact-SQL"
 title: "Deploy an SSIS project with Transact-SQL (VS Code) | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart

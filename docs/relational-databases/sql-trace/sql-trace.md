@@ -1,4 +1,5 @@
 ---
+description: "SQL Trace"
 title: "SQL Trace | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/27/2018"

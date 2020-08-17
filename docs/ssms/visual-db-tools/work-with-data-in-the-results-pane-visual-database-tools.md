@@ -1,4 +1,5 @@
 ---
+description: "Work with Data in the Results Pane (Visual Database Tools)"
 title: Work with Data in the Results Pane
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

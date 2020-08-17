@@ -1,4 +1,5 @@
 ---
+description: "Creating a Connection String"
 title: "Creating a Connection String | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

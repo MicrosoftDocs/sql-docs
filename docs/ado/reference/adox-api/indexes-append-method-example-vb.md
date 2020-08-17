@@ -1,4 +1,5 @@
 ---
+description: "Indexes Append Method Example (VB)"
 title: "Indexes Append Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "RDS Tutorial (VBScript)"
 title: "RDS Tutorial (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

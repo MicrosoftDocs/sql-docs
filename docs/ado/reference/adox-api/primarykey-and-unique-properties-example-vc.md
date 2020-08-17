@@ -1,4 +1,5 @@
 ---
+description: "PrimaryKey and Unique Properties Example (VC++)"
 title: "PrimaryKey and Unique Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

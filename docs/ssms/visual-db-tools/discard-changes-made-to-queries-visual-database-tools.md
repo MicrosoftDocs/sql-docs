@@ -1,4 +1,5 @@
 ---
+description: "Discard Changes Made to Queries (Visual Database Tools)"
 title: Discard Changes Made to Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

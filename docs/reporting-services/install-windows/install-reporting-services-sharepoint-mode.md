@@ -1,4 +1,5 @@
 ---
+description: "Install Reporting Services 2016 in SharePoint mode"
 title: "Install Reporting Services 2016 in SharePoint mode | Microsoft Docs"
 ms.date: 12/20/2017
 ms.prod: reporting-services

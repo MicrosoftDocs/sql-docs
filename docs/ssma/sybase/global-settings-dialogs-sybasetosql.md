@@ -1,4 +1,5 @@
 ---
+description: "Global Settings (Dialogs)  (SybaseToSQL)"
 title: "Global Settings (Dialogs)  (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

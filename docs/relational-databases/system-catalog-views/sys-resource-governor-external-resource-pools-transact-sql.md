@@ -1,4 +1,5 @@
 ---
+description: "sys.resource_governor_external_resource_pools (Transact-SQL)"
 title: "sys.resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/13/2017"

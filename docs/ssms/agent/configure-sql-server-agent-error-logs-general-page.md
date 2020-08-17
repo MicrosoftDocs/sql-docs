@@ -1,4 +1,5 @@
 ---
+description: "Configure SQL Server Agent Error Logs (General Page)"
 title: Configure Error Logs (General Page)
 ms.prod: sql
 ms.prod_service: sql-tools

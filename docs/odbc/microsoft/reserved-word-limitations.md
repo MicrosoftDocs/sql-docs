@@ -1,4 +1,5 @@
 ---
+description: "Reserved Keyword Limitations"
 title: "Reserved Word Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2018"

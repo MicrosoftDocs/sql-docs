@@ -1,4 +1,5 @@
 ---
+description: "SET PARSEONLY (Transact-SQL)"
 title: "SET PARSEONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/27/2017"

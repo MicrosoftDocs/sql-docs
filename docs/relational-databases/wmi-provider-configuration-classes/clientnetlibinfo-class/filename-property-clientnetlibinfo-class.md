@@ -1,4 +1,5 @@
 ---
+description: "FileName Property (ClientNetLibInfo Class)"
 title: "FileName Property (ClientNetLibInfo)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"

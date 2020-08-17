@@ -1,4 +1,5 @@
 ---
+description: "Error Handling in ADO"
 title: "Error Handling | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

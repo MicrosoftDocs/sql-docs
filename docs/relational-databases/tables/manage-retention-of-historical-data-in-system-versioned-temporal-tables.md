@@ -1,4 +1,5 @@
 ---
+description: "Manage retention of historical data in system-versioned temporal tables"
 title: Manage historical data in System-Versioned Temporal Tables
 ms.custom: "seo-lt-2019"
 ms.date: "05/18/2017"

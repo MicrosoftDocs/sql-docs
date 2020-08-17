@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_trace_getinfo (Transact-SQL)"
 title: "sys.fn_trace_getinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"

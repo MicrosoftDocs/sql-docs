@@ -1,4 +1,5 @@
 ---
+description: "Event Parameters"
 title: "Event Parameters | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

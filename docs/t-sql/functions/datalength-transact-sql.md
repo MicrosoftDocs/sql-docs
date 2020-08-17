@@ -1,4 +1,5 @@
 ---
+description: "DATALENGTH (Transact-SQL)"
 title: "DATALENGTH (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/20/2019"

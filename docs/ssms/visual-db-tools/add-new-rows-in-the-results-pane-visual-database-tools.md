@@ -1,4 +1,5 @@
 ---
+description: "Add New Rows in the Results Pane (Visual Database Tools)"
 title: Add New Rows in the Results Pane
 ms.prod: sql
 ms.prod_service: sql-tools

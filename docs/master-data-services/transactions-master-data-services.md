@@ -1,4 +1,5 @@
 ---
+description: "Transactions (Master Data Services)"
 title: Transactions
 ms.custom: ""
 ms.date: "01/10/2017"

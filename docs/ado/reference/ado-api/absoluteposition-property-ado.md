@@ -1,4 +1,5 @@
 ---
+description: "AbsolutePosition Property (ADO)"
 title: "AbsolutePosition Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

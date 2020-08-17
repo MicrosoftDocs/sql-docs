@@ -1,4 +1,5 @@
 ---
+description: "ISNULL (Transact-SQL)"
 title: ISNULL (Transact-SQL)
 ms.custom: ""
 ms.date: "03/06/2017"

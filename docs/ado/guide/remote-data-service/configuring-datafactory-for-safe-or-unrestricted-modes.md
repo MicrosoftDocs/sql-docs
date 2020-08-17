@@ -1,4 +1,5 @@
 ---
+description: "Configuring DataFactory for Safe or Unrestricted Modes"
 title: "Configuring DataFactory for Safe or Unrestricted Modes | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

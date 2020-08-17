@@ -1,4 +1,5 @@
 ---
+description: "GetRows Method Example (JScript)"
 title: "GetRows Method Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

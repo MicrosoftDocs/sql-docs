@@ -1,4 +1,5 @@
 ---
+description: "sp_autostats (Transact-SQL)"
 title: "sp_autostats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

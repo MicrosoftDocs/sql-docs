@@ -1,4 +1,5 @@
 ---
+description: "DeleteRule Property (ADOX)"
 title: "DeleteRule Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

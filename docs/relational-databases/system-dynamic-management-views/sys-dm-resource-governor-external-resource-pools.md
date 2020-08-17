@@ -1,7 +1,8 @@
 ---
+description: "sys.dm_resource_governor_external_resource_pools (Transact-SQL)"
 title: "sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/24/2019"
+ms.date: "08/06/2020"
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.reviewer: ""
@@ -19,7 +20,7 @@ helpviewer_keywords:
 author: dphansen
 ms.author: davidph
 manager: cgronlun
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # sys.dm_resource_governor_external_resource_pools (Transact-SQL)
 [!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
@@ -28,7 +29,7 @@ Returns information about the current external resource pool state, the current 
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
   
-|Colmn name      |Data type      |Description|  
+|Column name      |Data type      |Description|  
 |----------------|---------------|-----------------| 
 | external_pool_id|**int**|The ID of the resource pool. Is not nullable. |
 | name|**sysname**|The name of the resource pool. Is not nullable. 
@@ -38,16 +39,19 @@ Returns information about the current external resource pool state, the current 
 | max_memory_percent|**int**|The current configuration for the percentage of total server memory that can be used by requests in this resource pool. Is not nullable. |
 | statistics_start_time|**datetime**|The time when statistics was reset for this pool. Is not nullable. 
 | peak_memory_kb|**bigint**|The maximum amount of memory used, in kilobytes, for the resource pool. Is not nullable. |
-| write_io_count|**int**|The total write IOs issued since the Resource Govenor statistics were reset. Is not nullable. |
-| read_io_count|**int**|The total read IOs issued since the Resource Govenor statistics were reset. Is not nullable. |
-| total_cpu_kernel_ms|**bigint**|The cumulative CPU user kernel time in milliseconds since the Resource Govenor statistics were reset. Is not nullable. |
-| total_cpu_user_ms|**bigint**|The cumulative CPU user time in milliseconds since the Resource Govenor statistics were reset. Is not nullable. |
+| write_io_count|**int**|The total write IOs issued since the Resource Governor statistics were reset. Is not nullable. |
+| read_io_count|**int**|The total read IOs issued since the Resource Governor statistics were reset. Is not nullable. |
+| total_cpu_kernel_ms|**bigint**|The cumulative CPU user kernel time in milliseconds since the Resource Governor statistics were reset. Is not nullable. |
+| total_cpu_user_ms|**bigint**|The cumulative CPU user time in milliseconds since the Resource Governor statistics were reset. Is not nullable. |
 | active_processes_count|**int**|The number of external processes running at the moment of the request. Is not nullable. |
 
  
 ## Permissions
 
 Requires `VIEW SERVER STATE` permission.
+
+> [!NOTE]
+> SQL Machine Learning Services 2019 for Linux does not support the ability to set CPU affinity.
 
 ## See Also  
  [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md)  

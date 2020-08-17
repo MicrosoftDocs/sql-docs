@@ -1,4 +1,5 @@
 ---
+description: "Hierarchical Recordsets in XML"
 title: "Hierarchical Recordsets in XML | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

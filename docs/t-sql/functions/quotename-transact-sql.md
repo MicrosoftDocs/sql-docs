@@ -1,4 +1,5 @@
 ---
+description: "QUOTENAME (Transact-SQL)"
 title: "QUOTENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

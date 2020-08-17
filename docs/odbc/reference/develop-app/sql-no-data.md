@@ -1,4 +1,5 @@
 ---
+description: "SQL_NO_DATA"
 title: "SQL_NO_DATA | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

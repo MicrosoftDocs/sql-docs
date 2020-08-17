@@ -1,4 +1,5 @@
 ---
+description: "Data type conversion (Database Engine)"
 title: "Data type conversion (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"

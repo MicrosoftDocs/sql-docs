@@ -1,4 +1,5 @@
 ---
+description: "ClientNetLibInfo Class"
 title: "ClientNetLibInfo Class"
 ms.custom: ""
 ms.date: "03/14/2017"

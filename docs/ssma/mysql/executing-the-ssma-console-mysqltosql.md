@@ -1,4 +1,5 @@
 ---
+description: "Executing the SSMA Console (MySQLToSQL)"
 title: "Executing the SSMA Console (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

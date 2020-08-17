@@ -1,4 +1,5 @@
 ---
+description: "Determining Installed Oracle Components"
 title: "Determining Installed Oracle Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

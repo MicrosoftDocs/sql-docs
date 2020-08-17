@@ -1,4 +1,5 @@
 ---
+description: "Update Statistics Task"
 title: "Update Statistics Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

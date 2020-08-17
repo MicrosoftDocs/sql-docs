@@ -1,4 +1,5 @@
 ---
+description: "Logical Functions - IIF (Transact-SQL)"
 title: "IIF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

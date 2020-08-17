@@ -1,4 +1,5 @@
 ---
+description: "Deliver a Snapshot Through FTP"
 title: "Deliver a Snapshot Through FTP | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/20/2018"

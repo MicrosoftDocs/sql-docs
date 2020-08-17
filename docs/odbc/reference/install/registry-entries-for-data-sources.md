@@ -1,4 +1,5 @@
 ---
+description: "Registry Entries for Data Sources"
 title: "Registry Entries for Data Sources | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

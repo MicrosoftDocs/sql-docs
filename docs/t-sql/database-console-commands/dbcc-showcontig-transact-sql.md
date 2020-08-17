@@ -1,4 +1,5 @@
 ---
+description: "DBCC SHOWCONTIG (Transact-SQL)"
 title: DBCC SHOWCONTIG (Transact-SQL)
 ms.custom: ""
 ms.date: "07/17/2017"

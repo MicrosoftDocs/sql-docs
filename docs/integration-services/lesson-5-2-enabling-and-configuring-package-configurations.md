@@ -1,4 +1,5 @@
 ---
+description: "Lesson 5-2: Enable and configure package configurations"
 title: "Step 2: Enable and configure package configurations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/08/2019"

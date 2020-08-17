@@ -159,7 +159,7 @@ Confirm that the logical SQL Server instance has permissions to the key vault an
 
 ## Getting TDE status from the Activity log
 
-To allow for monitoring of the database status due to Azure Key Vault key access issues, the following events will be logged to the [Activity Log](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) for the resource ID based on the Azure Resource Manager URL and Subscription+Resourcegroup+ServerName+DatabseName: 
+To allow for monitoring of the database status due to Azure Key Vault key access issues, the following events will be logged to the [Activity Log](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) for the resource ID based on the Azure Resource Manager URL and Subscription+Resourcegroup+ServerName+DatabaseName: 
 
 **Event when the service loses access to the Azure Key Vault key**
 

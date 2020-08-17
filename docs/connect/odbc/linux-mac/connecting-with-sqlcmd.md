@@ -220,4 +220,4 @@ Existing scripts that invoke `isql` can be modified to use `sqlcmd` by defining 
 
 ## See Also  
 [Connecting with **bcp**](connecting-with-bcp.md)  
- 
+[Release Notes](release-notes-tools.md)

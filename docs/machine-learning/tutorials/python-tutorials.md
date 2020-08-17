@@ -33,7 +33,7 @@ This article describes the Python tutorials and quickstarts for [Azure SQL Manag
 | [Predict ski rental with linear regression](python-ski-rental-linear-regression.md) | Use Python and linear regression to predict the number of ski rentals. Use notebooks in Azure Data Studio for preparing data and training the model, and T-SQL for model deployment. |
 | [Categorizing customers using k-means clustering](python-clustering-model.md) | Use Python to develop and deploy a K-Means clustering model to categorize customers. Use notebooks in Azure Data Studio for preparing data and training the model, and T-SQL for model deployment. |
 | [Create a model using revoscalepy](use-python-revoscalepy-to-create-model.md) | Demonstrates how to run code from a remote Python client using SQL Server as compute context. The tutorial creates a model using **rxLinMod** from the **revoscalepy** library. |
-| [Python data analytics for SQL developers](sqldev-in-database-python-for-sql-developers.md) | This end-to-end walkthrough demonstrates the process of building a complete Python solution using T-SQL. |
+| [Python data analytics for SQL developers](python-taxi-classification-introduction.md) | This end-to-end walkthrough demonstrates the process of building a complete Python solution using T-SQL. |
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current"
 | Tutorial | Description |

@@ -27,7 +27,7 @@ ms.author: mathoma
   
 -   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] upgrade is supported both through the user interface and from the command prompt. You can run upgrade from the command prompt on each failover cluster node, or by using the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] setup UI to upgrade each cluster node. For more information, see:
 
-   - [Install a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance](../install/create-a-new-sql-server-failover-cluster-setup.md#to-install-a-new--failover-cluster-using-integrated-install-with-add-node)
+   - Install a new [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] failover cluster instance
    - [Install SQL Server from the Command Prompt](../../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
 
 -   The following scenarios are not supported as part of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] upgrade:  

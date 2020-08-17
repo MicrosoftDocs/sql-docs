@@ -31,6 +31,18 @@ Thank you.
 GeneMi.  2019/04/03.
 -->
 
+
+## 17.6, July 2020
+
+| New item | Details |
+| :------- | :------ |
+| New distributions supported. | Ubuntu 20.04 |
+| Support for Federated Authentication | See [Using Azure Active Directory](../using-azure-active-directory.md). |
+| Metadata caching for prepared statements | See [Using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md). |
+| SQL_COPT_SS_AUTOBEGINTXN connection attribute to control whether automatic BEGIN TRANSACTION happens after ROLLBACK or COMMIT | See [DSN and Connection String Attributes and Keywords](../dsn-connection-string-attribute.md). |
+| Bug fixes. | [Bug fixes](../bug-fixes.md). |
+| &nbsp; | &nbsp; |
+
 ## 17.5.2.2, April 2020 (Alpine Linux only)
 
 | Feature added | Details |
@@ -85,7 +97,7 @@ When using Always Encrypted with secure enclaves and Azure Key Vault, odd key pa
 | New item | Details |
 | :------- | :------ |
 | New distributions supported. | &bull; &nbsp; &nbsp; SUSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
-| Azure Active Directory Managed Service Identity (system and user-assigned) authentication mode. | See [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md). |
+| Azure Active Directory Managed Identity (system and user-assigned) authentication mode. | See [Using Azure Active Directory with the ODBC Driver](../using-azure-active-directory.md). |
 | Ability to stream input parameters against Always Encrypted columns. | For more information, see [Limitations of the ODBC driver when using Always Encrypted](../using-always-encrypted-with-the-odbc-driver.md#limitations-of-the-odbc-driver-when-using-always-encrypted). |
 | XA distributed transactions. | See [Using XA Transactions](../use-xa-with-dtc.md).<br/><br/>XA is an initialism for _eXtended Architecture_, which is a standard for the execution of a global transaction that accesses more than one server-side data storage system. |
 | &nbsp; | &nbsp; |

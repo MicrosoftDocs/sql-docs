@@ -32,5 +32,5 @@ Depending on the storage types of source SSIS packages and the migration destina
 
 ## Next steps
 
-- [Migrate SSIS packages to an Azure SQL Database managed instance](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance).
+- [Migrate SSIS packages to Azure SQL Managed Instance](https://docs.microsoft.com/azure/dms/how-to-migrate-ssis-packages-managed-instance).
 - [Migrate SSIS jobs to Azure Data Factory (ADF) with SQL Server Management Studio (SSMS)](https://docs.microsoft.com/azure/data-factory/how-to-migrate-ssis-job-ssms).

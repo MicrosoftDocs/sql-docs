@@ -61,7 +61,7 @@ SSMA starts without loading a default project. To migrate data from Access datab
   
 3.  In the **Location** box, enter or select a folder for the project  
   
-4.  In the Migration To drop down, select one of SQL Server 2005/ SQL Server 2008/ SQL Server 2012/ SQL Server 2014/ SQL Server 2016/ Azure SQL DB, and then click **OK**.  
+4.  In the Migration To drop down, select one of SQL Server 2005/ SQL Server 2008/ SQL Server 2012/ SQL Server 2014/ SQL Server 2016/ Azure SQL Database, and then click **OK**.  
   
 SSMA creates the project file. You can now perform the next step of [adding one or more Access databases](adding-and-removing-access-database-files-accesstosql.md).  
   

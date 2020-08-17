@@ -1,6 +1,6 @@
 ---
 title: "Create & configure availability groups (content index)"
-description: "An index of links that help you create and configure Always On availability groups for SQL Server."
+description: "Learn about references you can use to create and configure Always On availability groups for SQL Server."
 ms.custom: seo-lt-2019
 ms.date: "05/17/2016"
 ms.prod: sql

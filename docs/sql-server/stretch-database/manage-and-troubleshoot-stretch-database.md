@@ -15,7 +15,7 @@ ms.author: jroth
 ms.custom: seo-dt-2019
 ---
 # Manage and troubleshoot Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
   To manage and troubleshoot Stretch Database, use the tools and methods described in this article .  

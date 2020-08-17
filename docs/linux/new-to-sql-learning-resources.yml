@@ -52,13 +52,13 @@ landingContent:
         url: quickstart-install-connect-ubuntu.md
       - text: Container
         url: quickstart-install-connect-docker.md
-      - text: Tools
+      - text: Tools - Overview
         url: ../tools/overview-sql-tools.md
       - text: Azure Data Studio (Tool)
         url: ../azure-data-studio/what-is.md
       - text: Write basic Transact-SQL (T-SQL)
         url: ../t-sql/tutorial-writing-transact-sql-statements.md
-      - text: Channel 9 resources
+      - text: Additional Resources- Channel 9 resources
         url: https://channel9.msdn.com/events/Connect/2016/173?term=SQL%20on%20linux&lang-en=true
 
   - title: "Module 4: Configure SQL Server on Linux"

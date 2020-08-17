@@ -49,7 +49,7 @@ landingContent:
         url: quickstart-install-connect-suse.md
       - text: Ubuntu
         url: quickstart-install-connect-ubuntu.md
-      - text: Docker
+      - text: Container
         url: quickstart-install-connect-docker.md
       - text: Tools -Overview
         url: ../tools/overview-sql-tools.md

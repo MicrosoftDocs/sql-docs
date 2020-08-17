@@ -45,7 +45,7 @@ The following sections describe how to retrieve an endpoint for an application a
 
 ## Retrieve the endpoint
 
-The **azdata app describe** command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the webservice to interact with the app in a RESTful manner.
+Big Data Clusters ( BDC ) is able to provide endpoints that you can access and consume that application using a RESTful web service,  the main purpose is to facilities the interaction with other web or mobile applications and being more proactive for those microservices architecture. The **azdata app describe** command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the webservice to interact with the app in a RESTful manner.
 
 Describe your app by running a command similar to the following example:
 

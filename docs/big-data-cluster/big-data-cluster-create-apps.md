@@ -16,6 +16,13 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
+Applications deployed on BDC are not only to benefit from numerous advantages such as the computational power of the cluster but can also access massive data that is available on the cluster. This can be dramatically beneficial to increase the performance of the applications since it sits in the same area where the data lives.  The native supported application runtimes on SQL Server Big Data Clusters are as the following:  
+
+- **Python** - One of the most popular general programming languages for various personas such as Data Engineers, Data Scientists and DevOps engineer, supports numerous scenarios such as data wrangling,  automation, prototyping, to some extent,  it also increasingly used to program enterprise-grade application working in conjunction with web development frameworks such as Flask and Django to address different business requirements.  
+- **R** – Another popular programming language for Data Engineering and Data Scientists. Compared to Python, R is a programming language with more specific focus on statistical computing and graphics.  
+- **SQL Server Integration Services (SSIS)**  -  high-performance data integration solutions for building and debugging ETL packages, it uses Data Transformation Services Package File Format (DTSX) which is an XML-based file format that stores the instructions for the processing of migrating data between databases and the integration of external data sources.   
+- **MLeap** - is a common serialization format and provides everything needed to execute and serialize SparkML pipelines and others that can then be loaded at runtime to process ML scoring tasks in near real-time and close to the data.  
+
 This article describes how to deploy and manage R and Python script as an application inside a SQL Server 2019 big data cluster.
 
 ## What's new and improved
@@ -68,7 +75,7 @@ Before you deploy or interact with applications, first sign in to your SQL Serve
 azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
 ```
 
-## AKS
+## Azure Kubernetes Service (AKS)
 
 If you are using AKS, you need to run the following command to get the IP address of the `controller-svc-external` service by running this command in a bash or cmd window:
 
@@ -83,6 +90,24 @@ Run the following command to get the IP address to sign in in to the cluster
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
+```
+
+## Create an app skeleton
+
+The **azdata app init** command provides a scaffold with the relevant artifacts that is required for deploying an app. The example below creates add-app you can do this by running the following command.
+
+```bash
+azdata app init --name add-app --version v1 --template python
+```
+
+This will create a folder called hello.  You can `cd` into the directory and inspect the generated files in the folder. spec.yaml defines the app, such as name, version, and source code. You can edit the spec to change name, version, input, and outputs.
+
+Here is a sample output from the init command that you will see in the folder
+
+```
+add-app.py
+run-spec.yaml
+spec.yaml
 ```
 
 ## Create an app
@@ -229,23 +254,6 @@ If the run was successful, you should see your output as specified when you crea
 }
 ```
 
-## Create an app skeleton
-
-The init command provides a scaffold with the relevant artifacts that is required for deploying an app. The example below creates  hello you can do this by running the following command.
-
-```bash
-azdata app init --name hello --version v1 --template python
-```
-
-This will create a folder called hello.  You can `cd` into the directory and inspect the generated files in the folder. spec.yaml defines the app, such as name, version, and source code. You can edit the spec to change name, version, input, and outputs.
-
-Here is a sample output from the init command that you will see in the folder
-
-```
-hello.py
-run-spec.yaml
-spec.yaml
-```
 
 ## Describe an app
 

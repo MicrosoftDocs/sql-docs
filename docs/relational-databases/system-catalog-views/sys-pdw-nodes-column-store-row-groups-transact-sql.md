@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_nodes_column_store_row_groups (Transact-SQL)"
 title: "sys.pdw_nodes_column_store_row_groups (Transact-SQL)"
 ms.custom: seo-dt-2019
 ms.date: 08/05/2020

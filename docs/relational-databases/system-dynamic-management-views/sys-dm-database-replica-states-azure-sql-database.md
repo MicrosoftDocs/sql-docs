@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_database_replica_states (Azure SQL Database)"
 title: "sys.dm_database_replica_states (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2019"

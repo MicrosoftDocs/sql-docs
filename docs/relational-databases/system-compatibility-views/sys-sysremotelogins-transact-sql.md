@@ -1,4 +1,5 @@
 ---
+description: "sys.sysremotelogins (Transact-SQL)"
 title: "sys.sysremotelogins (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

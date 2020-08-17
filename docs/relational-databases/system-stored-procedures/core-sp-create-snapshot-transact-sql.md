@@ -1,4 +1,5 @@
 ---
+description: "core.sp_create_snapshot (Transact-SQL)"
 title: "core.sp_create_snapshot (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

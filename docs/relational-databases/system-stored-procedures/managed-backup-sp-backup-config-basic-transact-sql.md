@@ -1,4 +1,5 @@
 ---
+description: "managed_backup.sp_backup_config_basic (Transact-SQL)"
 title: "managed_backup.sp_backup_config_basic (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/03/2016"

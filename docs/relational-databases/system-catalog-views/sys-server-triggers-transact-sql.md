@@ -1,4 +1,5 @@
 ---
+description: "sys.server_triggers (Transact-SQL)"
 title: "sys.server_triggers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

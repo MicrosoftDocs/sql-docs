@@ -1,4 +1,5 @@
 ---
+description: "sys.plan_guides (Transact-SQL)"
 title: "sys.plan_guides (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

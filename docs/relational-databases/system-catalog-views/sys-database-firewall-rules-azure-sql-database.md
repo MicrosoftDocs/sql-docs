@@ -1,4 +1,5 @@
 ---
+description: "sys.database_firewall_rules (Azure SQL Database)"
 title: "sys.database_firewall_rules (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

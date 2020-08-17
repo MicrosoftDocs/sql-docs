@@ -1,4 +1,5 @@
 ---
+description: "Data Collector Stored Procedures (Transact-SQL)"
 title: "Data Collector Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

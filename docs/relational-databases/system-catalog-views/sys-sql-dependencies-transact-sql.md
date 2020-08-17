@@ -1,4 +1,5 @@
 ---
+description: "sys.sql_dependencies (Transact-SQL)"
 title: "sys.sql_dependencies (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

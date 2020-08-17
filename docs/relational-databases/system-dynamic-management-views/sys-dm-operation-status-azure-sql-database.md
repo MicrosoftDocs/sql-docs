@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_operation_status"
 title: "sys.dm_operation_status | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/05/2017"

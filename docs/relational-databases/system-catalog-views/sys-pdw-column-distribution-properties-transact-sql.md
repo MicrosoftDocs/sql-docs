@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_column_distribution_properties (Transact-SQL)"
 title: "sys.pdw_column_distribution_properties (Transact-SQL)"
 ms.custom: seo-dt-2019
 ms.date: "03/03/2017"

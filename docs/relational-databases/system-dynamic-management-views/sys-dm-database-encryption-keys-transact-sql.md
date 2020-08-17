@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_database_encryption_keys (Transact-SQL)"
 title: "sys.dm_database_encryption_keys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/27/2019

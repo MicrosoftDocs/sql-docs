@@ -1,4 +1,5 @@
 ---
+description: "sys.availability_replicas (Transact-SQL)"
 title: "sys.availability_replicas (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/16/2017"

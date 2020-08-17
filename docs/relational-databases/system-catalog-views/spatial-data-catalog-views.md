@@ -1,4 +1,5 @@
 ---
+description: "Spatial Data Catalog Views"
 title: "Spatial Data Catalog Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

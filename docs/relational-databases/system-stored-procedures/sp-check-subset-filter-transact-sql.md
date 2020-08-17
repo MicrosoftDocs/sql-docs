@@ -1,4 +1,5 @@
 ---
+description: "sp_check_subset_filter (Transact-SQL)"
 title: "sp_check_subset_filter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

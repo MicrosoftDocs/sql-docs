@@ -1,4 +1,5 @@
 ---
+description: "Using Filegroups and Files to Store Data"
 title: "Using Filegroups and Files to Store Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"

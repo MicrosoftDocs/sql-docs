@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_column_store_object_pool (Transact-SQL)"
 title: "sys.dm_column_store_object_pool (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

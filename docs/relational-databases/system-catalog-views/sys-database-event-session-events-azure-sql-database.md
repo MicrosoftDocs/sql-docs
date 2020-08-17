@@ -1,4 +1,5 @@
 ---
+description: "sys.database_event_session_events (Azure SQL Database)"
 title: "sys.database_event_session_events (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

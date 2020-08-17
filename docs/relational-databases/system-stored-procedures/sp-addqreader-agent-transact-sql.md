@@ -1,4 +1,5 @@
 ---
+description: "sp_addqreader_agent (Transact-SQL)"
 title: "sp_addqreader_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

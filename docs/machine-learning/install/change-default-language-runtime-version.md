@@ -15,7 +15,7 @@ monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 
 [!INCLUDE[SQL Server 2016 and 2017 only](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-This article describes how to change the default version of R or Python used by a SQL instance in [SQL Server 2016 R Services](../r/sql-server-r-services.md) or [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md).
+This article describes how to change the default version of R or Python used in [SQL Server 2016 R Services](../r/sql-server-r-services.md) or [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md).
 
 The following lists the versions of the R and Python runtime that are included in the different SQL Server versions.
 

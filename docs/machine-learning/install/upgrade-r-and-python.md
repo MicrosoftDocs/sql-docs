@@ -1,5 +1,5 @@
 ---
-title: Upgrade Python and R runtimes
+title: Upgrade Python and R runtimes (binding)
 description: Upgrade Python and R runtimes in SQL Server Machine Learning Services or SQL Server R Services using sqlbindr.exe to bind to Machine Learning Server.
 ms.prod: sql
 ms.technology: machine-learning-services
@@ -9,10 +9,10 @@ author: cawrites
 ms.author: chadam
 monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ---
-# Upgrade Python and R runtime in SQL Server Machine Learning Services
+# Upgrade Python and R runtime with binding in SQL Server Machine Learning Services
 [!INCLUDE [SQL Server 2016 and 2017](../../includes/applies-to-version/sqlserver2016-2017-only.md)]
 
-This article describes how to upgrade the R or Python runtimes used by a SQL instance in [SQL Server 2016 R Services](../r/sql-server-r-services.md) or [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md).
+This article describes how to use am installation process called **binding** to upgrade the R or Python runtimes in [SQL Server 2016 R Services](../r/sql-server-r-services.md) or [SQL Server 2017 Machine Learning Services](../sql-server-machine-learning-services.md).
 
 > [!IMPORTANT]
 > This article describes an old method for upgrading the R and Python runtimes, called *binding*. If you have installed **Cumulative Update (CU) 14 or later for SQL Server 2016 Services Pack (SP) 2** or **Cumulative Update (CU) 22 for SQL Server 2017**, see how to [change the default R or Python language runtime version](change-default-language-runtime-version.md) to a later version instead.

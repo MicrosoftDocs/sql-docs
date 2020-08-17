@@ -17,7 +17,7 @@ This article describes how to use am installation process called **binding** to 
 > [!IMPORTANT]
 > This article describes an old method for upgrading the R and Python runtimes, called *binding*. If you have installed **Cumulative Update (CU) 14 or later for SQL Server 2016 Services Pack (SP) 2** or **Cumulative Update (CU) 22 for SQL Server 2017**, see how to [change the default R or Python language runtime version](change-default-language-runtime-version.md) to a later version instead.
 
-You can get [newer versions of Python and R](#version-map) by *binding* to **Microsoft Machine Learning Server**. The version applies to both SQL Server Machine Learning Services (In-Database) and SQL Server R Services (In-Database).
+You can get [newer versions of Python and R](#version-map) by *binding* to Microsoft Machine Learning Server. The version applies to both SQL Server Machine Learning Services (In-Database) and SQL Server R Services (In-Database).
 
 ## What is binding?
 

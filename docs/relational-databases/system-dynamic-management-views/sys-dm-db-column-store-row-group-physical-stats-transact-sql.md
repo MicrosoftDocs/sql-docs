@@ -24,11 +24,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # sys.dm_db_column_store_row_group_physical_stats (Transact-SQL)
 
-<<<<<<< HEAD
-[!INCLUDE[UPDATE-ss2016-asdb-xxxx-xxx-md](../../includes/UPDATE-ss2016-asdb-xxxx-xxx-md.md)]
-=======
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
->>>>>>> 81ede900750218e3f2a8363315ceea198d03f9ec
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 Provides current rowgroup-level information about all of the columnstore indexes in the current database.  
 

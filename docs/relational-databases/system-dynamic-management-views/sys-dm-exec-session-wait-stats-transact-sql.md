@@ -19,11 +19,9 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.dm_exec_session_wait_stats (Transact-SQL)
-<<<<<<< HEAD
-[!INCLUDE[UPDATE-ss2016-asdb-xxxx-xxx-md](../../includes/UPDATE-ss2016-asdb-xxxx-xxx-md.md)]
-=======
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
->>>>>>> 81ede900750218e3f2a8363315ceea198d03f9ec
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
   Returns information about all the waits encountered by threads that executed for each session. You can use this  view to diagnose performance issues with the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] session and also with specific queries and batches.  This view returns session the same information that is aggregated for [sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md) but provides the **session_id** number as well.  
   

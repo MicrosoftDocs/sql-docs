@@ -1,5 +1,5 @@
 ---
-title: "ERROR_LINE (Transact-SQL) | Microsoft Docs"
+title: ERROR_LINE (Transact-SQL)
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -23,22 +23,26 @@ ms.assetid: 47335734-0baf-45a6-8b3b-6c4fd80d2cb8
 author: markingmyname
 ms.author: maghan
 ---
+
 # ERROR_LINE (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns the line number of occurrence of an error that caused the CATCH block of a TRY...CATCH construct to execute.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
-## Syntax  
-  
-```  
-ERROR_LINE ( )  
-```  
-  
-## Return Type  
-**int**  
-  
+## Syntax
+
+```syntaxsql
+ERROR_LINE ( )
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Type
+**int**
+
 ## Return Value  
 When called in a CATCH block, `ERROR_LINE` returns  
   

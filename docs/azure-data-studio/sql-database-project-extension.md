@@ -37,6 +37,10 @@ The SQL Database Projects extension (preview) is an extension for developing SQL
 4. Select **Reload** to enable the extension (only required the first time you install an extension).
 5. Select the files icon from the activity bar or select **Explorer** from the **View** menu. A new viewlet for **Projects** is now available.
 
+
+   > [!NOTE]
+   > The .NET Core SDK is required for project build functionality and you will be prompted to install the .NET Core SDK if it cannot be detected by the extension.  The .NET Core SDK (v3.1 or higher) can be downloaded and installed from [https://dotnet.microsoft.com/download/dotnet-core/3.1](https://dotnet.microsoft.com/download/dotnet-core/3.1).
+
    > [!NOTE]
    > It is recommended to install the [Schema Compare extension](schema-compare-extension.md) alongside the SQL Database Projects extension for full functionality.
 

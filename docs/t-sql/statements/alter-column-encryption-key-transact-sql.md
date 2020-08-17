@@ -22,7 +22,7 @@ author: jaszymas
 ms.author: jaszymas
 ---
 # ALTER COLUMN ENCRYPTION KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[UPDATE-ss2016-asdb-xxxx-xxx-md](../../includes/UPDATE-ss2016-asdb-xxxx-xxx-md.md)]
 
   Alters a column encryption key in a database, adding or dropping an encrypted value. A column encryption key can have up to two values, which allows for the rotation of the corresponding column master key. A column encryption key is used when encrypting columns using [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md) or [Always Encrypted with secure enclaves](../../relational-databases/security/encryption/always-encrypted-enclaves.md). Before adding a column encryption key value, you must define the column master key that was used to encrypt the value by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or the [CREATE MASTER KEY](../../t-sql/statements/create-column-master-key-transact-sql.md) statement.  
   

@@ -1,7 +1,7 @@
 ---
 title: AD mode deployment hangs - unhealthy sparkhead pods
 titleSuffix: SQL Server Big Data Cluster
-description: Troubleshooting hung deployment of a SQL Server Big Data Cluster in an Active Directory domain with unhealthy sparkhead pods .
+description: Troubleshooting hung deployment of a SQL Server Big Data Cluster in an Active Directory domain with unhealthy sparkhead pods.
 author: macarv-ms
 ms.author: macarv
 ms.reviewer: mikeray

@@ -54,15 +54,15 @@ Each SQL instance uses one of these versions as the default version of R. You ca
 > [!Note]
 > The functionality described in this article is available only with the copy of **RegisterRext.exe** included in SQL CUs. Don't use the copy that came with the original SQL installation.
 
-**RegisterRext.exe** accepts these command-line arguments:
+To change the R runtime version, pass the following command line arguments to **RegisterRext.exe**:
 
 - `/configure` - Required, specifies that you're configuring the default R version.
 
 - `/instance:`*&lt;instance name&gt;* - Optional, the instance you want to configure. If not specified, the default instance is configured.
 
-- `/rhome:`*&lt;path to the R_SERVICES[n.n] folder&gt;* - Optional, the version you want to set as the default R version.
+- `/rhome:`*&lt;path to the R_SERVICES[n.n] folder&gt;* - Optional, path to the runtime version folder you want to set as the default R version.
 
-  If you don't specify /rhome, the path used is the path under which **RegisterRext.exe** is located.
+  If you don't specify /rhome, the path configured is the path under which **RegisterRext.exe** is located.
 
 ### Examples
 
@@ -105,7 +105,7 @@ Each SQL instance uses one of these versions as the default version of Python. Y
 > [!Note]
 > The functionality described in this article is available only with the copy of **RegisterRExt.exe** included in SQL CUs. Don't use the copy that came with the original SQL installation.
 
-**RegisterRExt.exe** accepts these command-line arguments:
+To change the Python runtime version, pass the following command line arguments to **RegisterRext.exe**:
 
 - `/configure` - Required, specifies that you're configuring the default Python version.
 
@@ -113,16 +113,16 @@ Each SQL instance uses one of these versions as the default version of Python. Y
 
 - `/instance:`*&lt;instance name&gt;* - Optional, the instance you want to configure. If not specified, the default instance is configured.
 
-- `/pythonhome:`*&lt;path to the PYTHON_SERVICES[n.n] folder&gt;* - Optional, the version you want to set as the default Python version.
+- `/pythonhome:`*&lt;path to the PYTHON_SERVICES[n.n] folder&gt;* - Optional, path to the runtime version folder you want to set as the default Python version.
 
-  If you don't specify /pythonhome, the path used is the path under which **RegisterRExt.exe** is located.
+  If you don't specify /pythonhome, the path configured is the path under which **RegisterRExt.exe** is located.
 
 ### Example
 
 For example, to configure **Python 3.7** as the default version of Python for the instance MSSQLSERVER01 on SQL Server 2017:
 
 ```cmd
-cd "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER01\PYTHON_SERVICES.n.n\Lib\site-packages\revoscalepy\rxLibs"
+cd "C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER01\PYTHON_SERVICES.3.7\Lib\site-packages\revoscalepy\rxLibs"
 
 .\RegisterRext.exe /configure /pythonhome:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES.3.7" /instance:MSSQLSERVER01
 ```

@@ -58,7 +58,7 @@ landingContent:
         url: ../azure-data-studio/what-is.md
       - text: Write basic Transact-SQL (T-SQL)
         url: ../t-sql/tutorial-writing-transact-sql-statements.md
-      - text: Additional Resources- Channel 9 resources
+      - text: Additonal Learning - Cross-Platform SQL Tools
         url: https://channel9.msdn.com/events/Connect/2016/173?term=SQL%20on%20linux&lang-en=true
 
   - title: "Module 4: Configure SQL Server on Linux"

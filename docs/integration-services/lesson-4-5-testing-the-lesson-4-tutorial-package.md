@@ -1,4 +1,5 @@
 ---
+description: "Step 5: Test the Lesson 4 tutorial package"
 title: "Step 5: Test the Lesson 4 tutorial package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2019"

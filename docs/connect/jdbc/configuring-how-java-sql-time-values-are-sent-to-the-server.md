@@ -1,4 +1,5 @@
 ---
+description: "Configuring how java.sql.Time values are sent to the server"
 title: "Configuring how java.sql.Time values are sent to the server | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

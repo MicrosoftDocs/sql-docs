@@ -1,4 +1,5 @@
 ---
+description: "TopPercent (DMX)"
 title: "TopPercent (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

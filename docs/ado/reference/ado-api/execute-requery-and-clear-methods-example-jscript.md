@@ -1,4 +1,5 @@
 ---
+description: "Execute, Requery, and Clear Methods Example (JScript)"
 title: "Execute, Requery, and Clear Methods Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

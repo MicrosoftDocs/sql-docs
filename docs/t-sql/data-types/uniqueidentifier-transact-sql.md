@@ -1,4 +1,5 @@
 ---
+description: "uniqueidentifier (Transact-SQL)"
 title: "uniqueidentifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_databases (Transact-SQL)"
 title: "sp_databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

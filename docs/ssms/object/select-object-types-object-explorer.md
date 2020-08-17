@@ -1,4 +1,5 @@
 ---
+description: "Select Object Types (Object Explorer)"
 title: "Select Object Types (Object Explorer)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

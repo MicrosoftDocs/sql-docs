@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_repl_traninfo (Transact-SQL)"
 title: "sys.dm_repl_traninfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

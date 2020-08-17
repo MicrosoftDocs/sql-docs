@@ -1,4 +1,5 @@
 ---
+description: "Linked Servers (Database Engine)"
 title: "Linked Servers (Database Engine) | Microsoft Docs"
 ms.date: "06/16/2020"
 ms.prod: sql

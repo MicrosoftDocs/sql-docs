@@ -1,4 +1,5 @@
 ---
+description: "setNCharacterStream Method (java.lang.String, java.io.Reader)"
 title: "setNCharacterStream Method to Reader object - string | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

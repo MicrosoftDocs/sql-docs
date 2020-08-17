@@ -1,4 +1,5 @@
 ---
+description: "PDOStatement::rowCount"
 title: "PDOStatement::rowCount | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

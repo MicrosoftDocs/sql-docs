@@ -1,4 +1,5 @@
 ---
+description: "Connect To Azure SQL Database (AccessToSQL)"
 title: "Connect To Azure SQL Database (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Using Related Technologies with RDS"
 title: "Using Related Technologies with RDS | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

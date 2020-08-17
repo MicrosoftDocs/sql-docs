@@ -1,4 +1,5 @@
 ---
+description: "How Permissions Are Determined (Master Data Services)"
 title: How Permissions Are Determined
 ms.custom: ""
 ms.date: "03/01/2017"

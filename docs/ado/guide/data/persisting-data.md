@@ -1,4 +1,5 @@
 ---
+description: "Persisting Data"
 title: "Persisting Data | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

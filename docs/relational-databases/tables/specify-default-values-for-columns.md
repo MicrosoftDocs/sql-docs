@@ -1,4 +1,5 @@
 ---
+description: "Specify Default Values for Columns"
 title: "Specify Default Values for Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/17/2020

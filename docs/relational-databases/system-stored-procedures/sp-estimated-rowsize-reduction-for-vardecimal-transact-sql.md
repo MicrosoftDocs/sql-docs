@@ -1,4 +1,5 @@
 ---
+description: "sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL)"
 title: "sp_estimated_rowsize_reduction_for_vardecimal (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

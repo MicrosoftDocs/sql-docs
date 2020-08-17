@@ -1,4 +1,5 @@
 ---
+description: "getQueryTimeout Method (SQLServerStatement)"
 title: "getQueryTimeout Method (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

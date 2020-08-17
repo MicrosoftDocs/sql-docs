@@ -1,4 +1,5 @@
 ---
+description: "Azure SQL Database Catalog Views"
 title: "Azure SQL Database Catalog Views | Microsoft Docs"
 ms.custom: 
 ms.date: "08/20/2015"

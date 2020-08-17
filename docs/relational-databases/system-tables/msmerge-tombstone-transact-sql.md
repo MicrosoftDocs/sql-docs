@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_tombstone (Transact-SQL)"
 title: "MSmerge_tombstone (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

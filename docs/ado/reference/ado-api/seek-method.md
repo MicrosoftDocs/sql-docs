@@ -1,4 +1,5 @@
 ---
+description: "Seek Method"
 title: "Seek Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

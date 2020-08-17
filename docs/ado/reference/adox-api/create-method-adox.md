@@ -1,4 +1,5 @@
 ---
+description: "Create Method (ADOX)"
 title: "Create Method (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

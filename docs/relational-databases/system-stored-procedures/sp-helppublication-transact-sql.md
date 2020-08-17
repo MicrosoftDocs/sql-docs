@@ -1,4 +1,5 @@
 ---
+description: "sp_helppublication (Transact-SQL)"
 title: "sp_helppublication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/18/2019

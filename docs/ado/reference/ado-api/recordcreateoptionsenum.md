@@ -1,4 +1,5 @@
 ---
+description: "RecordCreateOptionsEnum"
 title: "RecordCreateOptionsEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

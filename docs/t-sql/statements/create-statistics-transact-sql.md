@@ -1,4 +1,5 @@
 ---
+description: "CREATE STATISTICS (Transact-SQL)"
 title: "CREATE STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2018"

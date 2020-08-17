@@ -1,4 +1,5 @@
 ---
+description: "Command Object Parameters"
 title: "Command Object Parameters | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

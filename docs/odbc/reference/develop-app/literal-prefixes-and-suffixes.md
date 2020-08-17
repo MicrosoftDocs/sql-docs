@@ -1,4 +1,5 @@
 ---
+description: "Literal Prefixes and Suffixes"
 title: "Literal Prefixes and Suffixes | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

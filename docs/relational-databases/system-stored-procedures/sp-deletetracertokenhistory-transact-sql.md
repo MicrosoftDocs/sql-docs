@@ -1,4 +1,5 @@
 ---
+description: "sp_deletetracertokenhistory (Transact-SQL)"
 title: "sp_deletetracertokenhistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

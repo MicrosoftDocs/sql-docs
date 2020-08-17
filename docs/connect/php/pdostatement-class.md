@@ -1,4 +1,5 @@
 ---
+description: "PDOStatement Class"
 title: "PDOStatement Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"

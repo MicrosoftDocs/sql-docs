@@ -1,4 +1,5 @@
 ---
+description: "CompareBookmarks Method Example (VC++)"
 title: "CompareBookmarks Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

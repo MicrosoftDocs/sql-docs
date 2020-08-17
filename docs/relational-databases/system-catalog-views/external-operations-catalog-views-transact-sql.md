@@ -1,4 +1,5 @@
 ---
+description: "External Operations Catalog Views (Transact-SQL)"
 title: "External Operations Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

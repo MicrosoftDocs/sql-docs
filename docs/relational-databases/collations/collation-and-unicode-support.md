@@ -1,4 +1,5 @@
 ---
+description: "Collation and Unicode support"
 title: "Collation and Unicode support | Microsoft Docs"
 ms.custom: ""
 ms.date: 12/05/2019

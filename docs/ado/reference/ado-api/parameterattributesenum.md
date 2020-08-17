@@ -1,4 +1,5 @@
 ---
+description: "ParameterAttributesEnum"
 title: "ParameterAttributesEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

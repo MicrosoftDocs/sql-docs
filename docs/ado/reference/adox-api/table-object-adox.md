@@ -1,4 +1,5 @@
 ---
+description: "Table Object (ADOX)"
 title: "Table Object (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

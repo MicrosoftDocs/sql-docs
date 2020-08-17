@@ -1,4 +1,5 @@
 ---
+description: "sys.master_files (Transact-SQL)"
 title: "sys.master_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/10/2016"

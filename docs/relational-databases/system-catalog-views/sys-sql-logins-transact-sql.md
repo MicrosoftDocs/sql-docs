@@ -1,4 +1,5 @@
 ---
+description: "sys.sql_logins (Transact-SQL)"
 title: "sys.sql_logins (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/20/2016"

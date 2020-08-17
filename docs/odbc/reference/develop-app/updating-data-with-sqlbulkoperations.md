@@ -1,4 +1,5 @@
 ---
+description: "Updating Data with SQLBulkOperations"
 title: "Updating Data with SQLBulkOperations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

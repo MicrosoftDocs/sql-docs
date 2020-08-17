@@ -1,4 +1,5 @@
 ---
+description: "Data Mining Extensions (DMX) Syntax Conventions"
 title: "Data Mining Extensions (DMX) Syntax Conventions | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

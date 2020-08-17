@@ -1,4 +1,5 @@
 ---
+description: "SCHEMA_ID (Transact-SQL)"
 title: "SCHEMA_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sys.message_type_xml_schema_collection_usages (Transact-SQL)"
 title: "sys.message_type_xml_schema_collection_usages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

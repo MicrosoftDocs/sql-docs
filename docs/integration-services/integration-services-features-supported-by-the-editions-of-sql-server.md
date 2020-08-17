@@ -1,4 +1,5 @@
 ---
+description: "Integration Services Features Supported by the Editions of SQL Server"
 title: "Integration Services Features Supported by the Editions of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"

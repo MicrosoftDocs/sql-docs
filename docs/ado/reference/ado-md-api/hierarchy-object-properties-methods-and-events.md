@@ -1,4 +1,5 @@
 ---
+description: "Hierarchy Object Properties, Methods, and Events"
 title: "Hierarchy Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

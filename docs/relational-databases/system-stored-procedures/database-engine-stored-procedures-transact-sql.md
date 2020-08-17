@@ -1,4 +1,5 @@
 ---
+description: "Database Engine Stored Procedures (Transact-SQL)"
 title: "Database Engine Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/02/2015"

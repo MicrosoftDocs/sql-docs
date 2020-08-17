@@ -1,4 +1,5 @@
 ---
+description: "Get diagnostic data after a SQL Server Management Studio (SSMS) crash"
 title: Troubleshooting an unresponsive system or crash with SSMS
 ms.prod: sql
 ms.prod_service: "sql-tools"

@@ -1,4 +1,5 @@
 ---
+description: "setDouble Method (SQLServerPreparedStatement)"
 title: "setDouble Method (SQLServerPreparedStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

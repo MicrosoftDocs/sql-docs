@@ -1,4 +1,5 @@
 ---
+description: "ADO Dynamic Property Index"
 title: "ADO Dynamic Property Index | Microsoft Docs"
 ms.prod: sql
 ms.technology: connectivity

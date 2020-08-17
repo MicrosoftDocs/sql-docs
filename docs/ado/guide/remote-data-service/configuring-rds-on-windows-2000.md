@@ -1,4 +1,5 @@
 ---
+description: "Configuring RDS on Windows 2000"
 title: "Configuring RDS on Windows 2000 | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

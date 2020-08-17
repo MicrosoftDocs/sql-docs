@@ -1,4 +1,5 @@
 ---
+description: "Set the Service Startup Account for SQL Server Agent (SQL Server Configuration Manager)"
 title: Set the Service Startup Account
 ms.prod: sql
 ms.prod_service: sql-tools

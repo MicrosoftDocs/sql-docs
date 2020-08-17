@@ -1,4 +1,5 @@
 ---
+description: "CREATE EXTERNAL RESOURCE POOL (Transact-SQL)"
 title: "CREATE EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2020"

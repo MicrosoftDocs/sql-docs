@@ -1,4 +1,5 @@
 ---
+description: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)"
 title: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2020"

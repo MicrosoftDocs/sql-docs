@@ -1,4 +1,5 @@
 ---
+description: "Structured Query Language (SQL)"
 title: "Structured Query Language (SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

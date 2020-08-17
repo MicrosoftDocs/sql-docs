@@ -1,4 +1,5 @@
 ---
+description: "IsolationLevel Property"
 title: "IsolationLevel Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

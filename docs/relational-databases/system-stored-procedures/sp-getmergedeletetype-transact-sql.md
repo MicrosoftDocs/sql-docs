@@ -1,4 +1,5 @@
 ---
+description: "sp_getmergedeletetype (Transact-SQL)"
 title: "sp_getmergedeletetype (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

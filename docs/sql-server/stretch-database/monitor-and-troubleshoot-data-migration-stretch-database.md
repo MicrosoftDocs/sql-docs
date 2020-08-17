@@ -1,4 +1,5 @@
 ---
+description: "Monitor and troubleshoot data migration (Stretch Database)"
 title: "Monitor and troubleshoot data migration"
 ms.date: "06/14/2016"
 ms.service: sql-server-stretch-database

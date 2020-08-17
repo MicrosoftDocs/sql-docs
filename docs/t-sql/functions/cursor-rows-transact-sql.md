@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;CURSOR_ROWS (Transact-SQL)"
 title: "@@CURSOR_ROWS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"

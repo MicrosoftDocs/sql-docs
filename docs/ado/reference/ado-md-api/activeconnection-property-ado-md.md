@@ -1,4 +1,5 @@
 ---
+description: "ActiveConnection Property (ADO MD)"
 title: "ActiveConnection Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

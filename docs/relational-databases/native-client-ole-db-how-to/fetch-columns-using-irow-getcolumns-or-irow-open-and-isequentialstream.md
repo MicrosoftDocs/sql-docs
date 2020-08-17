@@ -1,4 +1,5 @@
 ---
+description: "Fetch Columns Using IRow::GetColumns (or IRow::Open) and ISequentialStream"
 title: "Fetch, IRow::GetColumns and ISequentialStream"
 ms.custom: ""
 ms.date: "03/14/2017"

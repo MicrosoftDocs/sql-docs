@@ -1,4 +1,5 @@
 ---
+description: "PDO::lastInsertId"
 title: "PDO::lastInsertId | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2018"

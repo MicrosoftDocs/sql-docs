@@ -1,4 +1,5 @@
 ---
+description: "DBCC CHECKFILEGROUP (Transact-SQL)"
 title: "DBCC CHECKFILEGROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"

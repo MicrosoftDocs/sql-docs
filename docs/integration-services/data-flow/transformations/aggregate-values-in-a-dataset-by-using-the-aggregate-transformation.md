@@ -1,4 +1,5 @@
 ---
+description: "Aggregate Values in a Dataset with the Aggregate Transformation"
 title: "Aggregate Values in a Dataset with the Aggregate Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

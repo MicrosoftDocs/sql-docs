@@ -1,4 +1,5 @@
 ---
+description: "XML Persistence Format"
 title: "XML Persistence Format | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

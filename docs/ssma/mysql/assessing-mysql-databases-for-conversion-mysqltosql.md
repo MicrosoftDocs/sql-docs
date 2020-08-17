@@ -1,4 +1,5 @@
 ---
+description: "Assessing MySQL Databases for Conversion (MySQLToSQL)"
 title: "Assessing MySQL Databases for Conversion (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

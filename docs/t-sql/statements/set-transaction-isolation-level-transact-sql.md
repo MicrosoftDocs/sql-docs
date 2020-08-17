@@ -1,4 +1,5 @@
 ---
+description: "SET TRANSACTION ISOLATION LEVEL (Transact-SQL)"
 title: "SET TRANSACTION ISOLATION LEVEL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/22/2018"

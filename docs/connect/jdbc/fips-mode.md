@@ -1,4 +1,5 @@
 ---
+description: "FIPS mode in JDBC"
 title: "FIPS mode in JDBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

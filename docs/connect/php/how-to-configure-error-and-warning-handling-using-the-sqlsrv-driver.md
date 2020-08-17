@@ -1,4 +1,5 @@
 ---
+description: "How to: Configure Error and Warning Handling Using the SQLSRV Driver"
 title: "Configure Error and Warning Handling Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"

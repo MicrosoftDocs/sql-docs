@@ -1,4 +1,5 @@
 ---
+description: "Choosing an SQL Grammar"
 title: "Choosing an SQL Grammar | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

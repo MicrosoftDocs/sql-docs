@@ -1,4 +1,5 @@
 ---
+description: "NumericScale and Precision properties ADO code example (VB)"
 title: "NumericScale and Precision properties ADO code example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

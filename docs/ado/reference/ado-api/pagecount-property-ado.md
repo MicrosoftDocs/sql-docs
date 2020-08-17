@@ -1,4 +1,5 @@
 ---
+description: "PageCount Property (ADO)"
 title: "PageCount Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

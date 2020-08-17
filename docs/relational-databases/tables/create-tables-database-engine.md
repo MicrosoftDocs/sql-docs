@@ -1,4 +1,5 @@
 ---
+description: "Create Tables (Database Engine)"
 title: "Create Tables (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/22/2016"

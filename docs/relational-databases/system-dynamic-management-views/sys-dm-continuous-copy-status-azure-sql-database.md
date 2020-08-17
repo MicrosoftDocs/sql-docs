@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_continuous_copy_status (Azure SQL Database)"
 title: "sys.dm_continuous_copy_status"
 titleSuffix: Azure SQL Database
 ms.date: "03/03/2017"

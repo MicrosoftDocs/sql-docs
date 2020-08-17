@@ -1,4 +1,5 @@
 ---
+description: "Connect Property Example (VBScript)"
 title: "Connect Property Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

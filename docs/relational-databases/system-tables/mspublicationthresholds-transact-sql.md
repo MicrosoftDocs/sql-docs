@@ -1,4 +1,5 @@
 ---
+description: "MSpublicationthresholds (Transact-SQL)"
 title: "MSpublicationthresholds (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

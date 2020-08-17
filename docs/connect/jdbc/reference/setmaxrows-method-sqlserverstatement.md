@@ -1,4 +1,5 @@
 ---
+description: "setMaxRows Method (SQLServerStatement)"
 title: "setMaxRows Method (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

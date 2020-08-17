@@ -1,4 +1,5 @@
 ---
+description: "Working with Data Types in the Data Flow"
 title: "Working with Data Types in the Data Flow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

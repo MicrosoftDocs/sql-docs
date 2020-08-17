@@ -1,4 +1,5 @@
 ---
+description: "DBCC OPENTRAN (Transact-SQL)"
 title: "DBCC OPENTRAN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"

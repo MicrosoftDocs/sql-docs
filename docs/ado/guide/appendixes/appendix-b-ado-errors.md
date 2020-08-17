@@ -1,4 +1,5 @@
 ---
+description: "Appendix B: ADO Error Codes"
 title: "Appendix B: ADO Errors | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

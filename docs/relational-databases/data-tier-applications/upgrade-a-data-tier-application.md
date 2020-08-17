@@ -1,4 +1,5 @@
 ---
+description: "Upgrade a Data-tier Application"
 title: "Upgrade a Data-tier Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

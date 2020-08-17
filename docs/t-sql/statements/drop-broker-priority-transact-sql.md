@@ -1,4 +1,5 @@
 ---
+description: "DROP BROKER PRIORITY (Transact-SQL)"
 title: "DROP BROKER PRIORITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

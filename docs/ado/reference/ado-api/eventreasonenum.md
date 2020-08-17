@@ -1,4 +1,5 @@
 ---
+description: "EventReasonEnum"
 title: "EventReasonEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

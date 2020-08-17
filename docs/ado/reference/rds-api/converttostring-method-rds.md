@@ -1,4 +1,5 @@
 ---
+description: "ConvertToString Method (RDS)"
 title: "ConvertToString Method (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

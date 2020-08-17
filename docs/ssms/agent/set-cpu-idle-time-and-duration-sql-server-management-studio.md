@@ -1,4 +1,5 @@
 ---
+description: "Set CPU Idle Time and Duration"
 title: Set CPU Idle Time and Duration
 ms.prod: sql
 ms.prod_service: sql-tools

@@ -1,4 +1,5 @@
 ---
+description: "Issues of Database Evolution (Visual Database Tools)"
 title: Issues of Database Evolution
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

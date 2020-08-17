@@ -1,4 +1,5 @@
 ---
+description: "Key Object (ADOX)"
 title: "Key Object (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

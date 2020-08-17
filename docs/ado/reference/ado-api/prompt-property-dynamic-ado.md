@@ -1,4 +1,5 @@
 ---
+description: "Prompt Property-Dynamic (ADO)"
 title: "Prompt Property-Dynamic (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

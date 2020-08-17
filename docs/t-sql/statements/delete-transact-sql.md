@@ -1,4 +1,5 @@
 ---
+description: "DELETE (Transact-SQL)"
 title: "DELETE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/19/2020"

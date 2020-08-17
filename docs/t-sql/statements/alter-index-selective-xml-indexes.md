@@ -1,4 +1,5 @@
 ---
+description: "ALTER INDEX (Selective XML Indexes)"
 title: "ALTER INDEX (Selective XML Indexes) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"

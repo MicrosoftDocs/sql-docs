@@ -1,4 +1,5 @@
 ---
+description: "Execution Characteristics of Extended Stored Procedures"
 title: "Execution characteristics of extended stored procedures"
 ms.date: "03/14/2017"
 ms.prod: sql

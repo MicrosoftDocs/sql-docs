@@ -1,4 +1,5 @@
 ---
+description: "ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VC++)"
 title: "Stored Procedure Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

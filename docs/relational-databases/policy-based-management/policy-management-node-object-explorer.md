@@ -1,4 +1,5 @@
 ---
+description: "Policy Management Node (Object Explorer)"
 title: "Policy Management Node (Object Explorer) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

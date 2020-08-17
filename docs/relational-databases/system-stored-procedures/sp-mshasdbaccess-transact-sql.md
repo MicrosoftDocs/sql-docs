@@ -1,4 +1,5 @@
 ---
+description: "sp_MShasdbaccess (Transact-SQL)"
 title: "sp_MShasdbaccess (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

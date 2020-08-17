@@ -1,4 +1,5 @@
 ---
+description: "Primary and Foreign Key Constraints"
 title: "Primary and Foreign Key Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"

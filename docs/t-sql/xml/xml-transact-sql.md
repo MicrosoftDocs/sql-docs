@@ -1,4 +1,5 @@
 ---
+description: "xml (Transact-SQL)"
 title: xml (Transact-SQL)
 ms.custom: ""
 ms.date: "07/26/2017"

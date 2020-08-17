@@ -1,4 +1,5 @@
 ---
+description: "sp_cursor_list (Transact-SQL)"
 title: "sp_cursor_list (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

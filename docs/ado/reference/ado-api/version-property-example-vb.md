@@ -1,4 +1,5 @@
 ---
+description: "Version Property Example (VB)"
 title: "Version Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

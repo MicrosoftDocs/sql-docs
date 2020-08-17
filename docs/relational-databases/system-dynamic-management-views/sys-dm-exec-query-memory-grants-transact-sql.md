@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_query_memory_grants (Transact-SQL)"
 title: "sys.dm_exec_query_memory_grants (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/19/2020"

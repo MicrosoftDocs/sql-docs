@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_delete_collector_type (Transact-SQL)"
 title: "sp_syscollector_delete_collector_type (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

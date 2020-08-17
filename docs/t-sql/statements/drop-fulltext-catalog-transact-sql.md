@@ -1,4 +1,5 @@
 ---
+description: "DROP FULLTEXT CATALOG (Transact-SQL)"
 title: "DROP FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

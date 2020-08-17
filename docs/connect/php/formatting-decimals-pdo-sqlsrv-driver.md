@@ -1,4 +1,5 @@
 ---
+description: "Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)"
 title: "Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/11/2019"

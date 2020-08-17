@@ -1,4 +1,5 @@
 ---
+description: "Project Settings (Migration) (OracleToSQL)"
 title: "Project Settings (Migration) (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

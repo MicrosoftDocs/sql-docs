@@ -1,4 +1,5 @@
 ---
+description: "MSqreader_history (Transact-SQL)"
 title: "MSqreader_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

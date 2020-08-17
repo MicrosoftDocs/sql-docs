@@ -1,4 +1,5 @@
 ---
+description: "Using XML Data Types in SQL Server Native Clients"
 title: "Using XML Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

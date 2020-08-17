@@ -1,4 +1,5 @@
 ---
+description: "Generate and Run the Supplemental Logging Script"
 title: "Generate and Run the Supplemental Logging Script | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

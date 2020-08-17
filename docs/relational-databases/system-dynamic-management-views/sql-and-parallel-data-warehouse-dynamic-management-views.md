@@ -1,4 +1,5 @@
 ---
+description: "SQL and Parallel Data Warehouse Dynamic Management Views"
 title: "SQL and Parallel Data Warehouse Dynamic Management Views"
 ms.custom: seo-dt-2019
 ms.date: 11/05/2019

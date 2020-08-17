@@ -1,4 +1,5 @@
 ---
+description: "DENY Endpoint Permissions (Transact-SQL)"
 title: "DENY Endpoint Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2017"

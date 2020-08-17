@@ -1,4 +1,5 @@
 ---
+description: "Procedures Delete Method Example (VB)"
 title: "Procedures Delete Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

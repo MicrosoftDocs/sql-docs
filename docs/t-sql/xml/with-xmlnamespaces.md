@@ -1,4 +1,5 @@
 ---
+description: "WITH XMLNAMESPACES"
 title: WITH XMLNAMESPACES (Transact-SQL)
 ms.custom: ""
 ms.date: "06/10/2016"

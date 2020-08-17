@@ -1,4 +1,5 @@
 ---
+description: "Excel Custom Properties"
 title: "Excel Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

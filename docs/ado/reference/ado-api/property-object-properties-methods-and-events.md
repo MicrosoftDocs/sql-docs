@@ -1,4 +1,5 @@
 ---
+description: "Property Object Properties, Methods, and Events"
 title: "Property Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "System Stored Procedures (Transact-SQL)"
 title: "System Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2016"

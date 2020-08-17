@@ -1,4 +1,5 @@
 ---
+description: "Legal Notice (SSMA for Oracle)"
 title: "Legal Notice (SSMA for Oracle) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

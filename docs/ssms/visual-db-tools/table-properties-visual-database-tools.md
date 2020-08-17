@@ -1,4 +1,5 @@
 ---
+description: "Table Properties (Visual Database Tools)"
 title: Table Properties
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

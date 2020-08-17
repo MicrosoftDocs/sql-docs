@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;DBTS (Transact-SQL)"
 title: DBTS (Transact-SQL)
 ms.custom: ""
 ms.date: "09/18/2017"

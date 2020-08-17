@@ -1,4 +1,5 @@
 ---
+description: "sp_addsynctriggers (Transact-SQL)"
 title: "sp_addsynctriggers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_syspolicy_delete_policy_execution_history (Transact-SQL)"
 title: "sp_syspolicy_delete_policy_execution_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

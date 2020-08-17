@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_io_backup_tapes (Transact-SQL)"
 title: "sys.dm_io_backup_tapes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

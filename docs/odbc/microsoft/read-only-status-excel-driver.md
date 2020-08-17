@@ -1,4 +1,5 @@
 ---
+description: "Read-Only Status (Excel Driver)"
 title: "Read-Only Status (Excel Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Apply and Update a Changeset (Master Data Services)"
 title: Apply and Update a Changeset
 ms.custom: ""
 ms.date: "03/01/2017"

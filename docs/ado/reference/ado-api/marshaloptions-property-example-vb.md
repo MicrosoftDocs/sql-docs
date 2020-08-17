@@ -1,4 +1,5 @@
 ---
+description: "MarshalOptions Property Example (VB)"
 title: "MarshalOptions Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "sp_fulltext_semantic_register_language_statistics_db (Transact-SQL)"
 title: "sp_fulltext_semantic_register_language_statistics_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

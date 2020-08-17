@@ -1,4 +1,5 @@
 ---
+description: "Getting Started with SSMA  for Oracle Console (OracleToSQL)"
 title: "Getting Started with SSMA  for Oracle Console (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

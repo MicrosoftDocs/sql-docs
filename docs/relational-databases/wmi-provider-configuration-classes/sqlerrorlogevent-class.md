@@ -1,4 +1,5 @@
 ---
+description: "SqlErrorLogEvent Class"
 title: "SqlErrorLogEvent Class"
 ms.custom: ""
 ms.date: "03/14/2017"

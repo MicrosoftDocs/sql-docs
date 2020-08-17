@@ -1,4 +1,5 @@
 ---
+description: "Call SQLColumns on a Table with Sparse Columns"
 title: "Call SQLColumns on a Table with Sparse Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

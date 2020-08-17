@@ -1,4 +1,5 @@
 ---
+description: "Sessions Event Category"
 title: "Sessions Event Category | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

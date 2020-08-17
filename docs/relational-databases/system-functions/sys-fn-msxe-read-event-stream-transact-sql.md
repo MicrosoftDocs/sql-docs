@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_MSxe_read_event_stream (Transact-SQL)"
 title: "sys.fn_MSxe_read_event_stream (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

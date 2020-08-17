@@ -1,4 +1,5 @@
 ---
+description: "setAsciiStream (SQLServerCallableStatement)"
 title: "setAsciiStream (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

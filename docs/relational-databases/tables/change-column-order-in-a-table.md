@@ -1,4 +1,5 @@
 ---
+description: "Change Column Order in a Table"
 title: "Change Column Order in a Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/15/2018"

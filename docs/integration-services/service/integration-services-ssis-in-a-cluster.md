@@ -1,4 +1,5 @@
 ---
+description: "Integration Services (SSIS) in a Cluster"
 title: "Integration Services (SSIS) in a Cluster | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Execute Method (ADO Connection)"
 title: "Execute Method (ADO Connection) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

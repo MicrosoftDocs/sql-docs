@@ -1,4 +1,5 @@
 ---
+description: "ADO Fundamentals"
 title: "ADO Fundamentals | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

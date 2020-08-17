@@ -1,4 +1,5 @@
 ---
+description: "ADO Run-Time Errors"
 title: "ADO Errors | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

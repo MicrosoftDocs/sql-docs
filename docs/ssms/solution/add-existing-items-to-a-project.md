@@ -1,4 +1,5 @@
 ---
+description: "Add Existing Items to a Project"
 title: "Add Existing Items to a Project"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

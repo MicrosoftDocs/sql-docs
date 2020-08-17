@@ -1,4 +1,5 @@
 ---
+description: "Add Sparklines and Data Bars (Report Builder and SSRS)"
 title: "Add Sparklines and Data Bars (Report Builder) | Microsoft Docs"
 ms.date: 03/03/2017
 ms.prod: reporting-services

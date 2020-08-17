@@ -1,4 +1,5 @@
 ---
+description: "Get Mutual Kerberos Authentication"
 title: "Get Mutual Kerberos Authentication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

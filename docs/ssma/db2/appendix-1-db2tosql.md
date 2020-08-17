@@ -1,4 +1,5 @@
 ---
+description: "Appendix - 1 (DB2ToSQL)"
 title: "Appendix - 1 (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

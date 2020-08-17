@@ -1,4 +1,5 @@
 ---
+description: "Create Synonyms"
 title: "Create Synonyms | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

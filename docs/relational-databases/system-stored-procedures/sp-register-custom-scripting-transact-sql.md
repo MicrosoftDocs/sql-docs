@@ -1,4 +1,5 @@
 ---
+description: "sp_register_custom_scripting (Transact-SQL)"
 title: "sp_register_custom_scripting (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

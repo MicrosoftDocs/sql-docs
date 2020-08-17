@@ -1,4 +1,5 @@
 ---
+description: "Change Data Capture Designer for Oracle by Attunity"
 title: "Change Data Capture Designer for Oracle by Attunity | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

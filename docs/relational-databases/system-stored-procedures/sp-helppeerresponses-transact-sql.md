@@ -1,4 +1,5 @@
 ---
+description: "sp_helppeerresponses (Transact-SQL)"
 title: "sp_helppeerresponses (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

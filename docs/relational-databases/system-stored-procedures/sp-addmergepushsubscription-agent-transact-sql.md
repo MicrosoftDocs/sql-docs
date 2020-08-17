@@ -1,4 +1,5 @@
 ---
+description: "sp_addmergepushsubscription_agent (Transact-SQL)"
 title: "sp_addmergepushsubscription_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

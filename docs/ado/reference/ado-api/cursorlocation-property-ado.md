@@ -1,4 +1,5 @@
 ---
+description: "CursorLocation Property (ADO)"
 title: "CursorLocation Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

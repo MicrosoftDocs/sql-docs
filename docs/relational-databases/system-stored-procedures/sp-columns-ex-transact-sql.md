@@ -1,4 +1,5 @@
 ---
+description: "sp_columns_ex (Transact-SQL)"
 title: "sp_columns_ex (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

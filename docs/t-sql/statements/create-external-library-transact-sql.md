@@ -1,4 +1,5 @@
 ---
+description: "CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server"
 title: "CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/10/2020

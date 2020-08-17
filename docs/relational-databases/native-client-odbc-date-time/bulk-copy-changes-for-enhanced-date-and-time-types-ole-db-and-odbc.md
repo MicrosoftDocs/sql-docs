@@ -1,4 +1,5 @@
 ---
+description: "Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC)"
 title: "Bulk Copy, enhanced types, OLE DB"
 ms.custom: ""
 ms.date: 12/18/2019

@@ -1,4 +1,5 @@
 ---
+description: "Common errors with database mail"
 title: "Common errors with database mail| Microsoft Docs"
 ms.custom: ""
 ms.date: "04/22/2019"

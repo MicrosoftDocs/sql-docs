@@ -1,4 +1,5 @@
 ---
+description: "Proxy Editor - Add Principal"
 title: Proxy Editor - Add Principal
 ms.prod: sql
 ms.prod_service: sql-tools

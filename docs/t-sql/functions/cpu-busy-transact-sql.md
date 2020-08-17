@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;CPU_BUSY (Transact-SQL)"
 title: CPU_BUSY (Transact-SQL)
 ms.custom: ""
 ms.date: "09/18/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Direct Statement Execution and Prepared Statement Execution in the PDO_SQLSRV Driver"
 title: "Direct Statement - Prepared Statement Execution PDO_SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"

@@ -1,4 +1,5 @@
 ---
+description: "Temporal Table System Consistency Checks"
 title: "Temporal Table System Consistency Checks | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2016"

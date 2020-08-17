@@ -1,4 +1,5 @@
 ---
+description: "Clone Method Example (VB)"
 title: "Clone Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "ConnectComplete and Disconnect Events (ADO)"
 title: "ConnectComplete and Disconnect Events (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

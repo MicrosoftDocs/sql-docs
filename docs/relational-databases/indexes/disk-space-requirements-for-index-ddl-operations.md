@@ -1,4 +1,5 @@
 ---
+description: "Disk Space Requirements for Index DDL Operations"
 title: "Disk Space Requirements for Index DDL Operations | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"

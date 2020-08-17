@@ -1,4 +1,5 @@
 ---
+description: "Fields Collection Properties, Methods, and Events"
 title: "Fields Collection Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

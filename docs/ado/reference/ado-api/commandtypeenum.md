@@ -1,4 +1,5 @@
 ---
+description: "CommandTypeEnum"
 title: "CommandTypeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

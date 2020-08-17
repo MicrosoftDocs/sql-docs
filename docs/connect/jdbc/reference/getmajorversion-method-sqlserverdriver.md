@@ -1,4 +1,5 @@
 ---
+description: "getMajorVersion Method (SQLServerDriver)"
 title: "getMajorVersion Method (SQLServerDriver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "CREATE EVENT SESSION (Transact-SQL)"
 title: "CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/10/2019"

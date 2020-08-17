@@ -1,4 +1,5 @@
 ---
+description: "CubeDef Object Properties, Methods, and Events"
 title: "CubeDef Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

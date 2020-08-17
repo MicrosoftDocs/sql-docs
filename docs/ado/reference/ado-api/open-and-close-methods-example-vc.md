@@ -1,4 +1,5 @@
 ---
+description: "Open and Close Methods Example (VC++)"
 title: "Open and Close Methods Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

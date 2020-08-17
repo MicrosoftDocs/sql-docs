@@ -1,4 +1,5 @@
 ---
+description: "DROP CREDENTIAL (Transact-SQL)"
 title: "DROP CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/19/2015"

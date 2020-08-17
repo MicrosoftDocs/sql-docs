@@ -1,4 +1,5 @@
 ---
+description: "isPoolable Method (SQLServerStatement)"
 title: "isPoolable Method (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

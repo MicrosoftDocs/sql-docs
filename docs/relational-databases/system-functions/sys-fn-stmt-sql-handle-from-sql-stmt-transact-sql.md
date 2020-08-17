@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL)"
 title: "sys.fn_stmt_sql_handle_from_sql_stmt (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

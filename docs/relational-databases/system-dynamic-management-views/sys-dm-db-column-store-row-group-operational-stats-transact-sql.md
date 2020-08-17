@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_column_store_row_group_operational_stats (Transact-SQL)"
 title: "sys.dm_db_column_store_row_group_operational_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

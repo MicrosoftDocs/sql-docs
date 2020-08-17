@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_memory_objects (Transact-SQL)"
 title: "sys.dm_os_memory_objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"

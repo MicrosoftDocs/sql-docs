@@ -1,4 +1,5 @@
 ---
+description: "MDX Data Definition - CREATE SESSION CUBE"
 title: "CREATE SESSION CUBE Statement  (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

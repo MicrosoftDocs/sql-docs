@@ -1,4 +1,5 @@
 ---
+description: "Recordset and SourceRecordset Properties Example (VBScript)"
 title: "Recordset and SourceRecordset Properties Example (VBScript) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "Import Statuses (Master Data Services)"
 title: Import Statuses
 ms.custom: ""
 ms.date: "04/01/2016"

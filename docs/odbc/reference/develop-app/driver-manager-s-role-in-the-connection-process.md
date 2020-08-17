@@ -1,4 +1,5 @@
 ---
+description: "Driver Manager&#39;s Role in the Connection Process"
 title: "Driver Manager&#39;s Role in the Connection Process | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

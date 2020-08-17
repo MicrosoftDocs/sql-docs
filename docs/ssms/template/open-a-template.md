@@ -1,4 +1,5 @@
 ---
+description: "Open a Template"
 title: "Open a Template"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

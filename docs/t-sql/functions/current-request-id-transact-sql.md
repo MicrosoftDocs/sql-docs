@@ -1,4 +1,5 @@
 ---
+description: "CURRENT_REQUEST_ID (Transact-SQL)"
 title: "CURRENT_REQUEST_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"

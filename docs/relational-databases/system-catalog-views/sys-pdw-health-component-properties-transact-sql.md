@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_health_component_properties (Transact-SQL)"
 title: "sys.pdw_health_component_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

@@ -1,4 +1,5 @@
 ---
+description: "CubeDef Example (VBScript)"
 title: "CubeDef Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

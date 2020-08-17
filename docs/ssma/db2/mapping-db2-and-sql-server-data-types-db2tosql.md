@@ -1,4 +1,5 @@
 ---
+description: "Mapping DB2 and SQL Server Data Types (DB2ToSQL)"
 title: "Mapping DB2 and SQL Server Data Types (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

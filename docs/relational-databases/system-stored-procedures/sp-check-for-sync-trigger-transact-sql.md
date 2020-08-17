@@ -1,4 +1,5 @@
 ---
+description: "sp_check_for_sync_trigger (Transact-SQL)"
 title: "sp_check_for_sync_trigger (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

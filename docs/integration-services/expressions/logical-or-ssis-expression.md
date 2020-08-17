@@ -1,4 +1,5 @@
 ---
+description: "|| (Logical OR) (SSIS Expression)"
 title: "|| (Logical OR) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

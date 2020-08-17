@@ -1,4 +1,5 @@
 ---
+description: "DROP TYPE (Transact-SQL)"
 title: "DROP TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/12/2017"

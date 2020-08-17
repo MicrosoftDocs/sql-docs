@@ -1,4 +1,5 @@
 ---
+description: "SQL Data Types"
 title: "SQL Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

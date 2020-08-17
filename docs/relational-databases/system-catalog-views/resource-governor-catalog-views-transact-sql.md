@@ -1,4 +1,5 @@
 ---
+description: "Resource Governor Catalog Views (Transact-SQL)"
 title: "Resource Governor Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2016"

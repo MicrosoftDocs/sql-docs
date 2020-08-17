@@ -1,4 +1,5 @@
 ---
+description: "CancelUpdate Method Example (VBScript)"
 title: "CancelUpdate Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

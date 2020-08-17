@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_partition_stats (Transact-SQL)"
 title: "sys.dm_db_partition_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/28/2020"

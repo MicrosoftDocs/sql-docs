@@ -1,4 +1,5 @@
 ---
+description: "sys.masked_columns (Transact-SQL)"
 title: "sys.masked_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/25/2016"

@@ -1,4 +1,5 @@
 ---
+description: "sysmail_unsentitems (Transact-SQL)"
 title: "sysmail_unsentitems (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

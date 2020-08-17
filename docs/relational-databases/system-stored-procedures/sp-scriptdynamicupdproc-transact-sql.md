@@ -1,4 +1,5 @@
 ---
+description: "sp_scriptdynamicupdproc (Transact-SQL)"
 title: "sp_scriptdynamicupdproc (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

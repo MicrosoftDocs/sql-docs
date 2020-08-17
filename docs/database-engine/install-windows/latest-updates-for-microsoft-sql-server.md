@@ -1,4 +1,5 @@
 ---
+description: "Latest updates for Microsoft SQL Server"
 title: Latest updates for Microsoft SQL Server
 TOCTitle: Latest updates for Microsoft SQL Server
 ms:assetid: 0d1835fd-2b44-47cf-8f90-305ca14b7823

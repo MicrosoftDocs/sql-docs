@@ -1,4 +1,5 @@
 ---
+description: "sys.event_log (Azure SQL Database)"
 title: "sys.event_log (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/28/2019"

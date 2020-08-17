@@ -1,4 +1,5 @@
 ---
+description: "updateShort Method (java.lang.String, short)"
 title: "updateShort Method (java.lang.String, short) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_replsetoriginator (Transact-SQL)"
 title: "sp_replsetoriginator (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

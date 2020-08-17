@@ -1,4 +1,5 @@
 ---
+description: "Entity Dependencies Explorer"
 title: Entity Dependencies Explorer
 ms.custom: ""
 ms.date: "04/06/2016"

@@ -1,4 +1,5 @@
 ---
+description: "Removing SSMA for DB2 Components (DB2ToSQL)"
 title: "Removing SSMA for DB2 Components (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

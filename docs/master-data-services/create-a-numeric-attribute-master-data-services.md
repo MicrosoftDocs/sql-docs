@@ -1,4 +1,5 @@
 ---
+description: "Create a Numeric Attribute (Master Data Services)"
 title: Create a Numeric Attribute
 ms.custom: ""
 ms.date: "03/15/2017"

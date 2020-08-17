@@ -1,4 +1,5 @@
 ---
+description: "sp_help_publication_access (Transact-SQL)"
 title: "sp_help_publication_access (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

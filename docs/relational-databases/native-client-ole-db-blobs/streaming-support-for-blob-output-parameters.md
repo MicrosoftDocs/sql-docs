@@ -1,4 +1,5 @@
 ---
+description: "Streaming Support for BLOB Output Parameters in SQL Server Native Client"
 title: Streaming support for BLOB output parameters (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/06/2017"

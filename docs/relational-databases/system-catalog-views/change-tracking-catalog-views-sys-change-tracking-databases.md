@@ -1,4 +1,5 @@
 ---
+description: "Change Tracking Catalog Views - sys.change_tracking_databases"
 title: "sys.change_tracking_databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"

@@ -1,4 +1,5 @@
 ---
+description: "Check the Status of E-Mail Messages Sent With Database Mail"
 title: "Status of E-Mail Messages Sent With Database Mail"
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "Identify Similar Data Rows with the Fuzzy Grouping Transformation"
 title: "Identify Similar Data Rows with the Fuzzy Grouping Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

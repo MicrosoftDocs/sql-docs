@@ -1,4 +1,5 @@
 ---
+description: "MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (ADO)"
 title: "MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

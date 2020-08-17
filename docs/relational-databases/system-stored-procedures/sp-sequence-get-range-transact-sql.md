@@ -1,4 +1,5 @@
 ---
+description: "sp_sequence_get_range (Transact-SQL)"
 title: "sp_sequence_get_range (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2015"

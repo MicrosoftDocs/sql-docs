@@ -1,4 +1,5 @@
 ---
+description: "SET BLOCKSIZE Command"
 title: "SET BLOCKSIZE Command | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

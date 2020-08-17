@@ -1,4 +1,5 @@
 ---
+description: "CacheSize Property Example (VC++)"
 title: "CacheSize Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

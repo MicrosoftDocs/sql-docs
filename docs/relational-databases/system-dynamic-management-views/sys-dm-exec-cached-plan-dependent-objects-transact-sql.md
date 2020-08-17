@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_cached_plan_dependent_objects (Transact-SQL)"
 title: "sys.dm_exec_cached_plan_dependent_objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

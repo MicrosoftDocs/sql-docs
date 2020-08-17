@@ -1,4 +1,5 @@
 ---
+description: "sys.security_predicates (Transact-SQL)"
 title: "sys.security_predicates (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

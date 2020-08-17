@@ -1,4 +1,5 @@
 ---
+description: "Hierarchies Collection Properties, Methods, and Events"
 title: "Hierarchies Collection Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

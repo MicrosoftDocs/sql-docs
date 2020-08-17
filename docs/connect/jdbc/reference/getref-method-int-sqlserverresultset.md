@@ -1,4 +1,5 @@
 ---
+description: "getRef Method (int) (SQLServerResultSet)"
 title: "getRef Method (int) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

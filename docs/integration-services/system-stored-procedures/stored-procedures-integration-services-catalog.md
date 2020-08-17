@@ -1,4 +1,5 @@
 ---
+description: "Stored Procedures (Integration Services Catalog)"
 title: "Stored Procedures (Integration Services Catalog) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"

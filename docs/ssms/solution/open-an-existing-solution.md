@@ -1,4 +1,5 @@
 ---
+description: "Open an Existing Solution"
 title: "Open an Existing Solution"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

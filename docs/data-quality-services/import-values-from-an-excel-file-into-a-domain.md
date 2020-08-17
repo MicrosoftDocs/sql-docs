@@ -1,4 +1,5 @@
 ---
+description: "Import Values from an Excel File into a Domain"
 title: "Import Values from an Excel File into a Domain"
 ms.date: "03/01/2017"
 ms.prod: sql

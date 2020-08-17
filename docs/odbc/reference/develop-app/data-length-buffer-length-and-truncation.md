@@ -1,4 +1,5 @@
 ---
+description: "Data Length, Buffer Length, and Truncation"
 title: "Data Length, Buffer Length, and Truncation | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

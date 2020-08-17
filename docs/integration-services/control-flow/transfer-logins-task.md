@@ -1,4 +1,5 @@
 ---
+description: "Transfer Logins Task"
 title: "Transfer Logins Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ATN2 (Transact-SQL)"
 title: "ATN2 (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"

@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_XEVENT_FAILED"
 title: "LOCALDB_ERROR_XEVENT_FAILED | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

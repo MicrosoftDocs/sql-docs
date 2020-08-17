@@ -1,4 +1,5 @@
 ---
+description: "catalog.delete_environment_variable (SSISDB Database)"
 title: "catalog.delete_environment_variable (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

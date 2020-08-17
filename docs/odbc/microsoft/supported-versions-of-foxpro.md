@@ -1,4 +1,5 @@
 ---
+description: "Supported Versions of FoxPro"
 title: "Supported Versions of FoxPro | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

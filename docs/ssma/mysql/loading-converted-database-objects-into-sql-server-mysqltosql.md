@@ -1,4 +1,5 @@
 ---
+description: "Loading Converted Database Objects into SQL Server (MySQLToSQL)"
 title: "Loading Converted Database Objects into SQL Server (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

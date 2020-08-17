@@ -1,4 +1,5 @@
 ---
+description: "Role of the Driver Manager"
 title: "Role of the Driver Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

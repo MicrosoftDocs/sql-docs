@@ -1,4 +1,5 @@
 ---
+description: "setDateTimeOffset(int, java.sql.DateTimeOffset) (SQLServerStatement)"
 title: "setDateTimeOffset(int, java.sql.DateTimeOffset) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

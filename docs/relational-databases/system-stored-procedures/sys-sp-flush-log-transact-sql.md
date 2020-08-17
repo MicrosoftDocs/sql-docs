@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_flush_log (Transact-SQL)"
 title: "sys.sp_flush_log (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sys.sp_flush_log (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Flushes to disk the  transaction log of the current database, thereby hardening all previously committed delayed durable transactions.  
   

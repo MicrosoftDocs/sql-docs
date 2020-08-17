@@ -16,7 +16,7 @@ ms.author: sstein
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Database Object (Extended Properties Page)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   Extended properties allow you to add custom properties to database objects. Use this page to view or modify extended properties for the selected object. The **Extended Properties** page is the same for all types of database objects.  
   
 ## UI element list  

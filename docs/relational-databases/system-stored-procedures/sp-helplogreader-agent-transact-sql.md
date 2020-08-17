@@ -1,4 +1,5 @@
 ---
+description: "sp_helplogreader_agent (Transact-SQL)"
 title: "sp_helplogreader_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_helplogreader_agent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns properties of the Log Reader Agent job for the publication database. This stored procedure is executed at the Publisher on the publication database.  
   

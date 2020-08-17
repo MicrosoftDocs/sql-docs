@@ -1,4 +1,5 @@
 ---
+description: "Delete Rows in the Results Pane (Visual Database Tools)"
 title: Delete Rows in the Results Pane
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -21,7 +22,7 @@ ms.reviewer:
 
 ---
 # Delete Rows in the Results Pane (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Delete rows in the Results pane if you want to delete records in the database. If you want to delete all of the rows you can use a Delete query. For more information see [Create Delete Queries &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/create-delete-queries-visual-database-tools.md). If you only want to remove rows from the Results pane, change the criteria for the query. For more information see [Specify Search Criteria &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/specify-search-criteria-visual-database-tools.md).  
   
 ### To delete a row or rows  

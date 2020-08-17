@@ -1,4 +1,5 @@
 ---
+description: "managed_backup.sp_backup_config_basic (Transact-SQL)"
 title: "managed_backup.sp_backup_config_basic (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/03/2016"
@@ -22,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # managed_backup.sp_backup_config_basic (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Configures the [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] basic settings for a specific database or for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

@@ -5,7 +5,7 @@ description: Learn how to deploy SQL Server Big Data Cluster with high availabil
 author: mihaelablendea
 ms.author: mihaelab 
 ms.reviewer: mikeray
-ms.date: 02/13/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,9 +13,9 @@ ms.technology: big-data-cluster
 
 # Deploy SQL Server Big Data Cluster with high availability
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Because SQL Server Big Data Clusters is on Kubernetes as containerized applications, and uses features like stateful sets and persistent storage, this infrastructure has built-in health monitoring, failure detection, and failover mechanisms that cluster components leverage to maintain service health. For increased reliability, you can also configure SQL Server master instance or HDFS name node and Spark shared services to deploy with additional replicas in a high availability configuration. Monitoring, failure detection, and automatic failover are managed by a big data cluster management service, namely the control service. This service provide without user intervention – all from availability group setup, configuring database mirroring endpoints, to adding databases to the availability group or failover and upgrade coordination. 
+Because SQL Server Big Data Clusters is on Kubernetes as containerized applications, and uses features like stateful sets and persistent storage, this infrastructure has built-in health monitoring, failure detection, and failover mechanisms that cluster components leverage to maintain service health. For increased reliability, you can also configure SQL Server master instance or HDFS name node and Spark shared services to deploy with additional replicas in a high availability configuration. Monitoring, failure detection, and automatic failover are managed by a big data cluster management service, namely the control service. This service is provided without user intervention – all from availability group setup, configuring database mirroring endpoints, to adding databases to the availability group or failover and upgrade coordination. 
 
 The following image represents how an availability group is deployed in a SQL Server Big Data Cluster:
 
@@ -128,6 +128,9 @@ For certain operations like setting server level configurations or manually addi
 
 > [!IMPORTANT]
 > The endpoint exposed for SQL Server instance connections only supports SQL authentication, even in clusters where Active Directory is enabled. By default, during a big data cluster deployment, `sa` login is disabled and a new `sysadmin` login is provisioned based in the values provided at deployment time for `AZDATA_USERNAME` and `AZDATA_PASSWORD` environment variables.
+
+> [!IMPORTANT]
+> The contained availability group DDL is exclusively self managed in BDC. Any (external user) attempt to drop the contained avaialbility or the database mirroring endpoint is not supported and can result in unrecoverable BDC state.
 
 Here is an example that shows how to expose this endpoint and then add the database that was created with a restore workflow to the availability group. Similar instructions for setting up a connection to the SQL Server master instance apply when you want to change server configurations with `sp_configure`.
 

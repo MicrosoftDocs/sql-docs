@@ -19,7 +19,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DiffGram Examples (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   The examples in this topic consist of DiffGrams that perform insert, update, and delete operations to the database. Before using the examples, note the following:  
   
 -   The examples use two tables (Cust and Ord) that must be created if you want to test the DiffGram examples:  

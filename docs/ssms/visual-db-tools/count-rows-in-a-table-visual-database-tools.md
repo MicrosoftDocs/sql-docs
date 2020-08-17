@@ -1,4 +1,5 @@
 ---
+description: "Count Rows in a Table (Visual Database Tools)"
 title: Count Rows in a Table
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -20,7 +21,7 @@ ms.reviewer:
 
 ---
 # Count Rows in a Table (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can count rows in a table to determine:  
   
 -   The total number of rows in a table, for example, a count of all the books in a `titles` table.  

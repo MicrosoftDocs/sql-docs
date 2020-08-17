@@ -1,4 +1,5 @@
 ---
+description: "Schema (Text File Driver)"
 title: "Schema (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

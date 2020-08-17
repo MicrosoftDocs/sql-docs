@@ -1,4 +1,5 @@
 ---
+description: "sp_helptext (Transact-SQL)"
 title: "sp_helptext (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,7 +21,7 @@ ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_helptext (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Displays the definition of a user-defined rule, default, unencrypted [!INCLUDE[tsql](../../includes/tsql-md.md)] stored procedure, user-defined [!INCLUDE[tsql](../../includes/tsql-md.md)] function, trigger, computed column, CHECK constraint, view, or system object such as a system stored procedure.  
   

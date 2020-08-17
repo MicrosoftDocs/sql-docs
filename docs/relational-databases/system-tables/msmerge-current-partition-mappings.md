@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_current_partition_mappings"
 title: "MSmerge_current_partition_mappings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # MSmerge_current_partition_mappings
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSmerge_current_partition_mappings** table stores one row for each partition id a given changed row belongs to. This table is stored in the publication database.  
   

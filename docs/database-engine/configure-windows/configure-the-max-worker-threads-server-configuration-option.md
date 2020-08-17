@@ -16,7 +16,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Configure the max worker threads Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes how to configure the **max worker threads** server configuration option in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **max worker threads** option configures the number of worker threads that are available [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]-wide to process query requests, login, logout, and similar application requests.
 
@@ -69,7 +69,7 @@ The default value for **max worker threads** is 0. This enables [!INCLUDE[ssNoVe
     |8|288|576|576|   
     |16|352|704|704|   
     |32|480|960|960|   
-    |64|736|1472|2432|   
+    |64|736|1472|1472|   
     |128|1248|2496|4480|   
     |256|2272|4544|8576|   
     

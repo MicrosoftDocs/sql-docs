@@ -1,4 +1,5 @@
 ---
+description: "Trigger Functions (Transact-SQL)"
 title: "Trigger Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2017"
@@ -14,7 +15,7 @@ author: julieMSFT
 ms.author: jrasnick
 ---
 # Trigger Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The following scalar functions can be used in the definition of a trigger to test for changes in data values or to return other data.  
   

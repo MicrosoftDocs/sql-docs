@@ -1,4 +1,5 @@
 ---
+description: "sys.fulltext_languages (Transact-SQL)"
 title: "sys.fulltext_languages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -23,7 +24,7 @@ ms.reviewer: mikeray
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.fulltext_languages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   This catalog view contains one row per language whose word breakers are registered with [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Each row displays the LCID and name of the language. When word breakers are registered for a language, its other linguistic resources-stemmers, noise words (stopwords), and thesaurus files-become available to full-text indexing/querying operations. The value of **name** or **lcid** can be specified in the full-text queries and full-text index [!INCLUDE[tsql](../../includes/tsql-md.md)] statements.  
    

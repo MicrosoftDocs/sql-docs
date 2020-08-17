@@ -1,4 +1,5 @@
 ---
+description: "MSdistribution_agents (Transact-SQL)"
 title: "MSdistribution_agents (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/28/2015"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # MSdistribution_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSdistribution_agents** table contains one row for each Distribution Agent running at the local Distributor. This table is stored in the distribution database.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Lesson 3: Add Logging with SSIS"
 title: "Lesson 3: Add Logging with SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2019"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 3: Add logging with SSIS
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

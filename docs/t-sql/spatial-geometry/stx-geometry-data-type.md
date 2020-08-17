@@ -1,4 +1,5 @@
 ---
+description: "STX (geometry Data Type)"
 title: "STX (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/23/2020"
@@ -19,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STX (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The  X-coordinate property of a **Point** instance.
   
@@ -30,7 +31,9 @@ The  X-coordinate property of a **Point** instance.
 .STX  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type: **float**  
   
  CLR type: **SqlDouble**  

@@ -14,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server Integration Services Properties (Advanced Tab)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   Microsoft [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] is implemented as the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]service. If custom properties are defined, they appear on this tab, with their values. This tab may have no properties listed.  
   
   

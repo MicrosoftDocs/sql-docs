@@ -1,4 +1,5 @@
 ---
+description: "sysmergeschemaarticles (Transact-SQL)"
 title: "sysmergeschemaarticles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sysmergeschemaarticles (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Tracks schema-only articles for merge replication. This table is stored in the publication and subscription databases.  
   

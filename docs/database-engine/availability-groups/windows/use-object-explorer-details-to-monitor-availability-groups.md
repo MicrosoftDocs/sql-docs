@@ -18,7 +18,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Use Object Explorer Details to Monitor Availability Groups
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to use the **Object Explorer Details** pane of [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] to monitor and manage existing Always On availability groups, availability replicas, and availability databases.  
   
 > [!NOTE]  

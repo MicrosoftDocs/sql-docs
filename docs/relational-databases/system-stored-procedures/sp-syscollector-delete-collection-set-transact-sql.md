@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_delete_collection_set (Transact-SQL)"
 title: "sp_syscollector_delete_collection_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_syscollector_delete_collection_set (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes a user-defined collection set and all its collection items.  
   

@@ -1,4 +1,5 @@
 ---
+description: "sys.database_filestream_options (Transact-SQL)"
 title: "sys.database_filestream_options (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -21,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.database_filestream_options (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays information about the level of non-transactional access to FILESTREAM data in FileTables that is enabled. Contains one row for each database in the SQL Server instance.  
   

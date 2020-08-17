@@ -1,4 +1,5 @@
 ---
+description: "Using ADO with Microsoft Visual Basic and Visual Basic for Applications"
 title: "Using ADO with Microsoft Visual Basic | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

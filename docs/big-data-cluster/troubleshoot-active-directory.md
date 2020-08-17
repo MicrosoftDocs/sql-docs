@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Troubleshoot SQL Server Big Data Cluster Active Directory integration
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article explains how to troubleshoot deployment of a SQL Server Big Data Cluster in Active Directory mode.
 

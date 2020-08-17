@@ -18,7 +18,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Updategram Security Considerations (SQLXML 4.0)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   The following are security guidelines for using updategrams:  
   
 -   Avoid using default mapping when you use updategrams to update data. When you use default mapping, an element name in an updategram maps to a table name, and an attribute name maps to a column. This exposes the database table and column information in the database, which can be a potential security risk. Instead, if you specify a separate mapping schema that maps the elements and attributes in an updategram to the database tables and columns, your updategram element and attribute names can be arbitrary, and the schema does necessary mapping of these names to the database tables and columns. Thus, the database information is not exposed in an updategram.  

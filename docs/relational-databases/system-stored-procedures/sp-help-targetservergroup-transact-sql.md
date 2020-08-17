@@ -1,4 +1,5 @@
 ---
+description: "sp_help_targetservergroup (Transact-SQL)"
 title: "sp_help_targetservergroup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_help_targetservergroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists all target servers in the specified group. If no group is specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns information about all target server groups.  
   

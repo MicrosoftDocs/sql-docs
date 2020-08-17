@@ -12,7 +12,7 @@ ms.reviewer: mikeray
 
 # Frequently asked questions
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## PolyBase VS. linked servers
 The following table highlights the differences between PolyBase and linked server features:

@@ -1,4 +1,5 @@
 ---
+description: "Add Tables to Diagrams (Visual Database Tools)"
 title: Add Tables to Diagrams
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,7 +18,7 @@ ms.date: 01/19/2017
 
 # Add Tables to Diagrams (Visual Database Tools)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 You can add a table to your database diagram to edit its structure or relate it to other tables in your diagram. You can either add existing database tables to a diagram or insert a new table that has not yet been defined in the database.
   

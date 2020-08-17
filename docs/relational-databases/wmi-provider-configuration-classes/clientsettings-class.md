@@ -1,4 +1,5 @@
 ---
+description: "ClientSettings Class"
 title: "ClientSettings Class"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # ClientSettings Class
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The [ClientSettings Class](../../relational-databases/wmi-provider-configuration-classes/clientsettings-class.md) represents the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] settings on the client.  
   
  This class enables programmatic management of the client.  

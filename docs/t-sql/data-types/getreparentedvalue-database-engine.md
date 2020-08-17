@@ -1,4 +1,5 @@
 ---
+description: "GetReparentedValue (Database Engine)"
 title: "GetReparentedValue (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
@@ -19,7 +20,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # GetReparentedValue (Database Engine)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a node whose path from the root is the path to _newRoot_, followed by the path from _oldRoot_.
   
@@ -35,7 +36,9 @@ node. GetReparentedValue ( oldRoot, newRoot )
 SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newRoot )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 _oldRoot_  
 A **hierarchyid** that is the node that represents the level of the hierarchy that is to be modified.
   

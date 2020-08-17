@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_child_instances (Transact-SQL)"
 title: "sys.dm_os_child_instances (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"
@@ -22,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.dm_os_child_instances (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each user instance that has been created from the parent server instance.  
   

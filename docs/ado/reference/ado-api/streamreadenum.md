@@ -1,4 +1,5 @@
 ---
+description: "StreamReadEnum"
 title: "StreamReadEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -28,7 +29,12 @@ Specifies whether the whole stream or the next line should be read from a [Strea
  These constants do not have ADO/WFC equivalents.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Read Method](../../../ado/reference/ado-api/read-method.md)|[ReadText Method](../../../ado/reference/ado-api/readtext-method.md)|
+
+:::row:::
+    :::column:::
+        [Read Method](../../../ado/reference/ado-api/read-method.md)  
+    :::column-end:::
+    :::column:::
+        [ReadText Method](../../../ado/reference/ado-api/readtext-method.md)  
+    :::column-end:::
+:::row-end:::

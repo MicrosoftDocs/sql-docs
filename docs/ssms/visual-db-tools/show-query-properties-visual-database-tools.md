@@ -1,4 +1,5 @@
 ---
+description: "Show Query Properties (Visual Database Tools)"
 title: Show Query Properties
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,7 +19,7 @@ ms.reviewer:
 
 ---
 # Show Query Properties (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can display properties for a query in the Properties window from Query and View Designer.  
   
 ### To display properties for a query  

@@ -1,4 +1,5 @@
 ---
+description: "sp_changesubscriber (Transact-SQL)"
 title: "sp_changesubscriber (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_changesubscriber (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the options for a Subscriber. Any distribution task for the Subscribers to this Publisher is updated. This stored procedure writes to the **MSsubscriber_info** table in the distribution database. This stored procedure is executed at the Publisher on the publication database.  
   

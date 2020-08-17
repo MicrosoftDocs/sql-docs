@@ -1,6 +1,6 @@
 ---
 title: What's New for SQL Server 2017 on Linux
-description: This article highlights what's new for SQL Server 2017 on Linux.
+description: In this article, learn about the major features and services available for SQL Server 2017 running on Linux.
 author: VanMSFT 
 ms.author: vanto
 ms.date: 04/10/2020
@@ -11,7 +11,7 @@ ms.technology: linux
 
 # What's new for SQL Server 2017 on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article describes the major features and services available for SQL Server 2017 running on Linux.
 

@@ -1,4 +1,5 @@
 ---
+description: "sp_replmonitorhelpmergesession (Transact-SQL)"
 title: "sp_replmonitorhelpmergesession (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -17,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_replmonitorhelpmergesession (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns information on past sessions for a given replication Merge Agent, with one row returned for each session that matches the filtering criterion. This stored procedure, which is used to monitor merge replication, is executed at the Distributor on the distribution database or at the Subscriber on the subscription database.  
   

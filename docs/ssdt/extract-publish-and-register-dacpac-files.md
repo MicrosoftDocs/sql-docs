@@ -1,5 +1,6 @@
 ---
 title: Extract, Publish, and Register .dacpac Files
+description: "Learn about actions that you can take with data-tier applications (DACs). Examples include extracting, publishing, and registering snapshot (.dacpac) files."
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

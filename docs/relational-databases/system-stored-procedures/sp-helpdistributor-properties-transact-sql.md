@@ -1,4 +1,5 @@
 ---
+description: "sp_helpdistributor_properties (Transact-SQL)"
 title: "sp_helpdistributor_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -17,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_helpdistributor_properties (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns Distributor properties. This stored procedure is executed at the Distributor on the distribution database.  
   

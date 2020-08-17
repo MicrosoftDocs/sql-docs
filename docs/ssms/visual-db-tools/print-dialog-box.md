@@ -1,4 +1,5 @@
 ---
+description: "Print Dialog Box"
 title: Print Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,7 +16,7 @@ ms.reviewer:
 
 ---
 # Print Dialog Box
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can specify how you want to print a document by selecting options in the **Print** dialog box.  
   
 ## Printer  

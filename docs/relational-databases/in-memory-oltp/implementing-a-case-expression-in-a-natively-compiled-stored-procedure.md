@@ -14,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Implementing a CASE Expression in a Natively Compiled Stored Procedure
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 **Applies to:** [!INCLUDE[ssSDSFull_md](../../includes/sssdsfull-md.md)] and SQL Server starting [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)]
 

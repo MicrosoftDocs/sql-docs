@@ -1,4 +1,5 @@
 ---
+description: "sysmail_sentitems (Transact-SQL)"
 title: "sysmail_sentitems (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sysmail_sentitems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains one row for each message sent by Database Mail. Use **sysmail_sentitems** when you want to see which messages were successfully sent.  
   

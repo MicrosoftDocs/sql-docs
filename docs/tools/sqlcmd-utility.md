@@ -26,15 +26,15 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 06/03/2020
+ms.date: 07/22/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 
 # sqlcmd Utility
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-> For SQL Server 2014 and lower, see [sqlcmd Utility](https://docs.microsoft.com/sql/tools/sqlcmd-utility?view=sql-server-2014).
+> For SQL Server 2014 and lower, see [sqlcmd Utility](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014).
 >
 > For using sqlcmd on Linux, see [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).
 
@@ -66,7 +66,7 @@ The new BCP supports Azure AD authentication, including Multi-Factor Authenticat
 **System Requirements**
 Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2019.
 
-This component requires both [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) and [Microsoft ODBC Driver 17 for SQL Server](https://www.microsoft.com/download/details.aspx?id=56567).
+This component requires both [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) and [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql).
  
 To check the SQLCMD version execute `sqlcmd -?` command and confirm that 15.0.1300.359 version or higher is in use.
 
@@ -208,7 +208,7 @@ This switch is used by the client when connecting to SQL Database or SQL Data Wa
 
     The Azure AD Interactive authentication for Azure SQL Database and SQL Data Warehouse, allows you to use an interactive method supporting multi-factor authentication. For more information, see [Active Directory Interactive Authentication](../ssdt/azure-active-directory.md#active-directory-interactive-authentication). 
 
-   Azure AD interactive requires **sqlcmd** [version 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) or later as well as [ODBC version 17.2 or later](https://www.microsoft.com/download/details.aspx?id=56567).  
+   Azure AD interactive requires **sqlcmd** [version 15.0.1000.34](#download-the-latest-version-of-sqlcmd-utility) or later as well as [ODBC version 17.2 or later](https://aka.ms/downloadmsodbcsql).  
 
    To enable interactive authentication, provide -G option with user name (-U) only, without a password.
 
@@ -232,7 +232,7 @@ This switch is used by the client when connecting to SQL Database or SQL Data Wa
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
 
-   If guest users exist in a specific Azure AD and are part of a group that exists in SQL DB that has database permissions to execute the sqlcmd command, their guest user alias is used (for example, *keith0@adventureworks.com*).
+   If guest users exist in a specific Azure AD and are part of a group that exists in SQL Database that has database permissions to execute the sqlcmd command, their guest user alias is used (for example, *keith0@adventureworks.com*).
 
   >[!IMPORTANT]
   >There is a known issue when using the `-G` and `-U` option with SQLCMD, where putting the `-U` option before the `-G` option may cause authentication to fail. Always start with the `-G` option followed by the `-U` option.
@@ -709,7 +709,7 @@ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any 
  Causes **sqlcmd** to exit.  
   
  [**:**] **EXIT**[ **(**_statement_**)** ]  
- Lets you use the result of a SELECT statement as the return value from **sqlcmd**. If numeric, the first column of the last result row is converted to a 4-byte integer (long). MS-DOS passes the low byte to the parent process or operating system error level. Windows 200x passes the whole 4-byte integer. The syntax is:  
+ Lets you use the result of a SELECT statement as the return value from **sqlcmd**. If numeric, the first column of the last result row is converted to a 4-byte integer (long). MS-DOS, Linux, and Mac pass the low byte to the parent process or operating system error level. Windows 200x passes the whole 4-byte integer. The syntax is:  
   
  `:EXIT(query)`  
   
@@ -778,7 +778,7 @@ To use **sqlcmd** interactively, type **sqlcmd** at the command prompt with any 
   
  Time-out options:  
   
-|||  
+|Value|Behavior|  
 |-|-|  
 |0|wait forever|  
 |n>0|wait for n seconds|  
@@ -927,7 +927,7 @@ Use the following practices to help maximize security and efficiency.
 - [Manage Job Steps](~/ssms/agent/manage-job-steps.md)   
 - [Create a CmdExec Job Step](~/ssms/agent/create-a-cmdexec-job-step.md)  
 
-## Feedback
+## Forum Feedback
 
 ![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 

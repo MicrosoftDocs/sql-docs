@@ -17,7 +17,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Set up SQL Server TDE Extensible Key Management by using Azure Key Vault
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 In this article, you install and configure the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Connector for Azure Key Vault.  
   
@@ -477,6 +477,7 @@ For a note about the minimum permission levels needed for each action in this se
     --Create an ENCRYPTION KEY using the ASYMMETRIC KEY (EKMSampleASYKey)
     CREATE DATABASE ENCRYPTION KEY   
     WITH ALGORITHM = AES_256   
+    ENCRYPTION BY SERVER ASYMMETRIC KEY EKMSampleASYKey;
     ```  
   
 1. Encrypt the test database. Enable TDE by setting ENCRYPTION ON.

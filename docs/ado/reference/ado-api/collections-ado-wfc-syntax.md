@@ -1,4 +1,5 @@
 ---
+description: "Collections (ADO - WFC Syntax)"
 title: "Collections (ADO - WFC Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

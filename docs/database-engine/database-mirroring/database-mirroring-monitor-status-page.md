@@ -15,7 +15,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Database Mirroring Monitor (Status Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This read-only page displays the most recent mirroring status for the principal and mirror server instances of the database currently selected in the navigation tree. If information about an instance is currently unavailable, some of the cells in the **Status** grid corresponding to that instance are grayed out and display **Unknown**.  
   
  **To use SQL Server Management Studio to monitor database mirroring**  

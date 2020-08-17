@@ -1,4 +1,5 @@
 ---
+description: "SQL Data Warehouse and Parallel Data Warehouse Catalog Views"
 title: Catalog Views
 titleSuffix: Azure SQL Data Warehouse and Parallel Data Warehouse
 ms.date: 10/29/2019
@@ -15,7 +16,7 @@ ms.custom: seo-dt-2019
 ---
 # SQL Data Warehouse and Parallel Data Warehouse Catalog Views
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
  This topic lists the [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] catalog views.  
   

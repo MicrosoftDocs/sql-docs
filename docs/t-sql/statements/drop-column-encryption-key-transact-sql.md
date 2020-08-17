@@ -1,4 +1,5 @@
 ---
+description: "DROP COLUMN ENCRYPTION KEY (Transact-SQL)"
 title: "DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/15/2019"
@@ -22,7 +23,11 @@ author: jaszymas
 ms.author: jaszymas
 ---
 # DROP COLUMN ENCRYPTION KEY (Transact-SQL)
+<<<<<<< HEAD
 [!INCLUDE[UPDATE-ss2016-asdb-xxxx-xxx-md](../../includes/UPDATE-ss2016-asdb-xxxx-xxx-md.md)]
+=======
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+>>>>>>> 81ede900750218e3f2a8363315ceea198d03f9ec
 
   Drops a column encryption key from a database.  
   
@@ -34,12 +39,12 @@ ms.author: jaszymas
   
 DROP COLUMN ENCRYPTION KEY key_name [;]  
 ```  
-  
-## Arguments  
+
+## Arguments
  *key_name*  
  Is the name by which the column encryption key to be dropped from the database.  
   
-## Remarks  
+## Remarks
  A column encryption key cannot be dropped if it is used to encrypt any column in the database. All columns using the column encryption key must first be dropped.  
   
 ## Permissions  

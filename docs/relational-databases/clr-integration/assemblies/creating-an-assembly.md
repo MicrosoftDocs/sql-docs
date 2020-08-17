@@ -19,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Creating an Assembly
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Managed database objects, such as stored procedures or triggers, are compiled and then deployed in units called an assembly. Managed DLL assemblies must be registered in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] before the functionality the assembly provides can be used. To register an assembly in a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] database, use the CREATE ASSEMBLY statement. This topic discusses how to register an assembly in a database using the CREATE ASSEMBLY statement, and how to specify the security settings for the assembly.  
   
 ## The CREATE ASSEMBLY Statement  
@@ -129,7 +129,4 @@ WITH PERMISSION_SET = UNSAFE;
  [Altering an Assembly](../../../relational-databases/clr-integration/assemblies/altering-an-assembly.md)   
  [Dropping an Assembly](../../../relational-databases/clr-integration/assemblies/dropping-an-assembly.md)   
  [CLR Integration Code Access Security](../../../relational-databases/clr-integration/security/clr-integration-code-access-security.md)   
- [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md)   
- [Allowing Partially Trusted Callers](https://msdn.microsoft.com/library/20b0248f-36da-4fc3-97d2-3789fcf6e084)  
-  
-  
+ [TRUSTWORTHY Database Property](../../../relational-databases/security/trustworthy-database-property.md)

@@ -1,4 +1,5 @@
 ---
+description: "sys.service_queues (Transact-SQL)"
 title: "sys.service_queues (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -21,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.service_queues (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains a row for each object in the database that is a service queue, with **sys.objects.type** = SQ.  
   

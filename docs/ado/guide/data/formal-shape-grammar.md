@@ -1,4 +1,5 @@
 ---
+description: "Formal Shape Grammar"
 title: "Formal Shape Grammar | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

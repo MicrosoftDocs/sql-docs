@@ -1,4 +1,5 @@
 ---
+description: "SELECT FROM &lt;model&gt; (DMX)"
 title: "SELECT FROM &lt;model&gt; (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # SELECT FROM &lt;model&gt; (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Performs an empty prediction join, returning the most probable value or values for the specified columns. Only the content from the mining model is used to create the prediction.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Clustered Property (ADOX)"
 title: "Clustered Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

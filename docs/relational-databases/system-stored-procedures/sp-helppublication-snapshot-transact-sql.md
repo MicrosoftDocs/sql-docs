@@ -1,4 +1,5 @@
 ---
+description: "sp_helppublication_snapshot (Transact-SQL)"
 title: "sp_helppublication_snapshot (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_helppublication_snapshot (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns information on the Snapshot agent for a given publication. This stored procedure is executed at the Publisher on the publication database.  
   

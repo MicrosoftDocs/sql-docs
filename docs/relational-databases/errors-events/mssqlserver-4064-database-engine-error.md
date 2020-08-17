@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_4064"
 title: "MSSQLSERVER_4064 | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"
@@ -13,7 +14,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # MSSQLSERVER_4064
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   
 ## Details  
   

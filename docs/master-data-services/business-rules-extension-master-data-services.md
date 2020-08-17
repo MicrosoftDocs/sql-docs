@@ -14,7 +14,7 @@ ms.author: lle
 ---
 # Business Rules Extension (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)], you can apply user-defined SQL scripts as an extension of  pre-defined conditions and actions.  
   
@@ -58,9 +58,8 @@ CREATE PROCEDURE [usr].[YourAction]
   
  Script actions will be executed as mds_br_user which has following permissions  
   
-|||  
+|Schema|Permissions|  
 |-|-|  
-|**Schema**|**Permissions**|  
 |mdm|SELECT|  
 |stg|SELECT, UPDATE, DELETE, EXECUTE, INSERT|  
 |usr|FULL|  

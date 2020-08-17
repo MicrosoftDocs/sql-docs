@@ -1,4 +1,5 @@
 ---
+description: "Records and Streams"
 title: "Records and Streams | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

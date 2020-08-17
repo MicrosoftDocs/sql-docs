@@ -1,4 +1,5 @@
 ---
+description: "Customization File SQL Section"
 title: "Customization File SQL Section | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

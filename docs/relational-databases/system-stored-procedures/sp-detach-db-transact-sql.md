@@ -1,4 +1,5 @@
 ---
+description: "sp_detach_db (Transact-SQL)"
 title: "sp_detach_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2015"
@@ -20,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_detach_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Detaches a database that is currently not in use from a server instance and, optionally, runs UPDATE STATISTICS on all tables before detaching.  
   

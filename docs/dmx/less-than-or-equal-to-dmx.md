@@ -1,4 +1,5 @@
 ---
+description: "&lt;= (Less Than or Equal To) (DMX)"
 title: "&lt;= (Less Than or Equal To) (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # &lt;= (Less Than or Equal To) (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Performs a comparison operation that determines whether the value of one Data Mining Extensions (DMX) expression is less than or equal to the value of another DMX expression.  
   

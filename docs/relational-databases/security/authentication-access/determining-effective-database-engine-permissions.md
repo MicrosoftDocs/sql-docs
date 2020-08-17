@@ -17,7 +17,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Determining Effective Database Engine Permissions
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This article describes how to determine who has permissions to various objects in the SQL Server Database Engine. SQL Server implements two permission systems for the Database Engine. An older system of fixed roles has preconfigured permissions. Beginning with SQL Server 2005 a more flexible and precise system is available. (The information in this article applies to SQL Server, beginning with 2005. Some types of permissions are not available in some versions of SQL Server.)
 

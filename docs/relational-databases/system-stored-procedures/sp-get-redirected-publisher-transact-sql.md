@@ -1,4 +1,5 @@
 ---
+description: "sp_get_redirected_publisher (Transact-SQL)"
 title: "sp_get_redirected_publisher (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,7 +16,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_get_redirected_publisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Used by replication agents to query a distributor to determine whether the original publisher has been redirected.  
   

@@ -1,6 +1,6 @@
 ---
 title: Create a Java jar file from class files
-description: Learn how to create a Java jar file from class files 
+description: Package your class files into a jar file when using SQL Server Language Extensions to execute Java code. 
 author: dphansen
 ms.author: davidph 
 ms.date: 11/05/2019
@@ -10,7 +10,7 @@ ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Create a Java jar file from class files
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Learn how to package your class files into a jar file, when using [SQL Server Language Extensions](../language-extensions-overview.md) to execute Java code. We recommend you package your files.
 

@@ -1,4 +1,5 @@
 ---
+description: "ALTER TABLE column_definition (Transact-SQL)"
 title: "column_definition (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/24/2018"
@@ -20,10 +21,10 @@ helpviewer_keywords:
 ms.assetid: a1742649-ca29-4d9b-9975-661cdbf18f78
 author: CarlRabeler
 ms.author: carlrab
-monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER TABLE column_definition (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Specifies the properties of a column that are added to a table by using [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md).  
   
@@ -74,7 +75,9 @@ column_name <data_type>
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *column_name*  
  Is the name of the column to be altered, added, or dropped. *column_name* can consist of 1 through 128 characters. For new columns, created with a timestamp data type, *column_name* can be omitted. If no *column_name* is specified for a **timestamp** data type column, the name **timestamp** is used.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Create Method Example (VB)"
 title: "Create Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

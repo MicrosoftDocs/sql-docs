@@ -1,4 +1,5 @@
 ---
+description: "sys.parameter_type_usages (Transact-SQL)"
 title: "sys.parameter_type_usages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -21,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.parameter_type_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns one row for each parameter that is of user-defined type.  
   

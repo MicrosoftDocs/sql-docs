@@ -1,4 +1,5 @@
 ---
+description: "Extended Events Tables - trace_xe_event_map"
 title: "trace_xe_event_map (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Extended Events Tables - trace_xe_event_map
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each Extended Events event that is mapped to a SQL Trace event class. This table is stored in the master database, in the sys schema.  
   

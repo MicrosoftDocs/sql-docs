@@ -1,4 +1,5 @@
 ---
+description: "Updating Rows by Bookmark with SQLBulkOperations"
 title: "Updating Rows by Bookmark with SQLBulkOperations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

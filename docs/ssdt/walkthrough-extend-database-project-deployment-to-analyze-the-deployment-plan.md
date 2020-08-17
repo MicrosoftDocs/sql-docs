@@ -1,5 +1,6 @@
 ---
 title: Extend Database Project Deployment to Analyze the Deployment Plan
+description: Create a DeploymentPlanExecutor deployment contributor. Set up a contributor that keeps a record of the events that occur when you deploy a database project.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

@@ -1,4 +1,5 @@
 ---
+description: "Combine Conditions When OR Has Precedence (Visual Database Tools)"
 title: Combine Conditions When OR Has Precedence
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -19,7 +20,7 @@ ms.reviewer:
 
 ---
 # Combine Conditions When OR Has Precedence (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 To link conditions with OR and give them precedence over conditions linked with AND, you must repeat the AND condition for each OR condition.  
   
 For example, imagine that you want to find all employees who have been with the company more than five years and have lower-level jobs or are retired. This query requires three conditions, a single condition linked to two additional conditions with AND:  

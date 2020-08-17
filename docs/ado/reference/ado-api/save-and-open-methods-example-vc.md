@@ -1,4 +1,5 @@
 ---
+description: "Save and Open Methods Example (VC++)"
 title: "Save and Open Methods Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Edit Instance Properties"
 title: "Edit Instance Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Edit Instance Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the Properties editor to make changes to the CDC instance after you create the initial configurations. You can do the following in the Properties editor.  

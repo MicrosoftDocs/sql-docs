@@ -1,4 +1,5 @@
 ---
+description: "InternetTimeout Property Example (VB)"
 title: "InternetTimeout Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

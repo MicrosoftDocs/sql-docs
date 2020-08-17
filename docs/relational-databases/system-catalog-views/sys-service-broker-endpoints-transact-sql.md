@@ -1,4 +1,5 @@
 ---
+description: "sys.service_broker_endpoints (Transact-SQL)"
 title: "sys.service_broker_endpoints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -21,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.service_broker_endpoints (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This catalog view contains one row for the Service Broker endpoint. For every row in this view, there is a corresponding row with the same **endpoint_id** in the **sys.tcp_endpoints** view that contains the TCP configuration metadata. TCP is the only allowed protocol for Service Broker.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Specify Multiple Search Conditions for Multiple Columns (Visual Database Tools)"
 title: Specify Multiple Search Conditions for Multiple Columns
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -19,7 +20,7 @@ ms.reviewer:
 
 ---
 # Specify Multiple Search Conditions for Multiple Columns (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can expand or narrow the scope of your query by including several data columns as part of your search condition. For example, you might want to:  
   
 -   Search for employees who either have worked more than five years at the company or who hold certain jobs.  

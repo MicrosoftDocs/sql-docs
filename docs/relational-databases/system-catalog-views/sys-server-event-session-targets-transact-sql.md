@@ -1,4 +1,5 @@
 ---
+description: "sys.server_event_session_targets (Transact-SQL)"
 title: "sys.server_event_session_targets (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.server_event_session_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each event target for an event session.  
   
@@ -40,9 +41,8 @@ ms.author: carlrab
 ## Remarks  
  This view has the following relationship cardinalities.  
   
-||||  
-|-|-|-|  
-|From|To|Relationship|  
+| From | To | Relationship |
+| ---- | -- | ------------ |
 |sys.server_event_session_targets.event_session_id|sys.server_event_sessions.event_session_id|Many to one|  
   
 ## See Also  

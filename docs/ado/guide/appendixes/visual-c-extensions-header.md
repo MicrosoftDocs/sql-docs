@@ -1,4 +1,5 @@
 ---
+description: "Visual C++ Extensions Header"
 title: "Visual C++ Extensions Header | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,19 +1,20 @@
 ---
 title: revoscalepy Python package
-description: Introduction to the revoscalepy module in SQL Server Machine Learning Services with Python.
+description: revoscalepy is a Python package from Microsoft that supports distributed computing, remote compute contexts, and high-performance data science algorithms.
 ms.prod: sql
 ms.technology: machine-learning-services
-
-ms.date: 11/06/2019  
+ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# revoscalepy (Python module in SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# revoscalepy (Python package in SQL Server Machine Learning Services)
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
-**revoscalepy** is a Python35-compatible module from Microsoft that supports distributed computing, remote compute contexts, and high-performance data science algorithms. It is based on the **RevoScaleR** package for R (distributed with Microsoft R Server and SQL Server R Services), offering similar functionality:
+**revoscalepy** is a Python package from Microsoft that supports distributed computing, remote compute contexts, and high-performance data science algorithms. The package is included in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md).
+
+The package offers the following functionality:
 
 + Local and remote compute contexts on systems having the same version of **revoscalepy**
 + Data transformation and visualization functions
@@ -24,7 +25,7 @@ Data sources and compute contexts that you create in **revoscalepy** can also be
 
 ## Full reference documentation
 
-The **revoscalepy** library is distributed in multiple Microsoft products, but usage is the same whether you get the library in SQL Server or another product. Because the functions are the same, [documentation for individual revoscalepy functions](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) is published to just one location under the [Python reference](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
+The **revoscalepy** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual revoscalepy functions](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) is published to just one location under the [Python reference](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
 
 ## Versions and platforms
 
@@ -35,7 +36,7 @@ The **revoscalepy** module is based on Python 3.5 and available only when you in
 + [Python client libraries for a data science client](setup-python-client-tools-sql.md)
 
 > [!NOTE]
-> Full product release versions are Windows-only in SQL Server 2017. Both Windows and Linux are supported for **revoscalepy** in [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md).
+> Full product release versions are Windows-only in SQL Server 2017. Both Windows and Linux are supported for **revoscalepy** in [SQL Server 2019](../../linux/sql-server-linux-setup-machine-learning.md) and later.
 
 ## Functions by category
 
@@ -61,7 +62,7 @@ SQL Server and Python use different data types in some cases. For a list of mapp
 
 | Function | Description |
 |----------|-------------|
-|[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import) | Import data into an .xdf file or data frame.|
+|[rx_import](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-import) | Import data into a .xdf file or data frame.|
 |[rx_data_step](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-data-step) | Transform data from an input data set to an output data set.|
 
 <a name="bkmk_algorithms"></a>
@@ -98,11 +99,11 @@ When running locally, you typically run a Python script from the command line, o
 
 When you are ready to encapsulate Python script inside a stored procedure, [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql), we recommend rewriting the code as a single function that has clearly defined inputs and outputs. 
 
-Inputs and outputs must be **pandas** data frames. When this is done, you can call the stored procedure from any client that supports T-SQL, easily pass SQL queries as inputs, and save the results to SQL tables. For an example, see [Learn in-database Python analytics for SQL developers](../tutorials/sqldev-in-database-python-for-sql-developers.md).
+Inputs and outputs must be **pandas** data frames. When this is done, you can call the stored procedure from any client that supports T-SQL, easily pass SQL queries as inputs, and save the results to SQL tables. For an example, see [Learn in-database Python analytics for SQL developers](../tutorials/python-taxi-classification-introduction.md).
 
 ### Using revoscalepy with microsoftml
 
-The Python functions for [microsoftml](ref-py-microsoftml.md) are integrated with the compute contexts and data sources that are provided in revoscalepy. When calling functions from microsoftml, for example when defining and training a model, use the revoscalepy functions to execute the Python code either locally or in a SQl Server remote compute context.
+The Python functions for [microsoftml](ref-py-microsoftml.md) are integrated with the compute contexts and data sources that are provided in revoscalepy. When calling functions from microsoftml, for example when defining and training a model, use the revoscalepy functions to execute the Python code either locally or in a SQL Server remote compute context.
 
 The following example shows the syntax for importing modules in your Python code. You  can then reference the individual functions you need.
 

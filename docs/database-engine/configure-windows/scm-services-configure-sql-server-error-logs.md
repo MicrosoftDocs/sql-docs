@@ -16,7 +16,7 @@ ms.author: maghan
 ---
 # SCM Services - Configure SQL Server Error Logs
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to view or modify the way [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error logs are recycled.  
 
 ## To open the Configure SQL Server Error Logs dialog box  

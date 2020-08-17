@@ -1,4 +1,5 @@
 ---
+description: "getColumnName Method (SQLServerResultSetMetaData)"
 title: "getColumnName Method (SQLServerResultSetMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

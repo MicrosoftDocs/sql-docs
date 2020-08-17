@@ -1,5 +1,6 @@
 ---
 title: Edit an Existing Table using Queries
+description: "Learn how to use a Transact-SQL query to edit a table's definition or data. View examples of editing a table definition and inserting rows into a table."
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

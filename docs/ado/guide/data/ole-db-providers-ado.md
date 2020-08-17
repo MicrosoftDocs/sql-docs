@@ -1,4 +1,5 @@
 ---
+description: "OLE DB Providers (ADO)"
 title: "OLE DB Providers (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "sp_mergesubscription_cleanup (Transact-SQL)"
 title: "sp_mergesubscription_cleanup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -17,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_mergesubscription_cleanup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes metadata, such as triggers and entries, in **sysmergesubscriptions** and **sysmergearticles** after the specified merge push subscription is removed at the Publisher. This stored procedure is run at the Subscriber on the subscription database.  
   

@@ -1,5 +1,6 @@
 ---
 title: Debug Database Objects
+description: Find out how to debug stored procedures, functions, and triggers. See how to turn on debugging, set breakpoints, and run a SQL Server unit test in debug mode.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

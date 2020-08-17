@@ -1,4 +1,5 @@
 ---
+description: "DefaultDatabase Property"
 title: "DefaultDatabase Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

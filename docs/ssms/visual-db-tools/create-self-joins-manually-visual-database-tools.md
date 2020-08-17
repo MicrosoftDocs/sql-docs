@@ -1,4 +1,5 @@
 ---
+description: "Create Self-Joins Manually (Visual Database Tools)"
 title: Create Self-Joins Manually
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,7 +18,7 @@ ms.reviewer:
 
 ---
 # Create Self-Joins Manually (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can join a table to itself even if the table does not have a reflexive relationship in the database. For example, you can use a self-join to find pairs of authors living in the same city.  
   
 As with any join, a self-join requires at least two tables. The difference is that, instead of adding a second table to the query, you add a second instance of the same table. That way, you can compare a column in the first instance of the table to the same column in the second instance, which allows you to compare the values in a column to each other. The [Query and View Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) assigns an alias to the second instance of the table.  

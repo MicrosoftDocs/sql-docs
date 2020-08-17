@@ -1,4 +1,5 @@
 ---
+description: "Configure Peer-to-Peer Topology Wizard"
 title: "Configure Peer-to-Peer Topology Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -14,7 +15,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Configure Peer-to-Peer Topology Wizard
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This section provides information on all pages of the Configure Peer-to-Peer Topology Wizard:  
   
 -   [Publication &#40;Peer-to-Peer Replication&#41;](../../relational-databases/replication/publication-peer-to-peer-replication.md)  

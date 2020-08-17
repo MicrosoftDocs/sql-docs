@@ -1,4 +1,5 @@
 ---
+description: "sys.database_event_sessions (Azure SQL Database)"
 title: "sys.database_event_sessions (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,7 +12,7 @@ ms.author: carlrab
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.database_event_sessions (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Lists all the event session definitions that exist in the current database, in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   

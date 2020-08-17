@@ -1,5 +1,6 @@
 ---
-title: "replace value of (XML DML) | Microsoft Docs"
+description: "replace value of (XML DML)"
+title: replace value of (XML DML)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
@@ -19,7 +20,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # replace value of (XML DML)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Updates the value of a node in the document.  
   
@@ -30,7 +31,9 @@ replace value of Expression1
 with Expression2  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *Expression1*  
 Identifies a node whose value is to be updated. It must identify only a single node. That is, *Expression1* must be a static singleton. If the XML is typed, the type of the node must be a simple type. When multiple nodes are selected, an error is raised. If *Expression1* returns an empty sequence, no value replacement occurs and no errors are returned. *Expression1* must return a single element that has simple type content (list or atomic types), a text node, or an attribute node. *Expression1* can't be a union type, a complex type, a processing instruction, a document node, or a comment node, or an error is returned.  
   

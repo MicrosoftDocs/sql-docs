@@ -1,4 +1,5 @@
 ---
+description: "sp_check_dynamic_filters (Transact-SQL)"
 title: "sp_check_dynamic_filters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -28,7 +29,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_check_dynamic_filters (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Displays information on parameterized row filter properties for a publication, in particular the functions used to generate a filtered data partition for a publication and whether the publication qualifies for using precomputed partitions. This stored procedure is executed at the Publisher on the publication database.  
   

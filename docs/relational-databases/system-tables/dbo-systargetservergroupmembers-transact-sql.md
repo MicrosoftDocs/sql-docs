@@ -1,4 +1,5 @@
 ---
+description: "dbo.systargetservergroupmembers (Transact-SQL)"
 title: "dbo.systargetservergroupmembers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -21,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # dbo.systargetservergroupmembers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Records which target servers are currently enlisted in this multiserver group.  
   

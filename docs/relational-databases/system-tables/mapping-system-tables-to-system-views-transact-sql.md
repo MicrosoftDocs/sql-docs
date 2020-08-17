@@ -1,4 +1,5 @@
 ---
+description: "Mapping System Tables to System Views (Transact-SQL)"
 title: "Mapping System Tables to System Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -18,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Mapping System Tables to System Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This topic shows the mapping between the system tables and functions and system views and functions.  
   

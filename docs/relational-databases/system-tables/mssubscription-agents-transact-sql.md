@@ -1,4 +1,5 @@
 ---
+description: "MSsubscription_agents (Transact-SQL)"
 title: "MSsubscription_agents (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # MSsubscription_agents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSsubscription_agents** table is used by Distribution Agent and triggers of updateable subscriptions to track subscription properties. This table is stored in the subscription database.  
   

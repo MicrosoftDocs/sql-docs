@@ -18,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Aggregate Functions - avg
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Returns the average of a sequence of numbers.  
   

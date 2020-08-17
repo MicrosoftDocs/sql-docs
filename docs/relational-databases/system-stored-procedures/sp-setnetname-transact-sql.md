@@ -1,4 +1,5 @@
 ---
+description: "sp_setnetname (Transact-SQL)"
 title: "sp_setnetname (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_setnetname (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Sets the network names in **sys.servers** to their actual network computer names for remote instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This procedure can be used to enable execution of remote stored procedure calls to computers that have network names containing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] identifiers that are not valid.  
   

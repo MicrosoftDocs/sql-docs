@@ -1,5 +1,6 @@
 ---
 title: Interpreting SQL Server Unit Test Results
+description: Find out how to use the Test Results window or .trx files to view SQL Server unit test results. See how to obtain detailed information on results.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

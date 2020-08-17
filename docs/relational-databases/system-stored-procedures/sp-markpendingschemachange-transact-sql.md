@@ -1,4 +1,5 @@
 ---
+description: "sp_markpendingschemachange (Transact-SQL)"
 title: "sp_markpendingschemachange (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -17,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_markpendingschemachange (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Used for supportability of merge publications by enabling an administrator to skip selected pending schema changes so that they will not be replicated. This stored procedure is executed at the Publisher on the publication database.  
   

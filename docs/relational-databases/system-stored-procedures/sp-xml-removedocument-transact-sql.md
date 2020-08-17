@@ -1,4 +1,5 @@
 ---
+description: "sp_xml_removedocument (Transact-SQL)"
 title: "sp_xml_removedocument (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_xml_removedocument (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Removes the internal representation of the XML document specified by the document handle and invalidates the document handle.  
   

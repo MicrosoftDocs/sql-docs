@@ -13,7 +13,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Database Engine Instances (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   An instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] is a copy of the **sqlservr.exe** executable that runs as an operating system service. Each instance manages several system databases and one or more user databases. Each computer can run multiple instances of the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. Applications connect to the instance in order to perform work in a database managed by the instance.  
   
 ## Instances  

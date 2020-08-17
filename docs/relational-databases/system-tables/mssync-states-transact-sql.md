@@ -1,4 +1,5 @@
 ---
+description: "MSsync_states (Transact-SQL)"
 title: "MSsync_states (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # MSsync_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSsync_states** table tracks which publication is still in concurrent snapshot mode. This table is stored in the distribution database.  
   

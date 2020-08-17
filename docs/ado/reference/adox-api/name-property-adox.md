@@ -1,4 +1,5 @@
 ---
+description: "Name Property (ADOX)"
 title: "Name Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -59,13 +60,25 @@ Indicates the name of the object.
 >  For keys, this property is read-only on **Key** objects already appended to a collection. For tables, this property is read-only for **Table** objects already appended to a collection.  
   
 ## Applies To  
-  
-||||  
-|-|-|-|  
-|[Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)|[Group Object (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)|  
-|[Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)|[Procedure Object (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-|[Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|[View Object (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+        [Group Object (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+        [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+        [Procedure Object (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
+        [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+        [User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+        [View Object (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Columns and Tables Append Methods, Name Property Example (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   

@@ -13,12 +13,16 @@ ms.technology: big-data-cluster
 
 # Use a python script to deploy a SQL Server Big Data Cluster on Azure Red Hat OpenShift (ARO)
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 In this tutorial, you use a sample python deployment script to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] to [Azure Red Hat OpenShift (ARO)](/azure/virtual-machines/linux/openshift-get-started). This deployment option is supported beginning with SQL Server 2019 CU5.
 
 > [!TIP]
 > ARO is only one option for hosting Kubernetes for your big data cluster. To learn about other deployment options as well as how to customize deployment options, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md).
+
+
+> [!WARNING]
+> Persistent volumes created with the built-in storage class *managed-premium* have a reclaim policy of *Delete*. So, when you delete the SQL Server big data cluster, persistent volume claims are deleted as are the persistent volumes. You should create custom storage classes by using azure-disk provisioner with a *Retain* reclaim policy, as described in [Concepts storage](/azure/aks/concepts-storage/#storage-classes). The script below is using the *managed-premium* storage class. See [Data persistence](concept-data-persistence.md) topic for more details.
 
 The default big data cluster deployment used here consists of a SQL Master instance, one compute pool instance, two data pool instances, and two storage pool instances. Data is persisted using Kubernetes persistent volumes that use the ARO default storage classes. The default configuration used in this tutorial is suitable for dev/test environments.
 
@@ -220,10 +224,10 @@ allowHostPorts: false
 allowPrivilegeEscalation: true
 allowPrivilegedContainer: false
 allowedCapabilities:
-- SETUID
-- SETGID
-- CHOWN
-- SYS_PTRACE
+  - SETUID
+  - SETGID
+  - CHOWN
+  - SYS_PTRACE
 apiVersion: security.openshift.io/v1
 defaultAddCapabilities: null
 fsGroup:
@@ -236,8 +240,8 @@ metadata:
   name: bdc-scc
 readOnlyRootFilesystem: false
 requiredDropCapabilities:
-- KILL
-- MKNOD
+  - KILL
+  - MKNOD
 runAsUser:
   type: MustRunAsNonRoot
 seLinuxContext:
@@ -245,12 +249,12 @@ seLinuxContext:
 supplementalGroups:
   type: RunAsAny
 volumes:
-- configMap
-- downwardAPI
-- emptyDir
-- persistentVolumeClaim
-- projected
-- secret
+  - configMap
+  - downwardAPI
+  - emptyDir
+  - persistentVolumeClaim
+  - projected
+  - secret
 ```
 
 ## Next steps

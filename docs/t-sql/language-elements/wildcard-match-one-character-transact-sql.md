@@ -1,4 +1,5 @@
 ---
+description: "_ (Wildcard - Match One Character) (Transact-SQL)"
 title: "_ (Wildcard - Match One Character) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/06/2016"
@@ -23,7 +24,7 @@ author: rothja
 ms.author: jroth
 ---
 # _ (Wildcard - Match One Character) (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Use the underscore character _ to match any single character in a string comparison operation that involves pattern matching, such as `LIKE` and `PATINDEX`.  
   

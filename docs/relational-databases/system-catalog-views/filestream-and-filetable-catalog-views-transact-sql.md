@@ -1,4 +1,5 @@
 ---
+description: "Filestream and FileTable Catalog Views (Transact-SQL)"
 title: "Filestream and FileTable Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -16,7 +17,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Filestream and FileTable Catalog Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section describes the catalog views related to the FileTable feature.  
   

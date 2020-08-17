@@ -1,4 +1,5 @@
 ---
+description: "SubmitChanges Method (RDS)"
 title: "SubmitChanges Method (RDS) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""
@@ -52,11 +53,16 @@ DataControl.SubmitChanges DataFactory.SubmitChanges Connection, Recordset
  If the **URL** property has been set, **SubmitChanges** will submit changes to the location specified by the URL.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
-  
+
+:::row:::
+    :::column:::
+        [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [SubmitChanges Method Example (VBScript)](../../../ado/reference/rds-api/submitchanges-method-example-vbscript.md)   
  [Address Book Command Buttons](../../../ado/guide/remote-data-service/address-book-command-buttons.md)   

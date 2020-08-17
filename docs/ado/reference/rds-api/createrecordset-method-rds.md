@@ -1,4 +1,5 @@
 ---
+description: "CreateRecordset Method (RDS)"
 title: "CreateRecordset Method (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -93,11 +94,16 @@ object.CreateRecordset(ColumnInfos)
 |Variable|**adLongVarBinary**|205|204|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)|[DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)|  
-  
+
+:::row:::
+    :::column:::
+        [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+    :::column-end:::
+    :::column:::
+        [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [CreateRecordset Method Example (VB)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
  [CreateRecordset Method Example (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   

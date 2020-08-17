@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_enumerate_fixed_drives (Transact-SQL)"
 title: "sys.dm_os_enumerate_fixed_drives (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2019"
@@ -19,7 +20,7 @@ ms.author: carlrab
 ---
 # sys.dm_os_enumerate_fixed_drives (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Introduced in SQL Server 2019.
 

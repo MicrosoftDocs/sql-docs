@@ -1,5 +1,6 @@
 ---
-title: "exist() Method (xml Data Type) | Microsoft Docs"
+description: "exist() Method (xml Data Type)"
+title: exist() Method (xml Data Type)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # exist() Method (xml Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a **bit** that represents one of the following conditions:  
   
@@ -33,7 +34,9 @@ ms.author: genemi
 exist (XQuery)   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  XQuery  
  Is an XQuery expression, a string literal.  
   

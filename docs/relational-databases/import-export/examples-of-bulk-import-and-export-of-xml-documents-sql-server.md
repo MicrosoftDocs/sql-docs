@@ -1,7 +1,6 @@
 ---
 title: "Bulk import & export of XML documents"
-description: These examples show bulk import of XML documents into a SQL Server database and bulk export from a SQL Server database.
-ms.description: "Examples of bulk importing and exporting of XML documents with SQL Server"
+description: "Examples of bulk importing and exporting of XML documents with SQL Server"
 ms.date: "10/24/2016"
 ms.prod: sql
 ms.prod_service: "database-engine"
@@ -22,7 +21,11 @@ ms.author: mathoma
 ms.custom: "seo-lt-2019"
 ---
 # Examples of bulk import and export of XML documents (SQL Server)
+<<<<<<< HEAD
 [!INCLUDE[UPDATE-ss2016-asdb-xxxx-xxx-md](../../includes/UPDATE-ss2016-asdb-xxxx-xxx-md.md)]
+=======
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+>>>>>>> 81ede900750218e3f2a8363315ceea198d03f9ec
 
     
 ##  <a name="top"></a>

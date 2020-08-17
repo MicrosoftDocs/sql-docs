@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_geo_replication_link_status (Azure SQL Database)"
 title: "sys.dm_geo_replication_link_status"
 titleSuffix: Azure SQL Database
 ms.date: "01/28/2019"
@@ -22,7 +23,7 @@ ms.custom: seo-dt-2019
 ---
 # sys.dm_geo_replication_link_status (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Contains a row for each replication link between primary and secondary databases in a geo-replication partnership. This includes both primary and secondary databases. If more than one continuous replication link exists for a given primary database, this table contains a row for each of the relationships. The view is created in all databases, including the logical master. However, querying this view in the logical master returns an empty set.  
   

@@ -1,4 +1,5 @@
 ---
+description: "sp_helpreplicationoption (Transact-SQL)"
 title: "sp_helpreplicationoption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -17,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_helpreplicationoption (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Shows the types of replication options enabled for a server. This stored procedure is executed at any server on any database.  
   

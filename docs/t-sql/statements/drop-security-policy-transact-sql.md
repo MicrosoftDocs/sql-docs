@@ -1,4 +1,5 @@
 ---
+description: "DROP SECURITY POLICY (Transact-SQL)"
 title: "DROP SECURITY POLICY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2017"
@@ -21,7 +22,11 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DROP SECURITY POLICY (Transact-SQL)
+<<<<<<< HEAD
 [!INCLUDE[UPDATE-ss2016-asdb-xxxx-xxx-md](../../includes/UPDATE-ss2016-asdb-xxxx-xxx-md.md)]
+=======
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+>>>>>>> 81ede900750218e3f2a8363315ceea198d03f9ec
 
   Deletes a security policy.  
   
@@ -33,8 +38,8 @@ ms.author: vanto
 DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name    
 [;]  
 ```  
-  
-## Arguments  
+
+## Arguments
  *IF EXISTS*  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   
@@ -46,7 +51,7 @@ DROP SECURITY POLICY [ IF EXISTS ] [schema_name. ] security_policy_name
  *security_policy_name*  
  The name of the security policy. Security policy names must comply with the rules for identifiers and must be unique within the database and to its schema.  
   
-## Remarks  
+## Remarks
   
 ## Permissions  
  Requires the ALTER ANY SECURITY POLICY permission and ALTER permission on the schema.  

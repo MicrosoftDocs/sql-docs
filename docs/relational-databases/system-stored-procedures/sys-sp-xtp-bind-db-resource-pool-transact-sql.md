@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_xtp_bind_db_resource_pool (Transact-SQL)"
 title: "sys.sp_xtp_bind_db_resource_pool (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2016"
@@ -22,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.sp_xtp_bind_db_resource_pool (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Binds the specified [!INCLUDE[hek_2](../../includes/hek-2-md.md)] database to the specified resource pool. Both the database and the resource pool must exist prior to executing `sys.sp_xtp_bind_db_resource_pool`.  
   

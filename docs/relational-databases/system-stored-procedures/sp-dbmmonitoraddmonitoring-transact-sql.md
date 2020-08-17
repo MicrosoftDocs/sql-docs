@@ -1,4 +1,5 @@
 ---
+description: "sp_dbmmonitoraddmonitoring (Transact-SQL)"
 title: "sp_dbmmonitoraddmonitoring (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -20,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_dbmmonitoraddmonitoring (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a database mirroring monitor job that periodically updates the mirroring status for every mirrored database on the server instance.  
   

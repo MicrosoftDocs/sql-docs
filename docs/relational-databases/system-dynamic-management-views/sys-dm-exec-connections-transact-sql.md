@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_connections (Transact-SQL)"
 title: "sys.dm_exec_connections (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2017"
@@ -22,7 +23,7 @@ ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_connections (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns information about the connections established to this instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and the details of each connection. Returns server wide connection information for SQL Server. Returns current database connection information for SQL Database.  
   
@@ -65,8 +66,8 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
   
 ## Relationship Cardinalities  
   
-||||  
-|-|-|-|  
+| First element | Second element | Relationship |
+| --------------| -------------- | ------------ |  
 |dm_exec_sessions.session_id|dm_exec_connections.session_id|One-to-one|  
 |dm_exec_requests.connection_id|dm_exec_connections.connection_id|Many to one|  
 |dm_broker_connections.connection_id|dm_exec_connections.connection_id|One to one|  

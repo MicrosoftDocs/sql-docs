@@ -1,5 +1,6 @@
 ---
 title: Transact-SQL Editor Options
+description: Become familiar with Transact-SQL Editor options. Learn about query execution properties and query results properties, and see how to adjust the values.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

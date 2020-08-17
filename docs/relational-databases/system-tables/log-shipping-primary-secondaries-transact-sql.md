@@ -1,4 +1,5 @@
 ---
+description: "log_shipping_primary_secondaries (Transact-SQL)"
 title: "log_shipping_primary_secondaries (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # log_shipping_primary_secondaries (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Maps each primary database to its secondary databases. This table is stored in the **msdb** database.  
 

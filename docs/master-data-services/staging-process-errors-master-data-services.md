@@ -16,7 +16,7 @@ ms.author: lle
 ---
 # Staging Process Errors (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   When the staging process is complete, all processed records in the staging tables have a value in the ErrorCode column. These values are listed in the following table.  
   

@@ -1,6 +1,6 @@
 ---
 title: Create and configure an availability group for SQL Server on Linux
-description: This tutorial shows how to create and configure availability groups for SQL Server on Linux.
+description: This tutorial shows how to create and configure availability groups for SQL Server on Linux, as well as create availability group endpoints and certificates.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -12,7 +12,7 @@ ms.technology: linux
 
 # Create and configure an availability group for SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This tutorial covers how to create and configure an availability group (AG) for [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] on Linux. Unlike [!INCLUDE[sssql15-md](../includes/sssql15-md.md)] and earlier on Windows, you can enable AGs with or without creating the underlying Pacemaker cluster first. Integration with the cluster, if needed, is not done until later.
 
@@ -321,7 +321,7 @@ This section shows how to create an AG with a cluster type of External using SSM
 
 3.  In the Specify Availability Group Options dialog, enter a name for the availability group and select a cluster type of EXTERNAL or NONE in the dropdown. External should be used when Pacemaker will be deployed. None is for specialized scenarios, such as read scale out. Selecting the option for database level health detection is optional. For more information on this option, see [Availability group database level health detection failover option](../database-engine/availability-groups/windows/sql-server-always-on-database-health-detection-failover-option.md). Click **Next**.
 
-    ![](./media/sql-server-linux-create-availability-group/image3.png)
+    ![Create Availability Group 03](./media/sql-server-linux-create-availability-group/image3.png)
 
 4.  In the Select Databases dialog, select the database(s) that will participate in the AG. Each database must have a full backup before it can be added to an AG. Click **Next**.
 
@@ -335,17 +335,17 @@ This section shows how to create an AG with a cluster type of External using SSM
 
     The following example shows an AG with two replicas, a cluster type of External, and a configuration-only replica.
 
-    ![](./media/sql-server-linux-create-availability-group/image4.png)
+    ![Create Availability Group 04](./media/sql-server-linux-create-availability-group/image4.png)
 
     The following example shows an AG with two replicas, a cluster type of None, and a configuration-only replica.
 
-    ![](./media/sql-server-linux-create-availability-group/image5.png)
+    ![Create Availability Group 05](./media/sql-server-linux-create-availability-group/image5.png)
 
 9.  If you want to alter the backup preferences, click on the Backup Preferences tab. For more information on backup preferences with AGs, see [Configure backup on availability replicas](../database-engine/availability-groups/windows/configure-backup-on-availability-replicas-sql-server.md).
 
 10. If using readable secondaries or creating an AG with a cluster type of None for read-scale, you can create a listener by selecting the Listener tab. A listener can also be added later. To create a listener, choose the option **Create an availability group listener** and enter a name, a TCP/IP port, and whether to use a static or automatically assigned DHCP IP address. Remember that for an AG with a cluster type of None, the IP should be static and set to the primary's IP address.
 
-    ![](./media/sql-server-linux-create-availability-group/image6.png)
+    ![Create Availability Group 06](./media/sql-server-linux-create-availability-group/image6.png)
 
 11. If a listener is created for readable scenarios, SSMS 17.3 or later allows the creation of the read-only routing in the wizard. It can also be added later via SSMS or Transact-SQL. To add read-only routing now:
 

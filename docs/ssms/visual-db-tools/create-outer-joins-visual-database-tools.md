@@ -1,4 +1,5 @@
 ---
+description: "Create Outer Joins (Visual Database Tools)"
 title: Create Outer Joins
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,7 +17,7 @@ ms.reviewer:
 
 ---
 # Create Outer Joins (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 By default, the [Query and View Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md) creates an inner join between tables. Inner joins eliminate the rows that do not match with a row from the other table. Outer joins, however, return all rows from at least one of the tables or views mentioned in the FROM clause, as long as those rows meet any WHERE or HAVING search conditions. If you want to include data rows in the result set that do not have a match in the joined table, you can create an outer join.  
   
 When you create an outer join, the order in which tables appear in the SQL statement (as reflected in the SQL pane) is significant. The first table you add becomes the "left" table and the second table becomes the "right" table. (The actual order in which the tables appear in the [Diagram pane](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md) is not significant.) When you specify a left or right outer join, you are referring to the order in which the tables were added to the query and to the order in which they appear in the SQL statement in the [SQL pane](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  

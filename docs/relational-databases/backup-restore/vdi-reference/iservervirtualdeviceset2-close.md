@@ -13,7 +13,7 @@ ms.author: mathoma
 
 # IServerVirtualDeviceSet2::Close (VDI)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 The **Close** function closes a virtual device set opened by IServerVirtualDeviceSet2::Open. It results in releasing all resources associated with the virtual device. The IServerVirtualDeviceSet2 handle is not useful after this function returns and it should be returned to COM.
 

@@ -21,7 +21,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # sqlmaint Utility
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   The**sqlmaint** utility performs a specified set of maintenance operations on one or more databases. Use **sqlmaint** to run DBCC checks, back up a database and its transaction log, update statistics, and rebuild indexes. All database maintenance activities generate a report that can be sent to a designated text file, HTML file, or e-mail account. **sqlmaint** executes database maintenance plans created with previous versions of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. To run [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] maintenance plans from the command prompt, use the [dtexec Utility](../integration-services/packages/dtexec-utility.md).  
   
 > [!IMPORTANT]  
@@ -212,7 +212,7 @@ dbname_log_yyyymmddhhmm.BAK
  **-VrfyBackup**  
  Specifies that RESTORE VERIFYONLY be run on the backup when it completes.  
   
- *number*[**minutes**| **hours**| **day**| **weeks**| **months**]  
+ *number*[**minutes**\| **hours**\| **day**\| **weeks**\| **months**]  
  Specifies the time interval used to determine if a report or backup file is old enough to be deleted. *number* is an integer followed (without a space) by a unit of time. Valid examples:  
   
 -   **12weeks**  

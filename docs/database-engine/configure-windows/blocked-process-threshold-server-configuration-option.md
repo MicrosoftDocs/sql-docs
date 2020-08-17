@@ -16,7 +16,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # blocked process threshold Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
  Use the **blocked process threshold** option to specify the threshold, in seconds, at which blocked process reports are generated. The threshold can be set from 5 to 86,400.  The lock monitor only wakes up every 5 seconds to detect blocking conditions (it is also looking for other conditions such as deadlocks). Therefore, if you set a 'blocked process threshold' value to 1, it will not detect a process that has been blocking for 1 second. The minimum time it can detect a blocked process is 5 seconds.
  

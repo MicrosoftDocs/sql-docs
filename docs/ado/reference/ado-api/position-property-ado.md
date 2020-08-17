@@ -1,4 +1,5 @@
 ---
+description: "Position Property (ADO)"
 title: "Position Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

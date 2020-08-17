@@ -18,7 +18,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # sp_validate_replica_hosts_as_publishers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   **sp_validate_replica_hosts_as_publishers** is an extension of **sp_validate_redirected_publisher** that allows all secondary replicas to be validated, rather than just the current primary replica. **sp_validate_replicat_hosts_as_publisher** validates an entire Always On replication topology. **sp_validate_replica_hosts_as_publishers** must be executed directly on the distributor by using a remote desktop session to avoid a double-hop security error (21892).  
   

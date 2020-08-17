@@ -1,4 +1,5 @@
 ---
+description: "sp_attach_db (Transact-SQL)"
 title: "sp_attach_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_attach_db (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Attaches a database to a server.  
   

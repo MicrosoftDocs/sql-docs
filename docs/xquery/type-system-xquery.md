@@ -26,7 +26,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Type System (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   XQuery is a strongly-typed language for schema types and a weakly-typed language for untyped data. The predefined types of XQuery include the following:  
   

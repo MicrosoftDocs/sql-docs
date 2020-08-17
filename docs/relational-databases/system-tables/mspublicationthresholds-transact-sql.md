@@ -1,4 +1,5 @@
 ---
+description: "MSpublicationthresholds (Transact-SQL)"
 title: "MSpublicationthresholds (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # MSpublicationthresholds (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSpublicationthresholds** table is used to track replication performance metrics for a publication, with one row for each threshold value being monitored. This table is stored in the distribution database.  
   

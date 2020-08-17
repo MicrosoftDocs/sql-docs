@@ -1,4 +1,5 @@
 ---
+description: "ADO Objects and Interfaces"
 title: "ADO Objects and Interfaces | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,7 +20,7 @@ The relationships between these objects are represented in the [ADO Object Model
   
  Each object can be contained in its corresponding collection. For example, an [Error](../../../ado/reference/ado-api/error-object.md) object can be contained in an [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) collection. For more information, see [ADO Collections](../../../ado/reference/ado-api/ado-collections.md) or a specific collection topic.  
   
-|||  
+|Object or interface|Description|  
 |-|-|  
 |[IADOCommandConstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)|Used to retrieve the underlying OLEDB Command from an ADOCommand object.|  
 |[ADORecordConstruction](../../../ado/reference/ado-api/adorecordconstruction-interface.md)|Constructs an ADO **Record** object from an OLE DB **Row** object in a C/C++ application.|  

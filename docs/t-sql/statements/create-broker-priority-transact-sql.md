@@ -1,4 +1,5 @@
 ---
+description: "CREATE BROKER PRIORITY (Transact-SQL)"
 title: "CREATE BROKER PRIORITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -27,7 +28,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # CREATE BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Defines a priority level and the set of criteria for determining which [!INCLUDE[ssSB](../../includes/sssb-md.md)] conversations to assign the priority level. The priority level is assigned to any conversation endpoint that uses the same combination of contracts and services that are specified in the conversation priority. Priorities range in value from 1 (low) to 10 (high). The default is 5.  
   
@@ -49,7 +50,9 @@ FOR CONVERSATION
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *ConversationPriorityName*  
  Specifies the name for this conversation priority. The name must be unique in the current database, and must conform to the rules for [!INCLUDE[ssDE](../../includes/ssde-md.md)] [identifiers](../../relational-databases/databases/database-identifiers.md).  
   

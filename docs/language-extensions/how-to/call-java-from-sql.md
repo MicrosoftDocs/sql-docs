@@ -11,7 +11,7 @@ ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # How to call the Java runtime in SQL Server Language Extensions
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 [SQL Server Language Extensions](../language-extensions-overview.md) uses the [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) system stored procedure as the interface to call the Java runtime. 
 
@@ -111,7 +111,7 @@ For more information, see [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/s
 
 ## Loopback connection to SQL Server
 
-A loopback connection is a network connection between an application and a database server.
+Use a loopback connection to connect back to SQL Server over JDBC to read or write data from Java executed from `sp_execute_external_script`. You can use this when using the **InputDataSet** and **OutputDataSet** arguments of `sp_execute_external_script` are not possible.
 To make a loopback connection in Windows use the following example:
 
 ```
@@ -122,7 +122,6 @@ To make a loopback connection in Linux the JDBC driver requires three connection
 
 [Client-Certificate-Authenication](https://github.com/microsoft/mssql-jdbc/wiki/Client-Certificate-Authentication-for-Loopback-Scenarios)
 
-For more information see, [mssql-jdbc releases](https://github.com/microsoft/mssql-jdbc/releases/tag/v8.3.0).
 
 ## Next steps
 

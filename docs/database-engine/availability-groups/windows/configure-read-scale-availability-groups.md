@@ -1,6 +1,6 @@
 ---
 title: "Configure read-scale for an availability group"
-description: "Configure your Always On availability group for read-scale workloads on Windows."
+description: "Learn how to configure your SQL Server Always On availability group for read-scale workloads on Windows."
 ms.custom: "seodec18"
 author: MashaMSFT
 ms.author: mathoma
@@ -12,7 +12,7 @@ ms.technology: high-availability
 ---
 # Configure read-scale for an Always On availability group
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 You can configure a SQL Server Always On availability group for read-scale workloads on Windows. There are two types of architecture for availability groups:
 * An architecture for high availability that uses a cluster manager to provide improved business continuity and that can include readable-secondary replicas. To create this high-availability architecture, see [Create and configure availability groups on Windows](creation-and-configuration-of-availability-groups-sql-server.md). 

@@ -5,7 +5,7 @@ description: Learn how to upgrade SQL Server Big Data Clusters in an Active Dire
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/22/2020
+ms.date: 08/04/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in Active Directory mode
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This document explains how to deploy a SQL Server big data cluster (BDC) in the Active Directory
 authentication mode. The cluster uses an existing AD domain for authentication.
@@ -27,9 +27,16 @@ To enable Active Directory (AD) authentication, the BDC automatically creates th
 
 To automatically create all the required objects in Active Directory, the BDC needs an AD account during deployment. This account needs to have permissions to create users, groups, and machine accounts inside the provided OU.
 
-The steps below assume you already have an Active Directory domain controller. If you don't have a domain controller, the following [guide](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) includes steps that can be helpful.
+>[!IMPORTANT]
+>Depending on the password expiration policy set in the Domain Controller, passwords for these accounts can expire. The default expiration policy is 42 days. There is no mechanism to rotate credentials for all accounts in BDC, so the cluster will become inoperable once the expiration period is met. To workaround this issue, update the expiration policy for the BDC service accounts to “Password never expires” in the Domain Controller. This action can be done before or after the expiration time. In the latter case, Active Directory will reactivate the expired passwords.
+>
+>The following image shows where to set this property in in Active Directory Users and Computers.
+>
+>:::image type="content" source="media/deploy-active-directory/image25.png" alt-text="Set password expiration policy":::
 
 For a list of AD accounts and groups, see [Auto generated Active Directory objects](active-directory-objects.md).
+
+The steps below assume you already have an Active Directory domain controller. If you don't have a domain controller, the following [guide](https://social.technet.microsoft.com/wiki/contents/articles/37528.create-and-configure-active-directory-domain-controller-in-azure-windows-server.aspx) includes steps that can be helpful.
 
 ## Create AD objects
 
@@ -176,14 +183,19 @@ AD integration requires the following parameters. Add these parameters to the `c
 
 - `security.activeDirectory.realm` **Optional parameter**: In the majority of cases, the realm equals domain name. For cases where they are not the same, use this parameter to define name of realm (e.g. `CONTOSO.LOCAL`). The value of provided for this parameter should be fully-qualified.
 
-- `security.activeDirectory.domainDnsName`: Name of your DNS domain that will be used for the cluster (e.g. `contoso.local`). 
+- `security.activeDirectory.domainDnsName`: Name of your DNS domain that will be used for the cluster (e.g. `contoso.local`).
 
-- `security.activeDirectory.clusterAdmins`: This parameter takes one AD group. The AD group scope must be universal or global. Members of this group get administrator permissions in the cluster. This means that they have `sysadmin` permissions in SQL Server, superuser permissions in HDFS, and administrators in controller. 
+- `security.activeDirectory.clusterAdmins`: This parameter takes one AD group. The AD group scope must be universal or global. Members of this group will have the *bdcAdmin* cluster role which will give them administrator permissions in the cluster. This means that they have [`sysadmin` permissions in SQL Server](../relational-databases/security/authentication-access/server-level-roles.md#fixed-server-level-roles), [`superuser` permissions in HDFS](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#The_Super-User), and admin permissions when connected to the controller endpoint.
 
   >[!IMPORTANT]
   >Create this group in AD before deployment begins. If the scope for this AD group is domain local deployment fails.
 
 - `security.activeDirectory.clusterUsers`: List of the AD groups that are regular users (no administrator permissions) in the big data cluster. The list can include AD groups that are scoped as either universal or global groups. They cannot be domain local groups.
+
+AD groups in this list are mapped to the *bdcUser* big data cluster role and they need to be granted access to SQL Server (see [SQL Server permissions](../relational-databases/security/permissions-hierarchy-database-engine.md)) or HDFS (see [HDFS permissions Guide](https://hadoop.apache.org/docs/current/hadoop-project-dist/hadoop-hdfs/HdfsPermissionsGuide.html#:~:text=Permission%20Checks%20%20%20%20Operation%20%20,%20%20N%2FA%20%2029%20more%20rows%20)). When connected to the controller endpoint, these users can only list the endpoints available in the cluster using *azdata bdc endpoint list* command.
+
+For details on how to update the AD groups for this settings see [Manage Big Data Cluster access in Active Directory
+mode](manage-user-access.md).
 
   >[!IMPORTANT]
   >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
@@ -222,15 +234,23 @@ AD integration requires the following parameters. Add these parameters to the `c
 }
 ```
 
-- `security.activeDirectory.appOwners` **Optional parameter**: List of AD groups who have permissions to create, delete, and run any application. The list can include AD groups that are scoped as either universal or global groups. They cannot be domain local groups.
-
   >[!IMPORTANT]
-  >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
+  >Create the groups provided for the settings bellow in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
+
+- `security.activeDirectory.appOwners` **Optional parameter**: List of AD groups who have permissions to create, delete, and run any application. The list can include AD groups that are scoped as either universal or global groups. They cannot be domain local groups.
 
 - `security.activeDirectory.appReaders` **Optional parameter**: List of the AD groups who have permissions to run any application. The list can include AD groups that are scoped as either universal or global groups. They cannot be domain local groups.
 
-  >[!IMPORTANT]
-  >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
+Below table show the authorization model for application management:
+
+|   Authorized roles   |   azdata command   |
+|----------------------|--------------------|
+|   appOwner           | azdata app create  |
+|   appOwner           | azdata app update  |
+|   appOwner, appReader| azdata app list    |
+|   appOwner, appReader| azdata app describe|
+|   appOwner           | azdata app delete  |
+|   appOwner, appReader| azdata app run     |
 
 - `security.activeDirectory.subdomain`: **Optional parameter** This parameter is introduced in SQL Server 2019 CU5 release to support deploying multiple big data clusters against the same domain. Using this setting, you can specify different DNS names for each of the big data cluster deployed. If the value of this parameter is not specified in the active directory section of the `control.json` file, by default, the big data cluster name (same as Kubernetes namespace name) will be used to compute the value of subdomain setting. 
 

@@ -1,4 +1,5 @@
 ---
+description: "IHindextypes (Transact-SQL)"
 title: "IHindextypes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # IHindextypes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHindextypes** system table contains one row for each non-SQL Server index type supported for non-SQL Server Publishers. This table is stored in the distribution database.  
   

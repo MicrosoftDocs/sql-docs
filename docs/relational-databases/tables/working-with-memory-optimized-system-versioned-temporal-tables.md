@@ -1,4 +1,5 @@
 ---
+description: "Working with Memory-Optimized System-Versioned Temporal Tables"
 title: "Working with Memory-Optimized System-Versioned Temporal Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2016"
@@ -14,7 +15,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Working with Memory-Optimized System-Versioned Temporal Tables
 
+<<<<<<< HEAD
 [!INCLUDE[UPDATE-ss2016-asdb-xxxx-xxx-md](../../includes/UPDATE-ss2016-asdb-xxxx-xxx-md.md)]
+=======
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+>>>>>>> 81ede900750218e3f2a8363315ceea198d03f9ec
 
 This topic discusses how working with a memory-optimized system-versioned temporal table is different from working with a disk-based system-versioned temporal table.
 

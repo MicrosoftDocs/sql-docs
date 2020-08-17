@@ -1,4 +1,5 @@
 ---
+description: "ADO Dynamic Properties"
 title: "ADO Dynamic Properties | Microsoft Docs"
 ms.prod: sql
 ms.technology: connectivity
@@ -20,7 +21,7 @@ Dynamic properties can be added to the [Properties](../../../ado/reference/ado-a
   
  The following dynamic properties are especially interesting, and are also documented in the sources that were mentioned earlier. Special functionality with ADO is documented in the ADO help topics in the following list.  
   
-|||  
+|Dynamic property|Description|  
 |-|-|  
 |[Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)|Specifies whether an index should be created on this field.|  
 |[Prompt](../../../ado/reference/ado-api/prompt-property-dynamic-ado.md)|Specifies whether the OLE DB provider should prompt the user for initialization information.|  

@@ -1,4 +1,5 @@
 ---
+description: "GetChildren Method (ADO)"
 title: "GetChildren Method (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -34,7 +35,12 @@ Set recordset = record.GetChildren
  The provider determines what columns exist in the returned **Recordset**. For example, a document source provider always returns a resource **Recordset**.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|
+
+:::row:::
+    :::column:::
+        [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::

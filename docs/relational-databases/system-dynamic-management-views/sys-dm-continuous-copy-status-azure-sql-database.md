@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_continuous_copy_status (Azure SQL Database)"
 title: "sys.dm_continuous_copy_status"
 titleSuffix: Azure SQL Database
 ms.date: "03/03/2017"
@@ -22,7 +23,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ms.custom: seo-dt-2019
 ---
 # sys.dm_continuous_copy_status (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns a row for each user database (V11) that is currently engaged in a Geo-replication continuous-copy relationship. If more than one continuous copy relationship is initiated for a given primary database this table contains one row for each active secondary database.  
   

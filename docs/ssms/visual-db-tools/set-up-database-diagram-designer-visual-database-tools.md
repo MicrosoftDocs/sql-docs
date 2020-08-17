@@ -1,4 +1,5 @@
 ---
+description: "Set Up Database Diagram Designer (Visual Database Tools)"
 title: Set Up Database Diagram Designer
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -19,7 +20,7 @@ ms.reviewer:
 
 ---
 # Set Up Database Diagram Designer (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 To use Database Diagram Designer, it must first be set up by a member of the **db_owner** role to control access to diagrams.  
   
 ### To set up database diagramming  

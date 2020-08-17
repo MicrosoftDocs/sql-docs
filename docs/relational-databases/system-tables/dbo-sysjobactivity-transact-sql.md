@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysjobactivity (Transact-SQL)"
 title: "dbo.sysjobactivity (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"
@@ -21,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # dbo.sysjobactivity (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Records current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent job activity and status.  This table is stored in the **msdb** database.
   

@@ -1,4 +1,5 @@
 ---
+description: "sys.system_views (Transact-SQL)"
 title: "sys.system_views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -21,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.system_views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each system view that is shipped with [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. All system views are contained in the schemas named **sys** or **INFORMATION_SCHEMA**.  
   

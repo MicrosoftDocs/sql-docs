@@ -1,4 +1,5 @@
 ---
+description: "ASYMKEY_ID (Transact-SQL)"
 title: "ASYMKEY_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -24,7 +25,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ASYMKEY_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns the ID of an asymmetric key.
   
@@ -36,7 +37,9 @@ Returns the ID of an asymmetric key.
 ASYMKEY_ID ( 'Asym_Key_Name' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *Asym_Key_Name*  
 The name of an asymmetric key in the database.
   

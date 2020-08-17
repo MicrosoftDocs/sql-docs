@@ -16,7 +16,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Server Certificates and Asymmetric Keys
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
  Public Key Cryptography is a form of message secrecy in which a user creates a *public* key and a *private* key. The private key is kept secret, whereas the public key can be distributed to others. Although the keys are mathematically related, the private key cannot be easily derived by using the public key. The public key can be used to encrypt data which only the corresponding private key will be able to decrypt. This can be used for encrypting messages to the owner of the private key. Similarly the owner of a private key can encrypt data which can only be decrypted with the public key. This use forms the basis of digital certificates in which information contained in the certificate is encrypted by the owner of a private key, assuring the author of the contents. Since the encrypting and decrypting keys are different they are known as *asymmetric* keys.
   
@@ -62,9 +62,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## Tools  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] provides tools and utilities that will generate certificates and strong name key files. These tools offer a richer amount of flexibility in the key generation process than the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] syntax. You can use these tools to create RSA keys with more complex key lengths and then import them into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The following table shows where to find these tools.  
   
-|||  
-|-|-|  
-|Tool|Purpose|  
+| Tool | Purpose |
+| ---- | ------- |
 |[New-SelfSignedCertificate](/powershell/module/pkiclient/new-selfsignedcertificate)|Creates self-signed certificates.|  
 |[makecert](/windows/desktop/SecCrypto/makecert)|Creates certificates. Deprecated in favor of **New-SelfSignedCertificate**.|  
 |[sn](/dotnet/framework/tools/sn-exe-strong-name-tool)|Creates strong names for symmetric keys.|  

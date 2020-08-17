@@ -1,5 +1,6 @@
 ---
-title: "CURRENT_TRANSACTION_ID (Transact-SQL) | Microsoft Docs"
+description: "CURRENT_TRANSACTION_ID (Transact-SQL)"
+title: CURRENT_TRANSACTION_ID (Transact-SQL)
 ms.custom: ""
 ms.date: "07/24/2017"
 ms.prod: sql
@@ -15,11 +16,17 @@ f1_keywords:
 helpviewer_keywords: 
   - "CURRENT_TRANSACTION_ID function"
 ms.assetid: 82cd9f92-d935-45a0-a433-620d6e15b467
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
+
 # CURRENT_TRANSACTION_ID (Transact-SQL)
+<<<<<<< HEAD
 [!INCLUDE[UPDATE-ss2016-asdb-xxxx-xxx-md](../../includes/UPDATE-ss2016-asdb-xxxx-xxx-md.md)]
+=======
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+>>>>>>> 81ede900750218e3f2a8363315ceea198d03f9ec
 
 This function returns the transaction ID of the current transaction in the current session.
   
@@ -27,12 +34,13 @@ This function returns the transaction ID of the current transaction in the curre
   
 ## Syntax  
   
-```sql
+```syntaxsql
 CURRENT_TRANSACTION_ID( )  
   
 ```  
-  
+
 ## Return types
+
 **bigint**
   
 ## Return Value  

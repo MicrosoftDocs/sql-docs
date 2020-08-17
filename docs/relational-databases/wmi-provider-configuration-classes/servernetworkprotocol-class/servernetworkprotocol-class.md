@@ -1,4 +1,5 @@
 ---
+description: "ServerNetworkProtocol Class"
 title: "ServerNetworkProtocol Class"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -20,7 +21,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # ServerNetworkProtocol Class
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The [ServerNetworkProtocol Class](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md) represents network protocols installed on an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] that enables communication with clients over a network.  
   
  With the [ServerNetworkProtocol Class](../../../relational-databases/wmi-provider-configuration-classes/servernetworkprotocol-class/servernetworkprotocol-class.md), you can:  

@@ -1,17 +1,17 @@
 ---
 title: "End of support options"
 description: Learn about the different options available for SQL Server products that have reached end of support, such as SQL Server 2005, SQL Server 2008, and SQL Server 2008 R2. 
-ms.date: "12/18/2019"
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
-monikerRange: "=sql-server-previousversions||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server end of support options 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 This article explains your options for addressing SQL Server products that have reached end of support.
 
@@ -74,7 +74,7 @@ Hardware requirements:
 - [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)    
 
 Supported version and edition upgrades:
-- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016) 
+- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true) 
 - [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)
 - [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
 
@@ -159,7 +159,7 @@ If you want to offload maintenance, reduce costs, and eliminate the need to upgr
 
 - **Cost**: Single database can be cost-effective, since hardware, software, and maintenance is offloaded, and you can pay for usage by the second or the hour. 
 - **Flexibility**: Single database is particularly well suited for cloud-designed applications when developer productivity and fast time-to-market solutions are critical, or that have require external access.  
-- **Common features**: The most commonly used [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features are available, but not as many as for an Azure SQL Database managed instance.  
+- **Common features**: The most commonly used [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features are available, but not as many as for SQL Managed Instance.  
 - **Rapid deployment**: You can quickly deploy a single database. 
 - **Scalability**: You can quickly and easily scale up and down as needed for your business, providing additional cost-saving benefits. 
 - **Availability**: The cost of the service includes both storage and high availability, with 99.995% availability guaranteed.  
@@ -171,7 +171,7 @@ If you want to offload maintenance, reduce costs, and eliminate the need to upgr
 ### Considerations
 
 - **Limited migration options**:  You can only migrate a single database at a time, rather than an entire instance.   
-- **Feature limitation**:  Although the most commonly used [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features are available, the feature set for a single database is not as complete as for an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
+- **Feature limitation**:  Although the most commonly used Azure SQL Database features are available, the feature set for a single database is not as complete as for Azure SQL Managed Instance, or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Transact-SQL differences**:  There are some [!INCLUDE[tsql](../../includes/tsql-md.md)] (T-SQL) differences between a single database and an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Size limitations**:  A single database has a maximum database size of 100 TB, compared to a 524 PB size for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 - **Maintenance time**: There is no guarantee for the exact maintenance time, though it's nearly transparent. 
@@ -191,9 +191,9 @@ Tools:
 - [Data Migration Assistant](../../dma/dma-overview.md)
 - [Database Migration Service](/azure/dms/dms-overview)
 
-## Azure SQL Database managed instance
+## SQL Managed Instance
 
-If you'd like to take advantage of offloading maintenance and cost, but find the feature set of an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database too limiting, you can move to [Azure SQL Database managed instance](/azure/sql-database/sql-database-managed-instance). A managed instance closely resembles an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], without having to worry about such things as hardware failure, or patching. Managed instance is a collection of system and user databases with a shared set of resources that is lift-and-shift ready, and can be used for most migrations to the cloud. This option is best for new applications or existing on-premises applications that want to use the latest stable [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features and that are migrated to the cloud with minimal changes. 
+If you'd like to take advantage of offloading maintenance and cost, but find the feature set of an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database too limiting, you can move to [SQL Managed Instance](/azure/sql-database/sql-database-managed-instance). A managed instance closely resembles an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], without having to worry about such things as hardware failure, or patching. Managed Instance is a collection of system and user databases with a shared set of resources that is lift-and-shift ready, and can be used for most migrations to the cloud. This option is best for new applications or existing on-premises applications that want to use the latest stable [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features and that are migrated to the cloud with minimal changes. 
 
 ### Benefits
 
@@ -219,10 +219,10 @@ If you'd like to take advantage of offloading maintenance and cost, but find the
 
 ### Resources
 
-[Azure SQL Database managed instance overview](/azure/sql-database/sql-database-managed-instance)       
+[SQL Managed Instance overview](/azure/sql-database/sql-database-managed-instance)       
 [Choosing an Azure SQL option](/azure/sql-database/sql-database-paas-vs-sql-server-iaas)       
 [SQL Database feature comparison](/azure/sql-database/sql-database-features)       
-[Migrate SQL Server to a managed instance](/azure/sql-database/sql-database-managed-instance-migrate)       
+[Migrate SQL Server to Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-migrate)       
 [Broader migration process](/azure/cloud-adoption-framework/migrate/expanded-scope/sql-migration)       
 
 Tools:

@@ -15,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Revoke Permissions on an XML Schema Collection
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   The permission to create an XML schema collection can be revoked by using one of the following:  
   
 -   Revoke the ALTER permission for the relational schema. Then, the principal cannot create an XML schema collection in the relational schema. However, the principal can still do so in other relational schemas in the same database.  

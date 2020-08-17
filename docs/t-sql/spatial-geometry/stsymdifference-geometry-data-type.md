@@ -1,4 +1,5 @@
 ---
+description: "STSymDifference (geometry Data Type)"
 title: "STSymDifference (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/06/2020"
@@ -19,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STSymDifference (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns an object that represents all points that are either in one **geometry** instance or another **geometry** instance, but not those points that lie in both instances.  
   
@@ -30,7 +31,9 @@ ms.author: mlandzic
 .STSymDifference ( other_geometry )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geometry*  
  Is another **geometry** instance in addition to the instance on which `STSymDifference()` is being invoked.  
   

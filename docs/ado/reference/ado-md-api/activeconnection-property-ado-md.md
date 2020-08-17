@@ -1,4 +1,5 @@
 ---
+description: "ActiveConnection Property (ADO MD)"
 title: "ActiveConnection Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -51,11 +52,16 @@ Indicates to which ADO [Connection](../../../ado/reference/ado-api/connection-ob
 ```  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Catalog Object (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|[Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Catalog Object (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)  
+    :::column-end:::
+    :::column:::
+        [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Cellset Example (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
  [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   

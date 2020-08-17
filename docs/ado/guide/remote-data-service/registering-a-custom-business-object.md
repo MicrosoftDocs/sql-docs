@@ -1,4 +1,5 @@
 ---
+description: "Registering a Custom Business Object"
 title: "Registering a Custom Business Object | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

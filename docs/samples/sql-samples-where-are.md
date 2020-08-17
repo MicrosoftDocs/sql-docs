@@ -1,6 +1,6 @@
 ---
 title: "Microsoft SQL samples | Microsoft Docs"
-description: Documentation for sample databases and links to samples for Microsoft SQL products.
+description: View information about the WideWorldImporters and AdventureWorks sample databases, Azure samples and templates, and code samples for Microsoft SQL products.
 ms.date: "04/04/2018"
 ms.reviewer: ""
 ms.prod: sql
@@ -12,7 +12,7 @@ ms.author: mathoma
 ---
 # SQL samples
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Locations of sample databases and code samples for Microsoft SQL products.
 

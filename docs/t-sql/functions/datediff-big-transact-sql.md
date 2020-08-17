@@ -1,4 +1,5 @@
 ---
+description: "DATEDIFF_BIG (Transact-SQL)"
 title: "DATEDIFF_BIG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"
@@ -18,11 +19,15 @@ helpviewer_keywords:
   - "functions [SQL Server], date and time"
   - "time [SQL Server], functions"
 ms.assetid: 19ac1693-3cfa-400d-bf83-20a9cb46599a
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # DATEDIFF_BIG (Transact-SQL)
+<<<<<<< HEAD
 [!INCLUDE[UPDATE-ss2016-asdb-xxxx-xxx-md](../../includes/UPDATE-ss2016-asdb-xxxx-xxx-md.md)]
+=======
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+>>>>>>> 81ede900750218e3f2a8363315ceea198d03f9ec
 
 This function returns the count (as a signed big integer value) of the specified *datepart* boundaries crossed between the specified *startdate* and *enddate*.
   
@@ -35,8 +40,8 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
 ```
 DATEDIFF_BIG ( datepart , startdate , enddate )  
 ```  
-  
-## Arguments  
+
+## Arguments
 *datepart*  
 The part of *startdate* and *enddate* that specifies the type of boundary crossed.
 

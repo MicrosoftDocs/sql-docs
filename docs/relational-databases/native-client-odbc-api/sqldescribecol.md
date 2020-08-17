@@ -1,4 +1,5 @@
 ---
+description: "SQLDescribeCol"
 title: "SQLDescribeCol | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -16,7 +17,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLDescribeCol
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   For executed statements, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver does not need to query the server to describe columns in a result set. In this case, **SQLDescribeCol** does not cause a server roundtrip. Like [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md)and[SQLNumResultCols](../../relational-databases/native-client-odbc-api/sqlnumresultcols.md), calling **SQLDescribeCol** on prepared but not executed statements generates a server roundtrip.  
   
@@ -31,8 +32,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## SQLDescribeCol Support for Enhanced Date and Time Features  
  The values returned for date/time types are as follows:  
   
-||*DataTypePtr*|*ColumnSizePtr*|*DecimalDigitsPtr*|  
-|-|-------------------|---------------------|------------------------|  
+| Attribute | *DataTypePtr* | *ColumnSizePtr* | *DecimalDigitsPtr* |  
+| --------- | ------------- |---------------- | ------------------ |  
 |datetime|SQL_TYPE_TIMESTAMP|23|3|  
 |smalldatetime|SQL_TYPE_TIMESTAMP|16|0|  
 |date|SQL_TYPE_DATE|10|0|  

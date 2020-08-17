@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)"
 title: "sys.dm_db_xtp_gc_cycle_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2016"
@@ -22,7 +23,7 @@ ms.author: carlrab
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_gc_cycle_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb-asdbmi](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
   Outputs the current state of committed transactions that have deleted one or more rows. The idle garbage collection thread wakes every minute or when the number of committed DML transactions exceeds an internal threshold since the last garbage collection cycle. As part of the garbage collection cycle, it moves the transactions that have committed into one or more  queues associated with generations. The transactions that have generated stale versions are grouped in a unit of 16 transactions across 16 generations as follows:  
   

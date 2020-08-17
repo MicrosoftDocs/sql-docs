@@ -65,11 +65,11 @@ There are no restrictions on where you store Excel files you import into the [!I
   
 Date fields are essential to many mobile reports, so make cells are properly formatted as dates in Excel. In some cases this means a conversion is necessary. Here are examples of formulas for converting cells from text to dates in Excel.  
   
-    Week 24-2013=DATE(MID(A2,9,4),1,-2)-WEEKDAY(DATE(MID(A2,9,4),1,3))+MID(A2,6,2)*7  
-  
-    2013/03/21=DATEVALUE(A1)  
-  
-    2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))  
+`Week 24-2013=DATE(MID(A2,9,4),1,-2)-WEEKDAY(DATE(MID(A2,9,4),1,3))+MID(A2,6,2)*7`  
+
+`2013/03/21=DATEVALUE(A1)`  
+
+`2013-mar-12=DATEVALUE(RIGHT(A1,2)&"-"&MID(A1,6,3)&"-"&LEFT(A1,4))`  
   
 After you've converted the cells, you have to format them as dates by selecting them, or the entire column > **Context** menu > **Format Cells** > **Date** from the **Category** list. You can also use the Excel text-to-columns wizard to convert text cells to properly formatted dates.  
   

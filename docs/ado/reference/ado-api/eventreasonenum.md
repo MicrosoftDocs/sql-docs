@@ -1,4 +1,5 @@
 ---
+description: "EventReasonEnum"
 title: "EventReasonEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -59,8 +60,14 @@ Specifies the reason that caused an event to occur.
 |AdoEnums.EventReason.UPDATE|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[WillChangeRecord and RecordChangeComplete Events (ADO)](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|[WillChangeRecordset and RecordsetChangeComplete Events (ADO)](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|  
-|[WillMove and MoveComplete Events (ADO)](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)||
+
+:::row:::
+    :::column:::
+        [WillChangeRecord and RecordChangeComplete Events (ADO)](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
+
+        [WillChangeRecordset and RecordsetChangeComplete Events (ADO)](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
+    :::column-end:::
+    :::column:::
+        [WillMove and MoveComplete Events (ADO)](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
+    :::column-end:::
+:::row-end:::

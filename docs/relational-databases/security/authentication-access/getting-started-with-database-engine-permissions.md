@@ -16,7 +16,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Getting Started with Database Engine Permissions
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Permissions in the [!INCLUDE[ssDE](../../../includes/ssde-md.md)] are managed at the server level through logins and server roles, and at the database level through database users and database roles. The model for [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] exposes  the same system within each database, but the server level permissions are not available. This topic reviews some basic security concepts and then describes a typical implementation of the permissions.  
   

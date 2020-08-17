@@ -24,7 +24,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Server memory configuration options
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Reconfigure the amount of memory (in megabytes) for a SQL Server process used by an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  There are two server memory options, **min server memory** and **max server memory**. These options change the amount of memory the SQL Server Memory Manager can allocate to a SQL Server process.
   
@@ -38,7 +38,7 @@ The default settings and minimum allowable values for these options are:
 By default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can change its memory requirements dynamically based on available system resources. For more information, see [dynamic memory management](../../relational-databases/memory-management-architecture-guide.md#dynamic-memory-management).
 
 > [!IMPORTANT]  
-> Setting **max server memory** value too high can cause a single instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]to compete for memory with other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances hosted on the same host. However, setting this value too low could cause significant memory pressure and performance problems. 
+> Setting **max server memory** value too high can cause a single instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to compete for memory with other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instances hosted on the same host. However, setting this value too low could cause significant memory pressure and performance problems. 
 > Setting **max server memory** to the minimum value can even prevent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from starting. If you cannot start [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] after changing this option, start it using the **_-f_** startup option and reset **max server memory** to its previous value. For more information, see [Database Engine Service Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md).  
     
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can use memory dynamically; however, you can set the memory options manually and restrict the amount of memory that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can access. Before you set the amount of memory for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], determine the appropriate memory setting by subtracting, from the total physical memory, the memory required for the OS, memory allocations not controlled by the max_server_memory setting, and any other instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (and other system uses, if the computer is not wholly dedicated to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]). This difference is the maximum amount of memory you can assign to the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance.  
@@ -72,9 +72,14 @@ To set a fixed amount of memory:
   
 2.  Click the **Memory** node.  
   
-3.  Under **Server Memory Options**, enter the same amount that you want for **Minimum server memory** and **Maximum server memory**.  
+3.  Under **Server Memory Options**, enter the amount that you want for **Minimum server memory** and **Maximum server memory**.  
   
      Use the default settings to allow [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to change its memory requirements dynamically based on available system resources. It is recommended to set a **max server memory** as [detailed above](#max_server_memory). 
+
+The following screenshot demonstrates all three steps: 
+
+:::image type="content" source="media/server-memory-server-configuration-options/configure-memory-in-ssms.png" alt-text="Configure memory in SSMS":::
+
   
 ## Lock Pages in Memory (LPIM) 
 This Windows policy determines which accounts can use a process to keep data in physical memory, preventing the system from paging the data to virtual memory on disk. Locking pages in memory may keep the server responsive when paging memory to disk occurs. The **Lock Pages in Memory** option is set to ON in instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Standard edition and higher when the account with privileges to run sqlservr.exe has been granted the Windows *Lock Pages in Memory* (LPIM) user right.  

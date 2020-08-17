@@ -1,6 +1,6 @@
 ---
 title: "Using IMultipleResults to Process Multiple Result Sets | Microsoft Docs"
-description: "Using IMultipleResults to process multiple result sets"
+description: Learn how consumers use the IMultipleResults interface to process results returned by OLE DB Driver for SQL Server command execution. 
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -17,7 +17,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Using IMultipleResults to Process Multiple Result Sets
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

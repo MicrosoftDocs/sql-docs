@@ -1,4 +1,5 @@
 ---
+description: "Master Data Services Developer Documentation"
 title: Developer Documentation
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -14,7 +15,7 @@ ms.author: lle
 ---
 # Master Data Services Developer Documentation
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   Find information about how to write code to customize the way you and your users interact with [!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)]. Learn how to:  
   

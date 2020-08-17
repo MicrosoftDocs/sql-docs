@@ -1,7 +1,7 @@
 ---
 title: azdata app template reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata app template commands.
+description: Use this reference article to understand SQL commands in the azdata tool, specifically the app template commands. 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -13,12 +13,12 @@ ms.technology: big-data-cluster
 
 # azdata app template
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md)
+The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
-|     |     |
+| Command | Description |
 | --- | --- |
 [azdata app template list](#azdata-app-template-list) | Fetch supported templates.
 [azdata app template pull](#azdata-app-template-pull) | Download supported templates.

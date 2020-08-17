@@ -1,4 +1,5 @@
 ---
+description: "Date, Time, and Timestamp Literals"
 title: "Date, Time, and Timestamp Literals | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

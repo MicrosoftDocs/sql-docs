@@ -1,4 +1,5 @@
 ---
+description: "sys.internal_partitions (Transact-SQL)"
 title: "sys.internal_partitions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019
@@ -15,7 +16,11 @@ ms.author: rortloff
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.internal_partitions (Transact-SQL)
+<<<<<<< HEAD
 [!INCLUDE[UPDATE-ss2016-asdb-xxxx-xxx-md](../../includes/UPDATE-ss2016-asdb-xxxx-xxx-md.md)]
+=======
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+>>>>>>> 81ede900750218e3f2a8363315ceea198d03f9ec
 
   Returns one row for each rowset that tracks internal data for columnstore indexes on disk-based tables. These rowsets are internal to columnstore indexes and track deleted rows, rowgroup mappings, and delta store rowgroups. They track data for each for each table partition; every table has at least one partition. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] re-creates the rowsets each time it rebuilds the columnstore index.   
   

@@ -1,4 +1,5 @@
 ---
+description: "OGC Static Geometry Methods"
 title: "OGC Static Geometry Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -16,7 +17,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # OGC Static Geometry Methods
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] supports the static geometry methods of the Open Geospatial Consortium (OGC).  
   

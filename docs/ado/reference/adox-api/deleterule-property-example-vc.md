@@ -1,4 +1,5 @@
 ---
+description: "DeleteRule Property Example (VC++)"
 title: "DeleteRule Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

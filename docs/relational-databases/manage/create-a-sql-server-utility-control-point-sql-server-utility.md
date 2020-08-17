@@ -1,5 +1,5 @@
 ---
-title: "Create a SQL Server Utility Control Point (SQL Server Utility) | Microsoft Docs"
+title: Create a SQL Server Utility Control Point (SQL Server Utility)
 description: Get help identifying resource use bottlenecks and consolidation opportunities by creating a SQL Server utility control point (UCP).
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -23,7 +23,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Create a SQL Server Utility Control Point (SQL Server Utility)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   An enterprise can have multiple [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utilities, and each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility can manage many instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and data-tier applications. Every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility has one and only one utility control point (UCP). You must create a new UCP for each [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Each managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and every data-tier application is a member of one and only one [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility, and is managed by a single UCP.  
   
  The UCP collects configuration and performance information from managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] every 15 minutes. This information is stored in the utility management data warehouse (UMDW) on the UCP; the UMDW file name is sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance data is compared to policies to help identify resource use bottlenecks and consolidation opportunities.  
@@ -95,9 +95,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 >  The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility collection set is supported side-by-side with non- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility collection sets. That is, a managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be monitored by other collection sets while it is a member of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility. Note, however, that all collection sets on the managed instance will upload their data to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility management data warehouse. For more information, see [Considerations for Running Utility and non-Utility Collection Sets on the Same Instance of SQL Server](../../relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md) and [Configure Your Utility Control Point Data Warehouse &#40;SQL Server Utility&#41;](../../relational-databases/manage/configure-your-utility-control-point-data-warehouse-sql-server-utility.md).  
   
 ## Wizard Steps  
- ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
+ ![Create UCP](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")  
   
- The following sections provide information about each page in the wizard work flow to create a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP. To launch the wizard to create a new UCP, open the Utility Explorer pane from the View menu in SSMS, then click on the ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **Create UCP** button at the top of the Utility Explorer pane.  
+ The following sections provide information about each page in the wizard work flow to create a new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] UCP. To launch the wizard to create a new UCP, open the Utility Explorer pane from the View menu in SSMS, then click on the ![Create UCP](../../relational-databases/manage/media/create-ucp.gif "Create_UCP") **Create UCP** button at the top of the Utility Explorer pane.  
   
  Click on a link in the list below to navigate to details for a page in the Wizard.  
   
@@ -120,9 +120,9 @@ EXEC msdb.dbo.sp_sysutility_ucp_remove;
 ##  <a name="Welcome"></a> Introduction to Create UCP Wizard  
  If you open Utility Explorer and there is no connected utility control point, you must connect to one or create a new one.  
   
- **Connect to existing UCP** - If there is already a utility control point in your deployment, you can connect to it by clicking the ![](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Connect to Utility** button at the top of the Utility Explorer pane. To connect to an existing UCP, you must have administrator credentials or be a member of the Utility Reader role. Note that there can only be one UCP per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility and you can only be connected to one UCP from an instance of SSMS.  
+ **Connect to existing UCP** - If there is already a utility control point in your deployment, you can connect to it by clicking the ![connect to utility](../../relational-databases/manage/media/connect-to-utility.gif "Connect_to_Utility")**Connect to Utility** button at the top of the Utility Explorer pane. To connect to an existing UCP, you must have administrator credentials or be a member of the Utility Reader role. Note that there can only be one UCP per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility and you can only be connected to one UCP from an instance of SSMS.  
   
- **Create a new UCP** - To create a new utility control point, click the ![](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**Create UCP** button at the top of the Utility Explorer pane. To create a new UCP, you must specify the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name and provide administrator credentials in the connection dialog. Note that there can only be one UCP per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
+ **Create a new UCP** - To create a new utility control point, click the ![Create UCP](../../relational-databases/manage/media/create-ucp.gif "Create_UCP")**Create UCP** button at the top of the Utility Explorer pane. To create a new UCP, you must specify the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance name and provide administrator credentials in the connection dialog. Note that there can only be one UCP per [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility.  
   
 ##  <a name="Instance_name"></a> Specify Instance  
  Specify the following information about the UCP you are creating:  

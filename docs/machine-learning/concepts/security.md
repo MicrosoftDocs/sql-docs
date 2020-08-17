@@ -3,8 +3,7 @@ title: Security overview for extensibility
 description: Security overview for the extensibility framework in SQL Server Machine Learning Services. Security for login and user accounts, SQL Server launchpad service, worker accounts, running multiple scripts, and file permissions.
 ms.prod: sql
 ms.technology: machine-learning-services
-
-ms.date: 03/11/2020
+ms.date: 07/14/2020
 ms.topic: conceptual
 author: garyericson
 ms.author: garye
@@ -14,9 +13,9 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 ---
 # Security overview for the extensibility framework in SQL Server Machine Learning Services
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
-This article describes the overall security architecture that is used to integrate the SQL Server database engine and related components with the extensibility framework. It examines the securables, services, process identity, and permissions. For more information about the key concepts and components of extensibility in SQL Server, see [Extensibility architecture in SQL Server Machine Learning Services](extensibility-framework.md).
+This article describes the overall security architecture that is used to integrate the SQL Server database engine and related components with the extensibility framework in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). It examines the securables, services, process identity, and permissions. For more information about the key concepts and components of extensibility in SQL Server, see [Extensibility architecture in SQL Server Machine Learning Services](extensibility-framework.md).
 
 ## Securables for external script
 

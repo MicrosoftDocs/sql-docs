@@ -1,4 +1,5 @@
 ---
+description: "sp_prepexecrpc (Transact-SQL)"
 title: "sp_prepexecrpc (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_prepexecrpc (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Prepares and executes a parameterized stored procedure call that has been specified using an RPC identifier. sp_prepexecrpc is invoked by ID = 14 in a tabular data stream (TDS) packet.  
   

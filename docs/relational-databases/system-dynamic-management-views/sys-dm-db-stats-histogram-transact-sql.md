@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_stats_histogram (Transact-SQL)"
 title: "sys.dm_db_stats_histogram (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -21,8 +22,14 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # sys.dm_db_stats_histogram (Transact-SQL)
+<<<<<<< HEAD
 [!INCLUDE[UPDATE-ss2016-asdb-xxxx-xxx-md](../../includes/UPDATE-ss2016-asdb-xxxx-xxx-md.md)]
+=======
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi.md)]
+>>>>>>> 81ede900750218e3f2a8363315ceea198d03f9ec
 
 Returns the statistics histogram for the specified database object (table or indexed view) in the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. Similar to `DBCC SHOW_STATISTICS WITH HISTOGRAM`.
 
@@ -69,7 +76,7 @@ sys.dm_db_stats_histogram (object_id, stats_id)
   
  The following diagram shows a histogram with six steps. The area to the left of the first upper boundary value is the first step.  
   
- ![](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram")  
+ ![Histogram](../../relational-databases/system-dynamic-management-views/media/histogram_2.gif "Histogram")  
   
  For each histogram step:  
   

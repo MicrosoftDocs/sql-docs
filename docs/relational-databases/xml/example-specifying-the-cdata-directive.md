@@ -15,7 +15,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Example: Specifying the CDATA Directive
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   If the directive is set to **CDATA**, the contained data is not entity encoded, but is put in the CDATA section. The **CDATA** attributes must be nameless.  
   
  The following query wraps the product model summary description in a CDATA section.  

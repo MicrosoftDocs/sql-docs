@@ -1,4 +1,5 @@
 ---
+description: "Issuing Commands to the Underlying Data Provider"
 title: "Issuing Commands to the Underlying Data Provider | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

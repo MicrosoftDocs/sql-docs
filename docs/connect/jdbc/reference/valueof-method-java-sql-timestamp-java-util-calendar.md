@@ -1,4 +1,5 @@
 ---
+description: "valueOf Method (java.sql.Timestamp, java.util.Calendar)"
 title: "valueOf Method (java.sql.Timestamp, java.util.Calendar) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

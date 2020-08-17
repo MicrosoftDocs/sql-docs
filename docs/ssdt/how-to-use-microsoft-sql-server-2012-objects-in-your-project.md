@@ -1,5 +1,6 @@
 ---
 title: SQL Server 2012 Objects in Your Project
+description: Become familiar with SQL Server 2012 sequences. See how to add these objects to database projects and use them in queries.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

@@ -19,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # XQueries Involving Order
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Relational databases do not have a concept of sequence. For example, you cannot make a request such as "Get the first customer from the database." However, you can query an XML document and retrieve the first \<Customer> element. Then, you will always retrieve the same customer.  
   

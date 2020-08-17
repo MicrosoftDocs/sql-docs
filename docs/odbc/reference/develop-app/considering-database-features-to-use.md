@@ -1,4 +1,5 @@
 ---
+description: "Considering Database Features to Use"
 title: "Considering Database Features to Use | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

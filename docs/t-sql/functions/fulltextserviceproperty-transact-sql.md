@@ -1,4 +1,5 @@
 ---
+description: "FULLTEXTSERVICEPROPERTY (Transact-SQL)"
 title: "FULLTEXTSERVICEPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "services [SQL Server], full-text search properties"
   - "test"
 ms.assetid: b7dcacb0-af83-4807-9d1e-49148b56b59c
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # FULLTEXTSERVICEPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns information related to the properties of the Full-Text Engine. These properties can be set and retrieved by using **sp_fulltext_service**.  
   
@@ -35,7 +36,9 @@ ms.author: jrasnick
 FULLTEXTSERVICEPROPERTY ('property')  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *property*  
  Is an expression containing the name of the full-text service-level property. The table lists the properties and provides descriptions of the information returned.  
   

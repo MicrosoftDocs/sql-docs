@@ -1,4 +1,5 @@
 ---
+description: "Using database mirroring (JDBC)"
 title: "Using database mirroring (JDBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

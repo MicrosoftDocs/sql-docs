@@ -1,4 +1,5 @@
 ---
+description: "Arguments in Catalog Functions"
 title: "Arguments in Catalog Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -15,7 +15,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Database Properties (Filegroups Page)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this page to view the filegroups or add a new filegroup to the selected database. Filegroup types are separated into *row* filegroups, FILESTREAM data, and memory-optimized filegroups.  
   
  Row filegroups contain regular data and log files. FILESTREAM data filegroups contain FILESTREAM data files. These data files store information about how binary large object (BLOB) data is stored on the file system when you are using FILESTREAM storage. The options are the same for both types of filegroups.  

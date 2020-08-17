@@ -1,4 +1,5 @@
 ---
+description: "Color Dialog Box (Visual Database Tools)"
 title: Color Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,7 +16,7 @@ ms.reviewer:
 
 ---
 # Color Dialog Box (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The **Color Dialog Box** returns the RGB value of a color selected by the user. The user can select from a set of basic colors determined by the display driver or from a set of custom colors. Select from the Basic colors, or create custom colors. Define colors by clicking in the color matrix or by typing in the **Hue**, **Sat**, **Lum**, **Red**, **Green**, and **Blue** boxes.  
   
 ## Options  

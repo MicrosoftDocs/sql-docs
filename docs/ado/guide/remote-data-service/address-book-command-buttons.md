@@ -1,4 +1,5 @@
 ---
+description: "Address Book Command Buttons"
 title: "Address Book Command Buttons | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

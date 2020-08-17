@@ -1,4 +1,5 @@
 ---
+description: "Advanced Edit (Condition) Dialog Box"
 title: "Advanced Edit (Condition) Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2016"
@@ -14,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Advanced Edit (Condition) Dialog Box
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use the **Advanced Edit** dialog box to create complex expressions for Policy-Based Management conditions.  
   
 ## Options  

@@ -1,4 +1,5 @@
 ---
+description: "Change Data Capture Tables (Transact-SQL)"
 title: "Change Data Capture Tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -14,7 +15,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Change Data Capture Tables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Change data capture enables change tracking on tables so that data manipulation language (DML) and data definition language (DDL) changes made to the tables can be incrementally loaded into a data warehouse. The topics in this section describe the system tables that store information used by change data capture operations.  
   

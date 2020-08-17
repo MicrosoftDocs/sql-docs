@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysjobhistory (Transact-SQL)"
 title: "dbo.sysjobhistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/24/2019"
@@ -21,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # dbo.sysjobhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Contains information about the execution of scheduled jobs by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.
   

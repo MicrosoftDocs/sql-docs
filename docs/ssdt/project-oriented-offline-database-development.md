@@ -1,5 +1,6 @@
 ---
 title: Project-Oriented Offline Database Development
+description: View available resources on project-oriented offline database development tasks, such as importing objects into a database and using sequence objects.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

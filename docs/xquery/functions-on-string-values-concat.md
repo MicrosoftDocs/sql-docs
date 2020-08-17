@@ -18,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Functions on String Values - concat
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Accepts zero or more strings as arguments and returns a string created by concatenating the values of each of these arguments.  
   

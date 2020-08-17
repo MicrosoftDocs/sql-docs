@@ -1,7 +1,7 @@
 ---
 title: azdata bdc reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc commands.
+description: Use this reference article to understand SQL commands in the azdata tool, specifically the many bdc commands. 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -13,12 +13,12 @@ ms.technology: big-data-cluster
 
 # azdata bdc
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md)
+The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
 
 ## Commands
-|     |     |
+| Command | Description |
 | --- | --- |
 [azdata bdc spark](reference-azdata-bdc-spark.md) | The Spark commands allow the user to interact with the Spark system by creating and managing sessions, statements, and batches.
 [azdata bdc create](#azdata-bdc-create) | Create Big Data Cluster.

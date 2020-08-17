@@ -1,4 +1,5 @@
 ---
+description: "Data Sources for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages"
 title: "Data Sources | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/27/2016"
@@ -13,9 +14,9 @@ ms.assetid: 7ac81612-9822-470f-8d0f-a1dc96142fe3
 author: chugugrace
 ms.author: chugu
 ---
-# Data Sources
+# Data Sources for [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] includes a design-time object that you can use in [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages: the data source.  

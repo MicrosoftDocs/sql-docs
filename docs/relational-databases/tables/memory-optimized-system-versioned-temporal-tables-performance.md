@@ -1,4 +1,5 @@
 ---
+description: "Memory-Optimized System-Versioned Temporal Tables Performance"
 title: "Memory-Optimized System-Versioned Temporal Tables Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"
@@ -15,7 +16,11 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Memory-Optimized System-Versioned Temporal Tables Performance
 
+<<<<<<< HEAD
 [!INCLUDE[UPDATE-ss2016-asdb-xxxx-xxx-md](../../includes/UPDATE-ss2016-asdb-xxxx-xxx-md.md)]
+=======
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+>>>>>>> 81ede900750218e3f2a8363315ceea198d03f9ec
 
 This topic discusses some specific performance considerations when using system-versioned memory-optimized temporal tables.
 

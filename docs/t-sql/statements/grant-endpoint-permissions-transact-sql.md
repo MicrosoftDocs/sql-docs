@@ -1,4 +1,5 @@
 ---
+description: "GRANT Endpoint Permissions (Transact-SQL)"
 title: "GRANT Endpoint Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/17/2017"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # GRANT Endpoint Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Grants permissions on an endpoint.  
 
@@ -41,7 +42,9 @@ GRANT permission  [ ,...n ] ON ENDPOINT :: endpoint_name
     | SQL_Server_login_from_AsymKey  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on an endpoint. For a list of the permissions, see the Remarks section later in this topic.  
   

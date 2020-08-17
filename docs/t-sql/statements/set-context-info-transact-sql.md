@@ -1,4 +1,5 @@
 ---
+description: "SET CONTEXT_INFO (Transact-SQL)"
 title: "SET CONTEXT_INFO (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -21,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # SET CONTEXT_INFO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Associates up to 128 bytes of binary information with the current session or connection.  
   
@@ -34,7 +35,9 @@ ms.author: carlrab
 SET CONTEXT_INFO { binary_str | @binary_var }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *binary_str*  
  Is a **binary** constant, or a constant that is implicitly convertible to **binary**, to associate with the current session or connection.  
   

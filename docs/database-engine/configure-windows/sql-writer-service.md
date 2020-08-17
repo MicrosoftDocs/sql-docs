@@ -24,7 +24,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # SQL Writer Service
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The SQL Writer Service provides added functionality for backup and restore of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through the Volume Shadow Copy Service framework.  
   
  The SQL Writer Service is installed automatically. It must be running when the Volume Shadow Copy Service (VSS) application requests a backup or restore. To configure the service, use the [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows Services applet. The SQL Writer Service installs on all operating systems.  

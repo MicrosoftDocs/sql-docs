@@ -1,10 +1,10 @@
 ---
 title: Install SQL Server command-line tools on Linux
 titleSuffix: SQL Server
-description: This article describes how to install the SQL Server Tools on Linux.
+description: Learn how to install the SQL Server command-line tools, Microsoft ODBC drivers, and their dependencies on Linux.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 06/22/2020
+ms.date: 06/30/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.custom: "sqlfreshmay19"
@@ -13,7 +13,7 @@ ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
 ---
 # Install sqlcmd and bcp the SQL Server command-line tools on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 The following steps install the command-line tools, Microsoft ODBC drivers, and their dependencies. The **mssql-tools** package contains:
 
@@ -179,11 +179,11 @@ A preview of **sqlcmd** and **bcp** is now available on macOS. For more informat
 
 *Install [Homebrew](https://brew.sh) if you don't have it already:*
 
-        /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+- `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
 
 To install the tools for Mac El Capitan and Sierra, use the following commands:
 
-```
+```bash
 # brew untap microsoft/mssql-preview if you installed the preview version 
 brew tap microsoft/mssql-release https://github.com/Microsoft/homebrew-mssql-release
 brew update

@@ -1,6 +1,6 @@
 ---
 title: SQL loopback connection
-description: Learn how to use a loopback connection to connect back to SQL Server over ODBC to read or write data from a Python or R script executed from sp_execute_external_script. You can use this when you can't use the InputDataSet and OutputDataSet arguments of sp_execute_external_script.
+description: Learn how t use a loopback connection to connect back to SQL Server over ODBC to read or write data from a Python or R script executed from sp_execute_external_script. 
 ms.prod: sql
 ms.technology: machine-learning-services
 ms.date: 08/21/2019
@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Loopback connection to SQL Server from a Python or R script
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Learn how to use a loopback connection to connect back to SQL Server over [ODBC](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) to read or write data from a Python or R script executed from `sp_execute_external_script`. You can use this when using the **InputDataSet** and **OutputDataSet** arguments of `sp_execute_external_script` are not possible.
 

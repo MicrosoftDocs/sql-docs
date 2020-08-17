@@ -1,4 +1,5 @@
 ---
+description: "sp_attachsubscription (Transact-SQL)"
 title: "sp_attachsubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_attachsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb](../../includes/applies-to-version/sql-asdb.md)]
 
   Attaches an existing subscription database to any Subscriber. This stored procedure is executed at the new Subscriber on the master database.  
   

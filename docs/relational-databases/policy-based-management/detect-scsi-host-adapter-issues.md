@@ -1,4 +1,5 @@
 ---
+description: "Detect SCSI Host Adapter Issues"
 title: "Detect SCSI Host Adapter Issues | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -14,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Detect SCSI Host Adapter Issues
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks the system event log for EventId 1066. This error is caused SCSI host adapter configuration issues or device malfunctioning.  
   
 ## Best Practices Recommendations  

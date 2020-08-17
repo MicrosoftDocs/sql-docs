@@ -19,7 +19,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Handling Namespaces in XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   This topic provides samples for handling namespaces in queries.  
   

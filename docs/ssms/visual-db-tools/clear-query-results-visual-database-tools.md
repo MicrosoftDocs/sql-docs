@@ -1,4 +1,5 @@
 ---
+description: "Clear Query Results (Visual Database Tools)"
 title: Clear Query Results
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -19,7 +20,7 @@ ms.reviewer:
 
 ---
 # Clear Query Results (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 After running a query in the **Query and View Designer**, you can clear the Results pane. This procedure applies to queries created by using the **Open View** or **Open Table** options from Object Explorer. In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)], after running a query in the Query Editor, the Results pane cannot be cleared except by closing the Query Editor window or running another query.  
   
 > [!NOTE]  

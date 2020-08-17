@@ -1,4 +1,5 @@
 ---
+description: "MSpeer_originatorid_history (Transact-SQL)"
 title: "MSpeer_originatorid_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # MSpeer_originatorid_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each originator ID that has been defined in the topology. This includes IDs for nodes that are no longer active. The table is used when you are configuring a new node for conflict detection to ensure that the originator ID specified has not already been used. This table is stored in the publication database. For more information about conflict detection, see [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md).  
   

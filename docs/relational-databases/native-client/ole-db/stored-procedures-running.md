@@ -1,4 +1,5 @@
 ---
+description: "Stored Procedures - Running in SQL Server Native Client"
 title: "Running Stored Procedures (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,8 +17,8 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Stored Procedures - Running
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Stored Procedures - Running in SQL Server Native Client
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   When executing statements, calling a stored procedure on the data source (instead of executing or preparing a statement in the client application directly) can provide:  
   

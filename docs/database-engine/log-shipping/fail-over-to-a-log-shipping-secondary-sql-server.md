@@ -17,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Fail Over to a Log Shipping Secondary (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Failing over to a log shipping secondary is useful if the primary server instance fails or requires maintenance.  
   
 ## Preparing for a Controlled Failover  

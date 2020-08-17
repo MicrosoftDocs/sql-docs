@@ -1,4 +1,5 @@
 ---
+description: "DQS Cleansing Transformation"
 title: "DQS Cleansing Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -19,7 +20,7 @@ ms.author: chugu
 ---
 # DQS Cleansing Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The DQS Cleansing transformation uses Data Quality Services (DQS) to correct data from a connected data source, by applying approved rules that were created for the connected data source or a similar data source. For more information about data correction rules, see [DQS Knowledge Bases and Domains](../../../data-quality-services/dqs-knowledge-bases-and-domains.md). For more information DQS, see [Data Quality Services Concepts](../../../data-quality-services/data-quality-services-concepts.md).  

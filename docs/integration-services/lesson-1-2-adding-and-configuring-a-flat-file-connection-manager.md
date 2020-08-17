@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-2: Add and configure a Flat File connection manager"
 title: "Step 2: Add and configure a Flat File connection manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 1-2: Add and configure a Flat File connection manager
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

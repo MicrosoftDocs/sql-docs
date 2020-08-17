@@ -1,4 +1,5 @@
 ---
+description: "Append Method (ADOX Keys)"
 title: "Append Method (ADOX Keys) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

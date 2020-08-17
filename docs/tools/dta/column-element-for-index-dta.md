@@ -19,7 +19,7 @@ ms.date: 03/09/2017
 
 # Column Element for Index (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Specifies the columns on which the index is created for a user-specified configuration.  
   

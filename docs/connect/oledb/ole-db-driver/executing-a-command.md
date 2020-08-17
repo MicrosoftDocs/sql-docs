@@ -1,6 +1,6 @@
 ---
-title: "Executing a Command | Microsoft Docs"
-description: "Executing a command"
+title: "Executing a command (OLE DB driver) | Microsoft Docs"
+description: Learn how a consumer in OLE DB Driver for SQL Server executes a command by first creating a session, getting a rowset, and using Execute.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -18,7 +18,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Executing a Command
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

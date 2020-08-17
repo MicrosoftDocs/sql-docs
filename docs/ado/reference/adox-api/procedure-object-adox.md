@@ -1,4 +1,5 @@
 ---
+description: "Procedure Object (ADOX)"
 title: "Procedure Object (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

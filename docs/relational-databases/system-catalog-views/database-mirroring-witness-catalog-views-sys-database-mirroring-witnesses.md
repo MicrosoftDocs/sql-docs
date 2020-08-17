@@ -1,4 +1,5 @@
 ---
+description: "Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses"
 title: "sys.database_mirroring_witnesses (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -23,7 +24,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains a row for every witness role that a server plays in a database mirroring partnership. 
   

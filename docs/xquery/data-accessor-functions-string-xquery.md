@@ -18,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Data Accessor Functions - string (XQuery)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns the value of *$arg* represented as a string.  
   

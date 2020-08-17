@@ -1,4 +1,5 @@
 ---
+description: "Attributes Property Example (VB)"
 title: "Attributes Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

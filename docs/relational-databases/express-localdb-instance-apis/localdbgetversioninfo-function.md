@@ -1,4 +1,5 @@
 ---
+description: "LocalDBGetVersionInfo Function"
 title: "LocalDBGetVersionInfo Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -17,7 +18,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # LocalDBGetVersionInfo Function
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Returns information for the specified SQL Server Express LocalDB version, such as whether it exists and the full LocalDB version number (including build and release numbers).  
   
  The information is returned in the form of a **struct** named **LocalDBVersionInfo**, which has the following definition.  

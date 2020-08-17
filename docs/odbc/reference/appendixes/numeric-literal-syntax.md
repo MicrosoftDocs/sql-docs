@@ -1,4 +1,5 @@
 ---
+description: "Numeric Literal Syntax"
 title: "Numeric Literal Syntax | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

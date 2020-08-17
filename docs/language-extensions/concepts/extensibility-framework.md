@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 # Extensibility architecture in SQL Server Language Extensions
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Learn about the extensibility architecture used for SQL Server Language Extensions, which allows you to run external code in SQL Server. In SQL Server 2019, Java is supported. The code executes in a language runtime environment as an extension to the core database engine.
 

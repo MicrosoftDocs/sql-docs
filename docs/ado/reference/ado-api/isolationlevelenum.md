@@ -1,4 +1,5 @@
 ---
+description: "IsolationLevelEnum"
 title: "IsolationLevelEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

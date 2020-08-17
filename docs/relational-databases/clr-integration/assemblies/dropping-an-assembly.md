@@ -17,7 +17,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Dropping an Assembly
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Assemblies that have been registered in [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using the CREATE ASSEMBLY statement can be deleted, or dropped, when the functionality they provide is no longer needed. Dropping an assembly removes the assembly and all of its associated files, such as debug files, from the database. To drop an assembly, use the DROP ASSEMBLY statement with the following syntax:  
   
 ```  

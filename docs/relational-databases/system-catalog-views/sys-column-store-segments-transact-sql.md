@@ -1,4 +1,5 @@
 ---
+description: "sys.column_store_segments (Transact-SQL)"
 title: "sys.column_store_segments (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/15/2018"
@@ -21,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.column_store_segments (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 Returns one row for each column segment in a columnstore index. There is one column segment per column per rowgroup. For example, a table with 10 rowgroups and 34 columns returns 340 rows. 
   

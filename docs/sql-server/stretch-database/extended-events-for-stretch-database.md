@@ -1,4 +1,5 @@
 ---
+description: "Extended Events for Stretch Database"
 title: "Extended Events for Stretch Database"
 ms.date: "06/14/2016"
 ms.service: sql-server-stretch-database
@@ -10,7 +11,7 @@ ms.author: jroth
 ms.custom: seo-dt-2019
 ---
 # Extended Events for Stretch Database
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [sqlserver2016-windows-only](../../includes/applies-to-version/sqlserver2016-windows-only.md)]
 
 
 Stretch Database provides a set of extended events for troubleshooting.  

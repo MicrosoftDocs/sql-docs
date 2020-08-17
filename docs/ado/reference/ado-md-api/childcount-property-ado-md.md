@@ -1,4 +1,5 @@
 ---
+description: "ChildCount Property (ADO MD)"
 title: "ChildCount Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

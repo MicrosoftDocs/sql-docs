@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_firewall_rule (Azure SQL Database)"
 title: "sp_delete_firewall_rule"
 titleSuffix: Azure SQL Database
 ms.date: "07/27/2016"
@@ -21,7 +22,7 @@ ms.custom: seo-dt-2019
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sp_delete_firewall_rule (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asa](../../includes/applies-to-version/asdb-asa.md)]
 
   Removes server-level firewall settings from your [!INCLUDE[ssSDS](../../includes/sssds-md.md)] server. This stored procedure is only available in the master database to the server-level principal login.  
 

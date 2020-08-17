@@ -1,4 +1,5 @@
 ---
+description: "Retrieving ParameterMetaData via useFmtOnly"
 title: "Retrieving ParameterMetaData via useFmtOnly | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

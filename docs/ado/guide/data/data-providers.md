@@ -1,4 +1,5 @@
 ---
+description: "Data Providers"
 title: "Data Providers | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

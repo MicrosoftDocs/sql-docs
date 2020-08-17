@@ -1,4 +1,5 @@
 ---
+description: "Set Domain Properties"
 title: "Set Domain Properties"
 ms.date: "11/08/2011"
 ms.prod: sql
@@ -14,7 +15,7 @@ ms.author: sawinark
 ---
 # Set Domain Properties
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to set domain properties in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS).  
   

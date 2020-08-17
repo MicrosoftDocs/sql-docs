@@ -1,4 +1,5 @@
 ---
+description: "getArray Method (SQLServerResultSet)"
 title: "getArray Method (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

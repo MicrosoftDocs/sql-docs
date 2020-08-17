@@ -1,4 +1,5 @@
 ---
+description: "EOS and LineSeparator Properties and SkipLine Method Example (VB)"
 title: "EOS and LineSeparator Properties and SkipLine Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

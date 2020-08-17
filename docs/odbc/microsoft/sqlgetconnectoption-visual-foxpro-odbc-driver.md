@@ -1,4 +1,5 @@
 ---
+description: "SQLGetConnectOption (Visual FoxPro ODBC Driver)"
 title: "SQLGetConnectOption (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

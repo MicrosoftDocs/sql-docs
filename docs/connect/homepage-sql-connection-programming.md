@@ -45,13 +45,27 @@ Our *Build-an-app* webpages present code examples, along with configuration info
 
 In the following table, each language image is a link to detail about using the language with SQL Server. Each link jumps to a later section in this article.
 
-| &nbsp; | &nbsp; | &nbsp; |
-| :-- | :-- | :-- |
-| &nbsp; [![C# logo][image-ref-320-csharp]](#an-110-ado-net-docu) | &nbsp; [![ORM Entity Framework, of .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm) | &nbsp; [![Java logo][image-ref-330-java]](#an-130-jdbc-docu) |
-| &nbsp; [![Node.js logo][image-ref-340-node]](#an-140-node-js-docu) | &nbsp; [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu) | &nbsp; [![PHP logo][image-ref-360-php]](#an-170-php-docu) |
-| &nbsp; [![Python logo][image-ref-370-python]](#an-180-python-docu) | &nbsp; [![Ruby logo][image-ref-380-ruby]](#an-190-ruby-docu) | &nbsp; ... |
-| &nbsp; | &nbsp; | <br />|
+:::row:::
+    :::column:::
+        [![C# logo][image-ref-320-csharp]](#an-110-ado-net-docu)  
 
+        [![Node.js logo][image-ref-340-node]](#an-140-node-js-docu)  
+
+        [![Python logo][image-ref-370-python]](#an-180-python-docu)  
+    :::column-end:::
+    :::column:::
+        [![ORM Entity Framework, of .NET Framework][image-ref-333-ef]](#an-116-csharp-ef-orm)  
+
+        [**`ODBC for C++`**](#an-160-odbc-cpp-docu)<br/>[![cpp-big-plus][image-ref-322-cpp]](#an-160-odbc-cpp-docu)  
+
+        [![Ruby logo][image-ref-380-ruby]](#an-190-ruby-docu)  
+    :::column-end:::
+    :::column:::
+        [![Java logo][image-ref-330-java]](#an-130-jdbc-docu)  
+
+        [![PHP logo][image-ref-360-php]](#an-170-php-docu)  
+    :::column-end:::
+:::row-end:::
 
 #### Downloads and installs
 
@@ -69,7 +83,7 @@ The .NET managed languages, such as C# and Visual Basic, are the most common use
 
 #### Code examples
 
-|||
+| Example | Description |
 | :-- | :-- |
 | [Proof of concept connecting to SQL using ADO.NET](./ado-net/step-3-connect-sql-ado-net.md) | A small code example focused on connecting and querying SQL Server. |
 | [Connect resiliently to SQL with ADO.NET](./ado-net/step-4-connect-resiliently-sql-ado-net.md) | Retry logic in a code example, because connections can occasionally experience moments of connectivity loss.<br /><br />Retry logic applies well to connections maintained through the internet into any cloud database, such as to Azure SQL Database. |
@@ -79,7 +93,7 @@ The .NET managed languages, such as C# and Visual Basic, are the most common use
 
 #### Documentation
 
-|||
+| Area | Description |
 | :-- | :-- |
 | [C# using ADO.NET](./ado-net/index.md)| Root of our documentation. |
 | [Namespace: System.Data](https://docs.microsoft.com/dotnet/api/system.data) | A set of classes used for ADO.NET. |
@@ -110,7 +124,7 @@ The [start page for Entity Framework](https://docs.microsoft.com/ef/) introduces
 
 *Entity Framework* is a name shared by two separate source code branches. One EF branch is older, and its source code can now be maintained by the public. The other EF is new. The two EFs are described next:
 
-|     |     |
+| Version | Description |
 | :-- | :-- |
 | [EF 6.x](https://docs.microsoft.com/ef/ef6/) | Microsoft first released EF in August 2008. In March 2015, Microsoft announced that EF 6.x was the final version that Microsoft would develop. Microsoft released the source code into the public domain.<br /><br />Initially EF was part of .NET Framework. But EF 6.x was removed from .NET Framework.<br /><br />[EF 6.x source code on GitHub, in repository *aspnet/EntityFramework6*](https://github.com/aspnet/EntityFramework6) |
 | [EF Core](https://docs.microsoft.com/ef/core/) | Microsoft released the newly developed EF Core in June 2016. EF Core is designed for better flexibility and portability. EF Core can run on operating systems beyond just Microsoft Windows. And EF Core can interact with databases beyond just Microsoft SQL Server and other relational databases.<br /><br />**C&#x23; code examples:**<br />[Getting Started with Entity Framework Core](https://docs.microsoft.com/ef/core/get-started/index)<br />[Getting started with EF Core on .NET Framework with an Existing Database](https://docs.microsoft.com/ef/core/get-started/full-dotnet/existing-db) |
@@ -130,7 +144,7 @@ Microsoft provides a Java Database Connectivity (JDBC) driver for use with SQL S
 
 #### Code examples
 
-|||
+| Example | Description |
 | :-- | :-- |
 | [Code examples](./jdbc/code-samples/index.md) | Code examples that teach about data types, result sets, and large data. |
 | [Connection URL Sample](./jdbc/connection-url-sample.md) | Describes how to use a connection URL to connect to SQL Server. Then use it to use an SQL statement to retrieve data. |
@@ -143,7 +157,7 @@ Microsoft provides a Java Database Connectivity (JDBC) driver for use with SQL S
 
 The JDBC documentation includes the following major areas:
 
-|||
+| Area | Description |
 | :-- | :-- |
 | [Java Database Connectivity (JDBC)](./jdbc/index.md) | Root of our JDBC documentation. |
 | [Reference](./jdbc/reference/index.md) | Interfaces, classes, and members. |
@@ -162,7 +176,7 @@ The Node.js connection driver for SQL Server is implemented in JavaScript. The d
 
 #### Code examples
 
-|||
+| Example | Description |
 | :-- | :-- |
 | [Proof of concept connecting to SQL using Node.js](./node-js/step-3-proof-of-concept-connecting-to-sql-using-node-js.md) | Bare bones source code for connecting to SQL Server, and executing a query. |
 | [Azure SQL database: Use Node.js to query](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-nodejs) | Example for Azure SQL Database in the cloud. |
@@ -217,7 +231,7 @@ You can use PHP to interact with SQL Server. The root of our PHP documentation i
 
 #### Code examples
 
-|||
+| Example | Description |
 | :-- | :-- |
 | [Proof of concept connecting to SQL using PHP](./php/step-3-proof-of-concept-connecting-to-sql-using-php.md) | A small code example focused on connecting and querying SQL Server. |
 | [Connect resiliently to SQL with PHP](./php/step-4-connect-resiliently-to-sql-with-php.md) | Retry logic in a code example, because connections through the Internet and the cloud can occasionally experience moments of connectivity loss. |
@@ -236,7 +250,7 @@ You can use Python to interact with SQL Server.
 
 #### Code examples
 
-|||
+| Example | Description |
 | :-- | :-- |
 | [Proof of concept connecting to SQL with Python using pyodbc](./python/pyodbc/step-3-proof-of-concept-connecting-to-sql-using-pyodbc.md) | A small code example focused on connecting and querying SQL Server. |
 | [Azure SQL database: Use Python to query](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) | Azure SQL Database example. |
@@ -261,7 +275,7 @@ You can use Ruby to interact with SQL Server. The root of our Ruby documentation
 
 #### Code examples
 
-|||
+| Example | Description |
 | :-- | :-- |
 | [Proof of concept connecting to SQL with Ruby](./ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md) | A small code example focused on connecting and querying SQL Server. |
 | [Azure SQL database: Use Ruby to query](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-ruby) | Azure SQL Database example. |

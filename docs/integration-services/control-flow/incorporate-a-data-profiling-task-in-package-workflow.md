@@ -1,4 +1,5 @@
 ---
+description: "Incorporate a Data Profiling Task in Package Workflow"
 title: "Incorporate a Data Profiling Task in Package Workflow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Incorporate a Data Profiling Task in Package Workflow
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Data profiling and cleanup are not candidates for an automated process in their early stages. In [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], the output of the Data Profiling task usually requires visual analysis and human judgment to determine whether reported violations are meaningful or excessive. Even after recognizing data quality problems, there still has to be a carefully thought-out plan that addresses the best approach for cleanup.  

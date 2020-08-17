@@ -1,4 +1,5 @@
 ---
+description: "Create Queries (Visual Database Tools)"
 title: Create Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,7 +16,7 @@ ms.reviewer:
 
 ---
 # Create Queries (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Queries allow you to retrieve data from the tables and views in your database. You create and work with queries in **Query and View Designer**, which is composed of four panes: the [Diagram Pane](../../ssms/visual-db-tools/diagram-pane-visual-database-tools.md), the [SQL Pane](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md), the [Criteria Pane](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md), and the [Results Pane](../../ssms/visual-db-tools/results-pane-visual-database-tools.md).  
   
 ### To create a new query  

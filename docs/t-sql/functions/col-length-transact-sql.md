@@ -1,4 +1,5 @@
 ---
+description: "COL_LENGTH (Transact-SQL)"
 title: "COL_LENGTH (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "column properties [SQL Server]"
   - "column length [SQL Server]"
 ms.assetid: cf891206-c49f-40eb-858e-eefd2b638a33
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # COL_LENGTH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns the defined length of a column, in bytes.
   
@@ -34,7 +35,9 @@ This function returns the defined length of a column, in bytes.
 COL_LENGTH ( 'table' , 'column' )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 **'** *table* **'**  
 The name of the table whose column length information we want to determine. *table* is an expression of type **nvarchar**.
   

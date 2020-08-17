@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Configure replication with non-default ports (SQL Server Linux)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 You can configure replication with SQL Server on Linux instances listening on any port configured with the network.tcpport mssql-conf setting. The port needs to be appended to the server name during configuration if the following conditions are true:
 

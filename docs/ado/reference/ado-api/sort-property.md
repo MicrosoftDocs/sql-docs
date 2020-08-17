@@ -1,4 +1,5 @@
 ---
+description: "Sort Property"
 title: "Sort Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

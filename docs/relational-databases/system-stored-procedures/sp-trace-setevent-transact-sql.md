@@ -1,4 +1,5 @@
 ---
+description: "sp_trace_setevent (Transact-SQL)"
 title: "sp_trace_setevent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_trace_setevent (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds or removes an event or event column to a trace. **sp_trace_setevent** may be executed only on existing traces that are stopped (*status* is **0**). An error is returned if this stored procedure is executed on a trace that does not exist or whose *status* is not **0**.  
   
@@ -313,7 +314,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  This table illustrates the interaction between **\@on** and **\@columnid**.  
   
-|@on|@columnid|Result|  
+|\@on|\@columnid|Result|  
 |---------|---------------|------------|  
 |ON (**1**)|NULL|Event is turned ON.<br /><br /> All Columns are cleared.|  
 ||NOT NULL|Column is turned ON for the specified Event.|  

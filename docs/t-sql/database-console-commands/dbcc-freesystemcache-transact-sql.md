@@ -1,4 +1,5 @@
 ---
+description: "DBCC FREESYSTEMCACHE (Transact-SQL)"
 title: "DBCC FREESYSTEMCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/25/2020"
@@ -26,7 +27,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC FREESYSTEMCACHE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Releases all unused cache entries from all caches. The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] proactively cleans up unused cache entries in the background to make memory available for current entries. However, you can use this command to manually remove unused entries from every cache or from a specified Resource Governor pool cache.
   
@@ -41,7 +42,9 @@ DBCC FREESYSTEMCACHE
     ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 ( 'ALL' [,_pool\_name_ ] )  
 ALL specifies all supported caches.  
 _pool\_name_ specifies a Resource Governor pool cache. Only entries associated with this pool are freed.  

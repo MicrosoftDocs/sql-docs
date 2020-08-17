@@ -1,25 +1,22 @@
 ---
 title: microsoftml Python package
-description: Introduces the Microsoft machine learning algorithms and models for Python, as related to SQL Server machine learning workloads.
+description: microsoftml is a Python package from Microsoft that provides high-performance machine learning algorithms. It includes functions for training and transformations, scoring, text and image analysis, and feature extraction for deriving values from existing data. The package is included in SQL Server Machine Learning Services.
 ms.prod: sql
 ms.technology: machine-learning-services
-
-ms.date: 11/06/2019  
+ms.date: 07/14/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
-# microsoftml (Python module in SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+# microsoftml (Python package in SQL Server Machine Learning Services)
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
-**microsoftml** is a Python35-compatible module from Microsoft providing high-performance machine learning algorithms. It includes functions for training and transformations, scoring, text and image analysis, and feature extraction for deriving values from existing data.
-
-The machine learning APIs were developed by Microsoft for internal machine learning applications and have been refined over the years to support high performance on big data, using multicore processing and fast data streaming. This package originated as a Python equivalent of an R version, [MicrosoftML](../r/ref-r-microsoftml.md), that has similar functions. 
+**microsoftml** is a Python package from Microsoft that provides high-performance machine learning algorithms. It includes functions for training and transformations, scoring, text and image analysis, and feature extraction for deriving values from existing data. The package is included in [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) and supports high performance on big data, using multicore processing, and fast data streaming.
 
 ## Full reference documentation
 
-The **microsoftml** library is distributed in multiple Microsoft products, but usage is the same whether you get the library in SQL Server or another product. Because the functions are the same, [documentation for individual microsoftml functions](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) is published to just one location under the [Python reference](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
+The **microsoftml** package is distributed in multiple Microsoft products, but usage is the same whether you get the package in SQL Server or another product. Because the functions are the same, [documentation for individual microsoftml functions](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) is published to just one location under the [Python reference](https://docs.microsoft.com/machine-learning-server/python-reference/introducing-python-package-reference) for Microsoft Machine Learning Server. Should any product-specific behaviors exist, discrepancies will be noted in the function help page.
 
 ## Versions and platforms
 
@@ -37,7 +34,7 @@ The **microsoftml** module is based on Python 3.5 and available only when you in
 Algorithms in **microsoftml** depend on [revoscalepy](ref-py-revoscalepy.md) for:
 
 + Data source objects. Data consumed by **microsoftml** functions are created using **revoscalepy** functions.
-+ Remote computing (shifting function execution to a remote SQL Server instance). The **revoscalepy** library provides functions for creating and activating a remote compute context for SQL server.
++ Remote computing (shifting function execution to a remote SQL Server instance). The **revoscalepy** package provides functions for creating and activating a remote compute context for SQL server.
 
 In most cases, you will load the packages together whenever you are using **microsoftml**.
 

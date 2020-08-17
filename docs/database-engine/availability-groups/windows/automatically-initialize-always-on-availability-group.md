@@ -12,7 +12,7 @@ author: MashaMSFT
 ms.author: "mathoma"
 ---
 # Use automatic seeding to initialize an Always On availability group
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 SQL Server 2016 introduced automatic seeding of availability groups. When you create an availability group with automatic seeding, SQL Server automatically creates the secondary replicas for every database in the group. You no longer have to manually back up and restore secondary replicas. To enable automatic seeding, create the availability group with T-SQL or use the latest version of SQL Server Management Studio.
 

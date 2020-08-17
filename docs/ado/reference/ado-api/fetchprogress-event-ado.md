@@ -1,4 +1,5 @@
 ---
+description: "FetchProgress Event (ADO)"
 title: "FetchProgress Event (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

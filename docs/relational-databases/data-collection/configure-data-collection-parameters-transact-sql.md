@@ -1,4 +1,5 @@
 ---
+description: "Configure Data Collection Parameters (Transact-SQL)"
 title: "Configure Data Collection Parameters (T-SQL)"
 ms.date: 06/03/2020
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: mathoma
 ms.custom: "seo-lt-2019"
 ---
 # Configure Data Collection Parameters (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Before you create a custom collection set, you must first configure data collection parameters. You can do this by using the stored procedures that are provided with the data collector. Accomplishing this task involves using Query Editor in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] to carry out the following procedure.  
   
 > [!NOTE]  

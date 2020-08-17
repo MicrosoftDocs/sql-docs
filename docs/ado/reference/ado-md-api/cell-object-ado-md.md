@@ -1,4 +1,5 @@
 ---
+description: "Cell Object (ADO MD)"
 title: "Cell Object (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

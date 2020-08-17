@@ -1,4 +1,5 @@
 ---
+description: "ProtocolName Property (ServerNetworkProtocolIPAddress Class)"
 title: "ProtocolName Property (ServerNetworkProtocolIPAddress)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # ProtocolName Property (ServerNetworkProtocolIPAddress Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the name of the server network protocol that references the IP address.  
   
 ## Syntax  

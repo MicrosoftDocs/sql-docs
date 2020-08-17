@@ -1,4 +1,5 @@
 ---
+description: "OPENROWSET (Transact-SQL)"
 title: "OPENROWSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/30/2019"
@@ -28,7 +29,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 ---
 # OPENROWSET (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Includes all connection information that is required to access remote data from an OLE DB data source. This method is an alternative to accessing tables in a linked server and is a one-time, ad hoc method of connecting and accessing remote data by using OLE DB. For more frequent references to OLE DB data sources, use linked servers instead. For more information, see [Linked Servers &#40;Database Engine&#41;](../../relational-databases/linked-servers/linked-servers-database-engine.md). The `OPENROWSET` function can be referenced in the FROM clause of a query as if it were a table name. The `OPENROWSET` function can also be referenced as the target table of an `INSERT`, `UPDATE`, or `DELETE` statement, subject to the capabilities of the OLE DB provider. Although the query might return multiple result sets, `OPENROWSET` returns only the first one.
 
@@ -55,7 +56,7 @@ OPENROWSET
    [ , DATASOURCE = 'data_source_name' ]
 
    [ , ERRORFILE = 'file_name' ]
-   [ , ERRORFILE_DATASOURCE = 'data_source_name' ]
+   [ , ERRORFILE_DATA_SOURCE = 'data_source_name' ]
    [ , MAXERRORS = maximum_errors ]
 
    [ , FIRSTROW = first_row ]
@@ -68,8 +69,10 @@ OPENROWSET
    [ , FORMAT = 'CSV' ]
    [ , FIELDQUOTE = 'quote_characters']
    [ , FORMATFILE = 'format_file_path' ]
-   [ , FORMATFILE_DATASOURCE = 'data_source_name' ]
+   [ , FORMATFILE_DATA_SOURCE = 'data_source_name' ]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -231,7 +234,7 @@ SELECT *
 #### BULK Input file format options
 
 ##### CODEPAGE
-`CODEPAGE` = { 'ACP'| 'OEM'| 'RAW'| '*code_page*' }
+`CODEPAGE` = { 'ACP' \| 'OEM' \| 'RAW' \| '*code_page*' }
 Specifies the code page of the data in the data file. CODEPAGE is relevant only if the data contains **char**, **varchar**, or **text** columns with character values more than 127 or less than 32.
 
 > [!IMPORTANT]

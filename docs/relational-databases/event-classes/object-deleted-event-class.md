@@ -1,4 +1,5 @@
 ---
+description: "Object:Deleted Event Class"
 title: "Object:Deleted Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Object:Deleted Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The Object:Deleted event class indicates that an object has been deleted; for example, by DROP INDEX and DROP TABLE statements. This event class can be used to determine if objects are being deleted, for example, by ODBC applications that often create temporary stored procedures.  
   
  By monitoring the LoginName and NTUserName default data columns, in addition to the Objects event classes, you can determine the name of the user who is creating, deleting, or accessing objects.  

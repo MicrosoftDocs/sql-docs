@@ -1,5 +1,6 @@
 ---
-title: "xml (Transact-SQL) | Microsoft Docs"
+description: "xml (Transact-SQL)"
+title: xml (Transact-SQL)
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # xml (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Is the data type that stores XML data. You can store **xml** instances in a column, or a variable of **xml** type.  
   
@@ -31,7 +32,9 @@ ms.author: genemi
 xml ( [ CONTENT | DOCUMENT ] xml_schema_collection )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  CONTENT  
  Restricts the **xml** instance to be a well-formed XML fragment. The XML data can contain multiple zero or more elements at the top level. Text nodes are also allowed at the top level.  
   

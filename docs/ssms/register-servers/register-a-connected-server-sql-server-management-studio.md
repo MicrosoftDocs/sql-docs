@@ -1,4 +1,5 @@
 ---
+description: "Register a Connected Server (SQL Server Management Studio)"
 title: Register a Connected Server
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -19,7 +20,7 @@ ms.date: 07/28/2016
 
 # Register a Connected Server (SQL Server Management Studio)
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This topic describes how to register a connected server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] (SSMS). By registering the server, you can save the connection information for servers that you access frequently. A server can be registered before connecting, or at the time of connection from Object Explorer.  You can view your registered servers in SSMS by navigating to **View**\\**Registered Servers** from the menu.
   

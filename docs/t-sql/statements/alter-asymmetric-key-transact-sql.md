@@ -1,4 +1,5 @@
 ---
+description: "ALTER ASYMMETRIC KEY (Transact-SQL)"
 title: "ALTER ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.date: "04/12/2017"
 ms.prod: sql
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ALTER ASYMMETRIC KEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Changes the properties of an asymmetric key.  
   
@@ -44,7 +45,9 @@ ALTER ASYMMETRIC KEY Asym_Key_Name <alter_option>
     | DECRYPTION BY PASSWORD = 'oldPassword'  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Asym_Key_Name*  
  Is the name by which the asymmetric key is known in the database.  
   

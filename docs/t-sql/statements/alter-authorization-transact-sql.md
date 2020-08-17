@@ -1,4 +1,5 @@
 ---
+description: "ALTER AUTHORIZATION (Transact-SQL)"
 title: "ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/28/2019"
@@ -29,7 +30,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # ALTER AUTHORIZATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Changes the ownership of a securable.    
     
@@ -115,11 +116,13 @@ ALTER AUTHORIZATION ON
 }    
 ```    
     
-## Arguments    
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 \<class_type>
  Is the securable class of the entity for which the owner is being changed. OBJECT is the default.    
     
-|||    
+|Class|Product|    
 |-|-|    
 |OBJECT|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].|    
 |ASSEMBLY|**APPLIES TO**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later, [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].|    

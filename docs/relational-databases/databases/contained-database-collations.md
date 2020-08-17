@@ -15,7 +15,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Contained Database Collations
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Various properties affect the sort order and equality semantics of textual data, including case sensitivity, accent sensitivity, and the base language being used. These qualities are expressed to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] through the choice of collation for the data. For a more in-depth discussion of collations themselves, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md).  
   
  Collations apply not only to data stored in user tables, but to all text handled by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], including metadata, temporary objects, variable names, etc. The handling of these differs in contained and non-contained databases. This change will not affect many users, but helps provide instance independence and uniformity. But this may also cause some confusion, as well as problems for sessions that access both contained and non-contained databases.  
@@ -120,9 +120,8 @@ END;
   
  The behavior of various objects in both non-contained and contained databases is summarized in this table:  
   
-||||  
+|Item|Non-Contained Database|Contained Database|  
 |-|-|-|  
-|**Item**|**Non-Contained Database**|**Contained Database**|  
 |User Data (default)|DATABASE_DEFAULT|DATABASE_DEFAULT|  
 |Temp Data (default)|TempDB Collation|DATABASE_DEFAULT|  
 |Metadata|DATABASE_DEFAULT / CATALOG_DEFAULT|CATALOG_DEFAULT|  

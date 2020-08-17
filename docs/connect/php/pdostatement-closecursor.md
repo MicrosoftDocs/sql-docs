@@ -1,4 +1,5 @@
 ---
+description: "PDOStatement::closeCursor"
 title: "PDOStatement::closeCursor | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

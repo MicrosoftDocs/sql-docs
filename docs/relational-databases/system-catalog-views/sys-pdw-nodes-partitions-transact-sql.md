@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_nodes_partitions (Transact-SQL)"
 title: "sys.pdw_nodes_partitions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -14,7 +15,7 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_partitions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contains a row for each partition of all the tables, and most types of indexes in a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] database. All tables and indexes contain at least one partition, whether or not they are explicitly partitioned.  
   

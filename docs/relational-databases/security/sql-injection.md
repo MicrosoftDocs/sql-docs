@@ -16,7 +16,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQL Injection
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   SQL injection is an attack in which malicious code is inserted into strings that are later passed to an instance of SQL Server for parsing and execution. Any procedure that constructs SQL statements should be reviewed for injection vulnerabilities because SQL Server will execute all syntactically valid queries that it receives. Even parameterized data can be manipulated by a skilled and determined attacker.  
   
 ## How SQL Injection Works  
@@ -165,7 +165,7 @@ OR UPPER(text) LIKE '%SP_EXECUTESQL%';
 ### Wrapping Parameters with QUOTENAME() and REPLACE()  
  In each selected stored procedure, verify that all variables that are used in dynamic Transact-SQL are handled correctly. Data that comes from the input parameters of the stored procedure or that is read from a table should be wrapped in QUOTENAME() or REPLACE(). Remember that the value of @variable that is passed to QUOTENAME() is of sysname, and has a maximum length of 128 characters.  
   
-|@variable|Recommended wrapper|  
+|\@variable|Recommended wrapper|  
 |---------------|-------------------------|  
 |Name of a securable|`QUOTENAME(@variable)`|  
 |String of ≤128 characters|`QUOTENAME(@variable, '''')`|  

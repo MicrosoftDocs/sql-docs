@@ -1,4 +1,5 @@
 ---
+description: "sp_fulltext_load_thesaurus_file (Transact-SQL)"
 title: "sp_fulltext_load_thesaurus_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,7 +23,7 @@ ms.author: carlrab
 ---
 # sp_fulltext_load_thesaurus_file (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Causes the server instance to parse and load the data from the thesaurus file that corresponds to the language whose LCID is specified. This stored procedure is useful after updating a thesaurus file. Executing **sp_fulltext_load_thesaurus_file** causes recompilation of full-text queries that use the thesaurus of the specified LCID.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Go To Line Dialog Box"
 title: Go To Line Dialog Box
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -13,6 +14,6 @@ ms.date: 01/19/2017
 
 # Go To Line Dialog Box
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 To move to a location in the code editor window, type a line number, and then click **OK**.

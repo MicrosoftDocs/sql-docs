@@ -1,4 +1,5 @@
 ---
+description: "Edit Rows in the Results Pane (Visual Database Tools)"
 title: Edit Rows in the Results Pane
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -20,7 +21,7 @@ ms.reviewer:
 
 ---
 # Edit Rows in the Results Pane (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 In many cases, you can edit the data in the [Results Pane](../../ssms/visual-db-tools/results-pane-visual-database-tools.md). For more detailed information about changing data see [Rules for Updating Results &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/rules-for-updating-results-visual-database-tools.md) and [Work with Data in the Results Pane &#40;Visual Database Tools&#41;](../../ssms/visual-db-tools/work-with-data-in-the-results-pane-visual-database-tools.md).  
   
 ### To edit data in the Results pane  

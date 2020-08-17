@@ -1,4 +1,5 @@
 ---
+description: "suspect_pages (Transact-SQL)"
 title: "suspect_pages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -20,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # suspect_pages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row per page that failed with a minor 823 error or an 824 error. Pages are listed in this table because they are suspected of being bad, but they might actually be fine. When a suspect page is repaired, its status is updated in the **event_type** column.  
   

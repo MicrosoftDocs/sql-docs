@@ -1,4 +1,5 @@
 ---
+description: "Work with Change Tracking (SQL Server)"
 title: "Work with Change Tracking"
 ms.custom: seo-dt-2019
 ms.date: "08/08/2016"
@@ -24,7 +25,7 @@ ms.author: jroth
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Work with Change Tracking (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Applications that use change tracking must be able to obtain tracked changes, apply these changes to another data store, and update the source database. This topic describes how to perform these tasks, and also the role change tracking plays when a failover occurs and a database must be restored from a backup.  
   

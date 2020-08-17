@@ -1,4 +1,5 @@
 ---
+description: "SQLEndTran Function"
 title: "SQLEndTran Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"

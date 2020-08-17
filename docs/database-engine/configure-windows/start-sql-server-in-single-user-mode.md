@@ -2,7 +2,7 @@
 title: "Start SQL Server in Single-User Mode | Microsoft Docs"
 description: 'Learn about single-user mode in SQL Server. See when it is useful and how to use the startup option "-m" to start an instance of SQL Server in this mode.'
 ms.custom: ""
-ms.date: "09/20/2017"
+ms.date: "08/11/2020"
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ""
@@ -16,7 +16,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Start SQL Server in Single-User Mode
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Under certain circumstances, you may have to start an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode by using the **startup option -m.** For example, you may want to change server configuration options or recover a damaged master database or other system database. Both actions require starting an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode.  
   
  Starting [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] in single-user mode enables any member of the computer's local Administrators group to connect to the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as a member of the sysadmin fixed server role. For more information, see [Connect to SQL Server When System Administrators Are Locked Out](../../database-engine/configure-windows/connect-to-sql-server-when-system-administrators-are-locked-out.md).  
@@ -41,7 +41,13 @@ For example, **-m"SQLCMD"** limits connections to a single connection and that c
   
 > [!IMPORTANT]  
 >  Do not use this option as a security feature. The client application provides the client application name, and can provide a false name as part of the connection string.  
-  
+
+The following example starts the SQL Server instance in single-user mode and only allows connection through the SQL Server Management Studio Query Editor.
+
+```console
+net start "SQL Server (MSSQLSERVER)" -m"Microsoft SQL Server Management Studio - Query"
+```
+
 ## Note for Clustered installations  
  For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation in a clustered environment, when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is started in single user mode, the cluster resource dll uses up the available connection thereby blocking any other connections to the server. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is in this state, if you try to bring [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent resource online, it may fail over the SQL resource to a different node if the resource is configured to affect the group.  
   

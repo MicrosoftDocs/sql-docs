@@ -1,4 +1,5 @@
 ---
+description: "How to: Retrieve Character Data as a Stream Using the SQLSRV Driver"
 title: "Retrieve Character Data as a Stream Using the SQLSRV Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

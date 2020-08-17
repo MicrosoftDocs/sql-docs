@@ -1,4 +1,5 @@
 ---
+description: "EventStatusEnum"
 title: "EventStatusEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -39,10 +40,33 @@ Specifies the current status of the execution of an event.
 |AdoEnums.EventStatus.UNWANTEDEVENT|  
   
 ## Applies To  
-  
-||||  
-|-|-|-|  
-|[BeginTransComplete, CommitTransComplete, and RollbackTransComplete Events (ADO)](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)|[ConnectComplete and Disconnect Events (ADO)](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)|[EndOfRecordset Event (ADO)](../../../ado/reference/ado-api/endofrecordset-event-ado.md)|  
-|[ExecuteComplete Event (ADO)](../../../ado/reference/ado-api/executecomplete-event-ado.md)|[FetchComplete Event (ADO)](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)|[InfoMessage Event (ADO)](../../../ado/reference/ado-api/infomessage-event-ado.md)|  
-|[WillChangeField and FieldChangeComplete Events (ADO)](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)|[WillChangeRecord and RecordChangeComplete Events (ADO)](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)|[WillChangeRecordset and RecordsetChangeComplete Events (ADO)](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)|  
-|[WillConnect Event (ADO)](../../../ado/reference/ado-api/willconnect-event-ado.md)|[WillExecute Event (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)|[WillMove and MoveComplete Events (ADO)](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)|
+
+:::row:::
+    :::column:::
+        [BeginTransComplete, CommitTransComplete, and RollbackTransComplete Events (ADO)](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
+
+        [ConnectComplete and Disconnect Events (ADO)](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
+
+        [EndOfRecordset Event (ADO)](../../../ado/reference/ado-api/endofrecordset-event-ado.md)  
+
+        [ExecuteComplete Event (ADO)](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
+    :::column-end:::
+    :::column:::
+        [FetchComplete Event (ADO)](../../../ado/reference/ado-api/fetchcomplete-event-ado.md)  
+
+        [InfoMessage Event (ADO)](../../../ado/reference/ado-api/infomessage-event-ado.md)  
+
+        [WillChangeField and FieldChangeComplete Events (ADO)](../../../ado/reference/ado-api/willchangefield-and-fieldchangecomplete-events-ado.md)  
+
+        [WillChangeRecord and RecordChangeComplete Events (ADO)](../../../ado/reference/ado-api/willchangerecord-and-recordchangecomplete-events-ado.md)  
+    :::column-end:::
+    :::column:::
+        [WillChangeRecordset and RecordsetChangeComplete Events (ADO)](../../../ado/reference/ado-api/willchangerecordset-and-recordsetchangecomplete-events-ado.md)  
+
+        [WillConnect Event (ADO)](../../../ado/reference/ado-api/willconnect-event-ado.md)  
+
+        [WillExecute Event (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+
+        [WillMove and MoveComplete Events (ADO)](../../../ado/reference/ado-api/willmove-and-movecomplete-events-ado.md)  
+    :::column-end:::
+:::row-end:::

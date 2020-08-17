@@ -1,4 +1,5 @@
 ---
+description: "ADOX Properties"
 title: "ADOX Properties | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,7 +17,7 @@ ms.author: jroth
 ---
 # ADOX Properties
 
-|||  
+|Property|Description|  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md)|Indicates the ADO **Connection** object to which the catalog belongs.|  
 |[Attributes](../../../ado/reference/adox-api/attributes-property-adox.md)|Describes column characteristics.|  

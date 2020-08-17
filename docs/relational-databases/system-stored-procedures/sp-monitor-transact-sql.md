@@ -1,4 +1,5 @@
 ---
+description: "sp_monitor (Transact-SQL)"
 title: "sp_monitor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_monitor (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays statistics about [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -64,32 +65,30 @@ sp_monitor
 ## Examples  
  The following example reports information about how busy [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has been.  
   
-```  
+```console
 USE master  
 EXEC sp_monitor  
 ```  
   
  [!INCLUDE[ssResult](../../includes/ssresult-md.md)]  
-  
-||||  
-|-|-|-|  
-|**last_run**|**current_run**|**seconds**|  
-|Mar 29 1998 11:55AM|Apr 4 1998 2:22 PM|561|  
-  
-||||  
-|-|-|-|  
-|**cpu_busy**|**io_busy**|**idle**|  
-|190(0)-0%|187(0)-0%|148(556)-99%|  
-  
-||||  
-|-|-|-|  
-|**packets_received**|**packets_sent**|**packet_errors**|  
-|16(1)|20(2)|0(0)|  
-  
-|||||  
-|-|-|-|-|  
-|**total_read**|**total_write**|**total_errors**|**connections**|  
-|141(0)|54920(127)|0(0)|4(0)|  
+
+```console
+last_run       current_run                   seconds
+-----------    --------------------------    ---------
+Mar 29 1998    11:55AM Apr 4 1998 2:22 PM    561
+
+cpu_busy           io_busy     idle
+---------------    ---------   --------------
+190(0)-0%          187(0)-0%   148(556)-99%
+
+packets_received       packets_sent    packet_errors
+----------------       ------------    -------------
+16(1)                  20(2)           0(0)
+
+total_read     total_write   total_errors    connections
+-----------    -----------   -------------   -----------
+141(0)         54920(127)    0(0)            4(0)
+```
   
 ## See Also  
  [sp_who &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-who-transact-sql.md)   

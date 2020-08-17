@@ -16,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Create XML Indexes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   This topic describes how to create primary and secondary XML indexes.  
   
 ## Creating a Primary XML Index  

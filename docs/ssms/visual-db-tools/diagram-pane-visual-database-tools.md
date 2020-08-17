@@ -1,4 +1,5 @@
 ---
+description: "Diagram Pane (Visual Database Tools)"
 title: Diagram Pane
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -18,7 +19,7 @@ ms.reviewer:
 
 ---
 # Diagram Pane (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The Diagram pane presents a graphic display of the tables or table-valued objects you have selected from the data connection. It also shows any join relationships among them.  
   
 In the Diagram pane you can:  

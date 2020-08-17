@@ -1,4 +1,5 @@
 ---
+description: "Connecting to Microsoft Azure SQL Database"
 title: "Connecting to Microsoft Azure SQL Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -14,5 +15,5 @@ ms.author: v-daenge
 # Connecting to Microsoft Azure SQL Database
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-For more information on connecting to Azure SQL Databases, see [How to Access Azure SQL Database from PHP](https://azure.microsoft.com/documentation/articles/sql-database-php-how-to-use/).  
+For more information on connecting to Azure SQL Database, see [How to Access Azure SQL Database from PHP](https://azure.microsoft.com/documentation/articles/sql-database-php-how-to-use/).  
   

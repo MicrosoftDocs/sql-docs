@@ -1,4 +1,5 @@
 ---
+description: "DROP BROKER PRIORITY (Transact-SQL)"
 title: "DROP BROKER PRIORITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # DROP BROKER PRIORITY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes a conversation priority from the current database.  
   
@@ -33,7 +34,9 @@ DROP BROKER PRIORITY ConversationPriorityName
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *ConversationPriorityName*  
  Specifies the name of the conversation priority to be removed.  
   

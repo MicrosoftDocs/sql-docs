@@ -1,4 +1,5 @@
 ---
+description: "setDateTimeOffset Method (SQLServerCallableStatement)"
 title: "setDateTimeOffset Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

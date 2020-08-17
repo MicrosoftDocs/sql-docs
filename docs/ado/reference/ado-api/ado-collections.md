@@ -1,4 +1,5 @@
 ---
+description: "ADO Collections"
 title: "ADO Collections | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,7 +20,7 @@ The relationships between these collections and the ADO objects are represented 
   
  Each collection can contain its corresponding object. For example, an [Error](../../../ado/reference/ado-api/error-object.md) object can be contained in an [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) collection. For more information about objects, see [ADO Objects](../../../ado/reference/ado-api/ado-objects-and-interfaces.md) or a specific object topic.  
   
-|||  
+|Collection|Description|  
 |-|-|  
 |[Errors](../../../ado/reference/ado-api/errors-collection-ado.md)|Contains all the **Error** objects created in response to a single provider-related failure.|  
 |[Fields](../../../ado/reference/ado-api/fields-collection-ado.md)|Contains all the **Field** objects of a **Recordset** object.|  

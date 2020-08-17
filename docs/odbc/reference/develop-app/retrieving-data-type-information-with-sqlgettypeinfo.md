@@ -1,4 +1,5 @@
 ---
+description: "Retrieving Data Type Information with SQLGetTypeInfo"
 title: "Retrieving Data Type Information with SQLGetTypeInfo | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

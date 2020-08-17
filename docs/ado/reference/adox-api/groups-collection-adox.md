@@ -1,4 +1,5 @@
 ---
+description: "Groups Collection (ADOX)"
 title: "Groups Collection (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

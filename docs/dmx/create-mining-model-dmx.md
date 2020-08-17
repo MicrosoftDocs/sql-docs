@@ -1,4 +1,5 @@
 ---
+description: "CREATE MINING MODEL (DMX)"
 title: "CREATE MINING MODEL (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # CREATE MINING MODEL (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Creates both a new mining model and a mining structure in the database. You can create a model either by defining the new model in the statement, or by using the Predictive Model Markup Language (PMML). This second option is for advanced users only.  
   
@@ -41,7 +42,7 @@ CREATE MINING MODEL <model> FROM PMML <xml string>
  The name of a data mining algorithm, as defined by the current provider.  
   
 > [!NOTE]  
->  A list of the algorithms supported by the current provider can be retrieved by using [DMSCHEMA_MINING_SERVICES Rowset](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset). To view the algorithms supported in the current instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], see [Data Mining Properties](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
+>  A list of the algorithms supported by the current provider can be retrieved by using [DMSCHEMA_MINING_SERVICES Rowset](https://docs.microsoft.com/previous-versions/sql/sql-server-2012/ms126251(v=sql.110)). To view the algorithms supported in the current instance of [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], see [Data Mining Properties](https://docs.microsoft.com/analysis-services/server-properties/data-mining-properties).  
   
  *parameter list*  
  Optional. A comma-separated list of provider-defined parameters for the algorithm.  

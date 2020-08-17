@@ -1,4 +1,5 @@
 ---
+description: "IHpublishercolumnindexes (Transact-SQL)"
 title: "IHpublishercolumnindexes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # IHpublishercolumnindexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHpublishercolumnindexes** system table maps columns of a non-SQL Server publication in the [IHpublishercolumns](../../relational-databases/system-tables/ihpublishercolumns-transact-sql.md) system table to indexes in the [IHpublisherindexes](../../relational-databases/system-tables/ihpublisherindexes-transact-sql.md) system table. This table is stored in the distribution database.  
   

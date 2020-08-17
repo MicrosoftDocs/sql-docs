@@ -1,4 +1,5 @@
 ---
+description: "setString Method (long, java.lang.String, int, int) (SQLServerNClob)"
 title: "setString Method (long, java.lang.String, int, int) - NClob | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

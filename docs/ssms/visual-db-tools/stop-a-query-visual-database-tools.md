@@ -1,4 +1,5 @@
 ---
+description: "Stop a Query (Visual Database Tools)"
 title: Stop a Query
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,7 +18,7 @@ ms.reviewer:
 
 ---
 # Stop a Query (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 If you see that the query is taking too long or is not returning the results you expect, you can stop the query if it has not already finished.  
   
 ### To stop a query  

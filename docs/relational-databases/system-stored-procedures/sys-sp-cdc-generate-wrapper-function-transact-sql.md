@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_generate_wrapper_function (Transact-SQL)"
 title: "sys.sp_cdc_generate_wrapper_function (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.sp_cdc_generate_wrapper_function (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Generates scripts to create wrapper functions for the change data capture query functions that are available in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The API that is supported in the generated wrappers enables the query interval to be specified as a datetime interval. This makes the function good for use in many warehousing applications, including those that are developed by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] package designers who are using change data capture technology to determine incremental load.  
   

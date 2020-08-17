@@ -1,4 +1,5 @@
 ---
+description: "SetEnable Method (ServerNetworkProtocol Class)"
 title: "SetEnable Method (ServerNetworkProtocol)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # SetEnable Method (ServerNetworkProtocol Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Enables the server network protocol.  
   
 ## Syntax  

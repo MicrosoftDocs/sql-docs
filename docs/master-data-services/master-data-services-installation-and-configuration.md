@@ -2,7 +2,7 @@
 title: Installation and Configuration
 description: Learn how to install Master Data Services on a Windows Server 2012 R2 computer, configure the MDS database and website, and deploy the sample models and data.
 ms.custom: ""
-ms.date: 05/22/2019
+ms.date: 07/01/2020
 ms.prod: sql
 ms.prod_service: "mds"
 ms.reviewer: ""
@@ -14,7 +14,7 @@ ms.author: lle
 ---
 # Master Data Services Installation and Configuration
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This article covers how to install [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on a Windows Server 2012 R2 machine, set up the MDS database and website, and deploy the sample models and data. [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] (MDS) enables your organization to manage a trusted version of data.   
   
@@ -124,16 +124,16 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
   
 3.  On the **Database Server** page, specify the SQL Server instance. 
 
-    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] adds support for SQL Server Managed Instance. Set the value of **SQL Server Instance** to the host of an Azure SQL Database managed instance. For example, `xxxxxx.xxxxxx.database.windows.net`.
+    >  [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)] adds support for SQL Server Managed Instance. Set the value of **SQL Server Instance** to the host of the managed instance. For example, `xxxxxx.xxxxxx.database.windows.net`.
 
 4. Select the **Authentication type** and then click **Test Connection** to confirm that you can connect to the database using the credentials for the authentication type you selected. Click **Next**.
 
-    >For [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], to connect to Azure SQL Database managed instance, use one of the following authentication types:
+    >For [!INCLUDE[sqlv15](../includes/sssqlv15-md.md)], to connect to the managed instance, use one of the following authentication types:
     >
     >- Azure Active Directory Integrated Authentication: **Current User – Active Directory Integrated**
     >- SQL Server Authentication: **SQL Server Account**.
     >
-    >In Azure SQL Database managed instance, the user must be a member of the `sysadmin` fixed server role.
+    >In SQL Managed Instance, the user must be a member of the `sysadmin` fixed server role.
 
     > [!NOTE]  
     >  When you select **Current User - Integrated Security** as the authentication type, **User name** box is read-only and displays the name of the Windows user account that is logged on to the computer. If you are running [!INCLUDE[ssCurrent_md](../includes/sscurrent-md.md)] [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] on an Azure Virtual Machine (VM), the **User name** box displays the VM name and the user name for the local administrator account on the VM. 
@@ -203,7 +203,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
 
 ![mds_2016ConfigurationComplete_MessageBox](../master-data-services/media/mds-2016configurationcomplete-messagebox.png) 
   
-     For more information about the settings on the Web Configuration page, see [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
+For more information about the settings on the Web Configuration page, see [Web Configuration Page &#40;Master Data Services Configuration Manager&#41;](../master-data-services/web-configuration-page-master-data-services-configuration-manager.md)  
   
  You can also use [!INCLUDE[ssMDScfgmgr](../includes/ssmdscfgmgr-md.md)] to specify other settings for the Web applications and services associated with the [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] database. For example, you can specify how frequently data is loaded or how often validation emails are sent. For more information, see [System Settings &#40;Master Data Services&#41;](../master-data-services/system-settings-master-data-services.md).  
   
@@ -211,9 +211,7 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
  The following three sample model packages are included with  [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)].   These sample models include data. **The default location for the sample model packages is %programfiles%\Microsoft SQL Server\140\Master Data Services\Samples\Packages.**
   
 -   chartofaccounts_en.pkg  
-  
 -   customer_en.pkg  
-  
 -   product_en.pkg  
   
  You deploy the packages using the MDSModelDeploy tool. The default location for the MDSModelDeploy tool is *drive*\Program Files\Microsoft SQL Server\ 140\Master Data Services\Configuration.  
@@ -242,28 +240,26 @@ If you're interested in making changes to the installation of [!INCLUDE[ssCurren
     >  `MDSModelDeploy listservices`  
     >   
     >  The first service value in the list of values returned, is the one you specify to deploy a model.  
-    >
+
     > [!NOTE]
     > In order to know more about the metadata information of the sample models, please refer to the readme file available at this  location "c:\Program Files\Microsoft SQL Server\140\Master Data Services\Configuration"
-    >
    
      **To deploy the chartofaccounts_en.pkg sample model**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package chartofaccounts_en.pkg -model ChartofAccounts -service MDS1  
     ```  
   
      **To deploy the customer_en.pkg sample model**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package customer_en.pkg -model Customer -service MDS1  
     ```  
   
      **To deploy the product_en.pkg sample model**  
   
-    ```  
+    ```console
     MDSModelDeploy deploynew -package product_en.pkg -model Product -service MDS1  
-  
     ```  
   
      When a model is successfully deployed, the **MDSModelDeploy operation completed** message is displayed.  

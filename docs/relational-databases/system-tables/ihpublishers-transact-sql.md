@@ -1,4 +1,5 @@
 ---
+description: "IHpublishers (Transact-SQL)"
 title: "IHpublishers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # IHpublishers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHpublishers** system table contains one row for each non-SQL Server Publisher using the current Distributor. This table is stored in the distribution database.  
   

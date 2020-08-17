@@ -1,4 +1,4 @@
-## Get help
+## :::image type="icon" source="../media/info-tip.png" border="false"::: Get help
 
 - [UserVoice: Have suggestions for improving SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
 - [Set up and upgrade: MSDN Forums](https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc)

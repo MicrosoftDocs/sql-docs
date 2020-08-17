@@ -1,4 +1,5 @@
 ---
+description: "sysmail_help_account_sp (Transact-SQL)"
 title: "sysmail_help_account_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sysmail_help_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists information (except passwords) about Database Mail accounts.  
   
@@ -45,9 +46,8 @@ sysmail_help_account_sp [ [ @account_id = ] account_id | [ @account_name = ] 'ac
 ## Result Sets  
  Returns a result set containing the columns listed below.  
   
-||||  
-|-|-|-|  
-|Column name|Data type|Description|  
+| Column name | Data type | Description |
+| ----------- | --------- | ----------- |
 |**account_id**|**int**|The ID of the account.|  
 |**name**|**sysname**|The name of the account.|  
 |**description**|**nvarchar(256)**|The description for the account.|  

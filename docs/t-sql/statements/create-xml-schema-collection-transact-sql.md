@@ -1,4 +1,5 @@
 ---
+description: "CREATE XML SCHEMA COLLECTION (Transact-SQL)"
 title: "CREATE XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/25/2015"
@@ -27,7 +28,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # CREATE XML SCHEMA COLLECTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Imports the schema components into a database.  
   
@@ -40,7 +41,9 @@ ms.author: genemi
 CREATE XML SCHEMA COLLECTION [ <relational_schema>. ]sql_identifier AS Expression  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *relational_schema*  
  Identifies the relational schema name. If not specified, default relational schema is assumed.  
   

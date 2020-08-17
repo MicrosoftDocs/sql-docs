@@ -1,4 +1,5 @@
 ---
+description: "sys.sysprocesses (Transact-SQL)"
 title: "sys.sysprocesses (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -22,7 +23,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # sys.sysprocesses (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains information about processes that are running on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. These processes can be client processes or system processes. To access sysprocesses, you must be in the master database context, or you must use the master.dbo.sysprocesses three-part name.  
   

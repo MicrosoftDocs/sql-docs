@@ -16,7 +16,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # Columns with the Name of an XPath Node Test
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   If the column name is one of the XPath node tests, the content is mapped as shown in the following table. When the column name is an XPath node test, the content is mapped to the corresponding node. If the SQL type of the column is **xml**, an error is returned.  
   
 |Column Name|Behavior|  

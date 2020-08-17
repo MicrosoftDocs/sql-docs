@@ -1,4 +1,5 @@
 ---
+description: "Step 4: Populate the Details Text Box"
 title: "Step 4: Populate the Details Text Box | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

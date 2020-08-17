@@ -16,7 +16,7 @@ ms.date: 05/01/2020
 
 # SQL Server Profiler
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+ [!INCLUDE[sql-asdbmi](../../includes/applies-to-version/sql-asdbmi.md)]
 
 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] is an interface to create and manage traces and analyze and replay trace results. Events are saved in a trace file that can later be analyzed or used to replay a specific series of steps when diagnosing a problem.
 
@@ -29,11 +29,11 @@ ms.date: 05/01/2020
 > [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] for Analysis Services workloads are supported.
 
 > [!NOTE]
-> When you try to connect to a SQL Azure database from SQL server profiler, it incorrectly throws a misleading error message as follows:
+> When you try to connect to a Azure SQL Database from SQL server profiler, it incorrectly throws a misleading error message as follows:
 >
 > - In order to run a trace against SQL Server, you must be a member of sysadmin fixed server role or have the ALTER TRACE permission.
 >
-> The message should have explained that SQL Azure Database instances are not supported by SQL Server profiler.
+> The message should have explained that Azure SQL Database is not supported by SQL Server profiler.
 
 ## Where is the Profiler?
 

@@ -1,4 +1,5 @@
 ---
+description: "backupfile (Transact-SQL)"
 title: "backupfile (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -20,7 +21,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # backupfile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each data or log file of a database. The columns describes the file configuration at the time the backup was taken. Whether or not the file is included in the backup is determined by the **is_present** column. This table is stored in the **msdb** database.  
   

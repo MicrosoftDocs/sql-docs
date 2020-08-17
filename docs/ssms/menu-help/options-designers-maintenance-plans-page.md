@@ -1,4 +1,5 @@
 ---
+description: "Options (Designers - Maintenance Plans Page)"
 title: "Options (Designers - Maintenance Plans Page)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -14,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Options (Designers - Maintenance Plans Page)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use the **Options** dialog box to determine the default behavior of the designer when new shapes are added to the design surface. On the **Tools** menu, click **Options**, expand **Designers**, and select **Maintenance Plans**.  
   
 ## UI element list  

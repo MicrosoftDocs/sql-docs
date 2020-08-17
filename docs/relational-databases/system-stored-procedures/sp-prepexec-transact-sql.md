@@ -1,4 +1,5 @@
 ---
+description: "sp_prepexec (Transact-SQL)"
 title: "sp_prepexec (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_prepexec (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Prepares and executes a parameterized [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. sp_prepexec combines the functions of sp_prepare and sp_execute. This action is invoked by ID =13 in a tabular data stream (TDS) packet.  
   

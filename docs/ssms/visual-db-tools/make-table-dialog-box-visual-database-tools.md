@@ -1,4 +1,5 @@
 ---
+description: "Make Table Dialog Box (Visual Database Tools)"
 title: Make Table Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,7 +17,7 @@ ms.reviewer:
 
 ---
 # Make Table Dialog Box (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Allows you to name a created table that you copy rows to. This dialog box appears when you change a query's type to be a MAKE TABLE query. To change a query's type, from the **Query Designer** menu, point to **Change Type**, and then click **Make Table**.  
   
 ## Options  

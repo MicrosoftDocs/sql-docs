@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Set up a data science client for Python development on SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 Python integration is available in SQL Server 2017 and later, when you include the Python option in a [Machine Learning Services (In-Database) installation](../install/sql-machine-learning-services-windows-install.md). 
 
@@ -46,9 +46,9 @@ An installation script adds three Microsoft-specific libraries to the Python cli
 
 1. Download an installation script.
 
-  + [https://aka.ms/mls-py](https://aka.ms/mls-py) installs version 9.2.1 of the Microsoft Python packages. This version corresponds to a default SQL Server instance. 
+   + [https://aka.ms/mls-py](https://aka.ms/mls-py) installs version 9.2.1 of the Microsoft Python packages. This version corresponds to a default SQL Server instance. 
 
-  + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) installs version 9.3 of the Microsoft Python packages. This version is a better choice if your remote SQL Server instance is [bound to Machine Learning Server 9.3](../install/upgrade-r-and-python.md).
+   + [https://aka.ms/mls93-py](https://aka.ms/mls93-py) installs version 9.3 of the Microsoft Python packages. This version is a better choice if your remote SQL Server instance is [bound to Machine Learning Server 9.3](../install/upgrade-r-and-python.md).
 
 2. Open a PowerShell window with elevated administrator permissions (right-click **Run as administrator**).
 
@@ -74,7 +74,7 @@ Still in PowerShell, list the contents of the installation folder to confirm tha
 
 2. Enter `dir *.exe` to list the executables. You should see **python.exe**, **pythonw.exe**, and **uninstall-anaconda.exe**.
 
-  ![List of Python executables](media/powershell-python-exe.png)
+   ![List of Python executables](media/powershell-python-exe.png)
    
 On systems having multiple versions of Python, remember to use this particular Python.exe if you want to load **revoscalepy** and other Microsoft packages.
 
@@ -89,17 +89,17 @@ Anaconda includes Jupyter Notebooks. As a next step, create a notebook and run s
 
 1. At the Powershell prompt, still in the C:\Program Files\Microsoft\PyForMLS directory, open Jupyter Notebooks from the Scripts folder:
 
-  ```powershell
-  .\Scripts\jupyter-notebook
-  ```
+   ```powershell
+   .\Scripts\jupyter-notebook
+   ```
 
-  A notebook should open in your default browser at `https://localhost:8889/tree`.
+   A notebook should open in your default browser at `https://localhost:8889/tree`.
 
-  Another way to start is double-click **jupyter-notebook.exe**. 
+   Another way to start is double-click **jupyter-notebook.exe**. 
 
 2. Click **New** and then click **Python 3**.
 
-  ![jupyter notebook with New Python 3 selection](media/jupyter-notebook-new-p3.png)
+   ![jupyter notebook with New Python 3 selection](media/jupyter-notebook-new-p3.png)
 
 3. Enter `import revoscalepy` and run the command to load one of the Microsoft-specific libraries.
 
@@ -107,17 +107,17 @@ Anaconda includes Jupyter Notebooks. As a next step, create a notebook and run s
 
 4. Enter a more complex series of statements. This example generates summary statistics using [rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary) over a local data set. Other functions get the location of the sample data and create a data source object for a local .xdf file.
 
-  ```python
-  import os
-  from revoscalepy import rx_summary
-  from revoscalepy import RxXdfData
-  from revoscalepy import RxOptions
-  sample_data_path = RxOptions.get_option("sampleDataDir")
-  print(sample_data_path)
-  ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
-  summary = rx_summary("ArrDelay+DayOfWeek", ds)
-  print(summary)
-  ```
+   ```python
+   import os
+   from revoscalepy import rx_summary
+   from revoscalepy import RxXdfData
+   from revoscalepy import RxOptions
+   sample_data_path = RxOptions.get_option("sampleDataDir")
+   print(sample_data_path)
+   ds = RxXdfData(os.path.join(sample_data_path, "AirlineDemoSmall.xdf"))
+   summary = rx_summary("ArrDelay+DayOfWeek", ds)
+   print(summary)
+   ```
 
 The following screenshot shows the input and a portion of the output, trimmed for brevity.
 

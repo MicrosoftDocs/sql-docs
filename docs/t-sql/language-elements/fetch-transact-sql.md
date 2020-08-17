@@ -1,4 +1,5 @@
 ---
+description: "FETCH (Transact-SQL)"
 title: "FETCH (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -25,7 +26,7 @@ author: rothja
 ms.author: jroth
 ---
 # FETCH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Retrieves a specific row from a [!INCLUDE[tsql](../../includes/tsql-md.md)] server cursor.  
   
@@ -45,7 +46,9 @@ FETCH
 [ INTO @variable_name [ ,...n ] ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  NEXT  
  Returns the result row immediately following the current row and increments the current row to the row returned. If `FETCH NEXT` is the first fetch against a cursor, it returns the first row in the result set. `NEXT` is the default cursor fetch option.  
   

@@ -28,7 +28,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Choose an Authentication Mode
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   During setup, you must select an authentication mode for the [!INCLUDE[ssDE](../../includes/ssde-md.md)]. There are two possible modes: Windows Authentication mode and mixed mode. Windows Authentication mode enables Windows Authentication and disables [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Mixed mode enables both Windows Authentication and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication. Windows Authentication is always available and cannot be disabled.  
   
 ## Configuring the Authentication Mode  

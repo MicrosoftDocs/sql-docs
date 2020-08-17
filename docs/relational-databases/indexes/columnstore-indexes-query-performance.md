@@ -1,4 +1,5 @@
 ---
+description: "Columnstore indexes - Query performance"
 title: "Columnstore indexes - Query performance | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/11/2019
@@ -14,7 +15,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # Columnstore indexes - Query performance
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Recommendations for achieving the very fast query performance that columnstore indexes are designed to provide.    
     

@@ -1,4 +1,5 @@
 ---
+description: "sp_addtabletocontents (Transact-SQL)"
 title: "sp_addtabletocontents (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -17,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_addtabletocontents (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Inserts references into the merge tracking tables for any rows in a source table that are not currently included in the tracking tables. Use this option if you have bulk-loaded a large amount of data using **bcp**, which will not fire merge tracking triggers. This stored procedure is executed at the Publisher on the publication database.  
   

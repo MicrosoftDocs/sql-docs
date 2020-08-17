@@ -1,4 +1,5 @@
 ---
+description: "Conventions for Combining Search Conditions in the Criteria Pane (Visual Database Tools)"
 title: Conventions for Combining Search Conditions in the Criteria Pane
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,7 +23,7 @@ ms.reviewer:
 
 ---
 # Conventions for Combining Search Conditions in the Criteria Pane (Visual Database Tools)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can create queries that include any number of search conditions, linked with any number of AND and OR operators. A query with a combination of AND and OR clauses can become complex, so it is helpful to understand how such a query is interpreted when you execute it, and how such a query is represented in the [Criteria Pane](../../ssms/visual-db-tools/criteria-pane-visual-database-tools.md) and [SQL Pane](../../ssms/visual-db-tools/sql-pane-visual-database-tools.md).  
   
 > [!NOTE]  

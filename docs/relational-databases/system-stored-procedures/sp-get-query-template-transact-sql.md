@@ -1,4 +1,5 @@
 ---
+description: "sp_get_query_template (Transact-SQL)"
 title: "sp_get_query_template (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_get_query_template (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the parameterized form of a query. The results returned mimic the parameterized form of a query that results from using forced parameterization. sp_get_query_template is used primarily when you create TEMPLATE plan guides.  
   

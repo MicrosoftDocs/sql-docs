@@ -19,7 +19,7 @@ ms.date: 03/14/2017
 
 # Index Element (DTA)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Contains information about an index that you want to create or drop for a user-specified configuration.  
   

@@ -1,4 +1,5 @@
 ---
+description: "core.sp_add_collector_type (Transact-SQL)"
 title: "core.sp_add_collector_type (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -22,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # core.sp_add_collector_type (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a new entry to the core.supported_collector_types view in the management data warehouse database. The procedure must be executed in the context of the management data warehouse database.  
   

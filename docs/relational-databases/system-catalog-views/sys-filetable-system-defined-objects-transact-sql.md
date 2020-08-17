@@ -1,4 +1,5 @@
 ---
+description: "sys.filetable_system_defined_objects (Transact-SQL)"
 title: "sys.filetable_system_defined_objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -21,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.filetable_system_defined_objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays a list of the system-defined objects that are related to FileTables. Contains one row for each system-defined object.  
   

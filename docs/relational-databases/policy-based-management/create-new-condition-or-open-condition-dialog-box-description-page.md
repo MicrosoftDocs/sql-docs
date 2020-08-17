@@ -1,4 +1,5 @@
 ---
+description: "Create New Condition or Open Condition Dialog Box, Description Page"
 title: "Create New Condition or Open Condition Dialog Box, Description Page | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Create New Condition or Open Condition Dialog Box, Description Page
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Use this dialog box to add a description to a Policy-Based Management condition.  
   
 ## Options  

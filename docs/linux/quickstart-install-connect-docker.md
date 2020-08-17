@@ -17,7 +17,7 @@ zone_pivot_groups: cs1-command-shell
 
 # Quickstart: Run SQL Server container images with Docker
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -172,6 +172,8 @@ SELECT @@SERVERNAME,
 
 Setting `-h` and `--name` to the same value is a good way to easily identify the target container.
 
+5. As a final step, change your SA password because the `SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
+
 ::: moniker-end
 <!--End of 2017 "Pull and run" section-->
 
@@ -290,8 +292,14 @@ SELECT @@SERVERNAME,
 
 Setting `-h` and `--name` to the same value is a good way to easily identify the target container.
 
+
+5. As a final step, change your SA password because the `SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
+
+
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
+
+
 
 ## <a id="sapassword"></a> Change the SA password
 

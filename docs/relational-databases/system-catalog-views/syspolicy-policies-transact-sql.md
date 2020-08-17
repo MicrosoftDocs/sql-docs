@@ -1,4 +1,5 @@
 ---
+description: "syspolicy_policies (Transact-SQL)"
 title: "syspolicy_policies (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # syspolicy_policies (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays one row for each Policy-Based Management policy in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. syspolicy_policies belongs to the dbo schema in the msdb database. The following table describes the columns in the syspolicy_policies view.  
   

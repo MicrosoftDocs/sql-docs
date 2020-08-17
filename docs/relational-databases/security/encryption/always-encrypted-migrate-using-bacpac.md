@@ -1,4 +1,5 @@
 ---
+description: "Export and import databases using Always Encrypted"
 title: "Export and import databases using Always Encrypted  | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/30/2019
@@ -14,7 +15,7 @@ ms.author: jaszymas
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current" 
 ---
 # Export and import databases using Always Encrypted 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
 
 This article describes how to export and import databases containing columns protected with [Always Encrypted](../../../relational-databases/security/encryption/always-encrypted-database-engine.md).
 

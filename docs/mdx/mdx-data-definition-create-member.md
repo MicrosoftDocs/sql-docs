@@ -1,6 +1,7 @@
 ---
+description: "MDX Data Definition - CREATE MEMBER"
 title: "CREATE MEMBER Statement (MDX) | Microsoft Docs"
-ms.date: 06/04/2018
+ms.date: 07/22/2020
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: mdx
@@ -108,7 +109,7 @@ WHERE ProfitRatio
 |SOLVE_ORDER|The order in which the calculated member will be solved in cases where a calculated member references one other calculated member (that is, where calculated members intersect each other).|  
 |FORMAT_STRING|A Office style format string that the client application can use when displaying cell values.|  
 |VISIBLE|A value that indicates whether the calculated member is visible in a schema rowset. Visible calculated members can be added to a set with the [AddCalculatedMembers](../mdx/addcalculatedmembers-mdx.md) function. A nonzero value indicates that the calculated member is visible. The default value for this property is *Visible*.<br /><br /> Calculated members that are not visible (where this value is set to zero) are generally used as intermediate steps in more complex calculated members. These calculated members can also be referred to by other types of members, such as measures.|  
-|NON_EMPTY_BEHAVIOR|The measure or set that is used to determine the behavior of calculated members when resolving empty cells.<br /><br /> **\*\* Warning \*\*** This property is deprecated. Avoid setting it. See [Deprecated Analysis Services Features in SQL Server 2014](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014) for details.|  
+|NON_EMPTY_BEHAVIOR|The measure or set that is used to determine the behavior of calculated members when resolving empty cells.<br /><br /> **\*\* Warning \*\*** This property is deprecated. Avoid setting it. See [Deprecated Analysis Services Features in SQL Server 2014](/previous-versions/sql/2014/analysis-services/deprecated-analysis-services-features-in-sql-server-2014?view=sql-server-2014) for details.|  
 |CAPTION|A string that the client application uses as the caption for the member.|  
 |DISPLAY_FOLDER|A string that identifies the path of the display folder that the client application uses to show the member. The folder level separator is defined by the client application. For the tools and clients supplied by [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)], the backslash (\\) is the level separator. To provide multiple display folders for a defined member, use a semicolon (;) to separate the folders.|  
 |ASSOCIATED_MEASURE_GROUP|The name of the measure group to which this member is associated.|  

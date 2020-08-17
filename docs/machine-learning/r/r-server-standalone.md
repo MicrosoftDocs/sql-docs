@@ -1,6 +1,6 @@
 ---
 title: What is standalone Machine Learning Server or R Server?
-description: Overview introduction to standalone R Server and Machine Learning Server in SQL Server Setup
+description: Learn the differences between standalone R Server and Machine Learning Server in SQL Server Setup.
 ms.prod: sql
 ms.technology: machine-learning-services
 
@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # What are standalone Machine Learning Server or R Server in SQL Server?
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 SQL Server provides installation support for a standalone R Server or Machine Learning Server that runs independently of SQL Server. Depending on your SQL Server version, a standalone server has a foundation of open-source R and possibly Python, overlaid with high-performance libraries from Microsoft that add statistical and predictive analytics at scale. Libraries also enable machine learning tasks scripted in R or Python. 
 

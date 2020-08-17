@@ -23,7 +23,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Metadata Visibility Configuration
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The visibility of metadata is limited to securables that a user either owns or on which the user has been granted some permission. For example, the following query returns a row if the user has been granted a permission such as SELECT or INSERT on the table `myTable`.  
   
 ```  
@@ -37,21 +37,43 @@ GO
   
 ## Scope and Impact of Metadata Visibility Configuration  
  Metadata visibility configuration only applies to the following securables.  
-  
-|||  
-|-|-|  
-|Catalog views|[!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** stored procedures|  
-|Metadata exposing built-in functions|Information schema views|  
-|Compatibility views|Extended properties|  
+
+:::row:::
+    :::column:::
+        Catalog views
+
+        Metadata exposing built-in functions
+
+        Compatibility views
+    :::column-end:::
+    :::column:::
+         [!INCLUDE[ssDE](../../includes/ssde-md.md)] **sp_help** stored procedures
+
+        Information schema views
+
+        Extended properties
+    :::column-end:::
+:::row-end:::
   
  Metadata visibility configuration does not apply to the following securables.  
-  
-|||  
-|-|-|  
-|Log shipping system tables|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent system tables|  
-|Database maintenance plan system tables|Backup system tables|  
-|Replication system tables|Replication and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **sp_help** stored procedures|  
-  
+
+:::row:::
+    :::column:::
+        Log shipping system tables
+
+        Database maintenance plan system tables
+
+        Replication system tables
+    :::column-end:::
+    :::column:::
+         [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent system tables
+
+        Backup system tables
+
+        Replication and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent **sp_help** stored procedures
+    :::column-end:::
+:::row-end:::
+
  Limited metadata accessibility means the following:  
   
 -   Applications that assume **public** metadata access will break.  
@@ -112,26 +134,28 @@ GO
     -   The user has not been denied VIEW DEFINITION permission on the object and has CONTROL, ALTER, or TAKE OWNERSHIP permission on the object. All other users will see NULL.  
   
 -   The definition columns found in the following catalog views:  
-  
-    |||  
-    |-|-|  
-    |**sys.all_sql_modules**|**sys.sql_modules**|  
-    |**sys.server_sql_modules**|**sys.check_constraints**|  
-    |**sys.default_constraints**|**sys.computed_columns**|  
-    |**sys.numbered_procedures**||  
-  
+
+    - **sys.all_sql_modules**  
+    - **sys.server_sql_modules**  
+    - **sys.default_constraints**
+    - **sys.numbered_procedures**
+    - **sys.sql_modules**
+    - **sys.check_constraints**
+    - **sys.computed_columns**
+
 -   The **ctext** column in the **syscomments** compatibility view.  
   
 -   The output of the **sp_helptext** procedure.  
   
--   The following columns in the information schema views:  
-  
-    |||  
-    |-|-|  
-    |INFORMATION_SCHEMA.CHECK_CONSTRAINTS.CHECK_CLAUSE|INFORMATION_SCHEMA.COLUMNS.COLUMN_DEFAULT|  
-    |INFORMATION_SCHEMA.DOMAINS.DOMAIN_DEFAULT|INFORMATION_SCHEMA.ROUTINE_COLUMNS.COLUMN_DEFAULT|  
-    |INFORMATION_SCHEMA.ROUTINES.ROUTINE_DEFINITION|INFORMATION_SCHEMA.VIEWS.VIEW_DEFINITION|  
-  
+-   The following columns in the information schema views:
+
+    - INFORMATION_SCHEMA.CHECK_CONSTRAINTS.CHECK_CLAUSE
+    - INFORMATION_SCHEMA.DOMAINS.DOMAIN_DEFAULT
+    - INFORMATION_SCHEMA.ROUTINES.ROUTINE_DEFINITION
+    - INFORMATION_SCHEMA.COLUMNS.COLUMN_DEFAULT
+    - INFORMATION_SCHEMA.ROUTINE_COLUMNS.COLUMN_DEFAULT
+    - INFORMATION_SCHEMA.VIEWS.VIEW_DEFINITION
+
 -   OBJECT_DEFINITION() function  
   
 -   The value stored in the password_hash column of **sys.sql_logins**.  A user that does not have CONTROL SERVER permission will see a NULL value in this column.  
@@ -171,19 +195,45 @@ GO
   
  The metadata that is returned by the DB_ID() and DB_NAME() functions is visible to all users.  
   
- The following table lists the catalog views that are visible to the **public** role.  
-  
-|||  
-|-|-|  
-|**sys.partition_functions**|**sys.partition_range_values**|  
-|**sys.partition_schemes**|**sys.data_spaces**|  
-|**sys.filegroups**|**sys.destination_data_spaces**|  
-|**sys.database_files**|**sys.allocation_units**|  
-|**sys.partitions**|**sys.messages**|  
-|**sys.schemas**|**sys.configurations**|  
-|**sys.sql_dependencies**|**sys.type_assembly_usages**|  
-|**sys.parameter_type_usages**|**sys.column_type_usages**|  
-  
+ This is a list of the catalog views that are visible to the **public** role.  
+
+:::row:::
+    :::column:::
+        **sys.partition_functions**
+
+        **sys.partition_schemes**
+
+        **sys.filegroups**
+
+        **sys.database_files**
+
+        **sys.partitions**
+
+        **sys.schemas**
+
+        **sys.sql_dependencies**
+
+        **sys.parameter_type_usages**
+    :::column-end:::
+    :::column:::
+        **sys.partition_range_values**
+
+        **sys.data_spaces**
+
+        **sys.destination_data_spaces**
+
+        **sys.allocation_units**
+
+        **sys.messages**
+
+        **sys.configurations**
+
+        **sys.type_assembly_usages**
+
+        **sys.column_type_usages**
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [GRANT &#40;Transact-SQL&#41;](../../t-sql/statements/grant-transact-sql.md)   
  [DENY &#40;Transact-SQL&#41;](../../t-sql/statements/deny-transact-sql.md)   

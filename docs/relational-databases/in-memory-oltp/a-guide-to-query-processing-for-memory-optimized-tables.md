@@ -14,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # A Guide to Query Processing for Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   In-Memory OLTP introduces memory-optimized tables and natively compiled stored procedures in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This article gives an overview of query processing for both memory-optimized tables and natively compiled stored procedures.  
   
@@ -189,7 +189,7 @@ END
   
  Natively compiled stored procedures are compiled at create time, whereas interpreted stored procedures are compiled at first execution time. (A portion of the compilation, particularly parsing and algebrization, take place at create. However, for interpreted stored procedures, optimization of the query plans takes place at first execution.) The recompilation logic is similar. Natively compiled stored procedures are recompiled on first execution of the procedure if the server is restarted. Interpreted stored procedures are recompiled if the plan is no longer in the plan cache. The following table summarizes compilation and recompilation cases for both natively compiled and interpreted stored procedures:  
   
-||Natively compiled|Interpreted|  
+|Compilation type|Natively compiled|Interpreted|  
 |-|-----------------------|-----------------|  
 |Initial compilation|At create time.|At first execution.|  
 |Automatic recompilation|Upon first execution of the procedure after a database or server restart.|On server restart. Or, eviction from the plan cache, usually based on schema or stats changes, or memory pressure.|  

@@ -1,4 +1,5 @@
 ---
+description: "PDO::__construct"
 title: "PDO::__construct | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

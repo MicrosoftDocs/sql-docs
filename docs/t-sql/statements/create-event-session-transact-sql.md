@@ -1,4 +1,5 @@
 ---
+description: "CREATE EVENT SESSION (Transact-SQL)"
 title: "CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/10/2019"
@@ -25,7 +26,7 @@ ms.author: carlrab
 ---
 # CREATE EVENT SESSION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Creates an Extended Events session that identifies the source of the events, the event session targets, and the event session options.
 
@@ -98,6 +99,8 @@ ON { SERVER | DATABASE }
     [ [,] STARTUP_STATE = { ON | OFF } ]
 }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

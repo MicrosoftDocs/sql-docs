@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server with SMB fileshare storage
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system databases (Master, Model, MSDB, and TempDB), and [!INCLUDE[ssDE](../../includes/ssde-md.md)] user databases can be installed with Server Message Block (SMB) file server as a storage option. This applies to both [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stand-alone and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] failover cluster installations (FCI).  
   
@@ -105,7 +105,7 @@ Starting with [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)], system database
   
 ## Known issues  
   
--   After you detach a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database that resides on network-attached storage, you might run into database permission issue while trying to reattach the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. The issue is defined in [this KB article](https://go.microsoft.com/fwlink/?LinkId=237321) (https://go.microsoft.com/fwlink/?LinkId=237321). To work around this issue, see the **More Information** section in the KB article.  
+-   After you detach a [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] database that resides on network-attached storage, you might run into database permission issue while trying to reattach the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database. For more information see, [Error 5120](../../relational-databases/errors-events/mssqlserver-5120-database-engine-error.md).
   
 -   If SMB file share is used as a storage option for a clustered instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], by default the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Failover Cluster Diagnostics Log cannot be written to the file share because [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Resource DLL lacks the read/write permission on the file share. To resolve this issue, try one of the following methods:  
   

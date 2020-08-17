@@ -1,4 +1,5 @@
 ---
+description: "sp_help_jobstep (Transact-SQL)"
 title: "sp_help_jobstep (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_help_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information for the steps in a job used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service to perform automated activities.  
   

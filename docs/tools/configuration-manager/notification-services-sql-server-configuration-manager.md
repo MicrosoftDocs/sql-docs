@@ -14,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Notification Services (SQL Server Configuration Manager)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
   This is the service that supports [!INCLUDE[ssNS](../../includes/ssns-md.md)]. To view the properties of the service, right-click the service in the details pane, and then click **Properties**.  
   
  For information about [!INCLUDE[ssNS](../../includes/ssns-md.md)], see Books Online.  

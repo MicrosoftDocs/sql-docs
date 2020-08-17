@@ -1,4 +1,5 @@
 ---
+description: "Broker Event Category"
 title: "Broker Event Category | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2019"
@@ -17,7 +18,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linu
 ---
 # Broker Event Category
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 The **Broker** event category contains general Service Broker events.  
   
@@ -39,6 +40,6 @@ The **Broker** event category contains general Service Broker events.
  Two security audit events are also provided for Service Broker. For more information on those events, see [Audit Broker Login Event Class](../../relational-databases/event-classes/audit-broker-login-event-class.md) and [Audit Broker Conversation Event Class](../../relational-databases/event-classes/audit-broker-conversation-event-class.md).  
   
 ## See Also  
- [Security Audit Event Category](/bi-reference/trace-events/security-audit-event-category)  
+ [Security Audit Event Category](https://docs.microsoft.com/analysis-services/trace-events/security-audit-event-category)  
   
   

@@ -16,7 +16,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # precompute rank Server Configuration Option
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This option is not implemented in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. This is a breaking change. Modify applications that currently use this feature as soon as possible.  
   

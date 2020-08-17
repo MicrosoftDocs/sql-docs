@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_hadr_availability_group_states (Transact-SQL)"
 title: "sys.dm_hadr_availability_group_states (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -21,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.dm_hadr_availability_group_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each Always On availability group that possesses an availability replica on the local instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Each row displays the states that define the health of a given availability group.  
   

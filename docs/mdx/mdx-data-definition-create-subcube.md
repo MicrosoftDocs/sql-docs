@@ -1,4 +1,5 @@
 ---
+description: "MDX Data Definition - CREATE SUBCUBE"
 title: "CREATE SUBCUBE Statement (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql
@@ -83,9 +84,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  Yields the following results:  
   
-|||||  
+|Business Type + Category|All Products|Accessories|Clothing|  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
 |All Resellers|$2,031,079.39|$506,172.45|$1,524,906.93|  
 |Value Added Reseller|$767,388.52|$175,002.81|$592,385.71|  
 |Warehouse|$1,263,690.86|$331,169.64|$932,521.23|  
@@ -112,9 +112,8 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  Yields the following different results:  
   
-|||||  
+|Business Type + Category|All Products|Accessories|Clothing|  
 |-|-|-|-|  
-||All Products|Accessories|Clothing|  
 |All Resellers|$80,450,596.98|$571,297.93|$1,777,840.84|  
 |Value Added Reseller|$34,967,517.33|$175,002.81|$592,385.71|  
 |Warehouse|$38,726,913.48|$331,169.64|$932,521.23|  

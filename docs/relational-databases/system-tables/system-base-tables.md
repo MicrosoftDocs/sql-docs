@@ -1,4 +1,5 @@
 ---
+description: "System Base Tables"
 title: "System Base Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,7 +19,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # System Base Tables
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   System base tables are the underlying tables that actually store the metadata for a specific database. The **master** database is special in this respect because it contains some additional tables that are not found in any of the other databases. These tables contain persisted metadata that has server-wide scope.  
   

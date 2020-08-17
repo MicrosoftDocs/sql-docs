@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)"
 title: "sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -23,7 +24,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # sys.fn_hadr_backup_is_preferred_replica  (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Used to determine if the current replica is the preferred backup replica.  
   

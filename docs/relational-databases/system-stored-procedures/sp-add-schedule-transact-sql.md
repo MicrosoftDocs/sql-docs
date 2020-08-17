@@ -1,4 +1,5 @@
 ---
+description: "sp_add_schedule (Transact-SQL)"
 title: "sp_add_schedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_add_schedule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a schedule that can be used by any number of jobs.  
   
@@ -65,7 +66,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |**16**|Monthly|  
 |**32**|Monthly, relative to *freq_interval*|  
 |**64**|Run when SQL Agent service starts|  
-|**128**|Run when the computer is idle (not supported in [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
+|**128**|Run when the computer is idle (not supported in [Azure SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)) |  
   
 `[ @freq_interval = ] freq_interval`
  The days that a job is executed. *freq_interval* is **int**, with a default of **1**, and depends on the value of *freq_type*.  

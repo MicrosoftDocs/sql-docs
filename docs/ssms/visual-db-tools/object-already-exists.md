@@ -1,4 +1,5 @@
 ---
+description: "Object Already Exists"
 title: Object Already Exists
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,7 +17,7 @@ ms.reviewer:
 
 ---
 # Object Already Exists
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The object you are trying to save has the same name as an object already in the database. Choose another name and proceed.  
   
 Can also indicate the column name already exists.  

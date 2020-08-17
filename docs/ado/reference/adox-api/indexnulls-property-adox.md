@@ -1,4 +1,5 @@
 ---
+description: "IndexNulls Property (ADOX)"
 title: "IndexNulls Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

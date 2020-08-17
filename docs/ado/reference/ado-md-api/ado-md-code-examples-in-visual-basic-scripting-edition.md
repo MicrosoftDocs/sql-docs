@@ -1,4 +1,5 @@
 ---
+description: "ADO MD Code Examples in Visual Basic, Scripting Edition"
 title: "ADO MD Code Examples in Visual Basic, Scripting Edition | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

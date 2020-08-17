@@ -1,5 +1,6 @@
 ---
-title: "CREATE PROCEDURE (Transact-SQL) | Microsoft Docs"
+description: "CREATE PROCEDURE (Transact-SQL)"
+title: CREATE PROCEDURE (Transact-SQL)
 ms.custom: ""
 ms.date: "09/06/2017"
 ms.prod: sql
@@ -47,9 +48,10 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # CREATE PROCEDURE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Creates a [!INCLUDE[tsql](../../includes/tsql-md.md)] or common language runtime (CLR) stored procedure in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)], Azure SQL Data Warehouse and Parallel Data Warehouse. Stored procedures are similar to procedures in other programming languages in that they can:
 
@@ -134,6 +136,8 @@ CREATE { PROC | PROCEDURE } [ schema_name.] procedure_name
 AS { [ BEGIN ] sql_statement [;][ ,...n ] [ END ] }
 [;]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
@@ -354,7 +358,7 @@ Call the store procedure with statement: `EXEC What_DB_is_this;`
 Slightly more complex, is to provide an input parameter to make the procedure more flexible. For example:
 
 ```sql
-CREATE PROC What_DB_is_that @ID int
+CREATE PROC What_DB_is_that @ID INT
 AS
 SELECT DB_NAME(@ID) AS ThatDB;
 ```
@@ -411,13 +415,16 @@ The CREATE PROCEDURE statement cannot be combined with other [!INCLUDE[tsql](../
 
 The following statements cannot be used anywhere in the body of a stored procedure.
 
-||||
-|-|-|-|
-|CREATE AGGREGATE|CREATE SCHEMA|SET SHOWPLAN_TEXT|
-|CREATE DEFAULT|CREATE or ALTER TRIGGER|SET SHOWPLAN_XML|
-|CREATE or ALTER FUNCTION|CREATE or ALTER VIEW|USE *database_name*|
-|CREATE or ALTER PROCEDURE|SET PARSEONLY||
-|CREATE RULE|SET SHOWPLAN_ALL||
+| CREATE | SET | USE |
+|--------|-----|-----|
+| CREATE AGGREGATE | SET SHOWPLAN_TEXT | USE *database_name*|
+| CREATE DEFAULT | SET SHOWPLAN_XML
+| CREATE RULE | SET PARSEONLY |
+| CREATE SCHEMA | SET SHOWPLAN_ALL |
+| CREATE or ALTER TRIGGER |
+| CREATE or ALTER FUNCTION |
+| CREATE or ALTER PROCEDURE |
+| CREATE or ALTER VIEW |
 
  A procedure can reference tables that do not yet exist. At creation time, only syntax checking is performed. The procedure is not compiled until it is executed for the first time. Only during compilation are all objects referenced in the procedure resolved. Therefore, a syntactically correct procedure that references tables that do not exist can be created successfully; however, the procedure fails at execution time if the referenced tables do not exist.
 
@@ -425,7 +432,7 @@ The following statements cannot be used anywhere in the body of a stored procedu
 
 ```sql
 -- Passing the function value as a variable.
-DECLARE @CheckDate datetime = GETDATE();
+DECLARE @CheckDate DATETIME = GETDATE();
 EXEC dbo.uspGetWhereUsedProductID 819, @CheckDate;
 GO
 ```
@@ -474,7 +481,7 @@ Memory-optimized tables can be accessed through both traditional and natively co
 The following sample shows how to create a natively compiled stored procedure that accesses a memory-optimized table `dbo.Departments`:
 
 ```sql
-CREATE PROCEDURE dbo.usp_add_kitchen @dept_id int, @kitchen_count int NOT NULL
+CREATE PROCEDURE dbo.usp_add_kitchen @dept_id INT, @kitchen_count INT NOT NULL
 WITH EXECUTE AS OWNER, SCHEMABINDING, NATIVE_COMPILATION
 AS
 BEGIN ATOMIC WITH (TRANSACTION ISOLATION LEVEL = SNAPSHOT, LANGUAGE = N'us_english')
@@ -557,9 +564,9 @@ FROM '\\MachineName\HandlingLOBUsingCLR\bin\Debug\HandlingLOBUsingCLR.dll';
 GO
 CREATE PROCEDURE dbo.GetPhotoFromDB
 (
-    @ProductPhotoID int
-    , @CurrentDirectory nvarchar(1024)
-    , @FileName nvarchar(1024)
+    @ProductPhotoID INT
+    , @CurrentDirectory NVARCHAR(1024)
+    , @FileName NVARCHAR(1024)
 )
 AS EXTERNAL NAME HandlingLOBUsingCLR.LargeObjectBinary.GetPhotoFromDB;
 GO
@@ -578,8 +585,8 @@ IF OBJECT_ID ( 'HumanResources.uspGetEmployees', 'P' ) IS NOT NULL
     DROP PROCEDURE HumanResources.uspGetEmployees;
 GO
 CREATE PROCEDURE HumanResources.uspGetEmployees
-    @LastName nvarchar(50),
-    @FirstName nvarchar(50)
+    @LastName NVARCHAR(50),
+    @FirstName NVARCHAR(50)
 AS
 
     SET NOCOUNT ON;
@@ -614,8 +621,8 @@ IF OBJECT_ID ( 'HumanResources.uspGetEmployees2', 'P' ) IS NOT NULL
     DROP PROCEDURE HumanResources.uspGetEmployees2;
 GO
 CREATE PROCEDURE HumanResources.uspGetEmployees2
-    @LastName nvarchar(50) = N'D%',
-    @FirstName nvarchar(50) = N'%'
+    @LastName NVARCHAR(50) = N'D%',
+    @FirstName NVARCHAR(50) = N'%'
 AS
     SET NOCOUNT ON;
     SELECT FirstName, LastName, JobTitle, Department
@@ -647,10 +654,10 @@ The following example creates the `uspGetList` procedure. This procedures return
 IF OBJECT_ID ( 'Production.uspGetList', 'P' ) IS NOT NULL
     DROP PROCEDURE Production.uspGetList;
 GO  
-CREATE PROCEDURE Production.uspGetList @Product varchar(40)
-    , @MaxPrice money
-    , @ComparePrice money OUTPUT
-    , @ListPrice money OUT
+CREATE PROCEDURE Production.uspGetList @Product VARCHAR(40)
+    , @MaxPrice MONEY
+    , @ComparePrice MONEY OUTPUT
+    , @ListPrice MONEY OUT
 AS  
     SET NOCOUNT ON;
     SELECT p.[Name] AS Product, p.ListPrice AS 'List Price'
@@ -675,18 +682,18 @@ Execute `uspGetList` to return a list of [!INCLUDE[ssSampleDBCoShort](../../incl
 > The OUTPUT variable must be defined when the procedure is created and also when the variable is used. The parameter name and variable name do not have to match; however, the data type and parameter positioning must match, unless `@ListPrice` = *variable* is used.
 
 ```sql
-DECLARE @ComparePrice money, @Cost money ;
+DECLARE @ComparePrice MONEY, @Cost MONEY;
 EXECUTE Production.uspGetList '%Bikes%', 700,
     @ComparePrice OUT,
     @Cost OUTPUT
 IF @Cost <= @ComparePrice
 BEGIN
     PRINT 'These products can be purchased for less than
-    $'+RTRIM(CAST(@ComparePrice AS varchar(20)))+'.'
+    $'+RTRIM(CAST(@ComparePrice AS VARCHAR(20)))+'.'
 END
 ELSE
     PRINT 'The prices for all products in this category exceed
-    $'+ RTRIM(CAST(@ComparePrice AS varchar(20)))+'.';
+    $'+ RTRIM(CAST(@ComparePrice AS VARCHAR(20)))+'.';
 ```
 
 Here is the partial result set:
@@ -789,7 +796,7 @@ The following example uses an UPDATE statement in a stored procedure. The proced
 
 ```sql
 CREATE PROCEDURE HumanResources.Update_VacationHours
-@NewHours smallint, @Rowcount int OUTPUT
+@NewHours SMALLINT, @Rowcount INT OUTPUT
 AS
 SET NOCOUNT ON;
 UPDATE HumanResources.Employee
@@ -803,8 +810,8 @@ WHERE CurrentFlag = 1;
 SET @Rowcount = @@rowcount;
 
 GO
-DECLARE @Rowcount int
-EXEC HumanResources.Update_VacationHours 40, @Rowcount output
+DECLARE @Rowcount INT
+EXEC HumanResources.Update_VacationHours 40, @Rowcount OUTPUT
 PRINT @Rowcount;
 ```
 
@@ -817,7 +824,7 @@ Examples in this section demonstrate methods to handle errors that might occur w
 The following example using the TRY...CATCH construct to return error information caught during the execution of a stored procedure.
 
 ```sql
-CREATE PROCEDURE Production.uspDeleteWorkOrder ( @WorkOrderID int )
+CREATE PROCEDURE Production.uspDeleteWorkOrder ( @WorkOrderID INT )
 AS
 SET NOCOUNT ON;
 BEGIN TRY
@@ -837,7 +844,7 @@ BEGIN CATCH
     ROLLBACK
 
   -- Return the error information.
-  DECLARE @ErrorMessage nvarchar(4000), @ErrorSeverity int;
+  DECLARE @ErrorMessage NVARCHAR(4000), @ErrorSeverity INT;
   SELECT @ErrorMessage = ERROR_MESSAGE(),@ErrorSeverity = ERROR_SEVERITY();
   RAISERROR(@ErrorMessage, @ErrorSeverity, 1);
 END CATCH;
@@ -850,7 +857,7 @@ EXEC Production.uspDeleteWorkOrder 13;
    cause an error when the procedure definition is altered, but produces
    an error when the procedure is executed.
 */
-ALTER PROCEDURE Production.uspDeleteWorkOrder ( @WorkOrderID int )
+ALTER PROCEDURE Production.uspDeleteWorkOrder ( @WorkOrderID INT )
 AS
 
 BEGIN TRY
@@ -871,7 +878,7 @@ BEGIN CATCH
     ROLLBACK TRANSACTION
 
   -- Return the error information.
-  DECLARE @ErrorMessage nvarchar(4000), @ErrorSeverity int;
+  DECLARE @ErrorMessage NVARCHAR(4000), @ErrorSeverity INT;
   SELECT @ErrorMessage = ERROR_MESSAGE(),@ErrorSeverity = ERROR_SEVERITY();
   RAISERROR(@ErrorMessage, @ErrorSeverity, 1);
 END CATCH;
@@ -942,7 +949,7 @@ The `WITH RECOMPILE` clause is helpful when the parameters supplied to the proce
 IF OBJECT_ID ( 'dbo.uspProductByVendor', 'P' ) IS NOT NULL
     DROP PROCEDURE dbo.uspProductByVendor;
 GO
-CREATE PROCEDURE dbo.uspProductByVendor @Name varchar(30) = '%'
+CREATE PROCEDURE dbo.uspProductByVendor @Name VARCHAR(30) = '%'
 WITH RECOMPILE
 AS
     SET NOCOUNT ON;

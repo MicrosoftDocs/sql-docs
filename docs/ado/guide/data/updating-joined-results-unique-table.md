@@ -1,4 +1,5 @@
 ---
+description: "Updating JOINed Results: Unique Table"
 title: "Updating JOINed Results: Unique Table | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

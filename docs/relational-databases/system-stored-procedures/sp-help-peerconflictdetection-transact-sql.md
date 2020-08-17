@@ -1,4 +1,5 @@
 ---
+description: "sp_help_peerconflictdetection (Transact-SQL)"
 title: "sp_help_peerconflictdetection (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -17,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_help_peerconflictdetection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about the conflict detection settings for a publication that is involved in a peer-to-peer transactional replication topology.  
   

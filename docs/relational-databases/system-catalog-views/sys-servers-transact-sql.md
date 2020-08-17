@@ -1,4 +1,5 @@
 ---
+description: "sys.servers (Transact-SQL)"
 title: "sys.servers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/16/2020"
@@ -22,7 +23,7 @@ ms.author: carlrab
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sys.servers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains a row per linked or remote server registered, and a row for the local server that has **server_id** = 0.  
 

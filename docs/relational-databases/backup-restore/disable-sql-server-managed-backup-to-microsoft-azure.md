@@ -13,7 +13,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Disable SQL Server Managed Backup to Microsoft Azure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to disable or pause [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] at both the database and instance levels.  
   
 ##  <a name="DatabaseDisable"></a> Disable [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] for a database  

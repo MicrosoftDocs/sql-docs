@@ -1,4 +1,5 @@
 ---
+description: "DefinedSize Property Example (VB)"
 title: "DefinedSize Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Named Commands"
 title: "Named Commands | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "AbsolutePosition and CursorLocation Properties Example (VC++)"
 title: "AbsolutePosition and CursorLocation Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,6 +1,6 @@
 ---
 title: Host a database on a managed instance
-description: This article describes how to configure a Master Data Service (MDS) database on a managed instance.
+description: Learn how to create and configure a Master Data Services (MDS) database and host it on an Azure SQL Managed Instance.
 ms.custom: ""
 ms.date: "07/01/2019"
 ms.prod: sql
@@ -15,25 +15,25 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Host an MDS database on a managed instance
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This article covers how to configure a Master Data Services (MDS) database on a managed instance.
   
 ## Preparation
 
-To prepare, you need to create and configure an Azure SQL Database managed instance and configure your web application machine.
+To prepare, you need to create and configure an Azure SQL Managed Instance and configure your web application machine.
 
 ### Create and configure the database
 
-1. Create an Azure SQL Database managed instance with a virtual network. See [Quickstart: Create an Azure SQL Database managed instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) for details.
+1. Create a managed instance with a virtual network. See [Quickstart: Create a SQL Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-get-started) for details.
 
 1. Configure a Point-to-Site connection. See [Configure a Point-to-Site connection to a VNet using native Azure certificate authentication: Azure portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) for instructions.
 
-1. Configure Azure Active Directory authentication with SQL Database managed instance. See [Configure and manage Azure Active Directory authentication with SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) for details.
+1. Configure Azure Active Directory authentication with SQL Managed Instance. See [Configure and manage Azure Active Directory authentication with SQL](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication-configure) for details.
 
 ### Configure web application machine
 
-1. Install a Point-to-Site connection certificate and VPN to ensure that the machine can access the SQL Database managed instance. Refer to [Configure a Point-to-Site connection to a VNet using native Azure certificate authentication: Azure portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) for instructions.
+1. Install a Point-to-Site connection certificate and VPN to ensure that the machine can access the managed instance. Refer to [Configure a Point-to-Site connection to a VNet using native Azure certificate authentication: Azure portal](https://docs.microsoft.com/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) for instructions.
 
 1. Install the following Roles and Features:
    - Roles:

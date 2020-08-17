@@ -2651,8 +2651,8 @@
     - name: Using Always Encrypted with the JDBC Driver
       href: ../connect/jdbc/using-always-encrypted-with-the-jdbc-driver.md
       items:
-      - name: Always Encrypted with secure enclaves
-        href: ../connect/jdbc/always-encrypted-with-secure-enclaves.md
+      - name: Using Always Encrypted with secure enclaves with the JDBC Driver
+        href: ../connect/jdbc/using-always-encrypted-with-secure-enclaves-with-the-jdbc-driver.md
     - name: Guide articles
       items:
       - name: Using Statements with SQL
@@ -2767,6 +2767,8 @@
         href: ../connect/jdbc/using-sql-escape-sequences.md
       - name: Using Statements with Stored Procedures
         href: ../connect/jdbc/using-statements-with-stored-procedures.md
+      - name: Client Certificate Authentication for Loopback Scenarios
+        href: ../connect/jdbc/client-certification-authentication-for-loopback-scenarios.md
       - name: Azure Key Vault samples, for 7.0 and others
         href: ../connect/jdbc/azure-key-vault-sample-version-7.0.md
         items:
@@ -2816,14 +2818,16 @@
         href: ../connect/odbc/linux-mac/programming-guidelines.md
       - name: Tools
         items:
-        - name: Connecting with bcp.exe
+        - name: Connecting with bcp
           href: ../connect/odbc/linux-mac/connecting-with-bcp.md
-        - name: Connecting with sqlcmd.exe
+        - name: Connecting with sqlcmd
           href: ../connect/odbc/linux-mac/connecting-with-sqlcmd.md
       - name: Using Integrated Authentication
         href: ../connect/odbc/linux-mac/using-integrated-authentication.md
     - name: Release Notes
       href: ../connect/odbc/linux-mac/release-notes-odbc-sql-server-linux-mac.md
+    - name: Release Notes (mssql-tools)
+      href: ../connect/odbc/linux-mac/release-notes-tools.md
     - name: Known Issues
       href: ../connect/odbc/linux-mac/known-issues-in-this-version-of-the-driver.md
     - name: Frequently Asked Questions (FAQ) for ODBC Linux and macOS
@@ -2862,7 +2866,7 @@
     items:
     - name: Custom Keystore Providers
       href: ../connect/odbc/custom-keystore-providers.md
-    - name: DSN Connection String Keywords and Attributes
+    - name: DSN and Connection String Keywords and Attributes
       href: ../connect/odbc/dsn-connection-string-attribute.md
     - name: Using Always Encrypted
       href: ../connect/odbc/using-always-encrypted-with-the-odbc-driver.md

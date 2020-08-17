@@ -24,7 +24,7 @@ author: mashamsft
 ms.author: mathoma
 ---
 # Restore and Recovery Overview (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   To recover a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database from a failure, a database administrator has to restore a set of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] backups in a logically correct and meaningful restore sequence. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] restore and recovery supports restoring data from backups of a whole database, a data file, or a data page, as follows:  
   

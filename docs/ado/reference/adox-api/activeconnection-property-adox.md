@@ -1,4 +1,5 @@
 ---
+description: "ActiveConnection Property (ADOX)"
 title: "ActiveConnection Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

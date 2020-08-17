@@ -1,4 +1,5 @@
 ---
+description: "CubeDef Object (ADO MD)"
 title: "CubeDef Object (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

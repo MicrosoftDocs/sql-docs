@@ -12,7 +12,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # WideWorldImportersDW ETL workflow
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Use the *WWI_Integration* ETL package to migrate data from the WideWorldImporters database to the WideWorldImportersDW database as data changes. The package is run periodically (usually daily).
 
 The package ensures high performance by using SQL Server Integration Services to orchestrate bulk T-SQL operations (instead of separate transformations in Integration Services).

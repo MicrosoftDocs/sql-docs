@@ -1,4 +1,5 @@
 ---
+description: "sp_stored_procedures (Transact-SQL)"
 title: "sp_stored_procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -20,7 +21,7 @@ ms.author: carlrab
 ---
 # sp_stored_procedures (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a list of stored procedures in the current environment.  
   

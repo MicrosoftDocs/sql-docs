@@ -1,4 +1,5 @@
 ---
+description: "STMLineFromWKB (geometry Data Type)"
 title: "STMLineFromWKB (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -19,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STMLineFromWKB (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a **geometryMultiLineString** instance from an Open Geospatial Consortium (OGC) Well-Known Binary (WKB) representation.
   
@@ -30,7 +31,9 @@ Returns a **geometryMultiLineString** instance from an Open Geospatial Consortiu
 STMLineFromWKB ( 'WKB_multilinestring' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *WKB_multilinestring*  
  Is the WKB representation of the **geometryMultiLineString** instance to return. *WKB_multilinestring* is a **varbinary(max)** expression.  
   

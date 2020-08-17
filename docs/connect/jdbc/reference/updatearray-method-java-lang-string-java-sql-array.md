@@ -1,4 +1,5 @@
 ---
+description: "updateArray Method (java.lang.String, java.sql.Array)"
 title: "updateArray Method (java.lang.String, java.sql.Array) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ALTER SEARCH PROPERTY LIST (Transact-SQL)"
 title: "ALTER SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
@@ -25,7 +26,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # ALTER SEARCH PROPERTY LIST (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Adds a specified search property to, or drops it from the specified search property list.  
   
@@ -46,7 +47,10 @@ ALTER SEARCH PROPERTY LIST list_name
 ;  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *list_name*  
  Is the name of the property list being altered. *list_name* is an identifier.  
   

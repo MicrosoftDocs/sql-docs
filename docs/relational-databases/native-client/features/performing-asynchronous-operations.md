@@ -21,8 +21,8 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Performing Asynchronous Operations
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Performing Asynchronous Operations in SQL Server Native Client
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] allows applications to perform asynchronous database operations. Asynchronous processing enables methods to return immediately without blocking on the calling thread. This allows much of the power and flexibility of multithreading, without requiring the developer to explicitly create threads or handle synchronization. Applications request asynchronous processing when initializing a database connection, or when initializing the result from the execution of a command.  
   

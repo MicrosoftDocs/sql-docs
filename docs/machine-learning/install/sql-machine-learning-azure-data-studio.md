@@ -10,7 +10,7 @@ ms.author: davidph
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Run Python and R scripts in Azure Data Studio notebooks with SQL Server Machine Learning Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2017 and later](../../includes/applies-to-version/sqlserver2017.md)]
 
 Learn how to run Python and R scripts in [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is) notebooks with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). Azure Data Studio is a cross-platform database tool.
 
@@ -20,11 +20,9 @@ Learn how to run Python and R scripts in [Azure Data Studio](https://docs.micros
 
 - A server with SQL Server Machine Learning Services installed and enabled. You can use Machine Learning Services on Windows, Linux, or Big Data Clusters:
 
-    - [Install SQL Server Machine Learning Services on Windows](sql-machine-learning-services-windows-install.md).
-
-    - [Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
-
-    - [Run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
+  - [Install SQL Server Machine Learning Services on Windows](sql-machine-learning-services-windows-install.md).
+  - [Install SQL Server Machine Learning Services on Linux](../../linux/sql-server-linux-setup-machine-learning.md).
+  - [Run Python and R scripts with Machine Learning Services on SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md).
 
 ## Create a SQL notebook
 
@@ -119,5 +117,7 @@ Follow these steps to run an R script:
 
 ## Next steps
 
+- [How to use notebooks in Azure Data Studio](../../azure-data-studio/notebooks-guidance.md)
+- [Create and run a SQL Server notebook](../../azure-data-studio/notebooks-tutorial-sql-kernel.md)
 - [Quickstart: Run simple Python scripts with SQL Server Machine Learning Services](../tutorials/quickstart-python-create-script.md)
 - [Quickstart: Run simple R scripts with SQL Server Machine Learning Services](../tutorials/quickstart-r-create-script.md)

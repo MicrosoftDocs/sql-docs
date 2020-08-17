@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Deploy multiple [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in the same Active Directory domain
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article explains the updates to SQL server 2019 CU 5 that enable de capability for multiple SQL Server 2019 Big Data Clusters to be deployed and integrated with the same Active Directory Domain.
 

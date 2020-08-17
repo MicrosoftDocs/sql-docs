@@ -1,4 +1,5 @@
 ---
+description: "sp_publication_validation (Transact-SQL)"
 title: "sp_publication_validation (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -17,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_publication_validation (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Initiates an article validation request for each article in the specified publication. This stored procedure is executed at the Publisher on the publication database.  
   

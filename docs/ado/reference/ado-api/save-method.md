@@ -1,4 +1,5 @@
 ---
+description: "Save Method"
 title: "Save Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -82,11 +83,16 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
  A **Recordset** saved in XML format is saved using UTF-8 format. When such a file is loaded into an ADO Stream, the Stream object will not attempt to open a **Recordset** from the stream unless the Charset property of the stream is set to the appropriate value for UTF-8 format.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Save and Open Methods Example (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [Save and Open Methods Example (VC++)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   

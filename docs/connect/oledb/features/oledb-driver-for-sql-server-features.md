@@ -1,6 +1,6 @@
 ---
-title: "OLE DB Driver for SQL Server Features | Microsoft Docs"
-description: "OLE DB Driver for SQL Server features"
+title: "OLE DB Driver for SQL Server Features"
+description: "Learn about features supported by the OLE DB Driver for SQL Server like database mirroring, asynchronous operation, Azure Active Directory, and others."
 ms.custom: ""
 ms.date: "02/11/2019"
 ms.prod: sql
@@ -16,7 +16,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # OLE DB Driver for SQL Server Features
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

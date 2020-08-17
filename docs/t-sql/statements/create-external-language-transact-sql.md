@@ -1,4 +1,5 @@
 ---
+description: "CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server"
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
 ms.date: 04/03/2020
@@ -12,7 +13,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 
 # CREATE EXTERNAL LANGUAGE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Registers external language extensions in the database from the specified file path or byte stream. This statement serves as a generic mechanism for the database administrator to register new external language extensions on any OS platform supported by SQL Server. For more information, see [Language Extensions](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview).
 

@@ -1,4 +1,5 @@
 ---
+description: "ADO NET Source"
 title: "ADO NET Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -24,7 +25,7 @@ ms.author: chugu
 ---
 # ADO NET Source
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The ADO NET source consumes data from a .NET provider and makes the data available to the data flow.  

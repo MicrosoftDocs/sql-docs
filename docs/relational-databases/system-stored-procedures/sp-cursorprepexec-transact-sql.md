@@ -1,4 +1,5 @@
 ---
+description: "sp_cursorprepexec (Transact-SQL)"
 title: "sp_cursorprepexec (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/20/2019"

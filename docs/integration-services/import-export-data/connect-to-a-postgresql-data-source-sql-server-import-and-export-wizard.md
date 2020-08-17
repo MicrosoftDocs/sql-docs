@@ -1,7 +1,8 @@
 ---
+description: "Connect to a PostgreSQL Data Source (SQL Server Import and Export Wizard)"
 title: "Connect to a PostgreSQL Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/16/2017"
+ms.date: 06/29/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: integration-services
@@ -12,7 +13,7 @@ ms.author: chugu
 ---
 # Connect to a PostgreSQL Data Source (SQL Server Import and Export Wizard)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This topic shows you how to connect to a **PostgreSQL** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard. 
@@ -65,18 +66,18 @@ The **Uid** (user id) and **Pwd** (password) to connect.
 ### Connection string format
 Here's the format of a typical connection string. 
 
-    ```
-    Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
-    ```
+```console
+Driver={PostgreSQL ODBC Driver(UNICODE)};Server=<server>;Port=<port>;Database=<database>;UID=<user id>;PWD=<password>
+```
 
 ### Enter the connection string
 Enter the connection string in the **ConnectionString** field, or enter the DSN name in the **Dsn** field, on the **Choose a Data Source** or **Choose a Destination** page. After you enter the connection string, the wizard parses the string and displays the individual properties and their values in the list.
 
 The following example uses this connection string.
 
-    ```
-    Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
-    ```
+```console
+Driver={PostgreSQL ODBC Driver(UNICODE)};Server=127.0.0.1;Port=5432;Database=postgres;UID=postgres;PWD=********
+```
 
 Here's the screen that you see after entering the connection string.
 

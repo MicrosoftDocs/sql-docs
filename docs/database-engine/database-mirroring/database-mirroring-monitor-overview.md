@@ -17,7 +17,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Database Mirroring Monitor Overview
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   If you have the correct permissions, you can use Database Mirroring Monitor to monitor any subset of the mirrored databases on a server instance. Monitoring enables you to verify whether and how well data is flowing in the database mirroring session. Database Mirroring Monitor is also useful for troubleshooting the cause of reduced data flow.  
   
  You can register any of your mirrored databases for monitoring on each of the failover partners individually. When you register a database, Database Mirroring Monitor caches the following information about the database:  

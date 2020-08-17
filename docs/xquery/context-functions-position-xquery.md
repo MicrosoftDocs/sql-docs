@@ -18,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Context Functions - position (XQuery)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   Returns an integer value that indicates the position of the context item within the sequence of items currently being processed.  
   

@@ -1,4 +1,5 @@
 ---
+description: "SQLSetStmtOption (Desktop Database Drivers)"
 title: "SQLSetStmtOption (Desktop Database Drivers) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

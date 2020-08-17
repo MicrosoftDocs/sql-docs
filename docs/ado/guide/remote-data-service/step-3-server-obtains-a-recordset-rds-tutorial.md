@@ -1,4 +1,5 @@
 ---
+description: "Step 3: Server Obtains a Recordset (RDS Tutorial)"
 title: "Step 3: Server Obtains a Recordset (RDS Tutorial) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

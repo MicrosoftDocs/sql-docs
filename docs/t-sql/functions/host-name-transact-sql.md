@@ -1,4 +1,5 @@
 ---
+description: "HOST_NAME (Transact-SQL)"
 title: "HOST_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/21/2017"
@@ -20,7 +21,11 @@ author: VanMSFT
 ms.author: vanto
 ---
 # HOST_NAME (Transact-SQL)
+<<<<<<< HEAD
 [!INCLUDE[UPDATE-ss2016-asdb-xxxx-xxx-md](../../includes/UPDATE-ss2016-asdb-xxxx-xxx-md.md)]
+=======
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+>>>>>>> 81ede900750218e3f2a8363315ceea198d03f9ec
 
   Returns the workstation name.  
   
@@ -28,12 +33,12 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 HOST_NAME ()  
 ```  
-  
-## Return Types  
+
+## Return Types
  **nvarchar(128)**  
   
 ## Remarks  

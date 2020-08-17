@@ -1,4 +1,5 @@
 ---
+description: "Use SQL Server Profiler to Create a SQL Trace Collection Set"
 title: "Create SQL Trace collection set with Profiler"
 ms.date: 06/03/2020
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: mathoma
 ms.custom: "seo-lt-2019"
 ---
 # Use SQL Server Profiler to Create a SQL Trace Collection Set
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   In [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] you can exploit the server-side trace capabilities of [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to export a trace definition that you can use to create a collection set that uses the Generic SQL Trace collector type. There are two parts to this process:  
   
 1.  Create and export a [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] trace.  

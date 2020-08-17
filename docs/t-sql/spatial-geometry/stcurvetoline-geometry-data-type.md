@@ -1,4 +1,5 @@
 ---
+description: "STCurveToLine (geometry Data Type)"
 title: "STCurveToLine (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -16,7 +17,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STCurveToLine (geometry Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns a polygonal approximation of a **geometry** instance that contains circular arc segments.
   
@@ -27,7 +28,9 @@ Returns a polygonal approximation of a **geometry** instance that contains circu
 .STCurveToLine ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **geometry**  
   
  CLR return type: **SqlGeometry**  

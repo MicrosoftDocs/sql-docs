@@ -1,7 +1,7 @@
 ---
 title: SQL Server docs navigation tips 
 description: Tips and tricks for navigating the SQL Server technical documentation - explains such things as the hub page, the table of contents, the header, as well as how to use the breadcrumbs and how to use the version filter. 
-ms.date: 10/15/2019
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: ""
@@ -11,7 +11,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 monikerRange: ">= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
-# SQL Server docs navigation guide 
+# SQL Server docs navigation guide
 
 This topic provides some tips and tricks for navigating the SQL Server technical documentation space.  
 

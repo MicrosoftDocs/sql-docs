@@ -1,4 +1,5 @@
 ---
+description: "Filestream and FileTable Dynamic Management Views (Transact-SQL)"
 title: "Filestream and FileTable Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,7 +16,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Filestream and FileTable Dynamic Management Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This section describes the dynamic management views related to the FILESTREAM and FileTable features.  
   

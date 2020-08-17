@@ -14,7 +14,7 @@ ms.author: lle
 ---
 # Business Rule Examples (Master Data Services)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 This article shows examples of business rules for [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]. You'll find these examples in the sample models that are included with your installation of [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)].   
   
@@ -22,9 +22,11 @@ For instructions on how to deploy the sample models, see [Master Data Services I
   
   
 ## Business Rule Examples  
-Sample Model |Entity  |Business Rule Name| Description  
----------|---------|---------|-----------|  
-Customer    | Customer   | Person pmt terms| Specifies default payment terms for customers.          
+
+| Sample Model |Entity | Business Rule Name | Description |
+|-|-|-|-|
+| Customer | Customer | Person pmt terms | Specifies default payment terms for customers. |
+
 In the following business rule, if the CustomerType attribute value meets the `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-conditions-master-data-services.md) is applied to the PaymentTerms attribute. Otherwise no action is taken.  
 ```  
 If  
@@ -36,10 +38,11 @@ Else
 ```  
   
 **--------------------------------------------------**  
-  
-Sample Model  |Entity  |Business Rule Name|Description    
----------|---------|---------|---------------  
-Customer     | Customer    | Org pmt terms | Specifies default payment terms for organizations.         
+
+| Sample Model |Entity | Business Rule Name | Description |
+|-|-|-|-|
+| Customer | Customer | Org pmt terms | Specifies default payment terms for organizations. |
+
 In the following business rule, if the CustomerType attribute value meets the `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the PaymentTerms attribute. Otherwise no action is taken.  
 ```  
 If  
@@ -52,10 +55,11 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Sample Model  |Entity  |Business Rule Name| Description    
----------|---------|---------|-----------  
-Product     |  Product       | DaysToManufacture |Specifies the range of days-to-manufacturing for in house manufacturing.          
+
+| Sample Model |Entity | Business Rule Name | Description |
+|-|-|-|-|
+| Product | Product | DaysToManufacture | Specifies the range of days-to-manufacturing for in house manufacturing. |
+
 In the following business rule, if the InHouseManufacture attribute value meets the `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), then the `must be between` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the DaysToManufacture attribute. Otherwise no action is taken.  
 ```  
 If  
@@ -68,10 +72,11 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Sample Model  |Entity  |Business Rule Name|Description    
----------|---------|---------|-------------  
-Product     |Product         |Required fields| Specifies the required attributes for the product entity members.           
+
+| Sample Model |Entity | Business Rule Name | Description |
+|-|-|-|-|
+| Product | Product | Required fields | Specifies the required attributes for the product entity members. |
+
 In the following business rule, under all conditions the `is required` [validation action](../master-data-services/business-rule-actions-master-data-services.md) is taken for the specified attributes. The attribute values cannot be Null or blank.  
 ```  
 If  
@@ -93,10 +98,11 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Sample Model  |Entity  |Business Rule Name|Description    
----------|---------|---------|-----------  
-Product     | Product        |  Std Cost| Requires that the standard cost is greater than 0.        
+
+| Sample Model |Entity | Business Rule Name | Description |
+|-|-|-|-|
+| Product | Product | Std Cost | Requires that the standard cost is greater than 0. |
+
 In the following business rule, under all conditions the `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the StandardCost attribute of products.  
 ```  
 If  
@@ -109,10 +115,10 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Sample Model  |Entity  |Business Rule Name|Description    
----------|---------|---------|------------  
-Product     | Product        | FG MSRP Cost|Specifies that if the product is a finished good, the MSRP (manufacturer suggested retail price) and dealer costs must be greater than 0.           
+
+| Sample Model |Entity | Business Rule Name | Description |
+|-|-|-|-|
+| Product | Product | FG MSRP Cost | Specifies that if the product is a finished good, the MSRP (manufacturer suggested retail price) and dealer costs must be greater than 0. |
   
 In the following business rule, if the FinishedGoodIndicator attribute value meets the `is equal` [rule condition](../master-data-services/business-rule-conditions-master-data-services.md), the `must be greater than` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the MSRP and DealerCost attributes.  
 ```  
@@ -127,10 +133,11 @@ Else
   
 **--------------------------------------------------**  
   
-  
-Sample Model  |Entity  |Business Rule Name|Description    
----------|---------|---------|------------  
-Product     | Product        |  Default Name| Specifies the default product name based on the values of the Color and Class attributes. When the Color attribute value is not YLO and the Class attribute is not NA, the default name is Yellow NA.         
+
+| Sample Model |Entity | Business Rule Name | Description |
+|-|-|-|-|
+| Product | Product | Default Name | Specifies the default product name based on the values of the Color and Class attributes. When the Color attribute value is not YLO and the Class attribute is not NA, the default name is Yellow NA. |
+
 In the following business rule, if the Color and Class attributes do not meet the `is equal` rule condition, the `defaults to` [rule action](../master-data-services/business-rule-actions-master-data-services.md) is applied to the Name attribute.  
 ```  
 If  

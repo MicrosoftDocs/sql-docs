@@ -18,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Path Expressions - Specifying Node Test
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
   An axis step in a path expression includes the following components:  
   

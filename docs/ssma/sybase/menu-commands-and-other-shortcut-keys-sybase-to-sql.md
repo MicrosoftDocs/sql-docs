@@ -1,4 +1,5 @@
 ---
+description: "Menu commands and other shortcut keys (Sybase To SQL)"
 title: "Menu commands and other shortcut keys (Sybase To SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -7,8 +8,8 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1ca622b2-55d8-4666-b80a-8d9791cd3d3b
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Menu commands and other shortcut keys (Sybase To SQL)
 The following sections describe the keyboard shortcuts to access menu commands and other shortcut keys used in various dialog boxes of SSMA for Sybase application.  
@@ -73,7 +74,7 @@ To access Tools menu, the keyboard shortcut used is ALT + T. The following table
 |Create report.|ALT + T + C|  
 |Convert schema.|ALT + T + N or CTRL + R|  
 |Refresh from Sybase database.|ALT + T + R|  
-|Synchronize with SQL Server or SQL Azure database.|ALT + T + S|  
+|Synchronize with SQL Server or Azure SQL Database.|ALT + T + S|  
 |Save as script.|ALT + T + A|  
 |Migrate data.|ALT + T + M|  
 |Stop the current operation.|ALT + T + O|  

@@ -12,7 +12,7 @@ author: rothja
 ms.author: jroth
 ---
 # SQL Server error log (Always On Availability Groups)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   The SQL Server error log reports events affecting Always On Availability Groups, such as:  
   
 -   Communication with the Windows Server Failover Clustering (WSFC) cluster    

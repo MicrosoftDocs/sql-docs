@@ -1,4 +1,5 @@
 ---
+description: "Visual C++ Extensions for ADO"
 title: "Visual C++ Extensions for ADO | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Members Collection (ADO MD)"
 title: "Members Collection (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

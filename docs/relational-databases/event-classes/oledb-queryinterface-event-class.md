@@ -1,4 +1,5 @@
 ---
+description: "OLEDB QueryInterface Event Class"
 title: "OLEDB QueryInterface Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ ms.author: "sstein"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # OLEDB QueryInterface Event Class
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDB](../../includes/applies-to-version/sql-asdb.md)]
   The **OLEDB QueryInterface** event class occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] issues an OLE DB **QueryInterface** call for distributed queries and remote stored procedures. Include this event class in traces that are monitoring problems associated with distributed queries and remote stored procedures.  
   
  When the **OLEDB QueryInterface** event class is included, the amount of overhead will be high. If such events occur frequently, the trace may significantly impede performance. To minimize overhead incurred, limit use of this event class to traces that monitor specific problems for brief periods of time.  

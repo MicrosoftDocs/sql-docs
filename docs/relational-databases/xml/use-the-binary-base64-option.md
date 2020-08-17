@@ -17,7 +17,7 @@ ms.author: jroth
 ---
 # Use the BINARY BASE64 Option
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 If the BINARY BASE64 option is specified in the query, the binary data is returned in base64 encoding format.
 

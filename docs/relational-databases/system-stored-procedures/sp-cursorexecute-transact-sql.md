@@ -1,4 +1,5 @@
 ---
+description: "sp_cursorexecute (Transact-SQL)"
 title: "sp_cursorexecute (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sp_cursorexecute (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates and populates a cursor based upon the execution plan created by sp_cursorprepare. This procedure, coupled with sp_cursorprepare, has the same function as sp_cursoropen, but is split into two phases. sp_cursorexecute is invoked by specifying ID =4 in a tabular data stream (TDS) packet.  
   

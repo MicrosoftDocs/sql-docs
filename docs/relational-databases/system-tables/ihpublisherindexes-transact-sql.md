@@ -1,4 +1,5 @@
 ---
+description: "IHpublisherindexes (Transact-SQL)"
 title: "IHpublisherindexes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # IHpublisherindexes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHpublisherindexes** system table contains one row for each index replicated from non-SQL Server Publishers using the current Distributor. This table is stored in the distribution database.  
   

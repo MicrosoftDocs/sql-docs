@@ -16,7 +16,7 @@ ms.custom: "seo-lt-2019"
 ---
 # Columns with a Name Specified as a Wildcard Character
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 If the column name specified is a wildcard character (\*), the content of that column is inserted as if there is no column name specified. If this column is a non-**xml** type column, the column content is inserted as a text node, as shown in the following example:  
   

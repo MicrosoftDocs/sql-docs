@@ -1,4 +1,5 @@
 ---
+description: "Building Packages Programmatically"
 title: "Building Packages Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Building Packages Programmatically
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   If you need to create packages dynamically, or to manage and execute [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages outside the development environment, you can manipulate packages programmatically. In this approach, you have a continuous range of options:  

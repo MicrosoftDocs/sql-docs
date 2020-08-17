@@ -17,7 +17,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Failover and Failover Modes (Always On Availability Groups)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   Within the context of an availability group, the primary role and secondary role of availability replicas are typically interchangeable in a process known as *failover*. Three forms of failover exist: automatic failover (without data loss), planned manual failover (without data loss), and forced manual failover (with possible data loss), typically called *forced failover*. Automatic and planned manual failover preserve all your data. An availability group fails over at the availability-replica level. That is, an availability group fails over to one of its secondary replicas (the current *failover target*).  
   
@@ -73,8 +73,8 @@ ms.author: mathoma
 ##  <a name="Overview"></a> Overview of Failover  
  The following table summarizes which forms of failover are supported under different availability and failover modes. For each pairing, the effective availability mode and failover mode is determined by the intersection of the modes of the primary replica plus the modes of one or more secondary replicas.  
   
-||Asynchronous-commit mode|Synchronous-commit mode with manual-failover mode|Synchronous-commit mode with automatic-failover mode|  
-|-|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
+|Failover form|Asynchronous-commit mode|Synchronous-commit mode with manual-failover mode|Synchronous-commit mode with automatic-failover mode|  
+|-------------------------------|---------------------------------------------------------|------------------------------------------------------------|  
 |Automatic failover|No|No|Yes|  
 |Planned manual failover|No|Yes|Yes|  
 |Forced failover|Yes|Yes|Yes**&#42;**|  

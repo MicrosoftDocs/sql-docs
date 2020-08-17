@@ -1,4 +1,5 @@
 ---
+description: "ADO API Reference"
 title: "ADO API Reference | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

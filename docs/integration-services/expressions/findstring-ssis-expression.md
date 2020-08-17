@@ -1,4 +1,5 @@
 ---
+description: "FINDSTRING (SSIS Expression)"
 title: "FINDSTRING (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # FINDSTRING (SSIS Expression)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Returns the location of the specified occurrence of a string within a character expression. The return result is the one-based index of the occurrence. The string parameter must evaluate to a character expression, and the occurrence parameter must evaluate to an integer. If the string is not found, the return value is 0. If the string occurs fewer times than the occurrence argument specifies, the return value is 0.  

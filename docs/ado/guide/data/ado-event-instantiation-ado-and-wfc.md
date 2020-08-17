@@ -1,4 +1,5 @@
 ---
+description: "ADO Event Instantiation: ADO and WFC"
 title: "ADO Event Instantiation: ADO and WFC | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

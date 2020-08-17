@@ -1,4 +1,5 @@
 ---
+description: "CONNECTIONPROPERTY (Transact-SQL)"
 title: "CONNECTIONPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "CONNECTIONPROPERTY statement"
 ms.assetid: 6bd9ccae-af77-4a05-b97f-f8ab41cfde42
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # CONNECTIONPROPERTY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 For a request that comes in to the server, this function returns information about the connection properties of the unique connection which supports that request.
   
@@ -30,8 +31,10 @@ For a request that comes in to the server, this function returns information abo
 ```sql
 CONNECTIONPROPERTY ( property )  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *property*  
 The property of the connection. *property* can have one of these values:
   

@@ -1,4 +1,5 @@
 ---
+description: "sysmail_add_principalprofile_sp (Transact-SQL)"
 title: "sysmail_add_principalprofile_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sysmail_add_principalprofile_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Grants permission for an msdb database principal to use a Database Mail profile. The database principal must map to a SQL Server authentication user, a Windows User, or a Windows Group.
   

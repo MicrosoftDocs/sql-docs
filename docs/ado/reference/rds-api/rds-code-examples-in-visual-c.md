@@ -1,4 +1,5 @@
 ---
+description: "RDS Code Examples in Visual C++"
 title: "RDS Code Examples in Visual C++ | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

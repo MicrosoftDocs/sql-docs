@@ -1,5 +1,6 @@
 ---
-title: "Data Type Support for OLE DB Date and Time Improvements | Microsoft Docs"
+description: "Data type support for date and time improvements (Native Client OLE DB provider)"
+title: "Data type support for date and time improvements (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -16,8 +17,8 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Data Type Support for OLE DB Date and Time Improvements
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# SQL Server Native Client Data Type Support for OLE DB Date and Time Improvements
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic provides information about OLE DB ( [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client) types that support [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date/time data types.  
   
@@ -69,7 +70,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
  Implementations for the following existing OLE DB structs have been modified to support the new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] date and time data types. The definitions, however, have not changed.  
   
--   DBTYPE_DATE (This is an automation DATE type. It is internally represented as a **double**.. The whole part is the number of days since December 30, 1899 and the fractional part is the fraction of a day. This type has an accuracy of 1 second, so has an effective scale of 0.)  
+-   DBTYPE_DATE (This is an automation DATE type. It is internally represented as a **double**. The whole part is the number of days since December 30, 1899 and the fractional part is the fraction of a day. This type has an accuracy of 1 second, so has an effective scale of 0.)  
   
 -   DBTYPE_DBDATE  
   
@@ -175,7 +176,7 @@ enum SQLVARENUM {
 |DBTYPE_DBTIME2|**time**(p)|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider inspects the DBCOLUMDESC *bScale* member to determine the fractional seconds precision.|  
 |DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider inspects the DBCOLUMDESC *bScale* member to determine the fractional seconds precision.|  
   
- When an application specifies DBTYPE_DBTIMESTAMP in *wType*, it can override the mapping to **datetime2** by supplying a type name in *pwszTypeName*. If **datetime** is specified, *bScale* must be 3. If **smalldatetime** is specified, *bScale* must be 0. If *bScale* is not consistent with *wType* and *pwszTypeName*,DB_E_BADSCALE is returned.  
+ When an application specifies DBTYPE_DBTIMESTAMP in *wType*, it can override the mapping to **datetime2** by supplying a type name in *pwszTypeName*. If **datetime** is specified, *bScale* must be 3. If **smalldatetime** is specified, *bScale* must be 0. If *bScale* is not consistent with *wType* and *pwszTypeName*, DB_E_BADSCALE is returned.  
   
 ## See Also  
  [Date and Time Improvements &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  

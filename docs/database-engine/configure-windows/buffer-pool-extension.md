@@ -13,7 +13,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Buffer Pool Extension
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Introduced in [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)], the buffer pool extension provides the seamless integration of a nonvolatile random access memory (that is, solid-state drive) extension to the [!INCLUDE[ssDE](../../includes/ssde-md.md)] buffer pool to significantly improve I/O throughput. The buffer pool extension is not available in every [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] edition. For more information, see [Features Supported by the Editions of SQL Server 2016](~/sql-server/editions-and-supported-features-for-sql-server-2016.md).  
   
 ## Benefits of the Buffer Pool Extension  
@@ -92,9 +92,8 @@ ms.author: maghan
   
 ## Related Tasks  
   
-|||  
+|Task Description|Topic|  
 |-|-|  
-|**Task Description**|**Topic**|  
 |Enable and configure the buffer pool extension.|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |Modify the buffer pool extension configuration|[ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)|  
 |View the buffer pool extension configuration|[sys.dm_os_buffer_pool_extension_configuration &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-buffer-pool-extension-configuration-transact-sql.md)|  

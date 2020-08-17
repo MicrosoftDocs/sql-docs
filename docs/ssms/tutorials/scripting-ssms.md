@@ -1,6 +1,6 @@
 ---
 title: SSMS Script objects
-description: "A tutorial for scripting out objects in SSMS"
+description: "Generate Transact-SQL (T-SQL) scripts for various objects found within SQL Server Management Studio (SSMS)."
 keywords: SQL Server, SSMS, SQL Server Management Studio, Scripts, Scripting
 author: MashaMSFT
 ms.author: mathoma

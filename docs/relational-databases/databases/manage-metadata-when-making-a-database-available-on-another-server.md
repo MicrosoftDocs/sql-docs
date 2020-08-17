@@ -1,4 +1,5 @@
 ---
+description: "Manage Metadata When Making a Database Available on Another Server"
 title: "Manage metadata when making a database available on another server"
 ms.date: 06/03/2020
 ms.prod: sql
@@ -35,7 +36,7 @@ helpviewer_keywords:
   - "copying databases"
 ---
 # Manage Metadata When Making a Database Available on Another Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This article is relevant in the following situations:  
   
 -   Configuring the availability replicas of an [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] availability group.  

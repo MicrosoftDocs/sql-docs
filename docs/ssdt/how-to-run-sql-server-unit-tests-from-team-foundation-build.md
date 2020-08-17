@@ -1,5 +1,6 @@
 ---
 title: Run SQL Server Unit Tests from Team Foundation Build
+description: Learn how to run SQL Server unit tests from Team Foundation Build. See how to create a build definition and run unit tests in an automated test run.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

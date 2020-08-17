@@ -1,4 +1,5 @@
 ---
+description: "SQLServerException Members"
 title: "SQLServerException Members | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"

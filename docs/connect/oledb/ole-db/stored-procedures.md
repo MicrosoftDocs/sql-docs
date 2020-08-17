@@ -1,6 +1,6 @@
 ---
 title: "Stored Procedures | Microsoft Docs"
-description: "Stored Procedures"
+description: A stored procedure is an executable object stored in a database. SQL Server supports stored procedures and extended stored procedures.
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
@@ -17,7 +17,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Stored Procedures
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

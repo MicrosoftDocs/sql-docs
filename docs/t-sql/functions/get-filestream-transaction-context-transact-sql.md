@@ -1,5 +1,6 @@
 ---
-title: "GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL) | Microsoft Docs"
+description: "GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)"
+title: GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "GET_FILESTREAM_TRANSACTION_CONTEXT FILESTREAM [SQL Server]"
 ms.assetid: 459e6b79-4420-41e6-85bf-89d90f43b4f1
-author: julieMSFT
-ms.author: jrasnick
+author: markingmyname
+ms.author: maghan
 ---
 # GET_FILESTREAM_TRANSACTION_CONTEXT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a token that represents the current transaction context of a session. The token is used by an application to bind FILESTREAM file-system streaming operations to the transaction. For a list of FILESTREAM topics, see [Binary Large Object &#40;Blob&#41; Data &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md).  
   
@@ -27,11 +28,13 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 GET_FILESTREAM_TRANSACTION_CONTEXT ()  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return Type  
  **varbinary(max)**  
   

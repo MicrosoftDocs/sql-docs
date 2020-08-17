@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_CALLER_IS_NOT_OWNER"
 title: "LOCALDB_ERROR_CALLER_IS_NOT_OWNER | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -11,11 +12,11 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # LOCALDB_ERROR_CALLER_IS_NOT_OWNER
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
     
 ## Details  
   
-|||  
+|Category|Value|  
 |-|-|  
 |Product Name|SQL Server|  
 |Event ID|282|  

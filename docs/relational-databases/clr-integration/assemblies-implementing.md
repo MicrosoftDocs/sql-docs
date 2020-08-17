@@ -14,7 +14,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Assemblies - Implementing
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic provides information about the following areas to help you implement and work with assemblies in the database:  
   
 -   Creating assemblies  

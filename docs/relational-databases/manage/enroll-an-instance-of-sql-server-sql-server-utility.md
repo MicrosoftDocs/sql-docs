@@ -23,7 +23,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Enroll an Instance of SQL Server (SQL Server Utility)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Enroll an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] into an existing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Utility to monitor its performance and configuration as a managed instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. The utility control point (UCP) collects configuration and performance information from managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] every 15 minutes. This information is stored in the utility management data warehouse (UMDW) on the UCP; the UMDW file name is sysutility_mdw. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] performance data is compared to policies to help identify resource use bottlenecks and consolidation opportunities.  
   
  In this release, the UCP and all managed instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] must satisfy the following requirements:  
@@ -36,7 +36,7 @@ ms.author: mikeray
   
 -   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service accounts on the UCP and all managed instances of SQL Server must have read permission to Users in Active Directory.  
   
--   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to enroll cannot be SQL Azure.  
+-   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to enroll cannot be Azure SQL Database.  
   
  In this release, the UCP must satisfy the following requirements:  
   

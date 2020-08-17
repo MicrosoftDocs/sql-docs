@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_clr_properties (Transact-SQL)"
 title: "sys.dm_clr_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -22,7 +23,7 @@ ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_clr_properties (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-pdw](../../includes/applies-to-version/sql-asdbmi-pdw.md)]
 
   Returns a row for each property related to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] common language runtime (CLR) integration, including the version and state of the hosted CLR. The hosted CLR is initialized by running the [CREATE ASSEMBLY](../../t-sql/statements/create-assembly-transact-sql.md), [ALTER ASSEMBLY](../../t-sql/statements/alter-assembly-transact-sql.md), or [DROP ASSEMBLY](../../t-sql/statements/drop-assembly-transact-sql.md) statements, or by executing any CLR routine, type, or trigger. The **sys.dm_clr_properties** view does not specify whether execution of user CLR code has been enabled on the server. Execution of user CLR code is enabled by using the [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) stored procedure with the [clr enabled](../../database-engine/configure-windows/clr-enabled-server-configuration-option.md) option set to 1.  
   

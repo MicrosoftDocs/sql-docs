@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Data science scenarios and solution templates
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 This article describes a number of SQL Server machine learning solution templates. These templates demonstrate best practices and provide building blocks to help you implement a machine learning solution quickly. Each template is designed to solve a specific data science problem, for a specific vertical or industry.
 The tasks in each template extend from data preparation and feature engineering to model training and scoring. 

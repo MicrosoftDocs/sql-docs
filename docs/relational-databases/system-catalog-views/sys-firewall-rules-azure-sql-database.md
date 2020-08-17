@@ -1,4 +1,5 @@
 ---
+description: "sys.firewall_rules (Azure SQL Database)"
 title: "sys.firewall_rules (Azure SQL Database) | Microsoft Docs"
 ms.date: "03/26/2019"
 ms.prod: sql
@@ -20,7 +21,7 @@ ms.author: carlrab
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.firewall_rules (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns information about the server-level firewall settings associated with your [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  
   

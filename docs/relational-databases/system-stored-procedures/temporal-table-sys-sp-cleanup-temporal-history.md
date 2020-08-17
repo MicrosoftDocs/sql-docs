@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cleanup_temporal_history (Transact-SQL)"
 title: "sys.sp_cleanup_temporal_history | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -12,7 +13,7 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.sp_cleanup_temporal_history (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 

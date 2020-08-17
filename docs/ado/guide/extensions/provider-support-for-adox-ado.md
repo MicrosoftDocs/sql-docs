@@ -1,4 +1,5 @@
 ---
+description: "Provider Support for ADOX (ADO)"
 title: "Provider Support for ADOX (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Row Property (ADO)"
 title: "Row Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

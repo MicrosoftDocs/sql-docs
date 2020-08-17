@@ -18,7 +18,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Functions on Nodes - number
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   Returns the numeric value of the node that is indicated by *$arg*.  
   

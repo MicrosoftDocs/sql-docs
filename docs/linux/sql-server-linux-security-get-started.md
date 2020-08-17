@@ -1,6 +1,6 @@
 ---
 title: Get started with SQL Server security on Linux 
-description: This article describes typical security actions.  
+description: Walk through the security features of SQL Server on Linux to get an idea of areas to investigate further.  
 author: VanMSFT 
 ms.author: vanto
 ms.date: 10/02/2017
@@ -11,7 +11,7 @@ ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
 ---
 # Walkthrough for the security features of SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 If you are a Linux user who is new to SQL Server, the following tasks walk you through some of the security tasks. These are not unique or specific to Linux, but it helps to give you an idea of areas to investigate further. In each example, a link is provided to the in-depth documentation for that area.
 

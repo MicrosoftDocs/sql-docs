@@ -1,5 +1,6 @@
 ---
 title: Build and Deploy to a Local Database
+description: Learn about the local server instance that SQL Server 2012 provides. See how to use this instance for building, testing, and debugging development projects.
 ms.prod: sql
 ms.technology: ssdt
 ms.topic: conceptual

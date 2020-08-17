@@ -17,7 +17,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Local audit for SQL Server usage and diagnostic data collection (CEIP)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 ## Introduction
 
@@ -72,12 +72,12 @@ Create a new folder (local audit directory) where the local audit will write the
   >[!NOTE] 
   >Configure the directory path for local audit outside the SQL Server installation path to avoid allowing auditing functionality and patching to cause potential problems with SQL Server.
 
-  ||Design Decision|Recommendation|  
-  |------|-----------------|----------|  
-  |![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Space availability |On moderate workload with about 10 databases, plan on about 2 MB of disk space per database per instance.|  
-|![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate directories | Create a directory for each instance. For example, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* for a SQL Server instance named `MSSQLSERVER`. This simplifies file management.
-|![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Separate folders |Use a specific folder for each service. For example for a given instance name, have one folder for the database engine. If an instance of Analysis Services uses the same instance name, create a separate folder for Analysis Services. Having both Database Engine and Analysis Services instances configured to the same folder will cause all the local audit to write to the same log file from both instances.| 
-|![Checkbox](../database-engine/availability-groups/windows/media/checkboxemptycenterxtraspacetopandright.gif "Checkbox")|Grant permissions to the SQL Server CEIP service logon account|Enable **List folder contents**, **Read** and **Write** access to the SQL Server CEIP service logon account|
+|Design Decision|Recommendation|  
+|-----------------|----------|  
+|Space availability |On moderate workload with about 10 databases, plan on about 2 MB of disk space per database per instance.|  
+|Separate directories | Create a directory for each instance. For example, use *C:\\SQLCEIPAudit\\MSSQLSERVER\\DB\\* for a SQL Server instance named `MSSQLSERVER`. This simplifies file management.
+|Separate folders |Use a specific folder for each service. For example for a given instance name, have one folder for the database engine. If an instance of Analysis Services uses the same instance name, create a separate folder for Analysis Services. Having both Database Engine and Analysis Services instances configured to the same folder will cause all the local audit to write to the same log file from both instances.| 
+|Grant permissions to the SQL Server CEIP service logon account|Enable **List folder contents**, **Read** and **Write** access to the SQL Server CEIP service logon account|
 
 
 ### Grant permissions to the SQL Server CEIP service logon account

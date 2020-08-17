@@ -1,5 +1,6 @@
 ---
 title: "SQL Server PowerShell Provider | Microsoft Docs"
+description: Learn about the SQL Server provider for Windows PowerShell, which provides access to SQL Server objects by means of paths similar to file system paths.
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: scripting
@@ -20,7 +21,7 @@ ms.date: "07/31/2019"
 
 # SQL Server PowerShell Provider
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] provider for Windows PowerShell exposes the hierarchy of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] objects in paths similar to file system paths. You can use the paths to locate an object, and then use methods from the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] Management Object (SMO) models to perform actions on the objects.  
   

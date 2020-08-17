@@ -21,7 +21,7 @@ ms.author: maghan
 
 # SQL Server Express LocalDB
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Microsoft SQL Server Express LocalDB is a feature of [SQL Server Express](../../sql-server/editions-and-components-of-sql-server-version-15.md) targeted to developers. It is available on SQL Server Express with Advanced Services.
 
@@ -111,7 +111,7 @@ REM Gather information about the instance of LocalDB
 
  The last line above, returns information similar to the following.
 
-|||
+|Category|Value|
 |-|-|
 |Name|`LocalDBApp1`|
 |Version|\<Current Version>|

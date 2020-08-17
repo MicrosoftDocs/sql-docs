@@ -1,4 +1,5 @@
 ---
+description: "LockTypeEnum"
 title: "LockTypeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -39,8 +40,14 @@ Specifies the type of lock placed on records during editing.
 |AdoEnums.LockType.UNSPECIFIED|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Clone Method (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)|[LockType Property (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)|  
-|[Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[WillExecute Event (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)|
+
+:::row:::
+    :::column:::
+        [Clone Method (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)  
+        [LockType Property (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [WillExecute Event (ADO)](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+    :::column-end:::
+:::row-end:::

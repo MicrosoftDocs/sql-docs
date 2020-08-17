@@ -1,4 +1,5 @@
 ---
+description: "SET ANSI_PADDING (Transact-SQL)"
 title: "SET ANSI_PADDING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/04/2017"

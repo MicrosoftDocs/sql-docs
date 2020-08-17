@@ -1,4 +1,5 @@
 ---
+description: "SET TEXTSIZE (Transact-SQL)"
 title: "SET TEXTSIZE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/12/2016"

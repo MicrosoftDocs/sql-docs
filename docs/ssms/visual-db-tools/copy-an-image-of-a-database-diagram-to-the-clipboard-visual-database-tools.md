@@ -1,4 +1,5 @@
 ---
+description: "Copy an Image of a Database Diagram to the Clipboard (Visual Database Tools)"
 title: Copy an Image of a Database Diagram to the Clipboard
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

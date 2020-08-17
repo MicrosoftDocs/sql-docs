@@ -1,4 +1,5 @@
 ---
+description: "Customize Menus and Shortcut Keys"
 title: "Customize Menus and Shortcut Keys"
 ms.custom: seo-lt-2019
 ms.date: 06/03/2020

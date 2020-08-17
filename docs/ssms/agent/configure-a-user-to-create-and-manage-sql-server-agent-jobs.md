@@ -1,4 +1,5 @@
 ---
+description: "Configure a User to Create and Manage SQL Server Agent Jobs"
 title: Configure a User to Create and Manage SQL Server Agent Jobs
 ms.prod: sql
 ms.prod_service: sql-tools

@@ -1,4 +1,5 @@
 ---
+description: "Initializing Test Cases (OracleToSQL)"
 title: "Initializing Test Cases (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

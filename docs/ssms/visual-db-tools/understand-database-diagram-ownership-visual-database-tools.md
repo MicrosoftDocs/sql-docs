@@ -1,4 +1,5 @@
 ---
+description: "Understand Database Diagram Ownership (Visual Database Tools)"
 title: Understand Database Diagram Ownership
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

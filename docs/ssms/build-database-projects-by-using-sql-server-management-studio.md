@@ -1,4 +1,5 @@
 ---
+description: "Build Database Projects by Using SQL Server Management Studio"
 title: Build Database Projects
 ms.prod: sql
 ms.prod_service: "sql-tools"

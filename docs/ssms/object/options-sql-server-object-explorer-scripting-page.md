@@ -1,4 +1,5 @@
 ---
+description: "Options (SQL Server Object Explorer - Scripting Page)"
 title: "Options (SQL Server Object Explorer - Scripting Page)"
 ms.custom: seo-lt-2019
 ms.date: "08/01/2017"

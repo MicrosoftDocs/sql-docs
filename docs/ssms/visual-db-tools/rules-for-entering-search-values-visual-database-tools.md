@@ -1,4 +1,5 @@
 ---
+description: "Rules for Entering Search Values (Visual Database Tools)"
 title: Rules for Entering Search Values
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

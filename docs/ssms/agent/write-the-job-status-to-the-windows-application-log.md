@@ -1,4 +1,5 @@
 ---
+description: "Write the Job Status to the Windows Application Log"
 title: Write the Job Status to the Windows Application Log
 ms.prod: sql
 ms.prod_service: sql-tools

@@ -1,4 +1,5 @@
 ---
+description: "Create a New Registered Server (SQL Server Management Studio)"
 title: Create a New Registered Server
 ms.prod: sql
 ms.prod_service: sql-tools

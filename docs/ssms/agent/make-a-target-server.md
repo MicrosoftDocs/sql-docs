@@ -1,4 +1,5 @@
 ---
+description: "Make a Target Server"
 title: "Make a Target Server"
 ms.prod: sql
 ms.prod_service: sql-tools

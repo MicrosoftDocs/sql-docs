@@ -1,4 +1,5 @@
 ---
+description: "View Information About an Alert"
 title: "View Information About an Alert"
 ms.prod: sql
 ms.prod_service: sql-tools

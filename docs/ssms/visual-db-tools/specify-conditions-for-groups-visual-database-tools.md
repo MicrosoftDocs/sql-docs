@@ -1,4 +1,5 @@
 ---
+description: "Specify Conditions for Groups (Visual Database Tools)"
 title: Specify Conditions for Groups
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

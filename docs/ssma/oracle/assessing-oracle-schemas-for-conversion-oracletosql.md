@@ -1,4 +1,5 @@
 ---
+description: "Assessing Oracle Schemas for Conversion (OracleToSQL)"
 title: "Assessing Oracle Schemas for Conversion (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

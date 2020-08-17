@@ -1,4 +1,5 @@
 ---
+description: "Get started by running the Enable Database for Stretch Wizard"
 title: "Get started by running the Enable Database for Stretch Wizard"
 ms.date: "08/05/2016"
 ms.service: sql-server-stretch-database

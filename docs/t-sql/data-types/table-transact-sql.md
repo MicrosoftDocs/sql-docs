@@ -1,4 +1,5 @@
 ---
+description: "table (Transact-SQL)"
 title: "table (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/27/2019"

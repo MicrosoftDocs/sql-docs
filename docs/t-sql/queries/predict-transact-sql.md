@@ -1,4 +1,5 @@
 ---
+description: "PREDICT (Transact-SQL)"
 title: "PREDICT (Transact-SQL)"
 titleSuffix: SQL machine learning
 ms.custom: ""

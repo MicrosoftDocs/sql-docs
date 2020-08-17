@@ -1,4 +1,5 @@
 ---
+description: "CREATE EXTERNAL FILE FORMAT (Transact-SQL)"
 title: "CREATE EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 05/08/2020

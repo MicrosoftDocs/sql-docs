@@ -1,4 +1,5 @@
 ---
+description: "SMALLDATETIMEFROMPARTS (Transact-SQL)"
 title: "SMALLDATETIMEFROMPARTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

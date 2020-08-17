@@ -1,4 +1,5 @@
 ---
+description: "INDEXKEY_PROPERTY (Transact-SQL)"
 title: "INDEXKEY_PROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ERROR_MESSAGE (Transact-SQL)"
 title: ERROR_MESSAGE (Transact-SQL)
 ms.custom: ""
 ms.date: "03/16/2017"

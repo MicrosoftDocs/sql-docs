@@ -1,4 +1,5 @@
 ---
+description: "OPENDATASOURCE (Transact-SQL)"
 title: "OPENDATASOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/26/2019"

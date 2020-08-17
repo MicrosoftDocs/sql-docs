@@ -1,4 +1,5 @@
 ---
+description: "OGC Static Geography Methods"
 title: "OGC Static Geography Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ALTER SERVER AUDIT  (Transact-SQL)"
 title: "ALTER SERVER AUDIT  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"

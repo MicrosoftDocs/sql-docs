@@ -1,4 +1,5 @@
 ---
+description: "CREATE XML SCHEMA COLLECTION (Transact-SQL)"
 title: "CREATE XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/25/2015"

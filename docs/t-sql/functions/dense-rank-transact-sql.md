@@ -1,4 +1,5 @@
 ---
+description: "DENSE_RANK (Transact-SQL)"
 title: "DENSE_RANK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

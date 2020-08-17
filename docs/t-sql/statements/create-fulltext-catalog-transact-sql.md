@@ -1,4 +1,5 @@
 ---
+description: "CREATE FULLTEXT CATALOG (Transact-SQL)"
 title: "CREATE FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"

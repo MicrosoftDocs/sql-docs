@@ -1,4 +1,5 @@
 ---
+description: "SELECT - GROUP BY- Transact-SQL"
 title: "GROUP BY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2019"

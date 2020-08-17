@@ -1,4 +1,5 @@
 ---
+description: "Transact-SQL Reference (Database Engine)"
 title: "Transact-SQL Reference (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/29/2020"

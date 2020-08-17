@@ -1,4 +1,5 @@
 ---
+description: "DROP SEQUENCE (Transact-SQL)"
 title: "DROP SEQUENCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2017"

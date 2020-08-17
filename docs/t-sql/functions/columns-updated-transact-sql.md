@@ -1,4 +1,5 @@
 ---
+description: "COLUMNS_UPDATED (Transact-SQL)"
 title: COLUMNS_UPDATED (Transact-SQL)
 ms.custom: ""
 ms.date: "07/25/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ALTER XML SCHEMA COLLECTION (Transact-SQL)"
 title: "ALTER XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "GetAncestor (Database Engine)"
 title: "GetAncestor (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"

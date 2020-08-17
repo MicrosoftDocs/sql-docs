@@ -1,4 +1,5 @@
 ---
+description: "Aggregate Functions (Transact-SQL)"
 title: "Aggregate Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/15/2018"

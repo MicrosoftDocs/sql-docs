@@ -1,4 +1,5 @@
 ---
+description: "ENABLE TRIGGER (Transact-SQL)"
 title: "ENABLE TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/12/2017"

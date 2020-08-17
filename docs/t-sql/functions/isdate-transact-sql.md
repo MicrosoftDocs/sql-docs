@@ -1,4 +1,5 @@
 ---
+description: "ISDATE (Transact-SQL)"
 title: ISDATE (Transact-SQL)
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"

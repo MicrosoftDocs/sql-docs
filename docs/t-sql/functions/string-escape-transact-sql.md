@@ -1,4 +1,5 @@
 ---
+description: "STRING_ESCAPE (Transact-SQL)"
 title: "STRING_ESCAPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/25/2016"

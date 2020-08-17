@@ -1,4 +1,5 @@
 ---
+description: "ALTER MASTER KEY (Transact-SQL)"
 title: "ALTER MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: "fasttrack-edit"
 ms.date: "02/21/2019"

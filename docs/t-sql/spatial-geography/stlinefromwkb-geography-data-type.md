@@ -1,4 +1,5 @@
 ---
+description: "STLineFromWKB (geography Data Type)"
 title: "STLineFromWKB (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"

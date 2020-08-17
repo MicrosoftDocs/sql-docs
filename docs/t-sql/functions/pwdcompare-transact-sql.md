@@ -1,4 +1,5 @@
 ---
+description: "PWDCOMPARE (Transact-SQL)"
 title: "PWDCOMPARE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

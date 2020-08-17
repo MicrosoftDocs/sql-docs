@@ -1,4 +1,5 @@
 ---
+description: "Constants (Transact-SQL)"
 title: "Constants (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"

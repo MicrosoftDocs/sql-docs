@@ -1,4 +1,5 @@
 ---
+description: "SOME | ANY (Transact-SQL)"
 title: "SOME | ANY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

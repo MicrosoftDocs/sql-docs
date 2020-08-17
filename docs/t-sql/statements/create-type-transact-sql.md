@@ -1,4 +1,5 @@
 ---
+description: "CREATE TYPE (Transact-SQL)"
 title: "CREATE TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/05/2019"

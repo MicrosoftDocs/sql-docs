@@ -1,4 +1,5 @@
 ---
+description: "COMMIT TRANSACTION (Transact-SQL)"
 title: "COMMIT TRANSACTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/09/2016"

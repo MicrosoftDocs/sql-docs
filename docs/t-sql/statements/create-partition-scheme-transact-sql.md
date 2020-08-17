@@ -1,4 +1,5 @@
 ---
+description: "CREATE PARTITION SCHEME (Transact-SQL)"
 title: "CREATE PARTITION SCHEME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"

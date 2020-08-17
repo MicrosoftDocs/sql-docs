@@ -1,4 +1,5 @@
 ---
+description: "MinDbCompatibilityLevel (geometry Data Type)"
 title: "MinDbCompatibilityLevel (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"

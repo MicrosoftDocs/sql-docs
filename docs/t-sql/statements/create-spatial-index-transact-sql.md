@@ -1,4 +1,5 @@
 ---
+description: "CREATE SPATIAL INDEX (Transact-SQL)"
 title: "CREATE SPATIAL INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2019"

@@ -1,4 +1,5 @@
 ---
+description: "sp_helpdbfixedrole (Transact-SQL)"
 title: "sp_helpdbfixedrole (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

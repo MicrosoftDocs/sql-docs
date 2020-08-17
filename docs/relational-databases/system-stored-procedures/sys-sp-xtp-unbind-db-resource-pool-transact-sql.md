@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_xtp_unbind_db_resource_pool (Transact-SQL)"
 title: "sys.sp_xtp_unbind_db_resource_pool (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

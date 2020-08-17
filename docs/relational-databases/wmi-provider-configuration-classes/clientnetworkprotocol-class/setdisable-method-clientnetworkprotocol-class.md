@@ -1,4 +1,5 @@
 ---
+description: "SetDisable Method (ClientNetworkProtocol Class)"
 title: "SetDisable Method (ClientNetworkProtocol)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

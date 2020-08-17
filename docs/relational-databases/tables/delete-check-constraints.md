@@ -1,4 +1,5 @@
 ---
+description: "Delete Check Constraints"
 title: "Delete Check Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2017"

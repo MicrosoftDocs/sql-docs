@@ -1,4 +1,5 @@
 ---
+description: "sp_posttracertoken (Transact-SQL)"
 title: "sp_posttracertoken (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

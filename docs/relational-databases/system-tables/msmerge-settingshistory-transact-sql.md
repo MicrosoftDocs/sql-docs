@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_settingshistory (Transact-SQL)"
 title: "MSmerge_settingshistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

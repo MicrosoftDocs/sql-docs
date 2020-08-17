@@ -1,4 +1,5 @@
 ---
+description: "sp_table_validation (Transact-SQL)"
 title: "sp_table_validation (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2016"

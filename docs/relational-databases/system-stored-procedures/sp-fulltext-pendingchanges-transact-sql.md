@@ -1,4 +1,5 @@
 ---
+description: "sp_fulltext_pendingchanges (Transact-SQL)"
 title: "sp_fulltext_pendingchanges (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

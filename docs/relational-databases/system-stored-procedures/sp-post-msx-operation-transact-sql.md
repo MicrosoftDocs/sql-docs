@@ -1,4 +1,5 @@
 ---
+description: "sp_post_msx_operation (Transact-SQL)"
 title: "sp_post_msx_operation (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

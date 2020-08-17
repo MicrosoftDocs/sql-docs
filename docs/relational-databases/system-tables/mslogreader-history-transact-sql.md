@@ -1,4 +1,5 @@
 ---
+description: "MSlogreader_history (Transact-SQL)"
 title: "MSlogreader_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

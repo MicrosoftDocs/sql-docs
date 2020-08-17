@@ -1,4 +1,5 @@
 ---
+description: "ExpirationDate Property (SecurityCertificate Class)"
 title: "ExpirationDate Property (SecurityCertificate)"
 ms.custom: seo-lt-2019
 ms.date: "03/06/2017"

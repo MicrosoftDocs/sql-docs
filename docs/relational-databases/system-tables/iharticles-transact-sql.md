@@ -1,4 +1,5 @@
 ---
+description: "IHarticles (Transact-SQL)"
 title: "IHarticles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

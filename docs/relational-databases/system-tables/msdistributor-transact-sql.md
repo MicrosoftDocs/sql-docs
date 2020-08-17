@@ -1,4 +1,5 @@
 ---
+description: "MSdistributor (Transact-SQL)"
 title: "MSdistributor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

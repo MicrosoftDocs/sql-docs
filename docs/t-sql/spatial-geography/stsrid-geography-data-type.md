@@ -1,4 +1,5 @@
 ---
+description: "STSrid (geography Data Type)"
 title: "STSrid (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

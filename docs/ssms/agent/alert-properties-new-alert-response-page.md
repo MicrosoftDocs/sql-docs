@@ -1,4 +1,5 @@
 ---
+description: "Alert Properties - New Alert (Response Page)"
 title: "Alert Properties - New Alert (Response Page)"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

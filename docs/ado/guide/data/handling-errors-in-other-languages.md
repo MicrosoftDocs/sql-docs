@@ -1,4 +1,5 @@
 ---
+description: "Handling Errors In Other Languages"
 title: "Handling Errors In Other Languages | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

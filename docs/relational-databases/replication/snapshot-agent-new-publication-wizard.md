@@ -1,4 +1,5 @@
 ---
+description: "Snapshot Agent (New Publication Wizard)"
 title: "Snapshot Agent (New Publication Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

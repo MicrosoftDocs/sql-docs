@@ -1,4 +1,5 @@
 ---
+description: "Local audit for SSMS usage and diagnostic data collection"
 title: Usage and Diagnostic Data
 ms.custom: seo-lt-2019
 ms.date: "04/16/2019"

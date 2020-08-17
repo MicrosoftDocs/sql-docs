@@ -1,4 +1,5 @@
 ---
+description: "SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)"
 title: "SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

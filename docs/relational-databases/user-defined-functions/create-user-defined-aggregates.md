@@ -1,4 +1,5 @@
 ---
+description: "Create User-defined Aggregates"
 title: "Create User-defined Aggregates | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

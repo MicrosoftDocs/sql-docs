@@ -1,4 +1,5 @@
 ---
+description: "Parameters Collection, Command Property Example (VB)"
 title: "Parameters Collection, Command Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

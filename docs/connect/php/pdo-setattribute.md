@@ -1,4 +1,5 @@
 ---
+description: "PDO::setAttribute"
 title: "PDO::setAttribute | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/22/2019"

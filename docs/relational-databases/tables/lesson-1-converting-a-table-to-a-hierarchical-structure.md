@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1: Converting a Table to a Hierarchical Structure"
 title: "Lesson 1: Converting a Table to a Hierarchical Structure | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/22/2018"

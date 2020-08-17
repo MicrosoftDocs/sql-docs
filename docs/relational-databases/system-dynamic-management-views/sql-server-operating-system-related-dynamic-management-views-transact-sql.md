@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Operating System Related Dynamic Management Views (Transact-SQL)"
 title: "SQL Server Operating System Related Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/17/2018"

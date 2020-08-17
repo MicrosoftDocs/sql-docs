@@ -1,4 +1,5 @@
 ---
+description: "ProtocolName Property (ClientNetLibInfo Class)"
 title: "ProtocolName Property (ClientNetLibInfo)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"

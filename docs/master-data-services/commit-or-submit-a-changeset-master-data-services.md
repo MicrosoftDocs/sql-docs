@@ -1,4 +1,5 @@
 ---
+description: "Commit or Submit a Changeset (Master Data Services)"
 title: Commit or Submit a Changeset
 ms.custom: ""
 ms.date: "03/01/2017"

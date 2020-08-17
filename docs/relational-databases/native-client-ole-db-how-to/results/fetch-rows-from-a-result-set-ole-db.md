@@ -1,4 +1,5 @@
 ---
+description: "Fetch rows from a result set (Native Client OLE DB provider)"
 title: "Fetch rows from a result set (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

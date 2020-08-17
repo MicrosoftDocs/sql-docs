@@ -1,4 +1,5 @@
 ---
+description: "AbsolutePage, PageCount, and PageSize Properties Example (JScript)"
 title: "AbsolutePage, PageCount, and PageSize Properties Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "GetString Method Example (VB)"
 title: "GetString Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

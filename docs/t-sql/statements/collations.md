@@ -1,4 +1,5 @@
 ---
+description: "COLLATE (Transact-SQL)"
 title: "COLLATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/30/2019"

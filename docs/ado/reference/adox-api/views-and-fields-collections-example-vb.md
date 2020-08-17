@@ -1,4 +1,5 @@
 ---
+description: "Views and Fields Collections Example (VB)"
 title: "Views and Fields Collections Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

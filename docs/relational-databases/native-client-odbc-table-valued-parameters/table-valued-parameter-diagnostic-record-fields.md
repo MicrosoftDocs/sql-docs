@@ -1,4 +1,5 @@
 ---
+description: "Table-Valued Parameter Diagnostic Record Fields"
 title: "Table-Valued Parameter Diagnostic Record Fields | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

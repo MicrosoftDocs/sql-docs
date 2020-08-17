@@ -1,4 +1,5 @@
 ---
+description: "Backup and Restore Tables (Transact-SQL)"
 title: "Backup and Restore Tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Microsoft Connector for Oracle"
 title: "Microsoft Connector for Oracle | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2019"

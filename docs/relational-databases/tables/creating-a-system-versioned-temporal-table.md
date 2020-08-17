@@ -1,4 +1,5 @@
 ---
+description: "Creating a System-Versioned Temporal Table"
 title: "Creating a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/15/2019"

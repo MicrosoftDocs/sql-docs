@@ -1,4 +1,5 @@
 ---
+description: "Configure column encryption using Always Encrypted with PowerShell"
 title: "Configure column encryption using Always Encrypted with PowerShell | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/31/2019"

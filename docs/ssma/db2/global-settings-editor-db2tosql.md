@@ -1,4 +1,5 @@
 ---
+description: "Global Settings (Editor) (DB2ToSQL)"
 title: "Global Settings (Editor) (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

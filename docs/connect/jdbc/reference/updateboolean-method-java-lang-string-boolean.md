@@ -1,4 +1,5 @@
 ---
+description: "updateBoolean Method (java.lang.String, boolean)"
 title: "updateBoolean Method (java.lang.String, boolean) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

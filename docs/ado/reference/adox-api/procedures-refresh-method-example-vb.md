@@ -1,4 +1,5 @@
 ---
+description: "Procedures Refresh Method Example (VB)"
 title: "Procedures Refresh Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

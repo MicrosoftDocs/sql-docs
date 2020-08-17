@@ -1,4 +1,5 @@
 ---
+description: "catalog.cleanup_server_log"
 title: "catalog.cleanup_server_log | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

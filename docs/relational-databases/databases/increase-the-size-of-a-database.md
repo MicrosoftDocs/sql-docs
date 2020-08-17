@@ -1,4 +1,5 @@
 ---
+description: "Increase the Size of a Database"
 title: "Increase the Size of a Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

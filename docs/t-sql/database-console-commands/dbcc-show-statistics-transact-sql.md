@@ -1,4 +1,5 @@
 ---
+description: "DBCC SHOW_STATISTICS (Transact-SQL)"
 title: "DBCC SHOW_STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"

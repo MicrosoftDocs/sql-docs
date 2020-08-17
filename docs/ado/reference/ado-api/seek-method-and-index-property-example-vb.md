@@ -1,4 +1,5 @@
 ---
+description: "Seek Method and Index Property Example (VB)"
 title: "Seek Method and Index Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Internet Publishing Scenario"
 title: "Internet Publishing Scenario | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

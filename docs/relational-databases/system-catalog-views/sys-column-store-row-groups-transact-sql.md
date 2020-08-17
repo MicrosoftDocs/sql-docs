@@ -1,4 +1,5 @@
 ---
+description: "sys.column_store_row_groups (Transact-SQL)"
 title: "sys.column_store_row_groups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

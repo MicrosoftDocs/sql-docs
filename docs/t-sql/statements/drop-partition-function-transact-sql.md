@@ -1,4 +1,5 @@
 ---
+description: "DROP PARTITION FUNCTION (Transact-SQL)"
 title: "DROP PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

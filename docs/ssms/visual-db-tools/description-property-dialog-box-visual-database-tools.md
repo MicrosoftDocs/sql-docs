@@ -1,4 +1,5 @@
 ---
+description: "Description Property Dialog Box (Visual Database Tools)"
 title: Description Property Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

@@ -1,4 +1,5 @@
 ---
+description: "Appendix D: ADO Samples in the Windows SDK"
 title: "Appendix D: ADO Samples | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

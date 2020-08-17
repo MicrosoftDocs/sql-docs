@@ -1,4 +1,5 @@
 ---
+description: "Configure a URL  (SSRS Configuration Manager)"
 title: "Configure a URL  (Configuration Manager) | Microsoft Docs"
 ms.date: 05/26/2016
 ms.prod: reporting-services

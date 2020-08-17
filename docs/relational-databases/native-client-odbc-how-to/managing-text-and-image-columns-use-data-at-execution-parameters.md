@@ -1,4 +1,5 @@
 ---
+description: "Managing text and image Columns - Use Data-at-Execution Parameters"
 title: "Use Data-at-Execution Parameters (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

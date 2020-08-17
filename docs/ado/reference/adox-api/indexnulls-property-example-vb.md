@@ -1,4 +1,5 @@
 ---
+description: "IndexNulls Property Example (VB)"
 title: "IndexNulls Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

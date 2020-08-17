@@ -1,4 +1,5 @@
 ---
+description: "Logging in the Script Component"
 title: "Logging in the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

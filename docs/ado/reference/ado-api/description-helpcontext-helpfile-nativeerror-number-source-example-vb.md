@@ -1,4 +1,5 @@
 ---
+description: "Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VB)"
 title: "Error Object Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

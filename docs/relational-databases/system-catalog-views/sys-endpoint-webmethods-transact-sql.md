@@ -1,4 +1,5 @@
 ---
+description: "sys.endpoint_webmethods (Transact-SQL)"
 title: "sys.endpoint_webmethods (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "OLE DB Table-Valued Parameter Type Support in SQL Server Native Client (Properties)"
 title: "OLE DB Table-Valued Parameter type (Properties)"
 ms.custom: ""
 ms.date: "03/06/2017"

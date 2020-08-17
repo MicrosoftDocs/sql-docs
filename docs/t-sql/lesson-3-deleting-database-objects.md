@@ -1,4 +1,5 @@
 ---
+description: "T-SQL Tutorial: Delete database objects"
 title: "T-SQL Tutorial: Delete database objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2018"

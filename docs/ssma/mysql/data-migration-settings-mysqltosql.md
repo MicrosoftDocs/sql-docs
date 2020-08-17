@@ -1,4 +1,5 @@
 ---
+description: "Data Migration Settings (MySQLToSQL)"
 title: "Data Migration Settings (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

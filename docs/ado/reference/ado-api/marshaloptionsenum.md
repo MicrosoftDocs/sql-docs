@@ -1,4 +1,5 @@
 ---
+description: "MarshalOptionsEnum"
 title: "MarshalOptionsEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

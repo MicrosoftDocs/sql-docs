@@ -1,4 +1,5 @@
 ---
+description: "ALTER TABLE column_constraint (Transact-SQL)"
 title: "column_constraint (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2017"

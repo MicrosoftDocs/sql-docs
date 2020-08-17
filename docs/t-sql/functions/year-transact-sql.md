@@ -1,4 +1,5 @@
 ---
+description: "YEAR (Transact-SQL)"
 title: "YEAR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

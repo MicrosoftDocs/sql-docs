@@ -1,4 +1,5 @@
 ---
+description: "MSreplication_options (Transact-SQL)"
 title: "MSreplication_options (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

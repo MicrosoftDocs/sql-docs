@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysjobactivity (Transact-SQL)"
 title: "dbo.sysjobactivity (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/05/2016"

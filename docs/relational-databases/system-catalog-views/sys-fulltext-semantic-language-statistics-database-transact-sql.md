@@ -1,4 +1,5 @@
 ---
+description: "sys.fulltext_semantic_language_statistics_database (Transact-SQL)"
 title: "sys.fulltext_semantic_language_statistics_database (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

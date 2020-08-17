@@ -1,4 +1,5 @@
 ---
+description: "Hierarchy Object (ADO MD)"
 title: "Hierarchy Object (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

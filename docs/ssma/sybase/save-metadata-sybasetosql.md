@@ -1,4 +1,5 @@
 ---
+description: "Save Metadata  (SybaseToSQL)"
 title: "Save Metadata  (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

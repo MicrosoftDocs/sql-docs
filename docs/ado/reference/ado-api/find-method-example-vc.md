@@ -1,4 +1,5 @@
 ---
+description: "Find Method Example (VC++)"
 title: "Find Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

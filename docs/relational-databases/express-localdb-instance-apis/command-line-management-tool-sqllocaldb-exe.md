@@ -1,4 +1,5 @@
 ---
+description: "Command-Line Management Tool: SqlLocalDB.exe"
 title: "Command-Line Management Tool: SqlLocalDB.exe | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

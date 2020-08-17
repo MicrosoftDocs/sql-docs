@@ -1,4 +1,5 @@
 ---
+description: "UpdateBatch and CancelBatch Methods Example (VC++)"
 title: "UpdateBatch and CancelBatch Methods Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

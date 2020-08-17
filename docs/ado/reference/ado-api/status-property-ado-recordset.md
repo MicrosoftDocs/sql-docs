@@ -1,4 +1,5 @@
 ---
+description: "Status Property (ADO Recordset)"
 title: "Status Property (ADO Recordset) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

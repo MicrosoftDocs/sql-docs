@@ -1,4 +1,5 @@
 ---
+description: "sys.system_columns (Transact-SQL)"
 title: "sys.system_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

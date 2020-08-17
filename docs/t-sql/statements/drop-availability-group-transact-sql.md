@@ -1,4 +1,5 @@
 ---
+description: "DROP AVAILABILITY GROUP (Transact-SQL)"
 title: "DROP AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

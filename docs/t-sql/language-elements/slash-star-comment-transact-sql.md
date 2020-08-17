@@ -1,4 +1,5 @@
 ---
+description: "Slash Star (Block Comment) (Transact-SQL)"
 title: "Slash Star (Block Comment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"

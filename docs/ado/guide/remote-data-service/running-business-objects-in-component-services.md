@@ -1,4 +1,5 @@
 ---
+description: "Running Business Objects in Component Services"
 title: "Running Business Objects in Component Services | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

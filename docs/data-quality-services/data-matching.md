@@ -1,4 +1,5 @@
 ---
+description: "Data Matching"
 title: "Data Matching"
 ms.date: "10/01/2012"
 ms.prod: sql

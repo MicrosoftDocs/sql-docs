@@ -1,4 +1,5 @@
 ---
+description: "Recordset (ADO for Visual C++ Syntax)"
 title: "Recordset (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

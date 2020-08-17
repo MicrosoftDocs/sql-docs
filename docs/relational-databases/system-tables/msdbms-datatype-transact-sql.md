@@ -1,4 +1,5 @@
 ---
+description: "MSdbms_datatype (Transact-SQL)"
 title: "MSdbms_datatype (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

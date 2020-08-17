@@ -1,4 +1,5 @@
 ---
+description: "Command-line options in the SSMA Console (AccessToSQL)"
 title: "Command Line Options in SSMA Console (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

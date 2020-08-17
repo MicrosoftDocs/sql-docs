@@ -1,4 +1,5 @@
 ---
+description: "sp_get_distributor (Transact-SQL)"
 title: "sp_get_distributor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

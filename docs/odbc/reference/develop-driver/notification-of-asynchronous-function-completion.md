@@ -1,4 +1,5 @@
 ---
+description: "Notification of Asynchronous Function Completion"
 title: "Notification of Asynchronous Function Completion | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

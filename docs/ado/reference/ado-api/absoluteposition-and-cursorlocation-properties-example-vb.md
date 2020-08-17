@@ -1,4 +1,5 @@
 ---
+description: "AbsolutePosition and CursorLocation Properties Example (VB)"
 title: "AbsolutePosition and CursorLocation Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

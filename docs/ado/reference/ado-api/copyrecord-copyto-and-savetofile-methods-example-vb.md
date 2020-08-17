@@ -1,4 +1,5 @@
 ---
+description: "CopyRecord, CopyTo, and SaveToFile Methods Example (VB)"
 title: "CopyRecord, CopyTo, and SaveToFile Methods Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

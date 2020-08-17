@@ -1,4 +1,5 @@
 ---
+description: "syscollector_collector_types (Transact-SQL)"
 title: "syscollector_collector_types (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

@@ -1,4 +1,5 @@
 ---
+description: "SQLRemoveDSNFromIni Function"
 title: "SQLRemoveDSNFromIni Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

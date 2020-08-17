@@ -1,4 +1,5 @@
 ---
+description: "Connecting to Microsoft Azure SQL Database"
 title: "Connecting to Microsoft Azure SQL Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

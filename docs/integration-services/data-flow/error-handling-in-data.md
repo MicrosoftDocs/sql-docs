@@ -1,4 +1,5 @@
 ---
+description: "Error Handling in Data"
 title: "Error Handling in Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

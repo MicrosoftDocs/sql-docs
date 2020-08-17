@@ -1,4 +1,5 @@
 ---
+description: "Logical Functions - CHOOSE (Transact-SQL)"
 title: "CHOOSE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Catalog Example (VB)"
 title: "Catalog Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

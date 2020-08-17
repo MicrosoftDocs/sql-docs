@@ -1,4 +1,5 @@
 ---
+description: "DROP DEFAULT (Transact-SQL)"
 title: "DROP DEFAULT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"

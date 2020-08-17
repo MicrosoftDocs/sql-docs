@@ -1,4 +1,5 @@
 ---
+description: "Deleting Records Using the Delete Method"
 title: "Deleting Records Using the Delete Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

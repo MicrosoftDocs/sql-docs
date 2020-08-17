@@ -1,4 +1,5 @@
 ---
+description: "MSrepl_errors (Transact-SQL)"
 title: "MSrepl_errors (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

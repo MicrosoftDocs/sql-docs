@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_resource_governor_workload_groups (Transact-SQL)"
 title: "sys.dm_resource_governor_workload_groups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/15/2020"

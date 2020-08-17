@@ -1,4 +1,5 @@
 ---
+description: "Standards-Compliant Applications and Drivers"
 title: "Standards-Compliant Applications and Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

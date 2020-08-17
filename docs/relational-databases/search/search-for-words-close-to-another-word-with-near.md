@@ -1,4 +1,5 @@
 ---
+description: "Search for Words Close to Another Word with NEAR"
 title: "Search for Words Close to Another Word with NEAR | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

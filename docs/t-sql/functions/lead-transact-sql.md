@@ -1,4 +1,5 @@
 ---
+description: "LEAD (Transact-SQL)"
 title: "LEAD (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/09/2017"

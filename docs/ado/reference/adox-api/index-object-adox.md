@@ -1,4 +1,5 @@
 ---
+description: "Index Object (ADOX)"
 title: "Index Object (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

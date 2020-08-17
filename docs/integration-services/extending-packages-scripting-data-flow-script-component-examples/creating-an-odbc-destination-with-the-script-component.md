@@ -1,4 +1,5 @@
 ---
+description: "Creating an ODBC Destination with the Script Component"
 title: "Creating an ODBC Destination with the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/10/2018"

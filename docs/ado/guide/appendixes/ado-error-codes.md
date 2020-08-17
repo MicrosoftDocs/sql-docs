@@ -1,4 +1,5 @@
 ---
+description: "Capture ADO Error Codes"
 title: "ADO Error Codes | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

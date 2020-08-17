@@ -1,4 +1,5 @@
 ---
+description: "Create a Composite Domain"
 title: "Create a Composite Domain"
 ms.date: "11/22/2011"
 ms.prod: sql

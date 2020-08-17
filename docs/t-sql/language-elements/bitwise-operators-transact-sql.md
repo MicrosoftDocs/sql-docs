@@ -1,4 +1,5 @@
 ---
+description: "Bitwise Operators (Transact-SQL)"
 title: "Bitwise Operators (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/04/2019"

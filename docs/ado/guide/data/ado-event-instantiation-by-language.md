@@ -1,4 +1,5 @@
 ---
+description: "ADO Event Instantiation by Language"
 title: "ADO Event Instantiation by Language | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

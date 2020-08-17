@@ -1,4 +1,5 @@
 ---
+description: "SET QUOTED_IDENTIFIER (Transact-SQL)"
 title: "SET QUOTED_IDENTIFIER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2019"

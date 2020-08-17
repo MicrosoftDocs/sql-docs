@@ -1,4 +1,5 @@
 ---
+description: "Candidate Key Profile Request Options (Data Profiling Task)"
 title: "Candidate Key Profile Request Options (Data Profiling Task) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

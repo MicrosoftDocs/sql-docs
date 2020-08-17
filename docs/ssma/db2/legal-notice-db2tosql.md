@@ -1,4 +1,5 @@
 ---
+description: "Legal Notice (DB2toSQL)"
 title: "Legal Notice (DB2toSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

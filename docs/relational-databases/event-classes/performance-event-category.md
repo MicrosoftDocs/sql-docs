@@ -1,4 +1,5 @@
 ---
+description: "Performance Event Category"
 title: "Performance Event Category | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

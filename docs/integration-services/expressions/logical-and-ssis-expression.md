@@ -1,4 +1,5 @@
 ---
+description: "&amp;&amp; (Logical AND) (SSIS Expression)"
 title: "&amp;&amp; (Logical AND) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

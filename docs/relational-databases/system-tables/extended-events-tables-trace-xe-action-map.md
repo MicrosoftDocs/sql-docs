@@ -1,4 +1,5 @@
 ---
+description: "Extended Events Tables - trace_xe_action_map"
 title: "trace_xe_action_map (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

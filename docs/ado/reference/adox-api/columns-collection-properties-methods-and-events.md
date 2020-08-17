@@ -1,4 +1,5 @@
 ---
+description: "Columns Collection Properties, Methods, and Events"
 title: "Columns Collection Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

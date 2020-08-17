@@ -1,4 +1,5 @@
 ---
+description: "getSQLXML Method (int) (SQLServerResultSet)"
 title: "getSQLXML Method (int) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

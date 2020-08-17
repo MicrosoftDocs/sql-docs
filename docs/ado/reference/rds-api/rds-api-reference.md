@@ -1,4 +1,5 @@
 ---
+description: "RDS API Reference"
 title: "RDS API Reference | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

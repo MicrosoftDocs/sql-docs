@@ -1,4 +1,5 @@
 ---
+description: "OriginalValue and UnderlyingValue Properties Example (VB)"
 title: "OriginalValue and UnderlyingValue Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

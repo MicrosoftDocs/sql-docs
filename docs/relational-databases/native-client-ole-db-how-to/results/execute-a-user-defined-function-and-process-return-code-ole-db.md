@@ -1,4 +1,5 @@
 ---
+description: "Execute a SQL Server Native Client User-Defined Function and Process Return Code (OLE DB)"
 title: "User-Defined Function, Return Code (OLE DB)"
 ms.custom: ""
 ms.date: "03/14/2017"

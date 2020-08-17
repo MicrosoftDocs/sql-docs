@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_begin_transaction"
 title: "sqlsrv_begin_transaction | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"

@@ -1,4 +1,5 @@
 ---
+description: "REPLICATE (Transact-SQL)"
 title: "REPLICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"

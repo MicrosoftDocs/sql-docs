@@ -1,4 +1,5 @@
 ---
+description: "Initialization of Descriptor Fields"
 title: "Initialization of Descriptor Fields | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

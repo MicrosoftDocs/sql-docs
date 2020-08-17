@@ -1,4 +1,5 @@
 ---
+description: "DROP FUNCTION (Transact-SQL)"
 title: "DROP FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/11/2020"

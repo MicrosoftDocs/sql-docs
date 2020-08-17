@@ -1,4 +1,5 @@
 ---
+description: "xml Data Type Methods"
 title: xml Data Type Methods
 ms.custom: ""
 ms.date: "03/16/2017"

@@ -1,4 +1,5 @@
 ---
+description: "bcp_moretext"
 title: "bcp_moretext | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

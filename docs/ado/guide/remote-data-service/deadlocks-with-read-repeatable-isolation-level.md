@@ -1,4 +1,5 @@
 ---
+description: "Deadlocks with Read Repeatable Isolation Level"
 title: "Deadlocks with Read Repeatable Isolation Level | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

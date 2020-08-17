@@ -1,4 +1,5 @@
 ---
+description: "Sort Property Example (VC++)"
 title: "Sort Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

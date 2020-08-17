@@ -1,4 +1,5 @@
 ---
+description: "Working with Multidimensional Data"
 title: "Working with Multidimensional Data | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

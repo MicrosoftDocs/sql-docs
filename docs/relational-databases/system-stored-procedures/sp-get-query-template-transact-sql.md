@@ -1,4 +1,5 @@
 ---
+description: "sp_get_query_template (Transact-SQL)"
 title: "sp_get_query_template (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

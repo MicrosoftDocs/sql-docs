@@ -1,4 +1,5 @@
 ---
+description: "Replication Related Dynamic Management Views (Transact-SQL)"
 title: "Replication Related Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

@@ -1,4 +1,5 @@
 ---
+description: "FREETEXT (Transact-SQL)"
 title: "FREETEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2017"

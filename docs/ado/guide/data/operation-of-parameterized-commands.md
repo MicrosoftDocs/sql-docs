@@ -1,4 +1,5 @@
 ---
+description: "Operation of Parameterized Commands"
 title: "Operation of Parameterized Commands | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

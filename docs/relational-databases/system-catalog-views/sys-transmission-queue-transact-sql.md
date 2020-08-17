@@ -1,4 +1,5 @@
 ---
+description: "sys.transmission_queue (Transact-SQL)"
 title: "sys.transmission_queue (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

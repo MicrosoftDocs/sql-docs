@@ -1,4 +1,5 @@
 ---
+description: "Create a Transact-SQL Job Step"
 title: "Create a Transact-SQL Job Step"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

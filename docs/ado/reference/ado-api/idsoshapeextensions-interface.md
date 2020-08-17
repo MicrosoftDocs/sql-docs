@@ -1,4 +1,5 @@
 ---
+description: "IDSOShapeExtensions Interface"
 title: "IDSOShapeExtensions Interface | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

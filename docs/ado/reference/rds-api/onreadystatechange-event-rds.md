@@ -1,4 +1,5 @@
 ---
+description: "onReadyStateChange Event (RDS)"
 title: "onReadyStateChange Event (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

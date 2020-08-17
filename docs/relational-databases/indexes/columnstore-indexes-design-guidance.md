@@ -1,4 +1,5 @@
 ---
+description: "Columnstore indexes - Design guidance"
 title: "Columnstore indexes - Design guidance | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"

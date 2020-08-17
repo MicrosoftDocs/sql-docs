@@ -1,4 +1,5 @@
 ---
+description: "sys.database_mirroring_endpoints (Transact-SQL)"
 title: "sys.database_mirroring_endpoints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

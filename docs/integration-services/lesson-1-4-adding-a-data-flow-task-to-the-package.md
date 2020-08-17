@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-4: Add a Data Flow task to the package"
 title: "Step 4: Add a Data Flow task to the package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"

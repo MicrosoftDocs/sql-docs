@@ -1,4 +1,5 @@
 ---
+description: "Add Related Tables to Diagrams (Visual Database Tools)"
 title: Add Related Tables to Diagrams
 ms.prod: sql
 ms.prod_service: sql-tools

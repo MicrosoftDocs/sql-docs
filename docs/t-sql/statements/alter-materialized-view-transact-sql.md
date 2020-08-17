@@ -1,4 +1,5 @@
 ---
+description: "ALTER MATERIALIZED VIEW (Transact-SQL)"
 title: "ALTER MATERIALIZED VIEW (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/03/2019"

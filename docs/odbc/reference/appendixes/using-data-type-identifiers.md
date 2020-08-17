@@ -1,4 +1,5 @@
 ---
+description: "Using Data Type Identifiers"
 title: "Using Data Type Identifiers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)"
 title: "FROM: JOIN, APPLY, PIVOT (T-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/01/2019"

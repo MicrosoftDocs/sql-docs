@@ -1,4 +1,5 @@
 ---
+description: "Handler Property Example (VB)"
 title: "Handler Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_xtp_merge_requests (Transact-SQL)"
 title: "sys.dm_db_xtp_merge_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_dispatcher_pools (Transact-SQL)"
 title: "sys.dm_os_dispatcher_pools (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Data-tier Application Tables - sysdac_instances_internal"
 title: "sysdac_instances_internal (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

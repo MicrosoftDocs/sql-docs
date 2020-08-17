@@ -1,4 +1,5 @@
 ---
+description: "Types of Events"
 title: "Types of Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "MSdbms (Transact-SQL)"
 title: "MSdbms (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

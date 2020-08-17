@@ -1,4 +1,5 @@
 ---
+description: "Refresh from database (MySQLToSQL)"
 title: "Refresh from database (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

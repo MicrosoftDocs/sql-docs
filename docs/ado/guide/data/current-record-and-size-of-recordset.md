@@ -1,4 +1,5 @@
 ---
+description: "Current Record and Size of Recordset"
 title: "Current Record and Size of Recordset | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

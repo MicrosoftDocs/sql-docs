@@ -1,4 +1,5 @@
 ---
+description: "isWrapperFor Method (SQLServerCallableStatement)"
 title: "isWrapperFor Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Axis Object Properties, Methods, and Events"
 title: "Axis Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

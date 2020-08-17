@@ -1,4 +1,5 @@
 ---
+description: "UniqueName Property (ADO MD)"
 title: "UniqueName Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

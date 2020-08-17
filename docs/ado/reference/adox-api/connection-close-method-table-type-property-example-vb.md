@@ -1,4 +1,5 @@
 ---
+description: "Connection Close Method, Table Type Property Example (VB)"
 title: "Connection Close Method, Table Type Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

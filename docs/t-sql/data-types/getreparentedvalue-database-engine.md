@@ -1,4 +1,5 @@
 ---
+description: "GetReparentedValue (Database Engine)"
 title: "GetReparentedValue (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"

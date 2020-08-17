@@ -1,4 +1,5 @@
 ---
+description: "DateCreated and DateModified Properties Example (VB)"
 title: "DateCreated and DateModified Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

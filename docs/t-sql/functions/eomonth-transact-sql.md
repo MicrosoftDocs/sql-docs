@@ -1,4 +1,5 @@
 ---
+description: "EOMONTH (Transact-SQL)"
 title: "EOMONTH (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

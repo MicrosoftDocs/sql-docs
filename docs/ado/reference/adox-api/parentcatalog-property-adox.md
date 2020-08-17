@@ -1,4 +1,5 @@
 ---
+description: "ParentCatalog Property (ADOX)"
 title: "ParentCatalog Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Enabling a DLL to Run on DCOM"
 title: "Enabling a DLL to Run on DCOM | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

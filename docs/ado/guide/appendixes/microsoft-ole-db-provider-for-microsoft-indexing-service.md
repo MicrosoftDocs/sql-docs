@@ -1,4 +1,5 @@
 ---
+description: "Microsoft OLE DB Provider for Microsoft Indexing Service Overview"
 title: "Microsoft OLE DB Provider for Microsoft Indexing Service | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

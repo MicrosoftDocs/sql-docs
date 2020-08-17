@@ -1,4 +1,5 @@
 ---
+description: "Finding More SQL Server Native Client Information"
 title: "Finding More Information"
 ms.custom: ""
 ms.date: "03/14/2017"

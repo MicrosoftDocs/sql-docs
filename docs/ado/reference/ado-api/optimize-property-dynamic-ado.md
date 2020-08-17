@@ -1,4 +1,5 @@
 ---
+description: "Optimize Property-Dynamic (ADO)"
 title: "Optimize Property-Dynamic (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

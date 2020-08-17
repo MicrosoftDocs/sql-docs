@@ -1,4 +1,5 @@
 ---
+description: "ADO Enumerated Constants"
 title: "ADO Enumerated Constants | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

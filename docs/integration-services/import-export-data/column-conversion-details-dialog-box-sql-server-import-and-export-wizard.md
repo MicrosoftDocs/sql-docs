@@ -1,4 +1,5 @@
 ---
+description: "Column Conversion Details Dialog Box (SQL Server Import and Export Wizard)"
 title: "Column Conversion Details Dialog Box (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/16/2017"

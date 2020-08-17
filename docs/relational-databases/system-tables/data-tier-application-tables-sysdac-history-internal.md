@@ -1,4 +1,5 @@
 ---
+description: "Data-tier Application Tables - sysdac_history_internal"
 title: "sysdac_history_internal (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

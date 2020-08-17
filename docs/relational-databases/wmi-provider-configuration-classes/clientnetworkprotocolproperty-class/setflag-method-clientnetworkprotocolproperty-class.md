@@ -1,4 +1,5 @@
 ---
+description: "SetFlag Method (ClientNetworkProtocolProperty Class)"
 title: "SetFlag Method (ClientNetworkProtocolProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

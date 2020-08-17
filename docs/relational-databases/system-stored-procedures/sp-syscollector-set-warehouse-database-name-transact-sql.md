@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_set_warehouse_database_name (Transact-SQL)"
 title: "sp_syscollector_set_warehouse_database_name (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

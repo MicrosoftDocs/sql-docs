@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_xtp_control_proc_exec_stats (Transact-SQL)"
 title: "sys.sp_xtp_control_proc_exec_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

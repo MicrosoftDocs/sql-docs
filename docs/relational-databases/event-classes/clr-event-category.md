@@ -1,4 +1,5 @@
 ---
+description: "CLR Event Category"
 title: "CLR Event Category | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "PropertyAttributesEnum"
 title: "PropertyAttributesEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

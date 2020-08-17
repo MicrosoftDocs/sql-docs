@@ -1,4 +1,5 @@
 ---
+description: "SUSER_ID (Transact-SQL)"
 title: "SUSER_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"

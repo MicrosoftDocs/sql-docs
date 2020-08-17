@@ -1,4 +1,5 @@
 ---
+description: "Extended Properties Catalog Views - sys.extended_properties"
 title: "sys.extended_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

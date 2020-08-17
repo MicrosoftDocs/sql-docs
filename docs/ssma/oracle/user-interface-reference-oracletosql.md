@@ -1,4 +1,5 @@
 ---
+description: "User Interface Reference (OracleToSQL)"
 title: "User Interface Reference (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

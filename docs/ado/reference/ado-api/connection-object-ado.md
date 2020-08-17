@@ -1,4 +1,5 @@
 ---
+description: "Connection Object (ADO)"
 title: "Connection Object (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

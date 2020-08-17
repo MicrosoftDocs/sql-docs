@@ -1,4 +1,5 @@
 ---
+description: "Assign a Job to a Job Category"
 title: "Assign a Job to a Job Category"
 ms.prod: sql
 ms.prod_service: sql-tools

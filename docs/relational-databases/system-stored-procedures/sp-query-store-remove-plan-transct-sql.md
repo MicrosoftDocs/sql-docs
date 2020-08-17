@@ -1,4 +1,5 @@
 ---
+description: "sp_query_store_remove_plan (Transct-SQL)"
 title: "sp_query_store_remove_plan (Transct-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2016"

@@ -1,4 +1,5 @@
 ---
+description: "Data Quality Matching Columns (MDS Add-in for Excel)"
 title: Data Quality Matching Columns
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_depends (Transact-SQL)"
 title: "sp_depends (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

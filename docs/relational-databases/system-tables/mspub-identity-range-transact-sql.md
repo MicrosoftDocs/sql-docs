@@ -1,4 +1,5 @@
 ---
+description: "MSpub_identity_range (Transact-SQL)"
 title: "MSpub_identity_range (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

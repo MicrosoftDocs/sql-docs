@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_virtual_address_dump (Transact-SQL)"
 title: "sys.dm_os_virtual_address_dump (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

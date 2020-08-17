@@ -1,4 +1,5 @@
 ---
+description: "Flush Method (ADO)"
 title: "Flush Method (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

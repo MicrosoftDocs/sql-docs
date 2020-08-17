@@ -1,4 +1,5 @@
 ---
+description: "Required Providers for Data Shaping"
 title: "Required Providers for Data Shaping | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

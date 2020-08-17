@@ -1,4 +1,5 @@
 ---
+description: "I/O Related Dynamic Management Views and Functions (Transact-SQL)"
 title: "I/O Related Dynamic Management Views and Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

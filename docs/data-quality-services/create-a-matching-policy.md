@@ -1,4 +1,5 @@
 ---
+description: "Create a Matching Policy"
 title: "Create a Matching Policy"
 ms.date: "03/01/2017"
 ms.prod: sql

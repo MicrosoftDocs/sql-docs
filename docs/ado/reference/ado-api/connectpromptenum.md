@@ -1,4 +1,5 @@
 ---
+description: "ConnectPromptEnum"
 title: "ConnectPromptEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

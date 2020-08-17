@@ -1,4 +1,5 @@
 ---
+description: "DROP FULLTEXT INDEX (Transact-SQL)"
 title: "DROP FULLTEXT INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

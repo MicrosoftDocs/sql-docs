@@ -1,4 +1,5 @@
 ---
+description: "Axis Example (VBScript)"
 title: "Axis Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "CInstance Class - SetDefaults Method"
 title: "SetDefaults Method (CInstance)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

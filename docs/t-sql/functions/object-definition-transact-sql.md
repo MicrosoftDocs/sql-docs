@@ -1,4 +1,5 @@
 ---
+description: "OBJECT_DEFINITION (Transact-SQL)"
 title: "OBJECT_DEFINITION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

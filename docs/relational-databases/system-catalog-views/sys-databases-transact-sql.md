@@ -1,4 +1,5 @@
 ---
+description: "sys.databases (Transact-SQL)"
 title: "sys.databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/08/2020"

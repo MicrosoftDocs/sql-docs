@@ -1,4 +1,5 @@
 ---
+description: "updateShort Method (int, short)"
 title: "updateShort Method (int, short) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

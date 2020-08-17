@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_partition_groups (Transact-SQL)"
 title: "MSmerge_partition_groups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

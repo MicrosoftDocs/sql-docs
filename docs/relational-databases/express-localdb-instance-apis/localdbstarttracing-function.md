@@ -1,4 +1,5 @@
 ---
+description: "LocalDBStartTracing Function"
 title: "LocalDBStartTracing Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

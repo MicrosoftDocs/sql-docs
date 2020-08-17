@@ -1,4 +1,5 @@
 ---
+description: "BINARY_CHECKSUM  (Transact-SQL)"
 title: "BINARY_CHECKSUM  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"

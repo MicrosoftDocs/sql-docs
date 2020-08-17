@@ -1,4 +1,5 @@
 ---
+description: "Add Tables to a CDC Instance"
 title: "Add Tables to a CDC Instance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

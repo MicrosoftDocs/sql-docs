@@ -1,4 +1,5 @@
 ---
+description: "sys.system_components_surface_area_configuration (Transact-SQL)"
 title: "sys.system_components_surface_area_configuration (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

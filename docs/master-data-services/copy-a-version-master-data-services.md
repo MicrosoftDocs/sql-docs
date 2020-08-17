@@ -1,4 +1,5 @@
 ---
+description: "Copy a Version (Master Data Services)"
 title: Copy a Version
 ms.custom: ""
 ms.date: "03/01/2017"

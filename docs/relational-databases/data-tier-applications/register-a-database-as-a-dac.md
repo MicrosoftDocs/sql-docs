@@ -1,4 +1,5 @@
 ---
+description: "Register a Database As a DAC"
 title: "Register a Database As a DAC | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

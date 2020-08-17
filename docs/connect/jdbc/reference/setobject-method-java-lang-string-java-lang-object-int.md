@@ -1,4 +1,5 @@
 ---
+description: "setObject Method (java.lang.String, java.lang.Object, int)"
 title: "setObject Method (java.lang.String, java.lang.Object, int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "MoveRecordOptionsEnum"
 title: "MoveRecordOptionsEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Reserved Words (Master Data Services)"
 title: Reserved Words
 ms.custom: ""
 ms.date: "03/01/2017"

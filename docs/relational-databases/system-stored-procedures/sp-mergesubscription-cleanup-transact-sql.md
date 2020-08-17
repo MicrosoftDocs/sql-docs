@@ -1,4 +1,5 @@
 ---
+description: "sp_mergesubscription_cleanup (Transact-SQL)"
 title: "sp_mergesubscription_cleanup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

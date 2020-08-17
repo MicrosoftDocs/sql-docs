@@ -1,4 +1,5 @@
 ---
+description: "SCHEMATA (Transact-SQL)"
 title: "SCHEMATA (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/08/2017"

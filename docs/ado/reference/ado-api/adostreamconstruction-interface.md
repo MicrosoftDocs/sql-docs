@@ -1,4 +1,5 @@
 ---
+description: "ADOStreamConstruction Interface"
 title: "ADOStreamConstruction Interface | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

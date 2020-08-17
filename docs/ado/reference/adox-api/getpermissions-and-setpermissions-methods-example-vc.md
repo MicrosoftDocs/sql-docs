@@ -1,4 +1,5 @@
 ---
+description: "GetPermissions and SetPermissions Methods Example (VC++)"
 title: "GetPermissions and SetPermissions Methods Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

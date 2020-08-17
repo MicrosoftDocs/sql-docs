@@ -1,4 +1,5 @@
 ---
+description: "SET ANSI_DEFAULTS (Transact-SQL)"
 title: "SET ANSI_DEFAULTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 04/16/2020

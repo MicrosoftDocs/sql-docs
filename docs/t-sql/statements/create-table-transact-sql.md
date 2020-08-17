@@ -1,4 +1,5 @@
 ---
+description: "CREATE TABLE (Transact-SQL)"
 title: CREATE TABLE (Transact-SQL)
 ms.custom: ""
 ms.date: 02/24/2020

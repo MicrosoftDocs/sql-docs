@@ -1,4 +1,5 @@
 ---
+description: "Known errors and resolutions with change data capture for Oracle by Attunity"
 title: "Known errors and resolutions with change data capture for Oracle by Attunity | Microsoft Docs"
 ms.date: "07/23/2019"
 ms.prod: sql

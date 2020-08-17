@@ -1,4 +1,5 @@
 ---
+description: "ADO Java Class Wrappers"
 title: "ADO Java Class Wrappers | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

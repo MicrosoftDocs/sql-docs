@@ -1,4 +1,5 @@
 ---
+description: "sp_replcmds (Transact-SQL)"
 title: "sp_replcmds (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

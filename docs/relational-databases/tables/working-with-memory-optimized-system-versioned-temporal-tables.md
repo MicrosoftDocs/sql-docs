@@ -15,7 +15,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Working with Memory-Optimized System-Versioned Temporal Tables
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 This topic discusses how working with a memory-optimized system-versioned temporal table is different from working with a disk-based system-versioned temporal table.
 

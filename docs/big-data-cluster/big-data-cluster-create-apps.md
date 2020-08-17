@@ -16,14 +16,9 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Applications deployed on BDC are not only to benefit from numerous advantages such as the computational power of the cluster but can also access massive data that is available on the cluster. This can be dramatically beneficial to increase the performance of the applications since it sits in the same area where the data lives.  The native supported application runtimes on SQL Server Big Data Clusters are as the following:  
+Applications deployed on BDC are not only to benefit from numerous advantages such as the computational power of the cluster but can also access massive data that is available on the cluster. This can be dramatically beneficial to increase the performance of the applications since it sits in the same area where the data lives. 
 
-- **Python** - One of the most popular general programming languages for various personas such as Data Engineers, Data Scientists and DevOps engineer, supports numerous scenarios such as data wrangling,  automation, prototyping, to some extent,  it also increasingly used to program enterprise-grade application working in conjunction with web development frameworks such as Flask and Django to address different business requirements.  
-- **R** – Another popular programming language for Data Engineering and Data Scientists. Compared to Python, R is a programming language with more specific focus on statistical computing and graphics.  
-- **SQL Server Integration Services (SSIS)**  -  high-performance data integration solutions for building and debugging ETL packages, it uses Data Transformation Services Package File Format (DTSX) which is an XML-based file format that stores the instructions for the processing of migrating data between databases and the integration of external data sources.   
-- **MLeap** - is a common serialization format and provides everything needed to execute and serialize SparkML pipelines and others that can then be loaded at runtime to process ML scoring tasks in near real-time and close to the data.  
-
-This article describes how to deploy and manage R and Python script as an application inside a SQL Server 2019 big data cluster.
+This article describes how to deploy and manage R and Python script as an application inside a SQL Server 2019 big data clusters.
 
 ## What's new and improved
 
@@ -35,9 +30,11 @@ This article describes how to deploy and manage R and Python script as an applic
 Applications are deployed and managed using `azdata` command-line utility. This article provides examples of how to deploy apps from the command line. To learn how to use this in Visual Studio Code refer to [Visual Studio Code Extension](app-deployment-extension.md).
 
 The following types of apps are supported:
-- R and Python apps (functions, models, and apps)
-- MLeap Serving
-- SQL Server Integration Services (SSIS)
+
+- **Python** - One of the most popular general programming languages for various personas such as Data Engineers, Data Scientists and DevOps engineer, supports numerous scenarios such as data wrangling,  automation, prototyping, to some extent,  it also increasingly used to program enterprise-grade application working in conjunction with web development frameworks such as Flask and Django to address different business requirements.  
+- **R** – Another popular programming language for Data Engineering and Data Scientists. Compared to Python, R is a programming language with more specific focus on statistical computing and graphics.  
+- **SQL Server Integration Services (SSIS)**  -  high-performance data integration solutions for building and debugging ETL packages, it uses Data Transformation Services Package File Format (DTSX) which is an XML-based file format that stores the instructions for the processing of migrating data between databases and the integration of external data sources.   
+- **MLeap** - is a common serialization format and provides everything needed to execute and serialize SparkML pipelines and others that can then be loaded at runtime to process ML scoring tasks in near real-time and close to the data.  
 
 ## Prerequisites
 
@@ -225,68 +222,6 @@ You should see output similar to the following example:
 ]
 ```
 
-## Run an app
-
-If the app is in a `Ready` state, you can use it by running it with your specified input parameters. Use the following syntax to run an app:
-
-```bash
-azdata app run --name <app_name> --version <app_version> --inputs <inputs_params>
-```
-
-The following example command demonstrates the run command:
-
-```bash
-azdata app run --name add-app --version v1 --inputs x=1,y=2
-```
-
-If the run was successful, you should see your output as specified when you created the app. The following is an example.
-
-```json
-{
-  "changedFiles": [],
-  "consoleOutput": "",
-  "errorMessage": "",
-  "outputFiles": {},
-  "outputParameters": {
-    "result": 3
-  },
-  "success": true
-}
-```
-
-
-## Describe an app
-
-The describe command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the webservice to interact with the app in a RESTful manner. See [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information.
-
-```json
-{
-  "input_param_defs": [
-    {
-      "name": "x",
-      "type": "int"
-    },
-    {
-      "name": "y",
-      "type": "int"
-    }
-  ],
-  "links": {
-    "app": "https://10.1.1.3:30080/api/app/add-app/v1",
-    "swagger": "https://10.1.1.3:30080/api/app/add-app/v1/swagger.json"
-  },
-  "name": "add-app",
-  "output_param_defs": [
-    {
-      "name": "result",
-      "type": "int"
-    }
-  ],
-  "state": "Ready",
-  "version": "v1"
-}
-```
-
 ## Delete an app
 
 To delete an app from your big data cluster, use the following syntax:
@@ -297,6 +232,6 @@ azdata app delete --name add-app --version v1
 
 ## Next steps
 
-Explore how to integrate apps deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in your own applications at [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information. You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
+Explore how to integrate apps deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in your own applications at [Run applications on big data clusters](big-data-cluster-run-apps.md) and [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information. You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
 
 For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

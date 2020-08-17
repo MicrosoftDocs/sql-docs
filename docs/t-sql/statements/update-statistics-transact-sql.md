@@ -1,4 +1,5 @@
 ---
+description: "UPDATE STATISTICS (Transact-SQL)"
 title: "UPDATE STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2018"

@@ -1,4 +1,5 @@
 ---
+description: "SET ANSI_NULLS (Transact-SQL)"
 title: "SET ANSI_NULLS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/24/2020"

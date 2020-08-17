@@ -1,4 +1,5 @@
 ---
+description: "SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)"
 title: "SET CONCAT_NULL_YIELDS_NULL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

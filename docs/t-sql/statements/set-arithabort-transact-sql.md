@@ -1,4 +1,5 @@
 ---
+description: "SET ARITHABORT (Transact-SQL)"
 title: "SET ARITHABORT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/04/2017"

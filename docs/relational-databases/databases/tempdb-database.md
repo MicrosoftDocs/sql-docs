@@ -229,7 +229,7 @@ This implementation has some limitations:
 
 - Toggling the feature on and off is not dynamic. Because of the intrinsic changes that need to be made to the structure of `tempdb`, a restart is required to either enable or disable the feature.
 
-- A single transaction may not access memory-optimized tables in more than one database.  This means that any transactions that involve a memory-optimized table in a user database will not be able to access `tempdb` system views in the same transaction.  If you attempt to access `tempdb` system views in the same transaction as a memory-optimized table in a user database, you will receive the following error:
+- A single transaction might not access memory-optimized tables in more than one database. Any transactions that involve a memory-optimized table in a user database won't be able to access `tempdb` system views in the same transaction. If you try to access `tempdb` system views in the same transaction as a memory-optimized table in a user database, you'll receive the following error:
     
   ```
   A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
@@ -246,16 +246,17 @@ This implementation has some limitations:
    COMMIT TRAN
   ```
     
-- Queries against memory-optimized tables do not support locking and isolation hints, so queries against memory-optimized `tempdb` catalog views will not honor locking and isolation hints. As with other system catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], all transactions against system views will be in READ COMMITTED (or in this case READ COMMITTED SNAPSHOT) isolation.
+- Queries against memory-optimized tables don't support locking and isolation hints, so queries against memory-optimized `tempdb` catalog views won't honor locking and isolation hints. As with other system catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], all transactions against system views will be in `READ COMMITTED` (or in this case, `READ COMMITTED SNAPSHOT`) isolation.
 
-- [Columnstore indexes](../indexes/columnstore-indexes-overview.md) cannot be created on temporary tables when memory-optimized tempdb metadata is enabled.
+- [Columnstore indexes](../indexes/columnstore-indexes-overview.md) can't be created on temporary tables when memory-optimized `tempdb` metadata is enabled.
 
-- Due to the limitation on columnstore indexes, use of the sp_estimate_data_compression_savings system stored procedure with the COLUMNSTORE or COLUMNSTORE_ARCHIVE data compression parameter is not supported when memory-optimized tempdb metadata is enabled.
+- Due to the limitation on columnstore indexes, use of the `sp_estimate_data_compression_savings` system stored procedure with the `COLUMNSTORE` or `COLUMNSTORE_ARCHIVE` data compression parameter is not supported when memory-optimized `tempdb` metadata is enabled.
 
 > [!NOTE] 
-> These limitations only apply when referencing `tempdb` system views, you will be able to create a temp table in the same transaction as you access a memory-optimized table in a user database if desired.
+> These limitations apply only when you're referencing `tempdb` system views. You can create a temporary table in the same transaction as you access a memory-optimized table in a user database, if desired.
 
 You can verify whether or not `tempdb` is memory-optimized by using the following T-SQL command:
+
 ```
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_sessions (Transact-SQL)"
 title: "sys.dm_exec_sessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/03/2019"

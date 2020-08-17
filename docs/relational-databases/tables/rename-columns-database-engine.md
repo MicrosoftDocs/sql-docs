@@ -1,4 +1,5 @@
 ---
+description: "Rename Columns (Database Engine)"
 title: "Rename Columns (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"

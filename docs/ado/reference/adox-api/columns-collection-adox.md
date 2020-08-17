@@ -1,4 +1,5 @@
 ---
+description: "Columns Collection (ADOX)"
 title: "Columns Collection (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

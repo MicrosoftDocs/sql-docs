@@ -1,4 +1,5 @@
 ---
+description: "RDS Fundamentals"
 title: "RDS Fundamentals | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Command Property (ADOX)"
 title: "Command Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

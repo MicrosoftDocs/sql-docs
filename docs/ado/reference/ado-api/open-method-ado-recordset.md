@@ -1,4 +1,5 @@
 ---
+description: "Open Method (ADO Recordset)"
 title: "Open Method (ADO Recordset) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

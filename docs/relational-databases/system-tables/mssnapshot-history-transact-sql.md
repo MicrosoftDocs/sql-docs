@@ -1,4 +1,5 @@
 ---
+description: "MSsnapshot_history (Transact-SQL)"
 title: "MSsnapshot_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

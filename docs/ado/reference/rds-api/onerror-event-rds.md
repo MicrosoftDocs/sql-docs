@@ -1,4 +1,5 @@
 ---
+description: "onError Event (RDS)"
 title: "onError Event (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

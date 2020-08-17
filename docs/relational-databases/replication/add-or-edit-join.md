@@ -1,4 +1,5 @@
 ---
+description: "Add or Edit Join"
 title: "Add or Edit Join | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_articlehistory (Transact-SQL)"
 title: "MSmerge_articlehistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

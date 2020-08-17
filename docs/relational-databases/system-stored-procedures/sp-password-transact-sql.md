@@ -1,4 +1,5 @@
 ---
+description: "sp_password (Transact-SQL)"
 title: "sp_password (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

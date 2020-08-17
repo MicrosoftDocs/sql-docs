@@ -1,4 +1,5 @@
 ---
+description: "Move Method Example (VC++)"
 title: "Move Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

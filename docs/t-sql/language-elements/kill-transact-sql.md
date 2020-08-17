@@ -1,4 +1,5 @@
 ---
+description: "KILL (Transact-SQL)"
 title: "KILL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/31/2017"

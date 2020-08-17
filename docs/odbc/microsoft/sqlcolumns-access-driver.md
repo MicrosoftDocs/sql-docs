@@ -1,4 +1,5 @@
 ---
+description: "SQLColumns (Access Driver)"
 title: "SQLColumns (Access Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

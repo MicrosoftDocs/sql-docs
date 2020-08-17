@@ -1,4 +1,5 @@
 ---
+description: "Find Key Phrases in Documents with Semantic Search"
 title: "Find key phrases in documents with semantic search"
 ms.date: "03/04/2017"
 ms.prod: sql

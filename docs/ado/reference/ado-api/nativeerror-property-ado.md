@@ -1,4 +1,5 @@
 ---
+description: "NativeError Property (ADO)"
 title: "NativeError Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

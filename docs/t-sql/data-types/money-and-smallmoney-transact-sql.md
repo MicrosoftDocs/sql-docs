@@ -1,4 +1,5 @@
 ---
+description: "money and smallmoney (Transact-SQL)"
 title: "money and smallmoney (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"

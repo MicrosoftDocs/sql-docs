@@ -1,4 +1,5 @@
 ---
+description: "setNull Method (java.lang.String, int)"
 title: "setNull Method (java.lang.String, int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

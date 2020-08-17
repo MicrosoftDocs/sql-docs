@@ -1,4 +1,5 @@
 ---
+description: "sysarticleupdates (Transact-SQL)"
 title: "sysarticleupdates (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

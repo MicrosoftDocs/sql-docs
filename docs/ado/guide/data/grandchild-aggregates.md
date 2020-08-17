@@ -1,4 +1,5 @@
 ---
+description: "Grandchild Aggregates"
 title: "Grandchild Aggregates | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

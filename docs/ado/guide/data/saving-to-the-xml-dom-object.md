@@ -1,4 +1,5 @@
 ---
+description: "Saving to the XML DOM Object"
 title: "Saving to the XML DOM Object | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Capture Logon Trigger Event Data"
 title: "Capture Logon Trigger Event Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

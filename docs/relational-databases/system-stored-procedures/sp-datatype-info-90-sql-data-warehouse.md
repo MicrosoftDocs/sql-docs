@@ -1,4 +1,5 @@
 ---
+description: "sp_datatype_info_90 (SQL Data Warehouse)"
 title: "sp_datatype_info_90 (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"

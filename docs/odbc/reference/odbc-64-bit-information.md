@@ -1,4 +1,5 @@
 ---
+description: "ODBC 64-Bit Information"
 title: "ODBC 64-Bit Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

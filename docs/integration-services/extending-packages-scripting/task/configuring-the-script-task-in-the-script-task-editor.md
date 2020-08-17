@@ -1,4 +1,5 @@
 ---
+description: "Configuring the Script Task in the Script Task Editor"
 title: "Configuring the Script Task in the Script Task Editor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

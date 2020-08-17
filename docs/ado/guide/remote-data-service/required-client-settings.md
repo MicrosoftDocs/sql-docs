@@ -1,4 +1,5 @@
 ---
+description: "Required Client Settings"
 title: "Required Client Settings | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Format Nested JSON Output with PATH Mode (SQL Server)"
 title: "Format Nested JSON Output with PATH Mode"
 ms.date: 06/03/2020
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "CREATE SECURITY POLICY (Transact-SQL)"
 title: "CREATE SECURITY POLICY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_changepublication_snapshot (Transact-SQL)"
 title: "sp_changepublication_snapshot (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

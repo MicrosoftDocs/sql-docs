@@ -1,4 +1,5 @@
 ---
+description: "Using the Visual FoxPro ODBC Driver"
 title: "Using the Visual FoxPro ODBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

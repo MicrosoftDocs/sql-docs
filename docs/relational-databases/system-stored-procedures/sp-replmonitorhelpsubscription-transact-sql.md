@@ -1,4 +1,5 @@
 ---
+description: "sp_replmonitorhelpsubscription (Transact-SQL)"
 title: "sp_replmonitorhelpsubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

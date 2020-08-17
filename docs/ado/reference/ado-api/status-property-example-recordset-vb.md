@@ -1,4 +1,5 @@
 ---
+description: "Status Property Example (Recordset) (VB)"
 title: "Status Property Example (Recordset) (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

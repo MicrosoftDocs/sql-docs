@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1: Connecting to the Database Engine"
 title: "Lesson 1: Connecting to the Database Engine | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/05/2018"

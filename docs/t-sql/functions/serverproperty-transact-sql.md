@@ -1,4 +1,5 @@
 ---
+description: "SERVERPROPERTY (Transact-SQL)"
 title: "SERVERPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/28/2020"

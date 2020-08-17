@@ -1,4 +1,5 @@
 ---
+description: "Log Shipping Tables (Transact-SQL)"
 title: "Log Shipping Tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"

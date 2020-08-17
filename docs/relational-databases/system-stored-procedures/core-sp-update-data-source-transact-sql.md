@@ -1,4 +1,5 @@
 ---
+description: "core.sp_update_data_source (Transact-SQL)"
 title: "core.sp_update_data_source (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Data Type Functions (Transact-SQL)"
 title: "Data Type Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"

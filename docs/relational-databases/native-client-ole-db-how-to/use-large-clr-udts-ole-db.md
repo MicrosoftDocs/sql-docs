@@ -1,4 +1,5 @@
 ---
+description: "Use Large CLR UDTs  in SQL Server Native Client (OLE DB)"
 title: Use large CLR UDTs (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_configure_peerconflictdetection (Transact-SQL)"
 title: "sp_configure_peerconflictdetection (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

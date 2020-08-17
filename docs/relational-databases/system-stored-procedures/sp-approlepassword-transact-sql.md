@@ -1,4 +1,5 @@
 ---
+description: "sp_approlepassword (Transact-SQL)"
 title: "sp_approlepassword (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Lesson 5: Add SSIS package configurations for the Package Deployment Model"
 title: "Lesson 5: Add SSIS package configurations for the Package Deployment Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/08/2019"

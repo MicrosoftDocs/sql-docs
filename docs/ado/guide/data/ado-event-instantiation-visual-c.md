@@ -1,4 +1,5 @@
 ---
+description: "ADO Event Instantiation: Visual C++"
 title: "ADO Event Instantiation: Visual C++ | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

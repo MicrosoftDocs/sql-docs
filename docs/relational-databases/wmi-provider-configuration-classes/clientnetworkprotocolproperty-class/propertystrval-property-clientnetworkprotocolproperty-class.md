@@ -1,4 +1,5 @@
 ---
+description: "PropertyStrVal Property (ClientNetworkProtocolProperty Class)"
 title: "PropertyStrVal Property (ClientNetworkProtocolProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

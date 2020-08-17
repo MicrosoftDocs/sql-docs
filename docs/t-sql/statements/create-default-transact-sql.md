@@ -1,4 +1,5 @@
 ---
+description: "CREATE DEFAULT (Transact-SQL)"
 title: "CREATE DEFAULT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/25/2015"

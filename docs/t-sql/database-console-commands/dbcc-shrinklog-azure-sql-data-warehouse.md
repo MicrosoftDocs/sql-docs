@@ -1,4 +1,5 @@
 ---
+description: "DBCC SHRINKLOG (Parallel Data Warehouse)"
 title: DBCC SHRINKLOG (Parallel Data Warehouse)
 ms.custom: ""
 ms.date: "03/16/2018"

@@ -1,4 +1,5 @@
 ---
+description: "Overview of Multidimensional Schemas and Data"
 title: "Overview of Multidimensional Schemas and Data | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

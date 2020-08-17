@@ -1,4 +1,5 @@
 ---
+description: "Optimize Property Example (VC++)"
 title: "Optimize Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

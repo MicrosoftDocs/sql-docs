@@ -1,4 +1,5 @@
 ---
+description: "GRANT Asymmetric Key Permissions (Transact-SQL)"
 title: "GRANT Asymmetric Key Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"

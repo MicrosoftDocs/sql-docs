@@ -1,4 +1,5 @@
 ---
+description: "Query Store Stored Procedures (Transact-SQL)"
 title: "Query Store Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2016"

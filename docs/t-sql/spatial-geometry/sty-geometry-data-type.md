@@ -1,4 +1,5 @@
 ---
+description: "STY (geometry Data Type)"
 title: "STY (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"

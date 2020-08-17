@@ -1,4 +1,5 @@
 ---
+description: "CHAR (Transact-SQL)"
 title: "CHAR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/19/2018"

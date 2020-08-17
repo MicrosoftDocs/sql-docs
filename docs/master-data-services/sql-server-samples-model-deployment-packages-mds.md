@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Examples: Model Deployment Packages (MDS)"
 title: Model Deployment Package examples
 ms.custom: ""
 ms.date: "07/28/2017"

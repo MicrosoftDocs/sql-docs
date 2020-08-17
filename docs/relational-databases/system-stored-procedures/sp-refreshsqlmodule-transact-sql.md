@@ -1,4 +1,5 @@
 ---
+description: "sp_refreshsqlmodule (Transact-SQL)"
 title: "sp_refreshsqlmodule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2018"

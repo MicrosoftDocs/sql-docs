@@ -1,4 +1,5 @@
 ---
+description: "Types of Locks"
 title: "Types of Locks | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

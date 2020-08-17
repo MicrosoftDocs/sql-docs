@@ -1,4 +1,5 @@
 ---
+description: "Status Property (ADO Field)"
 title: "Status Property (ADO Field) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

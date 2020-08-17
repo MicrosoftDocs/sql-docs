@@ -1,4 +1,5 @@
 ---
+description: "sp_cycle_errorlog (Transact-SQL)"
 title: "sp_cycle_errorlog (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

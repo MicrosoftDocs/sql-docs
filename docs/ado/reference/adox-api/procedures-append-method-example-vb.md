@@ -1,4 +1,5 @@
 ---
+description: "Procedures Append Method Example (VB)"
 title: "Procedures Append Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

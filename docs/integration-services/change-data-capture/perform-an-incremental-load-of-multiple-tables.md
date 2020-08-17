@@ -1,4 +1,5 @@
 ---
+description: "Perform an Incremental Load of Multiple Tables"
 title: "Perform an Incremental Load of Multiple Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

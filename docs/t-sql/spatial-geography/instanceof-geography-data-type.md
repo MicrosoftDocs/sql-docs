@@ -1,4 +1,5 @@
 ---
+description: "InstanceOf (geography Data Type)"
 title: "InstanceOf (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

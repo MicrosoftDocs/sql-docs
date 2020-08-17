@@ -1,4 +1,5 @@
 ---
+description: "Delete Foreign Key Relationships"
 title: "Delete Foreign Key Relationships | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"

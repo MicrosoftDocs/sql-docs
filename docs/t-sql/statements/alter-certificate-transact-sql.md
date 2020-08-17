@@ -1,4 +1,5 @@
 ---
+description: "ALTER CERTIFICATE (Transact-SQL)"
 title: "ALTER CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/22/2019"

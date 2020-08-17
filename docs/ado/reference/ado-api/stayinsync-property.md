@@ -1,4 +1,5 @@
 ---
+description: "StayInSync Property"
 title: "StayInSync Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Using a Connection Object"
 title: "Using a Connection Object | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

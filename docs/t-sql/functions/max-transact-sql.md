@@ -1,4 +1,5 @@
 ---
+description: "MAX (Transact-SQL)"
 title: "MAX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"

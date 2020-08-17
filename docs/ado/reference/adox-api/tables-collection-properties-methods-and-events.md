@@ -1,4 +1,5 @@
 ---
+description: "Tables Collection Properties, Methods, and Events"
 title: "Tables Collection Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

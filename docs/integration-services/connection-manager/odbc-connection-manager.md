@@ -1,4 +1,5 @@
 ---
+description: "ODBC Connection Manager"
 title: "ODBC Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

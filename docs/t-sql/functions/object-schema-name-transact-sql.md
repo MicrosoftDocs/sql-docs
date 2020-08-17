@@ -1,4 +1,5 @@
 ---
+description: "OBJECT_SCHEMA_NAME (Transact-SQL)"
 title: "OBJECT_SCHEMA_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/25/2018"

@@ -1,4 +1,5 @@
 ---
+description: "SET STATISTICS IO (Transact-SQL)"
 title: "SET STATISTICS IO (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/10/2016"

@@ -1,4 +1,5 @@
 ---
+description: "Execute SQL Server Native Client Stored Procedure with RPC and Process Output"
 title: "Stored Procedure, RPC, Output"
 ms.custom: ""
 ms.date: "03/14/2017"

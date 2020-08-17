@@ -1,4 +1,5 @@
 ---
+description: "Disconnecting and Reconnecting the Recordset"
 title: "Disconnecting and Reconnecting the Recordset | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

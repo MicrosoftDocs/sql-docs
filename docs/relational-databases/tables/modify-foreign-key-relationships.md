@@ -1,4 +1,5 @@
 ---
+description: "Modify Foreign Key Relationships"
 title: "Modify Foreign Key Relationships | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2017"

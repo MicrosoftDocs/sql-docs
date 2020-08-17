@@ -1,4 +1,5 @@
 ---
+description: "Enable Stretch Database for a database"
 title: "Enable Stretch Database for a database"
 ms.date: "08/05/2016"
 ms.service: sql-server-stretch-database

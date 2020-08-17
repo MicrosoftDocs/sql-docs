@@ -1,4 +1,5 @@
 ---
+description: "Transact-SQL statements"
 title: "Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/17/2020"

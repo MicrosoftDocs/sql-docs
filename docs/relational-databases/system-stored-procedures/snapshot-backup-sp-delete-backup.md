@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_backup (Transact-SQL)"
 title: "sp_delete_backup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/03/2015"

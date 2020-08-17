@@ -1,4 +1,5 @@
 ---
+description: "MSdistribution_agents (Transact-SQL)"
 title: "MSdistribution_agents (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/28/2015"

@@ -1,4 +1,5 @@
 ---
+description: "DataSpace Object (RDS) Properties, Methods, and Events"
 title: "DataSpace Object (RDS) Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

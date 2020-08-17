@@ -1,4 +1,5 @@
 ---
+description: "DateModified Property (ADOX)"
 title: "DateModified Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

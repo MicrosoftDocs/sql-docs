@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_query_profiles (Transact-SQL)"
 title: "sys.dm_exec_query_profiles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/25/2019"

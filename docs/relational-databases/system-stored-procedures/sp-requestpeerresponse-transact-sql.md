@@ -1,4 +1,5 @@
 ---
+description: "sp_requestpeerresponse (Transact-SQL)"
 title: "sp_requestpeerresponse (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

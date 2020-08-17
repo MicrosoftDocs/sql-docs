@@ -1,4 +1,5 @@
 ---
+description: "APPROX_COUNT_DISTINCT (Transact-SQL)"
 title: "APPROX_COUNT_DISTINCT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/12/2019"

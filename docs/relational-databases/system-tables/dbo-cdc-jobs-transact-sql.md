@@ -1,4 +1,5 @@
 ---
+description: "dbo.cdc_jobs (Transact-SQL)"
 title: "dbo.cdc_jobs (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

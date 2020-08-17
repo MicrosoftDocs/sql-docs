@@ -1,4 +1,5 @@
 ---
+description: "Scrolling and Fetching Rows - Bookmarking Rows in ODBC"
 title: "Bookmarking Rows in ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

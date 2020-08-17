@@ -1,4 +1,5 @@
 ---
+description: "Query Store Catalog Views (Transact-SQL)"
 title: "Query Store Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/12/2019"

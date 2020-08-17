@@ -1,4 +1,5 @@
 ---
+description: "ALTER QUEUE (Transact-SQL)"
 title: "ALTER QUEUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2016"

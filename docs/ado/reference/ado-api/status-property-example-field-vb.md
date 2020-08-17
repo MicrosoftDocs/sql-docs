@@ -1,4 +1,5 @@
 ---
+description: "Status Property Example (Field) (VB)"
 title: "Status Property Example (Field) (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

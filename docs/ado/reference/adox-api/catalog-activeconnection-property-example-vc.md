@@ -1,4 +1,5 @@
 ---
+description: "Catalog ActiveConnection Property Example (VC++)"
 title: "Catalog ActiveConnection Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

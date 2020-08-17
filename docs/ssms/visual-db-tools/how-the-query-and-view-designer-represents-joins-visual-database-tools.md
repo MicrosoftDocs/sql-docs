@@ -1,4 +1,5 @@
 ---
+description: "How the Query and View Designer Represents Joins (Visual Database Tools)"
 title: How the Query and View Designer Represents Joins
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

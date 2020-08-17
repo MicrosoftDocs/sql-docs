@@ -1,4 +1,5 @@
 ---
+description: "CLR Assembly Catalog Views (Transact-SQL)"
 title: "CLR Assembly Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

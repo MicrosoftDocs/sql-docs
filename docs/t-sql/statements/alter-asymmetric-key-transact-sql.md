@@ -1,4 +1,5 @@
 ---
+description: "ALTER ASYMMETRIC KEY (Transact-SQL)"
 title: "ALTER ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.date: "04/12/2017"
 ms.prod: sql

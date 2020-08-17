@@ -1,4 +1,5 @@
 ---
+description: "Fetching BLOB Data by Using IRow::Open and ISequentialStream"
 title: "BLOB, IRow::Open, ISequentialStream"
 ms.custom: ""
 ms.date: "03/06/2017"

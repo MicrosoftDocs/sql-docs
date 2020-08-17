@@ -1,4 +1,5 @@
 ---
+description: "sys.sysconfigures (Transact-SQL)"
 title: "sys.sysconfigures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

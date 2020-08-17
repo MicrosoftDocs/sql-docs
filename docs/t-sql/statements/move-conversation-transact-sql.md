@@ -1,4 +1,5 @@
 ---
+description: "MOVE CONVERSATION (Transact-SQL)"
 title: "MOVE CONVERSATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"

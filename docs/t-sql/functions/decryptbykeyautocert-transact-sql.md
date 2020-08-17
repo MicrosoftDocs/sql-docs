@@ -1,4 +1,5 @@
 ---
+description: "DECRYPTBYKEYAUTOCERT (Transact-SQL)"
 title: "DECRYPTBYKEYAUTOCERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/09/2015"

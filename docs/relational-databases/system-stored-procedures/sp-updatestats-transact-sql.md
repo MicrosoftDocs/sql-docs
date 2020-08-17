@@ -1,4 +1,5 @@
 ---
+description: "sp_updatestats (Transact-SQL)"
 title: "sp_updatestats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2017"

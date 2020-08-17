@@ -1,4 +1,5 @@
 ---
+description: "Cursor Types (PDO_SQLSRV Driver)"
 title: "Cursor Types (PDO_SQLSRV Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/03/2019"

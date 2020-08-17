@@ -1,4 +1,5 @@
 ---
+description: "CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)"
 title: "CREATE REMOTE TABLE AS SELECT (Parallel Data Warehouse)"
 ms.custom: seo-dt-2019
 ms.date: 08/10/2017

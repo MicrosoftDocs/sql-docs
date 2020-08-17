@@ -1,4 +1,5 @@
 ---
+description: "How to Create and Edit a CDC Service"
 title: "How to Create and Edit a CDC Service | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"

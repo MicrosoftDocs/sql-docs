@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_cryptographic_provider_properties (Transact-SQL)"
 title: "sys.dm_cryptographic_provider_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

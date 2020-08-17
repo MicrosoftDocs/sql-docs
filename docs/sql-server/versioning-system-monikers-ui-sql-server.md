@@ -1,4 +1,5 @@
 ---
+description: "Versioning system for SQL documentation"
 title: Versioning system SQL docs
 ms.date: 08/12/2020
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "Static Aggregate Geometry Methods"
 title: "Static Aggregate Geometry Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

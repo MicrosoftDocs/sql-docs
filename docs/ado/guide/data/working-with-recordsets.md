@@ -1,4 +1,5 @@
 ---
+description: "Working with Recordsets"
 title: "Working with Recordsets | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

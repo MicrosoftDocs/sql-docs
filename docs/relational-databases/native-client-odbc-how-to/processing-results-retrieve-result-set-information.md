@@ -1,4 +1,5 @@
 ---
+description: "Processing Results - Retrieve Result Set Information"
 title: "Retrieve Result Set Information (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

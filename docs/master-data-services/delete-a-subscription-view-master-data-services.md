@@ -1,4 +1,5 @@
 ---
+description: "Delete a Subscription View (Master Data Services)"
 title: Delete a Subscription View
 ms.custom: ""
 ms.date: "03/01/2017"

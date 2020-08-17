@@ -1,4 +1,5 @@
 ---
+description: "Troubleshooting Oracle Publishers"
 title: "Troubleshooting Oracle Publishers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ProtocolDisplayName Property (ServerNetworkProtocol Class)"
 title: "ProtocolDisplayName Property (ServerNetworkProtocol)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

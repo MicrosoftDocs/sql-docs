@@ -1,4 +1,5 @@
 ---
+description: "GetRows Method Example (VC++)"
 title: "GetRows Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

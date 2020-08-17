@@ -1,4 +1,5 @@
 ---
+description: "Broker:Message Classify Event Class"
 title: "Broker:Message Classify Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2019"

@@ -1,4 +1,5 @@
 ---
+description: "Use Sparse Columns"
 title: "Use Sparse Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/22/2016"

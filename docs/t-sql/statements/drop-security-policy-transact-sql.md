@@ -1,4 +1,5 @@
 ---
+description: "DROP SECURITY POLICY (Transact-SQL)"
 title: "DROP SECURITY POLICY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2017"

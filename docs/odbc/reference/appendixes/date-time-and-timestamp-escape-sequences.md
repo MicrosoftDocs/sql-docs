@@ -1,4 +1,5 @@
 ---
+description: "Date, Time, and Timestamp Escape Sequences"
 title: "Date, Time, and Timestamp Escape Sequences | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

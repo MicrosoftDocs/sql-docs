@@ -1,4 +1,5 @@
 ---
+description: "Validate a DAC Package"
 title: "Validate a DAC Package | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

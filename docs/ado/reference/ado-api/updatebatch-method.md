@@ -1,4 +1,5 @@
 ---
+description: "UpdateBatch Method"
 title: "UpdateBatch Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

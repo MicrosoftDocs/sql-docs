@@ -1,4 +1,5 @@
 ---
+description: "Structure and Usage of DMX Prediction Queries"
 title: "Structure and Usage of DMX Prediction Queries | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

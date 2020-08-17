@@ -1,4 +1,5 @@
 ---
+description: "Operator Precedence and Associativity"
 title: "Operator Precedence and Associativity | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

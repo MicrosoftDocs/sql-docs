@@ -1,4 +1,5 @@
 ---
+description: "Removing an Extended Stored Procedure from SQL Server"
 title: "Removing an Extended Stored Procedure"
 ms.date: "03/14/2017"
 ms.prod: sql

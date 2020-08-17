@@ -1,4 +1,5 @@
 ---
+description: "Step 2: Initialize the Main List Box"
 title: "Step 2: Initialize the Main List Box | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

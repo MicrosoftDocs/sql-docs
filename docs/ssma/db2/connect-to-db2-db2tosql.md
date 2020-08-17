@@ -1,4 +1,5 @@
 ---
+description: "Connect To DB2 (DB2ToSQL)"
 title: "Connect To DB2 (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

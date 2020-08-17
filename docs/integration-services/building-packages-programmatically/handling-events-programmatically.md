@@ -1,4 +1,5 @@
 ---
+description: "Handling Events Programmatically"
 title: "Handling Events Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Monitoring Performance Counters with the Script Task"
 title: "Monitoring Performance Counters with the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

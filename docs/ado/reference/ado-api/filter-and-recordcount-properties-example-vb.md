@@ -1,4 +1,5 @@
 ---
+description: "Filter and RecordCount Properties Example (VB)"
 title: "Filter and RecordCount Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

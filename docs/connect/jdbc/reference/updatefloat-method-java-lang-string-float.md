@@ -1,4 +1,5 @@
 ---
+description: "updateFloat Method (java.lang.String, float)"
 title: "updateFloat Method (java.lang.String, float) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

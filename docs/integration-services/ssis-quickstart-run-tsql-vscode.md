@@ -1,4 +1,5 @@
 ---
+description: "Run an SSIS package from Visual Studio Code with Transact-SQL"
 title: "Run an SSIS package with Transact-SQL (VS Code) | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart

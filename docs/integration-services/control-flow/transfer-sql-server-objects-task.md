@@ -1,4 +1,5 @@
 ---
+description: "Transfer SQL Server Objects Task"
 title: "Transfer SQL Server Objects Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

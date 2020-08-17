@@ -1,4 +1,5 @@
 ---
+description: "Member Object (ADO MD)"
 title: "Member Object (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Reactivate a Member or Collection (Master Data Services)"
 title: Reactivate a Member or Collection
 ms.custom: ""
 ms.date: "04/01/2016"

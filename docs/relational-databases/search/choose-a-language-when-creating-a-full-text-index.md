@@ -1,4 +1,5 @@
 ---
+description: "Choose a Language When Creating a Full-Text Index"
 title: "Choose a Language When Creating a Full-Text Index | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql  

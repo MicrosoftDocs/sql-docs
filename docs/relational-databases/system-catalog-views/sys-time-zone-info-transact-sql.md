@@ -1,4 +1,5 @@
 ---
+description: "sys.time_zone_info (Transact-SQL)"
 title: "sys.time_zone_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2018"

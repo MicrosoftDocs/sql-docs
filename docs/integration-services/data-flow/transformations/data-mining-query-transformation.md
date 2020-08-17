@@ -1,4 +1,5 @@
 ---
+description: "Data Mining Query Transformation"
 title: "Data Mining Query Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

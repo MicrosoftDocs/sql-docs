@@ -1,4 +1,5 @@
 ---
+description: "Fixed-Width Text File"
 title: "Fixed-Width Text File | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

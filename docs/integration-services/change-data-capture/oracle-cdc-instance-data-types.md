@@ -1,4 +1,5 @@
 ---
+description: "Oracle CDC Instance Data Types"
 title: "Oracle CDC Instance Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

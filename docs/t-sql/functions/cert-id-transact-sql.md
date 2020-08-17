@@ -1,4 +1,5 @@
 ---
+description: "CERT_ID (Transact-SQL)"
 title: "CERT_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"

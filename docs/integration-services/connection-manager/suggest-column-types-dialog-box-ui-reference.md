@@ -1,4 +1,5 @@
 ---
+description: "Suggest Column Types Dialog Box UI Reference"
 title: "Suggest Column Types Dialog Box UI Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "SET EXCLUSIVE Command"
 title: "SET EXCLUSIVE Command | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

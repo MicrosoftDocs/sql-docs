@@ -1,4 +1,5 @@
 ---
+description: "Prerequisites for Using the ADO Documentation"
 title: "Prerequisites for Using the ADO Documentation | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

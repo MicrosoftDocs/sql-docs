@@ -1,4 +1,5 @@
 ---
+description: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)"
 title: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/09/2015"

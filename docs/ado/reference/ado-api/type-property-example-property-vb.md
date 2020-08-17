@@ -1,4 +1,5 @@
 ---
+description: "Type Property Example (Property) (VB)"
 title: "Type Property Example (Property) (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

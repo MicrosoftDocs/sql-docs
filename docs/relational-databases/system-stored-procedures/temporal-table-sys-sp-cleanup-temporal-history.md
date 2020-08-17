@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cleanup_temporal_history (Transact-SQL)"
 title: "sys.sp_cleanup_temporal_history | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

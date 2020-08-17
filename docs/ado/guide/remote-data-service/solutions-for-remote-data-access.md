@@ -1,4 +1,5 @@
 ---
+description: "Solutions for Remote Data Access"
 title: "Solutions for Remote Data Access | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

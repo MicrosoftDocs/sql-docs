@@ -1,4 +1,5 @@
 ---
+description: "DROP EXTERNAL FILE FORMAT (Transact-SQL)"
 title: "DROP EXTERNAL FILE FORMAT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"

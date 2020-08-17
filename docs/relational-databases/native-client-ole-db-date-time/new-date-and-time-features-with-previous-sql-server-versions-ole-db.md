@@ -1,4 +1,5 @@
 ---
+description: "New Date and Time Features with Previous SQL Server Versions (OLE DB)"
 title: "Date and Time OLE DB Features with Previous SQL Server Versions"
 ms.date: "03/14/2017"
 ms.prod: sql

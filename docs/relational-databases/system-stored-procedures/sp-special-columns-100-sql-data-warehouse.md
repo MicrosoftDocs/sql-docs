@@ -1,4 +1,5 @@
 ---
+description: "sp_special_columns_100 (SQL Data Warehouse)"
 title: "sp_special_columns_100 (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

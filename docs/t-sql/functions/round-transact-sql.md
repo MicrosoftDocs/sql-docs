@@ -1,4 +1,5 @@
 ---
+description: "ROUND (Transact-SQL)"
 title: "ROUND (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/14/2017"

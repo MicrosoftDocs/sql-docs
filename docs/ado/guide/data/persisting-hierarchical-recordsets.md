@@ -1,4 +1,5 @@
 ---
+description: "Persisting Hierarchical Recordsets"
 title: "Persisting Hierarchical Recordsets | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

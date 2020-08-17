@@ -1,4 +1,5 @@
 ---
+description: "Support for Large UDTs"
 title: "Support for Large UDTs | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

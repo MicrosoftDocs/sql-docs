@@ -1,4 +1,5 @@
 ---
+description: "Migration Wizard (AccessToSQL)"
 title: "Migration Wizard (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

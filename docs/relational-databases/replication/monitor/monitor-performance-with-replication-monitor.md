@@ -1,4 +1,5 @@
 ---
+description: "Monitor Performance with Replication Monitor"
 title: "Monitor Performance with Replication Monitor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

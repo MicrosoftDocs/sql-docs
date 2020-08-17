@@ -1,4 +1,5 @@
 ---
+description: "User Object Properties, Methods, and Events"
 title: "User Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

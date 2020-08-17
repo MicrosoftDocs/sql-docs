@@ -1,4 +1,5 @@
 ---
+description: "WMI Provider for Server Events Classes and Properties"
 title: "WMI Provider for Server Events Classes and Properties"
 ms.custom: ""
 ms.date: "03/03/2017"

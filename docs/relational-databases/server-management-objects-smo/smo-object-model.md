@@ -1,4 +1,5 @@
 ---
+description: "SMO Object Model"
 title: "SMO Object Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

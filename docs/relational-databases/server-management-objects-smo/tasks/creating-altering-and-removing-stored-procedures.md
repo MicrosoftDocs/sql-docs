@@ -1,4 +1,5 @@
 ---
+description: "Creating, Altering, and Removing Stored Procedures"
 title: "Creating, Altering, and Removing Stored Procedures"
 ms.custom: seo-dt-2019
 ms.date: "08/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "NumericScale Property (ADOX)"
 title: "NumericScale Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

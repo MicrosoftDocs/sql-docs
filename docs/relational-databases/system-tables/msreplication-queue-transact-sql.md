@@ -1,4 +1,5 @@
 ---
+description: "MSreplication_queue (Transact-SQL)"
 title: "MSreplication_queue (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

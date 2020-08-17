@@ -1,4 +1,5 @@
 ---
+description: "Using SQLBindCol"
 title: "Using SQLBindCol | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Constructing SQL Statements"
 title: "Constructing SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

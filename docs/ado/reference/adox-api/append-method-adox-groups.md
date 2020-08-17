@@ -1,4 +1,5 @@
 ---
+description: "Append Method (ADOX Groups)"
 title: "Append Method (ADOX Groups) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

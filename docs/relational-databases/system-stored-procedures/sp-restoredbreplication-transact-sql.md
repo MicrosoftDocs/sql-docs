@@ -1,4 +1,5 @@
 ---
+description: "sp_restoredbreplication (Transact-SQL)"
 title: "sp_restoredbreplication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

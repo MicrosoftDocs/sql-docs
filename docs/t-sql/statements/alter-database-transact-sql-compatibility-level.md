@@ -1,4 +1,5 @@
 ---
+description: "ALTER DATABASE Compatibility Level (Transact-SQL)"
 title: "ALTER DATABASE Compatibility Level (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/22/2020

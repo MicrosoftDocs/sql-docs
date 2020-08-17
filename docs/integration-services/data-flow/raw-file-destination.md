@@ -1,4 +1,5 @@
 ---
+description: "Raw File Destination"
 title: "Raw File Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

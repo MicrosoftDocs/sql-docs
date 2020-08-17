@@ -1,4 +1,5 @@
 ---
+description: "sys.database_recovery_status (Transact-SQL)"
 title: "sys.database_recovery_status (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2016"

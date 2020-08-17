@@ -1,4 +1,5 @@
 ---
+description: "STArea (geometry Data Type)"
 title: "STArea (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

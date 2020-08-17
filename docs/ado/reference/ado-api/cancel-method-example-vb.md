@@ -1,4 +1,5 @@
 ---
+description: "Cancel Method Example (VB)"
 title: "Cancel Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

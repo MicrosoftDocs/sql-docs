@@ -1,4 +1,5 @@
 ---
+description: "SQL Property Example (VBScript)"
 title: "SQL Property Example (VBScript) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

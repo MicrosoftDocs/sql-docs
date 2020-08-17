@@ -1,4 +1,5 @@
 ---
+description: "Temporal Table Metadata Views and Functions"
 title: "Temporal Table Metadata Views and Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"

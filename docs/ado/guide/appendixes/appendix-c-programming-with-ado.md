@@ -1,4 +1,5 @@
 ---
+description: "Appendix C: Programming with ADO in Development Environments"
 title: "Appendix C: Programming with ADO | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

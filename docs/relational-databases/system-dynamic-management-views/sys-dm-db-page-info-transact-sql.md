@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_page_info (Transact-SQL)"
 title: "sys.dm_db_page_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2018"

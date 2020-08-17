@@ -1,4 +1,5 @@
 ---
+description: "BufferWithTolerance (geography Data Type)"
 title: "BufferWithTolerance (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

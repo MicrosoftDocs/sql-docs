@@ -1,4 +1,5 @@
 ---
+description: "THROW (Transact-SQL)"
 title: "THROW (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

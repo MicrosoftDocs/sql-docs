@@ -1,4 +1,5 @@
 ---
+description: "PERCENT_RANK (Transact-SQL)"
 title: "PERCENT_RANK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2015"

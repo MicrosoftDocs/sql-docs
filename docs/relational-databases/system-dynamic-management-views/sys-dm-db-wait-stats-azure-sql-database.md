@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_wait_stats (Azure SQL Database)"
 title: "sys.dm_db_wait_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

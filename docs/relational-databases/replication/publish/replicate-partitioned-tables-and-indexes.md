@@ -1,4 +1,5 @@
 ---
+description: "Replicate Partitioned Tables and Indexes"
 title: "Replicate Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/10/2015"

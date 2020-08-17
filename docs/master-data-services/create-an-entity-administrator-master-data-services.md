@@ -1,4 +1,5 @@
 ---
+description: "Create an Entity Administrator (Master Data Services)"
 title: Create an Entity Administrator
 ms.custom: ""
 ms.date: "03/01/2017"

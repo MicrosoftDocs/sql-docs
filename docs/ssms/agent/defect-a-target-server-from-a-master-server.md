@@ -1,4 +1,5 @@
 ---
+description: "Defect a Target Server from a Master Server"
 title: "Defect a Target Server from a Master Server"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

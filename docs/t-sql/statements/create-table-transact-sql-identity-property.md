@@ -1,4 +1,5 @@
 ---
+description: "CREATE TABLE (Transact-SQL) IDENTITY (Property)"
 title: "IDENTITY (Property) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

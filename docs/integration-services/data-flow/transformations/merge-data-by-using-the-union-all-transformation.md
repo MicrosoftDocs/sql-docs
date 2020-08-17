@@ -1,4 +1,5 @@
 ---
+description: "Merge Data by Using the Union All Transformation"
 title: "Merge Data by Using the Union All Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

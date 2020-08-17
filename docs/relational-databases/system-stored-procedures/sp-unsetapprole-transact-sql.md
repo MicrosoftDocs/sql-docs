@@ -1,4 +1,5 @@
 ---
+description: "sp_unsetapprole (Transact-SQL)"
 title: "sp_unsetapprole (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

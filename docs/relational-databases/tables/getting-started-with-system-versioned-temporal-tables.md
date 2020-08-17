@@ -1,4 +1,5 @@
 ---
+description: "Getting Started with System-Versioned Temporal Tables"
 title: "Getting Started with System-Versioned Temporal Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"

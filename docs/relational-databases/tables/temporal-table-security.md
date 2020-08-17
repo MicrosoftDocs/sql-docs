@@ -1,4 +1,5 @@
 ---
+description: "Temporal Table Security"
 title: "Temporal Table Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/16/2019"

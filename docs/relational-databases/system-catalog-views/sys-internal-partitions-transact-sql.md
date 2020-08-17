@@ -1,4 +1,5 @@
 ---
+description: "sys.internal_partitions (Transact-SQL)"
 title: "sys.internal_partitions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019

@@ -1,4 +1,5 @@
 ---
+description: "Publication Information, Warnings (Snapshot Publication, SQL Server 2005 and Later)"
 title: "Warnings (Snapshot - Replication Monitor)"
 decription: Describes the 'Warnings' tab for a Snapshot Publication in the Replication Monitor found in SQL Server Management Studio (SSMS).
 ms.custom: seo-lt-2019

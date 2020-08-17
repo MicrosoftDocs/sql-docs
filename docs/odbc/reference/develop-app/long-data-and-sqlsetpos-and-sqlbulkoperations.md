@@ -1,4 +1,5 @@
 ---
+description: "Long Data and SQLSetPos and SQLBulkOperations"
 title: "Long Data and SQLSetPos and SQLBulkOperations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

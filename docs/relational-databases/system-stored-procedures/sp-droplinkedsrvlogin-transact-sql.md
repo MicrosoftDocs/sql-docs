@@ -1,4 +1,5 @@
 ---
+description: "sp_droplinkedsrvlogin (Transact-SQL)"
 title: "sp_droplinkedsrvlogin (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

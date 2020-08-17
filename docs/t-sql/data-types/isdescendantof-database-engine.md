@@ -1,4 +1,5 @@
 ---
+description: "IsDescendantOf (Database Engine)"
 title: "IsDescendantOf (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"

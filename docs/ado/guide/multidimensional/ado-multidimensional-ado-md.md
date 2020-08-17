@@ -1,4 +1,5 @@
 ---
+description: "ADO (Multidimensional) (ADO MD)"
 title: "ADO (Multidimensional) (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

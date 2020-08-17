@@ -1,4 +1,5 @@
 ---
+description: "DBCC CHECKIDENT (Transact-SQL)"
 title: DBCC CHECKIDENT (Transact-SQL)
 ms.custom: ""
 ms.date: "03/07/2019"

@@ -1,4 +1,5 @@
 ---
+description: "sys.computed_columns (Transact-SQL)"
 title: "sys.computed_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

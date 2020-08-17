@@ -1,4 +1,5 @@
 ---
+description: "Multiple Files Connection Manager"
 title: "Multiple Files Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

@@ -1,4 +1,5 @@
 ---
+description: "SetEnable Method (ServerNetworkProtocolIPAddress Class)"
 title: "SetEnable Method (ServerNetworkProtocolIPAddress)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

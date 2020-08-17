@@ -1,4 +1,5 @@
 ---
+description: "MSdistribution_history (Transact-SQL)"
 title: "MSdistribution_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

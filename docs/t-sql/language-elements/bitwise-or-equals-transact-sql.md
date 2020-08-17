@@ -1,4 +1,5 @@
 ---
+description: "|= (Bitwise OR Assignment) (Transact-SQL)"
 title: "|= (Bitwise OR)"
 titleSuffix: SQL Server (Transact-SQL)
 ms.custom: "seo-lt-2019"

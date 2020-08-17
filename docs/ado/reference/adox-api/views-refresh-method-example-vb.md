@@ -1,4 +1,5 @@
 ---
+description: "Views Refresh Method Example (VB)"
 title: "Views Refresh Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

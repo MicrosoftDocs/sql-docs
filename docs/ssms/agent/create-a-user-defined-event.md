@@ -1,4 +1,5 @@
 ---
+description: "Create a User-Defined Event"
 title: "Create a User-Defined Event"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

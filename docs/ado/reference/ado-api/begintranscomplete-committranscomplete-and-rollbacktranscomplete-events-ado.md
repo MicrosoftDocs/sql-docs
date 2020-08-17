@@ -1,4 +1,5 @@
 ---
+description: "BeginTransComplete, CommitTransComplete, and RollbackTransComplete Events (ADO)"
 title: "BeginTrans, CommitTrans, RollbackTrans Events (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

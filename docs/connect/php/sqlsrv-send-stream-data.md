@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_send_stream_data"
 title: "sqlsrv_send_stream_data | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2019"

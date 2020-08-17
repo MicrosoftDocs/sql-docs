@@ -1,4 +1,5 @@
 ---
+description: "SQLDriverConnect (Access Driver)"
 title: "SQLDriverConnect (Access Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

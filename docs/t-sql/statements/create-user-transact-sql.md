@@ -1,4 +1,5 @@
 ---
+description: "CREATE USER (Transact-SQL)"
 title: CREATE USER (Transact-SQL)
 ms.custom: ""
 ms.date: "11/06/2019"

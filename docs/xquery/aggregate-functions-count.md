@@ -1,4 +1,5 @@
 ---
+description: "Aggregate Functions - count"
 title: "count Function (XQuery) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"

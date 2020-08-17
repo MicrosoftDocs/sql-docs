@@ -1,4 +1,5 @@
 ---
+description: "xml_schema_namespace"
 title: xml_schema_namespace (Transact-SQL)
 ms.custom: ""
 ms.date: "07/27/2017"

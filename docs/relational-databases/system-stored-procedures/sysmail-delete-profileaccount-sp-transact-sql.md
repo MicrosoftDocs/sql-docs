@@ -1,4 +1,5 @@
 ---
+description: "sysmail_delete_profileaccount_sp (Transact-SQL)"
 title: "sysmail_delete_profileaccount_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

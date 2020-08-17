@@ -1,4 +1,5 @@
 ---
+description: "Visual Basic for Applications functions"
 title: "Visual Basic for Applications functions | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

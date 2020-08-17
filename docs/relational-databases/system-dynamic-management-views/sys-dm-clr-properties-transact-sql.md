@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_clr_properties (Transact-SQL)"
 title: "sys.dm_clr_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

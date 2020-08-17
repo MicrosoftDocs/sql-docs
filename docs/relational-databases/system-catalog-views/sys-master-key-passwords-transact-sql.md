@@ -1,4 +1,5 @@
 ---
+description: "sys.master_key_passwords (Transact-SQL)"
 title: "sys.master_key_passwords (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/06/2020"

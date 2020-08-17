@@ -1,4 +1,5 @@
 ---
+description: "sys.xml_indexes (Transact-SQL)"
 title: "sys.xml_indexes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

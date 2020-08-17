@@ -1,4 +1,5 @@
 ---
+description: "ADO NET Source"
 title: "ADO NET Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

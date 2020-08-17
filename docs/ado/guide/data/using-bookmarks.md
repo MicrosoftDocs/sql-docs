@@ -1,4 +1,5 @@
 ---
+description: "Using Bookmarks"
 title: "Using Bookmarks | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

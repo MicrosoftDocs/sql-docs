@@ -1,4 +1,5 @@
 ---
+description: "Variables (Transact-SQL)"
 title: "Variables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"

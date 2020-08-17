@@ -1,4 +1,5 @@
 ---
+description: "AddNew Method Example (VBScript)"
 title: "AddNew Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

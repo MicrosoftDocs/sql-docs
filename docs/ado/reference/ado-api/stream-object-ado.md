@@ -1,4 +1,5 @@
 ---
+description: "Stream Object (ADO)"
 title: "Stream Object (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

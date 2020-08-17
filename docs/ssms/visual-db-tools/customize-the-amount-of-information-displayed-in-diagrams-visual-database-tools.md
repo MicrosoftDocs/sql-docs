@@ -1,4 +1,5 @@
 ---
+description: "Customize the Amount of Information Displayed in Diagrams (Visual Database Tools)"
 title: Customize the Amount of Information Displayed in Diagrams
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

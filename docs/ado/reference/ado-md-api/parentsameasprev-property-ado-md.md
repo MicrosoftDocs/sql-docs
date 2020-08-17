@@ -1,4 +1,5 @@
 ---
+description: "ParentSameAsPrev Property (ADO MD)"
 title: "ParentSameAsPrev Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

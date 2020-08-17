@@ -1,4 +1,5 @@
 ---
+description: "BACKUP (Transact-SQL)"
 title: "BACKUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/22/2020

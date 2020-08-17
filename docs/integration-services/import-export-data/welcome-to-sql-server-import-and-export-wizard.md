@@ -1,4 +1,5 @@
 ---
+description: "Welcome to SQL Server Import and Export Wizard"
 title: "Welcome to SQL Server Import and Export Wizard | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/15/2017"

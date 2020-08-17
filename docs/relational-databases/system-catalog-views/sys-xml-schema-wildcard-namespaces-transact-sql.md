@@ -1,4 +1,5 @@
 ---
+description: "sys.xml_schema_wildcard_namespaces (Transact-SQL)"
 title: "sys.xml_schema_wildcard_namespaces (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

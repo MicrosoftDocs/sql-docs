@@ -1,4 +1,5 @@
 ---
+description: "ALTER SEQUENCE (Transact-SQL)"
 title: "ALTER SEQUENCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2015"

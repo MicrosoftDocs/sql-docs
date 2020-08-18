@@ -136,9 +136,8 @@ Multiple file locations can only be specified from the same storage account and 
 |                          |                CSV                |              Parquet               |                ORC                 |
 | :----------------------: | :-------------------------------: | :-------------------------------:  | :-------------------------------:  |
 |  **Azure blob storage**  | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD |              SAS/KEY               |              SAS/KEY               |
-| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS*/MSI/SERVICE PRINCIPAL/KEY/AAD |
+| **Azure Data Lake Gen2** | SAS/MSI/SERVICE PRINCIPAL/KEY/AAD | SAS (blob endpoint)/MSI (dfs endpoint)/SERVICE PRINCIPAL/KEY/AAD | SAS (blob endpoint)/MSI (dfs endpoint)/SERVICE PRINCIPAL/KEY/AAD |
 
-*Only supported with the blob endpoint
 
 When authenticating using AAD or to a public storage account, CREDENTIAL does not need to be specified. 
 

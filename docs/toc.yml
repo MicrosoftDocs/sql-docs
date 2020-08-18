@@ -4812,6 +4812,9 @@
   - name: Azure Migration Services >
     displayName: DMS, Data Migration Service, Azure Data Migration Service
     href: /azure/dms/dms-overview
+  - name: Migration guides
+    items:
+    - name: sql-server/migrate/guides/db2-to-sql-server.md
   - name: Data Quality Services (DQS)
     items:
     - name: Overview

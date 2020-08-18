@@ -99,9 +99,7 @@
         href: ../machine-learning/tutorials/python-clustering-model-build.md
       - name: 4 - Deploy the model
         href: ../machine-learning/tutorials/python-clustering-model-deploy.md
-    - name: Create a Python model using revoscalepy
-      href: ../machine-learning/tutorials/use-python-revoscalepy-to-create-model.md
-    - name: Python for SQL developers
+    - name: NYC taxi tips (classification)
       items:
       - name: 1 - Introduction
         href: ../machine-learning/tutorials/python-taxi-classification-introduction.md
@@ -113,6 +111,8 @@
         href: ../machine-learning/tutorials/python-taxi-classification-train-model.md
       - name: 5 - Predictions
         href: ../machine-learning/tutorials/python-taxi-classification-deploy-model.md
+    - name: Create a Python model using revoscalepy
+      href: ../machine-learning/tutorials/use-python-revoscalepy-to-create-model.md
   - name: R
     items:
     - name: R tutorials
@@ -137,9 +137,7 @@
         href: ../machine-learning/tutorials/r-clustering-model-build.md
       - name: 4 - Deploy the model
         href: ../machine-learning/tutorials/r-clustering-model-deploy.md
-    - name: Create partition-based models
-      href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
-    - name: R for SQL developers
+    - name: NYC taxi tips (classification)
       items:
       - name: 1. Introduction
         href: ../machine-learning/tutorials/r-taxi-classification-introduction.md
@@ -151,6 +149,8 @@
         href: ../machine-learning/tutorials/r-taxi-classification-train-model.md
       - name: 5. Predictions
         href: ../machine-learning/tutorials/r-taxi-classification-deploy-model.md
+    - name: Create partition-based models
+      href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
     - name: Use SQL ML in R tools
       items:
       - name: 1. Introduction

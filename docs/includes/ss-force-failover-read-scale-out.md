@@ -38,7 +38,7 @@ To avoid potential data loss, before you issue the manual failover, ensure that 
 
 To manually fail over without data loss:
 
-1. Make the target secondary replica `SYNCHRONOUS_COMMIT`.
+1. Make the current primary and target secondary replica `SYNCHRONOUS_COMMIT`.
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -85,7 +85,7 @@ To manually fail over without data loss:
    ALTER AVAILABILITY GROUP ag1 FORCE_FAILOVER_ALLOW_DATA_LOSS; 
    ``` 
 
-1. Update the role of the old primary to `SECONDARY`, run the following command on the SQL Server instance that hosts the primary replica:
+1. Update the role of the old primary to `SECONDARY`, run the following command on the SQL Server instance that hosts the old primary replica:
 
    ```SQL
    ALTER AVAILABILITY GROUP [ag1] 
@@ -101,3 +101,5 @@ To manually fail over without data loss:
    ALTER DATABASE [db1]
         SET HADR RESUME
    ```
+
+1. Recreate any listener you created for read-scale purposes and not managed by cluster manager. If the original listener points to the old primary then you need to drop and recreate it to point to the new primary.

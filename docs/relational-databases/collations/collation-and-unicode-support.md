@@ -367,9 +367,6 @@ The following table shows the default collation designations, as determined by t
 |Yoruba (Nigeria)|0x046a|0x0409|Latin1_General_CI_AS|
 |Zulu/isiZulu (South Africa)|0x0435|0x0409|Latin1_General_CI_AS|
 
-> [!NOTE]
-> Unicode-only collations can't be selected during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup, because they aren't supported as server-level collations.    
-    
 After you've assigned a collation to the server, you can change it only by exporting all database objects and data, rebuilding the *master* database, and importing all database objects and data. Instead of changing the default collation of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can specify the desired collation when you create a new database or database column.    
 
 To query the server collation for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the `SERVERPROPERTY` function:

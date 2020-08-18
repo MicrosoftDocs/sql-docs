@@ -15,13 +15,15 @@ monikerRange: ">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproduc
 
 [!INCLUDE [sqlserver2019-linux](../../includes/applies-to-version/sqlserver2019-linux.md)]
 
-The following steps install [PolyBase](../../relational-databases/search/full-text-search.md) (`mssql-server-polybase` and `mssql-server-polybase-hadoop` on Linux. PolyBase enables you to run external queries against remote data sources. 
+The following steps install [PolyBase](../../relational-databases/polybase/polybase-guide.md) (`mssql-server-polybase` and `mssql-server-polybase-hadoop`) on Linux. PolyBase enables you to run external queries against remote data sources.
 
 >[!NOTE]
-> Before installing Polybase, first [install SQL Server 2019](../../linux/sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when installing the `mssql-server-polybase` and `mssql-server-polybase-hadoop` package.
+> Before installing PolyBase, first [install SQL Server 2019](../../linux/sql-server-linux-setup.md#platforms). This configures the keys and repositories that you use when installing the `mssql-server-polybase` and `mssql-server-polybase-hadoop` package.
+
+>[!NOTE]
 >
-> PolyBase is not supported on SQL Server 2017 for Linux.
-> Scale-out for PolyBase on Linux is currently unavailable.
+> - PolyBase is not supported on SQL Server 2017 for Linux.
+> - Scale-out for PolyBase on Linux is currently unavailable.
 
 Install PolyBase for your operating system:
 

@@ -1,5 +1,6 @@
 ---
 title: "R tutorial: Explore and visualize data"
+titleSuffix: SQL machine learning
 description: Explore sample data and generate some plots in preparation for using binary classification in R with SQL machine learning.
 ms.prod: sql
 ms.technology: machine-learning
@@ -13,7 +14,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||>=azuresqldb-mi-curr
 ---
 
 # R tutorial: Explore and visualize data
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 In part two of this five-part tutorial series, you'll explore the sample data and generate some plots. Later, you'll learn how to serialize graphics objects in Python, and then deserialize those objects and make plots.
 

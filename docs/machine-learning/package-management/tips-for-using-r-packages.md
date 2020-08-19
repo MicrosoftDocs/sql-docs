@@ -13,7 +13,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 ---
 # Tips for using R packages
 
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 This article provides helpful tips on using R packages in SQL Server. These tips are for DBAs who are unfamiliar with R, and experienced R developers who are unfamiliar with package access in a SQL Server instance.
 

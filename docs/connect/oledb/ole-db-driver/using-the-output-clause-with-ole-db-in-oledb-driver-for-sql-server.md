@@ -1,6 +1,6 @@
 ---
 title: "Using the OUTPUT Clause with OLE DB in OLE DB Driver for SQL Server | Microsoft Docs"
-description: "Using the OUTPUT clause with OLE DB in OLE DB Driver for SQL Server"
+description: Learn about using the OUTPUT clause in an INSERT, UPDATE, DELETE, or MERGE command in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

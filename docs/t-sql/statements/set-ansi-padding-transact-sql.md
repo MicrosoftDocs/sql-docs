@@ -46,7 +46,9 @@ SET ANSI_PADDING { ON | OFF }
 SET ANSI_PADDING ON
 ```
 
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  Columns defined with **char**, **varchar**, **binary**, and **varbinary** data types have a defined size.  
   
  This setting affects only the definition of new columns. After the column is created, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stores the values based on the setting when the column was created. Existing columns are not affected by a later change to this setting.  

@@ -1,5 +1,5 @@
 ---
-title: "ERROR_STATE (Transact-SQL) | Microsoft Docs"
+title: ERROR_STATE (Transact-SQL)
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -24,7 +24,9 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # ERROR_STATE (Transact-SQL)
+
 [!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Returns the state number of the error that caused the CATCH block of a TRY...CATCH construct to be run.  
@@ -37,7 +39,9 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 ERROR_STATE ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **int**  
   
 ## Return Value  

@@ -28,7 +28,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 HOST_NAME ()  
 ```  

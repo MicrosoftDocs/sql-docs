@@ -2,8 +2,8 @@
 title: Deploy applications with azdata
 titleSuffix: SQL Server Big Data Clusters
 description: Deploy a Python or R script as an application on SQL Server 2019 big data cluster.
-author: jeroenterheerdt 
-ms.author: jterh
+author: cloudmelon 
+ms.author: melqin
 ms.reviewer: mikeray
 ms.metadata: seo-lt-2019
 ms.date: 12/13/2019
@@ -16,7 +16,7 @@ ms.technology: big-data-cluster
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Applications deployed on BDC are not only to benefit from numerous advantages such as the computational power of the cluster but can also access massive data that is available on the cluster. This can be dramatically beneficial to increase the performance of the applications since it sits in the same area where the data lives. 
+Applications deployed on BDC not only benefit from numerous advantages such as the computational power of the cluster but can also access massive data that is available on the cluster. This can be dramatically beneficial to increase the performance of the applications since it sits in the same area where the data lives. 
 
 This article describes how to deploy and manage R and Python script as an application inside a SQL Server 2019 big data clusters.
 

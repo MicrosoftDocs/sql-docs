@@ -1,4 +1,5 @@
 ---
+description: "Exporting an Access Inventory (AccessToSQL)"
 title: "Exporting an Access Inventory (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

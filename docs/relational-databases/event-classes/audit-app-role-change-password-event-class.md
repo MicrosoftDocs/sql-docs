@@ -1,4 +1,5 @@
 ---
+description: "Audit App Role Change Password Event Class"
 title: "Audit App Role Change Password Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

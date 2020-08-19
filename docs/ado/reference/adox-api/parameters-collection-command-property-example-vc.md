@@ -1,4 +1,5 @@
 ---
+description: "Parameters Collection, Command Property Example (VC++)"
 title: "Parameters Collection, Command Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "XSLT Transformations"
 title: "XSLT Transformations | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

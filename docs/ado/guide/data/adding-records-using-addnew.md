@@ -1,4 +1,5 @@
 ---
+description: "Adding Records Using AddNew Method"
 title: "Adding Records Using AddNew | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

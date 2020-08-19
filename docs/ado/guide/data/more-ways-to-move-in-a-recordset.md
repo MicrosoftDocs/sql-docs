@@ -1,4 +1,5 @@
 ---
+description: "More Ways to Move in a Recordset"
 title: "More Ways to Move in a Recordset | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

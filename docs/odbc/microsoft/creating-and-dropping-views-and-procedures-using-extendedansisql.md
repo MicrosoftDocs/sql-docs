@@ -1,4 +1,5 @@
 ---
+description: "Creating and Dropping Views and Procedures Using ExtendedAnsiSQL"
 title: "Creating and Dropping Views and Procedures Using ExtendedAnsiSQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

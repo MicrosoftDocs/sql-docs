@@ -1,4 +1,5 @@
 ---
+description: "IsolationLevel and Mode Properties Example (VB)"
 title: "IsolationLevel and Mode Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

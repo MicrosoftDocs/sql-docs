@@ -1,4 +1,5 @@
 ---
+description: "Hierarchies Collection (ADO MD)"
 title: "Hierarchies Collection (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

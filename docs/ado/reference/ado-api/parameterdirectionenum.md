@@ -1,4 +1,5 @@
 ---
+description: "ParameterDirectionEnum"
 title: "ParameterDirectionEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_trace_geteventinfo (Transact-SQL)"
 title: "sys.fn_trace_geteventinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

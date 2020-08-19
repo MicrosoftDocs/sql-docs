@@ -1,4 +1,5 @@
 ---
+description: "Execute, Requery, and Clear Methods Example (VC++)"
 title: "Execute, Requery, and Clear Methods Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

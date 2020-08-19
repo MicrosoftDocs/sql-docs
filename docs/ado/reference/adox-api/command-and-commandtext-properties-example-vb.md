@@ -1,4 +1,5 @@
 ---
+description: "Command and CommandText Properties Example (VB)"
 title: "Command and CommandText Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

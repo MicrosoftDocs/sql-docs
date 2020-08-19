@@ -1,4 +1,5 @@
 ---
+description: "Text and Image Functions - TEXTPTR (Transact-SQL)"
 title: "TEXTPTR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2017"

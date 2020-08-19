@@ -1,4 +1,5 @@
 ---
+description: "Catalog Object Properties, Methods, and Events (ADO MD)"
 title: "Catalog Object Properties, Methods, and Events (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

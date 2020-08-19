@@ -1,4 +1,5 @@
 ---
+description: "sp_cleanup_log_shipping_history (Transact-SQL)"
 title: "sp_cleanup_log_shipping_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"

@@ -1,4 +1,5 @@
 ---
+description: "Add or Delete a Task or a Container in a Control Flow"
 title: "Add or Delete a Task or a Container in a Control Flow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Integration Services Language Reference"
 title: "Integration Services Language Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

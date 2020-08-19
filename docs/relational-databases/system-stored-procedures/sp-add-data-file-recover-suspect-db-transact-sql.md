@@ -1,4 +1,5 @@
 ---
+description: "sp_add_data_file_recover_suspect_db (Transact-SQL)"
 title: "sp_add_data_file_recover_suspect_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

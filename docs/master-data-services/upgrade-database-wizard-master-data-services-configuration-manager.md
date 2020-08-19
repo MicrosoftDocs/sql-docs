@@ -1,4 +1,5 @@
 ---
+description: "Upgrade Database Wizard (Master Data Services Configuration Manager)"
 title: Upgrade Database Wizard
 ms.custom: ""
 ms.date: "03/20/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sys.views (Transact-SQL)"
 title: "sys.views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

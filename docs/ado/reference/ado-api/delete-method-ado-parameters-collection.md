@@ -1,4 +1,5 @@
 ---
+description: "Delete Method (ADO Parameters Collection)"
 title: "Delete Method (ADO Parameters Collection) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

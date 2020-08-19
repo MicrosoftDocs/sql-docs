@@ -1,4 +1,5 @@
 ---
+description: "Data source information properties (Native Client OLE DB provider)"
 title: "Data source information properties (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

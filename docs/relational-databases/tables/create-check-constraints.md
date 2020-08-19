@@ -1,4 +1,5 @@
 ---
+description: "Create Check Constraints"
 title: "Create Check Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/28/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Referencing the ADO Libraries In a Visual Basic 6 Application"
 title: "Referencing the ADO Libraries In a Visual Basic 6 Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Integration Services (SSIS) Connections"
 title: "Integration Services (SSIS) Connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

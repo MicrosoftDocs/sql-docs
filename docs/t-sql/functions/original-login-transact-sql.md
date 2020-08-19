@@ -1,4 +1,5 @@
 ---
+description: "ORIGINAL_LOGIN (Transact-SQL)"
 title: "ORIGINAL_LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

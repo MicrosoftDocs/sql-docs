@@ -1,4 +1,5 @@
 ---
+description: "sp_renamedb (Transact-SQL)"
 title: "sp_renamedb (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "setNClob Method (int, java.sql.NClob)"
 title: "setNClob Method (int, java.sql.NClob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

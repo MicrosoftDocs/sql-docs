@@ -1,4 +1,5 @@
 ---
+description: "InstanceName Property (SInstance Class)"
 title: "InstanceName Property (SInstance)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)"
 title: "sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/13/2017"

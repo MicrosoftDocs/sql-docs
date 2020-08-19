@@ -1,4 +1,5 @@
 ---
+description: "Dealing with Failed Updates"
 title: "Dealing with Failed Updates | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

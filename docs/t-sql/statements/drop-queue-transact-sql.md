@@ -1,4 +1,5 @@
 ---
+description: "DROP QUEUE (Transact-SQL)"
 title: "DROP QUEUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

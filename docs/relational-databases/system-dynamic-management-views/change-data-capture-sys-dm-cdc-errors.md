@@ -1,4 +1,5 @@
 ---
+description: "Change Data Capture - sys.dm_cdc_errors"
 title: "sys.dm_cdc_errors (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

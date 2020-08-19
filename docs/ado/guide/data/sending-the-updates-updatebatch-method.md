@@ -1,4 +1,5 @@
 ---
+description: "Sending the Updates: UpdateBatch Method"
 title: "Sending the Updates: UpdateBatch Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

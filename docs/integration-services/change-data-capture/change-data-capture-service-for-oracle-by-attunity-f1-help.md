@@ -1,4 +1,5 @@
 ---
+description: "Change Data Capture Service for Oracle by Attunity F1 Help"
 title: "Change Data Capture Service for Oracle by Attunity F1 Help | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"

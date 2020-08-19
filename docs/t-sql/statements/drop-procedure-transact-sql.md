@@ -1,4 +1,5 @@
 ---
+description: "DROP PROCEDURE (Transact-SQL)"
 title: "DROP PROCEDURE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2017"
@@ -75,20 +76,20 @@ DROP { PROC | PROCEDURE } { [ schema_name. ] procedure_name }
 ## Examples  
  The following example removes the `dbo.uspMyProc` stored procedure in the current database.  
   
-```  
+```sql  
 DROP PROCEDURE dbo.uspMyProc;  
 GO  
 ```  
   
  The following example removes several stored procedures in the current database.  
   
-```  
+```sql  
 DROP PROCEDURE dbo.uspGetSalesbyMonth, dbo.uspUpdateSalesQuotes, dbo.uspGetSalesByYear;  
 ```  
   
  The following example removes the `dbo.uspMyProc` stored procedure if it exists but does not cause an error if the procedure does not exist. This syntax is new in [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
-```  
+```sql  
 DROP PROCEDURE IF EXISTS dbo.uspMyProc;  
 GO  
 ```  

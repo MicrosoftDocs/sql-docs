@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_query_statistics_xml (Transact-SQL)"
 title: "sys.dm_exec_query_statistics_xml (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2016"

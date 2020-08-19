@@ -1,4 +1,5 @@
 ---
+description: "Set the AUTO_SHRINK Database Option to OFF"
 title: "Set the AUTO_SHRINK Database Option to OFF | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

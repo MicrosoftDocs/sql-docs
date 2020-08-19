@@ -1,4 +1,5 @@
 ---
+description: "SET XACT_ABORT (Transact-SQL)"
 title: "SET XACT_ABORT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/03/2019"
@@ -43,6 +44,8 @@ Specifies whether [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] auto
 ```syntaxsql
 SET XACT_ABORT { ON | OFF }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Remarks
 

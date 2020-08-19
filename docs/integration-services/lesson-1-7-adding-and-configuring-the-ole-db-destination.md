@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-7: Add and configure the OLE DB destination"
 title: "Step 7: Add and configure the OLE DB destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"

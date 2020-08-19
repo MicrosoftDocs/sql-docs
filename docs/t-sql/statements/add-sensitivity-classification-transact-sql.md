@@ -1,4 +1,5 @@
 ---
+description: "ADD SENSITIVITY CLASSIFICATION (Transact-SQL)"
 title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql

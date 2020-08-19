@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_job_object (Azure SQL Database)"
 title: "sys.dm_os_job_object (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/03/2020"

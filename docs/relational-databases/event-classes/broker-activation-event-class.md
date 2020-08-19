@@ -1,4 +1,5 @@
 ---
+description: "Broker:Activation Event Class"
 title: "Broker:Activation Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2019"

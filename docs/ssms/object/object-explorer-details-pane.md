@@ -1,4 +1,5 @@
 ---
+description: "Object Explorer Details Pane"
 title: "Object Explorer Details Pane"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

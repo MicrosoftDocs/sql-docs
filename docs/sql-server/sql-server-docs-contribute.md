@@ -1,4 +1,5 @@
 ---
+description: "How to contribute to SQL Server Documentation"
 title: How to Contribute to SQL Server Documentation | Microsoft Docs
 ms.date: "08/13/2018"
 ms.prod: sql

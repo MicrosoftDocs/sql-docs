@@ -1,4 +1,5 @@
 ---
+description: "PDOStatement::getColumnMeta"
 title: "PDOStatement::getColumnMeta | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2020"

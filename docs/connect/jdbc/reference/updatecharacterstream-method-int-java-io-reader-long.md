@@ -1,4 +1,5 @@
 ---
+description: "updateCharacterStream Method (int, java.io.Reader, long)"
 title: updateCharacterStream method (int, java.io.Reader, long)
 ms.custom: ""
 ms.date: "01/19/2017"

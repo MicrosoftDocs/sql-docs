@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "marked transactions [SQL Server], restoring"
   - "database restores [SQL Server], point in time"
 ms.assetid: 77a0d9c0-978a-4891-8b0d-a4256c81c3f8
-author: MikeRayMSFT
-ms.author: mikeray
+author: MashaMSFT
+ms.author: mathoma
 ---
 # Recovery of Related  Databases That Contain Marked Transaction
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
@@ -46,7 +46,7 @@ ms.author: mikeray
 ## Transact-SQL Syntax for Inserting Named Marks into a Transaction Log  
  To insert marks into the transaction logs, use the [BEGIN TRANSACTION](../../t-sql/language-elements/begin-transaction-transact-sql.md) statement and the WITH MARK [*description*] clause. The mark is named the same as the transaction. The optional *description* is a textual description of the mark, not the mark name. For example, the name of both the transaction and the mark that is created in the following `BEGIN TRANSACTION` statement is `Tx1`:  
   
-```wmimof  
+```sql  
 BEGIN TRANSACTION Tx1 WITH MARK 'not the mark name, just a description'    
 ```  
   

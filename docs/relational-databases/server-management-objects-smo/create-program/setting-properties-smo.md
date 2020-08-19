@@ -1,4 +1,5 @@
 ---
+description: "Setting Properties - SMO"
 title: "Setting Properties - SMO | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "CompareEnum"
 title: "CompareEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "SET STATISTICS XML (Transact-SQL)"
 title: "SET STATISTICS XML (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -36,7 +37,9 @@ ms.author: genemi
 SET STATISTICS XML { ON | OFF }  
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  The setting of SET STATISTICS XML is set at execute or run time and not at parse time.  
   
  When SET STATISTICS XML is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns execution information for each statement after executing it. After this option is set ON, information about all subsequent [!INCLUDE[tsql](../../includes/tsql-md.md)] statements is returned until the option is set to OFF. Note that SET STATISTICS XML need not be the only statement in a batch.  

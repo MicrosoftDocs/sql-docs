@@ -1,4 +1,5 @@
 ---
+description: "sp_execute_external_script (Transact-SQL)"
 title: "sp_execute_external_script (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 08/06/2020
@@ -22,8 +23,7 @@ ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # sp_execute_external_script (Transact-SQL)
-
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2016 SQL MI](../../includes/applies-to-version/sqlserver2016-asdbmi.md)]
 
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 The **sp_execute_external_script** stored procedure executes a script provided as an input argument to the procedure, and is used with [Machine Learning Services](../../machine-learning/sql-server-machine-learning-services.md) and [Language Extensions](../../language-extensions/language-extensions-overview.md). 

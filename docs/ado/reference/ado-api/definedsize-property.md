@@ -1,4 +1,5 @@
 ---
+description: "DefinedSize Property"
 title: "DefinedSize Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

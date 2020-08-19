@@ -1,4 +1,5 @@
 ---
+description: "ActiveCommand Property (ADO)"
 title: "ActiveCommand Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

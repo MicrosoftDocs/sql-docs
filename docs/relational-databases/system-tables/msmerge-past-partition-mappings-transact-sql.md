@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_past_partition_mappings (Transact-SQL)"
 title: "MSmerge_past_partition_mappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

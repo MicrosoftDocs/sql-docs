@@ -1,4 +1,5 @@
 ---
+description: "Installing SSMA components on SQL Server (SybaseToSQL)"
 title: "Installing SSMA components on SQL Server (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/14/2020"

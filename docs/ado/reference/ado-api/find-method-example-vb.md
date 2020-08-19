@@ -1,4 +1,5 @@
 ---
+description: "Find Method Example (VB)"
 title: "Find Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

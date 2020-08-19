@@ -1,4 +1,5 @@
 ---
+description: "AppendChunk and GetChunk Methods Example (VC++)"
 title: "AppendChunk and GetChunk Methods Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "PDOStatement::bindParam"
 title: "PDOStatement::bindParam | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2018"

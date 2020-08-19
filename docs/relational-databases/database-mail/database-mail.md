@@ -1,4 +1,5 @@
 ---
+description: "Database Mail"
 title: "Database Mail | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

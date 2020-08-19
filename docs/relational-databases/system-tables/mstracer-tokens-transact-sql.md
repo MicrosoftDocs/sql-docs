@@ -1,4 +1,5 @@
 ---
+description: "MStracer_tokens (Transact-SQL)"
 title: "MStracer_tokens (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

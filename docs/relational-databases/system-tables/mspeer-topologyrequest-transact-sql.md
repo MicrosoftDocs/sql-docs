@@ -1,4 +1,5 @@
 ---
+description: "MSpeer_topologyrequest (Transact-SQL)"
 title: "MSpeer_topologyrequest (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

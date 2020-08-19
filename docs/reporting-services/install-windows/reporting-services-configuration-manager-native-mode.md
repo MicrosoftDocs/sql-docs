@@ -1,4 +1,5 @@
 ---
+description: "Reporting Services Configuration Manager (Native Mode)"
 title: "Reporting Services Configuration Manager (Native Mode) | Microsoft Docs"
 ms.date: 09/20/2017
 ms.prod: reporting-services

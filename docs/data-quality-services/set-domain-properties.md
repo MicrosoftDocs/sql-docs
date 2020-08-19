@@ -1,4 +1,5 @@
 ---
+description: "Set Domain Properties"
 title: "Set Domain Properties"
 ms.date: "11/08/2011"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "Securing RDS Applications"
 title: "Securing RDS Applications | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

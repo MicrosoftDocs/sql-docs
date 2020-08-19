@@ -1,4 +1,5 @@
 ---
+description: "SSVARIANT Structure in SQL Server Native Client"
 title: SSVARIANT structure (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/16/2017"

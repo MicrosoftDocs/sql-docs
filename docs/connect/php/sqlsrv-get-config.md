@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_get_config"
 title: "sqlsrv_get_config | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

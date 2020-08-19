@@ -1,4 +1,5 @@
 ---
+description: "Statement Attributes that Affect Table-Valued Parameters"
 title: "Attributes that affect Table-Valued Parameters"
 ms.custom: ""
 ms.date: "03/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Database Maintenance Plan Tables (Transact-SQL)"
 title: "Database Maintenance Plan Tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

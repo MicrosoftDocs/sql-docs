@@ -1,4 +1,5 @@
 ---
+description: "FilterGroupEnum"
 title: "FilterGroupEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Lesson 2-3: Modify the Flat File connection manager"
 title: "Step 3: Modify the Flat File connection manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"

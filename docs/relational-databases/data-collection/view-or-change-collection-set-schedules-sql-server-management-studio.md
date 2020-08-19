@@ -1,4 +1,5 @@
 ---
+description: "View or Change Collection Set Schedules (SQL Server Management Studio)"
 title: "View or change collection set schedules"
 ms.date: 06/03/2020
 ms.prod: sql

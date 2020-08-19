@@ -1,4 +1,5 @@
 ---
+description: "BeginTrans, CommitTrans, and RollbackTrans Methods (ADO)"
 title: "BeginTrans, CommitTrans, and RollbackTrans Methods (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

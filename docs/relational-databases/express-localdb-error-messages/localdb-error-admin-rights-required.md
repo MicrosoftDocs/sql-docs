@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED"
 title: "LOCALDB_ERROR_ADMIN_RIGHTS_REQUIRED | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

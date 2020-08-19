@@ -1,4 +1,5 @@
 ---
+description: "semanticsimilaritytable (Transact-SQL)"
 title: "semanticsimilaritytable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

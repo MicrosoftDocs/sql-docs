@@ -1,4 +1,5 @@
 ---
+description: "sys.backup_devices (Transact-SQL)"
 title: "sys.backup_devices (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

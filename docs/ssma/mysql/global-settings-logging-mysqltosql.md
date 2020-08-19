@@ -1,4 +1,5 @@
 ---
+description: "Global Settings (Logging)  (MySQLToSQL)"
 title: "Global Settings (Logging)  (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

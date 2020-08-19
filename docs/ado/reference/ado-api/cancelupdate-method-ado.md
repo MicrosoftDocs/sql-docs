@@ -1,4 +1,5 @@
 ---
+description: "CancelUpdate Method (ADO)"
 title: "CancelUpdate Method (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

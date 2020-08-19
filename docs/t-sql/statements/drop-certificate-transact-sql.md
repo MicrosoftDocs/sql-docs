@@ -1,4 +1,5 @@
 ---
+description: "DROP CERTIFICATE (Transact-SQL)"
 title: "DROP CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/18/2018"

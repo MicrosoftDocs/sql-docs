@@ -1,4 +1,5 @@
 ---
+description: "Summarize Query Results (Visual Database Tools)"
 title: Summarize Query Results
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

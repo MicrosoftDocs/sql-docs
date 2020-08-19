@@ -1,4 +1,5 @@
 ---
+description: "sys.service_queues (Transact-SQL)"
 title: "sys.service_queues (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

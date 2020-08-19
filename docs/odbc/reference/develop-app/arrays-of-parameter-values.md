@@ -1,4 +1,5 @@
 ---
+description: "Arrays of Parameter Values"
 title: "Arrays of Parameter Values | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

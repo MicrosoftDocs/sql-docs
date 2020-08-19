@@ -1,4 +1,5 @@
 ---
+description: "Running the Address Book SQL Script"
 title: "Running the Address Book SQL Script | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

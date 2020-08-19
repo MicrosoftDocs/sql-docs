@@ -1,4 +1,5 @@
 ---
+description: "AddNew Method (ADO)"
 title: "AddNew Method (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

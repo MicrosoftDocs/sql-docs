@@ -1,4 +1,5 @@
 ---
+description: "GRANT Schema Permissions (Transact-SQL)"
 title: "GRANT Schema Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/19/2017"

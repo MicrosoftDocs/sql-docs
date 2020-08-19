@@ -1,4 +1,5 @@
 ---
+description: "Recordset (ADO - WFC Syntax)"
 title: "Recordset (ADO - WFC Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

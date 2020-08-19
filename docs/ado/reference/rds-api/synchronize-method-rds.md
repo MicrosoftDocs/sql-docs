@@ -1,4 +1,5 @@
 ---
+description: "Synchronize Method (RDS)"
 title: "Synchronize Method (RDS) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

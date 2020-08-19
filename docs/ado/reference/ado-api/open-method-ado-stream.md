@@ -1,4 +1,5 @@
 ---
+description: "Open Method (ADO Stream)"
 title: "Open Method (ADO Stream) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

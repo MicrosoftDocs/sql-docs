@@ -1,4 +1,5 @@
 ---
+description: "Data Profiling Task Editor (General Page)"
 title: "Data Profiling Task Editor (General Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

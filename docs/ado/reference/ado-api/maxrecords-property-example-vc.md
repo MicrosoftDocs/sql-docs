@@ -1,4 +1,5 @@
 ---
+description: "MaxRecords Property Example (VC++)"
 title: "MaxRecords Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

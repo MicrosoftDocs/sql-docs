@@ -1,4 +1,5 @@
 ---
+description: "ALTER TABLE column_definition (Transact-SQL)"
 title: "column_definition (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/24/2018"

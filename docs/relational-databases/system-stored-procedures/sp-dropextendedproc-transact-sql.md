@@ -1,4 +1,5 @@
 ---
+description: "sp_dropextendedproc (Transact-SQL)"
 title: "sp_dropextendedproc (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/04/2017"

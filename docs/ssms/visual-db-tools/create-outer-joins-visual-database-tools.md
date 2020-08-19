@@ -1,4 +1,5 @@
 ---
+description: "Create Outer Joins (Visual Database Tools)"
 title: Create Outer Joins
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

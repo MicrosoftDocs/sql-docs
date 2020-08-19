@@ -1,4 +1,5 @@
 ---
+description: "Automatically Delete a Job"
 title: "Automatically Delete a Job"
 ms.prod: sql
 ms.prod_service: sql-tools

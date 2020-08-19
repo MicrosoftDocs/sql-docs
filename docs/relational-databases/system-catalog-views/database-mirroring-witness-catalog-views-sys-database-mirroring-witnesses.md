@@ -1,4 +1,5 @@
 ---
+description: "Database Mirroring Witness Catalog Views - sys.database_mirroring_witnesses"
 title: "sys.database_mirroring_witnesses (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

@@ -1,4 +1,5 @@
 ---
+description: "CubeDefs Collection (ADO MD)"
 title: "CubeDefs Collection (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

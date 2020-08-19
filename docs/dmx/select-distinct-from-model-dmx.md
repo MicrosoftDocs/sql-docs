@@ -1,4 +1,5 @@
 ---
+description: "SELECT DISTINCT FROM &lt;model &gt; (DMX)"
 title: "SELECT DISTINCT FROM &lt;model &gt; (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

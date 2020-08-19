@@ -1,4 +1,5 @@
 ---
+description: "System requirements for the JDBC driver"
 title: "System requirements for the JDBC driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2020"

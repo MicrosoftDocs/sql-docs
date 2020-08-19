@@ -1,4 +1,5 @@
 ---
+description: "sp_validate_redirected_publisher (Transact-SQL)"
 title: "sp_validate_redirected_publisher (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

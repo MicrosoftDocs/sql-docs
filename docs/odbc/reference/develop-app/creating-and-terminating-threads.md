@@ -1,4 +1,5 @@
 ---
+description: "Creating and Terminating Threads"
 title: "Creating and Terminating Threads | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

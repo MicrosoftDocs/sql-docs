@@ -1,4 +1,5 @@
 ---
+description: "ERROR_PROCEDURE (Transact-SQL)"
 title: "ERROR_PROCEDURE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

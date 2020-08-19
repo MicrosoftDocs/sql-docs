@@ -1,4 +1,5 @@
 ---
+description: "getDriverName Method (SQLServerDatabaseMetaData)"
 title: "getDriverName Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

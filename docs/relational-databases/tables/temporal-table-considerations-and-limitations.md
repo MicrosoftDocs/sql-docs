@@ -1,4 +1,5 @@
 ---
+description: "Temporal Table Considerations and Limitations"
 title: "Temporal Table Considerations and Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"

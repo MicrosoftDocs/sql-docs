@@ -1,4 +1,5 @@
 ---
+description: "sp_db_increased_partitions"
 title: "sp_db_increased_partitions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

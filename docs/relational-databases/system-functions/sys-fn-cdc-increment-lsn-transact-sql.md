@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_cdc_increment_lsn (Transact-SQL)"
 title: "sys.fn_cdc_increment_lsn (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

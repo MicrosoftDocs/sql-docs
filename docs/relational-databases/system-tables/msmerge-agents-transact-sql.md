@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_agents (Transact-SQL)"
 title: "MSmerge_agents (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

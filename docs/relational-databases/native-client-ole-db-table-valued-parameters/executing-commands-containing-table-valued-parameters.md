@@ -1,4 +1,5 @@
 ---
+description: "Executing SQL Server Native Client Commands Containing Table-Valued Parameters"
 title: "Commands with Table-Valued Parameters"
 ms.custom: ""
 ms.date: "03/06/2017"

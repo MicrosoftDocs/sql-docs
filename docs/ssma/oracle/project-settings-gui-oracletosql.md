@@ -1,4 +1,5 @@
 ---
+description: "Project Settings (GUI) (OracleToSQL)"
 title: "Project Settings (GUI) (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

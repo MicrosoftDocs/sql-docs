@@ -1,4 +1,5 @@
 ---
+description: "getObject Method (int) (SQLServerResultSet)"
 title: "getObject Method (int) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

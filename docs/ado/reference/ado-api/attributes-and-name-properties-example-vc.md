@@ -1,4 +1,5 @@
 ---
+description: "Attributes and Name Properties Example (VC++)"
 title: "Attributes and Name Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

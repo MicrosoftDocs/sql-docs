@@ -1,4 +1,5 @@
 ---
+description: "Create a Project"
 title: "Create a Project"
 ms.prod: sql
 ms.prod_service: "sql-tools"

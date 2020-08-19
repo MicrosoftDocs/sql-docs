@@ -1,4 +1,5 @@
 ---
+description: "Sort Data for the Merge and Merge Join Transformations"
 title: "Sort Data for the Merge and Merge Join Transformations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

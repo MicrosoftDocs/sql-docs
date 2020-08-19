@@ -1,4 +1,5 @@
 ---
+description: "sp_help_operator (Transact-SQL)"
 title: "sp_help_operator (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"

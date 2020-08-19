@@ -1,4 +1,5 @@
 ---
+description: "ADO Code Examples VBScript"
 title: "ADO Code Examples VBScript | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

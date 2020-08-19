@@ -1,4 +1,5 @@
 ---
+description: "ALTER INDEX (Transact-SQL)"
 title: "ALTER INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 08/21/2019

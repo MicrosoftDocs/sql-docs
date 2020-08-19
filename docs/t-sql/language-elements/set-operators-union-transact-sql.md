@@ -1,4 +1,5 @@
 ---
+description: "Set Operators - UNION (Transact-SQL)"
 title: "UNION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/07/2017"

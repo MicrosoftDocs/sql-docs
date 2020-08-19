@@ -1,4 +1,5 @@
 ---
+description: "Is ODBC the Answer?"
 title: "Is ODBC the Answer? | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_database_backuphistory (Transact-SQL)"
 title: "sp_delete_database_backuphistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

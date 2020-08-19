@@ -1,4 +1,5 @@
 ---
+description: "Advanced Object Selection  (OracleToSQL)"
 title: "Advanced Object Selection  (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

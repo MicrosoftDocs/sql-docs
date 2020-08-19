@@ -1,4 +1,5 @@
 ---
+description: "CancelUpdate Method (RDS)"
 title: "CancelUpdate Method (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

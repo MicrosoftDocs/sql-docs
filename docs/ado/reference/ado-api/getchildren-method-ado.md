@@ -1,4 +1,5 @@
 ---
+description: "GetChildren Method (ADO)"
 title: "GetChildren Method (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

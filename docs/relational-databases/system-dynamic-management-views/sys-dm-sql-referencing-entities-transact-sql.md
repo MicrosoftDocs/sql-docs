@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_sql_referencing_entities (Transact-SQL)"
 title: "sys.dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

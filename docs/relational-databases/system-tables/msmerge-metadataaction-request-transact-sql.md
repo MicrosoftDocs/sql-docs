@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_metadataaction_request (Transact-SQL)"
 title: "MSmerge_metadataaction_request (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

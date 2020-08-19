@@ -1,4 +1,5 @@
 ---
+description: "Working with SSMA Projects (DB2ToSQL)"
 title: "Working with SSMA Projects (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

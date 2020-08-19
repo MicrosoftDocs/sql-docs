@@ -1,4 +1,5 @@
 ---
+description: "DBCC DROPCLEANBUFFERS (Transact-SQL)"
 title: DBCC DROPCLEANBUFFERS (Transact-SQL)
 ms.custom: ""
 ms.date: "07/16/2017"
@@ -38,7 +39,7 @@ Removes all clean buffers from the buffer pool, and columnstore objects from the
 ## Syntax
 Syntax for SQL Server:
 
-```sql
+```syntaxsql
 DBCC DROPCLEANBUFFERS [ WITH NO_INFOMSGS ]  
 ```  
 Syntax for Azure SQL Warehouse and Parallel Data Warehouse:
@@ -47,7 +48,9 @@ Syntax for Azure SQL Warehouse and Parallel Data Warehouse:
 DBCC DROPCLEANBUFFERS ( COMPUTE | ALL ) [ WITH NO_INFOMSGS ]  
 ```
 
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH NO_INFOMSGS  
  Suppresses all informational messages. Informational messages are always suppressed on [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)].  
   

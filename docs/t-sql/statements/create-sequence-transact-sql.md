@@ -1,4 +1,5 @@
 ---
+description: "CREATE SEQUENCE (Transact-SQL)"
 title: CREATE SEQUENCE (Transact-SQL)
 ms.custom: ""
 ms.date: "04/11/2017"

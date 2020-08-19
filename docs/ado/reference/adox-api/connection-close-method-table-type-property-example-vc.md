@@ -1,4 +1,5 @@
 ---
+description: "Connection Close Method, Table Type Property Example (VC++)"
 title: "Connection Close Method, Table Type Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

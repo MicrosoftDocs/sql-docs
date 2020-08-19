@@ -1,4 +1,5 @@
 ---
+description: "sp_prepare (Transact SQL)"
 title: "sp_prepare (Transact SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2018"
@@ -28,7 +29,7 @@ Prepares a parameterized [!INCLUDE[tsql](../../includes/tsql-md.md)] statement a
   
 ## Syntax  
   
-```  
+```syntaxsql  
 sp_prepare handle OUTPUT, params, stmt, options  
 ```  
   
@@ -53,9 +54,9 @@ sp_prepare handle OUTPUT, params, stmt, options
 A. The following example prepares and executes a simple statement.  
   
 ```sql  
-DECLARE @P1 int;  
-EXEC sp_prepare @P1 output,   
-    N'@P1 nvarchar(128), @P2 nvarchar(100)',  
+DECLARE @P1 INT;  
+EXEC sp_prepare @P1 OUTPUT,   
+    N'@P1 NVARCHAR(128), @P2 NVARCHAR(100)',  
     N'SELECT database_id, name FROM sys.databases WHERE name=@P1 AND state_desc = @P2';  
 EXEC sp_execute @P1, N'tempdb', N'ONLINE';  
 EXEC sp_unprepare @P1;  
@@ -65,9 +66,9 @@ B. The following example prepares a statement in the AdventureWorks2016 database
 
 ```sql
 -- Prepare query
-DECLARE @P1 int;  
-EXEC sp_prepare @P1 output,   
-    N'@Param int',  
+DECLARE @P1 INT;  
+EXEC sp_prepare @P1 OUTPUT,   
+    N'@Param INT',  
     N'SELECT *
 FROM Sales.SalesOrderDetail AS sod
 INNER JOIN Production.Product AS p ON sod.ProductID = p.ProductID

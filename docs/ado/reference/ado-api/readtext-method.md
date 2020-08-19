@@ -1,4 +1,5 @@
 ---
+description: "ReadText Method"
 title: "ReadText Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "* (Multiply) (DMX)"
 title: "* (Multiply) (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

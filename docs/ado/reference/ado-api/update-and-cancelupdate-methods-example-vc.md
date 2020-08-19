@@ -1,4 +1,5 @@
 ---
+description: "Update and CancelUpdate Methods Example (VC++)"
 title: "Update and CancelUpdate Methods Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

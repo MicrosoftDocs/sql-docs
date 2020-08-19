@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysjobstepslogs (Transact-SQL)"
 title: "dbo.sysjobstepslogs (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

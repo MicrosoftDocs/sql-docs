@@ -1,4 +1,5 @@
 ---
+description: "Discovering Data Flow Components Programmatically"
 title: "Discovering Data Flow Components Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

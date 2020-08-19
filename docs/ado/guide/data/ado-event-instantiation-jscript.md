@@ -1,4 +1,5 @@
 ---
+description: "ADO Event Instantiation: JScript"
 title: "ADO Event Instantiation: JScript | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

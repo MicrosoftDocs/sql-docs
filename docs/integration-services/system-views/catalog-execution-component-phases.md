@@ -1,4 +1,5 @@
 ---
+description: "catalog.execution_component_phases"
 title: "catalog.execution_component_phases | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

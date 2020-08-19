@@ -1,4 +1,5 @@
 ---
+description: "Multiple Flat Files Connection Manager"
 title: "Multiple Flat Files Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Context Property (SecurityCertificate Class)"
 title: "Context Property (SecurityCertificate)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"

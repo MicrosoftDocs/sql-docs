@@ -1,4 +1,5 @@
 ---
+description: "STDisjoint (geography Data Type)"
 title: "STDisjoint (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

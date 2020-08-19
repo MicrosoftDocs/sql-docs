@@ -1,4 +1,5 @@
 ---
+description: "GetDataProviderDSO Method"
 title: "GetDataProviderDSO Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

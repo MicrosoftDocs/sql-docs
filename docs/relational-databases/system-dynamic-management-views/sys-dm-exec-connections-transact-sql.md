@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_connections (Transact-SQL)"
 title: "sys.dm_exec_connections (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2017"

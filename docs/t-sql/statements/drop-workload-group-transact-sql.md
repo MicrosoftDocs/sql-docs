@@ -1,4 +1,5 @@
 ---
+description: "DROP WORKLOAD GROUP (Transact-SQL)"
 title: "DROP WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/10/2020

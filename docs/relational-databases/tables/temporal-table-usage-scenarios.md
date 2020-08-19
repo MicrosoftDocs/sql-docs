@@ -1,4 +1,5 @@
 ---
+description: "Temporal Table Usage Scenarios"
 title: "Temporal Table Usage Scenarios | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/16/2017"

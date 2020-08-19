@@ -1,4 +1,5 @@
 ---
+description: "MSSQL_ENG020596"
 title: "MSSQL_ENG020596 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

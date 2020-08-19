@@ -1,4 +1,5 @@
 ---
+description: "Autotranslation of Character Data"
 title: "Autotranslation of Character Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

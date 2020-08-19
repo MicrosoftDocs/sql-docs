@@ -1,4 +1,5 @@
 ---
+description: "cdc.lsn_time_mapping (Transact-SQL)"
 title: "cdc.lsn_time_mapping (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

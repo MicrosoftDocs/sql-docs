@@ -1,4 +1,5 @@
 ---
+description: "Permissions: GRANT, DENY, REVOKE (Azure SQL Data Warehouse, Parallel Data Warehouse)"
 title: "GRANT-DENY-REVOKE permissions"
 titleSuffix: "Azure SQL Data Warehouse"
 ms.custom: "seo-lt-2019​"

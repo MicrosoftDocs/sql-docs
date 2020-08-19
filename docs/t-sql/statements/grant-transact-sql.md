@@ -1,4 +1,5 @@
 ---
+description: "GRANT (Transact-SQL)"
 title: GRANT (Transact-SQL)
 ms.custom: ""
 ms.date: "06/12/2017"

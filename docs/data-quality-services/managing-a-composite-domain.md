@@ -1,4 +1,5 @@
 ---
+description: "Managing a Composite Domain"
 title: "Managing a Composite Domain"
 ms.date: "07/31/2012"
 ms.prod: sql

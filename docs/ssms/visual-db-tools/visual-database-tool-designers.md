@@ -1,4 +1,5 @@
 ---
+description: "Visual Database Tool Designers"
 title: Visual Database Tool Designers
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

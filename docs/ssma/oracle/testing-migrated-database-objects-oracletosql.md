@@ -1,4 +1,5 @@
 ---
+description: "Testing Migrated Database Objects (OracleToSQL)"
 title: "Testing Migrated Database Objects (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

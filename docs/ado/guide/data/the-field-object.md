@@ -1,4 +1,5 @@
 ---
+description: "The Field Object"
 title: "The Field Object | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

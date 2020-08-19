@@ -1,4 +1,5 @@
 ---
+description: "sp_subscription_cleanup (Transact-SQL)"
 title: "sp_subscription_cleanup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

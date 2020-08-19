@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_rollback"
 title: "sqlsrv_rollback | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"

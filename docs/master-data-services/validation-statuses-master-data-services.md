@@ -1,4 +1,5 @@
 ---
+description: "Validation Statuses (Master Data Services)"
 title: Validation Statuses
 ms.custom: ""
 ms.date: "03/01/2017"

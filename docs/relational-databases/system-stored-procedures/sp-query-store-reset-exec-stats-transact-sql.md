@@ -1,4 +1,5 @@
 ---
+description: "sp_query_store_reset_exec_stats (Transact-SQL)"
 title: "sp_query_store_reset_exec_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

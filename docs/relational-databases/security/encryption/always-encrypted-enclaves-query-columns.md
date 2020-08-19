@@ -1,4 +1,5 @@
 ---
+description: "Query columns using Always Encrypted with secure enclaves"
 title: "Query columns using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/31/2019

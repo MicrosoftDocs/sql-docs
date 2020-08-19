@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_hadr_cluster_members (Transact-SQL)"
 title: "sys.dm_hadr_cluster_members (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2019"

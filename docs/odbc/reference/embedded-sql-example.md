@@ -1,4 +1,5 @@
 ---
+description: "Embedded SQL Example"
 title: "Embedded SQL Example | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

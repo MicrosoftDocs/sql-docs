@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_xe_database_session_targets (Azure SQL Database)"
 title: "sys.dm_xe_database_session_targets"
 titleSuffix: Azure SQL Database
 ms.date: "06/10/2016"

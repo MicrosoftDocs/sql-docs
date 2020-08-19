@@ -1,4 +1,5 @@
 ---
+description: "Extending the Data Flow with the Script Component"
 title: "Extending the Data Flow with the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

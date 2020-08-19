@@ -1,4 +1,5 @@
 ---
+description: "Microsoft Access Data Types"
 title: "Microsoft Access Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/19/2019

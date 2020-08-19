@@ -1,4 +1,5 @@
 ---
+description: "Close Method (ADO MD)"
 title: "Close Method (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

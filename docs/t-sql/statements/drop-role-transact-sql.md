@@ -1,4 +1,5 @@
 ---
+description: "DROP ROLE (Transact-SQL)"
 title: "DROP ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2017"
@@ -45,7 +46,9 @@ DROP ROLE [ IF EXISTS ] role_name
 DROP ROLE role_name  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *IF EXISTS*  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   

@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Utilities Statements - GO"
 title: "SQL Server Utilities Statements - GO | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"

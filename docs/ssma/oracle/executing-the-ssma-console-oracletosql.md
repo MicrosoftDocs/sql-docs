@@ -1,4 +1,5 @@
 ---
+description: "Executing the SSMA Console (OracleToSQL)"
 title: "Executing the SSMA Console (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

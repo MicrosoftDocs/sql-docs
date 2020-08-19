@@ -1,4 +1,5 @@
 ---
+description: "ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL)"
 title: "ALTER CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/20/2017"

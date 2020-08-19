@@ -1,4 +1,5 @@
 ---
+description: "Editing Data"
 title: "Editing Data | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

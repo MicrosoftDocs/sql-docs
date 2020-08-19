@@ -1,4 +1,5 @@
 ---
+description: "Microsoft OLE DB Provider for Microsoft Active Directory Service"
 title: "Microsoft OLE DB Provider for Microsoft Active Directory Service | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

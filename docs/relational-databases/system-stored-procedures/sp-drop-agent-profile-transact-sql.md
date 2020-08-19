@@ -1,4 +1,5 @@
 ---
+description: "sp_drop_agent_profile (Transact-SQL)"
 title: "sp_drop_agent_profile (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

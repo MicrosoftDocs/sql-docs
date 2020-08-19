@@ -1,4 +1,5 @@
 ---
+description: "Creating a Destination with the Script Component"
 title: "Creating a Destination with the Script Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

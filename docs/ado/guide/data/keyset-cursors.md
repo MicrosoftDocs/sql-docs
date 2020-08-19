@@ -1,4 +1,5 @@
 ---
+description: "Keyset Cursors"
 title: "Keyset Cursors | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Project Settings(Loading System objects) (OracleToSQL)"
 title: "Project Settings(Loading System objects) (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

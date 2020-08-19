@@ -1,4 +1,5 @@
 ---
+description: "Change a Derived Hierarchy Name (Master Data Services)"
 title: Change a Derived Hierarchy Name
 ms.custom: ""
 ms.date: "03/01/2017"

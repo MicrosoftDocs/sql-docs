@@ -1,4 +1,5 @@
 ---
+description: "PrimaryKey and Unique Properties Example (VB)"
 title: "PrimaryKey and Unique Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

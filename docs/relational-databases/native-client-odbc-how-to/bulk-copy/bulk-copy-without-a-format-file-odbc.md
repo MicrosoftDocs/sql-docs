@@ -1,4 +1,5 @@
 ---
+description: "Bulk Copy Without a Format File (ODBC)"
 title: "Bulk Copy Without a Format File (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Using an SQL statement to modify data"
 title: "Using an SQL statement to modify data | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

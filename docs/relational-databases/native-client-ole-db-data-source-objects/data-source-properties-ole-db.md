@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Native Client Data Source Properties (OLE DB)"
 title: "Data source properties (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Static Aggregate Geography Methods"
 title: "Static Aggregate Geography Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

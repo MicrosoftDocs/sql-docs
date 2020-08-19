@@ -1,4 +1,5 @@
 ---
+description: "DBCC DBREINDEX (Transact-SQL)"
 title: "DBCC DBREINDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"

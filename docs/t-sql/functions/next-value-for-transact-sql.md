@@ -1,4 +1,5 @@
 ---
+description: "NEXT VALUE FOR (Transact-SQL)"
 title: "NEXT VALUE FOR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2016"

@@ -1,4 +1,5 @@
 ---
+description: "The Oracle CDC Instance"
 title: "The Oracle CDC Instance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

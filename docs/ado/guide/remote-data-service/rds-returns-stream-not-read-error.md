@@ -1,4 +1,5 @@
 ---
+description: "RDS Returns &quot;Stream Not Read&quot; Error"
 title: "RDS Returns &quot;Stream Not Read&quot; Error | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

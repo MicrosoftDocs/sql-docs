@@ -1,4 +1,5 @@
 ---
+description: "Visual FoxPro ODBC Driver Native Error Messages"
 title: "Visual FoxPro ODBC Driver Native Error Messages | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

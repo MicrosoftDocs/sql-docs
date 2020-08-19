@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_hadr_cluster_networks (Transact-SQL)"
 title: "sys.dm_hadr_cluster_networks (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

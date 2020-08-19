@@ -1,4 +1,5 @@
 ---
+description: "DBCC SHRINKDATABASE (Transact-SQL)"
 title: "DBCC SHRINKDATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"

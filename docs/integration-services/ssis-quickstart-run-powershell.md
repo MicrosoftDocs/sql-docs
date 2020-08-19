@@ -1,4 +1,5 @@
 ---
+description: "Run an SSIS package with PowerShell"
 title: "Run an SSIS package with PowerShell | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart

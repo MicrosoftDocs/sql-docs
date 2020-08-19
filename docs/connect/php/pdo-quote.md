@@ -1,4 +1,5 @@
 ---
+description: "PDO::quote"
 title: "PDO::quote | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2020"

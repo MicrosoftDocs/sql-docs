@@ -1,4 +1,5 @@
 ---
+description: "Schema Rowsets - LINKEDSERVERS Rowset in SQL Server Native Client"
 title: "LINKEDSERVERS Rowset (OLE DB) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

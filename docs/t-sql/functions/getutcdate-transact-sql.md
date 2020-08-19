@@ -1,4 +1,5 @@
 ---
+description: "GETUTCDATE (Transact-SQL)"
 title: "GETUTCDATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/02/2015"

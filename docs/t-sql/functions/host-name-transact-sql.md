@@ -1,4 +1,5 @@
 ---
+description: "HOST_NAME (Transact-SQL)"
 title: "HOST_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/21/2017"
@@ -28,7 +29,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 HOST_NAME ()  
 ```  

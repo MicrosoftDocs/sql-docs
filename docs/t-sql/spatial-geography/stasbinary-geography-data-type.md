@@ -1,4 +1,5 @@
 ---
+description: "STAsBinary (geography Data Type)"
 title: "STAsBinary (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

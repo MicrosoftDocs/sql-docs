@@ -1,4 +1,5 @@
 ---
+description: "CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server"
 title: "CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/10/2020
@@ -21,7 +22,7 @@ manager: cgronlund
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # CREATE EXTERNAL LIBRARY (Transact-SQL)  
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 Uploads R, Python, or Java package files to a database from the specified byte stream or file path. This statement serves as a generic mechanism for the database administrator to upload artifacts needed for any new external language runtimes and OS platforms supported by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
@@ -202,6 +203,8 @@ Specifies the language of the package. The value can be `R` or `Python` in Azure
 
 Specifies the language of the package. The value can be `R`, `Python`, or the name of an external language (see [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
 ::: moniker-end
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Remarks
 

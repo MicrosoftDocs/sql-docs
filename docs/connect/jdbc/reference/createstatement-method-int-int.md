@@ -1,4 +1,5 @@
 ---
+description: "createStatement Method (int, int)"
 title: "createStatement Method (int, int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

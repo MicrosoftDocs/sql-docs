@@ -1,4 +1,5 @@
 ---
+description: "Cellset Object (ADO MD)"
 title: "Cellset Object (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Operators (Transact-SQL)"
 title: "Operators (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"

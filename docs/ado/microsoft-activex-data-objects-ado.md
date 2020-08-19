@@ -1,4 +1,5 @@
 ---
+description: "Microsoft ActiveX Data Objects (ADO)"
 title: "Microsoft ActiveX Data Objects (ADO) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/08/2018

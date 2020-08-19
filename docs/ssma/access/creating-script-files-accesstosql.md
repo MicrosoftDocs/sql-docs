@@ -1,4 +1,5 @@
 ---
+description: "Creating Script Files (AccessToSQL)"
 title: "Creating Script Files (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

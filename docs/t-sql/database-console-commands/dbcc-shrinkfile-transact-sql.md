@@ -62,7 +62,7 @@ The file to be shrunk's logical name.
 The file to be shrunk's identification (ID) number. To get a file ID, use the [FILE_IDEX](../../t-sql/functions/file-idex-transact-sql.md) system function or query the [sys.database_files](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md) catalog view in the current database.
   
 *target_size*  
-An integer - the file's new megabyte size. If not specified, DBCC SHRINKFILE reduces to the file creation size.
+An integer - the file's new megabyte size. If not specified or 0, DBCC SHRINKFILE reduces to the file creation size.
   
 > [!NOTE]  
 >  You can reduce an empty file's default size using DBCC SHRINKFILE *target_size*. For example, if you create a 5-MB file and then shrink the file to 3 MB while the file is still empty, the default file size is set to 3 MB. This applies only to empty files that have never contained data.  

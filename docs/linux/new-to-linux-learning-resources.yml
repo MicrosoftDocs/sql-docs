@@ -20,10 +20,10 @@ landingContent:
       - text: Introduction to Linux
         url: new-to-linux-resources.md
       - text: "Learn: SQL Server on Linux"
-        url: https://docs.microsoft.com/en-us/learn/modules/introduction-sql-server-linux/
-      - text: "Channel9 - How SQL Server runs on Linux (optional)"
+        url: https://docs.microsoft.com/learn/modules/introduction-sql-server-linux/
+      - text: "Channel 9 - How SQL Server runs on Linux (optional)"
         url: https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-on-Linux-The-HOW?term=sql%20server%20on%20Linux&lang-en=true
-      - text: "Channel9 - SQL Server on Linux (optional)"
+      - text: "Channel 9 - SQL Server on Linux (optional)"
         url: https://channel9.msdn.com/events/Connect/2016/101?term=sql%20server%20on%20Linux&lang-en=true 
 
 
@@ -55,7 +55,7 @@ landingContent:
         url: ../tools/overview-sql-tools.md
       - text: Azure Data Studio (tool)
         url: ../azure-data-studio/what-is.md
-      - text: Channel9 - Cross-platform SQL tools (optional)
+      - text: Channel 9 - Cross-platform SQL tools (optional)
         url: https://channel9.msdn.com/events/Connect/2016/173?term=SQL%20on%20linux&lang-en=true
 
 

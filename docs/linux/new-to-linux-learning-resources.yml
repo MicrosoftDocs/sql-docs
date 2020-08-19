@@ -1,0 +1,102 @@
+### YamlMime:Landing
+
+title: "New to Linux: Learning resources"
+summary: Tutorials, quickstarts, and other educational resources meant to teach you to work with SQL Server on Linux for users who are familiar with SQL Server but new to Linux. 
+
+metadata:
+  title: "New to Linux: Learning resources"
+  description: A collection of resources meant to teach you to use SQL Server on Linux for new-to-Linux users. 
+  ms.prod: sql
+  ms.topic: landing-page
+  author: MashaMSFT
+  ms.author: mathoma
+  ms.date: 07/25/2020  
+
+landingContent:
+  - title: "Module 1: Introduction to SQL Server on Linux"
+    linkLists:
+    - linkListType: learn
+      links:
+      - text: Introduction to Linux
+        url: new-to-linux-resources.md
+      - text: "Learn: SQL Server on Linux"
+        url: https://docs.microsoft.com/learn/modules/introduction-sql-server-linux/
+      - text: "Channel 9 - How SQL Server runs on Linux (optional)"
+        url: https://channel9.msdn.com/Shows/Data-Exposed/SQL-Server-on-Linux-The-HOW?term=sql%20server%20on%20Linux&lang-en=true
+      - text: "Channel 9 - SQL Server on Linux (optional)"
+        url: https://channel9.msdn.com/events/Connect/2016/101?term=sql%20server%20on%20Linux&lang-en=true 
+
+
+  - title: "Module 2: Planning SQL Server on Linux"
+    linkLists:
+    - linkListType: learn
+      links:
+      - text: Editions and components
+        url: sql-server-linux-editions-and-components-2019.md
+      - text: Supported platforms
+        url: sql-server-linux-release-notes-2019.md
+      - text: Frequently asked questions
+        url: sql-server-linux-faq.md 
+
+
+  - title: "Module 3: Install/deploy & connect"
+    linkLists:
+    - linkListType: learn
+      links:
+      - text: Redhat
+        url: quickstart-install-connect-red-hat.md
+      - text: SUSE
+        url: quickstart-install-connect-suse.md
+      - text: Ubuntu
+        url: quickstart-install-connect-ubuntu.md
+      - text: Container
+        url: quickstart-install-connect-docker.md
+      - text: Tools overview
+        url: ../tools/overview-sql-tools.md
+      - text: Azure Data Studio (tool)
+        url: ../azure-data-studio/what-is.md
+      - text: Channel 9 - Cross-platform SQL tools (optional)
+        url: https://channel9.msdn.com/events/Connect/2016/173?term=SQL%20on%20linux&lang-en=true
+
+
+  - title: "Module 4: Configure SQL Server on Linux"
+    linkLists:
+    - linkListType: learn
+      links:
+      - text: Change default port
+        url: sql-server-linux-configure-mssql-conf.md#tcpport
+      - text: Change default paths
+        url: sql-server-linux-configure-mssql-conf.md#datadir
+      - text: Set traceflags 
+        url: sql-server-linux-configure-mssql-conf.md#traceflags
+      - text: Join domain
+        url: sql-server-linux-active-directory-authentication.md
+      - text: Load sample data 
+        url: ../samples/adventureworks-install-configure.md
+      - text: Migrate
+        url: sql-server-linux-migrate-restore-database.md
+
+
+  - title: "Module 5: Configure business continuity"
+    linkLists:
+    - linkListType: learn
+      links:
+      - text: Business continuity options
+        url:  sql-server-linux-business-continuity-dr.md
+      - text: Deploy Pacemaker Cluster
+        url: sql-server-linux-deploy-pacemaker-cluster.md
+      - text: Configure availability group
+        url: sql-server-linux-create-availability-group.md
+
+  - title: "Module 6: Monitor and tune"
+    linkLists:
+    - linkListType: learn
+      links:
+      - text: Performance dashboard 
+        url: https://www.youtube.com/watch?v=cVdfhBVmeig
+      - text: Query store
+        url: ../relational-databases/performance/monitoring-performance-by-using-the-query-store.md
+      - text: DMVs
+        url: ../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
+      - text: Additional learning - Performance features of SQL Server on Linux
+        url: sql-server-linux-performance-get-started.md

@@ -1,7 +1,7 @@
 ---
 title: Deploy private cluster
 titleSuffix: SQL Server Big Data Cluster
-description: Learn how to deploy a private SQL Server Big Data Clusters.
+description: Learn how to deploy a SQL Server Big Data Clusters with AKS private cluster.
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -11,15 +11,15 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Deploy private cluster in Azure Kubernetes Service (AKS) 
+# Deploy BDC in Azure Kubernetes Service (AKS) private cluster
 
-This article explains how to deploy SQL Server Big Data Cluster on Azure Kubernetes Service (AKS) in a private configuration. This configuration supports restricted access to public IP addresses.
+This article explains how to deploy SQL Server Big Data Clusters on Azure Kubernetes Service (AKS) private cluster. This configuration supports restricted access to public IP addresses.
 
 A private deployment provides the following benefits:
 
 * Restricted use of public IP addresses
 * Network traffic between application servers and cluster node pools remains only on the private network
-* Custom configuration for egress traffic to fit specific requirements
+* Custom configuration for mandatory egress traffics to fit specific requirements
 
 This article demonstrates how to use an AKS private cluster to restrict the use of Public IP address while respective security strings have applied.
 
@@ -31,7 +31,6 @@ This section shows you deploy a private BDC cluster in Azure Kubernetes Service 
 ## Create a private AKS cluster with advanced networking
 
 ```console
-# Define a set of environment variables to be used in resource creations.
 
 export REGION_NAME=northeurope
 export RESOURCE_GROUP=private-bdc-aks-rg
@@ -58,12 +57,13 @@ SUBNET_ID=$(az network vnet subnet show \
  
 echo $SUBNET_ID
 ## will be displayed something similar as the following: 
-/subscriptions/9b1b3746-eb27-417d-804c-a00646520a34/resourceGroups/private-bdc-aks/providers/Microsoft.Network/virtualNetworks/aks-vnet/subnets/aks-subnet
+/subscriptions/xxxx-xxxx-xxx-xxxx-xxxxxxxx/resourceGroups/your-bdc-rg/providers/Microsoft.Network/virtualNetworks/your-aks-vnet/subnets/your-aks-subnet
 ```
 
 ### Create AKS private cluster with advanced networking (CNI)
 
-To be able to get to next step, you need to provision an AKS cluster with Standard Load Balancer with private cluster feature enabled.  Your command will look like 
+To be able to get to next step, you need to provision an AKS cluster with Standard Load Balancer with private cluster feature enabled.  Your command will look like as follows : 
+
 ```console
 az aks create \
     --resource-group $RESOURCE_GROUP \

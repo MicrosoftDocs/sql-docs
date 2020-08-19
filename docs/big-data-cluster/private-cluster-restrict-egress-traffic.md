@@ -1,6 +1,6 @@
 ---
 title: Restrict egress traffic
-titleSuffix: SQL Server Big Data Cluster
+titleSuffix: SQL Server Big Data Clusters
 description: Learn how to restrict egress traffic.
 author: cloudmelon
 ms.author: melqin
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Restrict egress traffic of Private BDC cluster
+# Restrict egress traffic of BDC clusters in AKS private cluster
 
 Since AKS provisions a standard SKU Load Balancer to be set up and used for egress by default. However, the default setup may not meet the requirements of all scenarios if public IPs are disallowed or additional hops are required for egress. You can customize cluster egress with a User-Defined Route if you have those disallows public IPs and  your cluster sit behind a network virtual appliance (NVA).  
 
@@ -23,7 +23,7 @@ By default, AKS clusters have unrestricted outbound (egress) internet access for
 * Dev Space enabled and more scenarios of similar nature.
 
 > [!NOTE]
-> Currently, when you deploy BDC in Azure Kubernetes Service ( AKS ), there is no inbound dependencies in the scenario besides what we mentioned in this article, you can find all outbound dependencies at : [control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)]( /azure/aks/limit-egress-traffic) . 
+> Currently, when you deploy BDC in Azure Kubernetes Service ( AKS ) private cluster, there is no inbound dependencies in the scenario besides what we mentioned in this article, you can find all outbound dependencies at : [control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)]( /azure/aks/limit-egress-traffic) . 
 This article covers how to deploy BDC in AKS private cluster with advanced networking and UDR (User Defined Route) as well as its further integration with enterprise-grade networking environment. 
 
 ## Use Azure firewall to restrict egress traffic
@@ -189,11 +189,11 @@ az aks create \
     --generate-ssh-keys
 ```
 
-## Create Big Data Cluster
+## Create Big Data Clusters
 
-Then you can create BDC private cluster with custom profile. You can find a template to set up this architecture here in sql server sample repository on Github. 
+Then you can create BDC clusters with custom profile. You can find a template to set up this architecture here in sql server sample repository on Github. 
 
-Use 3rd Party Firewall to restrict egress traffic. Popular 3rd party firewall such as palo alto is chosen by customers, it can be used in private deployment solution with more complicity on configuration, but basically, it has to consider the following network rules :
+Use 3rd Party Firewall to restrict egress traffic when deployed BDC with AKS private cluster. Popular 3rd party firewall such as palo alto is chosen by customers, it can be used in private deployment solution with more complicity on configuration, but basically, it has to consider the following network rules :
 
 * All the required outbound network rules and FQDNs for AKS clusters and all Wildcard HTTP/HTTPS endpoints and dependencies that can vary with your AKS cluster based on a number of qualifiers and your actual requirements. 
 * Azure Global required network rules / FQDN/application rules mentioned here. 

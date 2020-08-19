@@ -17,7 +17,7 @@ The [Apache Spark Connector for SQL Server and Azure SQL](https://github.com/mic
 
 The connector is included by default in SQL Server Big Data Clusters.
 
-Learn more about the connector at the [open source repository](https://github.com/microsoft/sql-spark-connector). For samples of how to use the connector, click [here](https://github.com/microsoft/sql-spark-connector/tree/master/samples).
+Learn more about the connector at the [open source repository](https://github.com/microsoft/sql-spark-connector). For examples, see [samples](https://github.com/microsoft/sql-spark-connector/tree/master/samples).
 
 ## Write to a new SQL Table
 

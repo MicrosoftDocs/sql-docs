@@ -34,14 +34,14 @@
     href: tutorial-backup-restore-sql-server.md
   - name: Create an Extension
     items:
-      - name: Keymap Extension
-        href: tutorial-create-keymap-extension.md
-      - name: Notebook Extension
-        href: tutorial-create-notebook-extension.md
-      - name: Jupyter Book Extension
-        href: tutorial-create-jupyterbook-extension.md
-      - name: Wizard Extension
-        href: tutorial-create-wizard-extension.md
+    - name: Keymap Extension
+      href: tutorial-create-keymap-extension.md
+    - name: Notebook Extension
+      href: tutorial-create-notebook-extension.md
+    - name: Jupyter Book Extension
+      href: tutorial-create-jupyterbook-extension.md
+    - name: Wizard Extension
+      href: tutorial-create-wizard-extension.md
 - name: Concepts
   items:
   - name: Extensions

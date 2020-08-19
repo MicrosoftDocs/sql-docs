@@ -81,3 +81,12 @@ Your extension will be reviewed and added to the extension gallery.
 **Publishing extension updates**
 
 The process to publish updates is similar to publishing the extension. Please make sure the version is updated in package.json.
+
+## Next Steps
+
+Refer to one of the following extension authoring tutorials for step-by-step instructions on how to get started:
+
+- [Keymap Extension](tutorial-create-keymap-extension.md)
+- [Notebook Extension](tutorial-create-notebook-extension.md)
+- [Jupyter Book Extension](tutorial-create-jupyterbook-extension.md)
+- [Wizard Extension](tutorial-create-wizard-extension.md)

@@ -28,7 +28,8 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CREATE SECURITY POLICY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Creates a security policy for row level security.  
   

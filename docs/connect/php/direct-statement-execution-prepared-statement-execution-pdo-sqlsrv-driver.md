@@ -1,6 +1,6 @@
 ---
 title: "Direct Statement - Prepared Statement Execution PDO_SQLSRV Driver"
-description: "This topic discusses the use of the PDO::SQLSRV_ATTR_DIRECT_QUERY attribute to specify direct statement execution instead of prepared statement execution when using the Microsoft PDO_SQLSRV Driver for PHP for SQL Server"
+description: "Learn how to use the PDO::SQLSRV_ATTR_DIRECT_QUERY attribute for direct statement execution when using the Microsoft PDO_SQLSRV Driver for PHP for SQL Server"
 ms.custom: ""
 ms.date: "08/10/2020"
 ms.prod: sql

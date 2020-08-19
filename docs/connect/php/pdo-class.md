@@ -1,6 +1,6 @@
 ---
 title: "PDO Class"
-description: "API references for the PDO class in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
+description: "API reference for the PDO class in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
 ms.date: "08/10/2020"
 ms.prod: sql

@@ -11,19 +11,21 @@ ms.prod: sql
 ms.technology: machine-learning-bdc
 ---
 
-# Using the Apache Spark Connector for SQL Server and Azure SQL
+# Use the Apache Spark Connector for SQL Server and Azure SQL
 
-The [Apache Spark Connector for SQL Server and Azure SQL](https://github.com/microsoft/sql-spark-connector) is a high-performance connector that enables you to use transactional data in big data analytics and persists results for ad-hoc queries or reporting. The connector allows you to use any SQL database, on-premises or in the cloud, as an input data source or output data sink for Spark jobs. The connector uses SQL Server Bulk write APIs. Any bulk write parameters can be passed as optional parameters by the user and are passed as-is by the connector to the underlying API. For more information about bulk write operations, see [SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
+The [Apache Spark Connector for SQL Server and Azure SQL](https://github.com/microsoft/sql-spark-connector) is a high-performance connector that enables you to use transactional data in big data analytics and persists results for ad-hoc queries or reporting. The connector allows you to use any SQL database, on-premises or in the cloud, as an input data source or output data sink for Spark jobs. The connector uses SQL Server bulk write APIs. Any bulk write parameters can be passed as optional parameters by the user and are passed as-is by the connector to the underlying API. For more information about bulk write operations, see [Using bulk copy with the JDBC driver]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions).
 
 The connector is included by default in SQL Server Big Data Clusters.
 
 Learn more about the connector at the [open source repository](https://github.com/microsoft/sql-spark-connector). For samples of how to use the connector, click [here](https://github.com/microsoft/sql-spark-connector/tree/master/samples).
 
-## Apache Spark Connector for SQL Server and Azure SQL Interface
+## Write to a new SQL Table
 
-### Write to a new SQL Table
-#### Important: using the `overwrite` mode will first DROP the table if it already exists in the database by default. Please use this option with due care to avoid unexpected data loss!
-### When using mode `overwrite` if you do not use the option `truncate` , on recreation of the table indexes will be lost. For example a columnstore table would now be a heap. If you want to maintain existing indexing please also specify option `truncate` with value true. i.e .option("truncate",true)
+>[!CAUTION]
+> In `overwrite` mode, the connector first drops the table if it already exists in the database by default. Use this option with due care to avoid unexpected data loss.
+> 
+> When using mode `overwrite` if you do not use the option `truncate`, on re-creation of the table, indexes will be lost. For example, a columnstore table becomes a heap. If you want to maintain existing indexing please also specify option `truncate` with value `true`. For example `.option("truncate",true)`
+
 ```python
 server_name = "jdbc:sqlserver://{SERVER_ADDR}"
 database_name = "database_name"
@@ -46,7 +48,7 @@ except ValueError as error :
     print("Connector write failed", error)
 ```
 
-### Append to SQL Table
+## Append to SQL Table
 ```python
 try:
   df.write \
@@ -61,13 +63,15 @@ except ValueError as error :
     print("Connector write failed", error)
 ```
 
-### Specifying the isolation level
+## Specify the isolation level
+
 This connector by default uses READ_COMMITTED isolation level when performing the bulk insert into the database. If you wish to override this to another isolation level, please use the `mssqlIsolationLevel` option as shown below.
 ```python
     .option("mssqlIsolationLevel", "READ_UNCOMMITTED") \
 ```
 
-### Read from SQL Table
+## Read from SQL Table
+
 ```python
 jdbcDF = spark.read \
         .format("com.microsoft.sqlserver.jdbc.spark") \
@@ -77,9 +81,12 @@ jdbcDF = spark.read \
         .option("password", password).load()
 ```
 
-### Non-AD Mode:
-In non-AD mode security, each user has a username and password which need to be provided as parameters during the connector instantiation to perform read and/or writes.
-An example connector instantiation for non-AD mode is below:
+## Non-Active Directory mode
+
+In non-Active Directory mode security, each user has a username and password which need to be provided as parameters during the connector instantiation to perform read and/or writes.
+
+An example connector instantiation for non-Active Directory mode is below. Before you run the script, replace the `?` with the value for your account.
+
 ```python
 # Note: '?' is a placeholder for a necessary user-specified value
 connector_type = "com.microsoft.sqlserver.jdbc.spark" 
@@ -93,12 +100,15 @@ writer = df.write \
    .option("password",?) 
 writer.save() 
 ```
-### AD Mode:
-In AD mode security, after a user has generated a key tab file, the user needs to provide the `principal` and `keytab` as parameters during the connector instantiation.
+
+## Active Directory mode
+
+In Active Directory mode security, after a user has generated a key tab file, the user needs to provide the `principal` and `keytab` as parameters during the connector instantiation.
 
 In this mode, the driver loads the keytab file to the respective executor containers. Then, the executors use the principal name and keytab to generate a token that is used to create a JDBC connector for read/write.
 
-An example connector instantiation for AD mode is below:
+An example connector instantiation for Active Directory mode is below. Before you run the script, replace the `?` with the value for your account.
+
 ```python
 # Note: '?' is a placeholder for a necessary user-specified value
 connector_type = "com.microsoft.sqlserver.jdbc.spark"

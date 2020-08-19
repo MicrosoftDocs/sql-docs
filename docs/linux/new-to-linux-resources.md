@@ -52,12 +52,11 @@ After you're familiar with recognizing different users and groups in Linux, lear
 
 ## Commands for system administration
 
-Introduce yourself to the [frequently-used commands](https://www.linux.org/threads/commands-for-system-administration.4126/) system administrators rely on to control their Linux operating systems. These commands include: `df`, `du`, `TOP`, `ps`, `mkdir`, `rmdir`, `rm`, and `mv`. 
+Introduce yourself to the [frequently used commands](https://www.linux.org/threads/commands-for-system-administration.4126/) system administrators rely on to control their Linux operating systems. These commands include: `df`, `du`, `TOP`, `ps`, `mkdir`, `rmdir`, `rm`, and `mv`. 
 
 
 ## Next steps
 
-After you've familiarized yourself with the Linux environment, review the [editions and components](sql-server-linux-editions-and-components-2019.md) for
-SQL Server on Linux, as well as the [supported Linux platforms](sql-server-linux-release-notes-2019.md). 
+After you've familiarized yourself with the Linux environment, review the [editions and components](sql-server-linux-editions-and-components-2019.md) for SQL Server on Linux, as well as the [supported Linux platforms](sql-server-linux-release-notes-2019.md). 
 
 To learn more, see the [other Linux tutorials](https://www.linux.org/forums/linux-beginner-tutorials.123/) as well as the [frequently asked questions](sql-server-linux-faq.md).

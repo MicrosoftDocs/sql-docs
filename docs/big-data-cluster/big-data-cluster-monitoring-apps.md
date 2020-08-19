@@ -46,7 +46,7 @@ When you open the dashboard, go to the **Host Apps Metrics**, where you’ll
 ![Host apps metrics](media/big-data-cluster-monitor-apps/host-apps-metrics.png)
 
 
-To get more insight about a single pod of the application ( in some cases you have multiple copies of your application), please go to the **Host Pods Metrics** and choose the pod respect, you’ll get a view of metrics as belows:  
+To get more insight about a single pod of the application ( in some cases you have multiple copies of your application), please go to the **Host Pods Metrics** and choose the pod respect, you’ll get a view of metrics as follows:  
 
 ![Host pods metrics](media/big-data-cluster-monitor-apps/host-pods-metrics.png) 
 

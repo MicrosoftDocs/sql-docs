@@ -102,4 +102,4 @@ To manually fail over without data loss:
         SET HADR RESUME
    ```
 
-1. Recreate any listener you created for read-scale purposes and not managed by cluster manager. If the original listener points to the old primary then you need to drop and recreate it to point to the new primary.
+1. Re-create any listener you created for read-scale purposes and that isn't managed by a cluster manager. If the original listener points to the old primary, drop it and re-create it to point to the new primary.

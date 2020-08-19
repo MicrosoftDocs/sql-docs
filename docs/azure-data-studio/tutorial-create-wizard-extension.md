@@ -32,7 +32,6 @@ Azure Data Studio is built on the same framework as Visual Studio Code, so exten
 - The Azure Data Studio [Debug extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) (optional). This lets you test your extension without needing to package and install it into Azure Data Studio.
 - Ensure `azuredatastudio` is in your path. For Windows, make sure you choose the `Add to Path` option in setup.exe. For Mac or Linux, run the *Install 'azuredatastudio' command in PATH* option.
 
-
 ## Install the extension generator
 
 To simplify the process of creating extensions, we've built an [extension generator](https://code.visualstudio.com/docs/extensions/yocode) using Yeoman. To install it, run the following from the command prompt:
@@ -99,15 +98,22 @@ To share with others you need to package the extension into a single file. This 
 
 `npm install -g vsce`
 
-Navigate to the base directory of the extension, and run `vsce package`. Then, your vsix file will be created, ready to install, and share with the world!
+Edit the `README.md` to your liking, then navigate to the base directory of the extension, and run `vsce package`. You can optionally link a repository with your extension or continue without one. To add one, add a similar line to your `package.json` file.
 
-![install extension](./media/tutorial-create-wizard-extension/extensions.png)
+```json
+"repository": {
+    "type": "git",
+    "url": "https://github.com/laurajjiang/my-test-extension.git"
+}
+```
 
+After these lines were added, a my-test-extension-0.0.1.vsix file was created and ready to install in Azure Data Studio.
+
+![install vsix](./media/tutorial-create-wizard-extension/install-vsix.png)
 
 ## Publish your extension to the marketplace
 
 The Azure Data Studio extension marketplace is not totally implemented yet, but the current process is to host the extension VSIX somewhere (for example, a GitHub Release page) then submit a PR updating [this JSON file](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) with your extension info.
-
 
 ## Next steps
 
@@ -125,7 +131,6 @@ We hope after reading this you'll be inspired to build your own extension for Az
 If you have an idea but are not sure how to get started, please open an issue or tweet at the team: [azuredatastudio](https://twitter.com/azuredatastudio).
 
 You can always refer to the [Visual Studio Code extension guide](https://code.visualstudio.com/docs/extensions/overview) because it covers all the existing APIs and patterns.
-
 
 To learn how to work with T-SQL in Azure Data Studio, complete the T-SQL Editor tutorial:
 

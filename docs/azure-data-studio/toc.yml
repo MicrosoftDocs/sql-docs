@@ -36,8 +36,10 @@
     items:
       - name: Keymap Extension
         href: tutorial-create-keymap-extension.md
-      - name: Notebooks Extension
-        href: tutorial-create-notebooks-extension.md
+      - name: Notebook Extension
+        href: tutorial-create-notebook-extension.md
+      - name: Jupyter Book Extension
+        href: tutorial-create-jupyterbook-extension.md
       - name: Wizard Extension
         href: tutorial-create-wizard-extension.md
 - name: Concepts

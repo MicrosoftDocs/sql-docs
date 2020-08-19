@@ -8448,6 +8448,8 @@
       items:
       - name: Connect & query SQL Server
         href: ssms/tutorials/connect-query-sql-server.md
+      - name: Import Flat File
+        href: relational-databases/import-export/import-flat-file-wizard.md
     - name: Concepts
       items:
       - name: Tool Windows in SSMS
@@ -9874,6 +9876,12 @@
       href: linux/quickstart-install-connect-clouds.md
   - name: Tutorials
     items:
+    - name: New to SQL Server docs
+      href: linux/new-to-sql-learning-resources.yml
+    - name: New to Linux docs
+      href: linux/new-to-linux-learning-resources.yml
+    - name: New to Linux resources
+      href: linux/new-to-linux-resources.md
     - name: Migrate from Windows
       href: linux/sql-server-linux-migrate-restore-database.md
     - name: Migrate to Docker

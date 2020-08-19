@@ -8414,6 +8414,8 @@
       items:
       - name: Connect & query SQL Server
         href: ssms/tutorials/connect-query-sql-server.md
+      - name: Import Flat File
+        href: relational-databases/import-export/import-flat-file-wizard.md
     - name: Concepts
       items:
       - name: Tool Windows in SSMS

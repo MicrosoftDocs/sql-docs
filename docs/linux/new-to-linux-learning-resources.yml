@@ -49,7 +49,7 @@ landingContent:
         url: quickstart-install-connect-suse.md
       - text: Ubuntu
         url: quickstart-install-connect-ubuntu.md
-      - text: Docker
+      - text: Container
         url: quickstart-install-connect-docker.md
       - text: Tools -Overview
         url: ../tools/overview-sql-tools.md
@@ -98,5 +98,5 @@ landingContent:
         url: ../relational-databases/performance/monitoring-performance-by-using-the-query-store.md
       - text: DMVs
         url: ../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
-      - text: Performance Features of SQL Server on Linux
+      - text: Additonal Learning - Performance Features of SQL Server on Linux
         url: sql-server-linux-performance-get-started.md

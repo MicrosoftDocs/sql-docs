@@ -1,5 +1,5 @@
 ---
-title: "sys.pdw_permanent_table_mappings (Transact-SQL) | Microsoft Docs"
+title: "sys.pdw_permanent_table_mappings (Transact-SQL)"
 ms.custom: ""
 ms.date: "07/24/2020"
 ms.prod: sql

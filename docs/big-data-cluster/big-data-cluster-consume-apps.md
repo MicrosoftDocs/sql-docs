@@ -4,7 +4,7 @@ titleSuffix: SQL Server Big Data Clusters
 description: Consume an application deployed on SQL Server Big Data Clusters using a RESTful web service.
 author: cloudmelon
 ms.author: melqin
-ms.reviewer: bilia
+ms.reviewer: mikeray
 ms.date: 06/22/2020
 ms.metadata: seo-lt-2019
 ms.topic: conceptual
@@ -157,6 +157,6 @@ You have now successfully called the app through the web service. You can follow
 
 ## Next steps
 
-Explore how to [Monitor applications on big data clusters](big-data-cluster-monitor-apps.md) for more information. You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
+Explore how to [Monitor applications on big data clusters](big-data-cluster-monitoring-apps.md) for more information. You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
 
-For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

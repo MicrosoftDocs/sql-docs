@@ -12,7 +12,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-Grafana is one of the best cloud-native virtualization tools which can be used to provide various monitoring metrics of your application running in Kubernetes.  
+Grafana is one of the best cloud-native virtualization tools, which can be used to provide various monitoring metrics of your application running in Kubernetes.  
 
 This article describes how to monitor an application inside a SQL Server 2019 big data clusters.
 
@@ -27,16 +27,16 @@ In SQL Server 2019 you can create, delete, describe, initialize, list run and up
 
 |Command |Description |
 |:---|:---|
-|`azdata bdc endpoint list` | Lists the endpoints for the Big Data Cluster.. |
+|`azdata bdc endpoint list` | Lists the endpoints for the Big Data Cluster. |
 
 
-You can use the following example to list the endpoint of **Grafana dashboard** :
+You can use the following example to list the endpoint of **Grafana dashboard**:
 
 ```bash
 azdata bdc endpoint list --endpoint-name metricsui 
 ```
 
-The output will give you the endpoint which you can use your cluster username and password to login. 
+The output will give you the endpoint, which you can use your cluster username and password to log in. 
 
 ![Grafana Dashboard](media/big-data-cluster-monitor-apps/grafana-dashboard-endpoint.png)
 
@@ -46,7 +46,7 @@ When you open the dashboard, go to the **Host Apps Metrics**, where you’ll
 ![Host apps metrics](media/big-data-cluster-monitor-apps/host-apps-metrics.png)
 
 
-To get more insight about a single pod of the application ( in some cases you have multiple copies of your application), please go to the **Host Pods Metrics** and choose the pod respect, you’ll get a view of metrics as the following:  
+To get more insight about a single pod of the application ( in some cases you have multiple copies of your application), please go to the **Host Pods Metrics** and choose the pod respect, you’ll get a view of metrics as belows:  
 
 ![Host pods metrics](media/big-data-cluster-monitor-apps/host-pods-metrics.png) 
 

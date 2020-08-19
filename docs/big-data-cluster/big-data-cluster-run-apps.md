@@ -46,7 +46,7 @@ The following example command demonstrates the run command:
 azdata app run --name add-app --version v1 --inputs x=1,y=2
 ```
 
-If the run was successful, you should see your output as specified when you created the app. The following is an example.
+If the run was successful, you should see your output as specified when you created the app. The following output is an example.
 
 ```json
 {
@@ -64,7 +64,7 @@ If the run was successful, you should see your output as specified when you crea
 
 ## Describe an app
 
-The describe command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the webservice to interact with the app in a RESTful manner. See [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information.
+The describe command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the webservice to interact with the app in a RESTful manner. For more information, see [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information.
 
 ```json
 {

@@ -18,7 +18,7 @@ Language Extensions is a feature of SQL Server used for executing external code.
 In SQL Server 2019, Java is supported. The default Java runtime is Zulu Open JRE. You can also use another Java JRE or SDK.
 
 > [!NOTE]
-> For executing Python or R code in SQL Server, see the [Machine Learning Services](../machine-learning/sql-server-machine-learning-services.md) documentation.
+> For executing Python or R in SQL Server, see the [Machine Learning Services](../machine-learning/sql-server-machine-learning-services.md) documentation.
 
 ## What you can do with Language Extensions
 

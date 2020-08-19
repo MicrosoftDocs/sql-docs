@@ -52,13 +52,13 @@ landingContent:
         url: quickstart-install-connect-ubuntu.md
       - text: Container
         url: quickstart-install-connect-docker.md
-      - text: Tools - Overview
+      - text: Tools overview
         url: ../tools/overview-sql-tools.md
-      - text: Azure Data Studio (Tool)
+      - text: Azure Data Studio (tool)
         url: ../azure-data-studio/what-is.md
       - text: Write basic Transact-SQL (T-SQL)
         url: ../t-sql/tutorial-writing-transact-sql-statements.md
-      - text: Channel 9 - Cross-Platform SQL Tools (optional)
+      - text: Channel 9 - Cross-platform SQL tools (optional)
         url: https://channel9.msdn.com/events/Connect/2016/173?term=SQL%20on%20linux&lang-en=true
 
   - title: "Module 4: Configure SQL Server on Linux"
@@ -100,5 +100,5 @@ landingContent:
         url: ../relational-databases/performance/monitoring-performance-by-using-the-query-store.md
       - text: DMVs
         url: ../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md
-      - text: Additional Learning - Performance Features of SQL Server on Linux
+      - text: Additional learning - Performance features of SQL Server on Linux
         url: sql-server-linux-performance-get-started.md

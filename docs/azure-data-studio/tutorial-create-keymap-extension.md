@@ -162,6 +162,7 @@ In this tutorial, you learned how to:
 > * Create an extension project
 > * Install the extension generator
 > * Create your extension
+> * Add custom key-bindings to your extension
 > * Test your extension
 > * Package your extension
 > * Publish your extension to the marketplace

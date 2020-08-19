@@ -57,19 +57,19 @@ To create an extension:
 
    `yo azuredatastudio`
 
-2. Choose **New Wizard or Dialog** from the list of extension types
+2. Choose **New Wizard or Dialog** from the list of extension types. Then select **Wizard**, followed by the **Getting Started Template**
 
-3. Follow the steps to fill in the extension name (for this tutorial, use **wizard-demo**), and add a description. When prompted, select the 'Getting Started' Wizard Template
+3. Follow the steps to fill in the extension name (for this tutorial, use **My Test Extension**), and add a description.
 
-![extension generator](./media/tutorial-create-wizard-extension/extension_generator.gif)
+![extension generator](./media/tutorial-create-wizard-extension/extension_generator.png)
 
 Completing the previous steps creates a new folder. Open the folder in Visual Studio Code and you're ready to create your own wizard extension!
 
 ### Run the extension
 
-Before running the extension, ensure that the **Azure Data Studio Debug extension** is installed in Visual Studio Code.
+Let's see what the wizard template gives us by running the extension. Before running, ensure that the **Azure Data Studio Debug extension** is installed in Visual Studio Code.
 
-Select **F5** to launch Azure Data Studio in debug mode with the extension running. Then, run the **Launch Wizard** command from the Command Palette (Ctr+Shift+P) in the new window. This will launch the default wizard that this extension contributes:
+Select **F5** in VS Code to launch Azure Data Studio in debug mode with the extension running. Then, in Azure Data Studio, run the **Launch Wizard** command from the Command Palette (Ctr+Shift+P) in the new window. This will launch the default wizard that this extension contributes:
 
 ![wizard template](./media/tutorial-create-wizard-extension/wizard_template.gif)
 
@@ -79,9 +79,9 @@ Next, we will look at how to modify this default wizard.
 
 The most important files to get started with extension development are `package.json`, `src/main.ts`, and `vsc-extension-quickstart.md`:
 
-- `package.json`: This is the manifest file, where the **Launch Wizard** command is registered
+- `package.json`: This is the manifest file, where the **Launch Wizard** command is registered. This is also where `main.ts` is declared the main program entry point.
 - `main.ts`: Contains the code to add UI elements to the Wizard, like pages, text, and buttons
-- `vsc-extension-quickstart.md`: Contains specific technical documentation
+- `vsc-extension-quickstart.md`: Contains technical documentation that may be a helpful reference when developing
 
 Let's make a change to the wizard: we'll add a 4th, blank page. Modify `src/main.ts` as shown below, and you should see an additional page show up when you launch the wizard.
 
@@ -91,7 +91,7 @@ Once you are familiar with the template, here are some additional ideas to try:
 
 - Add a button with a width of 300 to your new page
 - Add a flex component to put your button in
-- Add an action to your button. For example, launch a file-opening dialog when the button is clicked or open a query editor.
+- Add an action to your button. For example, when the button is clicked, launch a file-opening dialog or open a query editor.
 
 ## Package your extension
 
@@ -101,7 +101,7 @@ To share with others you need to package the extension into a single file. This 
 
 Navigate to the base directory of the extension, and run `vsce package`. Then, your vsix file will be created, ready to install, and share with the world!
 
-![install extension](./media/tutorial-create-extension/extensions.png)
+![install extension](./media/tutorial-create-wizard-extension/extensions.png)
 
 
 ## Publish your extension to the marketplace

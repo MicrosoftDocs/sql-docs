@@ -30,7 +30,7 @@ In SQL Server 2019 you can create, delete, describe, initialize, list run and up
 |`azdata bdc endpoint list` | Lists the endpoints for the Big Data Cluster.. |
 
 
-You can use the following example tol list the endpoint of **Grafana dashboard** :
+You can use the following example to list the endpoint of **Grafana dashboard** :
 
 ```bash
 azdata bdc endpoint list --endpoint-name metricsui 
@@ -46,7 +46,7 @@ When you open the dashboard, go to the **Host Apps Metrics**, where you’ll
 ![Host apps metrics](media/big-data-cluster-monitor-apps/host-apps-metrics.png)
 
 
-If you want to get more insight about a single pod of the application ( in case you have multiple copies of your application), you can also go to the **Host Pods Metrics** and choose the pod respect, you’ll get a view of metrics as the following:  
+To get more insight about a single pod of the application ( in some cases you have multiple copies of your application), please go to the **Host Pods Metrics** and choose the pod respect, you’ll get a view of metrics as the following:  
 
 ![Host pods metrics](media/big-data-cluster-monitor-apps/host-pods-metrics.png) 
 

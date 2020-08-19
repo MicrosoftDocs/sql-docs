@@ -1,8 +1,8 @@
 ---
-title: "Tutorial: Create an extension"
-description: This tutorial demonstrates how to create an extension to add custom functionality to Azure Data Studio.
+title: "Tutorial: Create keymap extension"
+description: This tutorial demonstrates how to create a keymap extension to add custom functionality to Azure Data Studio.
 ms.custom: "seodec18"
-ms.date: 12/10/2019
+ms.date: 08/18/2020
 ms.prod: azure-data-studio
 ms.technology: 
 ms.reviewer: "alayu, maghan, sstein"
@@ -10,7 +10,7 @@ ms.topic: "tutorial"
 author: rothja
 ms.author: jroth
 ---
-# Tutorial: Create an Azure Data Studio extension
+# Tutorial: Create an Azure Data Studio Keymap extension
 
 This tutorial demonstrates how to create a new Azure Data Studio extension. The extension creates familiar SSMS key bindings in Azure Data Studio.
 
@@ -19,6 +19,7 @@ During this tutorial you learn how to:
 > * Create an extension project
 > * Install the extension generator
 > * Create your extension
+> * Add custom key-bindings to your extension
 > * Test your extension
 > * Package your extension
 > * Publish your extension to the marketplace
@@ -39,7 +40,7 @@ To simplify the process of creating extensions, we've built an [extension genera
 
 `npm install -g yo generator-azuredatastudio`
 
-## Create your extension
+## Create your keymap extension
 
 To create an extension:
 
@@ -49,7 +50,7 @@ To create an extension:
 
 2. Choose **New Keymap** from the list of extension types:
 
-   ![extension generator](./media/tutorial-create-extension/extension-generator.png)
+   ![extension generator](./media/tutorial-create-keymap-extension/extension-generator.png)
 
 3. Follow the steps to fill in the extension name (for this tutorial, use **ssmskeymap2**), and add a description.
 
@@ -72,9 +73,9 @@ The top things I saw missing were:
 
 It's easy to find and replace these key bindings. Run *Open Keyboard Shortcuts* to show the **Keyboard Shortcuts** tab in Azure Data Studio, search for *query* and then choose **Change Key binding**. Once you're done changing the keybinding, you can see the updated mapping in the keybindings.json file (run *Open Keyboard Shortcuts* to see it).
 
-![keyboard shortcuts](./media/tutorial-create-extension/keyboard-shortcuts.png)
+![keyboard shortcuts](./media/tutorial-create-keymap-extension/keyboard-shortcuts.png)
 
-![keybindings.json extension](./media/tutorial-create-extension/keybindings-json.png)
+![keybindings.json extension](./media/tutorial-create-keymap-extension/keybindings-json.png)
 
 
 **Step 2: Add shortcuts to the extension**
@@ -120,9 +121,9 @@ Ensure the Azure Data Studio Debug extension is installed in Visual Studio Code.
 
 Select **F5** to launch Azure Data Studio in debug mode with the extension running:
 
-![install extension](./media/tutorial-create-extension/install-extension.png)
+![install extension](./media/tutorial-create-keymap-extension/install-extension.png)
 
-![test extension](./media/tutorial-create-extension/test-extension.png)
+![test extension](./media/tutorial-create-keymap-extension/test-extension.png)
 
 Key maps are one of the quickest extensions to create, so your new extension should now be successfully working and ready to share.
 
@@ -146,7 +147,7 @@ Navigate to the base directory of the extension, and run `vsce package`. I had t
 
 Once this was done, my ssmskeymap-0.1.0.vsix file was created and ready to install and share with the world!
 
-![install extension](./media/tutorial-create-extension/extensions.png)
+![install extension](./media/tutorial-create-keymap-extension/extensions.png)
 
 
 ## Publish your extension to the marketplace

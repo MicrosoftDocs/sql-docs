@@ -1,4 +1,5 @@
 ---
+description: "RelatedTable Property (ADOX)"
 title: "RelatedTable Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

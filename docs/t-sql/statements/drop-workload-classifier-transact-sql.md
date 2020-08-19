@@ -1,4 +1,5 @@
 ---
+description: "DROP WORKLOAD Classifier (Transact-SQL)"
 title: "DROP WORKLOAD Classifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/04/2019
@@ -30,7 +31,7 @@ Drops an existing user-defined workload management classifier.  If requests are 
   
 ## Syntax  
 
-```
+```syntaxsql
 DROP WORKLOAD CLASSIFIER classifier_name;
 ```
 

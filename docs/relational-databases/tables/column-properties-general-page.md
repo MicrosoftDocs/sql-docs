@@ -1,4 +1,5 @@
 ---
+description: "Column Properties (General Page)"
 title: "Column Properties (General Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

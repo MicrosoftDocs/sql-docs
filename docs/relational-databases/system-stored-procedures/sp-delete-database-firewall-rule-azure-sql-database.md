@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_database_firewall_rule (Azure SQL Database)"
 title: "sp_delete_database_firewall_rule (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/04/2017"

@@ -1,4 +1,5 @@
 ---
+description: "setBinaryStream (SQLServerCallableStatement)"
 title: "setBinaryStream (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

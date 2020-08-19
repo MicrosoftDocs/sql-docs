@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_firewall_rule (Azure SQL Database)"
 title: "sp_delete_firewall_rule"
 titleSuffix: Azure SQL Database
 ms.date: "07/27/2016"

@@ -1,4 +1,5 @@
 ---
+description: "Finishing Test Case Preparation (OracleToSQL)"
 title: "Finishing Test Case Preparation (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "Logging in the Script Task"
 title: "Logging in the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

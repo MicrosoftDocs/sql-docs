@@ -1,4 +1,5 @@
 ---
+description: "sys.sysdevices (Transact-SQL)"
 title: "sys.sysdevices (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

@@ -1,4 +1,5 @@
 ---
+description: "acceptsURL Method (SQLServerDriver)"
 title: "acceptsURL Method (SQLServerDriver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ADO Methods"
 title: "ADO Methods | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

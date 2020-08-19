@@ -1,4 +1,5 @@
 ---
+description: "Modifying Data in a System-Versioned Temporal Table"
 title: "Modifying Data in a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"
@@ -30,7 +31,7 @@ You can construct your **INSERT** statement when you have visible **PERIOD** col
 
   ```sql
   -- Insert with column list and without period columns
-  INSERT INTO [dbo].[Department]0
+  INSERT INTO [dbo].[Department]
     (  [DeptID]
           , [DeptName]
           , [ManagerID]

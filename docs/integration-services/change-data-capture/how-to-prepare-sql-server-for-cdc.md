@@ -1,4 +1,5 @@
 ---
+description: "How to Prepare SQL Server for CDC"
 title: "How to Prepare SQL Server for CDC | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

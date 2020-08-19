@@ -1,4 +1,5 @@
 ---
+description: "DateCreated and DateModified Properties Example (VC++)"
 title: "DateCreated and DateModified Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

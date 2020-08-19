@@ -1,4 +1,5 @@
 ---
+description: "Outer Join Escape Sequence"
 title: "Outer Join Escape Sequence | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ALTER ASSEMBLY (Transact-SQL)"
 title: "ALTER ASSEMBLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2017"

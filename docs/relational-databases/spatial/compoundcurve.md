@@ -1,4 +1,5 @@
 ---
+description: "CompoundCurve"
 title: "CompoundCurve | Microsoft Docs"
 ms.date: "07/16/2020"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "Working with Images with the Script Task"
 title: "Working with Images with the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

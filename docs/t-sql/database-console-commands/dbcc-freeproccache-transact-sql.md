@@ -1,4 +1,5 @@
 ---
+description: "DBCC FREEPROCCACHE (Transact-SQL)"
 title: "DBCC FREEPROCCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/13/2017"

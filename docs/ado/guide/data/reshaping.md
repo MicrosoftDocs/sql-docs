@@ -1,4 +1,5 @@
 ---
+description: "Reshaping"
 title: "Reshaping | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

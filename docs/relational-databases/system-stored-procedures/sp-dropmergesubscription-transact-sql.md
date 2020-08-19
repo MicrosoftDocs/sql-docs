@@ -1,4 +1,5 @@
 ---
+description: "sp_dropmergesubscription (Transact-SQL)"
 title: "sp_dropmergesubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

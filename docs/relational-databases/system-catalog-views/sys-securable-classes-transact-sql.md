@@ -1,4 +1,5 @@
 ---
+description: "sys.securable_classes (Transact-SQL)"
 title: "sys.securable_classes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2016"

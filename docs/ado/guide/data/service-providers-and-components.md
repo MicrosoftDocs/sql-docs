@@ -1,4 +1,5 @@
 ---
+description: "Service Providers and Components"
 title: "Service Providers and Components | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

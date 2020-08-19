@@ -1,4 +1,5 @@
 ---
+description: "View Object (ADOX)"
 title: "View Object (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

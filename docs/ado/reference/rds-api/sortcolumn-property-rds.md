@@ -1,4 +1,5 @@
 ---
+description: "SortColumn Property (RDS)"
 title: "SortColumn Property (RDS) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "Designate an Events Forwarding Server"
 title: Designate an Events Forwarding Server
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

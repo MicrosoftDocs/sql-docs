@@ -1,4 +1,5 @@
 ---
+description: "Modeling Flags (DMX)"
 title: "Modeling Flags (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

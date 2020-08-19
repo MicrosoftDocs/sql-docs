@@ -1,4 +1,5 @@
 ---
+description: "AT TIME ZONE (Transact-SQL)"
 title: AT TIME ZONE (Transact-SQL)
 ms.date: "06/11/2019"
 ms.prod: sql
@@ -33,8 +34,6 @@ Converts an *inputdate* to the corresponding *datetimeoffset* value in the targe
 ```sql
 inputdate AT TIME ZONE timezone  
 ```
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

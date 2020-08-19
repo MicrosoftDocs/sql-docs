@@ -1,4 +1,5 @@
 ---
+description: "RDS Code Examples in VBScript"
 title: "RDS Code Examples in VBScript | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

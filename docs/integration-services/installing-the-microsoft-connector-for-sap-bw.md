@@ -1,4 +1,5 @@
 ---
+description: "Installing the Microsoft Connector for SAP BW"
 title: "Installing the Microsoft Connector for SAP BW | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "MSsync_states (Transact-SQL)"
 title: "MSsync_states (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

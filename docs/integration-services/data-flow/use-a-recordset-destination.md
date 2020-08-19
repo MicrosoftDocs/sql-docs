@@ -1,4 +1,5 @@
 ---
+description: "Use a Recordset Destination"
 title: "Use a Recordset Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;PACK_RECEIVED (Transact-SQL)"
 title: "@@PACK_RECEIVED (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

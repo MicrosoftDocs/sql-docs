@@ -1,4 +1,5 @@
 ---
+description: "sys.external_libraries (Transact-SQL)"
 title: "sys.external_libraries (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/25/2020
@@ -21,7 +22,7 @@ manager: cgronlun
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # sys.external_libraries (Transact-SQL)  
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 Supports the management of package libraries related to external runtimes such as R, Python, and Java.
 

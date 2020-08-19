@@ -1,4 +1,5 @@
 ---
+description: "ActiveCommand Property Example (JScript)"
 title: "ActiveCommand Property Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

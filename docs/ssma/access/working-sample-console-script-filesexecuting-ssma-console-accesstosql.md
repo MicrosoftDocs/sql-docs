@@ -1,4 +1,5 @@
 ---
+description: "Working with the Sample Console Script FilesExecuting the SSMA Console (AccessToSQL)"
 title: "Work with Sample Console Script FilesExecuting the SSMA Console | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

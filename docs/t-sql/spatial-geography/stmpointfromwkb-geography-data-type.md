@@ -1,4 +1,5 @@
 ---
+description: "STMPointFromWKB (geography Data Type)"
 title: "STMPointFromWKB (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"

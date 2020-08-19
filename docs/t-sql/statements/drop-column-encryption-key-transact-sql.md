@@ -1,4 +1,5 @@
 ---
+description: "DROP COLUMN ENCRYPTION KEY (Transact-SQL)"
 title: "DROP COLUMN ENCRYPTION KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/15/2019"
@@ -39,7 +40,7 @@ DROP COLUMN ENCRYPTION KEY key_name [;]
  *key_name*  
  Is the name by which the column encryption key to be dropped from the database.  
   
-## Remarks  
+## Remarks
  A column encryption key cannot be dropped if it is used to encrypt any column in the database. All columns using the column encryption key must first be dropped.  
   
 ## Permissions  

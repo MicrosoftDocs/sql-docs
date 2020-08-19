@@ -1,4 +1,5 @@
 ---
+description: "sp_estimate_data_compression_savings (Transact-SQL)"
 title: "sp_estimate_data_compression_savings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2019"

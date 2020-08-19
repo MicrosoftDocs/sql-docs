@@ -1,4 +1,5 @@
 ---
+description: "Attributes Property (ADOX)"
 title: "Attributes Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

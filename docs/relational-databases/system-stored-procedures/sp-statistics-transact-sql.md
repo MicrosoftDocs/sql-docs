@@ -1,4 +1,5 @@
 ---
+description: "sp_statistics (Transact-SQL)"
 title: "sp_statistics (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -28,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_statistics [ @table_name = ] 'table_name'    
@@ -100,7 +101,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## Example: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns information about the `DimEmployee` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_statistics DimEmployee;  

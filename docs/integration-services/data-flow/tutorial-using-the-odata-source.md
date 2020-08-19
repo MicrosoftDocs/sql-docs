@@ -1,4 +1,5 @@
 ---
+description: "Tutorial: Using the OData Source"
 title: "Tutorial: Using the OData Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

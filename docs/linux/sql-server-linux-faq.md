@@ -1,6 +1,6 @@
 ---
 title:  SQL Server on Linux FAQ
-description: This article provides answers to frequently asked questions about SQL Server running on Linux.
+description: This article provides answers to frequently asked questions (FAQ) about SQL Server running on Linux.
 author: VanMSFT 
 ms.author: vanto
 ms.date: 10/23/2019

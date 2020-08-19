@@ -1,4 +1,5 @@
 ---
+description: "Large CLR User-Defined Types in SQL Server Native Client"
 title: "Large CLR User-Defined Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

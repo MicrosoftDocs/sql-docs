@@ -1,4 +1,5 @@
 ---
+description: "setBinaryStream Method (int, java.io.InputStream)"
 title: "setBinaryStream Method (int, java.io.InputStream) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

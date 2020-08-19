@@ -1,4 +1,5 @@
 ---
+description: "PageSize Property (ADO)"
 title: "PageSize Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

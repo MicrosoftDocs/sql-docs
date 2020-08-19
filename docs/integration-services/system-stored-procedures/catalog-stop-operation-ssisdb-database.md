@@ -1,4 +1,5 @@
 ---
+description: "catalog.stop_operation (SSISDB Database)"
 title: "catalog.stop_operation (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

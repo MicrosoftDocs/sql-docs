@@ -1,4 +1,5 @@
 ---
+description: "Appendix - 1 (OracleToSQL)"
 title: "Appendix - 1 (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

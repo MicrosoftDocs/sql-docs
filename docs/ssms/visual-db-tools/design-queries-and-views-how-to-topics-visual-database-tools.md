@@ -1,4 +1,5 @@
 ---
+description: "Design Queries and Views How-to Topics (Visual Database Tools)"
 title: Design Queries and Views How-to Topics
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

@@ -1,4 +1,5 @@
 ---
+description: "Log Shipping Transaction Log Backup Settings"
 title: "Log Shipping Transaction Log Backup Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

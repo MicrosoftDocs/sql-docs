@@ -1,4 +1,5 @@
 ---
+description: "Retrieving Results (Basic)"
 title: "Retrieving Results (Basic) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

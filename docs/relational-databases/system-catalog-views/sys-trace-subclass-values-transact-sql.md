@@ -1,4 +1,5 @@
 ---
+description: "sys.trace_subclass_values (Transact-SQL)"
 title: "sys.trace_subclass_values (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

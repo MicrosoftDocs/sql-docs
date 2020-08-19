@@ -1,4 +1,5 @@
 ---
+description: "StreamOpenOptionsEnum"
 title: "StreamOpenOptionsEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

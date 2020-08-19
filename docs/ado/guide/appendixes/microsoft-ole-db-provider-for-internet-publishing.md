@@ -1,4 +1,5 @@
 ---
+description: "Microsoft OLE DB Provider for Internet Publishing Overview"
 title: "Microsoft OLE DB Provider for Internet Publishing | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

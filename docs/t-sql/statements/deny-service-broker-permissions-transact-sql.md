@@ -1,4 +1,5 @@
 ---
+description: "DENY Service Broker Permissions (Transact-SQL)"
 title: "DENY Service Broker Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/09/2017"

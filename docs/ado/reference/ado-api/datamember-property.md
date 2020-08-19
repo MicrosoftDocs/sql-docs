@@ -1,4 +1,5 @@
 ---
+description: "DataMember Property"
 title: "DataMember Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Freeing a Statement Handle"
 title: "Freeing a Statement Handle | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

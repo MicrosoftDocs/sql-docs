@@ -1,4 +1,5 @@
 ---
+description: "SET @local_variable (Transact-SQL)"
 title: "SET @local_variable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

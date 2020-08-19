@@ -1,4 +1,5 @@
 ---
+description: "Manage Data Collection"
 title: "Manage Data Collection | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2016"

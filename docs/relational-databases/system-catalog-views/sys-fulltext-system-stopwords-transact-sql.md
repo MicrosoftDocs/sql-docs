@@ -1,4 +1,5 @@
 ---
+description: "sys.fulltext_system_stopwords (Transact-SQL)"
 title: "sys.fulltext_system_stopwords (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

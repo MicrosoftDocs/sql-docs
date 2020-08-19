@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_query_stats_xe_file (Transact-SQL)"
 title: "sys.dm_pdw_query_stats_xe_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"

@@ -1,4 +1,5 @@
 ---
+description: "BufferWithCurves (geometry Data Type)"
 title: "BufferWithCurves (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -23,16 +24,17 @@ monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversio
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 .BufferWithCurves ( distance )  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments  
  *distance*  
  Is a **float** indicating the maximum distance that points forming the buffer can be from the **geometry** instance.  
   
-## Return Types  
+## Return Types
 SQL Server return type: **geometry**  
   
  CLR return type: **SqlGeometry**  

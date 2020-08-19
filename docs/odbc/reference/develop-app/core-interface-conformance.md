@@ -1,4 +1,5 @@
 ---
+description: "Core Interface Conformance"
 title: "Core Interface Conformance | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

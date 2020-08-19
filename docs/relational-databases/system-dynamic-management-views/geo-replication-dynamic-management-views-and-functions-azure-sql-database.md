@@ -1,4 +1,5 @@
 ---
+description: "Geo-Replication Dynamic Management Views and Functions (Azure SQL Database)"
 title: "Geo-Replication Dynamic Management Views and Functions (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/24/2015"

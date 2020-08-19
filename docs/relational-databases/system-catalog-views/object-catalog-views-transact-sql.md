@@ -1,4 +1,5 @@
 ---
+description: "Object Catalog Views (Transact-SQL)"
 title: "Object Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/19/2019

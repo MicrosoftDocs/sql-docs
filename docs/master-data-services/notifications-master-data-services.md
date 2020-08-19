@@ -1,4 +1,5 @@
 ---
+description: "Notifications (Master Data Services)"
 title: Notifications
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "REPLACE (SSIS Expression)"
 title: "REPLACE (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

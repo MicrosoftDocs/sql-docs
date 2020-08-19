@@ -1,4 +1,5 @@
 ---
+description: "Managing Backups (SybaseToSQL)"
 title: "Managing Backups (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

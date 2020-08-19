@@ -1,4 +1,5 @@
 ---
+description: "Supports Method Example (VB)"
 title: "Supports Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

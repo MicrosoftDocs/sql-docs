@@ -1,4 +1,5 @@
 ---
+description: "Append and CreateParameter Methods Example (VB)"
 title: "Append and CreateParameter Methods Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

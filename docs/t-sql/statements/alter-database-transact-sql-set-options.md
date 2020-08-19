@@ -735,14 +735,14 @@ The current setting of this option can be determined by examining the `is_parame
 <a name="query-store"></a> **\<query_store_options> ::=**     
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)])
 
-ON | **OFF** | CLEAR [ ALL ]     
+ON | **OFF** [ FORCED ] | CLEAR [ ALL ]     
 Controls whether the Query Store is enabled in this database, and also controls removing the contents of the Query Store. For more information, see [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md).
 
 ON     
 Enables the Query Store.
 
 OFF      
-Disables the Query Store. OFF is the default value. 
+Disables the Query Store. OFF is the default value. FORCED is optional. FORCED aborts all running Query Store background tasks, and skips the synchronous flush when Query Store is turned off. Causes Query Store to shut down as fast as possible. Effectively turns off Query Store immediately. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 introduces FORCED.
 
 > [!NOTE]  
 > Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
@@ -1863,10 +1863,13 @@ ON | OFF | CLEAR [ ALL ]
 Controls whether the Query Store is enabled in this database, and also controls removing the contents of the Query Store.
 
 ON     
-Enables the Query Store.
+Enables the Query Store. ON is the default value.
 
 OFF     
-Disables the Query Store. This is the default value.
+Disables the Query Store. 
+
+> [!NOTE]  
+> Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
 Remove the contents of the Query Store.
@@ -3319,7 +3322,7 @@ Turn off the READ_COMMITTED_SNAPSHOT option at the database level.
 
 ### Remarks
 
-This command must be run while connected to the `master` database. Turning READ_COMMITTED_SNAPSHOT ON or OFF for a user database will kill all open connections to this database. You may want to make this change during database maintenance window or wait until there's no active connection to the database except for the connection running the ALTER DATABSE command.  The database does not have to be in single-user mode. Changing READ_COMMITTED_SNAPSHOT setting at session level isn't supported.  To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
+This command must be run while connected to the `master` database. Turning READ_COMMITTED_SNAPSHOT ON or OFF for a user database will kill all open connections to this database. You may want to make this change during database maintenance window or wait until there's no active connection to the database except for the connection running the ALTER DATABASE command.  The database does not have to be in single-user mode. Changing READ_COMMITTED_SNAPSHOT setting at session level isn't supported.  To verify this setting for a database, check  is_read_committed_snapshot_on column in sys.databases.
 
 In a database with READ_COMMITTED_SNAPSHOT enabled, queries may experience slower performance due to the scan of versions if multiple data versions are present. Long-open transactions can also cause an increase in the size of the database. This issue occurs if there are data changes by these transactions that block version cleanup.  
 

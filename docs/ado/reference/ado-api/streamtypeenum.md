@@ -1,4 +1,5 @@
 ---
+description: "StreamTypeEnum"
 title: "StreamTypeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Project Settings (Azure SQL Database) (AccessToSQL)"
 title: "Project Settings (Azure SQL Database) (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

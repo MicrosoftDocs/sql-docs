@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Native Client Date and Time Improvements"
 title: "Date and Time Improvements | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

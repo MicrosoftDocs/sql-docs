@@ -1,4 +1,5 @@
 ---
+description: "HOST_ID (Transact-SQL)"
 title: "HOST_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

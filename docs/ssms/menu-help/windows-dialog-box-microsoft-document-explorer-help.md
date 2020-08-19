@@ -1,4 +1,5 @@
 ---
+description: "Windows Dialog Box (Microsoft Document Explorer Help)"
 title: "Windows Dialog Box (Microsoft Document Explorer Help)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

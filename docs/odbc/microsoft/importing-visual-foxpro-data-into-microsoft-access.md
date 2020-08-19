@@ -1,4 +1,5 @@
 ---
+description: "Importing Visual FoxPro Data into Microsoft Access"
 title: "Importing Visual FoxPro Data into Microsoft Access | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

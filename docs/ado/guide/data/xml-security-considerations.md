@@ -1,4 +1,5 @@
 ---
+description: "XML Security Considerations"
 title: "XML Security Considerations | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

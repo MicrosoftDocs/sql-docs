@@ -1,4 +1,5 @@
 ---
+description: "sys.resource_governor_workload_groups (Transact-SQL)"
 title: "sys.resource_governor_workload_groups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2016"

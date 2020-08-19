@@ -1,4 +1,5 @@
 ---
+description: "SQL Data Warehouse and Parallel Data Warehouse Catalog Views"
 title: Catalog Views
 titleSuffix: Azure SQL Data Warehouse and Parallel Data Warehouse
 ms.date: 10/29/2019

@@ -1,4 +1,5 @@
 ---
+description: "Retrieve and Understand the Change Data"
 title: "Retrieve and Understand the Change Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

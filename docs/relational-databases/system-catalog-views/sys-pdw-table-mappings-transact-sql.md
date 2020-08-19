@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_table_mappings (Transact-SQL)"
 title: "sys.pdw_table_mappings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/01/2018"

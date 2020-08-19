@@ -1,4 +1,5 @@
 ---
+description: "How to: Perform Transactions"
 title: "How to: Perform Transactions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

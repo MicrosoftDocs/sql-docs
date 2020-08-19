@@ -1,4 +1,5 @@
 ---
+description: "Catalog ActiveConnection Property Example (VB)"
 title: "Catalog ActiveConnection Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

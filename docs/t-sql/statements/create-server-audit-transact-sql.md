@@ -1,4 +1,5 @@
 ---
+description: "CREATE SERVER AUDIT (Transact-SQL)"
 title: CREATE SERVER AUDIT (Transact-SQL)
 ms.custom: ""
 ms.date: "01/07/2019"

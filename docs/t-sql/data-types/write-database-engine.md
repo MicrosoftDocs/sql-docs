@@ -1,4 +1,5 @@
 ---
+description: "Write (Database Engine)"
 title: "Write (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"
@@ -25,8 +26,8 @@ Write writes out a binary representation of **SqlHierarchyId** to the passed-in 
   
 ## Syntax  
   
-```sql
-void Write( BinaryWriter w )   
+```syntaxsql
+void Write( BinaryWriter w )
 ```  
 
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]

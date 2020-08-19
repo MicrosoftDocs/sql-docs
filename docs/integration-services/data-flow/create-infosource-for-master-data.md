@@ -1,4 +1,5 @@
 ---
+description: "Create InfoSource for Master Data"
 title: "Create InfoSource for Master Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

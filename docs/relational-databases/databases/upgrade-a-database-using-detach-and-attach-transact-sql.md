@@ -1,4 +1,5 @@
 ---
+description: "Upgrade a database using detach and attach (Transact-SQL)"
 title: "Upgrade a database using detach & attach (Transact-SQL)"
 ms.date: 06/03/2020
 ms.prod: sql

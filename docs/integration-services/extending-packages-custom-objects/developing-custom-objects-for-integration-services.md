@@ -1,4 +1,5 @@
 ---
+description: "Developing Custom Objects for Integration Services"
 title: "Developing Custom Objects for Integration Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "SET STATISTICS PROFILE (Transact-SQL)"
 title: "SET STATISTICS PROFILE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -38,7 +39,9 @@ ms.author: carlrab
 SET STATISTICS PROFILE { ON | OFF }  
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  When STATISTICS PROFILE is ON, each executed query returns its regular result set, followed by an additional result set that shows a profile of the query execution.  
   
  The additional result set contains the SHOWPLAN_ALL columns for the query and these additional columns.  

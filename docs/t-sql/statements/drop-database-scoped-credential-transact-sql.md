@@ -1,4 +1,5 @@
 ---
+description: "DROP DATABASE SCOPED CREDENTIAL (Transact-SQL)"
 title: "DROP DATABASE SCOPED CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/27/2017"

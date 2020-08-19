@@ -1,4 +1,5 @@
 ---
+description: "Open Queries (Visual Database Tools)"
 title: Open Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

@@ -1,4 +1,5 @@
 ---
+description: "Absolute and Relative URLs"
 title: "Absolute and Relative URLs | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

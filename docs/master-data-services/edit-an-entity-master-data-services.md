@@ -1,4 +1,5 @@
 ---
+description: "Edit an Entity (Master Data Services)"
 title: Edit an Entity
 ms.custom: ""
 ms.date: "03/01/2017"

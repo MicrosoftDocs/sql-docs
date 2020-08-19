@@ -1,4 +1,5 @@
 ---
+description: "sys.trigger_event_types (Transact-SQL)"
 title: "sys.trigger_event_types (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

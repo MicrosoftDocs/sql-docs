@@ -1,4 +1,5 @@
 ---
+description: "Make Changes to the Tables Selected for Capturing Changes"
 title: "Make Changes to the Tables Selected for Capturing Changes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

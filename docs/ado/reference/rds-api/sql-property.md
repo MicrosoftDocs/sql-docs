@@ -1,4 +1,5 @@
 ---
+description: "SQL Property"
 title: "SQL Property | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

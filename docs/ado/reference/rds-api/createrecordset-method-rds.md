@@ -1,4 +1,5 @@
 ---
+description: "CreateRecordset Method (RDS)"
 title: "CreateRecordset Method (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

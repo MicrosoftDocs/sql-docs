@@ -1,4 +1,5 @@
 ---
+description: "Always On Availability Groups Dynamic Management Views - Functions"
 title: "Always On Availability Groups Dynamic Management Views - Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

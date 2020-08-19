@@ -1,4 +1,5 @@
 ---
+description: "ADOX Methods"
 title: "ADOX Methods | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Members Collection Properties, Methods, and Events"
 title: "Members Collection Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Native Client Date and Time Improvements (OLE DB)"
 title: "Date and Time Improvements (OLE DB)"
 ms.date: "03/14/2017"
 ms.prod: sql

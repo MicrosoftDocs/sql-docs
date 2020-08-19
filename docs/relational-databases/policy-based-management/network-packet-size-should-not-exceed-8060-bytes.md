@@ -1,4 +1,5 @@
 ---
+description: "Network Packet Size Should Not Exceed 8060 Bytes"
 title: "Network Packet Size Should Not Exceed 8060 Bytes | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

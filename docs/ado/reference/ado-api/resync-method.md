@@ -1,4 +1,5 @@
 ---
+description: "Resync Method"
 title: "Resync Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

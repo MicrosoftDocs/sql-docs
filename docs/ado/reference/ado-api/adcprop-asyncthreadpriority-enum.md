@@ -1,4 +1,5 @@
 ---
+description: "ADCPROP_ASYNCTHREADPRIORITY_ENUM"
 title: "ADCPROP_ASYNCTHREADPRIORITY_ENUM | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

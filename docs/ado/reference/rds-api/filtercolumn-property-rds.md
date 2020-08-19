@@ -1,4 +1,5 @@
 ---
+description: "FilterColumn Property (RDS)"
 title: "FilterColumn Property (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

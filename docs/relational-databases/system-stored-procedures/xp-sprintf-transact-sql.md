@@ -1,4 +1,5 @@
 ---
+description: "xp_sprintf (Transact-SQL)"
 title: "xp_sprintf (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/09/2020"

@@ -1,4 +1,5 @@
 ---
+description: "PRINT (Transact-SQL)"
 title: "PRINT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

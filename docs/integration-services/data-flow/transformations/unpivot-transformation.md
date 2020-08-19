@@ -1,4 +1,5 @@
 ---
+description: "Unpivot Transformation"
 title: "Unpivot Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

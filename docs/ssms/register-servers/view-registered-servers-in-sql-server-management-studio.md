@@ -1,4 +1,5 @@
 ---
+description: "View Registered Servers in SQL Server Management Studio"
 title: View Registered Servers
 ms.prod: sql
 ms.prod_service: sql-tools

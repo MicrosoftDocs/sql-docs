@@ -39,50 +39,70 @@ To access the Import Flat File Wizard, follow these steps:
 2. Connect to an instance of the SQL Server Database Engine or localhost.
 3. Expand **Databases**, right-click a database (test in the example below), point to **Tasks**, and click **Import Flat File** above Import Data.
 
-![Wizard menu](media/import-flat-file-wizard/importffmenu.png)
+![Wizard menu](media/import-flat-file-wizard/import-flat-file-menu.png)
 
 To learn more about the different functions of the wizard, refer to the following tutorial:
 
 ## Tutorial
 For the purposes of this tutorial, feel free to use your own flat file. Otherwise, this tutorial is using the following CSV from Excel, which you are free to copy. If you use this CSV, title it **example.csv** and make sure to save it as a csv in an easy location such as your desktop.
 
-![Wizard Excel](media/import-flat-file-wizard/importffexample.png)
+![Wizard Excel](media/import-flat-file-wizard/import-flat-file-example.png)
 
 ### Step 1: Access Wizard and Intro Page
 Access the wizard as described [here](#started).
 
 The first page of the wizard is the welcome page. If you do not want to see this page again, feel free to click **Do not show this starting page again.**
 
-![Wizard Intro](media/import-flat-file-wizard/importffintro.png)
+![Wizard Intro](media/import-flat-file-wizard/import-flat-file-intro.png)
 
 ### Step 2: Specify Input File
 Click browse to select your input file. At default, the wizard searches for .csv and .txt files. 
 
 The new table name should be unique, and the wizard does not allow you to move further if not.
 
-![Wizard Specify](media/import-flat-file-wizard/importffspecify.png)
+![Wizard Specify](media/import-flat-file-wizard/import-flat-file-specify.png)
 
 ### Step 3: Preview Data
 The wizard generates a preview that you can view for the first 50 rows. If there are any problems, click cancel, otherwise proceed to the next page.
 
-![Wizard Preview](media/import-flat-file-wizard/importffpreview.png)
+![Wizard Preview](media/import-flat-file-wizard/import-flat-file-preview.png)
 
 ### Step 4: Modify Columns
 The wizard identifies what it believes are the correct column names, data types, etc. Here is where you can edit the fields if they are incorrect (for example, data type should be a float instead of an int).
 
 Proceed when ready.
 
-![Wizard Modify](media/import-flat-file-wizard/importffmodify.png)
+![Wizard Modify](media/import-flat-file-wizard/import-flat-file-modify.png)
 
 ### Step 5: Summary
 This is simply a summary page displaying your current configuration. If there are issues, you can go back to previous sections. Otherwise, clicking finish attempts the import process.
 
-![Wizard Summary](media/import-flat-file-wizard/importffsummary.png)
+![Wizard Summary](media/import-flat-file-wizard/import-flat-file-summary.png)
 
 ### Step 6: Results
 This page indicates whether the import was successful. If a green check mark appears, it was a success, otherwise you may need to review your configuration or input file for any errors.
 
-![Wizard Results](media/import-flat-file-wizard/importffresults.png)
+![Wizard Results](media/import-flat-file-wizard/import-flat-file-results.png)
+
+## Troubleshooting
+The Import Flat File Wizard detects the data types based on the first 200 rows.  In scenarios where data further in the flat file does not conform to the automatically detected data types, an error will occur during import. The error message would be similar to the following:
+```
+Error inserting data into table. (Microsoft.SqlServer.Prose.Import)
+The given value of type String from the data source cannot be converted to type nvarchar of the specified target column. (System.Data)
+String or binary data would be truncated. (System.Data)
+```
+Tactics to alleviate this error:
+- Expanding the data type size(s) in the [Modify Columns step](#step-4-modify-columns), such as the length of a nvarchar column, may compensate for variations in the data from the remainder of the flat file.
+- Enabling error reporting in the [Modify Columns step](#step-4-modify-columns), especially by a smaller number, will reveal which row(s) in the flat file contain data that does not fit the selected data types. For example, in a flat file where the second row introduces an error, running the import with error reporting with a range of 1 provides a specific error message.  Examining the file directly at the location can provide more targeted changes to the data types based on the data in the identified rows.
+
+![Error Reporting Results](media/import-flat-file-wizard/import-flat-file-error.png)
+
+```
+Error inserting data into table occured while inserting rows 1 - 2. (Microsoft.SqlServer.Prose.Import)
+The given value of type String from the data source cannot be converted to type float of the specified target column. (System.Data)
+Failed to convert parameter value from a String to a Double. (System.Data)
+```
+
 
 ## Learn More
 

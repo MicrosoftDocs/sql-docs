@@ -1,4 +1,5 @@
 ---
+description: "Create a Link Attribute (Master Data Services)"
 title: Create a Link Attribute
 ms.custom: ""
 ms.date: "03/15/2017"

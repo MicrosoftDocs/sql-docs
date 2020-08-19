@@ -1,4 +1,5 @@
 ---
+description: "SAP BW Destination Editor (Connection Manager Page)"
 title: "SAP BW Destination Editor (Connection Manager Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

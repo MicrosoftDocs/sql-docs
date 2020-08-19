@@ -1,4 +1,5 @@
 ---
+description: "SET SHOWPLAN_TEXT (Transact-SQL)"
 title: "SET SHOWPLAN_TEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -41,7 +42,9 @@ ms.author: carlrab
 SET SHOWPLAN_TEXT { ON | OFF }  
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  The setting of SET SHOWPLAN_TEXT is set at execute or run time and not at parse time.  
   
  When SET SHOWPLAN_TEXT is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns execution information for each [!INCLUDE[tsql](../../includes/tsql-md.md)] statement without executing it. After this option is set ON, execution plan information about all subsequent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] statements is returned until the option is set OFF. For example, if a CREATE TABLE statement is executed while SET SHOWPLAN_TEXT is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message from a subsequent SELECT statement involving that same table informing the user that the specified table does not exist. Therefore, subsequent references to this table fail. When SET SHOWPLAN_TEXT is OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes statements without generating a report with execution plan information.  

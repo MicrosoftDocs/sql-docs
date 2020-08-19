@@ -1,4 +1,5 @@
 ---
+description: "SetNumValue Method (SqlServiceAdvancedProperty Class)"
 title: "SetNumValue Method (SqlServiceAdvancedProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"

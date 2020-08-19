@@ -1,4 +1,5 @@
 ---
+description: "Implementing Endpoints"
 title: "Implementing Endpoints"
 ms.custom: seo-dt-2019
 ms.date: "08/06/2017"

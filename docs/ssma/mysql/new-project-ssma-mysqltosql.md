@@ -1,4 +1,5 @@
 ---
+description: "New Project (SSMA) (MySQLToSQL)"
 title: "New Project (SSMA) (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

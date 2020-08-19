@@ -1,4 +1,5 @@
 ---
+description: "DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)"
 title: DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 ms.custom: ""
 ms.date: "07/03/2019"

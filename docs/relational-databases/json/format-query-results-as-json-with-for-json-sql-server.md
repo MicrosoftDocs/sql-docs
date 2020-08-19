@@ -1,4 +1,5 @@
 ---
+description: "Format Query Results as JSON with FOR JSON (SQL Server)"
 title: "Format Query Results as JSON with FOR JSON"
 ms.date: 06/03/2020
 ms.prod: sql

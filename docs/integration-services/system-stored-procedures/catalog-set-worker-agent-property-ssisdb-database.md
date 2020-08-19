@@ -1,4 +1,5 @@
 ---
+description: "catalog.set_worker_agent_property (SSISDB Database)"
 title: "catalog.set_worker_agent_property (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"

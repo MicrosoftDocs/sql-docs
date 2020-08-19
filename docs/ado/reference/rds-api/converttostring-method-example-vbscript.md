@@ -1,4 +1,5 @@
 ---
+description: "ConvertToString Method Example (VBScript)"
 title: "ConvertToString Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

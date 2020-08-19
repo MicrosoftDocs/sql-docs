@@ -1,4 +1,5 @@
 ---
+description: "XML Recordset Persistence Scenario"
 title: "XML Recordset Persistence Scenario | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

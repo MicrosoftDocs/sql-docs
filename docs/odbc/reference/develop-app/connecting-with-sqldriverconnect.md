@@ -1,4 +1,5 @@
 ---
+description: "Connecting with SQLDriverConnect"
 title: "Connecting with SQLDriverConnect | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

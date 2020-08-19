@@ -1,4 +1,5 @@
 ---
+description: "Join Filters"
 title: "Join Filters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"

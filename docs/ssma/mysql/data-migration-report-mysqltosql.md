@@ -1,4 +1,5 @@
 ---
+description: "Data Migration Report  (MySQLToSQL)"
 title: "Data Migration Report  (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "Add File Connection Manager Dialog Box UI Reference"
 title: "Add File Connection Manager Dialog Box UI Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

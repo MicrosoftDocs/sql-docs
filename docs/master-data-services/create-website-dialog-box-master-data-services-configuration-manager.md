@@ -1,4 +1,5 @@
 ---
+description: "Create Website Dialog Box (Master Data Services Configuration Manager)"
 title: Create Website Dialog Box
 ms.custom: "seo-lt-2019"
 ms.date: "03/20/2017"

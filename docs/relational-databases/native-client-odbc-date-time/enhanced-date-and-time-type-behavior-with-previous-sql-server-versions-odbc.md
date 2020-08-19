@@ -1,4 +1,5 @@
 ---
+description: "Enhanced Date and Time Type Behavior with Previous SQL Server Versions (ODBC)"
 title: "Date Time in SQL versions (ODBC)"
 ms.custom: ""
 ms.date: 12/18/2019

@@ -1,4 +1,5 @@
 ---
+description: "Field-Related Error Information"
 title: "Field-Related Error Information | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

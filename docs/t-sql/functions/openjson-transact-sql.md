@@ -1,4 +1,5 @@
 ---
+description: "OPENJSON (Transact-SQL)"
 title: "OPENJSON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/03/2020
@@ -58,8 +59,6 @@ By default, the **OPENJSON** table-valued function returns three columns, which 
 ![Syntax for WITH clause in OPENJSON TVF](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH syntax")
 
 *with_clause* contains a list of columns with their types for **OPENJSON** to return. By default, **OPENJSON** matches keys in *jsonExpression* with the column names in *with_clause* (in this case, matches keys implies that it is case sensitive). If a column name does not match a key name, you can provide an optional *column_path*, which is a [JSON Path Expression](../../relational-databases/json/json-path-expressions-sql-server.md) that references a key within the *jsonExpression*. 
-
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

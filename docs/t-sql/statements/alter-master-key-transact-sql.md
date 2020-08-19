@@ -1,4 +1,5 @@
 ---
+description: "ALTER MASTER KEY (Transact-SQL)"
 title: "ALTER MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: "fasttrack-edit"
 ms.date: "02/21/2019"
@@ -89,6 +90,8 @@ ALTER MASTER KEY <alter_option>
     |
     DROP ENCRYPTION BY SERVICE MASTER KEY
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

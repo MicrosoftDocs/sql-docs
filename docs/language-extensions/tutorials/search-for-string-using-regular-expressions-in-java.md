@@ -10,7 +10,7 @@ ms.technology: language-extensions
 monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Tutorial: Search for a string using regular expressions (regex) in Java
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 This tutorial shows you how to use [SQL Server Language Extensions](../language-extensions-overview.md) to create a Java class that receives two columns (ID and text) from SQL Server and a regular expression (regex) as an input parameter. The class returns two columns back to SQL Server (ID and text).
 

@@ -1,4 +1,5 @@
 ---
+description: "sp_addmergepublication (Transact-SQL)"
 title: "sp_addmergepublication (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

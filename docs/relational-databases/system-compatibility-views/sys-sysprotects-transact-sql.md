@@ -1,4 +1,5 @@
 ---
+description: "sys.sysprotects (Transact-SQL)"
 title: "sys.sysprotects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Selecting and Configuring Objects to Test (OracleToSQL)"
 title: "Selecting and Configuring Objects to Test (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

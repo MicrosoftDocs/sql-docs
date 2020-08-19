@@ -1,4 +1,5 @@
 ---
+description: "SQLTransact (Text File Driver)"
 title: "SQLTransact (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

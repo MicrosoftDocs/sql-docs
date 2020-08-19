@@ -1,4 +1,5 @@
 ---
+description: "ReadyState Property Example (VBScript)"
 title: "ReadyState Property Example (VBScript) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

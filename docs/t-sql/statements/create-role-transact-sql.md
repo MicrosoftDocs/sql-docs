@@ -1,4 +1,5 @@
 ---
+description: "CREATE ROLE (Transact-SQL)"
 title: "CREATE ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"

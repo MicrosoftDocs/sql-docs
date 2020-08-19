@@ -1,4 +1,5 @@
 ---
+description: "Comments on HelloData"
 title: "Comments on HelloData | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

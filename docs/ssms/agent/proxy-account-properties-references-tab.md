@@ -1,4 +1,5 @@
 ---
+description: "Proxy Account Properties (References Tab)"
 title: Proxy Account Properties (References Tab)
 ms.prod: sql
 ms.prod_service: sql-tools

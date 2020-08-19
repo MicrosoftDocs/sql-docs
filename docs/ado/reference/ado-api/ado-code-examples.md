@@ -1,4 +1,5 @@
 ---
+description: "ADO Code Examples"
 title: "ADO Code Examples | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

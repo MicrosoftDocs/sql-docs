@@ -1,4 +1,5 @@
 ---
+description: "Performing Operation (SQL Server Import and Export Wizard)"
 title: "Performing Operation (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2017"

@@ -1,4 +1,5 @@
 ---
+description: "StayInSync Property Example (VB)"
 title: "StayInSync Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

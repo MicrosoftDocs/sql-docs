@@ -1,4 +1,5 @@
 ---
+description: "Resync Method Example (VB)"
 title: "Resync Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

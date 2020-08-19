@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_user_db_resource_governance (Transact-SQL)"
 title: "sys.dm_user_db_resource_governance (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/17/2019"

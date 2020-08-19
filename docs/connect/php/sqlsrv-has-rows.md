@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_has_rows"
 title: "sqlsrv_has_rows | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_db_backup_file_snapshots (Transact-SQL)"
 title: "sys.fn_db_backup_file_snapshots (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/03/2015"

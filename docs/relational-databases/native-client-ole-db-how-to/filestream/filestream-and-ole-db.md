@@ -1,4 +1,5 @@
 ---
+description: "Filestream and OLE DB (Native Client OLE DB provider)"
 title: "Filestream and OLE DB (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

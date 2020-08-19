@@ -1,4 +1,5 @@
 ---
+description: "Axes Collection (ADO MD)"
 title: "Axes Collection (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

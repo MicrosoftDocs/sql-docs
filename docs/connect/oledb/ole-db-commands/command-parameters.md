@@ -1,6 +1,6 @@
 ---
 title: "Command Parameters (OLE DB driver) | Microsoft Docs"
-description: "Command parameters"
+description: Learn about command parameters, including which types the OLE DB Driver for SQL Server supports for SQL statement and procedure-call commands.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

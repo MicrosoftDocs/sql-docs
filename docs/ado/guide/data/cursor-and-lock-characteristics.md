@@ -1,4 +1,5 @@
 ---
+description: "Cursor and Lock Characteristics"
 title: "Cursor and Lock Characteristics | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

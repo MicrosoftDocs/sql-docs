@@ -1,4 +1,5 @@
 ---
+description: "Linked Servers Catalog Views (Transact-SQL)"
 title: "Linked Servers Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Stat Method"
 title: "Stat Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

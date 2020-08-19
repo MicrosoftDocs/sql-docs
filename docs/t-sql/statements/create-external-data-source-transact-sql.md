@@ -1,4 +1,5 @@
 ---
+description: "CREATE EXTERNAL DATA SOURCE (Transact-SQL)"
 title: "CREATE EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 02/26/2020
@@ -808,7 +809,7 @@ WITH
 CREATE EXTERNAL DATA SOURCE AzureDataLakeStore
 WITH
   -- Please note the abfss endpoint when your account has secure transfer enabled
-  ( LOCATION = 'abfss://newyorktaxidataset.azuredatalakestore.net' , 
+  ( LOCATION = 'abfss://data@newyorktaxidataset.dfs.core.windows.net' , 
     CREDENTIAL = ADLS_credential ,
     TYPE = HADOOP
   ) ;

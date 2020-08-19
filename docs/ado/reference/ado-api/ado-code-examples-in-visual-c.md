@@ -1,4 +1,5 @@
 ---
+description: "ADO Code Examples in Visual C++"
 title: "ADO Code Examples in Visual C++ | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

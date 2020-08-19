@@ -1,4 +1,5 @@
 ---
+description: "CREATE DATABASE ENCRYPTION KEY (Transact-SQL)"
 title: CREATE DATABASE ENCRYPTION KEY (Transact-SQL)
 ms.custom: ""
 ms.date: "08/24/2016"

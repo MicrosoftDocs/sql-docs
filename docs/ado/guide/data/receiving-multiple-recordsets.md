@@ -1,4 +1,5 @@
 ---
+description: "Receiving Multiple Recordsets"
 title: "Receiving Multiple Recordsets | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

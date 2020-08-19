@@ -1,4 +1,5 @@
 ---
+description: "Setting ODBC Connection Pooling Options"
 title: "Setting ODBC Connection Pooling Options | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

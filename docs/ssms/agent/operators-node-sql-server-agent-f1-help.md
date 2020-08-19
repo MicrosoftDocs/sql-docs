@@ -1,4 +1,5 @@
 ---
+description: "Operators Node (SQL Server Agent F1 Help)"
 title: Operators Node (SQL Server Agent F1 Help)
 ms.prod: sql
 ms.prod_service: sql-tools

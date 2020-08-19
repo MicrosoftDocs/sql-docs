@@ -1,4 +1,5 @@
 ---
+description: "SubmitChanges Method Example (VBScript)"
 title: "SubmitChanges Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.technology: connectivity

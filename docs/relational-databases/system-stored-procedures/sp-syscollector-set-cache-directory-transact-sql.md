@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_set_cache_directory (Transact-SQL)"
 title: "sp_syscollector_set_cache_directory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

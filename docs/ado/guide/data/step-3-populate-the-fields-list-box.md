@@ -1,4 +1,5 @@
 ---
+description: "Step 3: Populate the Fields List Box"
 title: "Step 3: Populate the Fields List Box | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

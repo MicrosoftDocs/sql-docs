@@ -1,4 +1,5 @@
 ---
+description: "Prepared Property Example (VB)"
 title: "Prepared Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

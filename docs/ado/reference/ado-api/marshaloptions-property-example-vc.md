@@ -1,4 +1,5 @@
 ---
+description: "MarshalOptions Property Example (VC++)"
 title: "MarshalOptions Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

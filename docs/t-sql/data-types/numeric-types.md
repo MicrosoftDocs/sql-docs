@@ -1,4 +1,5 @@
 ---
+description: "Numeric types"
 title: "Numeric types | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"

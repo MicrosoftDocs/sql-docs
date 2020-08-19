@@ -1,4 +1,5 @@
 ---
+description: "IndexNulls Property Example (VC++)"
 title: "IndexNulls Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Detecting and Resolving Conflicts"
 title: "Detecting and Resolving Conflicts | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

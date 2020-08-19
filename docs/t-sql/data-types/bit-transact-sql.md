@@ -1,4 +1,5 @@
 ---
+description: "bit (Transact-SQL)"
 title: "bit (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"

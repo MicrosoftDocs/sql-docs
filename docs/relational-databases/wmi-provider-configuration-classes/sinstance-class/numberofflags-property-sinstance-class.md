@@ -1,4 +1,5 @@
 ---
+description: "NumberOfFlags Property (SInstance Class)"
 title: "NumberOfFlags Property (SInstance)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

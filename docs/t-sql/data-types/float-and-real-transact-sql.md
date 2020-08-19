@@ -1,4 +1,5 @@
 ---
+description: "float and real (Transact-SQL)"
 title: float and real (Transact-SQL)
 ms.custom: ""
 ms.date: "09/10/2019"

@@ -1,6 +1,6 @@
 ---
 title: "Creating an OLE DB Driver for SQL Server Application | Microsoft Docs"
-description: "Creating an OLE DB Driver for SQL Server application"
+description: Learn about the steps necessary to create an OLE DB Driver for SQL Server application and find additional resources.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql

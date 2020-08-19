@@ -1,4 +1,5 @@
 ---
+description: "Synonyms (Database Engine)"
 title: "Synonyms (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

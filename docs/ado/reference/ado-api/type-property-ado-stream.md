@@ -1,4 +1,5 @@
 ---
+description: "Type Property (ADO Stream)"
 title: "Type Property (ADO Stream) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

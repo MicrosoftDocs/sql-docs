@@ -1,4 +1,5 @@
 ---
+description: "DBCC SQLPERF (Transact-SQL)"
 title: "DBCC SQLPERF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2018"

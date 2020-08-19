@@ -1,4 +1,5 @@
 ---
+description: "sp_help_spatial_geometry_index_xml (Transact-SQL)"
 title: "sp_help_spatial_geometry_index_xml (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_buffer_descriptors (Transact-SQL)"
 title: "sys.dm_os_buffer_descriptors (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2017"

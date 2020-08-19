@@ -1,4 +1,5 @@
 ---
+description: "Adding the Data Flow Task Programmatically"
 title: "Adding the Data Flow Task Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Legal Notice (MySQLToSql)"
 title: "Legal Notice (MySQLToSql) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "sp_set_session_context (Transact-SQL)"
 title: "sp_set_session_context (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/14/2019"

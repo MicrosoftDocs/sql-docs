@@ -1,4 +1,5 @@
 ---
+description: "value() Method (xml Data Type)"
 title: value() Method (xml Data Type)
 ms.custom: ""
 ms.date: "07/26/2017"

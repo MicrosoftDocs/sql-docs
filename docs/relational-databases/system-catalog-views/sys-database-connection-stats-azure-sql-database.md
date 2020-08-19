@@ -1,4 +1,5 @@
 ---
+description: "sys.database_connection_stats (Azure SQL Database)"
 title: "sys.database_connection_stats"
 titleSuffix: Azure SQL Database
 ms.date: "01/28/2019"

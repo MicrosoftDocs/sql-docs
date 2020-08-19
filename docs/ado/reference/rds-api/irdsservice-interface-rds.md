@@ -1,4 +1,5 @@
 ---
+description: "IRDSService Interface (RDS)"
 title: "IRDSService Interface (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

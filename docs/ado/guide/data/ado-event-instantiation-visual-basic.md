@@ -1,4 +1,5 @@
 ---
+description: "ADO Event Instantiation: Visual Basic"
 title: "ADO Event Instantiation: Visual Basic | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

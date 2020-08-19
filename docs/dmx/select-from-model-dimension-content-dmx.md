@@ -1,4 +1,5 @@
 ---
+description: "SELECT FROM &lt;model&gt;.DIMENSION_CONTENT (DMX)"
 title: "SELECT FROM &lt;model&gt;.DIMENSION_CONTENT (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

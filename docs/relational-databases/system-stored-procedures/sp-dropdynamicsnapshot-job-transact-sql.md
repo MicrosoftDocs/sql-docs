@@ -1,4 +1,5 @@
 ---
+description: "sp_dropdynamicsnapshot_job (Transact-SQL)"
 title: "sp_dropdynamicsnapshot_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

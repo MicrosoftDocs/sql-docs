@@ -1,4 +1,5 @@
 ---
+description: "Global Settings (Logging) (OracleToSQL)"
 title: "Global Settings (Logging) (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

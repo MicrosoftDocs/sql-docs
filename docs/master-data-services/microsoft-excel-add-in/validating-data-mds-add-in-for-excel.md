@@ -1,4 +1,5 @@
 ---
+description: "Validating Data (MDS Add-in for Excel)"
 title: Validating Data
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"

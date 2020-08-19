@@ -1,4 +1,5 @@
 ---
+description: "Perform Basic Operations with Queries (Visual Database Tools)"
 title: Perform Basic Operations with Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

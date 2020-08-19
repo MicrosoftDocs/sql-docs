@@ -1,4 +1,5 @@
 ---
+description: "FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)"
 title: "FROM: JOIN, APPLY, PIVOT (T-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/01/2019"
@@ -166,7 +167,9 @@ FROM { <table_source> [ ,...n ] }
     | REDISTRIBUTE  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 \<table_source>  
  Specifies a table, view, table variable, or derived table source, with or without an alias, to use in the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. Up to 256 table sources can be used in a statement, although the limit varies depending on available memory and the complexity of other expressions in the query. Individual queries may not support up to 256 table sources.  
   

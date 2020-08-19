@@ -1,4 +1,5 @@
 ---
+description: "Extended Events Catalog Views (Transact-SQL)"
 title: "Extended Events Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

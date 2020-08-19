@@ -1,4 +1,5 @@
 ---
+description: "API Functions (ODBC Driver for Oracle)"
 title: "API Functions (ODBC Driver for Oracle) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

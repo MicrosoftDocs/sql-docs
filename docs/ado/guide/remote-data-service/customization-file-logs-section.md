@@ -1,4 +1,5 @@
 ---
+description: "Customization File Logs Section"
 title: "Customization File Logs Section | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

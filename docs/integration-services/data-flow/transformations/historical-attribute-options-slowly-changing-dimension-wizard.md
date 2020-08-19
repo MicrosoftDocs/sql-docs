@@ -1,4 +1,5 @@
 ---
+description: "Historical Attribute Options (Slowly Changing Dimension Wizard)"
 title: "Historical Attribute Options (Slowly Changing Dimension Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

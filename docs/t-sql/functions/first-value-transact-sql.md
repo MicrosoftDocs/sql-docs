@@ -1,4 +1,5 @@
 ---
+description: "FIRST_VALUE (Transact-SQL)"
 title: "FIRST_VALUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/10/2016"

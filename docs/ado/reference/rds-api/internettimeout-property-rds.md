@@ -1,4 +1,5 @@
 ---
+description: "InternetTimeout Property (RDS)"
 title: "InternetTimeout Property (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

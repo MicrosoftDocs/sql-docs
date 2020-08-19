@@ -1,4 +1,5 @@
 ---
+description: "Bulk-Load Data into Tables in a Merge Publication"
 title: "Bulk-Load Data into Tables in a Merge Publication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"

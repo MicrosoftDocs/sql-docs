@@ -1,4 +1,5 @@
 ---
+description: "sp_addrolemember (Transact-SQL)"
 title: "sp_addrolemember (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/30/2019"
@@ -31,9 +32,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```
+```syntaxsql
 sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'  
-
 ```    
   
 ## Arguments  
@@ -74,7 +74,7 @@ sp_addrolemember [ @rolename = ] 'role', [ @membername = ] 'security_account'
 > [!NOTE]  
 >  Because `Contoso\Mary5` is known as the database user `Mary5` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database, the user name `Mary5` must be specified. The statement will fail unless a `Contoso\Mary5` login exists. Test by using a login from your domain.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 CREATE USER Mary5 FOR LOGIN [Contoso\Mary5] ;  
@@ -84,7 +84,7 @@ GO
 ### B. Adding a database user  
  The following example adds the database user `Mary5` to the `Production` database role in the current database.  
   
-```  
+```sql  
 EXEC sp_addrolemember 'Production', 'Mary5';  
 ```  
   
@@ -96,7 +96,7 @@ EXEC sp_addrolemember 'Production', 'Mary5';
 > [!NOTE]  
 >  Because the login `LoginMary` is known as the database user `UserMary` in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database, the user name `UserMary` must be specified. The statement will fail unless a `Mary5` login exists. Logins and users usually have the same name. This example uses different names to differentiate the actions affecting the login vs. the user.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 CREATE USER UserMary FOR LOGIN LoginMary ;  
@@ -107,7 +107,7 @@ EXEC sp_addrolemember 'Production', 'UserMary'
 ### D. Adding a database user  
  The following example adds the database user `UserMary` to the `Production` database role in the current database.  
   
-```  
+```sql  
 EXEC sp_addrolemember 'Production', 'UserMary'  
 ```  
   

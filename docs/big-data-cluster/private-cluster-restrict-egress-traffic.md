@@ -28,68 +28,86 @@ This article covers how to deploy BDC in AKS private cluster with advanced netwo
 
 ## Use Azure firewall to restrict egress traffic
 
-All those egress traffics can be restricted using Azure firewall which provides an Azure Kubernetes Service (AzureKubernetesService) FQDN Tag to simplify this configuration. The FQDN tag contains all the FQDNs listed in AKS official documentation and is kept automatically up to date.
+Use Azure firewall to restrict egress traffic. Azure firewall includes an `AzureKubernetesService` FQDN tag to simplify this configuration. The FQDN tag contains all the FQDNs listed in AKS official documentation and is kept automatically up to date.
 
-The following is a reference architecture to build a completely private environment in AKS, you can check here to see how to restrict egress traffic using Azure firewall step by step.
+[Restrict egress traffic using Azure firewall](/azure/aks/limit-egress-traffic#restrict-egress-traffic-using-azure-firewall) provides a reference architecture to build a completely private environment in AKS. 
 
-Here are steps to set up basic architecture using Azure Firewall : 
+To set up a the basic architecture with Azure Firewall:
 
-## Define a set of environment variables to be used in resource creations.
+## Create the resource group and VNet
 
-```console
-export REGION_NAME=northeurope
-export RESOURCE_GROUP=private-bdc-aksudr-rg
-export SUBNET_NAME=aks-subnet
-export VNET_NAME=bdc-vnet
-export AKS_NAME=bdcaksprivatecluster
- 
-az group create -n $RESOURCE_GROUP -l $REGION_NAME
- 
-az network vnet create \
+1. Define a set of environment variables for creating resources.
+
+  ```console
+  export REGION_NAME=<region>
+  export RESOURCE_GROUP=private-bdc-aksudr-rg
+  export SUBNET_NAME=aks-subnet
+  export VNET_NAME=bdc-vnet
+  export AKS_NAME=bdcaksprivatecluster
+  ```
+
+1. Create the resource group
+
+  ```azurecli
+  az group create -n $RESOURCE_GROUP -l $REGION_NAME
+  ```
+
+1. Create the VNET
+
+  ```azurecli
+  az network vnet create \
     --resource-group $RESOURCE_GROUP \
     --location $REGION_NAME \
     --name $VNET_NAME \
     --address-prefixes 10.0.0.0/8 \
     --subnet-name $SUBNET_NAME \
     --subnet-prefix 10.1.0.0/16
- 
 
-SUBNET_ID=$(az network vnet subnet show \
+  SUBNET_ID=$(az network vnet subnet show \
     --resource-group $RESOURCE_GROUP \
     --vnet-name $VNET_NAME \
     --name $SUBNET_NAME \
     --query id -o tsv)
-```
+  ```
 
 ## Create and set up Azure Firewall
 
-### Define a set of environment variables to be used in resource creations
+1. Define a set of environment variables for creating resources.
 
-```console
-export FWNAME=bdcaksazfw
-export FWPUBIP=$FWNAME-ip
-export FWIPCONFIG_NAME=$FWNAME-config
+  ```console
+  export FWNAME=bdcaksazfw
+  export FWPUBIP=$FWNAME-ip
+  export FWIPCONFIG_NAME=$FWNAME-config
 
-az extension add --name azure-firewall
-```
+  az extension add --name azure-firewall
+  ```
 
-### Dedicated subnet for Azure Firewall (Firewall name cannot be changed)
+1. Create a dedicated subnet for the firewall
 
-az network vnet subnet create \
+  > [!NOTE]
+  > You cannot change the firewall name after creation
+
+  ```azurecli
+  az network vnet subnet create \
     --resource-group $RESOURCE_GROUP \
     --vnet-name $VNET_NAME \
     --name AzureFirewallSubnet \
     --address-prefix 10.3.0.0/24
 
-az network firewall create -g $RESOURCE_GROUP -n $FWNAME -l $REGION_NAME --enable-dns-proxy true
+   az network firewall create -g $RESOURCE_GROUP -n $FWNAME -l $REGION_NAME --enable-dns-proxy true
 
-az network public-ip create -g $RESOURCE_GROUP -n $FWPUBIP -l $REGION_NAME --sku "Standard"
+   az network public-ip create -g $RESOURCE_GROUP -n $FWPUBIP -l $REGION_NAME --sku "Standard"
 
-az network firewall ip-config create -g $RESOURCE_GROUP -f $FWNAME -n $FWIPCONFIG_NAME --public-ip-address $FWPUBIP --vnet-name $VNET_NAME
+   az network firewall ip-config create -g $RESOURCE_GROUP -f $FWNAME -n $FWIPCONFIG_NAME --public-ip-address $FWPUBIP --vnet-name $VNET_NAME
+  ```
 
+   By default, Azure automatically routes traffic between Azure subnets, virtual networks, and on-premises networks. 
 
+## Create user-defined route table
 
-By default, Azure automatically routes traffic between Azure subnets, virtual networks, and on-premises networks. In this scenario, we’re creating a user-defined route ( UDR ) table with a hop to Azure Firewall.
+Create a user-defined route (UDR) table with a hop to Azure Firewall.
+
+```azurecli
 
 export SUBID= <your Azure subscription ID>
 export FWROUTE_TABLE_NAME=bdcaks-rt
@@ -106,12 +124,11 @@ az network route-table create -g $RESOURCE_GROUP --name $FWROUTE_TABLE_NAME
 az network route-table route create -g $RESOURCE_GROUP --name $FWROUTE_NAME --route-table-name $FWROUTE_TABLE_NAME --address-prefix 0.0.0.0/0 --next-hop-type VirtualAppliance --next-hop-ip-address $FWPRIVATE_IP --subscription $SUBID
 
 az network route-table route create -g $RESOURCE_GROUP --name $FWROUTE_NAME_INTERNET --route-table-name $FWROUTE_TABLE_NAME --address-prefix $FWPUBLIC_IP/32 --next-hop-type Internet
+```
 
+## Set up firewall rules 
 
-
-
-Set up firewall rules based on the document : 
-
+```azurecli
 # Add FW Network Rules
 
 az network firewall network-rule create -g $RESOURCE_GROUP -f $FWNAME --collection-name 'aksfwnr' -n 'apiudp' --protocols 'UDP' --source-addresses '*' --destination-addresses "AzureCloud.$REGION_NAME" --destination-ports 1194 --action allow --priority 100
@@ -121,13 +138,16 @@ az network firewall network-rule create -g $RESOURCE_GROUP -f $FWNAME --collecti
 # Add FW Application Rules
 
 az network firewall application-rule create -g $RESOURCE_GROUP -f $FWNAME --collection-name 'aksfwar' -n 'fqdn' --source-addresses '*' --protocols 'http=80' 'https=443' --fqdn-tags "AzureKubernetesService" --action allow --priority 100
+```
 
-You can associate User defined route table (UDR) to AKS cluster where deployed BDC previsouly using the following command:
+You can associate User defined route table (UDR) to AKS cluster where deployed BDC previously using the following command:
 
+```azurecli
 az network vnet subnet update -g $RESOURCE_GROUP --vnet-name $VNET_NAME --name $SUBNET_NAME --route-table $FWROUTE_TABLE_NAME
+```
+## Create SP and assign permissions to the VNET
 
-
-
+```azurecli
 # Create SP and Assign Permission to Virtual Network
 
 az ad sp create-for-rbac -n "bdcaks-sp" --skip-assignment
@@ -143,12 +163,13 @@ az role assignment create --assignee $APPID --scope $VNETID --role "Network Cont
 
 RTID=$(az network route-table show -g $RESOURCE_GROUP -n $FWROUTE_TABLE_NAME --query id -o tsv)
 az role assignment create --assignee $APPID --scope $RTID --role "Network Contributor"
+```
 
-
-
+## Create AKS cluster 
 
 Then create AKS cluster with userDefinedRouting ( UDR ) as outbound type.
 
+```azcli 
 az aks create \
     --resource-group $RESOURCE_GROUP \
     --location $REGION_NAME \
@@ -166,16 +187,17 @@ az aks create \
     --node-vm-size Standard_D13_v2 \
     --node-count 2 \
     --generate-ssh-keys
+```
 
+## Create Big Data Cluster
 
 Then you can create BDC private cluster with custom profile. You can find a template to set up this architecture here in sql server sample repository on Github. 
 
-Use 3rd Party Firewall to restrict egress traffic
-Popular 3rd party firewall such as palo alto is chosen by customers, it can be used in private deployment solution with more complicity on configuration, but basically, it has to consider the following network rules : 
-•	 All the required outbound network rules and FQDNs for AKS clusters and all Wildcard HTTP/HTTPS endpoints and dependencies that can vary with your AKS cluster based on a number of qualifiers and your actual requirements. 
-•	Azure Global required network rules / FQDN/application rules mentioned here. 
-•	Optional recommended FQDN / application rules for AKS clusters mentioned here. 
+Use 3rd Party Firewall to restrict egress traffic. Popular 3rd party firewall such as palo alto is chosen by customers, it can be used in private deployment solution with more complicity on configuration, but basically, it has to consider the following network rules :
 
+* All the required outbound network rules and FQDNs for AKS clusters and all Wildcard HTTP/HTTPS endpoints and dependencies that can vary with your AKS cluster based on a number of qualifiers and your actual requirements. 
+* Azure Global required network rules / FQDN/application rules mentioned here. 
+* Optional recommended FQDN / application rules for AKS clusters mentioned here. 
 
 ## Next steps
 

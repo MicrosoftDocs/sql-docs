@@ -13,12 +13,14 @@ ms.technology: big-data-cluster
 
 # Deploy private cluster in Azure Kubernetes Service (AKS) 
 
-This article explains how to deploy SQL Server Big Data Cluster on Azure Kubernetes Service (AKS) in a private configuration. This configuration supports restricted access to public IP addresses. 
-When done correctly, a private deployment 
+This article explains how to deploy SQL Server Big Data Cluster on Azure Kubernetes Service (AKS) in a private configuration. This configuration supports restricted access to public IP addresses.
 
-* Restricts use of public IP addresses
-* Ensures that network traffic between application servers and cluster node pools remains only on the private network
-* allows custom configuration for egress traffic to fit specific requirements. 
+A private deployment provides the following benefits:
+
+* Restricted use of public IP addresses
+* Network traffic between application servers and cluster node pools remains only on the private network
+* Custom configuration for egress traffic to fit specific requirements
+
 This article demonstrates how to use an AKS private cluster to restrict the use of Public IP address while respective security strings have applied.
 
 ## Deploy private BDC cluster with AKS private cluster
@@ -144,3 +146,6 @@ Please check manage BDC private cluster to know more about how you can manage BD
 
 ## Next steps
 
+[Manage a private cluster](private-cluster-manage.md)
+
+[Restrict egress traffic of Private BDC cluster](private-cluster-restrict-egress-traffic.md)

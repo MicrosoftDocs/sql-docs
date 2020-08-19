@@ -39,7 +39,7 @@ landingContent:
         url: sql-server-linux-faq.md 
 
 
-  - title: "Module 3: Install/Deploy & Connect"
+  - title: "Module 3: Install/deploy & connect"
     linkLists:
     - linkListType: learn
       links:

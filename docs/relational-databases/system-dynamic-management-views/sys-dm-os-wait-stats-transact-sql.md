@@ -45,14 +45,11 @@ On [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)], requires `VIEW 
 On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the `VIEW DATABASE STATE` permission in the database. On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard and Basic Tiers, requires the  **Server admin** or an **Azure Active Directory admin** account.   
 
 ##  <a name="WaitTypes"></a> Types of Waits  
- **Resource waits** 
- Resource waits occur when a worker requests access to a resource that is not available because the resource is being used by some other worker or is not yet available. Examples of resource waits are locks, latches, network and disk I/O waits. Lock and latch waits are waits on synchronization objects  
+ **Resource waits** occur when a worker requests access to a resource that is not available because the resource is being used by some other worker or is not yet available. Examples of resource waits are locks, latches, network and disk I/O waits. Lock and latch waits are waits on synchronization objects  
   
-**Queue waits**  
- Queue waits occur when a worker is idle, waiting for work to be assigned. Queue waits are most typically seen with system background tasks such as the deadlock monitor and deleted record cleanup tasks. These tasks will wait for work requests to be placed into a work queue. Queue waits may also periodically become active even if no new packets have been put on the queue.  
+**Queue waits** occur when a worker is idle, waiting for work to be assigned. Queue waits are most typically seen with system background tasks such as the deadlock monitor and deleted record cleanup tasks. These tasks will wait for work requests to be placed into a work queue. Queue waits may also periodically become active even if no new packets have been put on the queue.  
   
- **External waits**  
- External waits occur when a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] worker is waiting for an external event, such as an extended stored procedure call or a linked server query, to finish. When you diagnose blocking issues, remember that external waits do not always imply that the worker is idle, because the worker may actively be running some external code.  
+ **External waits** occur when a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] worker is waiting for an external event, such as an extended stored procedure call or a linked server query, to finish. When you diagnose blocking issues, remember that external waits do not always imply that the worker is idle, because the worker may actively be running some external code.  
   
  `sys.dm_os_wait_stats` shows the time for waits that have completed. This dynamic management view does not show current waits.  
   
@@ -178,14 +175,14 @@ This command resets all counters to 0.
 |DBMIRRORING_CMD |Occurs when a task is waiting for log records to be flushed to disk. This wait state is expected to be held for long periods of time.| 
 |DBSEEDING_FLOWCONTROL |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |DBSEEDING_OPERATION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|DEADLOCK_ENUM_MUTEX |Occurs when the deadlock monitor and sys.dm_os_waiting_tasks try to make sure that SQL Server is not running multiple deadlock searches at the same time.| 
+|DEADLOCK_ENUM_MUTEX |Occurs when the deadlock monitor and sys.dm_os_waiting_tasks try to make sure that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is not running multiple deadlock searches at the same time.| 
 |DEADLOCK_TASK_SEARCH |Large waiting time on this resource indicates that the server is executing queries on top of sys.dm_os_waiting_tasks, and these queries are blocking deadlock monitor from running deadlock search. This wait type is used by deadlock monitor only. Queries on top of sys.dm_os_waiting_tasks use DEADLOCK_ENUM_MUTEX.| 
 |DEBUG |Occurs during Transact-SQL and CLR debugging for internal synchronization.| 
 |DIRECTLOGCONSUMER_LIST |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
 |DIRTY_PAGE_POLL |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |DIRTY_PAGE_SYNC |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |DIRTY_PAGE_TABLE_LOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
-|DISABLE_VERSIONING |Occurs when SQL Server polls the version transaction manager to see whether the timestamp of the earliest active transaction is later than the timestamp of when the state started changing. If this is this case, all the snapshot transactions that were started before the ALTER DATABASE statement was run have finished. This wait state is used when SQL Server disables versioning by using the ALTER DATABASE statement.| 
+|DISABLE_VERSIONING |Occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] polls the version transaction manager to see whether the timestamp of the earliest active transaction is later than the timestamp of when the state started changing. If this is this case, all the snapshot transactions that were started before the ALTER DATABASE statement was run have finished. This wait state is used when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] disables versioning by using the ALTER DATABASE statement.| 
 |DISKIO_SUSPEND |Occurs when a task is waiting to access a file when an external backup is active. This is reported for each waiting user process. A count larger than five per user process may indicate that the external backup is taking too much time to finish.| 
 |DISPATCHER_PRIORITY_QUEUE_SEMAPHORE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |DISPATCHER_QUEUE_SEMAPHORE |Occurs when a thread from the dispatcher pool is waiting for more work to process. The wait time for this wait type is expected to increase when the dispatcher is idle.| 
@@ -193,11 +190,11 @@ This command resets all counters to 0.
 |DPT_ENTRY_LOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
 |DROP_DATABASE_TIMER_TASK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |DROPTEMP |Occurs between attempts to drop a temporary object if the previous attempt failed. The wait duration grows exponentially with each failed drop attempt.| 
-|DTC |Occurs when a task is waiting on an event that is used to manage state transition. This state controls when the recovery of Microsoft Distributed Transaction Coordinator (MS DTC) transactions occurs after SQL Server receives notification that the MS DTC service has become unavailable.| 
+|DTC |Occurs when a task is waiting on an event that is used to manage state transition. This state controls when the recovery of Microsoft Distributed Transaction Coordinator (MS DTC) transactions occurs after [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] receives notification that the MS DTC service has become unavailable.| 
 |DTC_ABORT_REQUEST |Occurs in a MS DTC worker session when the session is waiting to take ownership of a MS DTC transaction. After MS DTC owns the transaction, the session can roll back the transaction. Generally, the session will wait for another session that is using the transaction.| 
 |DTC_RESOLVE |Occurs when a recovery task is waiting for the master database in a cross-database transaction so that the task can query the outcome of the transaction.| 
 |DTC_STATE |Occurs when a task is waiting on an event that protects changes to the internal MS DTC global state object. This state should be held for very short periods of time.| 
-|DTC_TMDOWN_REQUEST |Occurs in a MS DTC worker session when SQL Server receives notification that the MS DTC service is not available. First, the worker will wait for the MS DTC recovery process to start. Then, the worker waits to obtain the outcome of the distributed transaction that the worker is working on. This may continue until the connection with the MS DTC service has been reestablished.| 
+|DTC_TMDOWN_REQUEST |Occurs in a MS DTC worker session when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] receives notification that the MS DTC service is not available. First, the worker will wait for the MS DTC recovery process to start. Then, the worker waits to obtain the outcome of the distributed transaction that the worker is working on. This may continue until the connection with the MS DTC service has been reestablished.| 
 |DTC_WAITFOR_OUTCOME |Occurs when recovery tasks wait for MS DTC to become active to enable the resolution of prepared transactions.| 
 |DTCNEW_ENLIST |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
 |DTCNEW_PREPARE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
@@ -210,9 +207,9 @@ This command resets all counters to 0.
 |DUMPTRIGGER |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
 |EC |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
 |EE_PMOLOCK |Occurs during synchronization of certain types of memory allocations during statement execution.| 
-|EE_SPECPROC_MAP_INIT |Occurs during synchronization of internal procedure hash table creation. This wait can only occur during the initial accessing of the hash table after the SQL Server instance starts.| 
+|EE_SPECPROC_MAP_INIT |Occurs during synchronization of internal procedure hash table creation. This wait can only occur during the initial accessing of the hash table after the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance starts.| 
 |ENABLE_EMPTY_VERSIONING |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|ENABLE_VERSIONING |Occurs when SQL Server waits for all update transactions in this database to finish before declaring the database ready to transition to snapshot isolation allowed state. This state is used when SQL Server enables snapshot isolation by using the ALTER DATABASE statement.| 
+|ENABLE_VERSIONING |Occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] waits for all update transactions in this database to finish before declaring the database ready to transition to snapshot isolation allowed state. This state is used when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] enables snapshot isolation by using the ALTER DATABASE statement.| 
 |ERROR_REPORTING_MANAGER |Occurs during synchronization of multiple concurrent error log initializations.| 
 |EXCHANGE |Occurs during synchronization in the query processor exchange iterator during parallel queries.| 
 |EXECSYNC |Occurs during parallel queries while synchronizing in query processor in areas not related to the exchange iterator. Examples of such areas are bitmaps, large binary objects (LOBs), and the spool iterator. LOBs may frequently use this wait state.| 
@@ -290,24 +287,24 @@ This command resets all counters to 0.
 |GUARDIAN |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
 |HADR_AG_MUTEX |Occurs when an Always On DDL statement or Windows Server Failover Clustering command is waiting for exclusive read/write access to the configuration of an availability group., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_AR_CRITICAL_SECTION_ENTRY |Occurs when an Always On DDL statement or Windows Server Failover Clustering command is waiting for exclusive read/write access to the runtime state of the local replica of the associated availability group., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|HADR_AR_MANAGER_MUTEX |Occurs when an availability replica shutdown is waiting for startup to complete or an availability replica startup is waiting for shutdown to complete. Internal use only., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|HADR_AR_MANAGER_MUTEX |Occurs when an availability replica shutdown is waiting for startup to complete or an availability replica startup is waiting for shutdown to complete. Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_AR_UNLOAD_COMPLETED |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|HADR_ARCONTROLLER_NOTIFICATIONS_SUBSCRIBER_LIST |The publisher for an availability replica event (such as a state change or configuration change) is waiting for exclusive read/write access to the list of event subscribers. Internal use only., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|HADR_ARCONTROLLER_NOTIFICATIONS_SUBSCRIBER_LIST |The publisher for an availability replica event (such as a state change or configuration change) is waiting for exclusive read/write access to the list of event subscribers. Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_BACKUP_BULK_LOCK |The Always On primary database received a backup request from a secondary database and is waiting for the background thread to finish processing the request on acquiring or releasing the BulkOp lock., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_BACKUP_QUEUE |The backup background thread of the Always On primary database is waiting for a new work request from the secondary database. (typically, this occurs when the primary database is holding the BulkOp log and is waiting for the secondary database to indicate that the primary database can release the lock)., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|HADR_CLUSAPI_CALL |A SQL Server thread is waiting to switch from non-preemptive mode (scheduled by SQL Server) to preemptive mode (scheduled by the operating system) in order to invoke Windows Server Failover Clustering APIs., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|HADR_CLUSAPI_CALL |A [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] thread is waiting to switch from non-preemptive mode (scheduled by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]) to preemptive mode (scheduled by the operating system) in order to invoke Windows Server Failover Clustering APIs., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_COMPRESSED_CACHE_SYNC |Waiting for access to the cache of compressed log blocks that is used to avoid redundant compression of the log blocks sent to multiple secondary databases., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_CONNECTIVITY_INFO |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_DATABASE_FLOW_CONTROL |Waiting for messages to be sent to the partner when the maximum number of queued messages has been reached. Indicates that the log scans are running faster than the network sends. This is an issue only if network sends are slower than expected., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|HADR_DATABASE_VERSIONING_STATE |Occurs on the versioning state change of an Always On secondary database. This wait is for internal data structures and is usually is very short with no direct effect on data access., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|HADR_DATABASE_VERSIONING_STATE |Occurs on the versioning state change of an Always On secondary database. This wait is for internal data structures and usually is very short with no direct effect on data access., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_DATABASE_WAIT_FOR_RECOVERY |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
 |HADR_DATABASE_WAIT_FOR_RESTART |Waiting for the database to restart under Always On Availability Groups control. Under normal conditions, this is not a customer issue because waits are expected here., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_DATABASE_WAIT_FOR_TRANSITION_TO_VERSIONING |A query on object(s) in a readable secondary database of an Always On availability group is blocked on row versioning while waiting for commit or rollback of all transactions that were in-flight when the secondary replica was enabled for read workloads. This wait type guarantees that row versions are available before execution of a query under snapshot isolation., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_DB_COMMAND |Waiting for responses to conversational messages (which require an explicit response from the other side, using the Always On conversational message infrastructure). A number of different message types use this wait type., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_DB_OP_COMPLETION_SYNC |Waiting for responses to conversational messages (which require an explicit response from the other side, using the Always On conversational message infrastructure). A number of different message types use this wait type., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_DB_OP_START_SYNC |An Always On DDL statement or a Windows Server Failover Clustering command is waiting for serialized access to an availability database and its runtime state., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|HADR_DBR_SUBSCRIBER |The publisher for an availability replica event (such as a state change or configuration change) is waiting for exclusive read/write access to the runtime state of an event subscriber that corresponds to an availability database. Internal use only., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|HADR_DBR_SUBSCRIBER_FILTER_LIST |The publisher for an availability replica event (such as a state change or configuration change) is waiting for exclusive read/write access to the list of event subscribers that correspond to availability databases. Internal use only., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|HADR_DBR_SUBSCRIBER |The publisher for an availability replica event (such as a state change or configuration change) is waiting for exclusive read/write access to the runtime state of an event subscriber that corresponds to an availability database. Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|HADR_DBR_SUBSCRIBER_FILTER_LIST |The publisher for an availability replica event (such as a state change or configuration change) is waiting for exclusive read/write access to the list of event subscribers that correspond to availability databases. Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_DBSEEDING |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |HADR_DBSEEDING_LIST |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |HADR_DBSTATECHANGE_SYNC |Concurrency control wait for updating the internal state of the database replica., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
@@ -323,10 +320,10 @@ This command resets all counters to 0.
 |HADR_LOGCAPTURE_SYNC |Concurrency control around the log capture or apply object when creating or destroying scans. This is an expected wait when partners change state or connection status., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_LOGCAPTURE_WAIT |Waiting for log records to become available. Can occur either when waiting for new log records to be generated by connections or for I/O completion when reading log not in the cache. This is an expected wait if the log scan is caught up to the end of log or is reading from disk., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_LOGPROGRESS_SYNC |Concurrency control wait when updating the log progress status of database replicas., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|HADR_NOTIFICATION_DEQUEUE |A background task that processes Windows Server Failover Clustering notifications is waiting for the next notification. Internal use only., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|HADR_NOTIFICATION_WORKER_EXCLUSIVE_ACCESS |The Always On availability replica manager is waiting for serialized access to the runtime state of a background task that processes Windows Server Failover Clustering notifications. Internal use only., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|HADR_NOTIFICATION_WORKER_STARTUP_SYNC |A background task is waiting for the completion of the startup of a background task that processes Windows Server Failover Clustering notifications. Internal use only., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |A background task is waiting for the termination of a background task that processes Windows Server Failover Clustering notifications. Internal use only., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|HADR_NOTIFICATION_DEQUEUE |A background task that processes Windows Server Failover Clustering notifications is waiting for the next notification. Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|HADR_NOTIFICATION_WORKER_EXCLUSIVE_ACCESS |The Always On availability replica manager is waiting for serialized access to the runtime state of a background task that processes Windows Server Failover Clustering notifications. Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|HADR_NOTIFICATION_WORKER_STARTUP_SYNC |A background task is waiting for the completion of the startup of a background task that processes Windows Server Failover Clustering notifications. Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|HADR_NOTIFICATION_WORKER_TERMINATION_SYNC |A background task is waiting for the termination of a background task that processes Windows Server Failover Clustering notifications. Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_PARTNER_SYNC |Concurrency control wait on the partner list., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_READ_ALL_NETWORKS |Waiting to get read or write access to the list of WSFC networks. Internal use only. Note: The engine keeps a list of WSFC networks that is used in dynamic management views (such as sys.dm_hadr_cluster_networks) or to validate Always On Transact-SQL statements that reference WSFC network information. This list is updated upon engine startup, WSFC related notifications, and internal Always On restart (for example, losing and regaining of WSFC quorum). Tasks will usually be blocked when an update in that list is in progress. , <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_RECOVERY_WAIT_FOR_CONNECTION |Waiting for the secondary database to connect to the primary database before running recovery. This is an expected wait, which can lengthen if the connection to the primary is slow to establish., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
@@ -340,7 +337,7 @@ This command resets all counters to 0.
 |HADR_SEEDING_WAIT_FOR_COMPLETION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
 |HADR_SYNC_COMMIT |Waiting for transaction commit processing for the synchronized secondary databases to harden the log. This wait is also reflected by the Transaction Delay performance counter. This wait type is expected for synchronized availability groups and indicates the time to send, write, and acknowledge log to the secondary databases., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_SYNCHRONIZING_THROTTLE |Waiting for transaction commit processing to allow a synchronizing secondary database to catch up to the primary end of log in order to transition to the synchronized state. This is an expected wait when a secondary database is catching up., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|HADR_TDS_LISTENER_SYNC |Either the internal Always On system or the WSFC cluster will request that listeners are started or stopped. The processing of this request is always asynchronous, and there is a mechanism to remove redundant requests. There are also moments that this process is suspended because of configuration changes. All waits related with this listener synchronization mechanism use this wait type. Internal use only., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|HADR_TDS_LISTENER_SYNC |Either the internal Always On system or the WSFC cluster will request that listeners are started or stopped. The processing of this request is always asynchronous, and there is a mechanism to remove redundant requests. There are also moments that this process is suspended because of configuration changes. All waits related with this listener synchronization mechanism use this wait type. Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_TDS_LISTENER_SYNC_PROCESSING |Used at the end of an Always On Transact-SQL statement that requires starting and/or stopping an availability group listener. Since the start/stop operation is done asynchronously, the user thread will block using this wait type until the situation of the listener is known., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |HADR_THROTTLE_LOG_RATE_GOVERNOR |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
 |HADR_THROTTLE_LOG_RATE_MISMATCHED_SLO | Occurs when a geo-replication secondary is configured with lower compute size (lower SLO) than the primary. A primary database is throttled due to delayed log consumption by the secondary. This is caused  by the secondary database having insufficient compute capacity to keep up with the primary database's rate of change. <br /><br /> **Applies to**: Azure SQL Database| 
@@ -366,7 +363,7 @@ This command resets all counters to 0.
 |HTTP_ENUMERATION |Occurs at startup to enumerate the HTTP endpoints to start HTTP.| 
 |HTTP_START |Occurs when a connection is waiting for HTTP to complete initialization.| 
 |HTTP_STORAGE_CONNECTION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|IMPPROV_IOWAIT |Occurs when SQL Server waits for a bulkload I/O to finish.| 
+|IMPPROV_IOWAIT |Occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] waits for a bulkload I/O to finish.| 
 |INSTANCE_LOG_RATE_GOVERNOR |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
 |INTERNAL_TESTING |Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.| 
 |IO_AUDIT_MUTEX |Occurs during synchronization of trace event buffers.| 
@@ -468,7 +465,7 @@ This command resets all counters to 0.
 |LOWFAIL_MEMMGR_QUEUE |Occurs while waiting for memory to be available for use.| 
 |MD_AGENT_YIELD |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |MD_LAZYCACHE_RWLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
-|MEMORY_ALLOCATION_EXT |Occurs while allocating memory from either the internal SQL Server memory pool or the operation system., <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
+|MEMORY_ALLOCATION_EXT |Occurs while allocating memory from either the internal [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] memory pool or the operation system., <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
 |MEMORY_GRANT_UPDATE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
 |METADATA_LAZYCACHE_RWLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |  
 |MIGRATIONBUFFER |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
@@ -477,12 +474,12 @@ This command resets all counters to 0.
 |MSQL_DQ |Occurs when a task is waiting for a distributed query operation to finish. This is used to detect potential Multiple Active Result Set (MARS) application deadlocks. The wait ends when the distributed query call finishes.| 
 |MSQL_XACT_MGR_MUTEX |Occurs when a task is waiting to obtain ownership of the session transaction manager to perform a session level transaction operation.| 
 |MSQL_XACT_MUTEX |Occurs during synchronization of transaction usage. A request must acquire the mutex before it can use the transaction.| 
-|MSQL_XP |Occurs when a task is waiting for an extended stored procedure to end. SQL Server uses this wait state to detect potential MARS application deadlocks. The wait stops when the extended stored procedure call ends.| 
+|MSQL_XP |Occurs when a task is waiting for an extended stored procedure to end. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses this wait state to detect potential MARS application deadlocks. The wait stops when the extended stored procedure call ends.| 
 |MSSEARCH |Occurs during Full-Text Search calls. This wait ends when the full-text operation completes. It does not indicate contention, but rather the duration of full-text operations.| 
 |NET_WAITFOR_PACKET |Occurs when a connection is waiting for a network packet during a network read.| 
 |NETWORKSXMLMGRLOAD |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
 |NODE_CACHE_MUTEX |Internal use only.| 
-|OLEDB |Occurs when SQL Server calls the SQL Server Native Client OLE DB Provider. This wait type is not used for synchronization. Instead, it indicates the duration of calls to the OLE DB provider.| 
+|OLEDB |Occurs when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] calls the SNAC OLE DB Provider (SQLNCLI) or the Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL). This wait type is not used for synchronization. Instead, it indicates the duration of calls to the OLE DB provider.| 
 |ONDEMAND_TASK_QUEUE |Occurs while a background task waits for high priority system task requests. Long wait times indicate that there have been no high priority requests to process, and should not cause concern.| 
 |PAGEIOLATCH_DT |Occurs when a task is waiting on a latch for a buffer that is in an I/O request. The latch request is in Destroy mode. Long waits may indicate problems with the disk subsystem.| 
 |PAGEIOLATCH_EX |Occurs when a task is waiting on a latch for a buffer that is in an I/O request. The latch request is in Exclusive mode. Long waits may indicate problems with the disk subsystem.| 
@@ -803,7 +800,7 @@ This command resets all counters to 0.
 |RESOURCE_QUEUE |Occurs during synchronization of various internal resource queues.| 
 |RESOURCE_SEMAPHORE |Occurs when a query memory request cannot be granted immediately due to other concurrent queries. High waits and wait times may indicate excessive number of concurrent queries, or excessive memory request amounts.| 
 |RESOURCE_SEMAPHORE_MUTEX |Occurs while a query waits for its request for a thread reservation to be fulfilled. It also occurs when synchronizing query compile and memory grant requests.| 
-|RESOURCE_SEMAPHORE_QUERY_COMPILE |Occurs when the number of concurrent query compilations reaches a throttling limit. High waits and wait times may indicate excessive compilations, recompiles, or uncachable plans.| 
+|RESOURCE_SEMAPHORE_QUERY_COMPILE |Occurs when the number of concurrent query compilations reaches a throttling limit. High waits and wait times may indicate excessive compilations, recompiles, or uncacheable plans.| 
 |RESOURCE_SEMAPHORE_SMALL_QUERY |Occurs when memory request by a small query cannot be granted immediately due to other concurrent queries. Wait time should not exceed more than a few seconds, because the server transfers the request to the main query memory pool if it fails to grant the requested memory within a few seconds. High waits may indicate an excessive number of concurrent small queries while the main memory pool is blocked by waiting queries. <br /><br /> **Applies to**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |  
 |RESTORE_FILEHANDLECACHE_ENTRYLOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
 |RESTORE_FILEHANDLECACHE_LOCK |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
@@ -828,7 +825,7 @@ This command resets all counters to 0.
 |SEMPLAT_DSI_BUILD |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |SEQUENCE_GENERATION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |SEQUENTIAL_GUID |Occurs while a new sequential GUID is being obtained.| 
-|SERVER_IDLE_CHECK |Occurs during synchronization of SQL Server instance idle status when a resource monitor is attempting to declare a SQL Server instance as idle or trying to wake up.| 
+|SERVER_IDLE_CHECK |Occurs during synchronization of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance idle status when a resource monitor is attempting to declare a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance as idle or trying to wake up.| 
 |SERVER_RECONFIGURE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |SESSION_WAIT_STATS_CHILDREN |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
 |SHARED_DELTASTORE_CREATION |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
@@ -836,7 +833,7 @@ This command resets all counters to 0.
 |SLEEP_BPOOL_FLUSH |Occurs when a checkpoint is throttling the issuance of new I/Os in order to avoid flooding the disk subsystem.| 
 |SLEEP_BUFFERPOOL_HELPLW |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
 |SLEEP_DBSTARTUP |Occurs during database startup while waiting for all databases to recover.| 
-|SLEEP_DCOMSTARTUP |Occurs once at most during SQL Server instance startup while waiting for DCOM initialization to complete.| 
+|SLEEP_DCOMSTARTUP |Occurs once at most during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance startup while waiting for DCOM initialization to complete.| 
 |SLEEP_MASTERDBREADY |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |SLEEP_MASTERMDREADY |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |SLEEP_MASTERUPGRADED |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
@@ -850,8 +847,8 @@ This command resets all counters to 0.
 |SLO_UPDATE |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
 |SMSYNC |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL15_md](../../includes/sssql15-md.md)] and later.| 
 |SNI_CONN_DUP |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later.| 
-|SNI_CRITICAL_SECTION |Occurs during internal synchronization within SQL Server networking components.| 
-|SNI_HTTP_WAITFOR_0_DISCON |Occurs during SQL Server shutdown, while waiting for outstanding HTTP connections to exit.| 
+|SNI_CRITICAL_SECTION |Occurs during internal synchronization within [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] networking components.| 
+|SNI_HTTP_WAITFOR_0_DISCON |Occurs during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] shutdown, while waiting for outstanding HTTP connections to exit.| 
 |SNI_LISTENER_ACCESS |Occurs while waiting for non-uniform memory access (NUMA) nodes to update state change. Access to state change is serialized.| 
 |SNI_TASK_COMPLETION |Occurs when there is a wait for all tasks to finish during a NUMA node state change.| 
 |SNI_WRITE_ASYNC |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] and later.| 
@@ -864,19 +861,19 @@ This command resets all counters to 0.
 |SOS_MEMORY_TOPLEVELBLOCKALLOCATOR |Internal use only. <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |SOS_MEMORY_USAGE_ADJUSTMENT |Occurs when memory usage is being adjusted among pools.| 
 |SOS_OBJECT_STORE_DESTROY_MUTEX |Occurs during internal synchronization in memory pools when destroying objects from the pool.| 
-|SOS_PHYS_PAGE_CACHE |Accounts for the time a thread waits to acquire the mutex it must acquire before it allocates physical pages or before it returns those pages to the operating system. Waits on this type only appear if the instance of SQL Server uses AWE memory., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
+|SOS_PHYS_PAGE_CACHE |Accounts for the time a thread waits to acquire the mutex it must acquire before it allocates physical pages or before it returns those pages to the operating system. Waits on this type only appear if the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses AWE memory., <br /><br /> **Applies to**: [!INCLUDE[ssSQL12](../../includes/sssql11-md.md)] and later.| 
 |SOS_PROCESS_AFFINITY_MUTEX |Occurs during synchronizing of access to process affinity settings.| 
-|SOS_RESERVEDMEMBLOCKLIST |Occurs during internal synchronization in the SQL Server memory manager. <br /><br /> **Applies to**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |  
+|SOS_RESERVEDMEMBLOCKLIST |Occurs during internal synchronization in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager. <br /><br /> **Applies to**: [!INCLUDE[ssKilimanjaro_md](../../includes/sskilimanjaro-md.md)] only. |  
 |SOS_SCHEDULER_YIELD |Occurs when a task voluntarily yields the scheduler for other tasks to execute. During this wait the task is waiting for its quantum to be renewed.| 
 |SOS_SMALL_PAGE_ALLOC |Occurs during the allocation and freeing of memory that is managed by some memory objects.| 
 |SOS_STACKSTORE_INIT_MUTEX |Occurs during synchronization of internal store initialization.| 
-|SOS_SYNC_TASK_ENQUEUE_EVENT |Occurs when a task is started in a synchronous manner. Most tasks in SQL Server are started in an asynchronous manner, in which control returns to the starter immediately after the task request has been placed on the work queue.| 
-|SOS_VIRTUALMEMORY_LOW |Occurs when a memory allocation waits for a resource manager to free up virtual memory.| 
-|SOSHOST_EVENT |Occurs when a hosted component, such as CLR, waits on a SQL Server event synchronization object.| 
+|SOS_SYNC_TASK_ENQUEUE_EVENT |Occurs when a task is started in a synchronous manner. Most tasks in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] are started in an asynchronous manner, in which control returns to the starter immediately after the task request has been placed on the work queue.| 
+|SOS_VIRTUALMEMORY_LOW |Occurs when a memory allocation waits for a Resource Manager to free up virtual memory.| 
+|SOSHOST_EVENT |Occurs when a hosted component, such as CLR, waits on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] event synchronization object.| 
 |SOSHOST_INTERNAL |Occurs during synchronization of memory manager callbacks used by hosted components, such as CLR.| 
-|SOSHOST_MUTEX |Occurs when a hosted component, such as CLR, waits on a SQL Server mutex synchronization object.| 
-|SOSHOST_RWLOCK |Occurs when a hosted component, such as CLR, waits on a SQL Server reader-writer synchronization object.| 
-|SOSHOST_SEMAPHORE |Occurs when a hosted component, such as CLR, waits on a SQL Server semaphore synchronization object.| 
+|SOSHOST_MUTEX |Occurs when a hosted component, such as CLR, waits on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] mutex synchronization object.| 
+|SOSHOST_RWLOCK |Occurs when a hosted component, such as CLR, waits on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] reader-writer synchronization object.| 
+|SOSHOST_SEMAPHORE |Occurs when a hosted component, such as CLR, waits on a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] semaphore synchronization object.| 
 |SOSHOST_SLEEP |Occurs when a hosted task sleeps while waiting for a generic event to occur. Hosted tasks are used by hosted components such as CLR.| 
 |SOSHOST_TRACELOCK |Occurs during synchronization of access to trace streams.| 
 |SOSHOST_WAITFORDONE |Occurs when a hosted component, such as CLR, waits for a task to complete.| 

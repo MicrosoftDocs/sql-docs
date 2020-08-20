@@ -1,5 +1,5 @@
 ---
-title: "Configure Error and Warning Handling Using the SQLSRV Driver"
+title: "Configure error and arning handling using the SQLSRV driver"
 description: "This topic describes how to configure the SQLSRV driver to handle errors and warnings when using the Microsoft SQLSRV Driver for PHP for SQL Server"
 ms.custom: ""
 ms.date: "08/10/2020"

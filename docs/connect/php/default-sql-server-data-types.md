@@ -1,5 +1,5 @@
 ---
-title: "Default SQL Server Data Types"
+title: "Default SQL Server data types"
 description: "This topic lists all the default SQL Server Data types based on PHP Data Types when using the Microsoft SQLSRV Driver for PHP for SQL Server"
 ms.custom: ""
 ms.date: "08/10/2020"

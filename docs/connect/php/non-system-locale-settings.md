@@ -1,5 +1,5 @@
 ---
-title: "Non-System Locale Settings"
+title: "Non-system locale settings"
 description: "Learn how different locale settings in Linux and macOS affect the Microsoft Drivers for PHP for SQL Server"
 ms.custom: ""
 ms.date: "08/10/2020"

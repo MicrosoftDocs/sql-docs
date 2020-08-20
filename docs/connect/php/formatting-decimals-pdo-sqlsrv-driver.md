@@ -1,5 +1,5 @@
 ---
-title: "Formatting Decimal Strings and Money Values (PDO_SQLSRV Driver)"
+title: "Formatting decimal strings and money values (PDO_SQLSRV driver)"
 description: "Learn how to use PDO::SQLSRV_ATTR_FORMAT_DECIMALS and SQLSRV_ATTR_DECIMAL_PLACES attributes to format decimal or money values when using the PDO_SQLSRV Driver"
 ms.custom: ""
 ms.date: "08/10/2020"

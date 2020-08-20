@@ -1,5 +1,5 @@
 ---
-title: "How to: Specify PHP Data Types"
+title: "How to: specify PHP data types"
 description: "Learn how to specify PHP Data Types when retrieving data using the Microsoft Drivers for PHP for SQL Server"
 ms.custom: ""
 ms.date: "08/10/2020"

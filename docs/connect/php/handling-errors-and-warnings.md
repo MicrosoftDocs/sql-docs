@@ -1,5 +1,5 @@
 ---
-title: "Handling Errors and Warnings"
+title: "Handling errors and warnings"
 description: "This topic provides information about handling errors and warnings when using the Microsoft SQLSRV Driver for PHP for SQL Server"
 ms.custom: ""
 ms.date: "08/10/2020"

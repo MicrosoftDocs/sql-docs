@@ -1,5 +1,5 @@
 ---
-title: "Converting Data Types"
+title: "Converting data types"
 description: "Learn how to specify data types and provide details about default data types when using the Microsoft Drivers for PHP for SQL Server"
 ms.custom: ""
 ms.date: "08/10/2020"

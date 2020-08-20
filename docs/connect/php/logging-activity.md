@@ -1,5 +1,5 @@
 ---
-title: "Logging Activity"
+title: "Logging activity"
 description: "Learn how to configure different combinations of logging options when using the Microsoft Drivers for PHP for SQL Server"
 ms.custom: ""
 ms.date: "08/10/2020"

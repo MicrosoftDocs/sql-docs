@@ -1,5 +1,5 @@
 ---
-title: "Data Types with Stream Support Using the SQLSRV Driver"
+title: "Data types with stream support using the SQLSRV driver"
 description: "This topic lists the SQL Server data types which can be retrieved as streams when using the Microsoft SQLSRV Driver for PHP for SQL Server"
 ms.custom: ""
 ms.date: "08/10/2020"

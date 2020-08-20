@@ -1,5 +1,5 @@
 ---
-title: "How to: Retrieve I/O Parameters Using the SQLSRV Driver"
+title: "How to: retrieve I/O parameters using the SQLSRV driver"
 description: "This topic describes how to retrieve input and output parameters using stored procedures and the Microsoft SQLSRV Driver for PHP for SQL Server"
 ms.custom: ""
 ms.date: "08/10/2020"

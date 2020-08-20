@@ -1,5 +1,5 @@
 ---
-title: "How to: Retrieve Date and Time Types as PHP DateTime Objects Using the PDO_SQLSRV Driver"
+title: "How to: retrieve date and time types as PHP DateTime objects using the PDO_SQLSRV driver"
 description: "This topic describes how to retrieve date and time types as PHP DateTime objects when using the Microsoft PDO_SQLSRV Driver for PHP for SQL Server"
 ms.custom: ""
 ms.date: "08/10/2020"

@@ -1,5 +1,5 @@
 ---
-title: "Direct Statement - Prepared Statement Execution PDO_SQLSRV Driver"
+title: "Direct Statement - Prepared statement execution PDO_SQLSRV driver"
 description: "Learn how to use the PDO::SQLSRV_ATTR_DIRECT_QUERY attribute for direct statement execution when using the Microsoft PDO_SQLSRV Driver for PHP for SQL Server"
 ms.custom: ""
 ms.date: "08/10/2020"

@@ -1,5 +1,5 @@
 ---
-title: "How to: Specify SQL Server Data Types When Using the SQLSRV Driver"
+title: "How to: specify SQL Server data types when using the SQLSRV driver"
 description: "Learn how to specify SQL Server Data Types with the optional *$params* array in prepared statements or direct queries when using the SQLSRV Driver for PHP"
 ms.custom: ""
 ms.date: "08/10/2020"

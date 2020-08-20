@@ -1,5 +1,5 @@
 ---
-title: "Comparing Execution Functions"
+title: "Comparing execution functions"
 description: "This topic lists the different query execution functions when using the Microsoft Drivers for PHP for SQL Server"
 ms.custom: ""
 ms.date: "08/10/2020"

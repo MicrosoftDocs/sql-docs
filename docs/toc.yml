@@ -362,7 +362,7 @@
       - name: Active directory domain group scope
         href: big-data-cluster/troubleshoot-active-directory.md
       - name: Active directory deployment stops
-        href: troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods.md
+        href: big-data-cluster/troubleshoot-ad-hung-deployment-unhealthy-sparkhead-pods.md
       - name: Active Directory DNS
         href: big-data-cluster/troubleshoot-ad-reverse-lookup-zone.md
       - name: Active Directory login fails

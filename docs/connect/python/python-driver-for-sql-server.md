@@ -31,7 +31,7 @@ There are several python SQL drivers available. However, Microsoft places its te
 * [python.org Community](https://www.python.org/community/)  
   
 ## More Samples  
-* [Create a Python web app using DJango and SQL Database in Azure Website](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure)
+* [Create a Python web app using DJango and SQL Database in Azure Website](https://docs.microsoft.com/azure/app-service/containers/quickstart-python?tabs=bash)
 * [Getting Started with Python on Windows](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
 * [Getting Started with Python on macOS](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
 * [Getting Started with Python on Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)

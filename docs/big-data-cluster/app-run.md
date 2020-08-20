@@ -1,5 +1,5 @@
 ---
-title: Running applications with azdata 
+title: Run applications with azdata 
 titleSuffix: SQL Server Big Data Clusters
 description: Running applications with azdata on SQL Server 2019 big data clusters.
 author: cloudmelon
@@ -12,7 +12,9 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-This article describes how to run an application inside a SQL Server 2019 big data clusters.
+# Run apps with azdata - SQL Server Big Data Clusters
+
+This article describes how to run an application inside a SQL Server Big Data Clusters.
 
 ## Prerequisites
 
@@ -64,7 +66,7 @@ If the run was successful, you should see your output as specified when you crea
 
 ## Describe an app
 
-The describe command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the webservice to interact with the app in a RESTful manner. For more information, see [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information.
+The describe command provides detailed information about the app including the end point in your cluster. This is typically used by an app developer to build an app using the swagger client and using the webservice to interact with the app in a RESTful manner. For more information, see [Consume applications on big data clusters](app-consume.md) for more information.
 
 ```json
 {
@@ -94,6 +96,6 @@ The describe command provides detailed information about the app including the e
 }
 ```
 
-Explore how to integrate apps deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in your own applications at [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information. You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
+Explore how to integrate apps deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in your own applications at [Consume applications on big data clusters](app-consume.md) for more information. You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
 
 For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).

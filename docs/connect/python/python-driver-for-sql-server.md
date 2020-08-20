@@ -31,9 +31,9 @@ There are several python SQL drivers available. However, Microsoft places its te
 * [python.org Community](https://www.python.org/community/)  
   
 ## More Samples  
-* [Create a Python app in Azure App Service on Linux](/azure/app-service/containers/quickstart-python?tabs=bash)
-* [Getting Started with Python on Windows](/sql-server/developer-get-started/python/windows/)
-* [Getting Started with Python on macOS](/sql-server/developer-get-started/python/mac/)
-* [Getting Started with Python on Ubuntu](/sql-server/developer-get-started/python/ubuntu/)
-* [Getting Started with Python on Red Hat Enterprise Linux (RHEL)](/sql-server/developer-get-started/python/rhel/)
-* [Getting Started with Python on SUSE Linux Enterprise Server (SLES)](/sql-server/developer-get-started/python/sles/)
+* [Create a Python app in Azure App Service on Linux](https://docs.microsoft.com/azure/app-service/containers/quickstart-python?tabs=bash)
+* [Getting Started with Python on Windows](https://www.microsoft.com/sql-server/developer-get-started/python/windows/)
+* [Getting Started with Python on macOS](https://www.microsoft.com/sql-server/developer-get-started/python/mac/)
+* [Getting Started with Python on Ubuntu](https://www.microsoft.com/sql-server/developer-get-started/python/ubuntu/)
+* [Getting Started with Python on Red Hat Enterprise Linux (RHEL)](https://www.microsoft.com/sql-server/developer-get-started/python/rhel/)
+* [Getting Started with Python on SUSE Linux Enterprise Server (SLES)](https://www.microsoft.com/sql-server/developer-get-started/python/sles/)

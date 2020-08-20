@@ -5,7 +5,7 @@ description: Learn how to use Machine Learning extension for Azure Data Studio t
 ms.date: "06/09/2020"
 ms.reviewer: "sstein"
 ms.prod: azure-data-studio
-ms.technology: machine-learning
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph

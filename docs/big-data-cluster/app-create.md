@@ -12,13 +12,13 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# How to deploy an app on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
+# How to deploy an app on SQL Server Big Data Clusters
 
 [!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
-Applications deployed on BDC not only benefit from many advantages such as the computational power of the cluster but also access massive data that is available on the cluster. It can be dramatically beneficial to increase the performance since your app sits in the same cluster where the data lives. 
+Applications deployed on SQL Server Big Data Clusters (BDC) not only benefit from many advantages such as the computational power of the cluster but also access massive data that is available on the cluster. It dramatically improve the performance since your app sits in the same cluster where the data lives.
 
-This article describes how to deploy and manage R and Python script as an application inside a SQL Server 2019 big data clusters.
+This article describes how to deploy and manage R and Python script as an application inside a SQL Server Big Data Cluster.
 
 ## What's new and improved
 

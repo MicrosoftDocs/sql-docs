@@ -18,7 +18,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 [!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 > For content related to the Import and Export Wizard, see [SQL Server Import and Export Wizard](https://docs.microsoft.com/sql/integration-services/import-export-data/import-and-export-data-with-the-sql-server-import-and-export-wizard).
 
-Import Flat File Wizard is a simple way to copy data from a flat file (.csv, .txt) to a new table in your database. This overview describes the reasons for using this wizard, how to find this wizard, and a simple example to follow.
+Import Flat File Wizard is a simple way to copy data from a flat file (.csv, .txt) to a new table in your database.  The Import Flat File Wizard supports both comma-separated and fixed width format files. This overview describes the reasons for using this wizard, how to find this wizard, and a simple example to follow.
 
 ## Why would I use this wizard?
 This wizard was created to improve the current import experience leveraging an intelligent framework known as Program Synthesis using Examples ([PROSE](https://microsoft.github.io/prose/)). For a user without specialized domain knowledge, importing data can often be a complex, error prone, and tedious task. This wizard streamlines the import process as simple as selecting an input file and unique table name, and the PROSE framework handles the rest.
@@ -30,7 +30,7 @@ To further understand the user experience improvement of the Import Flat File Wi
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Introducing-the-new-Import-Flat-File-Wizard-in-SSMS-173/player?WT.mc_id=dataexposed-c9-niner]
 
 ## Prerequisites
-This feature is only available on SQL Server Management Studio (SSMS) v17.3 or later. Make sure you are using the latest version. You can find the latest version [here.](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
+This feature is available on SQL Server Management Studio (SSMS) v17.3 or later. Make sure you are using the latest version. You can find the latest version [here.](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
  
 ## <a id="started"></a>Getting Started
 To access the Import Flat File Wizard, follow these steps:
@@ -48,6 +48,14 @@ For the purposes of this tutorial, feel free to use your own flat file. Otherwis
 
 ![Wizard Excel](media/import-flat-file-wizard/import-flat-file-example.png)
 
+Overview:
+1. [Access Wizard](#step-1-access-wizard-and-intro-page)
+2. [Specify Input File](#step-2-specify-input-file)
+3. [Preview Data](#step-3-preview-data)
+4. [Modify Columns](#step-4-modify-columns)
+5. [Summary](#step-5-summary)
+6. [Results](#step-6-results)
+
 ### Step 1: Access Wizard and Intro Page
 Access the wizard as described [here](#started).
 
@@ -56,7 +64,7 @@ The first page of the wizard is the welcome page. If you do not want to see this
 ![Wizard Intro](media/import-flat-file-wizard/import-flat-file-intro.png)
 
 ### Step 2: Specify Input File
-Click browse to select your input file. At default, the wizard searches for .csv and .txt files. 
+Click browse to select your input file. At default, the wizard searches for .csv and .txt files. PROSE will detect if the file is comma-separated or fixed-width format regardless of file extension.
 
 The new table name should be unique, and the wizard does not allow you to move further if not.
 
@@ -69,6 +77,8 @@ The wizard generates a preview that you can view for the first 50 rows. If there
 
 ### Step 4: Modify Columns
 The wizard identifies what it believes are the correct column names, data types, etc. Here is where you can edit the fields if they are incorrect (for example, data type should be a float instead of an int).
+
+Columns where empty values are detected will have "Allow Nulls" checked. However if you expect nulls in a column and "Allow Nulls" is not checked, here is where you can update the table definition to allow nulls in one or all columns.
 
 Proceed when ready.
 

@@ -150,7 +150,7 @@ END
 ```sql  
 -- Check all tables with change tracking enabled  
 IF EXISTS (  
-  SELECT COUNT(*) FROM sys.change_tracking_tables  
+  SELECT 1 FROM sys.change_tracking_tables  
   WHERE min_valid_version > @last_synchronization_version )  
 BEGIN  
   -- Handle invalid version & do not enumerate changes  

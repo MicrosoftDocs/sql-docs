@@ -1,8 +1,8 @@
 ---
-description: "PDOStatement::bindParam"
-title: "PDOStatement::bindParam | Microsoft Docs"
+title: "PDOStatement::bindParam"
+description: "API reference for the PDOStatement::bindParam function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "05/22/2018"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

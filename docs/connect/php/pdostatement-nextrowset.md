@@ -1,8 +1,8 @@
 ---
-description: "PDOStatement::nextRowset"
-title: "PDOStatement::nextRowset | Microsoft Docs"
+title: "PDOStatement::nextRowset"
+description: "API reference for the PDOStatement::nextRowset function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

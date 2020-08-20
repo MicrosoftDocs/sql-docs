@@ -1,8 +1,8 @@
 ---
-description: "How to: Disable Multiple Active Resultsets (MARS)"
-title: "How to: Disable Multiple Active Resultsets (MARS) | Microsoft Docs"
+title: "How to: disable multiple active resultsets (MARS)"
+description: "Learn how to disable Multiple Active Resultsets support when using the Microsoft Drivers for PHP for SQL Server"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

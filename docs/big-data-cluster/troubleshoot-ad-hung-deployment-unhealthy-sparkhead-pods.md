@@ -5,7 +5,7 @@ description: Troubleshooting hung deployment of a SQL Server Big Data Cluster in
 author: macarv-ms
 ms.author: macarv
 ms.reviewer: mikeray
-ms.date: 06/01/2020
+ms.date: 08/20/2020
 ms.topic: how-to
 ms.prod: sql
 ms.technology: big-data-cluster

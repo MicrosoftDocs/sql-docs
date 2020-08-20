@@ -15,7 +15,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Manage retention of historical data in system-versioned temporal tables
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 With system-versioned temporal tables, the history table may increase database size more than regular tables, particularly under the following conditions:
 

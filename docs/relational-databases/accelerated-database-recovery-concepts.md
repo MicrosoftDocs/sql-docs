@@ -1,6 +1,7 @@
 ---
+description: "Accelerated database recovery"
 title: "Accelerated database recovery | Microsoft Docs"
-ms.date: "08/12/2019"
+ms.date: "05/20/2020"
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.technology: backup-restore
@@ -15,7 +16,7 @@ monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
 ---
 # Accelerated database recovery
 
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Accelerated database recovery (ADR) improves database availability, especially in the presence of long running transactions, by redesigning the SQL database engine recovery process. ADR is new for SQL Server 2019 and is also available for single databases and pooled databases in Azure SQL Database, and databases in Azure SQL Data Warehouse (currently in public preview). The primary benefits of ADR are:
 
@@ -87,6 +88,10 @@ The ADR recovery process has the same three phases as the current recovery proce
 
    The undo phase with ADR completes almost instantaneously by using sLog to undo non-versioned operations and persisted version store (PVS) with logical revert to perform row level version-based undo.
 
+You can also watch this 8-minute video that explains Accelerated Database Recovery
+
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Advanced-Database-Recovery--Data-Exposed/player?WT.mc_id=dataexposed-c9-niner]
+
 ## ADR recovery components
 
 The four key components of ADR are:
@@ -125,7 +130,9 @@ The following types of customers should consider enabling ADR:
 - Customers that have seen cases where active transactions are causing the transaction log to grow significantly.  
 - Customers that have experienced long periods of database unavailability due to SQL Server long running recovery (such as unexpected SQL Server restart or manual transaction rollback).
 
+>[!IMPORTANT]
+>ADR is not supported for databases enrolled in database mirroring.
 
 ## See Also  
 
-  
+[Manage accelerated database recovery](accelerated-database-recovery-management.md)

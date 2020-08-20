@@ -1,4 +1,5 @@
 ---
+description: "FilterGroupEnum"
 title: "FilterGroupEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "FilterGroupEnum enumeration [ADO]"
 ms.assetid: b22e725e-84bd-4286-a070-290c278c3783
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # FilterGroupEnum
 Specifies the group of records to be filtered from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

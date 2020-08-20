@@ -1,4 +1,5 @@
 ---
+description: "updateDouble Method (int, double)"
 title: "updateDouble Method (int, double) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 90c47643-e27e-425d-85a0-63866f858367
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # updateDouble Method (int, double)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

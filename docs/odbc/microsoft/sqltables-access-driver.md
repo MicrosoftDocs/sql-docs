@@ -1,4 +1,5 @@
 ---
+description: "SQLTables (Access Driver)"
 title: "SQLTables (Access Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "SQLTables function [ODBC], Access Driver"
   - "Access driver [ODBC], SQLTables"
 ms.assetid: 94423cf9-341a-4db6-bb10-8f5448df7fc3
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLTables (Access Driver)
 > [!NOTE]  

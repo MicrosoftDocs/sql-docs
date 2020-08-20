@@ -1,4 +1,5 @@
 ---
+description: "Allocating a Statement Handle"
 title: "Allocating a Statement Handle | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -18,12 +19,12 @@ helpviewer_keywords:
   - "statement handles [ODBC]"
   - "SQLAllocHandle function"
 ms.assetid: 9ee207f3-2667-45f5-87ca-e6efa1fd7a5c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Allocating a Statement Handle
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Before an application can execute a statement, it must allocate a statement handle. It does this by calling **SQLAllocHandle** with the *HandleType* parameter set to SQL_HANDLE_STMT and *InputHandle* pointing to a connection handle.  
   

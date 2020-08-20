@@ -1,4 +1,5 @@
 ---
+description: "SQLDrivers Function"
 title: "SQLDrivers Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLDrivers function [ODBC]"
 ms.assetid: 6b5b7514-e9cb-4cfd-8b7a-ab51dfab9efa
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLDrivers Function
 **Conformance**  

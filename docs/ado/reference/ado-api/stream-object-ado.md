@@ -1,4 +1,5 @@
 ---
+description: "Stream Object (ADO)"
 title: "Stream Object (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Stream object [ADO]"
 ms.assetid: 0514531f-009d-4519-abc3-d727014a39f1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Stream Object (ADO)
 Represents a stream of binary data or text.  

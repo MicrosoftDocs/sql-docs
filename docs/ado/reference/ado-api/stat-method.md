@@ -1,4 +1,5 @@
 ---
+description: "Stat Method"
 title: "Stat Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Stat method [ADO]"
 ms.assetid: 99a2b2d4-e6b1-4205-b011-72d024ea7240
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Stat Method
 Retrieves information about a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

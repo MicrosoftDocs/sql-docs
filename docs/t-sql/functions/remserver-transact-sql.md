@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;REMSERVER (Transact-SQL)"
 title: "@@REMSERVER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "remote servers [SQL Server], logins"
   - "@@REMSERVER function"
 ms.assetid: 0bb451a9-3866-4064-963d-b74a2f864049
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 ---
 # &#x40;&#x40;REMSERVER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
     
 > [!IMPORTANT]  
@@ -36,8 +37,10 @@ ms.author: mikeray
 ```  
 @@REMSERVER  
 ```  
-  
-## Return Types  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **nvarchar(128)**  
   
 ## Remarks  

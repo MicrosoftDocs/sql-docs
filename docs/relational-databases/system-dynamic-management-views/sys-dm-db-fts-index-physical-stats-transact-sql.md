@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_fts_index_physical_stats (Transact-SQL)"
 title: "sys.dm_db_fts_index_physical_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_fts_index_physical_stats dynamic management view"
 ms.assetid: 997c3278-3630-47f6-ada3-190b6c16ce0e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_fts_index_physical_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns a row for each full-text or semantic index in each table that has an associated full-text or semantic index.  
   

@@ -1,4 +1,5 @@
 ---
+description: "MSpeer_lsns (Transact-SQL)"
 title: "MSpeer_lsns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpeer_lsns system table"
 ms.assetid: 0ba33907-601b-4c3d-8099-2663f680a161
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSpeer_lsns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **Mspeer_lsns** table is used to map each transaction to a subscription in a peer-to-peer replication topology. This table is stored in every publication database in a peer-to-peer replication topology and in the subscription database of all Subscribers to a peer-to-peer publication. For more information on this type of transactional replication topology, see [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md). This table is stored in the publication database.  
   

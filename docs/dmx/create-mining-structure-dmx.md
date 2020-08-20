@@ -1,16 +1,17 @@
 ---
+description: "CREATE MINING STRUCTURE (DMX)"
 title: "CREATE MINING STRUCTURE (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: dmx
-ms.topic: conceptual
+ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 ---
 # CREATE MINING STRUCTURE (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Creates a new mining structure in a database and optionally defines training and testing partitions. After you have created the mining structure, you can use the [ALTER MINING STRUCTURE &#40;DMX&#41;](../dmx/alter-mining-structure-dmx.md) statement to add models to the mining structure.  
   

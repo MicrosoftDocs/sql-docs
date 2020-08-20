@@ -1,6 +1,6 @@
 ---
 title: "Use contained databases with availability groups"
-description: "How to use contained databases with an Always On availability group"
+description: "Learn about the using a contained database with Always On availability groups in SQL Server 2019 (15.x)."
 ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Use contained databases with Always On availability groups 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
   This topic contains information about the using a contained database with [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)].  
   

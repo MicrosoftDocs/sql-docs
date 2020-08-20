@@ -1,4 +1,5 @@
 ---
+description: "Installing and Configuring"
 title: "Installing and Configuring | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], installing"
   - "FoxPro ODBC driver [ODBC], installing"
 ms.assetid: 4202165e-b89c-47a5-ae59-0c98988caad5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Installing and Configuring
 To download the Visual FoxPro ODBC Driver, see [the Visual FoxPro ODBC Driver download site](https://go.microsoft.com/fwlink/?LinkId=121318).  

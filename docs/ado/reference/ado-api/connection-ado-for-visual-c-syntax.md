@@ -1,4 +1,5 @@
 ---
+description: "Connection (ADO for Visual C++ Syntax)"
 title: "Connection (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Connection collection [ADO], ADO for Visual C++ syntax"
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Connection (ADO for Visual C++ Syntax)
 ## Methods  

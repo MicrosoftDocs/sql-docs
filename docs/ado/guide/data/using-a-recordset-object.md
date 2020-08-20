@@ -1,4 +1,5 @@
 ---
+description: "Using a Recordset Object"
 title: "Using a Recordset Object | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "connections [ADO]"
 ms.assetid: 01c630d8-eb35-4bd0-a99f-7c0f85316cc1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Using a Recordset Object
 Alternatively, you can use **Recordset.Open** to implicitly establish a connection and issue a command over that connection in a single operation. For example, in Visual Basic:  

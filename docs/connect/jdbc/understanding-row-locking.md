@@ -1,4 +1,5 @@
 ---
+description: "Understanding row locking"
 title: "Understanding row locking | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 63c76a2f-f2b9-461f-8904-acbda0169ac3
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Understanding row locking

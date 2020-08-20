@@ -1,4 +1,5 @@
 ---
+description: "DefaultDatabase Property"
 title: "DefaultDatabase Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "DefaultDatabase property"
 ms.assetid: 41e8a8dd-e69c-4a09-8736-93502e01961c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DefaultDatabase Property
 Indicates the default database for a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  

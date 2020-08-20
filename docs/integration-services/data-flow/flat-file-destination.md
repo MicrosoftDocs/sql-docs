@@ -1,4 +1,5 @@
 ---
+description: "Flat File Destination"
 title: "Flat File Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -22,7 +23,7 @@ ms.author: chugu
 ---
 # Flat File Destination
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Flat File destination writes data to a text file. The text file can be in delimited, fixed width, fixed width with row delimiter, or ragged right format.  

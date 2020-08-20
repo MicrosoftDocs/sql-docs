@@ -1,4 +1,5 @@
 ---
+description: "Requery Method"
 title: "Requery Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Requery method [ADO]"
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Requery Method
 Updates the data in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object by re-executing the query on which the object is based.  

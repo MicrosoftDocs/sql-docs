@@ -1,4 +1,5 @@
 ---
+description: "Multiple Files Connection Manager"
 title: "Multiple Files Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -20,7 +21,7 @@ ms.author: chugu
 ---
 # Multiple Files Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   A Multiple Files connection manager enables a package to reference existing files and folders, or to create files and folders at run time.  

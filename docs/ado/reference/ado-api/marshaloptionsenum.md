@@ -1,4 +1,5 @@
 ---
+description: "MarshalOptionsEnum"
 title: "MarshalOptionsEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "MarshalOptionsEnum enumeration [ADO]"
 ms.assetid: 4013075d-dbea-4bbc-a6f4-c345a55c5633
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # MarshalOptionsEnum
 Specifies which records should be returned to the server.  

@@ -1,4 +1,5 @@
 ---
+description: "Formal Shape Grammar"
 title: "Formal Shape Grammar | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "shape commands [ADO], shape grammar"
   - "data shaping [ADO], shape grammar"
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Formal Shape Grammar
 This is the formal grammar for creating any shape command:  

@@ -1,5 +1,6 @@
 ---
-title: "Indicators (Report Builder and SSRS) | Microsoft Docs"
+title: "Indicators (Report Builder) | Microsoft Docs"
+description: Learn about indicators, the small gauges that convey the state of a single data value in paginated reports in Report Builder. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -19,7 +20,7 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Indicators (Report Builder and SSRS)
-  In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports,indicators are small gauges that convey the state of a single data value at a glance. The icons that represent indicators and their states are simple and visually effective even when used in small sizes.  
+  In [!INCLUDE[ssRSnoversion_md](../../includes/ssrsnoversion-md.md)] paginated reports, indicators are small gauges that convey the state of a single data value at a glance. The icons that represent indicators and their states are simple and visually effective even when used in small sizes.  
   
  You can use state indicators in your reports to show the following:  
   

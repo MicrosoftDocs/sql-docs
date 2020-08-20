@@ -1,5 +1,6 @@
 ---
-title: "Using table-valued parameters | Microsoft Docs"
+title: "Using table-valued parameters"
+description: "Table-valued parameters provide an efficient way to send multiple rows of data from a client to SQL Server in a single parameterized command."
 ms.custom: ""
 ms.date: "11/19/2019"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 3af61054-a886-4e1a-ad85-93f87c6d3584
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using table-valued parameters
 
@@ -42,7 +43,7 @@ Before table-valued parameters were introduced to SQL Server 2008, the options f
   
 - Create a series of individual SQL statements for data modifications that affect multiple rows. Changes can be submitted to the server individually or batched into groups. However, even when submitted in batches that contain multiple statements, each statement is executed separately on the server.  
   
-- Use the bcp utility program or [SQLServerBulkCopy](../../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md) to load many rows of data into a table. Although this technique is very efficient, it does not support server-side processing unless the data is loaded into a temporary table or table variable.
+- Use the bcp utility program or [SQLServerBulkCopy](using-bulk-copy-with-the-jdbc-driver.md) to load many rows of data into a table. Although this technique is very efficient, it does not support server-side processing unless the data is loaded into a temporary table or table variable.
   
 ## Creating table-valued parameter types  
 
@@ -121,7 +122,7 @@ pStmt.execute();
   
 ## Passing a table-valued parameter as a SQLServerDataTable object  
 
-Beginning with Microsoft JDBC Driver 6.0 for SQL Server, the SQLServerDataTable class represents an in-memory table of relational data. This example demonstrates how to construct a table-valued parameter from in-memory data using the SQLServerDataTable object. The code first creates a SQLServerDataTable object, defines its schema and populates the table with data. The code then configures a SQLServerPreparedStatement that passes this data table as a table-valued parameter to SQL Server.  
+Beginning with Microsoft JDBC Driver 6.0 for SQL Server, the SQLServerDataTable class represents an in-memory table of relational data. This example demonstrates how to construct a table-valued parameter from in-memory data using the SQLServerDataTable object. First, the code creates a SQLServerDataTable object, defines its schema, and populates the table with data. The code then configures a SQLServerPreparedStatement that passes this data table as a table-valued parameter to SQL Server.  
 
 ```java
 /* Assumes connection is an active Connection object. */
@@ -150,7 +151,7 @@ pStmt.execute();
   
 ## Passing a table-valued parameter as a ResultSet object  
 
-This example demonstrates how to stream rows of data from a ResultSet to a table-valued parameter. The code first retrieves data from a source table in a creates a SQLServerDataTable object, defines its schema and populates the table with data. The code then configures a SQLServerPreparedStatement that passes this data table as a table-valued parameter to SQL Server.  
+This example demonstrates how to stream rows of data from a ResultSet to a table-valued parameter. First, the code retrieves data from a source table in a SQLServerDataTable object, defines its schema, and populates the table with data. The code then configures a SQLServerPreparedStatement that passes this data table as a table-valued parameter to SQL Server.  
 
 ```java
 /* Assumes connection is an active Connection object. */
@@ -308,4 +309,4 @@ The following methods have been added to this class to support passing of table-
 
 ## See also
 
-[Overview of the JDBC driver](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
+[Overview of the JDBC driver](overview-of-the-jdbc-driver.md)  

@@ -1,5 +1,6 @@
 ---
-title: "Analysis Services Connection Type for DMX (SSRS) | Microsoft Docs"
+title: "Analysis Services Connection Type for DMX | Microsoft Docs"
+description: Learn about the Analysis Services connection type for DMX and learn to use the DMX Query Designer to build a DMX query using graphical elements.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

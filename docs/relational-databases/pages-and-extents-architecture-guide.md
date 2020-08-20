@@ -1,4 +1,5 @@
 ---
+description: "Pages and Extents Architecture Guide"
 title: "Pages and Extents Architecture Guide | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/12/2019"
@@ -16,7 +17,7 @@ ms.author: "jroth"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Pages and Extents Architecture Guide
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The page is the fundamental unit of data storage in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. An extent is a collection of eight physically contiguous pages. Extents help efficiently manage pages. This guide describes the data structures that are used to manage pages and extents in all versions of SQL Server. Understanding the architecture of pages and extents is important for designing and developing databases that perform efficiently.
 
@@ -158,7 +159,7 @@ An IAM page covers a 4-GB range in a file and is the same coverage as a GAM or S
 IAM pages are allocated as required for each allocation unit and are located randomly in the file. The system view, sys.system_internals_allocation_units, points to the first IAM page for an allocation unit. All the IAM pages for that allocation unit are linked in a chain.
 
 > [!IMPORTANT]
-> The `sys.system_internals_allocation_units` system view is for internal use only and is subject to change. Compatibility is not guaranteed.
+> The `sys.system_internals_allocation_units` system view is for internal use only and is subject to change. Compatibility is not guaranteed. This view is not available in Azure SQL Database. 
 
 ![iam_chain](../relational-databases/media/iam-chain.gif)
  

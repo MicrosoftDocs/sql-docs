@@ -16,11 +16,11 @@ helpviewer_keywords:
   - "backupmediafamily system table"
   - "backup media [SQL Server], backupmediafamily system table"
 ms.assetid: ee16de24-3d95-4b2e-a094-78df2514d18a
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # backupmediafamily (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Contains one row for each media family. If a media family resides in a mirrored media set, the family has a separate row for each mirror in the media set. This table is stored in the **msdb** database.  
     

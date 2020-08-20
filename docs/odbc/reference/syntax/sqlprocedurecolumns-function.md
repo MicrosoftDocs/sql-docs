@@ -1,4 +1,5 @@
 ---
+description: "SQLProcedureColumns Function"
 title: "SQLProcedureColumns Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLProcedureColumns function [ODBC]"
 ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLProcedureColumns Function
 **Conformance**  

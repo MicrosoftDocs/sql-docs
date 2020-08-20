@@ -1,4 +1,5 @@
 ---
+description: "ADO Connection and Recordset Events"
 title: "ADO Event Handler Summary | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "events [ADO], about event handlers"
   - "event handlers [ADO]"
 ms.assetid: b34f4472-5e04-4a2c-ab64-38d6eca31a69
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO Connection and Recordset Events
 Two ADO objects can raise events: the [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object and the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object. The **ConnectionEvent** family pertains to operations on the **Connection** object, and the **RecordsetEvent** family pertains to operations on the **Recordset** object.

@@ -1,4 +1,5 @@
 ---
+description: "IsolationLevel Property"
 title: "IsolationLevel Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "IsolationLevel property"
 ms.assetid: ea84e4b2-fbf2-4eef-b9ce-796b22e21800
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # IsolationLevel Property
 Indicates the level of isolation for a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  

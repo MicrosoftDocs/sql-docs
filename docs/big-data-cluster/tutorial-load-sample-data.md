@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Tutorial: Load sample data into a SQL Server big data cluster
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This tutorial explains how to use a script to load sample data into a [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]. Many of the other tutorials in the documentation use this sample data.
 
@@ -31,7 +31,7 @@ This tutorial explains how to use a script to load sample data into a [!INCLUDE[
  
 ## <a id="sampledata"></a> Load sample data
 
-The following steps use a bootstrap script to download a SQL Server database backup and load the data into your big data cluster. For ease of use, these steps have been broken out into [Windows](#windows) and [Linux](#linux) sections.
+The following steps use a bootstrap script to download a SQL Server database backup and load the data into your big data cluster. For ease of use, these steps have been broken out into [Windows](#windows) and [Linux](#linux) sections. If you want to use basic username/password as authentication mechanism then set AZDATA_USERNAME and AZDATA_PASSWORD environment variables before executing the script. Otherwise the script will use integrated authentication to connect to SQL Server Master instance and Knox gateway. Also, DNS name should be specified for the endpoints in order to use integrated authentication.
 
 ## <a id="windows"></a> Windows
 
@@ -59,18 +59,16 @@ The following steps describe how to use a Windows client to load the sample data
    | Parameter | Description |
    |---|---|
    | <CLUSTER_NAMESPACE> | The name you gave your big data cluster. |
-   | <SQL_MASTER_IP> | The IP address of your master instance. |
-   | <SQL_MASTER_SA_PASSWORD> | The SA password for the master instance. |
-   | <KNOX_IP> | The IP address of the HDFS/Spark Gateway. |
-   | <KNOX_PASSWORD> | The password for the HDFS/Spark Gateway. |
-
+   | <SQL_MASTER_ENDPOINT> | The DNS name or IP address of your master instance. |
+   | <KNOX_ENDPOINT> | The DNS name or IP address of the HDFS/Spark Gateway. |
+   
    > [!TIP]
    > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-big-data-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**master-svc-external**) and Knox (**gateway-svc-external**). The default name of a cluster is **mssql-cluster**.
 
 1. Run the bootstrap script.
 
    ```cmd
-   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   .\bootstrap-sample-db.cmd <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
 ## <a id="linux"></a> Linux
@@ -95,10 +93,8 @@ The following steps describe how to use a Linux client to load the sample data i
    | Parameter | Description |
    |---|---|
    | <CLUSTER_NAMESPACE> | The name you gave your big data cluster. |
-   | <SQL_MASTER_IP> | The IP address of your master instance. |
-   | <SQL_MASTER_SA_PASSWORD> | The SA password for the master instance. |
-   | <KNOX_IP> | The IP address of the HDFS/Spark Gateway. |
-   | <KNOX_PASSWORD> | The password for the HDFS/Spark Gateway. |
+   | <SQL_MASTER_ENDPOINT> | The DNS name or IP address of your master instance. |
+   | <KNOX_ENDPOINT> | The DNS name or IP address of the HDFS/Spark Gateway. |
 
    > [!TIP]
    > Use [kubectl](cluster-troubleshooting-commands.md) to find the IP addresses for the SQL Server master instance and Knox. Run `kubectl get svc -n <your-big-data-cluster-name>` and look at the EXTERNAL-IP addresses for the master instance (**master-svc-external**) and Knox (**gateway-svc-external**). The default name of a cluster is **mssql-cluster**.
@@ -106,7 +102,7 @@ The following steps describe how to use a Linux client to load the sample data i
 1. Run the bootstrap script.
 
    ```bash
-   sudo env "PATH=$PATH" ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_IP> <SQL_MASTER_SA_PASSWORD> <KNOX_IP> <KNOX_PASSWORD>
+   ./bootstrap-sample-db.sh <CLUSTER_NAMESPACE> <SQL_MASTER_ENDPOINT> <KNOX_ENDPOINT>
    ```
 
 ## Next steps
@@ -125,4 +121,4 @@ Data ingestion:
 
 Notebooks:
 
-- [Tutorial: Run a sample notebook on a SQL Server 2019 big data cluster](tutorial-notebook-spark.md)
+- [Tutorial: Run a sample notebook on a SQL Server 2019 big data cluster](notebooks-tutorial-spark.md)

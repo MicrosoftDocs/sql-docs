@@ -1,4 +1,5 @@
 ---
+description: "Mapping Deprecated Functions"
 title: "Mapping Deprecated Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "functions [ODBC], mapping deprecated functions"
   - "mapping deprecated functions [ODBC]"
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Mapping Deprecated Functions
 This section describes how deprecated functions are mapped by the ODBC *3.x* Driver Manager to guarantee backward compatibility of ODBC *3.x* drivers that are used with ODBC *2.x* applications. The Driver Manager performs this mapping regardless of the version of the application. Because each of the ODBC *2.x* functions in the following list is mapped to the corresponding ODBC *3.x* function when called in an ODBC *3.x* driver, the ODBC *3.x* driver does not have to implement the ODBC *2.x* functions.  

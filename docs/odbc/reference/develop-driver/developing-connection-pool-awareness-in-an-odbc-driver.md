@@ -1,4 +1,5 @@
 ---
+description: "Developing Connection-Pool Awareness in an ODBC Driver"
 title: "Developing Connection-Pool Awareness in an ODBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c63d5cae-24fc-4fee-89a9-ad0367cddc3e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Developing Connection-Pool Awareness in an ODBC Driver
 This topic discusses the details of developing an ODBC driver that contains information about how the driver should provide connection pooling services.  

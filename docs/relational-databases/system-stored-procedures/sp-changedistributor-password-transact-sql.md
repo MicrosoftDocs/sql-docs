@@ -1,4 +1,5 @@
 ---
+description: "sp_changedistributor_password (Transact-SQL)"
 title: "sp_changedistributor_password (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changedistributor_password"
 ms.assetid: 4a496e60-414a-4026-ba7a-3e89391d39b7
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_changedistributor_password (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the password for a Distributor. This stored procedure is executed at the Distributor on any database.  
   

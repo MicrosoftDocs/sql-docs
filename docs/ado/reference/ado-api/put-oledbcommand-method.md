@@ -1,4 +1,5 @@
 ---
+description: "put_OLEDBCommand Method"
 title: "put_OLEDBCommand Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "put_OLEDBCommand method [ADO]"
 ms.assetid: ca6a5804-bf5c-4afc-99db-22904bc0b33d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # put_OLEDBCommand Method
 This method performs no operation and always returns S_OK.  

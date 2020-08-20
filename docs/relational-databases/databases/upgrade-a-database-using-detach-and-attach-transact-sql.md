@@ -1,9 +1,8 @@
 ---
+description: "Upgrade a database using detach and attach (Transact-SQL)"
 title: "Upgrade a database using detach & attach (Transact-SQL)"
-ms.custom: ""
-ms.date: "11/26/2018"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine"
 ms.reviewer: ""
 ms.technology: 
 ms.topic: conceptual
@@ -20,7 +19,7 @@ ms.author: "sstein"
 ms.custom: seo-dt-2019
 ---
 # Upgrade a database using detach and attach (Transact-SQL)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 This topic describes how to use detach and attach operations to upgrade a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. After being attached to [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)], the database is available immediately and is automatically upgraded. This prevents the database from being used with an older version of the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. However, metadata upgrade does not affect the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) setting of a database. See more information in [Database Compatibility Level After Upgrade](#dbcompat) later in this topic.  
   
  **In this topic**  

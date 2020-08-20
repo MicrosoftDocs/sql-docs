@@ -1,4 +1,5 @@
 ---
+description: "DBCC TRACEOFF (Transact-SQL)"
 title: "DBCC TRACEOFF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
@@ -23,7 +24,7 @@ author: pmasl
 ms.author: umajay
 ---
 # DBCC TRACEOFF (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Disables the specified trace flags.
   
@@ -31,11 +32,13 @@ Disables the specified trace flags.
   
 ## Syntax  
   
-```sql
+```syntaxsql
 DBCC TRACEOFF ( trace# [ ,...n ] [ , -1 ] ) [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *trace#*  
 Is the number of the trace flag to disable.  
   

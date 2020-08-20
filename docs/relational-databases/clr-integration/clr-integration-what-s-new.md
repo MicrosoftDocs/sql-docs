@@ -1,5 +1,6 @@
 ---
-title: "What&#39;s New in CLR Integration | Microsoft Docs"
+title: "What's New in CLR Integration | Microsoft Docs"
+description: Microsoft SQL Server hosting CLR is called CLR integration. This article describes new features in CLR integration in SQL Server 2012.
 ms.date: "03/03/2017"
 ms.prod: sql
 ms.reviewer: ""
@@ -11,7 +12,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # CLR Integration - What&#39;s New
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The following are new features in CLR integration in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]:  
   
 -   In version 4 of the CLR, CLR database objects no longer catch corrupted state exceptions. These exceptions are now caught in the CLR integration hosting layer. These exceptions can still be caught by the CLR database components by setting a code attribute ([\<legacyCorruptedStateExceptionsPolicy> Element](https://go.microsoft.com/fwlink/?LinkId=204954)). However, this is not recommended because results are not reliable when a corrupted state exception occurs.  

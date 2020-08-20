@@ -1,4 +1,5 @@
 ---
+description: "Creating, Altering, and Removing Database Objects"
 title: "Working with Database Objects"
 ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
@@ -17,7 +18,7 @@ ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating, Altering, and Removing Database Objects
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   The stages of SMO object creation are as follows:  
   

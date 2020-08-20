@@ -1,4 +1,5 @@
 ---
+description: "Overview of Multidimensional Schemas and Data"
 title: "Overview of Multidimensional Schemas and Data | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "multidimensional schemas and data"
 ms.assetid: ce37fa06-c581-4d80-9a9b-c3aa66408909
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Overview of Multidimensional Schemas and Data
 ## Understanding Multidimensional Schemas  

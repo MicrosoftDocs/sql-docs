@@ -1,4 +1,5 @@
 ---
+description: "SET CONTEXT_INFO (Transact-SQL)"
 title: "SET CONTEXT_INFO (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -21,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # SET CONTEXT_INFO (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Associates up to 128 bytes of binary information with the current session or connection.  
   
@@ -29,12 +30,14 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET CONTEXT_INFO { binary_str | @binary_var }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *binary_str*  
  Is a **binary** constant, or a constant that is implicitly convertible to **binary**, to associate with the current session or connection.  
   
@@ -61,7 +64,7 @@ SET CONTEXT_INFO { binary_str | @binary_var }
 ### A. Setting context information by using a constant  
  The following example demonstrates `SET CONTEXT_INFO` by setting the value and displaying the results. Note that querying `sys.dm_exec_sessions` requires SELECT and VIEW SERVER STATE permissions, whereas using the CONTEXT_INFO function does not.  
   
-```  
+```sql
 SET CONTEXT_INFO 0x01010101;  
 GO  
 SELECT context_info   
@@ -73,7 +76,7 @@ GO
 ### B. Setting context information by using a function  
  The following example demonstrates using the output of a function to set the context value, where the value from the function must be first placed in a **binary** variable.  
   
-```  
+```sql
 DECLARE @BinVar varbinary(128);  
 SET @BinVar = CAST(REPLICATE( 0x20, 128 ) AS varbinary(128) );  
 SET CONTEXT_INFO @BinVar;  

@@ -1,4 +1,5 @@
 ---
+description: "getXAResource Method (SQLServerXAConnection)"
 title: "getXAResource Method (SQLServerXAConnection) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: e1d2828f-fd20-44b0-b796-dc70f77c5b03
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getXAResource Method (SQLServerXAConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

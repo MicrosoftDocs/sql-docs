@@ -1,4 +1,5 @@
 ---
+description: "Parameters Collection (ADO)"
 title: "Parameters Collection (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Parameters collection [ADO]"
 ms.assetid: 497cae10-3913-422a-9753-dcbb0a639b1b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Parameters Collection (ADO)
 Contains all the [Parameter](../../../ado/reference/ado-api/parameter-object.md) objects of a [Command](../../../ado/reference/ado-api/command-object-ado.md) object.  

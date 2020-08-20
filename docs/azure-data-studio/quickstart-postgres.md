@@ -1,33 +1,33 @@
 ---
 title: "Quickstart: Connect and query PostgreSQL"
-titleSuffix: Azure Data Studio
-description: This quickstart shows how to use Azure Data Studio to connect to PostgreSQL and run a query
+description: Do a quickstart in which you use Azure Data Studio to connect to PostgreSQL, and then use SQL statements to create and query a database.
 ms.custom: "seodec18"
 ms.date: "09/18/2019"
-ms.prod: sql
-ms.technology: azure-data-studio
-ms.reviewer: "alayu; sstein"
+ms.prod: azure-data-studio
+ms.technology: 
+ms.reviewer: "alayu, maghan, sstein"
 ms.topic: "quickstart"
 author: "rachel-msft"
 ms.author: "raagyema"
 ---
 
-# Quickstart: Connect and query PostgreSQL using [!INCLUDE[name-sos](../includes/name-sos-short.md)]
-This quickstart shows how to use [!INCLUDE[name-sos](../includes/name-sos-short.md)] to connect to Postgres, and then use SQL statements to create the database *tutorialdb* and query it.
+# Quickstart: Use Azure Data Studio to connect and query PostgreSQL
+
+This quickstart shows how to use Azure Data Studio to connect to PostgreSQL, and then use SQL statements to create the database *tutorialdb* and query it.
 
 ## Prerequisites
 
-To complete this quickstart, you need [!INCLUDE[name-sos](../includes/name-sos-short.md)], the PostgreSQL extension for [!INCLUDE[name-sos](../includes/name-sos-short.md)], and access to a PostgreSQL server.
+To complete this quickstart, you need Azure Data Studio, the PostgreSQL extension for Azure Data Studio, and access to a PostgreSQL server.
 
-- [Install [!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md).
+- [Install Azure Data Studio](download.md).
 - [Install the PostgreSQL extension for Azure Data Studio](postgres-extension.md).
 - [Install PostgreSQL](https://www.postgresql.org/download/). (Alternatively, you can create a Postgres database in the cloud using [az postgres up](https://docs.microsoft.com/azure/postgresql/quickstart-create-server-up-azure-cli)). 
 
 ## Connect to PostgreSQL
 
-1. Start **[!INCLUDE[name-sos](../includes/name-sos-short.md)]**.
+1. Start **Azure Data Studio**.
 
-2. The first time you start [!INCLUDE[name-sos](../includes/name-sos-short.md)] the **Connection** dialog opens. If the **Connection** dialog doesn't open, click the **New Connection** icon in the **SERVERS** page:
+2. The first time you start Azure Data Studio the **Connection** dialog opens. If the **Connection** dialog doesn't open, click the **New Connection** icon in the **SERVERS** page:
 
    ![New Connection Icon](media/quickstart-postgresql/new-connection-icon.png)
 

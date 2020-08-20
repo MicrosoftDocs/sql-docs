@@ -1,4 +1,5 @@
 ---
+description: "SQLBindParameter Function"
 title: "SQLBindParameter Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2019"
@@ -18,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLBindParameter function [ODBC]"
 ms.assetid: 38349d4b-be03-46f9-9d6a-e50dd144e225
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLBindParameter Function
 

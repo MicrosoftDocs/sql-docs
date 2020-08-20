@@ -1,10 +1,9 @@
 ---
+description: "OPENJSON (Transact-SQL)"
 title: "OPENJSON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/21/2019"
+ms.date: 06/03/2020
 ms.prod: sql
-ms.prod_service: "database-engine, sql-database"
-ms.reviewer: ""
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
@@ -17,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 233d0877-046b-4dcc-b5da-adeb22f78531
 author: "jovanpop-msft"
 ms.author: "jovanpop"
-ms.reviewer: genemi
+ms.reviewer: jroth
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # OPENJSON (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
 **OPENJSON** is a table-valued function that parses JSON text and returns objects and properties from the JSON input as rows and columns. In other words, **OPENJSON** provides a rowset view over a JSON document. You can explicitly specify the columns in the rowset and the JSON property paths used to populate the columns. Since **OPENJSON** returns a set of rows, you can use **OPENJSON** in the `FROM` clause of a [!INCLUDE[tsql](../../includes/tsql-md.md)] statement just as you can use any other table, view, or table-valued function.  
   
@@ -41,7 +40,7 @@ Use **OPENJSON** to import JSON data into [!INCLUDE[ssNoVersion](../../includes/
   
 ## Syntax  
   
-```
+```syntaxsql
 OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 <with_clause> ::= WITH ( { colName type [ column_path ] [ AS JSON ] } [ ,...n ] )
@@ -370,11 +369,37 @@ DECLARE @json NVARCHAR(max)  = N'{
         isAlive bit, age int,  
         dateOfBirth datetime2, spouse nvarchar(50))
 ```  
-  
+
+### Example 6 - Simple example with JSON content
+
+```sql
+--simple cross apply example
+DECLARE @JSON NVARCHAR(MAX) = N'[
+{
+"OrderNumber":"SO43659",
+"OrderDate":"2011-05-31T00:00:00",
+"AccountNumber":"AW29825",
+"ItemPrice":2024.9940,
+"ItemQuantity":1
+},
+{
+"OrderNumber":"SO43661",
+"OrderDate":"2011-06-01T00:00:00",
+"AccountNumber":"AW73565",
+"ItemPrice":2024.9940,
+"ItemQuantity":3
+}
+]'
+
+SELECT root.[key] AS [Order],TheValues.[key], TheValues.[value]
+FROM OPENJSON ( @JSON ) AS root
+CROSS APPLY OPENJSON ( root.value) AS TheValues
+```
+
 ## See also
 
- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
- [Convert JSON Data to Rows and Columns with OPENJSON &#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   
- [Use OPENJSON with the Default Schema &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md)   
- [Use OPENJSON with an Explicit Schema &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  
+- [JSON Path Expressions &#40;SQL Server&#41;](../../relational-databases/json/json-path-expressions-sql-server.md)   
+- [Convert JSON Data to Rows and Columns with OPENJSON &#40;SQL Server&#41;](../../relational-databases/json/convert-json-data-to-rows-and-columns-with-openjson-sql-server.md)   
+- [Use OPENJSON with the Default Schema &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-the-default-schema-sql-server.md)   
+- [Use OPENJSON with an Explicit Schema &#40;SQL Server&#41;](../../relational-databases/json/use-openjson-with-an-explicit-schema-sql-server.md)  
   

@@ -1,5 +1,6 @@
 ---
 title: "Interactive Functionality - Different Report Rendering Extensions | Microsoft Docs"
+description: Reporting Services allows you to interact with a paginated report at runtime. This article describes how the interactive features work in specific formats.
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -56,7 +57,7 @@ ms.author: maggies
   
 |Export Option|Support Information|  
 |-------------------|-------------------------|  
-|Preview/Report Viewer, HTML|For tabular repots, users click sort arrows on column to change how the data is sorted.|  
+|Preview/Report Viewer, HTML|For tabular reports, users click sort arrows on column to change how the data is sorted.|  
 |PDF|Not available in PDF.|  
 |Excel|Not available in Excel.|  
 |Word|Not available in Word.|  

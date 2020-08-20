@@ -1,6 +1,6 @@
 ---
 title: "DATEPART (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for the DATEPART function. This function returns an integer corresponding to the datepart of a specified date."
 ms.date: "07/29/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -24,12 +24,12 @@ helpviewer_keywords:
   - "DATEPART function [SQL Server]"
   - "dates [SQL Server], dateparts"
 ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATEPART (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
 This function returns an integer representing the specified *datepart* of the specified *date*.
@@ -44,7 +44,9 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
 DATEPART ( datepart , date )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *datepart*  
 The specific part of the *date* argument for which `DATEPART` will return an **integer**. This table lists all valid *datepart* arguments.
 
@@ -212,7 +214,8 @@ This example returns the base year. The base year helps with date calculations. 
   
 ```sql
 SELECT DATEPART(year, 0), DATEPART(month, 0), DATEPART(day, 0);  
--- Returns: 1900    1    1 */  
+
+-- Returns: 1900    1    1 
 ```  
   
 This example returns the day part of the date `12/20/1974`.
@@ -221,13 +224,8 @@ This example returns the day part of the date `12/20/1974`.
 -- Uses AdventureWorks  
   
 SELECT TOP(1) DATEPART (day,'12/20/1974') FROM dbo.DimCustomer;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```
---------
-20
+
+-- Returns: 20
 ```  
   
 This example returns the year part of the date `12/20/1974`.
@@ -236,13 +234,8 @@ This example returns the year part of the date `12/20/1974`.
 -- Uses AdventureWorks  
   
 SELECT TOP(1) DATEPART (year,'12/20/1974') FROM dbo.DimCustomer;  
-```  
-  
-[!INCLUDE[ssResult](../../includes/ssresult-md.md)]
-  
-```
---------
-1974
+
+-- Returns: 1974
 ```  
   
 ## See also

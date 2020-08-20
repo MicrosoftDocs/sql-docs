@@ -1,4 +1,5 @@
 ---
+description: "GetRows Method (ADO)"
 title: "GetRows Method (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Getrows method [ADO]"
 ms.assetid: 14b92860-4171-47d9-a413-dd60dd6a8880
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # GetRows Method (ADO)
 Retrieves multiple records of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object into an array.  

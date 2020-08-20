@@ -1,4 +1,5 @@
 ---
+description: "sp_update_jobstep (Transact-SQL)"
 title: "sp_update_jobstep (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_jobstep"
 ms.assetid: e158802c-c347-4a5d-bf75-c03e5ae56e6b
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_update_jobstep (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the setting for a step in a job that is used to perform automated activities.  
   

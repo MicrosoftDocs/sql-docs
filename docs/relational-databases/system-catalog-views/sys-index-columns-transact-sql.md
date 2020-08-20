@@ -1,4 +1,5 @@
 ---
+description: "sys.index_columns (Transact-SQL)"
 title: "sys.index_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/03/2019"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.index_columns catalog view"
 ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.index_columns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Contains one row per column that is part of a **sys.indexes** index or unordered table (heap).  
   

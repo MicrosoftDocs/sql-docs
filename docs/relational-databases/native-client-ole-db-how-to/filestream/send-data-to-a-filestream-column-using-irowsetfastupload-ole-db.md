@@ -1,4 +1,5 @@
 ---
+description: "Send Data to a FILESTREAM Column Using IRowsetFastUpload SQL Server Native Client (OLE DB)"
 title: "Data FILESTREAM, IRowsetFastUpload (OLE DB)"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -8,12 +9,12 @@ ms.reviewer: ""
 ms.technology: native-client
 ms.topic: "reference"
 ms.assetid: fdb47319-83bc-4ff2-b46d-8d8ccfeb5bab
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Send Data to a FILESTREAM Column Using IRowsetFastUpload (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+# Send Data to a FILESTREAM Column Using IRowsetFastUpload SQL Server Native Client (OLE DB)
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This sample uses the IRowsetFastUpload interface to send between 4MB and 4GB of data to a filestream column.  
   

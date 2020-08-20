@@ -1,4 +1,5 @@
 ---
+description: "sp_deletetracertokenhistory (Transact-SQL)"
 title: "sp_deletetracertokenhistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -13,12 +14,12 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_deletetracertokenhistory"
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_deletetracertokenhistory (Transact-SQL)
 
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Removes tracer token records from the [MStracer_tokens &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md) and [MStracer_history &#40;Transact-SQL&#41;](../../relational-databases/system-tables/mstracer-history-transact-sql.md) system tables. This stored procedure is executed at the Publisher on the publication database or at the Distributor on the distribution database.
 

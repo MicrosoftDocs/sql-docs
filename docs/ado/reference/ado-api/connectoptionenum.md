@@ -1,4 +1,5 @@
 ---
+description: "ConnectOptionEnum"
 title: "ConnectOptionEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ConnectOptionEnum enumeration [ADO]"
 ms.assetid: bff07eeb-dee3-4e4e-9b2d-d56061ea744d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ConnectOptionEnum
 Specifies whether the [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) method of a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object should return after the connection is established (synchronously) or before (asynchronously).  

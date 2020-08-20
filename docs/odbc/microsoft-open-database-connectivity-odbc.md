@@ -1,4 +1,5 @@
 ---
+description: "Microsoft Open Database Connectivity (ODBC)"
 title: "Microsoft Open Database Connectivity (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 278cf36e-9817-4ee3-842e-dbd149f15273
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Microsoft Open Database Connectivity (ODBC)
 The Microsoft Open Database Connectivity (ODBC) interface is a C programming language interface that makes it possible for applications to access data from a variety of database management systems (DBMSs). ODBC is a low-level, high-performance interface that is designed specifically for relational data stores.  

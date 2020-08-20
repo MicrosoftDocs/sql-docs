@@ -1,4 +1,5 @@
 ---
+description: "Collections (Visual C++ Syntax Index with #import)"
 title: "Collections (Visual C++ Syntax Index with #import) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "ADO for Visual C++ syntax with #import [ADO]"
   - "#import [ADO]"
 ms.assetid: 36fbca8e-1884-44b5-806b-d15e30f42fe6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Collections (Visual C++ Syntax Index with #import)
 It is useful to know that collections inherit certain common methods and properties.  

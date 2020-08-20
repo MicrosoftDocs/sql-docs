@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_xe_objects (Transact-SQL)"
 title: "sys.dm_xe_objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "sys.dm_xe_objects dynamic management view"
   - "extended events [SQL Server], views"
 ms.assetid: 5d944b99-b097-491b-8cbd-b0e42b459ec0
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_xe_objects (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for each object that is exposed by an event package. Objects can be one of the following:  
   

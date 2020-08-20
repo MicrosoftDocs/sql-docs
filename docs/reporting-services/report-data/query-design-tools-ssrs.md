@@ -1,5 +1,6 @@
 ---
-title: "Query Design Tools (SSRS) | Microsoft Docs"
+title: "Query Design Tools | Microsoft Docs"
+description: Learn about query design tools and also learn the type of data source each query design tool supports.
 ms.date: 03/20/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

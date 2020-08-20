@@ -1,4 +1,5 @@
 ---
+description: "HelpContext, HelpFile Properties"
 title: "HelpContext, HelpFile Properties | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "HelpContext property [ADO]"
   - "HelpFile property [ADO]"
 ms.assetid: 2b9ef441-993c-44d4-8f87-fac0979dac1d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # HelpContext, HelpFile Properties
 Indicates the Help file and topic associated with an [Error](../../../ado/reference/ado-api/error-object.md) object.  

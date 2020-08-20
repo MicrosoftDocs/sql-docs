@@ -1,5 +1,6 @@
 ---
 title: "Find in Files"
+description: Learn how to search for a string or expression in a specified set of files, and how to specify the location of the search results. 
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Find in Files
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The **Find in Files** tab of the Find and Replace window enables you to search the code of a specified set of files for a string or expression. The matches found and actions taken are listed in the Find Results window selected in **Result Options**.  
   
  Toolbar buttons and shortcut keys are also available to open the **Find and Replace** dialog box.  
@@ -128,4 +129,4 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
  This toolbar tab changes the dialog box to a **Find in Symbols** dialog box.  
   
 ## See Also  
- [SQL Server Management Studio Keyboard Shortcuts](../../tools/sql-server-management-studio/sql-server-management-studio-keyboard-shortcuts.md)  
+ [SQL Server Management Studio Keyboard Shortcuts](../../ssms/sql-server-management-studio-keyboard-shortcuts.md)  

@@ -1,4 +1,5 @@
 ---
+description: "Deprecated Master Data Services Features"
 title: Deprecated Master Data Services Features
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ manager: erikre
 ---
 # Deprecated Master Data Services Features
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   This topic describes the deprecated [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] features that are still available in [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]. These features are scheduled to be removed in a future release of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. Deprecated features should not be used in new applications.  
   

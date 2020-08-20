@@ -1,5 +1,6 @@
 ---
 title: "Query Profling Infrastruture | Microsoft Docs"
+description: Learn how the SQL Server Database Engine accesses runtime information on query execution plans to understand the workload and how resource usage is driven.
 ms.custom: ""
 ms.date: 04/23/2019
 ms.prod: sql
@@ -19,7 +20,7 @@ ms.author: pelopes
 manager: amitban
 ---
 # Query Profiling Infrastructure
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 The [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] provides the ability to access runtime information on query execution plans. One of the most important actions when a performance issue occurs, is to get precise understanding on the workload that is executing and how resource usage is being driven. For this, access to the [actual execution plan](../../relational-databases/performance/display-an-actual-execution-plan.md) is important.
 
@@ -53,7 +54,7 @@ Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUD
 
 ### Lightweight query execution statistics profiling infrastructure v1
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 through [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]). 
   
 Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], the performance overhead to collect information about execution plans was reduced with the introduction of lightweight profiling. Unlike standard profiling, lightweight profiling does not collect CPU runtime information. However, lightweight profiling still collects row count and I/O usage information.
 
@@ -83,7 +84,7 @@ When running an extended event session that uses the *query_thread_profile* even
 
 ### Lightweight query execution statistics profiling infrastructure v2
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 through [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]). 
 
 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 includes a revised version of lightweight profiling with minimal overhead. Lightweight profiling can also be enabled globally using [trace flag 7412](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) for the versions stated above in *Applies to*. A new DMF [sys.dm_exec_query_statistics_xml](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md) is introduced to return the query execution plan for in-flight requests.
 
@@ -113,9 +114,9 @@ WITH (MAX_MEMORY=4096 KB,
 
 ### Lightweight query execution statistics profiling infrastructure v3
 
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] includes a newly revised version of lightweight profiling collecting row count information for all executions. Lightweight profiling is enabled by default on [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and trace flag 7412 has no effect. Lightweight profiling can be disabled at the database level using the LIGHTWEIGHT_QUERY_PROFILING [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] include a newly revised version of lightweight profiling collecting row count information for all executions. Lightweight profiling is enabled by default on [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], trace flag 7412 has no effect. Lightweight profiling can be disabled at the database level using the LIGHTWEIGHT_QUERY_PROFILING [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LIGHTWEIGHT_QUERY_PROFILING = OFF;`.
 
 A new DMF [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) is introduced to return the equivalent of the last known actual execution plan for most queries, and is called *last query plan statistics*. The last query plan statistics can be enabled at the database level using the LAST_QUERY_PLAN_STATS [database scoped configuration](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md): `ALTER DATABASE SCOPED CONFIGURATION SET LAST_QUERY_PLAN_STATS = ON;`.
 
@@ -189,6 +190,9 @@ For more information on the performance overhead of query profiling, see the blo
 
 > [!NOTE]
 > Extended Events that leverage lightweight profiling will use information from standard profiling in case the standard profiling infrastructure is already enabled. For example, an extended event session using `query_post_execution_showplan` is running, and another session using `query_post_execution_plan_profile` is started. The second session will still use information from standard profiling.
+
+> [!NOTE]
+> On [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)], Lightweight Profiling is off by default but is activated when an XEvent trace relying on `query_post_execution_plan_profile` is started, and is then deactivated again when the trace is stopped. As a consequence, if Xevent traces based on `query_post_execution_plan_profile` are frequently started and stopped on a [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] instance, it is strongly advised to activate Lightweight Profiling at global level with traceflag 7412 to avoid the repeated activation/deactivation overhead. 
 
 ## See Also  
  [Monitor and Tune for Performance](../../relational-databases/performance/monitor-and-tune-for-performance.md)     

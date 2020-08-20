@@ -1,4 +1,5 @@
 ---
+description: "sp_query_store_remove_query (Transact-SQL)"
 title: "sp_query_store_remove_query (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2016"
@@ -18,12 +19,13 @@ helpviewer_keywords:
   - "sys.sp_query_store_remove_query"
   - "sp_query_store_remove_query"
 ms.assetid: cc39ca92-3cba-478e-beef-65560aa84007
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_query_store_remove_query (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Removes the query, as well as all associated plans and runtime stats from the query store.  
   

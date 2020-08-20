@@ -1,4 +1,5 @@
 ---
+description: "Keys Collection (ADOX)"
 title: "Keys Collection (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Keys collection [ADOX]"
 ms.assetid: cdb31c76-e559-475c-b33a-aac24f73e70e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Keys Collection (ADOX)
 Contains all [Key](../../../ado/reference/adox-api/key-object-adox.md) objects of a [table](../../../ado/reference/adox-api/table-object-adox.md).  

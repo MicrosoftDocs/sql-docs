@@ -1,5 +1,6 @@
 ---
-title: "Report Embedded Datasets and Shared Datasets (Report Builder and SSRS) | Microsoft Docs"
+title: "Report Embedded Datasets and Shared Datasets (Report Builder) | Microsoft Docs"
+description: Learn about report embedded datasets and shared datasets so you can create expressions that evaluate to the actual data when the report runs.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

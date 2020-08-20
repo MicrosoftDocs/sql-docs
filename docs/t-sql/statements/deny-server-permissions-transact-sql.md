@@ -1,4 +1,5 @@
 ---
+description: "DENY Server Permissions (Transact-SQL)"
 title: "DENY Server Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/09/2017"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DENY Server Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Denies permissions on a server.  
   
@@ -27,7 +28,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ]   
     TO <grantee_principal> [ ,...n ]  
     [ CASCADE ]  
@@ -48,7 +49,9 @@ DENY permission [ ,...n ]
     | server_role  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on a server. For a list of the permissions, see the Remarks section later in this topic.  
   

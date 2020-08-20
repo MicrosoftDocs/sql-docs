@@ -1,4 +1,5 @@
 ---
+description: "Optimize Property Example (VB)"
 title: "Optimize Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Optimize property [ADO], Visual Basic example"
 ms.assetid: 652194af-cfa4-4aa0-a6d6-fa409bbc3f98
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Optimize Property Example (VB)
 This example demonstrates the [Field](../../../ado/reference/ado-api/field-object.md) object's dynamic **Optimize** property. The ***zip*** field of the ***Authors*** table in the ***Pubs*** database is not indexed. Setting the [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) property to **True** on the ***zip*** field authorizes ADO to build an index that improves the performance of the [Find](../../../ado/reference/ado-api/find-method-ado.md) method.  

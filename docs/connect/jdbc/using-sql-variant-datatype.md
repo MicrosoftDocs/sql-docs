@@ -1,4 +1,5 @@
 ---
+description: "Using Sql_variant data type"
 title: "Using Sql_variant data type | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using Sql_variant data type
 

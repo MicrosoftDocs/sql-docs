@@ -1,4 +1,5 @@
 ---
+description: "HelloData Code"
 title: "HelloData Code | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "HelloData sample application [ADO], sample code"
 ms.assetid: 6da136c5-fa93-4fe6-9bf5-90f4d92441fb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # HelloData Code
 ```  

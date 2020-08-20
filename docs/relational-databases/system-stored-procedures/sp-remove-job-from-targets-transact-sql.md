@@ -1,4 +1,5 @@
 ---
+description: "sp_remove_job_from_targets (Transact-SQL)"
 title: "sp_remove_job_from_targets (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_remove_job_from_targets"
 ms.assetid: b8171fb1-c11d-4244-8618-a12e28a150ce
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_remove_job_from_targets (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes the specified job from the given target servers or target server groups.  
   

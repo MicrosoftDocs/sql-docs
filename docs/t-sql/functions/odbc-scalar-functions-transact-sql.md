@@ -1,4 +1,5 @@
 ---
+description: "ODBC Scalar Functions (Transact-SQL)"
 title: "ODBC Scalar Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -49,12 +50,12 @@ helpviewer_keywords:
   - "functions, ODBC WEEK"
   - "HOUR ODBC function"
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ODBC Scalar Functions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   You can use [ODBC Scalar Functions](https://go.microsoft.com/fwlink/?LinkID=88579) in [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. These statements are interpreted by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. They can be used in stored procedures and user-defined functions. These include string, numeric, time, date, interval, and system functions.  
   
@@ -103,9 +104,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ```  
 CREATE PROCEDURE dbo.ODBCprocedure  
-    (  
-    @string_exp nvarchar(4000)  
-    )  
+(  
+    @string_exp NVARCHAR(4000)  
+)  
 AS  
 SELECT {fn OCTET_LENGTH( @string_exp )};  
 ```  
@@ -115,13 +116,13 @@ SELECT {fn OCTET_LENGTH( @string_exp )};
   
 ```  
 CREATE FUNCTION dbo.ODBCudf  
-    (  
-    @string_exp nvarchar(4000)  
-    )  
-RETURNS int  
+(  
+    @string_exp NVARCHAR(4000)  
+)  
+RETURNS INT  
 AS  
 BEGIN  
-DECLARE @len int  
+DECLARE @len INT  
 SET @len = (SELECT {fn OCTET_LENGTH( @string_exp )})  
 RETURN(@len)  
 END ;  
@@ -150,7 +151,7 @@ SELECT {fn CURRENT_DATE( )};
 SELECT {fn CURRENT_TIME(6)};  
 -- Returns 10:27:11.973000  
   
-DECLARE @date_exp nvarchar(30) = '2007-04-21 01:01:01.1234567';  
+DECLARE @date_exp NVARCHAR(30) = '2007-04-21 01:01:01.1234567';  
 SELECT {fn DAYNAME( @date_exp )};  
 -- Returns Saturday  
 SELECT {fn DAYOFMONTH( @date_exp )};  
@@ -178,9 +179,9 @@ SELECT {fn WEEK( @date_exp )};
   
 ```  
 CREATE PROCEDURE dbo.ODBCprocedure  
-    (  
-    @string_exp nvarchar(4000)  
-    )  
+(  
+    @string_exp NVARCHAR(4000)  
+)  
 AS  
 SELECT {fn BIT_LENGTH( @string_exp )};  
 ```  
@@ -190,13 +191,13 @@ SELECT {fn BIT_LENGTH( @string_exp )};
   
 ```  
 CREATE FUNCTION dbo.ODBCudf  
-    (  
-    @string_exp nvarchar(4000)  
-    )  
-RETURNS int  
+(  
+    @string_exp NVARCHAR(4000)  
+)  
+RETURNS INT  
 AS  
 BEGIN  
-DECLARE @len int  
+DECLARE @len INT  
 SET @len = (SELECT {fn BIT_LENGTH( @string_exp )})  
 RETURN(@len)  
 END ;  
@@ -210,18 +211,18 @@ SELECT dbo.ODBCudf('Returns the length in bits.');
  The following SELECT statements use ODBC functions:  
   
 ```  
-DECLARE @string_exp nvarchar(4000) = 'Returns the length.';  
+DECLARE @string_exp NVARCHAR(4000) = 'Returns the length.';  
 SELECT {fn BIT_LENGTH( @string_exp )};  
 -- Returns 304  
   
 SELECT {fn CONCAT( 'CONCAT ','returns a character string')};  
 -- Returns CONCAT returns a character string  
 SELECT {fn CURRENT_DATE( )};  
--- Returns todays date  
+-- Returns today's date  
 SELECT {fn CURRENT_TIME(6)};  
 -- Returns the time  
   
-DECLARE @date_exp nvarchar(30) = '2007-04-21 01:01:01.1234567';  
+DECLARE @date_exp NVARCHAR(30) = '2007-04-21 01:01:01.1234567';  
 SELECT {fn DAYNAME( @date_exp )};  
 -- Returns Saturday  
 SELECT {fn DAYOFMONTH( @date_exp )};  
@@ -244,4 +245,3 @@ SELECT {fn WEEK( @date_exp )};
   
 ## See Also  
  [Built-in Functions &#40;Transact-SQL&#41;](~/t-sql/functions/functions.md)  
-  

@@ -1,4 +1,5 @@
 ---
+description: "Data Quality Services Features and Tasks"
 title: "Data Quality Services Features and Tasks"
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -12,7 +13,7 @@ ms.author: sawinark
 ---
 # Data Quality Services Features and Tasks
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   Find information that anyone-data steward, Data Quality Services administrator, or SQL Server administrator-requires to prepare and execute a data quality project.  
   

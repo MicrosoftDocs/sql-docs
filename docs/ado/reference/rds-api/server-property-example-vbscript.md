@@ -1,4 +1,5 @@
 ---
+description: "Server Property Example (VBScript)"
 title: "Server Property Example (VBScript) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Server property [RDS], VBScript example"
 ms.assetid: 0fe57af9-a4d0-4986-a2e3-beaa4d26ed58
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Server Property Example (VBScript)
 > [!IMPORTANT]

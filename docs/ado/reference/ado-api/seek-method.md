@@ -1,4 +1,5 @@
 ---
+description: "Seek Method"
 title: "Seek Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Seek method [ADO]"
 ms.assetid: 129293d2-19d3-4940-bf64-483ee72fb4a1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Seek Method
 Searches the index of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) to quickly locate the row that matches the specified values, and changes the current row position to that row.  

@@ -1,4 +1,5 @@
 ---
+description: "sysmail_unsentitems (Transact-SQL)"
 title: "sysmail_unsentitems (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_unsentitems database mail view"
 ms.assetid: 993c12da-41e5-4e53-a188-0323feb70c67
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysmail_unsentitems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains one row for each Database Mail message with the **unsent** or **retrying** status. Messages with unsent or retrying status are still in the mail queue and may be sent at any time. Messages can have the **unsent** status for the following reasons:  
   

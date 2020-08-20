@@ -17,7 +17,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Frequently Asked Questions for Replication Administrators
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   The following questions and answers provide guidance on a variety of tasks faced by administrators of replicated databases.  
   
 ## Configuring Replication  
@@ -107,7 +107,10 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ### Does replication work over low bandwidth connections? Does it use compression?  
  Yes, replication does work over low bandwidth connections. For connections over TCP/IP, it uses the compression provided by the protocol but does not provide additional compression. For Web synchronization connections over HTTPS, it uses the compression provided by the protocol and also additional compression of the XML files used to replicate changes.  
-  
+
+### Can I configure replication if I connect to the server by using the IP address? 
+No, replication works only when you use the actual server name. Beginning in SQL Server Management Studio (SSMS) 18.0 (and later versions), replication can be configured by using the actual server name and port number. 
+
 ## Logins and Object Ownership  
   
 ### Are logins and passwords replicated?  
@@ -130,7 +133,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 -   For articles in publications that use character mode snapshots (which are used for non-[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers and [!INCLUDE[ssEW](../../../includes/ssew-md.md)] Subscribers): by default, the owner is left blank. The owner defaults to the owner associated with the account used by the Distribution Agent or Merge Agent to connect to the Subscriber.  
   
- The object owner can be changed through the **Article Properties - \<***Article***>** dialog box and through the following stored procedures: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, and **sp_changemergearticle**. For more information, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Define an Article](../../../relational-databases/replication/publish/define-an-article.md), and [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
+ The object owner can be changed through the **Article Properties - \<**_Article_**>** dialog box and through the following stored procedures: **sp_addarticle**, **sp_addmergearticle**, **sp_changearticle**, and **sp_changemergearticle**. For more information, see [View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md), [Define an Article](../../../relational-databases/replication/publish/define-an-article.md), and [View and Modify Article Properties](../../../relational-databases/replication/publish/view-and-modify-article-properties.md).  
   
 ### How can grants on the subscription database be configured to match grants on the publication database?  
  By default, replication does not execute GRANT statements on the subscription database. If you want the permissions on the subscription database to match those on the publication database, use one of the following methods:  

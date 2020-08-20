@@ -1,4 +1,5 @@
 ---
+description: "DateCreated and DateModified Properties Example (VC++)"
 title: "DateCreated and DateModified Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "DateCreated property [ADOX], VC++ example"
   - "DateModified property [ADOX], VC++ example"
 ms.assetid: b964beee-83c7-4f91-8255-3ba864c9adfd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DateCreated and DateModified Properties Example (VC++)
 This example demonstrates the [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) and [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) properties by adding a new [Column](../../../ado/reference/adox-api/column-object-adox.md) to an existing [Table](../../../ado/reference/adox-api/table-object-adox.md) and by creating a new **Table**. The DateOutput procedure is required for this example to run.  
@@ -95,7 +96,7 @@ void DateCreatedX() {
     }  
   
     catch(...) {  
-        cout << "Error occured in include files...." << endl;  
+        cout << "Error occurred in include files...." << endl;  
     }  
 }  
   

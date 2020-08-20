@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_database_replica_states (Azure SQL Database)"
 title: "sys.dm_database_replica_states (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2019"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Availability Groups [SQL Server], monitoring"
   - "sys.dm_database_replica_states dynamic management view"
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_database_replica_states (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns a row for the database, exposing state for the local replica.  
   

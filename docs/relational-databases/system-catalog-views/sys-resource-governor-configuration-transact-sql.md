@@ -1,4 +1,5 @@
 ---
+description: "sys.resource_governor_configuration (Transact-SQL)"
 title: "sys.resource_governor_configuration (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.resource_governor_configuration catalog view"
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.resource_governor_configuration (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the stored Resource Governor state.  
   

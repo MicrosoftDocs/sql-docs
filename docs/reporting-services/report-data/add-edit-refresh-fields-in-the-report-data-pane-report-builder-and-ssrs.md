@@ -1,5 +1,6 @@
 ---
-title: "Add, Edit, Refresh Fields in the Report Data Pane (Report Builder and SSRS) | Microsoft Docs"
+title: "Add, Edit, Refresh Fields in the Report Data Pane (Report Builder) | Microsoft Docs"
+description: Learn details about datasets as well as how to add, edit, and refresh fields in the report data pane in Report Builder.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

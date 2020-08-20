@@ -1,4 +1,5 @@
 ---
+description: "AddNew Method (ADO)"
 title: "AddNew Method (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "AddNew method [ADO]"
 ms.assetid: a9f54be9-5763-45d0-a6eb-09981b03bc08
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # AddNew Method (ADO)
 Creates a new record for an updatable [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

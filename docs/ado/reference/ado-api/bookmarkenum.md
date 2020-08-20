@@ -1,4 +1,5 @@
 ---
+description: "BookmarkEnum"
 title: "BookmarkEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "BookMarkEnum enumeration [ADO]"
 ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # BookmarkEnum
 Specifies a bookmark indicating where the operation should begin.  
@@ -35,7 +36,12 @@ Specifies a bookmark indicating where the operation should begin.
 |AdoEnums.Bookmark.LAST|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[GetRows Method (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)|[Move Method (ADO)](../../../ado/reference/ado-api/move-method-ado.md)|
+
+:::row:::
+    :::column:::
+        [GetRows Method (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Move Method (ADO)](../../../ado/reference/ado-api/move-method-ado.md)  
+    :::column-end:::
+:::row-end:::

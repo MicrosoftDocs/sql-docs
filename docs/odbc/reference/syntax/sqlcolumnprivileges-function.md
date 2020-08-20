@@ -1,4 +1,5 @@
 ---
+description: "SQLColumnPrivileges Function"
 title: "SQLColumnPrivileges Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLColumnPrivileges function [ODBC]"
 ms.assetid: ef233d9a-6ed5-4986-9d42-5e0b1a79fb6e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLColumnPrivileges Function
 **Conformance**  

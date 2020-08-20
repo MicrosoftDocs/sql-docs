@@ -1,4 +1,5 @@
 ---
+description: "SET FMTONLY (Transact-SQL)"
 title: "SET FMTONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/03/2019"
@@ -41,7 +42,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 SET FMTONLY { ON | OFF }   
 ```  
 

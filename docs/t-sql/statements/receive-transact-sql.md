@@ -1,4 +1,5 @@
 ---
+description: "RECEIVE (Transact-SQL)"
 title: "RECEIVE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -23,7 +24,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # RECEIVE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Retrieves one or more messages from a queue. Depending on the retention setting for the queue, either removes the message from the queue or updates the status of the message in the queue.  
   
@@ -31,7 +32,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 [ WAITFOR ( ]  
     RECEIVE [ TOP ( n ) ]   
@@ -53,7 +54,9 @@ ms.author: carlrab
 { database_name.schema_name.queue_name | schema_name.queue_name | queue_name }
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WAITFOR  
  Specifies that the RECEIVE statement waits for a message to arrive on the queue, if no messages are currently present.  
   

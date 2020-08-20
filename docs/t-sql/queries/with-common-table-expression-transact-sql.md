@@ -1,6 +1,6 @@
 ---
 title: "WITH common_table_expression (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+description: "Transact-SQL reference for how to use common table expressions (CTE) in queries."
 ms.date: "08/09/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -29,7 +29,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # WITH common_table_expression (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Specifies a temporary named result set, known as a common table expression (CTE). This is derived from a simple query and defined within the execution scope of a single SELECT, INSERT, UPDATE, DELETE or MERGE statement. This clause can also be used in a CREATE VIEW statement as part of its defining SELECT statement. A common table expression can include references to itself. This is referred to as a recursive common table expression.  
   
@@ -37,7 +37,7 @@ Specifies a temporary named result set, known as a common table expression (CTE)
   
 ## Syntax  
   
-```  
+```syntaxsql
 [ WITH <common_table_expression> [ ,...n ] ]  
   
 <common_table_expression>::=  
@@ -46,7 +46,9 @@ Specifies a temporary named result set, known as a common table expression (CTE)
     ( CTE_query_definition )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *expression_name*  
 Is a valid identifier for the common table expression. *expression_name* must be different from the name of any other common table expression defined in the same WITH \<common_table_expression> clause, but *expression_name* can be the same as the name of a base table or view. Any reference to *expression_name* in the query uses the common table expression and not the base object.
   

@@ -1,4 +1,5 @@
 ---
+description: "Item Property Example (VB)"
 title: "Item Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Item property [ADO], Visual Basic example"
 ms.assetid: b4476603-691b-4081-8797-a3d0b331dce5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Item Property Example (VB)
 This example demonstrates how the [Item](../../../ado/reference/ado-api/item-property-ado.md) property accesses members of a collection. The example opens the ***Authors*** table of the ***Pubs*** database with a parameterized command.  

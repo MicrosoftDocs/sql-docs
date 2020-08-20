@@ -1,4 +1,5 @@
 ---
+description: "Index Object Properties, Methods, and Events"
 title: "Index Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Index object [ADOX], members"
 ms.assetid: 6f4e92e1-e7cb-45d8-aa86-cd749474f825
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Index Object Properties, Methods, and Events
 ## Properties/Collections  

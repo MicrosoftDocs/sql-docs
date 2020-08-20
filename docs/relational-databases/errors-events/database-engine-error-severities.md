@@ -1,5 +1,6 @@
 ---
 title: "Database Engine Error Severities | Microsoft Docs"
+description: Use this list of severity levels to understand the type of problem that SQL Server encountered when the SQL Server Database Engine raises an error.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Database Engine Error Severities
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   When an error is raised by the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], the severity of the error indicates the type of problem encountered by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## Levels of Severity  

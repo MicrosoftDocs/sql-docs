@@ -1,4 +1,5 @@
 ---
+description: "AllowNullsEnum"
 title: "AllowNullsEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "AllowNullsEnum enumeration [ADOX]"
 ms.assetid: 6acf3689-1a7f-4379-9d7f-df452ccbac27
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # AllowNullsEnum
 Specifies whether records with null values are indexed.  

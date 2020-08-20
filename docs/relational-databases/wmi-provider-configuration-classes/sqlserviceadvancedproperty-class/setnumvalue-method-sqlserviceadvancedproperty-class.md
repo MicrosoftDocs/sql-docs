@@ -1,4 +1,5 @@
 ---
+description: "SetNumValue Method (SqlServiceAdvancedProperty Class)"
 title: "SetNumValue Method (SqlServiceAdvancedProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
@@ -19,7 +20,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # SetNumValue Method (SqlServiceAdvancedProperty Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Sets the numeric value of a property.  
   
 ## Syntax  

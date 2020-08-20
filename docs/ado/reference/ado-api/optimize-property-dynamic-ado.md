@@ -1,4 +1,5 @@
 ---
+description: "Optimize Property-Dynamic (ADO)"
 title: "Optimize Property-Dynamic (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,8 +12,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "Optimize property [ADO]"
 ms.assetid: a491c4ce-2b04-4c84-be83-3846bde8d16b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Optimize Property-Dynamic (ADO)
 Specifies whether an index should be created on a [field](../../../ado/reference/ado-api/field-object.md).  

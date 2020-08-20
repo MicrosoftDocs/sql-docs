@@ -1,4 +1,5 @@
 ---
+description: "Cellset Example (VB)"
 title: "Cellset Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Cellset object [ADO MD], Visual Basic example"
 ms.assetid: 2666ad1c-b48e-4b2c-b269-5a9f4e4a7810
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Cellset Example (VB)
 This Visual Basic project demonstrates the basics of using ADO MD to access cube data. It displays member captions for column and row headers, then displays formatted values of specific cells within the cellset.  

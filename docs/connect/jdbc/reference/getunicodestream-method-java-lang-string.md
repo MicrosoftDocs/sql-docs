@@ -1,4 +1,5 @@
 ---
+description: "getUnicodeStream Method (java.lang.String)"
 title: "getUnicodeStream Method (java.lang.String) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: e8ea50a3-804a-4752-96e5-eb3d521f93c1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getUnicodeStream Method (java.lang.String)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

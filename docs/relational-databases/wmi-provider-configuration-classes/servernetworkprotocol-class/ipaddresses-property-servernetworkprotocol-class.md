@@ -1,4 +1,5 @@
 ---
+description: "IpAddresses Property (ServerNetworkProtocol Class)"
 title: "IpAddresses Property (ServerNetworkProtocol)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # IpAddresses Property (ServerNetworkProtocol Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the IP addresses associated with the server network protocol.  
   
 ## Syntax  

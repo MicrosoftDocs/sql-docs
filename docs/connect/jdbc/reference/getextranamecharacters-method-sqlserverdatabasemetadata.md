@@ -1,4 +1,5 @@
 ---
+description: "getExtraNameCharacters Method (SQLServerDatabaseMetaData)"
 title: "getExtraNameCharacters Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: a22becfe-0f07-4a15-8d11-06d4054b2369
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getExtraNameCharacters Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

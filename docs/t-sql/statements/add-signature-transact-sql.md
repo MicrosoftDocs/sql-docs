@@ -1,14 +1,12 @@
 ---
-title: "ADD SIGNATURE (Transact-SQL) | Microsoft Docs"
-ms.date: "05/15/2017"
+description: "ADD SIGNATURE (Transact-SQL)"
+title: ADD SIGNATURE (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "ADD SIGNATURE"
   - "ADD_SIGNATURE_TSQL"
-dev_langs: 
-  - "TSQL"
 helpviewer_keywords: 
   - "ADD SIGNATURE statement"
   - "adding digital signatures"
@@ -17,33 +15,40 @@ helpviewer_keywords:
 ms.assetid: 64d8b682-6ec1-4e5b-8aee-3ba11e72d21f
 author: VanMSFT
 ms.author: vanto
+ms.reviewer: ""
+ms.custom: ""
+ms.date: 06/10/2020
 ---
-# ADD SIGNATURE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  Adds a digital signature to a stored procedure, function, assembly, or trigger. Also adds a countersignature to a stored procedure, function, assembly, or trigger.  
-  
-  
- ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
-  
-## Syntax  
-  
-```  
-ADD [ COUNTER ] SIGNATURE TO module_class::module_name   
-    BY <crypto_list> [ ,...n ]  
+# ADD SIGNATURE (Transact-SQL)
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
+
+Adds a digital signature to a stored procedure, function, assembly, or trigger. Also adds a countersignature to a stored procedure, function, assembly, or trigger.
+
+![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+
+## Syntax
+
+```syntaxsql
+ADD [ COUNTER ] SIGNATURE TO module_class::module_name
+    BY <crypto_list> [ ,...n ]
   
 <crypto_list> ::=  
     CERTIFICATE cert_name  
-    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]  
-    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob   
+    | CERTIFICATE cert_name [ WITH PASSWORD = 'password' ]
+    | CERTIFICATE cert_name WITH SIGNATURE = signed_blob
     | ASYMMETRIC KEY Asym_Key_Name  
-    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]  
-    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob  
-```  
-  
-## Arguments  
- *module_class*  
- Is the class of the module to which the signature is added. The default for schema-scoped modules is OBJECT.  
+    | ASYMMETRIC KEY Asym_Key_Name [ WITH PASSWORD = 'password'.]
+    | ASYMMETRIC KEY Asym_Key_Name WITH SIGNATURE = signed_blob
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+
+*module_class*  
+Is the class of the module to which the signature is added. The default for schema-scoped modules is OBJECT.  
   
  *module_name*  
  Is the name of a stored procedure, function, assembly, or trigger to be signed or countersigned.  
@@ -52,7 +57,7 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  Is the name of a certificate with which to sign or countersign the stored procedure, function, assembly, or trigger.  
   
  WITH PASSWORD ='*password*'  
- Is the password that is required to decrypt the private key of the certificate or asymmetric key. This clause is only required if the private key is not protected by the database master key.  
+ Is the password that is required to decrypt the private key of the certificate or asymmetric key. This clause is only required if the private key isn't protected by the database master key.  
   
  SIGNATURE =*signed_blob*  
  Specifies the signed, binary large object (BLOB) of the module. This clause is useful if you want to ship a module without shipping the private key. When you use this clause, only the module, signature, and public key are required to add the signed binary large object to a database. *signed_blob* is the blob itself in hexadecimal format.  
@@ -60,8 +65,9 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
  ASYMMETRIC KEY *Asym_Key_Name*  
  Is the name of an asymmetric key with which to sign or counter-sign the stored procedure, function, assembly, or trigger.  
   
-## Remarks  
- The module being signed or countersigned and the certificate or asymmetric key used to sign it must already exist. Every character in the module is included in the signature calculation. This includes leading carriage returns and line feeds.  
+## Remarks
+
+The module being signed or countersigned and the certificate or asymmetric key used to sign it must already exist. Every character in the module is included in the signature calculation. This includes leading carriage returns and line feeds.  
   
  A module can be signed and countersigned by any number of certificates and asymmetric keys.  
   
@@ -69,35 +75,37 @@ ADD [ COUNTER ] SIGNATURE TO module_class::module_name
   
  If a module contains an EXECUTE AS clause, the security ID (SID) of the principal is also included as a part of the signing process.  
   
-> [!CAUTION]  
->  Module signing should only be used to grant permissions, never to deny or revoke permissions.  
+> [!CAUTION]
+> Module signing should only be used to grant permissions, never to deny or revoke permissions.  
   
  Inline table-valued functions cannot be signed.  
   
  Information about signatures is visible in the sys.crypt_properties catalog view.  
   
-> [!WARNING]  
+> [!WARNING]
 >  When recreating a procedure for signature, all the statements in the original batch must match recreation batch. If any portion of the batch differs, even in spaces or comments, the resultant signature will be different.  
   
 ## Countersignatures  
- When executing a signed module, the signatures will be temporarily added to the SQL token, but the signatures are lost if the module executes another module or if the module terminates execution. A countersignature is a special form of signature. By itself, a countersignature does not grant any permissions, however, it allows signatures made by the same certificate or asymmetric key to be kept for the duration of the call made to the countersigned object.  
+ When executing a signed module, the signatures will be temporarily added to the SQL token, but the signatures are lost if the module executes another module or if the module terminates execution. A countersignature is a special form of signature. By itself, a countersignature doesn't grant any permissions, however, it allows signatures made by the same certificate or asymmetric key to be kept for the duration of the call made to the countersigned object.  
   
- For example, presume that user Alice calls procedure ProcSelectT1ForAlice, which calls procedure procSelectT1, which selects from table T1. Alice has EXECUTE permission on ProcSelectT1ForAlice and procSelectT1, but she does not have SELECT permission on T1, and no ownership chaining is involved in this entire chain. Alice cannot access table T1, either directly, or through the use of ProcSelectT1ForAlice and procSelectT1. Since we want Alice to always use ProcSelectT1ForAlice for access, we don't want to grant her permission to execute procSelectT1. How can we accomplish this?  
+ For example, presume that user Alice calls procedure ProcSelectT1ForAlice, which calls procedure procSelectT1, which selects from table T1. Alice has EXECUTE permission on ProcSelectT1ForAlice and procSelectT1, but she doesn't have SELECT permission on T1, and no ownership chaining is involved in this entire chain. Alice cannot access table T1, either directly, or through the use of ProcSelectT1ForAlice and procSelectT1. Since we want Alice to always use ProcSelectT1ForAlice for access, we don't want to grant her permission to execute procSelectT1. How can we accomplish this?  
   
 -   If we sign procSelectT1, such that procSelectT1 can access T1, then Alice can invoke procSelectT1 directly and she doesn't have to call ProcSelectT1ForAlice.  
   
--   We could deny EXECUTE permission on procSelectT1 to Alice, but then Alice would not be able to call procSelectT1 through ProcSelectT1ForAlice either.  
+-   We could deny EXECUTE permission on procSelectT1 to Alice, but then Alice would not be able to call procSelectT1 through ProcSelectT1ForAlice.
   
 -   Signing ProcSelectT1ForAlice would not work by itself, because the signature would be lost in the call to procSelectT1.  
   
 However, by countersigning procSelectT1 with the same certificate used to sign ProcSelectT1ForAlice, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will keep the signature across the call chain and will allow access to T1. If Alice attempts to call procSelectT1 directly, she cannot access T1, because the countersignature doesn't grant any rights. Example C below, shows the [!INCLUDE[tsql](../../includes/tsql-md.md)] for this example.  
   
 ## Permissions  
- Requires ALTER permission on the object and CONTROL permission on the certificate or asymmetric key. If an associated private key is protected by a password, the user also must have the password.  
+
+Requires ALTER permission on the object and CONTROL permission on the certificate or asymmetric key. If an associated private key is protected by a password, the user also must have the password.  
   
 ## Examples  
   
-### A. Signing a stored procedure by using a certificate  
+### A. Signing a stored procedure by using a certificate
+
  The following example signs the stored procedure `HumanResources.uspUpdateEmployeeLogin` with the certificate `HumanResourcesDP`.  
   
 ```  
@@ -107,8 +115,9 @@ ADD SIGNATURE TO HumanResources.uspUpdateEmployeeLogin
 GO  
 ```  
   
-### B. Signing a stored procedure by using a signed BLOB  
- The following example creates a new database and creates a certificate to use in the example. The example creates and signs a simple stored procedure and retrieves the signature BLOB from `sys.crypt_properties`. The signature is then dropped and added again. The example signs the procedure by using the WITH SIGNATURE syntax.  
+### B. Signing a stored procedure by using a signed BLOB
+
+The following example creates a new database and creates a certificate to use in the example. The example creates and signs a simple stored procedure and retrieves the signature BLOB from `sys.crypt_properties`. The signature is then dropped and added again. The example signs the procedure by using the WITH SIGNATURE syntax.  
   
 ```  
 CREATE DATABASE TestSignature ;  
@@ -153,8 +162,9 @@ ADD SIGNATURE TO [sp_signature_demo]
 GO  
 ```  
   
-### C. Accessing a procedure using a countersignature  
- The following example shows how countersigning can help control access to an object.  
+### C. Accessing a procedure using a countersignature
+
+The following example shows how countersigning can help control access to an object.  
   
 ```  
 -- Create tesT1 database  
@@ -239,8 +249,7 @@ DROP LOGIN Alice;
   
 ```  
   
-## See Also  
- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)   
- [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)  
-  
-  
+## See Also
+
+- [sys.crypt_properties &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-crypt-properties-transact-sql.md)
+- [DROP SIGNATURE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-signature-transact-sql.md)

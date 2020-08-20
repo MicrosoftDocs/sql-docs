@@ -1,4 +1,5 @@
 ---
+description: "Step 2: Initialize the Application"
 title: "Step 2: Initialize the Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "initializing applications [ODBC]"
   - "application process [ODBC], initializing applications"
 ms.assetid: 23a7a230-ae2c-4a5e-9760-d2e17f92c389
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Step 2: Initialize the Application
 The second step is to initialize the application, as shown in the following illustration. Exactly what is done here varies with the application.  

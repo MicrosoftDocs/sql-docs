@@ -1,4 +1,5 @@
 ---
+description: "Hierarchical Data (SQL Server)"
 title: "Hierarchical Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/04/2019"
@@ -21,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Hierarchical Data (SQL Server)
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 
   The built-in **hierarchyid** data type makes it easier to store and query hierarchical data. **hierarchyid** is optimized for representing trees, which are the most common type of hierarchical data.  
   

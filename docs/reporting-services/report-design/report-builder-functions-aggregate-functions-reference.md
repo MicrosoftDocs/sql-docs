@@ -1,5 +1,6 @@
 ---
-title: "Aggregate Functions Reference (Report Builder and SSRS) | Microsoft Docs"
+title: "Aggregate Functions Reference (Report Builder) | Microsoft Docs"
+description: Use built-in aggregate functions in expressions in Report Builder to include aggregated values in your report. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

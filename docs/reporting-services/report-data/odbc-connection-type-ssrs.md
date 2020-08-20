@@ -1,5 +1,6 @@
 ---
-title: "ODBC Connection Type (SSRS) | Microsoft Docs"
+title: "ODBC Connection Type | Microsoft Docs"
+description: Use the information in this article about the ODBC connection type to learn how to build a data source.
 ms.date: 03/17/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

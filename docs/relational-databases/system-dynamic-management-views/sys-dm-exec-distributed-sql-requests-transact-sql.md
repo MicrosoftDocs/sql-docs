@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_distributed_sql_requests (Transact-SQL)"
 title: "sys.dm_exec_distributed_sql_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -19,8 +20,8 @@ helpviewer_keywords:
   - "sys.dm_exec_distributed_requests management view"
   - "dm_exec_distributed_requests management view"
 ms.assetid: d065dc01-35d4-472f-9554-53ac41e7d104
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_distributed_sql_requests (Transact-SQL)

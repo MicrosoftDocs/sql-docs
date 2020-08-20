@@ -1,4 +1,5 @@
 ---
+description: "getDate Method (java.lang.String) (SQLServerResultSet)"
 title: "getDate Method (java.lang.String) column | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 821058ae-cbe3-4a14-aa02-d55e45491437
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getDate Method (java.lang.String) (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

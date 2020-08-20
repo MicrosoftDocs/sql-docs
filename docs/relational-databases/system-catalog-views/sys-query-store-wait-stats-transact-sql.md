@@ -1,4 +1,5 @@
 ---
+description: "sys.query_store_wait_stats (Transact-SQL)"
 title: "sys.query_store_wait_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/19/2019"
@@ -16,13 +17,13 @@ helpviewer_keywords:
   - "query_store_wait_stats catalog view"
   - "sys.query_store_wait_stats catalog view"
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_wait_stats (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
   Contains  information about the wait information for the query.  
   

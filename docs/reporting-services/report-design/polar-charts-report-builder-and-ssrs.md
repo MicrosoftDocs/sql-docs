@@ -1,5 +1,6 @@
 ---
-title: "Polar Charts (Report Builder and SSRS) | Microsoft Docs"
+title: "Polar Charts (Report Builder) | Microsoft Docs"
+description: Discover the use of a polar chart with points grouped by category on a circle and values represented by the length of a point from the center of the circle.
 ms.date: 03/03/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

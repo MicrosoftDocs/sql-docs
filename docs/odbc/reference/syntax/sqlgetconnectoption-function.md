@@ -1,4 +1,5 @@
 ---
+description: "SQLGetConnectOption Function"
 title: "SQLGetConnectOption Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetConnectOption function [ODBC]"
 ms.assetid: 59cde899-7957-4b5e-8677-f34d3b859bfd
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetConnectOption Function
 **Conformance**  

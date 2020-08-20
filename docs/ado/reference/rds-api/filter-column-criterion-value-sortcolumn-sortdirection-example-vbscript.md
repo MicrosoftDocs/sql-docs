@@ -1,4 +1,5 @@
 ---
+description: "FilterColumn, FilterCriterion, FilterValue, SortColumn, and SortDirection Properties and Reset Method Example (VBScript)"
 title: "Set RDS.DataControl Server and Bind to HTML table (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,8 +18,8 @@ helpviewer_keywords:
   - "SortColumn property [RDS], VBScript example"
   - "FilterValue property [ADO], VBScript example"
 ms.assetid: 8a74802f-34d6-4676-bf94-07df5f8bff66
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # FilterColumn, FilterCriterion, FilterValue, SortColumn, and SortDirection Properties and Reset Method Example (VBScript)
 > [!IMPORTANT]

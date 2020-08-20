@@ -1,4 +1,5 @@
 ---
+description: "DROP RESOURCE POOL (Transact-SQL)"
 title: "DROP RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # DROP RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a user-defined Resource Governor resource pool.  
   
@@ -27,13 +28,15 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP RESOURCE POOL pool_name  
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *pool_name*  
  Is the name of an existing user-defined resource pool.  
   

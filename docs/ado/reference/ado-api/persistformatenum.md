@@ -1,4 +1,5 @@
 ---
+description: "PersistFormatEnum"
 title: "PersistFormatEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "PersistFormatEnum enumeration [ADO]"
 ms.assetid: ebe1a2ab-e9f1-43a2-8f94-b190c9613d70
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # PersistFormatEnum
 Specifies the format in which to save a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

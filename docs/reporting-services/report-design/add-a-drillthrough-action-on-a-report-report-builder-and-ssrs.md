@@ -1,5 +1,6 @@
 ---
-title: "Add a Drillthrough Action on a Report (Report Builder and SSRS) | Microsoft Docs"
+title: "Add a Drillthrough Action on a Report (Report Builder) | Microsoft Docs"
+description: Improve query performance with the addition of a drillthrough action link in a text box, an image, or data points on a chart.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

@@ -1,4 +1,5 @@
 ---
+description: "FieldStatusEnum"
 title: "FieldStatusEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "FieldStatusEnum enumeration [ADO]"
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # FieldStatusEnum
 Specifies the [status](../../../ado/reference/ado-api/status-property-ado-field.md) of a [Field Object](../../../ado/reference/ado-api/field-object.md).  

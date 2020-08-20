@@ -1,4 +1,5 @@
 ---
+description: "Export a Policy-Based Management Policy"
 title: "Export a Policy-Based Management Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -14,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Export a Policy-Based Management Policy
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to export a Policy-Based Management policy in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)].  
   
  **In This Topic**  

@@ -1,4 +1,5 @@
 ---
+description: "Status Property (ADO Field)"
 title: "Status Property (ADO Field) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Status property [ADO Field]"
 ms.assetid: 8cd1f7f4-0a3a-4f07-b8ba-6582e70140ad
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Status Property (ADO Field)
 Indicates the status of a [Field](../../../ado/reference/ado-api/field-object.md) object.  

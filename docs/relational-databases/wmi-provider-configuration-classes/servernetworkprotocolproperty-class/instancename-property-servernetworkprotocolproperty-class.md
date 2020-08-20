@@ -1,4 +1,5 @@
 ---
+description: "InstanceName Property (ServerNetworkProtocolProperty Class)"
 title: "InstanceName Property (ServerNetworkProtocolProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # InstanceName Property (ServerNetworkProtocolProperty Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the name of an instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] on which the server network protocol is installed.  
   
 ## Syntax  

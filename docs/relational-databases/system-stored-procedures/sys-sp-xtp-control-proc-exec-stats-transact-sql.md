@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_xtp_control_proc_exec_stats (Transact-SQL)"
 title: "sys.sp_xtp_control_proc_exec_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.sp_xtp_control_proc_exec_stats"
 ms.assetid: f5119808-76a1-4522-8529-9e02ee39adcb
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.sp_xtp_control_proc_exec_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Enables statistics collection for natively compiled stored procedures for the instance.  
   

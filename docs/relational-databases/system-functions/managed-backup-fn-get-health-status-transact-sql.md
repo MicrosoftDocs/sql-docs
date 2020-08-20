@@ -1,4 +1,5 @@
 ---
+description: "managed_backup.fn_get_health_status (Transact-SQL)"
 title: "managed_backup.fn_get_health_status (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -22,7 +23,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # managed_backup.fn_get_health_status (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Returns a table of 0, one or more rows of aggregated count of the errors reported by Extended Events for a specified period of time.  
   

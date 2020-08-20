@@ -1,4 +1,5 @@
 ---
+description: "SQLServerCallableStatement Class"
 title: "SQLServerCallableStatement Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,13 +9,13 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 30710a63-c05d-47d9-9cf9-c087a1c76373
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLServerCallableStatement Class
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  Lets you specify the stored procedure name to call along with input and output parameters. This class also provides the ability to retrieve the return status value with the ? = call( ?, ..) syntax.  
+  Lets you specify the stored procedure name to call along with input and output parameters. This class also provides the ability to retrieve the return status value with the `? = call( ?, ..)` syntax.  
   
  **Package:** com.microsoft.sqlserver.jdbc  
   

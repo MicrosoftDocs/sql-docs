@@ -1,4 +1,5 @@
 ---
+description: "FILEPROPERTYEX (Transact-SQL)"
 title: "FILEPROPERTYEX (Transact-SQL) | Microsoft Docs"
 ms.date: "07/23/2019"
 ms.prod: sql
@@ -21,7 +22,7 @@ author: stevestein
 ms.author: sstein
 ---
 # FILEPROPERTYEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns the specified extended file property value when a file name in the current database and a property name are specified. Returns NULL for files that are not in the current database or for extended file properties that do not exist. Currently, extended file properties only apply to databases that are in Azure Blob storage.  
   

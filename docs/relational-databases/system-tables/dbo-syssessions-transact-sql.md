@@ -1,4 +1,5 @@
 ---
+description: "dbo.syssessions (Transact-SQL)"
 title: "dbo.syssessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/30/2019"
@@ -16,12 +17,12 @@ dev_langs:
 helpviewer_keywords: 
   - "syssessions system table"
 ms.assetid: 187819b6-c7f4-4a26-b74c-0a89e96695cf
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # dbo.syssessions (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Each time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent starts, it creates a new session. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent uses sessions to preserve the status of jobs when the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent service is restarted or stopped unexpectedly. Each row of the **syssessions** table contains information about one session. Use the **sysjobactivity** table to view the job state at the end of each session.  
   

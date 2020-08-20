@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_xe_map_values (Transact-SQL)"
 title: "sys.dm_xe_map_values (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "sys.dm_xe_map_values dynamic management view"
   - "xe"
 ms.assetid: c0c5dd7e-9cee-47e2-b65a-88194c00aa1f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_xe_map_values (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a mapping of internal numeric keys to human-readable text.  
  

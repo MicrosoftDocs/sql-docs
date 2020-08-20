@@ -1,4 +1,5 @@
 ---
+description: "execute Method (java.lang.String) (SQLServerStatement)"
 title: "execute Method (java.lang.String) (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 64ac78b8-d5b3-4134-9b72-d2b0c52168a2
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # execute Method (java.lang.String) (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

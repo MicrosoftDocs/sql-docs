@@ -1,4 +1,5 @@
 ---
+description: "Graph processing with SQL Server and Azure SQL Database"
 title: "Graph processing"
 titleSuffix:  SQL Server and Azure SQL Database
 ms.date: "06/26/2019"
@@ -17,24 +18,24 @@ ms.custom: seo-dt-2019
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Graph processing with SQL Server and Azure SQL Database
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] offers graph database capabilities to model many-to-many relationships. The graph relationships are integrated into [!INCLUDE[tsql-md](../../includes/tsql-md.md)] and receive the benefits of using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] as the foundational database management system.
 
 
 ## What is a graph database?  
 A graph database is a collection of nodes (or vertices) and edges (or relationships). A node represents an entity (for example, a person or an organization) and an edge represents a relationship between the two nodes that it connects (for example, likes or friends). Both nodes and edges may have properties associated with them. Here are some features that make a graph database unique:  
--	Edges or relationships are first class entities in a Graph Database and can have attributes or properties associated with them. 
--	A single edge can flexibly connect multiple nodes in a Graph Database.
--	You can express pattern matching and multi-hop navigation queries easily.
--	You can express transitive closure and polymorphic queries easily.
+-    Edges or relationships are first class entities in a Graph Database and can have attributes or properties associated with them. 
+-    A single edge can flexibly connect multiple nodes in a Graph Database.
+-    You can express pattern matching and multi-hop navigation queries easily.
+-    You can express transitive closure and polymorphic queries easily.
 
 ## When to use a graph database
 
-There is nothing a graph database can achieve, which cannot be achieved using a relational database. However, a graph database can make it easier to express certain kind of queries. Also, with specific optimizations, certain queries may perform better. Your decision to choose one over the other can be based on following factors:  
--	Your application has hierarchical data. The HierarchyID datatype can be used to implement hierarchies, but it has some limitations. For example, it does not allow you to store multiple parents for a node.
--	Your application has complex many-to-many relationships; as application evolves, new relationships are added.
--	You need to analyze interconnected data and relationships.
+A relational database can achieve anything a graph database can. However, a graph database makes it easier to express certain kinds of queries. Also, with specific optimizations, certain queries may perform better. Your decision to choose either a relational or graph database is based on following factors:  
+-    Your application has hierarchical data. The HierarchyID datatype can be used to implement hierarchies, but it has some limitations. For example, it does not allow you to store multiple parents for a node.
+-    Your application has complex many-to-many relationships; as application evolves, new relationships are added.
+-    You need to analyze interconnected data and relationships.
 
 ## Graph features introduced in [!INCLUDE[sssqlv14](../../includes/sssqlv14-md.md)] 
 We are starting to add graph extensions to SQL Server, to make storing and querying graph data easier. Following features are introduced in the first release. 

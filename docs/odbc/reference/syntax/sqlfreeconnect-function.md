@@ -1,4 +1,5 @@
 ---
+description: "SQLFreeConnect Function"
 title: "SQLFreeConnect Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLFreeConnect function [ODBC]"
 ms.assetid: 0d22eaeb-3c75-47fb-af9a-6f7397e61b9c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLFreeConnect Function
 **Conformance**  

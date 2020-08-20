@@ -1,4 +1,5 @@
 ---
+description: "MSreplication_subscriptions (Transact-SQL)"
 title: "MSreplication_subscriptions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSreplication_subscriptions system table"
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSreplication_subscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSreplication_subscriptions** table contains one row of replication information for each Distribution Agent servicing the local Subscriber database. This table is stored in the subscription database.  
   

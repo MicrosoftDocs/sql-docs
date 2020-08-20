@@ -1,4 +1,5 @@
 ---
+description: "rowversion (Transact-SQL)"
 title: "rowversion (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
@@ -28,7 +29,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # rowversion (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Is a data type that exposes automatically generated, unique binary numbers within a database. **rowversion** is generally used as a mechanism for version-stamping table rows. The storage size is 8 bytes. The **rowversion** data type is just an incrementing number and does not preserve a date or a time. To record a date or time, use a **datetime2** data type.
   
@@ -75,7 +76,7 @@ INSERT INTO MyTest (myKey, myValue) VALUES (2, 0);
 GO  
 ```  
   
-You can then use the following sample [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to implement optimistic concurrency control on the `MyTest` table during the update.
+You can then use the following sample [!INCLUDE[tsql](../../includes/tsql-md.md)] statements to implement optimistic concurrency control on the `MyTest` table during the update. The script uses `<myRv>` to represent the **rowversion** value from the last time you read the row. Replace the value with the actual **rowversion** value. An example of an actual **rowversion** value is `0x00000000000007D3`.
   
 ```sql
 DECLARE @t TABLE (myKey int);  
@@ -83,7 +84,7 @@ UPDATE MyTest
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND RV = myRv;  
+    AND RV = <myRv>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  
@@ -93,12 +94,12 @@ IF (SELECT COUNT(*) FROM @t) = 0
     END;  
 ```  
   
-`myRv` is the **rowversion** column value for the row that indicates the last time that you read the row. This value must be replaced by the actual **rowversion** value. An example of the actual **rowversion** value is 0x00000000000007D3.
-  
+
+
 You can also put the sample [!INCLUDE[tsql](../../includes/tsql-md.md)] statements into a transaction. By querying the `@t` variable in the scope of the transaction, you can retrieve the updated `myKey` column of the table without requerying the `MyTest` table.
-  
-The following is the same example using the **timestamp** syntax:
-  
+
+The following is the same example using the **timestamp** syntax. Replace `<myTS>` with an actual **timestamp**.
+
 ```sql
 CREATE TABLE MyTest2 (myKey int PRIMARY KEY  
     ,myValue int, TS timestamp);  
@@ -112,7 +113,7 @@ UPDATE MyTest2
 SET myValue = 2  
     OUTPUT inserted.myKey INTO @t(myKey)   
 WHERE myKey = 1   
-    AND TS = myTS;  
+    AND TS = <myTS>;  
 IF (SELECT COUNT(*) FROM @t) = 0  
     BEGIN  
         RAISERROR ('error changing row with myKey = %d'  

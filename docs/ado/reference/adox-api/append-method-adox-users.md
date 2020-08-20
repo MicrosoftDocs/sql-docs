@@ -1,4 +1,5 @@
 ---
+description: "Append Method (ADOX Users)"
 title: "Append Method (ADOX Users) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Append method [ADOX]"
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Append Method (ADOX Users)
 Adds a new [User](../../../ado/reference/adox-api/user-object-adox.md) object to the [Users](../../../ado/reference/adox-api/users-collection-adox.md) collection.  

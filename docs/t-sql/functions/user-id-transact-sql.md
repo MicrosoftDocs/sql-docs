@@ -1,4 +1,5 @@
 ---
+description: "USER_ID (Transact-SQL)"
 title: "USER_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -24,7 +25,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # USER_ID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the identification number for a database user.  
   
@@ -40,7 +41,9 @@ ms.author: vanto
 USER_ID ( [ 'user' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *user*  
  Is the username to be used. *user* is **nchar**. If a **char** value is specified, it is implicitly converted to **nchar**. The parentheses are required.  
   

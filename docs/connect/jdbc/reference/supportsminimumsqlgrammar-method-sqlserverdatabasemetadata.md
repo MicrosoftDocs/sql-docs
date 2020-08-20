@@ -1,4 +1,5 @@
 ---
+description: "supportsMinimumSQLGrammar Method (SQLServerDatabaseMetaData)"
 title: "supportsMinimumSQLGrammar Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 40f5d727-1ce7-414d-867d-589ead7b2a29
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # supportsMinimumSQLGrammar Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_drop_job (Transact-SQL)"
 title: "sys.sp_cdc_drop_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_drop_job"
 ms.assetid: e8265846-8051-4848-b28e-fac27c10bdeb
-author: rothja
-ms.author: jroth
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.sp_cdc_drop_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Removes a change data capture cleanup or capture job for the current database from msdb.  
   

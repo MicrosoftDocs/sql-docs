@@ -1,4 +1,5 @@
 ---
+description: "Type Property Example (Property) (VC++)"
 title: "Type Property Example (Property) (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Type property [property] [ADO], VC++ example"
 ms.assetid: a4e23508-fbf3-4468-be55-212e7238802b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Type Property Example (Property) (VC++)
 This example demonstrates the [Type](../../../ado/reference/ado-api/type-property-ado.md) property. It is a model of a utility for listing the names and types of a collection, like [Properties](../../../ado/reference/ado-api/properties-collection-ado.md), [Fields](../../../ado/reference/ado-api/fields-collection-ado.md), etc.  

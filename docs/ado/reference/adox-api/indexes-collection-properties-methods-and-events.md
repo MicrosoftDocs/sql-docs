@@ -1,4 +1,5 @@
 ---
+description: "Indexes Collection Properties, Methods, and Events"
 title: "Indexes Collection Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Indexes collection [ADOX], members"
 ms.assetid: b27b5c37-3db2-4831-a447-ee6442e24d87
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Indexes Collection Properties, Methods, and Events
 ## Properties  

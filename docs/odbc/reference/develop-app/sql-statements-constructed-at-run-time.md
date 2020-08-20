@@ -1,4 +1,5 @@
 ---
+description: "SQL Statements Constructed at Run Time"
 title: "SQL Statements Constructed at Run Time | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "SQL statements [ODBC], constructing"
   - "SQL statements [ODBC], building at run time"
 ms.assetid: f6554486-d49c-436a-82e3-4c158d26acd8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQL Statements Constructed at Run Time
 Applications that perform ad hoc analysis commonly build SQL statements at run time. For example, a spreadsheet might allow a user to select columns from which to retrieve data:  

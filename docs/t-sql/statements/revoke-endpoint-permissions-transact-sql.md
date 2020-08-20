@@ -1,4 +1,5 @@
 ---
+description: "REVOKE Endpoint Permissions (Transact-SQL)"
 title: "REVOKE Endpoint Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -18,7 +19,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # REVOKE Endpoint Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Revokes permissions granted or denied on an endpoint.  
   
@@ -26,7 +27,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]   
     ON ENDPOINT :: endpoint_name  
@@ -41,7 +42,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ]
     | SQL_Server_login_from_AsymKey  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on an endpoint. For a list of the permissions, see the Remarks section later in this topic.  
   

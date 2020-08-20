@@ -3,7 +3,7 @@ title: "SUSE: Install SQL Server on Linux"
 description:  This quickstart shows how to install SQL Server 2017 or SQL Server 2019 on SUSE Linux Enterprise Server and then create and query a database with sqlcmd.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 11/04/2019
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -11,7 +11,7 @@ ms.assetid: 31ddfb80-f75c-4f51-8540-de6213cb68b8
 ---
 # Quickstart: Install SQL Server and create a database on SUSE Linux Enterprise Server
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -25,7 +25,7 @@ In this quickstart, you install SQL Server 2017 or SQL Server 2019 on SUSE Linux
 In this quickstart, you install SQL Server 2019 on SUSE Linux Enterprise Server (SLES) v12. You then connect with **sqlcmd** to create your first database and run queries.
 
 > [!IMPORTANT]
-> SQL Server 2019 is supported on SUSE Enterprise Linux Server v12 SP2, SP3, or SP4.
+> SQL Server 2019 is supported on SUSE Enterprise Linux Server v12 SP2, SP3, SP4 or SP5.
 
 ::: moniker-end
 
@@ -44,7 +44,7 @@ You must have a SLES v12 SP2 machine with **at least 2 GB** of memory. The file 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-You must have a SLES v12 SP2, SP3, or SP4 machine with **at least 2 GB** of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
+You must have a SLES v12 SP2, SP3, SP4 or SP5 machine with **at least 2 GB** of memory. The file system must be **XFS** or **EXT4**. Other file systems, such as **BTRFS**, are unsupported.
 
 ::: moniker-end
 
@@ -178,7 +178,7 @@ To create a database, you need to connect with a tool that can run Transact-SQL 
    sudo zypper --gpg-auto-import-keys refresh
    ```
 
-1. Install **mssql-tools** with the unixODBC developer package.
+1. Install **mssql-tools** with the unixODBC developer package. For more information, see [Install the Microsoft ODBC driver for SQL Server (Linux)](../connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md).
 
    ```bash
    sudo zypper install -y mssql-tools unixODBC-devel

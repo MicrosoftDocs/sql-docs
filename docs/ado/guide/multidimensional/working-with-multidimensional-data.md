@@ -1,4 +1,5 @@
 ---
+description: "Working with Multidimensional Data"
 title: "Working with Multidimensional Data | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "multidimensional data [ADO]"
 ms.assetid: 84387746-aa3e-44fd-ad6c-a8214a6966dc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Working with Multidimensional Data
 A *cellset* is the result of a query on multidimensional data. It consists of a collection of axes, usually no more than four axes and typically only two or three. An *axis* is a collection of members from one or more dimensions, which is used to locate or filter specific values in a cube.  

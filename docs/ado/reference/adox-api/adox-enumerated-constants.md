@@ -1,4 +1,5 @@
 ---
+description: "ADOX Enumerated Constants"
 title: "ADOX Enumerated Constants | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "enumerated constants [ADOX]"
 ms.assetid: 9d91f511-d46f-44ef-97ef-77bf93836186
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADOX Enumerated Constants
 To assist debugging, the ADOX enumerated constants list a value for each constant. However, this value is purely advisory, and may change from one release of ADOX to another. Your code should only depend on the name, not the actual value, of enumerated constants.  

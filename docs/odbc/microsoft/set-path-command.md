@@ -1,4 +1,5 @@
 ---
+description: "SET PATH Command"
 title: "SET PATH Command | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SET PATH command [ODBC]"
 ms.assetid: db488d1e-0963-4f45-8c76-a23b9bde9e9d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SET PATH Command
 Specifies a path for file searches. For driver-specific information, see the Remarks.  

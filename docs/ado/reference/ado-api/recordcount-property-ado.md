@@ -1,4 +1,5 @@
 ---
+description: "RecordCount Property (ADO)"
 title: "RecordCount Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "RecordCount property [ADO]"
 ms.assetid: 834f0121-394a-44d4-ad7d-999b43a6fe63
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RecordCount Property (ADO)
 

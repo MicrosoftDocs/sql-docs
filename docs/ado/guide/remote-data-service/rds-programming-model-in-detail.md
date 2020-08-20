@@ -1,4 +1,5 @@
 ---
+description: "RDS Programming Model in Detail"
 title: "RDS Programming Model in Detail | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS programming model [ADO], details"
 ms.assetid: 3e57af8d-519b-4467-a0bd-af468534cefd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RDS Programming Model in Detail
 The following are key elements of the RDS programming model:  

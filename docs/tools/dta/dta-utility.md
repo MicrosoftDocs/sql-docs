@@ -1,5 +1,6 @@
 ---
 title: dta Utility
+description: The dta utility is a command prompt version of Database Engine Tuning Advisor that allows you to use functionality in applications and scripts.
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: tools-other
@@ -17,7 +18,6 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-ms.manager: jroth
 ms.reviewer: ""
 ms.custom: seo-lt-2019
 ms.date: 01/09/2017
@@ -25,7 +25,7 @@ ms.date: 01/09/2017
 
 # dta Utility
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 The **dta** utility is the command prompt version of Database Engine Tuning Advisor. The **dta** utility is designed to allow you to use Database Engine Tuning Advisor functionality in applications and scripts.  
 

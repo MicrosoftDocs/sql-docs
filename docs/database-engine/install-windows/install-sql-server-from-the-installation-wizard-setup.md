@@ -1,5 +1,6 @@
 ---
 title: "Install using graphical user interface"
+description: This article provides a step-by-step procedure for installing a new instance of SQL Server by using the SQL Server Setup Installation Wizard.
 ms.custom: "seo-lt-2019"
 ms.date: "12/13/2019"
 ms.prod: sql
@@ -17,7 +18,7 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Install SQL Server from the Installation Wizard (Setup)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server -Windows Only](../../includes/applies-to-version/sql-windows-only.md)]
 
 This article explains how to install SQL Server with the Installation Wizard. It applies to [!INCLUDE[SQLServer2016](../../includes/sssql15-md.md)] and [!INCLUDE[SQLServer2017](../../includes/sssqlv14-md.md)].
 
@@ -61,9 +62,9 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
    To continue, select **Next**.
 
 1. On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms** check box, and then select **Next**.  
-
-   >[!NOTE]
-   > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016).
+    
+   > [!NOTE]
+   > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback).
 
 1. In the **Global Rules** page, Setup will automatically advance to the **Product Updates** page if there are no rule errors.  
   
@@ -221,15 +222,17 @@ This is not applicable to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.
   
 1. The Installation Wizard runs the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Installation Center. To create a new installation of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], select **Installation** in the left navigation area, and then select **New [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] standalone installation or add features to an existing installation**.  
 
-1. On the **Product Key** page, select an option to indicate whether you're installing a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or a production version that has a PID key. For more information, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-2017.md).  
+1. On the **Product Key** page, select an option to indicate whether you're installing a free edition of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] or a production version that has a PID key. For more information, see [Editions and supported features of SQL Server 2017](../../sql-server/editions-and-components-of-sql-server-version-15.md).  
   
    To continue, select **Next**.
-
   
 1. On the **License Terms** page, review the license agreement. If you agree, select the **I accept the license terms and [privacy statement](https://privacy.microsoft.com/privacystatement)** check box, and then select **Next**.  
 
-   >[!NOTE]
-   > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback?view=sql-server-2016).
+   > [!NOTE]
+   > If an Enterprise Server/CAL license Product Key is entered, and the machine has more than 20 physical cores, or 40 logical cores when Hyper-Threading is enabled, a warning is shown during setup. You can still continue setup by selecting the **Check this box to acknowledge this limitation or click Back/Cancel to enter an Enterprise Core product license that supports the operating system maximum** check box, or click **Back** and enter a License Key that supports the operating system maximum number of processors.
+
+   > [!NOTE]
+   > SQL Server transmits information about your installation experience, as well as other usage and performance data to help Microsoft improve the product. To learn more about SQL Server data processing and privacy controls, see the [privacy statement](https://privacy.microsoft.com/privacystatement) and [Configure SQL Server to send feedback to Microsoft](https://docs.microsoft.com/sql/sql-server/sql-server-customer-feedback).
 
 1. In the **Global Rules** page, Setup will automatically advance to the **Product Updates** page if there are no rule errors.  
   

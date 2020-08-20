@@ -1,4 +1,5 @@
 ---
+description: "Delete Method Example (VC++)"
 title: "Delete Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Delete method [ADO], VC++ example"
 ms.assetid: 7cc78fb5-2701-49dc-bc22-06613b10cecb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Delete Method Example (VC++)
 This example uses the [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md) method to remove a specified record from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

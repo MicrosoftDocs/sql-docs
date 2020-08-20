@@ -1,4 +1,5 @@
 ---
+description: "sp_replmonitorhelppublisher (Transact-SQL)"
 title: "sp_replmonitorhelppublisher (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replmonitorhelppublisher"
 ms.assetid: 171501fe-4b74-4647-96c3-7691c777e01b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_replmonitorhelppublisher (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Returns current status information for one or more Publishers associated with a Distributor. This stored procedure, which is used to monitor replication, is executed at the Distributor on the distribution database.  
   

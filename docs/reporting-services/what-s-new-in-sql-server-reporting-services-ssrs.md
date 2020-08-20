@@ -1,5 +1,6 @@
 ---
-title: "What's new in Reporting Services (SSRS) | Microsoft Docs"
+title: "What's new in Reporting Services | Microsoft Docs"
+description: Learn about what's new in the different versions of SQL Server Reporting Services, including changes to the major feature areas.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -45,7 +46,7 @@ With Azure Active Directory Application Proxy, you no longer need to manage your
 
 ### Custom headers
 
-Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. See [Custom headers](tools/server-properties-advanced-page-reporting-services.md#custom-headers) in the **Server Properties Advanced Page** article for details.
+Sets header values for all URLs matching the specified regex pattern. Users can update the custom header value with valid XML to set header values for selected request URLs. Admins can add any number of headers in the XML. See [Custom headers](tools/server-properties-advanced-page-reporting-services.md#customheaders) in the **Server Properties Advanced Page** article for details.
 
 ### Transparent Database Encryption
 
@@ -79,7 +80,7 @@ In the latest releases of Report Builder and SQL Server Data Tools, you can crea
 
 ### REST API support
 
-To enable development of modern applications and customization, SQL Server Reporting Services now supports a fully OpenAPI compliant RESTful API. The full API specification and documentation can now be found on [swaggerhub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
+To enable development of modern applications and customization, SQL Server Reporting Services now supports a fully OpenAPI compliant RESTful API. The full API specification and documentation can now be found on [SwaggerHub](https://app.swaggerhub.com/apis/microsoft-rs/SSRS/2.0).
 
 ### Query designer support for DAX now in Report Builder and SQL Server Data Tools
 
@@ -227,9 +228,8 @@ The new release of SSDT includes the project templates for [!INCLUDE[ssRSCurrent
 
 **New Report Builder User Interface:** The core [!INCLUDE[ssRBnoversion](../includes/ssrbnoversion.md)] user interface is now a modern look and feel with streamlined UI elements.  
 
-|||  
-|-|-|  
 |New|Previous|  
+|-|-|  
 |![ssrs_rbfacelift_new](../reporting-services/media/ssrs-rbfacelift-new.png "ssrs_rbfacelift_new")|![ssrs_rbfacelift_old](../reporting-services/media/ssrs-rbfacelift-old.png "ssrs_rbfacelift_old")|  
 
 **Custom Parameters Pane:** You can now customize the parameters pane. Using the design surface in Report Builder, you can drag a parameter to a specific column and row in the parameters pane. You can add and remove columns to change the layout of the pane. For more information, see [Customize the Parameters Pane in a Report &#40;Report Builder&#41;](../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md).  

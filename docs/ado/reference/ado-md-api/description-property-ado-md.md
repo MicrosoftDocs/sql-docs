@@ -1,4 +1,5 @@
 ---
+description: "Description Property (ADO MD)"
 title: "Description Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,8 +19,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Description property [ADO MD]"
 ms.assetid: 6d626d35-0bf3-4f24-9934-ad9c9c91273a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Description Property (ADO MD)
 Returns a text explanation of the current object.  
@@ -33,8 +34,17 @@ Returns a text explanation of the current object.
  This property is only supported on **Member** objects that belong to a [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) object. An error occurs when this property is referenced from **Member** objects belonging to a [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) object.  
   
 ## Applies To  
-  
-||||  
-|-|-|-|  
-|[CubeDef Object (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)|[Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)|[Hierarchy Object (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)|  
-|[Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)|[Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)||
+
+:::row:::
+    :::column:::
+        [CubeDef Object (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)  
+        [Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)  
+    :::column-end:::
+    :::column:::
+        [Hierarchy Object (ADO MD)](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)  
+        [Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+    :::column-end:::
+    :::column:::
+        [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+    :::column-end:::
+:::row-end:::

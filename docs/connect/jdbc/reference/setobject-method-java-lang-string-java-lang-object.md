@@ -1,4 +1,5 @@
 ---
+description: "setObject Method (java.lang.String, java.lang.Object)"
 title: "setObject Method (java.lang.String, java.lang.Object) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 14b84409-5510-4642-a83b-732d8511c5b1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setObject Method (java.lang.String, java.lang.Object)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

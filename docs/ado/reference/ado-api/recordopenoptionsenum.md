@@ -1,4 +1,5 @@
 ---
+description: "RecordOpenOptionsEnum"
 title: "RecordOpenOptionsEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "RecordOpenOptionsEnum enumeration [ADO]"
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RecordOpenOptionsEnum
 Specifies options for opening a [Record](../../../ado/reference/ado-api/record-object-ado.md). These values may be combined by using OR.  

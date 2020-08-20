@@ -1,4 +1,5 @@
 ---
+description: "MScached_peer_lsns (Transact-SQL)"
 title: "MScached_peer_lsns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MScached_peer_lsns system table"
 ms.assetid: f8b6089a-0230-45f9-8c34-9fe0d2a3a74e
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MScached_peer_lsns (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MScached_peer_lsns** table is used to track the LSN values in the transaction log that are used to determine which commands to return to a given Subscriber in peer-to-peer replication. This table is stored in the distribution database.  
   

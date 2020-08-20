@@ -1,4 +1,5 @@
 ---
+description: "MSqreader_history (Transact-SQL)"
 title: "MSqreader_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSqreader_history system table"
 ms.assetid: c5c91d39-513c-4a77-870b-c8ef74a1cd6b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSqreader_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSqreader_history** table contains history rows for the Queue Reader Agents associated with the local Distributor. This table is stored in the distribution database.  
   

@@ -1,4 +1,5 @@
 ---
+description: "SetDefaults Method (ServerSettings Class)"
 title: "SetDefaults Method (ServerSettings)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # SetDefaults Method (ServerSettings Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Sets all the default values for the instance of [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] with the option to overwrite existing data.  
   
 ## Syntax  

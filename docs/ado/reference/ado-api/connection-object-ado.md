@@ -1,4 +1,5 @@
 ---
+description: "Connection Object (ADO)"
 title: "Connection Object (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Connection object [ADO]"
 ms.assetid: ef6b1824-5b12-43db-89d7-8f3d13896d4d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Connection Object (ADO)
 Represents an open connection to a data source.  

@@ -1,4 +1,5 @@
 ---
+description: "RESTORE Statements - FILELISTONLY (Transact-SQL)"
 title: "RESTORE FILELISTONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
@@ -36,7 +37,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 RESTORE FILELISTONLY   
 FROM <backup_device>   

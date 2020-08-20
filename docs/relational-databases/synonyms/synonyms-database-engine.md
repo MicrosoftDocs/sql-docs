@@ -1,4 +1,5 @@
 ---
+description: "Synonyms (Database Engine)"
 title: "Synonyms (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -29,17 +30,37 @@ For example, consider the **Employee** table of [!INCLUDE[ssSampleDBCoShort](../
 To address both these issues, you can create a synonym, **EmpTable**, on **Server2** for the **Employee** table on **Server1**. Now, the client application only has to use the single-part name, **EmpTable**, to reference the **Employee** table. Also, if the location of the **Employee** table changes, you will have to modify the synonym, **EmpTable**, to point to the new location of the **Employee** table. Because there is no ALTER SYNONYM statement, you first have to drop the synonym, **EmpTable**, and then re-create the synonym with the same name, but point the synonym to the new location of **Employee**.  
   
 A synonym belongs to a schema, and like other objects in a schema, the name of a synonym must be unique. You can create synonyms for the following database objects:  
-  
-|||  
-|-|-|  
-|Assembly (CLR) stored procedure|Assembly (CLR) table-valued function|  
-|Assembly (CLR) scalar function|Assembly (CLR) aggregate functions|  
-|Replication-filter-procedure|Extended stored procedure|  
-|SQL scalar function|SQL table-valued function|  
-|SQL inline-tabled-valued function|SQL stored procedure|  
-|View|Table* (User-defined)|  
-  
- *Includes local and global temporary tables  
+
+:::row:::
+    :::column:::
+        Assembly (CLR) stored procedure
+
+        Assembly (CLR) scalar function
+
+        Replication-filter-procedure
+
+        SQL scalar function
+
+        SQL inline-tabled-valued function
+
+        View
+    :::column-end:::
+    :::column:::
+        Assembly (CLR) table-valued function
+
+        Assembly (CLR) aggregate functions
+
+        Assembly (CLR) aggregate functions
+
+        SQL table-valued function
+
+        SQL stored procedure
+
+        Table* (User-defined)
+    :::column-end:::
+:::row-end:::
+
+*Includes local and global temporary tables  
   
 > [!NOTE]  
 > Four-part names for function base objects are not supported.  
@@ -57,23 +78,48 @@ If you have a default schema that you do not own and want to create a synonym, y
 Only synonym owners, members of **db_owner**, or members of **db_ddladmin** can grant permission on a synonym.  
   
 You can `GRANT`, `DENY`, and `REVOKE` all or any of the following permissions on a synonym:  
-  
-|||  
-|-|-|  
-|CONTROL|DELETE|  
-|EXECUTE|INSERT|  
-|SELECT|TAKE OWNERSHIP|  
-|UPDATE|VIEW DEFINITION|  
-  
+
+:::row:::
+    :::column:::
+      CONTROL
+
+      EXECUTE
+
+      SELECT
+
+      UPDATE
+    :::column-end:::
+    :::column:::
+      DELETE
+
+      INSERT
+
+      TAKE OWNERSHIP
+
+      VIEW DEFINITION
+    :::column-end:::
+:::row-end:::
+
 ## Using Synonyms  
- You can use synonyms in place of their referenced base object in several SQL statements and expression contexts. The following table contains a list of these statements and expression contexts:  
-  
-|||  
-|-|-|  
-|SELECT|INSERT|  
-|UPDATE|DELETE|  
-|EXECUTE|Sub-selects|  
-  
+ You can use synonyms in place of their referenced base object in several SQL statements and expression contexts. The following columns contain a list of these statements and expression contexts:  
+
+:::row:::
+    :::column:::
+        SELECT
+
+        UPDATE
+
+        EXECUTE
+    :::column-end:::
+    :::column:::
+        INSERT
+
+        DELETE
+
+        Sub-selects
+    :::column-end:::
+:::row-end:::
+ 
  When you are working with synonyms in the contexts previously stated, the base object is affected. For example, if a synonym references a base object that is a table and you insert a row into the synonym, you are actually inserting a row into the referenced table.  
   
 > [!NOTE]  
@@ -91,19 +137,36 @@ EXEC ('ALTER TABLE dbo.MyProduct
 ```  
   
 The following permission statements are associated only with the synonym and not the base object:  
-  
-|||  
-|-|-|  
-|GRANT|DENY|  
-|REVOKE||  
-  
+
+:::row:::
+    :::column:::
+        GRANT
+
+        REVOKE
+    :::column-end:::
+    :::column:::
+        DENY
+    :::column-end:::
+:::row-end:::
+
 Synonyms are not schema-bound and, therefore, cannot be referenced by the following schema-bound expression contexts:  
-  
-|||  
-|-|-|  
-|CHECK constraints|Computed columns|  
-|Default expressions|Rule expressions|  
-|Schema-bound views|Schema-bound functions|  
+
+:::row:::
+    :::column:::
+        CHECK constraints
+
+        Default expressions
+
+        Schema-bound views
+    :::column-end:::
+    :::column:::
+        Computed columns
+
+        Rule expressions
+
+        Schema-bound functions
+    :::column-end:::
+:::row-end:::
   
 For more information about schema-bound functions, see [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md).  
   

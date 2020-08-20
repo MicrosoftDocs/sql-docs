@@ -1,4 +1,5 @@
 ---
+description: "Procedures Delete Method Example (VB)"
 title: "Procedures Delete Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Delete method [ADOX], Visual Basic example"
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Procedures Delete Method Example (VB)
 The following code demonstrates how to delete a procedure by using the [Delete](../../../ado/reference/adox-api/delete-method-adox-collections.md) method of the [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection.  

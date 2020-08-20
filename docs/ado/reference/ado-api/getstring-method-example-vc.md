@@ -1,4 +1,5 @@
 ---
+description: "GetString Method Example (VC++)"
 title: "GetString Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "GetString method [ADO], VC++ example"
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # GetString Method Example (VC++)
 This example demonstrates the [GetString](../../../ado/reference/ado-api/getstring-method-ado.md) method.  

@@ -1,4 +1,5 @@
 ---
+description: "Device Not Ready Error"
 title: "Device Not Ready Error | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -14,7 +15,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Device Not Ready Error
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks the system event log for EventId 15. This error can be caused by SCSI host adapter configuration issues or related problems.  
   
 ## Best Practices Recommendations  

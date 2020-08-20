@@ -1,4 +1,5 @@
 ---
+description: "MSrepl_errors (Transact-SQL)"
 title: "MSrepl_errors (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSrepl_errors system table"
 ms.assetid: c6e023c1-2c32-4269-8d76-e442ea309e4b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSrepl_errors (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSrepl_errors** table contains rows with extended Distribution Agent and Merge Agent failure information. This table is stored in the distribution database.  
   

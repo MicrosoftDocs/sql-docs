@@ -1,4 +1,5 @@
 ---
+description: "Group Object Properties, Methods, and Events"
 title: "Group Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "group object [ADOX], members"
 ms.assetid: ba9642d0-9025-4eff-8885-e6e7f8154c73
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Group Object Properties, Methods, and Events
 ## Properties/Collections  

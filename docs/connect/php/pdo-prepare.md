@@ -1,15 +1,16 @@
 ---
-title: "PDO::prepare | Microsoft Docs"
+title: "PDO::prepare"
+description: "API reference for the PDO::prepare function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "04/25/2019"
+ms.date: "01/31/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a8b16fdc-c748-49be-acf2-a6ac7432d16b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # PDO::prepare
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -133,6 +134,33 @@ print_r($row);
 ?>
 ```
 
+## Example
+The following two snippets show how to use PDO::prepare with data targeted for CHAR/VARCHAR columns. Because the default encoding for PDO::prepare is UTF-8, the user can use the option `PDO::SQLSRV_ENCODING_SYSTEM` to avoid implicit conversions.
+
+**Option 1**
+```
+$options = array(PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_SYSTEM);
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue',
+  $options
+);
+
+$statement->bindValue(':myVarcharValue', 'my data', PDO::PARAM_STR);
+```
+
+**Option 2**
+```
+$statement = $pdo->prepare(
+  'SELECT *
+   FROM myTable
+   WHERE myVarcharColumn = :myVarcharValue'
+);
+$p = 'my data';
+$statement->bindParam(':myVarcharValue', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_SYSTEM);
+```
+
 <a name="emulate-prepare" />
 
 ## Example
@@ -210,6 +238,52 @@ If user wishes to bind parameters with different encodings (for instance, UTF-8 
 The PDO_SQLSRV driver first checks the encoding specified in `PDO::bindParam()` (for example, `$statement->bindParam(:cus_name, "Cardinal", PDO::PARAM_STR, 10, PDO::SQLSRV_ENCODING_UTF8)`).
 
 If not found, the driver checks if any encoding is set in `PDO::prepare()` or `PDOStatement::setAttribute()`. Otherwise, the driver will use the encoding specified in `PDO::__construct()` or `PDO::setAttribute()`.
+
+In addition, beginning with version 5.8.0, when using PDO::prepare with `PDO::ATTR_EMULATE_PREPARES` set to true, the user may use [the extended string types introduced in PHP 7.2](https://wiki.php.net/rfc/extended-string-types-for-pdo) to ensure that the `N` prefix is used. The snippets below display various alternatives.
+
+> [!NOTE]
+> By default, emulate prepares is set to false, in which case the extended PDO string constants will be ignored.
+
+**Using driver option PDO::SQLSRV_ENCODING_UTF8 when binding**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR, 0, PDO::SQLSRV_ENCODING_UTF8);
+$stmt->execute();
+```
+
+**Using the PDO::SQLSRV_ATTR_ENCODING attribute**
+
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true, PDO::SQLSRV_ATTR_ENCODING => PDO::SQLSRV_ENCODING_UTF8);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
+
+**Using the PDO constant PDO::PARAM_STR_NATL**
+```
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->bindParam(':value', $p, PDO::PARAM_STR | PDO::PARAM_STR_NATL);
+$stmt->execute();
+```
+
+**Setting the default string param type PDO::PARAM_STR_NATL**
+```
+$conn->setAttribute(PDO::ATTR_DEFAULT_STR_PARAM, PDO::PARAM_STR_NATL);
+$p = '가각';
+$sql = 'SELECT :value';
+$options = array(PDO::ATTR_EMULATE_PREPARES => true);
+$stmt = $conn->prepare($sql, $options);
+$stmt->execute([':value' => $p]);
+```
 
 ### Limitations
 

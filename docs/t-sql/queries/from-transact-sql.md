@@ -1,4 +1,5 @@
 ---
+description: "FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)"
 title: "FROM: JOIN, APPLY, PIVOT (T-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/01/2019"
@@ -37,7 +38,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # FROM clause plus JOIN, APPLY, PIVOT (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa-pdw.md)]
 
 In Transact-SQL, the FROM clause is available on the following statements:
 
@@ -57,13 +58,13 @@ This article also discusses the following keywords that can be used on the FROM 
 
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 [ FROM { <table_source> } [ ,...n ] ]   
 <table_source> ::=   
 {  
-    table_or_view_name [ [ AS ] table_alias ]   
+    table_or_view_name [ FOR SYSTEM_TIME <system_time> ] [ AS ] table_alias ]   
         [ <tablesample_clause> ]   
         [ WITH ( < table_hint > [ [ , ]...n ] ) ]   
     | rowset_function [ [ AS ] table_alias ]   
@@ -76,8 +77,7 @@ This article also discusses the following keywords that can be used on the FROM 
     | <unpivoted_table>  
     | @variable [ [ AS ] table_alias ]  
     | @variable.function_call ( expression [ ,...n ] )   
-        [ [ AS ] table_alias ] [ (column_alias [ ,...n ] ) ]  
-    | FOR SYSTEM_TIME <system_time>   
+        [ [ AS ] table_alias ] [ (column_alias [ ,...n ] ) ]     
 }  
 <tablesample_clause> ::=  
     TABLESAMPLE [SYSTEM] ( sample_number [ PERCENT | ROWS ] )   
@@ -131,7 +131,7 @@ This article also discusses the following keywords that can be used on the FROM 
         <date_time_literal> | @date_time_variable  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 FROM { <table_source> [ ,...n ] }  
@@ -167,7 +167,9 @@ FROM { <table_source> [ ,...n ] }
     | REDISTRIBUTE  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 \<table_source>  
  Specifies a table, view, table variable, or derived table source, with or without an alias, to use in the [!INCLUDE[tsql](../../includes/tsql-md.md)] statement. Up to 256 table sources can be used in a statement, although the limit varies depending on available memory and the complexity of other expressions in the query. Individual queries may not support up to 256 table sources.  
   
@@ -223,7 +225,7 @@ FROM { <table_source> [ ,...n ] }
  *derived_table*  
  Is a subquery that retrieves rows from the database. *derived_table* is used as input to the outer query.  
   
- *derived* *_table* can use the [!INCLUDE[tsql](../../includes/tsql-md.md)] table value constructor feature to specify multiple rows. For example, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. For more information, see [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
+ *derived_table* can use the [!INCLUDE[tsql](../../includes/tsql-md.md)] table value constructor feature to specify multiple rows. For example, `SELECT * FROM (VALUES (1, 2), (3, 4), (5, 6), (7, 8), (9, 10) ) AS MyTable(a, b);`. For more information, see [Table Value Constructor &#40;Transact-SQL&#41;](../../t-sql/queries/table-value-constructor-transact-sql.md).  
   
  *column_alias*  
  Is an optional alias to replace a column name in the result set of the derived table. Include one column alias for each column in the select list, and enclose the complete list of column aliases in parentheses.  

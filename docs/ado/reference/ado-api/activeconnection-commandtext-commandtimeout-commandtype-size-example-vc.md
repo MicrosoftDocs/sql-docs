@@ -1,4 +1,5 @@
 ---
+description: "ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VC++)"
 title: "Stored Procedure Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "Direction property [ADO], VC++ example"
   - "ActiveConnection property [ADO], VC++ example"
 ms.assetid: 0d9917c4-9ef0-4d7a-b4ce-4f1fa6ce1817
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VC++)
 This example uses the [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md), and [Direction](../../../ado/reference/ado-api/direction-property.md) properties to execute a stored procedure.  

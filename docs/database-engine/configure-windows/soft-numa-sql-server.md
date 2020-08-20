@@ -1,5 +1,6 @@
 ---
 title: "Soft-NUMA (SQL Server) | Microsoft Docs"
+description: Learn about soft-NUMA in SQL Server 2014 SP2 and newer versions. See how to use automatic soft-NUMA and how to manually configure SQL Server to use soft-NUMA.
 ms.custom: ""
 ms.date: "02/13/2018"
 ms.prod: sql
@@ -19,7 +20,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # Soft-NUMA (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Modern processors have multiple cores per socket. Each socket is represented, usually, as a single NUMA node. The SQL Server database engine partitions various internal structures and partitions service threads per NUMA node.  With processors containing 10 or more cores per socket, using software NUMA to split hardware NUMA nodes generally increases scalability and performance. Prior to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2, software-based NUMA (soft-NUMA) required you to edit the registry to add a node configuration affinity mask, and was configured at the host level, rather than per instance. Starting with [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP2 and [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], soft-NUMA is configured automatically at the database-instance level when the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] service starts.  
   
@@ -66,7 +67,7 @@ Consider the example of a computer with eight CPUs, that does not have hardware 
   
  Instance A, which experiences significant I/O, now has two I/O threads and one lazy writer thread. Instance B, which performs processor-intensive operations, has only one I/O thread and one lazy writer thread. Differing amounts of memory can be assigned to the instances, but unlike hardware NUMA, they both receive memory from the same operating system memory block, and there is no memory-to-processor affinity.  
   
- The lazy writer thread is tied to the SQLOS view of the physical NUMA memory nodes. Therefore, whatever the hardware presents as the number of physical NUMA nodes, this will be the number of lazy writer threads that are created. For more information, see [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://blogs.msdn.com/b/psssql/archive/2010/04/02/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers-and-memory-nodes.aspx).  
+ The lazy writer thread is tied to the SQLOS view of the physical NUMA memory nodes. Therefore, whatever the hardware presents as the number of physical NUMA nodes, this will be the number of lazy writer threads that are created. For more information, see [How It Works: Soft NUMA, I/O Completion Thread, Lazy Writer Workers and Memory Nodes](https://techcommunity.microsoft.com/t5/sql-server-support/how-it-works-soft-numa-i-o-completion-thread-lazy-writer-workers/ba-p/316044).  
   
 > [!NOTE]
 > The **Soft-NUMA** registry keys are not copied when you upgrade an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

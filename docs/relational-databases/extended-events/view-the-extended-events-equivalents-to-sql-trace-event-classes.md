@@ -1,5 +1,6 @@
 ---
 title: "Extended events equivalents to SQL Trace Event classes"
+description: This article shows you how to view the Extended Events actions and events that are equivalent to each SQL Trace event and its associated columns.
 ms.date: "03/05/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -18,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # View the Extended Events Equivalents to SQL Trace Event Classes
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/applies-to-version/sql-asdb.md)]
 
   If you want to use Extended Events to collect event data that is equivalent to SQL Trace event classes and columns, it is useful to understand how the SQL Trace events map to Extended Events events and actions.  
   

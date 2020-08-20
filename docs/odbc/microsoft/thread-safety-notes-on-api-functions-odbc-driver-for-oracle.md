@@ -1,4 +1,5 @@
 ---
+description: "Thread-Safety Notes on API Functions (ODBC Driver for Oracle)"
 title: "Thread-Safety Notes on API Functions (ODBC Driver for Oracle) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "threading options [ODBC]"
   - "multiple concurrent statements [ODBC]"
 ms.assetid: f0c9bdfd-f79d-4088-9ecb-afcd8ca7fb73
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Thread-Safety Notes on API Functions (ODBC Driver for Oracle)
 > [!IMPORTANT]  

@@ -13,7 +13,7 @@ ms.reviewer: maghan
 ---
 # Schedule the execution of SQL Server Integration Services (SSIS) packages deployed in Azure
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -107,7 +107,7 @@ Before you can use SQL Server Agent on premises to schedule execution of package
 2.  **Set up linked server credentials**
 
     ```sql
-    -- Add your Azure SQL DB server admin credentials
+    -- Add your Azure SQL Database server admin credentials
     EXEC sp_addlinkedsrvlogin
         @rmtsrvname = 'myLinkedServer',
         @useself = 'false',

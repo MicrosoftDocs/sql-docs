@@ -1,4 +1,5 @@
 ---
+description: "Integration Services Service (SSIS Service)"
 title: "Integration Services Service (SSIS Service) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -25,7 +26,7 @@ ms.author: chugu
 ---
 # Integration Services Service (SSIS Service)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The topics in this section discuss the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service, a Windows service for managing [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages. This service is not required to create, save, and run Integration Services packages. [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] supports the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service for backward compatibility with earlier releases of [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)].  
@@ -79,7 +80,7 @@ ms.author: chugu
   
  If the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service is stopped, you can continue to run packages using the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard, the [!INCLUDE[ssIS](../../includes/ssis-md.md)] Designer, the Execute Package Utility, and the **dtexec** command prompt utility (dtexec.exe). However, you cannot monitor the running packages.  
   
- By default, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service runs in the context of the NETWORK SERVICE account.  
+ By default, the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service runs in the context of the NETWORK SERVICE account. It is recommended to run the SQL Server Integration Services service under an account that has limited permissions such as the NETWORK SERVICE account. Running the SQL Server Integration Services service under a highly-priveleged account represents a potential security risk. 
   
  The [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] service writes to the Windows event log. You can view service events in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. You can also view service events by using the Windows Event Viewer.  
   

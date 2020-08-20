@@ -1,5 +1,6 @@
 ---
 title: "Type Casting Rules in XQuery | Microsoft Docs"
+description: Learn about the rules that are applied when explicitly or implicitly casting from one data type to another in XQuery. 
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -21,7 +22,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Type Casting Rules in XQuery
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../includes/applies-to-version/sqlserver.md)]
 
   The following W3C XQuery 1.0 and XPath 2.0 Functions and Operators specifications diagram shows the built-in data types. This includes the built-in primitive and built-in derived types.  
   

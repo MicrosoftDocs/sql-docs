@@ -1,16 +1,16 @@
 ---
 title: Configure replay for SQL Server upgrades
-description: Configure Distributed Replay for Database Experimentation Assistant
+description: Use Database Experimentation Assistant (DEA) to access the Distributed Replay tools. Use the tools to replay a captured trace against an upgraded test environment.
 ms.custom: "seo-lt-2019"
-ms.date: 11/21/2019
+ms.date: 01/24/2020
 ms.prod: sql
 ms.prod_service: dea
 ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ---
 
@@ -43,10 +43,12 @@ To set up the controller service:
 3. Open Services.msc and go to the **SQL Server Distributed Replay Controller** service.
 4. Right-click on the service, and then select **Properties**. Set the service account to an account that is common to the controller and client machines in the network.
 5. Select **OK** to close the **Properties** window.
-6. Restart the **SQL Server Distributed Replay Controller** service from Services.msc. You also can run the following commands at the command line to restart the service:<br/>
-   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
+6. Restart the **SQL Server Distributed Replay Controller** service from Services.msc. You also can run the following commands at the command line to restart the service:
+
+   `NET STOP "SQL Server Distributed Replay Controller"`</br>
    `NET START "SQL Server Distributed Replay Controller"`
-7. For more configuration options, see [Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+
+For more configuration options, see [Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
 
 ## Configure DCOM
 
@@ -63,9 +65,10 @@ This configuration is only required on the controller computer.
 9. Add the user that will be starting the replay. Give the user Local Access permissions. If the user plans to access the controller service remotely, give the user Remote Access permissions.
 10. Select **OK** to commit the changes and return to the **Security** tab.
 11. Select **OK** to commit the changes.
-12. Restart the SQL Server Distributed Replay Controller service from Services.msc. You also can run the following commands at the command line to restart the service:<br/>
-   `NET STOP "SQL Server Distributed Replay Controller"`<br/>
-   `NET START "SQL Server Distributed Replay Controller"`
+12. Restart the SQL Server Distributed Replay Controller service from Services.msc. You also can run the following commands at the command line to restart the service:
+
+    `NET STOP "SQL Server Distributed Replay Controller"`</br>
+    `NET START "SQL Server Distributed Replay Controller"`
 
 ## Set up the client service
 
@@ -76,12 +79,16 @@ Before you set up the client service, use networking tools like ping to verify t
 3. Right-click on the service, and then select **Properties**. Set the service account to an account that is common to both the controller and client machines in the network.
 4. Select **OK** to close the **Properties** window. If you skipped the SQL Server Installer wizard step to configure the Distributed Replay client, you can configure it through the configuration file. In a typical installation, the configuration file is located at C:\Program Files (x86)\Microsoft SQL Server\<version\>\Tools\DReplayClient\DReplayClient.config.
 5. Ensure that the DReplayClient.config file contains the name of the controller machine as its controller for registration.
-6. Restart the SQL Server Distributed Replay Client service from Services.msc. You also can run the following commands from the command line to restart the service:<br/>
-    `NET STOP "SQL Server Distributed Replay Client"`<br/>
+6. Restart the SQL Server Distributed Replay Client service from Services.msc. You also can run the following commands from the command line to restart the service:
+
+    `NET STOP "SQL Server Distributed Replay Client"`</br>
     `NET START "SQL Server Distributed Replay Client"`
-7. Distributed Replay controller logs are located at C:\Program Files (x86)\Microsoft SQL Server\<version\>\Tools\DReplayClient\Log. The logs indicate whether the client can register itself with the controller.
-8. If the configuration is successful, the log displays the message "Registered with controller <controller name\>".
-9. For more configuration options, see [Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
+
+    Distributed Replay controller logs are located at C:\Program Files (x86)\Microsoft SQL Server\<version\>\Tools\DReplayClient\Log. The logs indicate whether the client can register itself with the controller.
+
+    If the configuration is successful, the log displays the message **Registered with controller <controller name\>**.
+
+For more configuration options, see [Configure Distributed Replay](https://docs.microsoft.com/sql/tools/distributed-replay/configure-distributed-replay).
 
 ## Set up Distributed Replay administration tools
 

@@ -1,5 +1,6 @@
 ---
-title: "Add and Verify a Data Connection (Report Builder and SSRS) | Microsoft Docs"
+title: "Add and Verify a Data Connection (Report Builder) | Microsoft Docs"
+description: Learn how to use Report Builder to add and verify a data connection to verify that the credentials that are specified are sufficient.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: report-data

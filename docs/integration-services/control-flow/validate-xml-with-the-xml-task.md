@@ -1,4 +1,5 @@
 ---
+description: "Validate XML with the XML Task"
 title: "Validate XML with the XML Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # Validate XML with the XML Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Validate XML documents and get rich error output by enabling the **ValidationDetails** property of the XML Task.  

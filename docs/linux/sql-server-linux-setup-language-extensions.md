@@ -1,12 +1,12 @@
 ---
 title: Install SQL Server Language Extensions on Linux
 titleSuffix:
-description: Learn how to install SQL Server Language Extensions on Red Hat, Ubuntu, and SUSE. 
+description: Learn how to install SQL Server Language Extensions on Red Hat, Ubuntu, and SUSE Linux.
 author: dphansen
 ms.author: davidph
 ms.reviewer: vanto
 manager: cgronlun
-ms.date: 11/05/2019
+ms.date: 02/03/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: language-extensions
@@ -14,7 +14,7 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 ---
 # Install SQL Server Language Extensions on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server 2019 - Linux](../includes/applies-to-version/sqlserver2019-linux.md)]
 
 Language Extensions is an add-on to the database engine. Although you can [install the database engine and Language Extensions concurrently](#install-all), it's a best practice to install and configure the SQL Server database engine first so that you can resolve any issues before adding more components. 
 
@@ -24,7 +24,7 @@ Package location for the Java extensions is in the SQL Server Linux source repos
 
 Language Extensions is also supported on Linux containers. We do not provide pre-built containers with Language Extensions, but you can create one from the SQL Server containers using [an example template available on GitHub](https://github.com/Microsoft/mssql-docker/tree/master/linux/preview/examples/mssql-mlservices).
 
-Language Extensions and [Machine Learning Services](../advanced-analytics/index.yml) are installed by default on SQL Server Big Data Clusters. If you use Big Data Clusters, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md).
+Language Extensions and [Machine Learning Services](../machine-learning/index.yml) are installed by default on SQL Server Big Data Clusters. If you use Big Data Clusters, you do not need to follow the steps in this article. For more information, see [Use Machine Learning Services (Python and R) on Big Data Clusters](../big-data-cluster/machine-learning-services.md).
 
 ## Uninstall preview version
 
@@ -48,9 +48,9 @@ Commands for removing packages appear in the following table.
 
 | Platform	| Package removal command(s) | 
 |-----------|----------------------------|
-| RHEL	| `sudo yum remove msssql-server-extensibility-java` |
-| SLES	| `sudo zypper remove msssql-server-extensibility-java` |
-| Ubuntu	| `sudo apt-get remove msssql-server-extensibility-java`|
+| RHEL	| `sudo yum remove mssql-server-extensibility-java` |
+| SLES	| `sudo zypper remove mssql-server-extensibility-java` |
+| Ubuntu	| `sudo apt-get remove mssql-server-extensibility-java`|
 
 ### 3. Install SQL Server 2019
 
@@ -194,9 +194,13 @@ The following example adds an external language called Java to a database on SQL
 
 ```SQL
 CREATE EXTERNAL LANGUAGE Java
-FROM (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so');
-GO
+FROM (CONTENT = N'/opt/mssql-extensibility/lib/java-lang-extension.tar.gz', 
+    FILE_NAME = 'javaextension.so', 
+    ENVIRONMENT_VARIABLES = N'{"JRE_HOME":"/opt/mssql/lib/zulu-jre-11"}')
 ```
+For the Java extension, the environment variable “JRE_HOME” is used to determine the path to find and initialize the JVM from.
+
+CREATE EXTERNAL LANGUAGE ddl provides a parameter (ENVIRONMENT_VARIABLES) to set environment variables specifically for the process hosting the extension. This is the recommended and most effective way to set environment variables required by external language extensions.
 
 For more information, see [CREATE EXTERNAL LANGUAGE](https://docs.microsoft.com/sql/t-sql/statements/create-external-language-transact-sql).
 
@@ -254,21 +258,22 @@ You can download packages from [https://packages.microsoft.com/](https://package
 
 #### RedHat/7 paths
 
-|||
+|Package|Download location|
 |--|----|
-| mssql/extensibility-java packages | [https://packages.microsoft.com/rhel/7/mssql-server-preview/](https://packages.microsoft.com/rhel/7/mssql-server-preview/) |
+| mssql/extensibility-java packages | [https://packages.microsoft.com/rhel/7/mssql-server-2019/](https://packages.microsoft.com/rhel/7/mssql-server-2019/) |
 
 #### Ubuntu/16.04 paths
 
-|||
+|Package|Download location|
 |--|----|
-| mssql/extensibility-java packages | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-preview/pool/main/m/) |
+| mssql/extensibility-java packages | [https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2019/pool/main/m/) |
 
 #### SUSE/12 paths
 
-|||
+
+|Package|Download location|
 |--|----|
-| mssql/extensibility-java packages | [https://packages.microsoft.com/sles/12/mssql-server-preview/](https://packages.microsoft.com/sles/12/mssql-server-preview/) |
+| mssql/extensibility-java packages | [https://packages.microsoft.com/sles/12/mssql-server-2019/](https://packages.microsoft.com/sles/12/mssql-server-2019/) |
 
 #### Package list
 

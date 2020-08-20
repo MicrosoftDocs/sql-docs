@@ -1,4 +1,5 @@
 ---
+description: "Error Object Properties, Methods, and Events"
 title: "Error Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "error object [ADO], members"
 ms.assetid: cd69e4b7-82bf-4ffc-bc53-c535ba20161f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Error Object Properties, Methods, and Events
 ## Properties  

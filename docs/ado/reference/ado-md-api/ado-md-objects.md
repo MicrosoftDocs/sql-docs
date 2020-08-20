@@ -1,4 +1,5 @@
 ---
+description: "ADO MD Objects"
 title: "ADO MD Objects | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +12,12 @@ helpviewer_keywords:
   - "ADO MD, objects"
   - "objects [ADO MD]"
 ms.assetid: 2a32e873-3282-4520-a7ed-89493f1da80e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO MD Objects
 
-|||  
+|Object|Description|  
 |-|-|  
 |[Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md)|Represents a positional or filter axis of a cellset, containing selected members of one or more dimensions.|  
 |[Catalog](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)|Contains multidimensional schema information (that is, cubes and underlying dimensions, hierarchies, levels, and members) specific to a multidimensional data provider (MDP).|  

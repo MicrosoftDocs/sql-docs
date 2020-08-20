@@ -1,4 +1,5 @@
 ---
+description: "sp_prepare (Transact SQL)"
 title: "sp_prepare (Transact SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/28/2018"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_prepare"
 ms.assetid: f328c9eb-8211-4863-bafa-347e1bf7bb3f
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_prepare (Transact SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
 Prepares a parameterized [!INCLUDE[tsql](../../includes/tsql-md.md)] statement and returns a statement *handle* for execution.  `sp_prepare` is invoked by specifying ID = 11 in a tabular data stream (TDS) packet.  
   
@@ -28,7 +29,7 @@ Prepares a parameterized [!INCLUDE[tsql](../../includes/tsql-md.md)] statement a
   
 ## Syntax  
   
-```  
+```syntaxsql  
 sp_prepare handle OUTPUT, params, stmt, options  
 ```  
   
@@ -53,9 +54,9 @@ sp_prepare handle OUTPUT, params, stmt, options
 A. The following example prepares and executes a simple statement.  
   
 ```sql  
-DECLARE @P1 int;  
-EXEC sp_prepare @P1 output,   
-    N'@P1 nvarchar(128), @P2 nvarchar(100)',  
+DECLARE @P1 INT;  
+EXEC sp_prepare @P1 OUTPUT,   
+    N'@P1 NVARCHAR(128), @P2 NVARCHAR(100)',  
     N'SELECT database_id, name FROM sys.databases WHERE name=@P1 AND state_desc = @P2';  
 EXEC sp_execute @P1, N'tempdb', N'ONLINE';  
 EXEC sp_unprepare @P1;  
@@ -65,9 +66,9 @@ B. The following example prepares a statement in the AdventureWorks2016 database
 
 ```sql
 -- Prepare query
-DECLARE @P1 int;  
-EXEC sp_prepare @P1 output,   
-    N'@Param int',  
+DECLARE @P1 INT;  
+EXEC sp_prepare @P1 OUTPUT,   
+    N'@Param INT',  
     N'SELECT *
 FROM Sales.SalesOrderDetail AS sod
 INNER JOIN Production.Product AS p ON sod.ProductID = p.ProductID

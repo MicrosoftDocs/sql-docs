@@ -1,4 +1,5 @@
 ---
+description: "Setting Up the Visual FoxPro ODBC Driver"
 title: "Setting Up the Visual FoxPro ODBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "Visual FoxPro ODBC driver [ODBC], installing"
   - "FoxPro ODBC driver [ODBC], installing"
 ms.assetid: d0aedaa1-ed24-4aa6-92c8-83b0fa8c86fb
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Setting Up the Visual FoxPro ODBC Driver
 For information about downloading and installing the Visual FoxPro ODBC driver, see [Visual FoxPro ODBC Driver](https://go.microsoft.com/fwlink/?LinkId=121318) on MSDN Downloads.  

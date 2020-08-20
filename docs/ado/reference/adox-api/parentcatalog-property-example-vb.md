@@ -1,4 +1,5 @@
 ---
+description: "ParentCatalog Property Example (VB)"
 title: "ParentCatalog Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ParentCatalog property [ADOX], Visual Basic example"
 ms.assetid: 448bc850-7584-4c5f-89f3-5f4fee88b259
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ParentCatalog Property Example (VB)
 The following code demonstrates how to use the [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) property to access a provider-specific property prior to appending a table to a catalog. The property is **AutoIncrement**, which creates an AutoIncrement field in a Microsoft Jet database.  

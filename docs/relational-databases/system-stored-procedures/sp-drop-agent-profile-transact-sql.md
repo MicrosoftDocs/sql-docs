@@ -1,4 +1,5 @@
 ---
+description: "sp_drop_agent_profile (Transact-SQL)"
 title: "sp_drop_agent_profile (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_drop_agent_profile"
 ms.assetid: b884f9ef-ae89-4cbc-a917-532c3ff6ed41
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_drop_agent_profile (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops a profile from the **MSagent_profiles** table. This stored procedure is executed at the Distributor on any database.  
   

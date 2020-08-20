@@ -1,4 +1,5 @@
 ---
+description: "getCharacterStream Method ()"
 title: "getCharacterStream Method () | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 70a5a8c8-791a-43f9-8a0e-1c390f30857c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getCharacterStream Method ()
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

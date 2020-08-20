@@ -1,4 +1,5 @@
 ---
+description: "SQLAllocEnv Function"
 title: "SQLAllocEnv Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLAllocEnv function [ODBC]"
 ms.assetid: 00bac0c1-346b-4e48-901a-06ba4557b944
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLAllocEnv Function
 **Conformance**  

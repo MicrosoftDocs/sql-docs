@@ -1,4 +1,5 @@
 ---
+description: "DefinedSize Property Example (VB)"
 title: "DefinedSize Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DefinedSize property [ADOX], Visual Basic example"
 ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DefinedSize Property Example (VB)
 This example demonstrates the [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) property of a [Column](../../../ado/reference/adox-api/column-object-adox.md). The code will redefine the size of the FirstName column of the **Employees** table of the *Northwind* database. Then, the change in the values of the FirstName [Field](../../../ado/reference/ado-api/field-object.md) of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) based on the **Employees** table is displayed. Note that by default, the FirstName field becomes padded with spaces after you redefine the **DefinedSize** property.  

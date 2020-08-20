@@ -1,5 +1,6 @@
 ---
-title: "COLUMNS_UPDATED (Transact-SQL) | Microsoft Docs"
+description: "COLUMNS_UPDATED (Transact-SQL)"
+title: COLUMNS_UPDATED (Transact-SQL)
 ms.custom: ""
 ms.date: "07/25/2017"
 ms.prod: sql
@@ -18,11 +19,13 @@ helpviewer_keywords:
   - "column testing [SQL Server]"
   - "updated columns"
 ms.assetid: 765fde44-1f95-4015-80a4-45388f18a42c
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 ---
+
 # COLUMNS_UPDATED (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function returns a **varbinary** bit pattern indicating the inserted or updated columns of a table or view. Use `COLUMNS_UPDATED` anywhere inside the body of a [!INCLUDE[tsql](../../includes/tsql-md.md)] INSERT or UPDATE trigger to test whether the trigger should execute certain actions.
   
@@ -33,7 +36,9 @@ This function returns a **varbinary** bit pattern indicating the inserted or upd
 ```sql
 COLUMNS_UPDATED ( )   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return types
 **varbinary**
   

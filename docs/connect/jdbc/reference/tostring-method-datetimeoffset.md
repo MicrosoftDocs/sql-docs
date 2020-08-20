@@ -1,4 +1,5 @@
 ---
+description: "toString Method (DateTimeOffset)"
 title: "toString Method (DateTimeOffset) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: e77b9be3-1a02-4769-8acf-ac71d48d6a76
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # toString Method (DateTimeOffset)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

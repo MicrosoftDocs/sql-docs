@@ -1,4 +1,5 @@
 ---
+description: "DeleteRule Property Example (VC++)"
 title: "DeleteRule Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DeleteRule property [ADOX], VC++ example"
 ms.assetid: 7a1def31-2b6f-4542-aac3-ec35b54c89ef
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DeleteRule Property Example (VC++)
 This example demonstrates the [DeleteRule](../../../ado/reference/adox-api/deleterule-property-adox.md) property of a [Key](../../../ado/reference/adox-api/key-object-adox.md) object. The code appends a new [Table](../../../ado/reference/adox-api/table-object-adox.md) and then defines a new primary key, setting **DeleteRule** to **adRICascade**.  
@@ -94,7 +95,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...."<< endl;  
+      cout << "Error occurred in include files...."<< endl;  
    }  
   
    ::CoUninitialize();  

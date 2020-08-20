@@ -1,4 +1,5 @@
 ---
+description: "SQLState Property"
 title: "SQLState Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLState property"
 ms.assetid: f9e25967-54b0-444d-af2a-0d2c75365d3e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # SQLState Property
 Indicates the SQL state for a given [Error](../../../ado/reference/ado-api/error-object.md) object.  

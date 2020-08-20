@@ -1,4 +1,5 @@
 ---
+description: "PositionEnum"
 title: "PositionEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "PositionEnum enumeration"
 ms.assetid: e69af0a5-3405-4b72-9c6e-6b188ff746fd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # PositionEnum
 Specifies the current position of the record pointer within a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -35,7 +36,12 @@ Specifies the current position of the record pointer within a [Recordset](../../
 |AdoEnums.Position.UNKNOWN|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[AbsolutePage Property (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)|[AbsolutePosition Property (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)|
+
+:::row:::
+    :::column:::
+        [AbsolutePage Property (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)  
+    :::column-end:::
+    :::column:::
+        [AbsolutePosition Property (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)  
+    :::column-end:::
+:::row-end:::

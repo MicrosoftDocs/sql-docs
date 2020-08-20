@@ -1,5 +1,6 @@
 ---
 title: "Executing a DiffGram by Using SQLXML Managed Classes"
+description: Learn how to execute a DiffGram file in the Microsoft .NET Framework environment to apply data updates to SQL Server tables using SQLXML Managed Classes.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing a DiffGram by Using SQLXML Managed Classes
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   This example shows how to execute a DiffGram file in the [!INCLUDE[msCoName](../../../includes/msconame-md.md)] .NET Framework environment to apply data updates to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] tables using SQLXML Managed Classes (Microsoft.Data.SqlXml).  
   
  In this example, the DiffGram updates customer information (CompanyName and ContactName) for customer ALFKI.  

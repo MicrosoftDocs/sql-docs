@@ -1,4 +1,5 @@
 ---
+description: "MSsubscriptions (Transact-SQL)"
 title: "MSsubscriptions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSsubscriptions system table"
 ms.assetid: b7e8301d-d115-41f6-8d4f-e0d25f453b25
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSsubscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSsubscriptions** table contains one row for each published article in a subscription serviced by the local Distributor. This table is stored in the distribution database.  
   

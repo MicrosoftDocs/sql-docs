@@ -1,4 +1,5 @@
 ---
+description: "RDS Tutorial"
 title: "RDS Tutorial | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS tutorial [ADO]"
 ms.assetid: 6e3305a0-7bc7-40d1-9122-235c15d23ab2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RDS Tutorial
 This tutorial illustrates using the RDS programming model to query and update a data source. First, it describes the steps necessary to accomplish this task. Then the tutorial is repeated in Microsoft® Visual Basic Scripting Edition (featuring ADO for Windows Foundation Classes (ADO/WFC)).  

@@ -1,4 +1,5 @@
 ---
+description: "Microsoft OLE DB Provider for Microsoft Active Directory Service"
 title: "Microsoft OLE DB Provider for Microsoft Active Directory Service | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "providers [ADO], OLE DB provider for Active Directory service"
   - "OLE DB provider for Active Directory service [ADO]"
 ms.assetid: f9e81452-5675-4cfc-9949-cfbd2fe57534
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Microsoft OLE DB Provider for Microsoft Active Directory Service
 The Active Directory Service Interfaces (ADSI) Provider allows ADO to connect to heterogeneous directory services through ADSI. This gives ADO applications read-only access to the Microsoft Windows NT 4.0 and Microsoft Windows 2000 directory services, in addition to any LDAP-compliant directory service and Novell Directory Services. ADSI itself is based on a provider model, so that if there is a new provider giving access to another directory, the ADO application will be able to access it seamlessly. The ADSI provider is free-threaded and Unicode enabled.  

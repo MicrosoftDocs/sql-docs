@@ -1,9 +1,9 @@
 ---
 title: What's New for SQL Server 2017 on Linux
-description: This article highlights what's new for SQL Server 2017 on Linux.
+description: In this article, learn about the major features and services available for SQL Server 2017 running on Linux.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 10/23/2019
+ms.date: 04/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -11,12 +11,20 @@ ms.technology: linux
 
 # What's new for SQL Server 2017 on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article describes the major features and services available for SQL Server 2017 running on Linux.
 
 > [!NOTE]
 > In addition to these capabilities in this article, cumulative updates are released at regular intervals. These cumulative updates provide many improvements and fixes. For detailed information about the latest CU release, see [https://aka.ms/sql2017cu](https://aka.ms/sql2017cu). For package downloads and known issues, see the [Release notes](sql-server-linux-release-notes.md).
+
+## Ubuntu 18.04 supported
+
+Starting with SQL Server 2017 CU20, Ubuntu 18.04 is now supported. Check out our Quickstart on [Installing SQL Server and creating a database on Ubuntu](quickstart-install-connect-ubuntu.md?view=sql-server-2017).
+
+## RHEL 8 supported
+
+Starting with SQL Server 2017 CU20, RHEL 8 is now supported. Check out our Quickstart on [Installing SQL Server and creating a database on Red Hat](quickstart-install-connect-red-hat.md?view=sql-server-2017).
 
 ## SQL Server Database Engine
 

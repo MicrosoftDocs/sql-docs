@@ -1,5 +1,6 @@
 ---
-title: "Customize the Data and Display of a Map or Map Layer (Report Builder and SSRS) | Microsoft Docs"
+title: "Customize the Data and Display of a Map or Map Layer (Report Builder) | Microsoft Docs"
+description:  Improve the user experience of data and display with changes to legends, color, labels, and resolution in Report Builder. 
 ms.date: 03/07/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

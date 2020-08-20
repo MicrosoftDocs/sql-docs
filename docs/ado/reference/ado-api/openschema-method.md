@@ -1,4 +1,5 @@
 ---
+description: "OpenSchema Method"
 title: "OpenSchema Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "OpenSchema method [ADO]"
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # OpenSchema Method
 Obtains database schema information from the provider.  

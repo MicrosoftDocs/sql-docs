@@ -1,4 +1,5 @@
 ---
+description: "Columns Collection (ADOX)"
 title: "Columns Collection (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,8 +17,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Columns collection [ADOX]"
 ms.assetid: 23b9fea8-4f76-4a51-95ce-1a6ce4560b34
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Columns Collection (ADOX)
 Contains all [Column](../../../ado/reference/adox-api/column-object-adox.md) objects of a table, index, or key.  

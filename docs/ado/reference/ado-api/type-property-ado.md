@@ -1,4 +1,5 @@
 ---
+description: "Type Property (ADO)"
 title: "Type Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Type property [ADO]"
 ms.assetid: 8a4c079f-9f4f-4545-801d-85983b8db71e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Type Property (ADO)
 Indicates the operational type or data type of a [Parameter](../../../ado/reference/ado-api/parameter-object.md), [Field](../../../ado/reference/ado-api/field-object.md), or [Property](../../../ado/reference/ado-api/property-object-ado.md) object.  
@@ -29,11 +30,19 @@ Indicates the operational type or data type of a [Parameter](../../../ado/refere
  For all other objects, the **Type** property is read-only.  
   
 ## Applies To  
-  
-||||  
-|-|-|-|  
-|[Field Object](../../../ado/reference/ado-api/field-object.md)|[Parameter Object](../../../ado/reference/ado-api/parameter-object.md)|[Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Field Object](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)  
+    :::column-end:::
+    :::column:::
+        [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Type Property Example (Field) (VB)](../../../ado/reference/ado-api/type-property-example-field-vb.md)   
  [Type Property Example (Property) (VC++)](../../../ado/reference/ado-api/type-property-example-property-vc.md)   

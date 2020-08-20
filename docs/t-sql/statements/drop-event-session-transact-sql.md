@@ -1,4 +1,5 @@
 ---
+description: "DROP EVENT SESSION (Transact-SQL)"
 title: "DROP EVENT SESSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -20,7 +21,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # DROP EVENT SESSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Drops an event session.  
   
@@ -33,7 +34,9 @@ DROP EVENT SESSION event_session_name
 ON SERVER  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *event_session_name*  
  Is the name of an existing event session.  
   

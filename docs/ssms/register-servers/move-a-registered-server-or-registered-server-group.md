@@ -1,4 +1,5 @@
 ---
+description: "Move a Registered Server or Registered Server Group"
 title: Move a Registered Server or Server Group
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -20,7 +21,7 @@ ms.date: 03/07/2017
 
 # Move a Registered Server or Registered Server Group
 
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This topic describes how to organize the servers in Registered Servers by moving a registered server or  server groups in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Server groups can contain registered servers, or other server groups. Both servers and server groups can be moved from one server group to another.  
 

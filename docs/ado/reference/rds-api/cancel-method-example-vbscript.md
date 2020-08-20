@@ -1,4 +1,5 @@
 ---
+description: "Cancel Method Example (VBScript)"
 title: "Cancel Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Cancel method [ADO], VBScript example"
 ms.assetid: 4ade106d-063d-486e-bc4d-a1a6b6e0bea9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Cancel Method Example (VBScript)
 > [!IMPORTANT]

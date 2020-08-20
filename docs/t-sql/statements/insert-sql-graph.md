@@ -1,6 +1,6 @@
 ---
 title: "INSERT (SQL Graph) | Microsoft Docs"
-description: INSERT syntax for SQL Graph node or edge tables. 
+description: Learn about the syntax, permissions, and arguments for the INSERT statement that adds one or more rows to an SQL Graph  node or edge table in SQL Server.
 ms.date: "05/12/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -19,7 +19,7 @@ ms.author: "shkale"
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # INSERT (SQL Graph)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver2017-asdb](../../includes/applies-to-version/sqlserver2017-asdb.md)]
 
 Adds one or more rows to a `node` or `edge` table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. 
 
@@ -31,7 +31,7 @@ Adds one or more rows to a `node` or `edge` table in [!INCLUDE[ssNoVersion](../.
 ## INSERT Into Node Table Syntax 
 The syntax for inserting into a Node table is the same as for a regular table. 
 
-```sql
+```syntaxsql
 [ WITH <common_table_expression> [ ,...n ] ]  
 INSERT   
 {  
@@ -94,7 +94,9 @@ INSERT
 ```  
   
  
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 This document describes arguments related to SQL graph. For a full list and description of supported arguments in INSERT statement, see [INSERT TABLE (Transact-SQL)](../../t-sql/statements/insert-transact-sql.md)
 
 INTO  

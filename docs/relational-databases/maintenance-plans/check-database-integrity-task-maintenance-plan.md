@@ -1,5 +1,6 @@
 ---
 title: "Check Database Integrity Task (Maintenance Plan) | Microsoft Docs"
+description: Use Check Database Integrity Task to check the allocation and structural integrity of user and system tables, and indexes in a SQL Server database.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # Check Database Integrity Task (Maintenance Plan)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Use the **Check Database Integrity Task** dialog to check the allocation and structural integrity of user and system tables, and indexes in the database, by running the `DBCC CHECKDB`[!INCLUDE[tsql](../../includes/tsql-md.md)] statement. Running `DBCC` ensures that any integrity problems with the database are reported, thereby allowing them to be addressed later by a system administrator or database owner.  
   

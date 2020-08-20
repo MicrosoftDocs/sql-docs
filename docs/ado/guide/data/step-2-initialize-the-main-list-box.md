@@ -1,4 +1,5 @@
 ---
+description: "Step 2: Initialize the Main List Box"
 title: "Step 2: Initialize the Main List Box | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -8,8 +9,8 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.topic: conceptual
 ms.assetid: a1454493-1c86-46c2-ada8-d3c6fcdaf3c1
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Step 2: Initialize the Main List Box
 To declare global Record and Recordset objects, insert the following code into the (General) (Declarations) for Form1:  
@@ -39,7 +40,7 @@ Private Sub Form_Load()
 End Sub  
 ```  
   
- This code instantiates the global Record and Recordset objects. The Record object, `grec`, is opened with a URL specified as the ActiveConnection. If the URL exists, it is opened; if it does not already exist, it is created. Note that you should replace "<https://servername/foldername/>" with a valid URL from your environment.  
+ This code instantiates the global Record and Recordset objects. The Record object, `grec`, is opened with a URL specified as the ActiveConnection. If the URL exists, it is opened; if it does not already exist, it is created. Note that you should replace `https://servername/foldername/` with a valid URL from your environment.  
   
  The Recordset object, `grs`, is opened on the children of the Record, `grec`. Then `lstMain` is populated with the file names of the resources published to the URL.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Running the Address Book Sample Application"
 title: "Running the Address Book Sample Application | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "address book application scenario [ADO]"
   - "RDS scenarios [ADO]"
 ms.assetid: 3a2644e9-d634-4ae6-a5b7-13fb7b317ec7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Running the Address Book Sample Application
 > [!IMPORTANT]

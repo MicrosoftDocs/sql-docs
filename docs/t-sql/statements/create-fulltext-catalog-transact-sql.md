@@ -1,4 +1,5 @@
 ---
+description: "CREATE FULLTEXT CATALOG (Transact-SQL)"
 title: "CREATE FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"
@@ -28,7 +29,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # CREATE FULLTEXT CATALOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates a full-text catalog for a database. One full-text catalog can have several full-text indexes, but a full-text index can only be part of one full-text catalog. Each database can contain zero or more full-text catalogs.  
   
@@ -41,7 +42,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE FULLTEXT CATALOG catalog_name  
      [ON FILEGROUP filegroup ]  
@@ -55,7 +56,9 @@ CREATE FULLTEXT CATALOG catalog_name
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *catalog_name*  
  Is the name of the new catalog. The catalog name must be unique among all catalog names in the current database. Also, the name of the file that corresponds to the full-text catalog (see ON FILEGROUP) must be unique among all files in the database. If the name of the catalog is already used for another catalog in the database, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error.  
   

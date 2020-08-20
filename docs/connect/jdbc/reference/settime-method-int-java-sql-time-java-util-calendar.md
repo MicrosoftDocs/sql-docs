@@ -1,4 +1,5 @@
 ---
+description: "setTime Method (int, java.sql.Time, java.util.Calendar)"
 title: "setTime Method (int, java.sql.Time, java.util.Calendar) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 79ff6eef-6ad7-4e33-95be-c2d552c65546
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setTime Method (int, java.sql.Time, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

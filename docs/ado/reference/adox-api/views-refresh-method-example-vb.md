@@ -1,4 +1,5 @@
 ---
+description: "Views Refresh Method Example (VB)"
 title: "Views Refresh Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Refresh method [ADOX]"
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Views Refresh Method Example (VB)
 The following code shows how to refresh the [Views](../../../ado/reference/adox-api/views-collection-adox.md) collection of a [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md). This is required before [View](../../../ado/reference/adox-api/view-object-adox.md) objects from the **Catalog** can be accessed.  

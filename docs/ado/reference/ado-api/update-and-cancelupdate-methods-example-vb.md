@@ -1,4 +1,5 @@
 ---
+description: "Update and CancelUpdate Methods Example (VB)"
 title: "Update and CancelUpdate Methods Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "CancelUpdate method [ADO]"
   - "Update method [ADO], Visual Basic example"
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Update and CancelUpdate Methods Example (VB)
 This example demonstrates the [Update](../../../ado/reference/ado-api/update-method.md) method in conjunction with the [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) method.  

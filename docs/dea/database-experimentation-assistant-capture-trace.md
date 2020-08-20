@@ -1,6 +1,6 @@
 ---
 title: Capture a trace for SQL Server upgrades
-description: Capture a trace in Database Experimentation Assistant for SQL Server upgrades
+description: Use Database Experimentation Assistant (DEA) to create a trace file with a log of captured server events.
 ms.custom: "seo-lt-2019"
 ms.date: 12/12/2019
 ms.prod: sql
@@ -9,8 +9,8 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: HJToland3
-ms.author: rajsell
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ---
 
@@ -128,7 +128,7 @@ If you see an error when you run a trace capture, confirm that:
 
 - The name of the computer running SQL Server is valid. To confirm, try to connect to the computer running SQL Server by using SQL Server Management Studio (SSMS).
 - Your firewall configuration doesn't block connections to the computer running SQL Server.
-- The user has the permissions that are listed in the blog posting [Replay FAQ](https://blogs.msdn.microsoft.com/datamigration/2017/03/24/dea-2-0-replay-faq/).
+- The user has the permissions that are listed in the [Replay FAQ](https://docs.microsoft.com/sql/dea/database-experimentation-assistant-replay-trace?view=sql-server-ver15#frequently-asked-questions-about-trace-replay).
 - The trace name doesn't follow the standard rollover convention (Capture\_1). Instead, try trace names like Capture\_1A or Capture1.
 
 Following are some possible errors you might see and solutions for resolving them:

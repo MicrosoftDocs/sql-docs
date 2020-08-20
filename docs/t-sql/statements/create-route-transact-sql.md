@@ -1,4 +1,5 @@
 ---
+description: "CREATE ROUTE (Transact-SQL)"
 title: "CREATE ROUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
@@ -37,7 +38,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 CREATE ROUTE route_name  
 [ AUTHORIZATION owner_name ]  
@@ -78,7 +79,7 @@ WHERE database_id = DB_ID()
  Specifies the time, in seconds, that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] retains the route in the routing table. At the end of the lifetime, the route expires, and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] no longer considers the route when choosing a route for a new conversation. If this clause is omitted, the *route_lifetime* is NULL and the route never expires.  
   
  ADDRESS **='**_next\_hop\_address_**'**  
-For SQL Database managed instance, `ADDRESS` must be local. 
+For SQL Managed Instance, `ADDRESS` must be local. 
 
 Specifies the network address for this route. The *next_hop_address* specifies a TCP/IP address in the following format:  
   

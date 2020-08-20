@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_add_job (Transact-SQL)"
 title: "sys.sp_cdc_add_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_add_job"
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
-author: rothja
-ms.author: jroth
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.sp_cdc_add_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Creates a change data capture cleanup or capture job in the current database.  
   
@@ -70,7 +71,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
 `[ @pollinginterval ] = polling\_interval_`
  Number of seconds between log scan cycles. *polling_interval* is **bigint** with a default of 5.  
   
- *polling_interval* is valid only for capture jobs when *continuous* is set to 1. If specified, the value cannot be negative and cannot exceed 24 hours. If a value of 0 is specified, there is no wait between log scans.  
+ *polling_interval* is valid only for capture jobs when *continuous* is set to 1. If specified, the value must be greater than or equal to 0 and less than 24 hours(Max: 86399 seconds). If a value of 0 is specified, there is no wait between log scans.  
   
 `[ @retention ] = retention_`
  Number of minutes that change data rows are to be retained in change tables. *retention* is **bigint** with a default of 4320 (72 hours). The maximum value is 52494800 (100 years). If specified, the value must be a positive integer.  

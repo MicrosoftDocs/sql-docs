@@ -1,4 +1,5 @@
 ---
+description: "Adding Tasks Programmatically"
 title: "Adding Tasks Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -19,7 +20,7 @@ ms.author: chugu
 ---
 # Adding Tasks Programmatically
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Tasks can be added to the following types of objects in the run-time engine:  

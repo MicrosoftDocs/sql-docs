@@ -1,4 +1,5 @@
 ---
+description: "getMaxFieldSize Method (SQLServerStatement)"
 title: "getMaxFieldSize Method (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: ed7bbcb8-660b-4e9b-8241-e216c42826f9
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getMaxFieldSize Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

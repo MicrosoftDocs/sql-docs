@@ -1,6 +1,6 @@
 ---
 title: Common errors with customer-managed keys in Azure Key Vault
-description: Troubleshoot common errors with transparent data encryption (TDE) and customer-managed keys in Azure Key Vault.
+description: Learn how to identify and resolve access issues and common errors with transparent data encryption (TDE) and customer-managed keys in Azure Key Vault.
 ms.custom: seo-lt-2019
 helpviewer_keywords: 
   - "troublshooting, tde akv"
@@ -17,7 +17,8 @@ monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-
 ---
 # Common errors for transparent data encryption with customer-managed keys in Azure Key Vault
 
-[!INCLUDE[appliesto-xx-asdb-asdw-xxx-md.md](../../../includes/appliesto-xx-asdb-asdw-xxx-md.md)]
+[!INCLUDE[asdb-asdbmi-asa](../../../includes/applies-to-version/asdb-asdbmi-asa.md)]
+
 This article describes how to identify and resolve Azure Key Vault key access issues that caused a database configured to use [transparent data encryption (TDE) with customer-managed keys in Azure Key Vault](/azure/sql-database/transparent-data-encryption-byok-azure-sql) to become inaccessible.
 
 ## Introduction
@@ -27,7 +28,7 @@ For the first 8 hours, if the underlying Azure key vault key access issue is res
 
 If an inaccessible database is no longer needed, it can be deleted immediately to stop incurring costs. All other actions on the database are not permitted until access to the Azure key vault key has been restored and the database is back online. Changing the TDE option from customer-managed to service-managed keys on the server is also not possible while a database encrypted with customer-managed keys is inaccessible. This is necessary to protect the data from unauthorized access while permissions to the TDE Protector have been revoked. 
 
-After a database has been inaccessible for more than 8 hours, it will no longer auto-heal. If the required Azure key vault key access has been restored after that period, you must re-validate the access manually to bring the database back online. Bringing the database back online in this case can take a significant amount of time depending on the size of the database and currently requires opening a support ticket. Once the database is back online, previously configured settings such as the geo-link if Geo-DR was configured, PITR history, and tags will be lost. Therefore, we recommend implementing a notification system using [Action Groups](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) that allows to become aware of and address the underlying key vault key access issues as soon as possible. 
+After a database has been inaccessible for more than 8 hours, it will no longer auto-heal. If the required Azure key vault key access has been restored after that period, you must re-validate the access to the key manually, to bring the database back online. Bringing the database back online in this case can take a significant amount of time depending on the size of the database. Once the database is back online, previously configured settings such as [failover group](https://docs.microsoft.com/azure/sql-database/sql-database-auto-failover-group), PITR history, and any tags **will be lost**. Therefore, we recommend implementing a notification system using [Action Groups](https://docs.microsoft.com/azure/azure-monitor/platform/action-groups) that allows to become aware of and address the underlying key vault key access issues as soon as possible. 
 
 ## Common errors causing databases to become inaccessible
 
@@ -158,7 +159,7 @@ Confirm that the logical SQL Server instance has permissions to the key vault an
 
 ## Getting TDE status from the Activity log
 
-To allow for monitoring of the database status due to Azure Key Vault key access issues, the following events will be logged to the [Activity Log](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) for the resource ID based on the Azure Resource Manager URL and Subscription+Resourcegroup+ServerName+DatabseName: 
+To allow for monitoring of the database status due to Azure Key Vault key access issues, the following events will be logged to the [Activity Log](https://docs.microsoft.com/azure/service-health/alerts-activity-log-service-notifications) for the resource ID based on the Azure Resource Manager URL and Subscription+Resourcegroup+ServerName+DatabaseName: 
 
 **Event when the service loses access to the Azure Key Vault key**
 

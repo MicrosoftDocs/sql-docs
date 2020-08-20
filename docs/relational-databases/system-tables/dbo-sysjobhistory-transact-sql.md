@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysjobhistory (Transact-SQL)"
 title: "dbo.sysjobhistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/24/2019"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysjobhistory system table"
 ms.assetid: 1b1fcdbb-2af2-45e6-bf3f-e8279432ce13
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # dbo.sysjobhistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Contains information about the execution of scheduled jobs by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.
   
@@ -41,7 +42,7 @@ This table is stored in the **msdb** database.
 |**message**|**nvarchar(4000)**|Text, if any, of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error.|  
 |**run_status**|**int**|Status of the job execution:<br /><br /> **0** = Failed<br /><br /> **1** = Succeeded<br /><br /> **2** = Retry<br /><br /> **3** = Canceled<br /><br />**4** = In Progress|  
 |**run_date**|**int**|Date the job or step started execution. For an In Progress history, this is the date/time the history was written.|  
-|**run_time**|**int**|Time the job or step started.|  
+|**run_time**|**int**|Time the job or step started in **HHMMSS** format.|  
 |**run_duration**|**int**|Elapsed time in the execution of the job or step in **HHMMSS** format.|  
 |**operator_id_emailed**|**int**|ID of the operator notified when the job completed.|  
 |**operator_id_netsent**|**int**|ID of the operator notified by a message when the job completed.|  

@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_backuphistory (Transact-SQL)"
 title: "sp_delete_backuphistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_backuphistory"
 ms.assetid: bdb56834-616e-47e4-b942-e895d2325e97
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_delete_backuphistory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Reduces the size of the backup and restore history tables by deleting the entries for backup sets older than the specified date. Additional rows are added to the backup and restore history tables after each backup or restore operation is performed; therefore, we recommend that you periodically execute **sp_delete_backuphistory**.  
   

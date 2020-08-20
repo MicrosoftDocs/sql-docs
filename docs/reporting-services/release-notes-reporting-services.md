@@ -1,6 +1,7 @@
 ---
 title: "Release notes for Reporting Services 2017 and later | Microsoft Docs"
-ms.date: 12/04/2019
+description: Learn details about the changes in SQL Server Reporting Services (SSRS), for versions 2017 and later.
+ms.date: 04/28/2020
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
@@ -45,7 +46,26 @@ We are "standardizing" all our 'Release Notes' style articles:
 
 GeneMi, DevOps = 1467988 (MsEng > TechnicalContent) , 2019/03/19
 -->
-## 14.0.600.1451 2019/11/13 
+## SQL Server 2019 Reporting Services
+
+## 15.0.7243.37714, 2019/11/01
+
+Initial release.
+
+
+## SQL Server 2017 Reporting Services
+
+## 14.0.600.1572, 2020/04/06 
+
+| Fixed issue | Details |
+| :---------- | :------ |
+| Updated JQuery UI to 1.12  | &nbsp; |
+| Fixed URL case-sensitivity  | &nbsp; |
+| Fixed Parameter placement when there are many parameters  | &nbsp; |
+| Fixed FindString not working in HTML5 rendering  | &nbsp; |
+| Analysis Services Client Libraries updated to address TLS 1.0/1.1 deprecation | &nbsp; |
+
+## 14.0.600.1451, 2019/11/13 
 
 | Fixed issue | Details |
 | :---------- | :------ |

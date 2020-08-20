@@ -1,4 +1,5 @@
 ---
+description: "CREATE QUEUE (Transact-SQL)"
 title: "CREATE QUEUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2019"
@@ -28,7 +29,7 @@ ms.author: carlrab
 ---
 # CREATE QUEUE (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Creates a new queue in a database. Queues store messages. When a message arrives for a service, [!INCLUDE[ssSB](../../includes/sssb-md.md)] puts the message on the queue associated with the service.
 
@@ -36,7 +37,7 @@ Creates a new queue in a database. Queues store messages. When a message arrives
 
 ## Syntax
 
-```
+```syntaxsql
 CREATE QUEUE <object>
    [ WITH
      [ STATUS = { ON | OFF } [ , ] ]
@@ -60,6 +61,8 @@ CREATE QUEUE <object>
 { database_name.schema_name.stored_procedure_name | schema_name.stored_procedure_name | stored_procedure_name }
 
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

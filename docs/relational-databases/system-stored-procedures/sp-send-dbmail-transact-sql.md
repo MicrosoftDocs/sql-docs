@@ -1,4 +1,5 @@
 ---
+description: "sp_send_dbmail (Transact-SQL)"
 title: "sp_send_dbmail (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2016"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_send_dbmail"
 ms.assetid: f1d7a795-a3fd-4043-ac4b-c781e76dab47
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_send_dbmail (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Sends an e-mail message to the specified recipients. The message may include a query result set, file attachments, or both. When mail is successfully placed in the Database Mail queue, **sp_send_dbmail** returns the **mailitem_id** of the message. This stored procedure is in the **msdb** database.  
   

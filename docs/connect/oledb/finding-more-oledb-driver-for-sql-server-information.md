@@ -1,6 +1,6 @@
 ---
-title: "Finding More OLE DB Driver for SQL Server Information | Microsoft Docs"
-description: "Where to find more OLE DB Driver for SQL Server information"
+title: "Finding More OLE DB Driver for SQL Server Information"
+description: Use these resources for more information about OLE DB Driver for SQL Server and other types of data access programming.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -15,7 +15,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Finding More OLE DB Driver for SQL Server Information
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../includes/driver_oledb_download.md)]
 

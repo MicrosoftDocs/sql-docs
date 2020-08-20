@@ -1,4 +1,5 @@
 ---
+description: "GetRowsOptionEnum"
 title: "GetRowsOptionEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "GetRowsOptionEnum enumeration [ADO]"
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # GetRowsOptionEnum
 Specifies how many records to retrieve from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

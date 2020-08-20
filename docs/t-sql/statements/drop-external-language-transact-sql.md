@@ -1,4 +1,5 @@
 ---
+description: "DROP EXTERNAL LANGUAGE (Transact-SQL) - SQL Server"
 title: DROP EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom:
 ms.date: 08/08/2019
@@ -9,11 +10,11 @@ author: nelgson
 ms.author: negust
 ms.reviewer: dphansen
 manager: cgronlun
-monikerRange: ">=sql-server-ver15||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 
-# DROP EXTERNAL LIBRARY (Transact-SQL)  
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+# DROP EXTERNAL LANGUAGE (Transact-SQL)  
+[!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
 Deletes an existing external language.
 
@@ -39,6 +40,8 @@ To delete a language requires the privilege ALTER ANY EXTERNAL LANGUAGE. By defa
 ### Return values
 
 An informational message is returned if the statement was successful.
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Remarks
 

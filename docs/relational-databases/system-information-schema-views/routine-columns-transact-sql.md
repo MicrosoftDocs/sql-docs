@@ -1,4 +1,5 @@
 ---
+description: "ROUTINE_COLUMNS (Transact-SQL)"
 title: "ROUTINE_COLUMNS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -21,7 +22,7 @@ ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ROUTINE_COLUMNS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns one row for each column returned by the table-valued functions that can be accessed by the current user in the current database.  
   
@@ -30,7 +31,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**TABLE_CATALOG**|**nvarchar(**128**)**|Catalog or database name of the table-valued function.|  
-|**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of the schema that contains the table-valued function.<br /><br /> <strong>\*\* Important \*\*</strong> Do not use INFORMATION_SCHEMA views to determine the schema of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|**TABLE_SCHEMA**|**nvarchar(**128**)**|Name of the schema that contains the table-valued function.<br /><br /> <strong>\*\* Important \*\*</strong> Do not use INFORMATION_SCHEMA views to determine the schema of an object. INFORMATION_SCHEMA views only represent a subset of the metadata of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
 |**TABLE_NAME**|**nvarchar(**128**)**|Name of the table-valued function.|  
 |**COLUMN_NAME**|**nvarchar(**128**)**|Column name.|  
 |**ORDINAL_POSITION**|**int**|Column identification number.|  
@@ -50,7 +51,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 |**COLLATION_SCHEMA**|**varchar(**3**)**|Always returns NULL.|  
 |**COLLATION_NAME**|**nvarchar(**128**)**|Returns the unique name for the sort order if the column is character data or **text** data type. Otherwise, returns NULL.|  
 |**DOMAIN_CATALOG**|**nvarchar(**128**)**|If the column is an alias data type, this column is the database name in which the user-defined data type was created. Otherwise, returns NULL.|  
-|**DOMAIN_SCHEMA**|**nvarchar(**128**)**|If the column is a user-defined data type, this column is the name of the schema that contains the user-defined data type. Otherwise, returns NULL.<br /><br /> <strong>\*\* Important \*\*</strong> Do not use INFORMATION_SCHEMA views to determine the schema of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
+|**DOMAIN_SCHEMA**|**nvarchar(**128**)**|If the column is a user-defined data type, this column is the name of the schema that contains the user-defined data type. Otherwise, returns NULL.<br /><br /> <strong>\*\* Important \*\*</strong> Do not use INFORMATION_SCHEMA views to determine the schema of an object. INFORMATION_SCHEMA views only represent a subset of the metadata of an object. The only reliable way to find the schema of a object is to query the sys.objects catalog view.|  
 |**DOMAIN_NAME**|**nvarchar(**128**)**|If the column is a user-defined data type, this column is the name of the user-defined data type. Otherwise, returns NULL.|  
   
 ## See Also  

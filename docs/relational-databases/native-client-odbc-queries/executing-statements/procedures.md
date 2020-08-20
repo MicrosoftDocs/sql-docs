@@ -1,4 +1,5 @@
 ---
+description: "Procedures"
 title: "Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,12 +15,12 @@ helpviewer_keywords:
   - "statements [ODBC], stored procedures"
   - "ODBC applications, stored procedures"
 ms.assetid: c64d5f3a-376b-48ef-84f3-b6148ac8600a
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Procedures
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   A stored procedure is a precompiled executable object that contains one or more [!INCLUDE[tsql](../../../includes/tsql-md.md)] statements. Stored procedures can have input and output parameters and can also put out an integer return code. An application can enumerate available stored procedures by using catalog functions.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Guidelines for online index operations"
 title: Guidelines for Online Index Operations | Microsoft Docs
 ms.custom: ""
 ms.date: 11/12/2019
@@ -21,7 +22,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Guidelines for online index operations
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 When you perform online index operations, the following guidelines apply:  
 

@@ -1,4 +1,5 @@
 ---
+description: "DeleteRule Property (ADOX)"
 title: "DeleteRule Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "DeleteRule property [ADOX]"
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DeleteRule Property (ADOX)
 Indicates the action performed when a primary key is deleted.  

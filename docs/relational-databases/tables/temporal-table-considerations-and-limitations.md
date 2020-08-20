@@ -1,4 +1,5 @@
 ---
+description: "Temporal Table Considerations and Limitations"
 title: "Temporal Table Considerations and Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"
@@ -14,7 +15,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Temporal Table Considerations and Limitations
 
-[!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 There are some considerations and limitations to be aware of when working with temporal tables, due to the nature of system-versioning.
 
@@ -45,7 +48,7 @@ Consider the following when working with temporal tables:
 
   - **Always On:** Fully supported
   - **Change Data Capture and Change Data Tracking:** Supported only on the current table
-  - **Snapshot and transactional replication**: Only supported for a single publisher without temporal being enabled and one subscriber with temporal enabled. In this case, the publisher is used for an OLTP workload while subscriber serves for offloading reporting (including 'AS OF' querying). Use of multiple subscribers is not supported since this scenario may lead to inconsistent temporal data as each of them would depend on the local system clock.
+  - **Snapshot and transactional replication**: Only supported for a single publisher without temporal being enabled and one subscriber with temporal enabled. In this case, the publisher is used for an OLTP workload while subscriber serves for offloading reporting (including 'AS OF' querying). When the distribution agent starts, it opens a transaction that is held open until distribution agent stops. Due to this behavior SysStartTime and SysEndTime are populated to the begin time of the first transaction that distribution agent starts. Consequently, it may be preferable to run the distribution agent on a schedule rather than the default behavior of running it continuously, if having SysStartTime and SysEndTime populated with a time that is close to the current system time is important to your application or organization. Use of multiple subscribers is not supported as this may lead to inconsistent temporal data due to dependency on local system clock.
   - **Merge replication:** Not supported for temporal tables
 
 - Regular queries only affect data in the current table. To query data in the history table, you must use temporal queries. These are discussed later in this document in the section entitled Querying Temporal Data.

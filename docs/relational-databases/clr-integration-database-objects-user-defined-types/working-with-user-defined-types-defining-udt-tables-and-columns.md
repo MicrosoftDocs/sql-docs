@@ -1,5 +1,6 @@
 ---
 title: "Defining UDT Tables and Columns | Microsoft Docs"
+description: After you register the assembly that contains a UDT definition, you can use it in a column definition.
 ms.custom: ""
 ms.date: "12/05/2019"
 ms.prod: sql
@@ -23,7 +24,7 @@ author: "rothja"
 ms.author: "jroth"
 ---
 # Working with User-Defined Types - Defining UDT Tables and Columns
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Once the assembly containing the user-defined type (UDT) definition has been registered in a [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database, it can be used in a column definition. For more information, see [CREATE TYPE (Transact-SQL)](../../t-sql/statements/create-type-transact-sql.md).  
   
 ## Creating Tables with UDTs  

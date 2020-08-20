@@ -1,4 +1,5 @@
 ---
+description: "ALTER FULLTEXT INDEX (Transact-SQL)"
 title: "ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/27/2017"
@@ -23,7 +24,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # ALTER FULLTEXT INDEX (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Changes the properties of a full-text index in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -31,7 +32,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER FULLTEXT INDEX ON table_name  
    { ENABLE   
@@ -59,7 +60,9 @@ ALTER FULLTEXT INDEX ON table_name
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table_name*  
  Is the name of the table or indexed view that contains the column or columns included in the full-text index. Specifying database and table owner names is optional.  
   

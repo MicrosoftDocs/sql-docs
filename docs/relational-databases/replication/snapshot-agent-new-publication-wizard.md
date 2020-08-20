@@ -1,4 +1,5 @@
 ---
+description: "Snapshot Agent (New Publication Wizard)"
 title: "Snapshot Agent (New Publication Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Snapshot Agent (New Publication Wizard)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The Snapshot Agent creates files containing the publication schema and data that are used to initialize new subscriptions. By default, the Snapshot Agent runs immediately after the publication is created in the New Publication Wizard. Subsequently, the agent runs according to a schedule you specify. Whether the agent creates new snapshot files each time it runs depends on the type of replication and options chosen. For more information, see [Create and Apply the Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md).  
   
  For merge publications that use parameterized filters, you must create a snapshot for each partition of data after the publication snapshot has completed. For more information, see [Snapshots for Merge Publications with Parameterized Filters](../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md).  

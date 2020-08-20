@@ -1,4 +1,5 @@
 ---
+description: "Catalog Object Properties, Methods, and Events"
 title: "Catalog Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Catalog object [ADOX], members"
 ms.assetid: 90a05168-87d0-45e8-8b32-0b64fec74ad2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Catalog Object Properties, Methods, and Events
 ## Properties/Collections  

@@ -1,5 +1,6 @@
 ---
 title: "SqlLocalDB Utility"
+description: The SqlLocalDB utility command line tool allows users and developers to create and manage an instance of SQL Server Express LocalDB.
 ms.custom: seo-lt-2019
 ms.date: "08/09/2016"
 ms.prod: sql
@@ -16,7 +17,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # SqlLocalDB Utility
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
   Use the **SqlLocalDB** utility to create an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssExpCurrent](../includes/ssexpcurrent-md.md)] **LocalDB**. The **SqlLocalDB** utility (SqlLocalDB.exe) is a simple command line tool to enable users and developers to create and manage an instance of [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] **LocalDB**. For information about how to use **LocalDB**, see [SQL Server 2016 Express LocalDB](../database-engine/configure-windows/sql-server-2016-express-localdb.md).  
   
 ## Syntax  

@@ -1,4 +1,5 @@
 ---
+description: "Append Method (ADOX Tables)"
 title: "Append Method (ADOX Tables) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Append method [ADOX]"
 ms.assetid: a362ed51-314c-4783-9598-538dbf755f3d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Append Method (ADOX Tables)
 Adds a new [Table](../../../ado/reference/adox-api/table-object-adox.md) object to the [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) collection.  

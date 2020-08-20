@@ -1,4 +1,5 @@
 ---
+description: "Monitoring Replication with System Monitor"
 title: "Monitoring Replication with System Monitor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,7 +17,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Monitoring Replication with System Monitor
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows System Monitor allows you to use graphs, charts, and reports to gauge the efficiency of your computer, and identify and troubleshoot possible problems (such as unbalanced resource use, insufficient hardware, or poor program design), and plan for additional hardware needs. For more information, see [Monitor Resource Usage &#40;System Monitor&#41;](../../../relational-databases/performance-monitor/monitor-resource-usage-system-monitor.md).  
   
  System Monitor uses performance objects and counters, which provide information on the performance of various processes. You can measure replication performance through counters associated with the replication agents:  

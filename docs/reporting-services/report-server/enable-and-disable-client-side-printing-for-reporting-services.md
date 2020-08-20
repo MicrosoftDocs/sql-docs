@@ -1,5 +1,6 @@
 ---
 title: "Enable and Disable Client-Side Printing for Reporting Services | Microsoft Docs"
+description: Learn how to enable or disable client-side printing for Reporting Services reports viewed in a browser. Client-side printing uses PDF and is enabled by default.
 ms.date: 05/30/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -28,7 +29,7 @@ ms.author: maggies
   
  ![Report toolbar](../../reporting-services/media/ssrs-htmlviewer-toolbar.png "Report toolbar")  
   
-|||  
+|Interaction|User interface|  
 |-|-|  
 |The first dialog is the same for all browsers and allows you change basic layout properties such as orientation. When you click **Print**, the experience will be slightly different depending on the browser you are using.|![ssrs_pdfprint_chrome1](../../reporting-services/report-server/media/ssrs-pdfprint-chrome1.png "ssrs_pdfprint_chrome1")|  
 |In Chrome, a detailed browser print dialog opens.   You can change the print configuration,  print, and open the operating systems print dialog.|![ssrs_pdfprint_chrome2](../../reporting-services/report-server/media/ssrs-pdfprint-chrome2.png "ssrs_pdfprint_chrome2") ![ssrs_pdfprint_chrome3.png](../../reporting-services/report-server/media/ssrs-pdfprint-chrome3-png.png "ssrs_pdfprint_chrome3.png")|  

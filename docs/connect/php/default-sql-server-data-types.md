@@ -1,7 +1,8 @@
 ---
-title: "Default SQL Server Data Types | Microsoft Docs"
+title: "Default SQL Server data types"
+description: "This topic lists all the default SQL Server Data types based on PHP Data Types when using the Microsoft SQLSRV Driver for PHP for SQL Server"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "default data types"
   - "converting data types"
 ms.assetid: 65c7c211-96d3-4e65-a1de-1fe8d21348e7
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Default SQL Server Data Types
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

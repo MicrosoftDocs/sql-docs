@@ -1,4 +1,5 @@
 ---
+description: "sp_changedistpublisher (Transact-SQL)"
 title: "sp_changedistpublisher (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_changedistpublisher"
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_changedistpublisher (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the properties of the distribution Publisher. This stored procedure is executed at the Distributor on any database.  
   
@@ -44,7 +45,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
  Is the value for the given property. *value* is **nvarchar(255)**, with a default of NULL.  
   
 `[ @storage_connection_string = ] 'storage_connection_string'`
- Is required for SQL Database managed instance, should match the access key for the Azure SQL Database storage volume. 
+ Is required for SQL Managed Instance, should match the access key for the Azure SQL Database storage volume. 
 
 
  > [!INCLUDE[Azure SQL Database link](../../includes/azure-sql-db-repl-for-more-information.md)]
@@ -62,7 +63,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ||**0**|Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication when connecting to the Publisher. *This cannot be changed for a non-*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*|  
 |**working_directory**||Working directory used to store data and schema files for the publication.|  
 |NULL (default)||All available *property* options are printed.| 
-|**storage_connection_string**| Access key | The access key for the working directory when the database is Azure SQL Database Managed Instance. 
+|**storage_connection_string**| Access key | The access key for the working directory when the database is Azure SQL Managed Instance. 
   
 ## Return Code Values  
  **0** (success) or **1** (failure)  

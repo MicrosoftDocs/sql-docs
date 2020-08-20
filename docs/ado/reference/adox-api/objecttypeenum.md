@@ -1,4 +1,5 @@
 ---
+description: "ObjectTypeEnum"
 title: "ObjectTypeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ObjectTypeEnum enumeration [ADOX]"
 ms.assetid: 3fdecfca-aa91-4596-ad98-610f1b7f840b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ObjectTypeEnum
 Specifies the type of database object for which to set permissions or ownership.  
@@ -29,8 +30,14 @@ Specifies the type of database object for which to set permissions or ownership.
 |**adPermObjView**|5|The object is a view.|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[GetObjectOwner Method (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)|[GetPermissions Method (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)|  
-|[SetObjectOwner Method](../../../ado/reference/adox-api/setobjectowner-method.md)|[SetPermissions Method (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)|
+
+:::row:::
+    :::column:::
+        [GetObjectOwner Method (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
+        [GetPermissions Method (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+    :::column-end:::
+    :::column:::
+        [SetObjectOwner Method](../../../ado/reference/adox-api/setobjectowner-method.md)  
+        [SetPermissions Method (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+    :::column-end:::
+:::row-end:::

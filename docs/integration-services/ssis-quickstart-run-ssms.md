@@ -1,4 +1,5 @@
 ---
+description: "Run an SSIS package with SQL Server Management Studio (SSMS)"
 title: "Run an SSIS package with SSMS | Microsoft Docs"
 ms.date: "05/21/2018"
 ms.topic: quickstart
@@ -11,7 +12,7 @@ ms.author: chugu
 ---
 # Run an SSIS package with SQL Server Management Studio (SSMS)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This quickstart demonstrates how to use SQL Server Management Studio (SSMS) to connect to the SSIS Catalog database, and then run an SSIS package stored in the SSIS Catalog from Object Explorer in SSMS.

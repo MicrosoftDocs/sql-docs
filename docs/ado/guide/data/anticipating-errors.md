@@ -1,4 +1,5 @@
 ---
+description: "Anticipating Errors"
 title: "Anticipating Errors | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "errors [ADO], preventing"
   - "preventing errors [ADO]"
 ms.assetid: ea1d4a97-58c3-476b-a496-cc80db2a90d5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Anticipating Errors
 Error prevention is at least as important as error handling. This final section contains a short list of precautions your application can take to help make errors less likely to occur.  

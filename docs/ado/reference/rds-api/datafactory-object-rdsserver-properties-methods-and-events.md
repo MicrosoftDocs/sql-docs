@@ -1,4 +1,5 @@
 ---
+description: "DataFactory Object (RDSServer) Properties, Methods, and Events"
 title: "DataFactory Object (RDSServer) Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "DataFactory object [ADO], members"
 ms.assetid: 36a1f49b-91f4-44f4-b6e2-52fc7ed06d7e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DataFactory Object (RDSServer) Properties, Methods, and Events
 > [!IMPORTANT]
@@ -22,7 +23,7 @@ ms.author: genemi
   
 ## Methods  
   
-|||  
+|Method|Description|  
 |-|-|  
 |[ConvertToString Method (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Converts a recordset into a MIME64 string.|  
 |[CreateRecordset Method (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Creates and returns an empty recordset.|  

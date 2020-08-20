@@ -1,4 +1,5 @@
 ---
+description: "Registering a Custom Business Object"
 title: "Registering a Custom Business Object | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "registering custom business objects in RDS [ADO]"
   - "business objects in RDS [ADO]"
 ms.assetid: e9032ad8-d14c-42e3-ba13-cb5f00084a79
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Registering a Custom Business Object
 To successfully launch a custom business object (.dll or .exe) through the Web server, the business object's ProgID must be entered into the registry as explained in this procedure. This RDS feature protects the security of your Web server by running only sanctioned executables.  

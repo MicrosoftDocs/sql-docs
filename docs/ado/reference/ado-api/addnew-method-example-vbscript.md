@@ -1,4 +1,5 @@
 ---
+description: "AddNew Method Example (VBScript)"
 title: "AddNew Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "AddNew method [ADO], VBScript"
 ms.assetid: dcdcaf0a-b9b0-4d81-8728-43c38c4c853b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # AddNew Method Example (VBScript)
 This example uses the [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) method to create a new record with the specified name.  

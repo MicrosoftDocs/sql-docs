@@ -1,4 +1,5 @@
 ---
+description: "Save As"
 title: "Save As"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -16,7 +17,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Save As
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Used to save an instance of the current item at a specified location in a specified file format. Click **Save** *<file>* **As** on the **File** menu (where *<file>* is the name of the current item), or press ALT+F, A in the Code Editor.  
   
 ## Central Panel  
@@ -27,7 +28,7 @@ Locate the existing project folder from this drop-down menu. Selecting a folder 
 Use this option to view the current file name, change the file name, or filter the files and folders that are displayed. To filter the files and folders that are displayed, enter a full or partial file name on which to filter. You can use the asterisk (`*`) as a wildcard.  
   
 > [!TIP]
-> To display files on Web and network locations, enter a URL or network path in the **File name** box. For example, "<https://mywebsite>" displays the files available at the "mywebsite" Web location and "\\\myserver\myshare" displays the files available at the "myshare" location on "myserver".  
+> To display files on Web and network locations, enter a URL or network path in the **File name** box. For example, `https://mywebsite` displays the files available at the "mywebsite" Web location and "\\\myserver\myshare" displays the files available at the "myshare" location on "myserver".  
   
 **Save as type**  
 Use this option to select a new file type for the selected item. The file types displayed include all available file types to which the selected item can be converted.  

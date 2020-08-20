@@ -1,6 +1,7 @@
 ---
+description: "Get Full Memory Dump"
 title: Get Full Memory Dump to troubleshoot SSMS
-Description: Troubleshooting an SSMS hang or crash by collecting a full memory dump
+Description: Capture diagnostic information from SQL Server Management Studio (SSMS) so you can troubleshoot a crash or an unresponsive system.
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms
@@ -17,7 +18,7 @@ ms.date: 05/17/2019
 
 [!INCLUDE[Applies to](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-In this article, you learn how to capture diagnostic information to troubleshoot a crash or a hang that you experienced from SQL Server Management Studio (SSMS).
+In this article, you learn how to capture diagnostic information to troubleshoot a crash or a unresponsive system that you experienced from SQL Server Management Studio (SSMS).
 
 To capture diagnostic information to troubleshoot, follow the steps below.
 

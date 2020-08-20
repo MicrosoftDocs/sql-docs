@@ -1,4 +1,5 @@
 ---
+description: "Type Property (Column) (ADOX)"
 title: "Type Property (Column) (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Type property [ADOX]"
 ms.assetid: 5c6718b6-f728-478a-8afb-5d17b0a91d1f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Type Property (Column) (ADOX)
 Indicates the data type of a column.  

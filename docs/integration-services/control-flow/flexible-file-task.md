@@ -1,4 +1,5 @@
 ---
+description: "Flexible File Task"
 title: "Flexible File Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/22/2019"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Flexible File Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 The Flexible File Task enables users to perform file operations on various supported storage services.
 Currently supported storage services are
@@ -38,18 +39,19 @@ For **Copy** operation, following properties are available.
 - **SourceConnectionType:** Specifies the source connection manager type.
 - **SourceConnection:** Specifies the source connection manager.
 - **SourceFolderPath:** Specifies the source folder path.
-- **SourceFileName:** Specifies the source file name. If left blank, the source folder will be copied.
+- **SourceFileName:** Specifies the source file name. If left blank, the source folder will be copied. Following wildcards are allowed in source file name: `*` (matches zero or more characters), `?` (matches zero or single character) and `^` (escape character).
 - **SearchRecursively:** Specifies whether to recursively copy subfolders.
 - **DestinationConnectionType:** Specifies the destination connection manager type.
 - **DestinationConnection:** Specifies the destination connection manager.
 - **DestinationFolderPath:** Specifies the destination folder path.
-- **DestinationFileName:** Specifies the destination file name.
+- **DestinationFileName:** Specifies the destination file name. If left blank, the source file names will be used.
 
 For **Delete** operation, following properties are available.
 - **ConnectionType:** Specifies the connection manager type.
 - **Connection:** Specifies the connection manager.
 - **FolderPath:** Specifies the folder path.
-- **FileName:** Specifies the file name. If left blank, the folder will be deleted. For Azure Blob Storage, delete folder is not supported.
+- **FileName:** Specifies the file name. If left blank, the folder will be deleted. For Azure Blob Storage, delete folder is not supported. Following wildcards are allowed in file name: `*` (matches zero or more characters), `?` (matches zero or single character) and `^` (escape character).
+- **DeleteRecursively:** Specifies whether to recusively delete files.
 
 ***Notes on Service Principal Permission Configuration***
 

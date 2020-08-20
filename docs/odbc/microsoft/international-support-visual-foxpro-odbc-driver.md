@@ -1,4 +1,5 @@
 ---
+description: "International Support (Visual FoxPro ODBC Driver)"
 title: "International Support (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "collating sequences [ODBC]"
   - "Visual FoxPro ODBC driver [ODBC], international support"
 ms.assetid: cd3fab32-13f1-4a86-abc4-5e18667669fc
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # International Support (Visual FoxPro ODBC Driver)
 The Microsoft Visual FoxPro ODBC Driver supports:  

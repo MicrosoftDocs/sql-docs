@@ -1,4 +1,5 @@
 ---
+description: "Append Method (ADOX Indexes)"
 title: "Append Method (ADOX Indexes) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Append method [ADOX]"
 ms.assetid: 6695769f-275b-4b70-81bd-1a5f7d74926c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Append Method (ADOX Indexes)
 Adds a new [Index](../../../ado/reference/adox-api/index-object-adox.md) object to the [Indexes](../../../ado/reference/adox-api/indexes-collection-adox.md) collection.  

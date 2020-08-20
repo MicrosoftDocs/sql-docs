@@ -1,4 +1,5 @@
 ---
+description: "SortDirection Property (RDS)"
 title: "SortDirection Property (RDS) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""
@@ -11,8 +12,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "SortDirection property [RDS]"
 ms.assetid: 1d9d8715-e4ad-4ff3-bf7f-f1dc0532d8c2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # SortDirection Property (RDS)
 Indicates whether a sort order is ascending or descending.  

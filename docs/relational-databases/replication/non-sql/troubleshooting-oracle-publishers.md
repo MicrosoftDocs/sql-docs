@@ -1,4 +1,5 @@
 ---
+description: "Troubleshooting Oracle Publishers"
 title: "Troubleshooting Oracle Publishers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Troubleshooting Oracle Publishers
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic lists a number of issues that might arise when configuring and using an Oracle Publisher.  
   
 ## An Error Is Raised Regarding Oracle Client and Networking Software  

@@ -1,4 +1,5 @@
 ---
+description: "Server Property (RDS)"
 title: "Server Property (RDS) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Server property [RDS]"
 ms.assetid: d2727ce7-da9f-4271-ae3c-9334ef477c14
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Server Property (RDS)
 Indicates the Internet Information Services (IIS) name and communication protocol.  

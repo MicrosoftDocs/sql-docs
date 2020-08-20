@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_sys_memory (Transact-SQL)"
 title: "sys.dm_os_sys_memory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_os_sys_memory dynamic management view"
 ms.assetid: 1ca58814-1caa-44c1-b307-ff0bdcbbef62
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_sys_memory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdbmi-asa-pdw.md)]
 
   Returns memory information from the operating system.  
   
@@ -36,7 +37,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |**total_physical_memory_kb**|**bigint**|Total size of physical memory available to the operating system, in kilobytes (KB).|  
 |**available_physical_memory_kb**|**bigint**|Size of physical memory available, in KB.|  
 |**total_page_file_kb**|**bigint**|Size of the commit limit reported by the operating system in KB|  
-|**available_page_file_kb**|**bigint**|Total amount of page file thatis not being used, in KB.|  
+|**available_page_file_kb**|**bigint**|Total amount of page file that is not being used, in KB.|  
 |**system_cache_kb**|**bigint**|Total amount of system cache memory, in KB.|  
 |**kernel_paged_pool_kb**|**bigint**|Total amount of the paged kernel pool, in KB.|  
 |**kernel_nonpaged_pool_kb**|**bigint**|Total amount of the nonpaged kernel pool, in KB.|  

@@ -1,10 +1,10 @@
 ---
-title: "System Requirements for SQL Server Native Client | Microsoft Docs"
+description: "System Requirements for SQL Server Native Client"
+title: "System Requirements"
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.reviewer: ""
-ms.technology:
+ms.technology: native-client
 ms.topic: "reference"
 helpviewer_keywords: 
   - "system requirements [SQL Server Native Client]"
@@ -12,12 +12,12 @@ helpviewer_keywords:
   - "SQL Server Native Client, system requirements"
   - "SQLNCLI, system requirements"
 ms.assetid: 1c8e2f8a-a440-44da-8e3a-af632d34c52c
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # System Requirements for SQL Server Native Client
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   To use data access features of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] such as MARS, you must have the following software installed:  
   

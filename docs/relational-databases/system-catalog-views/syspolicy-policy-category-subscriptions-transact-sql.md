@@ -1,4 +1,5 @@
 ---
+description: "syspolicy_policy_category_subscriptions (Transact-SQL)"
 title: "syspolicy_policy_category_subscriptions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # syspolicy_policy_category_subscriptions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays one row for each Policy-Based Management subscription in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Each row describes a target and policy category pair. The following table describes the columns in the syspolicy_policy_group_subscriptions view.  
   

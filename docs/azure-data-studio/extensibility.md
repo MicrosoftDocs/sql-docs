@@ -1,20 +1,19 @@
 ---
-title: Adding additional functionality thru extensibility
-titleSuffix: Azure Data Studio
+title: Adding additional functionality through extensibility
 description: Learn about the extensibility model and key extensibility areas for extending the functionality of Azure Data Studio
-ms.prod: sql
-ms.technology: azure-data-studio
+ms.prod: azure-data-studio
+ms.technology: 
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu; sstein"
+ms.reviewer: "alayu, maghan, sstein"
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ---
 
-# Getting started with [!INCLUDE[name-sos](../includes/name-sos-short.md)] extensibility
+# Azure Data Studio extensibility
 
-[!INCLUDE[name-sos](../includes/name-sos.md)] has several extensibility mechanisms to customize the user experience and make those customizations available to the entire user community. The core [!INCLUDE[name-sos](../includes/name-sos.md)] platform is built upon Visual Studio Code, so most of the Visual Studio Code extensibility APIs are available. Additionally, we've provided additional extensibility points for data management-specific activities.
+Azure Data Studio has several extensibility mechanisms to customize the user experience and make those customizations available to the entire user community. The core Azure Data Studio platform is built upon Visual Studio Code, so most of the Visual Studio Code extensibility APIs are available. Additionally, we've provided additional extensibility points for data management-specific activities.
 
 Some of the key extensibility points are:
 
@@ -27,7 +26,7 @@ Some of the key extensibility points are:
 
 ## Visual Studio Code extensibility APIs
 
-Because the core [!INCLUDE[name-sos](../includes/name-sos.md)] platform is built upon Visual Studio Code, details about the Visual Studio Code extensibility APIs are found in the [Extension Authoring](https://code.visualstudio.com/docs/extensions/overview) and [Extension API](https://code.visualstudio.com/docs/extensionAPI/overview) documentation on the Visual Studio Code website.
+Because the core Azure Data Studio platform is built upon Visual Studio Code, details about the Visual Studio Code extensibility APIs are found in the [Extension Authoring](https://code.visualstudio.com/docs/extensions/overview) and [Extension API](https://code.visualstudio.com/docs/extensionAPI/overview) documentation on the Visual Studio Code website.
 
 ## Manage Dashboard tab panel contributions
 
@@ -44,9 +43,9 @@ This section covers the various contribution points that are defined in the pack
 
 The IntelliSense is supported inside azuredatastudio.
 
-## Contributes dashboard
+### Dashboard contribution points
 
-Contribute tab, container, insight widget to the dashboard.
+Contribute a tab, container, and/or insight widget to the dashboard.
 
 ![Dashboard](media/extensibility/dashboard-page.png)
 
@@ -234,7 +233,7 @@ There are currently four supported container types:
 				"icon": {
 					"light": "./icons/tab1Icon.svg",
 					"dark": "./icons/tab1Icon_dark.svg"
-				}
+				},
 				"container": {
 					...
 				}
@@ -245,7 +244,7 @@ There are currently four supported container types:
 				"icon": {
 					"light": "./icons/tab2Icon.svg",
 					"dark": "./icons/tab2Icon_dark.svg"
-				}
+				},
 				"container": {
 					...
 				}
@@ -272,4 +271,4 @@ In dashboard, we provide the following context variables:
 |`serverName`|A string of the server name of the current connection. Ex. `serverName == 'localhost'`.|
 |`databaseName` | A string of the database name of the current connection. Ex. `databaseName == 'master'`.|
 |`connection` | The full connection profile object for the current connection (IConnectionProfile)|
-|`dashboardContext` | A string of the context of the page of the dashboard is currently on. Either 'database' or 'server'. Ex. `dashboardContext == 'database'`|
+|`dashboardContext` | A string of the context of the page the dashboard is currently on. Either 'database' or 'server'. Ex. `dashboardContext == 'database'`|

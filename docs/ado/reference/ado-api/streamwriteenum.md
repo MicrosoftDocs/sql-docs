@@ -1,4 +1,5 @@
 ---
+description: "StreamWriteEnum"
 title: "StreamWriteEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "StreamWriteEnum enumeration [ADO]"
 ms.assetid: bdbf3405-a0bd-4f02-85d4-e3fe8da3f3f7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # StreamWriteEnum
 Specifies whether a line separator is appended to the string written to a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

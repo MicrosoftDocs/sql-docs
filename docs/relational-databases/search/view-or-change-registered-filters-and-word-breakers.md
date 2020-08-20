@@ -1,4 +1,5 @@
 ---
+description: "View or Change Registered Filters and Word Breakers"
 title: "View or change registered filters & word breakers"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ms.custom: "seo-lt-2019"
 ---
 # View or Change Registered Filters and Word Breakers
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   After any word breakers or filters are installed or uninstalled on a system, the changes do not automatically take effect on server instances. This topic describes how to view the currently registered word breaker or filters and how to register newly installed word breakers and filters on an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ### To view a list of languages whose word breakers are currently registered  

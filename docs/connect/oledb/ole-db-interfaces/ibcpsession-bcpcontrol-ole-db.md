@@ -1,6 +1,6 @@
 ---
-title: "IBCPSession::BCPControl (OLE DB) | Microsoft Docs"
-description: "IBCPSession::BCPControl (OLE DB)"
+title: "IBCPSession::BCPControl (OLE DB driver) | Microsoft Docs"
+description: Learn how IBCPSession::BCPControl sets the options for a bulk-copy operation in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "07/03/2018"
 ms.prod: sql
@@ -17,7 +17,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # IBCPSession::BCPControl (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
@@ -71,7 +71,7 @@ HRESULT BCPControl(
  The method succeeded.  
   
  E_FAIL  
- A provider-specific error occurred; for detailed information, use the [ISQLServerErrorInfo](https://msdn.microsoft.com/library/a8323b5c-686a-4235-a8d2-bda43617b3a1) interface.  
+ A provider-specific error occurred; for detailed information, use the [ISQLServerErrorInfo](https://docs.microsoft.com/sql/connect/oledb/ole-db-interfaces/isqlservererrorinfo-geterrorinfo-ole-db?view=sql-server-ver15) interface.  
   
  E_UNEXPECTED  
  The call to the method was unexpected. For example, the [IBCPSession::BCPInit](../../oledb/ole-db-interfaces/ibcpsession-bcpinit-ole-db.md) method was not called before calling this function.  

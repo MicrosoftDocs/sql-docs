@@ -1,4 +1,5 @@
 ---
+description: "ObjectStateEnum"
 title: "ObjectStateEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ObjectStateEnum enumeration [ADO]"
 ms.assetid: 32746558-097b-4749-989e-519aadf7e3f4
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ObjectStateEnum
 Specifies whether an object is open or closed, connecting to a data source, executing a command, or retrieving data.  
@@ -39,7 +40,12 @@ Specifies whether an object is open or closed, connecting to a data source, exec
 |AdoEnums.ObjectState.FETCHING|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[State Property (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)|[State Property (ADO)](../../../ado/reference/ado-api/state-property-ado.md)|
+
+:::row:::
+    :::column:::
+        [State Property (ADO)](../../../ado/reference/ado-api/state-property-ado.md)  
+    :::column-end:::
+    :::column:::
+        [State Property (ADO MD)](../../../ado/reference/ado-md-api/state-property-ado-md.md)  
+    :::column-end:::
+:::row-end:::

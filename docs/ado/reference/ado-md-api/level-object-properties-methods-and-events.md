@@ -1,4 +1,5 @@
 ---
+description: "Level Object Properties, Methods, and Events"
 title: "Level Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Level object [ADO MD], members"
 ms.assetid: fdff70b0-95d0-447f-9359-97b8d159420d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Level Object Properties, Methods, and Events
 ## Properties/Collections  

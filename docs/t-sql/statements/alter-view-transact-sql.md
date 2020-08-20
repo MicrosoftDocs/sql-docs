@@ -1,4 +1,5 @@
 ---
+description: "ALTER VIEW (Transact-SQL)"
 title: "ALTER VIEW (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/25/2018"
@@ -22,7 +23,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # ALTER VIEW (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Modifies a previously created view. This includes an indexed view. ALTER VIEW does not affect dependent stored procedures or triggers and does not change permissions.  
   
@@ -30,7 +31,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
 ALTER VIEW [ schema_name . ] view_name [ ( column [ ,...n ] ) ]   
 [ WITH <view_attribute> [ ,...n ] ]   
 AS select_statement   
@@ -42,9 +43,20 @@ AS select_statement
     [ SCHEMABINDING ]  
     [ VIEW_METADATA ]       
 }   
-```  
+```
+
+```syntaxsql
+-- Syntax for Azure Synapse Analytics (SQL DW) and Parallel Data Warehouse  
   
-## Arguments  
+ALTER VIEW [ schema_name . ] view_name [  ( column_name [ ,...n ] ) ]   
+AS <select_statement>   
+[;]  
+
+``` 
+  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of the schema to which the view belongs.  
   

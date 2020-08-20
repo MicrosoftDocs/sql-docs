@@ -1,5 +1,6 @@
 ---
 title: "Install and configure WideWorldImporters sample database"
+description: Follow these instructions to download, install, and configure the WideWorldImporters sample database with SQL Server Management Studio.
 ms.prod: sql
 ms.prod_service: sql
 ms.technology: samples
@@ -11,7 +12,7 @@ ms.author: mathoma
 ms.custom: "seo-lt-2019"
 ---
 # Installation and configuration
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../includes/applies-to-version/sql-asdb.md)]
 Wide World Importers OLTP database installation and configuration instructions.
 
 ## Prerequisites
@@ -29,7 +30,7 @@ Download the sample WideWorldImporters database backup/bacpac that corresponds t
 
 Source code to recreate the sample database is available from the following location. Note that recreating the sample will result in slight differences in the data, since there is a random factor in the data generation:
 
-[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-database-scripts)
+[wide-world-importers](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/sample-scripts)
 
 ## Install
 
@@ -61,7 +62,7 @@ To import a bacpac into a new SQL Database, you can use Management Studio.
 
 ### Full-Text Indexing
 
-The sample database can make use of Full-Text Indexing. However, that feature is not installed by default with SQL Server - you need to select it during SQL Server setup (it is enabled by default in Azure SQL DB). Therefore, a post-installation step is required.
+The sample database can make use of Full-Text Indexing. However, that feature is not installed by default with SQL Server - you need to select it during SQL Server setup (it is enabled by default in Azure SQL Database). Therefore, a post-installation step is required.
 
 1. In SQL Server Management Studio, connect to the WideWorldImporters database and open a new query window.
 2. Run the following T-SQL command to enable the use of Full-Text Indexing in the database:
@@ -74,7 +75,9 @@ Applies to: SQL Server
 
 Enabling auditing in SQL Server requires server configuration. To enable SQL Server audit for the WideWorldImporters sample, run the following statement in the database:
 
-    EXECUTE [Application].[Configuration_ApplyAuditing]
+```sql
+EXECUTE [Application].[Configuration_ApplyAuditing]
+```
 
 In Azure SQL Database, Audit is configured through the [Azure portal](https://portal.azure.com/).
 
@@ -84,5 +87,7 @@ Applies to: Azure SQL Database
 
 Row-Level Security is not enabled by default in the bacpac download of WideWorldImporters. To enable Row-Level Security in the database, run the following stored procedure:
 
-    EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```sql
+EXECUTE [Application].[Configuration_ApplyRowLevelSecurity]
+```
 

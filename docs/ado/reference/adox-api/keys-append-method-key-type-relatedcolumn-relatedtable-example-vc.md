@@ -1,4 +1,5 @@
 ---
+description: "Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VC++)"
 title: "Create a New Foreign Key Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,8 +18,8 @@ helpviewer_keywords:
   - "Keys Append method [ADOX], VC++ example"
   - "RelatedColumn property [ADOX], VC++ example"
 ms.assetid: 28495b8f-18dc-482c-995d-a120f6ae2006
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VC++)
 The following code demonstrates how to create a new foreign key. It assumes two tables (Customers and Orders) exist.  
@@ -86,7 +87,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...." << endl;  
+      cout << "Error occurred in include files...." << endl;  
    }  
    ::CoUninitialize();  
 }  

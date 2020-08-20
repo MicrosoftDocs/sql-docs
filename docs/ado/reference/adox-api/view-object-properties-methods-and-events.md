@@ -1,4 +1,5 @@
 ---
+description: "View Object Properties, Methods, and Events"
 title: "View Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "View object [ADOX], members"
 ms.assetid: 02b5ba88-cacd-4a68-881b-974824ea4a04
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # View Object Properties, Methods, and Events
 ## Properties  

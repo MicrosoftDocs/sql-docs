@@ -1,4 +1,5 @@
 ---
+description: "Unique Property (ADOX)"
 title: "Unique Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Unique property [ADOX]"
 ms.assetid: 85fd4bd0-393b-4dc1-9d73-80dced4f2fbe
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Unique Property (ADOX)
 Indicates whether the index keys must be unique.  

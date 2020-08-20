@@ -1,4 +1,5 @@
 ---
+description: "Column Data"
 title: "Column Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "cursor library [ODBC], cache"
   - "cache [ODBC]"
 ms.assetid: 0425818c-9469-493f-9e3c-fc03d9411c5c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Column Data
 > [!IMPORTANT]  

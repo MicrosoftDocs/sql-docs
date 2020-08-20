@@ -1,7 +1,7 @@
 ---
 title: "XML Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: 04/03/2020
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -11,11 +11,12 @@ helpviewer_keywords:
   - "XML [SQL Server]"
   - "XML [SQL Server], about XML"
 ms.assetid: 6a1793c9-9856-485c-aac5-88fda62f61a8
-author: MightyPen
-ms.author: genemi
+author: RothJa
+ms.author: jroth
+# monikerRange: "= azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 # XML Data (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides a powerful platform for developing rich applications for semi-structured data management. Support for XML is integrated into all the components in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and includes the following:  
   
 -   The **xml** data type. XML values can be stored natively in an **xml** data type column that can be typed according to a collection of XML schemas, or left untyped. You can index the XML column.  

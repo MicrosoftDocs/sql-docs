@@ -1,6 +1,6 @@
 ---
-title: "IBCPSession::BCPDone (OLE DB) | Microsoft Docs"
-description: "IBCPSession::BCPDone (OLE DB)"
+title: "IBCPSession::BCPDone (OLE DB driver) | Microsoft Docs"
+description: Learn how the IBCPSession::BCPDone method commits the remaining rows to be sent to SQL Server in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -17,7 +17,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # IBCPSession::BCPDone (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

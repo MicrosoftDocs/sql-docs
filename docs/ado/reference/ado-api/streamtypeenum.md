@@ -1,4 +1,5 @@
 ---
+description: "StreamTypeEnum"
 title: "StreamTypeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "StreamTypeEnum enumeration [ADO]"
 ms.assetid: 220fe51d-4889-4020-a099-2ec9c7485503
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # StreamTypeEnum
 Specifies the type of data stored in a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  

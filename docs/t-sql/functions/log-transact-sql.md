@@ -1,4 +1,5 @@
 ---
+description: "LOG (Transact-SQL)"
 title: "LOG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
@@ -17,12 +18,12 @@ helpviewer_keywords:
   - "logarithm of expression"
   - "LOG function"
 ms.assetid: f7c39511-cd84-4362-93ba-0d93655217ee
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # LOG (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the natural logarithm of the specified **float** expression in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -30,19 +31,21 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
--- Syntax for SQL Server  
+```syntaxsql
+-- Syntax for SQL Server, Azure SQL Database  
   
 LOG ( float_expression [, base ] )  
 ```  
   
-```  
--- Syntax for Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
+```syntaxsql
+-- Syntax for Azure Synapse SQL 
   
 LOG ( float_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *float_expression*  
  Is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **float** or of a type that can be implicitly converted to **float**.  
   
@@ -66,9 +69,9 @@ LOG ( float_expression )
 ### A. Calculating the logarithm for a number.  
  The following example calculates the `LOG` for the specified **float** expression.  
   
-```  
-DECLARE @var float = 10;  
-SELECT 'The LOG of the variable is: ' + CONVERT(varchar, LOG(@var));  
+```sql  
+DECLARE @var FLOAT = 10;  
+SELECT 'The LOG of the variable is: ' + CONVERT(VARCHAR, LOG(@var));  
 GO  
 ```  
   
@@ -84,7 +87,7 @@ The LOG of the variable is: 2.30259
 ### B. Calculating the logarithm of the exponent of a number.  
  The following example calculates the `LOG` for the exponent of a number.  
   
-```  
+```sql  
 SELECT LOG (EXP (10));  
   
 ```  
@@ -102,7 +105,7 @@ SELECT LOG (EXP (10));
 ### C. Calculating the logarithm for a number  
  The following example calculates the `LOG` for the specified **float** expression.  
   
-```  
+```sql  
 SELECT LOG(10);  
 ```  
   

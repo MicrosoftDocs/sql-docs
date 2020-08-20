@@ -1,4 +1,5 @@
 ---
+description: "Microsoft ActiveX Data Objects (ADO)"
 title: "Microsoft ActiveX Data Objects (ADO) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/08/2018
@@ -15,7 +16,7 @@ ms.author: genemi
 ---
 # Microsoft ActiveX Data Objects (ADO)
 
-ADO is used in C++ programs to connect to SQL Server. Of course, it also works to connect to Azure SQL Database in the cloud.
+ActiveX Data Objects is a programming model, which means that it is not dependent upon any given back-end engine. Currently, however, the only engine supporting the ADO model is OLE-DB. There are many native OLE-DB Providers as well as an OLE-DB Provider for ODBC. ADO is used in C++ and Visual Basic programs to connect to SQL Server and other databases. Of course, it also works to connect to Azure SQL Database in the cloud.
 
 Each section in this article describes a component of ADO.
 

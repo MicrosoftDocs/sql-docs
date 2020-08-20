@@ -1,4 +1,5 @@
 ---
+description: "Tables Collection (ADOX)"
 title: "Tables Collection (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Tables collection [ADOX]"
 ms.assetid: 38d750e7-f3fb-426e-b4b4-55eea4f1a654
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Tables Collection (ADOX)
 Contains all [Table](../../../ado/reference/adox-api/table-object-adox.md) objects of a catalog.  

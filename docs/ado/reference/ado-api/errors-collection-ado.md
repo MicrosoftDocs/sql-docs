@@ -1,4 +1,5 @@
 ---
+description: "Errors Collection (ADO)"
 title: "Errors Collection (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Errors collection [ADO]"
 ms.assetid: 290819e1-7b39-4e1e-a93b-801257138b00
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Errors Collection (ADO)
 Contains all the [Error](../../../ado/reference/ado-api/error-object.md) objects created in response to a single provider-related failure.  

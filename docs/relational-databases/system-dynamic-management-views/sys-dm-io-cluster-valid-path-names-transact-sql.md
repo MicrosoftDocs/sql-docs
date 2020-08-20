@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_io_cluster_valid_path_names (Transact-SQL)"
 title: "sys.dm_io_cluster_valid_path_names (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -20,11 +21,11 @@ helpviewer_keywords:
   - "csv name"
   - "cluster shared volume names"
 ms.assetid: 5bc8a0e5-6c72-425b-8c58-f276eb9add2c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_io_cluster_valid_path_names (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information on all valid shared disks, including clustered shared volumes, for a SQL Server failover cluster instance. If the instance is not clustered, an empty rowset is returned.  
   

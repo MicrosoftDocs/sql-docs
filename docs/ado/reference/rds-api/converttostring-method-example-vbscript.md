@@ -1,4 +1,5 @@
 ---
+description: "ConvertToString Method Example (VBScript)"
 title: "ConvertToString Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ConvertToString method [ADO], VBScript example"
 ms.assetid: edd0a01c-1a1b-4b91-9966-2529e244abae
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ConvertToString Method Example (VBScript)
 > [!IMPORTANT]

@@ -1,4 +1,5 @@
 ---
+description: "Use Property Expressions in Packages"
 title: "Use Property Expressions in Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,7 +23,7 @@ ms.author: chugu
 ---
 # Use Property Expressions in Packages
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   A property expression is an expression that is assigned to a property to enable dynamic update of the property at run time. For example, a property expression can update the To line that a Send Mail task uses by inserting an e-mail address that is stored in a variable.  

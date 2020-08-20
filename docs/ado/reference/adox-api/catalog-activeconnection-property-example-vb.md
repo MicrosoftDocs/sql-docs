@@ -1,4 +1,5 @@
 ---
+description: "Catalog ActiveConnection Property Example (VB)"
 title: "Catalog ActiveConnection Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ActiveConnection property [ADOX], Visual Basic example"
 ms.assetid: bb3274b1-764d-43a7-a49f-ef55680ecd26
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Catalog ActiveConnection Property Example (VB)
 Setting the [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) property to a valid, open connection "opens" the catalog. From an open catalog, you can access the schema objects contained within that catalog.  

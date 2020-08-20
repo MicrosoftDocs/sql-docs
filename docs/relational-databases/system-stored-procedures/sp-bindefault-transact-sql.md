@@ -1,4 +1,5 @@
 ---
+description: "sp_bindefault (Transact-SQL)"
 title: "sp_bindefault (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/25/2015"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_bindefault"
 ms.assetid: 3da70c10-68d0-4c16-94a5-9e84c4a520f6
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_bindefault (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Binds a default to a column or to an alias data type.  
   

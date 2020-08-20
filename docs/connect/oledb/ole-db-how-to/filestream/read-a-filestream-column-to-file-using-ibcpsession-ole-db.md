@@ -1,6 +1,6 @@
 ---
 title: "Read a FILESTREAM Column to File Using IBCPSession (OLE DB) | Microsoft Docs"
-description: "Read a FILESTREAM column to file using IBCPSession (OLE DB)"
+description: Learn how to read a FILESTREAM column to a file using the IBCPSession interface in OLE DB Driver for SQL Server and write a format file with this example.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -12,7 +12,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Read a FILESTREAM Column to File Using IBCPSession (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 

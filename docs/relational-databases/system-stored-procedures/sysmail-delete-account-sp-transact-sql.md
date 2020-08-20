@@ -1,4 +1,5 @@
 ---
+description: "sysmail_delete_account_sp (Transact-SQL)"
 title: "sysmail_delete_account_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_delete_account_sp"
 ms.assetid: 2adcac78-4a4a-407e-9666-1d9c43c73cc2
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sysmail_delete_account_sp (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Deletes a Database Mail SMTP account. You can also use the Database Mail Configuration Wizard to delete an account.  
   

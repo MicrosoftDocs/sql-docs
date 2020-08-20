@@ -1,4 +1,5 @@
 ---
+description: "Azure Feature Pack for Integration Services (SSIS)"
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/24/2019"
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # Azure Feature Pack for Integration Services (SSIS)
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 SQL Server Integration Services (SSIS) Feature Pack for Azure is an extension that provides the components listed on this page for SSIS to connect to Azure services, transfer data between Azure and on-premises data sources, and process data stored in Azure.
@@ -185,8 +186,29 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
  Use the Foreach Loop Container with the Azure Blob Enumerator to process data in multiple blob files.
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
-  
+
 ## Release Notes
+
+### Version 1.19.0
+
+#### Improvements
+
+1. Added support for shared access signature authentication to Azure Storage connection manager.
+
+### Version 1.18.0
+
+#### Improvements
+
+1. For Flexible File task, three are three improvements: (1) wildcard support for copy/delete operations is added; (2) user can enable/disable recursive searching for delete operation; and (3) the file name of Destination for copy operation can be empty to keep the source file name.
+
+### Version 1.17.0
+
+This is a hotfix version released for SQL Server 2019 only.
+
+#### Bugfixes
+
+1. When executing in Visual Studio 2019 and targeting SQL Server 2019, Flexible File Task/Source/Destination may fail with the error message `Attempted to access an element as a type incompatible with the array.`
+1. When executing in Visual Studio 2019 and targeting SQL Server 2019, Flexible File Source/Destination using ORC/Parquet format may fail with the error message `Microsoft.DataTransfer.Common.Shared.HybridDeliveryException: An unknown error occurred. JNI.JavaExceptionCheckException.`
 
 ### Version 1.16.0
 

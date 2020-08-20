@@ -1,4 +1,5 @@
 ---
+description: "sp_syspolicy_purge_health_state (Transact-SQL)"
 title: "sp_syspolicy_purge_health_state (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # sp_syspolicy_purge_health_state (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Deletes the policy health states in Policy-Based Management. Policy health states are visual indicators (a scroll symbol with a red "X") within Object Explorer that enable you to determine which nodes have failed a policy evaluation.  
   

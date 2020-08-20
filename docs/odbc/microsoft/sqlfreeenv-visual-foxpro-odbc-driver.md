@@ -1,4 +1,5 @@
 ---
+description: "SQLFreeEnv (Visual FoxPro ODBC Driver)"
 title: "SQLFreeEnv (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLFreeEnv function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 83011775-e31d-4663-b68b-999113a20d5b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLFreeEnv (Visual FoxPro ODBC Driver)
 > [!NOTE]  

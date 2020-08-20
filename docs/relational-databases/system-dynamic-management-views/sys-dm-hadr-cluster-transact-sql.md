@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_hadr_cluster (Transact-SQL)"
 title: "sys.dm_hadr_cluster (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2019"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "sys.dm_hadr_cluster catalog view"
   - "Availability Groups [SQL Server], WSFC clusters"
 ms.assetid: 13ce70e4-9d43-4a80-a826-099e6213bf85
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_hadr_cluster (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   If the Windows Server Failover Clustering (WSFC) node that hosts an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] that is enabled for [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] has WSFC quorum, **sys.dm_hadr_cluster** returns a row that exposes the cluster name and information about the quorum. If the WSFC node has no quorum, no row is returned.  
  > [!TIP]

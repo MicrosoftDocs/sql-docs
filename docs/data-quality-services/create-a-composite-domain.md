@@ -1,4 +1,5 @@
 ---
+description: "Create a Composite Domain"
 title: "Create a Composite Domain"
 ms.date: "11/22/2011"
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: sawinark
 ---
 # Create a Composite Domain
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sqlserver.md)]
 
   This topic describes how to create a composite domain in a knowledge base in [!INCLUDE[ssDQSnoversion](../includes/ssdqsnoversion-md.md)] (DQS). A composite domain consists of one or more single domains that apply to a single data field. For more information on composite domains, see [Managing a Composite Domain](../data-quality-services/managing-a-composite-domain.md).  
   

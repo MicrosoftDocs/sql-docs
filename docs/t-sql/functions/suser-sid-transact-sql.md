@@ -1,4 +1,5 @@
 ---
+description: "SUSER_SID (Transact-SQL)"
 title: "SUSER_SID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"
@@ -26,7 +27,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # SUSER_SID (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the security identification number (SID) for the specified login name.  
   
@@ -34,12 +35,14 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SUSER_SID ( [ 'login' ] [ , Param2 ] )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *login* **'**  
 **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later
   
@@ -62,6 +65,11 @@ SUSER_SID ( [ 'login' ] [ , Param2 ] )
   
  `Windows NT user or group '%s' not found. Check the name again.`  
   
+## [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] Remarks  
+ SUSER_SID always return the login SID for the current security context. Use [sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) to obtain the SID of a different login.
+  
+ The SUSER_SID statement does not support execution using an impersonated security context through EXECUTE AS.  
+
 ## Examples  
   
 ### A. Using SUSER_SID  

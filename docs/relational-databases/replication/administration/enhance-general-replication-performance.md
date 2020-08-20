@@ -1,4 +1,5 @@
 ---
+description: "Enhance General Replication Performance"
 title: "Enhance General Replication Performance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -24,7 +25,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Enhance General Replication Performance
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   You can enhance the general performance for all types of replication in your application and on your network by using the guidelines described in this topic.  
   
 ## Server and Network  

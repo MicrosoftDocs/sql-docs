@@ -1,4 +1,5 @@
 ---
+description: "Scrolling and Fetching Rows (ODBC)"
 title: "Scrolling and Fetching Rows (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "cursors [ODBC], scrollable"
   - "scrolling rows [ODBC]"
 ms.assetid: c43764cb-5841-4b89-9dc0-984a7488b3c1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Scrolling and Fetching Rows (ODBC)
 When using a scrollable cursor, applications call **SQLFetchScroll** to position the cursor and fetch rows. **SQLFetchScroll** supports relative scrolling (next, prior, and relative *n* rows), absolute scrolling (first, last, and row *n*), and positioning by bookmark. The *FetchOrientation* and *FetchOffset* arguments in **SQLFetchScroll** specify which rowset to fetch, as shown in the following diagrams.  

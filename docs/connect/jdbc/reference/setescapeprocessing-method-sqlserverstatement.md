@@ -1,4 +1,5 @@
 ---
+description: "setEscapeProcessing Method (SQLServerStatement)"
 title: "setEscapeProcessing Method (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 6ac0682e-e04c-4fdb-893b-92408d42051e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setEscapeProcessing Method (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

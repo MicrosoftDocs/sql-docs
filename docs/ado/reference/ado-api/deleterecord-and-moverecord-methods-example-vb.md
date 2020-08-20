@@ -1,4 +1,5 @@
 ---
+description: "DeleteRecord and MoveRecord Methods Example (VB)"
 title: "DeleteRecord and MoveRecord Methods Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "MoveRecord method [ADO], Visual Basic example"
   - "DeleteRecord method [ADO], Visual Basic example"
 ms.assetid: c3937d1e-9872-47e5-a22e-b147637f2388
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DeleteRecord and MoveRecord Methods Example (VB)
 This example demonstrates how to copy, move, edit, and delete the contents of a text file published to a Web folder. Other properties and methods used include [GetChildren](../../../ado/reference/ado-api/getchildren-method-ado.md), [ParentURL](../../../ado/reference/ado-api/parenturl-property-ado.md), [Source](../../../ado/reference/ado-api/source-property-ado-record.md), and [Flush](../../../ado/reference/ado-api/flush-method-ado.md).  

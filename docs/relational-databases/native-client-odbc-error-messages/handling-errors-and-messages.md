@@ -1,5 +1,6 @@
 ---
 title: "Handling Errors and Messages | Microsoft Docs"
+description: Learn about what diagnostic information is returned when an application calls an ODBC function, including success or failure and detailed information.
 ms.custom: ""
 ms.date: "03/17/2017"
 ms.prod: sql
@@ -17,12 +18,12 @@ helpviewer_keywords:
   - "errors [ODBC], about error handling"
   - "messages [ODBC]"
 ms.assetid: 74ea9630-e482-4a46-bb45-f5234f079b48
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Handling Errors and Messages
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   When an application calls an ODBC function, the driver executes the function and returns diagnostic information in two ways: A return code indicates the overall success or failure of an ODBC function, and diagnostic records provide detailed information about the function. Diagnostic records include a header record and status records. At least one diagnostic record, the header record, is returned even if the function succeeds.  
   

@@ -1,4 +1,5 @@
 ---
+description: "DefinedSize Property (ADOX)"
 title: "DefinedSize Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "DefinedSize property [ADOX]"
 ms.assetid: 762b8937-c31c-4e90-bb85-506d991e8280
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DefinedSize Property (ADOX)
 Indicates the stated maximum size of the column.  

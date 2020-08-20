@@ -1,4 +1,5 @@
 ---
+description: "EditMode Property"
 title: "EditMode Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "EditMode property"
 ms.assetid: a1b04bb2-8c8b-47f9-8477-bfd0368b6f68
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # EditMode Property
 Indicates the editing status of the current record.  

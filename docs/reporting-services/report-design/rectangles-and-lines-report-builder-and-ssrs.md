@@ -1,5 +1,6 @@
 ---
-title: "Rectangles and Lines (Report Builder and SSRS) | Microsoft Docs"
+title: "Rectangles and Lines (Report Builder) | Microsoft Docs"
+description: Discover how to create visual effects within a paginated report in Report Builder. Add features such as color or an image, a tooltip, or a bookmark.   
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

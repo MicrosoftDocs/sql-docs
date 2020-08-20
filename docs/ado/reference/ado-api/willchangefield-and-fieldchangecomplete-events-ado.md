@@ -1,4 +1,5 @@
 ---
+description: "WillChangeField and FieldChangeComplete Events (ADO)"
 title: "WillChangeField and FieldChangeComplete Events (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,8 +18,8 @@ helpviewer_keywords:
   - "WillChangeField event [ADO]"
   - "fieldchangecomplete event [ADO]"
 ms.assetid: 3e49fb89-c45b-4d39-823e-3cc887c59b37
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # WillChangeField and FieldChangeComplete Events (ADO)
 The **WillChangeField** event is called before a pending operation changes the value of one or more [Field](../../../ado/reference/ado-api/field-object.md) objects in the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). The **FieldChangeComplete** event is called after the value of one or more **Field** objects has changed.  

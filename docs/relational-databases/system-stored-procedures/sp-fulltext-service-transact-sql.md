@@ -1,4 +1,5 @@
 ---
+description: "sp_fulltext_service (Transact-SQL)"
 title: "sp_fulltext_service (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,11 +18,11 @@ helpviewer_keywords:
   - "sp_fulltext_service"
   - "Full-Text Search Upgrade Option"
 ms.assetid: 17a91433-f9b6-4a40-88c4-8c704ec2de9f
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_fulltext_service (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the server properties of full-text search for [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

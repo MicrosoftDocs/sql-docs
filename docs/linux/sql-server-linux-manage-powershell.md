@@ -1,6 +1,6 @@
 ---
 title: Manage SQL Server on Linux with PowerShell
-description: This article provides an overview of using PowerShell on Windows with SQL Server on Linux.
+description: Learn details about SQL Server PowerShell and see a couple of examples on how to use Windows with SQL Server on Linux. 
 author: VanMSFT 
 ms.author: vanto
 ms.date: 10/02/2017
@@ -11,7 +11,7 @@ ms.assetid: a3492ce1-5d55-4505-983c-d6da8d1a94ad
 ---
 # Use PowerShell on Windows to Manage SQL Server on Linux
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This article introduces [SQL Server PowerShell](../powershell/sql-server-powershell.md) and walks you through a couple of examples on how to use it with SQL Server on Linux. PowerShell support for SQL Server is currently available on Windows, MacOS, & Linux. This article walks you through using a Windows machine to connect to a remote SQL Server instance on Linux.
 

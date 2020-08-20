@@ -1,4 +1,5 @@
 ---
+description: "CopyTo Method (ADO)"
 title: "CopyTo Method (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "CopyTo method [ADO]"
 ms.assetid: b4aa5714-916b-48b8-8b09-cc2708379602
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CopyTo Method (ADO)
 Copies the specified number of characters or bytes (depending on [Type](../../../ado/reference/ado-api/type-property-ado-stream.md)) in the [Stream](../../../ado/reference/ado-api/stream-object-ado.md) to another **Stream** object.  

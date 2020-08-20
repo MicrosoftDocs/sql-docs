@@ -1,4 +1,5 @@
 ---
+description: "SecureConnectionLevel Property (WMI MSReportServer_ConfigurationSetting)"
 title: "SecureConnectionLevel Property (WMI MSReportServer_ConfigurationSetting) | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -32,7 +33,7 @@ public Integer SecureConnectionLevel;
 ```  
   
 ## Property Values  
- An **Integer** value that represents the secure connection level. The return values indicate that the SSL is either configured or not. A value of greater than or equal to 1 indicates that SSL is turned on. A value of 0 indicates that SSL is turned off.  
+ An **Integer** value that represents the secure connection level. The return values indicate that the TLS is either configured or not. A value of greater than or equal to 1 indicates that TLS is turned on. A value of 0 indicates that TLS is turned off.  
   
 ## Example Code  
  [MSReportServer_ConfigurationSetting Class](../../reporting-services/wmi-provider-library-reference/msreportserver-configurationsetting-class.md)  

@@ -1,4 +1,5 @@
 ---
+description: "CursorTypeEnum"
 title: "CursorTypeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "CursorTypeEnum enumeration [ADO]"
 ms.assetid: ffc6e245-4471-42ae-84dd-e85bddfce983
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CursorTypeEnum
 Specifies the type of cursor used in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

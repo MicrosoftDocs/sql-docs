@@ -1,4 +1,5 @@
 ---
+description: "Non-SQL Server Publishers"
 title: "Non-SQL Server Publishers | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/29/2017"
@@ -17,7 +18,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Non-SQL Server Publishers  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
 
 Publishing data from non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] sources allows you to consolidate data in [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] can subscribe to snapshot or transactional data published from an Oracle database. For more information about publishing from Oracle, see [Oracle Publishing Overview](../../../relational-databases/replication/non-sql/oracle-publishing-overview.md).  
   

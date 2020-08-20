@@ -1,4 +1,5 @@
 ---
+description: "Connection (ADO - WFC Syntax)"
 title: "Connection (ADO - WFC Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,8 +12,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "Connection collection [ADO], ADO/WFC syntax"
 ms.assetid: 8cfc35bb-91e2-47da-ad4c-982e9162cd51
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Connection (ADO - WFC Syntax)
 ## package com.ms.wfc.data  

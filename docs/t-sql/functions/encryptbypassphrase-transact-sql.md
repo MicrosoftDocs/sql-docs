@@ -1,4 +1,5 @@
 ---
+description: "ENCRYPTBYPASSPHRASE (Transact-SQL)"
 title: "ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # ENCRYPTBYPASSPHRASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Encrypt data with a passphrase using the TRIPLE DES algorithm with a 128 key bit length.  
   
@@ -29,7 +30,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 EncryptByPassPhrase ( { 'passphrase' | @passphrase }   
     , { 'cleartext' | @cleartext }  
@@ -37,7 +38,9 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
     , { authenticator | @authenticator } ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *passphrase*  
  A passphrase from which to generate a symmetric key.  
   
@@ -89,7 +92,7 @@ SET @PassphraseEnteredByUser
 -- In this case, the record is number 3681.  
 UPDATE Sales.CreditCard  
 SET CardNumber_EncryptedbyPassphrase = EncryptByPassPhrase(@PassphraseEnteredByUser  
-    , CardNumber, 1, CONVERT( varbinary, CreditCardID))  
+    , CardNumber, 1, CONVERT(varbinary, CreditCardID))  
 WHERE CreditCardID = '3681';  
 GO  
 ```  

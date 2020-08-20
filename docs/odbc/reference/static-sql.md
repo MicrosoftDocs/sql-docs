@@ -1,4 +1,5 @@
 ---
+description: "Static SQL"
 title: "Static SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "embedded SQL [ODBC]"
   - "SQL [ODBC], static SQL"
 ms.assetid: 667d92ec-fed9-4028-81d4-bb9ba867356a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Static SQL
 The embedded SQL shown in [Embedded SQL Example](../../odbc/reference/embedded-sql-example.md) is known as static SQL. It is called static SQL because the SQL statements in the program are static; that is, they do not change each time the program is run. As described in the previous section, these statements are compiled when the rest of the program is compiled.  

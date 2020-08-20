@@ -1,4 +1,5 @@
 ---
+description: "Using Service SIDs to grant permissions to services in SQL Server"
 title: Using Service SIDs to grant permissions to services
 ms.custom: seo-dt-2019
 author: randomnote1
@@ -86,13 +87,13 @@ GO
 Grant the permissions required to manage Availability Groups to the Cluster Service.
 
 ```SQL
-GRANT ALTER ANY AVAILABILITY GROUP TO 'NT SERVICE\ClusSvc'
+GRANT ALTER ANY AVAILABILITY GROUP TO [NT SERVICE\ClusSvc]
 GO
 
-GRANT CONNECT SQL TO 'NT SERVICE\ClusSvc'
+GRANT CONNECT SQL TO [NT SERVICE\ClusSvc]
 GO
 
-GRANT VIEW SERVER STATE TO 'NT SERVICE\ClusSvc'
+GRANT VIEW SERVER STATE TO [NT SERVICE\ClusSvc]
 GO
 ```
 

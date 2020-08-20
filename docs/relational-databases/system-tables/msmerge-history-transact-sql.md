@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_history (Transact-SQL)"
 title: "MSmerge_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_history system table"
 ms.assetid: 936195ad-ca07-41a8-a1a0-6699b6e63403
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSmerge_history (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSmerge_history** table contains history rows with detailed descriptions of the outcomes of previous Merge Agent job sessions. This table contains one row for each line of agent output. This table is used in the distribution database and in each subscription database. In the distribution database, it contains history for all merge publications and subscriptions that use the Distributor. In each subscription database, it contains the history for publications to which the Subscriber is subscribed.  
   

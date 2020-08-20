@@ -1,4 +1,5 @@
 ---
+description: "Microsoft Cursor Service for OLE DB (ADO Service Component)"
 title: "Microsoft Cursor Service for OLE DB (ADO Service Component) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "providers [ADO], cursor service for OLE DB"
   - "cursor service for OLE DB [ADO]"
 ms.assetid: 420d0989-7cfb-4c66-a7b5-f4199d13165d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Microsoft Cursor Service for OLE DB Overview
 The Microsoft Cursor Service for OLE DB supplements the cursor support functions of data providers. As a result, the user perceives relatively uniform functionality from all data providers.

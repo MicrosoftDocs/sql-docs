@@ -1,5 +1,6 @@
 ---
-title: "Overview of the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
+title: "Overview of the Microsoft Drivers for PHP for SQL Server"
+description: "Learn an overview of the Microsoft SQLSRV and PDO_SQSRV Drivers for PHP for SQL Server and how you can use them in a PHP application for database access."
 ms.custom: ""
 ms.date: "03/27/2018"
 ms.prod: sql
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Overview of the Microsoft Drivers for PHP for SQL Server
 
@@ -23,7 +24,7 @@ To use the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)], you must h
   
 |Topic|Description|  
 |---------|---------------|  
-| ![Download-DownArrow-Circled](../../ssdt/media/download.png)[To download drivers for PHP for SQL Server](download-drivers-php-sql-server.md) | Links to download Microsoft Drivers for PHP for SQL Server. |
+| ![Download-DownArrow-Circled](../../ssms/media/download-icon.png)[To download drivers for PHP for SQL Server](download-drivers-php-sql-server.md) | Links to download Microsoft Drivers for PHP for SQL Server. |
 |[Release Notes for the Microsoft Drivers for PHP for SQL Server](../../connect/php/release-notes-php-sql-driver.md)|Lists the features that were added for versions 4.0, 3.2, 3.1, 3.0, and 2.0.|  
 |[Support Resources for the Microsoft Drivers for PHP for SQL Server](../../connect/php/support-resources-for-the-php-sql-driver.md)|Provides links to resources that can be helpful when you are developing applications that use the [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)].|  
 |[About Code Examples in the Documentation](../../connect/php/about-code-examples-in-the-documentation.md)|Provides information that might be helpful when you run the code examples in this documentation.|  

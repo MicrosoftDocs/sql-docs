@@ -1,4 +1,5 @@
 ---
+description: "Supports Method"
 title: "Supports Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Supports method [ADO]"
 ms.assetid: 298fc41c-0b55-42fc-b373-c5133b4da6a5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Supports Method
 Determines whether a specified [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object supports a particular type of functionality.  

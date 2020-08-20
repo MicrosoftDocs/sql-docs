@@ -1,4 +1,5 @@
 ---
+description: "RDS Methods"
 title: "RDS Methods | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""
@@ -11,14 +12,14 @@ helpviewer_keywords:
   - "RDS methods [ADO]"
   - "methods [ADO], RDS"
 ms.assetid: c2c6af1a-3c44-4c9d-ad33-b381552c71af
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # RDS Methods
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
-|||  
+|Method|Description|  
 |-|-|  
 |[Cancel (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)|Cancels execution of a pending, asynchronous method call.|  
 |[CancelUpdate (RDS)](../../../ado/reference/rds-api/cancelupdate-method-rds.md)|Cancels any changes made to the current or new row of a **Recordset** object.|  

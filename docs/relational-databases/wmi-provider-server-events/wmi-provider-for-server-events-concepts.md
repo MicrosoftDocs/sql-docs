@@ -1,5 +1,6 @@
 ---
 title: "WMI Provider for Server Events Concepts"
+description: Use these resources to learn about how WMI Provider for Server Events uses Windows Management Instrumentation to monitor events in an instance of SQL Server.
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -18,7 +19,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # WMI Provider for Server Events Concepts
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   The WMI Provider for Server Events lets you use Windows Management Instrumentation (WMI) to monitor events in an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 ## In This Section  

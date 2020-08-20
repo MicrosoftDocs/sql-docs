@@ -1,4 +1,5 @@
 ---
+description: "ReadyState Property Example (VBScript)"
 title: "ReadyState Property Example (VBScript) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ReadyState property [ADO], VBScript example"
 ms.assetid: e3e18da4-0511-4ece-a35d-699978bc28c6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ReadyState Property Example (VBScript)
 > [!IMPORTANT]

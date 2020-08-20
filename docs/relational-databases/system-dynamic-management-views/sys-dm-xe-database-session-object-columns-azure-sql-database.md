@@ -1,20 +1,20 @@
 ---
+description: "sys.dm_xe_database_session_object_columns (Azure SQL Database)"
 title: "sys.dm_xe_database_session_object_columns"
 titleSuffix: Azure SQL Database
-ms.custom: ""
 ms.date: "06/10/2016"
 ms.service: sql-database
 ms.prod_service: "sql-database"
 ms.reviewer: ""
 ms.topic: "language-reference"
 ms.assetid: 0e6adc54-4d97-4ef0-bf4f-b4538d69f136
-author: MightyPen
-ms.author: genemi
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ms.custom: seo-dt-2019
 ---
 # sys.dm_xe_database_session_object_columns (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Shows the configuration values for objects that are bound to a session.  
   

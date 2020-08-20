@@ -1,4 +1,5 @@
 ---
+description: "sys.availability_read_only_routing_lists (Transact-SQL)"
 title: "sys.availability_read_only_routing_lists (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -22,11 +23,11 @@ helpviewer_keywords:
   - "readable secondary replicas"
   - "sys.availability_read_only_routing_lists dynamic management view"
 ms.assetid: 0686bc5a-c206-41ef-b40a-79a8259d51d2
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.availability_read_only_routing_lists (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row for the read only routing list of each availability replica in an Always On availability group in the WSFC failover cluster.  
   

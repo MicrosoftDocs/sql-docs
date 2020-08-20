@@ -1,4 +1,5 @@
 ---
+description: "sp_update_targetservergroup (Transact-SQL)"
 title: "sp_update_targetservergroup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_targetservergroup"
 ms.assetid: 4ac65ed6-e07e-40e4-a282-13bfd92dfa41
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_update_targetservergroup (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Changes the name of the specified target server group.  
   

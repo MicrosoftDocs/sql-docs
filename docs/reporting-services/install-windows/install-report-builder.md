@@ -1,7 +1,7 @@
 ---
 title: "Install Report Builder | Microsoft Docs"
 description: Report Builder is stand-alone app, installed on your computer by you or an administrator. 
-ms.date: 01/03/2020
+ms.date: 01/31/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 
@@ -11,14 +11,20 @@ author: maggiesMSFT
 ms.author: maggies
 ---
 # Install Report Builder
-  [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a stand-alone app, installed on your computer by you or an administrator. You can install it from the Microsoft Download Center, from a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] report server, or from a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
+
+[!INCLUDE[ssrs-appliesto](../../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../../includes/ssrs-appliesto-pbirs.md)]
+
+[!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] is a stand-alone app, installed on your computer by you or an administrator. You can install it from the Microsoft Download Center, from a [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] report server, or from a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)].  
 
 > [!NOTE]
-> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
-  
+> Looking for installation information for Power BI Report Builder instead? Head to the [Microsoft Power BI Report Builder](https://www.microsoft.com/download/details.aspx?id=58158) page on the Download Center. 
+
  An administrator typically installs and configures [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)], grants permission to download [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from the web portal, and manages folders and permissions to reports, report parts, and shared datasets saved to the report server. For more information about [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] administration, see [Reporting Services Report Server &#40;Native Mode&#41;](../../reporting-services/report-server/reporting-services-report-server-native-mode.md).  
   
 ## Install [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from  a  web portal or SharePoint library 
+
+> [!NOTE]
+> Reporting Services integration with SharePoint is no longer available after SQL Server 2016.
   
  You can start [!INCLUDE[ssRBnoversion](../../includes/ssrbnoversion.md)] from a [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] web portal or a SharePoint site integrated with [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]. For information, see [Start Report Builder](../../reporting-services/report-builder/start-report-builder.md).  
 

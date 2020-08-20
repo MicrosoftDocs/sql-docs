@@ -1,4 +1,5 @@
 ---
+description: "MSpeer_topologyrequest (Transact-SQL)"
 title: "MSpeer_topologyrequest (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "MSpeer_topologyrequest"
 ms.assetid: c644814b-4e40-44d7-b6b4-5954b0d4db7c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSpeer_topologyrequest (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Used in peer-to-peer replication to track topology status requests for a publication. This table is stored in the publication database.  
   

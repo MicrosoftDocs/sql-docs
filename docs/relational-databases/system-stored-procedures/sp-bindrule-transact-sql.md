@@ -1,4 +1,5 @@
 ---
+description: "sp_bindrule (Transact-SQL)"
 title: "sp_bindrule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/25/2015"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_bindrule"
 ms.assetid: 2606073e-c52f-498d-a923-5026b9d97e67
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_bindrule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Binds a rule to a column or to an alias data type.  
   

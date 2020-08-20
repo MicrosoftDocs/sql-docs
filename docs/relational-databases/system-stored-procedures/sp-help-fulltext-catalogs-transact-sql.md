@@ -1,4 +1,5 @@
 ---
+description: "sp_help_fulltext_catalogs (Transact-SQL)"
 title: "sp_help_fulltext_catalogs (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_fulltext_catalogs"
 ms.assetid: 1b94f280-e095-423f-88bc-988c9349d44c
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_help_fulltext_catalogs (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns the ID, name, root directory, status, and number of full-text indexed tables for the specified full-text catalog.  
   

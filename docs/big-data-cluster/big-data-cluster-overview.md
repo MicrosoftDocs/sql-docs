@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]?
 
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 Starting with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)], [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] allow you to deploy scalable clusters of SQL Server, Spark, and HDFS containers running on Kubernetes. These components are running side by side to enable you to read, write, and process big data from Transact-SQL or Spark, allowing you to easily combine and analyze your high-value relational data with high-volume big data.
 
@@ -66,12 +66,11 @@ A SQL Server big data cluster includes a scalable HDFS *storage pool*. This can 
 
 Management and monitoring are provided through a combination of command line tools, APIs, portals, and dynamic management views.
 
-You can use Azure Data Studio to perform a variety of tasks on the big data cluster. This is enabled by the new **SQL Server 2019 Extension**. This extension provides:
-
+You can use [Azure Data Studio](../azure-data-studio/what-is.md) to perform a variety of tasks on the big data cluster:
 - Built-in snippets for common management tasks.
 - Ability to browse HDFS, upload files, preview files, and create directories.
 - Ability to create, open, and run Jupyter-compatible notebooks.
-- Data virtualization wizard to simplify the creation of external data sources.
+- Data virtualization wizard to simplify the creation of external data sources (enabled by the **Data Virtualization Extension**).
 
 ## <a id="architecture"></a> Architecture
 
@@ -81,7 +80,7 @@ A SQL Server big data cluster is a cluster of Linux containers orchestrated by [
 
 Kubernetes is an open source container orchestrator, which can scale container deployments according to need. The following table defines some important Kubernetes terminology:
 
-|||
+|Term|Description|
 |:--|:--|
 | **Cluster** | A Kubernetes cluster is a set of machines, known as nodes. One node controls the cluster and is designated the master node; the remaining nodes are worker nodes. The Kubernetes master is responsible for distributing work between the workers, and for monitoring the health of the cluster. |
 | **Node** | A node runs containerized applications. It can be either a physical machine or a virtual machine. A Kubernetes cluster can contain a mixture of physical machine and virtual machine nodes. |
@@ -113,7 +112,7 @@ The data pool is used for data persistence and caching. The data pool consists o
 The storage pool consists of storage pool pods comprised of SQL Server on Linux, Spark, and HDFS. All the storage nodes in a SQL Server big data cluster are members of an HDFS cluster.
 
 > [!TIP]
-> For an in-depth look into big data cluster architecture and installation, see [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters).
+> For an in-depth look into big data cluster architecture and installation, see [Workshop: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] Architecture](https://github.com/microsoft/sqlworkshops-bdc).
 
 ## Next steps
 

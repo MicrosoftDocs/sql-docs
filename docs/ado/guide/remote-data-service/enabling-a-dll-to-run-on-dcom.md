@@ -1,4 +1,5 @@
 ---
+description: "Enabling a DLL to Run on DCOM"
 title: "Enabling a DLL to Run on DCOM | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "DCOM in RDS [ADO]"
   - "business objects in RDS [ADO]"
 ms.assetid: 5f1c2205-191c-4fb4-9bd9-84c878ea46ed
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Enabling a DLL to Run on DCOM
 > [!IMPORTANT]

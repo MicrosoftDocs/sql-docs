@@ -1,6 +1,6 @@
 ---
-title: "CASE (Transact-SQL) | Microsoft Docs"
-ms.custom: ""
+title: CASE (Transact-SQL)
+description: "Transact-SQL reference for the CASE expression. CASE evaluates a list of conditions to return specific results."
 ms.date: "06/28/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
@@ -22,8 +22,10 @@ author: rothja
 ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # CASE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Evaluates a list of conditions and returns one of multiple possible result expressions.  
   
@@ -41,7 +43,7 @@ Evaluates a list of conditions and returns one of multiple possible result expre
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 Simple CASE expression:   
@@ -56,15 +58,17 @@ CASE
 END  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 CASE  
      WHEN when_expression THEN result_expression [ ...n ]   
      [ ELSE else_result_expression ]   
-END  
-```  
-  
+END
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments  
  *input_expression*  
  Is the expression evaluated when the simple CASE format is used. *input_expression* is any valid [expression](../../t-sql/language-elements/expressions-transact-sql.md).  
@@ -81,7 +85,9 @@ END
  WHEN *Boolean_expression*  
  Is the Boolean expression evaluated when using the searched CASE format. *Boolean_expression* is any valid Boolean expression.  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  Returns the highest precedence type from the set of types in *result_expressions* and the optional *else_result_expression*. For more information, see [Data Type Precedence &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-precedence-transact-sql.md).  
   
 ### Return Values  

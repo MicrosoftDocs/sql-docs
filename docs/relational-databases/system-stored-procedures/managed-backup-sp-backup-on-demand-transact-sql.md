@@ -1,4 +1,5 @@
 ---
+description: "managed_backup.sp_backup_on_demand (Transact-SQL)"
 title: "managed_backup.sp_backup_on_demand (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "smart_admin.sp_backup_on_demand"
   - "sp_backup_on_demand"
 ms.assetid: 638f809f-27fa-4c44-a549-9cf37ecc920c
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # managed_backup.sp_backup_on_demand (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Requests [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)] to perform a backup of the specified database.  
   

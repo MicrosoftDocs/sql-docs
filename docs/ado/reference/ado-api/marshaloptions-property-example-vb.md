@@ -1,4 +1,5 @@
 ---
+description: "MarshalOptions Property Example (VB)"
 title: "MarshalOptions Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MarshalOptions property [ADO], Visual Basic example"
 ms.assetid: ae576b2c-65aa-4838-872a-85e618806dc8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # MarshalOptions Property Example (VB)
 This example uses the [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) property to specify what rows are sent back to the server - All Rows or only Modified Rows.  

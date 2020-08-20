@@ -1,4 +1,5 @@
 ---
+description: "ActiveCommand Property Example (VB)"
 title: "ActiveCommand Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ActiveCommand property [ADO], Visual Basic example"
 ms.assetid: 23b06499-62df-4f46-88eb-6da392f9b456
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ActiveCommand Property Example (VB)
 This example demonstrates the [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) property.  

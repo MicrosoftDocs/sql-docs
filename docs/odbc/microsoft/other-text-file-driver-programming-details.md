@@ -1,4 +1,5 @@
 ---
+description: "Other Text File Driver Programming Details"
 title: "Other Text File Driver Programming Details | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "desktop database drivers [ODBC], text file driver"
   - "Jet-based ODBC drivers [ODBC], text file driver"
 ms.assetid: bfa85e91-060e-4d70-88c3-f5c48df634f1
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Other Text File Driver Programming Details
 > [!NOTE]  

@@ -12,7 +12,7 @@ ms.technology: linux
 ---
 # Deploy a SQL Server container in Kubernetes with Azure Kubernetes Services (AKS)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 Learn how to configure a SQL Server instance on Kubernetes in Azure Kubernetes Service (AKS), with persistent storage for high availability (HA). The solution provides resiliency. If the SQL Server instance fails, Kubernetes automatically re-creates it in a new pod. Kubernetes also provides resiliency against a node failure.
 
@@ -46,7 +46,7 @@ In the following diagram, the node hosting the `mssql-server` container has fail
 * **Kubernetes cluster**
    - The tutorial requires a Kubernetes cluster. The steps use [kubectl](https://kubernetes.io/docs/user-guide/kubectl/) to manage the cluster. 
 
-   - See [Deploy an Azure Container Service (AKS) cluster](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) to create and connect to a single-node Kubernetes cluster in AKS with `kubectl`. 
+   - See [Deploy an Azure Kubernetes Service (AKS) cluster](https://docs.microsoft.com/azure/aks/tutorial-kubernetes-deploy-cluster) to create and connect to a single-node Kubernetes cluster in AKS with `kubectl`. 
 
    >[!NOTE]
    >To protect against node failure, a Kubernetes cluster requires more than one node.
@@ -154,12 +154,15 @@ In this step, create a manifest to describe the container based on the SQL Serve
 1. Create a manifest (a YAML file) to describe the deployment. The following example describes a deployment, including a container based on the SQL Server container image.
 
    ```yaml
-   apiVersion: apps/v1beta1
+   apiVersion: apps/v1
    kind: Deployment
    metadata:
      name: mssql-deployment
    spec:
      replicas: 1
+     selector:
+        matchLabels:
+          app: mssql
      template:
        metadata:
          labels:
@@ -176,7 +179,7 @@ In this step, create a manifest to describe the container based on the SQL Serve
              value: "Developer"
            - name: ACCEPT_EULA
              value: "Y"
-           - name: MSSQL_SA_PASSWORD
+           - name: SA_PASSWORD
              valueFrom:
                secretKeyRef:
                  name: mssql

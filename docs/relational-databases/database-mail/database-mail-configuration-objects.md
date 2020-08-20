@@ -1,4 +1,5 @@
 ---
+description: "Database Mail Configuration Objects"
 title: "Database Mail Configuration Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -34,7 +35,7 @@ author: stevestein
 ms.author: sstein
 ---
 # Database Mail Configuration Objects
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Database Mail has two configuration objects: The database configuration objects provide a way for you to configure the settings that Database mail should use when sending an email from your database application or [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent.  
   
 -   Database Mail accounts  
@@ -77,7 +78,7 @@ ms.author: sstein
   
 -   The port number of the e-mail server.  
   
--   A bit column indicating whether the connection to the SMTP mail server is made using Secure Sockets Layer (SSL).  
+-   A bit column indicating whether the connection to the SMTP mail server is made using Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL).  
   
 -   A bit column indicating whether the connection to the SMTP server is made using the credentials configured for the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)].  
   

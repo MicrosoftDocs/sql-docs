@@ -1,4 +1,5 @@
 ---
+description: "Synchronize21 Method (RDS)"
 title: "Synchronize21 Method (RDS) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""
@@ -11,8 +12,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "Synchronize21 method [ADO]"
 ms.assetid: 6b35f136-9d9a-4bdd-8144-67decfd3c4e9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Synchronize21 Method (RDS)
 Synchronize the given recordset with the database specified by the connection string for use with ADO 2.1.  

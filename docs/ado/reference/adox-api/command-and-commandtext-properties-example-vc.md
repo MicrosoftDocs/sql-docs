@@ -1,4 +1,5 @@
 ---
+description: "Command and CommandText Properties Example (VC++)"
 title: "Command and CommandText Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "CommandText property [ADOX], VC++ example"
   - "Command property [ADOX], VC++ example"
 ms.assetid: 5a007b9a-be11-4fba-96db-6252993f97b8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Command and CommandText Properties Example (VC++)
 The following code demonstrates how to use the [Command](../../../ado/reference/adox-api/command-property-adox.md) property to update the text of a procedure.  
@@ -77,7 +78,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in ProcedureTextX...."<< endl;  
+      cout << "Error occurred in ProcedureTextX...."<< endl;  
    }  
   
    ::CoUninitialize();  

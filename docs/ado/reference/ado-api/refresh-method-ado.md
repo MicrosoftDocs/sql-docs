@@ -1,4 +1,5 @@
 ---
+description: "Refresh Method (ADO)"
 title: "Refresh Method (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Refresh method [ADO]"
 ms.assetid: 089b7ca7-684f-4259-8032-5bd1ecc54426
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Refresh Method (ADO)
 Updates the objects in a collection to reflect objects available from, and specific to, the provider.  
@@ -48,17 +49,35 @@ collection.Refresh
  Using the **Refresh** method on a **Properties** collection of some objects populates the collection with the dynamic properties that the provider exposes. These properties provide information about functionality specific to the provider, beyond the built-in properties ADO supports.  
   
 ## Applies To  
-  
-||||  
-|-|-|-|  
-|[Axes Collection](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)|[Columns Collection](../../../ado/reference/adox-api/columns-collection-adox.md)|[CubeDefs Collection](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)|  
-|[Dimensions Collection](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)|[Errors Collection](../../../ado/reference/ado-api/errors-collection-ado.md)|[Fields Collection](../../../ado/reference/ado-api/fields-collection-ado.md)|  
-|[Groups Collection](../../../ado/reference/adox-api/groups-collection-adox.md)|[Hierarchies Collection](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)|[Indexes Collection](../../../ado/reference/adox-api/indexes-collection-adox.md)|  
-|[Keys Collection](../../../ado/reference/adox-api/keys-collection-adox.md)|[Levels Collection](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)|[Members Collection](../../../ado/reference/ado-md-api/members-collection-ado-md.md)|  
-|[Parameters Collection](../../../ado/reference/ado-api/parameters-collection-ado.md)|[Positions Collection](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)|[Procedures Collection](../../../ado/reference/adox-api/procedures-collection-adox.md)|  
-|[Properties Collection](../../../ado/reference/ado-api/properties-collection-ado.md)|[Tables Collection](../../../ado/reference/adox-api/tables-collection-adox.md)|[Users Collection](../../../ado/reference/adox-api/users-collection-adox.md)|  
-|[Views Collection](../../../ado/reference/adox-api/views-collection-adox.md)|||  
-  
+
+:::row:::
+    :::column:::
+        [Axes Collection](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)  
+        [Columns Collection](../../../ado/reference/adox-api/columns-collection-adox.md)  
+        [CubeDefs Collection](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)  
+        [Dimensions Collection](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)  
+        [Errors Collection](../../../ado/reference/ado-api/errors-collection-ado.md)  
+        [Fields Collection](../../../ado/reference/ado-api/fields-collection-ado.md)  
+        [Groups Collection](../../../ado/reference/adox-api/groups-collection-adox.md)  
+    :::column-end:::
+    :::column:::
+        [Hierarchies Collection](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)  
+        [Indexes Collection](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+        [Keys Collection](../../../ado/reference/adox-api/keys-collection-adox.md)  
+        [Levels Collection](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)  
+        [Members Collection](../../../ado/reference/ado-md-api/members-collection-ado-md.md)  
+        [Parameters Collection](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Positions Collection](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+        [Procedures Collection](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+        [Properties Collection](../../../ado/reference/ado-api/properties-collection-ado.md)  
+        [Tables Collection](../../../ado/reference/adox-api/tables-collection-adox.md)  
+        [Users Collection](../../../ado/reference/adox-api/users-collection-adox.md)  
+        [Views Collection](../../../ado/reference/adox-api/views-collection-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Refresh Method Example (VB)](../../../ado/reference/ado-api/refresh-method-example-vb.md)   
  [Refresh Method Example (VC++)](../../../ado/reference/ado-api/refresh-method-example-vc.md)   

@@ -1,21 +1,22 @@
 ---
+description: "Understanding Java EE support"
 title: "Understanding Java EE support | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/12/2019"
+ms.date: "07/31/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: a9448b80-b7a3-49cf-8bb4-322c73676005
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Understanding Java EE support
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-The following sections document how the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides support for the Java Platform, Enterprise Edition (Java EE) and JDBC 3.0 optional API features. The source code examples provided in this Help system provide a good reference for getting started with these features.  
+The following sections document how the [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] provides support for the Java Platform, Enterprise Edition (Java EE), and JDBC 3.0 optional API features. The source code examples provided in this Help system provide a good reference for getting started with these features.  
   
 First, make sure that your Java environment (JDK, JRE) includes the javax.sql package. This is a required package for any JDBC application that uses the optional API. JDK 1.5 and later versions already contain this package, so you don't have to install it separately.  
   
@@ -32,7 +33,11 @@ For JDBC Driver 7.0, the driver is contained in **mssql-jdbc-7.0.0.jre8.jar**, o
 For JDBC Driver 7.2, the driver is contained in **mssql-jdbc-7.2.2.jre8.jar**, or **mssql-jdbc-7.2.2.jre11.jar**.
 
 For JDBC Driver 7.4, the driver is contained in **mssql-jdbc-7.4.1.jre8.jar**, **mssql-jdbc-7.4.1.jre11.jar**, or **mssql-jdbc-7.4.1.jre12.jar**.
-  
+
+For JDBC Driver 8.2, the driver is contained in **mssql-jdbc-8.2.2.jre8.jar**, **mssql-jdbc-8.2.2.jre11.jar**, or **mssql-jdbc-8.2.2.jre13.jar**.
+
+For JDBC Driver 8.4, the driver is contained in **mssql-jdbc-8.4.0.jre8.jar**, **mssql-jdbc-8.4.0.jre11.jar**, or **mssql-jdbc-8.4.0.jre14.jar**.
+
 The class name is used whenever you load the driver with the JDBC DriverManager class, and whenever you specify the class name of the driver in any driver configuration. For example, configuring a data source within a Java EE application server might require you enter the driver class name.  
   
 ## Data sources

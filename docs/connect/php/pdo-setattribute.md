@@ -1,15 +1,16 @@
 ---
-title: "PDO::setAttribute | Microsoft Docs"
+title: "PDO::setAttribute"
+description: "API reference for the PDO::setAttribute function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "04/22/2019"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 56f9ee96-e1d2-46cc-b137-38f06a251863
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # PDO::setAttribute
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -36,6 +37,7 @@ Returns true on success, otherwise false.
 |-------------|----------------|--------------------|---------------|  
 |PDO::ATTR_CASE|PDO|PDO::CASE_LOWER<br /><br />PDO::CASE_NATURAL<br /><br />PDO::CASE_UPPER|Specifies the case of column names.<br /><br />PDO::CASE_LOWER causes lower case column names.<br /><br />PDO::CASE_NATURAL (the default) displays column names as returned by the database.<br /><br />PDO::CASE_UPPER causes column names to upper case.<br /><br />This attribute can be set using PDO::setAttribute.|  
 |PDO::ATTR_DEFAULT_FETCH_MODE|PDO|See the PDO documentation.|See the PDO documentation.|  
+|PDO::ATTR_DEFAULT_STR_PARAM|PDO|PDO::PARAM_STR_CHAR<br /><br />PDO::PARAM_STR_NATL|For more information see the examples in [PDO::quote](../../connect/php/pdo-quote.md).|
 |PDO::ATTR_ERRMODE|PDO|PDO::ERRMODE_SILENT<br /><br />PDO::ERRMODE_WARNING<br /><br />PDO::ERRMODE_EXCEPTION|Specifies how the driver reports failures.<br /><br />PDO::ERRMODE_SILENT (the default) sets the error codes and information.<br /><br />PDO::ERRMODE_WARNING raises E_WARNING.<br /><br />PDO::ERRMODE_EXCEPTION causes an exception to be thrown.<br /><br />This attribute can be set using PDO::setAttribute.|  
 |PDO::ATTR_ORACLE_NULLS|PDO|See the PDO documentation.|Specifies how nulls should be returned.<br /><br />PDO::NULL_NATURAL does no conversion.<br /><br />PDO::NULL_EMPTY_STRING converts an empty string to null.<br /><br />PDO::NULL_TO_STRING converts null to an empty string.|  
 |PDO::ATTR_STATEMENT_CLASS|PDO|See the PDO documentation.|Sets the user-supplied statement class derived from PDOStatement.<br /><br />Requires `array(string classname, array(mixed constructor_args))`.<br /><br />For more information, see the PDO documentation.|  

@@ -1,4 +1,5 @@
 ---
+description: "LockType Property (ADO)"
 title: "LockType Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "LockType property [ADO]"
 ms.assetid: 9920c14e-033a-4de1-8149-0ce9737a3246
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # LockType Property (ADO)
 Indicates the type of locks placed on records during editing.  

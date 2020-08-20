@@ -1,4 +1,5 @@
 ---
+description: "Handler Property Example (VB)"
 title: "Handler Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Handler property [ADO], Visual Basic example"
 ms.assetid: 9664f9a6-65fc-4e7f-be3d-3e4b501b558a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Handler Property Example (VB)
 > [!IMPORTANT]

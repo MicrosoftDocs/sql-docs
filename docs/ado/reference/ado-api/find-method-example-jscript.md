@@ -1,4 +1,5 @@
 ---
+description: "Find Method Example (JScript)"
 title: "Find Method Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Find method [ADO], JScript example"
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Find Method Example (JScript)
 This example uses the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object's [Find](../../../ado/reference/ado-api/find-method-ado.md) method to locate and display the companies in the ***Northwind*** database whose name begins with the letter G. Cut and paste the following code to Notepad or another text editor, and save it as **FindJS.asp**.  

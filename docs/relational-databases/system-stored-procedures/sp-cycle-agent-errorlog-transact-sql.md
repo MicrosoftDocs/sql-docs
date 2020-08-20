@@ -1,4 +1,5 @@
 ---
+description: "sp_cycle_agent_errorlog (Transact-SQL)"
 title: "sp_cycle_agent_errorlog (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cycle_agent_errorlog"
 ms.assetid: 8aa96182-60b7-4d7b-b2a7-ccce70378c6e
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_cycle_agent_errorlog (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Closes the current [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent error log file and cycles the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent error log extension numbers just like a server restart. The new [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent error log contains a line indicating that the new log has been created.  
   

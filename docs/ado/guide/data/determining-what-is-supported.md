@@ -1,4 +1,5 @@
 ---
+description: "Determining What is Supported"
 title: "Determining What is Supported | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "editing data [ADO], Supports method"
   - "Supports method [ADO]"
 ms.assetid: 65090cba-6d46-4775-8d61-f6838e7752a6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Determining What is Supported
 The **Supports** method is used to determine whether a specified **Recordset** object supports a particular type of functionality. It has the following syntax:  

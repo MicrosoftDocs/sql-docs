@@ -1,5 +1,6 @@
 ---
 title: "Take an Availability Group Offline (SQL Server) | Microsoft Docs"
+description: Learn how to take an Always On availability group from the ONLINE state to the OFFLINE state by using Transact-SQL in SQL Server.
 ms.custom: ""
 ms.date: "05/17/2016"
 ms.prod: sql
@@ -13,14 +14,14 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Take an Availability Group Offline (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to take an Always On availability group from the ONLINE state to the OFFLINE state by using [!INCLUDE[tsql](../../../includes/tsql-md.md)] in [!INCLUDE[ssSQL11SP1](../../../includes/sssql11sp1-md.md)] and later versions. There is no data loss for synchronous-commit databases because if any synchronous-commit replica is not synchronized, the OFFLINE operation raises an error and leaves the availability group ONLINE. Keeping the availability group online protects unsynchronized synchronous-commit databases from possible data loss. After an availability group goes offline, its databases become unavailable to clients and you cannot bring the availability group back online. Therefore, take an availability group offline only to migrate the availability group resources from one WSFC cluster to another.  
   
  During a cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)], if any applications connect directly to the primary replica of an availability group, the availability group must be taken offline. Cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] supports OS upgrade with minimal downtime of availability groups. The typical scenario is to use cross-cluster migration of [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] for OS upgrade to [!INCLUDE[win8](../../../includes/win8-md.md)] or [!INCLUDE[win8srv](../../../includes/win8srv-md.md)]. For more information, see [Cross-Cluster Migration of Always On Availability Groups for OS Upgrade](https://msdn.microsoft.com/library/jj873730.aspx).  
   
   
 > [!CAUTION]  
->  Use the OFFLINE option only for a cross-cluster migration of availability group resources.  
+>  Use the OFFLINE option for a cross-cluster migration of availability group resources or for failing over a read-scale availability group.
   
 ##  <a name="Prerequisites"></a> Prerequisites  
   

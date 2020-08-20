@@ -1,4 +1,5 @@
 ---
+description: "ADO Programmer&#39;s Reference"
 title: "ADO Programmer&#39;s Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, reference"
 ms.assetid: 6dc27c85-84e1-472a-b057-d1854b8c98a3
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO Programmer&#39;s Reference
 This section contains the following topics.  

@@ -1,4 +1,5 @@
 ---
+description: "SQLCancel Function"
 title: "SQLCancel Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLCancel function [ODBC]"
 ms.assetid: ac0b5972-627f-4440-8c5a-0e8da728726d
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLCancel Function
 **Conformance**  

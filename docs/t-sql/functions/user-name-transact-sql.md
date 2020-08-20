@@ -1,4 +1,5 @@
 ---
+description: "USER_NAME (Transact-SQL)"
 title: "USER_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -26,7 +27,7 @@ ms.author: vanto
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # USER_NAME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a database user name from a specified identification number.  
   
@@ -38,7 +39,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 USER_NAME ( [ id ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *id*  
  Is the identification number associated with a database user. *id* is **int**. The parentheses are required.  
   
@@ -47,6 +50,9 @@ USER_NAME ( [ id ] )
   
 ## Remarks  
  When *id* is omitted, the current user in the current context is assumed. If the parameter contains the word NULL will return NULL. When USER_NAME is called without specifying an *id* after an EXECUTE AS statement, USER_NAME returns the name of the impersonated user. If a Windows principal accesses the database by way of membership in a group, USER_NAME returns the name of the Windows principal instead of the group.  
+ 
+> [!NOTE]
+> Although the USER_NAME function is supported on Azure SQL Database, using *Execute as* with USER_NAME is not supported on Azure SQL Database. 
   
 ## Examples  
   

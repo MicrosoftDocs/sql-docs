@@ -1,4 +1,5 @@
 ---
+description: "XactAttributeEnum"
 title: "XactAttributeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "XactAttributeEnum enumeration [ADO]"
 ms.assetid: e7dcecd3-7dc7-445c-b922-f700c3067fbc
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # XactAttributeEnum
 Specifies the transaction attributes of a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  

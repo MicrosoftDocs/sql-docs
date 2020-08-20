@@ -1,4 +1,5 @@
 ---
+description: "Parameter Object"
 title: "Parameter Object | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Parameter object [ADO]"
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Parameter Object
 Represents a parameter or argument associated with a [Command](../../../ado/reference/ado-api/command-object-ado.md) object based on a parameterized query or stored procedure.  

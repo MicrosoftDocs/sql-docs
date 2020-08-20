@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_nodes_column_store_segments (Transact-SQL)"
 title: "sys.pdw_nodes_column_store_segments (Transact-SQL)"
 ms.custom: seo-dt-2019
 ms.date: "03/28/2018"
@@ -16,7 +17,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 ---
 # sys.pdw_nodes_column_store_segments (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
 Contains a row for each column in a columnstore index.
 
@@ -73,6 +74,9 @@ ORDER BY    table_nm
 ,           nc.column_id
 ,           sm.name ;
 ```
+
+>[!TIP]
+> For improved performance in Synapse SQL, consider using **sys.pdw_permanent_table_mappings** instead of **sys.pdw_table_mappings** on permanent user tables. See **[sys.pdw_permanent_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** for more information.
 
 ## Permissions
 

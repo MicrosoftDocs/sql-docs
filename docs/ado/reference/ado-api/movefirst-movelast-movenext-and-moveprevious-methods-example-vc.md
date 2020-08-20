@@ -1,4 +1,5 @@
 ---
+description: "MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VC++)"
 title: "Move Record Pointer of Recordset Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "MovePrevious method [ADO], VC++ example"
   - "MoveFirst method [ADO], VC++ example"
 ms.assetid: 7f8aea7b-9183-4b29-8ac0-a393ed2e8bd5
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example (VC++)
 This example uses the [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md), and [MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) methods to move the record pointer of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) based on the supplied command. The MoveAny function is required for this example to run.  

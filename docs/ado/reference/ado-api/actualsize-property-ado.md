@@ -1,4 +1,5 @@
 ---
+description: "ActualSize Property (ADO)"
 title: "ActualSize Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ActualSize property [ADO]"
 ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ActualSize Property (ADO)
 Indicates the actual length of a field's value in bytes.  

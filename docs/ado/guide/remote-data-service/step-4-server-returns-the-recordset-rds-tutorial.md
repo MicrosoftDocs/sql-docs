@@ -1,4 +1,5 @@
 ---
+description: "Step 4: Server Returns the Recordset (RDS Tutorial)"
 title: "Step 4: Server Returns the Recordset (RDS Tutorial) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS tutorial [ADO], server returns Recordset"
 ms.assetid: 3d1855c4-419c-4810-b5ea-6c874b5e2905
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Step 4: Server Returns the Recordset (RDS Tutorial)
 > [!IMPORTANT]

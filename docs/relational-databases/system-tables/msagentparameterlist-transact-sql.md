@@ -1,4 +1,5 @@
 ---
+description: "MSagentparameterlist (Transact-SQL)"
 title: "MSagentparameterlist (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "Msagentparameterlist system table"
 ms.assetid: 4ea571a0-078d-4e13-95ee-f3d4bbd4dfb2
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # MSagentparameterlist (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **MSagentparameterlist** table contains replication agent parameter information and is used to specify the parameters that can be set for a given agent type. This table is stored in the **msdb** database.  
   

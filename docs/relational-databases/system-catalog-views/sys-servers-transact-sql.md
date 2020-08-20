@@ -1,7 +1,8 @@
 ---
+description: "sys.servers (Transact-SQL)"
 title: "sys.servers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "09/07/2018"
+ms.date: "06/16/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -17,12 +18,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.servers catalog view"
 ms.assetid: 4e774ed9-4e83-4726-9f1d-8efde8f9feff
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sys.servers (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Contains a row per linked or remote server registered, and a row for the local server that has **server_id** = 0.  
 
@@ -31,11 +32,11 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 |**server_id**|**int**|Local ID of linked server.|  
 |**name**|**sysname**|When **server_id** = 0, the returned value is the server name.<br /><br /> When **server_id** > 0, the returned value is the local name of linked server.|  
 |**product**|**sysname**|Product name of the linked server. A value of "SQL Server" indicates another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].|  
-|**provider**|**sysname**|OLE DB provider name for connecting to linked server.|  
+|**provider**|**sysname**|OLE DB provider name for connecting to linked server.<br /><br />Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], the value "SQLNCLI" maps to the [Microsoft OLE DB Driver for SQL Server (MSOLEDBSQL)](../../connect/oledb/oledb-driver-for-sql-server.md) by default. In earlier versions, the value "SQLNCLI" maps to the [SQL Server Native Client OLE DB provider (SQLNCLI11)](../../relational-databases/native-client/sql-server-native-client.md).|  
 |**data_source**|**nvarchar(4000)**|OLE DB data source connection property.|  
 |**location**|**nvarchar(4000)**|OLE DB location connection property. NULL if none.|  
-|**provider_string**|**nvarchar(4000)**|OLE DB provider-string connection property.<br /><br /> Is NULL unless the caller has the ALTER ANY LINKED SERVER permission.|  
-|**catalog**|**sysname**|OLEDB catalog connection property. NULL if none.|  
+|**provider_string**|**nvarchar(4000)**|OLE DB provider-string connection property.<br /><br /> Is NULL unless the caller has the `ALTER ANY LINKED SERVER` permission.|  
+|**catalog**|**sysname**|OLE DB catalog connection property. NULL if none.|  
 |**connect_timeout**|**int**|Connect time-out in seconds, 0 if none.|  
 |**query_timeout**|**int**|Query time-out in seconds, 0 if none.|  
 |**is_linked**|**bit**|0 = Is an old-style server added by using **sp_addserver**, with different RPC and distributed-transaction behavior.<br /><br /> 1 = Standard linked server.|  
@@ -53,6 +54,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
 |**is_nonsql_subscriber**|**bit**|Server is a non-SQL Server replication Subscriber.|  
 |**is_remote_proc_transaction_promotion_enabled**|**bit**|If 1, calling a remote stored procedure starts a distributed transaction and enlists the transaction with MS DTC. For more information, see [sp_serveroption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-serveroption-transact-sql.md).|  
 |**modify_date**|**datetime**|Date that server information was last changed.|  
+|**is_rda_server**|**bit**|**Applies to:** Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].<br /><br />Server is remote data archive enable (stretch-enabled). For more information, see [Enable Stretch Database on the server](https://docs.microsoft.com/sql/sql-server/stretch-database/enable-stretch-database-for-a-database#EnableTSQLServer).|
   
 ## Permissions  
  The value in **provider_string** is always NULL unless the caller has the ALTER ANY LINKED SERVER permission.  
@@ -72,4 +74,4 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
  [sp_addlinkedsrvlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addremotelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addremotelogin-transact-sql.md)  
   
-  
+ 

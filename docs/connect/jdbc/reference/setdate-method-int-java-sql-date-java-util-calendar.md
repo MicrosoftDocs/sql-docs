@@ -1,4 +1,5 @@
 ---
+description: "setDate Method (int, java.sql.Date, java.util.Calendar)"
 title: "setDate Method to date and calendar - int | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 2c46f694-6dc4-429f-a037-a3bad369a7c8
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # setDate Method (int, java.sql.Date, java.util.Calendar)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

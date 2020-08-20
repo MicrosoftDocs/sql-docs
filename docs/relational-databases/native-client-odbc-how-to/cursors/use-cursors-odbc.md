@@ -1,4 +1,5 @@
 ---
+description: "Use Cursors (ODBC)"
 title: "Use Cursors (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -10,12 +11,12 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "cursors [ODBC], how to topics"
 ms.assetid: c502736f-bca0-45c3-ae25-d2ad52d296bf
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Use Cursors (ODBC)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
     
 ### To use cursors  

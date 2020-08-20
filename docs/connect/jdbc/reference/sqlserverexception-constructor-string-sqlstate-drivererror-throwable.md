@@ -1,4 +1,5 @@
 ---
+description: "SQLServerException Constructor (java.lang.String, SQLState, DriverError, java.lang.Throwable)"
 title: "SQLServerException Constructor (java.lang.String, SQLState, DriverError, java.lang.Throwable) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"
@@ -11,8 +12,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid:
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLServerException Constructor (java.lang.String, SQLState, DriverError, java.lang.Throwable)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

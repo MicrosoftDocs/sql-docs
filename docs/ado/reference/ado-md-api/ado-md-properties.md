@@ -1,4 +1,5 @@
 ---
+description: "ADO MD Properties"
 title: "ADO MD Properties | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,12 +12,12 @@ helpviewer_keywords:
   - "ADO MD, properties"
   - "properties [ADO MD]"
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO MD Properties
 
-|||  
+|Property|Description|  
 |-|-|  
 |[ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)|Indicates to which ADO **Connection** object the current cellset or catalog currently belongs.|  
 |[Caption](../../../ado/reference/ado-md-api/caption-property-ado-md.md)|Indicates the text caption to use when displaying a **Level** or **Member** object.|  

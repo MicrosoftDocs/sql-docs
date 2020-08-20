@@ -1,4 +1,5 @@
 ---
+description: "Command Property (ADOX)"
 title: "Command Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Command property [ADOX]"
 ms.assetid: bcc9146f-586f-4e69-9c10-863440c9cffa
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Command Property (ADOX)
 Specifies an ADO [Command](../../../ado/reference/ado-api/command-object-ado.md) object that can be used to create or execute the procedure.  
@@ -27,11 +28,16 @@ Specifies an ADO [Command](../../../ado/reference/ado-api/command-object-ado.md)
  An error will occur when getting and setting this property if the provider does not support persisting commands.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Procedure Object (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[View Object (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Procedure Object (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
+    :::column-end:::
+    :::column:::
+        [View Object (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Command and CommandText Properties Example (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Parameters Collection, Command Property Example (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   

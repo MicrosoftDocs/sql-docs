@@ -1,4 +1,5 @@
 ---
+description: "MarshalOptions Property Example (VC++)"
 title: "MarshalOptions Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MarshalOptions property [ADO], VC++ example"
 ms.assetid: a3b6fc09-ce21-450d-9063-bac505208d31
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # MarshalOptions Property Example (VC++)
 This example uses the [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) property to specify what rows are sent back to the server - All Rows or only Modified Rows.  

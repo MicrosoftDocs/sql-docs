@@ -1,4 +1,5 @@
 ---
+description: "Collation and Unicode support"
 title: "Collation and Unicode support | Microsoft Docs"
 ms.custom: ""
 ms.date: 12/05/2019
@@ -35,7 +36,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 
 # Collation and Unicode support
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Collations in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provide sorting rules, case, and accent sensitivity properties for your data. Collations that are used with character data types, such as **char** and **varchar**, dictate the code page and corresponding characters that can be represented for that data type. 
 
 Whether you're installing a new instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], restoring a database backup, or connecting server to client databases, it's important to understand the locale requirements, sorting order, and case and accent sensitivity of the data that you're working with. To list the collations that are available on your instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], see [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md).    
@@ -173,12 +174,12 @@ The following table shows the default collation designations, as determined by t
 |Arabic (Yemen)|0x2401|0x0401|Arabic_CI_AS|
 |Armenian (Armenia)|0x042b|0x0419|Latin1_General_CI_AS|
 |Assamese (India)|0x044d|0x044d|Not available at server level|
-|Azeri (Azerbaijan, Cyrillic)|0x082c|0x082c|Deprecated, not available at server level|
-|Azeri (Azerbaijan, Latin)|0x042c|0x042c|Deprecated, not available at server level|
+|Azerbaijani (Azerbaijan, Cyrillic)|0x082c|0x082c|Deprecated, not available at server level|
+|Azerbaijani (Azerbaijan, Latin)|0x042c|0x042c|Deprecated, not available at server level|
 |Bashkir (Russia)|0x046d|0x046d|Latin1_General_CI_AI|
 |Basque (Basque)|0x042d|0x0409|Latin1_General_CI_AS|
 |Belarusian (Belarus)|0x0423|0x0419|Cyrillic_General_CI_AS|
-|Bengali (Bangladesh)|0x0845|0x0445|Not available at server level|
+|Bangla (Bangladesh)|0x0845|0x0445|Not available at server level|
 |Bengali (India)|0x0445|0x0439|Not available at server level|
 |Bosnian (Bosnia and Herzegovina, Cyrillic)|0x201a|0x201a|Latin1_General_CI_AI|
 |Bosnian (Bosnia and Herzegovina, Latin)|0x141a|0x141a|Latin1_General_CI_AI|
@@ -230,7 +231,7 @@ The following table shows the default collation designations, as determined by t
 |French (Monaco)|0x180c|0x040c|French_CI_AS|
 |French (Switzerland)|0x100c|0x040c|French_CI_AS|
 |Frisian (Netherlands)|0x0462|0x0462|Latin1_General_CI_AI|
-|Galician (Spain)|0x0456|0x0409|Latin1_General_CI_AS|
+|Galician|0x0456|0x0409|Latin1_General_CI_AS|
 |Georgian (Georgia)|0x10437|0x10437|Georgian_Modern_Sort_CI_AS|
 |Georgian (Georgia)|0x0437|0x0419|Latin1_General_CI_AS|
 |German - Phone Book Sort (DIN)|0x10407|0x10407|German_PhoneBook_CI_AS|
@@ -270,7 +271,7 @@ The following table shows the default collation designations, as determined by t
 |Lithuanian (Lithuania)|0x0427|0x0427|Lithuanian_CI_AS|
 |Lower Sorbian (Germany)|0x082e|0x0409|Latin1_General_CI_AS|
 |Luxembourgish (Luxembourg)|0x046e|0x0409|Latin1_General_CI_AS|
-|Macedonian (Macedonia, FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
+|Macedonian (North Macedonia, FYROM)|0x042f|0x042f|Macedonian_FYROM_90_CI_AS|
 |Malay (Brunei Darussalam)|0x083e|0x0409|Latin1_General_CI_AS|
 |Malay (Malaysia)|0x043e|0x0409|Latin1_General_CI_AS|
 |Malayalam (India)|0x044c|0x0439|Not available at server level|
@@ -285,7 +286,7 @@ The following table shows the default collation designations, as determined by t
 |Norwegian (Bokmål, Norway)|0x0414|0x0414|Latin1_General_CI_AI|
 |Norwegian (Nynorsk, Norway)|0x0814|0x0414|Latin1_General_CI_AI|
 |Occitan (France)|0x0482|0x040c|French_CI_AS|
-|Oriya (India)|0x0448|0x0439|Not available at server level|
+|Odia (India)|0x0448|0x0439|Not available at server level|
 |Pashto (Afghanistan)|0x0463|0x0463|Not available at server level|
 |Persian (Iran)|0x0429|0x0429|Latin1_General_CI_AI|
 |Polish (Poland)|0x0415|0x0415|Polish_CI_AS|
@@ -298,6 +299,7 @@ The following table shows the default collation designations, as determined by t
 |Romanian (Romania)|0x0418|0x0418|Romanian_CI_AS|
 |Romansh (Switzerland)|0x0417|0x0417|Latin1_General_CI_AI|
 |Russian (Russia)|0x0419|0x0419|Cyrillic_General_CI_AS|
+|Sahka (Russia)|0x0485|0x0485|Latin1_General_CI_AI|
 |Sami (Inari, Finland)|0x243b|0x083b|Latin1_General_CI_AI|
 |Sami (Lule, Norway)|0x103b|0x043b|Latin1_General_CI_AI|
 |Sami (Lule, Sweden)|0x143b|0x083b|Latin1_General_CI_AI|
@@ -361,14 +363,10 @@ The following table shows the default collation designations, as determined by t
 |Welsh (United Kingdom)|0x0452|0x0452|Latin1_General_CI_AI|
 |Wolof (Senegal)|0x0488|0x040c|French_CI_AS|
 |Xhosa/isiXhosa (South Africa)|0x0434|0x0409|Latin1_General_CI_AS|
-|Yakut (Russia)|0x0485|0x0485|Latin1_General_CI_AI|
 |Yi (PRC)|0x0478|0x0409|Latin1_General_CI_AS|
 |Yoruba (Nigeria)|0x046a|0x0409|Latin1_General_CI_AS|
 |Zulu/isiZulu (South Africa)|0x0435|0x0409|Latin1_General_CI_AS|
 
-> [!NOTE]
-> Unicode-only collations can't be selected during [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] setup, because they aren't supported as server-level collations.    
-    
 After you've assigned a collation to the server, you can change it only by exporting all database objects and data, rebuilding the *master* database, and importing all database objects and data. Instead of changing the default collation of an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], you can specify the desired collation when you create a new database or database column.    
 
 To query the server collation for an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], use the `SERVERPROPERTY` function:
@@ -651,4 +649,3 @@ For more information, see the following related content:
 [Choose a Language When Creating a Full-Text Index](../../relational-databases/search/choose-a-language-when-creating-a-full-text-index.md)     
 [sys.fn_helpcollations (Transact-SQL)](../../relational-databases/system-functions/sys-fn-helpcollations-transact-sql.md)       
 [Single-Byte and Multibyte Character Sets](https://docs.microsoft.com/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)      
- 

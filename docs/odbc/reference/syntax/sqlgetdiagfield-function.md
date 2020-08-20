@@ -1,4 +1,5 @@
 ---
+description: "SQLGetDiagField Function"
 title: "SQLGetDiagField Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2019"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLGetDiagField function [ODBC]"
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLGetDiagField Function
 

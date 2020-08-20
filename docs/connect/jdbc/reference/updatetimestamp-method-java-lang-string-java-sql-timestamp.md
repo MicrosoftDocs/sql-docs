@@ -1,4 +1,5 @@
 ---
+description: "updateTimestamp Method (java.lang.String, java.sql.Timestamp)"
 title: "updateTimestamp Method (java.lang.String, java.sql.Timestamp) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 6d468357-bf73-484c-9a30-3671e399cf26
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # updateTimestamp Method (java.lang.String, java.sql.Timestamp)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

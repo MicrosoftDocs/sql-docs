@@ -1,4 +1,5 @@
 ---
+description: "Query Notifications - sys.dm_qn_subscriptions"
 title: "sys.dm_qn_subscriptions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -16,11 +17,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_qn_subscriptions dynamic management view"
 ms.assetid: a3040ce6-f5af-48fc-8835-c418912f830c
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # Query Notifications - sys.dm_qn_subscriptions
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about the active query notifications subscriptions in the server. You can use this view to check for active subscriptions in the server or a specified database, or to check for a specified server principal.  
   

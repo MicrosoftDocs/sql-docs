@@ -1,4 +1,5 @@
 ---
+description: "SQLServerDataSource Members"
 title: "SQLServerDataSource Members | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7e749bc5-d765-4864-be2b-7822d4c20c09
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLServerDataSource Members
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +42,7 @@ ms.author: genemi
 |[getEncrypt](../../../connect/jdbc/reference/getencrypt-method-sqlserverdatasource.md)|Returns a **Boolean** value indicating whether the encrypt property is enabled.|  
 |[getDescription](../../../connect/jdbc/reference/getdescription-method-sqlserverdatasource.md)|Returns a description of the data source.|  
 |[getFailoverPartner](../../../connect/jdbc/reference/getfailoverpartner-method-sqlserverdatasource.md)|Returns the name of the failover server used in a database mirroring configuration.|  
-|[getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md)|Returns the host name used in validating the SQL Server Secure Sockets Layer (SSL) certificate.|  
+|[getHostNameInCertificate](../../../connect/jdbc/reference/gethostnameincertificate-method-sqlserverdatasource.md)|Returns the host name used in validating the SQL Server Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), certificate.|  
 |[getInstanceName](../../../connect/jdbc/reference/getinstancename-method-sqlserverdatasource.md)|Returns the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance name.|  
 |[getLastUpdateCount](../../../connect/jdbc/reference/getlastupdatecount-method-sqlserverdatasource.md)|Returns a **boolean** value indicating whether the lastUpdateCount property is enabled.|  
 |[getLockTimeout](../../../connect/jdbc/reference/getlocktimeout-method-sqlserverdatasource.md)|Returns an **int** value indicating the number of milliseconds the database waits before reporting a lock time out.|  
@@ -77,7 +78,7 @@ ms.author: genemi
 |[setEnablePrepareOnFirstPreparedStatementCall](../../../connect/jdbc/reference/setenableprepareonfirstpreparedstatementcall-method-sqlserverdatasource.md)|Specifies the new value of the **enablePrepareOnFirstPreparedStatementCall** connection property.|  
 |[setEncrypt](../../../connect/jdbc/reference/setencrypt-method-sqlserverdatasource.md)|Sets a **Boolean** value indicating whether the encrypt property is enabled.|  
 |[setFailoverPartner](../../../connect/jdbc/reference/setfailoverpartner-method-sqlserverdatasource.md)|Sets the name of the failover server used in a database mirroring configuration.|  
-|[setHostNameInCertificate](../../../connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource.md)|Sets the host name to be used in validating the SQL Server Secure Sockets Layer (SSL) certificate.|  
+|[setHostNameInCertificate](../../../connect/jdbc/reference/sethostnameincertificate-method-sqlserverdatasource.md)|Sets the host name to be used in validating the SQL Server Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), certificate.|  
 |[setInstanceName](../../../connect/jdbc/reference/setinstancename-method-sqlserverdatasource.md)|Sets the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] instance name.|  
 |[setIntegratedSecurity](../../../connect/jdbc/reference/setintegratedsecurity-method-sqlserverdatasource.md)|Sets a **Boolean** value indicating whether the integratedSecurity property is enabled.|  
 |[setLastUpdateCount](../../../connect/jdbc/reference/setlastupdatecount-method-sqlserverdatasource.md)|Sets a **Boolean** value indicating whether the lastUpdateCount property is enabled.|  

@@ -1,4 +1,5 @@
 ---
+description: "Status Property (ADO Recordset)"
 title: "Status Property (ADO Recordset) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Status property [ADO Recordset]"
 ms.assetid: 41d70d89-880f-4850-9d17-19d9790cc8eb
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Status Property (ADO Recordset)
 Indicates the status of the current record with respect to batch updates or other bulk operations.  

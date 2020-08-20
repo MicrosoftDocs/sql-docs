@@ -1,4 +1,5 @@
 ---
+description: "prepareStatement Method (java.lang.String, int[])"
 title: "prepareStatement Method (java.lang.String, int[]) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 72b5c4a5-1382-4b2c-80a0-47c97c5f52d3
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # prepareStatement Method (java.lang.String, int[])
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

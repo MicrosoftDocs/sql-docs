@@ -1,4 +1,5 @@
 ---
+description: "AcceptPause Property (SqlService Class)"
 title: "AcceptPause Property (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
@@ -18,7 +19,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # AcceptPause Property (SqlService Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets the Boolean property value that specifies whether the service can be paused.  
   
 ## Syntax  

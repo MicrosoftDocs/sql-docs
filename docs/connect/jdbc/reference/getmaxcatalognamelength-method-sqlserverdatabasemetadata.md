@@ -1,4 +1,5 @@
 ---
+description: "getMaxCatalogNameLength Method (SQLServerDatabaseMetaData)"
 title: "getMaxCatalogNameLength Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 89c11327-eae1-4178-9e26-4b484d521c65
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getMaxCatalogNameLength Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Command (ADO for Visual C++ Syntax)"
 title: "Command (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Command collection [ADO], ADO for Visual C++ syntax"
 ms.assetid: cf12cbd1-25f7-4bb5-aa94-0fe823b3b6d6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Command (ADO for Visual C++ Syntax)
 ## Methods  

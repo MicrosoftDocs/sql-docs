@@ -1,4 +1,5 @@
 ---
+description: "Parameter (Visual C++ Syntax Index with #import)"
 title: "Parameter (Visual C++ Syntax Index with #import) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Parameter collection [ADO], Visual C++ syntax index with #import"
 ms.assetid: 6b43cf70-9695-47b0-9e68-f36898859b6b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Parameter (Visual C++ Syntax Index with #import)
 ## Methods  

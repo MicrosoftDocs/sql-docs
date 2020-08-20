@@ -1,4 +1,5 @@
 ---
+description: "ExecuteOptionEnum"
 title: "ExecuteOptionEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ExecuteOptionEnum enumeration [ADO]"
 ms.assetid: 68bfa83a-5df4-4bef-8736-0f88ae8c29ea
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ExecuteOptionEnum
 Specifies how a provider should execute a command.  
@@ -41,8 +42,14 @@ Specifies how a provider should execute a command.
 |AdoEnums.ExecuteOption.UNSPECIFIED|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Execute Method (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)|[Execute Method (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)|  
-|[Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)|[Requery Method](../../../ado/reference/ado-api/requery-method.md)|
+
+:::row:::
+    :::column:::
+        [Execute Method (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+        [Execute Method (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
+    :::column-end:::
+    :::column:::
+        [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)  
+        [Requery Method](../../../ado/reference/ado-api/requery-method.md)  
+    :::column-end:::
+:::row-end:::

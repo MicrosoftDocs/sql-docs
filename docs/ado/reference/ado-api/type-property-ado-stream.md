@@ -1,4 +1,5 @@
 ---
+description: "Type Property (ADO Stream)"
 title: "Type Property (ADO Stream) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Type property [ADO Stream]"
 ms.assetid: f6a17e8c-7a28-48d0-bded-76b9e0cf7639
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Type Property (ADO Stream)
 Indicates the type of data contained in the [Stream](../../../ado/reference/ado-api/stream-object-ado.md) (binary or text).  

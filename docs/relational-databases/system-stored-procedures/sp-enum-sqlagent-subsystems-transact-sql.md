@@ -1,4 +1,5 @@
 ---
+description: "sp_enum_sqlagent_subsystems (Transact-SQL)"
 title: "sp_enum_sqlagent_subsystems (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_enum_sqlagent_subsystems"
 ms.assetid: 019a3c9d-bac3-495b-a70a-2c19f1d2e20e
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_enum_sqlagent_subsystems (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Lists the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Agent subsystems.  
   

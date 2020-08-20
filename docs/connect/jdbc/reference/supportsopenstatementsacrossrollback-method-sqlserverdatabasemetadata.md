@@ -1,4 +1,5 @@
 ---
+description: "supportsOpenStatementsAcrossRollback Method (SQLServerDatabaseMetaData)"
 title: "supportsOpenStatementsAcrossRollback Method | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 4e38b938-f39f-4c5d-9b32-4ba489535c45
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # supportsOpenStatementsAcrossRollback Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

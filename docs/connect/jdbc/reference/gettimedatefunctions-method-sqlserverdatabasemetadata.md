@@ -1,4 +1,5 @@
 ---
+description: "getTimeDateFunctions Method (SQLServerDatabaseMetaData)"
 title: "getTimeDateFunctions Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: a56e08ae-6f4e-4dc6-b175-ff457d0d7a81
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # getTimeDateFunctions Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

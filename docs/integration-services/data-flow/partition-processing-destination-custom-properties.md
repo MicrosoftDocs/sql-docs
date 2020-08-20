@@ -1,4 +1,5 @@
 ---
+description: "Partition Processing Destination Custom Properties"
 title: "Partition Processing Destination Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Partition Processing Destination Custom Properties
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Partition Processing destination has both custom properties and the properties common to all data flow components.  

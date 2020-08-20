@@ -1,4 +1,5 @@
 ---
+description: "Parameters Collection, Command Property Example (VB)"
 title: "Parameters Collection, Command Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Command property [ADOX], Visual Basic example"
 ms.assetid: 7df1089e-69b7-476e-9244-19947c087351
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Parameters Collection, Command Property Example (VB)
 The following code demonstrates how to use the [Command](../../../ado/reference/adox-api/command-property-adox.md) property with the [Command](../../../ado/reference/ado-api/command-object-ado.md) object to retrieve parameter information for the procedure.  

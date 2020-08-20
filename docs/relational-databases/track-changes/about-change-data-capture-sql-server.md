@@ -1,4 +1,5 @@
 ---
+description: "About Change Data Capture (SQL Server)"
 title: "About Change Data Capture"
 ms.custom: seo-dt-2019
 ms.date: "01/14/2019"
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # About Change Data Capture (SQL Server)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 > [!NOTE]
 > CDC is now supported for SQL Server 2017 on Linux starting with CU18, and SQL Server 2019 on Linux.

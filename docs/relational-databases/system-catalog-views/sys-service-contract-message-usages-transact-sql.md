@@ -1,4 +1,5 @@
 ---
+description: "sys.service_contract_message_usages (Transact-SQL)"
 title: "sys.service_contract_message_usages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_contract_message_usages catalog view"
 ms.assetid: f783e662-126c-4595-8e22-f9d05191f5d0
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.service_contract_message_usages (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   This catalog view contains a row per (contract, message type) pair.  
   

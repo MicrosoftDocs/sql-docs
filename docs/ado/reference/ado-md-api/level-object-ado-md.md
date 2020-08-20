@@ -1,4 +1,5 @@
 ---
+description: "Level Object (ADO MD)"
 title: "Level Object (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Level object [ADO MD]"
 ms.assetid: 37815869-ed30-45fd-9aea-0a986c1b305c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Level Object (ADO MD)
 Contains a set of members, each of which has the same rank within a hierarchy.  

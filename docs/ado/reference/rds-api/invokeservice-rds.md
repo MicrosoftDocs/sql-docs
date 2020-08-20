@@ -1,4 +1,5 @@
 ---
+description: "InvokeService (RDS)"
 title: "InvokeService (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,8 +12,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "InvokeService [RDS]"
 ms.assetid: ad45c676-ec7e-4a3a-9a6b-a54f75eb3012
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # InvokeService (RDS)
 Returns a pointer to the requested interface on a more capable version of the object.  

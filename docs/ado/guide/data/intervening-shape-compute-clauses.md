@@ -1,4 +1,5 @@
 ---
+description: "Intervening Shape COMPUTE Clauses"
 title: "Intervening Shape COMPUTE Clauses | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "COMPUTE clause [ADO]"
   - "data shaping [ADO], COMPUTE clause"
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Intervening Shape COMPUTE Clauses
 It is valid to embed one or more COMPUTE clauses between the parent and child in a parameterized shape command, as in the following example:  

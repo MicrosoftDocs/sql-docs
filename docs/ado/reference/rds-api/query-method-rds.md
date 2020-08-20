@@ -1,4 +1,5 @@
 ---
+description: "Query Method (RDS)"
 title: "Query Method (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,8 +12,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "Query method [ADO]"
 ms.assetid: 20f2480f-3758-405d-a379-05a0dce74796
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Query Method (RDS)
 Uses a valid SQL query string to return a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  

@@ -1,4 +1,5 @@
 ---
+description: "CompareBookmarks Method Example (VC++)"
 title: "CompareBookmarks Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CompareBookmarks method [ADO], VC++ example"
 ms.assetid: 24ab3f3a-29c5-4ee1-942e-2634c02d0778
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CompareBookmarks Method Example (VC++)
 This example demonstrates the [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) method. The relative value of bookmarks is seldom needed unless a particular bookmark is somehow special.  

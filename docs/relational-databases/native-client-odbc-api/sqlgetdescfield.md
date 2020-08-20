@@ -1,4 +1,5 @@
 ---
+description: "SQLGetDescField"
 title: "SQLGetDescField | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -11,12 +12,12 @@ apitype: "DLLExport"
 helpviewer_keywords: 
   - "SQLGetDescField function"
 ms.assetid: 3e59a37a-28ee-4c91-8968-7fe3b966739d
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SQLGetDescField
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC driver exposes driver-specific descriptor fields for the implementation row descriptor (IRD) only. Within the IRD, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] descriptor fields are referenced through driver-specific column attributes. For information about a complete list of available driver-specific descriptor fields, see [SQLColAttribute](../../relational-databases/native-client-odbc-api/sqlcolattribute.md).  
   

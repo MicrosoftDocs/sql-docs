@@ -1,4 +1,5 @@
 ---
+description: "ALTER MESSAGE TYPE (Transact-SQL)"
 title: "ALTER MESSAGE TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -21,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # ALTER MESSAGE TYPE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Changes the properties of a message type.  
   
@@ -29,7 +30,7 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER MESSAGE TYPE message_type_name  
    VALIDATION =  
@@ -40,7 +41,10 @@ ALTER MESSAGE TYPE message_type_name
 [ ; ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *message_type_name*  
  The name of the message type to change. Server, database, and schema names cannot be specified.  
   

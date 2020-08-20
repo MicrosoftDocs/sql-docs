@@ -1,4 +1,5 @@
 ---
+description: "sp_cursorprepexec (Transact-SQL)"
 title: "sp_cursorprepexec (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/20/2019"
@@ -15,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cursorprepexec"
 ms.assetid: 8094fa90-35b5-4cf4-8012-0570cb2ba1e6
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_cursorprepexec (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

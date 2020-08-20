@@ -1,4 +1,5 @@
 ---
+description: "UnderlyingValue Property"
 title: "UnderlyingValue Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "UnderlyingValue property"
 ms.assetid: 00a0c8b8-8b63-433f-95b8-020ab05874a0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # UnderlyingValue Property
 Indicates the current value of a [Field](../../../ado/reference/ado-api/field-object.md) object in the database.  

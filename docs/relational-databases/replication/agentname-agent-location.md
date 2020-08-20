@@ -1,4 +1,5 @@
 ---
+description: "&lt;AgentName&gt; Agent Location"
 title: "&lt;AgentName&gt; Agent Location | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -15,7 +16,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # &lt;AgentName&gt; Agent Location
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The Merge Agent (for merge subscriptions) and the Distribution Agent (for transactional and snapshot subscriptions) run at the Distributor or at the Subscriber. If the agent runs at the Distributor, the subscription is referred to as a push subscription; if the agent runs at the Subscriber, it is referred to as a pull subscription. For more information about push and pull subscriptions, see [Subscribe to Publications](../../relational-databases/replication/subscribe-to-publications.md). All subscriptions created in this pass through the wizard will be of the selected type. To create subscriptions of both types, you must run the wizard twice.  
   
 > [!NOTE]  

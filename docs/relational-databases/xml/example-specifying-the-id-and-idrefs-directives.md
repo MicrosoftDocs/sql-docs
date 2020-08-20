@@ -1,5 +1,6 @@
 ---
 title: "Example: Specifying the ID and IDREFS Directives | Microsoft Docs"
+description: Learn how specifying the ID and IDREFS directives in an SQL query can enable intra-document links.
 ms.custom: "fresh2019may"
 ms.date: "05/22/2019"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: genemi
 ---
 # Example: Specifying the ID and IDREFS Directives
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 An element attribute can be specified as an **ID** type attribute, and the **IDREFS** attribute can then be used to refer to it. This enables intra-document links and is similar to the primary key and foreign key relationships in relational databases.  
   

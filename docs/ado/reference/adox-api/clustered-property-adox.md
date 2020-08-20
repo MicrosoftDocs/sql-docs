@@ -1,4 +1,5 @@
 ---
+description: "Clustered Property (ADOX)"
 title: "Clustered Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Clustered property [ADOX]"
 ms.assetid: 9b62fb35-de43-425a-83ca-77af4e33fea9
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Clustered Property (ADOX)
 Indicates whether the index is clustered.  

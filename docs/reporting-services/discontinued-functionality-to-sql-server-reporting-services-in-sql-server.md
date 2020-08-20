@@ -1,5 +1,6 @@
 ---
 title: Discontinued functionality in SQL Server 2016 Reporting Services (SSRS)
+description: Learn details about SQL Server Reporting Services features that are no longer available in SQL Server 2016.
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services

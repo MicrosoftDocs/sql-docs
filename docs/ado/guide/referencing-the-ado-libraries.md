@@ -1,4 +1,5 @@
 ---
+description: "Referencing the ADO Libraries"
 title: "Referencing the ADO Libraries | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "referencing libraries [ADO]"
   - "ADO, libraries"
 ms.assetid: 573f8f27-babd-4e2f-bf9a-270ee7024975
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Referencing the ADO Libraries
 The latest version of ADO is packaged as *msado15.dll*. The latest versions of ADO MD and ADOX are packaged as *msadom.dll* and *msadox.dll*, respectively. These libraries are installed by default in *$installDir*, where *$installDir* stands for the path of the directory in which the ADO library has been installed on your computer. To use the ADO libraries in your application, you must reference them explicitly in the application project.  

@@ -1,4 +1,5 @@
 ---
+description: "STDistance (geography Data Type)"
 title: "STDistance (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/19/2019"
@@ -19,7 +20,7 @@ author: MladjoA
 ms.author: mlandzic 
 ---
 # STDistance (geography Data Type)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]
 
   Returns the shortest distance between a point in a **geography** instance and a point in another **geography** instance.  
   
@@ -33,7 +34,9 @@ ms.author: mlandzic
 .STDistance ( other_geography )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *other_geography*  
  Is another **geography** instance from which to measure the distance between the instance on which STDistance() is invoked. If *other_geography* is an empty set, STDistance() returns null.  
   

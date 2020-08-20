@@ -1,4 +1,5 @@
 ---
+description: "ErrorControl Property (SqlService Class)"
 title: "ErrorControl Property (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"
@@ -19,7 +20,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # ErrorControl Property (SqlService Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Gets or sets the severity of the error if the service fails to start during startup.  
   
 ## Syntax  

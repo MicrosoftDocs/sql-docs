@@ -1,4 +1,5 @@
 ---
+description: "syscollector_collector_types (Transact-SQL)"
 title: "syscollector_collector_types (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "data collector view"
   - "syscollector_collector_types view"
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # syscollector_collector_types (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Provides information about a collector type for a collection item.  
   

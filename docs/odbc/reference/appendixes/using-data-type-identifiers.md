@@ -1,4 +1,5 @@
 ---
+description: "Using Data Type Identifiers"
 title: "Using Data Type Identifiers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "data types [ODBC], identifiers"
   - "identifiers [ODBC], data types"
 ms.assetid: 467e0c0c-a818-4737-8a24-3d8e15c7e162
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using Data Type Identifiers
 Applications use data type identifiers in two ways: to describe their buffers to the driver, and to retrieve metadata about the result set from the driver so that they can determine what type of C buffers to use to store the data. Applications call the following functions to perform these tasks:  

@@ -16,7 +16,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Publication Information, Agents (Transactional Publication)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
   The **Agents** tab displays summary information on the agents for the selected publication. Information on the Snapshot Agent and Log Reader Agent is displayed for all transactional publications. Information on the Queue Reader Agent is displayed for those transactional publications that are enabled for queued updating subscriptions.  
   
 ## Options  

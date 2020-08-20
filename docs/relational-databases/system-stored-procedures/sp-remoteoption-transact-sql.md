@@ -1,4 +1,5 @@
 ---
+description: "sp_remoteoption (Transact-SQL)"
 title: "sp_remoteoption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_remoteoption"
 ms.assetid: c9a7309b-eab7-4192-a414-e282581af4e5
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_remoteoption (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Displays or changes options for a remote login defined on the local server running [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

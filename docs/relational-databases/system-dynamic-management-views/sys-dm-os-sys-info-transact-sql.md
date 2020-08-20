@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_sys_info (Transact-SQL)"
 title: "sys.dm_os_sys_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2018"
@@ -19,12 +20,12 @@ helpviewer_keywords:
   - "time [SQL Server], instance started"
   - "starting time"
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_sys_info (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a miscellaneous set of useful information about the computer, and about the resources available to and consumed by [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)].  
   
@@ -40,7 +41,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |**physical_memory_kb**|**bigint**|**Applies to:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Specifies the total amount of physical memory on the machine. Not nullable.|  
 |**virtual_memory_in_bytes**|**bigint**|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Amount of virtual memory available to the process in user mode. This can be used to determine whether SQL Server was started by using a 3-GB switch.|  
 |**virtual_memory_kb**|**bigint**|**Applies to:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Specifies the total amount of virtual address space available to the process in user mode. Not nullable.|  
-|**bpool_commited**|**int**|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Represents the committed memory in kilobytes (KB) in the memory manager. Does not include reserved memory in the memory manager. Not nullable.|  
+|**bpool_committed**|**int**|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Represents the committed memory in kilobytes (KB) in the memory manager. Does not include reserved memory in the memory manager. Not nullable.|  
 |**committed_kb**|**int**|**Applies to:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Represents the committed memory in kilobytes (KB) in the memory manager. Does not include reserved memory in the memory manager. Not nullable.|  
 |**bpool_commit_target**|**int**|**Applies to:** [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] through [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)].<br /><br /> Represents the amount of memory, in kilobytes (KB), that can be consumed by SQL Server memory manager.|  
 |**committed_target_kb**|**int**|**Applies to:** [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later.<br /><br /> Represents the amount of memory, in kilobytes (KB), that can be consumed by SQL Server memory manager. The target amount is calculated using a variety of inputs like:<br /><br /> - the current state of the system including its load<br /><br /> - the memory requested by current processes<br /><br /> - the amount of memory installed on the computer<br /><br /> - configuration parameters<br /><br /> If **committed_target_kb** is larger than **committed_kb**, the memory manager will try to obtain additional memory. If **committed_target_kb** is smaller than **committed_kb**, the memory manager will try to shrink the amount of memory committed. The **committed_target_kb** always includes stolen and reserved memory. Not nullable.|  
@@ -55,7 +56,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
 |**scheduler_total_count**|**int**|Represents the total number of schedulers in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Not nullable.|  
 |**deadlock_monitor_serial_number**|**int**|Specifies the ID of the current deadlock monitor sequence. Not nullable.|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|Represents the **ms_tick** number when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] last started. Compare to the current ms_ticks column. Not nullable.|  
-|**sqlserver_start_time**|**datetime**|Specifies the date and time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] last started. Not nullable.|  
+|**sqlserver_start_time**|**datetime**|Specifies the local system date and time [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] last started. Not nullable.|  
 |**affinity_type**|**int**|**Applies to:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and later.<br /><br /> Specifies the type of server CPU process affinity currently in use. Not nullable. For more information, see [ALTER SERVER CONFIGURATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md).<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**Applies to:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and later.<br /><br /> Describes the **affinity_type** column. Not nullable.<br /><br /> MANUAL = affinity has been set for at least one CPU.<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can freely move threads between CPUs.|  
 |**process_kernel_time_ms**|**bigint**|**Applies to:** [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] and later.<br /><br /> Total time in milliseconds spent by all [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] threads in kernel mode. This value can be larger than a single processor clock because it includes the time for all processors on the server. Not nullable.|  

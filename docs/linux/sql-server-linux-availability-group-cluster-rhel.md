@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-ms.date: 01/10/2020
+ms.date: 01/23/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -13,7 +13,7 @@ ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
 ---
 # Configure RHEL Cluster for SQL Server Availability Group
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
+[!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
 
 This document explains how to create a three-node availability group cluster for SQL Server on Red Hat Enterprise Linux. For high availability, an availability group on Linux requires three nodes - see [High availability and data protection for availability group configurations](sql-server-linux-availability-group-ha.md). The clustering layer is based on Red Hat Enterprise Linux (RHEL) [HA add-on](https://access.redhat.com/documentation/en-US/Red_Hat_Enterprise_Linux/6/pdf/High_Availability_Add-On_Overview/Red_Hat_Enterprise_Linux-6-High_Availability_Add-On_Overview-en-US.pdf) built on top of [Pacemaker](https://clusterlabs.org/). 
 
@@ -44,7 +44,7 @@ The steps to create an availability group on Linux servers for high availability
    
    >A Linux cluster uses fencing to return the cluster to a known state. The way to configure fencing depends on the distribution and the environment. Currently, fencing is not available in some cloud environments. For more information, see [Support Policies for RHEL High Availability Clusters - Virtualization Platforms](https://access.redhat.com/articles/29440).
 
-5. [Add the availability group as a resource in the cluster](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
+4. [Add the availability group as a resource in the cluster](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource).  
 
 ## Configure high availability for RHEL
 
@@ -78,8 +78,16 @@ Each node in the cluster must have an appropriate subscription for RHEL and the 
 
 1. Enable the repository.
 
+   **RHEL 7**
+
    ```bash
    sudo subscription-manager repos --enable=rhel-ha-for-rhel-7-server-rpms
+   ```
+
+   **RHEL 8**
+
+   ```bash
+   sudo subscription-manager repos --enable=rhel-8-for-x86_64-highavailability-rpms
    ```
 
 For more information, see [Pacemaker - The Open Source, High Availability Cluster](https://clusterlabs.org/pacemaker/). 
@@ -154,14 +162,21 @@ For information on Pacemaker cluster properties, see [Pacemaker Clusters Propert
 
 ## Create availability group resource
 
-To create the availability group resource, use `pcs resource create` command and set the resource properties. The following command creates a `ocf:mssql:ag` master/slave type resource for availability group with name `ag1`.
+To create the availability group resource, use `pcs resource create` command and set the resource properties. The following command creates a `ocf:mssql:ag` master/subordinate type resource for availability group with name `ag1`.
+
+**RHEL 7**
 
 ```bash
 sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s master notify=true
 ```
 
-> [!NOTE]
-> With the availability of **RHEL 8**, the create syntax has changed. If you are using **RHEL 8**, the terminology `master` has changed to `promotable`. Use the following create command instead of the above command: `sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true`
+**RHEL 8**
+
+With the availability of **RHEL 8**, the create syntax has changed. If you are using **RHEL 8**, the terminology `master` has changed to `promotable`. Use the following create command instead of the above command: 
+
+```bash
+sudo pcs resource create ag_cluster ocf:mssql:ag ag_name=ag1 meta failure-timeout=60s promotable notify=true
+```
 
 [!INCLUDE [required-synchronized-secondaries-default](../includes/ss-linux-cluster-required-synchronized-secondaries-default.md)]
 

@@ -1,4 +1,5 @@
 ---
+description: "DataControl Object Example (VBScript)"
 title: "DataControl Object Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DataControl object [ADO], VBScript example"
 ms.assetid: 4f306a51-d5a4-4785-b426-487639cda164
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DataControl Object Example (VBScript)
 > [!IMPORTANT]

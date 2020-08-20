@@ -1,0 +1,146 @@
+- name: Oracle
+  href: sql-server-migration-assistant-for-oracle-oracletosql.md
+- name: What's New in SSMA
+  href: what-s-new-in-ssma-for-oracle-oracletosql.md
+- name: Installing SSMA
+  href: installing-ssma-for-oracle-oracletosql.md
+- name: Getting Started
+  href: getting-started-with-ssma-for-oracle-oracletosql.md
+- name: Convert Oracle HR Schema to SQL Server
+  href: sql-server-linux-convert-from-oracle.md
+- name: Legal Notice
+  href: legal-notice-ssma-for-oracle.md
+- name: Installing SSMA for Oracle client
+  href: installing-ssma-for-oracle-client-oracletosql.md
+- name: New GUI features in SSMA
+  href: new-gui-features-in-ssma-for-oracle-oracletosql.md
+- name: Running Test Cases
+  href: running-test-cases-oracletosql.md
+- name: Menu commands & other shortcut keys
+  href: menu-commands-and-other-shortcut-keys-oracle-to-sql.md
+- name: Using Test Repositories
+  href: using-test-repositories-oracletosql.md
+- name: Creating Variable Value Files
+  href: creating-variable-value-files-oracletosql.md
+- name: Testing Migrated Database Objects
+  href: testing-migrated-database-objects-oracletosql.md
+- name: Working with SSMA Projects
+  href: working-with-ssma-projects-oracletosql.md
+- name: Connecting to Oracle Database
+  href: connecting-to-oracle-database-oracletosql.md
+- name: Migrating Oracle Data into SQL Server
+  href: migrating-oracle-data-into-sql-server-oracletosql.md
+- name: Converting Oracle Schemas
+  href: converting-oracle-schemas-oracletosql.md
+- name: Data Migration Report
+  href: data-migration-report-oracletosql.md
+- name: Generating Reports
+  href: generating-reports-oracletosql.md
+- name: Advanced Object Selection
+  href: advanced-object-selection-oracletosql.md
+- name: Working with the Sample Console Script Files
+  href: working-with-the-sample-console-script-files-oracletosql.md
+- name: Command-Line Options in SSMA Console
+  href: command-line-options-in-ssma-console-oracletosql.md
+- name: Shortcut Keys
+  href: shortcut-keys-oracle-to-sql.md
+- name: Loading Converted Database Objects into SQL Server
+  href: loading-converted-database-objects-into-sql-server-oracletosql.md
+- name: Setting Project Options
+  href: setting-project-options-oracletosql.md
+- name: Managing Backups
+  href: managing-backups-oracletosql.md
+- name: Save Metadata
+  href: save-metadata-oracletosql.md
+- name: Customizing Calls Order
+  href: customizing-calls-order-oracletosql.md
+- name: Data Migration Settings
+  href: data-migration-settings-oracletosql.md
+- name: Viewing Test Case Reports
+  href: viewing-test-case-reports-oracletosql.md
+- name: Managing Passwords
+  href: managing-passwords-oracletosql.md
+- name: Removing SSMA  for Oracle Components
+  href: removing-ssma-for-oracle-components-oracletosql.md
+- name: Refresh from Database
+  href: refresh-from-database-oracletosql.md
+- name: Executing the SSMA Console
+  href: executing-the-ssma-console-oracletosql.md
+- name: Edit Type Mapping
+  href: edit-type-mapping-oracletosql.md
+- name: Getting Started with SSMA  for Oracle Console
+  href: getting-started-with-ssma-for-oracle-console-oracletosql.md
+- name: Creating Script Files
+  href: creating-script-files-oracletosql.md
+- name: Selecting & Configuring Affected Objects
+  href: selecting-and-configuring-affected-objects-oracletosql.md
+- name: Connect to SQL Server
+  href: connect-to-sql-server-oracletosql.md
+- name: Working with SSMA for Oracle Console
+  href: working-with-ssma-for-oracle-console-oracletosql.md
+- name: Assessing Oracle Schemas for Conversion
+  href: assessing-oracle-schemas-for-conversion-oracletosql.md
+- name: Initializing Test Cases
+  href: initializing-test-cases-oracletosql.md
+- name: Installing SSMA components on SQL Server
+  href: installing-ssma-components-on-sql-server-oracletosql.md
+- name: Finishing Test Case Preparation
+  href: finishing-test-case-preparation-oracletosql.md
+- name: Selecting & Configuring Objects to Test
+  href: selecting-and-configuring-objects-to-test-oracletosql.md
+- name: Connect To Oracle
+  href: connect-to-oracle-oracletosql.md
+- name: Creating Test Cases
+  href: creating-test-cases-oracletosql.md
+- name: Troubleshooting
+  href: troubleshooting-oracletosql.md
+- name: Migrating Oracle Databases to SQL Server
+  href: migrating-oracle-databases-to-sql-server-oracletosql.md
+- name: Connecting to SQL Server
+  href: connecting-to-sql-server-oracletosql.md
+- name: Assessment Report
+  href: assessment-report-oracletosql.md
+- name: New Project
+  href: new-project-oracletosql.md
+- name: User Interface Reference
+  href: user-interface-reference-oracletosql.md
+- name: Mapping Oracle Schemas to SQL Server Schemas
+  href: mapping-oracle-schemas-to-sql-server-schemas-oracletosql.md
+- name: Mapping Oracle & SQL Server Data Types
+  href: mapping-oracle-and-sql-server-data-types-oracletosql.md
+- name: Creating the Server Connection Files
+  href: creating-the-server-connection-files-oracletosql.md
+- name: Emulating Oracle Package Variables
+  href: emulate-package-variables.md
+- name: Emulating Records and Collections via CLR UDT
+  href: emulate-records-collections-via-clr.md
+- name: Appendix - 1
+  href: appendix-1-oracletosql.md
+- name: Project Settings
+  items:
+  - name: Conversion
+    href: project-settings-conversion-oracletosql.md
+  - name: Loading System objects
+    href: project-settings-loading-system-objects-oracletosql.md
+  - name: Synchronization
+    href: project-settings-synchronization-oracletosql.md
+  - name: GUI
+    href: project-settings-gui-oracletosql.md
+  - name: Type-Mapping
+    href: project-settings-type-mapping-oracletosql.md
+  - name: Migration
+    href: project-settings-migration-oracletosql.md
+- name: Global settings
+  items:
+  - name: Tester
+    href: global-settings-tester-oracletosql.md
+  - name: Editor
+    href: global-settings-editor-oracletosql.md
+  - name: Logging
+    href: global-settings-logging-oracletosql.md
+  - name: Dialogs
+    href: global-settings-dialogs-oracletosql.md
+  - name: Output Window
+    href: global-settings-output-window-oracletosql.md
+- name: Conversion messages
+  href: messages/toc.yml

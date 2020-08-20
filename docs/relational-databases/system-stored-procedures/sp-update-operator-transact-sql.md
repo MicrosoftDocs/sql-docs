@@ -1,4 +1,5 @@
 ---
+description: "sp_update_operator (Transact-SQL)"
 title: "sp_update_operator (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_operator"
 ms.assetid: 231750a6-4828-4d03-afe6-b91d38c42ed3
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_update_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Updates information about an operator (notification recipient) for use with alerts and jobs.  
   

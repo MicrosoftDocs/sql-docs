@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_set_cache_directory (Transact-SQL)"
 title: "sp_syscollector_set_cache_directory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "data collector [SQL Server], stored procedures"
   - "sp_syscollector_set_cache_directory stored procedure"
 ms.assetid: df56d5a5-8961-494f-a745-d752ca63805a
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_syscollector_set_cache_directory (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Specifies the directory where collected data is stored before it is uploaded to the management data warehouse.  
   
@@ -43,7 +44,7 @@ sp_syscollector_set_cache_directory [ @cache_directory = ] 'cache_directory'
 ## Remarks  
  You must disable the data collector before changing the cache directory configuration. This stored procedure fails if the data collector is enabled. For more information, see [Enable or Disable Data Collection](../../relational-databases/data-collection/enable-or-disable-data-collection.md), and [Manage Data Collection](../../relational-databases/data-collection/manage-data-collection.md).  
   
- The specified directory does not need to exist at the time the sp_syscollector_set_cache_directory is executed; however, data cannot be successully cached and uploaded until the directory is created. We recommend creating the directory before executing this stored procedure.  
+ The specified directory does not need to exist at the time the sp_syscollector_set_cache_directory is executed; however, data cannot be successfully cached and uploaded until the directory is created. We recommend creating the directory before executing this stored procedure.  
   
 ## Permissions  
  Requires membership in the dc_admin (with EXECUTE permission) fixed database role to execute this procedure.  

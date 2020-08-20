@@ -1,5 +1,6 @@
 ---
 title: "Replication Distribution Agent | Microsoft Docs"
+description: Move a snapshot and the transactions held in the distribution database tables to the Subscribers destination tables by using the Replication Distribution Agent.
 ms.custom: ""
 ms.date: "10/29/2018"
 ms.prod: sql
@@ -15,10 +16,10 @@ helpviewer_keywords:
 ms.assetid: 7b4fd480-9eaf-40dd-9a07-77301e44e2ac
 author: "MashaMSFT"
 ms.author: "mathoma"
-monikerRange: "=azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions"
+monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Replication Distribution Agent
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdb](../../../includes/applies-to-version/sql-asdb.md)]
   The Replication Distribution Agent is an executable that moves the snapshot (for snapshot replication and transactional replication) and the transactions held in the distribution database tables (for transactional replication) to the destination tables at the Subscribers.  
   
 > [!NOTE]  
@@ -58,6 +59,7 @@ distrib [-?]
 [-MaxBcpThreads]  
 [-MaxDeliveredTransactions number_of_transactions]  
 [-MessageInterval message_interval]  
+[-MultiSubnetFailover [0|1]]
 [-OledbStreamThreshold oledb_stream_threshold]  
 [-Output output_path_and_file_name]  
 [-OutputVerboseLevel [0|1|2]]  
@@ -125,20 +127,20 @@ distrib [-?]
  **-DistributorPassword** _distributor_password_  
  Is the Distributor password.  
   
- **-DistributorSecurityMode** [ **0**| **1**]  
+ **-DistributorSecurityMode** [ **0**\| **1**]  
  Specifies the security mode of the Distributor. A value of 0 indicates [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Authentication Mode, and a value of 1 indicates Windows Authentication Mode (default).  
   
- **-EncryptionLevel** [ **0** | **1** | **2** ]  
- Is the level of Secure Sockets Layer (SSL) encryption used by the Distribution Agent when making connections.  
+ **-EncryptionLevel** [ **0** \| **1** \| **2** ]  
+ Is the level of Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), encryption used by the Distribution Agent when making connections.  
   
 |EncryptionLevel value|Description|  
 |---------------------------|-----------------|  
-|**0**|Specifies that SSL is not used.|  
-|**1**|Specifies that SSL is used, but the agent does not verify that the SSL server certificate is signed by a trusted issuer.|  
-|**2**|Specifies that SSL is used, and that the certificate is verified.|  
+|**0**|Specifies that TLS is not used.|  
+|**1**|Specifies that TLS is used, but the agent does not verify that the TLS/SSL server certificate is signed by a trusted issuer.|  
+|**2**|Specifies that TLS is used, and that the certificate is verified.|  
  
  > [!NOTE]  
- >  A valid SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The ‘Alias Name’ parameter should be the server name and the ‘Server’ parameter should be set to the fully qualified name of the SQL Server.
+ >  A valid TLS/SSL certificate is defined with a fully qualified domain name of the SQL Server. In order for the agent to connect successfully when setting -EncryptionLevel to 2, create an alias on the local SQL Server. The ‘Alias Name’ parameter should be the server name and the ‘Server’ parameter should be set to the fully qualified name of the SQL Server.
 
  For more information, see [View and modify replication security settings](../../../relational-databases/replication/security/view-and-modify-replication-security-settings.md).  
   
@@ -163,7 +165,7 @@ distrib [-?]
  **-FtpUserName**  _ftp_user_name_  
  Is the user name used to connect to the FTP service. When not specified, **anonymous** is used.  
   
- **-HistoryVerboseLevel** [ **0** | **1** | **2** | **3** ]  
+ **-HistoryVerboseLevel** [ **0** \| **1** \| **2** \| **3** ]  
  Specifies the amount of history logged during a distribution operation. You can minimize the performance effect of history logging by selecting **1**.  
   
 |HistoryVerboseLevel value|Description|  
@@ -199,6 +201,9 @@ distrib [-?]
 -   The **MessageInterval** value is reached after the last history event is logged.  
   
  If there is no replicated transaction available at the source, the agent reports a no-transaction message to the Distributor. This option specifies how long the agent waits before reporting another no-transaction message. Agents always report a no-transaction message when they detect that there are no transactions available at the source after previously processing replicated transactions. The default is 60 seconds.  
+
+**-MultiSubnetFailover**
+ Specifies whether the MultiSubnetFailover property is enabled or not. If your application is connecting to an AlwaysOn availability group (AG) on different subnets, setting MultiSubnetFailover=true provides faster detection of and connection to the (currently) active server.
   
  **-OledbStreamThreshold** _oledb_stream_threshold_  
  Specifies the minimum size, in bytes, for binary large object data above which the data will be bound as a stream. You must specify **-UseOledbStreaming** to use this parameter. Values can range from 400 to 1048576 bytes, with a default of 16384 bytes.  
@@ -251,7 +256,7 @@ distrib [-?]
 |**1**|ODBC data source|  
 |**3**|OLE DB data source|  
   
- **-SubscriptionStreams** [**0**|**1**|**2**|...**64**]  
+ **-SubscriptionStreams** [**0**\|**1**\|**2**\|...**64**]  
  Is the number of connections allowed per Distribution Agent to apply batches of changes in parallel to a Subscriber, while maintaining many of the transactional characteristics present when using a single thread. For a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Publisher, a range of values from 1 to 64 is supported. This parameter is only supported when the Publisher and Distributor are running on [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] or later versions. This parameter is not supported or must be 0 for non- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Subscribers or peer-to-peer subscriptions.  
   
 > [!NOTE]  
@@ -293,6 +298,7 @@ distrib [-?]
 |Updated content|  
 |---------------------|  
 |Added the **-ExtendedEventConfigFile** parameter.|  
+|Added the **-MultiSubnetFailover** parameter.|  
   
 ## See Also  
  [Replication Agent Administration](../../../relational-databases/replication/agents/replication-agent-administration.md)  

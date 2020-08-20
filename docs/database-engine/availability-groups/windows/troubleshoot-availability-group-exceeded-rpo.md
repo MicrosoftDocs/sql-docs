@@ -12,7 +12,7 @@ author: rothja
 ms.author: jroth
 ---
 # Troubleshoot: Availability group exceeded RPO
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   After you perform a forced manual failover on an availability group to an asynchronous-commit secondary replica, you may find that data loss is more than your recovery point objective (RPO). Or, when you calculate the potential data loss of an asynchronous-commit secondary replica using the method in [Monitor Performance for Always On Availability Groups](monitor-performance-for-always-on-availability-groups.md), you find that it exceeds your RPO.  
   
  A synchronous-commit secondary replica guarantees zero data loss, but the potential data loss of an asynchronous-commit secondary replica depends on how much log is still waiting to be hardened on the secondary replica.  

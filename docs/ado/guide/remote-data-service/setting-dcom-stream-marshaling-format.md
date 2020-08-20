@@ -1,4 +1,5 @@
 ---
+description: "Setting DCOM Stream Marshaling Format"
 title: "Setting DCOM Stream Marshaling Format | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "dcom stream marshaling format in rds [ADO]"
 ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Setting DCOM Stream Marshaling Format
 A client computer using components from RDS 1.5 or earlier is not compatible with a server using components from RDS 2.0 or later. When using DCOM as the underlying protocol, the support for RDS 2.0 or later is more efficient in transporting [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objects. If your client is running components from RDS 1.5 or earlier, you can set your server to work with the previous RDS support (called RDS 1.0) or the newer RDS support (called RDS 2.0 or later). Set either of the following registry entries:  

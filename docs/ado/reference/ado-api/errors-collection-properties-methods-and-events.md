@@ -1,4 +1,5 @@
 ---
+description: "Errors Collection Properties, Methods, and Events"
 title: "Errors Collection Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Errors collection [ADO], members"
 ms.assetid: 606f2b92-3821-4d11-a207-4c22f6f35619
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Errors Collection Properties, Methods, and Events
 ## Properties  

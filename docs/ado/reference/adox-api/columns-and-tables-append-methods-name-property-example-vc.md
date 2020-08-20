@@ -1,4 +1,5 @@
 ---
+description: "Columns and Tables Append Methods, Name Property Example (VC++)"
 title: "Columns and Tables Append Methods, Name Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "Name property [ADOX], VC++ example"
   - "Append method [ADOX], VC++ example"
 ms.assetid: 2b6dfef9-bcdf-483d-a164-2fa3ec81a43f
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Columns and Tables Append Methods, Name Property Example (VC++)
 The following code demonstrates how to create a new table.  
@@ -68,7 +69,7 @@ int main() {
    }  
   
    catch(...) {  
-      cout << "Error occured in include files...."<< endl;  
+      cout << "Error occurred in include files...."<< endl;  
    }  
   
    ::CoUninitialize();  

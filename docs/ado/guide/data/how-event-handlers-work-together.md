@@ -1,4 +1,5 @@
 ---
+description: "How Event Handlers Work Together"
 title: "How Event Handlers Work Together | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "event handlers [ADO]"
   - "multiple object event handlers [ADO]"
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # How Event Handlers Work Together
 Unless you are programming in Visual Basic, all event handlers for **Connection** and **Recordset** events must be implemented, regardless of whether you actually process all of the events. The amount of implementation work you have to do depends on your programming language. For more information, see [ADO Event Instantiation by Language](../../../ado/guide/data/ado-event-instantiation-by-language.md).  

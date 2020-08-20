@@ -1,4 +1,5 @@
 ---
+description: "ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VB)"
 title: "Stored Procedure Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,8 +17,8 @@ helpviewer_keywords:
   - "ActiveConnection property [ADO], Visual Basic example"
   - "Direction property [ADO], Visual Basic example"
 ms.assetid: dade4531-0bcc-4a52-8f86-b110ba2a3f9d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VB)
 This example uses the [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md), [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md), [CommandTimeout](../../../ado/reference/ado-api/commandtimeout-property-ado.md), [CommandType](../../../ado/reference/ado-api/commandtype-property-ado.md), [Size](../../../ado/reference/ado-api/size-property-ado-parameter.md), and [Direction](../../../ado/reference/ado-api/direction-property.md) properties to execute a stored procedure.  

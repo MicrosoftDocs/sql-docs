@@ -1,4 +1,5 @@
 ---
+description: "DefinedSize Property Example (VC++)"
 title: "DefinedSize Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "DefinedSize property [ADOX], VC++ example"
 ms.assetid: cc752ae4-58c4-4a7b-bfb2-0454e90fe2e7
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # DefinedSize Property Example (VC++)
 This example demonstrates the [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md) property of a [Column](../../../ado/reference/adox-api/column-object-adox.md). The code will redefine the size of the FirstName column of the **Employees** table of the *Northwind* database. Then, the change in the values of the FirstName [Field](../../../ado/reference/ado-api/field-object.md) of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) based on the **Employees** table is displayed. Note that by default, the FirstName field becomes padded with spaces after you redefine the **DefinedSize** property.  
@@ -143,7 +144,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in DefinedSizeX...." << endl;  
+      cout << "Error occurred in DefinedSizeX...." << endl;  
    }  
   
    if (m_pRstEmployees)  

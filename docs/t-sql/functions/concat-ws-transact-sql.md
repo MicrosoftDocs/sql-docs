@@ -1,4 +1,5 @@
 ---
+description: "CONCAT_WS (Transact-SQL)"
 title: "CONCAT_WS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/25/2018"
@@ -15,26 +16,28 @@ dev_langs:
 helpviewer_keywords: 
   - "CONCAT_WS function"
 ms.assetid: f1375fd7-a2fd-48bf-922a-4f778f0deb1f
-author: MikeRayMSFT
-ms.author: mikeray
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # CONCAT_WS (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2017-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
 This function returns a string resulting from the concatenation, or joining, of two or more string values in an end-to-end manner. It separates those concatenated string values with the delimiter specified in the first function argument. (`CONCAT_WS` indicates *concatenate with separator*.)
 
 ##  Syntax   
-```sql
+```syntaxsql
 CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 ```
 
-## Arguments   
-separator  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+*separator*
 An expression of any character type (`char`, `nchar`, `nvarchar`, or `varchar`).
 
-argument1, argument2, argument*N*  
-An expression of any type.
+*argument1, argument2, argumentN*
+An expression of any type. The `CONCAT_WS` function requires at least two arguments, and no more than 254 arguments.
 
 ## Return types
 A string value whose length and type depend on the input.

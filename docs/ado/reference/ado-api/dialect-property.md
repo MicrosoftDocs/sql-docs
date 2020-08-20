@@ -1,4 +1,5 @@
 ---
+description: "Dialect Property"
 title: "Dialect Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Dialect property"
 ms.assetid: 329c3a71-ba88-4009-b04f-2f52195a5957
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Dialect Property
 Indicates the dialect of the [CommandText](../../../ado/reference/ado-api/commandtext-property-ado.md) or [CommandStream](../../../ado/reference/ado-api/commandstream-property-ado.md) properties. The dialect defines the syntax and general rules that the provider uses to parse the string or stream.  

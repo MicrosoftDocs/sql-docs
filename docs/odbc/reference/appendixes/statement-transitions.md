@@ -1,4 +1,5 @@
 ---
+description: "Statement Transitions"
 title: "Statement Transitions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -12,8 +13,8 @@ helpviewer_keywords:
   - "state transitions [ODBC], statement"
   - "statement transitions [ODBC]"
 ms.assetid: 3d70e0e3-fe83-4b4d-beac-42c82495a05b
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Statement Transitions
 ODBC statements have the following states.  

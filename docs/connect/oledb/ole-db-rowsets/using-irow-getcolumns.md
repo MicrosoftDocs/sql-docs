@@ -1,6 +1,6 @@
 ---
-title: "Using IRow::GetColumns | Microsoft Docs"
-description: "Using IRow::GetColumns to access all the columns in a row"
+title: Using IRow::GetColumns (OLE DB driver)
+description: Learn how to use IRow::GetColumns to access all columns in a row in OLE DB Driver for SQL Server. IRow allows forward-only sequential access to columns.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -19,7 +19,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # Using IRow::GetColumns
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

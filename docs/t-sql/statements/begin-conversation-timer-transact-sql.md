@@ -1,4 +1,5 @@
 ---
+description: "BEGIN CONVERSATION TIMER (Transact-SQL)"
 title: "BEGIN CONVERSATION TIMER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -34,7 +35,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # BEGIN CONVERSATION TIMER (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Starts a timer. When the time-out expires, [!INCLUDE[ssSB](../../includes/sssb-md.md)] puts a message of type `https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer` on the local queue for the conversation.  
   
@@ -42,14 +43,16 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 BEGIN CONVERSATION TIMER ( conversation_handle )  
    TIMEOUT = timeout   
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  BEGIN CONVERSATION TIMER **(**_conversation\_handle_**)**  
  Specifies the conversation to time. The *conversation_handle* must be of type **uniqueidentifier**.  
   

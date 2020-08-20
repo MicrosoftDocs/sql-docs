@@ -1,4 +1,5 @@
 ---
+description: "Attributes Property Example (VC++)"
 title: "Attributes Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Attributes property [ADOX], VC++ example"
 ms.assetid: 1057b57b-5ace-4830-9a20-562e88aeef86
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Attributes Property Example (VC++)
 This example demonstrates the [Attributes](../../../ado/reference/adox-api/attributes-property-adox.md) property of a [Column](../../../ado/reference/adox-api/column-object-adox.md). Setting it to **adColNullable** allows the user to set the value of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [Field](../../../ado/reference/ado-api/field-object.md) to an empty string. In this situation, the user can distinguish between a record where data is not known and a record where the data does not apply.  
@@ -173,7 +174,7 @@ int main() {
       printf("\n\tSource :  %s \n\tdescription : %s \n ", (LPCSTR)bstrSource, (LPCSTR)bstrDescription);  
    }  
    catch(...) {  
-      cout << "Error occured in AttributesX...." << endl;  
+      cout << "Error occurred in AttributesX...." << endl;  
    }  
   
    if (m_pRstEmployees)  

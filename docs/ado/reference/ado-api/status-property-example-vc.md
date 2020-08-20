@@ -1,4 +1,5 @@
 ---
+description: "Status Property Example (VC++)"
 title: "Status Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Status property [ADO], VC++ example"
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Status Property Example (VC++)
 This example uses the [Status](../../../ado/reference/ado-api/status-property-ado-recordset.md) property to display which records have been modified in a batch operation before a batch update has occurred.  

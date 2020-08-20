@@ -1,4 +1,5 @@
 ---
+description: "SQLColAttribute Function"
 title: "SQLColAttribute Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLColAttribute function [ODBC]"
 ms.assetid: 8c45c598-cb01-4789-a571-e93619a18ed9
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLColAttribute Function
 **Conformance**  

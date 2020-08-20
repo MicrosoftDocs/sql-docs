@@ -1,4 +1,5 @@
 ---
+description: "ALTER EVENT SESSION (Transact-SQL)"
 title: "ALTER EVENT SESSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/07/2017"
@@ -21,7 +22,7 @@ author: MightyPen
 ms.author: genemi
 ---
 # ALTER EVENT SESSION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Starts or stops an event session or changes an event session configuration.  
   
@@ -29,7 +30,7 @@ ms.author: genemi
   
 ## Syntax  
   
-```  
+```syntaxsql
 ALTER EVENT SESSION event_session_name  
 ON SERVER  
 {  
@@ -108,11 +109,12 @@ ON SERVER
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
   
-|||  
-|-|-|  
 |Term|Definition|  
+|-|-|
 |*event_session_name*|Is the name of an existing event session.|  
 |STATE = START &#124; STOP|Starts or stops the event session. This argument is only valid when ALTER EVENT SESSION is applied to an event session object.|  
 |ADD EVENT \<event_specifier>|Associates the event identified by \<event_specifier>with the event session.|

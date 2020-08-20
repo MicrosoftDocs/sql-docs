@@ -1,5 +1,6 @@
 ---
 title: "Query processing for memory-optimized tables"
+description: Learn about query processing for both memory-optimized tables and natively compiled stored procedures in In-Memory OLTP in SQL Server.
 ms.custom: seo-dt-2019
 ms.date: "05/09/2019"
 ms.prod: sql
@@ -13,7 +14,7 @@ ms.author: genemi
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # A Guide to Query Processing for Memory-Optimized Tables
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   In-Memory OLTP introduces memory-optimized tables and natively compiled stored procedures in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. This article gives an overview of query processing for both memory-optimized tables and natively compiled stored procedures.  
   
@@ -57,7 +58,7 @@ CREATE INDEX IX_OrderDate ON dbo.[Order](OrderDate)
 GO  
 ```  
   
- For constructing the query plans shown in this article, the two tables were populated with sample data from the Northwind sample database, which you can download from [Northwind and pubs Sample Databases for SQL Server 2000](https://www.microsoft.com/download/details.aspx?id=23654).  
+ For constructing the query plans shown in this article, the two tables were populated with sample data from the Northwind sample database, which you can download from [Northwind and pubs Sample Databases for SQL Server 2000](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/northwind-pubs).  
   
  Consider the following query, which joins the tables Customer and Order and returns the ID of the order and the associated customer information:  
   
@@ -188,7 +189,7 @@ END
   
  Natively compiled stored procedures are compiled at create time, whereas interpreted stored procedures are compiled at first execution time. (A portion of the compilation, particularly parsing and algebrization, take place at create. However, for interpreted stored procedures, optimization of the query plans takes place at first execution.) The recompilation logic is similar. Natively compiled stored procedures are recompiled on first execution of the procedure if the server is restarted. Interpreted stored procedures are recompiled if the plan is no longer in the plan cache. The following table summarizes compilation and recompilation cases for both natively compiled and interpreted stored procedures:  
   
-||Natively compiled|Interpreted|  
+|Compilation type|Natively compiled|Interpreted|  
 |-|-----------------------|-----------------|  
 |Initial compilation|At create time.|At first execution.|  
 |Automatic recompilation|Upon first execution of the procedure after a database or server restart.|On server restart. Or, eviction from the plan cache, usually based on schema or stats changes, or memory pressure.|  
@@ -219,7 +220,7 @@ Execution of natively compiled stored procedures.
   
  Invocation of a natively compiled stored procedure is described as follows:  
   
-1.  The user issues an **EXEC**_usp_myproc_ statement.  
+1.  The user issues an **EXEC** _usp_myproc_ statement.  
   
 2.  The parser extracts the name and stored procedure parameters.  
   

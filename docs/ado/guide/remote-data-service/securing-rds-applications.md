@@ -1,4 +1,5 @@
 ---
+description: "Securing RDS Applications"
 title: "Securing RDS Applications | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "RDS security [ADO]"
 ms.assetid: 82fb1330-d6c6-4c17-ad3e-d417ff822b25
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Securing RDS Applications
 This topic provides security information for RDS.  

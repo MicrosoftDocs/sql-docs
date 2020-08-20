@@ -1,4 +1,5 @@
 ---
+description: "DROP PARTITION SCHEME (Transact-SQL)"
 title: "DROP PARTITION SCHEME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -23,7 +24,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # DROP PARTITION SCHEME (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/applies-to-version/sqlserver.md)]
 
   Removes a partition scheme from the current database. Partition schemes are created by using [CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md) and modified by using [ALTER PARTITION SCHEME](../../t-sql/statements/alter-partition-scheme-transact-sql.md).  
   
@@ -31,12 +32,14 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DROP PARTITION SCHEME partition_scheme_name [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *partition_scheme_name*  
  Is the name of the partition scheme to be dropped.  
   

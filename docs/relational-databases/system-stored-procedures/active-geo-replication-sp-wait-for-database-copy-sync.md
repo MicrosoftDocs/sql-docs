@@ -1,4 +1,5 @@
 ---
+description: "Active Geo-Replication - sp_wait_for_database_copy_sync"
 title: "sp_wait_for_database_copy_sync"
 titleSuffix: Azure SQL Database
 ms.date: "03/03/2017"
@@ -13,13 +14,13 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_wait_for_database_copy_sync"
 ms.assetid: 7068da7f-cb74-47f2-b064-eb076a0d3885
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ms.custom: seo-dt-2019
 ---
 # Active Geo-Replication - sp_wait_for_database_copy_sync
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   This procedure is scoped to an [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] relationship between a primary and secondary. Calling the **sp_wait_for_database_copy_sync** causes the application to wait until all committed transactions are replicated and acknowledged by the active secondary database. Run **sp_wait_for_database_copy_sync** on only the primary database.  
   
@@ -70,6 +71,7 @@ GO
   
 ## See Also  
  [sys.dm_continuous_copy_status &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-continuous-copy-status-azure-sql-database.md)   
- [Geo-Replication Dynamic Management Views and Functions &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)  
+ [Geo-Replication Dynamic Management Views (DMVs) and Functions &#40;Azure SQL Database&#41;](../../relational-databases/system-dynamic-management-views/geo-replication-dynamic-management-views-and-functions-azure-sql-database.md)   
+ [sys.dm_geo_replication_link_status](../system-dynamic-management-views/sys-dm-geo-replication-link-status-azure-sql-database.md)
   
   

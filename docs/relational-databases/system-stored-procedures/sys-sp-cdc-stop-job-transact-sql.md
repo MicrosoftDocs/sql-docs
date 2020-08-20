@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_stop_job (Transact-SQL)"
 title: "sys.sp_cdc_stop_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,11 +18,11 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_stop_job"
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
-author: rothja
-ms.author: jroth
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.sp_cdc_stop_job (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Stops a change data capture cleanup or capture job for the current database.  
   

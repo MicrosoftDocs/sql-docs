@@ -1,4 +1,5 @@
 ---
+description: "SQLSetConnectOption (Visual FoxPro ODBC Driver)"
 title: "SQLSetConnectOption (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLSetConnectOption function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: 5a35449e-4694-4ee5-9fa1-45d5a8fe7823
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetConnectOption (Visual FoxPro ODBC Driver)
 > [!NOTE]  

@@ -1,4 +1,5 @@
 ---
+description: "Choose a Data Source (SQL Server Import and Export Wizard)"
 title: "Choose a Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/28/2019"
@@ -14,7 +15,7 @@ ms.author: chugu
 ---
 # Choose a Data Source (SQL Server Import and Export Wizard)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   After the Welcome page, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Import and Export Wizard displays **Choose a Data Source**. On this page, you provide information about the source of your data and about how to connect to it.

@@ -1,5 +1,6 @@
 ---
 title: "Run template files with the CommandStream Property"
+description: Learn how to execute template files that consist of SQL or XPath queries by using the CommandStream property of the SqlXmlCommand object.  
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
@@ -18,7 +19,7 @@ ms.custom: "seo-lt-2019"
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Executing Template Files by Using the CommandStream Property
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server Azure SQL Database](../../../includes/applies-to-version/sql-asdb.md)]
   This example illustrates how template files that consist of SQL or XPath queries can be specified by using the CommandStream property of the SqlXmlCommand object. In this application, a FileStreamobject is opened for a command file, and the file stream is assigned as the CommandStream that is executed.  
   
  In the following example, the CommandType property is specified as SqlXmlCommandType.Template (not as TemplateFile).  

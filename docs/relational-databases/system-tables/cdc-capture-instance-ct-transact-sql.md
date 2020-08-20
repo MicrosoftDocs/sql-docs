@@ -1,4 +1,5 @@
 ---
+description: "cdc.&lt;capture_instance&gt;_CT (Transact-SQL)"
 title: "cdc.&lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.<capture_instance>_CT"
 ms.assetid: 979c8110-3c54-4e76-953c-777194bc9751
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # cdc.&lt;capture_instance&gt;_CT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Is the change table created when change data capture is enabled on a source table. The table returns one row for each insert and delete operation performed against the source table, and two rows for each update operation performed against the source table. When the name of the change table is not specified at the time the source table is enabled, the name is derived. The format of the name is cdc.*capture_instance*_CT where *capture_instance* is the schema name of the source table and the source table name in the format *schema_table*. For example, if the table **Person.Address** in the **AdventureWorks** sample database is enabled for change data capture, the derived change table name would be **cdc.Person_Address_CT**.  
   

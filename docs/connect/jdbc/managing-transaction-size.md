@@ -1,4 +1,5 @@
 ---
+description: "Managing transaction size"
 title: "Managing transaction size | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 82900342-bc80-445f-98a4-468a303aae1e
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Managing transaction size
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

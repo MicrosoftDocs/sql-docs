@@ -1,4 +1,5 @@
 ---
+description: "ConfigTranslator Function"
 title: "ConfigTranslator Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ConfigTranslator [ODBC]"
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # ConfigTranslator Function
 **Conformance**  

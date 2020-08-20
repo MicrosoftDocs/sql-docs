@@ -1,4 +1,5 @@
 ---
+description: "DROP EXTERNAL DATA SOURCE (Transact-SQL)"
 title: "DROP EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -23,7 +24,7 @@ monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallpr
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Drop an external data source  
 DROP EXTERNAL DATA SOURCE external_data_source_name  
 [;]  
@@ -36,7 +37,7 @@ DROP EXTERNAL DATA SOURCE external_data_source_name
 ## Metadata  
  To view a list of external data sources use the sys.external_data_sources system view.  
   
-```  
+```sql  
 SELECT * FROM sys.external_data_sources;  
 ```  
   
@@ -53,7 +54,7 @@ SELECT * FROM sys.external_data_sources;
   
 ### A. Using basic syntax  
   
-```  
+```sql  
 DROP EXTERNAL DATA SOURCE mydatasource;  
 ```  
   

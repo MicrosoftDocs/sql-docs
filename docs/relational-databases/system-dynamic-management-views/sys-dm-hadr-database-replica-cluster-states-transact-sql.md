@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_hadr_database_replica_cluster_states (Transact-SQL)"
 title: "sys.dm_hadr_database_replica_cluster_states (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -18,11 +19,11 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
   - "sys.dm_hadr_database_replica_cluster_states dynamic management view"
 ms.assetid: 6f719071-ebce-470d-aebd-1f55ee8cd70a
-author: MikeRayMSFT
-ms.author: mikeray
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sys.dm_hadr_database_replica_cluster_states (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns a row containing information intended to provide you with insight into the health of the availability databases in the Always On availability groups in each Always On availability group on the Windows Server Failover Clustering (WSFC) cluster. Query **sys.dm_hadr_database_replica_states** to answer the following questions:  
   

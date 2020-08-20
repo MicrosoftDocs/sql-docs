@@ -1,4 +1,5 @@
 ---
+description: "Row Count Transformation"
 title: "Row Count Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -21,7 +22,7 @@ ms.author: chugu
 ---
 # Row Count Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Row Count transformation counts rows as they pass through a data flow and stores the final count in a variable.  

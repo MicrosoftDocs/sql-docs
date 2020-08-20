@@ -1,4 +1,5 @@
 ---
+description: "Marking Business Objects as Safe for Scripting"
 title: "Marking Business Objects as Safe for Scripting | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "business objects in RDS [ADO]"
 ms.assetid: 0be98d1a-ab3d-4dce-a166-dacda10d154a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Marking Business Objects as Safe for Scripting
 > [!IMPORTANT]

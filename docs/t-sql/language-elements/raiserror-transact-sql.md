@@ -1,4 +1,5 @@
 ---
+description: "RAISERROR (Transact-SQL)"
 title: "RAISERROR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2017"
@@ -32,7 +33,10 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 
 # RAISERROR (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all_md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+
+> [!NOTE]
+> The **RAISERROR** statement does not honor **SET XACT_ABORT**. New applications should use **THROW** instead of **RAISERROR**.
 
   Generates an error message and initiates error processing for the session. RAISERROR can either reference a user-defined message stored in the sys.messages catalog view or build a message dynamically. The message is returned as a server error message to the calling application or to an associated CATCH block of a TRY...CATCH construct. New applications should use [THROW](../../t-sql/language-elements/throw-transact-sql.md) instead.  
   
@@ -40,7 +44,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql
 -- Syntax for SQL Server and Azure SQL Database  
   
 RAISERROR ( { msg_id | msg_str | @local_variable }  
@@ -49,7 +53,7 @@ RAISERROR ( { msg_id | msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-```  
+```syntaxsql
 -- Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse  
   
 RAISERROR ( { msg_str | @local_variable }  
@@ -58,7 +62,9 @@ RAISERROR ( { msg_str | @local_variable }
     [ WITH option [ ,...n ] ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *msg_id*  
  Is a user-defined error message number stored in the sys.messages catalog view using sp_addmessage. Error numbers for user-defined error messages should be greater than 50000. When *msg_id* is not specified, RAISERROR raises an error message with an error number of 50000.  
   

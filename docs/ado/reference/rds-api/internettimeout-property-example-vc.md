@@ -1,4 +1,5 @@
 ---
+description: "InternetTimeout Property Example (VC++)"
 title: "InternetTimeout Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "InternetTimeout property [ADO], VC++ example"
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # InternetTimeout Property Example (VC++)
 > [!IMPORTANT]

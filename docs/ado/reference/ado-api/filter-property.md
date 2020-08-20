@@ -1,4 +1,5 @@
 ---
+description: "Filter Property"
 title: "Filter Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Filter property"
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Filter Property
 Indicates a filter for data in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
@@ -84,7 +85,7 @@ Only Filters in the form of criteria strings affect the contents of a persisted 
   
 The following table summarizes the effects of **adFilterPendingRecords** in different combinations of filtering and modifications. The left column shows the possible modifications. Modifications can be made on any of the non-keyed fields, on the key field in a single-keyed table, or on any of the key fields in a multiple-keyed table. The top row shows the filtering criterion. Filtering can be based on any of the non-keyed fields, the key field in a single-keyed table, or any of the key fields in a multiple-keyed table. The intersecting cells show the results. A **+** plus sign means that applying **adFilterPendingRecords** results in a non-empty **Recordset**. A **-** minus sign means an empty **Recordset**.  
   
-||Non keys|Single Key|Multiple Keys|
+|Combinations|Non keys|Single Key|Multiple Keys|
 |-|--------------|----------------|-------------------|
 |**Non keys**|+|+|+|
 |**Single Key**|+|-|N/A|

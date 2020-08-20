@@ -1,4 +1,5 @@
 ---
+description: "OpenSchema Method Example (VB)"
 title: "OpenSchema Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "OpenSchema method [ADO], Visual Basic example"
 ms.assetid: 455a02f0-8143-4562-8648-8fb45ffd334c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # OpenSchema Method Example (VB)
 This example uses the [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) method to display the name and type of each table in the ***Pubs*** database.  

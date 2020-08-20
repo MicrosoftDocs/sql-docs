@@ -1,4 +1,5 @@
 ---
+description: "Installation and Configuration Components Reference"
 title: "Installation and Configuration Components Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: c48b4303-6f39-4b5e-9134-1113cdef0e43
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Installation and Configuration Components Reference
 > [!NOTE]  

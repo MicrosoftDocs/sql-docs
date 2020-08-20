@@ -23,7 +23,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # Administer Servers by Using Policy-Based Management
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
    Policy-Based Management is a policy based system for managing one or more instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Use is to create conditions that contain condition expressions. Then, create policies that apply the conditions to database target objects.  
 
 For example, as the database administrator, you may want to ensure that certain servers do not have Database Mail enabled, so you  create a condition and a policy that sets that server option. 
@@ -100,25 +100,19 @@ For example, as the database administrator, you may want to ensure that certain 
   
 ## Links to specific tasks 
 
- - [Store Policy-Based Management policies.](policy-based-management-storage.md)|  
- - [Configure Alerts to Notify Policy Administrators of Policy Failures](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)  
- - [Create a New Policy-Based Management Condition](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md) 
+ - [Store Policy-Based Management policies.](policy-based-management-storage.md)
+ - [Configure Alerts to Notify Policy Administrators of Policy Failures](../../relational-databases/policy-based-management/configure-alerts-to-notify-policy-administrators-of-policy-failures.md)
+ - [Create a New Policy-Based Management Condition](../../relational-databases/policy-based-management/create-a-new-policy-based-management-condition.md)
  - [Delete a Policy-Based Management Condition](../../relational-databases/policy-based-management/delete-a-policy-based-management-condition.md)
- - [View or Modify the Properties of a Policy-Based Management Condition](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)|  
+ - [View or Modify the Properties of a Policy-Based Management Condition](../../relational-databases/policy-based-management/view-or-modify-the-properties-of-a-policy-based-management-condition.md)
  - [Export a Policy-Based Management Policy](../../relational-databases/policy-based-management/export-a-policy-based-management-policy.md)
- - [Import a Policy-Based Management Policy](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)|  
+ - [Import a Policy-Based Management Policy](../../relational-databases/policy-based-management/import-a-policy-based-management-policy.md)
  - [Evaluate a Policy-Based Management Policy from an Object](../../relational-databases/policy-based-management/evaluate-a-policy-based-management-policy-from-an-object.md)
- - [Work with Policy-Based Management Facets](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)|  
+ - [Work with Policy-Based Management Facets](../../relational-databases/policy-based-management/working-with-policy-based-management-facets.md)
  - [Monitor and Enforce Best Practices Using Policy-Based Management](../../relational-databases/policy-based-management/monitor-and-enforce-best-practices-by-using-policy-based-management.md)
-
 
 ## See also  
  
  - [Tutorial: Create and apply an off-by-default policy](lesson-1-create-and-apply-an-off-by-default-policy.md)
  - [Tutorial: Create and apply naming standards policy](lesson-2-create-and-apply-a-naming-standards-policy.md)
  - [Policy-Based Management Views &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/policy-based-management-views-transact-sql.md)  
- 
-
- 
-  
-  

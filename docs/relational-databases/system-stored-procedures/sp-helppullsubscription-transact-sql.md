@@ -1,4 +1,5 @@
 ---
+description: "sp_helppullsubscription (Transact-SQL)"
 title: "sp_helppullsubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helppullsubscription"
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_helppullsubscription (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Displays information about one or more subscriptions at the Subscriber. This stored procedure is executed at the Subscriber on the subscription database.  
   

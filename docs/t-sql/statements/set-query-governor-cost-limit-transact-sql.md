@@ -1,4 +1,5 @@
 ---
+description: "SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)"
 title: "SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -24,7 +25,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # SET QUERY_GOVERNOR_COST_LIMIT (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Overrides the currently configured **query governor cost limit** value for the current connection.  
   
@@ -32,12 +33,14 @@ ms.author: carlrab
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 SET QUERY_GOVERNOR_COST_LIMIT value  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *value*  
  Is a numeric or integer value specifying the longest time in which a query can run. Values are rounded down to the nearest integer. Negative values are rounded up to 0. The query governor disallows execution of any query that has an estimated cost exceeding that value. Specifying 0 (the default) for this option turns off the query governor, and all queries are allowed to run indefinitely.  
   

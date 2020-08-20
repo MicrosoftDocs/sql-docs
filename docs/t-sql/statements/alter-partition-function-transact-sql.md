@@ -1,4 +1,5 @@
 ---
+description: "ALTER PARTITION FUNCTION (Transact-SQL)"
 title: "ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -27,7 +28,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # ALTER PARTITION FUNCTION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Alters a partition function by splitting or merging its boundary values. Running an ALTER PARTITION FUNCTION statement can split one table partition or index that uses the partition function into two partitions. The statement can also merge two partitions into one less partition.  
   
@@ -38,7 +39,7 @@ Alters a partition function by splitting or merging its boundary values. Running
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 ALTER PARTITION FUNCTION partition_function_name()  
 {   
@@ -47,7 +48,10 @@ ALTER PARTITION FUNCTION partition_function_name()
 } [ ; ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *partition_function_name*  
 Is the name of the partition function to be modified.  
   

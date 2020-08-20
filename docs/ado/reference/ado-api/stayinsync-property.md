@@ -1,4 +1,5 @@
 ---
+description: "StayInSync Property"
 title: "StayInSync Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "StayInSync property"
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # StayInSync Property
 Indicates, in a hierarchical [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object, whether the reference to the underlying child records (that is, the *chapter*) changes when the parent row position changes.  

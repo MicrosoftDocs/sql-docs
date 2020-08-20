@@ -1,4 +1,5 @@
 ---
+description: "Error (ADO for Visual C++ Syntax)"
 title: "Error (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Error collection [ADO], ADO for Visual C++ syntax"
 ms.assetid: 1c3fafe1-8bcc-4c04-b8d1-f5ffebac00dd
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Error (ADO for Visual C++ Syntax)
 ## Properties  

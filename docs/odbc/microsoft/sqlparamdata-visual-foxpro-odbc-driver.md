@@ -1,4 +1,5 @@
 ---
+description: "SQLParamData (Visual FoxPro ODBC Driver)"
 title: "SQLParamData (Visual FoxPro ODBC Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "SQLParamData function [ODBC], Visual FoxPro ODBC Driver"
 ms.assetid: a2308f6c-2fa1-47e9-903f-37c2a03c723a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLParamData (Visual FoxPro ODBC Driver)
 > [!NOTE]  

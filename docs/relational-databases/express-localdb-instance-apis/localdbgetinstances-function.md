@@ -1,4 +1,5 @@
 ---
+description: "LocalDBGetInstances Function"
 title: "LocalDBGetInstances Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -17,7 +18,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # LocalDBGetInstances Function
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Returns all SQL Server Express LocalDB instances with the given version.  
   
  **Header file:** sqlncli.h  

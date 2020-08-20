@@ -1,6 +1,6 @@
 ---
-title: "IDBProperties (OLE DB) | Microsoft Docs"
-description: "IDBProperties interface (OLE DB)"
+title: "IDBProperties (OLE DB driver) | Microsoft Docs"
+description: Learn about the IDBProperties interface in OLE DB Driver for SQL Server, including the IDBProperties::GetPropertyInfo method.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -12,7 +12,7 @@ author: pmasl
 ms.author: pelopes
 ---
 # IDBProperties (OLE DB)
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

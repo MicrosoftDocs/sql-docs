@@ -1,4 +1,5 @@
 ---
+description: "sp_describe_undeclared_parameters (Transact-SQL)"
 title: "sp_describe_undeclared_parameters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/24/2018"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_describe_undeclared_parameters"
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-author: stevestein
-ms.author: sstein
-monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
+author: CarlRabeler
+ms.author: carlrab
+monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # sp_describe_undeclared_parameters (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)] 
 
   Returns a result set that contains metadata about undeclared parameters in a [!INCLUDE[tsql](../../includes/tsql-md.md)] batch. Considers each parameter that is used in the **\@tsql** batch, but not declared in **\@params**. A result set is returned that contains one row for each such parameter, with the deduced type information for that parameter. The procedure returns an empty result set if the **\@tsql** input batch has no parameters except those declared in **\@params**.  
   
@@ -34,7 +35,10 @@ sp_describe_undeclared_parameters
     [ @tsql = ] 'Transact-SQL_batch'   
     [ , [ @params = ] N'parameters' data type ] [, ...n]  
 ```  
-  
+
+> [!Note] 
+> To use this stored procedure in Azure Synapse Analytics (Formerly SQL DW), the compatibility level of a database needs to greater than 10. 
+
 ## Arguments  
 `[ \@tsql = ] 'Transact-SQL\_batch'`
  One or more [!INCLUDE[tsql](../../includes/tsql-md.md)] statements. *Transact-SQL_batch* may be **nvarchar(**_n_**)** or **nvarchar(max)**.  

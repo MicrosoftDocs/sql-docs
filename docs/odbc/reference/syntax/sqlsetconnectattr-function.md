@@ -1,4 +1,5 @@
 ---
+description: "SQLSetConnectAttr Function"
 title: "SQLSetConnectAttr Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -17,8 +18,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "SQLSetConnectAttr function [ODBC]"
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLSetConnectAttr Function
 **Conformance**  

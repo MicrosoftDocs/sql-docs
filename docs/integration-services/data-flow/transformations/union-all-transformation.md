@@ -1,4 +1,5 @@
 ---
+description: "Union All Transformation"
 title: "Union All Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -21,7 +22,7 @@ ms.author: chugu
 ---
 # Union All Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Union All transformation combines multiple inputs into one output. For example, the outputs from five different Flat File sources can be inputs to the Union All transformation and combined into one output.  

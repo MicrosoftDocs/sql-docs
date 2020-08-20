@@ -1,5 +1,6 @@
 ---
-title: "Loop through Excel Files and Tables by Using a Foreach Loop Container | Microsoft Docs"
+description: "Loop through Excel Files and Tables with a Foreach Loop Container"
+title: "Loop through Excel Files and Tables with a Foreach Loop Container | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2018"
 ms.prod: sql
@@ -15,9 +16,9 @@ ms.assetid: a5393c1a-cc37-491a-a260-7aad84dbff68
 author: chugugrace
 ms.author: chugu
 ---
-# Loop through Excel Files and Tables by Using a Foreach Loop Container
+# Loop through Excel Files and Tables with a Foreach Loop Container
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The procedures in this topic describe how to loop through the Excel workbooks in a folder, or through the tables in an Excel workbook, by using the Foreach Loop container with the appropriate enumerator.  

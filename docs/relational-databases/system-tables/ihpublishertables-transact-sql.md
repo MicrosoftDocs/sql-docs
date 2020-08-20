@@ -1,4 +1,5 @@
 ---
+description: "IHpublishertables (Transact-SQL)"
 title: "IHpublishertables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,11 +16,11 @@ dev_langs:
 helpviewer_keywords: 
   - "IHpublishertables system table"
 ms.assetid: 7d16ac39-633a-4fe2-8f22-1d9afc191ee9
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # IHpublishertables (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   The **IHpublishertables** system table represents metadata stored at the publisher. This table contains one row for each source table published from a non-SQL Server Publisher using the current Distributor. This table is stored in the distribution database.  
   

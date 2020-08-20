@@ -1,4 +1,5 @@
 ---
+description: "SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)"
 title: "SSTRANSTIGHTLYCPLD Field (SQLServerXAResource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)"
 apitype: "Assembly"
 ms.assetid: 379857c3-9de1-4964-8782-32df317cbfbb
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SSTRANSTIGHTLYCPLD Field (SQLServerXAResource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

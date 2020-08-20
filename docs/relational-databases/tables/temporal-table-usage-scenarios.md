@@ -1,4 +1,5 @@
 ---
+description: "Temporal Table Usage Scenarios"
 title: "Temporal Table Usage Scenarios | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/16/2017"
@@ -13,7 +14,7 @@ ms.author: "carlrab"
 ---
 # Temporal table usage scenarios
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 Temporal Tables are generally useful in scenarios that require tracking history of data changes. We recommend you to consider Temporal Tables in the following use cases for major productivity benefits.
 

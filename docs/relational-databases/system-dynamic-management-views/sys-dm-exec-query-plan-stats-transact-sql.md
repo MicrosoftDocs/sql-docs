@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_query_plan_stats (Transact-SQL)"
 title: "sys.dm_exec_query_plan_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 05/22/2019
@@ -19,7 +20,7 @@ ms.author: "pelopes"
 manager: amitban
 ---
 # sys.dm_exec_query_plan_stats (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
+[!INCLUDE[SQL Server 2019](../../includes/tsql-appliesto-ssver15-asdb-xxxx-xxx.md)]
 
 Returns the equivalent of the last known actual execution plan for a previously cached query plan.
 

@@ -1,4 +1,5 @@
 ---
+description: "What&#39;s New in Integration Services in SQL Server 2016"
 title: "What&#39;s New in Integration Services in SQL Server 2016 | Microsoft Docs"
 ms.custom: 
   - "SQL2016_New_Updated"
@@ -17,7 +18,7 @@ ms.author: chugu
 ---
 # What&#39;s New in Integration Services in SQL Server 2016
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 
@@ -181,9 +182,9 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
 ####  <a name="encrypted"></a> Support for Always Encrypted in the SSIS Catalog  
  SSIS already supports the Always Encrypted feature in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]. For more info, see the following blog posts.  
   
--   [SSIS with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/ssis-with-always.aspx)  
+-   [SSIS with Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/ssis-with-always-encrypted/ba-p/388272)  
   
--   [Lookup transformation with Always Encrypted](https://blogs.msdn.com/b/ssis/archive/2015/12/18/lookup-transformation-with-always-encrypted.aspx)  
+-   [Lookup transformation with Always Encrypted](https://techcommunity.microsoft.com/t5/sql-server-integration-services/lookup-transformation-with-always-encrypted/ba-p/388282)  
 
 ### Better debugging
 
@@ -209,7 +210,7 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
   
 -   In the Script Component or a custom data flow component, call the new <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A> method of the IDTSComponentMetadata100 interface.  
   
- For more info about this improvement, see the following blog post by SSIS developer Bo Fan: [Error Column Improvements for SSIS Data Flow](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx).  
+ For more info about this improvement, see the following blog post by SSIS developer Bo Fan: [Error Column Improvements for SSIS Data Flow](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253).  
   
 > [!NOTE]  
 >  (This support has been expanded in subsequent releases. For more info, see [Expanded support for error column names](#getidstring) and [New IDTSComponentMetaData130 interface in the API](#CMD130).)  
@@ -219,7 +220,7 @@ The Incremental Package Deployment feature lets you deploy one or more packages 
   
  The method GetIdentificationStringByLineageID has been renamed to <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130.GetIdentificationStringByID%2A>. For more info, see [Column names for errors in the data flow](#ErrorColumn).  
   
- For more info about this change and about the error column improvement, see the following updated blog post. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](https://blogs.msdn.com/b/ssis/archive/2015/11/27/error-column-improvement-for-ssis-data-flow.aspx)  
+ For more info about this change and about the error column improvement, see the following updated blog post. [Error Column Improvements for SSIS Data Flow (Updated for CTP3.3)](https://techcommunity.microsoft.com/t5/sql-server-integration-services/error-column-improvements-for-ssis-data-flow-updated-for-rc2/ba-p/388253)  
   
 > [!NOTE]  
 >  (In RC0, this method has been moved to the new <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSComponentMetaData130> interface. For more info, see [New IDTSComponentMetaData130 interface in the API](#CMD130).)  

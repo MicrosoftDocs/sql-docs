@@ -1,4 +1,5 @@
 ---
+description: "Sparse columns"
 title: "Sparse columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 7d4237e0-818f-4639-9093-d5ac9683fc71
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # Sparse columns

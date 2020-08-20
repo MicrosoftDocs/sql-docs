@@ -1,4 +1,5 @@
 ---
+description: "BOF, EOF Properties (ADO)"
 title: "BOF, EOF Properties (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "EOF property [ADO]"
   - "BOF property [ADO]"
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # BOF, EOF Properties (ADO)
 -   **BOF** Indicates that the current record position is before the first record in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  

@@ -1,7 +1,8 @@
 ---
+description: "sp_addpullsubscription_agent (Transact-SQL)"
 title: "sp_addpullsubscription_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/08/2019"
+ms.date: "06/09/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords:
   - "sp_addpullsubscription_agent"
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_addpullsubscription_agent (Transact-SQL)
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
  
   Adds a new scheduled agent job used to synchronize a pull subscription to a transactional publication. This stored procedure is executed at the Subscriber on the subscription database.  
   
@@ -75,6 +76,9 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## Arguments  
 `[ @publisher = ] 'publisher'`
  Is the name of the Publisher. *publisher* is **sysname**, with no default.  
+
+> [!NOTE]
+> Server name can be specified as `<Hostname>,<PortNumber>`. You may need to specify the port number for your connection when SQL Server is deployed on Linux or Windows with a custom port, and browser service is disabled.
   
 `[ @publisher_db = ] 'publisher_db'_`
  Is the name of the Publisher database. *publisher_db* is **sysname**, with a default value of NULL. *publisher_db* is ignored by Oracle Publishers.  

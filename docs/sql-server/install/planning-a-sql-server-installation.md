@@ -1,5 +1,6 @@
 ---
 title: "Planning a SQL Server Installation | Microsoft Docs"
+description: This article helps you plan to install SQL Server. It includes links to resources needed for SQL Server installation.
 ms.custom: ""
 ms.date: "08/23/2017"
 ms.prod: sql
@@ -9,11 +10,11 @@ ms.topic: quickstart
 helpviewer_keywords: 
   - "installing SQL Server, planning"
 ms.assetid: b1d56f2f-603f-48f2-b902-c715f14a6db9
-author: MashaMSFT
-ms.author: mathoma
+author: markingmyname
+ms.author: maghan
 ---
 # Planning a SQL Server Installation
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   To install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], follow these steps:  
   
@@ -25,7 +26,7 @@ ms.author: mathoma
   
  Regardless of the installation method, you are required to confirm acceptance of the software license terms as an individual or on behalf of an entity, unless your use of the software is governed by a separate agreement such as a [!INCLUDE[msCoName](../../includes/msconame-md.md)] volume licensing agreement or a third-party agreement with an ISV or OEM.  
   
- The license terms are displayed for review and acceptance in the Setup user interface. Unattended installations (using the `/Q` or `/QS` parameters) must include the `/IAcceptSQLServerLicenseTerms` parameter. Download and review the license terms separately at [Microsoft SQL Server License Terms and Information](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx). For volume licensing terms, see [Licensing Termss and Documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). For older versions of SQL Server, see [Microsoft Software License Terms](https://go.microsoft.com/fwlink/?LinkID=148209).  
+ The license terms are displayed for review and acceptance in the Setup user interface. Unattended installations (using the `/Q` or `/QS` parameters) must include the `/IAcceptSQLServerLicenseTerms` parameter. Download and review the license terms separately at [Microsoft SQL Server License Terms and Information](https://www.microsoft.com/Licensing/product-licensing/sql-server.aspx). For volume licensing terms, see [Licensing Terms and Documentation](https://www.microsoftvolumelicensing.com/DocumentSearch.aspx?Mode=3&DocumentTypeId=53). For older versions of SQL Server, see [Microsoft Software License Terms](https://go.microsoft.com/fwlink/?LinkID=148209).  
   
 > [!NOTE]  
 >  Depending on how you received the software (for example, through [!INCLUDE[msCoName](../../includes/msconame-md.md)] volume licensing), your use of the software may be subject to additional terms and conditions.  
@@ -34,8 +35,8 @@ ms.author: mathoma
  [What's New in SQL Server Installation](../../sql-server/install/what-s-new-in-sql-server-installation.md)  
  This article describes the details about the new or improved features of installation in this version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
- [Hardware and Software Requirements for Installing SQL Server](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)  
- This article lists the minimum hardware and software requirements to install and run an instance of [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)].  
+ Hardware and software requirements for installing [SQL Server 2016 & 2017](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md), [SQL Server 2019](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md) or [SQL Server on Linux](../../linux/sql-server-linux-setup.md)
+ This article lists the minimum hardware and software requirements to install and run an instance of SQL Server. .  
   
  [Security Considerations for a SQL Server Installation](../../sql-server/install/security-considerations-for-a-sql-server-installation.md)  
  This article describes some security best practices that you should consider before you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and after you install [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

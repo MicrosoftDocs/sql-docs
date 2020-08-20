@@ -1,4 +1,5 @@
 ---
+description: "sp_redirect_publisher (Transact-SQL)"
 title: "sp_redirect_publisher (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -13,11 +14,11 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_redirect_publisher"
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 ---
 # sp_redirect_publisher (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Specifies a redirected publisher for an existing publisher/database pair. If the publisher database belongs to an Always On Availability Group, the redirected publisher is the availability group listener name associated with the availability group.  
   

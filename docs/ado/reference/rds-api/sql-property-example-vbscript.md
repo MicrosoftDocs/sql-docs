@@ -1,4 +1,5 @@
 ---
+description: "SQL Property Example (VBScript)"
 title: "SQL Property Example (VBScript) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "SQL property [ADO], VBScript example"
 ms.assetid: 32c33bcf-3320-4836-9e2e-99c8978ce581
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # SQL Property Example (VBScript)
 > [!IMPORTANT]

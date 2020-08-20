@@ -1,4 +1,5 @@
 ---
+description: "User and Group Permissions Functional Area (Master Data Manager)"
 title: User and Group Permissions Functional Area
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -13,7 +14,7 @@ ms.author: lle
 ---
 # User and Group Permissions Functional Area (Master Data Manager)
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE [SQL Server - Windows only ASDBMI  ](../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
   In the User and Group Permissions functional area, administrators can grant permission to functional areas, to attributes (on the Models tab), and to members (on the Hierarchy Members tab). Overlapping permissions are resolved to determine a user's permission to each individual attribute value.  
   

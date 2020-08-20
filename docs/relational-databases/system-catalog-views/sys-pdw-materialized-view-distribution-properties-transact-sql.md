@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_materialized_view_distribution_properties (Transact-SQL) (preview)"
 title: "sys.pdw_materialized_view_distribution_properties (Transact-SQL)"
 ms.custom: seo-dt-2019
 ms.date: "07/03/2019"
@@ -15,7 +16,7 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_materialized_view_distribution_properties (Transact-SQL) (preview)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Displays distribution information materialized views.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Current Record and Size of Recordset"
 title: "Current Record and Size of Recordset | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "record location [ADO]"
   - "current record [ADO]"
 ms.assetid: e63ff331-8655-4be7-82c6-e6cd6cc9d16d
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Current Record and Size of Recordset
 This section describes how to locate the current position of the cursor in the sample **Recordset** in [JScript Code Example to Return a Recordset](../../../ado/guide/data/jscript-code-example-to-return-a-recordset.md).  

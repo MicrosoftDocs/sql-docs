@@ -1,4 +1,5 @@
 ---
+description: "Replication Programming Concepts"
 title: "Replication Programming Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -17,7 +18,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Replication Programming Concepts
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
 
   Before developing an application that uses replication functionalities, you should follow the following general planning steps:  
   
@@ -117,7 +118,7 @@ monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allver
   
 2.  In addition to the typical data access required for a sales application, this application should enable a salesperson to synchronize the pull subscription on demand by clicking a button. Since a sales representative will install and run the application, it also needs to be able to configure a subscription and apply the initial snapshot at the client. Optionally, the application will use the infrastructure provided by Windows for sensing wireless connectivity to automatically synchronize the subscription when a connection is detected.  
   
-3.  Follow all of the security guidelines for replication, including using Windows Authentication and a virtual private network (VPN) when connecting to the publisher. If implementing Web synchronization, use a secure sockets layer (SSL) connection. For more information, see [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md).  
+3.  Follow all of the security guidelines for replication, including using Windows Authentication and a virtual private network (VPN) when connecting to the publisher. If implementing Web synchronization, use a Transport Layer Security (TLS), previously known as Secure Sockets Layer (SSL), connection. For more information, see [Configure Web Synchronization](../../../relational-databases/replication/configure-web-synchronization.md).  
   
 4.  In order to take advantage of the features of the [!INCLUDE[dnprdnshort](../../../includes/dnprdnshort-md.md)], the application is developed using a managed code language.  
   

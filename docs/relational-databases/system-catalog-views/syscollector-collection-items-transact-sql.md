@@ -1,4 +1,5 @@
 ---
+description: "syscollector_collection_items (Transact-SQL)"
 title: "syscollector_collection_items (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -16,11 +17,11 @@ helpviewer_keywords:
   - "syscollector_collection_items view"
   - "add data collector view"
 ms.assetid: a279ecd1-a59c-4315-9f08-bf221f00a465
-author: "stevestein"
-ms.author: "sstein"
+author: CarlRabeler
+ms.author: carlrab
 ---
 # syscollector_collection_items (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about an item in a collection set.  
   

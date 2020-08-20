@@ -30,7 +30,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DENY Database Principal Permissions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Denies permissions granted on a database user, database role, or application role in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
 
@@ -39,7 +39,7 @@ ms.author: vanto
   
 ## Syntax  
   
-```  
+```syntaxsql
 DENY permission [ ,...n ]    
     ON   
     {  [ USER :: database_user ]  
@@ -61,7 +61,9 @@ DENY permission [ ,...n ]
   | Database_user_with_no_login   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on the database principal. For a list of the permissions, see the Remarks section later in this topic.  
   

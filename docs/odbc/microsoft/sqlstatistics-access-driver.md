@@ -1,4 +1,5 @@
 ---
+description: "SQLStatistics (Access Driver)"
 title: "SQLStatistics (Access Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "Access driver [ODBC], SQLStatistics"
   - "SQLStatistics function [ODBC], Access Driver"
 ms.assetid: 6117ac77-1020-4f0c-8eed-e671c34c1f21
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQLStatistics (Access Driver)
 > [!NOTE]  

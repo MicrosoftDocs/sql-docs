@@ -1,5 +1,6 @@
 ---
-title: "Element Path Syntax for XML Report Data (SSRS) | Microsoft Docs"
+title: "Element Path Syntax for XML Report Data | Microsoft Docs"
+description: Learn about the element path syntax and conventions used to define the path for XML report data in Report Designer.
 ms.date: 03/01/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

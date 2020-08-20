@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_cancel"
 title: "sqlsrv_cancel | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -14,8 +15,8 @@ helpviewer_keywords:
   - "sqlsrv_cancel"
   - "API Reference, sqlsrv_cancel"
 ms.assetid: 75798c9b-f711-445d-9b8f-ba4d405ca50a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # sqlsrv_cancel
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]

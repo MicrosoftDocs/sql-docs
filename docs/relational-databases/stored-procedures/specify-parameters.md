@@ -1,5 +1,6 @@
 ---
 title: "Specify Parameters | Microsoft Docs"
+description: Learn how to pass values into parameters and about how each of the parameter attributes is used during a procedure call.
 ms.custom: ""
 ms.date: "03/16/2017"
 ms.prod: sql
@@ -17,7 +18,7 @@ ms.author: "sstein"
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Specify Parameters
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   By specifying procedure parameters, calling programs are able to pass values into the body of the procedure. Those values can be used for a variety of purposes during procedure execution. Procedure parameters can also return values to the calling program if the parameter is marked as an OUTPUT parameter.  
   
  A procedure can have a maximum of 2100 parameters; each assigned a name, data type, and direction. Optionally, parameters can be assigned default values.  

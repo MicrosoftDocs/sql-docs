@@ -1,4 +1,5 @@
 ---
+description: "Attributes Property (ADO)"
 title: "Attributes Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "Attributes property [ADO]"
 ms.assetid: acc15d40-68a6-4ba9-85bd-12d331aecaa6
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Attributes Property (ADO)
 Indicates one or more characteristics of an object.  
@@ -41,12 +42,18 @@ Indicates one or more characteristics of an object.
 >  **Remote Data Service Usage** This property is not available on a client-side **Connection** object.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Field Object](../../../ado/reference/ado-api/field-object.md)|  
-|[Parameter Object](../../../ado/reference/ado-api/parameter-object.md)|[Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Field Object](../../../ado/reference/ado-api/field-object.md)  
+    :::column-end:::
+    :::column:::
+        [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)  
+        [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Attributes and Name Properties Example (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
  [Attributes and Name Properties Example (VC++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   

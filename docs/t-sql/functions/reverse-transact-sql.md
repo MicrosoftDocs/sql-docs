@@ -1,4 +1,5 @@
 ---
+description: "REVERSE (Transact-SQL)"
 title: "REVERSE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -17,12 +18,12 @@ helpviewer_keywords:
   - "REVERSE function"
   - "reverse character expressions"
 ms.assetid: 555d8877-7cc7-4955-ae2c-6215aca313b7
-author: MikeRayMSFT
-ms.author: mikeray
+author: julieMSFT
+ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # REVERSE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns the reverse order of a string value.  
   
@@ -34,7 +35,9 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 REVERSE ( string_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *string_expression*  
  *string_expression* is an [expression](../../t-sql/language-elements/expressions-transact-sql.md) of a string or binary data type. *string_expression* can be a constant, variable, or column of either character or binary data.  
   

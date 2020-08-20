@@ -1,7 +1,8 @@
 ---
-title: "Database Detach and Attach (SQL Server) | Microsoft Docs"
+title: "Database Detach and Attach (SQL Server)"
+description: You can detach and reattach data and transaction log files of a SQL Server database to change the database to a different instance or to move the database.
 ms.custom: ""
-ms.date: "11/26/2018"
+ms.date: "06/30/2020"
 ms.prod: sql
 ms.prod_service: "database-engine"
 ms.reviewer: ""
@@ -29,7 +30,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Database Detach and Attach (SQL Server)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 The data and transaction log files of a database can be detached and then reattached to the same or another instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Detaching and attaching a database is useful if you want to change the database to a different instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] on the same computer or to move the database.  
   
   
@@ -56,7 +57,13 @@ You cannot detach a database if any of the following are true:
   
     > [!NOTE]  
     > A database snapshot cannot be detached or attached.  
+
+-   The database is part of an Always On availability group.  
   
+    The database cannot be detached until it is removed from the availability group. For more information, see [Remove a primary database from an Always On availability group](../../database-engine/availability-groups/windows/remove-a-primary-database-from-an-availability-group-sql-server.md).
+  
+
+
 -   The database is being mirrored in a database mirroring session.  
   
     The database cannot be detached unless the session is terminated. For more information, see [Removing Database Mirroring &#40;SQL Server&#41;](../../database-engine/database-mirroring/removing-database-mirroring-sql-server.md).  
@@ -111,7 +118,7 @@ Like any database that is fully or partially offline, a database with restoring 
 > [!IMPORTANT]  
 > A database created by a more recent version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot be attached in earlier versions. This precludes the database from being physically used with an older version of the [!INCLUDE[ssde_md](../../includes/ssde_md.md)]. However, this relates to metadata state and does not affect the [database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md). For more information, see [ALTER DATABASE Compatibility Level &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md).   
   
-When you attach a database onto another server instance, to provide a consistent experience to users and applications, you might have to re-create some or all of the metadata for the database, such as logins and jobs, on the other server instance. For more information, see [Manage metadata when making a aatabase available on another server instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
+When you attach a database onto another server instance, to provide a consistent experience to users and applications, you might have to re-create some or all of the metadata for the database, such as logins and jobs, on the other server instance. For more information, see [Manage metadata when making a database available on another server instance &#40;SQL Server&#41;](../../relational-databases/databases/manage-metadata-when-making-a-database-available-on-another-server.md).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
 **To detach a database**  

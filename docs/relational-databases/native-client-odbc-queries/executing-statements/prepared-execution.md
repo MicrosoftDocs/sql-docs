@@ -1,4 +1,5 @@
 ---
+description: "Prepared Execution"
 title: "Prepared Execution | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,12 @@ helpviewer_keywords:
   - "SQLExecute function"
   - "statements [ODBC], prepared execution"
 ms.assetid: f3a9d32b-6cd7-4f0c-b38d-c8ccc4ee40c3
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Prepared Execution
-[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The ODBC API defines prepared execution as a way to reduce the parsing and compiling overhead associated with repeatedly executing a [!INCLUDE[tsql](../../../includes/tsql-md.md)] statement. The application builds a character string containing an SQL statement and then executes it in two stages. It calls [SQLPrepare Function](https://go.microsoft.com/fwlink/?LinkId=59360) once to have the statement parsed and compiled into an execution plan by the [!INCLUDE[ssDE](../../../includes/ssde-md.md)]. It then calls **SQLExecute** for each execution of the prepared execution plan. This saves the parsing and compiling overhead on each execution. Prepared execution is commonly used by applications to repeatedly execute the same, parameterized SQL statement.  
   

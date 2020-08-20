@@ -1,5 +1,6 @@
 ---
 title: "Reporting Services Data Alerts | Microsoft Docs"
+description: Learn how SQL Server Reporting Services data alerts help inform you about report data that is interesting or important to you.
 ms.date: 07/02/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
@@ -112,7 +113,7 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
 ##  <a name="InstallAlerting"></a> Install Data Alerts  
  The data alerts feature is available only when [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] is installed in SharePoint mode. When you install [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, setup automatically creates the alerting database that stores data alert definitions and alerting metadata, and two SharePoint pages for managing alerts and adds Data Alert Designer to the SharePoint site. There are no special steps to perform or options to set for alerting during installation.  
   
- If you want to learn more about installing [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, including the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] shared service that is new in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application that you must create and configure before you can use [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features, see [Install Reporting Services SharePoint Mode for SharePoint 2010](https://msdn.microsoft.com/47efa72e-1735-4387-8485-f8994fb08c8c) in MSDN library.  
+ If you want to learn more about installing [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] in SharePoint mode, including the [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] shared service that is new in [!INCLUDE[ssSQL11](../includes/sssql11-md.md)] and [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] service application that you must create and configure before you can use [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features, see [Install Reporting Services SharePoint Mode for SharePoint 2010](https://docs.microsoft.com/sql/reporting-services/install-windows/install-the-first-report-server-in-sharepoint-mode) in MSDN library.  
   
  As the diagram earlier in the topic shows, data alerts use SQL Server Agent jobs. To create the jobs, SQL Server Agent must be running. You might have configured SQL Server Agent to start automatically when you installed [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]. If not, you can start SQL Server Agent manually. For more information, see [Configure SQL Server Agent](../ssms/agent/configure-sql-server-agent.md) and [Start, Stop, Pause, Resume, Restart the Database Engine, SQL Server Agent, or SQL Server Browser Service](../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md).  
   
@@ -153,9 +154,8 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
   
  The following table summarizes the event handlers and when retry will fire:  
   
-|Error Category|<|\<|Event type||>|>|>|  
+|Error Category / Event Type|FireAlert|FireSchedule|CreateSchedule|UpdateSchedule|DeleteSchedule|GenerateAlert|DeliverAlert|  
 |--------------------|--------|--------|----------------|-|--------|--------|--------|  
-||**FireAlert**|**FireSchedule**|**CreateSchedule**|**UpdateSchedule**|**DeleteSchedule**|**GenerateAlert**|**DeliverAlert**|  
 |Out of memory|X|X|X|X|X|X|X|  
 |Thread abort|X|X|X|X|X|X|X|  
 |SQL Agent is not running|X||X|X|X|||  
@@ -266,12 +266,12 @@ The following summarizes the key areas of [!INCLUDE[ssRSnoversion](../includes/s
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] provides performance counters for other [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] features. For more information, see [Performance Counters for the ReportServer:Service  and ReportServerSharePoint:Service Performance Objects](../reporting-services/report-server/performance-counters-reportserver-service-performance-objects.md), [Performance Counters for the MSRS 2011 Web Service and MSRS 2011 Windows Service Performance Objects &#40;Native Mode&#41;](../reporting-services/report-server/performance-counters-msrs-2011-web-service-performance-objects.md), and [Performance Counters for the MSRS 2011 Web Service SharePoint Mode and MSRS 2011 Windows Service SharePoint Mode Performance Objects &#40;SharePoint Mode&#41;](../reporting-services/report-server/performance-counters-msrs-2011-sharepoint-mode-performance-objects.md).  
   
-##  <a name="SupportForSSL"></a> Support for SSL  
- [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] can use the HTTP SSL (Secure Sockets Layer) service to establish encrypted connections to a report server or SharePoint site.  
+##  <a name="SupportForSSL"></a> Support for TLS  
+ [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] can use the HTTP SSL service to establish encrypted connections to a report server or SharePoint site. Transport Layer Security (TLS) was previously known as Secure Sockets Layer (SSL).
   
- The alerting runtime service and data alerts user interface support SSL and works similarly whether you use SSL or HTTP; however, there are some subtle differences. When the data alert definition is created using and SSL connection, the URL that links back to the SharePoint library from the data alert message also uses SSL. You can identify the SSL connection because it uses HTTPS instead of HTTP in its URL. Likewise, if the data alert definition was created using an HTTP connection, the link back to the SharePoint site uses HTTP. Whether the alert definition was created using SSL or HTTP, the experience for users and alerting administrators are identical when using Data Alert Designer or Data Alert Manager. If the protocol (HTTP or SSL) should change between the time that the alert definition was created and then updated and resaved, the original protocol is kept and used in link URLs.  
+ The alerting runtime service and data alerts user interface support TLS and works similarly whether you use TLS or HTTP; however, there are some subtle differences. When the data alert definition is created using and TLS connection, the URL that links back to the SharePoint library from the data alert message also uses TLS. You can identify the TLS connection because it uses HTTPS instead of HTTP in its URL. Likewise, if the data alert definition was created using an HTTP connection, the link back to the SharePoint site uses HTTP. Whether the alert definition was created using TLS or HTTP, the experience for users and alerting administrators are identical when using Data Alert Designer or Data Alert Manager. If the protocol (HTTP or TLS) should change between the time that the alert definition was created and then updated and resaved, the original protocol is kept and used in link URLs.  
   
- If you create a data alert on a SharePoint site that is configured to use SSL and then remove the SSL requirement the alert continues to work on the site. If the site is deleted, the default zone site is used instead.  
+ If you create a data alert on a SharePoint site that is configured to use TLS and then remove the TLS requirement the alert continues to work on the site. If the site is deleted, the default zone site is used instead.  
   
 ##  <a name="UserInterface"></a> Data Alert User Interface  
  Data alerts provide SharePoint pages for managing alerts and a designer for creating and editing data alert definitions.  

@@ -1,4 +1,5 @@
 ---
+description: "sp_statistics (Transact-SQL)"
 title: "sp_statistics (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,12 +16,12 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_statistics"
 ms.assetid: 0bb6495f-258a-47ec-9f74-fd16671d23b8
-author: stevestein
-ms.author: sstein
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_statistics (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a list of all indexes and statistics on a specified table or indexed view.  
   
@@ -28,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_statistics [ @table_name = ] 'table_name'    
@@ -100,7 +101,7 @@ sp_statistics [ @table_name = ] 'table_name'
 ## Example: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns information about the `DimEmployee` table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_statistics DimEmployee;  

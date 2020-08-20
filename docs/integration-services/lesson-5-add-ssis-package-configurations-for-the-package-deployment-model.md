@@ -1,4 +1,5 @@
 ---
+description: "Lesson 5: Add SSIS package configurations for the Package Deployment Model"
 title: "Lesson 5: Add SSIS package configurations for the Package Deployment Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/08/2019"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 5: Add SSIS package configurations for the Package Deployment Model
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

@@ -1,4 +1,5 @@
 ---
+description: "Detecting and Resolving Conflicts"
 title: "Detecting and Resolving Conflicts | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "conflicts [ADO], detecting and resolving"
   - "ADO, detecting and resolving conflicts"
 ms.assetid: b28fdd26-c1a4-40ce-a700-2b0c9d201514
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Detecting and Resolving Conflicts
 If you are dealing with your Recordset in immediate mode, there is much less chance for concurrency problems to occur. On the other hand, if your application uses batch mode updating, there may be a good chance that one user will change a record before changes that were made by another user editing the same record are saved. In such a case, you will want your application to gracefully handle the conflict. It may be your wish that the last person to send an update to the server "wins." Or you may want to let the most recent user to decide which update should take precedence by providing him with a choice between the two conflicting values.  

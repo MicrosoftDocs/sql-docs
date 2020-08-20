@@ -1,4 +1,5 @@
 ---
+description: "StartService Method (SqlService Class)"
 title: "StartService Method (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"
@@ -19,7 +20,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # StartService Method (SqlService Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Attempts to place the service into its started state.  
   
 ## Syntax  

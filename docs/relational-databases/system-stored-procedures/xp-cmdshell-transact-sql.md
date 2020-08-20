@@ -1,4 +1,5 @@
 ---
+description: "xp_cmdshell (Transact-SQL)"
 title: "xp_cmdshell (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2019"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # xp_cmdshell (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
   Spawns a Windows command shell and passes in a string for execution. Any output is returned as rows of text.  
   
@@ -118,7 +119,7 @@ REVERT ;
  The following example shows the `xp_cmdshell` extended stored procedure executing a directory command.  
   
 ```  
-EXEC master..xp_cmdshell 'dir *.exe''  
+EXEC master..xp_cmdshell 'dir *.exe'  
 ```  
   
 ### B. Returning no output  
@@ -128,7 +129,7 @@ EXEC master..xp_cmdshell 'dir *.exe''
 USE master;  
   
 EXEC xp_cmdshell 'copy c:\SQLbcks\AdvWorks.bck  
-    \\server2\backups\SQLbcks, NO_OUTPUT';  
+    \\server2\backups\SQLbcks', NO_OUTPUT;  
 GO  
 ```  
   

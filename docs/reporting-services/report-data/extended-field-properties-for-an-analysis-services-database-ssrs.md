@@ -1,5 +1,6 @@
 ---
-title: "Extended Field Properties for an Analysis Services Database (SSRS) | Microsoft Docs"
+title: "Extended Field Properties for an Analysis Services Database | Microsoft Docs"
+description: Learn about extended field properties for an Analysis Services database and how to include extended field property values in your report.
 ms.date: 03/14/2017
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

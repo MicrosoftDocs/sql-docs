@@ -2,7 +2,6 @@
 title: "What's new"
 description: "See what's new in Microsoft Analytics Platform System, a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse."
 author: "mzaman1"
-manager: "craigg"
 ms.prod: "sql"
 ms.technology: data-warehouse
 ms.topic: "conceptual"
@@ -15,6 +14,16 @@ ms.custom: seo-dt-2019
 See what's new in the latest Appliance Updates for Microsoft Analytics Platform System (APS). APS is a scale-out on-premises appliance that hosts MPP SQL Server Parallel Data Warehouse. 
 
 ::: moniker range=">= aps-pdw-2016-au7 || = sqlallproducts-allversions"
+<a name="h2-aps-cu7.6"></a>
+## APS CU7.6
+Release date - April 2020
+
+### Rename Column
+After upgrading to CU7.6, customers will be able to rename a column of a user-created table. See [RENAME (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/rename-transact-sql) for syntax, examples, limitations and more information.
+
+### Alter view
+Customers will now be able to alter views. See [ALTER VIEW (Transact-SQL)](https://docs.microsoft.com/sql/t-sql/statements/alter-view-transact-sql) for more information.
+
 <a name="h2-aps-cu7.5"></a>
 ## APS CU7.5
 Release date - September 2019
@@ -50,6 +59,8 @@ APS CU7.3 improves query performance with common subexpression elimination in SQ
 
 ### APS Informatica connector for Informatica 10.2.0 published
 We have released a new version of Informatica connectors for APS that works with Informatica version 10.2.0 and 10.2.0 Hotfix 1. The new connectors can be downloaded from [download site](https://www.microsoft.com/download/details.aspx?id=57472).
+> [!NOTE]
+> APS Informatica connector for Informatica 10.2.0 or 10.2.0 Hotfix 1 does not work on strict TLS1.2 and requires TLS1.0 and 1.1 to be fully functional.
 
 #### Supported Versions
 

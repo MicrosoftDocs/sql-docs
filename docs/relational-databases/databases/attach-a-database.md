@@ -1,5 +1,6 @@
 ---
 title: "Attach a Database | Microsoft Docs"
+description: Learn how to attach a database in SQL Server by using SQL Server Management Studio or Transact-SQL. Use this feature to copy, move, or upgrade a database.
 ms.custom: ""
 ms.date: "10/24/2016"
 ms.prod: sql
@@ -17,7 +18,7 @@ author: "stevestein"
 ms.author: "sstein"
 ---
 # Attach a Database
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 This topic describes how to attach a database in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] or [!INCLUDE[tsql](../../includes/tsql-md.md)]. You can use this feature to copy, move, or upgrade a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database.  
   
@@ -32,7 +33,7 @@ This topic describes how to attach a database in [!INCLUDE[ssCurrent](../../incl
 ###  <a name="Recommendations"></a> Is Attach the best choice?  
 We recommend that you move databases by using the `ALTER DATABASE` planned relocation procedure instead of using detach and attach, when moving database files within the same instance. For more information, see [Move User Databases](../../relational-databases/databases/move-user-databases.md). 
  
-We don't recommend using detach and attach for Backup and Recovery. There are no transaction log backups, and it's possible to accidently delete files.
+We don't recommend using detach and attach for Backup and Recovery. There are no transaction log backups, and it's possible to accidentally delete files.
   
 ###  <a name="Security"></a> Security  
 File access permissions are set during a number of database operations, including detaching or attaching a database. For information about file permissions that are set whenever a database is detached and attached, see [Securing Data and Log Files](https://technet.microsoft.com/library/ms189128.aspx) from [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] Books Online (Still a valid read!) 

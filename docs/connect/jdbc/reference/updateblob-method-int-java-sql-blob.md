@@ -1,4 +1,5 @@
 ---
+description: "updateBlob Method (int, java.sql.Blob)"
 title: "updateBlob Method (int, java.sql.Blob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 1e86f588-1365-4011-9412-f0acf7009880
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # updateBlob Method (int, java.sql.Blob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

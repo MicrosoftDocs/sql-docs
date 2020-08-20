@@ -1,4 +1,5 @@
 ---
+description: "AffectEnum"
 title: "AffectEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "AffectEnum enumeration [ADO]"
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # AffectEnum
 Specifies which records are affected by an operation.  
@@ -37,8 +38,14 @@ Specifies which records are affected by an operation.
 |AdoEnums.Affect.GROUP|  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[CancelBatch Method (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)|[Delete Method (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)|  
-|[Resync Method](../../../ado/reference/ado-api/resync-method.md)|[UpdateBatch Method](../../../ado/reference/ado-api/updatebatch-method.md)|
+
+:::row:::
+    :::column:::
+        [CancelBatch Method (ADO)](../../../ado/reference/ado-api/cancelbatch-method-ado.md)  
+        [Delete Method (ADO Recordset)](../../../ado/reference/ado-api/delete-method-ado-recordset.md)  
+    :::column-end:::
+    :::column:::
+        [Resync Method](../../../ado/reference/ado-api/resync-method.md)  
+        [UpdateBatch Method](../../../ado/reference/ado-api/updatebatch-method.md)  
+    :::column-end:::
+:::row-end:::

@@ -1,4 +1,5 @@
 ---
+description: "LocalDBCreateInstance Function"
 title: "LocalDBCreateInstance Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -17,7 +18,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # LocalDBCreateInstance Function
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   Creates a new SQL Server Express LocalDB instance.  
   
  **Header file:** sqlncli.h  

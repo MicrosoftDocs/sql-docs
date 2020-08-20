@@ -1,4 +1,5 @@
 ---
+description: "ExecuteOptions and FetchOptions Properties Example (VBScript)"
 title: "ExecuteOptions and FetchOptions Properties Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ helpviewer_keywords:
   - "FetchOptions property [ADO], VBScript example"
   - "ExecuteOptions property [ADO]"
 ms.assetid: 753a4a3d-0fba-40b8-86e7-50b34182ca69
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ExecuteOptions and FetchOptions Properties Example (VBScript)
 > [!IMPORTANT]

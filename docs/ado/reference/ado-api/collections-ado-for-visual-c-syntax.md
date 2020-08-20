@@ -1,4 +1,5 @@
 ---
+description: "Collections (ADO for Visual C++ Syntax)"
 title: "Collections (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,8 +16,8 @@ helpviewer_keywords:
   - "syntax indexes [ADO], ADO for Visual C++ syntax"
   - "collections [ADO], ADO for Visual C++ syntax"
 ms.assetid: 6a0109a0-f2d9-4f7c-8e1e-42763f9acaea
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Collections (ADO for Visual C++ Syntax)
 ## Parameters  

@@ -1,4 +1,5 @@
 ---
+description: "ADO API Reference"
 title: "ADO API Reference | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, reference"
 ms.assetid: bfd96a4b-c913-45aa-9e4c-ec86ac364f3a
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ADO API Reference
 This section of the ADO documentation contains topics for each ADO object, collection, property, dynamic property, method, event, and enumeration. In addition, it contains a list of ADO syntax indexes to be used with Microsoft Visual C++ and Windows Foundation Classes (WFC).  

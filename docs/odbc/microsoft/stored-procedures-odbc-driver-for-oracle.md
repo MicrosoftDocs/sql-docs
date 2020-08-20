@@ -1,4 +1,5 @@
 ---
+description: "Stored Procedures (ODBC Driver for Oracle)"
 title: "Stored Procedures (ODBC Driver for Oracle) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -8,8 +9,8 @@ ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: de0e1214-b9d8-4afc-8fc0-e8b9c4c648f6
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Stored Procedures (ODBC Driver for Oracle)
 > [!IMPORTANT]  

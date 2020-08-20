@@ -1,4 +1,5 @@
 ---
+description: "ErrorValueEnum"
 title: "ErrorValueEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -13,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ErrorValueEnum enumeration [ADO]"
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ErrorValueEnum
 Specifies the type of ADO run-time error.  

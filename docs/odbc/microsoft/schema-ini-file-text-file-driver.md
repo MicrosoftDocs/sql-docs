@@ -1,4 +1,5 @@
 ---
+description: "Schema.ini File (Text File Driver)"
 title: "Schema.ini File (Text File Driver) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "schema.ini file [ODBC]"
   - "text file driver [ODBC], schema.ini file"
 ms.assetid: 0c4625c4-c730-4984-b430-9051b7bc0451
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # Schema.ini File (Text File Driver)
 When the Text driver is used, the format of the text file is determined by using a schema information file. The schema information file is always named Schema.ini and always kept in the same directory as the text data source. The schema information file provides the IISAM with information about the general format of the file, the column name and data type information, and several other data characteristics. A Schema.ini file is always required for accessing fixed-length data. You should use a Schema.ini file when your text table contains DateTime, Currency, or Decimal data, or any time that you want more control over the handling of the data in the table.  
@@ -84,7 +85,7 @@ Col2=CustomerName Text Width 30
   
 ```  
   
-n=ColumnNametype [#]  
+n=ColumnName type [Width] [#]  
 ```  
   
 ## Remarks  

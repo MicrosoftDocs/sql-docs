@@ -1,4 +1,5 @@
 ---
+description: "sys.event_log (Azure SQL Database)"
 title: "sys.event_log (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/28/2019"
@@ -17,13 +18,13 @@ helpviewer_keywords:
   - "event_log"
   - "sys.event_log"
 ms.assetid: ad5496b5-e5c7-4a18-b5a0-3f985d7c4758
-author: MashaMSFT
-ms.author: mathoma
+author: CarlRabeler
+ms.author: carlrab
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.event_log (Azure SQL Database)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns successful [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] database connections, connection failures, and deadlocks. You can use this information to track or troubleshoot your database activity with [!INCLUDE[ssSDS](../../includes/sssds-md.md)].  
   

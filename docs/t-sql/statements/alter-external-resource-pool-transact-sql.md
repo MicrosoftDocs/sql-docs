@@ -1,10 +1,11 @@
 ---
+description: "ALTER EXTERNAL RESOURCE POOL (Transact-SQL)"
 title: "ALTER EXTERNAL RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/07/2019"
+ms.date: "08/06/2020"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: machine-learning
+ms.technology: machine-learning-services
 ms.topic: "language-reference"
 f1_keywords: 
   - "ALTER_EXTERNAL_RESOURCE_POOL_TSQL"
@@ -16,18 +17,18 @@ ms.assetid: 634c327d-971b-49ba-b8a2-e243a04040db
 author: dphansen
 ms.author: davidph
 manager: cgronlund
-monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # ALTER EXTERNAL RESOURCE POOL (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Changes a Resource Governor external pool that specifies resources that can be used by external processes. 
 
-::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 For [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the external pool governs `rterm.exe`, `BxlServer.exe`, and other processes spawned by them.
 ::: moniker-end
 
-::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)], the external pool governs `rterm.exe`, `python.exe`, `BxlServer.exe`, and other processes spawned by them.
 ::: moniker-end
 
@@ -35,7 +36,7 @@ For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
 ## Syntax
 
-```
+```syntaxsql
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
     [ MAX_CPU_PERCENT = value ]
@@ -55,6 +56,8 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 { *pool_name* | "default" }  
@@ -81,7 +84,7 @@ The [!INCLUDE[ssDE](../../includes/ssde-md.md)] implements the resource pool whe
 
 For general information about resource pools, see [Resource Governor Resource Pool](../../relational-databases/resource-governor/resource-governor-resource-pool.md), [sys.resource_governor_external_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md), and [sys.dm_resource_governor_external_resource_pool_affinity &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md).  
 
-For information specific to the use of external resource pools to govern machine learning jobs, see [Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)...
+For information specific to the use of external resource pools to govern machine learning jobs, see [Resource governance for machine learning in SQL Server](../../machine-learning/administration/resource-governor.md)...
 ## Permissions
 
 Requires `CONTROL SERVER` permission.
@@ -102,9 +105,12 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
 
+> [!NOTE]
+> SQL Machine Learning Services 2019 for Linux does not support the ability to set CPU affinity.
+
 ## See also
 
-+ [Resource governance for machine learning in SQL Server](../../advanced-analytics/r/resource-governance-for-r-services.md)
++ [Resource governance for machine learning in SQL Server](../../machine-learning/administration/resource-governor.md)
 + [external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)
 + [CREATE EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-resource-pool-transact-sql.md)
 + [DROP EXTERNAL RESOURCE POOL &#40;Transact-SQL&#41;](../../t-sql/statements/drop-external-resource-pool-transact-sql.md)

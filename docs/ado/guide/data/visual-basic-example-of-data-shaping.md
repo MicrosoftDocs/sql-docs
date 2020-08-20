@@ -1,4 +1,5 @@
 ---
+description: "Visual Basic Example of Data Shaping"
 title: "Visual Basic Example of Data Shaping | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Visual Basic example of data shaping[ADO], about data shaping"
 ms.assetid: d95dd499-19e2-4ce7-b16e-f56a04a9519c
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Visual Basic Example of Data Shaping
 ```  

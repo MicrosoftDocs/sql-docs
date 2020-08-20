@@ -1,4 +1,5 @@
 ---
+description: "Internet Information Services Error Codes for Remote Data Service"
 title: "Internet Information Services Error Codes | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "errors [ADO], IIS"
   - "IIS errors [ADO]"
 ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Internet Information Services Error Codes for Remote Data Service
 The following table lists Microsoft® Internet Information Services (IIS) error codes related to Remote Data Service usage. The positive decimal translation of the low two bytes, the negative decimal translation of the full error code, and the hexadecimal values are shown.

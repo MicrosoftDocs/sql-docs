@@ -1,4 +1,5 @@
 ---
+description: "SEND (Transact-SQL)"
 title: "SEND (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -26,7 +27,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # SEND (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]
 
 Sends a message, using one or more existing conversations.  
   
@@ -34,7 +35,7 @@ Sends a message, using one or more existing conversations.
   
 ## Syntax  
   
-```sql
+```syntaxsql
   
 SEND  
    ON CONVERSATION [(]conversation_handle [,.. @conversation_handle_n][)]  
@@ -43,7 +44,9 @@ SEND
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 ON CONVERSATION *conversation_handle [.. @conversation_handle_n]*  
 Specifies the conversations that the message belongs to. The *conversation_handle* must contain a valid conversation identifier. The same conversation handle can't be used more than once.  
   

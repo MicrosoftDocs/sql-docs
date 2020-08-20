@@ -1,4 +1,5 @@
 ---
+description: "SELECT - SQL Command"
 title: "SELECT - SQL Command | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -10,8 +11,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "select [ODBC]"
 ms.assetid: 2149c3ca-3a71-446d-8d53-3d056e2f301a
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # SELECT - SQL Command
 Retrieves data from one or more tables.  

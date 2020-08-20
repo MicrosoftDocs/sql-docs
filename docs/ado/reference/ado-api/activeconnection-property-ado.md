@@ -1,4 +1,5 @@
 ---
+description: "ActiveConnection Property (ADO)"
 title: "ActiveConnection Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,8 +16,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "ActiveConnection property [ADO]"
 ms.assetid: 52d0a96c-14fb-4ad9-b004-4d821bc0a6db
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # ActiveConnection Property (ADO)
 Indicates to which [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object the specified [Command](../../../ado/reference/ado-api/command-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), or [Record](../../../ado/reference/ado-api/record-object-ado.md) object currently belongs.  
@@ -62,11 +63,19 @@ Indicates to which [Connection](../../../ado/reference/ado-api/connection-object
 >  URLs using the http scheme will automatically invoke the [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). For more information, see [Absolute and Relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
   
 ## Applies To  
-  
-||||  
-|-|-|-|  
-|[Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)|[Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection, CommandText, CommandTimeout, CommandType, Size, and Direction Properties Example (VC++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   

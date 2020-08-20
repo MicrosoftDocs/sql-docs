@@ -1,4 +1,5 @@
 ---
+description: "othersDeletesAreVisible Method (SQLServerDatabaseMetaData)"
 title: "othersDeletesAreVisible Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: c4692a8c-e6b7-4edc-9dad-7af816988de5
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # othersDeletesAreVisible Method (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

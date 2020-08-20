@@ -1,7 +1,8 @@
 ---
+description: "sys.dm_db_resource_stats (Azure SQL Database)"
 title: "sys.dm_db_resource_stats (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
-ms.date: "05/21/2019"
+ms.date: "02/27/2020"
 ms.service: sql-database
 ms.reviewer: ""
 ms.topic: "language-reference"
@@ -21,7 +22,7 @@ ms.author: jrasnick
 monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 ---
 # sys.dm_db_resource_stats (Azure SQL Database)
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[Azure SQL Database Azure SQL Managed Instance](../../includes/applies-to-version/asdb-asdbmi.md)]
 
   Returns CPU, I/O, and memory consumption for an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] database. One row exists for every 15 seconds, even if there is no activity in the database. Historical data is maintained for approximately one hour.  
   
@@ -37,22 +38,22 @@ monikerRange: "= azuresqldb-current || = sqlallproducts-allversions"
 |max_session_percent|**decimal (5,2)**|Maximum concurrent sessions in percentage of the limit of the database's service tier.|  
 |dtu_limit|**int**|Current max database DTU setting for this database during this interval. For databases using the vCore-based model, this column is NULL.|
 |cpu_limit|**decimal (5,2)**|Number of vCores for this database during this interval. For databases using the DTU-based model, this column is NULL.|
-|avg_instance_cpu_percent|**decimal (5,2)**|Average database CPU usage as a percentage of the SQL DB process.|
-|avg_instance_memory_percent|**decimal (5,2)**|Average database memory usage as a percentage of the SQL DB process.|
+|avg_instance_cpu_percent|**decimal (5,2)**|Average CPU usage for the SQL Server instance hosting the database, as measured by the operating system. Includes CPU utilization by both user and internal workloads.|
+|avg_instance_memory_percent|**decimal (5,2)**|Average memory usage for the SQL Server instance hosting the database, as measured by the operating system. Includes memory utilization by both user and internal workloads.|
 |avg_login_rate_percent|**decimal (5,2)**|Identified for informational purposes only. Not supported. Future compatibility is not guaranteed.|
 |replica_role|**int**|Represents the current replica’s role with 0 as primary, 1 as secondary, and 2 as forwarder (geo-secondary’s primary). You will see “1” when connected with ReadOnly intent to all readable secondaries. If connecting to a geo-secondary without specifying ReadOnly intent, you should see “2” (connecting to the forwarder).|
 |||
   
 > [!TIP]  
->  For more context about these limits and service tiers, see the topics [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/) and [Service tier capabilities and limits](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/).  
+> For more context about these limits and service tiers, see the topics [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/), [Manually tune query performance in Azure SQL Database](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/), and [SQL Database resource limits and resource governance](https://docs.microsoft.com/azure/sql-database/sql-database-resource-limits-database-server).
   
-## Permissions  
+## Permissions
  This view requires VIEW DATABASE STATE permission.  
   
-## Remarks  
+## Remarks
  The data returned by **sys.dm_db_resource_stats** is expressed as a percentage of the maximum allowed limits for the service tier/performance level that you are running.
  
- If the database was failed over to another server within the last 60 minutes, the view will only return data for the time it has been the primary database since that failover.  
+ If the database was failed over to another server within the last 60 minutes, the view will only return data for the time since that failover.  
   
  For a less granular view of this data with longer retention period, use **sys.resource_stats** catalog view in the **master** database. This view captures data every 5 minutes and maintains historical data for 14 days.  For more information, see [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md).  
   
@@ -95,8 +96,5 @@ FROM sys.dm_db_resource_stats;
 ```  
   
 ## See Also  
- [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)   
- [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)   
- [Service tier capabilities and limits](https://azure.microsoft.com/documentation/articles/sql-database-performance-guidance/)  
-  
-  
+ [sys.resource_stats &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-resource-stats-azure-sql-database.md)
+ [Service Tiers](https://azure.microsoft.com/documentation/articles/sql-database-service-tiers/)

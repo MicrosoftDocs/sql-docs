@@ -1,4 +1,5 @@
 ---
+description: "Microsoft Data Shaping Service for OLE DB (ADO Service Provider)"
 title: "Microsoft Data Shaping Service for OLE DB (ADO Service Provider) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "providers [ADO], data shaping service for OLE DB"
   - "data shaping service for OLE DB [ADO]"
 ms.assetid: 523009ce-e01b-4e2d-a7df-816d7688aff0
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Microsoft Data Shaping Service for OLE DB Overview
 > [!IMPORTANT]

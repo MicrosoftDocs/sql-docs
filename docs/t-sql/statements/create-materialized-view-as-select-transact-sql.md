@@ -1,7 +1,8 @@
 ---
+description: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)"
 title: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "07/03/2019"
+ms.date: "03/04/2020"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse"
 ms.reviewer: "jrasnick"
@@ -40,17 +41,17 @@ monikerRange: "=azure-sqldw-latest||=sqlallproducts-allversions"
 ---
 # CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)  
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 This article explains the CREATE MATERIALIZED VIEW AS SELECT T-SQL statement in Azure SQL Data Warehouse for developing solutions. The article also provides code examples.
 
-A Materialized View persists the data returned from the view definition query and automatically gets updated as data changes in the underlying tables.   It improves the performance of complex queries (typically queries with joins and aggregations) while offering simple maintenance operations.   With its execution plan automatching capability, a materialized view does not have to be referenced in the query for the optimizer to consider the view for substitution.  This allows data engineers to implement materialized views as a mechanism for improving query response time, without having to change queries.  
+A Materialized View persists the data returned from the view definition query and automatically gets updated as data changes in the underlying tables.   It improves the performance of complex queries (typically queries with joins and aggregations) while offering simple maintenance operations.   With its execution plan automatching capability, a materialized view does not have to be referenced in the query for the optimizer to consider the view for substitution.  This capability allows data engineers to implement materialized views as a mechanism for improving query response time, without having to change queries.  
   
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
-```  
+```syntaxsql
 CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
     WITH (  
       <distribution_option>
@@ -98,31 +99,35 @@ When MIN/MAX aggregates are used in the SELECT list of materialized view definit
   GROUP BY i.i_item_sk, i.i_item_id, i.i_category_id
   ```
 
-- The materialized view will be disabled when an UPDATE or DELETE occurs in the referenced base tables.  This restriction does not apply to INSERTs.  To re-enable the materialized view, run ALTER MATERIALIZED INDEX with REBUILD.
+- The materialized view will be disabled when an UPDATE or DELETE occurs in the referenced base tables.  This restriction doesn't  apply to INSERTs.  To re-enable the materialized view, run ALTER MATERIALIZED VIEW with REBUILD.
   
 ## Remarks
 
-A materialized view in Azure data warehouse is very similar to an indexed view in SQL Server.  It shares almost the same restrictions as indexed view (see [Create Indexed Views](/sql/relational-databases/views/create-indexed-views) for details) except that a materialized view supports aggregate functions.   Here are additional considerations for materialized view.  
- 
+A materialized view in Azure data warehouse is similar to an indexed view in SQL Server.  It shares almost the same restrictions as indexed view (see [Create Indexed Views](/sql/relational-databases/views/create-indexed-views) for details) except that a materialized view supports aggregate functions.   
+
 Only CLUSTERED COLUMNSTORE INDEX is supported by materialized view. 
 
 A materialized view cannot reference other views.  
- 
-Materialized Views can be created on partitioned tables.  SPLIT/MERGE operations are supported on tables referenced in materialized views.  SWITCH is not supported on tables referenced in materialized views. If attempted, the user will see the error,  `Msg 106104, Level 16, State 1, Line 9`
+
+A materialized view can't be created on a table with dynamic data masking (DDM), even if the DDM column is not part of the materialized view.  If a table column is part of an active materialized view or a disabled materialized view, DDM can't be added to this column.  
+
+A materialized view can't be created on a table with row level security enabled.
+
+Materialized Views can be created on partitioned tables.  Partition SPLIT/MERGE are supported on materialized views base tables, partition SWITCH isn't supported.  
  
 ALTER TABLE SWITCH is not supported on tables that are referenced in materialized views. Disable or drop the materialized views before using ALTER TABLE SWITCH. In the following scenarios, the materialized view creation requires new columns to be added to the materialized view:
 
 |Scenario|New columns to add to materialized view|Comment|  
 |-----------------|---------------|-----------------|
-|COUNT_BIG() is missing in the SELECT list of an materialized view definition| COUNT_BIG (*) |Automatically added by materialized view creation.  No user action is required.|
-|SUM(a) is specified by users in the SELECT list of an materialized view definition AND ‘a’ is a nullable expression |COUNT_BIG (a) |Users need to add the expression ‘a’ manually in the materialized view definition.|
-|AVG(a) is specified by users in the SELECT list of an materialized view definition where ‘a’ is an expression.|SUM(a), COUNT_BIG(a)|Automatically added by materialized view creation.  No user action is required.|
-|STDEV(a) is specified by users in the SELECT list of an materialized view definition where ‘a’ is an expression.|SUM(a), COUNT_BIG(a), SUM(square(a))|Automatically added by materialized view creation.  No user action is required. |
+|COUNT_BIG() is missing in the SELECT list of a materialized view definition| COUNT_BIG (*) |Automatically added by materialized view creation.  No user action is required.|
+|SUM(a) is specified by users in the SELECT list of a materialized view definition AND 'a' is a nullable expression |COUNT_BIG (a) |Users need to add the expression 'a' manually in the materialized view definition.|
+|AVG(a) is specified by users in the SELECT list of a materialized view definition where 'a' is an expression.|SUM(a), COUNT_BIG(a)|Automatically added by materialized view creation.  No user action is required.|
+|STDEV(a) is specified by users in the SELECT list of a materialized view definition where 'a' is an expression.|SUM(a), COUNT_BIG(a), SUM(square(a))|Automatically added by materialized view creation.  No user action is required. |
 | | | |
 
 Once created, materialized views are visible within SQL Server Management Studio under the views folder of the Azure SQL Data Warehouse instance.
 
-Users can run [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) and [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) to determine the space being consumed by an materialized view.  
+Users can run [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) and [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) to determine the space being consumed by a materialized view.  
 
 A materialized view can be dropped via DROP VIEW.  You can use ALTER MATERIALIZED VIEW to disable or rebuild a materialized view.   
 
@@ -132,12 +137,14 @@ To find out if a SQL statement can benefit from a new materialized view, run the
 
 ## Permissions
 
-Requires CREATE VIEW permission in the database and ALTER permission on the schema in which the view is being created. 
+Requires 1) REFERENCES and CREATE VIEW permission OR 2) CONTROL permission on the schema in which the view is being created. 
+
   
 ## See also
 
 [Performance tuning with Materialized View](/azure/sql-data-warehouse/performance-tuning-materialized-views)   
 [ALTER MATERIALIZED VIEW &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-materialized-view-transact-sql?view=azure-sqldw-latest)      
+[DROP VIEW](/sql/t-sql/statements/drop-view-transact-sql?view=azure-sqldw-latest)  
 [EXPLAIN &#40;Transact-SQL&#41;](/sql/t-sql/queries/explain-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_column_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-column-distribution-properties-transact-sql?view=azure-sqldw-latest)   
 [sys.pdw_materialized_view_distribution_properties &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-distribution-properties-transact-sql?view=azure-sqldw-latest)   

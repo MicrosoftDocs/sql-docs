@@ -1,4 +1,5 @@
 ---
+description: "GetNextOrderValue Method (ClientNetworkProtocol Class)"
 title: "GetNextOrderValue Method (ClientNetworkProtocol)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ author: "CarlRabeler"
 ms.author: "carlrab"
 ---
 # GetNextOrderValue Method (ClientNetworkProtocol Class)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Selects the protocol that is in the next position in the list of protocols.  
   
 ## Syntax  

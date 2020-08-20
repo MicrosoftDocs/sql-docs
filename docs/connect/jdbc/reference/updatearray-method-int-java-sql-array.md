@@ -1,4 +1,5 @@
 ---
+description: "updateArray Method (int, java.sql.Array)"
 title: "updateArray Method (int, java.sql.Array) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -13,8 +14,8 @@ apilocation:
   - "sqljdbc.jar"
 apitype: "Assembly"
 ms.assetid: 464f7e3f-3e8a-4b2d-aebd-1c040583d52c
-author: MightyPen
-ms.author: genemi
+author: David-Engel
+ms.author: v-daenge
 ---
 # updateArray Method (int, java.sql.Array)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

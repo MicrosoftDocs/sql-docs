@@ -19,7 +19,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Use the Availability Group Wizard (SQL Server Management Studio)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   This topic describes how to use the **New Availability Group Wizard** in [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] to create and configure an Always On availability group in [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]. An *availability group* defines a set of user databases that will fail over as a single unit and a set of failover partners, known as *availability replicas*, that support failover.  
   
 > [!NOTE]  
@@ -74,7 +74,7 @@ In most cases, you can use the New Availability Group Wizard to complete all of 
   
 4.  The first time you run this wizard, an **Introduction** page appears. To bypass this page in the future, you can click **Do not show this page again**. After reading this page, click **Next**.  
   
-5.  On the **Specify Availability Group Options** page, enter the name of the new availability group in the **Availability group name** field. This name must be a valid [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identifier that is unique on the cluster and in your domain as a whole. The maximum length for an availability group name is 128 characters. e
+5.  On the **Specify Availability Group Options** page, enter the name of the new availability group in the **Availability group name** field. This name must be a valid [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] identifier that is unique on the cluster and in your domain as a whole. The maximum length for an availability group name is 128 characters.
 
 6. Next, specify the cluster type. The possible cluster types depend on the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] version and operating system. Choose either **WSFC**, **EXTERNAL**, or **NONE**. For details see [Specify Availability Group Name Page](specify-availability-group-name-page.md)
  
@@ -175,7 +175,7 @@ In most cases, you can use the New Availability Group Wizard to complete all of 
   
 -   **Blogs:**  
   
-     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://blogs.msdn.com/b/psssql/archive/2012/05/17/Always%20On-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases.aspx)  
+     [Always On - HADRON Learning Series: Worker Pool Usage for HADRON Enabled Databases](https://docs.microsoft.com/archive/blogs/psssql/alwayson-hadron-learning-series-worker-pool-usage-for-hadron-enabled-databases)  
   
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   

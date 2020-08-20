@@ -1,4 +1,5 @@
 ---
+description: "SortColumn Property (RDS)"
 title: "SortColumn Property (RDS) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""
@@ -11,8 +12,8 @@ apitype: "COM"
 helpviewer_keywords: 
   - "SortColumn property [RDS]"
 ms.assetid: f6f80f67-f0fb-4e63-a5f5-8fdf312aac63
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # SortColumn Property (RDS)
 Indicates by which column to sort the records.  

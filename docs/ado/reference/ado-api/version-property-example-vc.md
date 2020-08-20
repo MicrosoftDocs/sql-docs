@@ -1,4 +1,5 @@
 ---
+description: "Version Property Example (VC++)"
 title: "Version Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -12,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "Version property [ADO], VC++ example"
 ms.assetid: 2440b6ff-2536-497c-a5f4-41db0cf1945e
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Version Property Example (VC++)
 This example uses the [Version](../../../ado/reference/ado-api/version-property-ado.md) property of a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object to display the current ADO version. It also uses several dynamic properties to show:  

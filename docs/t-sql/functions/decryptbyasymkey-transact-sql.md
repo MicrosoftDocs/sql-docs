@@ -1,4 +1,5 @@
 ---
+description: "DECRYPTBYASYMKEY (Transact-SQL)"
 title: "DECRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -21,7 +22,7 @@ author: VanMSFT
 ms.author: vanto
 ---
 # DECRYPTBYASYMKEY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 This function uses an asymmetric key to decrypt encrypted data.  
   
@@ -29,13 +30,15 @@ This function uses an asymmetric key to decrypt encrypted data.
   
 ## Syntax  
   
-```  
+```syntaxsql
   
 DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }   
     [ , 'Asym_Key_Password' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Asym_Key_ID*  
 The ID of an asymmetric key in the database. *Asym_Key_ID* has an **int** data type.  
   

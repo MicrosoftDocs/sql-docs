@@ -1,4 +1,5 @@
 ---
+description: "CursorLocation Property (ADO)"
 title: "CursorLocation Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,8 +15,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "CursorLocation property [ADO]"
 ms.assetid: 39c8d86e-7ee9-4182-be5e-aad5ce952f84
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # CursorLocation Property (ADO)
 Indicates the location of the cursor service.  
@@ -36,10 +37,15 @@ Indicates the location of the cursor service.
 >  **Remote Data Service Usage** When used on a client-side **Recordset** or **Connection** object, the **CursorLocation** property can only be set to **adUseClient**.  
   
 ## Applies To  
-  
-|||  
-|-|-|  
-|[Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|[Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|  
-  
+
+:::row:::
+    :::column:::
+        [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+    :::column-end:::
+    :::column:::
+        [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)

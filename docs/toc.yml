@@ -177,11 +177,15 @@
     - name: Deploy and consume apps
       items:
       - name: Deploy with azdata
-        href: big-data-cluster/big-data-cluster-create-apps.md
+        href: big-data-cluster/app-create.md
       - name: Deploy with VS Code
         href: big-data-cluster/app-deployment-extension.md
       - name: Consume apps
-        href: big-data-cluster/big-data-cluster-consume-apps.md
+        href: big-data-cluster/app-consume.md
+      - name: Run apps
+        href: big-data-cluster/app-run.md
+      - name: Monitor apps
+        href: big-data-cluster/app-monitor.md
     - name: Big Data/Machine Learning
       items:
       - name: Use Machine Learning Services (Python, R)

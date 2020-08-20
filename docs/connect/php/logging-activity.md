@@ -1,8 +1,8 @@
 ---
-description: "Logging Activity"
-title: "Logging Activity | Microsoft Docs"
+title: "Logging activity"
+description: "Learn how to configure different combinations of logging options when using the Microsoft Drivers for PHP for SQL Server"
 ms.custom: ""
-ms.date: "03/26/2018"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

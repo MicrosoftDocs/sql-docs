@@ -66,9 +66,9 @@ master-0          4/4     Running   0          3d13h 
 master-1          4/4     Running   0          3d13h 
 master-2          4/4     Running   0          3d13h 
 metricsdb-0       1/1     Running   0          3d13h 
-metricsdc-2fzf7   1/1     Running   0          3d13h 
+metricsdc-xezf7   1/1     Running   0          3d13h 
 metricsdc-qdjkh   1/1     Running   0          3d13h 
-metricsui-mrzgw   1/1     Running   0          3d13h 
+metricsui-mr34w   1/1     Running   0          3d13h 
 mgmtproxy-kz5gg   2/2     Running   0          3d13h 
 nmnode-0-0        2/2     Running   1          3d13h 
 nmnode-0-1        2/2     Running   0          3d13h 

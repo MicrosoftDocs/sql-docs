@@ -150,7 +150,7 @@ If you click `Links`, you will see that you can access the `swagger.json` of you
 
 ![Swagger](media/vs-extension/swagger.png)
 
-See [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information.
+See [Consume applications on big data clusters](app-consume.md) for more information.
 
 ### App Run
 
@@ -194,7 +194,7 @@ To delete an app, just click the Trash can button next to the app in the `Deploy
 
 ## Next steps
 
-Explore how to integrate apps deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in your own applications at [Consume applications on big data clusters](big-data-cluster-consume-apps.md) for more information. You can also refer to the additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy) to try with the extension.
+Explore how to integrate apps deployed on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] in your own applications at [Consume applications on big data clusters](app-consume.md) for more information. You can also refer to the additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy) to try with the extension.
 
 For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
 

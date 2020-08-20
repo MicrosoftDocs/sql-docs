@@ -21,8 +21,8 @@ Use the **Advanced** tab on the **Protocols for MSSQLSERVER Properties** dialog 
 
 > [!IMPORTANT]  
 > Windows does not enable **Extended Protection** by default. For information about how to enable **Extended Protection**, see the following:
-> - [Windows Extended Protection \<extendedProtection\>](https://docs.microsoft.com/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
-> - [Extended Protection for Authentication Overview](https://docs.microsoft.com/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
+> - [Windows Extended Protection \<extendedProtection\>](/iis/configuration/system.webserver/security/authentication/windowsauthentication/extendedprotection/)
+> - [Extended Protection for Authentication Overview](/dotnet/framework/wcf/feature-details/extended-protection-for-authentication-overview)
 
 For more information about how to configure other [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] services, and a complete description of **Extended Protection**, see more recent information on [Microsoft.com](https://go.microsoft.com/fwlink/?LinkId=177752).
 
@@ -47,4 +47,3 @@ An instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can be 
 ## See Also
 
 [Extended Protection for Authentication with Reporting Services](../../reporting-services/security/extended-protection-for-authentication-with-reporting-services.md)
-

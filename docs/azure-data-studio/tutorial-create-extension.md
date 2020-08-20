@@ -4,7 +4,7 @@ description: This tutorial demonstrates how to create an extension to add custom
 ms.custom: "seodec18"
 ms.date: 12/10/2019
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.reviewer: "alayu, maghan, sstein"
 ms.topic: "tutorial"
 author: rothja

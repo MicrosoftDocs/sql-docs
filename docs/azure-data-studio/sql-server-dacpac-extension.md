@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: 11/04/2019
 ms.reviewer: "alayu, maghan, sstein"
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"

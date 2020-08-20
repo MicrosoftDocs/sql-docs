@@ -58656,6 +58656,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/big-data-cluster/big-data-cluster-consume-apps.md",
+      "redirect_url": "/sql/big-data-cluster/app-consume",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/big-data-cluster-create-apps.md",
+      "redirect_url": "/sql/big-data-cluster/app-create",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/big-data-cluster/tutorial-notebook-spark.md",
       "redirect_url": "/sql/big-data-cluster/notebooks-tutorial-spark",
       "redirect_document_id": false

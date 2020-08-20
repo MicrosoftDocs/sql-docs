@@ -73,18 +73,18 @@ allowedCapabilities:
 ## How to work with Application Deployment
 
 The two main interfaces for application deployment are: 
-- [Command line interface `azdata`](big-data-cluster-create-apps.md)
+- [Command line interface `azdata`](app-create.md)
 - [Visual Studio Code and Azure Data Studio extension](app-deployment-extension.md)
 
-It is also possible for an application to be executed using a RESTful web service. For more information, see [Consume applications on big data clusters](big-data-cluster-consume-apps.md).
+It is also possible for an application to be executed using a RESTful web service. For more information, see [Consume applications on big data clusters](app-consume.md).
 
 ## Next steps
 
 To learn more about how to create and run applications on [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following:
 
-- [Deploy applications using azdata](big-data-cluster-create-apps.md)
+- [Deploy applications using azdata](app-create.md)
 - [Deploy applications using the App Deploy extension](app-deployment-extension.md)
-- [Consume applications on big data clusters](big-data-cluster-consume-apps.md)
+- [Consume applications on big data clusters](app-consume.md)
 
 To learn more about the [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see the following overview:
 

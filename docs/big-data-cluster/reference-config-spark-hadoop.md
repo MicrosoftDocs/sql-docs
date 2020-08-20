@@ -95,8 +95,6 @@ The settings listed in the JSON are the BDC-specific defaults. They can be modif
     "capacity-scheduler.yarn.scheduler.capacity.node-locality-delay": "40",
     "capacity-scheduler.yarn.scheduler.capacity.rack-locality-additional-delay": "-1",
 
-    "hadoop-env.HADOOP_HEAPSIZE_MAX": "2048",
-
     "yarn-env.YARN_RESOURCEMANAGER_HEAPSIZE": "2048",
     "yarn-env.YARN_NODEMANAGER_HEAPSIZE": "2048",
 
@@ -232,7 +230,7 @@ The following `spark` configurations are unsupported and cannot be changed in th
 |           |                            |                            | livy.impersonation.enabled                                              |
 |           |                            |                            | livy.server.access-control.enabled                                      |
 |           |                            |                            | livy.server.access-control.*                                            |
-|           | livy-env                   | livy-env.sh                | LIVY_SERVER_JAVA_OPTS                                                   |
+|           | livy-env                   | livy-env.sh                |                                                                         |
 |           | hive-site                  | hive-site.xml              | javax.jdo.option.ConnectionURL                                          |
 |           |                            |                            | javax.jdo.option.ConnectionDriverName                                   |
 |           |                            |                            | javax.jdo.option.ConnectionUserName                                     |
@@ -272,9 +270,7 @@ The following `hdfs` configurations are unsupported and cannot be changed in the
 |          |                             |                               | hadoop.http.authentication.kerberos.principal         |
 |          |                             |                               | hadoop.http.authentication.kerberos.keytab            |
 |          |                             |                               | hadoop.http.filter.initializers                       |
-|          |                             |                               | hadoop.security.group.mapping.*                       |
-|          | hadoop-env                  | hadoop-env.sh                 | JAVA_HOME                                             |
-|          |                             |                               | HADOOP_CLASSPATH                                      |
+|          |                             |                               | hadoop.security.group.mapping.*                       |                               |
 |          | mapred-env                  | mapred-env.sh                 |                                                       |
 |          | hdfs-site                   | hdfs-site.xml                 | dfs.namenode.name.dir                                 |
 |          |                             |                               | dfs.datanode.data.dir                                 |

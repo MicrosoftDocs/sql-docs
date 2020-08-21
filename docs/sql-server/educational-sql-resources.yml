@@ -125,12 +125,18 @@ landingContent:
       - text: Configure security
         url: /azure/sql-database/sql-database-security-tutorial
 
-  - title: Additional resources 
+  - title: Learn SQL 
     linkLists:
     - linkListType: reference 
       links:
-      - text: Microsoft Learn
-        url: https://docs.microsoft.com/learn/
+      - text: Azure SQL for beginners
+        url: https://aka.ms/azuresql4beginners
+      - text: Azure SQL fundamentals 
+        url: https://docs.microsoft.com/learn/paths/azure-sql-fundamentals/
+      - text: Azure SQL hands-on labs
+        url: https://aka.ms/asqlworkshop
+      - text: Azure SQL bootcamp 
+        url: https://aka.ms/azuresqlbootcamp
       - text: LinkedIn Learning
         url: https://www.linkedin.com/learning/topics/sql-server
       - text: Pluralsight

@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # OpenSchema Method Example (VC++)
-This example uses the [OpenSchema](../../../ado/reference/ado-api/openschema-method.md) method to display the name and type of each table in the ***Pubs*** database.  
+This example uses the [OpenSchema](./openschema-method.md) method to display the name and type of each table in the ***Pubs*** database.  
   
 ```  
 // OpenSchemaMethodExample.cpp  
@@ -189,4 +189,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [OpenSchema Method](../../../ado/reference/ado-api/openschema-method.md)
+ [OpenSchema Method](./openschema-method.md)

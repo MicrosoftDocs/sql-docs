@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # NumericScale and Precision Properties Example (VC++)
-This example uses the [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) and [Precision](../../../ado/reference/ado-api/precision-property-ado.md) properties to display the numeric scale and precision of fields in the ***Discounts*** table of the ***Pubs*** database.  
+This example uses the [NumericScale](./numericscale-property-ado.md) and [Precision](./precision-property-ado.md) properties to display the numeric scale and precision of fields in the ***Discounts*** table of the ***Pubs*** database.  
   
 ```cpp
 // BeginNumericScaleCpp.cpp  
@@ -129,5 +129,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [NumericScale Property (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [Precision Property (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+ [NumericScale Property (ADO)](./numericscale-property-ado.md)   
+ [Precision Property (ADO)](./precision-property-ado.md)

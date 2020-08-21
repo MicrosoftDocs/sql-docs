@@ -4,7 +4,7 @@ description: Learn how to open a terminal that is integrated into Azure Data Stu
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.reviewer: "alayu, maghan, sstein"
 ms.topic: conceptual
 author: "yualan"

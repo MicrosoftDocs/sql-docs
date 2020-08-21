@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "10/07/2019"
 ms.reviewer: alanyu, maghan, sstein
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop

@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # AddNew Method Example (VB)
-This example uses the [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) method to create a new record with the specified name.  
+This example uses the [AddNew](./addnew-method-ado.md) method to create a new record with the specified name.  
   
 ```  
 'BeginAddNewVB  
@@ -103,5 +103,5 @@ End Sub
 ```  
   
 ## See Also  
- [AddNew Method (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AddNew Method (ADO)](./addnew-method-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

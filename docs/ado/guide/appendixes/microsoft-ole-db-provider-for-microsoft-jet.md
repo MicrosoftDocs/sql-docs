@@ -20,7 +20,7 @@ ms.author: jroth
 The OLE DB Provider for Microsoft Jet allows ADO to access Microsoft Jet databases.
 
 ## Connection String Parameters
- To connect to this provider, set the *Provider* argument of the [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) property to the following:
+ To connect to this provider, set the *Provider* argument of the [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) property to the following property:
 
 ```vb
 Microsoft.Jet.OLEDB.4.0
@@ -48,7 +48,7 @@ Microsoft.Jet.OLEDB.4.0
 >  If you are connecting to a data source provider that supports Windows authentication, you should specify **Trusted_Connection=yes** or **Integrated Security = SSPI** instead of user ID and password information in the connection string.
 
 ## Provider-Specific Connection Parameters
- The OLE DB Provider for Microsoft Jet supports several provider-specific dynamic properties in addition to those that are defined by ADO. As with all other **Connection** parameters, they can be set by using the **Properties** collection of the **Connection** object or as part of the connection string.
+ The OLE DB Provider for Microsoft Jet supports several provider-specific dynamic properties in addition to those defined by ADO. As with all other **Connection** parameters, they can be set by using the **Properties** collection of the **Connection** object or as part of the connection string.
 
  The following table lists these properties together with the corresponding OLE DB property name in parentheses.
 
@@ -63,7 +63,7 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB:Encrypt Database (DBPROP_JETOLEDB_ENCRYPTDATABASE)|Indicates whether a compacted database should be encrypted. If this property is not set, the compacted database will be encrypted if the original database was also encrypted.|
 |Jet OLEDB:Engine Type (DBPROP_JETOLEDB_ENGINE)|Indicates the storage engine used to access the current data store.|
 |Jet OLEDB:Exclusive Async Delay (DBPROP_JETOLEDB_EXCLUSIVEASYNCDELAY)|Indicates the maximum length of time, in milliseconds, that Jet can delay asynchronous writes to disk when the database is opened exclusively.<br /><br /> This property is ignored unless **Jet OLEDB:Flush Transaction Timeout** is set to 0.|
-|Jet OLEDB:Flush Transaction Timeout (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|Indicates the amount of time to wait before data stored in a cache for asynchronous writing is actually written to disk. This setting overrides the values for **Jet OLEDB:Shared Async Delay** and **Jet OLEDB:Exclusive Async Delay**.|
+|Jet OLEDB:Flush Transaction Timeout (DBPROP_JETOLEDB_FLUSHTRANSACTIONTIMEOUT)|Indicates the amount of time to wait before data stored in a cache for asynchronous writing is written to disk. This setting overrides the values for **Jet OLEDB:Shared Async Delay** and **Jet OLEDB:Exclusive Async Delay**.|
 |Jet OLEDB:Global Bulk Transactions (DBPROP_JETOLEDB_GLOBALBULKNOTRANSACTIONS)|Indicates whether SQL bulk transactions are transacted.|
 |Jet OLEDB:Global Partial Bulk Ops (DBPROP_JETOLEDB_GLOBALBULKPARTIAL)|Indicates the password used to open the database.|
 |Jet OLEDB:Implicit Commit Sync (DBPROP_JETOLEDB_IMPLICITCOMMITSYNC)|Indicates whether changes that were made in internal implicit transactions are written in synchronous or asynchronous mode.|

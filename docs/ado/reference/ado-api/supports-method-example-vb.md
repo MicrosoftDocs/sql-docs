@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Supports Method Example (VB)
-This example uses the [Supports](../../../ado/reference/ado-api/supports-method.md) method to display the options supported by a recordset opened with different cursor types. The DisplaySupport procedure is required for this procedure to run.  
+This example uses the [Supports](./supports-method.md) method to display the options supported by a recordset opened with different cursor types. The DisplaySupport procedure is required for this procedure to run.  
   
 ```  
 'BeginSupportsVB  
@@ -157,5 +157,5 @@ End Sub
 ```  
   
 ## See Also  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Supports Method](../../../ado/reference/ado-api/supports-method.md)
+ [Recordset Object (ADO)](./recordset-object-ado.md)   
+ [Supports Method](./supports-method.md)

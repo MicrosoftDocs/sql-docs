@@ -87,4 +87,4 @@ __declspec(property(get=GetType,put=PutType)) enum StreamTypeEnum Type;
 ```  
   
 ## See Also  
- [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Stream Object (ADO)](./stream-object-ado.md)

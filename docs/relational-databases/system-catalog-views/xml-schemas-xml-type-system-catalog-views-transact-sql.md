@@ -1,4 +1,5 @@
 ---
+description: "XML Schemas (XML Type System) Catalog Views (Transact-SQL)"
 title: "XML Schemas (XML Type System) Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

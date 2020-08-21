@@ -1,4 +1,5 @@
 ---
+description: "SQL Editor (Visual Database Tools)"
 title: SQL Editor
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

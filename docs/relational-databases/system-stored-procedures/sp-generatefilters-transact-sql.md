@@ -1,4 +1,5 @@
 ---
+description: "sp_generatefilters (Transact-SQL)"
 title: "sp_generatefilters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

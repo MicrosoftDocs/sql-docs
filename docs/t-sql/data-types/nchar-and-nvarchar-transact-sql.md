@@ -1,4 +1,5 @@
 ---
+description: "nchar and nvarchar (Transact-SQL)"
 title: "nchar and nvarchar (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/19/2019"

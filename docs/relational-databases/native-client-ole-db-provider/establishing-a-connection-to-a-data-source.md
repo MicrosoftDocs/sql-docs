@@ -1,4 +1,5 @@
 ---
+description: "Establish connection to data source (Native Client OLE DB provider)"
 title: "Establish connection to data source (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

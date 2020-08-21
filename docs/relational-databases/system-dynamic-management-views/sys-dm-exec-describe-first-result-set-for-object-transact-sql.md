@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_describe_first_result_set_for_object (Transact-SQL)"
 title: "sys.dm_exec_describe_first_result_set_for_object (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

@@ -1,4 +1,5 @@
 ---
+description: "Create a Text Attribute (Master Data Services)"
 title: Create a Text Attribute
 ms.custom: ""
 ms.date: "03/15/2017"

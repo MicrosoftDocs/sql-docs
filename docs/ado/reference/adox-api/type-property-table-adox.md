@@ -1,4 +1,5 @@
 ---
+description: "Type Property (Table) (ADOX)"
 title: "Type Property (Table) (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

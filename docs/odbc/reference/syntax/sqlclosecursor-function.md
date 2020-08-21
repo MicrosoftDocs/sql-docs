@@ -1,4 +1,5 @@
 ---
+description: "SQLCloseCursor Function"
 title: "SQLCloseCursor Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"

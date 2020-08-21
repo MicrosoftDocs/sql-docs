@@ -1,4 +1,5 @@
 ---
+description: "Append and CreateParameter Methods Example (JScript)"
 title: "Append and CreateParameter Methods Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

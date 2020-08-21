@@ -1,4 +1,5 @@
 ---
+description: "Conversion Settings (MySQLToSQL)"
 title: "Conversion Settings (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

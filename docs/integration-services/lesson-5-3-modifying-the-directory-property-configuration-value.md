@@ -1,4 +1,5 @@
 ---
+description: "Lesson 5-3: Modify the Directory property configuration value"
 title: "Step 3: Modify the Directory property configuration value | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/08/2019"

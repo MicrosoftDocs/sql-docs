@@ -1,4 +1,5 @@
 ---
+description: "syspolicy_policy_category_subscriptions (Transact-SQL)"
 title: "syspolicy_policy_category_subscriptions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

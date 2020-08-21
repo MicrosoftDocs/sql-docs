@@ -1,4 +1,5 @@
 ---
+description: "Populate Full-Text Indexes"
 title: "Populate Full-Text Indexes | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "sp_set_database_firewall_rule (Azure SQL Database)"
 title: "sp_set_database_firewall_rule"
 titleSuffix: Azure SQL Database
 ms.date: "08/04/2017"

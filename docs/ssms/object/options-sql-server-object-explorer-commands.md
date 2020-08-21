@@ -1,4 +1,5 @@
 ---
+description: "Options (SQL Server Object Explorer - Commands)"
 title: "Options (SQL Server Object Explorer - Commands)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

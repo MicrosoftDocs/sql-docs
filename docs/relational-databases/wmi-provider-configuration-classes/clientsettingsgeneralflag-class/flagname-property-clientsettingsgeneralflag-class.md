@@ -1,4 +1,5 @@
 ---
+description: "FlagName Property (ClientSettingsGeneralFlag Class)"
 title: "FlagName Property (ClientSettingsGeneralFlag)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"

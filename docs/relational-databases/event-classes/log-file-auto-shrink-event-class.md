@@ -1,4 +1,5 @@
 ---
+description: "Log File Auto Shrink Event Class"
 title: "Log File Auto Shrink Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

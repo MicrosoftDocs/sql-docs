@@ -1,4 +1,5 @@
 ---
+description: "Shortcut Keys(Oracle To SQL)"
 title: "Shortcut Keys(Oracle To SQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -177,11 +177,15 @@
     - name: Deploy and consume apps
       items:
       - name: Deploy with azdata
-        href: big-data-cluster/big-data-cluster-create-apps.md
+        href: big-data-cluster/app-create.md
       - name: Deploy with VS Code
         href: big-data-cluster/app-deployment-extension.md
       - name: Consume apps
-        href: big-data-cluster/big-data-cluster-consume-apps.md
+        href: big-data-cluster/app-consume.md
+      - name: Run apps
+        href: big-data-cluster/app-run.md
+      - name: Monitor apps
+        href: big-data-cluster/app-monitor.md
     - name: Big Data/Machine Learning
       items:
       - name: Use Machine Learning Services (Python, R)
@@ -8448,6 +8452,8 @@
       items:
       - name: Connect & query SQL Server
         href: ssms/tutorials/connect-query-sql-server.md
+      - name: Import Flat File
+        href: relational-databases/import-export/import-flat-file-wizard.md
     - name: Concepts
       items:
       - name: Tool Windows in SSMS
@@ -9874,6 +9880,12 @@
       href: linux/quickstart-install-connect-clouds.md
   - name: Tutorials
     items:
+    - name: New to SQL Server docs
+      href: linux/new-to-sql-learning-resources.yml
+    - name: New to Linux docs
+      href: linux/new-to-linux-learning-resources.yml
+    - name: New to Linux resources
+      href: linux/new-to-linux-resources.md
     - name: Migrate from Windows
       href: linux/sql-server-linux-migrate-restore-database.md
     - name: Migrate to Docker
@@ -11877,6 +11889,8 @@
         href: relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md
       - name: sys.pdw_nodes_tables
         href: relational-databases/system-catalog-views/sys-pdw-nodes-tables-transact-sql.md
+      - name: sys.pdw_permanent_table_mappings
+        href: relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md
       - name: sys.pdw_replicated_table_cache_state
         href: relational-databases/system-catalog-views/sys-pdw-replicated-table-cache-state-transact-sql.md
       - name: sys.pdw_table_distribution_properties

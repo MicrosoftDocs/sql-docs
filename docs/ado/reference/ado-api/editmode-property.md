@@ -1,4 +1,5 @@
 ---
+description: "EditMode Property"
 title: "EditMode Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

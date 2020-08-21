@@ -1,4 +1,5 @@
 ---
+description: "Operator Properties - New Operator (Notifications Page)"
 title: New Operator (Notifications Page)
 ms.prod: sql
 ms.prod_service: sql-tools

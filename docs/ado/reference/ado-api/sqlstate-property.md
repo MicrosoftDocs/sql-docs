@@ -1,4 +1,5 @@
 ---
+description: "SQLState Property"
 title: "SQLState Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

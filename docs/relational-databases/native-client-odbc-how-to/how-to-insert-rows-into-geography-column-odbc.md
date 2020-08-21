@@ -1,4 +1,5 @@
 ---
+description: "How to: Insert Rows into Geography Column (ODBC)"
 title: "How to: Insert Rows into Geography Column (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

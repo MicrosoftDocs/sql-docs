@@ -1,4 +1,5 @@
 ---
+description: "Edit Type Mapping (OracleToSQL)"
 title: "Edit Type Mapping (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

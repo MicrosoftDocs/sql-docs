@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_current_partition_mappings"
 title: "MSmerge_current_partition_mappings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

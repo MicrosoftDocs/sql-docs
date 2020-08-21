@@ -1,4 +1,5 @@
 ---
+description: "Writing Your Own Customized Handler"
 title: "Writing Your Own Customized Handler | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

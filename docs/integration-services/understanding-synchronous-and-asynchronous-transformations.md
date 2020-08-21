@@ -1,4 +1,5 @@
 ---
+description: "Understanding Synchronous and Asynchronous Transformations"
 title: "Understanding Synchronous and Asynchronous Transformations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

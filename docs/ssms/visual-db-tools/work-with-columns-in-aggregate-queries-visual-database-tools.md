@@ -1,4 +1,5 @@
 ---
+description: "Work with Columns in Aggregate Queries (Visual Database Tools)"
 title: Work with Columns in Aggregate Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

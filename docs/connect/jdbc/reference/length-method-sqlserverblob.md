@@ -1,4 +1,5 @@
 ---
+description: "length Method (SQLServerBlob)"
 title: "length Method (SQLServerBlob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

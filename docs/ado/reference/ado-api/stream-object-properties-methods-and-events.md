@@ -1,4 +1,5 @@
 ---
+description: "Stream Object Properties, Methods, and Events"
 title: "Stream Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

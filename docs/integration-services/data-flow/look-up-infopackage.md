@@ -1,4 +1,5 @@
 ---
+description: "Look Up InfoPackage"
 title: "Look Up InfoPackage | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

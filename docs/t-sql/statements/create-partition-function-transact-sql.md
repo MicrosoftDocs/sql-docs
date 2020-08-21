@@ -1,4 +1,5 @@
 ---
+description: "CREATE PARTITION FUNCTION (Transact-SQL)"
 title: "CREATE PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/19/2018"

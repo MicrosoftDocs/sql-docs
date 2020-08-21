@@ -1,4 +1,5 @@
 ---
+description: "Create Table SQL Statement (SQL Server Import and Export Wizard)"
 title: "Create Table SQL Statement (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/16/2017"

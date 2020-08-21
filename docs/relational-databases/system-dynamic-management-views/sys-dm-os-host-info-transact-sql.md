@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_host_info (Transact-SQL)"
 title: "sys.dm_os_host_info (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/10/2017"

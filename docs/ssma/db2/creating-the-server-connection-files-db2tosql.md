@@ -1,4 +1,5 @@
 ---
+description: "Creating the Server Connection Files (DB2ToSQL)"
 title: "Creating the Server Connection Files (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

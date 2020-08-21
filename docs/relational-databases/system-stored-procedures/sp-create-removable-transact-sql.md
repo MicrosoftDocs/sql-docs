@@ -1,4 +1,5 @@
 ---
+description: "sp_create_removable (Transact-SQL)"
 title: "sp_create_removable (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

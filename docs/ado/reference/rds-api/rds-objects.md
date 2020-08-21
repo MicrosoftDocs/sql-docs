@@ -1,4 +1,5 @@
 ---
+description: "RDS Objects"
 title: "RDS Objects | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

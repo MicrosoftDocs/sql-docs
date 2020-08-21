@@ -1,4 +1,5 @@
 ---
+description: "Load Data by Using the OLE DB Destination"
 title: "Load Data by Using the OLE DB Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

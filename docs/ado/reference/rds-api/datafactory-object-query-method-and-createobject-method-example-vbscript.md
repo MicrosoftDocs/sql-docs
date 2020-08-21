@@ -1,4 +1,5 @@
 ---
+description: "DataFactory Object, Query Method, and CreateObject Method Example (VBScript)"
 title: "Create RDSServer.DataFactory Object using CreateObject (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

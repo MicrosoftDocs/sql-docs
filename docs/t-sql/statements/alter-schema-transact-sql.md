@@ -1,4 +1,5 @@
 ---
+description: "ALTER SCHEMA (Transact-SQL)"
 title: "ALTER SCHEMA (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2020"

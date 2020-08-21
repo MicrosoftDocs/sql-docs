@@ -1,4 +1,5 @@
 ---
+description: "Configuring RDS"
 title: "Configuring RDS | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

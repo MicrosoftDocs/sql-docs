@@ -1,4 +1,5 @@
 ---
+description: "ClientSettings Class - SetDefaults Method"
 title: "SetDefaults Method (ClientSettings)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

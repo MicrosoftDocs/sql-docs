@@ -1,4 +1,5 @@
 ---
+description: "HOST_NAME (Transact-SQL)"
 title: "HOST_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/21/2017"
@@ -20,7 +21,8 @@ author: VanMSFT
 ms.author: vanto
 ---
 # HOST_NAME (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Returns the workstation name.  
   

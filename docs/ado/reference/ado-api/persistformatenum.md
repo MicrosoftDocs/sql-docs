@@ -1,4 +1,5 @@
 ---
+description: "PersistFormatEnum"
 title: "PersistFormatEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

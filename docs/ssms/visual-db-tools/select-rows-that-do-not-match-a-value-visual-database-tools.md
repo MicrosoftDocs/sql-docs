@@ -1,4 +1,5 @@
 ---
+description: "Select Rows That Do Not Match a Value (Visual Database Tools)"
 title: Select Rows That Do Not Match a Value
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

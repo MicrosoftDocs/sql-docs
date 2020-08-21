@@ -1,4 +1,5 @@
 ---
+description: "CREATE ROUTE (Transact-SQL)"
 title: "CREATE ROUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"

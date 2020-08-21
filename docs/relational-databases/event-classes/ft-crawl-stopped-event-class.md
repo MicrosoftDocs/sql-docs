@@ -1,4 +1,5 @@
 ---
+description: "FT:Crawl Stopped Event Class"
 title: "FT:Crawl Stopped Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

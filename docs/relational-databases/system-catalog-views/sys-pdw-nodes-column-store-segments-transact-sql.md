@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_nodes_column_store_segments (Transact-SQL)"
 title: "sys.pdw_nodes_column_store_segments (Transact-SQL)"
 ms.custom: seo-dt-2019
 ms.date: "03/28/2018"
@@ -73,6 +74,9 @@ ORDER BY    table_nm
 ,           nc.column_id
 ,           sm.name ;
 ```
+
+>[!TIP]
+> For improved performance in Synapse SQL, consider using **sys.pdw_permanent_table_mappings** instead of **sys.pdw_table_mappings** on permanent user tables. See **[sys.pdw_permanent_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** for more information.
 
 ## Permissions
 

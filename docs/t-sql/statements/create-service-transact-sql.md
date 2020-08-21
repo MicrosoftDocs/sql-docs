@@ -1,4 +1,5 @@
 ---
+description: "CREATE SERVICE (Transact-SQL)"
 title: "CREATE SERVICE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

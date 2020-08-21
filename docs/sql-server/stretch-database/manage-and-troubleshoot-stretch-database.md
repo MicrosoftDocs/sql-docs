@@ -1,4 +1,5 @@
 ---
+description: "Manage and troubleshoot Stretch Database"
 title: "Manage and troubleshoot"
 ms.date: "06/27/2016"
 ms.service: sql-server-stretch-database

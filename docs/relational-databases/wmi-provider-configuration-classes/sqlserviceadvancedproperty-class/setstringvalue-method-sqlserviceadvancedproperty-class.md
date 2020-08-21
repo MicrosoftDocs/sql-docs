@@ -1,4 +1,5 @@
 ---
+description: "SetStringValue Method (SqlServiceAdvancedProperty Class )"
 title: "SetStringValue Method (SqlServiceAdvancedProperty Class )"
 ms.custom: ""
 ms.date: "03/03/2017"

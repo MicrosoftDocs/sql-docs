@@ -1,4 +1,5 @@
 ---
+description: "ALTER REMOTE SERVICE BINDING (Transact-SQL)"
 title: "ALTER REMOTE SERVICE BINDING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Aggregate Functions, the CALC Function, and the NEW Keyword"
 title: "Aggregate Functions, the CALC Function, and the NEW Keyword | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

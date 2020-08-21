@@ -1,4 +1,5 @@
 ---
+description: "Using spatial datatypes"
 title: "Using spatial datatypes | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2020"

@@ -1,4 +1,5 @@
 ---
+description: "REVOKE Full-Text Permissions (Transact-SQL)"
 title: "REVOKE Full-Text Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"

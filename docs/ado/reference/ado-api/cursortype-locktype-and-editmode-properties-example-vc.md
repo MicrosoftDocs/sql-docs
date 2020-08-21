@@ -1,4 +1,5 @@
 ---
+description: "CursorType, LockType, and EditMode Properties Example (VC++)"
 title: "CursorType, LockType, and EditMode Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

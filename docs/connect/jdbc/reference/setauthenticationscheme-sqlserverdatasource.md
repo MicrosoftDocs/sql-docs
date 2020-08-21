@@ -1,4 +1,5 @@
 ---
+description: "setAuthenticationScheme (SQLServerDataSource)"
 title: "setAuthenticationScheme (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

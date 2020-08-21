@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;MAX_PRECISION (Transact-SQL)"
 title: "@@MAX_PRECISION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"

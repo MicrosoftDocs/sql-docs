@@ -1,4 +1,5 @@
 ---
+description: "Modify an Index"
 title: "Modify an Index | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"

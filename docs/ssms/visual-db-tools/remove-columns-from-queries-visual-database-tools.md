@@ -1,4 +1,5 @@
 ---
+description: "Remove Columns from Queries (Visual Database Tools)"
 title: Remove Columns from Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

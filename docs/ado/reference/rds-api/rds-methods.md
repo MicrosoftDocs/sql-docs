@@ -1,4 +1,5 @@
 ---
+description: "RDS Methods"
 title: "RDS Methods | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

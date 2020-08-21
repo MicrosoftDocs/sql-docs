@@ -1,4 +1,5 @@
 ---
+description: "Configure column encryption in-place with Transact-SQL"
 title: "Configure column encryption in-place with Transact-SQL | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/10/2019

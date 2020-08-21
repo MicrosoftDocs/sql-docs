@@ -1,4 +1,5 @@
 ---
+description: "sp_lock (Transact-SQL)"
 title: "sp_lock (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

@@ -1,4 +1,5 @@
 ---
+description: "UnderlyingValue Property"
 title: "UnderlyingValue Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

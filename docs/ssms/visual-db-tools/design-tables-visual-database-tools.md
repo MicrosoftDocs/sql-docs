@@ -1,4 +1,5 @@
 ---
+description: "Create and update database tables"
 title: Create and Update Tables
 ms.prod: sql
 ms.prod_service: sql-tools

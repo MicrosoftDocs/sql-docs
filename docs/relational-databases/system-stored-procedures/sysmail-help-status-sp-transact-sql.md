@@ -1,4 +1,5 @@
 ---
+description: "sysmail_help_status_sp (Transact-SQL)"
 title: "sysmail_help_status_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

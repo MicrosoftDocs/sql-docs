@@ -1,4 +1,5 @@
 ---
+description: "Recordset Dynamic Properties in XML"
 title: "Recordset Dynamic Properties in XML | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

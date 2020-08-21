@@ -1,4 +1,5 @@
 ---
+description: "ConnectionValidSharedMemory function in dbmslpcn.dll Shared Memory"
 title: "ConnectionValidSharedMemory dbmslpcn.dll"
 ms.custom: ""
 ms.date: "03/07/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Hints (Transact-SQL) - Table"
 title: "Table Hints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/21/2020"

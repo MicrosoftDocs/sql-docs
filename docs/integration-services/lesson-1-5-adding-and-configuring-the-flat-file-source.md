@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-5: Add and configure the Flat File source"
 title: "Step 5: Add and configure the Flat File source | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"

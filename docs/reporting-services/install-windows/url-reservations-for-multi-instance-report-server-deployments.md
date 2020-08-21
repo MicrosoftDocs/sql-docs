@@ -1,4 +1,5 @@
 ---
+description: "URL Reservations for Multi-Instance Report Server Deployments"
 title: "URL Reservations for Multi-Instance Report Server Deployments | Microsoft Docs"
 ms.date: 05/18/2016
 ms.prod: reporting-services

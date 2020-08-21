@@ -1,4 +1,5 @@
 ---
+description: "clearBatch Method (SQLServerPreparedStatement)"
 title: "clearBatch Method (SQLServerPreparedStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Handling ADO Events"
 title: "Handling ADO Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

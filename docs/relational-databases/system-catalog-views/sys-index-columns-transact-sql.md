@@ -1,4 +1,5 @@
 ---
+description: "sys.index_columns (Transact-SQL)"
 title: "sys.index_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/03/2019"

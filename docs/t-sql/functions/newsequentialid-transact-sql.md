@@ -1,4 +1,5 @@
 ---
+description: "NEWSEQUENTIALID (Transact-SQL)"
 title: "NEWSEQUENTIALID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2015"

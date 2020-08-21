@@ -1,4 +1,5 @@
 ---
+description: "Table Value Constructor (Transact-SQL)"
 title: "Table Value Constructor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/23/2019"

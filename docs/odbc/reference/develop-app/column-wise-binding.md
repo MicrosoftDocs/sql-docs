@@ -1,4 +1,5 @@
 ---
+description: "Column-Wise Binding"
 title: "Column-Wise Binding | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

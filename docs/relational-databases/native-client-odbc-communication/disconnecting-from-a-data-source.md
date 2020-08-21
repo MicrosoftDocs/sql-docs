@@ -1,4 +1,5 @@
 ---
+description: "Disconnecting from a Data Source"
 title: "Disconnecting from a Data Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

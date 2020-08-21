@@ -1,4 +1,5 @@
 ---
+description: "Levels Collection (ADO MD)"
 title: "Levels Collection (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

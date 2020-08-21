@@ -1,4 +1,5 @@
 ---
+description: "DDL Events"
 title: "DDL Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/01/2016"

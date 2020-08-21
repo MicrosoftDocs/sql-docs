@@ -1,4 +1,5 @@
 ---
+description: "Specifying Connection Properties"
 title: "Specifying Connection Properties | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

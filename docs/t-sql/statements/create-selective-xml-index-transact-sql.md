@@ -1,4 +1,5 @@
 ---
+description: "CREATE SELECTIVE XML INDEX (Transact-SQL)"
 title: "CREATE SELECTIVE XML INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"

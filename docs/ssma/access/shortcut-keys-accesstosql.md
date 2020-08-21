@@ -1,4 +1,5 @@
 ---
+description: "Shortcut Keys (AccessToSQL)"
 title: "Shortcut Keys (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "Backward Compatibility (Master Data Services)"
 title: Backward Compatibility
 ms.custom: ""
 ms.date: "03/01/2017"

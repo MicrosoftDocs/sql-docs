@@ -1,4 +1,5 @@
 ---
+description: "Binding Parameters ODBC"
 title: "Binding Parameters ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "MSrepl_backup_lsns (Transact-SQL)"
 title: "MSrepl_backup_lsns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

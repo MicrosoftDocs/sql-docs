@@ -1,4 +1,5 @@
 ---
+description: "Hierarchical Data (SQL Server)"
 title: "Hierarchical Data (SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/04/2019"

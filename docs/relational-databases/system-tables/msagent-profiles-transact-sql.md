@@ -1,4 +1,5 @@
 ---
+description: "MSagent_profiles (Transact-SQL)"
 title: "MSagent_profiles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

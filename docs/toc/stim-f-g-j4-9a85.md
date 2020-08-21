@@ -1,4 +1,5 @@
 ---
+description: "Initialize a Subscription with a Snapshot (9a85)"
 title: Initialize a Subscription with a Snapshot (9a85) | Microsoft Docs
 ms.date: 02/29/2020
 ms.prod: sql

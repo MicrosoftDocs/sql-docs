@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_query_plan_stats (Transact-SQL)"
 title: "sys.dm_exec_query_plan_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 05/22/2019

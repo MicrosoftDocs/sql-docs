@@ -1,4 +1,5 @@
 ---
+description: "Updating Data (Microsoft Drivers for PHP for SQL Server)"
 title: "Updating Data (Microsoft Drivers for PHP for SQL Server) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"

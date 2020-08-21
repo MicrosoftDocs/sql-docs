@@ -1,4 +1,5 @@
 ---
+description: "sp_helpremotelogin (Transact-SQL)"
 title: "sp_helpremotelogin (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Sequence Properties (General Page)"
 title: "Sequence Properties (General Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

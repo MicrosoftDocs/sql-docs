@@ -1,4 +1,5 @@
 ---
+description: "DBCC FREESESSIONCACHE (Transact-SQL)"
 title: "DBCC FREESESSIONCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"

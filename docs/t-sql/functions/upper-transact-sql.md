@@ -1,4 +1,5 @@
 ---
+description: "UPPER (Transact-SQL)"
 title: "UPPER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"

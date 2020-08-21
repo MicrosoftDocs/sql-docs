@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-5 - Testing the Updated Packages"
 title: "Step 5: Testing the Updated Packages | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

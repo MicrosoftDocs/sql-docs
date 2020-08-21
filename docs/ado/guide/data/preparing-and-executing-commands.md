@@ -1,4 +1,5 @@
 ---
+description: "Preparing and Executing Commands"
 title: "Preparing and Executing Commands | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Data-tier Applications"
 title: "Data-tier Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2016"

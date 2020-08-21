@@ -1,4 +1,5 @@
 ---
+description: "Mapping Replacement Functions for Backward Compatibility of Applications"
 title: "Mapping Replacement Functions for Compatibility of Apps - ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

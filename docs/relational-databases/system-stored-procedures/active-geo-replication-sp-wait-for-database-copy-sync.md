@@ -1,4 +1,5 @@
 ---
+description: "Active Geo-Replication - sp_wait_for_database_copy_sync"
 title: "sp_wait_for_database_copy_sync"
 titleSuffix: Azure SQL Database
 ms.date: "03/03/2017"

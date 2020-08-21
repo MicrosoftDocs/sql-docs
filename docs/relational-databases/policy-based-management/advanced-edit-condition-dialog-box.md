@@ -1,4 +1,5 @@
 ---
+description: "Advanced Edit (Condition) Dialog Box"
 title: "Advanced Edit (Condition) Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2016"

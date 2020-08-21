@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Native Client (OLE DB) Interfaces"
 title: "OLE DB Reference"
 ms.custom: ""
 ms.date: "03/14/2017"

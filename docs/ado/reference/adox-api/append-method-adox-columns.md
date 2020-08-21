@@ -1,4 +1,5 @@
 ---
+description: "Append Method (ADOX Columns)"
 title: "Append Method (ADOX Columns) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

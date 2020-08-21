@@ -1,4 +1,5 @@
 ---
+description: "Columnstore indexes - what&#39;s new"
 title: "Columnstore indexes - what&#39;s new | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2020"

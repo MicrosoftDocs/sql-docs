@@ -1,4 +1,5 @@
 ---
+description: "dbo.systargetservers (Transact-SQL)"
 title: "dbo.systargetservers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

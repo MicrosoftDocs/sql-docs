@@ -1,4 +1,5 @@
 ---
+description: "Indexes - Keys Dialog Box (Visual Database Tools)"
 title: Indexes - Keys Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

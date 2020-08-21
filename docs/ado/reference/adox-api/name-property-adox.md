@@ -1,4 +1,5 @@
 ---
+description: "Name Property (ADOX)"
 title: "Name Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

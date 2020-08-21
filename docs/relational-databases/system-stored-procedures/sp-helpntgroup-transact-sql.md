@@ -1,4 +1,5 @@
 ---
+description: "sp_helpntgroup (Transact-SQL)"
 title: "sp_helpntgroup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

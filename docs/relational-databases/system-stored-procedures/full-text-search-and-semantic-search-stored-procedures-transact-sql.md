@@ -1,4 +1,5 @@
 ---
+description: "Full-Text Search and Semantic Search Stored Procedures (Transact-SQL)"
 title: "Full-Text Search and Semantic Search Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

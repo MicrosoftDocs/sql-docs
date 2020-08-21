@@ -1,4 +1,5 @@
 ---
+description: "Object Explorer"
 title: "Object Explorer"
 ms.prod: sql
 ms.prod_service: "sql-tools"

@@ -1,4 +1,5 @@
 ---
+description: "SQLDescribeCol and SQLColAttribute"
 title: "SQLDescribeCol and SQLColAttribute | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

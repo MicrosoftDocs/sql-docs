@@ -1,4 +1,5 @@
 ---
+description: "AddNew Method Example (JScript)"
 title: "AddNew Method Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

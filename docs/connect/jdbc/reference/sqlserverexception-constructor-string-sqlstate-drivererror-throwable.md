@@ -1,4 +1,5 @@
 ---
+description: "SQLServerException Constructor (java.lang.String, SQLState, DriverError, java.lang.Throwable)"
 title: "SQLServerException Constructor (java.lang.String, SQLState, DriverError, java.lang.Throwable) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"

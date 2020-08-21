@@ -1,4 +1,5 @@
 ---
+description: "Map Query Parameters to Variables in a Data Flow Component"
 title: "Map Query Parameters to Variables in a Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

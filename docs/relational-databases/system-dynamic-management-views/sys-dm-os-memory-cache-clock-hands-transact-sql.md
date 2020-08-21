@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_memory_cache_clock_hands (Transact-SQL)"
 title: "sys.dm_os_memory_cache_clock_hands (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/21/2017"

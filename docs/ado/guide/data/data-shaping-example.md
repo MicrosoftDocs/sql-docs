@@ -1,4 +1,5 @@
 ---
+description: "Data Shaping Example"
 title: "Data Shaping Example | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

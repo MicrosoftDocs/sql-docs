@@ -1,4 +1,5 @@
 ---
+description: "Using Kerberos integrated authentication to connect to SQL Server"
 title: "Using Kerberos integrated authentication to connect to SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/29/2020"

@@ -1,4 +1,5 @@
 ---
+description: "MSSQL_REPL027056"
 title: "MSSQL_REPL027056 | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"

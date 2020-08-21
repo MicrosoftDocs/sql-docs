@@ -1,4 +1,5 @@
 ---
+description: "MSReportServer_ConfigurationSetting Methods"
 title: "MSReportServer_ConfigurationSetting Methods | Microsoft Docs"
 ms.date: 03/20/2017
 ms.prod: reporting-services

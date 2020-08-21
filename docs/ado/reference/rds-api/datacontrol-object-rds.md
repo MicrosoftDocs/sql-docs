@@ -1,4 +1,5 @@
 ---
+description: "DataControl Object (RDS)"
 title: "DataControl Object (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

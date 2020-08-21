@@ -1,4 +1,5 @@
 ---
+description: "User Interface Reference (DB2ToSQL)"
 title: "User Interface Reference (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

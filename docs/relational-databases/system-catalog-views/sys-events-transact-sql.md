@@ -1,4 +1,5 @@
 ---
+description: "sys.events (Transact-SQL)"
 title: "sys.events (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

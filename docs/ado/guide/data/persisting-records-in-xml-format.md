@@ -1,4 +1,5 @@
 ---
+description: "Persisting Records in XML Format"
 title: "Persisting Records in XML Format | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

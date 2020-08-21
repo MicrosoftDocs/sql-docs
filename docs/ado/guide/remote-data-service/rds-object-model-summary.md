@@ -1,4 +1,5 @@
 ---
+description: "RDS Object Model Summary"
 title: "RDS Object Model Summary | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

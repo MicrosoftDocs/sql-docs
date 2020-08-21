@@ -1,4 +1,5 @@
 ---
+description: "GetSchemaObject Method (ADO MD)"
 title: "GetSchemaObject Method (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Delete Method (ADOX Collections)"
 title: "Delete Method (ADOX Collections) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

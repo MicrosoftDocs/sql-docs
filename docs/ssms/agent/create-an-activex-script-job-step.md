@@ -1,4 +1,5 @@
 ---
+description: "Create an ActiveX Script Job Step"
 title: "Create an ActiveX Script Job Step"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

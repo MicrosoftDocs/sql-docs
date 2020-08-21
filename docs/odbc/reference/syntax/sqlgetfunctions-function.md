@@ -1,4 +1,5 @@
 ---
+description: "SQLGetFunctions Function"
 title: "SQLGetFunctions Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2019"

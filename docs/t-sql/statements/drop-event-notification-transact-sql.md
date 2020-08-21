@@ -1,4 +1,5 @@
 ---
+description: "DROP EVENT NOTIFICATION (Transact-SQL)"
 title: "DROP EVENT NOTIFICATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

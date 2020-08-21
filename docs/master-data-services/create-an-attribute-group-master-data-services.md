@@ -1,4 +1,5 @@
 ---
+description: "Create an Attribute Group (Master Data Services)"
 title: Create an Attribute Group
 ms.custom: ""
 ms.date: "03/15/2017"

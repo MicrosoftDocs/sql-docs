@@ -1,4 +1,5 @@
 ---
+description: "COLUMNS (Transact-SQL)"
 title: "COLUMNS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

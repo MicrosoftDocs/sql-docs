@@ -1,4 +1,5 @@
 ---
+description: "View the Dependencies of a Table"
 title: "View the Dependencies of a Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

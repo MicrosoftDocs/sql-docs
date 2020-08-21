@@ -1,4 +1,5 @@
 ---
+description: "Command and CommandText Properties Example (VC++)"
 title: "Command and CommandText Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

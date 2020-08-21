@@ -1,4 +1,5 @@
 ---
+description: "CursorType Property (ADO)"
 title: "CursorType Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

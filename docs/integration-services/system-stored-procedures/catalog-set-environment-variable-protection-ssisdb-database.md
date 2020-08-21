@@ -1,4 +1,5 @@
 ---
+description: "catalog.set_environment_variable_protection (SSISDB Database)"
 title: "catalog.set_environment_variable_protection (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

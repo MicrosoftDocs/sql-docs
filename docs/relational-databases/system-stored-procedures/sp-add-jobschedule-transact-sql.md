@@ -1,4 +1,5 @@
 ---
+description: "sp_add_jobschedule (Transact-SQL)"
 title: "sp_add_jobschedule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/28/2016"

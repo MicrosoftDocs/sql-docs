@@ -1,4 +1,5 @@
 ---
+description: "BeginTrans, CommitTrans, and RollbackTrans Methods Example (VB)"
 title: "BeginTrans, CommitTrans, and RollbackTrans Methods Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "sp_msx_get_account (Transact-SQL)"
 title: "sp_msx_get_account (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

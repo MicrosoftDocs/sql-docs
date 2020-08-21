@@ -1,4 +1,5 @@
 ---
+description: "ALTER AUTHORIZATION (Transact-SQL)"
 title: "ALTER AUTHORIZATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/28/2019"

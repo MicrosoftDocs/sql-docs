@@ -1,4 +1,5 @@
 ---
+description: "GRANT Endpoint Permissions (Transact-SQL)"
 title: "GRANT Endpoint Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/17/2017"

@@ -1,4 +1,5 @@
 ---
+description: "PERCENTILE_CONT (Transact-SQL)"
 title: "PERCENTILE_CONT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2015"

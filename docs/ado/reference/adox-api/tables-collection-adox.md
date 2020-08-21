@@ -1,4 +1,5 @@
 ---
+description: "Tables Collection (ADOX)"
 title: "Tables Collection (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

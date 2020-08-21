@@ -1,4 +1,5 @@
 ---
+description: "Use the Teradata connection manager"
 title: "Use the Teradata connection manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/22/2019"

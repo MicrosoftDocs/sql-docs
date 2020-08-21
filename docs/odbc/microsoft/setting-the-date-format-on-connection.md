@@ -1,4 +1,5 @@
 ---
+description: "Setting the Date Format on Connection"
 title: "Setting the Date Format on Connection | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_helpuser (Transact-SQL)"
 title: "sp_helpuser (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

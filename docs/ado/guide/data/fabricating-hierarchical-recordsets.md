@@ -1,4 +1,5 @@
 ---
+description: "Fabricating Hierarchical Recordsets"
 title: "Fabricating Hierarchical Recordsets | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

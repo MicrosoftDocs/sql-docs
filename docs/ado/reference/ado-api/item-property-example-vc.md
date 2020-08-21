@@ -1,4 +1,5 @@
 ---
+description: "Item Property Example (VC++)"
 title: "Item Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

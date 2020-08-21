@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_genhistory (Transact-SQL)"
 title: "MSmerge_genhistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

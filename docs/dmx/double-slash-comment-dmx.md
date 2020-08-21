@@ -1,4 +1,5 @@
 ---
+description: "Double Slash (Comment) (DMX)"
 title: "Double Slash (Comment) (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "Type Property (ADO MD)"
 title: "Type Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

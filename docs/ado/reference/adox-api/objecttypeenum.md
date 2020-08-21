@@ -1,4 +1,5 @@
 ---
+description: "ObjectTypeEnum"
 title: "ObjectTypeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

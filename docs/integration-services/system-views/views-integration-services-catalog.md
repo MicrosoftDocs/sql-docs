@@ -1,4 +1,5 @@
 ---
+description: "Views (Integration Services Catalog)"
 title: "Views (Integration Services Catalog) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"

@@ -34,7 +34,6 @@ ms.author: maghan
  SQL Serverdoes not implement changes to this property.  
   
 ## See Also  
- [Choosing a Network Protocol](https://msdn.microsoft.com/library/ms187892(v=sql.130).aspx)   
+ [Choosing a Network Protocol](/previous-versions/sql/sql-server-2016/ms187892(v=sql.130))   
  [Creating a Valid Connection String Using TCP IP](creating-a-valid-connection-string-using-tcp-ip.md)  
-  
   

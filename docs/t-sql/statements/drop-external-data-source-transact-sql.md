@@ -1,4 +1,5 @@
 ---
+description: "DROP EXTERNAL DATA SOURCE (Transact-SQL)"
 title: "DROP EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

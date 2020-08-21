@@ -1,4 +1,5 @@
 ---
+description: "Combine Conditions When OR Has Precedence (Visual Database Tools)"
 title: Combine Conditions When OR Has Precedence
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

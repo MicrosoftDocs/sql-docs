@@ -1,4 +1,5 @@
 ---
+description: "rollback Method (SQLServerXAResource)"
 title: "rollback Method (SQLServerXAResource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

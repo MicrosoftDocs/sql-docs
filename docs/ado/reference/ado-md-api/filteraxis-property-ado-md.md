@@ -1,4 +1,5 @@
 ---
+description: "FilterAxis Property (ADO MD)"
 title: "FilterAxis Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

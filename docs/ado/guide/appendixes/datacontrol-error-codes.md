@@ -1,4 +1,5 @@
 ---
+description: "DataControl Object Error Codes"
 title: "DataControl Error Codes | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

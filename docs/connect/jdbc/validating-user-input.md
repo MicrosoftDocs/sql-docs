@@ -1,4 +1,5 @@
 ---
+description: "Validating user input"
 title: "Validating user input | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

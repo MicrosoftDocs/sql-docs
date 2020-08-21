@@ -1,4 +1,5 @@
 ---
+description: "sp_replication_agent_checkup (Transact-SQL)"
 title: "sp_replication_agent_checkup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

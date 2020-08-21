@@ -1,4 +1,5 @@
 ---
+description: "Spatial Indexes Overview"
 title: "Spatial Indexes Overview | Microsoft Docs"
 ms.date: "09/12/2016"
 ms.prod: sql

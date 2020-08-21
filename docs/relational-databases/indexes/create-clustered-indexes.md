@@ -1,4 +1,5 @@
 ---
+description: "Create Clustered Indexes"
 title: "Create Clustered Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"

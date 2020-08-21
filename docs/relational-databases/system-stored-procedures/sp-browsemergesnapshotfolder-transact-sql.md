@@ -1,4 +1,5 @@
 ---
+description: "sp_browsemergesnapshotfolder (Transact-SQL)"
 title: "sp_browsemergesnapshotfolder (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

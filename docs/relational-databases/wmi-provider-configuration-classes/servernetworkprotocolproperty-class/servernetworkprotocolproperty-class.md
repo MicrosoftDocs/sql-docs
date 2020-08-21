@@ -1,4 +1,5 @@
 ---
+description: "ServerNetworkProtocolProperty Class"
 title: "ServerNetworkProtocolProperty Class"
 ms.custom: ""
 ms.date: "03/04/2017"

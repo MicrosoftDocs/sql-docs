@@ -1,4 +1,5 @@
 ---
+description: "sys.availability_read_only_routing_lists (Transact-SQL)"
 title: "sys.availability_read_only_routing_lists (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

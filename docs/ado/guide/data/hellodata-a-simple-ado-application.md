@@ -1,4 +1,5 @@
 ---
+description: "HelloData: A Simple ADO Application"
 title: "HelloData: A Simple ADO Application | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

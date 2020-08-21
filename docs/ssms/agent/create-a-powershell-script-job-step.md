@@ -1,4 +1,5 @@
 ---
+description: "Create a PowerShell Script Job Step"
 title: "Create a PowerShell Script Job Step"
 ms.custom: seo-lt-2019
 ms.date: "01/20/2017"

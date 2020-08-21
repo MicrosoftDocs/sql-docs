@@ -1,4 +1,5 @@
 ---
+description: "getBlob Method (SQLServerCallableStatement)"
 title: "getBlob Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

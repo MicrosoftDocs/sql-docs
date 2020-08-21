@@ -1,4 +1,5 @@
 ---
+description: "Value Property Example (VB)"
 title: "Value Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

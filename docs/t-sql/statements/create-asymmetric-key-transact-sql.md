@@ -1,4 +1,5 @@
 ---
+description: "CREATE ASYMMETRIC KEY (Transact-SQL)"
 title: "CREATE ASYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/23/2019"

@@ -1,4 +1,5 @@
 ---
+description: "Prepare SQL Server for CDC"
 title: "Prepare SQL Server for CDC | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

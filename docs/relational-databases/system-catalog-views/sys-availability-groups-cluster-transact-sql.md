@@ -1,4 +1,5 @@
 ---
+description: "sys.availability_groups_cluster (Transact-SQL)"
 title: "sys.availability_groups_cluster (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

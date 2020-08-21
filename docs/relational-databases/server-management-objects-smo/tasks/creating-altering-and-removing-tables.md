@@ -1,4 +1,5 @@
 ---
+description: "Creating, Altering, and Removing Tables"
 title: "Creating, Altering, and Removing Tables"
 ms.custom: seo-dt-2019
 ms.date: "08/06/2017"

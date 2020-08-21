@@ -1,4 +1,5 @@
 ---
+description: "SELECT - ORDER BY Clause (Transact-SQL)"
 title: "ORDER BY Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/24/2018"

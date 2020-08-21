@@ -1,4 +1,5 @@
 ---
+description: "Audit Login Failed Event Class"
 title: "Audit Login Failed Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

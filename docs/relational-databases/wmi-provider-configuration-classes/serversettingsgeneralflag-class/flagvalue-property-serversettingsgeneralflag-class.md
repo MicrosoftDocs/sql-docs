@@ -1,4 +1,5 @@
 ---
+description: "FlagValue Property (ServerSettingsGeneralFlag Class)"
 title: "FlagValue Property (ServerSettingsGeneralFlag)"
 ms.custom: seo-lt-2019
 ms.date: "03/06/2017"

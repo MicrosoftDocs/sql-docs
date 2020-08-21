@@ -1,4 +1,5 @@
 ---
+description: "Rebuild Index Task"
 title: "Rebuild Index Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

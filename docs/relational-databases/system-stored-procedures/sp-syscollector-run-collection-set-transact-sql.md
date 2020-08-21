@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_run_collection_set (Transact-SQL)"
 title: "sp_syscollector_run_collection_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

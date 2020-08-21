@@ -1,4 +1,5 @@
 ---
+description: "CURSOR_STATUS (Transact-SQL)"
 title: "CURSOR_STATUS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"

@@ -1,4 +1,5 @@
 ---
+description: "OUTPUT Clause (Transact-SQL)"
 title: "OUTPUT Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/14/2020"

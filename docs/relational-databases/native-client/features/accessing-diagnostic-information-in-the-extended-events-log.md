@@ -1,4 +1,5 @@
 ---
+description: "Accessing SQL Server Native Client Diagnostic Information in the Extended Events Log"
 title: "Diagnostic Info in Extended Events log"
 ms.date: 03/14/2017
 ms.reviewer: ""

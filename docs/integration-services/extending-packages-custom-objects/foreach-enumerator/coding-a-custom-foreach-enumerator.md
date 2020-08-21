@@ -1,4 +1,5 @@
 ---
+description: "Coding a Custom Foreach Enumerator"
 title: "Coding a Custom Foreach Enumerator | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

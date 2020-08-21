@@ -1,4 +1,5 @@
 ---
+description: "sp_invalidate_textptr (Transact-SQL)"
 title: "sp_invalidate_textptr (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

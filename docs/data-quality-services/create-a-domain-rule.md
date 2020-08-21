@@ -1,4 +1,5 @@
 ---
+description: "Create a Domain Rule"
 title: "Create a Domain Rule"
 ms.date: "11/08/2011"
 ms.prod: sql

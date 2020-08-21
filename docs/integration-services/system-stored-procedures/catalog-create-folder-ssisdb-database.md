@@ -1,4 +1,5 @@
 ---
+description: "catalog.create_folder (SSISDB Database)"
 title: "catalog.create_folder (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

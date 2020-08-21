@@ -1,4 +1,5 @@
 ---
+description: "Count Rows in a Table (Visual Database Tools)"
 title: Count Rows in a Table
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

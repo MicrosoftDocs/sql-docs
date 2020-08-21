@@ -1,4 +1,5 @@
 ---
+description: "sys.numbered_procedure_parameters (Transact-SQL)"
 title: "sys.numbered_procedure_parameters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

@@ -1,4 +1,5 @@
 ---
+description: "Microsoft OLE DB Provider for Microsoft Jet Overview"
 title: "Microsoft OLE DB Provider for Microsoft Jet | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

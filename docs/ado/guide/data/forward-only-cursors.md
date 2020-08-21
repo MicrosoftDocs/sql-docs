@@ -1,4 +1,5 @@
 ---
+description: "Forward-Only Cursors"
 title: "Forward-Only Cursors | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

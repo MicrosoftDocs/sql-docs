@@ -1,4 +1,5 @@
 ---
+description: "sys.data_spaces (Transact-SQL)"
 title: "sys.data_spaces (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

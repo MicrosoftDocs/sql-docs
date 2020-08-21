@@ -1,4 +1,5 @@
 ---
+description: "Schema Section"
 title: "Schema Section | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

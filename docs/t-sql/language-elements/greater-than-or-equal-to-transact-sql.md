@@ -1,4 +1,5 @@
 ---
+description: "&gt;= (Greater Than or Equal To) (Transact-SQL)"
 title: "&gt;= (Greater Than or Equal To) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"

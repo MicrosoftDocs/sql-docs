@@ -1,4 +1,5 @@
 ---
+description: "sql_variant (Transact-SQL)"
 title: sql_variant (Transact-SQL)
 ms.custom: ""
 ms.date: "09/12/2017"

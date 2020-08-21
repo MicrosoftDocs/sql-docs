@@ -1,4 +1,5 @@
 ---
+description: "Project Settings (Type Mapping) (SybaseToSQL)"
 title: "Project Settings (Type Mapping) (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

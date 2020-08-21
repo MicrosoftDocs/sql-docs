@@ -1,4 +1,5 @@
 ---
+description: "Retrieving Error Information (Native Client OLE DB provider)"
 title: Retrieving error information (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"

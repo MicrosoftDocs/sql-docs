@@ -1,4 +1,5 @@
 ---
+description: "Step 1: Set Up the Visual Basic Project"
 title: "Step 1: Set Up the Visual Basic Project | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Handling SMO Events"
 title: "Handling SMO Events | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"

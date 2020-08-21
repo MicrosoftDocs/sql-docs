@@ -1,4 +1,5 @@
 ---
+description: "CREATE TABLE (Azure SQL Data Warehouse)"
 title: "CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/03/2019"

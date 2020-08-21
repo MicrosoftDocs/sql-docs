@@ -1,4 +1,5 @@
 ---
+description: "Sending Data as a Table-Valued Parameter Using Data-At-Execution (ODBC)"
 title: "Table-Valued Parameter, Data-At-Execution (ODBC)"
 ms.custom: ""
 ms.date: "03/14/2017"

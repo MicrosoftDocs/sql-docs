@@ -1,4 +1,5 @@
 ---
+description: "Reset Method (RDS)"
 title: "Reset Method (RDS) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

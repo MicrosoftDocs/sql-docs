@@ -1,4 +1,5 @@
 ---
+description: "ADO Collections"
 title: "ADO Collections | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

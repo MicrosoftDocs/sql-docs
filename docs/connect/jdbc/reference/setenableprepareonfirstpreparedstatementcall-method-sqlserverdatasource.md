@@ -1,4 +1,5 @@
 ---
+description: "setEnablePrepareOnFirstPreparedStatementCall Method (SQLServerDataSource)"
 title: "setEnablePrepareOnFirstPreparedStatementCall Method (SQLServerDataSource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2018"

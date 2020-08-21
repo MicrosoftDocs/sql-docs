@@ -1,4 +1,5 @@
 ---
+description: "Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VC++)"
 title: "Create a New Foreign Key Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

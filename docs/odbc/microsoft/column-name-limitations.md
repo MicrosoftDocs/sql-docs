@@ -1,4 +1,5 @@
 ---
+description: "Column Name Limitations"
 title: "Column Name Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

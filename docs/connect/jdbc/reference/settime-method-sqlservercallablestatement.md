@@ -1,4 +1,5 @@
 ---
+description: "setTime Method (SQLServerCallableStatement)"
 title: "setTime Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

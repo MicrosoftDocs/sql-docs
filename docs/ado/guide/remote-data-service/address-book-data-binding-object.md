@@ -1,4 +1,5 @@
 ---
+description: "Address Book Data-Binding Object"
 title: "Address Book Data-Binding Object | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "ROLLBACK WORK (Transact-SQL)"
 title: ROLLBACK WORK (Transact-SQL)
 ms.custom: ""
 ms.date: "06/10/2016"

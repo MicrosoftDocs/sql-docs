@@ -50,4 +50,4 @@ Before you call UpdateBatch, you can use the Recordset Filter property to view o
 ```  
   
 ## See Also  
- [Batch Mode](../../../ado/guide/data/batch-mode.md)
+ [Batch Mode](./batch-mode.md)

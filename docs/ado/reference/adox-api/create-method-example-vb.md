@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Create Method Example (VB)
-The following code shows how to create a new Microsoft Jet database with the [Create](../../../ado/reference/adox-api/create-method-adox.md) method.  
+The following code shows how to create a new Microsoft Jet database with the [Create](./create-method-adox.md) method.  
   
 ```  
 Attribute VB_Name = "Create"  
@@ -45,5 +45,5 @@ End Sub
 ```  
   
 ## See Also  
- [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Create Method (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
+ [Catalog Object (ADOX)](./catalog-object-adox.md)   
+ [Create Method (ADOX)](./create-method-adox.md)

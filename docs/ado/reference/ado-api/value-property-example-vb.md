@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Value Property Example (VB)
-This example demonstrates the [Value](../../../ado/reference/ado-api/value-property-ado.md) property with [Field](../../../ado/reference/ado-api/field-object.md) and [Property](../../../ado/reference/ado-api/property-object-ado.md) objects by displaying field and property values for the ***Employees*** table.  
+This example demonstrates the [Value](./value-property-ado.md) property with [Field](./field-object.md) and [Property](./property-object-ado.md) objects by displaying field and property values for the ***Employees*** table.  
   
 ```  
 'BeginValueVB  
@@ -96,6 +96,6 @@ End Sub
 ```  
   
 ## See Also  
- [Field Object](../../../ado/reference/ado-api/field-object.md)   
- [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Value Property (ADO)](../../../ado/reference/ado-api/value-property-ado.md)
+ [Field Object](./field-object.md)   
+ [Property Object (ADO)](./property-object-ado.md)   
+ [Value Property (ADO)](./value-property-ado.md)

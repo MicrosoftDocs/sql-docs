@@ -22,6 +22,6 @@ The following examples require Microsoft Visual Basic version 5.0 with Service P
 > [!NOTE]
 >  Paste the entire code example, from beginning to end, into your code editor. The example may not run correctly if partial examples are used or if paragraph formatting is lost.  
   
--   [Cellset Example](../../../ado/reference/ado-md-api/cellset-example-vb.md)  
+-   [Cellset Example](./cellset-example-vb.md)  
   
--   [Catalog Example](../../../ado/reference/ado-md-api/catalog-example-vb.md)
+-   [Catalog Example](./catalog-example-vb.md)

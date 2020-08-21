@@ -171,6 +171,14 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ## Known issues
 
+### Empty Livy jobs before you apply CU7
+
+- **Affected releases**: CU7
+
+- **Issue and customer impact**: 
+
+- **Workaround**: Before you apply CU7, empty all Livy jobs.
+
 ### Big data cluster generated service accounts passwords expiration
 
 - **Affected releases**: All big data cluster deployments with Active Directory integration, irrespective of the release

@@ -55,4 +55,4 @@ __declspec(property(get=GetState)) long State;
 ```  
   
 ## See Also  
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [Command Object (ADO)](./command-object-ado.md)

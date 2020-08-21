@@ -47,4 +47,4 @@ get_Parameters(ADOParameters **ppvObject)
 ```  
   
 ## See Also  
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [Command Object (ADO)](./command-object-ado.md)

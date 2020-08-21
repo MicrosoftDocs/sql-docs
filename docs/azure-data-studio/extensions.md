@@ -2,7 +2,7 @@
 title: Add extensions
 description: Learn how to add functionality to Azure Data Studio by selecting and installing extensions from among those provided by Microsoft and third parties. 
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"

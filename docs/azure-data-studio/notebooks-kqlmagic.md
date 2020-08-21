@@ -6,7 +6,7 @@ ms.author: maghan
 ms.reviewer: jukoesma
 ms.topic: tutorial
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.custom: ""
 ms.date: 04/27/2020
 ---

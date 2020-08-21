@@ -2,7 +2,7 @@
 title: Connect your SQL Server using Windows authentication (Kerberos)
 description: Learn how to connect Azure Data Studio to SQL Server using Microsoft Kerberos integrated authentication.
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu, maghan, sstein

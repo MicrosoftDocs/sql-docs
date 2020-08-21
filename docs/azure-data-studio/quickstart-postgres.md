@@ -4,7 +4,7 @@ description: Do a quickstart in which you use Azure Data Studio to connect to Po
 ms.custom: "seodec18"
 ms.date: "09/18/2019"
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.reviewer: "alayu, maghan, sstein"
 ms.topic: "quickstart"
 author: "rachel-msft"

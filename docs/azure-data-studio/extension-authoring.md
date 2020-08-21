@@ -2,7 +2,7 @@
 title: Create extensions
 description: You can add functionality to Azure Data Studio with an extension. Learn how to create one and how to publish it to the extensions gallery.
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"

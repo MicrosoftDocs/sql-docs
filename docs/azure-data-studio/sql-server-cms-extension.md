@@ -29,6 +29,4 @@ This experience is currently in its initial preview. Report issues and feature r
  Central Management Servers can be viewed by clicking on the Connections icon (Ctrl/Cmd + G). The first time you download the extension, the CMS view will be minimized, and you can open it by click on **Central Management Servers**
 
 ## Next steps
-To learn more conceptually about Central Management Servers, [you can read more here.](https://docs.microsoft.com/sql/ssms/register-servers/create-a-central-management-server-and-server-group)
-
-
+To learn more conceptually about Central Management Servers, [you can read more here.](../ssms/register-servers/create-a-central-management-server-and-server-group.md)

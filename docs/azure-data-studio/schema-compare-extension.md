@@ -62,5 +62,5 @@ It can be tedious to manually manage and synchronize different database versions
 
 ## Next steps
 
-To learn more about Schema Compare, [check our documentation.](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions)
+To learn more about Schema Compare, [check our documentation.](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)
 Report issues and feature requests [here.](https://github.com/microsoft/azuredatastudio/issues)

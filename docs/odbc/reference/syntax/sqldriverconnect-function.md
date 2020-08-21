@@ -1,8 +1,8 @@
 ---
-description: "SQLDriverConnect Function"
 title: "SQLDriverConnect Function | Microsoft Docs"
+description: "The SQLDriverConnect function is part of the ODBC API standard and this reference documentation provides information on its syntax."
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/20/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -26,20 +26,8 @@ ms.author: v-daenge
  Version Introduced: ODBC 1.0 Standards Compliance: ODBC  
   
  **Summary**  
- **SQLDriverConnect** is an alternative to **SQLConnect**. It supports data sources that require more connection information than the three arguments in **SQLConnect**, dialog boxes to prompt the user for all connection information, and data sources that are not defined in the system information.  
-  
- **SQLDriverConnect** provides the following connection attributes:  
-  
--   Establish a connection using a connection string that contains the data source name, one or more user IDs, one or more passwords, and other information required by the data source.  
-  
--   Establish a connection using a partial connection string or no additional information; in this case, the Driver Manager and the driver can each prompt the user for connection information.  
-  
--   Establish a connection to a data source that is not defined in the system information. If the application supplies a partial connection string, the driver can prompt the user for connection information.  
-  
--   Establish a connection to a data source using a connection string constructed from the information in a .dsn file.  
-  
- After a connection is established, **SQLDriverConnect** returns the completed connection string. The application can use this string for subsequent connection requests. For more information, see [Connecting with SQLDriverConnect](../../../odbc/reference/develop-app/connecting-with-sqldriverconnect.md).  
-  
+ **SQLDriverConnect** is an alternative to **SQLConnect**. It supports data sources that require more connection information than the three arguments in **SQLConnect**, dialog boxes to prompt the user for all connection information, and data sources that are not defined in the system information. For more information, see [Connecting with SQLDriverConnect](../develop-app/connecting-with-sqldriverconnect.md).  
+
 ## Syntax  
   
 ```cpp  

@@ -115,9 +115,9 @@ FROM DISK = '\\10.172.14.255\backups\yearly\Invoices2013Full'
   
 For more information, see: 
   
--   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=sql-server-ver15)   
+-   [BACKUP DATABASE](../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016)   
   
--   [RESTORE DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=sql-server-ver15)  
+-   [RESTORE DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016)  
   
 ## <a name="Security"></a>Security notices  
 The backup server is not joined to the private domain for the appliance. It is in your own network, and there is no trust relationship between your own domain and private appliance domain.  

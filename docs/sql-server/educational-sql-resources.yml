@@ -13,6 +13,26 @@ metadata:
   ms.date: 01/07/2020  
 
 landingContent:
+  - title: Learn SQL 
+    linkLists:
+    - linkListType: learn 
+      links:
+      - text: Azure SQL for beginners
+        url: https://aka.ms/azuresql4beginners
+      - text: Azure SQL fundamentals 
+        url: https://docs.microsoft.com/learn/paths/azure-sql-fundamentals/
+      - text: Azure SQL hands-on labs
+        url: https://aka.ms/asqlworkshop
+      - text: Azure SQL bootcamp 
+        url: https://aka.ms/azuresqlbootcamp
+      - text: LinkedIn Learning
+        url: https://www.linkedin.com/learning/topics/sql-server
+      - text: Pluralsight
+        url: https://www.pluralsight.com/browse/data-professional/sql-server
+      - text: Channel 9
+        url: https://channel9.msdn.com/Tags/sql+server
+
+
   - title: SQL Server
     linkLists:
     - linkListType: learn
@@ -124,25 +144,6 @@ landingContent:
         url: /azure/sql-database/sql-database-active-geo-replication-portal
       - text: Configure security
         url: /azure/sql-database/sql-database-security-tutorial
-
-  - title: Learn SQL 
-    linkLists:
-    - linkListType: reference 
-      links:
-      - text: Azure SQL for beginners
-        url: https://aka.ms/azuresql4beginners
-      - text: Azure SQL fundamentals 
-        url: https://docs.microsoft.com/learn/paths/azure-sql-fundamentals/
-      - text: Azure SQL hands-on labs
-        url: https://aka.ms/asqlworkshop
-      - text: Azure SQL bootcamp 
-        url: https://aka.ms/azuresqlbootcamp
-      - text: LinkedIn Learning
-        url: https://www.linkedin.com/learning/topics/sql-server
-      - text: Pluralsight
-        url: https://www.pluralsight.com/browse/data-professional/sql-server
-      - text: Channel 9
-        url: https://channel9.msdn.com/Tags/sql+server
 
   - title: SQL Server on Linux
     linkLists:

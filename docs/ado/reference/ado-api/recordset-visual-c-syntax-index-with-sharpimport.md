@@ -199,4 +199,4 @@ __declspec(property(get=GetStayInSync,put=PutStayInSync)) VARIANT_BOOL
 ```  
   
 ## See Also  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset Object (ADO)](./recordset-object-ado.md)

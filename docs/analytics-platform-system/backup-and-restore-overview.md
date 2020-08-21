@@ -98,7 +98,7 @@ When restoring data, the appliance detects the number of Compute nodes on the so
   
 1.  The database backup to be restored is available on a Windows file share on a non-appliance backup server. For best performance, this server is connected to the appliance InfiniBand network.  
   
-2.  User submits a [RESTORE DATABASE](../t-sql/statements/restore-statements-transact-sql.md??view=aps-pdw-2016) tsql statement to the Control node.  
+2.  User submits a [RESTORE DATABASE](../t-sql/statements/restore-statements-transact-sql.md?view=aps-pdw-2016) tsql statement to the Control node.  
   
     -   The restore is either a full restore or a header restore. The full restore restores a full backup and then optionally restores a differential backup.  
   

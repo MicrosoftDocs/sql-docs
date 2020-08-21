@@ -119,26 +119,4 @@ If you're using an ODBC data source, you can use the connection pooling option i
 5.  Click OK, and then OK again to exit the utility.  
   
 ## See Also  
- [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [RDS Fundamentals](./rds-fundamentals.md)

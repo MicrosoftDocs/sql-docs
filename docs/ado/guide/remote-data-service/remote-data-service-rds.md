@@ -23,30 +23,8 @@ Remote Data Service (RDS) is a feature of ADO, with which you can move data from
   
  The RDS Programmer's Guide contains the following chapters:  
   
--   [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)  
+-   [RDS Fundamentals](./rds-fundamentals.md)  
   
--   [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)  
+-   [RDS Tutorial](./rds-tutorial.md)  
   
--   [RDS Usage and Security](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-   [RDS Usage and Security](./rds-usage-and-security.md)

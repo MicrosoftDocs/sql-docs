@@ -39,7 +39,7 @@ This tutorial illustrates using the RDS programming model to query and update a 
   
 -   Invoke the server program. Pass parameters to the server program that identifies the data source and the command to issue.  
   
--   The server program obtains a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object from the data source, typically by using ADO. Optionally, the **Recordset** object is processed on the server.  
+-   The server program obtains a [Recordset](../../reference/ado-api/recordset-object-ado.md) object from the data source, typically by using ADO. Optionally, the **Recordset** object is processed on the server.  
   
 -   The server program returns the final **Recordset** object to the client application.  
   
@@ -49,20 +49,20 @@ This tutorial illustrates using the RDS programming model to query and update a 
   
  This tutorial contains the following topics.  
   
--   [Step 1: Specify a Server Program (RDS Tutorial)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)  
+-   [Step 1: Specify a Server Program (RDS Tutorial)](./step-1-specify-a-server-program-rds-tutorial.md)  
   
--   [Step 2: Invoke the Server Program (RDS Tutorial)](../../../ado/guide/remote-data-service/step-2-invoke-the-server-program-rds-tutorial.md)  
+-   [Step 2: Invoke the Server Program (RDS Tutorial)](./step-2-invoke-the-server-program-rds-tutorial.md)  
   
--   [Step 3: Server Obtains a Recordset (RDS Tutorial)](../../../ado/guide/remote-data-service/step-3-server-obtains-a-recordset-rds-tutorial.md)  
+-   [Step 3: Server Obtains a Recordset (RDS Tutorial)](./step-3-server-obtains-a-recordset-rds-tutorial.md)  
   
--   [Step 4: Server Returns the Recordset (RDS Tutorial)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)  
+-   [Step 4: Server Returns the Recordset (RDS Tutorial)](./step-4-server-returns-the-recordset-rds-tutorial.md)  
   
--   [Step 5: DataControl is Made Usable (RDS Tutorial)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)  
+-   [Step 5: DataControl is Made Usable (RDS Tutorial)](./step-5-datacontrol-is-made-usable-rds-tutorial.md)  
   
--   [Step 6: Changes are Sent to the Server (RDS Tutorial)](../../../ado/guide/remote-data-service/step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
+-   [Step 6: Changes are Sent to the Server (RDS Tutorial)](./step-6-changes-are-sent-to-the-server-rds-tutorial.md)  
   
--   [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)  
+-   [RDS Tutorial (VBScript)](./rds-tutorial-vbscript.md)  
   
 ## See Also  
- [Step 1: Specify a Server Program (RDS Tutorial)](../../../ado/guide/remote-data-service/step-1-specify-a-server-program-rds-tutorial.md)   
- [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Step 1: Specify a Server Program (RDS Tutorial)](./step-1-specify-a-server-program-rds-tutorial.md)   
+ [RDS Tutorial (VBScript)](./rds-tutorial-vbscript.md)

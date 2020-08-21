@@ -523,7 +523,7 @@ Loaded data might require more or less space on the appliance than in the source
 Although **dwloader** is a transaction process and will roll back gracefully on failure, it cannot be rolled back once the bulk load has been completed successfully. To cancel an active **dwloader** process, type CTRL+C.  
   
 ## Limitations and Restrictions  
-The total size of all loads occurring concurrently must be smaller than LOG_SIZE for the database, and we recommend the total size of all concurrent loads is less than 50% of the LOG_SIZE. To achieve this size limitation, you can split large loads  into multiple batches. For more information on LOG_SIZE, see [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md?view=sql-server-ver15)  
+The total size of all loads occurring concurrently must be smaller than LOG_SIZE for the database, and we recommend the total size of all concurrent loads is less than 50% of the LOG_SIZE. To achieve this size limitation, you can split large loads  into multiple batches. For more information on LOG_SIZE, see [CREATE DATABASE](../t-sql/statements/create-database-transact-sql.md?view=aps-pdw-2016)  
   
 When loading multiple files with one load command, all rejected rows are written to the same reject file. The reject file does not show which input file contains each rejected row.  
   

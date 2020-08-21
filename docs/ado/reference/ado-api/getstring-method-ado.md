@@ -19,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # GetString Method (ADO)
-Returns the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) as a string.  
+Returns the [Recordset](./recordset-object-ado.md) as a string.  
   
 ## Syntax  
   
@@ -33,7 +33,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
   
 #### Parameters  
  *StringFormat*  
- A [StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md) value that specifies how the **Recordset** should be converted to a string. The *RowDelimiter*, *ColumnDelimiter*, and *NullExpr* parameters are used only with a *StringFormat* of **adClipString**.  
+ A [StringFormatEnum](./stringformatenum.md) value that specifies how the **Recordset** should be converted to a string. The *RowDelimiter*, *ColumnDelimiter*, and *NullExpr* parameters are used only with a *StringFormat* of **adClipString**.  
   
  *NumRows*  
  Optional. The number of rows to be converted in the **Recordset**. If *NumRows* is not specified, or if it is greater than the total number of rows in the **Recordset**, then all the rows in the **Recordset** are converted.  
@@ -53,7 +53,7 @@ Variant = recordset.GetString(StringFormat, NumRows, ColumnDelimiter, RowDelimit
  This method is equivalent to the RDO **GetClipString** method.  
   
 ## Applies To  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset Object (ADO)](./recordset-object-ado.md)  
   
 ## See Also  
- [GetString Method Example (VB)](../../../ado/reference/ado-api/getstring-method-example-vb.md)
+ [GetString Method Example (VB)](./getstring-method-example-vb.md)

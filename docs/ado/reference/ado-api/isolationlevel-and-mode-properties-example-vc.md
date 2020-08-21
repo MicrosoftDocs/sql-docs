@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # IsolationLevel and Mode Properties Example (VC++)
-This example uses the [Mode](../../../ado/reference/ado-api/mode-property-ado.md) property to open an exclusive connection, and the [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) property to open a transaction that is conducted in isolation of other transactions.  
+This example uses the [Mode](./mode-property-ado.md) property to open an exclusive connection, and the [IsolationLevel](./isolationlevel-property.md) property to open a transaction that is conducted in isolation of other transactions.  
   
 ## Example  
   
@@ -239,5 +239,5 @@ void PrintComError(_com_error &e) {
 **Fifty Years in Buckingham Palace Kitchens -  trad_cook**  
 **Sushi, Anyone? -  trad_cook**   
 ## See Also  
- [IsolationLevel Property](../../../ado/reference/ado-api/isolationlevel-property.md)   
- [Mode Property (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
+ [IsolationLevel Property](./isolationlevel-property.md)   
+ [Mode Property (ADO)](./mode-property-ado.md)

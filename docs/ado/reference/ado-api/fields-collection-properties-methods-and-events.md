@@ -16,25 +16,25 @@ ms.author: jroth
 ---
 # Fields Collection Properties, Methods, and Events
 ## Properties  
- [Count Property](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count Property](./count-property-ado.md)  
   
- [Item Property](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item Property](./item-property-ado.md)  
   
 ## Methods  
- [Append Method](../../../ado/reference/ado-api/append-method-ado.md)  
+ [Append Method](./append-method-ado.md)  
   
- [CancelUpdate Method](../../../ado/reference/ado-api/cancelupdate-method-ado.md)  
+ [CancelUpdate Method](./cancelupdate-method-ado.md)  
   
- [Delete Method (ADO Fields Collection)](../../../ado/reference/ado-api/delete-method-ado-fields-collection.md)  
+ [Delete Method (ADO Fields Collection)](./delete-method-ado-fields-collection.md)  
   
- [Refresh Method](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh Method](./refresh-method-ado.md)  
   
- [Resync Method](../../../ado/reference/ado-api/resync-method.md)  
+ [Resync Method](./resync-method.md)  
   
- [Update Method](../../../ado/reference/ado-api/update-method.md)  
+ [Update Method](./update-method.md)  
   
 ## Events  
  None.  
   
 ## See Also  
- [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)
+ [Fields Collection (ADO)](./fields-collection-ado.md)

@@ -19,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # Item Property (ADO MD Cellset)
-Retrieves a cell from a [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) using its coordinates.  
+Retrieves a cell from a [cellset](./cellset-object-ado-md.md) using its coordinates.  
   
 ## Syntax  
   
@@ -40,7 +40,7 @@ Cell = Cellset.Item ( Positions)
 -   The ordinal position  
   
 ## Remarks  
- Use the **Item** property to return a [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) object within a [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) object. If the **Item** property cannot find the cell corresponding to the *Positions* argument, an error occurs.  
+ Use the **Item** property to return a [Cell](./cell-object-ado-md.md) object within a [Cellset](./cellset-object-ado-md.md) object. If the **Item** property cannot find the cell corresponding to the *Positions* argument, an error occurs.  
   
  The **Item** property is the default property for the **Cellset** object. The following syntax forms are interchangeable:  
   
@@ -60,8 +60,8 @@ Cellset.Item ( Positions )Cellset ( Positions )
 >  Retrieving cells by member name may not be supported by your data provider. See the documentation for your provider for more information.  
   
 ## Applies To  
- [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+ [Cellset Object (ADO MD)](./cellset-object-ado-md.md)  
   
 ## See Also  
- [Cell Object (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)
+ [Cell Object (ADO MD)](./cell-object-ado-md.md)   
+ [Cellset Object (ADO MD)](./cellset-object-ado-md.md)

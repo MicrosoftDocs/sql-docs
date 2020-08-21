@@ -23,13 +23,13 @@ Represents one of the dimensions of a multidimensional cube, containing one or m
 ## Remarks  
  With the collections and properties of a **Dimension** object, you can do the following:  
   
--   Identify the **Dimension** with the [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) and [UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md) properties.  
+-   Identify the **Dimension** with the [Name](./name-property-ado-md.md) and [UniqueName](./uniquename-property-ado-md.md) properties.  
   
--   Return a meaningful string that describes the **Dimension** with the [Description](../../../ado/reference/ado-md-api/description-property-ado-md.md) property.  
+-   Return a meaningful string that describes the **Dimension** with the [Description](./description-property-ado-md.md) property.  
   
--   Return the [Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md) objects that make up the **Dimension** with the [Hierarchies](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md) collection.  
+-   Return the [Hierarchy](./hierarchy-object-ado-md.md) objects that make up the **Dimension** with the [Hierarchies](./hierarchies-collection-ado-md.md) collection.  
   
--   Use the standard ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection to obtain additional information about the **Dimension** object.  
+-   Use the standard ADO [Properties](../ado-api/properties-collection-ado.md) collection to obtain additional information about the **Dimension** object.  
   
  The **Properties** collection contains provider-supplied properties. The following table lists properties that might be available. The actual property list may differ depending upon the implementation of the provider. See the documentation for your provider for a more complete list of available properties.  
   
@@ -50,11 +50,11 @@ Represents one of the dimensions of a multidimensional cube, containing one or m
   
  This section contains the following topic.  
   
--   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/dimension-object-properties-methods-and-events.md)  
+-   [Properties, Methods, and Events](./dimension-object-properties-methods-and-events.md)  
   
 ## See Also  
- [CubeDef Example (VBScript)](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)   
- [CubeDef Object (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)   
- [Dimensions Collection (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)   
- [Hierarchies Collection (ADO MD)](../../../ado/reference/ado-md-api/hierarchies-collection-ado-md.md)   
- [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [CubeDef Example (VBScript)](./cubedef-example-vbscript.md)   
+ [CubeDef Object (ADO MD)](./cubedef-object-ado-md.md)   
+ [Dimensions Collection (ADO MD)](./dimensions-collection-ado-md.md)   
+ [Hierarchies Collection (ADO MD)](./hierarchies-collection-ado-md.md)   
+ [Properties Collection (ADO)](../ado-api/properties-collection-ado.md)

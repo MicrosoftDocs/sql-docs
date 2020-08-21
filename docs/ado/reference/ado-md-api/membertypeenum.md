@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # MemberTypeEnum
-Specifies the setting for the [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) property of a [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) object.  
+Specifies the setting for the [Type](./type-property-ado-md.md) property of a [Member](./member-object-ado-md.md) object.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  

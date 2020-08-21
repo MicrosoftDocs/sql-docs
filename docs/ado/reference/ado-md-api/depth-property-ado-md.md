@@ -19,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # Depth Property (ADO MD)
-Indicates the number of levels between the [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) and the root of the hierarchy.  
+Indicates the number of levels between the [Level](./level-object-ado-md.md) and the root of the hierarchy.  
   
 ## Return Values  
  Returns an integer, and is read-only.  
@@ -28,7 +28,7 @@ Indicates the number of levels between the [Level](../../../ado/reference/ado-md
  A **Level** at the root of a hierarchy has a **Depth** value of zero (0).  
   
 ## Applies To  
- [Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+ [Level Object (ADO MD)](./level-object-ado-md.md)  
   
 ## See Also  
- [LevelDepth Property (ADO MD)](../../../ado/reference/ado-md-api/leveldepth-property-ado-md.md)
+ [LevelDepth Property (ADO MD)](./leveldepth-property-ado-md.md)

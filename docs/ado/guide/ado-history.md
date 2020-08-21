@@ -46,28 +46,28 @@ This topic lists the new features introduced by each release of ADO, ADO MD, and
 ## ADO 2.6
 
  **CubDef.GetSchemaObject**  _Method_
- Starting with ADO 2.6, ADO MD objects can be retrieved using unique names, as specified by the [UniqueName property (ADO MD)](../../ado/reference/ado-md-api/uniquename-property-ado-md.md). The names of parent objects do not need to be known, and parent collections do not need to be populated to retrieve a schema object. See [GetSchemaObject method (ADO MD)](../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md).
+ Starting with ADO 2.6, ADO MD objects can be retrieved using unique names, as specified by the [UniqueName property (ADO MD)](../reference/ado-md-api/uniquename-property-ado-md.md). The names of parent objects do not need to be known, and parent collections do not need to be populated to retrieve a schema object. See [GetSchemaObject method (ADO MD)](../reference/ado-md-api/getschemaobject-method-ado-md.md).
 
  *Command streams*
- The **Command** object supports commands in stream format as an alternative to using the **CommandText** property. The [CommandStream property (ADO)](../../ado/reference/ado-api/commandstream-property-ado.md) can be used to specify XML Templates or updategrams as the **Command** input with the Microsoft OLE DB Provider for SQL Server.
+ The **Command** object supports commands in stream format as an alternative to using the **CommandText** property. The [CommandStream property (ADO)](../reference/ado-api/commandstream-property-ado.md) can be used to specify XML Templates or updategrams as the **Command** input with the Microsoft OLE DB Provider for SQL Server.
 
  **Dialect**  _property_
- [Dialect](../../ado/reference/ado-api/dialect-property.md) is a new property that defines the syntax and general rules that the provider uses to parse the string or stream.
+ [Dialect](../reference/ado-api/dialect-property.md) is a new property that defines the syntax and general rules that the provider uses to parse the string or stream.
 
  **Command.Execute**  _method_
- The [Execute method](../../ado/reference/ado-api/execute-method-ado-command.md) of the ADO **Command** object has been enhanced to use streams for input and output.
+ The [Execute method](../reference/ado-api/execute-method-ado-command.md) of the ADO **Command** object has been enhanced to use streams for input and output.
 
  *Field statusvalues*
- If the user encounters a DB_E_ERRORSOCCURRED error when modifying a **Field** of a **Recordset**, ADO will now fill the **Field.Status** property with the appropriate status information so that the user will have more information about what went wrong. See [Status Property (ADO Field)](../../ado/reference/ado-api/status-property-ado-field.md).
+ If the user encounters a DB_E_ERRORSOCCURRED error when modifying a **Field** of a **Recordset**, ADO will now fill the **Field.Status** property with the appropriate status information so that the user will have more information about what went wrong. See [Status Property (ADO Field)](../reference/ado-api/status-property-ado-field.md).
 
  **NamedParameters**  _property_
- [NamedParameters](../../ado/reference/ado-api/namedparameters-property-ado.md) is a new property of the **Command** object that indicates that the provider should use named parameters.
+ [NamedParameters](../reference/ado-api/namedparameters-property-ado.md) is a new property of the **Command** object that indicates that the provider should use named parameters.
 
  *Resultsets in streams*
- ADO can return resultsets from a data source in a **Stream**, rather than a **Recordset** object. Using the latest version of the Microsoft OLE DB Provider for SQL Server, you can get XML results from the provider by executing a "For XML" query. A **Stream** that receives the resultset can be opened with a "For XML" command as the source. See [Retrieving Resultsets into Streams](../../ado/guide/data/retrieving-resultsets-into-streams.md).
+ ADO can return resultsets from a data source in a **Stream**, rather than a **Recordset** object. Using the latest version of the Microsoft OLE DB Provider for SQL Server, you can get XML results from the provider by executing a "For XML" query. A **Stream** that receives the resultset can be opened with a "For XML" command as the source. See [Retrieving Resultsets into Streams](./data/retrieving-resultsets-into-streams.md).
 
  *Single row resultset*
- The ADO **Record** object can now be opened on a command string or **Command** object that returns one row of data from the provider. This results in improved performance with MDAC 2.6 providers. See [Open Method (ADO Record)](../../ado/reference/ado-api/open-method-ado-record.md).
+ The ADO **Record** object can now be opened on a command string or **Command** object that returns one row of data from the provider. This results in improved performance with MDAC 2.6 providers. See [Open Method (ADO Record)](../reference/ado-api/open-method-ado-record.md).
 
 ## ADO 2.5
 

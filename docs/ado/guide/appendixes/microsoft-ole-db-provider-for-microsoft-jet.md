@@ -20,13 +20,13 @@ ms.author: jroth
 The OLE DB Provider for Microsoft Jet allows ADO to access Microsoft Jet databases.
 
 ## Connection String Parameters
- To connect to this provider, set the *Provider* argument of the [ConnectionString](../../../ado/reference/ado-api/connectionstring-property-ado.md) property to the following:
+ To connect to this provider, set the *Provider* argument of the [ConnectionString](../../reference/ado-api/connectionstring-property-ado.md) property to the following:
 
 ```vb
 Microsoft.Jet.OLEDB.4.0
 ```
 
- Reading the [Provider](../../../ado/reference/ado-api/provider-property-ado.md) property will also return this string.
+ Reading the [Provider](../../reference/ado-api/provider-property-ado.md) property will also return this string.
 
 ## Typical Connection String
  A typical connection string for this provider is:
@@ -100,16 +100,16 @@ Microsoft.Jet.OLEDB.4.0
 |Jet OLEDB:Stored Query (DBPROP_JETOLEDB_STOREDQUERY)|Indicates whether the command text should be interpreted as a stored query instead of an SQL command.|
 |Jet OLEDB:Validate Rules On Set (DBPROP_JETOLEDB_VALIDATEONSET)|Indicates whether the Jet validation rules are evaluated when column data is set or when the changes are committed to the database.|
 
- By default, the OLE DB Provider for Microsoft Jet opens Microsoft Jet databases in read/write mode. To open a database in read-only mode, set the [Mode](../../../ado/reference/ado-api/mode-property-ado.md) property on the ADO **Connection** object to **adModeRead**.
+ By default, the OLE DB Provider for Microsoft Jet opens Microsoft Jet databases in read/write mode. To open a database in read-only mode, set the [Mode](../../reference/ado-api/mode-property-ado.md) property on the ADO **Connection** object to **adModeRead**.
 
 ## Command Object Usage
- Command text in the [Command](../../../ado/reference/ado-api/command-object-ado.md) object uses the Microsoft Jet SQL dialect. You can specify row-returning queries, action queries, and table names in the command text; however, stored procedures are not supported and should not be specified.
+ Command text in the [Command](../../reference/ado-api/command-object-ado.md) object uses the Microsoft Jet SQL dialect. You can specify row-returning queries, action queries, and table names in the command text; however, stored procedures are not supported and should not be specified.
 
 ## Recordset Behavior
- The Microsoft Jet database engine does not support dynamic cursors. Therefore, the OLE DB Provider for Microsoft Jet does not support the **adLockDynamic** cursor type. When a dynamic cursor is requested, the provider will return a keyset cursor and reset the [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) property to indicate the type of [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) returned. Further, if an updatable **Recordset** is requested (**LockType** is **adLockOptimistic**, **adLockBatchOptimistic**, or **adLockPessimistic**) the provider will also return a keyset cursor and reset the **CursorType** property.
+ The Microsoft Jet database engine does not support dynamic cursors. Therefore, the OLE DB Provider for Microsoft Jet does not support the **adLockDynamic** cursor type. When a dynamic cursor is requested, the provider will return a keyset cursor and reset the [CursorType](../../reference/ado-api/cursortype-property-ado.md) property to indicate the type of [Recordset](../../reference/ado-api/recordset-object-ado.md) returned. Further, if an updatable **Recordset** is requested (**LockType** is **adLockOptimistic**, **adLockBatchOptimistic**, or **adLockPessimistic**) the provider will also return a keyset cursor and reset the **CursorType** property.
 
 ## Dynamic Properties
- The OLE DB Provider for Microsoft Jet inserts several dynamic properties into the **Properties** collection of the unopened [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md), and [Command](../../../ado/reference/ado-api/command-object-ado.md) objects.
+ The OLE DB Provider for Microsoft Jet inserts several dynamic properties into the **Properties** collection of the unopened [Connection](../../reference/ado-api/connection-object-ado.md), [Recordset](../../reference/ado-api/recordset-object-ado.md), and [Command](../../reference/ado-api/command-object-ado.md) objects.
 
  The following tables are a cross-index of the ADO and OLE DB names for each dynamic property. The OLE DB Programmer's Reference refers to an ADO property name by the term, "Description." You can find more information about these properties in the OLE DB Programmer's Reference.
 
@@ -330,4 +330,4 @@ Microsoft.Jet.OLEDB.4.0
 |Updatability|DBPROP_UPDATABILITY|
 |Use Bookmarks|DBPROP_BOOKMARKS|
 
- For specific implementation details and functional information about the OLE DB Provider for Microsoft Jet, see [Jet Provider](https://msdn.microsoft.com/library/windows/desktop/ms722791.aspx) in the OLE DB documentation.
+ For specific implementation details and functional information about the OLE DB Provider for Microsoft Jet, see [Jet Provider](/previous-versions/windows/desktop/ms722791(v=vs.85)) in the OLE DB documentation.

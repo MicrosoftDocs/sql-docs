@@ -16,15 +16,15 @@ ms.author: jroth
 ---
 # Dimensions Collection Properties, Methods, and Events
 ## Properties  
- [Count Property](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count Property](../ado-api/count-property-ado.md)  
   
- [Item Property](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item Property](../ado-api/item-property-ado.md)  
   
 ## Methods  
- [Refresh Method](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh Method](../ado-api/refresh-method-ado.md)  
   
 ## Events  
  None.  
   
 ## See Also  
- [Dimensions Collection (ADO MD)](../../../ado/reference/ado-md-api/dimensions-collection-ado-md.md)
+ [Dimensions Collection (ADO MD)](./dimensions-collection-ado-md.md)

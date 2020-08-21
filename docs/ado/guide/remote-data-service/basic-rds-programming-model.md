@@ -24,7 +24,7 @@ ms.author: jroth
   
 -   Invoke the server program. Pass parameters to the server program that identify the data source and the command to issue. (The server program actually uses ADO to gain access to the data source. ADO makes a connection with one of the given parameters, and then issues the command specified in the other parameter.)  
   
--   The server program obtains a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object from the data source. Optionally, the **Recordset** object is processed on the server.  
+-   The server program obtains a [Recordset](../../reference/ado-api/recordset-object-ado.md) object from the data source. Optionally, the **Recordset** object is processed on the server.  
   
 -   The server program returns the final **Recordset** object to the client application.  
   
@@ -39,10 +39,8 @@ ms.author: jroth
  Finally, if your needs are somewhere in between, ADO now supports customizing the behavior of the default server program.  
   
 ## See Also  
- [RDS Programming Model in Detail](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)   
- [RDS Scenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [RDS Usage and Security](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [RDS Programming Model in Detail](./rds-programming-model-in-detail.md)   
+ [RDS Scenario](./rds-scenario.md)   
+ [RDS Tutorial](./rds-tutorial.md)   
+ [Recordset Object (ADO)](../../reference/ado-api/recordset-object-ado.md)   
+ [RDS Usage and Security](./rds-usage-and-security.md)

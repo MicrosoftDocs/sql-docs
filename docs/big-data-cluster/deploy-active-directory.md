@@ -197,6 +197,9 @@ AD groups in this list are mapped to the *bdcUser* big data cluster role and the
 For details on how to update the AD groups for this settings see [Manage Big Data Cluster access in Active Directory
 mode](manage-user-access.md).
 
+  >[!TIP]
+  >To enable the HDFS browsing experience when connected to SQL Server master in Azure Data Studio, an user with bdcUser role must be granted VIEW SERVER STATE permissions since Azure Data studio is using the *sys.dm_cluster_endpoints* DMV to get the required Knox gateway endpoint to connect to HDFS.
+
   >[!IMPORTANT]
   >Create these groups in AD before deployment begins. If the scope for any of these AD groups is domain local deployment fails.
 

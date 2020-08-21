@@ -25,21 +25,21 @@ Use the following code examples to learn about how to use the ADO methods when w
   
 ## Methods  
   
--   [AddNew Method Example](../../../ado/reference/ado-api/addnew-method-example-vbscript.md)  
+-   [AddNew Method Example](./addnew-method-example-vbscript.md)  
   
--   [Clone Method Example](../../../ado/reference/ado-api/clone-method-example-vbscript.md)  
+-   [Clone Method Example](./clone-method-example-vbscript.md)  
   
--   [Delete Method Example](../../../ado/reference/ado-api/delete-method-example-vbscript.md)  
+-   [Delete Method Example](./delete-method-example-vbscript.md)  
   
--   [Execute, Requery, and Clear Methods Example](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)  
+-   [Execute, Requery, and Clear Methods Example](./execute-requery-and-clear-methods-example-vbscript.md)  
   
--   [Move Method Example](../../../ado/reference/ado-api/move-method-example-vbscript.md)  
+-   [Move Method Example](./move-method-example-vbscript.md)  
   
--   [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)  
+-   [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods Example](./movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript.md)  
   
--   [Open and Close Methods Example](../../../ado/reference/ado-api/open-and-close-methods-example-vbscript.md)  
+-   [Open and Close Methods Example](./open-and-close-methods-example-vbscript.md)  
   
 ## See Also  
- [ADO Code Examples in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
- [ADO Code Examples in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
- [Appendix D: ADO Samples](../../../ado/guide/appendixes/appendix-d-ado-samples.md)
+ [ADO Code Examples in Visual Basic](./ado-code-examples-in-visual-basic.md)   
+ [ADO Code Examples in Visual C++](./ado-code-examples-in-visual-c.md)   
+ [Appendix D: ADO Samples](../../guide/appendixes/appendix-d-ado-samples.md)

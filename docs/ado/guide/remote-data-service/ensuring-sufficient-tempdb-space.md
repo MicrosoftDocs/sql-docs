@@ -15,7 +15,7 @@ author: rothja
 ms.author: jroth
 ---
 # Ensuring Sufficient TempDB Space
-If errors occur while handling [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objects that need processing space on Microsoft SQL Server 6.5, you may need to increase the size of the TempDB. (Some queries require temporary processing space; for example, a query with an ORDER BY clause requires a sort of the **Recordset**, which requires some temporary space.)  
+If errors occur while handling [Recordset](../../reference/ado-api/recordset-object-ado.md) objects that need processing space on Microsoft SQL Server 6.5, you may need to increase the size of the TempDB. (Some queries require temporary processing space; for example, a query with an ORDER BY clause requires a sort of the **Recordset**, which requires some temporary space.)  
   
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -51,6 +51,4 @@ If errors occur while handling [Recordset](../../../ado/reference/ado-api/record
  For more information about this topic, search the Microsoft SQL Server Enterprise Manager Help file for "Expand Database dialog box."  
   
 ## See Also  
- [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [RDS Fundamentals](./rds-fundamentals.md)

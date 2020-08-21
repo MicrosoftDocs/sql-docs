@@ -18,9 +18,9 @@ author: rothja
 ms.author: jroth
 ---
 # ADCPROP_ASYNCTHREADPRIORITY_ENUM
-For an RDS [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object, specifies the execution priority of the asynchronous thread that retrieves data.  
+For an RDS [Recordset](./recordset-object-ado.md) object, specifies the execution priority of the asynchronous thread that retrieves data.  
   
- Use these constants with the **Recordset** "**Background Thread Priority**" dynamic property, which is referenced in the ADO-to-OLE DB Dynamic Property index and documented in the [Microsoft Cursor Service for OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentation.  
+ Use these constants with the **Recordset** "**Background Thread Priority**" dynamic property, which is referenced in the ADO-to-OLE DB Dynamic Property index and documented in the [Microsoft Cursor Service for OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentation.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  

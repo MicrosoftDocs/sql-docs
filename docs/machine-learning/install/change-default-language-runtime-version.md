@@ -139,7 +139,7 @@ For example, to remove the **R 3.2** folder from the instance MSSQLSERVER01:
 .\RegisterRext.exe /cleanup /rhome:"C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER01\R_SERVICES" /instance:MSSQLSERVER01
 ```
 
-For example, to remove the Python 3.7 folder from the instance MSSQLSERVER01:
+For example, to remove the **Python 3.7** folder from the instance MSSQLSERVER01:
 
 ```cmd
 .\RegisterRExt.exe /cleanup /python /pythonhome:"C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER01\PYTHON_SERVICES.3.7" /instance:MSSQLSERVER01

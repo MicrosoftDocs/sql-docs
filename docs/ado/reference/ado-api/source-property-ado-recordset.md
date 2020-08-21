@@ -1,4 +1,5 @@
 ---
+description: "Source Property (ADO Recordset)"
 title: "Source Property (ADO Recordset) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

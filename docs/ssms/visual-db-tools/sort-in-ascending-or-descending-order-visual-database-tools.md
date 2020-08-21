@@ -1,4 +1,5 @@
 ---
+description: "Sort in Ascending or Descending Order (Visual Database Tools)"
 title: Sort in Ascending or Descending Order
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

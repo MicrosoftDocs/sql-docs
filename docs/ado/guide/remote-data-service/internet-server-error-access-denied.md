@@ -1,4 +1,5 @@
 ---
+description: "Internet Server Error: Access Denied"
 title: "Internet Server Error: Access Denied | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "GET_TRANSMISSION_STATUS (Transact-SQL)"
 title: "GET_TRANSMISSION_STATUS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"

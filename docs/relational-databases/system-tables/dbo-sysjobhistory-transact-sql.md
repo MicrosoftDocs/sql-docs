@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysjobhistory (Transact-SQL)"
 title: "dbo.sysjobhistory (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/24/2019"

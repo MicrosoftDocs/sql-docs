@@ -1,4 +1,5 @@
 ---
+description: "Join Tables Automatically (Visual Database Tools)"
 title: Join Tables Automatically
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

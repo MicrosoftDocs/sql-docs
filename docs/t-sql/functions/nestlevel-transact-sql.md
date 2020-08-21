@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;NESTLEVEL (Transact-SQL)"
 title: "@@NESTLEVEL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/17/2017"

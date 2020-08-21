@@ -1,4 +1,5 @@
 ---
+description: "Create Master Data Manager Web Service Proxy Classes"
 title: Create Master Data Manager Web Service Proxy Classes
 ms.custom: ""
 ms.date: "03/17/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Trigger Functions (Transact-SQL)"
 title: "Trigger Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/08/2017"

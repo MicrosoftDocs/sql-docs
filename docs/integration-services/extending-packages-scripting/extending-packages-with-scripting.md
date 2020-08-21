@@ -1,4 +1,5 @@
 ---
+description: "Extending Packages with Scripting"
 title: "Extending Packages with Scripting | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

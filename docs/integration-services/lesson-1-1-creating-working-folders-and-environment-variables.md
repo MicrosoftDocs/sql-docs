@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-1 - Creating Working Folders and Environment Variables"
 title: "Step 1: Creating Working Folders and Environment Variables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

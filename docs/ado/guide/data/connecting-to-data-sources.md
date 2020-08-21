@@ -1,4 +1,5 @@
 ---
+description: "Connecting to Data Sources"
 title: "Connecting to Data Sources | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

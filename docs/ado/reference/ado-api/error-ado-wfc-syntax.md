@@ -1,4 +1,5 @@
 ---
+description: "Error (ADO - WFC Syntax)"
 title: "Error (ADO - WFC Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

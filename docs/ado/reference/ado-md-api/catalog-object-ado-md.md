@@ -1,4 +1,5 @@
 ---
+description: "Catalog Object (ADO MD)"
 title: "Catalog Object (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

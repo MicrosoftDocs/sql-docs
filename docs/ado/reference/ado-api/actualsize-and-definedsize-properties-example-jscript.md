@@ -1,4 +1,5 @@
 ---
+description: "ActualSize and DefinedSize Properties Example (JScript)"
 title: "ActualSize and DefinedSize Properties Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

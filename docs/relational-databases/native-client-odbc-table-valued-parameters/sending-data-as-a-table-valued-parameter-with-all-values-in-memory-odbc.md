@@ -1,4 +1,5 @@
 ---
+description: "Sending Data as a Table-Valued Parameter with All Values in Memory (ODBC)"
 title: "Table-Valued Parameter, values in Memory (ODBC)"
 ms.custom: ""
 ms.date: "03/14/2017"

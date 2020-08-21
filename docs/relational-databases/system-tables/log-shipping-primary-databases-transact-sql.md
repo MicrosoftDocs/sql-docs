@@ -1,4 +1,5 @@
 ---
+description: "log_shipping_primary_databases (Transact-SQL)"
 title: "log_shipping_primary_databases (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

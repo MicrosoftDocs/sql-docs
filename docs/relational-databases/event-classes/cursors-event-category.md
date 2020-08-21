@@ -1,4 +1,5 @@
 ---
+description: "Cursors Event Category"
 title: "Cursors Event Category | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

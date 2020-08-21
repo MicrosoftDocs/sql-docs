@@ -1,4 +1,5 @@
 ---
+description: "Reshape Name Property-Dynamic (ADO)"
 title: "Reshape Name Property-Dynamic (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

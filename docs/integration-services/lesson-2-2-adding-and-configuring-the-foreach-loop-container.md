@@ -1,4 +1,5 @@
 ---
+description: "Lesson 2-2: Add and configure the Foreach Loop container"
 title: "Step 2: Add and configure the Foreach Loop container | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"

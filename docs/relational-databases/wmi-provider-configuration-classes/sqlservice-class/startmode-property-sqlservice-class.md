@@ -1,4 +1,5 @@
 ---
+description: "StartMode Property (SqlService Class)"
 title: "StartMode Property (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"

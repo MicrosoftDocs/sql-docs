@@ -1,4 +1,5 @@
 ---
+description: "DataSpace Object and CreateObject Method Example (VBScript)"
 title: "DataSpace Object and CreateObject Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

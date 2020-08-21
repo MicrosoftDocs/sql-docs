@@ -1,4 +1,5 @@
 ---
+description: "Divide (SSIS Expression)"
 title: "Divide (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

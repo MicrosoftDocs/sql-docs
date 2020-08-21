@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_xtp_memory_consumers (Transact-SQL)"
 title: "sys.dm_db_xtp_memory_consumers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Additional Table-Valued Parameter Metadata"
 title: "Additional Table-Valued Parameter Metadata | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

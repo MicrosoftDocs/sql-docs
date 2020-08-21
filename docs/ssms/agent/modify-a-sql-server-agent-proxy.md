@@ -1,4 +1,5 @@
 ---
+description: "Modify a SQL Server Agent Proxy"
 title: "Modify a SQL Server Agent Proxy"
 ms.prod: sql
 ms.prod_service: sql-tools

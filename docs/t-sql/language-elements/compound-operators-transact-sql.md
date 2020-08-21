@@ -1,4 +1,5 @@
 ---
+description: "Compound Operators (Transact-SQL)"
 title: "Compound Operators (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

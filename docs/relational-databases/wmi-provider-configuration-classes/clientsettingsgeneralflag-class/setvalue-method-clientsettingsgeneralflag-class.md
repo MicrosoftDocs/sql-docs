@@ -1,4 +1,5 @@
 ---
+description: "SetValue Method (ClientSettingsGeneralFlag Class)"
 title: "SetValue Method (ClientSettingsGeneralFlag)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"

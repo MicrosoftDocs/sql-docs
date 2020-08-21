@@ -1,4 +1,5 @@
 ---
+description: "SET NUMERIC_ROUNDABORT (Transact-SQL)"
 title: "SET NUMERIC_ROUNDABORT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/04/2017"

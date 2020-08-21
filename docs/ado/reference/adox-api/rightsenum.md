@@ -1,4 +1,5 @@
 ---
+description: "RightsEnum"
 title: "RightsEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

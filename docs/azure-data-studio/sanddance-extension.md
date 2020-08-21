@@ -4,7 +4,7 @@ description: Learn how to use an Azure Data Studio extension to quickly create v
 ms.custom: "seodec18"
 ms.date: "07/03/2019"
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.reviewer: "alayu, maghan, sstein"
 ms.topic: conceptual
 author: "yualan"

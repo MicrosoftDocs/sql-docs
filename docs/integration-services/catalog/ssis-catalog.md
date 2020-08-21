@@ -1,4 +1,5 @@
 ---
+description: "SSIS Catalog"
 title: "SSIS Catalog | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/12/2018

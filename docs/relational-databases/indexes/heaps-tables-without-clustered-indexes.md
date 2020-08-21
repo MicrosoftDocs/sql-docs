@@ -1,4 +1,5 @@
 ---
+description: "Heaps (Tables without Clustered Indexes)"
 title: "Heaps (Tables without Clustered Indexes) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/01/2016"

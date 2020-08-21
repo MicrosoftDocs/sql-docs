@@ -1,4 +1,5 @@
 ---
+description: "Walkthrough: Adding and Changing a Database Diagram"
 title: Adding and Changing a Database Diagram
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

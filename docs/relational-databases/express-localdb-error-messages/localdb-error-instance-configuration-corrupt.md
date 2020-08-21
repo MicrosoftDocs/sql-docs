@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT"
 title: "LOCALDB_ERROR_INSTANCE_CONFIGURATION_CORRUPT | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

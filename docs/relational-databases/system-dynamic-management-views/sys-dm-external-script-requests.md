@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_external_script_requests"
 title: "sys.dm_external_script_requests | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/26/2020"

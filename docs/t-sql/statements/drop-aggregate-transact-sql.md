@@ -1,4 +1,5 @@
 ---
+description: "DROP AGGREGATE (Transact-SQL)"
 title: "DROP AGGREGATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"

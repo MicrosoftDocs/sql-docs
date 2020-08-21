@@ -1,4 +1,5 @@
 ---
+description: "Delete Method (ADO Fields Collection)"
 title: "Delete Method (ADO Fields Collection) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

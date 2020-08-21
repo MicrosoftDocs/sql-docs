@@ -1,4 +1,5 @@
 ---
+description: "supportsGroupBy Method (SQLServerDatabaseMetaData)"
 title: "supportsGroupBy Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

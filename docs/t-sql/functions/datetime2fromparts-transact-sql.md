@@ -1,4 +1,5 @@
 ---
+description: "DATETIME2FROMPARTS (Transact-SQL)"
 title: "DATETIME2FROMPARTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"

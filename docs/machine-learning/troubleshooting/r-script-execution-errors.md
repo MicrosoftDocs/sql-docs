@@ -95,6 +95,6 @@ If there are multiple variables to delete, we suggest that you save the names of
 
 [Data collection for troubleshooting machine learning](data-collection-ml-troubleshooting-process.md)
 
-[Upgrade and installation FAQ](upgrade-and-installation-faq-sql-server-r-services.md)
+[Install SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 
 [Troubleshoot database engine connections](../../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)

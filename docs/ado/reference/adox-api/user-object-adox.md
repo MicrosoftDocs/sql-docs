@@ -1,4 +1,5 @@
 ---
+description: "User Object (ADOX)"
 title: "User Object (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

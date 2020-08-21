@@ -1,4 +1,5 @@
 ---
+description: "MDX Data Definition - DROP SET"
 title: "DROP SET Statement (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

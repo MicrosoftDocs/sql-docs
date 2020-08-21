@@ -1,4 +1,5 @@
 ---
+description: "OpenSchema Method Example (VC++)"
 title: "OpenSchema Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

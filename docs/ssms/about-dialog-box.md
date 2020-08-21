@@ -1,4 +1,5 @@
 ---
+description: "About Dialog Box"
 title: "About Dialog Box"
 ms.prod: sql
 ms.prod_service: "sql-tools"

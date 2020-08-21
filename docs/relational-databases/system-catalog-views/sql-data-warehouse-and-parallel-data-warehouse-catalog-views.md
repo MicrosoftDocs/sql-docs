@@ -1,4 +1,5 @@
 ---
+description: "SQL Data Warehouse and Parallel Data Warehouse Catalog Views"
 title: Catalog Views
 titleSuffix: Azure SQL Data Warehouse and Parallel Data Warehouse
 ms.date: 10/29/2019
@@ -64,12 +65,13 @@ ms.custom: seo-dt-2019
 
  [sys.pdw_materialized_view_mappings &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-pdw-materialized-view-mappings-transact-sql?view=azure-sqldw-latest) (Preview)
 
+ [sys.pdw_permanent_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)
+
  [sys.workload_management_workload_classifier_details &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifier-details-transact-sql.md)
   
  [sys.workload_management_workload_classifiers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-workload-management-workload-classifiers-transact-sql.md)
   
- [sys.workload_management_workload_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest) 
-
+ [sys.workload_management_workload_groups &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-workload-management-workload-groups-transact-sql?view=azure-sqldw-latest)
 
 ## [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] Catalog Views
 

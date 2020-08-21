@@ -1,4 +1,5 @@
 ---
+description: "RDS Code Examples"
 title: "RDS Code Examples | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "Adding Records to a Recordset"
 title: "Adding Records | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

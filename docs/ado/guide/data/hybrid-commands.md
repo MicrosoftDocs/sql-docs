@@ -1,4 +1,5 @@
 ---
+description: "Hybrid Commands"
 title: "Hybrid Commands | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

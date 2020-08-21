@@ -1,4 +1,5 @@
 ---
+description: "ConfigurationSetting Property - VirtualDirectoryReportServer"
 title: "ConfigurationSetting Property - VirtualDirectoryReportServer | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services

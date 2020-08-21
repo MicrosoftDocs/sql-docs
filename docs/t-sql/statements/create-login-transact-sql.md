@@ -1,4 +1,5 @@
 ---
+description: "CREATE LOGIN (Transact-SQL)"
 title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/29/2020

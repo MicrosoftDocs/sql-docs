@@ -1,4 +1,5 @@
 ---
+description: "- (Subtract) (SSIS Expression)"
 title: "- (Subtract) (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

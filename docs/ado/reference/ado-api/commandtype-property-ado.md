@@ -1,4 +1,5 @@
 ---
+description: "CommandType Property (ADO)"
 title: "CommandType Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "DBCC CHECKCONSTRAINTS (Transact-SQL)"
 title: DBCC CHECKCONSTRAINTS (Transact-SQL)
 ms.custom: ""
 ms.date: "11/14/2017"

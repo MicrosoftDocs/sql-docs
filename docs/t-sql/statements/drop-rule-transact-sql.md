@@ -1,4 +1,5 @@
 ---
+description: "DROP RULE (Transact-SQL)"
 title: "DROP RULE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/11/2017"

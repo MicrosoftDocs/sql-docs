@@ -1,4 +1,5 @@
 ---
+description: "Positions Collection (ADO MD)"
 title: "Positions Collection (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

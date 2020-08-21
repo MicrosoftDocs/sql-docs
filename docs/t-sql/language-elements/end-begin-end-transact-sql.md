@@ -1,4 +1,5 @@
 ---
+description: "END (BEGIN...END) (Transact-SQL)"
 title: "END (BEGIN...END) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

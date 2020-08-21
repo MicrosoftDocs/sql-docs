@@ -1,4 +1,5 @@
 ---
+description: "sp_spaceused (Transact-SQL)"
 title: "sp_spaceused (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2017"

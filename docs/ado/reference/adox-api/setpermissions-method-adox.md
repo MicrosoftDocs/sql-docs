@@ -1,4 +1,5 @@
 ---
+description: "SetPermissions Method (ADOX)"
 title: "SetPermissions Method (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

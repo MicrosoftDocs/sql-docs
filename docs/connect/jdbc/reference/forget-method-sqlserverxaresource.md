@@ -1,4 +1,5 @@
 ---
+description: "forget Method (SQLServerXAResource)"
 title: "forget Method (SQLServerXAResource) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

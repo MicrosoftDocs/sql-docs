@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_replinfo (Transact-SQL)"
 title: "MSmerge_replinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

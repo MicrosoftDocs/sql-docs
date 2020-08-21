@@ -1,4 +1,5 @@
 ---
+description: "Calling a Stored Procedure with a Command"
 title: "Calling a Stored Procedure with a Command | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

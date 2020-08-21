@@ -1,4 +1,5 @@
 ---
+description: "sys.external_language_files (Transact-SQL) - SQL Server"
 title: "sys.external_language_files (Transact-SQL) - SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: 05/22/2019

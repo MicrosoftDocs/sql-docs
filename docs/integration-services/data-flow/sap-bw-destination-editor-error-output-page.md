@@ -1,4 +1,5 @@
 ---
+description: "SAP BW Destination Editor (Error Output Page)"
 title: "SAP BW Destination Editor (Error Output Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

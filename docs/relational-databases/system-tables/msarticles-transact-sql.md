@@ -1,4 +1,5 @@
 ---
+description: "MSarticles (Transact-SQL)"
 title: "MSarticles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

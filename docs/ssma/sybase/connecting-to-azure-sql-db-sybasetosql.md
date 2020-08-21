@@ -1,4 +1,5 @@
 ---
+description: "Connecting to Azure SQL Database (SybaseToSQL)"
 title: "Connecting to Azure SQL Database (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

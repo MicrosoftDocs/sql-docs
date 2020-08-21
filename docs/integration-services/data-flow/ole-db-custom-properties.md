@@ -1,4 +1,5 @@
 ---
+description: "OLE DB Custom Properties"
 title: "OLE DB Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

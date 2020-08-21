@@ -1,4 +1,5 @@
 ---
+description: "sys.trace_event_bindings (Transact-SQL)"
 title: "sys.trace_event_bindings (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

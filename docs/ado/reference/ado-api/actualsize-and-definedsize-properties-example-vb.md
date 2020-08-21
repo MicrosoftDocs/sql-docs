@@ -1,4 +1,5 @@
 ---
+description: "ActualSize and DefinedSize Properties Example (VB)"
 title: "ActualSize and DefinedSize Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

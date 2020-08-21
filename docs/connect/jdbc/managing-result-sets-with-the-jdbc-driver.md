@@ -1,4 +1,5 @@
 ---
+description: "Managing result sets with the JDBC driver"
 title: "Managing result sets with the JDBC driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

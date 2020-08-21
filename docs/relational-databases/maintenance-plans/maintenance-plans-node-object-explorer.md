@@ -1,4 +1,5 @@
 ---
+description: "Maintenance Plans Node (Object Explorer)"
 title: "Maintenance Plans Node (Object Explorer) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

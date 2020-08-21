@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_cached_plans (Transact-SQL)"
 title: "sys.dm_exec_cached_plans (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"

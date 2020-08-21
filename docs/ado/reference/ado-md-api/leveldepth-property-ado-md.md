@@ -1,4 +1,5 @@
 ---
+description: "LevelDepth Property (ADO MD)"
 title: "LevelDepth Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Internet Information Services Error Codes for Remote Data Service"
 title: "Internet Information Services Error Codes | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

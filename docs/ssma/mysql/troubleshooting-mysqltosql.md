@@ -1,4 +1,5 @@
 ---
+description: "Troubleshooting (MySQLToSQL)"
 title: "Troubleshooting (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

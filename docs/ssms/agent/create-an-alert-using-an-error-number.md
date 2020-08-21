@@ -1,4 +1,5 @@
 ---
+description: "Create an Alert Using an Error Number"
 title: "Create an Alert Using an Error Number"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_fts_index_physical_stats (Transact-SQL)"
 title: "sys.dm_db_fts_index_physical_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"

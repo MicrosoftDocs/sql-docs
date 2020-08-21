@@ -1,4 +1,5 @@
 ---
+description: "sp_start_job (Transact-SQL)"
 title: "sp_start_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

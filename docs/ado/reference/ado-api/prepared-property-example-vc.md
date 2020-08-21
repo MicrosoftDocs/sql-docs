@@ -1,4 +1,5 @@
 ---
+description: "Prepared Property Example (VC++)"
 title: "Prepared Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

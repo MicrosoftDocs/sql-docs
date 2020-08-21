@@ -1,4 +1,5 @@
 ---
+description: "Obtain a FAST_FORWARD Cursor (Native Client OLE DB provider)"
 title: Obtain a FAST_FORWARD cursor (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"

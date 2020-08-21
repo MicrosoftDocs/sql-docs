@@ -1,4 +1,5 @@
 ---
+description: "Working with SSMA for Access Console (AccessToSQL)"
 title: "Working with SSMA for Access Console (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

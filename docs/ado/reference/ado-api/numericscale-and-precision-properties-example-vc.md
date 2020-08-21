@@ -1,4 +1,5 @@
 ---
+description: "NumericScale and Precision Properties Example (VC++)"
 title: "NumericScale and Precision Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

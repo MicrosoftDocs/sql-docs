@@ -1,4 +1,5 @@
 ---
+description: "RENAME (Transact-SQL)"
 title: "RENAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2019"

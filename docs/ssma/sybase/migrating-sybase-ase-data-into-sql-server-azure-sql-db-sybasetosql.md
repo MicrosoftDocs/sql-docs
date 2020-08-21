@@ -1,4 +1,5 @@
 ---
+description: "Migrating Sybase ASE Data into SQL Server - Azure SQL Database  (SybaseToSQL)"
 title: "Migrate Sybase ASE Data into SQL Server - Azure SQL Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

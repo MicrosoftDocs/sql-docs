@@ -1,4 +1,5 @@
 ---
+description: "Using ADO with Scripting Languages"
 title: "Using ADO with Scripting Languages | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

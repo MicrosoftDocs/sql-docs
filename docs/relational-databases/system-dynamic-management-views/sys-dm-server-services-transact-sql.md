@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_server_services (Transact-SQL)"
 title: "sys.dm_server_services (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/07/2018"

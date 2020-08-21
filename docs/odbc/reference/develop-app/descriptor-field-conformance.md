@@ -1,4 +1,5 @@
 ---
+description: "Descriptor Field Conformance"
 title: "Descriptor Field Conformance | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

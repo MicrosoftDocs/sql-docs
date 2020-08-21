@@ -1,4 +1,5 @@
 ---
+description: "STMLineFromWKB (geometry Data Type)"
 title: "STMLineFromWKB (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"

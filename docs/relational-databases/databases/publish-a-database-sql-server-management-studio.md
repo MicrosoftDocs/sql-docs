@@ -1,4 +1,5 @@
 ---
+description: "Publish a Database (SQL Server Management Studio)"
 title: "Publish a Database (SQL Server Management Studio) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

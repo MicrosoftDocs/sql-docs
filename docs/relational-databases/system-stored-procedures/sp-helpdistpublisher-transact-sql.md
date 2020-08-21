@@ -1,4 +1,5 @@
 ---
+description: "sp_helpdistpublisher (Transact-SQL)"
 title: "sp_helpdistpublisher (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_update_job (Transact-SQL)"
 title: "sp_update_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"

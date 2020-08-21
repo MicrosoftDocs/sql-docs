@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_server_registry (Transact-SQL)"
 title: "sys.dm_server_registry (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

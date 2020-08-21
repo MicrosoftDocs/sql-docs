@@ -1,4 +1,5 @@
 ---
+description: "ADO Code Examples in Microsoft JScript"
 title: "ADO Code Examples in Microsoft JScript | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

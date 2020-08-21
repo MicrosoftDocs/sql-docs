@@ -32,8 +32,7 @@ ms.date: 03/01/2017
   
 ## See Also  
  [Create a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Modify a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
+ [Modify a Trace Template &#40;SQL Server Profiler&#41;](./modify-trace-templates.md?view=sql-server-ver15)   
  [Derive a Template from a Running Trace &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/derive-a-template-from-a-running-trace-sql-server-profiler.md)   
  [SQL Server Profiler](../../tools/sql-server-profiler/sql-server-profiler.md)  
-  
   

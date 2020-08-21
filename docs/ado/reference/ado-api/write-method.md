@@ -1,4 +1,5 @@
 ---
+description: "Write Method"
 title: "Write Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

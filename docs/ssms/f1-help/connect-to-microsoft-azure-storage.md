@@ -1,4 +1,5 @@
 ---
+description: "Connect to Microsoft Azure Storage"
 title: Connect to Microsoft Azure Storage
 ms.prod: sql
 ms.prod_service: sql-tools

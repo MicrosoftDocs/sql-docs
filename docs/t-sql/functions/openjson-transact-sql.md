@@ -1,4 +1,5 @@
 ---
+description: "OPENJSON (Transact-SQL)"
 title: "OPENJSON (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/03/2020

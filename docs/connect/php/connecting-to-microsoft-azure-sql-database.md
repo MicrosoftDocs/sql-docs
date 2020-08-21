@@ -1,7 +1,8 @@
 ---
-title: "Connecting to Microsoft Azure SQL Database | Microsoft Docs"
+title: "Connecting to Microsoft Azure SQL Database"
+description: "Learn more about how to access Azure SQL Database using the Microsoft Drivers for PHP for SQL Server"
 ms.custom: ""
-ms.date: "01/19/2017"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

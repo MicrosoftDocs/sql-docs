@@ -1,4 +1,5 @@
 ---
+description: "ActualSize and DefinedSize Properties Example (VC++)"
 title: "ActualSize and DefinedSize Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

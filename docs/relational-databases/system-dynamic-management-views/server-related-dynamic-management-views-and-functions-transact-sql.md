@@ -1,4 +1,5 @@
 ---
+description: "Server-Related Dynamic Management Views and Functions (Transact-SQL)"
 title: "Server-Related Dynamic Management Views and Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

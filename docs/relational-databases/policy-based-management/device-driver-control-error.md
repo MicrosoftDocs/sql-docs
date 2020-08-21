@@ -1,4 +1,5 @@
 ---
+description: "Device Driver Control Error"
 title: "Device Driver Control Error | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

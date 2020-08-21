@@ -1,4 +1,5 @@
 ---
+description: "sp_msx_enlist (Transact-SQL)"
 title: "sp_msx_enlist (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

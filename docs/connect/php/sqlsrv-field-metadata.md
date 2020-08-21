@@ -1,4 +1,5 @@
 ---
+description: "sqlsrv_field_metadata"
 title: "sqlsrv_field_metadata | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/31/2020"

@@ -1,4 +1,5 @@
 ---
+description: "Transaction Locking and Row Versioning Guide"
 title: "Transaction Locking and Row Versioning Guide"
 ms.custom: seo-dt-2019
 ms.date: "03/10/2020"

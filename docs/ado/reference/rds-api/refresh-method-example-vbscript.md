@@ -1,4 +1,5 @@
 ---
+description: "Refresh Method Example (VBScript)"
 title: "Refresh Method Example (VBScript) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""

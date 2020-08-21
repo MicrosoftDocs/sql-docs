@@ -1,4 +1,5 @@
 ---
+description: "SAP BW Destination"
 title: "SAP BW Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

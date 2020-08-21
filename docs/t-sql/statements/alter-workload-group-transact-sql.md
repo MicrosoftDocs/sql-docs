@@ -1,4 +1,5 @@
 ---
+description: "ALTER WORKLOAD GROUP (Transact-SQL)"
 title: ALTER WORKLOAD GROUP (Transact-SQL) 
 ms.custom: ""
 ms.date: "05/05/2020"

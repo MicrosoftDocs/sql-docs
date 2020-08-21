@@ -1,4 +1,5 @@
 ---
+description: "ALTER DATABASE (Transact-SQL)"
 title: "ALTER DATABASE (Transact-SQL)| Microsoft Docs"
 ms.custom: ""
 ms.date: 07/21/2020

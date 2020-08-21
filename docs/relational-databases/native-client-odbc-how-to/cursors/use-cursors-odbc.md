@@ -1,4 +1,5 @@
 ---
+description: "Use Cursors (ODBC)"
 title: "Use Cursors (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

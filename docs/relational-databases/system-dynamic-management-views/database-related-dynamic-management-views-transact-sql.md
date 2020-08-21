@@ -1,4 +1,5 @@
 ---
+description: "Database Related Dynamic Management Views (Transact-SQL)"
 title: "Database Related Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/18/2017"

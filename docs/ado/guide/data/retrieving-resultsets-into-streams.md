@@ -1,4 +1,5 @@
 ---
+description: "Retrieving Resultsets into Streams"
 title: "Retrieving Resultsets into Streams | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

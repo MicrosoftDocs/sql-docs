@@ -1,4 +1,5 @@
 ---
+description: "Change Data Capture and Other SQL Server Features"
 title: "Change Data Capture and Other SQL Server Features"
 ms.custom: seo-dt-2019
 ms.date: "01/02/2019"

@@ -1,4 +1,5 @@
 ---
+description: "sys.sysaltfiles (Transact-SQL)"
 title: "sys.sysaltfiles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

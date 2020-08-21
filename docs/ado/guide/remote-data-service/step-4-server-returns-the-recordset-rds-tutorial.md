@@ -1,4 +1,5 @@
 ---
+description: "Step 4: Server Returns the Recordset (RDS Tutorial)"
 title: "Step 4: Server Returns the Recordset (RDS Tutorial) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

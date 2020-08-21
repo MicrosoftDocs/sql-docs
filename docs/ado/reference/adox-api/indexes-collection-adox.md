@@ -1,4 +1,5 @@
 ---
+description: "Indexes Collection (ADOX)"
 title: "Indexes Collection (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

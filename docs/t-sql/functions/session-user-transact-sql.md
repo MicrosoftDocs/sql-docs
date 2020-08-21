@@ -1,4 +1,5 @@
 ---
+description: "SESSION_USER (Transact-SQL)"
 title: "SESSION_USER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

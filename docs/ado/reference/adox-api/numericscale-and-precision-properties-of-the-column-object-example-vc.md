@@ -1,4 +1,5 @@
 ---
+description: "NumericScale and Precision Properties of the Column Object Example (VC++)"
 title: "NumericScale and Precision Properties of Column Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "datetime2 (Transact-SQL)"
 title: "datetime2 (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"

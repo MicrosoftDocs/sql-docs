@@ -1,4 +1,5 @@
 ---
+description: "Files-Only Installation (Reporting Services)"
 title: "Files-Only Installation (Reporting Services) | Microsoft Docs"
 ms.date: 05/24/2018
 ms.prod: reporting-services

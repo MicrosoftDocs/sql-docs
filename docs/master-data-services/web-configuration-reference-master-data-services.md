@@ -1,4 +1,5 @@
 ---
+description: "Web Configuration Reference (Master Data Services)"
 title: Web Configuration Reference
 ms.custom: ""
 ms.date: "03/01/2017"

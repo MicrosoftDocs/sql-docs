@@ -1,4 +1,5 @@
 ---
+description: "CurveToLineWithTolerance (geography Data Type)"
 title: "CurveToLineWithTolerance (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

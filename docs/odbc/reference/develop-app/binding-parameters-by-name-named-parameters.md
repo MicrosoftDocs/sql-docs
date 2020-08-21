@@ -1,4 +1,5 @@
 ---
+description: "Binding Parameters by Name (Named Parameters)"
 title: "Binding Parameters by Name (Named Parameters) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

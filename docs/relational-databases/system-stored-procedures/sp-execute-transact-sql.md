@@ -1,4 +1,5 @@
 ---
+description: "sp_execute (Transact-SQL)"
 title: "sp_execute (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

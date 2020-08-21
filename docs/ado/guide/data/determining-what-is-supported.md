@@ -1,4 +1,5 @@
 ---
+description: "Determining What is Supported"
 title: "Determining What is Supported | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

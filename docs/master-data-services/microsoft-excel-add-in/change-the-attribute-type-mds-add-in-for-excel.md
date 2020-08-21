@@ -1,4 +1,5 @@
 ---
+description: "Change the Attribute Type (MDS Add-in for Excel)"
 title: Change the Attribute Type
 ms.custom: microsoft-excel-add-in
 ms.date: "03/15/2017"

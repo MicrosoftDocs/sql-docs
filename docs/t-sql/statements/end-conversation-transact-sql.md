@@ -1,4 +1,5 @@
 ---
+description: "END CONVERSATION (Transact-SQL)"
 title: "END CONVERSATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"

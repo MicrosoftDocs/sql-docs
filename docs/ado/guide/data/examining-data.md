@@ -1,4 +1,5 @@
 ---
+description: "Examining Data"
 title: "Examining Data | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

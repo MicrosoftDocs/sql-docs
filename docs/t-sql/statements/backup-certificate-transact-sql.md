@@ -1,4 +1,5 @@
 ---
+description: "BACKUP CERTIFICATE (Transact-SQL)"
 title: "BACKUP CERTIFICATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/16/2020"

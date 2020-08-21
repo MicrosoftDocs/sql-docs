@@ -1,4 +1,5 @@
 ---
+description: "Configuring SQL Server in SMO"
 title: "Configuring SQL Server in SMO"
 ms.custom: seo-dt-2019
 ms.date: "08/06/2017"

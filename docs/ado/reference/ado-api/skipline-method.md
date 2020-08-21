@@ -1,4 +1,5 @@
 ---
+description: "SkipLine Method"
 title: "SkipLine Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

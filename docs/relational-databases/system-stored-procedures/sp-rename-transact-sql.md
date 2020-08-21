@@ -1,4 +1,5 @@
 ---
+description: "sp_rename (Transact-SQL)"
 title: "sp_rename (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/09/2018"

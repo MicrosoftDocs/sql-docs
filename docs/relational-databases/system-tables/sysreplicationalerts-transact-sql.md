@@ -1,4 +1,5 @@
 ---
+description: "sysreplicationalerts (Transact-SQL)"
 title: "sysreplicationalerts (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

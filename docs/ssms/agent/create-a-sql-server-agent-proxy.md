@@ -1,4 +1,5 @@
 ---
+description: "Create a SQL Server Agent Proxy"
 title: "Create a SQL Server Agent Proxy"
 ms.custom: seo-lt-2019
 ms.date: "05/04/2017"

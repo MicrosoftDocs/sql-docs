@@ -1,4 +1,5 @@
 ---
+description: "SHA Property (SecurityCertificate Class)"
 title: "SHA Property (SecurityCertificate)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"

@@ -1,4 +1,5 @@
 ---
+description: "More About Recordset Persistence"
 title: "More About Recordset Persistence | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

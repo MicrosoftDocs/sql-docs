@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INSTANCE_BUSY"
 title: "LOCALDB_ERROR_INSTANCE_BUSY | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

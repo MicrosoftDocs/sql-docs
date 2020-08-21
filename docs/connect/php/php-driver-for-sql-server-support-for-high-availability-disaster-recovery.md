@@ -1,4 +1,5 @@
 ---
+description: "Support for High Availability, Disaster Recovery for the Microsoft Drivers for PHP for SQL Server"
 title: "Support for High Availability, Disaster Recovery for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/31/2018"

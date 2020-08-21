@@ -1,4 +1,5 @@
 ---
+description: "Review Data Type Mapping (SQL Server Import and Export Wizard)"
 title: "Review Data Type Mapping (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

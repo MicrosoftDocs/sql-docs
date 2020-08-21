@@ -1,4 +1,5 @@
 ---
+description: "DataSpace (ADO - WFC Syntax)"
 title: "DataSpace (ADO - WFC Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

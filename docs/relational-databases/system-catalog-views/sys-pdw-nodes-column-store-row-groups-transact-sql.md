@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_nodes_column_store_row_groups (Transact-SQL)"
 title: "sys.pdw_nodes_column_store_row_groups (Transact-SQL)"
 ms.custom: seo-dt-2019
 ms.date: 08/05/2020
@@ -30,8 +31,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |**total_rows**|**bigint**|Total rows physically stored in the row group. Some may have been deleted but they are still stored. The maximum number of rows in a row group is 1,048,576 (hexadecimal FFFFF).|  
 |**deleted_rows**|**bigint**|Number of rows physically stored in the row group that are marked for deletion.<br /><br /> Always 0 for DELTA row groups.|  
 |**size_in_bytes**|**int**|Combined size, in bytes, of all the pages in this row group. This size does not include the size required to store metadata or shared dictionaries.|  
-|**pdw_node_id**|**int**|Unique id of a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] node.|  
-|**distribution_id**|**int**|Unique id of the distribution.|
+|**pdw_node_id**|**int**|Unique ID of a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] node.|  
+|**distribution_id**|**int**|Unique ID of the distribution.|
   
 ## Remarks  
  Returns one row for each columnstore row group for each table having a clustered or nonclustered columnstore index.  
@@ -100,6 +101,8 @@ FROM sys.pdw_nodes_column_store_row_groups rg
 GROUP BY s.name, t.name, rg.partition_number
 ORDER BY 1, 2
 ```
+>[!TIP]
+> For improved performance in Synapse SQL, consider using **sys.pdw_permanent_table_mappings** instead of **sys.pdw_table_mappings** on permanent user tables. See **[sys.pdw_permanent_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** for more information.
   
 ## See Also  
  [SQL Data Warehouse and Parallel Data Warehouse Catalog Views](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)   

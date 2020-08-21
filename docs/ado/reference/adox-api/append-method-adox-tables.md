@@ -1,4 +1,5 @@
 ---
+description: "Append Method (ADOX Tables)"
 title: "Append Method (ADOX Tables) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

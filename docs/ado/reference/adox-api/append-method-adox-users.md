@@ -1,4 +1,5 @@
 ---
+description: "Append Method (ADOX Users)"
 title: "Append Method (ADOX Users) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

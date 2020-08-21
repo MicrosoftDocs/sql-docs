@@ -1,4 +1,5 @@
 ---
+description: "ActionEnum"
 title: "ActionEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

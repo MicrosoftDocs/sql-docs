@@ -1,4 +1,5 @@
 ---
+description: "Members Example (VBScript)"
 title: "Members Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

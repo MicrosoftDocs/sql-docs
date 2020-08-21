@@ -1,4 +1,5 @@
 ---
+description: "Requery Method"
 title: "Requery Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

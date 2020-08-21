@@ -1,4 +1,5 @@
 ---
+description: "Database Mail Views (Transact-SQL)"
 title: "Database Mail Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

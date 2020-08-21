@@ -1,4 +1,5 @@
 ---
+description: "Create a New Database Diagram (Visual Database Tools)"
 title: Create a New Database Diagram
 ms.custom: seo-lt-2019
 ms.date: "09/24/2018"

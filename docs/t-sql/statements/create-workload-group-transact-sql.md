@@ -1,4 +1,5 @@
 ---
+description: "CREATE WORKLOAD GROUP (Transact-SQL)"
 title: "CREATE WORKLOAD GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 05/27/2020

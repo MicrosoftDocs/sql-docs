@@ -1,4 +1,5 @@
 ---
+description: "Audit Database Operation Event Class"
 title: "Audit Database Operation Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

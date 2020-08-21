@@ -1,4 +1,5 @@
 ---
+description: "xp_logevent (Transact-SQL)"
 title: "xp_logevent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

@@ -1,4 +1,5 @@
 ---
+description: "setDate Method (java.lang.String, java.sql.Date, java.util.Calendar)"
 title: "setDate Method to date and calendar - string | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

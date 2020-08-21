@@ -1,4 +1,5 @@
 ---
+description: "Open and Close Methods Example (VBScript)"
 title: "Open and Close Methods Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

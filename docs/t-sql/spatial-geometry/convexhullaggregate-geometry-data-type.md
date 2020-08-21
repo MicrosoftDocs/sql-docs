@@ -1,4 +1,5 @@
 ---
+description: "ConvexHullAggregate (geometry Data Type)"
 title: "ConvexHullAggregate (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"

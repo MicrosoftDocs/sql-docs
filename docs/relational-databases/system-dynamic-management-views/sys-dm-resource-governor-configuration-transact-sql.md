@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_resource_governor_configuration (Transact-SQL)"
 title: "sys.dm_resource_governor_configuration (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

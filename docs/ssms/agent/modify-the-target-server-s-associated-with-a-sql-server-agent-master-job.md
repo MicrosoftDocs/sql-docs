@@ -1,4 +1,5 @@
 ---
+description: "Modify the Target Server(s) Associated with a SQL Server Agent Master Job"
 title: Modify Target Server Associated with Agent Master Job
 ms.prod: sql
 ms.prod_service: sql-tools

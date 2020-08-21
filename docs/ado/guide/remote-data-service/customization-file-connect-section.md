@@ -1,4 +1,5 @@
 ---
+description: "Customization File Connect Section"
 title: "Customization File Connect Section | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

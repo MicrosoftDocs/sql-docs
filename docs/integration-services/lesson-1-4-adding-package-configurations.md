@@ -1,4 +1,5 @@
 ---
+description: "Lesson 1-4 - Adding Package Configurations"
 title: "Step 4: Adding Package Configurations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

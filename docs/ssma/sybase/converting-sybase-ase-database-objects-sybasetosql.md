@@ -1,4 +1,5 @@
 ---
+description: "Converting Sybase ASE Database Objects (SybaseToSQL)"
 title: "Converting Sybase ASE Database Objects (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"

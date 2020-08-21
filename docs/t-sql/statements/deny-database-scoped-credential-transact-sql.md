@@ -1,4 +1,5 @@
 ---
+description: "DENY Database Scoped Credential (Transact-SQL)"
 title: "DENY Database Scoped Credential (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"

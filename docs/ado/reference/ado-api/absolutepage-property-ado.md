@@ -1,4 +1,5 @@
 ---
+description: "AbsolutePage Property (ADO)"
 title: "AbsolutePage Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

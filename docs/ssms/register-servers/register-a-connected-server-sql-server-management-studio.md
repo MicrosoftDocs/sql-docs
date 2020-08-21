@@ -1,4 +1,5 @@
 ---
+description: "Register a Connected Server (SQL Server Management Studio)"
 title: Register a Connected Server
 ms.prod: sql
 ms.prod_service: sql-tools

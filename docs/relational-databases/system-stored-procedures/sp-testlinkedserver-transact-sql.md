@@ -1,4 +1,5 @@
 ---
+description: "sp_testlinkedserver (Transact-SQL)"
 title: "sp_testlinkedserver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

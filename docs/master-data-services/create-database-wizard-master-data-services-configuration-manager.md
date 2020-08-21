@@ -1,4 +1,5 @@
 ---
+description: "Create Database Wizard (Master Data Services Configuration Manager)"
 title: Create Database Wizard
 ms.custom: ""
 ms.date: "03/20/2017"

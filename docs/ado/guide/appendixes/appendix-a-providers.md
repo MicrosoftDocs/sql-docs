@@ -1,4 +1,5 @@
 ---
+description: "Appendix A: Data and Service Providers"
 title: "Appendix A: Providers | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

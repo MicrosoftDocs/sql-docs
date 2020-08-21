@@ -1,4 +1,5 @@
 ---
+description: "Fields Collection (ADO)"
 title: "Fields Collection (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

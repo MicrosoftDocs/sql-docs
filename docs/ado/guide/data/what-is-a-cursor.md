@@ -1,4 +1,5 @@
 ---
+description: "What is a Cursor?"
 title: "What is a Cursor? | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

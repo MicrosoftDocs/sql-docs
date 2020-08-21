@@ -1,4 +1,5 @@
 ---
+description: "Using CacheSize"
 title: "Using CacheSize | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

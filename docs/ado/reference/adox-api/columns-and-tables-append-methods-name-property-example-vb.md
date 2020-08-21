@@ -1,4 +1,5 @@
 ---
+description: "Columns and Tables Append Methods, Name Property Example (VB)"
 title: "Columns and Tables Append Methods, Name Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

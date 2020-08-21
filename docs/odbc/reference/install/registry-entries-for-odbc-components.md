@@ -1,4 +1,5 @@
 ---
+description: "Registry Entries for ODBC Components"
 title: "Registry Entries for ODBC Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

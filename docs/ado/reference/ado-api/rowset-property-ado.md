@@ -1,4 +1,5 @@
 ---
+description: "Rowset Property (ADO)"
 title: "Rowset Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

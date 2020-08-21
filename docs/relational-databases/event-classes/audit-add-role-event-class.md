@@ -1,4 +1,5 @@
 ---
+description: "Audit Add Role Event Class"
 title: "Audit Add Role Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

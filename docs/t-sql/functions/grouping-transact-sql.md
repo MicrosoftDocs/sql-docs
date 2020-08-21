@@ -1,4 +1,5 @@
 ---
+description: "GROUPING (Transact-SQL)"
 title: "GROUPING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/03/2019"

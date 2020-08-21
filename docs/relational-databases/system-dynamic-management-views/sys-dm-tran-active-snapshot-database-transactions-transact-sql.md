@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_tran_active_snapshot_database_transactions (Transact-SQL)"
 title: "sys.dm_tran_active_snapshot_database_transactions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

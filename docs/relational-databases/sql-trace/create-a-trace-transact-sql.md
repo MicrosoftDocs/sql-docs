@@ -1,4 +1,5 @@
 ---
+description: "Create a Trace (Transact-SQL)"
 title: "Create a Trace (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

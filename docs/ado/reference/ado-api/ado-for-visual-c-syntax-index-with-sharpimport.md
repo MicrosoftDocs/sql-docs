@@ -1,4 +1,5 @@
 ---
+description: "ADO for Visual C++ Syntax Index with #import"
 title: "ADO for Visual C++ Syntax Index with #import | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

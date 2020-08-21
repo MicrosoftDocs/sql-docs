@@ -1,4 +1,5 @@
 ---
+description: "Provider Errors"
 title: "Provider Errors | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

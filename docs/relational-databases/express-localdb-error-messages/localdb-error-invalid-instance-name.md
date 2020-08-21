@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INVALID_INSTANCE_NAME"
 title: "LOCALDB_ERROR_INVALID_INSTANCE_NAME | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"

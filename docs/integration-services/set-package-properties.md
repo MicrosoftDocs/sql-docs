@@ -1,4 +1,5 @@
 ---
+description: "Set Package Properties"
 title: "Set Package Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

@@ -1,4 +1,5 @@
 ---
+description: "DBCC CHECKTABLE (Transact-SQL)"
 title: "DBCC CHECKTABLE (Transact-SQL) | Microsoft Docs"
 ms.date: "11/14/2017"
 ms.prod: sql

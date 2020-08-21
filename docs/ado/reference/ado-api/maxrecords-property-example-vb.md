@@ -1,4 +1,5 @@
 ---
+description: "MaxRecords Property Example (VB)"
 title: "MaxRecords Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

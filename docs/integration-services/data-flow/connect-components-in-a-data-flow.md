@@ -1,4 +1,5 @@
 ---
+description: "Connect Components in a Data Flow"
 title: "Connect Components in a Data Flow | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_objects_impacted_on_version_change (Azure SQL Database)"
 title: "sys.dm_db_objects_impacted_on_version_change"
 titleSuffix: Azure SQL Database
 ms.date: "03/03/2017"

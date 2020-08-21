@@ -1,4 +1,5 @@
 ---
+description: "sys.database_scoped_credentials (Transact-SQL)"
 title: "sys.database_scoped_credentials (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/27/2017"

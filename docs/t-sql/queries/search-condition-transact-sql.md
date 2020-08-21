@@ -1,4 +1,5 @@
 ---
+description: "Search Condition (Transact-SQL)"
 title: "Search Condition (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/15/2018"

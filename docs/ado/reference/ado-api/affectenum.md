@@ -1,4 +1,5 @@
 ---
+description: "AffectEnum"
 title: "AffectEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

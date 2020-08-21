@@ -1,4 +1,5 @@
 ---
+description: "State Property Example (VB)"
 title: "State Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

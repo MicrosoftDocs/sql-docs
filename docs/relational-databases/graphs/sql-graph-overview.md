@@ -1,4 +1,5 @@
 ---
+description: "Graph processing with SQL Server and Azure SQL Database"
 title: "Graph processing"
 titleSuffix:  SQL Server and Azure SQL Database
 ms.date: "06/26/2019"

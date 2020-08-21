@@ -1,4 +1,5 @@
 ---
+description: "Step 5: DataControl is Made Usable (RDS Tutorial)"
 title: "Step 5: DataControl is Made Usable (RDS Tutorial) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "SP:CacheRemove Event Class"
 title: "SP:CacheRemove Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

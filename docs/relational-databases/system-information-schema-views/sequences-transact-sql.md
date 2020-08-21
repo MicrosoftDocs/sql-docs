@@ -1,4 +1,5 @@
 ---
+description: "SEQUENCES (Transact-SQL)"
 title: "SEQUENCES (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/30/2019"

@@ -1,4 +1,5 @@
 ---
+description: "Installer DLL API Reference Function"
 title: "Installer DLL API Reference Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sys.sysforeignkeys (Transact-SQL)"
 title: "sys.sysforeignkeys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

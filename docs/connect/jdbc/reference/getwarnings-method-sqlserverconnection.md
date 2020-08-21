@@ -1,4 +1,5 @@
 ---
+description: "getWarnings Method (SQLServerConnection)"
 title: "getWarnings Method (SQLServerConnection) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

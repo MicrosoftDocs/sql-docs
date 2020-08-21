@@ -1,4 +1,5 @@
 ---
+description: "Replication Programming Concepts"
 title: "Replication Programming Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

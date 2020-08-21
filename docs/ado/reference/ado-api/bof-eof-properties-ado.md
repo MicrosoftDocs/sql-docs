@@ -1,4 +1,5 @@
 ---
+description: "BOF, EOF Properties (ADO)"
 title: "BOF, EOF Properties (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

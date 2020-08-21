@@ -1,4 +1,5 @@
 ---
+description: "sp_changedistributor_property (Transact-SQL)"
 title: "sp_changedistributor_property (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

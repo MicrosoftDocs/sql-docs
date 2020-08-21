@@ -1,4 +1,5 @@
 ---
+description: "sys.fulltext_document_types (Transact-SQL)"
 title: "sys.fulltext_document_types (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

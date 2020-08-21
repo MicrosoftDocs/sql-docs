@@ -1,4 +1,5 @@
 ---
+description: "managed_backup.sp_backup_config_advanced (Transact-SQL)"
 title: "managed_backup.sp_backup_config_advanced (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

@@ -1,4 +1,5 @@
 ---
+description: "Stretch Database"
 title: "Stretch Database"
 ms.date: "06/27/2016"
 ms.service: sql-server-stretch-database

@@ -1,4 +1,5 @@
 ---
+description: "get_OLEDBCommand Method"
 title: "get_OLEDBCommand Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

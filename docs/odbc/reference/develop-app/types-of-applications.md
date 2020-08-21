@@ -1,4 +1,5 @@
 ---
+description: "Types of Applications"
 title: "Types of Applications | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

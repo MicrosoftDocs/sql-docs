@@ -1,4 +1,5 @@
 ---
+description: "Securing Replication Over the Internet"
 title: "Securing Replication Over the Internet | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

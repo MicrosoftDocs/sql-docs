@@ -1,4 +1,5 @@
 ---
+description: "Supports Method Example (VC++)"
 title: "Supports Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

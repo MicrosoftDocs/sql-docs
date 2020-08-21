@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_cdc_get_min_lsn (Transact-SQL)"
 title: "sys.fn_cdc_get_min_lsn (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

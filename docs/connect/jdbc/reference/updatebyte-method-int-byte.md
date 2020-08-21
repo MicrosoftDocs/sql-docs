@@ -1,4 +1,5 @@
 ---
+description: "updateByte Method (int, byte)"
 title: "updateByte Method (int, byte) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

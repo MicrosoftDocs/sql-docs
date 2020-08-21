@@ -1,4 +1,5 @@
 ---
+description: "Service Broker Catalog Views (Transact-SQL)"
 title: "Service Broker Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

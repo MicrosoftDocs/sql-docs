@@ -1,4 +1,5 @@
 ---
+description: "Views Delete Method Example (VB)"
 title: "Views Delete Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

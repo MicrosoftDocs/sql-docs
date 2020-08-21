@@ -1,4 +1,5 @@
 ---
+description: "WHERE Clause Limitations"
 title: "WHERE Clause Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

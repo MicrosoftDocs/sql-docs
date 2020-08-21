@@ -1,4 +1,5 @@
 ---
+description: "Read (Database Engine) by using CSharp"
 title: "Read (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/16/2020"

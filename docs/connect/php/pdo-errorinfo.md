@@ -1,5 +1,6 @@
 ---
-title: "PDO::errorInfo | Microsoft Docs"
+title: "PDO::errorInfo"
+description: "API reference for the PDO::errorInfo function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.prod: sql

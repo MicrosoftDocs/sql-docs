@@ -1,4 +1,5 @@
 ---
+description: "SQL_C_TCHAR"
 title: "SQL_C_TCHAR | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Create Linked Servers (SQL Server Database Engine)"
 title: "Create Linked Servers"
 ms.date: "01/24/2020"
 ms.prod: sql

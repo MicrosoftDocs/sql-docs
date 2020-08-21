@@ -1,4 +1,5 @@
 ---
+description: "sys.objects (Transact-SQL)"
 title: "sys.objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 05/20/2020

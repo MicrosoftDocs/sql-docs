@@ -38,9 +38,24 @@ For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 ::: moniker-end
   
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).  
-  
+ 
+
 ## Syntax  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions":   
+```syntaxsql
+CREATE EXTERNAL RESOURCE POOL pool_name  
+[ WITH (  
+    [ MAX_CPU_PERCENT = value ]  
+    [ [ , ] MAX_MEMORY_PERCENT = value ]  
+    [ [ , ] MAX_PROCESSES = value ]   
+    )   
+]  
+[ ; ]  
   
+<CPU_range_spec> ::=    
+{ CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]  
+```  
+::: moniker-end
 ```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
 [ WITH (  
@@ -60,16 +75,25 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 <CPU_range_spec> ::=    
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]  
 ```  
-  
-[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
-> [!NOTE]
-> SQL Machine Learning Services 2019 for Linux does not support the ability to set CPU affinity.
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 
 *pool_name*  
 Is the user-defined name for the external resource pool. *pool_name* is alphanumeric and can be up to 128 characters. This argument must be unique within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and must fulfill the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions":
+MAX_CPU_PERCENT =*value*  
+The maximum average CPU bandwidth for all requests in the external resource pool can receive when there's CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
+
+When you use AFFINITY NUMANODE = **(\<NUMA_node_range_spec> **)**, the external resource pool is affinitized to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] physical CPUs that correspond to the given NUMA node or range of nodes. 
+
+MAX_MEMORY_PERCENT =*value*  
+Specifies the total server memory that can be used by requests in this external resource pool. *value* is an integer. The allowed range for *value* is from 1 through 100.
+
+MAX_PROCESSES =*value*  
+The maximum number of processes allowed for the external resource pool. 0 = unlimited threshold for the pool, which is thereafter bound only by computer resources.
+::: moniker-end
 
 MAX_CPU_PERCENT =*value*  
 The maximum average CPU bandwidth for all requests in the external resource pool can receive when there's CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
@@ -102,7 +126,18 @@ Requires `CONTROL SERVER` permission.
 ## Examples
 
 The external pool has restricted CPU usage to 75 percent. The maximum memory is 30 percent of the available memory on the computer.
-
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions":
+```sql
+CREATE EXTERNAL RESOURCE POOL ep_1
+WITH (  
+    MAX_CPU_PERCENT = 75
+    , MAX_MEMORY_PERCENT = 30
+);
+GO
+ALTER RESOURCE GOVERNOR RECONFIGURE;
+GO
+```
+ ::: moniker-end
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1
 WITH (  
@@ -114,7 +149,7 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
-  
+ 
 ## See also
 
 + [external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)

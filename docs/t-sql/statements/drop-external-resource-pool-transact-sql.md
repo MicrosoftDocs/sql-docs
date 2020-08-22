@@ -73,9 +73,6 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO  
 ```  
 
-> [!NOTE]
-> SQL Machine Learning Services 2019 for Linux does not support the ability to set CPU affinity.
-
 ## See Also
 
 + [external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)

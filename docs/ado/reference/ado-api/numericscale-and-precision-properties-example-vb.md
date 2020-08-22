@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # NumericScale and Precision Properties Example (VB)
-This example uses the [NumericScale](../../../ado/reference/ado-api/numericscale-property-ado.md) and [Precision](../../../ado/reference/ado-api/precision-property-ado.md) properties to display the numeric scale and precision of fields in the ***Discounts*** table of the ***Pubs*** database.  
+This example uses the [NumericScale](./numericscale-property-ado.md) and [Precision](./precision-property-ado.md) properties to display the numeric scale and precision of fields in the ***Discounts*** table of the ***Pubs*** database.  
   
 ```  
 'BeginNumericScaleVB  
@@ -69,7 +69,7 @@ End Sub
 ```  
   
 ## See Also  
- [Field Object](../../../ado/reference/ado-api/field-object.md)   
- [NumericScale Property (ADO)](../../../ado/reference/ado-api/numericscale-property-ado.md)   
- [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)   
- [Precision Property (ADO)](../../../ado/reference/ado-api/precision-property-ado.md)
+ [Field Object](./field-object.md)   
+ [NumericScale Property (ADO)](./numericscale-property-ado.md)   
+ [Parameter Object](./parameter-object.md)   
+ [Precision Property (ADO)](./precision-property-ado.md)

@@ -29,9 +29,9 @@ Indicates the name of an object.
   
  The value is read/write on a **Command** object and read-only on a **Property** object.  
   
- For a **Field** object, **Name** is normally read-only. However, for new **Field** objects that have been appended to the [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection of a [Record](../../../ado/reference/ado-api/record-object-ado.md), **Name** is read/write only after the [Value](../../../ado/reference/ado-api/value-property-ado.md) property for the **Field** has been specified and the data provider has successfully added the new **Field** by calling the [Update](../../../ado/reference/ado-api/update-method.md) method of the **Fields** collection.  
+ For a **Field** object, **Name** is normally read-only. However, for new **Field** objects that have been appended to the [Fields](./fields-collection-ado.md) collection of a [Record](./record-object-ado.md), **Name** is read/write only after the [Value](./value-property-ado.md) property for the **Field** has been specified and the data provider has successfully added the new **Field** by calling the [Update](./update-method.md) method of the **Fields** collection.  
   
- For **Parameter** objects not yet appended to the [Parameters](../../../ado/reference/ado-api/parameters-collection-ado.md) collection, the **Name** property is read/write. For appended **Parameter** objects and all other objects, the **Name** property is read-only. Names do not have to be unique within a collection.  
+ For **Parameter** objects not yet appended to the [Parameters](./parameters-collection-ado.md) collection, the **Name** property is read/write. For appended **Parameter** objects and all other objects, the **Name** property is read-only. Names do not have to be unique within a collection.  
   
  You can retrieve the **Name** property of an object by an ordinal reference, after which you can refer to the object directly by name. For example, if `rstMain.Properties(20).Name` yields `Updatability`, you can subsequently refer to this property as `rstMain.Properties("Updatability")`.  
   
@@ -39,15 +39,15 @@ Indicates the name of an object.
 
 :::row:::
     :::column:::
-        [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
-        [Field Object](../../../ado/reference/ado-api/field-object.md)  
+        [Command Object (ADO)](./command-object-ado.md)  
+        [Field Object](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)  
-        [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Parameter Object](./parameter-object.md)  
+        [Property Object (ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## See Also  
- [Attributes and Name Properties Example (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Attributes and Name Properties Example (VC++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
+ [Attributes and Name Properties Example (VB)](./attributes-and-name-properties-example-vb.md)   
+ [Attributes and Name Properties Example (VC++)](./attributes-and-name-properties-example-vc.md)

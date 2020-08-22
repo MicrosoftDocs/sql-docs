@@ -22,7 +22,7 @@ System Center Operations Manager must be installed and running. SQL Server PDW 2
 ## <a name="Step1"></a>Step 1: Download the Management Packs  
 For the APS PDW workload, download the [System Center Management Pack for the Microsoft Analytics Platform System](https://go.microsoft.com/fwlink/?LinkId=396857).  
   
-For the appliance management, download the [SQL Server Appliance Base Management Pack](https://docs.microsoft.com/previous-versions/system-center/packs/gg602398(v=technet.10)).  
+For the appliance management, download the [SQL Server Appliance Base Management Pack](/previous-versions/system-center/packs/gg602398(v=technet.10)).  
   
 For older versions of PDW without APS, download the[System Center Monitoring Pack for Microsoft SQL Server 2012 Parallel Data Warehouse Appliance](https://go.microsoft.com/fwlink/p/?LinkId=282661).  
   
@@ -75,4 +75,3 @@ Now that you have the Management Packs installed, continue to the next step: [Im
   
 <!-- MISSING LINKS ## See Also  
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
-  

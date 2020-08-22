@@ -28,11 +28,11 @@ Indicates the ADO version number.
 ## Remarks  
  Use the **Version** property to return the version number of the ADO implementation.  
   
- The version of the provider will be available as a dynamic property in the [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection.  
+ The version of the provider will be available as a dynamic property in the [Properties](./properties-collection-ado.md) collection.  
   
 ## Applies To  
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection Object (ADO)](./connection-object-ado.md)  
   
 ## See Also  
- [Version Property Example (VB)](../../../ado/reference/ado-api/version-property-example-vb.md)   
- [Version Property Example (VC++)](../../../ado/reference/ado-api/version-property-example-vc.md)   
+ [Version Property Example (VB)](./version-property-example-vb.md)   
+ [Version Property Example (VC++)](./version-property-example-vc.md)

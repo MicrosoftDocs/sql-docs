@@ -22,8 +22,8 @@ The following examples require Microsoft Active Server Pages (ASP) for Microsoft
 > [!NOTE]
 >  Paste the entire code example, from beginning to end, into your code editor. The example may not run correctly if partial examples are used or if paragraph formatting is lost.  
   
--   [Axis Example](../../../ado/reference/ado-md-api/axis-example-vbscript.md)  
+-   [Axis Example](./axis-example-vbscript.md)  
   
--   [Members Example](../../../ado/reference/ado-md-api/members-example-vbscript.md)  
+-   [Members Example](./members-example-vbscript.md)  
   
--   [CubeDef Example](../../../ado/reference/ado-md-api/cubedef-example-vbscript.md)
+-   [CubeDef Example](./cubedef-example-vbscript.md)

@@ -55,4 +55,4 @@ put_Type(StreamTypeEnum Type)
 ```  
   
 ## See Also  
- [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Stream Object (ADO)](./stream-object-ado.md)

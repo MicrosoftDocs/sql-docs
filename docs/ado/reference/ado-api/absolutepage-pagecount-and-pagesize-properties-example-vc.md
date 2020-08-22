@@ -19,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # AbsolutePage, PageCount, and PageSize Properties Example (VC++)
-This example uses the [AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md), [PageCount](../../../ado/reference/ado-api/pagecount-property-ado.md), and [PageSize](../../../ado/reference/ado-api/pagesize-property-ado.md) properties to display names and hire dates from the ***Employee*** table, five records at a time.  
+This example uses the [AbsolutePage](./absolutepage-property-ado.md), [PageCount](./pagecount-property-ado.md), and [PageSize](./pagesize-property-ado.md) properties to display names and hire dates from the ***Employee*** table, five records at a time.  
   
 ```  
 // BeginAbsolutePageCpp.cpp  
@@ -174,7 +174,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 ```  
   
 ## See Also  
- [AbsolutePage Property (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md)   
- [PageCount Property (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)   
- [PageSize Property (ADO)](../../../ado/reference/ado-api/pagesize-property-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AbsolutePage Property (ADO)](./absolutepage-property-ado.md)   
+ [PageCount Property (ADO)](./pagecount-property-ado.md)   
+ [PageSize Property (ADO)](./pagesize-property-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

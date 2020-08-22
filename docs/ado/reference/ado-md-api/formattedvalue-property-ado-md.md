@@ -19,17 +19,17 @@ author: rothja
 ms.author: jroth
 ---
 # FormattedValue Property (ADO MD)
-Indicates the formatted display of a [cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) value.  
+Indicates the formatted display of a [cell](./cell-object-ado-md.md) value.  
   
 ## Return Values  
  Returns a **String** and is read-only.  
   
 ## Remarks  
- Use the **FormattedValue** property to obtain the formatted display value of the [Value](../../../ado/reference/ado-md-api/value-property-ado-md.md) property of a [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md) object. For example, if the value of a cell was 1056.87, and this value represented a dollar amount, **FormattedValue** would be $1,056.87.  
+ Use the **FormattedValue** property to obtain the formatted display value of the [Value](./value-property-ado-md.md) property of a [Cell](./cell-object-ado-md.md) object. For example, if the value of a cell was 1056.87, and this value represented a dollar amount, **FormattedValue** would be $1,056.87.  
   
 ## Applies To  
- [Cell Object (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
+ [Cell Object (ADO MD)](./cell-object-ado-md.md)  
   
 ## See Also  
- [Cellset Example (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Value Property (ADO MD)](../../../ado/reference/ado-md-api/value-property-ado-md.md)
+ [Cellset Example (VB)](./cellset-example-vb.md)   
+ [Value Property (ADO MD)](./value-property-ado-md.md)

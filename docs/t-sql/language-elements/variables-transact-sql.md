@@ -28,7 +28,10 @@ A Transact-SQL local variable is an object that can hold a single data value of 
 > The names of some Transact-SQL system functions begin with two *at* signs (\@\@). Although in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the \@\@functions are referred to as global variables, they are not variables and do not have the same behaviors as variables. The \@\@functions are system functions, and their syntax usage follows the rules for functions.
 
 > [!NOTE]
-> Variables can not be used in views.
+> Variables can notbe used in views.
+
+> [!NOTE]
+> Changes to variables are not affected by the rollback of a transaction.
 
 The following script creates a small test table and populates it with 26 rows. The script uses a variable to do three things: 
 

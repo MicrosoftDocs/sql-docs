@@ -106,7 +106,7 @@ To refer to registered container, specify the id of the container
 
 `dashboard.insights`
 
-You can register insights using dashboard.insights. This is similar to [Tutorial: Build a custom insight widget](https://docs.microsoft.com/sql/sql-operations-studio/tutorial-build-custom-insight-sql-server)
+You can register insights using dashboard.insights. This is similar to [Tutorial: Build a custom insight widget](./tutorial-build-custom-insight-sql-server.md?view=sql-server-ver15)
 
 ```json
 "dashboard.insights": {

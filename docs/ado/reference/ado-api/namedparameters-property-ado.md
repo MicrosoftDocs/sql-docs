@@ -21,12 +21,12 @@ ms.author: jroth
 Indicates whether parameter names should be passed to the provider.  
   
 ## Remarks  
- When this property is true, ADO passes the value of the **Name** property of each parameter in the **Parameter** collection for the [Command Object](../../../ado/reference/ado-api/command-object-ado.md). The provider uses a parameter name to match parameters in the **CommandText** or **CommandStream** properties. If this property is false (the default), parameter names are ignored and the provider uses the order of parameters to match values to parameters in the **CommandText** or **CommandStream** properties.  
+ When this property is true, ADO passes the value of the **Name** property of each parameter in the **Parameter** collection for the [Command Object](./command-object-ado.md). The provider uses a parameter name to match parameters in the **CommandText** or **CommandStream** properties. If this property is false (the default), parameter names are ignored and the provider uses the order of parameters to match values to parameters in the **CommandText** or **CommandStream** properties.  
   
 ## Applies To  
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
+ [Command Object (ADO)](./command-object-ado.md)  
   
 ## See Also  
- [CommandText Property (ADO)](../../../ado/reference/ado-api/commandtext-property-ado.md)   
- [CommandStream Property (ADO)](../../../ado/reference/ado-api/commandstream-property-ado.md)   
- [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
+ [CommandText Property (ADO)](./commandtext-property-ado.md)   
+ [CommandStream Property (ADO)](./commandstream-property-ado.md)   
+ [Parameters Collection (ADO)](./parameters-collection-ado.md)

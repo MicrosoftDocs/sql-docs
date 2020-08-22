@@ -19,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # DrilledDown Property (ADO MD)
-Indicates whether children immediately follow the [member](../../../ado/reference/ado-md-api/member-object-ado-md.md) on the axis.  
+Indicates whether children immediately follow the [member](./member-object-ado-md.md) on the axis.  
   
 ## Return Values  
  Returns a **Boolean** value and is read-only. **DrilledDown** returns **True** if there are no child members of the current member on the axis. **DrilledDown** returns **False** if the current member has one or more child members on the axis.  
@@ -27,10 +27,10 @@ Indicates whether children immediately follow the [member](../../../ado/referenc
 ## Remarks  
  Use the **DrilledDown** property to determine whether there is at least one child of this member on the axis immediately following this member. This information is useful when displaying the member.  
   
- This property is only supported on [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) objects belonging to a [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) object. An error occurs when this property is referenced from **Member** objects belonging to a [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) object.  
+ This property is only supported on [Member](./member-object-ado-md.md) objects belonging to a [Position](./position-object-ado-md.md) object. An error occurs when this property is referenced from **Member** objects belonging to a [Level](./level-object-ado-md.md) object.  
   
 ## Applies To  
- [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+ [Member Object (ADO MD)](./member-object-ado-md.md)  
   
 ## See Also  
- [ParentSameAsPrev Property (ADO MD)](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)
+ [ParentSameAsPrev Property (ADO MD)](./parentsameasprev-property-ado-md.md)

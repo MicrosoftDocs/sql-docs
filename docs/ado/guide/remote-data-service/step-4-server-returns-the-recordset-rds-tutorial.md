@@ -33,5 +33,5 @@ Sub RDSTutorial4()
 ```  
   
 ## See Also  
- [Step 5: DataControl is Made Usable (RDS Tutorial)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)   
- [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Step 5: DataControl is Made Usable (RDS Tutorial)](./step-5-datacontrol-is-made-usable-rds-tutorial.md)   
+ [RDS Tutorial (VBScript)](./rds-tutorial-vbscript.md)

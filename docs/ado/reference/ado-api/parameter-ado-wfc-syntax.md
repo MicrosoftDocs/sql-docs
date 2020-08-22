@@ -60,7 +60,7 @@ public AdoProperties getProperties()
 ```  
   
 ## Parameter Accessor Methods  
- The [Value](../../../ado/reference/ado-api/value-property-ado.md) property of a [Parameter](../../../ado/reference/ado-api/parameter-object.md) object gets or sets the content of that object. The content is represented as a VARIANT, a type of object that can be assigned a value and any of several data types.  
+ The [Value](./value-property-ado.md) property of a [Parameter](./parameter-object.md) object gets or sets the content of that object. The content is represented as a VARIANT, a type of object that can be assigned a value and any of several data types.  
   
  ADO/WFC implements the **Value** property with the **getValue** method, which returns a VARIANT object; and the **setValue** method, which takes a VARIANT as an argument. VARIANTs are highly efficient in certain languages, such as Microsoft Visual Basic.  
   
@@ -90,4 +90,4 @@ public void setNull()
 ```  
   
 ## See Also  
- [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter Object](./parameter-object.md)

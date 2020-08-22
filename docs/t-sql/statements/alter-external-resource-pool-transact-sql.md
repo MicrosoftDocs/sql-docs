@@ -35,7 +35,7 @@ For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
 ## Syntax
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions":
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ```syntaxsql
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
@@ -77,7 +77,7 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 { *pool_name* | "default" }  
 Is the name of an existing user-defined external resource pool or the default external resource pool that is created when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.
 "default" must be enclosed by quotation marks ("") or brackets ([]) when used with `ALTER EXTERNAL RESOURCE POOL` to avoid conflict with `DEFAULT`, which is a system reserved word.
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions":
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
 Specifies the maximum average CPU bandwidth that all requests in the external resource pool can receive when there is CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
 
@@ -115,7 +115,7 @@ Requires `CONTROL SERVER` permission.
 ## Examples
 
 The following statement changes an external pool, restricting the CPU usage to 50 percent and the maximum memory to 25 percent of the available memory on the computer.
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions":  
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"  
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (

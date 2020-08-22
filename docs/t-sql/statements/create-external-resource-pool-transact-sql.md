@@ -41,7 +41,7 @@ For [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
  
 
 ## Syntax  
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions":   
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
 [ WITH (  
@@ -82,7 +82,7 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 
 *pool_name*  
 Is the user-defined name for the external resource pool. *pool_name* is alphanumeric and can be up to 128 characters. This argument must be unique within an instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and must fulfill the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions":
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
 The maximum average CPU bandwidth for all requests in the external resource pool can receive when there's CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
 
@@ -126,7 +126,7 @@ Requires `CONTROL SERVER` permission.
 ## Examples
 
 The external pool has restricted CPU usage to 75 percent. The maximum memory is 30 percent of the available memory on the computer.
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions":
+::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1
 WITH (  

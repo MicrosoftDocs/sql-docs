@@ -1,8 +1,8 @@
 ---
-title: "Tutorial: Create wizard extension"
-description: This tutorial demonstrates how to create a wizard extension to add custom functionality to Azure Data Studio.
+title: "Tutorial: Create dashboard extension"
+description: This tutorial demonstrates how to create a dashboard extension to add custom functionality to Azure Data Studio.
 ms.custom:
-ms.date: 8/18/2020
+ms.date: 8/20/2020
 ms.prod: azure-data-studio
 ms.technology: 
 ms.reviewer: 
@@ -10,15 +10,15 @@ ms.topic: "tutorial"
 author: t-anjaga
 ms.author: t-anjaga
 ---
-# Tutorial: Create an Azure Data Studio Wizard extension
+# Tutorial: Create an Azure Data Studio Dashboard extension
 
-This tutorial demonstrates how to create a new **Azure Data Studio Wizard extension**. The extension contributes a wizard to interact with users in Azure Data Studio.
+This tutorial demonstrates how to create a new **Azure Data Studio Dashboard extension**. The extension contributes to the Azure Data Studio connection dashboard, so you can extend the functionality of Azure Data Studio in a manner easily visible to users.
 
 During this tutorial you learn how to:
 > [!div class="checklist"]
 > * Install the extension generator
 > * Create your extension
-> * Add a custom wizard to your extension
+> * Contribute to the dashboard in your extension
 > * Test your extension
 > * Package your extension
 > * Publish your extension to the marketplace
@@ -38,15 +38,23 @@ To simplify the process of creating extensions, we've built an [extension genera
 
 `npm install -g yo generator-azuredatastudio`
 
-## Create your wizard extension
+## Create your dashboard extension
 
-### Introduction to wizards
+### Introduction to the dashboard
 
-Wizards are a user interface type that present step-by-step pages for users to fill in, in order to accomplish a task. Common examples include software setup wizards and troubleshooting wizards. For example:
+The Azure Data Studio connection dashboard is a powerful tool that summarizes and provides insight into a user's connections.
 
-![dacpac wizard](./media/tutorial-create-wizard-extension/dacpac_wizard.gif)
+There are two variations of the dashboard: the 'server dashboard' that summarizes the entire server, and the 'database dashboard' that summarizes an individual database. You can access either by right-clicking on a server or a database in the Connections viewlet of Azure Data Studio, and clicking **Manage**:
 
-Because wizards are often helpful when working with data and extending the functionality of Azure Data Studio, Azure Data Studio offers APIs to create your own custom wizards. We will be walking through how to generate a Wizard template and modify it to create your own custom wizard.
+![dashboards intro](./media/tutorial-create-dashboard-extension/dashboard_summary.gif)
+
+There are 3 key contribution points for extensions to add functionality to the dashboard:
+
+- <span style="color:green">Widgets</span>: Graphs that run against your SQL Server
+- <span style="color:red">Homepage Actions</span>: Action buttons at the top of the connection toolbar
+- <span style="color:purple">Full Dashboard Tab</span>: A separate tab in the dashboard for your extension. Can be added to either a server or database dashboard. Customizable with widgets, a toolbar, and a navigation section.
+
+![contribution points](./media/tutorial-create-dashboard-extension/dashboard_contrib_points.png)
 
 ### Run the extension generator
 
@@ -56,41 +64,35 @@ To create an extension:
 
    `yo azuredatastudio`
 
-2. Choose **New Wizard or Dialog** from the list of extension types. Then select **Wizard**, followed by the **Getting Started Template**
+2. Choose **New Dashboard** from the list of extension types.
 
-3. Follow the steps to fill in the extension name (for this tutorial, use **My Test Extension**), and add a description.
+3. Fill in the prompts as shown below. This will create an extension that contributes a tab to the Server Dashboard.
 
-![extension generator](./media/tutorial-create-wizard-extension/extension_generator.png)
+![extension generator](./media/tutorial-create-dashboard-extension/dashboard_generator.png)
 
-Completing the previous steps creates a new folder. Open the folder in Visual Studio Code and you're ready to create your own wizard extension!
+There are a lot of prompts, so here is a little more information on what each question means:
+
+![dashboards flowchart](./media/tutorial-create-dashboard-extension/dashboard_flowchart.png)
+
+Completing the previous steps creates a new folder. Open the folder in Visual Studio Code and you're ready to create your own dashboard extension!
 
 ### Run the extension
 
-Let's see what the wizard template gives us by running the extension. Before running, ensure that the **Azure Data Studio Debug extension** is installed in Visual Studio Code.
+Let's see what the dashboard template gives us by running the extension. Before running, ensure that the **Azure Data Studio Debug extension** is installed in Visual Studio Code.
 
-Select **F5** in VS Code to launch Azure Data Studio in debug mode with the extension running. Then, in Azure Data Studio, run the **Launch Wizard** command from the Command Palette (Ctr+Shift+P) in the new window. This will launch the default wizard that this extension contributes:
+Select **F5** in VS Code to launch Azure Data Studio in debug mode with the extension running. Then, you can view how this default template contributes to the dashboard.
 
-![wizard template](./media/tutorial-create-wizard-extension/wizard_template.gif)
+Next, we will look at how to modify this default dashboard.
 
-Next, we will look at how to modify this default wizard.
+### Develop the dashboard
 
-### Develop the wizard
+The most important files to get started with extension development is `package.json`. This is the manifest file, where the dashboard contributions are registered. Note the `dashboard.tabs`, `dashboard.insights`, and `dashboard.containers` sections.
 
-The most important files to get started with extension development are `package.json`, `src/main.ts`, and `vsc-extension-quickstart.md`:
+Here are some changes to try out:
 
-- `package.json`: This is the manifest file, where the **Launch Wizard** command is registered. This is also where `main.ts` is declared the main program entry point.
-- `main.ts`: Contains the code to add UI elements to the Wizard, like pages, text, and buttons
-- `vsc-extension-quickstart.md`: Contains technical documentation that may be a helpful reference when developing
-
-Let's make a change to the wizard: we'll add a 4th, blank page. Modify `src/main.ts` as shown below, and you should see an additional page show up when you launch the wizard.
-
-![wizard main](./media/tutorial-create-wizard-extension/wizard_main.png)
-
-Once you are familiar with the template, here are some additional ideas to try:
-
-- Add a button with a width of 300 to your new page
-- Add a flex component to put your button in
-- Add an action to your button. For example, when the button is clicked, launch a file-opening dialog or open a query editor.
+- Play around with the insights types, including 'bar', 'horizontalBar', 'timeSeries'
+- Write your own queries to run against your SQL Server connection
+- Refer to this [sample insight tutorial](tutorial-qds-sql-server.md) or [this one](tutorial-table-space-sql-server.md) for specific insight tutorials
 
 ## Package your extension
 
@@ -109,7 +111,7 @@ Edit the `README.md` to your liking, then navigate to the base directory of the 
 
 After these lines were added, a my-test-extension-0.0.1.vsix file was created and ready to install in Azure Data Studio.
 
-![install vsix](./media/tutorial-create-wizard-extension/install-vsix.png)
+![install vsix](./media/tutorial-create-dashboard-extension/install-vsix.png)
 
 ## Publish your extension to the marketplace
 
@@ -121,7 +123,7 @@ In this tutorial, you learned how to:
 > [!div class="checklist"]
 > * Install the extension generator
 > * Create your extension
-> * Add a custom wizard to your extension
+> * Contribute to the dashboard in your extension
 > * Test your extension
 > * Package your extension
 > * Publish your extension to the marketplace

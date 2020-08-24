@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # AppendChunk and GetChunk Methods Example (VB)
-This example uses the [AppendChunk](../../../ado/reference/ado-api/appendchunk-method-ado.md) and [GetChunk](../../../ado/reference/ado-api/getchunk-method-ado.md) methods to fill an image field with data from another record.  
+This example uses the [AppendChunk](./appendchunk-method-ado.md) and [GetChunk](./getchunk-method-ado.md) methods to fill an image field with data from another record.  
   
 ```  
 'BeginAppendChunkVB  
@@ -143,7 +143,7 @@ End Sub
 ```  
   
 ## See Also  
- [AppendChunk Method (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [Field Object](../../../ado/reference/ado-api/field-object.md)   
- [GetChunk Method (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)   
- [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)
+ [AppendChunk Method (ADO)](./appendchunk-method-ado.md)   
+ [Field Object](./field-object.md)   
+ [GetChunk Method (ADO)](./getchunk-method-ado.md)   
+ [Parameter Object](./parameter-object.md)

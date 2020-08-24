@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Clustered Property Example (VB)
-This example demonstrates the [Clustered](../../../ado/reference/adox-api/clustered-property-adox.md) property of an [Index](../../../ado/reference/adox-api/index-object-adox.md). Note that Microsoft Jet databases do not support clustered indexes, so this example will return **False** for the **Clustered** property of all indexes in the **Northwind** database.  
+This example demonstrates the [Clustered](./clustered-property-adox.md) property of an [Index](./index-object-adox.md). Note that Microsoft Jet databases do not support clustered indexes, so this example will return **False** for the **Clustered** property of all indexes in the **Northwind** database.  
   
 ```  
 ' BeginClusteredVB  
@@ -68,7 +68,7 @@ End Sub
 ```  
   
 ## See Also  
- [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Clustered Property (ADOX)](../../../ado/reference/adox-api/clustered-property-adox.md)   
- [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Catalog Object (ADOX)](./catalog-object-adox.md)   
+ [Clustered Property (ADOX)](./clustered-property-adox.md)   
+ [Index Object (ADOX)](./index-object-adox.md)   
+ [Table Object (ADOX)](./table-object-adox.md)

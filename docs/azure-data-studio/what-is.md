@@ -19,7 +19,7 @@ Azure Data Studio offers a modern editor experience with IntelliSense, code snip
 
 The source code for Azure Data Studio and its data providers is available on GitHub under a source code EULA that provides rights to modify and use the software, but not to redistribute it or host it in a cloud service. For more information, see [Azure Data Studio FAQ](faq.md).
 
-**[Download and Install Azure Data Studio](download.md)**
+**[Download and Install Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)**
 
 ## SQL code editor with IntelliSense
 
@@ -160,7 +160,7 @@ To learn about authoring extensions, see [Extension authoring](extension-authori
 
 ## Next steps
 
-- [Download and Install Azure Data Studio](download.md)
+- [Download and Install Azure Data Studio](./download-azure-data-studio.md?view=sql-server-ver15)
 - [Connect and query SQL Server](quickstart-sql-server.md)
 - [Connect and query Azure SQL Database](quickstart-sql-database.md)
 

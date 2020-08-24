@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Version Property Example (VC++)
-This example uses the [Version](../../../ado/reference/ado-api/version-property-ado.md) property of a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object to display the current ADO version. It also uses several dynamic properties to show:  
+This example uses the [Version](./version-property-ado.md) property of a [Connection](./connection-object-ado.md) object to display the current ADO version. It also uses several dynamic properties to show:  
   
 -   Current DBMS name and version.  
   
@@ -130,5 +130,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Version Property (ADO)](../../../ado/reference/ado-api/version-property-ado.md)
+ [Connection Object (ADO)](./connection-object-ado.md)   
+ [Version Property (ADO)](./version-property-ado.md)

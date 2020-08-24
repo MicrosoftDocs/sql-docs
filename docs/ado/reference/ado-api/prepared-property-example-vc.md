@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Prepared Property Example (VC++)
-This example demonstrates the [Prepared](../../../ado/reference/ado-api/prepared-property-ado.md) property by opening two [Command](../../../ado/reference/ado-api/command-object-ado.md) objects - one prepared and one not prepared.  
+This example demonstrates the [Prepared](./prepared-property-ado.md) property by opening two [Command](./command-object-ado.md) objects - one prepared and one not prepared.  
   
 ## Example  
   
@@ -139,5 +139,5 @@ void PrintComError(_com_error &e) {
 **Not Prepared:  0.016 seconds**  
 **Prepared:      0.016 seconds**   
 ## See Also  
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
- [Prepared Property (ADO)](../../../ado/reference/ado-api/prepared-property-ado.md)
+ [Command Object (ADO)](./command-object-ado.md)   
+ [Prepared Property (ADO)](./prepared-property-ado.md)

@@ -16,19 +16,19 @@ ms.author: jroth
 ---
 # Keys Collection Properties, Methods, and Events
 ## Properties  
- [Count Property](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count Property](../ado-api/count-property-ado.md)  
   
- [Item Property](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item Property](../ado-api/item-property-ado.md)  
   
 ## Methods  
- [Append Method (Keys)](../../../ado/reference/adox-api/append-method-adox-keys.md)  
+ [Append Method (Keys)](./append-method-adox-keys.md)  
   
- [Delete Method (Collections)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
+ [Delete Method (Collections)](./delete-method-adox-collections.md)  
   
- [Refresh Method](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh Method](../ado-api/refresh-method-ado.md)  
   
 ## Events  
  None.  
   
 ## See Also  
- [Keys Collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)
+ [Keys Collection (ADOX)](./keys-collection-adox.md)

@@ -31,4 +31,4 @@ HRESULT put_OLEDBCommand(
  [in] Pointer to an OLE DB Command object.  
   
 ## Applies To  
- [IADOCommandConstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)
+ [IADOCommandConstruction](/previous-versions/windows/desktop/aa965677(v=vs.85))

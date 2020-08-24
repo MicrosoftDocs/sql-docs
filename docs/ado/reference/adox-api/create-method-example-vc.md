@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Create Method Example (VC++)
-The following code shows how to create a new Microsoft Jet database with the [Create](../../../ado/reference/adox-api/create-method-adox.md) method.  
+The following code shows how to create a new Microsoft Jet database with the [Create](./create-method-adox.md) method.  
   
 ```  
 // BeginCreateDatabaseCpp.cpp  
@@ -71,4 +71,4 @@ void CreateDatabaseX() {
 ```  
   
 ## See Also  
- [Create Method (ADOX)](../../../ado/reference/adox-api/create-method-adox.md)
+ [Create Method (ADOX)](./create-method-adox.md)

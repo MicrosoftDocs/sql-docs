@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # GetRows Method Example (VC++)
-This example uses the [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) method to retrieve a specified number of rows from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) and to fill an array with the resulting data. The **GetRows** method will return less than the desired number of rows in two cases: either if [EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md) has been reached, or if **GetRows** tried to retrieve a record that was deleted by another user. The function returns **False** only if the second case occurs. The GetRowsOK function is required for this procedure to run.  
+This example uses the [GetRows](./getrows-method-ado.md) method to retrieve a specified number of rows from a [Recordset](./recordset-object-ado.md) and to fill an array with the resulting data. The **GetRows** method will return less than the desired number of rows in two cases: either if [EOF](./bof-eof-properties-ado.md) has been reached, or if **GetRows** tried to retrieve a record that was deleted by another user. The function returns **False** only if the second case occurs. The GetRowsOK function is required for this procedure to run.  
   
 ## Example  
   
@@ -239,6 +239,6 @@ Pedro Afonso, 12/24/1990
 ```  
   
 ## See Also  
- [BOF, EOF Properties (ADO)](../../../ado/reference/ado-api/bof-eof-properties-ado.md)   
- [GetRows Method (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [BOF, EOF Properties (ADO)](./bof-eof-properties-ado.md)   
+ [GetRows Method (ADO)](./getrows-method-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

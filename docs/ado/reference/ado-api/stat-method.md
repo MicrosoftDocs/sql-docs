@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Stat Method
-Retrieves information about a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  
+Retrieves information about a [Stream](./stream-object-ado.md) object.  
   
 ## Syntax  
   
@@ -65,4 +65,4 @@ Long stream.Stat(StatStg, StatFlag)
  If STATFLAG_NONAME was not specified in the StatFlag parameter, and there is no name available for the current stream, this value will be E_NOTIMPL.  
   
 ## Applies To  
- [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Stream Object (ADO)](./stream-object-ado.md)

@@ -130,7 +130,7 @@ public AdoProperties getProperties()
 ```  
   
 ### Events  
- For more information about ADO/WFC events, see [ADO Event Instantiation by Language](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+ For more information about ADO/WFC events, see [ADO Event Instantiation by Language](../../guide/data/ado-event-instantiation-by-language.md).  
   
 ```  
 public void addOnEndOfRecordset(RecordsetEventHandler handler)  
@@ -158,4 +158,4 @@ public void removeOnWillMove(RecordsetEventHandler handler)
 ```  
   
 ## See Also  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset Object (ADO)](./recordset-object-ado.md)

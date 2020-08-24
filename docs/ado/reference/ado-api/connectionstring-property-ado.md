@@ -36,9 +36,9 @@ Indicates the information used to establish a connection to a data source.
 |*Remote Server=*|Specifies the path name of the server to use when opening a client-side connection. (Remote Data Service only.)|  
 |*URL=*|Specifies the connection string as an absolute URL identifying a resource, such as a file or directory.|  
   
- After you set the **ConnectionString** property and open the [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object, the provider may alter the contents of the property, for example, by mapping the ADO-defined argument names to their equivalents for the specific provider.  
+ After you set the **ConnectionString** property and open the [Connection](./connection-object-ado.md) object, the provider may alter the contents of the property, for example, by mapping the ADO-defined argument names to their equivalents for the specific provider.  
   
- The **ConnectionString** property automatically inherits the value used for the *ConnectionString* argument of the [Open](../../../ado/reference/ado-api/open-method-ado-connection.md) method, so you can override the current **ConnectionString** property during the **Open** method call.  
+ The **ConnectionString** property automatically inherits the value used for the *ConnectionString* argument of the [Open](./open-method-ado-connection.md) method, so you can override the current **ConnectionString** property during the **Open** method call.  
   
  Because the *File Name* argument causes ADO to load the associated provider, you cannot pass both the *Provider* and *File Name* arguments.  
   
@@ -57,9 +57,9 @@ Indicates the information used to establish a connection to a data source.
 |No default.<br /><br /> When an ADO application runs on the following operating systems and does not specify the provider explicitly, ADO returns the following error: "ADODB.Connection: provider is not specified and there is no designated default provider"|Windows 2000 (64-bit)<br /><br /> Windows XP (64-bit)<br /><br /> Windows 2003 Server (64-bit)<br /><br /> Windows Vista (64-bit)|  
   
 ## Applies To  
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+ [Connection Object (ADO)](./connection-object-ado.md)  
   
 ## See Also  
- [ConnectionString, ConnectionTimeout, and State Properties Example (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString, ConnectionTimeout, and State Properties Example (VC++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
- [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [ConnectionString, ConnectionTimeout, and State Properties Example (VB)](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString, ConnectionTimeout, and State Properties Example (VC++)](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [Appendix A: Providers](../../guide/appendixes/appendix-a-providers.md)

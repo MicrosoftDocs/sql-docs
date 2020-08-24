@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # InheritTypeEnum
-Specifies how objects will inherit permissions set with [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md).  
+Specifies how objects will inherit permissions set with [SetPermissions](./setpermissions-method-adox.md).  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -29,4 +29,4 @@ Specifies how objects will inherit permissions set with [SetPermissions](../../.
 |**adInheritObjects**|1|Non-container objects in the container inherit the permissions.|  
   
 ## Applies To  
- [SetPermissions Method (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)
+ [SetPermissions Method (ADOX)](./setpermissions-method-adox.md)

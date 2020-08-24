@@ -24,7 +24,7 @@ author: rothja
 ms.author: jroth
 ---
 # HelpContext, HelpFile Properties
-Indicates the Help file and topic associated with an [Error](../../../ado/reference/ado-api/error-object.md) object.  
+Indicates the Help file and topic associated with an [Error](./error-object.md) object.  
   
 ## Return Values  
   
@@ -36,11 +36,11 @@ Indicates the Help file and topic associated with an [Error](../../../ado/refere
  If a Help file is specified in the **HelpFile** property, the **HelpContext** property is used to automatically display the Help topic it identifies. If there is no relevant help topic available, the **HelpContext** property returns zero and the **HelpFile** property returns a zero-length string ("").  
   
 ## Applies To  
- [Error Object](../../../ado/reference/ado-api/error-object.md)  
+ [Error Object](./error-object.md)  
   
 ## See Also  
- [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VC++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
- [Description Property](../../../ado/reference/ado-api/description-property.md)   
- [Number Property (ADO)](../../../ado/reference/ado-api/number-property-ado.md)   
- [Source Property (ADO Error)](../../../ado/reference/ado-api/source-property-ado-error.md)
+ [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VB)](./description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VC++)](./description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Description Property](./description-property.md)   
+ [Number Property (ADO)](./number-property-ado.md)   
+ [Source Property (ADO Error)](./source-property-ado-error.md)

@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Append and CreateParameter Methods Example (JScript)
-This example uses the [Append](../../../ado/reference/ado-api/append-method-ado.md) and [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) methods to execute a stored procedure with an input parameter. Cut and paste the following code to Notepad or another text editor, and save it as **AppendJS.asp**.  
+This example uses the [Append](./append-method-ado.md) and [CreateParameter](./createparameter-method-ado.md) methods to execute a stored procedure with an input parameter. Cut and paste the following code to Notepad or another text editor, and save it as **AppendJS.asp**.  
   
 ```  
 <!-- BeginAppendJS -->  
@@ -137,8 +137,8 @@ body {
 ```  
   
 ## See Also  
- [Append Method (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
- [Field Object](../../../ado/reference/ado-api/field-object.md)   
- [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)
+ [Append Method (ADO)](./append-method-ado.md)   
+ [CreateParameter Method (ADO)](./createparameter-method-ado.md)   
+ [Field Object](./field-object.md)   
+ [Fields Collection (ADO)](./fields-collection-ado.md)   
+ [Parameter Object](./parameter-object.md)

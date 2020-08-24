@@ -17,9 +17,9 @@ author: rothja
 ms.author: jroth
 ---
 # CreateRecordset Method Example (VB)
-You can create a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object and specify the column information. You can then insert data into the **Recordset** object; the underlying rowset buffers the inserts.  
+You can create a [Recordset](./recordset-object-ado.md) object and specify the column information. You can then insert data into the **Recordset** object; the underlying rowset buffers the inserts.  
   
- The following code example shows how to define a **Recordset** by using the [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) object. You can also do this with the [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object.  
+ The following code example shows how to define a **Recordset** by using the [RDSServer.DataFactory](../rds-api/datafactory-object-rdsserver.md) object. You can also do this with the [RDS.DataControl](../rds-api/datacontrol-object-rds.md) object.  
   
 ```  
 'BeginRsDefineShapeVB  

@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # ColumnAttributesEnum
-Specifies characteristics of a [Column](../../../ado/reference/adox-api/column-object-adox.md).  
+Specifies characteristics of a [Column](./column-object-adox.md).  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -26,4 +26,4 @@ Specifies characteristics of a [Column](../../../ado/reference/adox-api/column-o
 |**adColNullable**|2|The column may contain null values.|  
   
 ## Applies To  
- [Attributes Property (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)
+ [Attributes Property (ADOX)](./attributes-property-adox.md)

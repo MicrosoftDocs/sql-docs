@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Catalog ActiveConnection Property Example (VB)
-Setting the [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) property to a valid, open connection "opens" the catalog. From an open catalog, you can access the schema objects contained within that catalog.  
+Setting the [ActiveConnection](./activeconnection-property-adox.md) property to a valid, open connection "opens" the catalog. From an open catalog, you can access the schema objects contained within that catalog.  
   
 ```  
 ' BeginOpenConnectionVB  
@@ -61,8 +61,8 @@ Attribute VB_Name = "Catalog"
 ```  
   
 ## See Also  
- [ActiveConnection Property (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Tables Collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Type Property (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)
+ [ActiveConnection Property (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog Object (ADOX)](./catalog-object-adox.md)   
+ [Table Object (ADOX)](./table-object-adox.md)   
+ [Tables Collection (ADOX)](./tables-collection-adox.md)   
+ [Type Property (Table) (ADOX)](./type-property-table-adox.md)

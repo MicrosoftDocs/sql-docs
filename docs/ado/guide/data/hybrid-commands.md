@@ -29,6 +29,6 @@ SHAPE {select * from plants}
  The caching behavior for a hybrid command is the same as that of regular parameterized commands.  
   
 ## See Also  
- [Data Shaping Example](../../../ado/guide/data/data-shaping-example.md)   
- [Formal Shape Grammar](../../../ado/guide/data/formal-shape-grammar.md)   
- [Shape Commands in General](../../../ado/guide/data/shape-commands-in-general.md)
+ [Data Shaping Example](./data-shaping-example.md)   
+ [Formal Shape Grammar](./formal-shape-grammar.md)   
+ [Shape Commands in General](./shape-commands-in-general.md)

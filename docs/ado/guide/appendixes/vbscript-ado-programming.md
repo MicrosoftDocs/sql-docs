@@ -69,7 +69,7 @@ Response.Write("Success!")
 </HTML>  
 ```  
   
- More specific VBScript examples are included with the ADO documentation. For more information, see [ADO Code Examples in Microsoft Visual Basic Scripting Edition](../../../ado/reference/ado-api/ado-code-examples-vbscript.md).  
+ More specific VBScript examples are included with the ADO documentation. For more information, see [ADO Code Examples in Microsoft Visual Basic Scripting Edition](../../reference/ado-api/ado-code-examples-vbscript.md).  
   
 ## Differences Between VBScript and Visual Basic  
  Using ADO with VBScript is similar to using ADO with Visual Basic in many ways, including how syntax is used. However, some significant differences exist:  

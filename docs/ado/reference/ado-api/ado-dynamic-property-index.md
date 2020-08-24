@@ -14,11 +14,11 @@ author: rothja
 ms.author: jroth
 ---
 # ADO Dynamic Property Index
-Data providers, service providers, and service components can add dynamic properties to the **Properties** collections of the unopened [Connection](../../../ado/reference/ado-api/connection-object-ado.md) and [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objects. A given provider may also insert additional properties when these objects are opened. Some of these properties are listed in the [ADO Dynamic Properties](../../../ado/reference/ado-api/ado-dynamic-properties.md) section. More are listed under the specific providers in the [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md) section.  
+Data providers, service providers, and service components can add dynamic properties to the **Properties** collections of the unopened [Connection](./connection-object-ado.md) and [Recordset](./recordset-object-ado.md) objects. A given provider may also insert additional properties when these objects are opened. Some of these properties are listed in the [ADO Dynamic Properties](./ado-dynamic-properties.md) section. More are listed under the specific providers in the [Appendix A: Providers](../../guide/appendixes/appendix-a-providers.md) section.  
   
  The following tables are cross-indexes of the ADO and OLE DB names for each standard OLE DB provider dynamic property. Your providers may add more properties than listed here. For the specific information about provider-specific dynamic properties, see your provider documentation.  
   
- The OLE DB Programmer's Reference refers to an ADO property name by the term "Description." For more information about these standard properties, search or browse the index in the [OLE DB documentation](https://msdn.microsoft.com/library/windows/desktop/ms722784.aspx)for the OLE DB property by its name.  
+ The OLE DB Programmer's Reference refers to an ADO property name by the term "Description." For more information about these standard properties, search or browse the index in the [OLE DB documentation](/previous-versions/windows/desktop/ms722784(v=vs.85))for the OLE DB property by its name.  
   
 ## Connection Dynamic Properties  
   

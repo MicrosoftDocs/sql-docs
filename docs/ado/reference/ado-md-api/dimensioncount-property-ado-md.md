@@ -19,14 +19,14 @@ author: rothja
 ms.author: jroth
 ---
 # DimensionCount Property (ADO MD)
-Indicates the number of dimensions on an [axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md).  
+Indicates the number of dimensions on an [axis](./axis-object-ado-md.md).  
   
 ## Return Values  
  Returns a **Long** integer, and is read-only.  
   
 ## Applies To  
- [Axis Object (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)  
+ [Axis Object (ADO MD)](./axis-object-ado-md.md)  
   
 ## See Also  
- [Axis Example (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Dimension Object (ADO MD)](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)
+ [Axis Example (VBScript)](./axis-example-vbscript.md)   
+ [Dimension Object (ADO MD)](./dimension-object-ado-md.md)

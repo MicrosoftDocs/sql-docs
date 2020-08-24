@@ -26,8 +26,6 @@ Use the following code examples to learn how to use RDS properties when writing 
 > [!NOTE]
 >  Paste the entire code example, from beginning to end, into your code editor. The example may not run correctly if partial examples are used or if paragraph formatting is lost.  
   
--   [Handler Property Example](../../../ado/reference/rds-api/handler-property-example-vc.md)  
+-   [Handler Property Example](./handler-property-example-vc.md)  
   
--   [InternetTimeout Property Example](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)
-
-
+-   [InternetTimeout Property Example](./internettimeout-property-example-vc.md)

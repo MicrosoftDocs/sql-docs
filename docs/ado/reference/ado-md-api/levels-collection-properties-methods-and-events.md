@@ -16,15 +16,15 @@ ms.author: jroth
 ---
 # Levels Collection Properties, Methods, and Events
 ## Properties  
- [Count Property](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count Property](../ado-api/count-property-ado.md)  
   
- [Item Property](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item Property](../ado-api/item-property-ado.md)  
   
 ## Methods  
- [Refresh Method](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh Method](../ado-api/refresh-method-ado.md)  
   
 ## Events  
  None.  
   
 ## See Also  
- [Levels Collection (ADO MD)](../../../ado/reference/ado-md-api/levels-collection-ado-md.md)
+ [Levels Collection (ADO MD)](./levels-collection-ado-md.md)

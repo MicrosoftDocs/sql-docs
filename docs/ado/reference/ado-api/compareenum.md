@@ -40,7 +40,7 @@ Specifies the relative position of two records represented by their bookmarks.
 |AdoEnums.Compare.NOTEQUAL|  
   
 ## Applies To  
- [CompareBookmarks Method (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)  
+ [CompareBookmarks Method (ADO)](./comparebookmarks-method-ado.md)  
   
 ## See Also  
- [CompareBookmarks Method (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)
+ [CompareBookmarks Method (ADO)](./comparebookmarks-method-ado.md)

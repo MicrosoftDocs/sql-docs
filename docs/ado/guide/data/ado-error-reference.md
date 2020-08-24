@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # ADO Errors
-The **ErrorValueEnum** constant describes the ADO error values. For a complete listing of these enumerated constants, including values, see [Appendix B: ADO Errors](../../../ado/guide/appendixes/appendix-b-ado-errors.md). This section will examine some of the more interesting errors and explain some specific situations that can raise them, or solutions to fix the problem. Both the **ErrorValueEnum** constant and the short positive decimal number are listed.
+The **ErrorValueEnum** constant describes the ADO error values. For a complete listing of these enumerated constants, including values, see [Appendix B: ADO Errors](../appendixes/appendix-b-ado-errors.md). This section will examine some of the more interesting errors and explain some specific situations that can raise them, or solutions to fix the problem. Both the **ErrorValueEnum** constant and the short positive decimal number are listed.
 
 |Number|ErrorValueEnum constant|Description/Possible causes|
 |------------|-----------------------------|----------------------------------|

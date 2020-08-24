@@ -136,6 +136,46 @@ The following table lists alternative partners that can help with migration as w
 |**[:::image type="content" source="media/db2-to-sql-server/ispirer_logo.png" alt-text="Ispirer":::](https://www.ispirer.com/blog/migration-to-the-microsoft-technology-stack)**|[:::image type="content" source="media/db2-to-sql-server/querysurge_logo-84.png" alt-text="Querysurge":::](https://www.querysurge.com/company/partners/microsoft)|[:::image type="content" source="media/db2-to-sql-server/scalability-experts-logo3.png" alt-text="Scalability Experts":::](http://www.scalabilityexperts.com/products/index.html)|
 |**[:::image type="content" source="media/db2-to-sql-server/wipro-220.png" alt-text="Wipro":::](https://www.wipro.com/analytics/)**|||
 
+:::row:::
+   :::column span="":::
+      [:::image type="content" source="media/db2-to-sql-server/Blitzz_logo_84.png" alt-text="Blitzz":::](https://www.blitzz.io/product)
+   :::column-end:::
+   :::column span="":::
+      [:::image type="content" source="media/db2-to-sql-server/blueprint_logo.png" alt-text="Blueprint":::](https://bpcs.com/what-we-do)
+   :::column-end:::
+   :::column span="":::
+      [:::image type="content" source="media/db2-to-sql-server/Cognizant-220.1.png" alt-text="Cognizant":::](https://www.cognizant.com/partners/microsoft)
+   :::column-end:::   
+:::row-end:::
+:::row:::
+   :::column span="":::
+      [:::image type="content" source="media/db2-to-sql-server/DXC_logo_cropped.png" alt-text="DXC":::](https://www.dxc.technology/application_services/offerings/139843/142343-application_services_for_microsoft_azure)
+   :::column-end:::
+   :::column span="":::
+      [:::image type="content" source="media/db2-to-sql-server/HVR-logo.png" alt-text="HVR":::](https://www.hvr-software.com/solutions/azure-data-integration/)
+   :::column-end:::
+   :::column span="":::
+      [:::image type="content" source="media/db2-to-sql-server/InfosysLogo.png" alt-text="Infosys":::](https://www.infosys.com/services/)
+   :::column-end:::   
+:::row-end:::
+:::row:::
+   :::column span="":::
+     [:::image type="content" source="media/db2-to-sql-server/ispirer_logo.png" alt-text="Ispirer":::](https://www.ispirer.com/blog/migration-to-the-microsoft-technology-stack)
+   :::column-end:::
+   :::column span="":::
+      [:::image type="content" source="media/db2-to-sql-server/querysurge_logo-84.png" alt-text="Querysurge":::](https://www.querysurge.com/company/partners/microsoft)
+   :::column-end:::
+   :::column span="":::
+     [:::image type="content" source="media/db2-to-sql-server/scalability-experts-logo3.png" alt-text="Scalability Experts":::](http://www.scalabilityexperts.com/products/index.html)
+   :::column-end:::   
+:::row-end:::
+:::row:::
+   :::column span="":::
+     [:::image type="content" source="media/db2-to-sql-server/wipro-220.png" alt-text="Wipro":::](https://www.wipro.com/analytics/)**
+   :::column-end:::
+:::row-end:::
+
+
 
 
 ## Next steps

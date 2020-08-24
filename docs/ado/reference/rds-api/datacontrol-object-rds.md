@@ -19,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # DataControl Object (RDS)
-Binds a data query [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) to one or more controls (for example, a text box, grid control, or combo box) to display the **Recordset** data on a Web page.  
+Binds a data query [Recordset](../ado-api/recordset-object-ado.md) to one or more controls (for example, a text box, grid control, or combo box) to display the **Recordset** data on a Web page.  
   
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -39,14 +39,14 @@ Binds a data query [Recordset](../../../ado/reference/ado-api/recordset-object-a
  The class ID for the **RDS.DataControl** object is BD96C556-65A3-11D0-983A-00C04FC29E33.  
   
 > [!NOTE]
->  If you get an error that an [RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) or **RDS.DataControl** object does not load, make sure that you are using the correct class ID. The class IDs for these objects have changed from version 1.0 and 1.1. Also, be aware that even nullable columns must be set when you use the **RDS DataControl** object.  
+>  If you get an error that an [RDS.DataSpace](./dataspace-object-rds.md) or **RDS.DataControl** object does not load, make sure that you are using the correct class ID. The class IDs for these objects have changed from version 1.0 and 1.1. Also, be aware that even nullable columns must be set when you use the **RDS DataControl** object.  
   
- For a basic scenario, you need to set only the **SQL**, **Connect**, and **Server** properties of the **RDS.DataControl** object, which will automatically call the default business object, [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md).  
+ For a basic scenario, you need to set only the **SQL**, **Connect**, and **Server** properties of the **RDS.DataControl** object, which will automatically call the default business object, [RDSServer.DataFactory](./datafactory-object-rdsserver.md).  
   
  All the properties in the **RDS.DataControl** are optional because custom business objects can replace their functionality.  
   
 > [!NOTE]
->  If you query for multiple results, only the first [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) is returned. If multiple result sets are needed, assign each to its own **DataControl**. An example of a query for multiple results could be the following: `"Select * from Authors, Select * from Topics"`  
+>  If you query for multiple results, only the first [Recordset](../ado-api/recordset-object-ado.md) is returned. If multiple result sets are needed, assign each to its own **DataControl**. An example of a query for multiple results could be the following: `"Select * from Authors, Select * from Topics"`  
   
  Adding "DFMode=20;" to your connection string when you use the **RDS.DataControl** object can improve the performance of your server when you update data. With this setting, the **RDSServer.DataFactory** object on the server uses a less resource-intensive mode. However, the following features are not available in this configuration:  
   
@@ -58,15 +58,15 @@ Binds a data query [Recordset](../../../ado/reference/ado-api/recordset-object-a
   
 -   Getting row status.  
   
--   Calling the [Resync](../../../ado/reference/ado-api/resync-method.md) method.  
+-   Calling the [Resync](../ado-api/resync-method.md) method.  
   
--   Refreshing (explicitly or automatically) via the [Update Resync](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md) property.  
+-   Refreshing (explicitly or automatically) via the [Update Resync](../ado-api/update-resync-property-dynamic-ado.md) property.  
   
--   Setting **Command** or [Recordset](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md) properties.  
+-   Setting **Command** or [Recordset](./recordset-sourcerecordset-properties-rds.md) properties.  
   
 -   Using **adCmdTableDirect**.  
   
- The **RDS.DataControl** object runs in asynchronous mode by default. If you require synchronous execution for your application, set the [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) parameter equal to **adcExecSync** and the [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) parameter equal to **adcFetchUpFront**, as shown in the following example.  
+ The **RDS.DataControl** object runs in asynchronous mode by default. If you require synchronous execution for your application, set the [ExecuteOptions](./executeoptions-property-rds.md) parameter equal to **adcExecSync** and the [FetchOptions](./fetchoptions-property-rds.md) parameter equal to **adcFetchUpFront**, as shown in the following example.  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33"   
@@ -101,29 +101,7 @@ Binds a data query [Recordset](../../../ado/reference/ado-api/recordset-object-a
   
  This section contains the following topic.  
   
--   [DataControl Object (RDS) Properties, Methods, and Events](../../../ado/reference/rds-api/datacontrol-object-rds-properties-methods-and-events.md)  
+-   [DataControl Object (RDS) Properties, Methods, and Events](./datacontrol-object-rds-properties-methods-and-events.md)  
   
 ## See Also  
- [DataControl Object Example (VBScript)](../../../ado/reference/rds-api/datacontrol-object-example-vbscript.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [DataControl Object Example (VBScript)](./datacontrol-object-example-vbscript.md)

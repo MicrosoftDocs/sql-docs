@@ -127,7 +127,7 @@ These resources were developed as part of the Data Migration Jumpstart Program (
 
 ## Partners
 
-The following lists alternative partners that can help with migration as well:
+The following partners can provide alternative methods for migration as well: 
 
 :::row:::
    :::column span="":::

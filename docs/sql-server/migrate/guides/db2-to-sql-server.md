@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Migration guide: DB2 to SQL Server
-[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
 
 
 ## Prerequisites
@@ -49,7 +49,7 @@ To create an assessment, follow these steps:
 1. Fill out the DB2 connection details on the **Connect to DB2** dialog box. 
 1. Select the DB2 schema you want to migrate, and then select **Create report**. 
 
-   :::image type="content" source="media/db2-to-sql-server/createreport.png" alt-text="Select new SSMA project":::
+   :::image type="content" source="media/db2-to-sql-server/createreport.png" alt-text="Select create report":::
 
 1. 
 

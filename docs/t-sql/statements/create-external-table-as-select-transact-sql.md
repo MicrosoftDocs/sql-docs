@@ -153,6 +153,7 @@ The external files are written to *hdfs_folder* and named *QueryID_date_time_ID.
 - External partition move
 
  **Applies to:**  [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
+
 As a prerequisite for creating an external table, the appliance administrator needs to configure Hadoop connectivity. For more information, see "Configure Connectivity to External Data (Analytics Platform System)" in the Analytics Platform System documentation, which you can download from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=48241).
 
 ## Limitations and restrictions

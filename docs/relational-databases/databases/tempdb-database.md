@@ -51,7 +51,7 @@ Operations within `tempdb` are minimally logged so that transactions can be roll
 
 ## Physical properties of tempdb in SQL Server
 
-The following table lists the initial configuration values of the `tempdb` data and log files in SQL Server. The values are based on the defaults for the Model database. The sizes of these files might vary slightly for different editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
+The following table lists the initial configuration values of the `tempdb` data and log files in SQL Server. The values are based on the defaults for the `model` database. The sizes of these files might vary slightly for different editions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
 |File|Logical name|Physical name|Initial size|File growth|  
 |----------|------------------|-------------------|------------------|-----------------|  
@@ -165,7 +165,7 @@ Any user can create temporary objects in `tempdb`. Users can access only their o
 ## Optimizing tempdb performance in SQL Server
 The size and physical placement of the `tempdb` database can affect the performance of a system. For example, if the size that's defined for `tempdb` is too small, part of the system-processing load might be taken up with autogrowing `tempdb` to the size required to support the workload every time you restart the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
-If possible, use [instant file initialization for a database](../../relational-databases/databases/database-instant-file-initialization.md) to improve the performance of growth operations for data files.
+If possible, use [instant file initialization](../../relational-databases/databases/database-instant-file-initialization.md) to improve the performance of growth operations for data files.
 
 Preallocate space for all `tempdb` files by setting the file size to a value large enough to accommodate the typical workload in the environment. Preallocation prevents `tempdb` from expanding too often, which affects performance. The `tempdb` database should be set to autogrow to increase disk space for unplanned exceptions.
 
@@ -202,7 +202,7 @@ Put the `tempdb` database on disks that differ from the disks that user database
 ## Performance improvements in tempdb for SQL Server
 Starting with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)], `tempdb` performance is further optimized in the following ways:  
   
-- Temporary tables and table variables are cached. Caching allows operations that drop and create the temporary objects to run very quickly. Caching also reduces page allocation contention.  
+- Temporary tables and table variables are cached. Caching allows operations that drop and create the temporary objects to run very quickly. Caching also reduces page allocation and metadata contention.  
 - The allocation page latching protocol is improved to reduce the number of `UP` (update) latches that are used.  
 - Logging overhead for `tempdb` is reduced to reduce disk I/O bandwidth consumption on the `tempdb` log file.  
 - Setup adds multiple `tempdb` data files during a new instance installation. You can accomplish this task by using the new UI input control in the **Database Engine Configuration** section and the command-line parameter `/SQLTEMPDBFILECOUNT`. By default, setup adds as many `tempdb` data files as the logical processor count or eight, whichever is lower.  
@@ -234,7 +234,7 @@ This implementation has some limitations:
 
 - Toggling the feature on and off is not dynamic. Because of the intrinsic changes that need to be made to the structure of `tempdb`, a restart is required to either enable or disable the feature.
 
-- A single transaction might not access memory-optimized tables in more than one database. Any transactions that involve a memory-optimized table in a user database won't be able to access `tempdb` system views in the same transaction. If you try to access `tempdb` system views in the same transaction as a memory-optimized table in a user database, you'll receive the following error:
+- A single transaction is not allowed to access memory-optimized tables in more than one database. Any transactions that involve a memory-optimized table in a user database won't be able to access `tempdb` system views in the same transaction. If you try to access `tempdb` system views in the same transaction as a memory-optimized table in a user database, you'll receive the following error:
     
   ```
   A user transaction that accesses memory optimized tables or natively compiled modules cannot access more than one user database or databases model and msdb, and it cannot write to master.
@@ -266,7 +266,7 @@ You can verify whether or not `tempdb` is memory-optimized by using the followin
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
 
-If the server fails to start for any reason after you enable memory-optimized `tempdb` metadata, you can bypass the feature by starting the SQL Server instance with [minimal configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) through the **-f** startup option. You can then restart SQL Server in normal mode.
+If the server fails to start for any reason after you enable memory-optimized `tempdb` metadata, you can bypass the feature by starting the SQL Server instance with [minimal configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) through the **-f** startup option. You can then disable the feature and restart SQL Server in normal mode.
 
 ## Capacity planning for tempdb in SQL Server
 Determining the appropriate size for `tempdb` in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] production environment depends on many factors. As described earlier, these factors include the existing workload and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are used. We recommend that you analyze the existing workload by performing the following tasks in a SQL Server test environment:

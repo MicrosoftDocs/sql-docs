@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, errors"
   - "errors [OLE DB], SQL Server message results"
   - "OLE DB error handling, SQL Server message results"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # SQL Server Message Results
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -52,7 +52,7 @@ When an application is executed, the Kubernetes service for the application prox
 
 SQL Server 2019 CU5 enables support for Big Data Clusters deployment on Red Hat OpenShift as well as an updated security model for BDC so privileged containers no longer required. In addition to non-privileged, containers are running as non-root user by default for all new deployments using SQL Server 2019 CU5.
 
-At the time of the CU5 release, the setup step of the applications deployed with [app deploy](concept-application-deployment.md) interfaces will still run as *root* user. This is required since during setup  additional packages that application will use are installed. Other user code deployed as part of the application will run as low privilege user. 
+At the time of the CU5 release, the setup step of the applications deployed with [app deploy]() interfaces will still run as *root* user. This is required since during setup  additional packages that application will use are installed. Other user code deployed as part of the application will run as low privilege user. 
 
 In addition, **CAP_AUDIT_WRITE** capability is an optional capability necessary to allow scheduling SSIS applications using cron jobs. When the application’s yaml specification file specifies a schedule, the application will be triggered via a cron job, which requires the additional capability.  Alternatively, the application can be triggered on demand with *azdata app run* through a web service call, which does not require the CAP_AUDIT_WRITE capability. 
 

@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # KeyTypeEnum
-Specifies the type of [Key](../../../ado/reference/adox-api/key-object-adox.md): primary, foreign, or unique.  
+Specifies the type of [Key](./key-object-adox.md): primary, foreign, or unique.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -27,4 +27,4 @@ Specifies the type of [Key](../../../ado/reference/adox-api/key-object-adox.md):
 |**adKeyUnique**|3|The key is unique.|  
   
 ## Applies To  
- [Type Property (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)
+ [Type Property (Key) (ADOX)](./type-property-key-adox.md)

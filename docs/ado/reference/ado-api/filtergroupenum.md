@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 ---
 # FilterGroupEnum
-Specifies the group of records to be filtered from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Specifies the group of records to be filtered from a [Recordset](./recordset-object-ado.md).  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
-|**adFilterAffectedRecords**|2|Filters for viewing only records affected by the last [Delete](../../../ado/reference/ado-api/delete-method-ado-recordset.md), [Resync](../../../ado/reference/ado-api/resync-method.md), [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md), or [CancelBatch](../../../ado/reference/ado-api/cancelbatch-method-ado.md) call.|  
+|**adFilterAffectedRecords**|2|Filters for viewing only records affected by the last [Delete](./delete-method-ado-recordset.md), [Resync](./resync-method.md), [UpdateBatch](./updatebatch-method.md), or [CancelBatch](./cancelbatch-method-ado.md) call.|  
 |**adFilterConflictingRecords**|5|Filters for viewing the records that failed the last batch update.|  
 |**adFilterFetchedRecords**|3|Filters for viewing the records in the current cache-that is, the results of the last call to retrieve records from the database.|  
 |**adFilterNone**|0|Removes the current filter and restores all records for viewing.|  
@@ -40,4 +40,4 @@ Specifies the group of records to be filtered from a [Recordset](../../../ado/re
 |AdoEnums.FilterGroup.PENDINGRECORDS|  
   
 ## Applies To  
- [Filter Property](../../../ado/reference/ado-api/filter-property.md)
+ [Filter Property](./filter-property.md)

@@ -21,9 +21,9 @@ ms.author: jroth
   
  Creates client-side proxies to custom business objects located on the middle tier.  
   
- Remote Data Service needs business object proxies so that client-side components can communicate with business objects located on the middle tier. Proxies facilitate the packaging, unpackaging, and transport (marshaling) of the application's [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) data across process or machine boundaries.  
+ Remote Data Service needs business object proxies so that client-side components can communicate with business objects located on the middle tier. Proxies facilitate the packaging, unpackaging, and transport (marshaling) of the application's [Recordset](../ado-api/recordset-object-ado.md) data across process or machine boundaries.  
   
- Remote Data Service uses the **RDS.DataSpace** object's [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) method to create business object proxies. The business object proxy is dynamically created whenever an instance of its middle-tier business object counterpart is created. Remote Data Service supports the following protocols: HTTP, HTTPS (HTTP Secure Sockets), DCOM, and in-process (client components and the business object reside on the same computer).  
+ Remote Data Service uses the **RDS.DataSpace** object's [CreateObject](./createobject-method-rds.md) method to create business object proxies. The business object proxy is dynamically created whenever an instance of its middle-tier business object counterpart is created. Remote Data Service supports the following protocols: HTTP, HTTPS (HTTP Secure Sockets), DCOM, and in-process (client components and the business object reside on the same computer).  
   
 > [!NOTE]
 >  RDS behaves in a "stateless" manner when the **RDS.DataSpace** object uses the HTTP or HTTPS protocols. That is, any internal information about a client request is discarded after the server returns a response.  
@@ -40,9 +40,7 @@ ms.author: jroth
   
  This section contains the following topic.  
   
--   [DataSpace Object (RDS) Properties, Methods, and Events](../../../ado/reference/rds-api/dataspace-object-rds-properties-methods-and-events.md)  
+-   [DataSpace Object (RDS) Properties, Methods, and Events](./dataspace-object-rds-properties-methods-and-events.md)  
   
 ## See Also  
- [DataSpace Object and CreateObject Method Example (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)
-
-
+ [DataSpace Object and CreateObject Method Example (VBScript)](./dataspace-object-and-createobject-method-example-vbscript.md)

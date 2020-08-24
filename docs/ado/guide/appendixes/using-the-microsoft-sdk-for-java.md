@@ -26,7 +26,7 @@ The Microsoft SDK for Java is the developer kit for the Microsoft Internet Explo
   
  This mechanism reads the ADO type library and generates classes that you can instantiate within your application. It generates those classes in the following location: \\<windows directory\>\Java\trustlib\msado15.  
   
- Creating an ADO application in Java using the Microsoft SDK for Java is fundamentally identical, from the perspective of source code, to using the Java Type Library Wizard. For sample code, see [ADO Java Class Wrappers](../../../ado/guide/appendixes/ado-java-class-wrappers.md). The only real difference is in how you generate the wrapper classes in the first place, as demonstrated in the following steps.  
+ Creating an ADO application in Java using the Microsoft SDK for Java is fundamentally identical, from the perspective of source code, to using the Java Type Library Wizard. For sample code, see [ADO Java Class Wrappers](./ado-java-class-wrappers.md). The only real difference is in how you generate the wrapper classes in the first place, as demonstrated in the following steps.  
   
 ### To create an ADO project with the Microsoft SDK for Java  
   
@@ -45,4 +45,4 @@ The Microsoft SDK for Java is the developer kit for the Microsoft Internet Explo
 3.  To use these files, open your project in Visual J++. From the **Project** menu, choose **Add To Project**. Select **Files**, and add all of the .JAVA files generated in the trustlib\msado15 directory to your project.  
   
 ## See Also  
- [ADO Java Class Wrappers](../../../ado/guide/appendixes/ado-java-class-wrappers.md)   
+ [ADO Java Class Wrappers](./ado-java-class-wrappers.md)

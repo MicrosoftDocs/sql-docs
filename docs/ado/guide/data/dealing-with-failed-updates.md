@@ -32,4 +32,4 @@ Loop
 ```  
   
 ## See Also  
- [Batch Mode](../../../ado/guide/data/batch-mode.md)
+ [Batch Mode](./batch-mode.md)

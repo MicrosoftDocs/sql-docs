@@ -72,4 +72,4 @@ WillExecute(BSTR *Source, CursorTypeEnum *CursorType, LockTypeEnum *LockType, lo
 ```  
   
 ## See Also  
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection Object (ADO)](./connection-object-ado.md)

@@ -18,11 +18,11 @@ author: rothja
 ms.author: jroth
 ---
 # GetRowsOptionEnum
-Specifies how many records to retrieve from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Specifies how many records to retrieve from a [Recordset](./recordset-object-ado.md).  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
-|**adGetRowsRest**|-1|Retrieves the rest of the records in the **Recordset**, from either the current position or a bookmark specified by the *Start* parameter of the [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md) method.|  
+|**adGetRowsRest**|-1|Retrieves the rest of the records in the **Recordset**, from either the current position or a bookmark specified by the *Start* parameter of the [GetRows](./getrows-method-ado.md) method.|  
   
 ## ADO/WFC Equivalent  
  Package: **com.ms.wfc.data**  
@@ -32,4 +32,4 @@ Specifies how many records to retrieve from a [Recordset](../../../ado/reference
 |AdoEnums.GetRowsOption.REST|  
   
 ## Applies To  
- [GetRows Method (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)
+ [GetRows Method (ADO)](./getrows-method-ado.md)

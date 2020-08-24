@@ -16,27 +16,27 @@ ms.author: jroth
 ---
 # Catalog Object Properties, Methods, and Events
 ## Properties/Collections  
- [ActiveConnection Property](../../../ado/reference/adox-api/activeconnection-property-adox.md)  
+ [ActiveConnection Property](./activeconnection-property-adox.md)  
   
- [Groups Collection](../../../ado/reference/adox-api/groups-collection-adox.md)  
+ [Groups Collection](./groups-collection-adox.md)  
   
- [Procedures Collection](../../../ado/reference/adox-api/procedures-collection-adox.md)  
+ [Procedures Collection](./procedures-collection-adox.md)  
   
- [Tables Collection](../../../ado/reference/adox-api/tables-collection-adox.md)  
+ [Tables Collection](./tables-collection-adox.md)  
   
- [Users Collection](../../../ado/reference/adox-api/users-collection-adox.md)  
+ [Users Collection](./users-collection-adox.md)  
   
- [Views Collection](../../../ado/reference/adox-api/views-collection-adox.md)  
+ [Views Collection](./views-collection-adox.md)  
   
 ## Methods  
- [Create Method](../../../ado/reference/adox-api/create-method-adox.md)  
+ [Create Method](./create-method-adox.md)  
   
- [GetObjectOwner Method](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
+ [GetObjectOwner Method](./getobjectowner-method-adox.md)  
   
- [SetObjectOwner Method](../../../ado/reference/adox-api/setobjectowner-method.md)  
+ [SetObjectOwner Method](./setobjectowner-method.md)  
   
 ## Events  
  None.  
   
 ## See Also  
- [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)
+ [Catalog Object (ADOX)](./catalog-object-adox.md)

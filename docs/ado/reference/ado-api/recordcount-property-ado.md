@@ -21,7 +21,7 @@ ms.author: jroth
 ---
 # RecordCount Property (ADO)
 
-Indicates the number of records in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.
+Indicates the number of records in a [Recordset](./recordset-object-ado.md) object.
   
 ## Return Value
 
@@ -47,11 +47,11 @@ The cursor type of the **Recordset** object affects whether the number of record
   
 ## Applies To
 
-[Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+[Recordset Object (ADO)](./recordset-object-ado.md)  
   
 ## See Also
 
-[Filter and RecordCount Properties Example (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)   
-[Filter and RecordCount Properties Example (VC++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)   
-[AbsolutePosition Property (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
-[PageCount Property (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md)
+[Filter and RecordCount Properties Example (VB)](./filter-and-recordcount-properties-example-vb.md)   
+[Filter and RecordCount Properties Example (VC++)](./filter-and-recordcount-properties-example-vc.md)   
+[AbsolutePosition Property (ADO)](./absoluteposition-property-ado.md)   
+[PageCount Property (ADO)](./pagecount-property-ado.md)

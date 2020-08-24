@@ -28,4 +28,4 @@ Specifies whether records with null values are indexed.
 |**adIndexNullsIgnoreAny**|4|The index does not insert entries where some key column has a null value. For an index having a multi-column key, if a null value is entered in some column, the entry is ignored and no error occurs.|  
   
 ## Applies To  
- [IndexNulls Property (ADOX)](../../../ado/reference/adox-api/indexnulls-property-adox.md)
+ [IndexNulls Property (ADOX)](./indexnulls-property-adox.md)

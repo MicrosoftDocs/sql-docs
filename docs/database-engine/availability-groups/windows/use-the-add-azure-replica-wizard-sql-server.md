@@ -17,8 +17,8 @@ ms.author: mathoma
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]
   Use the Add Azure Replica Wizard to help you create a new Azure VM in hybrid IT and configure it as a secondary replica for a new or existing Always On availability group.  
 
-        >  [!IMPORTANT]  
-        >  Azure has two different deployment models for creating and working with resources: Resource Manager and Classic. This article covers using the Classic deployment model. Microsoft recommends that most new deployments use the Resource Manager model. The steps in this article are not applicable if you are deploying the Azure Virtual Machine using Resource Manager model.   
+>  [!IMPORTANT]  
+>  Azure has two different deployment models for creating and working with resources: Resource Manager and Classic. This article covers using the Classic deployment model. Microsoft recommends that most new deployments use the Resource Manager model. The steps in this article are not applicable if you are deploying the Azure Virtual Machine using Resource Manager model.   
 
 ##  <a name="BeforeYouBegin"></a> Before You Begin  
  If you have never added any availability replica to an availability group, see the "Server instances" and "Availability groups and replicas" sections in [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md).  
@@ -44,9 +44,10 @@ ms.author: mathoma
   
 ##  <a name="SSMSProcedure"></a> Using the Add Azure Replica Wizard (SQL Server Management Studio)  
 
-        >  [!IMPORTANT]  
-        >  The Add Azure Replica Wizard only supports virtual machines created with the Classic deployment model. New Virtual Machine deployments should use the newer Resource Manager model. If you are using Virtual Machines with Resource Manager, then you must manually add the secondary Azure replica using Transact-SQL commands (not shown here). This wizard will not work in the Resource Manager scenario. 
-        >  The Add Azure Replica Wizard is not available in the latest releases (versions 18.x and 17.x) of SQL Server Management Studio.
+>  [!IMPORTANT]  
+>  The Add Azure Replica Wizard only supports virtual machines created with the Classic deployment model. New Virtual Machine deployments should use the newer Resource Manager model. If you are using Virtual Machines with Resource Manager, then you must manually add the secondary Azure replica using Transact-SQL commands (not shown here). This wizard will not work in the Resource Manager scenario. 
+>
+>  The Add Azure Replica Wizard is not available in the latest releases (versions 18.x and 17.x) of SQL Server Management Studio.
         
  The Add Azure Replica Wizard can be launched from the [Specify Replicas Page](../../../database-engine/availability-groups/windows/specify-replicas-page-new-availability-group-wizard-add-replica-wizard.md). There are two ways to reach this page:  
   

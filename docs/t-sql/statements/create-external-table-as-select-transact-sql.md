@@ -138,13 +138,13 @@ The external files are written to *hdfs_folder* and named *QueryID_date_time_ID.
  The database will report any Java errors that occur on the external data source during the data export.
 
 ##  <a name="GeneralRemarks"></a> General remarks
- After the CETAS statement finishes, you can run [!INCLUDE[tsql](../../includes/tsql-md.md)] queries on the external table. These operations will import data into the database for the duration of the query unless you import by using the CREATE TABLE AS SELECT statement.
+ After the CREATE EXTERNAL TABLE AS SELECT statement finishes, you can run [!INCLUDE[tsql](../../includes/tsql-md.md)] queries on the external table. These operations will import data into the database for the duration of the query unless you import by using the CREATE TABLE AS SELECT statement.
 
  The external table name and definition are stored in the database metadata. The data is stored in the external data source.
 
  The external files are named *QueryID_date_time_ID.format*, where *ID* is an incremental identifier and *format* is the exported data format. An example is QID776_20160130_182739_0.orc.
 
- The CETAS statement always creates a nonpartitioned table, even if the source table is partitioned.
+ The CREATE EXTERNAL TABLE AS SELECT statement always creates a nonpartitioned table, even if the source table is partitioned.
 
  For query plans, created with EXPLAIN, the database uses these query plan operations for external tables:
 
@@ -187,7 +187,7 @@ To use CREATE EXTERNAL TABLE AS SELECT containing these characters, you must fir
 
 ##  <a name="Examples"></a> Examples
 
-### A. Create a Hadoop table by using CREATE EXTERNAL TABLE AS SELECT (CETAS)
+### A. Create a Hadoop table by using CREATE EXTERNAL TABLE AS SELECT
 
  The following example creates a new external table named `hdfsCustomer` that uses the column definitions and data from the source table `dimCustomer`.
 
@@ -213,9 +213,9 @@ WITH (
 ) AS SELECT * FROM dimCustomer;  
 ```
 
-### B. Use a query hint with CREATE EXTERNAL TABLE AS SELECT (CETAS)
+### B. Use a query hint with CREATE EXTERNAL TABLE AS SELECT
 
- This query shows the basic syntax for using a query join hint with the CETAS statement. After the query is submitted, the database uses the hash join strategy to generate the query plan. For more information on join hints and how to use the OPTION clause, see [OPTION Clause &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).
+ This query shows the basic syntax for using a query join hint with the CREATE EXTERNAL TABLE AS SELECT statement. After the query is submitted, the database uses the hash join strategy to generate the query plan. For more information on join hints and how to use the OPTION clause, see [OPTION Clause &#40;Transact-SQL&#41;](../../t-sql/queries/option-clause-transact-sql.md).
 
 > [!NOTE]
 >  This example specifies for 5000. If the port isn't specified, the database uses 8020 as the default port.

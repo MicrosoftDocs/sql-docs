@@ -65,7 +65,7 @@ The following table lists the default mappings between the basic [!INCLUDE[ssNoV
   
 <sup>2</sup> You can programmatically access values of **datetimeoffset** with [DateTimeOffset Class](reference/datetimeoffset-class.md).  
   
-<sup>3</sup> Note that java.sql.Timestamp values can no longer be used to compare values from a datetime column starting from SQL Server 2016, due to a server-side change that converts datetime to datetime2 differently. Workaround to this problem is to either change the datetime column to datetime2(3), use String instead of java.sql.Timestamp, or change database compatibility level to 120 or below.
+<sup>3</sup> Note that java.sql.Timestamp values can no longer be used to compare values from a datetime column starting from SQL Server 2016. This limitation is due to a server-side change that converts datetime to datetime2 differently, resulting in non-equitable values. The workaround to this issue is to either change datetime columns to datetime2(3), use String instead of java.sql.Timestamp, or change database compatibility level to 120 or below.
   
 The following sections provide examples of how you can use the JDBC Driver and the basic data types. For a more detailed example of how to use the basic data types in a Java application, see [Basic Data Types Sample](basic-data-types-sample.md).  
   

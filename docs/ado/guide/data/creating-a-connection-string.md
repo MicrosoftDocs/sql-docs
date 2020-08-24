@@ -36,7 +36,7 @@ A connection string consists of a list of argument/value pairs (that is, paramet
   
  Other arguments are passed to the provider named in the *Provider* argument, without any processing by ADO.  
   
- The HelloData application in [HelloData: A Simple ADO Application](../../../ado/guide/data/hellodata-a-simple-ado-application.md) used the following connection string:  
+ The HelloData application in [HelloData: A Simple ADO Application](./hellodata-a-simple-ado-application.md) used the following connection string:  
   
 ```vb
 m_sConnStr = "Provider=SQLOLEDB;Data Source=MySqlServer;" & _  

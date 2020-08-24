@@ -127,6 +127,8 @@ These resources were developed as part of the Data Migration Jumpstart Program (
 
 ## Partners
 
+The following table lists alternative partners that can help with migration as well:
+
 |  | |  |
 |---------|---------|---------|
 |**[:::image type="content" source="media/db2-to-sql-server/Blitzz_logo_84.png" alt-text="Blitzz":::](https://www.blitzz.io/product)**|[:::image type="content" source="media/db2-to-sql-server/blueprint_logo.png" alt-text="Blueprint":::](https://bpcs.com/what-we-do)|[:::image type="content" source="media/db2-to-sql-server/Cognizant-220.1.png" alt-text="Cognizant":::](https://www.cognizant.com/partners/microsoft)| 
@@ -136,7 +138,7 @@ These resources were developed as part of the Data Migration Jumpstart Program (
 
 
 
-## Next step
+## Next steps
 
 After migration, review the [Post-migration validation and optimization guide](../../../relational-databases/post-migration-validation-and-optimization-guide.md). 
 

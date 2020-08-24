@@ -2,7 +2,7 @@
 title: "Frequently asked questions (FAQ) for JDBC driver"
 description: "This page provides answers to frequently asked questions about the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "07/31/2020"
+ms.date: "08/24/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

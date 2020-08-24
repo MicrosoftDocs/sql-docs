@@ -29,9 +29,9 @@ The following table lists the default mappings between the basic [!INCLUDE[ssNoV
 | bit                | BIT                                                | boolean                      |
 | char               | CHAR                                               | String                       |
 | date               | DATE                                               | java.sql.Date                |
-| datetime<sup>3</sup>          | TIMESTAMP                                          | java.sql.Timestamp           |
+| datetime<sup>3</sup>          | TIMESTAMP                               | java.sql.Timestamp           |
 | datetime2          | TIMESTAMP                                          | java.sql.Timestamp           |
-| datetimeoffset <sup>2</sup> | microsoft.sql.Types.DATETIMEOFFSET                 | microsoft.sql.DateTimeOffset |
+| datetimeoffset<sup>2</sup> | microsoft.sql.Types.DATETIMEOFFSET         | microsoft.sql.DateTimeOffset |
 | decimal            | DECIMAL                                            | java.math.BigDecimal         |
 | float              | DOUBLE                                             | double                       |
 | image              | LONGVARBINARY                                      | byte[]                       |
@@ -47,7 +47,7 @@ The following table lists the default mappings between the basic [!INCLUDE[ssNoV
 | smallint           | SMALLINT                                           | short                        |
 | smallmoney         | DECIMAL                                            | java.math.BigDecimal         |
 | text               | LONGVARCHAR                                        | String                       |
-| time               | TIME (1)                                           | java.sql.Time <sup>1</sup>            |
+| time               | TIME<sup>1</sup>                                   | java.sql.Time<sup>1</sup>            |
 | timestamp          | BINARY                                             | byte[]                       |
 | tinyint            | TINYINT                                            | short                        |
 | udt                | VARBINARY                                          | byte[]                       |

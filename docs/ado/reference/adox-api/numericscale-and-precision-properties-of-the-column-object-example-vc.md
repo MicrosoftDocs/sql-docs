@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # NumericScale and Precision Properties of the Column Object Example (VC++)
-This example demonstrates the [NumericScale](../../../ado/reference/adox-api/numericscale-property-adox.md) and [Precision](../../../ado/reference/adox-api/precision-property-adox.md) properties of the [Column](../../../ado/reference/adox-api/column-object-adox.md) object. This code displays their value for the **Order Details** table of the *Northwind* database.  
+This example demonstrates the [NumericScale](./numericscale-property-adox.md) and [Precision](./precision-property-adox.md) properties of the [Column](./column-object-adox.md) object. This code displays their value for the **Order Details** table of the *Northwind* database.  
   
 ```  
 // BeginNumericScalePrecCpp.cpp  

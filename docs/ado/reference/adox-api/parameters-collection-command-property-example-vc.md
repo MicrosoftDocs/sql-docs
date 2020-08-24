@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Parameters Collection, Command Property Example (VC++)
-The following code demonstrates how to use the [Command](../../../ado/reference/adox-api/command-property-adox.md) property with the [Command](../../../ado/reference/ado-api/command-object-ado.md) object to retrieve parameter information for the procedure.  
+The following code demonstrates how to use the [Command](./command-property-adox.md) property with the [Command](../ado-api/command-object-ado.md) object to retrieve parameter information for the procedure.  
   
 ```  
 // BeginProcedureParametersCpp.cpp  

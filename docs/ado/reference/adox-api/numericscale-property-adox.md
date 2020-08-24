@@ -25,16 +25,16 @@ ms.author: jroth
 Indicates the scale of a numeric value in the column.  
   
 ## Settings and Return Values  
- Sets and returns a **Byte** value that is the scale of data values in the column when the [Type](../../../ado/reference/adox-api/type-property-column-adox.md) property is **adNumeric** or **adDecimal**. **NumericScale** is ignored for all other data types.  
+ Sets and returns a **Byte** value that is the scale of data values in the column when the [Type](./type-property-column-adox.md) property is **adNumeric** or **adDecimal**. **NumericScale** is ignored for all other data types.  
   
 ## Remarks  
  The default value is zero (0).  
   
- **NumericScale** is read-only for [Column](../../../ado/reference/adox-api/column-object-adox.md) objects already appended to a collection.  
+ **NumericScale** is read-only for [Column](./column-object-adox.md) objects already appended to a collection.  
   
 ## Applies To  
- [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+ [Column Object (ADOX)](./column-object-adox.md)  
   
 ## See Also  
- [ADOX Code Example: NumericScale and Precision Properties Example (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
- [Type Property (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)
+ [ADOX Code Example: NumericScale and Precision Properties Example (VB)](./adox-code-example-numericscale-and-precision-properties-example-vb.md)   
+ [Type Property (Column) (ADOX)](./type-property-column-adox.md)

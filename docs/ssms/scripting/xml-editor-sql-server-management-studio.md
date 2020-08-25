@@ -4,7 +4,7 @@ description: Learn how to use the visual tools of the SQL Server Management Stud
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "S_OK"
   - "FAILED macro"
   - "errors [OLE DB], return codes"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Return Codes
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

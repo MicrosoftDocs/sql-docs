@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, SPNs"
   - "OLE DB, SPNs"
   - "SPNs [SQL Server]"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Service Principal Name (SPN) Support in Client Connections
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

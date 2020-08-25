@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "rowsets [OLE DB], creating"
   - "OLE DB Driver for SQL Server, rowsets"
   - "OLE DB rowsets, creating"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Creating a Rowset with IOpenRowset
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

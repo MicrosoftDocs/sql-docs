@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "OLE DB, schema rowsets"
   - "OLE DB rowsets, schema"
   - "rowsets [OLE DB], schema"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Schema Rowsets - Distributed Query Support
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

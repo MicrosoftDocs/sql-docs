@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "AddColumn function"
   - "OLE DB Driver for SQL Server, columns"
   - "adding columns"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Adding a Column to a SQL Server Table
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

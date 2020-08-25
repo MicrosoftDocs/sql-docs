@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, rowsets"
   - "properties [OLE DB]"
   - "OLE DB rowsets, properties"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Rowset Properties and Behaviors
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

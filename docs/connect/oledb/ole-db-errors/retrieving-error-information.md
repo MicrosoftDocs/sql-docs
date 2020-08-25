@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "OLE DB error handling, retrieving information"
   - "errors [OLE DB], retrieving information"
   - "OLE DB error handling, examples"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Retrieving Error Information
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

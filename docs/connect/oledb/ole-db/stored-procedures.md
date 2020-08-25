@@ -1,6 +1,6 @@
 ---
 title: "Stored Procedures | Microsoft Docs"
-description: A stored procedure is an executable object stored in a database. SQL Server supports stored procedures and extended stored procedures.
+description: Learn how you can run stored procedures in a SQL database using the OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql

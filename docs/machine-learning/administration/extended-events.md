@@ -47,8 +47,8 @@ For more information about how to do this, see the section, [Collecting events f
 |satellite_abort_connection|Abort connection record||  
 |satellite_abort_received|Fires when an abort message is received over a satellite connection.||  
 |satellite_abort_sent|Fires when an abort message is sent over satellite connection.||  
-|satellite_authentication_completion|Fires when authentication completes for a connection over TCP or Namedpipe.||  
-|satellite_authorization_completion|Fires when authorization completes for a connection over TCP or Namedpipe.||  
+|satellite_authentication_completion|Fires when authentication completes for a connection over TCP or Named pipe.||  
+|satellite_authorization_completion|Fires when authorization completes for a connection over TCP or Named pipe.||  
 |satellite_cleanup|Fires when satellite calls cleanup.|Fired only from external process. See instructions on collecting events from external processes.|  
 |satellite_data_chunk_sent|Fires when the satellite connection finishes sending a single data chunk.|The event reports the number of rows sent, the number of columns, the number of SNI packets used and time elapsed in milliseconds while sending the chunk. The information can help you understand how much time is spent passing different types of data, and how many packets are used.|  
 |satellite_data_receive_completion|Fires when all the required data by a query is received over the satellite connection.|Fired only from external process. See instructions on collecting events from external processes.|  
@@ -96,7 +96,7 @@ SQL Server Machine Learning Services starts some services that run outside of th
      
     **R:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\R_SERVICES\library\RevoScaleR\rxLibs\x64`.  
 
-    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\library\RevoScaleR\rxLibs\x64`.
+    **Python:** `C:\Program Files\Microsoft SQL Server\MSSQL_version_number.MSSQLSERVER\PYTHON_SERVICES\Lib\site-packages\revoscalepy\rxLibs`.
 
 The configuration file must be named the same as the executable, using the format "[name].xevents.xml". In other words, the files must be named as follows:
 

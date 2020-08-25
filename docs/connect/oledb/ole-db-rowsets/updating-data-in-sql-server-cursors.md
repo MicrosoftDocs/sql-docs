@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "immediate update mode [OLE DB]"
   - "cursors [OLE DB]"
   - "data updates [SQL Server], OLE DB"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Updating Data in SQL Server Cursors
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

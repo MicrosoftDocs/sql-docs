@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, vs. MDAC"
   - "data access [OLE DB Driver for SQL Server], vs. MDAC"
   - "OLE DB Driver for SQL Server, updating applications"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Updating an Application to OLE DB Driver for SQL Server from MDAC
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

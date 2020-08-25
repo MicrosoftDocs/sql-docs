@@ -47,70 +47,70 @@ The following steps provide details.
 
 1. Define a set of environment variables for creating resources.
 
-  ```console
-  export REGION_NAME=<region>
-  export RESOURCE_GROUP=private-bdc-aksudr-rg
-  export SUBNET_NAME=aks-subnet
-  export VNET_NAME=bdc-vnet
-  export AKS_NAME=bdcaksprivatecluster
-  ```
+   ```console
+   export REGION_NAME=<region>
+   export RESOURCE_GROUP=private-bdc-aksudr-rg
+   export SUBNET_NAME=aks-subnet
+   export VNET_NAME=bdc-vnet
+   export AKS_NAME=bdcaksprivatecluster
+   ```
 
 1. Create the resource group
 
-  ```azurecli
-  az group create -n $RESOURCE_GROUP -l $REGION_NAME
-  ```
+   ```azurecli
+   az group create -n $RESOURCE_GROUP -l $REGION_NAME
+   ```
 
 1. Create the VNET
 
-  ```azurecli
-  az network vnet create \
-    --resource-group $RESOURCE_GROUP \
-    --location $REGION_NAME \
-    --name $VNET_NAME \
-    --address-prefixes 10.0.0.0/8 \
-    --subnet-name $SUBNET_NAME \
-    --subnet-prefix 10.1.0.0/16
+   ```azurecli
+   az network vnet create \
+     --resource-group $RESOURCE_GROUP \
+     --location $REGION_NAME \
+     --name $VNET_NAME \
+     --address-prefixes 10.0.0.0/8 \
+     --subnet-name $SUBNET_NAME \
+     --subnet-prefix 10.1.0.0/16
 
-  SUBNET_ID=$(az network vnet subnet show \
-    --resource-group $RESOURCE_GROUP \
-    --vnet-name $VNET_NAME \
-    --name $SUBNET_NAME \
-    --query id -o tsv)
-  ```
+   SUBNET_ID=$(az network vnet subnet show \
+     --resource-group $RESOURCE_GROUP \
+     --vnet-name $VNET_NAME \
+     --name $SUBNET_NAME \
+     --query id -o tsv)
+   ```
 
 ## Create and set up Azure Firewall
 
 1. Define a set of environment variables for creating resources.
 
-  ```console
-  export FWNAME=bdcaksazfw
-  export FWPUBIP=$FWNAME-ip
-  export FWIPCONFIG_NAME=$FWNAME-config
+   ```console
+   export FWNAME=bdcaksazfw
+   export FWPUBIP=$FWNAME-ip
+   export FWIPCONFIG_NAME=$FWNAME-config
 
-  az extension add --name azure-firewall
-  ```
+   az extension add --name azure-firewall
+   ```
 
 1. Create a dedicated subnet for the firewall
 
-  > [!NOTE]
-  > You cannot change the firewall name after creation
+   > [!NOTE]
+   > You cannot change the firewall name after creation
 
-  ```azurecli
-  az network vnet subnet create \
-    --resource-group $RESOURCE_GROUP \
-    --vnet-name $VNET_NAME \
-    --name AzureFirewallSubnet \
-    --address-prefix 10.3.0.0/24
+   ```azurecli
+   az network vnet subnet create \
+     --resource-group $RESOURCE_GROUP \
+     --vnet-name $VNET_NAME \
+     --name AzureFirewallSubnet \
+     --address-prefix 10.3.0.0/24
 
-   az network firewall create -g $RESOURCE_GROUP -n $FWNAME -l $REGION_NAME --enable-dns-proxy true
+    az network firewall create -g $RESOURCE_GROUP -n $FWNAME -l $REGION_NAME --enable-dns-proxy true
 
-   az network public-ip create -g $RESOURCE_GROUP -n $FWPUBIP -l $REGION_NAME --sku "Standard"
+    az network public-ip create -g $RESOURCE_GROUP -n $FWPUBIP -l $REGION_NAME --sku "Standard"
 
-   az network firewall ip-config create -g $RESOURCE_GROUP -f $FWNAME -n $FWIPCONFIG_NAME --public-ip-address $FWPUBIP --vnet-name $VNET_NAME
-  ```
+    az network firewall ip-config create -g $RESOURCE_GROUP -f $FWNAME -n $FWIPCONFIG_NAME --public-ip-address $FWPUBIP --vnet-name $VNET_NAME
+   ```
 
-   By default, Azure automatically routes traffic between Azure subnets, virtual networks, and on-premises networks. 
+By default, Azure automatically routes traffic between Azure subnets, virtual networks, and on-premises networks. 
 
 ## Create user-defined route table
 

@@ -1,4 +1,5 @@
 ---
+description: "sys.event_notification_event_types (Transact-SQL)"
 title: "sys.event_notification_event_types (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

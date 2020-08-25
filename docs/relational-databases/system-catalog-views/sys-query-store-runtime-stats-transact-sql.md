@@ -1,4 +1,5 @@
 ---
+description: "sys.query_store_runtime_stats (Transact-SQL)"
 title: "sys.query_store_runtime_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2019"

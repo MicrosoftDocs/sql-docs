@@ -1,4 +1,5 @@
 ---
+description: "Indexes Append Method Example (VB)"
 title: "Indexes Append Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -75,6 +76,6 @@ End Sub
 ```  
   
 ## See Also  
- [Append Method (ADOX Indexes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [Indexes Collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)
+ [Append Method (ADOX Indexes)](./append-method-adox-indexes.md)   
+ [Index Object (ADOX)](./index-object-adox.md)   
+ [Indexes Collection (ADOX)](./indexes-collection-adox.md)

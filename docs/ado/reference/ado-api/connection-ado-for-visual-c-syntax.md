@@ -1,4 +1,5 @@
 ---
+description: "Connection (ADO for Visual C++ Syntax)"
 title: "Connection (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -71,4 +72,4 @@ WillExecute(BSTR *Source, CursorTypeEnum *CursorType, LockTypeEnum *LockType, lo
 ```  
   
 ## See Also  
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection Object (ADO)](./connection-object-ado.md)

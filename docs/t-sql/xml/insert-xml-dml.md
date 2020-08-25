@@ -1,4 +1,5 @@
 ---
+description: "insert (XML DML)"
 title: insert (XML DML)
 ms.custom: ""
 ms.date: "07/26/2017"

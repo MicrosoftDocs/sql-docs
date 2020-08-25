@@ -1,4 +1,5 @@
 ---
+description: "Export Data to Excel from Master Data Services"
 title: Export Data to Excel
 ms.custom: microsoft-excel-add-in, seo-lt-2019
 ms.date: "03/01/2017"

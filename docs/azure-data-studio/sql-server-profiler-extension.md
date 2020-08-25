@@ -5,7 +5,7 @@ ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ms.reviewer: "alayu, maghan, sstein"
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
@@ -43,9 +43,4 @@ The SQL Server Profiler extension (preview) provides a simple SQL Server tracing
 
 ## Next steps
 
-To learn more about Profiler and extended events, see [Extended Events](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events).
-
-
-
-
-
+To learn more about Profiler and extended events, see [Extended Events](../relational-databases/extended-events/extended-events.md).

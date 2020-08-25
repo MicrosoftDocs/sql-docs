@@ -1,4 +1,5 @@
 ---
+description: "Configure and Manage Filters for Search"
 title: "Configure and Manage Filters for Search | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "setAsciiStream Method (SQLServerClob)"
 title: "setAsciiStream Method (SQLServerClob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ResyncEnum"
 title: "ResyncEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # ResyncEnum
-Specifies whether underlying values are overwritten by a call to [Resync](../../../ado/reference/ado-api/resync-method.md).  
+Specifies whether underlying values are overwritten by a call to [Resync](./resync-method.md).  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -33,4 +34,4 @@ Specifies whether underlying values are overwritten by a call to [Resync](../../
 |AdoEnums.Resync.UNDERLYINGVALUES|  
   
 ## Applies To  
- [Resync Method](../../../ado/reference/ado-api/resync-method.md)
+ [Resync Method](./resync-method.md)

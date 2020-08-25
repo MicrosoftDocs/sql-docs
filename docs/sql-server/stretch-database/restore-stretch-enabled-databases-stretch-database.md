@@ -1,4 +1,5 @@
 ---
+description: "Restore Stretch-enabled databases (Stretch Database)"
 title: "Restore Stretch-enabled databases"
 ms.date: "07/06/2016"
 ms.service: sql-server-stretch-database

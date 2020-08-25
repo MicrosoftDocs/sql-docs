@@ -1,4 +1,5 @@
 ---
+description: "URL Property Example (VBScript)"
 title: "URL Property Example (VBScript) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""
@@ -133,6 +134,4 @@ End Sub
 ```  
   
 ## See Also  
- [URL Property (RDS)](../../../ado/reference/rds-api/url-property-rds.md)
-
-
+ [URL Property (RDS)](./url-property-rds.md)

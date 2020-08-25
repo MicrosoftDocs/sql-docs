@@ -1,4 +1,5 @@
 ---
+description: "RowPosition Property (ADO)"
 title: "RowPosition Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -46,4 +47,4 @@ HRESULT put_RowPosition([in] IUnknown* pRowPos);
  When this property is set, if the **Rowset** object on the **RowPosition** object is different from the **Rowset** object on the **Recordset** object, the former overrides the latter. The same behavior applies to the current **Chapter** of the **RowPosition** as well.  
   
 ## Applies To  
- [ADORecordsetConstruction Interface](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)
+ [ADORecordsetConstruction Interface](./adorecordsetconstruction-interface.md)

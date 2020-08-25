@@ -1,4 +1,5 @@
 ---
+description: "Search Document Properties with Search Property Lists"
 title: "Search document properties with search property lists"
 ms.date: "03/06/2017"
 ms.prod: sql

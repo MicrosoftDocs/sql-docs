@@ -1,4 +1,5 @@
 ---
+description: "Write (Database Engine)"
 title: "Write (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/23/2017"

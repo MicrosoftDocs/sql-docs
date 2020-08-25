@@ -1,4 +1,5 @@
 ---
+description: "Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with Secure Enclaves"
 title: "Example demonstrating use of Azure Key Vault provider with Always Encrypted enabled with Secure Enclaves | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/09/2020

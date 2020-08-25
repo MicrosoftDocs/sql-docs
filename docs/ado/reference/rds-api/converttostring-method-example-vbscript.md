@@ -1,4 +1,5 @@
 ---
+description: "ConvertToString Method Example (VBScript)"
 title: "ConvertToString Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -88,9 +89,5 @@ MIME Encoded RS: <BR>
 ```  
   
 ## See Also  
- [ConvertToString Method (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
-
-
-
+ [ConvertToString Method (RDS)](./converttostring-method-rds.md)   
+ [Recordset Object (ADO)](../ado-api/recordset-object-ado.md)

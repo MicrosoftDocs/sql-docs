@@ -1,4 +1,5 @@
 ---
+description: "STConvexHull (geometry Data Type)"
 title: "STConvexHull (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"

@@ -1,4 +1,5 @@
 ---
+description: "DAY (Transact-SQL)"
 title: "DAY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"

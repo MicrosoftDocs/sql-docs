@@ -1,4 +1,5 @@
 ---
+description: "Querying the SQL Server System Catalog FAQ"
 title: "Querying the SQL Server System Catalog FAQ | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sys.server_audits (Transact-SQL)"
 title: "sys.server_audits (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/05/2016"

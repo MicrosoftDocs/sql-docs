@@ -1,4 +1,5 @@
 ---
+description: "Extended Static Geography Methods"
 title: "Extended Static Geography Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

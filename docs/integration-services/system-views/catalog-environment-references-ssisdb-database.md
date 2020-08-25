@@ -1,4 +1,5 @@
 ---
+description: "catalog.environment_references (SSISDB Database)"
 title: "catalog.environment_references (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

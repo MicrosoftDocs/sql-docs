@@ -1,4 +1,5 @@
 ---
+description: "Summarize or Aggregate Values for All Rows in a Table (Visual Database Tools)"
 title: Summarize or Aggregate Values for All Rows in a Table
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

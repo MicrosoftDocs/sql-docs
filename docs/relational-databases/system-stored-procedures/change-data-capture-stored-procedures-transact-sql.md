@@ -1,4 +1,5 @@
 ---
+description: "Change Data Capture Stored Procedures (Transact-SQL)"
 title: "Change Data Capture Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ActualSize and DefinedSize Properties Example (VC++)"
 title: "ActualSize and DefinedSize Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # ActualSize and DefinedSize Properties Example (VC++)
-This example uses the [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md) and [DefinedSize](../../../ado/reference/ado-api/definedsize-property.md) properties to display the defined size and actual size of a field.  
+This example uses the [ActualSize](./actualsize-property-ado.md) and [DefinedSize](./definedsize-property.md) properties to display the defined size and actual size of a field.  
   
 ## Example  
   
@@ -141,5 +142,5 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 **Defined Size: 40**  
 **Actual Size: 8**   
 ## See Also  
- [ActualSize Property (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
- [DefinedSize Property](../../../ado/reference/ado-api/definedsize-property.md)
+ [ActualSize Property (ADO)](./actualsize-property-ado.md)   
+ [DefinedSize Property](./definedsize-property.md)

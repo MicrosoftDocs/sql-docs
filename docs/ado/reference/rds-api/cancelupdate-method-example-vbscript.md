@@ -1,4 +1,5 @@
 ---
+description: "CancelUpdate Method Example (VBScript)"
 title: "CancelUpdate Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -112,7 +113,4 @@ End Sub
 ```  
   
 ## See Also  
- [CancelUpdate Method (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)
-
-
-
+ [CancelUpdate Method (ADO)](../ado-api/cancelupdate-method-ado.md)

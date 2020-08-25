@@ -1,4 +1,5 @@
 ---
+description: "SortOrder Property Example (VB)"
 title: "SortOrder Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # SortOrder Property Example (VB)
-This example demonstrates the [SortOrder](../../../ado/reference/adox-api/sortorder-property-adox.md) property of a [Column](../../../ado/reference/adox-api/column-object-adox.md) that has been appended to the [Columns](../../../ado/reference/adox-api/columns-collection-adox.md) collection of an [Index](../../../ado/reference/adox-api/index-object-adox.md). The code appends an ascending index to the Country column in the **Employees** table, then displays the records. Then the code appends a descending index to the Country column in the **Employees** table and displays the records again. The difference between ascending and descending indexes is shown.  
+This example demonstrates the [SortOrder](./sortorder-property-adox.md) property of a [Column](./column-object-adox.md) that has been appended to the [Columns](./columns-collection-adox.md) collection of an [Index](./index-object-adox.md). The code appends an ascending index to the Country column in the **Employees** table, then displays the records. Then the code appends a descending index to the Country column in the **Employees** table and displays the records again. The difference between ascending and descending indexes is shown.  
   
 ```  
 ' BeginSortOrderVB  
@@ -131,7 +132,7 @@ End Sub
 ```  
   
 ## See Also  
- [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [SortOrder Property (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
+ [Column Object (ADOX)](./column-object-adox.md)   
+ [Columns Collection (ADOX)](./columns-collection-adox.md)   
+ [Index Object (ADOX)](./index-object-adox.md)   
+ [SortOrder Property (ADOX)](./sortorder-property-adox.md)

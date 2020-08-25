@@ -1,4 +1,5 @@
 ---
+description: "Azure Feature Pack for Integration Services (SSIS)"
 title: "Azure Feature Pack for Integration Services (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/24/2019"

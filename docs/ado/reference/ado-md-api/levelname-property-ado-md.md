@@ -1,4 +1,5 @@
 ---
+description: "LevelName Property (ADO MD)"
 title: "LevelName Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,17 +19,17 @@ author: rothja
 ms.author: jroth
 ---
 # LevelName Property (ADO MD)
-Indicates the name of the level of a [member](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+Indicates the name of the level of a [member](./member-object-ado-md.md).  
   
 ## Return Values  
  Returns a **String** and is read-only.  
   
 ## Remarks  
- Use the **LevelName** property to retrieve the name of the level to which a member belongs. This corresponds to the [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) property of a [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) object.  
+ Use the **LevelName** property to retrieve the name of the level to which a member belongs. This corresponds to the [Name](./name-property-ado-md.md) property of a [Level](./level-object-ado-md.md) object.  
   
 ## Applies To  
- [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+ [Member Object (ADO MD)](./member-object-ado-md.md)  
   
 ## See Also  
- [Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)   
- [Name Property (ADO MD)](../../../ado/reference/ado-md-api/name-property-ado-md.md)
+ [Level Object (ADO MD)](./level-object-ado-md.md)   
+ [Name Property (ADO MD)](./name-property-ado-md.md)

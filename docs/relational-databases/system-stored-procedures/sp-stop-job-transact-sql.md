@@ -1,4 +1,5 @@
 ---
+description: "sp_stop_job (Transact-SQL)"
 title: "sp_stop_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"

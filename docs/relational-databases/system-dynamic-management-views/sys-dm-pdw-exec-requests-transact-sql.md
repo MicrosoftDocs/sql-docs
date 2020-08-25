@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_exec_requests (Transact-SQL)"
 title: "sys.dm_pdw_exec_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/05/2019

@@ -1,4 +1,5 @@
 ---
+description: "RDS Tutorial (VBScript)"
 title: "RDS Tutorial (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,12 +17,12 @@ author: rothja
 ms.author: jroth
 ---
 # RDS Tutorial (VBScript)
-This is the RDS Tutorial, written in Microsoft Visual Basic Scripting Edition. For a description of the purpose of this tutorial, see the [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md).  
+This is the RDS Tutorial, written in Microsoft Visual Basic Scripting Edition. For a description of the purpose of this tutorial, see the [RDS Tutorial](./rds-tutorial.md).  
   
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- In this tutorial, [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) and [RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) are created at design time - that is, they are defined with object tags, like this: `<OBJECT>...</OBJECT>`. Alternatively, they could be created at run time with the [CreateObject Method (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md) method. For example, the **RDS.DataControl** object could be created like this:  
+ In this tutorial, [RDS.DataControl](../../reference/rds-api/datacontrol-object-rds.md) and [RDS.DataSpace](../../reference/rds-api/dataspace-object-rds.md) are created at design time - that is, they are defined with object tags, like this: `<OBJECT>...</OBJECT>`. Alternatively, they could be created at run time with the [CreateObject Method (RDS)](../../reference/rds-api/createobject-method-rds.md) method. For example, the **RDS.DataControl** object could be created like this:  
   
 ```vb
 Set DC = Server.CreateObject("RDS.DataControl")  
@@ -52,7 +53,7 @@ Set DC = Server.CreateObject("RDS.DataControl")
  However, for this tutorial, use the imaginary server, "yourServer".  
   
 > [!NOTE]
->  Pay attention to the data type of **ByRef** arguments. VBScript does not let you specify the variable type, so you must always pass a **Variant**. When using HTTP, RDS will allow you to pass a Variant to a method that expects a non-Variant if you invoke it with the **RDS.DataSpace** object [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) method. When using DCOM or an in-process server, you must match the parameter types on the client and server sides or you will receive a "Type Mismatch" error.  
+>  Pay attention to the data type of **ByRef** arguments. VBScript does not let you specify the variable type, so you must always pass a **Variant**. When using HTTP, RDS will allow you to pass a Variant to a method that expects a non-Variant if you invoke it with the **RDS.DataSpace** object [CreateObject](../../reference/rds-api/createobject-method-rds.md) method. When using DCOM or an in-process server, you must match the parameter types on the client and server sides or you will receive a "Type Mismatch" error.  
   
 ```vb
 Set DF1 = DS1.CreateObject("RDSServer.DataFactory", "https://yourServer")  
@@ -133,4 +134,4 @@ End Sub
  **This is the end of the tutorial.**  
   
 ## See Also  
- [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
+ [RDS Tutorial](./rds-tutorial.md)

@@ -1,4 +1,5 @@
 ---
+description: "Executing the SSMA Console (DB2ToSQL)"
 title: "Executing the SSMA Console (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

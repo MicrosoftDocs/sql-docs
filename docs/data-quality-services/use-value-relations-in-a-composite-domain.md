@@ -1,4 +1,5 @@
 ---
+description: "Use Value Relations in a Composite Domain"
 title: "Use Value Relations in a Composite Domain"
 ms.date: "11/22/2011"
 ms.prod: sql

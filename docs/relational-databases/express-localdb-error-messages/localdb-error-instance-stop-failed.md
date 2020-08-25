@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INSTANCE_STOP_FAILED"
 title: "LOCALDB_ERROR_INSTANCE_STOP_FAILED | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ADD SIGNATURE (Transact-SQL)"
 title: ADD SIGNATURE (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql

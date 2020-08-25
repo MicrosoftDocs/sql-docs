@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;LANGUAGE (Transact-SQL)"
 title: "@@LANGUAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"

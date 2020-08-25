@@ -1,4 +1,5 @@
 ---
+description: "SQLCleanupConnectionPoolID Function"
 title: "SQLCleanupConnectionPoolID Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

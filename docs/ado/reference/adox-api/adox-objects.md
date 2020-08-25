@@ -1,4 +1,5 @@
 ---
+description: "ADOX Objects"
 title: "ADOX Objects | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,22 +20,22 @@ ms.author: jroth
   
 |Object|Description|  
 |------------|-----------------|  
-|[Catalog](../../../ado/reference/adox-api/catalog-object-adox.md)|Contains collections that describe the schema catalog of a data source.|  
-|[Column](../../../ado/reference/adox-api/column-object-adox.md)|Represents a column from a table, index, or key.|  
-|[Group](../../../ado/reference/adox-api/group-object-adox.md)|Represents a group account that has access permissions within a secured database.|  
-|[Index](../../../ado/reference/adox-api/index-object-adox.md)|Represents an index from a database table.|  
-|[Key](../../../ado/reference/adox-api/key-object-adox.md)|Represents a primary, foreign, or unique key field from a database table.|  
-|[Procedure](../../../ado/reference/adox-api/procedure-object-adox.md)|Represents a stored procedure.|  
-|[Table](../../../ado/reference/adox-api/table-object-adox.md)|Represents a database table, including columns, indexes, and keys.|  
-|[User](../../../ado/reference/adox-api/user-object-adox.md)|Represents a user account that has access permissions within a secured database.|  
-|[View](../../../ado/reference/adox-api/view-object-adox.md)|Represents a filtered set of records or a virtual table.|  
+|[Catalog](./catalog-object-adox.md)|Contains collections that describe the schema catalog of a data source.|  
+|[Column](./column-object-adox.md)|Represents a column from a table, index, or key.|  
+|[Group](./group-object-adox.md)|Represents a group account that has access permissions within a secured database.|  
+|[Index](./index-object-adox.md)|Represents an index from a database table.|  
+|[Key](./key-object-adox.md)|Represents a primary, foreign, or unique key field from a database table.|  
+|[Procedure](./procedure-object-adox.md)|Represents a stored procedure.|  
+|[Table](./table-object-adox.md)|Represents a database table, including columns, indexes, and keys.|  
+|[User](./user-object-adox.md)|Represents a user account that has access permissions within a secured database.|  
+|[View](./view-object-adox.md)|Represents a filtered set of records or a virtual table.|  
   
- The relationships between these objects are illustrated in the [ADOX Object Model](../../../ado/reference/adox-api/adox-object-model.md).  
+ The relationships between these objects are illustrated in the [ADOX Object Model](./adox-object-model.md).  
   
- Each object can be contained in its corresponding collection. For example, a **Table** object can be contained in a [Tables](../../../ado/reference/adox-api/tables-collection-adox.md) collection. For more information, see [ADOX Collections](../../../ado/reference/adox-api/adox-collections.md) or a specific collection topic.  
+ Each object can be contained in its corresponding collection. For example, a **Table** object can be contained in a [Tables](./tables-collection-adox.md) collection. For more information, see [ADOX Collections](./adox-collections.md) or a specific collection topic.  
   
 ## See Also  
- [ADOX API Reference](../../../ado/reference/adox-api/adox-api-reference.md)   
- [ADOX Collections](../../../ado/reference/adox-api/adox-collections.md)   
- [ADOX Object Model](../../../ado/reference/adox-api/adox-object-model.md)   
- [ADO Extensions for Data Definition Language and Security (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+ [ADOX API Reference](./adox-object-model.md?view=sql-server-ver15)   
+ [ADOX Collections](./adox-collections.md)   
+ [ADOX Object Model](./adox-object-model.md)   
+ [ADO Extensions for Data Definition Language and Security (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

@@ -1,4 +1,5 @@
 ---
+description: "CInstance Class"
 title: "CInstance Class"
 ms.custom: ""
 ms.date: "03/14/2017"

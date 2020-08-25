@@ -1,4 +1,5 @@
 ---
+description: "Balanced Data Distributor Transformation"
 title: "Balanced Data Distributor Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

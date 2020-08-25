@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_hadr_auto_page_repair (Transact-SQL)"
 title: "sys.dm_hadr_auto_page_repair (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/05/2019"

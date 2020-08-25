@@ -1,4 +1,5 @@
 ---
+description: "Recycle SQL Server Agent Error Logs"
 title: "Recycle SQL Server Agent Error Logs"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

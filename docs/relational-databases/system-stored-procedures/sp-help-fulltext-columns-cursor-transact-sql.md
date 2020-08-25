@@ -1,4 +1,5 @@
 ---
+description: "sp_help_fulltext_columns_cursor (Transact-SQL)"
 title: "sp_help_fulltext_columns_cursor (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Constructing Interoperable SQL Statements"
 title: "Constructing Interoperable SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

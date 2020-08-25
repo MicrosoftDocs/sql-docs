@@ -1,4 +1,5 @@
 ---
+description: "Advanced Merge Replication Conflict - COM-Based Custom Resolvers"
 title: "COM-Based Custom Resolvers | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Streams and Persistence"
 title: "Streams and Persistence | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

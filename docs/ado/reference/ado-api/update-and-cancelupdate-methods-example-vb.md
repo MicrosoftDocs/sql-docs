@@ -1,4 +1,5 @@
 ---
+description: "Update and CancelUpdate Methods Example (VB)"
 title: "Update and CancelUpdate Methods Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Update and CancelUpdate Methods Example (VB)
-This example demonstrates the [Update](../../../ado/reference/ado-api/update-method.md) method in conjunction with the [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) method.  
+This example demonstrates the [Update](./update-method.md) method in conjunction with the [CancelUpdate](./cancelupdate-method-ado.md) method.  
   
 ```  
 'BeginUpdateVB  
@@ -108,13 +109,13 @@ End Sub
 ' EndUpdateVB  
 ```  
   
- This example demonstrates the **Update** method in conjunction with the [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) method.  
+ This example demonstrates the **Update** method in conjunction with the [AddNew](./addnew-method-ado.md) method.  
   
 ```  
 Attribute VB_Name = "Update"  
 ```  
   
 ## See Also  
- [CancelUpdate Method (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Update Method](../../../ado/reference/ado-api/update-method.md)
+ [CancelUpdate Method (ADO)](./cancelupdate-method-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)   
+ [Update Method](./update-method.md)

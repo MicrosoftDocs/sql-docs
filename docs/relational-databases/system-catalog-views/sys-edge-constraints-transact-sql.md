@@ -1,4 +1,5 @@
 ---
+description: "sys.edge_constraints (Transact-SQL)"
 title: "sys.edge_constraints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/17/2018"

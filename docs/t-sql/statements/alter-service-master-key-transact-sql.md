@@ -1,4 +1,5 @@
 ---
+description: "ALTER SERVICE MASTER KEY (Transact-SQL)"
 title: "ALTER SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

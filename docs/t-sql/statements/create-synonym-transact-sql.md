@@ -1,4 +1,5 @@
 ---
+description: "CREATE SYNONYM (Transact-SQL)"
 title: CREATE SYNONYM (Transact-SQL)
 ms.custom: ""
 ms.date: "04/11/2017"

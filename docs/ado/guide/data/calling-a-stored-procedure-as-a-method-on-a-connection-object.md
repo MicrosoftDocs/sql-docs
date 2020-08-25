@@ -1,4 +1,5 @@
 ---
+description: "Calling a Stored Procedure as a Method on a Connection object"
 title: "Calling a Stored Procedure as a Method on a Connection object | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -73,4 +74,4 @@ Set objComm = Nothing
 ```  
   
 ## See Also  
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection Object (ADO)](../../reference/ado-api/connection-object-ado.md)

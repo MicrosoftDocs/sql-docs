@@ -1,4 +1,5 @@
 ---
+description: "Data-tier Application Views - dbo.sysdac_instances"
 title: "dbo.sysdac_instances (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

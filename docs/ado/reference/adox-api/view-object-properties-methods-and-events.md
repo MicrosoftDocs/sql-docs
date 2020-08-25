@@ -1,4 +1,5 @@
 ---
+description: "View Object Properties, Methods, and Events"
 title: "View Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,13 +16,13 @@ ms.author: jroth
 ---
 # View Object Properties, Methods, and Events
 ## Properties  
- [Command Property](../../../ado/reference/adox-api/command-property-adox.md)  
+ [Command Property](./command-property-adox.md)  
   
- [DateCreated Property](../../../ado/reference/adox-api/datecreated-property-adox.md)  
+ [DateCreated Property](./datecreated-property-adox.md)  
   
- [DateModified Property](../../../ado/reference/adox-api/datemodified-property-adox.md)  
+ [DateModified Property](./datemodified-property-adox.md)  
   
- [Name Property](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name Property](./name-property-adox.md)  
   
 ## Methods  
  None.  
@@ -30,4 +31,4 @@ ms.author: jroth
  None.  
   
 ## See Also  
- [View Object (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)
+ [View Object (ADOX)](./view-object-adox.md)

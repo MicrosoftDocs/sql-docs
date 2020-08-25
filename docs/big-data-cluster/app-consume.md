@@ -22,7 +22,7 @@ This article describes how to consume an app deployed on a SQL Server big data c
 
 - [SQL Server big data cluster](deployment-guidance.md)
 - [azdata command-line utility](deploy-install-azdata.md)
-- An app deployed using either [azdata](big-data-cluster-create-apps.md) or the [App Deploy extension](app-deployment-extension.md)
+- An app deployed using either [azdata](app-create.md) or the [App Deploy extension](app-deployment-extension.md)
 
 > [!NOTE]
 > When the application’s yaml specification file specifies a schedule, the application will be triggered via a cron job. If your big data cluster is deployed on OpenShift, launching the cron job requires additional capabilities. See the details regarding [security considerations on OpenShift](concept-application-deployment.md#app-deploy-security) for specific instructions.
@@ -126,7 +126,7 @@ The output of this request will give you a JWT `access_token`, which you'll need
 
 ## Execute the app using the RESTful web service
 
-There are multiple ways to consume an app on BDC, you can choose to use [azdata app run command](big-data-cluster-create-apps.md). This section will demonstrate how to use common developer tools such as Postman to execute the app. 
+There are multiple ways to consume an app on BDC, you can choose to use [azdata app run command](app-create.md). This section will demonstrate how to use common developer tools such as Postman to execute the app. 
 
 You can open the URL for the `swagger` that was returned when you ran `azdata app describe --name [appname] --version [version]` in your browser, which should be similar to `https://[IP]:[PORT]/app/[appname]/[version]/swagger.json`. 
 
@@ -157,6 +157,6 @@ You've now successfully called the app through the web service. You can follow s
 
 ## Next steps
 
-Explore how to [Monitor applications on big data clusters](big-data-cluster-monitoring-apps.md) for more information. You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
+Explore how to [Monitor applications on big data clusters](app-monitor.md) for more information. You can also check out additional samples at [App Deploy Samples](https://aka.ms/sql-app-deploy).
 
 For more information about [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)], see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md).

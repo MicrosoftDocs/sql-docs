@@ -1,4 +1,5 @@
 ---
+description: "Extended Events for Stretch Database"
 title: "Extended Events for Stretch Database"
 ms.date: "06/14/2016"
 ms.service: sql-server-stretch-database

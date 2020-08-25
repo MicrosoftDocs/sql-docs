@@ -1,4 +1,5 @@
 ---
+description: "CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL)"
 title: "CREATE CRYPTOGRAPHIC PROVIDER (Transact-SQL) | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

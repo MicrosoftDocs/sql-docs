@@ -1,4 +1,5 @@
 ---
+description: "dbo.syssubsystems (Transact-SQL)"
 title: "dbo.syssubsystems (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

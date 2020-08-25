@@ -1,4 +1,5 @@
 ---
+description: "Server Memory Change Event Class"
 title: "Server Memory Change Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

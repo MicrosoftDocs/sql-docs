@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_dms_external_work (Transact-SQL)"
 title: "sys.dm_pdw_dms_external_work (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

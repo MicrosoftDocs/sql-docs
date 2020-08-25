@@ -1,4 +1,5 @@
 ---
+description: "COMPRESS (Transact-SQL)"
 title: "COMPRESS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/11/2018"

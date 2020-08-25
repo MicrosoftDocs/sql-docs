@@ -1,4 +1,5 @@
 ---
+description: "Initialize a Subscription with a Snapshot (862a)"
 title: Initialize a Subscription with a Snapshot (862a) | Microsoft Docs
 ms.date: 08/12/2020
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "Overview: Importing Data from Excel (MDS Add-in for Excel)"
 title: Importing Data from Excel
 ms.custom: microsoft-excel-add-in
 ms.date: "03/01/2017"

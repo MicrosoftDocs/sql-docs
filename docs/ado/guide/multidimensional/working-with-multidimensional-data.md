@@ -1,4 +1,5 @@
 ---
+description: "Working with Multidimensional Data"
 title: "Working with Multidimensional Data | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -22,7 +23,7 @@ A *cellset* is the result of a query on multidimensional data. It consists of a 
   
  A *cell* is an object positioned at the intersection of axis coordinates. Each cell has multiple pieces of information associated with it, including the data itself, a formatted string (the displayable form of cell data), and the cell ordinal value. (Each cell is a unique ordinal value in the cellset. The ordinal value of the first cell in the cellset is zero, while the leftmost cell in the second row of a cellset with eight columns would have an ordinal value of eight.)  
   
- For example, a cube has the following six dimensions (note that this cube schema differs slightly from the example given in [Overview of Multidimensional Schemas and Data](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)):  
+ For example, a cube has the following six dimensions (note that this cube schema differs slightly from the example given in [Overview of Multidimensional Schemas and Data](./overview-of-multidimensional-schemas-and-data.md)):  
   
 -   Salesperson  
   
@@ -69,11 +70,11 @@ A *cellset* is the result of a query on multidimensional data. It consists of a 
 Jan, Feb, Mar, Qtr2, Qtr3, Oct, Nov, Dec  
 ```  
   
- Cellsets, cells, axes, and positions are all represented in ADO MD by corresponding objects: [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md), [Cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md), [Axis](../../../ado/reference/ado-md-api/axis-object-ado-md.md), and [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md).  
+ Cellsets, cells, axes, and positions are all represented in ADO MD by corresponding objects: [Cellset](../../reference/ado-md-api/cellset-object-ado-md.md), [Cell](../../reference/ado-md-api/cell-object-ado-md.md), [Axis](../../reference/ado-md-api/axis-object-ado-md.md), and [Position](../../reference/ado-md-api/position-object-ado-md.md).  
   
 ## See Also  
- [ADO MD Object Model](../../../ado/reference/ado-md-api/ado-md-object-model.md)   
- [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [Overview of Multidimensional Schemas and Data](../../../ado/guide/multidimensional/overview-of-multidimensional-schemas-and-data.md)   
- [Programming with ADO MD](../../../ado/guide/multidimensional/programming-with-ado-md.md)   
- [Using ADO with ADO MD](../../../ado/guide/multidimensional/using-ado-with-ado-md.md)
+ [ADO MD Object Model](../../reference/ado-md-api/ado-md-object-model.md)   
+ [ADO (Multidimensional) (ADO MD)](./ado-multidimensional-ado-md.md)   
+ [Overview of Multidimensional Schemas and Data](./overview-of-multidimensional-schemas-and-data.md)   
+ [Programming with ADO MD](./programming-with-ado-md.md)   
+ [Using ADO with ADO MD](./using-ado-with-ado-md.md)

@@ -1,4 +1,5 @@
 ---
+description: "LastChild (MDX)"
 title: "LastChild (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

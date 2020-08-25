@@ -1,4 +1,5 @@
 ---
+description: "Working with SSMA for Oracle Console (DB2ToSQL)"
 title: "Working with SSMA for Oracle Console (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

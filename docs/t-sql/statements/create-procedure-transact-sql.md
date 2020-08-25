@@ -1,4 +1,5 @@
 ---
+description: "CREATE PROCEDURE (Transact-SQL)"
 title: CREATE PROCEDURE (Transact-SQL)
 ms.custom: ""
 ms.date: "09/06/2017"

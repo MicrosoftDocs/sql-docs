@@ -1,4 +1,5 @@
 ---
+description: "StreamOpenOptionsEnum"
 title: "StreamOpenOptionsEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,16 +18,16 @@ author: rothja
 ms.author: jroth
 ---
 # StreamOpenOptionsEnum
-Specifies options for opening a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object. The values can be combined with an OR operation.  
+Specifies options for opening a [Stream](./stream-object-ado.md) object. The values can be combined with an OR operation.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
 |**adOpenStreamAsync**|1|Opens the **Stream** object in asynchronous mode.|  
-|**adOpenStreamFromRecord**|4|Identifies the contents of the *Source* parameter to be an already open [Record](../../../ado/reference/ado-api/record-object-ado.md) object. The default behavior is to treat *Source* as a URL that points directly to a node in a tree structure. The default stream associated with that node is opened.|  
+|**adOpenStreamFromRecord**|4|Identifies the contents of the *Source* parameter to be an already open [Record](./record-object-ado.md) object. The default behavior is to treat *Source* as a URL that points directly to a node in a tree structure. The default stream associated with that node is opened.|  
 |**adOpenStreamUnspecified**|-1|Default. Specifies opening the **Stream** object with default options.|  
   
 ## ADO/WFC Equivalent  
  These constants do not have ADO/WFC equivalents.  
   
 ## Applies To  
- [Open Method (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)
+ [Open Method (ADO Stream)](./open-method-ado-stream.md)

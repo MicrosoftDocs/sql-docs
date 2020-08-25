@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_network_credentials (Transact-SQL)"
 title: "sys.dm_pdw_network_credentials (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_filestream_file_io_handles (Transact-SQL)"
 title: "sys.dm_filestream_file_io_handles (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

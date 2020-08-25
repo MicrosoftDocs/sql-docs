@@ -1,4 +1,5 @@
 ---
+description: "Developing Connection-Pool Awareness in an ODBC Driver"
 title: "Developing Connection-Pool Awareness in an ODBC Driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

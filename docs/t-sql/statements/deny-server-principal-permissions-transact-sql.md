@@ -1,4 +1,5 @@
 ---
+description: "DENY Server Principal Permissions (Transact-SQL)"
 title: "DENY Server Principal Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/09/2017"

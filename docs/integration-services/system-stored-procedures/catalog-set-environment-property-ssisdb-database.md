@@ -1,4 +1,5 @@
 ---
+description: "catalog.set_environment_property (SSISDB Database)"
 title: "catalog.set_environment_property (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

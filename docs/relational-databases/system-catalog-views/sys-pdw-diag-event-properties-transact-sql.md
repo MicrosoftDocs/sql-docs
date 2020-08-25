@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_diag_event_properties (Transact-SQL)"
 title: "sys.pdw_diag_event_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

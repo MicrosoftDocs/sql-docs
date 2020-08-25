@@ -1,4 +1,5 @@
 ---
+description: "ADO - WFC Syntax Index"
 title: "ADO - WFC Syntax Index | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: 
@@ -22,26 +23,26 @@ The ADO Language Reference uses the Microsoft Visual Basic programming language 
   
 ## ActiveX Data Objects  
   
--   [ADO Collections](../../../ado/reference/ado-api/collections-ado-wfc-syntax.md)  
+-   [ADO Collections](./collections-ado-wfc-syntax.md)  
   
--   [Command object](../../../ado/reference/ado-api/command-ado-wfc-syntax.md)  
+-   [Command object](./command-ado-wfc-syntax.md)  
   
--   [Connection object](../../../ado/reference/ado-api/connection-ado-wfc-syntax.md)  
+-   [Connection object](./connection-ado-wfc-syntax.md)  
   
--   [Error object](../../../ado/reference/ado-api/error-ado-wfc-syntax.md)  
+-   [Error object](./error-ado-wfc-syntax.md)  
   
--   [Field object](../../../ado/reference/ado-api/field-ado-wfc-syntax.md)  
+-   [Field object](./field-ado-wfc-syntax.md)  
   
--   [Parameter object](../../../ado/reference/ado-api/parameter-ado-wfc-syntax.md)  
+-   [Parameter object](./parameter-ado-wfc-syntax.md)  
   
--   [Recordset object](../../../ado/reference/ado-api/recordset-ado-wfc-syntax.md)  
+-   [Recordset object](./recordset-ado-wfc-syntax.md)  
   
 ## Remote Data Service  
   
--   [DataSpace](../../../ado/reference/ado-api/dataspace-ado-wfc-syntax.md)  
+-   [DataSpace](./dataspace-ado-wfc-syntax.md)  
   
--   [ObjectProxy](../../../ado/reference/ado-api/objectproxy-ado-wfc-syntax.md)  
+-   [ObjectProxy](./objectproxy-ado-wfc-syntax.md)  
   
 ## See Also  
- [Handling ADO Events](../../../ado/guide/data/handling-ado-events.md)   
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)
+ [Handling ADO Events](../../guide/data/handling-ado-events.md)   
+ [Microsoft ActiveX Data Objects (ADO)](../../microsoft-activex-data-objects-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: "RecordType Property (ADO)"
 title: "RecordType Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,17 +20,17 @@ author: rothja
 ms.author: jroth
 ---
 # RecordType Property (ADO)
-Indicates the type of [Record](../../../ado/reference/ado-api/record-object-ado.md) object.  
+Indicates the type of [Record](./record-object-ado.md) object.  
   
 ## Return Value  
- Returns a [RecordTypeEnum](../../../ado/reference/ado-api/recordtypeenum.md) value.  
+ Returns a [RecordTypeEnum](./recordtypeenum.md) value.  
   
 ## Remarks  
  The **RecordType** property is read-only.  
   
 ## Applies To  
- [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+ [Record Object (ADO)](./record-object-ado.md)  
   
 ## See Also  
- [Type Property (ADO)](../../../ado/reference/ado-api/type-property-ado.md)   
- [Type Property (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)
+ [Type Property (ADO)](./type-property-ado.md)   
+ [Type Property (ADO Stream)](./type-property-ado-stream.md)

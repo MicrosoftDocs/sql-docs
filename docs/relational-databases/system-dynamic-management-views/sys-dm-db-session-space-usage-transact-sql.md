@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_session_space_usage (Transact-SQL)"
 title: "sys.dm_db_session_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/16/2015"

@@ -1,4 +1,5 @@
 ---
+description: "WillChangeRecordset and RecordsetChangeComplete Events (ADO)"
 title: "WillChangeRecordset and RecordsetChangeComplete Events (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -21,7 +22,7 @@ author: rothja
 ms.author: jroth
 ---
 # WillChangeRecordset and RecordsetChangeComplete Events (ADO)
-The **WillChangeRecordset** event is called before a pending operation changes the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). The **RecordsetChangeComplete** event is called after the **Recordset** has changed.  
+The **WillChangeRecordset** event is called before a pending operation changes the [Recordset](./recordset-object-ado.md). The **RecordsetChangeComplete** event is called after the **Recordset** has changed.  
   
 ## Syntax  
   
@@ -33,10 +34,10 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
   
 #### Parameters  
  *adReason*  
- An [EventReasonEnum](../../../ado/reference/ado-api/eventreasonenum.md) value that specifies the reason for this event. Its value can be **adRsnRequery**, **adRsnResynch**, **adRsnClose**, **adRsnOpen**.  
+ An [EventReasonEnum](./eventreasonenum.md) value that specifies the reason for this event. Its value can be **adRsnRequery**, **adRsnResynch**, **adRsnClose**, **adRsnOpen**.  
   
  *adStatus*  
- An [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) status value.  
+ An [EventStatusEnum](./eventstatusenum.md) status value.  
   
  When **WillChangeRecordset** is called, this parameter is set to **adStatusOK** if the operation that caused the event was successful. It is set to **adStatusCantDeny** if this event cannot request cancellation of the pending operation.  
   
@@ -47,18 +48,18 @@ RecordsetChangeComplete adReason, pError, adStatus, pRecordset
  Before **WillChangeRecordset** or **RecordsetChangeComplete** returns, set this parameter to **adStatusUnwantedEvent** to prevent subsequent notifications.  
   
  *pError*  
- An [Error](../../../ado/reference/ado-api/error-object.md) object. It describes the error that occurred if the value of *adStatus* is **adStatusErrorsOccurred**; otherwise it is not set.  
+ An [Error](./error-object.md) object. It describes the error that occurred if the value of *adStatus* is **adStatusErrorsOccurred**; otherwise it is not set.  
   
  *pRecordset*  
  A **Recordset** object. The **Recordset** for which this event occurred.  
   
 ## Remarks  
- A **WillChangeRecordset** or **RecordsetChangeComplete** event may occur because of the **Recordset** [Requery](../../../ado/reference/ado-api/requery-method.md) or [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) methods.  
+ A **WillChangeRecordset** or **RecordsetChangeComplete** event may occur because of the **Recordset** [Requery](./requery-method.md) or [Open](./open-method-ado-recordset.md) methods.  
   
  If the provider does not support bookmarks, a **RecordsetChange** event notification occurs every time that new rows are retrieved from the provider. The frequency of this event depends on the **RecordsetCacheSize** property.  
   
  You must set the **adStatus** parameter to **adStatusUnwantedEvent** for each possible **adReason** value to completely stop event notification for any event that includes an **adReason** parameter.  
   
 ## See Also  
- [ADO Events Model Example (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)
+ [ADO Events Model Example (VC++)](./ado-events-model-example-vc.md)   
+ [ADO Event Handler Summary](../../guide/data/ado-event-handler-summary.md)

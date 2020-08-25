@@ -1,4 +1,5 @@
 ---
+description: "Shape APPEND Clause"
 title: "Shape APPEND Clause | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "FINDSTRING (SSIS Expression)"
 title: "FINDSTRING (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

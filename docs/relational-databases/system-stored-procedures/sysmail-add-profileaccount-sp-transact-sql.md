@@ -1,4 +1,5 @@
 ---
+description: "sysmail_add_profileaccount_sp (Transact-SQL)"
 title: "sysmail_add_profileaccount_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

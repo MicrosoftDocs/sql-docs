@@ -1,4 +1,5 @@
 ---
+description: "State Property Example (VB)"
 title: "State Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # State Property Example (VB)
-This example uses the [State](../../../ado/reference/ado-api/state-property-ado.md) property to display a message while asynchronous connections are opening and asynchronous commands are executing.  
+This example uses the [State](./state-property-ado.md) property to display a message while asynchronous connections are opening and asynchronous commands are executing.  
   
 ```  
 'BeginStateVB  
@@ -102,5 +103,5 @@ End Sub
 ```  
   
 ## See Also  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [State Property (ADO)](../../../ado/reference/ado-api/state-property-ado.md)
+ [Recordset Object (ADO)](./recordset-object-ado.md)   
+ [State Property (ADO)](./state-property-ado.md)

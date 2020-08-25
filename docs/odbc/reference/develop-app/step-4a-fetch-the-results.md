@@ -1,4 +1,5 @@
 ---
+description: "Step 4a: Fetch the Results"
 title: "Step 4a: Fetch the Results | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

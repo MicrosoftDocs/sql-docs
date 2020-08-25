@@ -2,7 +2,7 @@
 title: Create extensions
 description: You can add functionality to Azure Data Studio with an extension. Learn how to create one and how to publish it to the extensions gallery.
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
@@ -35,7 +35,7 @@ npm install -g yo generator-azuredatastudio # Install the generator
 yo azuredatastudio
 ```
 
-For an in-depth guide on how to get started with your extension template, see [Creating an Extension](https://docs.microsoft.com/sql/azure-data-studio/tutorial-create-extension?view=sql-server-ver15), which walks you through the creation of a keymap extension.
+For an in-depth guide on how to get started with your extension template, see [Creating an Extension](./tutorial-create-extension.md?view=sql-server-ver15), which walks you through the creation of a keymap extension.
 
 **Extensibility References**
 

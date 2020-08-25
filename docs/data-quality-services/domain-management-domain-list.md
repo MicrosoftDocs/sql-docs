@@ -1,4 +1,5 @@
 ---
+description: "Domain Management: Domain List"
 title: "Domain Management: Domain List"
 ms.date: "11/08/2011"
 ms.prod: sql

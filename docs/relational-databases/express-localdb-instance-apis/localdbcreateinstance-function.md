@@ -1,4 +1,5 @@
 ---
+description: "LocalDBCreateInstance Function"
 title: "LocalDBCreateInstance Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

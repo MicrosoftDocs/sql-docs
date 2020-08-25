@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_database_copies (Azure SQL Database)"
 title: "sys.dm_database_copies (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

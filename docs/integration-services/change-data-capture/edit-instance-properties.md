@@ -1,4 +1,5 @@
 ---
+description: "Edit Instance Properties"
 title: "Edit Instance Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

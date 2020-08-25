@@ -1,4 +1,5 @@
 ---
+description: "Entity Permissions (Master Data Services)"
 title: Entity Permissions
 ms.custom: ""
 ms.date: "03/01/2017"

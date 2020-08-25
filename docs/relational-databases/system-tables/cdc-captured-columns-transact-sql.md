@@ -1,4 +1,5 @@
 ---
+description: "cdc.captured_columns (Transact-SQL)"
 title: "cdc.captured_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

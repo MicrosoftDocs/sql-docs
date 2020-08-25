@@ -2,7 +2,7 @@
 title: Source control
 description: Azure Data Studio supports Git for Source Control Management (SCM). Learn how to open an existing Git repository, and how to initialize a new one.
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"

@@ -1,4 +1,5 @@
 ---
+description: "Sending Result Sets to the Server (Extended Stored Procedure API)"
 title: "Sending Result Sets to the Server (Extended Stored Procedure API)"
 ms.date: "03/16/2017"
 ms.prod: sql

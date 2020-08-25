@@ -1,4 +1,5 @@
 ---
+description: "BottomCount (DMX)"
 title: "BottomCount (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "Filter (geography Data Type)"
 title: "Filter (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

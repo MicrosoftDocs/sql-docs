@@ -1,4 +1,5 @@
 ---
+description: "SET ARITHIGNORE (Transact-SQL)"
 title: "SET ARITHIGNORE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/04/2017"

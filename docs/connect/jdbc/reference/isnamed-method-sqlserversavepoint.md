@@ -1,4 +1,5 @@
 ---
+description: "isNamed Method (SQLServerSavepoint)"
 title: "isNamed Method (SQLServerSavepoint) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

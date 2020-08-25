@@ -1,4 +1,5 @@
 ---
+description: "Guidelines for online index operations"
 title: Guidelines for Online Index Operations | Microsoft Docs
 ms.custom: ""
 ms.date: 11/12/2019

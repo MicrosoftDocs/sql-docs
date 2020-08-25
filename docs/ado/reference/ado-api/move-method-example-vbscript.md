@@ -1,4 +1,5 @@
 ---
+description: "Move Method Example (VBScript)"
 title: "Move Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Move Method Example (VBScript)
-This example uses the [Move](../../../ado/reference/ado-api/move-method-ado.md) method to position the record pointer, based on user input.  
+This example uses the [Move](./move-method-ado.md) method to position the record pointer, based on user input.  
   
  Use the following example in an Active Server Page (ASP). To view this fully functional example, you must either have the data source AdvWorks.mdb (installed with the SDK) located at C:\Program Files\Microsoft Platform SDK\Samples\DataAccess\Rds\RDSTest\advworks.mdb or edit the path in the example code to reflect the actual location of this file. This is a Microsoft Access database file.  
   
@@ -177,5 +178,5 @@ End Sub
 ```  
   
 ## See Also  
- [Move Method (ADO)](../../../ado/reference/ado-api/move-method-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Move Method (ADO)](./move-method-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

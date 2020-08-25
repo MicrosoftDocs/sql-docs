@@ -1,4 +1,5 @@
 ---
+description: "ALTER RESOURCE POOL (Transact-SQL)"
 title: "ALTER RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"

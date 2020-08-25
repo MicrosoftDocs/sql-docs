@@ -1,4 +1,5 @@
 ---
+description: "AT TIME ZONE (Transact-SQL)"
 title: AT TIME ZONE (Transact-SQL)
 ms.date: "06/11/2019"
 ms.prod: sql

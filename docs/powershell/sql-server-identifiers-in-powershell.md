@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Cmdlets [SQL Server], Encode-Sqlname"

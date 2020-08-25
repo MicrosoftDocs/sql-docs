@@ -1,7 +1,8 @@
 ---
-title: "PDO::quote | Microsoft Docs"
+title: "PDO::quote"
+description: "API reference for the PDO::quote function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "01/31/2020"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

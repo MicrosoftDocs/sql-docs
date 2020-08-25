@@ -1,4 +1,5 @@
 ---
+description: "ALTER DATABASE Database Mirroring (Transact-SQL)"
 title: "ALTER DATABASE Database Mirroring (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2019"

@@ -1,4 +1,5 @@
 ---
+description: "Create Method (ADOX)"
 title: "Create Method (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -32,13 +33,13 @@ Catalog.Create ConnectString
  A **String** value used to connect to the data source.  
   
 ## Remarks  
- The **Create** method creates and opens a new ADO [Connection](../../../ado/reference/ado-api/connection-object-ado.md) to the data source specified in *ConnectString*. If successful, the new **Connection** object is assigned to the [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) property.  
+ The **Create** method creates and opens a new ADO [Connection](../ado-api/connection-object-ado.md) to the data source specified in *ConnectString*. If successful, the new **Connection** object is assigned to the [ActiveConnection](./activeconnection-property-adox.md) property.  
   
  An error will occur if the provider does not support creating new catalogs.  
   
 ## Applies To  
- [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)  
+ [Catalog Object (ADOX)](./catalog-object-adox.md)  
   
 ## See Also  
- [Create Method Example (VB)](../../../ado/reference/adox-api/create-method-example-vb.md)   
- [ActiveConnection Property (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
+ [Create Method Example (VB)](./create-method-example-vb.md)   
+ [ActiveConnection Property (ADOX)](./activeconnection-property-adox.md)

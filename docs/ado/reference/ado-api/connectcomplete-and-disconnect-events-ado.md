@@ -1,4 +1,5 @@
 ---
+description: "ConnectComplete and Disconnect Events (ADO)"
 title: "ConnectComplete and Disconnect Events (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -33,18 +34,18 @@ Disconnect adStatus, pConnection
   
 #### Parameters  
  *pError*  
- An [Error](../../../ado/reference/ado-api/error-object.md) object. It describes the error that occurred if the value of *adStatus* is **adStatusErrorsOccurred**; otherwise it is not set.  
+ An [Error](./error-object.md) object. It describes the error that occurred if the value of *adStatus* is **adStatusErrorsOccurred**; otherwise it is not set.  
   
  *adStatus*  
- An [EventStatusEnum](../../../ado/reference/ado-api/eventstatusenum.md) value that always returns **adStatusOK**.  
+ An [EventStatusEnum](./eventstatusenum.md) value that always returns **adStatusOK**.  
   
  When **ConnectComplete** is called, this parameter is set to **adStatusCancel** if a **WillConnect** event has requested cancellation of the pending connection.  
   
- Before either event returns, set this parameter to **adStatusUnwantedEvent** to prevent subsequent notifications. However, closing and reopening the [Connection](../../../ado/reference/ado-api/connection-object-ado.md) causes these events to occur again.  
+ Before either event returns, set this parameter to **adStatusUnwantedEvent** to prevent subsequent notifications. However, closing and reopening the [Connection](./connection-object-ado.md) causes these events to occur again.  
   
  *pConnection*  
  The **Connection** object for which this event applies.  
   
 ## See Also  
- [ADO Events Model Example (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
- [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)
+ [ADO Events Model Example (VC++)](./ado-events-model-example-vc.md)   
+ [ADO Event Handler Summary](../../guide/data/ado-event-handler-summary.md)

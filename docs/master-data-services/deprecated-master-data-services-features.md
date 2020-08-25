@@ -1,4 +1,5 @@
 ---
+description: "Deprecated Master Data Services Features"
 title: Deprecated Master Data Services Features
 ms.custom: ""
 ms.date: "03/14/2017"

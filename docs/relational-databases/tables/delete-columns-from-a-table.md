@@ -1,4 +1,5 @@
 ---
+description: "Delete Columns from a Table"
 title: "Delete Columns from a Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/11/2017"

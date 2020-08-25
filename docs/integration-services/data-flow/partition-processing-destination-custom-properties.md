@@ -1,4 +1,5 @@
 ---
+description: "Partition Processing Destination Custom Properties"
 title: "Partition Processing Destination Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

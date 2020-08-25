@@ -1,4 +1,5 @@
 ---
+description: "Standard Database Access Architectures"
 title: "Standard Database Access Architectures | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

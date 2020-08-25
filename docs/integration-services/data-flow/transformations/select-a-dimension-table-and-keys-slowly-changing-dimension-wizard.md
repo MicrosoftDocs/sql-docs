@@ -1,4 +1,5 @@
 ---
+description: "Select a Dimension Table and Keys (Slowly Changing Dimension Wizard)"
 title: "Select a Dimension Table and Keys (Slowly Changing Dimension Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

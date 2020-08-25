@@ -1,4 +1,5 @@
 ---
+description: "Dealing with Failed Updates"
 title: "Dealing with Failed Updates | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -31,4 +32,4 @@ Loop
 ```  
   
 ## See Also  
- [Batch Mode](../../../ado/guide/data/batch-mode.md)
+ [Batch Mode](./batch-mode.md)

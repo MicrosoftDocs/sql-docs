@@ -1,4 +1,5 @@
 ---
+description: "ORDER BY with GROUP BY"
 title: "ORDER BY with GROUP BY | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

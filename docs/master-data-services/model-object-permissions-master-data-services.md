@@ -1,4 +1,5 @@
 ---
+description: "Model Object Permissions (Master Data Services)"
 title: Model Object Permissions
 ms.custom: ""
 ms.date: "03/01/2017"

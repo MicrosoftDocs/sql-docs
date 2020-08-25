@@ -1,4 +1,5 @@
 ---
+description: "Write Method"
 title: "Write Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # Write Method
-Writes binary data to a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  
+Writes binary data to a [Stream](./stream-object-ado.md) object.  
   
 ## Syntax  
   
@@ -34,15 +35,15 @@ Stream.Write Buffer
 ## Remarks  
  Specified bytes are written to the **Stream** object without any intervening spaces between each byte.  
   
- The current [Position](../../../ado/reference/ado-api/position-property-ado.md) is set to the byte following the written data. The **Write** method does not truncate the rest of the data in a stream. If you want to truncate these bytes, call [SetEOS](../../../ado/reference/ado-api/seteos-method.md).  
+ The current [Position](./position-property-ado.md) is set to the byte following the written data. The **Write** method does not truncate the rest of the data in a stream. If you want to truncate these bytes, call [SetEOS](./seteos-method.md).  
   
- If you write past the current [EOS](../../../ado/reference/ado-api/eos-property.md) position, the [Size](../../../ado/reference/ado-api/size-property-ado-stream.md) of the **Stream** will be increased to contain any new bytes, and **EOS** will move to the new last byte in the **Stream**.  
+ If you write past the current [EOS](./eos-property.md) position, the [Size](./size-property-ado-stream.md) of the **Stream** will be increased to contain any new bytes, and **EOS** will move to the new last byte in the **Stream**.  
   
 > [!NOTE]
->  The **Write** method is used with binary streams ([Type](../../../ado/reference/ado-api/type-property-ado-stream.md) is **adTypeBinary**). For text streams (**Type** is **adTypeText**), use [WriteText](../../../ado/reference/ado-api/writetext-method.md).  
+>  The **Write** method is used with binary streams ([Type](./type-property-ado-stream.md) is **adTypeBinary**). For text streams (**Type** is **adTypeText**), use [WriteText](./writetext-method.md).  
   
 ## Applies To  
- [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+ [Stream Object (ADO)](./stream-object-ado.md)  
   
 ## See Also  
- [WriteText Method](../../../ado/reference/ado-api/writetext-method.md)
+ [WriteText Method](./writetext-method.md)

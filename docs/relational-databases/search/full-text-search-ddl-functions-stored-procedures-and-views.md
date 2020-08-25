@@ -1,4 +1,5 @@
 ---
+description: "Full-Text Search DDL, Functions, Stored Procedures, and Views"
 title: "Full-Text Search DDL, functions, stored procedures, & views"
 ms.date: "03/14/2017"
 ms.prod: sql

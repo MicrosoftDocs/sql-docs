@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "MSOLEDBSQL, encryption"
   - "encryption [OLE DB Driver for SQL Server]"
   - "OLE DB Driver for SQL Server, encryption"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Using Encryption Without Validation
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

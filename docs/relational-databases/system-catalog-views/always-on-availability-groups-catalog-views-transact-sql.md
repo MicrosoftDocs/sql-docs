@@ -1,4 +1,5 @@
 ---
+description: "Always On Availability Groups Catalog Views (Transact-SQL)"
 title: "Always On Availability Groups Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

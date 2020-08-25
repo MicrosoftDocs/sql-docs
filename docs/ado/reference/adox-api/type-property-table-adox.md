@@ -1,4 +1,5 @@
 ---
+description: "Type Property (Table) (ADOX)"
 title: "Type Property (Table) (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -28,11 +29,11 @@ Indicates the type of a table.
  This property is read-only.  
   
 ## Applies To  
- [Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+ [Table Object (ADOX)](./table-object-adox.md)  
   
 ## See Also  
- [Catalog ActiveConnection Property Example (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
- [Connection Close Method, Table Type Property Example (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   
- [Type Property (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
- [Type Property (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
- [Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Catalog ActiveConnection Property Example (VB)](./catalog-activeconnection-property-example-vb.md)   
+ [Connection Close Method, Table Type Property Example (VB)](./connection-close-method-table-type-property-example-vb.md)   
+ [Type Property (Column) (ADOX)](./type-property-column-adox.md)   
+ [Type Property (Key) (ADOX)](./type-property-key-adox.md)   
+ [Table Object (ADOX)](./table-object-adox.md)

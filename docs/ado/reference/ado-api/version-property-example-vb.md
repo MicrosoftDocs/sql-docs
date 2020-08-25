@@ -1,4 +1,5 @@
 ---
+description: "Version Property Example (VB)"
 title: "Version Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Version Property Example (VB)
-This example uses the [Version](../../../ado/reference/ado-api/version-property-ado.md) property of a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object to display the current ADO version. It also uses several dynamic properties to show:  
+This example uses the [Version](./version-property-ado.md) property of a [Connection](./connection-object-ado.md) object to display the current ADO version. It also uses several dynamic properties to show:  
   
 -   the current DBMS name and version.  
   
@@ -72,5 +73,5 @@ End Sub
 ```  
   
 ## See Also  
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Version Property (ADO)](../../../ado/reference/ado-api/version-property-ado.md)
+ [Connection Object (ADO)](./connection-object-ado.md)   
+ [Version Property (ADO)](./version-property-ado.md)

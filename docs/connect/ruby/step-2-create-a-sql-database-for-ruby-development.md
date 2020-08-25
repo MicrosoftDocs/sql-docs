@@ -1,4 +1,5 @@
 ---
+description: "Step 2: Create a SQL database for Ruby development"
 title: "Step 2: Create a SQL database for Ruby development | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2017"

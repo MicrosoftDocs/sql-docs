@@ -1,4 +1,5 @@
 ---
+description: "Database Access Architecture"
 title: "Database Access Architecture | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

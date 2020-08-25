@@ -1,4 +1,5 @@
 ---
+description: "Optimize Property Example (VC++)"
 title: "Optimize Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Optimize Property Example (VC++)
-This example demonstrates the [Field](../../../ado/reference/ado-api/field-object.md) object dynamic **Optimize** property. The **zip** field of the **Authors** table in the **Pubs** database is not indexed. Setting the [Optimize](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md) property to **True** on the **zip** field authorizes ADO to build an index that improves the performance of the [Find](../../../ado/reference/ado-api/find-method-ado.md) method.  
+This example demonstrates the [Field](./field-object.md) object dynamic **Optimize** property. The **zip** field of the **Authors** table in the **Pubs** database is not indexed. Setting the [Optimize](./optimize-property-dynamic-ado.md) property to **True** on the **zip** field authorizes ADO to build an index that improves the performance of the [Find](./find-method-ado.md) method.  
   
 ## Example  
   
@@ -128,5 +129,5 @@ void PrintComError(_com_error &e) {
   
  **Akiko Yokomoto    3 Silver Ct. Walnut Creek CA**   
 ## See Also  
- [Field Object](../../../ado/reference/ado-api/field-object.md)   
- [Optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+ [Field Object](./field-object.md)   
+ [Optimize Property-Dynamic (ADO)](./optimize-property-dynamic-ado.md)

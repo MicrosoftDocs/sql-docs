@@ -1,4 +1,5 @@
 ---
+description: "RDS Fundamentals"
 title: "RDS Fundamentals | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -20,20 +21,18 @@ ms.author: jroth
   
  The following topics introduce RDS.  
   
--   [Solutions for Remote Data Access](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)  
+-   [Solutions for Remote Data Access](./solutions-for-remote-data-access.md)  
   
--   [Basic RDS Programming Model](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)  
+-   [Basic RDS Programming Model](./basic-rds-programming-model.md)  
   
--   [RDS Programming Model in Detail](../../../ado/guide/remote-data-service/rds-programming-model-in-detail.md)  
+-   [RDS Programming Model in Detail](./rds-programming-model-in-detail.md)  
   
--   [RDS Programming Model with Objects](../../../ado/guide/remote-data-service/rds-programming-model-with-objects.md)  
+-   [RDS Programming Model with Objects](./rds-programming-model-with-objects.md)  
   
--   [The RDS Object Model Summary](../../../ado/guide/remote-data-service/rds-object-model-summary.md)  
+-   [The RDS Object Model Summary](./rds-object-model-summary.md)  
   
 ## See Also  
- [Solutions for Remote Data Access](../../../ado/guide/remote-data-service/solutions-for-remote-data-access.md)   
- [RDS Scenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RDS Usage and Security](../../../ado/guide/remote-data-service/rds-usage-and-security.md)
-
-
+ [Solutions for Remote Data Access](./solutions-for-remote-data-access.md)   
+ [RDS Scenario](./rds-scenario.md)   
+ [RDS Tutorial](./rds-tutorial.md)   
+ [RDS Usage and Security](./rds-usage-and-security.md)

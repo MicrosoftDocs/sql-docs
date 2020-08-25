@@ -1,4 +1,5 @@
 ---
+description: "Log Reader Agent Security"
 title: "Log Reader Agent Security | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

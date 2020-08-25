@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_child_instances (Transact-SQL)"
 title: "sys.dm_os_child_instances (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/18/2017"

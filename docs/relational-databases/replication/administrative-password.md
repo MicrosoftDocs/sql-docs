@@ -1,4 +1,5 @@
 ---
+description: "Administrative Password"
 title: "Administrative Password | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "DateModified Property (ADOX)"
 title: "DateModified Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -25,22 +26,22 @@ Indicates the date the object was last modified.
  Returns a **Variant** value specifying the date modified. The value is null if **DateModified** is not supported by the provider.  
   
 ## Remarks  
- The **DateModified** property is null for newly appended objects. After appending a new [View](../../../ado/reference/adox-api/view-object-adox.md) or [Procedure](../../../ado/reference/adox-api/procedure-object-adox.md), you must call the [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) method of the [Views](../../../ado/reference/adox-api/views-collection-adox.md) or [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection to obtain values for the **DateModified** property.  
+ The **DateModified** property is null for newly appended objects. After appending a new [View](./view-object-adox.md) or [Procedure](./procedure-object-adox.md), you must call the [Refresh](../ado-api/refresh-method-ado.md) method of the [Views](./views-collection-adox.md) or [Procedures](./procedures-collection-adox.md) collection to obtain values for the **DateModified** property.  
   
 ## Applies To  
 
 :::row:::
     :::column:::
-        [Procedure Object (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
+        [Procedure Object (ADOX)](./procedure-object-adox.md)  
     :::column-end:::
     :::column:::
-        [Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
+        [Table Object (ADOX)](./table-object-adox.md)  
     :::column-end:::
     :::column:::
-        [View Object (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+        [View Object (ADOX)](./view-object-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## See Also  
- [DateCreated and DateModified Properties Example (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
- [DateCreated Property (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)
+ [DateCreated and DateModified Properties Example (VB)](./datecreated-and-datemodified-properties-example-vb.md)   
+ [DateCreated Property (ADOX)](./datecreated-property-adox.md)

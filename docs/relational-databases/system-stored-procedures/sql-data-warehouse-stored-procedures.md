@@ -1,4 +1,5 @@
 ---
+description: "SQL Data Warehouse Stored Procedures"
 title: "SQL Data Warehouse Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Appendix D: ADO Samples in the Windows SDK"
 title: "Appendix D: ADO Samples | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -24,16 +25,16 @@ The Windows SDK contains several sample applications that demonstrate the use of
 
  To get started with the ADO and RDS sample applications, open default.htm from the ADO and RDS samples folders, respectively. These files describe each available sample application and explain how to configure and run the samples how to browse the sample source code.
 
- The ADO documentation also contains code examples in multiple languages, which are included as topics within this online help. For more information about these examples, see [ADO Code Examples](../../../ado/reference/ado-api/ado-code-examples.md).
+ The ADO documentation also contains code examples in multiple languages, which are included as topics within this online help. For more information about these examples, see [ADO Code Examples](../../reference/ado-api/ado-code-examples.md).
 
 ## See Also
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)
- [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md)
- [ADO Code Examples](../../../ado/reference/ado-api/ado-code-examples.md)
- [ADO Code Examples in Visual Basic](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)
- [ADO Code Examples VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)
- [ADO Code Examples in Visual C++](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)
- [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)
- [Configuring RDS](../../../ado/guide/remote-data-service/configuring-rds.md)
- [Appendix C: Programming with ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)
- [ADO History](../../../ado/guide/ado-history.md)
+ [Microsoft ActiveX Data Objects (ADO)](../../microsoft-activex-data-objects-ado.md)
+ [ADO API Reference](../../reference/ado-api/ado-api-reference.md)
+ [ADO Code Examples](../../reference/ado-api/ado-code-examples.md)
+ [ADO Code Examples in Visual Basic](../../reference/ado-api/ado-code-examples-in-visual-basic.md)
+ [ADO Code Examples VBScript](../../reference/ado-api/ado-code-examples-vbscript.md)
+ [ADO Code Examples in Visual C++](../../reference/ado-api/ado-code-examples-in-visual-c.md)
+ [Appendix A: Providers](./appendix-a-providers.md)
+ [Configuring RDS](../remote-data-service/configuring-rds.md)
+ [Appendix C: Programming with ADO](./appendix-c-programming-with-ado.md)
+ [ADO History](../ado-history.md)

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], bulk copy operations"
   - "OLE DB Driver for SQL Server, bulk copy operations"
   - "MSOLEDBSQL, bulk copy operations"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Performing Bulk Copy Operations
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -1,4 +1,5 @@
 ---
+description: "Sample Recordset for Examining Data"
 title: "Sample Recordset for Examining Data | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

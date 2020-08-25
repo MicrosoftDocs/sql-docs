@@ -1,4 +1,5 @@
 ---
+description: "Understanding Recordset Structure"
 title: "Understanding Recordset Structure | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "READTEXT (Transact-SQL)"
 title: "READTEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2017"

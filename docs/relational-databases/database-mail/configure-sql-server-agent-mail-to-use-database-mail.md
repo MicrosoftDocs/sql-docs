@@ -1,4 +1,5 @@
 ---
+description: "Configure SQL Server Agent Mail to Use Database Mail"
 title: "Configure SQL Server Agent Mail to Use Database Mail"
 ms.date: "08/05/2016"
 ms.prod: sql

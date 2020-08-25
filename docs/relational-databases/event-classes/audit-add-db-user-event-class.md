@@ -1,4 +1,5 @@
 ---
+description: "Audit Add DB User Event Class"
 title: "Audit Add DB User Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

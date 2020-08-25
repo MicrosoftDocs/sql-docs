@@ -1,4 +1,5 @@
 ---
+description: "Command Streams"
 title: "Command Streams | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

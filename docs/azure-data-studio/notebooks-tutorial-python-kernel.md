@@ -6,7 +6,7 @@ ms.author: garye
 ms.reviewer: mikeray, alayu, maghan
 ms.topic: tutorial
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.custom: ""
 ms.date: 07/01/2020
 ---

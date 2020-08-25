@@ -1,4 +1,5 @@
 ---
+description: "RelatedTable Property (ADOX)"
 title: "RelatedTable Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -32,7 +33,7 @@ Indicates the name of the related table.
  If the key is a foreign key, then **RelatedTable** is the name of the table that contains the key.  
   
 ## Applies To  
- [Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [Key Object (ADOX)](./key-object-adox.md)  
   
 ## See Also  
- [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)
+ [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

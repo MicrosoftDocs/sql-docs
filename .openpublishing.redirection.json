@@ -42273,6 +42273,11 @@
     {
       "source_path": "docs/machine-learning/upgrade-and-installation-faq-sql-server-r-services.md",
       "redirect_url": "/sql/machine-learning/troubleshooting/upgrade-and-installation-faq-sql-server-r-services",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "/docs/machine-learning/troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md",
+      "redirect_url": "/sql/machine-learning/install/sql-machine-learning-services-windows-install",
       "redirect_document_id": true
     },
     {
@@ -58648,6 +58653,16 @@
     {
       "source_path": "docs/azure-data-studio/notebooks-manage-sql-server.md",
       "redirect_url": "/sql/azure-data-studio/notebooks-guidance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/big-data-cluster-consume-apps.md",
+      "redirect_url": "/sql/big-data-cluster/app-consume",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/big-data-cluster-create-apps.md",
+      "redirect_url": "/sql/big-data-cluster/app-create",
       "redirect_document_id": false
     },
     {

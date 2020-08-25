@@ -1,4 +1,5 @@
 ---
+description: "ADO Glossary"
 title: "ADO Glossary | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -171,7 +172,7 @@ This topic defines terms relevant to ADO.
  hierarchical Recordset  
  A **Recordset** that contains another **Recordset**. See also data shaping, chapter.  
   
- For more information, see [Accessing Rows in a Hierarchical Recordset](../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
+ For more information, see [Accessing Rows in a Hierarchical Recordset](../guide/data/accessing-rows-in-a-hierarchical-recordset.md).  
   
  hierarchy  
  In general, a hierarchy is a ranked structure with a top level and subordinate levels. In ADO, hierarchical **Recordsets** are used to represent the parent-child relationship between a record and a chapter. Also in ADO, **Record** and **Stream** objects can be used to access hierarchical tree structures such as a folder and documents. ADO MD also includes **Hierarchy** objects to represent a relationship between the levels of a dimension in an OLAP cube. See also hierarchical Recordsets, parent-child relationship, chapter, tree.  

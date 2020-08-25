@@ -1,4 +1,5 @@
 ---
+description: "= (Equal To) (DMX)"
 title: "= (Equal To) (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

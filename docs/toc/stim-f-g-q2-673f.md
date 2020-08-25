@@ -1,4 +1,5 @@
 ---
+description: "Data Profiling and Notifications in Data Quality Services (DQS) (673f)"
 title: Data Profiling and Notifications in DQS (673f)
 ms.date: 08/12/2020
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "sp_tableoption (Transact-SQL)"
 title: "sp_tableoption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/11/2017"

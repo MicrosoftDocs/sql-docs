@@ -1,4 +1,5 @@
 ---
+description: "Customize behavior of word breakers with a custom dictionary (SQL Server Search)"
 title: "Customize behavior of word breakers with a custom dictionary"
 ms.date: "03/14/2017"
 ms.prod: sql

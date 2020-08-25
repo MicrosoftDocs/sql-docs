@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_component_health_active_alerts (Transact-SQL)"
 title: "sys.dm_pdw_component_health_active_alerts (Transact-SQL"
 ms.custom: seo-dt-2019
 ms.date: "03/07/2017"

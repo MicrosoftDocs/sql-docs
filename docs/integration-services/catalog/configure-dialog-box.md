@@ -1,4 +1,5 @@
 ---
+description: "Configure Dialog Box"
 title: "Configure Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

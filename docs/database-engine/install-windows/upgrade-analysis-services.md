@@ -1,4 +1,5 @@
 ---
+description: "Upgrade Analysis Services"
 title: "Upgrade Analysis Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"

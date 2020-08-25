@@ -1,4 +1,5 @@
 ---
+description: "SQLSetStmtOption Function"
 title: "SQLSetStmtOption Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

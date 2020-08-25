@@ -1,4 +1,5 @@
 ---
+description: "Attributes Property (ADOX)"
 title: "Attributes Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -24,11 +25,11 @@ ms.author: jroth
 Describes column characteristics.  
   
 ## Settings and Return Values  
- Sets or returns a **Long** value. The value specifies characteristics of the table that is represented by the [Column](../../../ado/reference/adox-api/column-object-adox.md) object. The value can be a combination of [ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md) constants. The default value is zero (**0**), which is neither **adColFixed** nor **adColNullable**.  
+ Sets or returns a **Long** value. The value specifies characteristics of the table that is represented by the [Column](./column-object-adox.md) object. The value can be a combination of [ColumnAttributesEnum](./columnattributesenum.md) constants. The default value is zero (**0**), which is neither **adColFixed** nor **adColNullable**.  
   
 ## Applies To  
   
-- [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
+- [Column Object (ADOX)](./column-object-adox.md)  
   
 ## See Also  
- [Attributes Property Example (VB)](../../../ado/reference/adox-api/attributes-property-example-vb.md)
+ [Attributes Property Example (VB)](./attributes-property-example-vb.md)

@@ -1,4 +1,5 @@
 ---
+description: "sp_get_redirected_publisher (Transact-SQL)"
 title: "sp_get_redirected_publisher (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

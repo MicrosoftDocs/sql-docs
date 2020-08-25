@@ -1,4 +1,5 @@
 ---
+description: "Execute SQL Task"
 title: Execute SQL Task
 ms.custom: ""
 ms.date: "03/13/2017"

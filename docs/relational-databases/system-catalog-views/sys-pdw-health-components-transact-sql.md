@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_health_components (Transact-SQL)"
 title: "sys.pdw_health_components (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

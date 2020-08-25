@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Management Studio Menu Help"
 title: "SQL Server Management Studio Menu Help"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

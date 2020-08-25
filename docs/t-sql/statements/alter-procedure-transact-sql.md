@@ -1,4 +1,5 @@
 ---
+description: "ALTER PROCEDURE (Transact-SQL)"
 title: "ALTER PROCEDURE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"

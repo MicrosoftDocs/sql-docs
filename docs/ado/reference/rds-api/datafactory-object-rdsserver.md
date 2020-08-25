@@ -1,4 +1,5 @@
 ---
+description: "DataFactory Object (RDSServer)"
 title: "DataFactory Object (RDSServer) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -22,11 +23,11 @@ ms.author: jroth
   
  The **RDSServer.DataFactory** object is designed as a server-side Automation object that receives client requests. In an Internet implementation, it resides on a Web server and is instantiated by the ADISAPI component. The **RDSServer.DataFactory** object provides read and write access to specified data sources, but does not contain any validation or business rules logic.  
   
- If you use a method that is available in both the **RDSServer.DataFactory** and [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) objects, Remote Data Service uses the **RDS.DataControl** version by default. The default assumes a basic programming scenario, where the **RDSServer.DataFactory** serves as a generic server-side business object.  
+ If you use a method that is available in both the **RDSServer.DataFactory** and [RDS.DataControl](./datacontrol-object-rds.md) objects, Remote Data Service uses the **RDS.DataControl** version by default. The default assumes a basic programming scenario, where the **RDSServer.DataFactory** serves as a generic server-side business object.  
   
  If you want your Web application to handle task-specific server-side processing, you can replace the **RDSServer.DataFactory** with a custom business object.  
   
- You can create server-side business objects that call the **RDSServer.DataFactory** methods, such as [Query](../../../ado/reference/rds-api/query-method-rds.md) and [CreateRecordset](../../../ado/reference/rds-api/createrecordset-method-rds.md). This is helpful if you want to add functionality to your business objects, but take advantage of existing Remote Data Service technologies.  
+ You can create server-side business objects that call the **RDSServer.DataFactory** methods, such as [Query](./query-method-rds.md) and [CreateRecordset](./createrecordset-method-rds.md). This is helpful if you want to add functionality to your business objects, but take advantage of existing Remote Data Service technologies.  
   
  The **DataFactory** object is not safe for scripts that run on the client side.  
   
@@ -34,9 +35,7 @@ ms.author: jroth
   
  This section contains the following topic.  
   
--   [DataFactory Object (RDSServer) Properties, Methods, and Events](../../../ado/reference/rds-api/datafactory-object-rdsserver-properties-methods-and-events.md)  
+-   [DataFactory Object (RDSServer) Properties, Methods, and Events](./datafactory-object-rdsserver-properties-methods-and-events.md)  
   
 ## See Also  
- [DataFactory Object, Query Method, and CreateObject Method Example (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)
-
-
+ [DataFactory Object, Query Method, and CreateObject Method Example (VBScript)](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)

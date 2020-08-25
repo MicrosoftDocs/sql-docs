@@ -1,4 +1,5 @@
 ---
+description: "sys.traces (Transact-SQL)"
 title: "sys.traces (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

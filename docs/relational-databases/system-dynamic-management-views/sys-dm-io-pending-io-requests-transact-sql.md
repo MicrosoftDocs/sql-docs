@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_io_pending_io_requests (Transact-SQL)"
 title: "sys.dm_io_pending_io_requests (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2017"

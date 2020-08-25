@@ -1,4 +1,5 @@
 ---
+description: "Installation and Configuration Components Reference"
 title: "Installation and Configuration Components Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

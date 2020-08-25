@@ -1,4 +1,5 @@
 ---
+description: "Results Detailed View Dialog Box"
 title: "Results Detailed View Dialog Box | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Detecting an Empty Flat File with the Script Task"
 title: "Detecting an Empty Flat File with the Script Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

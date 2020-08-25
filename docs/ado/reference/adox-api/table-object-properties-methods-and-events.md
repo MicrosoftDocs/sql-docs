@@ -1,4 +1,5 @@
 ---
+description: "Table Object Properties, Methods, and Events"
 title: "Table Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,23 +16,23 @@ ms.author: jroth
 ---
 # Table Object Properties, Methods, and Events
 ## Properties/Collections  
- [Columns Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)  
+ [Columns Collection (ADOX)](./columns-collection-adox.md)  
   
- [DateCreated Property (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)  
+ [DateCreated Property (ADOX)](./datecreated-property-adox.md)  
   
- [DateModified Property (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)  
+ [DateModified Property (ADOX)](./datemodified-property-adox.md)  
   
- [Indexes Collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+ [Indexes Collection (ADOX)](./indexes-collection-adox.md)  
   
- [Keys Collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)  
+ [Keys Collection (ADOX)](./keys-collection-adox.md)  
   
- [Name Property (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name Property (ADOX)](./name-property-adox.md)  
   
- [ParentCatalog Property (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
+ [ParentCatalog Property (ADOX)](./parentcatalog-property-adox.md)  
   
- [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Properties Collection (ADO)](../ado-api/properties-collection-ado.md)  
   
- [Type Property (Table) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)  
+ [Type Property (Table) (ADOX)](./type-property-table-adox.md)  
   
 ## Methods  
  None.  
@@ -40,4 +41,4 @@ ms.author: jroth
  None.  
   
 ## See Also  
- [Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)
+ [Table Object (ADOX)](./table-object-adox.md)

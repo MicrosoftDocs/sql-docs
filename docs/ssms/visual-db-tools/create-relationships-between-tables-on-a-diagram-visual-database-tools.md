@@ -1,4 +1,5 @@
 ---
+description: "Create Relationships Between Tables on a Diagram (Visual Database Tools)"
 title: Create Relationships Between Tables on a Diagram
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

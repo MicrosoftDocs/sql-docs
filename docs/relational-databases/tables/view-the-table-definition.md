@@ -1,4 +1,5 @@
 ---
+description: "View the Table Definition"
 title: "View the Table Definition | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

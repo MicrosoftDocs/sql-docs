@@ -1,4 +1,5 @@
 ---
+description: "Find property set GUIDs and property integer IDs for Search properties"
 title: "Find property set GUIDs & property integer IDs for Search properties"
 ms.date: "03/14/2017"
 ms.prod: sql

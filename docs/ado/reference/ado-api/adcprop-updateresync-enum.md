@@ -1,4 +1,5 @@
 ---
+description: "ADCPROP_UPDATERESYNC_ENUM"
 title: "ADCPROP_UPDATERESYNC_ENUM | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # ADCPROP_UPDATERESYNC_ENUM
-Specifies whether the [UpdateBatch](../../../ado/reference/ado-api/updatebatch-method.md) method is followed by an implicit [Resync](../../../ado/reference/ado-api/resync-method.md) method operation and if so, the scope of that operation.  
+Specifies whether the [UpdateBatch](./updatebatch-method.md) method is followed by an implicit [Resync](./resync-method.md) method operation and if so, the scope of that operation.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -29,4 +30,4 @@ Specifies whether the [UpdateBatch](../../../ado/reference/ado-api/updatebatch-m
 |**adResyncUpdates**|4|Invokes **Resync** for all successfully updated rows.|  
   
 ## Applies To  
- [Update Resync Property-Dynamic (ADO)](../../../ado/reference/ado-api/update-resync-property-dynamic-ado.md)
+ [Update Resync Property-Dynamic (ADO)](./update-resync-property-dynamic-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: "Databases and Files Catalog Views (Transact-SQL)"
 title: "Databases and Files Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/18/2016"

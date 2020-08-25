@@ -1,4 +1,5 @@
 ---
+description: "Assessing DB2 Schemas for Conversion (DB2ToSQL)"
 title: "Assessing DB2 Schemas for Conversion (DB2ToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

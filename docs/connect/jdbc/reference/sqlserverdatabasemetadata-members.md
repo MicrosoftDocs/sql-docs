@@ -1,4 +1,5 @@
 ---
+description: "SQLServerDatabaseMetaData Members"
 title: "SQLServerDatabaseMetaData Members | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

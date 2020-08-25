@@ -1,4 +1,5 @@
 ---
+description: "catalog.rename_environment (SSISDB Database)"
 title: "catalog.rename_environment (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

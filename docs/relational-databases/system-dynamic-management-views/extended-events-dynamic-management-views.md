@@ -1,4 +1,5 @@
 ---
+description: "Extended Events Dynamic Management Views"
 title: "Extended Events Dynamic Management Views | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

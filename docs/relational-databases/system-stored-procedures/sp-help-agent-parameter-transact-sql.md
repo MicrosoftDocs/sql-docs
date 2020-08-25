@@ -1,4 +1,5 @@
 ---
+description: "sp_help_agent_parameter (Transact-SQL)"
 title: "sp_help_agent_parameter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

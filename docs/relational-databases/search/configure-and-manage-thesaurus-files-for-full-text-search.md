@@ -1,4 +1,5 @@
 ---
+description: "Configure and Manage Thesaurus Files for Full-Text Search"
 title: "Configure & manage thesaurus files for Full-Text Search"
 ms.date: 07/01/2020
 ms.prod: sql

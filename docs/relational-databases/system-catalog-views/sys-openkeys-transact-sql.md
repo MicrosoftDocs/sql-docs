@@ -1,4 +1,5 @@
 ---
+description: "sys.openkeys (Transact-SQL)"
 title: "sys.openkeys (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

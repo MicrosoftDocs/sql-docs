@@ -1,4 +1,5 @@
 ---
+description: "Using Transparent Network IP Resolution"
 title: "Using Transparent Network IP Resolution | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/02/2020"

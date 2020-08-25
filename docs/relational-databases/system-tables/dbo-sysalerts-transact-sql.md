@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysalerts (Transact-SQL)"
 title: "dbo.sysalerts (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/24/2016"

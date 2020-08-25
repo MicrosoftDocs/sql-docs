@@ -1,4 +1,5 @@
 ---
+description: "RESTORE Statements - HEADERONLY (Transact-SQL)"
 title: "RESTORE HEADERONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"

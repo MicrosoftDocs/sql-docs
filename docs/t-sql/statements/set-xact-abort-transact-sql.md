@@ -1,4 +1,5 @@
 ---
+description: "SET XACT_ABORT (Transact-SQL)"
 title: "SET XACT_ABORT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/03/2019"

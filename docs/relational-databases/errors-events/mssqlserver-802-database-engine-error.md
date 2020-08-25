@@ -1,4 +1,5 @@
 ---
+description: "MSSQLSERVER_802 - Database Engine error"
 title: "MSSQLSERVER_802 - Database Engine error | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2017"

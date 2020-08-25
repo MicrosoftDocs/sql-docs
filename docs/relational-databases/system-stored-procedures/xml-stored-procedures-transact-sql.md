@@ -1,4 +1,5 @@
 ---
+description: "XML Stored Procedures (Transact-SQL)"
 title: "XML Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

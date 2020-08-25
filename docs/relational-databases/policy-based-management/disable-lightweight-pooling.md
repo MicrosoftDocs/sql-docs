@@ -1,4 +1,5 @@
 ---
+description: "Disable Lightweight Pooling"
 title: "Disable Lightweight Pooling | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"

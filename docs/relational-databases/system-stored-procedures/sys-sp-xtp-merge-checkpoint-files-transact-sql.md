@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_xtp_merge_checkpoint_files (Transact-SQL)"
 title: "sys.sp_xtp_merge_checkpoint_files (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/28/2016"

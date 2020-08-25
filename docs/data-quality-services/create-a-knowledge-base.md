@@ -1,4 +1,5 @@
 ---
+description: "Create a Knowledge Base"
 title: "Create a Knowledge Base"
 ms.date: "06/04/2013"
 ms.prod: sql

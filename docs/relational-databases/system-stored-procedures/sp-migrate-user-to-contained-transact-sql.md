@@ -1,4 +1,5 @@
 ---
+description: "sp_migrate_user_to_contained (Transact-SQL)"
 title: "sp_migrate_user_to_contained (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/11/2019"

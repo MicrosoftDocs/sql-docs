@@ -1,4 +1,5 @@
 ---
+description: "MaxRecords Property Example (VB)"
 title: "MaxRecords Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # MaxRecords Property Example (VB)
-This example uses the [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) property to open a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) containing the 10 most expensive titles in the ***Titles*** table.  
+This example uses the [MaxRecords](./maxrecords-property-ado.md) property to open a [Recordset](./recordset-object-ado.md) containing the 10 most expensive titles in the ***Titles*** table.  
   
 ```  
 'BeginMaxRecordsVB  
@@ -82,5 +83,5 @@ End Sub
 ```  
   
 ## See Also  
- [MaxRecords Property (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [MaxRecords Property (ADO)](./maxrecords-property-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

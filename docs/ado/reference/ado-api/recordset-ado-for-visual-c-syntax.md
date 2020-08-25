@@ -1,4 +1,5 @@
 ---
+description: "Recordset (ADO for Visual C++ Syntax)"
 title: "Recordset (ADO for Visual C++ Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -113,4 +114,4 @@ WillMove(EventReasonEnum adReason, EventStatusEnum *adStatus, _ADORecordset *pRe
 ```  
   
 ## See Also  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset Object (ADO)](./recordset-object-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: "Get Started with Full-Text Search"
 title: "Get Started with Full-Text Search | Microsoft Docs"
 ms.date: "03/31/2020"
 ms.prod: sql

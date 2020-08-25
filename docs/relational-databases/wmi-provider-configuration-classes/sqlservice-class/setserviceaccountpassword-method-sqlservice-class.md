@@ -1,4 +1,5 @@
 ---
+description: "SetServiceAccountPassword Method (SqlService Class)"
 title: "SetServiceAccountPassword Method (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"

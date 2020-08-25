@@ -1,4 +1,5 @@
 ---
+description: "Temporal Table Metadata Views and Functions"
 title: "Temporal Table Metadata Views and Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"
@@ -14,7 +15,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Temporal Table Metadata Views and Functions
 
+
 [!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] and [!INCLUDE[sqldbesa](../../includes/sqldbesa-md.md)] include a number of metabase views and functions to enable administrators to retrieve information about temporal tables.
 

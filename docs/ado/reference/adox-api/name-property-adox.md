@@ -1,4 +1,5 @@
 ---
+description: "Name Property (ADOX)"
 title: "Name Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -51,7 +52,7 @@ Indicates the name of the object.
 ## Remarks  
  Names do not have to be unique within a collection.  
   
- The **Name** property is read/write on [Column](../../../ado/reference/adox-api/column-object-adox.md), [Group](../../../ado/reference/adox-api/group-object-adox.md), [Key](../../../ado/reference/adox-api/key-object-adox.md), [Index](../../../ado/reference/adox-api/index-object-adox.md), [Table](../../../ado/reference/adox-api/table-object-adox.md), and [User](../../../ado/reference/adox-api/user-object-adox.md) objects. The **Name** property is read-only on [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md), [Procedure](../../../ado/reference/adox-api/procedure-object-adox.md), and [View](../../../ado/reference/adox-api/view-object-adox.md) objects.  
+ The **Name** property is read/write on [Column](./column-object-adox.md), [Group](./group-object-adox.md), [Key](./key-object-adox.md), [Index](./index-object-adox.md), [Table](./table-object-adox.md), and [User](./user-object-adox.md) objects. The **Name** property is read-only on [Catalog](./catalog-object-adox.md), [Procedure](./procedure-object-adox.md), and [View](./view-object-adox.md) objects.  
   
  For read/write objects (**Column**, **Group**, **Key**, **Index**, **Table** and **User** objects), the default value is an empty string ("").  
   
@@ -62,23 +63,23 @@ Indicates the name of the object.
 
 :::row:::
     :::column:::
-        [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
-        [Group Object (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
-        [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+        [Column Object (ADOX)](./column-object-adox.md)  
+        [Group Object (ADOX)](./group-object-adox.md)  
+        [Index Object (ADOX)](./index-object-adox.md)  
     :::column-end:::
     :::column:::
-        [Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
-        [Procedure Object (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
-        [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Key Object (ADOX)](./key-object-adox.md)  
+        [Procedure Object (ADOX)](./procedure-object-adox.md)  
+        [Property Object (ADO)](../ado-api/property-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)  
-        [User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
-        [View Object (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+        [Table Object (ADOX)](./table-object-adox.md)  
+        [User Object (ADOX)](./user-object-adox.md)  
+        [View Object (ADOX)](./view-object-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## See Also  
- [Columns and Tables Append Methods, Name Property Example (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
- [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
- [ParentCatalog Property Example (VB)](../../../ado/reference/adox-api/parentcatalog-property-example-vb.md)
+ [Columns and Tables Append Methods, Name Property Example (VB)](./columns-and-tables-append-methods-name-property-example-vb.md)   
+ [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
+ [ParentCatalog Property Example (VB)](./parentcatalog-property-example-vb.md)

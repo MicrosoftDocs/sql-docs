@@ -1,4 +1,5 @@
 ---
+description: "AbsolutePosition and CursorLocation Properties Example (VB)"
 title: "AbsolutePosition and CursorLocation Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # AbsolutePosition and CursorLocation Properties Example (VB)
-This example demonstrates how the [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md) property can track the progress of a loop that enumerates all the records of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). It uses the [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) property to enable the **AbsolutePosition** property by setting the cursor to a client cursor.  
+This example demonstrates how the [AbsolutePosition](./absoluteposition-property-ado.md) property can track the progress of a loop that enumerates all the records of a [Recordset](./recordset-object-ado.md). It uses the [CursorLocation](./cursorlocation-property-ado.md) property to enable the **AbsolutePosition** property by setting the cursor to a client cursor.  
   
 ```  
 'BeginAbsolutePositionVB  
@@ -86,6 +87,6 @@ End Sub
 ```  
   
 ## See Also  
- [AbsolutePosition Property (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md)   
- [CursorLocation Property (ADO)](../../../ado/reference/ado-api/cursorlocation-property-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AbsolutePosition Property (ADO)](./absoluteposition-property-ado.md)   
+ [CursorLocation Property (ADO)](./cursorlocation-property-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

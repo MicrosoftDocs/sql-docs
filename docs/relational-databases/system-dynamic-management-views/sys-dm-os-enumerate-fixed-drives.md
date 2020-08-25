@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_enumerate_fixed_drives (Transact-SQL)"
 title: "sys.dm_os_enumerate_fixed_drives (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2019"

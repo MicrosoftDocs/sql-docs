@@ -1,4 +1,5 @@
 ---
+description: "SET NOEXEC (Transact-SQL)"
 title: "SET NOEXEC (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

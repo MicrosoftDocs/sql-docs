@@ -1,4 +1,5 @@
 ---
+description: "Access Inventory Schemas (AccessToSQL)"
 title: "Access Inventory Schemas (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

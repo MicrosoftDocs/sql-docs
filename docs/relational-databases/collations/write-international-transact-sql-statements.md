@@ -1,4 +1,5 @@
 ---
+description: "Write International Transact-SQL Statements"
 title: "Write International Transact-SQL Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/24/2019"

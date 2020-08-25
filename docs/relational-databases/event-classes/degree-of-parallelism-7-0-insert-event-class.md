@@ -1,4 +1,5 @@
 ---
+description: "Degree of Parallelism (7.0 Insert) Event Class"
 title: "Degree of Parallelism (7.0 Insert) Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

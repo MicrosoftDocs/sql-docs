@@ -1,4 +1,5 @@
 ---
+description: "EXECUTE AS (Transact-SQL)"
 title: "EXECUTE AS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/27/2019"

@@ -1,4 +1,5 @@
 ---
+description: "Filter Settings"
 title: "Filter Settings | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

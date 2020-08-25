@@ -1,4 +1,5 @@
 ---
+description: "IsDescendant (DMX)"
 title: "IsDescendant (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

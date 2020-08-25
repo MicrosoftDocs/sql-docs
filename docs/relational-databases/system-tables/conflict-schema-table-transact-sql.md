@@ -1,4 +1,5 @@
 ---
+description: "conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL)"
 title: "conflict_&lt;schema&gt;_&lt;table&gt; (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/15/2016"

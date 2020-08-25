@@ -1,4 +1,5 @@
 ---
+description: "TRY...CATCH (Transact-SQL)"
 title: "TRY...CATCH (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

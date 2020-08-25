@@ -1,4 +1,5 @@
 ---
+description: "ADO Extensions for Data Definition Language and Security (ADOX)"
 title: "ADO Extensions for Data Definition Language and Security (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,6 +15,6 @@ ms.author: jroth
 # ADO Extensions for Data Definition Language and Security (ADOX)
 This section contains the following topics.  
   
--   [ADOX Fundamentals](../../../ado/guide/extensions/adox-fundamentals.md)  
+-   [ADOX Fundamentals](./adox-fundamentals.md)  
   
--   [Provider Support for ADOX](../../../ado/guide/extensions/provider-support-for-adox-ado.md)
+-   [Provider Support for ADOX](./provider-support-for-adox-ado.md)

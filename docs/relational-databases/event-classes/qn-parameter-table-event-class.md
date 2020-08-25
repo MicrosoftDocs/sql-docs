@@ -1,4 +1,5 @@
 ---
+description: "QN:Parameter Table Event Class"
 title: "QN:Parameter Table Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "CREATE ENDPOINT (Transact-SQL)"
 title: CREATE ENDPOINT (Transact-SQL)
 ms.custom: ""
 ms.date: "08/10/2017"

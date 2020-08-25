@@ -1,4 +1,5 @@
 ---
+description: "Source Property (ADO MD)"
 title: "Source Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,15 +19,15 @@ author: rothja
 ms.author: jroth
 ---
 # Source Property (ADO MD)
-Indicates the source for the data in the [cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md).  
+Indicates the source for the data in the [cellset](./cellset-object-ado-md.md).  
   
 ## Settings and Return Values  
- Sets or returns a **Variant**, and is read/write for closed [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) objects and read-only for open **Cellset** objects. The **Variant** should contain a valid **String**, for example, an MDX query.  
+ Sets or returns a **Variant**, and is read/write for closed [Cellset](./cellset-object-ado-md.md) objects and read-only for open **Cellset** objects. The **Variant** should contain a valid **String**, for example, an MDX query.  
   
 ## Applies To  
- [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+ [Cellset Object (ADO MD)](./cellset-object-ado-md.md)  
   
 ## See Also  
- [Cellset Example (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [ActiveConnection Property (ADO MD)](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md)   
- [Open Method (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
+ [Cellset Example (VB)](./cellset-example-vb.md)   
+ [ActiveConnection Property (ADO MD)](./activeconnection-property-ado-md.md)   
+ [Open Method (ADO MD)](./open-method-ado-md.md)

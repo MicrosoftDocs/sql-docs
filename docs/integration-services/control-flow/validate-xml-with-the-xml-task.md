@@ -1,4 +1,5 @@
 ---
+description: "Validate XML with the XML Task"
 title: "Validate XML with the XML Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

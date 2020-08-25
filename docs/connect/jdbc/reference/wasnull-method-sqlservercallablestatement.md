@@ -1,4 +1,5 @@
 ---
+description: "wasNull Method (SQLServerCallableStatement)"
 title: "wasNull Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

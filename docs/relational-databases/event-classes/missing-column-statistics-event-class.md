@@ -1,4 +1,5 @@
 ---
+description: "Missing Column Statistics Event Class"
 title: "Missing Column Statistics Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "getNClob Method (java.lang.String) (SQLServerResultSet)"
 title: "getNClob Method (java.lang.String) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ALTER PARTITION FUNCTION (Transact-SQL)"
 title: "ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

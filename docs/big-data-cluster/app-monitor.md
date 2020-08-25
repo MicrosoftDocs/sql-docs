@@ -1,5 +1,5 @@
 ---
-title: Monitoring applications with azdata and Grafana Dashboard
+title: Monitor applications with azdata and Grafana Dashboard
 titleSuffix: SQL Server Big Data Clusters
 description: Monitoring applications with azdata and Grafana on SQL Server 2019 big data cluster.
 author: cloudmelon
@@ -12,9 +12,11 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
+# Monitor applications with azdata and Grafana Dashboard
+
 Grafana is one of the best cloud-native virtualization tools, which can be used to provide various monitoring metrics of your application running in Kubernetes.  
 
-This article describes how to monitor an application inside a SQL Server 2019 big data clusters.
+This article describes how to monitor an application inside a SQL Server Big Data Cluster.
 
 ## Prerequisites
 

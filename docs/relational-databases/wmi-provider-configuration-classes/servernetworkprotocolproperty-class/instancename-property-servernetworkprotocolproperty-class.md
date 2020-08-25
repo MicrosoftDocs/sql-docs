@@ -1,4 +1,5 @@
 ---
+description: "InstanceName Property (ServerNetworkProtocolProperty Class)"
 title: "InstanceName Property (ServerNetworkProtocolProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

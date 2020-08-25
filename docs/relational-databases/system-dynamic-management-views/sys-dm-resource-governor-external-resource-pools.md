@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_resource_governor_external_resource_pools (Transact-SQL)"
 title: "sys.dm_resource_governor_external_resource_pools (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2020"

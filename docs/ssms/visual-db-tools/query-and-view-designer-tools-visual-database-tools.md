@@ -1,4 +1,5 @@
 ---
+description: "Query and View Designer Tools (Visual Database Tools)"
 title: Query and View Designer Tools
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

@@ -1,4 +1,5 @@
 ---
+description: "bcp_init"
 title: "bcp_init | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

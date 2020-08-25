@@ -1,4 +1,5 @@
 ---
+description: "Sort Rows (Visual Database Tools)"
 title: Sort Rows
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

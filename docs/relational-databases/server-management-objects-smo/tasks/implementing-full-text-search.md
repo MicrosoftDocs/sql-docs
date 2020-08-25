@@ -1,4 +1,5 @@
 ---
+description: "Implementing Full-Text Search"
 title: "Implementing Full-Text Search"
 ms.custom: seo-dt-2019
 ms.date: "08/06/2017"

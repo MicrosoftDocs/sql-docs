@@ -1,4 +1,5 @@
 ---
+description: "New GUI Features in SSMA for MySQL (MySQLToSQL)"
 title: "New GUI Features in SSMA for MySQL (MySQLToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""

@@ -1,4 +1,5 @@
 ---
+description: "Manage a CDC Instance"
 title: "Manage a CDC Instance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

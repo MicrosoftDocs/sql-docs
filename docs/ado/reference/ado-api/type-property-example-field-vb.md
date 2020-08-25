@@ -1,4 +1,5 @@
 ---
+description: "Type Property Example (Field) (VB)"
 title: "Type Property Example (Field) (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Type Property Example (Field) (VB)
-This example demonstrates the [Type](../../../ado/reference/ado-api/type-property-ado.md) property by displaying the name of the constant that corresponds to the value of the [Type](../../../ado/reference/ado-api/type-property-ado.md) property of all the [Field](../../../ado/reference/ado-api/field-object.md) objects in the ***Employees*** table. The FieldType function is required for this procedure to run.  
+This example demonstrates the [Type](./type-property-ado.md) property by displaying the name of the constant that corresponds to the value of the [Type](./type-property-ado.md) property of all the [Field](./field-object.md) objects in the ***Employees*** table. The FieldType function is required for this procedure to run.  
   
 ```  
 'BeginTypeFieldVB  
@@ -100,5 +101,5 @@ Attribute VB_Name = "TypeField"
 ```  
   
 ## See Also  
- [Field Object](../../../ado/reference/ado-api/field-object.md)   
- [Type Property (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Field Object](./field-object.md)   
+ [Type Property (ADO)](./type-property-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: "The Significance of Cursor Location"
 title: "The Significance of Cursor Location | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "Open and Close Methods Example (VC++)"
 title: "Open and Close Methods Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Open and Close Methods Example (VC++)
-This example uses the **Open** and [Close](../../../ado/reference/ado-api/close-method-ado.md) methods on both [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) and [Connection](../../../ado/reference/ado-api/connection-object-ado.md) objects that have been opened.  
+This example uses the **Open** and [Close](./close-method-ado.md) methods on both [Recordset](./recordset-object-ado.md) and [Connection](./connection-object-ado.md) objects that have been opened.  
   
 ```  
 // Open_Close_Methods.cpp  
@@ -200,8 +201,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [Close Method (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open Method (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Close Method (ADO)](./close-method-ado.md)   
+ [Connection Object (ADO)](./connection-object-ado.md)   
+ [Open Method (ADO Connection)](./open-method-ado-connection.md)   
+ [Open Method (ADO Recordset)](./open-method-ado-recordset.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

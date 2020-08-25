@@ -1,4 +1,5 @@
 ---
+description: "Recordset and SourceRecordset Properties Example (VBScript)"
 title: "Recordset and SourceRecordset Properties Example (VBScript) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""
@@ -20,7 +21,7 @@ ms.author: jroth
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- The following example shows how to set the necessary parameters of the [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) default business object at run time.  
+ The following example shows how to set the necessary parameters of the [RDSServer.DataFactory](./datafactory-object-rdsserver.md) default business object at run time.  
   
  To test this example, cut and paste this code between the \<Body> and \</Body> tags in a normal HTML document and name it **RecordsetVBS.asp**. ASP script will identify your server.  
   
@@ -122,8 +123,5 @@ CLASSID="CLSID:BD96C556-65A3-11D0-983A-00C04FC29E36">
 ```  
   
 ## See Also  
- [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [Recordset, SourceRecordset Properties (RDS)](../../../ado/reference/rds-api/recordset-sourcerecordset-properties-rds.md)
-
-
-
+ [DataFactory Object (RDSServer)](./datafactory-object-rdsserver.md)   
+ [Recordset, SourceRecordset Properties (RDS)](./recordset-sourcerecordset-properties-rds.md)

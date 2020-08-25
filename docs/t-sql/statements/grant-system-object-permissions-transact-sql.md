@@ -1,4 +1,5 @@
 ---
+description: "GRANT System Object Permissions (Transact-SQL)"
 title: "GRANT System Object Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"

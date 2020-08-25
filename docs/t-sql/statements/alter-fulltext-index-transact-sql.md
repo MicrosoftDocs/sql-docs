@@ -1,4 +1,5 @@
 ---
+description: "ALTER FULLTEXT INDEX (Transact-SQL)"
 title: "ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/27/2017"

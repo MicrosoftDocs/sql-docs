@@ -1,4 +1,5 @@
 ---
+description: "REVERSE (SSIS Expression)"
 title: "REVERSE (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

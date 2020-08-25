@@ -1,4 +1,5 @@
 ---
+description: "Change Data Capture (SSIS)"
 title: "Change Data Capture (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

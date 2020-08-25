@@ -1,4 +1,5 @@
 ---
+description: "HDFS File Destination"
 title: "HDFS File Destination | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/09/2019

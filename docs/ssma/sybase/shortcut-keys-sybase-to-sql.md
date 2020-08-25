@@ -1,4 +1,5 @@
 ---
+description: "Shortcut Keys(Sybase To SQL)"
 title: "Shortcut Keys(Sybase To SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

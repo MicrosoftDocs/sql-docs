@@ -1,4 +1,5 @@
 ---
+description: "sys.external_tables (Transact-SQL)"
 title: "sys.external_tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

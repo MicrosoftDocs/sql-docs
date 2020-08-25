@@ -1,4 +1,5 @@
 ---
+description: "Long (geography Data Type)"
 title: "Long (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"

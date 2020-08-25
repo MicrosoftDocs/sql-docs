@@ -1,4 +1,5 @@
 ---
+description: "Cellset Example (VB)"
 title: "Cellset Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

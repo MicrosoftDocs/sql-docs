@@ -1,4 +1,5 @@
 ---
+description: "Cell Object Properties, Methods, and Events"
 title: "Cell Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,15 +16,15 @@ ms.author: jroth
 ---
 # Cell Object Properties, Methods, and Events
 ## Properties/Collections  
- [FormattedValue Property](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)  
+ [FormattedValue Property](./formattedvalue-property-ado-md.md)  
   
- [Ordinal Property (Cell)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md)  
+ [Ordinal Property (Cell)](./ordinal-property-ado-md-cell.md)  
   
- [Positions Collection](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)  
+ [Positions Collection](./positions-collection-ado-md.md)  
   
- [Properties Collection](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Properties Collection](../ado-api/properties-collection-ado.md)  
   
- [Value Property](../../../ado/reference/ado-md-api/value-property-ado-md.md)  
+ [Value Property](./value-property-ado-md.md)  
   
 ## Methods  
  None.  
@@ -32,4 +33,4 @@ ms.author: jroth
  None.  
   
 ## See Also  
- [Cell Object (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)
+ [Cell Object (ADO MD)](./cell-object-ado-md.md)

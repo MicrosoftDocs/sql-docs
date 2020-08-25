@@ -1,4 +1,5 @@
 ---
+description: "Background Job Error Event Class"
 title: "Background Job Error Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

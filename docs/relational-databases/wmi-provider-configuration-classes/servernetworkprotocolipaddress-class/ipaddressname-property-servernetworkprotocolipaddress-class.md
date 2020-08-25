@@ -1,4 +1,5 @@
 ---
+description: "IpAddressName Property (ServerNetworkProtocolIPAddress Class)"
 title: "IpAddressName Property (ServerNetworkProtocolIPAddress)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

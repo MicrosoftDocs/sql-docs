@@ -1,4 +1,5 @@
 ---
+description: "Jet 4.0 Uses SQL-92 Reserved Words List when ExtendedAnsiSQL_Set"
 title: "Jet 4.0 Uses SQL-92 Reserved Words List when ExtendedAnsiSQL_Set | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

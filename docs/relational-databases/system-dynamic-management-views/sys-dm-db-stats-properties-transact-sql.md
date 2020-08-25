@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_stats_properties (Transact-SQL)"
 title: "sys.dm_db_stats_properties (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Clone Method Example (VC++)"
 title: "Clone Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Clone Method Example (VC++)
-This example uses the [Clone](../../../ado/reference/ado-api/clone-method-ado.md) method to create copies of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) and then lets the user position the record pointer of each copy independently.  
+This example uses the [Clone](./clone-method-ado.md) method to create copies of a [Recordset](./recordset-object-ado.md) and then lets the user position the record pointer of each copy independently.  
   
 ```  
 // BeginCloneCpp.cpp  
@@ -214,4 +215,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset Object (ADO)](./recordset-object-ado.md)

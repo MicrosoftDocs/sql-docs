@@ -1,4 +1,5 @@
 ---
+description: "CREATE TABLE (SQL Graph)"
 title: "CREATE TABLE (SQL Graph) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/09/2019"

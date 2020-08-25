@@ -1,4 +1,5 @@
 ---
+description: "CopyRecord, CopyTo, and SaveToFile Methods Example (VB)"
 title: "CopyRecord, CopyTo, and SaveToFile Methods Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # CopyRecord, CopyTo, and SaveToFile Methods Example (VB)
-This example demonstrates how to create copies of a file using [Stream](../../../ado/reference/ado-api/stream-object-ado.md) or [Record](../../../ado/reference/ado-api/record-object-ado.md) objects. One copy is made to a Web folder for Internet publishing. Other properties and methods shown include [Stream Type](../../../ado/reference/ado-api/type-property-ado-stream.md), **Open**, [LoadFromFile](../../../ado/reference/ado-api/loadfromfile-method-ado.md), and [Record Open](../../../ado/reference/ado-api/open-method-ado-record.md).  
+This example demonstrates how to create copies of a file using [Stream](./stream-object-ado.md) or [Record](./record-object-ado.md) objects. One copy is made to a Web folder for Internet publishing. Other properties and methods shown include [Stream Type](./type-property-ado-stream.md), **Open**, [LoadFromFile](./loadfromfile-method-ado.md), and [Record Open](./open-method-ado-record.md).  
   
 ```  
 'BeginCopyRecordVB  
@@ -119,12 +120,12 @@ End Sub
 ```  
   
 ## See Also  
- [CopyRecord Method (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)   
- [CopyTo Method (ADO)](../../../ado/reference/ado-api/copyto-method-ado.md)   
- [LoadFromFile Method (ADO)](../../../ado/reference/ado-api/loadfromfile-method-ado.md)   
- [Open Method (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)   
- [Open Method (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)   
- [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [SaveToFile Method](../../../ado/reference/ado-api/savetofile-method.md)   
- [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)   
- [Type Property (ADO Stream)](../../../ado/reference/ado-api/type-property-ado-stream.md)
+ [CopyRecord Method (ADO)](./copyrecord-method-ado.md)   
+ [CopyTo Method (ADO)](./copyto-method-ado.md)   
+ [LoadFromFile Method (ADO)](./loadfromfile-method-ado.md)   
+ [Open Method (ADO Record)](./open-method-ado-record.md)   
+ [Open Method (ADO Stream)](./open-method-ado-stream.md)   
+ [Record Object (ADO)](./record-object-ado.md)   
+ [SaveToFile Method](./savetofile-method.md)   
+ [Stream Object (ADO)](./stream-object-ado.md)   
+ [Type Property (ADO Stream)](./type-property-ado-stream.md)

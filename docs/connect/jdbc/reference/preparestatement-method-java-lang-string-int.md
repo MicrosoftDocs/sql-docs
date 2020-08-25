@@ -1,4 +1,5 @@
 ---
+description: "prepareStatement Method (java.lang.String)"
 title: "prepareStatement Method (java.lang.String) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/07/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Deprecated Features in SQL Server Replication"
 title: "Deprecated Features in SQL Server Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/22/2016"

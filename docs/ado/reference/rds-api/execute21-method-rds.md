@@ -1,4 +1,5 @@
 ---
+description: "Execute21 Method (RDS)"
 title: "Execute21 Method (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -67,9 +68,7 @@ object.Execute21(ConnectionString As String, HandlerString As String, QueryStrin
  The *HandlerString* parameter may be null. What occurs in this case depends on how the RDS server is configured. A handler string of "MSDFMAP.handler" indicates that the Microsoft supplied handler (Msdfmap.dll) should be used. A handler string of "MASDFMAP.handler,sample.ini" indicates that the Msdfmap.dll handler should be used and that the argument "sample.ini" should be passed to the handler. MSDFMAP.dll will interpret the argument as a direction to use the sample.ini to check the connection and query strings.  
   
 > [!NOTE]
->  The **Execute21** method is a version of the [Execute method (RDS)](../../../ado/reference/rds-api/execute-method-rds.md). Where you need to use the **Execute** method to communicate with ADO 2.1, the **Execute21** method can be called instead. The capabilities of the **Execute** method in ADO 2.5 and later are a superset of the capabilities provided for the same method in ADO 2.1.  
+>  The **Execute21** method is a version of the [Execute method (RDS)](./execute-method-rds.md). Where you need to use the **Execute** method to communicate with ADO 2.1, the **Execute21** method can be called instead. The capabilities of the **Execute** method in ADO 2.5 and later are a superset of the capabilities provided for the same method in ADO 2.1.  
   
 ## Applies To  
- [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory Object (RDSServer)](./datafactory-object-rdsserver.md)

@@ -1,4 +1,5 @@
 ---
+description: "Add a Collection Item to a Collection Set (Transact-SQL)"
 title: "Add Collection Item to Collection Set (T-SQL)"
 ms.date: 06/03/2020
 ms.prod: sql

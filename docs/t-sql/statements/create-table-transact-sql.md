@@ -1012,7 +1012,7 @@ Global temporary tables for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)
 
 ### Troubleshooting global temporary tables for Azure SQL Database
 
-For the troubleshooting the tempdb, see [How to Monitor tempdb use](../../relational-databases/databases/tempdb-database.md#how-to-monitor-tempdb-use).
+For troubleshooting tempdb, see [How to Monitor tempdb use](../../relational-databases/databases/tempdb-database.md#monitoring-tempdb-use).
 
 > [!NOTE]
 > Only a server admin can access the troubleshooting DMVs in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].

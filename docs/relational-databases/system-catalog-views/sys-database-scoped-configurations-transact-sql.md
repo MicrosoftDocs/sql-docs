@@ -33,7 +33,6 @@ Contains one row per configuration.
 |**value**|**sqlvariant**|The value set for this configuration option for the primary replica.|
 |**value_for_secondary**|**sqlvariant**|The value set for this configuration option for the secondary replicas.|
 |**is_value_default**|**bit** |Specifies whether the value set is the default value.|
-|**dw_compatibility_level**|**int**|The compatibility level (Preview) of the database.  Default = 0 (AUTO)|
 
 ## <a name="Permissions"></a> Permissions
 

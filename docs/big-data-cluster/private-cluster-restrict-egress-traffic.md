@@ -13,18 +13,18 @@ ms.technology: big-data-cluster
 
 # Restrict egress traffic of BDC clusters in AKS private cluster
 
-Since AKS provisions a standard SKU Load Balancer to be set up and used for egress by default. However, the default setup may not meet the requirements of all scenarios if public IPs are disallowed or additional hops are required for egress. You can customize cluster egress with a User-Defined Route if you have those disallows public IPs and  your cluster sit behind a network virtual appliance (NVA).  
+AKS provisions a standard SKU Load Balancer to be set up and used for egress by default. However, the default setup may not meet the requirements of all scenarios if public IPs are disallowed or additional hops are required for egress. Define a user user-defined route table if the cluster disallows public IPs and sits behind a network virtual appliance (NVA).
 
 By default, AKS clusters have unrestricted outbound (egress) internet access for the sake of management and operational purposes. Worker nodes in an AKS cluster need to access certain ports and fully qualified domain names (FQDNs) for instance:
 
 * Worker node OS security updates, the cluster needs to pull base system container images from Microsoft Container Registry (MCR)
-* GPU enabled AKS worker nodes need to access some endpoints from Nvidia to install driver.
+* GPU enabled AKS worker nodes need to access some endpoints from Nvidia to install driver
 * In the scenario where customers use AKS work in conjunction with Azure services such as Azure policy for enterprise-grade compliance, Azure Monitoring (with container insights) 
-* Dev Space enabled and more scenarios of similar nature.
+* Dev Space enabled and more scenarios of similar nature
 
 > [!NOTE]
 > Currently, when you deploy BDC in Azure Kubernetes Service ( AKS ) private cluster, there is no inbound dependencies in the scenario besides what we mentioned in this article, you can find all outbound dependencies at : [control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)]( /azure/aks/limit-egress-traffic) . 
-This article covers how to deploy BDC in AKS private cluster with advanced networking and UDR (User Defined Route) as well as its further integration with enterprise-grade networking environment. 
+This article covers how to deploy BDC in AKS private cluster with advanced networking and UDR (user-defined route) as well as its further integration with enterprise-grade networking environment. 
 
 ## Use Azure firewall to restrict egress traffic
 
@@ -32,7 +32,16 @@ Use Azure firewall to restrict egress traffic. Azure firewall includes an `Azure
 
 [Restrict egress traffic using Azure firewall](/azure/aks/limit-egress-traffic#restrict-egress-traffic-using-azure-firewall) provides a reference architecture to build a completely private environment in AKS. 
 
-To set up a the basic architecture with Azure Firewall:
+To set up a basic architecture with Azure Firewall:
+
+1. Create the resource group & VNet
+2. Create & set up Azure firewall
+3. Create user-defined route table
+4. Set up firewall rules
+5. Create service principal (SP)
+6. Create AKS cluster
+
+The following steps provide details.
 
 ## Create the resource group and VNet
 
@@ -140,12 +149,12 @@ az network firewall network-rule create -g $RESOURCE_GROUP -f $FWNAME --collecti
 az network firewall application-rule create -g $RESOURCE_GROUP -f $FWNAME --collection-name 'aksfwar' -n 'fqdn' --source-addresses '*' --protocols 'http=80' 'https=443' --fqdn-tags "AzureKubernetesService" --action allow --priority 100
 ```
 
-You can associate User defined route table (UDR) to AKS cluster where deployed BDC previously using the following command:
+You can associate user-defined route table (UDR) to AKS cluster where deployed BDC previously using the following command:
 
 ```azurecli
 az network vnet subnet update -g $RESOURCE_GROUP --vnet-name $VNET_NAME --name $SUBNET_NAME --route-table $FWROUTE_TABLE_NAME
 ```
-## Create SP and assign permissions to the VNET
+## Create service principal (SP) and assign permissions to the VNet
 
 ```azurecli
 # Create SP and Assign Permission to Virtual Network
@@ -165,9 +174,9 @@ RTID=$(az network route-table show -g $RESOURCE_GROUP -n $FWROUTE_TABLE_NAME --q
 az role assignment create --assignee $APPID --scope $RTID --role "Network Contributor"
 ```
 
-## Create AKS cluster 
+## Create AKS cluster
 
-Then create AKS cluster with userDefinedRouting ( UDR ) as outbound type.
+Then create the AKS cluster with `userDefinedRouting` as outbound type.
 
 ```azcli 
 az aks create \
@@ -189,11 +198,11 @@ az aks create \
     --generate-ssh-keys
 ```
 
-## Create Big Data Clusters
+## Create big data cluster
 
-Then you can create BDC clusters with custom profile. You can find a template to set up this architecture here in sql server sample repository on Github. 
+Then you can create BDC clusters with custom profile. For an example, see [private-aks in SQL Server Samples repository on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/private-aks).
 
-Use 3rd Party Firewall to restrict egress traffic when deployed BDC with AKS private cluster. Popular 3rd party firewall such as palo alto is chosen by customers, it can be used in private deployment solution with more complicity on configuration, but basically, it has to consider the following network rules :
+Use 3rd party firewall to restrict egress traffic when deployed BDC with AKS private cluster. For example, [Palo Alto Networks](https://www.paloaltonetworks.com/) provides firewall products in the Azure Marketplace. These firewalls can be used in private deployment solutions with more compliant configurations. Any firewall should provide the following network rules:
 
 * All the required outbound network rules and FQDNs for AKS clusters and all Wildcard HTTP/HTTPS endpoints and dependencies that can vary with your AKS cluster based on a number of qualifiers and your actual requirements. 
 * Azure Global required network rules / FQDN/application rules mentioned here. 
@@ -201,3 +210,4 @@ Use 3rd Party Firewall to restrict egress traffic when deployed BDC with AKS pri
 
 ## Next steps
 
+[Manage big data cluster in AKS private cluster](private-cluster-manage.md)

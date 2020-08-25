@@ -149,7 +149,7 @@ The following operations can't be performed on the `tempdb` database:
 - Creating a database snapshot.
 - Dropping the database.
 - Dropping the *guest* user from the database.
-- Enabling the capture of change data.
+- Enabling Change Data Capture.
 - Participating in database mirroring.
 - Removing the primary filegroup, primary data file, or log file.
 - Renaming the database or primary filegroup.

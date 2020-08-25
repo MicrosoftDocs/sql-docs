@@ -74,4 +74,4 @@ oConn.Close
   
  Here transaction processing is used to ensure that the two records are updated as one unit of operation, and that the two product names are either interchanged or not changed at all.  
   
- For detailed discussions of transaction processing see [Updating and Persisting Data](../../../ado/guide/data/updating-and-persisting-data.md).
+ For detailed discussions of transaction processing see [Updating and Persisting Data](./updating-and-persisting-data.md).

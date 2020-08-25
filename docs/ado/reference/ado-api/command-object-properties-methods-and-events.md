@@ -16,39 +16,39 @@ ms.author: jroth
 ---
 # Command Object Properties, Methods, and Events
 ## Properties/Collections  
- [ActiveConnection Property](../../../ado/reference/ado-api/activeconnection-property-ado.md)  
+ [ActiveConnection Property](./activeconnection-property-ado.md)  
   
- [CommandStream Property](../../../ado/reference/ado-api/commandstream-property-ado.md)  
+ [CommandStream Property](./commandstream-property-ado.md)  
   
- [CommandText Property](../../../ado/reference/ado-api/commandtext-property-ado.md)  
+ [CommandText Property](./commandtext-property-ado.md)  
   
- [CommandTimeout Property](../../../ado/reference/ado-api/commandtimeout-property-ado.md)  
+ [CommandTimeout Property](./commandtimeout-property-ado.md)  
   
- [CommandType Property](../../../ado/reference/ado-api/commandtype-property-ado.md)  
+ [CommandType Property](./commandtype-property-ado.md)  
   
- [Dialect Property](../../../ado/reference/ado-api/dialect-property.md)  
+ [Dialect Property](./dialect-property.md)  
   
- [Name Property](../../../ado/reference/ado-api/name-property-ado.md)  
+ [Name Property](./name-property-ado.md)  
   
- [NamedParameters Property](../../../ado/reference/ado-api/namedparameters-property-ado.md)  
+ [NamedParameters Property](./namedparameters-property-ado.md)  
   
- [Parameters Collection](../../../ado/reference/ado-api/parameters-collection-ado.md)  
+ [Parameters Collection](./parameters-collection-ado.md)  
   
- [Prepared Property](../../../ado/reference/ado-api/prepared-property-ado.md)  
+ [Prepared Property](./prepared-property-ado.md)  
   
- [Properties Collection](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Properties Collection](./properties-collection-ado.md)  
   
- [State Property](../../../ado/reference/ado-api/state-property-ado.md)  
+ [State Property](./state-property-ado.md)  
   
 ## Methods  
- [Cancel Method](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [Cancel Method](./cancel-method-ado.md)  
   
- [CreateParameter Method](../../../ado/reference/ado-api/createparameter-method-ado.md)  
+ [CreateParameter Method](./createparameter-method-ado.md)  
   
- [Execute Method (ADO Command)](../../../ado/reference/ado-api/execute-method-ado-command.md)  
+ [Execute Method (ADO Command)](./execute-method-ado-command.md)  
   
 ## Events  
  None.  
   
 ## See Also  
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [Command Object (ADO)](./command-object-ado.md)

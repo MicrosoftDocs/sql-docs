@@ -18,9 +18,9 @@ author: rothja
 ms.author: jroth
 ---
 # ADCPROP_UPDATECRITERIA_ENUM
-Specifies which fields can be used to detect conflicts during an optimistic update of a row of the data source with a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  
+Specifies which fields can be used to detect conflicts during an optimistic update of a row of the data source with a [Recordset](./recordset-object-ado.md) object.  
   
- Use these constants with the **Recordset** "**Update Criteria**" dynamic property, which is referenced in the [ADO Dynamic Property Index](../../../ado/reference/ado-api/ado-dynamic-property-index.md) and documented in the [Microsoft Cursor Service for OLE DB](../../../ado/guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentation.  
+ Use these constants with the **Recordset** "**Update Criteria**" dynamic property, which is referenced in the [ADO Dynamic Property Index](./ado-dynamic-property-index.md) and documented in the [Microsoft Cursor Service for OLE DB](../../guide/appendixes/microsoft-cursor-service-for-ole-db-ado-service-component.md) documentation.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  

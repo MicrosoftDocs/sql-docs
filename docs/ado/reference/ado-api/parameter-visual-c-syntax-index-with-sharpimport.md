@@ -65,4 +65,4 @@ __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;
 ```  
   
 ## See Also  
- [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter Object](./parameter-object.md)

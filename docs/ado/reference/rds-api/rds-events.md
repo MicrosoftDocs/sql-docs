@@ -21,7 +21,5 @@ ms.author: jroth
   
 |Event|Description|  
 |-|-|  
-|[onError (RDS)](../../../ado/reference/rds-api/onerror-event-rds.md)|Called whenever an error occurs during an operation.|  
-|[onReadyStateChange (RDS)](../../../ado/reference/rds-api/onreadystatechange-event-rds.md)|Called whenever the value of the **ReadyState** property changes.|
-
-
+|[onError (RDS)](./onerror-event-rds.md)|Called whenever an error occurs during an operation.|  
+|[onReadyStateChange (RDS)](./onreadystatechange-event-rds.md)|Called whenever the value of the **ReadyState** property changes.|

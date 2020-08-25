@@ -24,7 +24,7 @@ The **ADOStreamConstruction** interface is used to construct an ADO **Stream** o
   
 |Property|Description|  
 |-|-|  
-|[Stream](../../../ado/reference/ado-api/stream-property.md)|Read/Write. Gets/sets an OLE DB **Stream** object.|  
+|[Stream](./stream-property.md)|Read/Write. Gets/sets an OLE DB **Stream** object.|  
   
 ## Methods  
  None.  
@@ -68,4 +68,4 @@ adoStrConstruct->put_Stream(pUnk);
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## See Also  
- [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md)
+ [ADO API Reference](./ado-api-reference.md)

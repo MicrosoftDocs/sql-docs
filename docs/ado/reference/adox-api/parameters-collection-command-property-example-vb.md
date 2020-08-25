@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Parameters Collection, Command Property Example (VB)
-The following code demonstrates how to use the [Command](../../../ado/reference/adox-api/command-property-adox.md) property with the [Command](../../../ado/reference/ado-api/command-object-ado.md) object to retrieve parameter information for the procedure.  
+The following code demonstrates how to use the [Command](./command-property-adox.md) property with the [Command](../ado-api/command-object-ado.md) object to retrieve parameter information for the procedure.  
   
 ```  
 ' BeginParametersVB  
@@ -71,8 +71,8 @@ End Sub
 ```  
   
 ## See Also  
- [ActiveConnection Property (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Command Property (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)   
- [Procedure Object (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures Collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)
+ [ActiveConnection Property (ADOX)](./activeconnection-property-adox.md)   
+ [Catalog Object (ADOX)](./catalog-object-adox.md)   
+ [Command Property (ADOX)](./command-property-adox.md)   
+ [Procedure Object (ADOX)](./procedure-object-adox.md)   
+ [Procedures Collection (ADOX)](./procedures-collection-adox.md)

@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Attributes and Name Properties Example (VC++)
-This example displays the value of the [Attributes](../../../ado/reference/ado-api/attributes-property-ado.md) property for [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Field](../../../ado/reference/ado-api/field-object.md), and [Property](../../../ado/reference/ado-api/property-object-ado.md) objects. It uses the [Name](../../../ado/reference/ado-api/name-property-ado.md) property to display the name of each **Field** and **Property** object.  
+This example displays the value of the [Attributes](./attributes-property-ado.md) property for [Connection](./connection-object-ado.md), [Field](./field-object.md), and [Property](./property-object-ado.md) objects. It uses the [Name](./name-property-ado.md) property to display the name of each **Field** and **Property** object.  
   
 ```  
 // BeginAttributesCpp.cpp  
@@ -176,8 +176,8 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [Attributes Property (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)   
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Field Object](../../../ado/reference/ado-api/field-object.md)   
- [Name Property (ADO)](../../../ado/reference/ado-api/name-property-ado.md)   
- [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+ [Attributes Property (ADO)](./attributes-property-ado.md)   
+ [Connection Object (ADO)](./connection-object-ado.md)   
+ [Field Object](./field-object.md)   
+ [Name Property (ADO)](./name-property-ado.md)   
+ [Property Object (ADO)](./property-object-ado.md)

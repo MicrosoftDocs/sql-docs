@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # IsolationLevelEnum
-Specifies the level of transaction isolation for a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.  
+Specifies the level of transaction isolation for a [Connection](./connection-object-ado.md) object.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -48,4 +48,4 @@ Specifies the level of transaction isolation for a [Connection](../../../ado/ref
 |AdoEnums.IsolationLevel.SERIALIZABLE|  
   
 ## Applies To  
- [IsolationLevel Property](../../../ado/reference/ado-api/isolationlevel-property.md)
+ [IsolationLevel Property](./isolationlevel-property.md)

@@ -19,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # CursorType, LockType, and EditMode Properties Example (VB)
-This example demonstrates setting the [CursorType](../../../ado/reference/ado-api/cursortype-property-ado.md) and [LockType](../../../ado/reference/ado-api/locktype-property-ado.md) properties before opening a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md). It also shows the value of the [EditMode](../../../ado/reference/ado-api/editmode-property.md) property under various conditions. The EditModeOutput function is required for this procedure to run.  
+This example demonstrates setting the [CursorType](./cursortype-property-ado.md) and [LockType](./locktype-property-ado.md) properties before opening a [Recordset](./recordset-object-ado.md). It also shows the value of the [EditMode](./editmode-property.md) property under various conditions. The EditModeOutput function is required for this procedure to run.  
   
 ```  
 'BeginEditModeVB  
@@ -118,10 +118,10 @@ End Function
 ```  
   
 ## See Also  
- [CursorType Property (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)   
- [CursorTypeEnum](../../../ado/reference/ado-api/cursortypeenum.md)   
- [EditMode Property](../../../ado/reference/ado-api/editmode-property.md)   
- [EditModeEnum](../../../ado/reference/ado-api/editmodeenum.md)   
- [LockType Property (ADO)](../../../ado/reference/ado-api/locktype-property-ado.md)   
- [LockTypeEnum](../../../ado/reference/ado-api/locktypeenum.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CursorType Property (ADO)](./cursortype-property-ado.md)   
+ [CursorTypeEnum](./cursortypeenum.md)   
+ [EditMode Property](./editmode-property.md)   
+ [EditModeEnum](./editmodeenum.md)   
+ [LockType Property (ADO)](./locktype-property-ado.md)   
+ [LockTypeEnum](./locktypeenum.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

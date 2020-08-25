@@ -20,7 +20,7 @@ ms.author: jroth
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- This code shows how to set the [Connect](../../../ado/reference/rds-api/connect-property-rds.md) property at design time:  
+ This code shows how to set the [Connect](./connect-property-rds.md) property at design time:  
   
 ```  
 <OBJECT CLASSID="clsid:BD96C556-65A3-11D0-983A-00C04FC29E33" ID="ADC1">  
@@ -121,25 +121,4 @@ BODY {
 ```  
   
 ## See Also  
- [Connect Property (RDS)](../../../ado/reference/rds-api/connect-property-rds.md)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+ [Connect Property (RDS)](./connect-property-rds.md)

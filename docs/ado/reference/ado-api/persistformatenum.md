@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # PersistFormatEnum
-Specifies the format in which to save a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Specifies the format in which to save a [Recordset](./recordset-object-ado.md).  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -36,4 +36,4 @@ Specifies the format in which to save a [Recordset](../../../ado/reference/ado-a
 |AdoEnums.PersistFormat.XML|  
   
 ## Applies To  
- [Save Method](../../../ado/reference/ado-api/save-method.md)
+ [Save Method](./save-method.md)

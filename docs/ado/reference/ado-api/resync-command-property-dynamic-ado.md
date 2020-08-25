@@ -16,13 +16,13 @@ author: rothja
 ms.author: jroth
 ---
 # Resync Command Property-Dynamic (ADO)
-Specifies a user-supplied command string that the [Resync](../../../ado/reference/ado-api/resync-method.md) method issues to refresh the data in the table named in the [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) dynamic property.  
+Specifies a user-supplied command string that the [Resync](./resync-method.md) method issues to refresh the data in the table named in the [Unique Table](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) dynamic property.  
   
 ## Settings and Return Values  
  Sets or returns a **String** value which is a command string.  
   
 ## Remarks  
- The [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object is the result of a JOIN operation executed on multiple base tables. The rows affected depend on the *AffectRecords* parameter of the [Resync](../../../ado/reference/ado-api/resync-method.md) method. The standard **Resync** method is executed if the [Unique Table](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) and **Resync Command** properties are not set.  
+ The [Recordset](./recordset-object-ado.md) object is the result of a JOIN operation executed on multiple base tables. The rows affected depend on the *AffectRecords* parameter of the [Resync](./resync-method.md) method. The standard **Resync** method is executed if the [Unique Table](./unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md) and **Resync Command** properties are not set.  
   
  The command string of the **Resync Command** property is a parameterized command or stored procedure that uniquely identifies the row being refreshed, and returns a single row containing the same number and order of columns as the row to be refreshed. The command string contains a parameter for each primary key column in the **Unique Table**; otherwise, a run-time error is returned. The parameters are automatically filled in with primary key values from the row to be refreshed.  
   
@@ -75,7 +75,7 @@ WHERE Orders.ordid  = @ordid
   
  Once again, the **Unique Table** is *Orders* and its primary key, *OrderID*, is parameterized.  
   
- **Resync Command** is a dynamic property appended to the **Recordset** object [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection when the [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) property is set to **adUseClient**.  
+ **Resync Command** is a dynamic property appended to the **Recordset** object [Properties](./properties-collection-ado.md) collection when the [CursorLocation](./cursorlocation-property-ado.md) property is set to **adUseClient**.  
   
 ## Applies To  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Recordset Object (ADO)](./recordset-object-ado.md)

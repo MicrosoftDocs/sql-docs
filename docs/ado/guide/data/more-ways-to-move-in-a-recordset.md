@@ -19,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # More Ways to Move in a Recordset
-The following four methods are used to move around, or scroll, in the **Recordset**: [MoveFirst, MoveLast, MoveNext, and MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Some of these methods are unavailable on forward-only cursors.)  
+The following four methods are used to move around, or scroll, in the **Recordset**: [MoveFirst, MoveLast, MoveNext, and MovePrevious](../../reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md). (Some of these methods are unavailable on forward-only cursors.)  
   
  **MoveFirst** changes the current record position to the first record in the **Recordset**. **MoveLast** changes the current record position to the last record in the **Recordset**. To use **MoveFirst** or **MoveLast**, the **Recordset** object must support bookmarks or backward cursor movement; otherwise, the method call will generate an error.  
   

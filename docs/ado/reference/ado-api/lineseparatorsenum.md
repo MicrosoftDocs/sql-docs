@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # LineSeparatorsEnum
-Specifies the character used as a line separator in text [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objects.  
+Specifies the character used as a line separator in text [Stream](./stream-object-ado.md) objects.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -30,4 +30,4 @@ Specifies the character used as a line separator in text [Stream](../../../ado/r
  These constants do not have ADO/WFC equivalents.  
   
 ## Applies To  
- [LineSeparator Property (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)
+ [LineSeparator Property (ADO)](./lineseparator-property-ado.md)

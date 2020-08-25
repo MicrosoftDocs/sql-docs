@@ -22,4 +22,4 @@ One of the most powerful features found in ADO is the capability to open a clien
  We will use a disconnected Recordset later in this section when we discuss Recordset persistence to address a scenario in which we need to have the data in a Recordset available to an application while the client computer is not connected to a network.  
   
 ## See Also  
- [Batch Mode](../../../ado/guide/data/batch-mode.md)
+ [Batch Mode](./batch-mode.md)

@@ -20,7 +20,7 @@ author: rothja
 ms.author: jroth
 ---
 # Event Parameters
-Every event handler has a status parameter that controls the event handler. For Complete events, this parameter is also used to indicate the success or failure of the operation that generated the event. Most Complete events also have an error parameter to provide information about any error that might have occurred, and one or more object parameters that refer to the ADO objects used to perform the operation. For example, the [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md) event includes object parameters for the **Command**, **Recordset**, and **Connection** objects associated with the event. In the following Microsoft® Visual Basic® example, you can see the pCommand, pRecordset, and pConnection objects which represent the **Command**, **Recordset**, and **Connection** objects that are used by the **Execute** method.  
+Every event handler has a status parameter that controls the event handler. For Complete events, this parameter is also used to indicate the success or failure of the operation that generated the event. Most Complete events also have an error parameter to provide information about any error that might have occurred, and one or more object parameters that refer to the ADO objects used to perform the operation. For example, the [ExecuteComplete](../../reference/ado-api/executecomplete-event-ado.md) event includes object parameters for the **Command**, **Recordset**, and **Connection** objects associated with the event. In the following Microsoft® Visual Basic® example, you can see the pCommand, pRecordset, and pConnection objects which represent the **Command**, **Recordset**, and **Connection** objects that are used by the **Execute** method.  
   
 ```  
 Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _  
@@ -54,7 +54,7 @@ Private Sub connEvent_ExecuteComplete(ByVal RecordsAffected As Long, _
 |**adStatusCancel**|Request cancellation of the operation that is about to occur.|  
   
 ## Error Parameter  
- The *Error* parameter is a reference to an ADO [Error](../../../ado/reference/ado-api/error-object.md) object. When the *Status* parameter is set to **adStatusErrorsOccurred**, the **Error** object contains details about why the operation failed. If the Will event associated with a Complete event has canceled the operation by setting the *Status* parameter to **adStatusCancel**, the error object is always set to **adErrOperationCancelled**.  
+ The *Error* parameter is a reference to an ADO [Error](../../reference/ado-api/error-object.md) object. When the *Status* parameter is set to **adStatusErrorsOccurred**, the **Error** object contains details about why the operation failed. If the Will event associated with a Complete event has canceled the operation by setting the *Status* parameter to **adStatusCancel**, the error object is always set to **adErrOperationCancelled**.  
   
 ## Object Parameter  
  Each event receives one or more objects representing the objects that are involved in the operation. For example, the **ExecuteComplete** event receives a **Command** object, a **Recordset** object, and a **Connection** object.  
@@ -82,7 +82,7 @@ End Sub
  In contrast, you need to set *adStatus* to **adStatusUnwantedEvent** only one time to request that an event handler without an **adReason** parameter stop receiving event notifications.  
   
 ## See Also  
- [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO Event Instantiation by Language](../../../ado/guide/data/ado-event-instantiation-by-language.md)   
- [How Event Handlers Work Together](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [Types of Events](../../../ado/guide/data/types-of-events.md)
+ [ADO Event Handler Summary](./ado-event-handler-summary.md)   
+ [ADO Event Instantiation by Language](./ado-event-instantiation-by-language.md)   
+ [How Event Handlers Work Together](./how-event-handlers-work-together.md)   
+ [Types of Events](./types-of-events.md)

@@ -23,14 +23,14 @@ Batch mode is in effect when the **LockType** property is set to **adLockBatchOp
   
  This section contains the following topics:  
   
--   [Sending the Updates: UpdateBatch Method](../../../ado/guide/data/sending-the-updates-updatebatch-method.md)  
+-   [Sending the Updates: UpdateBatch Method](./sending-the-updates-updatebatch-method.md)  
   
--   [Filtering for Updated Records](../../../ado/guide/data/filtering-for-updated-records.md)  
+-   [Filtering for Updated Records](./filtering-for-updated-records.md)  
   
--   [Dealing with Failed Updates](../../../ado/guide/data/dealing-with-failed-updates.md)  
+-   [Dealing with Failed Updates](./dealing-with-failed-updates.md)  
   
--   [Detecting and Resolving Conflicts](../../../ado/guide/data/detecting-and-resolving-conflicts.md)  
+-   [Detecting and Resolving Conflicts](./detecting-and-resolving-conflicts.md)  
   
--   [Disconnecting and Reconnecting the Recordset](../../../ado/guide/data/disconnecting-and-reconnecting-the-recordset.md)  
+-   [Disconnecting and Reconnecting the Recordset](./disconnecting-and-reconnecting-the-recordset.md)  
   
--   [Updating JOINed Results: Unique Table](../../../ado/guide/data/updating-joined-results-unique-table.md)
+-   [Updating JOINed Results: Unique Table](./updating-joined-results-unique-table.md)

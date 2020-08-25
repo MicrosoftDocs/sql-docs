@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Procedures Refresh Method Example (VB)
-The following code shows how to refresh the [Procedures](../../../ado/reference/adox-api/procedures-collection-adox.md) collection of a [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md). This is required before [Procedure](../../../ado/reference/adox-api/procedure-object-adox.md) objects from the **Catalog** can be accessed.  
+The following code shows how to refresh the [Procedures](./procedures-collection-adox.md) collection of a [Catalog](./catalog-object-adox.md). This is required before [Procedure](./procedure-object-adox.md) objects from the **Catalog** can be accessed.  
   
 ```  
 ' BeginProceduresRefreshVB  
@@ -50,6 +50,6 @@ End Sub
 ```  
   
 ## See Also  
- [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Procedures Collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
- [Refresh Method (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
+ [Catalog Object (ADOX)](./catalog-object-adox.md)   
+ [Procedures Collection (ADOX)](./procedures-collection-adox.md)   
+ [Refresh Method (ADO)](../ado-api/refresh-method-ado.md)

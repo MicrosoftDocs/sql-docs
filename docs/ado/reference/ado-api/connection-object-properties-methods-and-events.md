@@ -16,57 +16,57 @@ ms.author: jroth
 ---
 # Connection Object Properties, Methods, and Events
 ## Properties/Collections  
- [Attributes Property](../../../ado/reference/ado-api/attributes-property-ado.md)  
+ [Attributes Property](./attributes-property-ado.md)  
   
- [CommandTimeout Property](../../../ado/reference/ado-api/commandtimeout-property-ado.md)  
+ [CommandTimeout Property](./commandtimeout-property-ado.md)  
   
- [ConnectionString Property](../../../ado/reference/ado-api/connectionstring-property-ado.md)  
+ [ConnectionString Property](./connectionstring-property-ado.md)  
   
- [ConnectionTimeout Property](../../../ado/reference/ado-api/connectiontimeout-property-ado.md)  
+ [ConnectionTimeout Property](./connectiontimeout-property-ado.md)  
   
- [CursorLocation Property](../../../ado/reference/ado-api/cursorlocation-property-ado.md)  
+ [CursorLocation Property](./cursorlocation-property-ado.md)  
   
- [DefaultDatabase Property](../../../ado/reference/ado-api/defaultdatabase-property.md)  
+ [DefaultDatabase Property](./defaultdatabase-property.md)  
   
- [Errors Collection](../../../ado/reference/ado-api/errors-collection-ado.md)  
+ [Errors Collection](./errors-collection-ado.md)  
   
- [IsolationLevel Property](../../../ado/reference/ado-api/isolationlevel-property.md)  
+ [IsolationLevel Property](./isolationlevel-property.md)  
   
- [Mode Property](../../../ado/reference/ado-api/mode-property-ado.md)  
+ [Mode Property](./mode-property-ado.md)  
   
- [Properties Collection](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Properties Collection](./properties-collection-ado.md)  
   
- [Provider Property](../../../ado/reference/ado-api/provider-property-ado.md)  
+ [Provider Property](./provider-property-ado.md)  
   
- [State Property](../../../ado/reference/ado-api/state-property-ado.md)  
+ [State Property](./state-property-ado.md)  
   
- [Version Property](../../../ado/reference/ado-api/version-property-ado.md)  
+ [Version Property](./version-property-ado.md)  
   
 ## Methods  
- [BeginTrans, CommitTrans, and RollbackTrans Methods](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)  
+ [BeginTrans, CommitTrans, and RollbackTrans Methods](./begintrans-committrans-and-rollbacktrans-methods-ado.md)  
   
- [Cancel Method](../../../ado/reference/ado-api/cancel-method-ado.md)  
+ [Cancel Method](./cancel-method-ado.md)  
   
- [Close Method](../../../ado/reference/ado-api/close-method-ado.md)  
+ [Close Method](./close-method-ado.md)  
   
- [Execute Method (ADO Connection)](../../../ado/reference/ado-api/execute-method-ado-connection.md)  
+ [Execute Method (ADO Connection)](./execute-method-ado-connection.md)  
   
- [Open Method (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)  
+ [Open Method (ADO Connection)](./open-method-ado-connection.md)  
   
- [OpenSchema Method](../../../ado/reference/ado-api/openschema-method.md)  
+ [OpenSchema Method](./openschema-method.md)  
   
 ## Events  
- [BeginTransComplete, CommitTransComplete, and RollbackTransComplete Events](../../../ado/reference/ado-api/begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
+ [BeginTransComplete, CommitTransComplete, and RollbackTransComplete Events](./begintranscomplete-committranscomplete-and-rollbacktranscomplete-events-ado.md)  
   
- [ConnectComplete and Disconnect Events](../../../ado/reference/ado-api/connectcomplete-and-disconnect-events-ado.md)  
+ [ConnectComplete and Disconnect Events](./connectcomplete-and-disconnect-events-ado.md)  
   
- [ExecuteComplete Event](../../../ado/reference/ado-api/executecomplete-event-ado.md)  
+ [ExecuteComplete Event](./executecomplete-event-ado.md)  
   
- [InfoMessage Event](../../../ado/reference/ado-api/infomessage-event-ado.md)  
+ [InfoMessage Event](./infomessage-event-ado.md)  
   
- [WillConnect Event](../../../ado/reference/ado-api/willconnect-event-ado.md)  
+ [WillConnect Event](./willconnect-event-ado.md)  
   
- [WillExecute Event](../../../ado/reference/ado-api/willexecute-event-ado.md)  
+ [WillExecute Event](./willexecute-event-ado.md)  
   
 ## See Also  
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection Object (ADO)](./connection-object-ado.md)

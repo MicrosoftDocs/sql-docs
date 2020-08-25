@@ -77,6 +77,6 @@ int main() {
 ```  
   
 ## See Also  
- [Append Method (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append Method (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Name Property (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)
+ [Append Method (ADOX Columns)](./append-method-adox-columns.md)   
+ [Append Method (ADOX Tables)](./append-method-adox-tables.md)   
+ [Name Property (ADOX)](./name-property-adox.md)

@@ -38,4 +38,4 @@ HRESULT put_ParentRow([in] IUnknown* pParent);
  This property method returns the standard HRESULT values, including S_OK and E_FAIL.  
   
 ## Applies To  
- [ADORecordConstruction Interface](../../../ado/reference/ado-api/adorecordconstruction-interface.md)
+ [ADORecordConstruction Interface](./adorecordconstruction-interface.md)

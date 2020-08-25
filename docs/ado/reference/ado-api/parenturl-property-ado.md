@@ -18,13 +18,13 @@ author: rothja
 ms.author: jroth
 ---
 # ParentURL Property (ADO)
-Indicates an absolute URL string that points to the parent [Record](../../../ado/reference/ado-api/record-object-ado.md) of the current **Record** object.  
+Indicates an absolute URL string that points to the parent [Record](./record-object-ado.md) of the current **Record** object.  
   
 ## Return Value  
  Returns a **String** value that indicates the URL of the parent **Record**.  
   
 ## Remarks  
- The **ParentURL** property depends on the source used to open the **Record** object. For example, the **Record** can be opened with a source that contains a relative path name of a directory referenced by the [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md) property.  
+ The **ParentURL** property depends on the source used to open the **Record** object. For example, the **Record** can be opened with a source that contains a relative path name of a directory referenced by the [ActiveConnection](./activeconnection-property-ado.md) property.  
   
  Suppose "second" is a folder contained under "first". Open the **Record** object by using the following syntax:  
   
@@ -46,13 +46,13 @@ record.Open "second"
  This property is read-only.  
   
 > [!NOTE]
->  This property is only supported by document source providers, such as the [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). For more information, see [Records and Provider-Supplied Fields](../../../ado/guide/data/records-and-provider-supplied-fields.md).  
+>  This property is only supported by document source providers, such as the [Microsoft OLE DB Provider for Internet Publishing](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). For more information, see [Records and Provider-Supplied Fields](../../guide/data/records-and-provider-supplied-fields.md).  
   
 > [!NOTE]
->  URLs using the http scheme will automatically invoke the [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). For more information, see [Absolute and Relative URLs](../../../ado/guide/data/absolute-and-relative-urls.md).  
+>  URLs using the http scheme will automatically invoke the [Microsoft OLE DB Provider for Internet Publishing](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). For more information, see [Absolute and Relative URLs](../../guide/data/absolute-and-relative-urls.md).  
   
 > [!NOTE]
 >  If the current record contains a data record from an ADO **Recordset**, accessing the **ParentURL** property causes a run-time error, indicating that no URL is possible.  
   
 ## Applies To  
- [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+ [Record Object (ADO)](./record-object-ado.md)

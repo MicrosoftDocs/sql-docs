@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, multiple rowsets"
   - "commands [OLE DB]"
   - "multiple-rowset results"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Commands Generating Multiple-Rowset Results
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

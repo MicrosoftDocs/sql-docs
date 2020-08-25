@@ -15,10 +15,10 @@ author: rothja
 ms.author: jroth
 ---
 # Capture ADO Error Codes
-In addition to the provider errors returned in the [Error](../../../ado/reference/ado-api/error-object.md) objects of the [Errors](../../../ado/reference/ado-api/errors-collection-ado.md) collection, ADO itself can return errors to the exception-handling mechanism of your run-time environment. Use the error trapping mechanism your programming language, such as the **On Error** statement in Microsoft® Visual Basic, or the **try-catch** block in Microsoft Visual C++®, to capture ADO errors.
+In addition to the provider errors returned in the [Error](../../reference/ado-api/error-object.md) objects of the [Errors](../../reference/ado-api/errors-collection-ado.md) collection, ADO itself can return errors to the exception-handling mechanism of your run-time environment. Use the error trapping mechanism your programming language, such as the **On Error** statement in Microsoft® Visual Basic, or the **try-catch** block in Microsoft Visual C++®, to capture ADO errors.
 
- For the list of ADO error codes, see [ErrorValueEnum](../../../ado/reference/ado-api/errorvalueenum.md).
+ For the list of ADO error codes, see [ErrorValueEnum](../../reference/ado-api/errorvalueenum.md).
 
 ## See Also
- [Error Object](../../../ado/reference/ado-api/error-object.md)
- [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)
+ [Error Object](../../reference/ado-api/error-object.md)
+ [Errors Collection (ADO)](../../reference/ado-api/errors-collection-ado.md)

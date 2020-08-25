@@ -34,4 +34,4 @@ ADO consists of the following nine objects and four collections.
 |**Errors** collection|Contains all the **Error** objects created in response to a single provider-related failure.|  
   
 ## See Also  
- [ADO Object Model](../../../ado/reference/ado-api/ado-object-model.md)
+ [ADO Object Model](../../reference/ado-api/ado-object-model.md)

@@ -105,5 +105,5 @@ int main() {
 ```  
   
 ## See Also  
- [Using Visual C++ Extensions](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
- [Visual C++ Extensions Header](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ [Using Visual C++ Extensions](./using-visual-c-extensions.md)   
+ [Visual C++ Extensions Header](./visual-c-extensions-header.md)

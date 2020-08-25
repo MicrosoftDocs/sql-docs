@@ -78,6 +78,6 @@ public int getCount()
 ```  
   
 ## See Also  
- [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)
+ [Errors Collection (ADO)](./errors-collection-ado.md)   
+ [Fields Collection (ADO)](./fields-collection-ado.md)   
+ [Parameters Collection (ADO)](./parameters-collection-ado.md)

@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Command and CommandText Properties Example (VC++)
-The following code demonstrates how to use the [Command](../../../ado/reference/adox-api/command-property-adox.md) property to update the text of a procedure.  
+The following code demonstrates how to use the [Command](./command-property-adox.md) property to update the text of a procedure.  
   
 ```  
 // BeginCommandTextCpp  
@@ -86,4 +86,4 @@ int main() {
 ```  
   
 ## See Also  
- [Command Property (ADOX)](../../../ado/reference/adox-api/command-property-adox.md)
+ [Command Property (ADOX)](./command-property-adox.md)

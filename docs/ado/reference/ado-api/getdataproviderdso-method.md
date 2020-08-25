@@ -34,4 +34,4 @@ HRESULT GetDataProviderDSO(
  This method does not addref the interface pointer. If the caller plans to hold the pointer, the caller must do the required addref and release.  
   
 ## Applies to  
- [IDSOShapeExtensions Interface](../../../ado/reference/ado-api/idsoshapeextensions-interface.md)
+ [IDSOShapeExtensions Interface](./idsoshapeextensions-interface.md)

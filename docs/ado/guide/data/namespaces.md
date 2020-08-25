@@ -41,4 +41,4 @@ xmlns:rs="urn:schemas-microsoft-com:rowset"
  The user can define this to be any name as long as this name is consistently used throughout the XML document. ADO always writes out "s," "rs," "dt," and "z," but these prefix names are not hard-coded into the loading component.  
   
 ## See Also  
- [Persisting Records in XML Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Persisting Records in XML Format](./persisting-records-in-xml-format.md)

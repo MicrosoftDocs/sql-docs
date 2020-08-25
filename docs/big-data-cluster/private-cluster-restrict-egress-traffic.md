@@ -23,14 +23,18 @@ By default, AKS clusters have unrestricted outbound (egress) internet access for
 * Dev Space enabled and more scenarios of similar nature
 
 > [!NOTE]
-> Currently, when you deploy BDC in Azure Kubernetes Service ( AKS ) private cluster, there is no inbound dependencies in the scenario besides what we mentioned in this article, you can find all outbound dependencies at : [control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)]( /azure/aks/limit-egress-traffic) . 
+> Currently, when you deploy BDC in Azure Kubernetes Service ( AKS ) private cluster, there is no inbound dependencies in the scenario besides what we mentioned in this article, you can find all outbound dependencies at [control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)]( /azure/aks/limit-egress-traffic) . 
 This article covers how to deploy BDC in AKS private cluster with advanced networking and UDR (user-defined route) as well as its further integration with enterprise-grade networking environment. 
 
 ## Use Azure firewall to restrict egress traffic
 
-Use Azure firewall to restrict egress traffic. Azure firewall includes an `AzureKubernetesService` FQDN tag to simplify this configuration. The FQDN tag contains all the FQDNs listed in AKS official documentation and is kept automatically up to date.
+Azure Firewall provides an Azure Kubernetes Service `(AzureKubernetesService)` FQDN tag to simplify this configuration.
 
-[Restrict egress traffic using Azure firewall](/azure/aks/limit-egress-traffic#restrict-egress-traffic-using-azure-firewall) provides a reference architecture to build a completely private environment in AKS. 
+See [Restrict egress traffic using Azure firewall](/azure/aks/limit-egress-traffic#restrict-egress-traffic-using-azure-firewall) for complete information about this tag.
+
+The following image shows how traffic is restricted on an AKS private cluster. 
+
+:::image type="content" source="media/private-cluster-restrict-egress-traffic/aks-azure-firewall-egress.png" alt-text="AKS private cluster firewall egress traffic":::
 
 To set up a basic architecture with Azure Firewall:
 
@@ -40,6 +44,7 @@ To set up a basic architecture with Azure Firewall:
 4. Set up firewall rules
 5. Create service principal (SP)
 6. Create AKS cluster
+7. Create BDC
 
 The following steps provide details.
 

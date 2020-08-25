@@ -134,6 +134,4 @@ End Sub
 ```  
   
 ## See Also  
- [URL Property (RDS)](../../../ado/reference/rds-api/url-property-rds.md)
-
-
+ [URL Property (RDS)](./url-property-rds.md)

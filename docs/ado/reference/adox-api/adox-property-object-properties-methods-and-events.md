@@ -16,13 +16,13 @@ ms.author: jroth
 ---
 # ADOX Property Object Properties, Methods, and Events
 ## Properties  
- [Attributes Property (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)  
+ [Attributes Property (ADOX)](./attributes-property-adox.md)  
   
- [Name Property (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name Property (ADOX)](./name-property-adox.md)  
   
- [Type Property (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)  
+ [Type Property (Column) (ADOX)](./type-property-column-adox.md)  
   
- [Value Property (ADO)](../../../ado/reference/ado-api/value-property-ado.md)  
+ [Value Property (ADO)](../ado-api/value-property-ado.md)  
   
 ## Methods  
  None.  
@@ -31,4 +31,4 @@ ms.author: jroth
  None.  
   
 ## See Also  
- [Property Object (ADOX)](../../../ado/reference/adox-api/property-object-adox.md)
+ [Property Object (ADOX)](./property-object-adox.md)

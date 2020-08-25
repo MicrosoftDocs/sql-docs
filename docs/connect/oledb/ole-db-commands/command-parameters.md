@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, commands"
   - "parameters [OLE DB Driver for SQL Server], OLE DB"
   - "commands [OLE DB]"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Command Parameters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

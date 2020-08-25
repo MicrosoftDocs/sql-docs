@@ -92,7 +92,7 @@ PropertyPtr GetItem( const _variant_t & Index ); __declspec(property(get=GetItem
 ```  
   
 ## See Also  
- [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md)   
- [Fields Collection (ADO)](../../../ado/reference/ado-api/fields-collection-ado.md)   
- [Parameters Collection (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   
- [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Errors Collection (ADO)](./errors-collection-ado.md)   
+ [Fields Collection (ADO)](./fields-collection-ado.md)   
+ [Parameters Collection (ADO)](./parameters-collection-ado.md)   
+ [Properties Collection (ADO)](./properties-collection-ado.md)

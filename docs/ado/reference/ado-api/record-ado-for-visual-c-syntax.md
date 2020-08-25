@@ -48,4 +48,4 @@ get_State(ObjectStateEnum *pState)
 ```  
   
 ## See Also  
- [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)
+ [Record Object (ADO)](./record-object-ado.md)

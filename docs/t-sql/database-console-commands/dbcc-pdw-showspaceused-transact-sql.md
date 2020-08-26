@@ -46,7 +46,7 @@ Requires VIEW SERVER STATE permission.
   
 ## Result Sets
 
-This is the result set for all tables.  For a replicated Synapse table, when its cache is not populated the DBCC result only reflects the size of underlying round robin table from each distribution.  When the cache is created, the result reflects the total size of the round robin table and the cache.   
+This is the result set for all tables.  Before a cache is created for a replicated Synapse table, the DBCC result reflects the total size of the underlying round robin table from each distribution.  After the cache is created, the result reflects the total size of the round robin tables and the cache.   
   
 |Column|Data Type|Description|  
 |------------|---------------|-----------------|  

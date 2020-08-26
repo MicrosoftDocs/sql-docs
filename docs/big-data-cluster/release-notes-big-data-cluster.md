@@ -59,7 +59,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release          | BDC Version    | `azdata` Version| Release date |
 |------------------|----------------|-----------------|--------------|
-| [CU7](#cu7)      | 15.0.4063.15   | 20.0.1          | 2020-08-28   |
+| [CU7](#cu7)      | 15.0.4063.15   | 20.1.0          | 2020-08-28   |
 | [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
 | [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
 | [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
@@ -175,9 +175,12 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 - **Affected releases**: CU7
 
-- **Issue and customer impact**: 
+- **Issue and customer impact**: During an upgrade, sparkhead returns 404 error.
 
-- **Workaround**: Before you apply CU7, empty all Livy jobs.
+- **Workaround**: Before you apply CU7, empty all Livy jobs. Make sure no active Livy sessions or batch jobs are running in Azure Data Studio. An easy way to confirm this is either through `curl` command or a browser to request these URLs:
+
+- `https://knox.azdata.local:30443/gateway/default/livy/v1/sessions`
+- `https://knox.azdata.local:30443/gateway/default/livy/v1/batches`
 
 ### Big data cluster generated service accounts passwords expiration
 

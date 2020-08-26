@@ -124,7 +124,7 @@ Use this page to specify if you want the wizard to save scripts to the location 
 
 **Save Scripts to a Specific Location** - save one or more Transact-SQL script files to a location you specify.
 
-![Save](media/generate-and-publish-scripts-wizard/save.png)
+![Save as notebook](media/generate-and-publish-scripts-wizard/save.png)
 
 - **[Save as notebook](../../azure-data-studio/notebooks-guidance.md)** - Save the script to one or more .sql files. Select the browse button (**...**) to specify a name and location for the file.
 
@@ -218,7 +218,7 @@ Use this page to specify how you want this wizard to generate scripts. Many diff
 
 ### <a name="Summary"></a> Summary Page
 
-![Summary](media/generate-and-publish-scripts-wizard/summary.png)
+![GS Summary](media/generate-and-publish-scripts-wizard/summary.png)
 
 This page summarizes the options that you have selected in this wizard. To change an option, select **Previous**. To begin generating scripts that are saved or published, select **Next**.
 

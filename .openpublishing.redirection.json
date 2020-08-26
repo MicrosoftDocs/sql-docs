@@ -58719,6 +58719,11 @@
       "source_path": "docs/visual-studio-code/sql-server-develop-use-vscode.md",
       "redirect_url": "/sql/tools/visual-studio-code/sql-server-develop-use-vscode",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/query-and-text-editors-sql-server-management-studio.md",
+      "redirect_url": "/sql/ssms/database-engine-query-editor-sql-server-management-studio",
+      "redirect_document_id": false
     }
   ]
 }

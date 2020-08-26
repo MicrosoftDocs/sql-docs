@@ -206,13 +206,13 @@ az aks create \
 
 ## Build Big Data Cluster (BDC) deployment profile
 
-You can create BDC clusters with custom profile : 
+You can create BDC clusters with custom profile: 
 
 ```console
 azdata bdc config init --source aks-dev-test --target private-bdc-aks --force
 ```console
 
-## Generate and config BDC custom deployment profile 
+## Generate and config BDC custom deployment profile: 
 ```console
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.docker.imageTag=2019-CU6-ubuntu-16.04"
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.storage.data.className=default"
@@ -235,13 +235,15 @@ export AZDATA_PASSWORD=< your bdcadmin password>
 azdata bdc create --config-profile private-bdc-aks --accept-eula yes
 ```
 
-## Use 3rd party firewall instead of Azure Firewall
+## Use third party firewall instead of Azure Firewall
 
-Use 3rd party firewall to restrict egress traffic when deployed BDC with AKS private cluster. For example, [Palo Alto Networks](https://www.paloaltonetworks.com/) provides firewall products in the Azure Marketplace. These firewalls can be used in private deployment solutions with more compliant configurations. Any firewall should provide the following network rules:
+Use third party firewall to restrict egress traffic when deployed BDC with AKS private cluster. For example, [Palo Alto Networks](https://www.paloaltonetworks.com/) provides firewall products in the Azure Marketplace. These firewalls can be used in private deployment solutions with more compliant configurations. Any firewall should provide the following network rules:
 
 * All the required outbound network rules and FQDNs for AKS clusters and all Wildcard HTTP/HTTPS endpoints and dependencies that can vary with your AKS cluster based on a number of qualifiers and your actual requirements. 
 * Azure Global required network rules / FQDN/application rules mentioned here. 
 * Optional recommended FQDN / application rules for AKS clusters mentioned here. 
+
+Please check how to [manage BDC in AKS private cluster](private-cluster-manage.md)  and then the next step is to [connect to BDC cluster](connect-to-big-data-cluster.md).
 
 See automation scripts for this scenario at [SQL Server Samples repository on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/private-aks).
 

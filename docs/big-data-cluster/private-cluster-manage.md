@@ -22,7 +22,7 @@ The easiest option is to:
 1. Deploy an Azure VM in the same VNET with your AKS cluster
 1. Connect to that VM and [Install SQL Server 2019 Big Data tools](deployment-guidance.md#install-sql-server-2019-big-data-tools)
 
-If you need to manage private BDC in AKS cluster, there are 4 options available as the following upon your specific scenario:
+If you need to manage private BDC in AKS cluster, there are four options available as below upon your specific scenario:
 
 - Deploy an Azure VM for management purposes. This may be called a *jumpbox*. Locate the jumpbox in the same VNet with your AKS cluster. Grant access to BDC controller with your BDC username and password.  
 - In Azure, you can also use an Azure VM in a separate network and set up [Virtual network peering](/azure/virtual-network/virtual-network-peering-overview) to the VNet.

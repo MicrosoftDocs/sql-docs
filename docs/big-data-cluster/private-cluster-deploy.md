@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Deploy BDC in Azure Kubernetes Service (AKS) private cluster
 
-This article explains how to deploy SQL Server Big Data Clusters on Azure Kubernetes Service (AKS) private cluster. This configuration supports restricted use of public IP addresses in entreprise networking environment.
+This article explains how to deploy SQL Server Big Data Clusters on Azure Kubernetes Service (AKS) private cluster. This configuration supports restricted use of public IP addresses in enterprise networking environment.
 
 A private deployment provides the following benefits:
 
@@ -63,7 +63,7 @@ echo $SUBNET_ID
 
 ### Create AKS private cluster with advanced networking (CNI)
 
-To be able to get to next step, you need to provision an AKS cluster with Standard Load Balancer with private cluster feature enabled.  Your command will look like as follows : 
+To be able to get to next step, you need to provision an AKS cluster with Standard Load Balancer with private cluster feature enabled.  Your command will look like as follows: 
 
 ```console
 az aks create \
@@ -91,13 +91,14 @@ az aks get-credentials -n $AKS_NAME -g $RESOURCE_GROUP
 
 ## Build Big Data Cluster (BDC) deployment profile
 
-After connecting to an AKS cluster, you can start to deploy BDC, and you can prepare the environment variable and initiate a deployment : 
+After connecting to an AKS cluster, you can start to deploy BDC, and you can prepare the environment variable and initiate a deployment: 
 
 ```console
 azdata bdc config init --source aks-dev-test --target private-bdc-aks --force
 ```console
 
-## Generate and config BDC custom deployment profile 
+Generate and config BDC custom deployment profile:
+
 ```console
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.docker.imageTag=2019-CU6-ubuntu-16.04"
 azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.storage.data.className=default"
@@ -113,7 +114,7 @@ azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.appp
 
 ## Deploy private SQL Server Big Data Cluster with HA 
 
-In case you are  [deploying a SQL Server Big Data Cluster ( SQL-BDC ) with high availability ( HA )]( deployment-high-availability.md),  you’ll be using deploy aks-dev-test-ha deployment profile. After a successful deployment, you can use the same `kubectl get svc` command and you’ll see an additional ‘master-secondary-svc’ service is created which  you need to configure ServiceType as NodePort ( as the following ) . Other steps will be similar to what mentioned in previous section. 
+In case you are  [deploying a SQL Server Big Data Cluster ( SQL-BDC ) with high availability ( HA )]( deployment-high-availability.md),  you’ll be using deploy aks-dev-test-ha deployment profile. After a successful deployment, you can use the same `kubectl get svc` command and you’ll see an additional ‘master-secondary-svc’ service is created which  you need to configure ServiceType as NodePort (as the following) . Other steps will be similar to what mentioned in previous section. 
 
 ```console
 azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.master.spec.endpoints[1].serviceType=NodePort"
@@ -144,7 +145,7 @@ Make sure using the following command to check the services and they are all in 
 kubectl get services -n mssql-cluster
 ```
 
-Please check manage BDC private cluster to know more about how you can manage BDC private cluster and then the next step is to connect to BDC cluster.
+Please check how to [manage BDC in AKS private cluster](private-cluster-manage.md)  and then the next step is to [connect to BDC cluster](connect-to-big-data-cluster.md).
 
 
 See automation scripts for this scenario at [SQL Server Samples repository on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/private-aks).

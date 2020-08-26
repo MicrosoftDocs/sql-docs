@@ -428,13 +428,13 @@ There are no limitations on the number or size of files; however, for best perfo
 
 ### Are there any limitations with COPY using Synapse workspaces (preview)?
 
-Authenticating using Managed Identity (MSI) is not supported with the COPY statement or PolyBase to load (including when used in pipelines). You may run into a similiar error message:
+Authenticating using Managed Identity (MSI) is not supported with the COPY statement or PolyBase (including when used in pipelines). You may run into a similiar error message:
 
 *com.microsoft.sqlserver.jdbc.SQLServerException: Managed Service Identity has not been enabled on this server. Please enable Managed Service Identity and try again.*
 
-MSI authentication is required when the storage account is associated with a VNet. If your storage account is attached to a VNet, you must use BCP/Bulk insert to load data. We will enable MSI support in an upcoming release. 
+MSI authentication is required when the storage account is associated with a VNet. You must use BCP/Bulk insert to load data instead of COPY or PolyBase if your storage account is attached to a VNet.
 
-This limitation is only applicable to SQL pools belonging to a Synapse workspace (preview).
+This limitation is only applicable to SQL pools belonging to a Synapse workspace (preview). We will enable MSI support in Synapse workspaces in an upcoming release. 
 
 Please send any feedback or issues to the following distribution list: sqldwcopypreview@service.microsoft.com
 

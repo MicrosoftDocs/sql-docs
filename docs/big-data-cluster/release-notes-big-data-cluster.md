@@ -179,8 +179,8 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 - **Workaround**: Before you apply CU7, empty all Livy jobs. Make sure no active Livy sessions or batch jobs are running in Azure Data Studio. An easy way to confirm this is either through `curl` command or a browser to request these URLs:
 
-- `https://knox.azdata.local:30443/gateway/default/livy/v1/sessions`
-- `https://knox.azdata.local:30443/gateway/default/livy/v1/batches`
+  - `https://knox.azdata.local:30443/gateway/default/livy/v1/sessions`
+  - `https://knox.azdata.local:30443/gateway/default/livy/v1/batches`
 
 ### Big data cluster generated service accounts passwords expiration
 

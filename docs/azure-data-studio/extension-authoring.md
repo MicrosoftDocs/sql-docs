@@ -80,4 +80,18 @@ Your extension will be reviewed and added to the extension gallery.
 
 **Publishing extension updates**
 
+<<<<<<< HEAD
 The process to publish updates is similar to publishing the extension. Please make sure the version is updated in package.json.
+=======
+The process to publish updates is similar to publishing the extension. Please make sure the version is updated in package.json.
+
+## Next Steps
+
+Refer to one of the following extension authoring tutorials for step-by-step instructions on how to get started:
+
+- **[Keymap Extension Tutorial](tutorial-create-keymap-extension.md)**
+- [Dashboard Extension Tutorial](tutorial-create-dashboard-extension.md)
+- [Notebook Extension Tutorial](tutorial-create-notebook-extension.md)
+- [Jupyter Book Extension Tutorial](tutorial-create-jupyterbook-extension.md)
+- [Wizard Extension Tutorial](tutorial-create-wizard-extension.md)
+>>>>>>> ae5a5cf388a3c2e8c55affeafd19b2d20e26570a

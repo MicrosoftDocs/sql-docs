@@ -1,7 +1,7 @@
 ---
 description: "SQL Server privacy supplement"
 title: "SQL Server privacy supplement | Microsoft Docs"
-ms.date: 07/24/2020
+ms.date: 08/26/2020
 ms.prod: sql
 ms.technology: release-landing
 ms.reviewer: "mikeray"
@@ -16,7 +16,7 @@ ms.author: jaszymas
 
 [!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 
-This article summarizes Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SQL Server may collect standard computer information and data about usage and performance may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of the product. Microsoft will not use this information and data as an occasion to renew agreements made without the customer's prior consent.
+This article summarizes Internet-enabled features that can collect and send anonymous feature usage and diagnostic data to Microsoft. SQL Server may collect standard computer information and data about usage and performance may be transmitted to Microsoft and analyzed for purposes of improving the quality, security, and reliability of the product.
 
 This article serves as an addendum to the overall [Microsoft Privacy Statement](https://go.microsoft.com/fwlink/?LinkId=521839). The data classification in this article only applies to versions of the SQL Server on-premises product. It does not apply to the items:
 
@@ -123,7 +123,7 @@ Data received from an organization, or generated from their use of the product.
 ### Permitted usage scenarios
 |Scenario  |Access Restrictions  |Retention Requirements|
 |---------|---------|---------|
-| Microsoft may collect generic usage data of SQL Server instances running in Azure Virtual Machines for the express purpose of giving customers optional benefits within Azure for using SQL Server within Azure Virtual Machines. | Microsoft can expose data to the customer, such as through the Azure portal, to help customers running SQL Server in Azure Virtual Machines to access benefits specific to running SQL Server in Azure. | Min 90 days - Max 3 years |
+| Microsoft may collect generic usage data of SQL Server instances running in Azure Virtual Machines for the express purpose of giving customers optional benefits within Azure for using SQL Server within Azure Virtual Machines. | Microsoft can expose data to the customer, such as through the Azure portal, to help customers running SQL Server in Azure Virtual Machines to access benefits specific to running SQL Server in Azure. </br></br>Microsoft will not use this data for licensing audits without customer's advance consent. | Min 90 days - Max 3 years |
 
 ## System metadata
 

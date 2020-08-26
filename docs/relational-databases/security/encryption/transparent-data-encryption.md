@@ -114,7 +114,7 @@ GO
 The encryption and decryption operations are scheduled on background threads by [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]. To view the status of these operations, use the catalog views and dynamic management views in the table that appears later in this article.
 
 > [!CAUTION]
-> Backup database files that have TDE enabled are also encrypted with the database encryption key. As a result, when you restore these backups, the certificate that protects the database encryption key must be available. Therefore, in addition to backing up the database, make sure to maintain backups of the server certificates. Data loss results if the certificates are no longer available.
+> Backups for databases that have TDE enabled are also encrypted with the database encryption key. As a result, when you restore these backups, the certificate that protects the database encryption key must be available. Therefore, in addition to backing up the database, make sure to maintain backups of the server certificates. Data loss results if the certificates are no longer available.
 >
 > For more information, see [SQL Server Certificates and Asymmetric Keys](../../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md).
 

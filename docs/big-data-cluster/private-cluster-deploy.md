@@ -1,7 +1,7 @@
 ---
 title: Deploy private cluster
 titleSuffix: SQL Server Big Data Cluster
-description: Learn how to deploy a SQL Server Big Data Clusters with AKS private cluster.
+description: Learn how to deploy a SQL Server Big Data Clusters with AKS private cluster with advanced networking (CNI).
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray
@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Deploy BDC in Azure Kubernetes Service (AKS) private cluster
 
-This article explains how to deploy SQL Server Big Data Clusters on Azure Kubernetes Service (AKS) private cluster. This configuration supports restricted access to public IP addresses.
+This article explains how to deploy SQL Server Big Data Clusters on Azure Kubernetes Service (AKS) private cluster. This configuration supports restricted use of public IP addresses in entreprise networking environment.
 
 A private deployment provides the following benefits:
 
@@ -25,18 +25,19 @@ This article demonstrates how to use an AKS private cluster to restrict the use 
 
 ## Deploy private BDC cluster with AKS private cluster
 
-To get started, create a [AKS private cluster](/azure/aks/private-clusters) to restrict the network traffic between API server and node pools. The traffic remains on the private network only.  Because the solution uses an AKS private cluster, the control plane or API server has internal IP addresses.  
-This section shows you deploy a private BDC cluster in Azure Kubernetes Service (AKS) with advanced networking (CNI).
+To get started, create a [AKS private cluster](/azure/aks/private-clusters) to make sure the network traffic between API server and node pools remains on the private network only. The control plane or API server has internal IP addresses in an AKS private cluster.  
+
+This section shows you deploy a BDC cluster in Azure Kubernetes Service (AKS) private cluster with advanced networking (CNI).
 
 ## Create a private AKS cluster with advanced networking
 
 ```console
 
-export REGION_NAME=northeurope
-export RESOURCE_GROUP=private-bdc-aks-rg
+export REGION_NAME=<your Azure region >
+export RESOURCE_GROUP=< your resource group name >
 export SUBNET_NAME=aks-subnet
 export VNET_NAME=bdc-vnet
-export AKS_NAME=bdcaksprivatecluster
+export AKS_NAME=< your aks private cluster name >
  
 az group create -n $RESOURCE_GROUP -l $REGION_NAME
  
@@ -88,6 +89,8 @@ After a successful deployment, you can go to `<MC_yourakscluster>` resource grou
 az aks get-credentials -n $AKS_NAME -g $RESOURCE_GROUP
 ```
 
+## Build Big Data Cluster (BDC) deployment profile
+
 After connecting to an AKS cluster, you can start to deploy BDC, and you can prepare the environment variable and initiate a deployment : 
 
 ```console
@@ -113,7 +116,7 @@ azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.appp
 In case you are  [deploying a SQL Server Big Data Cluster ( SQL-BDC ) with high availability ( HA )]( deployment-high-availability.md),  you’ll be using deploy aks-dev-test-ha deployment profile. After a successful deployment, you can use the same `kubectl get svc` command and you’ll see an additional ‘master-secondary-svc’ service is created which  you need to configure ServiceType as NodePort ( as the following ) . Other steps will be similar to what mentioned in previous section. 
 
 ```console
-azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.master.spec.endpoints[1].serviceType= NodePort"
+azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.master.spec.endpoints[1].serviceType=NodePort"
 ```
 
 ## Deploy BDC in AKS private cluster
@@ -121,7 +124,6 @@ azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.mast
 ```console
 export AZDATA_USERNAME=<your bdcadmin username>
 export AZDATA_PASSWORD=< your bdcadmin password>
-export ACCEPT_EULA=yes  #accept agreement
 
 azdata bdc create --config-profile private-bdc-aks --accept-eula yes
 ```
@@ -131,7 +133,7 @@ azdata bdc create --config-profile private-bdc-aks --accept-eula yes
 The deployment will take a few minutes and you can use the following command to check the deployment status: 
 
 ```console
- Kubectl get pods -n mssql-cluster -w
+ kubectl get pods -n mssql-cluster -w
 ```
 
 ## Check the service status
@@ -144,8 +146,14 @@ kubectl get services -n mssql-cluster
 
 Please check manage BDC private cluster to know more about how you can manage BDC private cluster and then the next step is to connect to BDC cluster.
 
+
+See automation scripts for this scenario at [SQL Server Samples repository on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/private-aks).
+
+
 ## Next steps
 
 [Manage a private cluster](private-cluster-manage.md)
 
 [Restrict egress traffic of Private BDC cluster](private-cluster-restrict-egress-traffic.md)
+
+[Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)

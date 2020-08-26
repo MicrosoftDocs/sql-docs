@@ -33,4 +33,4 @@ For security purpose, you can use AKS features for API server authorized IP rang
 
 ## Next steps
 
-[Restrict egress traffic of Private BDC cluster](private-cluster-restrict-egress-traffic.md)
+[Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)

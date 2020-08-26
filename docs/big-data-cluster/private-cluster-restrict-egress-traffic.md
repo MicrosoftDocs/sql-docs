@@ -43,8 +43,9 @@ To set up a basic architecture with Azure Firewall:
 3. Create user-defined route table
 4. Set up firewall rules
 5. Create service principal (SP)
-6. Create AKS cluster
-7. Create BDC
+6. Create AKS private cluster
+7. Create BDC deployment profile
+8. Deploy BDC
 
 The following steps provide details.
 
@@ -166,8 +167,8 @@ az network vnet subnet update -g $RESOURCE_GROUP --vnet-name $VNET_NAME --name $
 
 az ad sp create-for-rbac -n "bdcaks-sp" --skip-assignment
 
-APPID=<your service principle ID >
-PASSWORD=< your service principle password >
+APPID=<your service principal ID >
+PASSWORD=< your service principal password >
 VNETID=$(az network vnet show -g $RESOURCE_GROUP --name $VNET_NAME --query id -o tsv)
 
 # Assign SP Permission to VNET
@@ -203,9 +204,38 @@ az aks create \
     --generate-ssh-keys
 ```
 
-## Create big data cluster
+## Build Big Data Cluster (BDC) deployment profile
 
-Then you can create BDC clusters with custom profile. For an example, see [private-aks in SQL Server Samples repository on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/private-aks).
+You can create BDC clusters with custom profile : 
+
+```console
+azdata bdc config init --source aks-dev-test --target private-bdc-aks --force
+```console
+
+## Generate and config BDC custom deployment profile 
+```console
+azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.docker.imageTag=2019-CU6-ubuntu-16.04"
+azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.storage.data.className=default"
+azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.storage.logs.className=default"
+
+azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.endpoints[0].serviceType=NodePort"
+azdata bdc config replace -c private-bdc-aks/control.json -j "$.spec.endpoints[1].serviceType=NodePort"
+
+azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.master.spec.endpoints[0].serviceType=NodePort"
+azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.gateway.spec.endpoints[0].serviceType=NodePort"
+azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.appproxy.spec.endpoints[0].serviceType=NodePort"
+```
+
+## Deploy BDC in AKS private cluster
+
+```console
+export AZDATA_USERNAME=<your bdcadmin username>
+export AZDATA_PASSWORD=< your bdcadmin password>
+
+azdata bdc create --config-profile private-bdc-aks --accept-eula yes
+```
+
+## Use 3rd party firewall instead of Azure Firewall
 
 Use 3rd party firewall to restrict egress traffic when deployed BDC with AKS private cluster. For example, [Palo Alto Networks](https://www.paloaltonetworks.com/) provides firewall products in the Azure Marketplace. These firewalls can be used in private deployment solutions with more compliant configurations. Any firewall should provide the following network rules:
 
@@ -213,6 +243,12 @@ Use 3rd party firewall to restrict egress traffic when deployed BDC with AKS pri
 * Azure Global required network rules / FQDN/application rules mentioned here. 
 * Optional recommended FQDN / application rules for AKS clusters mentioned here. 
 
+See automation scripts for this scenario at [SQL Server Samples repository on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/private-aks).
+
+
+
 ## Next steps
 
 [Manage big data cluster in AKS private cluster](private-cluster-manage.md)
+
+[Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)

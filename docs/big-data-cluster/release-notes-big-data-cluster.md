@@ -177,10 +177,19 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 - **Issue and customer impact**: During an upgrade, sparkhead returns 404 error.
 
-- **Workaround**: Before you apply CU7, empty all Livy jobs. Make sure no active Livy sessions or batch jobs are running in Azure Data Studio. An easy way to confirm this is either through `curl` command or a browser to request these URLs:
+- **Workaround**: Before upgrading BDC, ensure that there are no active Livy sessions or batch jobs. To check this, navigate to `<gateway-endpoint>/ gateway/default/livy/v1`. 
+
+   Make sure no active Livy sessions or batch jobs are running in Azure Data Studio. An easy way to confirm this is either through `curl` command or a browser to request these URLs:
 
   - `https://knox.azdata.local:30443/gateway/default/livy/v1/sessions`
   - `https://knox.azdata.local:30443/gateway/default/livy/v1/batches`
+
+   Otherwise you may run into a 404 error with Livy during the upgrade process. To resolve this problem after the upgraded has started, restart the Livy server on both sparkhead nodes. For example:
+
+   ```console
+   kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec
+supervisorctl restart livy
+   ```
 
 ### Big data cluster generated service accounts passwords expiration
 

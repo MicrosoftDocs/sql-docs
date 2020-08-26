@@ -31,8 +31,16 @@ Before you proceed, check the [upgrade release notes for known issues](release-n
 
 This section explains how to upgrade a SQL Server BDC from a supported release (starting with SQL Server 2019 GDR1) to a newer supported release.
 
+1. Verify no active Livy sessions.
+
+   Make sure no active Livy sessions or batch jobs are running in Azure Data Studio. An easy way to confirm this is either through `curl` command or a browser to request these URLs:
+
+    - `https://knox.azdata.local:30443/gateway/default/livy/v1/sessions`
+    - `https://knox.azdata.local:30443/gateway/default/livy/v1/batches`
+
 1. Back up SQL Server master instance.
-2. Back up HDFS.
+
+1. Back up HDFS.
 
    ```
    azdata bdc hdfs cp --from-path <path> --to-path <path>
@@ -44,7 +52,7 @@ This section explains how to upgrade a SQL Server BDC from a supported release (
    azdata bdc hdfs cp --from-path hdfs://user/hive/warehouse/%%D --to-path ./%%D
    ```
 
-3. Update `azdata`.
+1. Update `azdata`.
 
    Follow the instructions for installing `azdata`. 
    - [Windows installer](deploy-install-azdata-installer.md)

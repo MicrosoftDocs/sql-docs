@@ -1,4 +1,5 @@
 ---
+description: "ADOX Fundamentals"
 title: "ADOX Fundamentals | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -22,28 +23,28 @@ Microsoft® ActiveX® Data Objects Extensions for Data Definition Language and S
   
  The Microsoft OLE DB Provider for the Microsoft Jet Database Engine fully supports ADOX. Certain features of ADOX may not be supported, depending on your data provider.  
   
- This document assumes a working knowledge of the Microsoft® Visual Basic® programming language and a general knowledge of ADO. For more information about ADO, see the [ADO Programmer's Guide](../../../ado/guide/ado-programmer-s-guide.md). For more overview information about ADOX, see the following topics:  
+ This document assumes a working knowledge of the Microsoft® Visual Basic® programming language and a general knowledge of ADO. For more information about ADO, see the [ADO Programmer's Guide](../ado-programmer-s-guide.md). For more overview information about ADOX, see the following topics:  
   
--   [ADOX Object Model](../../../ado/reference/adox-api/adox-object-model.md)  
+-   [ADOX Object Model](../../reference/adox-api/adox-object-model.md)  
   
--   [ADOX Objects](../../../ado/reference/adox-api/adox-objects.md)  
+-   [ADOX Objects](../../reference/adox-api/adox-objects.md)  
   
--   [ADOX Collections](../../../ado/reference/adox-api/adox-collections.md)  
+-   [ADOX Collections](../../reference/adox-api/adox-collections.md)  
   
--   [ADOX Properties](../../../ado/reference/adox-api/adox-properties.md)  
+-   [ADOX Properties](../../reference/adox-api/adox-properties.md)  
   
--   [ADOX Methods](../../../ado/reference/adox-api/adox-methods.md)  
+-   [ADOX Methods](../../reference/adox-api/adox-methods.md)  
   
--   [ADOX Examples](../../../ado/reference/adox-api/adox-code-examples.md)  
+-   [ADOX Examples](../../reference/adox-api/adox-code-examples.md)  
   
 ## See Also  
- [ADOX API Reference](../../../ado/reference/adox-api/adox-api-reference.md)   
- [ADOX Code Examples](../../../ado/reference/adox-api/adox-code-examples.md)   
- [ADOX Collections](../../../ado/reference/adox-api/adox-collections.md)   
- [ADOX Enumerated Constants](../../../ado/reference/adox-api/adox-enumerated-constants.md)   
- [ADOX Methods](../../../ado/reference/adox-api/adox-methods.md)   
- [ADOX Object Model](../../../ado/reference/adox-api/adox-object-model.md)   
- [ADOX Objects](../../../ado/reference/adox-api/adox-objects.md)   
- [ADOX Properties](../../../ado/reference/adox-api/adox-properties.md)   
- [ADO (Multidimensional) (ADO MD)](../../../ado/guide/multidimensional/ado-multidimensional-ado-md.md)   
- [ADO Programmer's Guide](../../../ado/guide/ado-programmer-s-guide.md)
+ [ADOX API Reference](../../reference/adox-api/adox-object-model.md?view=sql-server-ver15)   
+ [ADOX Code Examples](../../reference/adox-api/adox-code-examples.md)   
+ [ADOX Collections](../../reference/adox-api/adox-collections.md)   
+ [ADOX Enumerated Constants](../../reference/adox-api/adox-enumerated-constants.md)   
+ [ADOX Methods](../../reference/adox-api/adox-methods.md)   
+ [ADOX Object Model](../../reference/adox-api/adox-object-model.md)   
+ [ADOX Objects](../../reference/adox-api/adox-objects.md)   
+ [ADOX Properties](../../reference/adox-api/adox-properties.md)   
+ [ADO (Multidimensional) (ADO MD)](../multidimensional/ado-multidimensional-ado-md.md)   
+ [ADO Programmer's Guide](../ado-programmer-s-guide.md)

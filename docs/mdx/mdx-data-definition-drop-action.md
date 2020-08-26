@@ -1,4 +1,5 @@
 ---
+description: "MDX Data Definition - DROP ACTION"
 title: "DROP ACTION Statement (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

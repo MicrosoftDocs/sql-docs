@@ -1,4 +1,5 @@
 ---
+description: "ODBC and the Standard CLI"
 title: "ODBC and the Standard CLI | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

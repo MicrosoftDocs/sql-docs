@@ -1,4 +1,5 @@
 ---
+description: "SortDirection Property (RDS)"
 title: "SortDirection Property (RDS) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""
@@ -29,20 +30,18 @@ DataControl.SortDirection = value
   
 #### Parameters  
  *DataControl*  
- An object variable that represents an [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object.  
+ An object variable that represents an [RDS.DataControl](./datacontrol-object-rds.md) object.  
   
  *Value*  
  A **Boolean** value that, when set to **True**, indicates the sort direction is ascending. **False** indicates descending order.  
   
 ## Remarks  
- The [SortColumn](../../../ado/reference/rds-api/sortcolumn-property-rds.md), **SortDirection**, [FilterValue](../../../ado/reference/rds-api/filtervalue-property-rds.md), [FilterCriterion](../../../ado/reference/rds-api/filtercriterion-property-rds.md), and [FilterColumn](../../../ado/reference/rds-api/filtercolumn-property-rds.md) properties provide sorting and filtering functionality on the client-side cache. The sorting functionality orders records by using values from one column. The filtering functionality displays a subset of records based on find criteria, while the full [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) is maintained in the cache. The [Reset](../../../ado/reference/rds-api/reset-method-rds.md) method will execute the criteria and replace the current **Recordset** with an updatable **Recordset**.  
+ The [SortColumn](./sortcolumn-property-rds.md), **SortDirection**, [FilterValue](./filtervalue-property-rds.md), [FilterCriterion](./filtercriterion-property-rds.md), and [FilterColumn](./filtercolumn-property-rds.md) properties provide sorting and filtering functionality on the client-side cache. The sorting functionality orders records by using values from one column. The filtering functionality displays a subset of records based on find criteria, while the full [Recordset](../ado-api/recordset-object-ado.md) is maintained in the cache. The [Reset](./reset-method-rds.md) method will execute the criteria and replace the current **Recordset** with an updatable **Recordset**.  
   
 ## Applies To  
- [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+ [DataControl Object (RDS)](./datacontrol-object-rds.md)  
   
 ## See Also  
- [FilterColumn, FilterCriterion, FilterValue, SortColumn, and SortDirection Properties and Reset Method Example (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
- [Sort Property](../../../ado/reference/ado-api/sort-property.md)   
- [SortColumn Property (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)
-
-
+ [FilterColumn, FilterCriterion, FilterValue, SortColumn, and SortDirection Properties and Reset Method Example (VBScript)](./filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
+ [Sort Property](../ado-api/sort-property.md)   
+ [SortColumn Property (RDS)](./sortcolumn-property-rds.md)

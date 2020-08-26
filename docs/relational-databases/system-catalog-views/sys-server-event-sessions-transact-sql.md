@@ -1,4 +1,5 @@
 ---
+description: "sys.server_event_sessions (Transact-SQL)"
 title: "sys.server_event_sessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,0 @@
-- name: Integration Services Service (SSIS Service)
-  items:
-  - name: Events Logged by the Integration Services Service
-- name: Package Management (SSIS Service)

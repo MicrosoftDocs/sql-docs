@@ -1,4 +1,5 @@
 ---
+description: "sp_mergemetadataretentioncleanup (Transact-SQL)"
 title: "sp_mergemetadataretentioncleanup (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Create Linked Servers (SQL Server Database Engine)"
 title: "Create Linked Servers"
 ms.date: "01/24/2020"
 ms.prod: sql
@@ -93,7 +94,7 @@ ms.custom: seo-dt-2019
      Use the remote user to map users not defined in **Local login**. The **Remote User** must be a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Authentication login on the remote server.  
 
     > [!WARNING]
-    > Only a SQL Server user can be used a "Remote User" in an Azure SQL Database managed instance deployment.  
+    > Only a SQL Server user can be used a "Remote User" in a managed instance deployment.  
 
      **Remote Password**  
      Specify the password of the Remote User.  

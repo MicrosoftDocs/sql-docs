@@ -1,4 +1,5 @@
 ---
+description: "sp_add_maintenance_plan_db (Transact-SQL)"
 title: "sp_add_maintenance_plan_db (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

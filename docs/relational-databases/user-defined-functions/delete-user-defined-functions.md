@@ -1,4 +1,5 @@
 ---
+description: "Delete User-defined Functions"
 title: "Delete User-defined Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

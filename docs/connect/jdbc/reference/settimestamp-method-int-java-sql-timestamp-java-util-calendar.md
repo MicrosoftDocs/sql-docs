@@ -1,4 +1,5 @@
 ---
+description: "setTimestamp Method (int, java.sql.Timestamp, java.util.Calendar)"
 title: "setTimestamp Method (int, java.sql.Timestamp, java.util.Calendar) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

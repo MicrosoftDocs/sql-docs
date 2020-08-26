@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_cryptographic_provider_algorithms (Transact-SQL)"
 title: "sys.dm_cryptographic_provider_algorithms (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

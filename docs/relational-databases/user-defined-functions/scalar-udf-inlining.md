@@ -2,7 +2,7 @@
 title: "Scalar UDF Inlining in Microsoft SQL Server | Microsoft Docs"
 description: "Scalar UDF Inlining feature to improve performance of queries that invoke scalar UDFs in SQL Server (starting with SQL Server 2019)."
 ms.custom: ""
-ms.date: 06/23/2020
+ms.date: 08/04/2020
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database"
 ms.reviewer: ""
@@ -125,7 +125,7 @@ As mentioned earlier, the query plan no longer has a user-defined function opera
 -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has also inferred the implicit `GROUP BY O_CUSTKEY on ORDERS` and has used the IndexSpool + StreamAggregate to implement it.
 -  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is now using parallelism across all operators.
 
-Depending upon the complexity of the logic in the UDF, the resulting query plan might also get bigger and more complex. As we can see, the operations inside the UDF are now no longer a black box, and hence the query optimizer is able to cost and optimize those operations. Also, since the UDF is no longer in the plan, iterative UDF invocation is replaced by a plan that completely avoids function call overhead.
+Depending upon the complexity of the logic in the UDF, the resulting query plan might also get bigger and more complex. As we can see, the operations inside the UDF are now no longer an opaque box, and hence the query optimizer is able to cost and optimize those operations. Also, since the UDF is no longer in the plan, iterative UDF invocation is replaced by a plan that completely avoids function call overhead.
 
 ## Inlineable scalar UDFs requirements
 <a name="requirements"></a> A scalar T-SQL UDF can be inlined if all of the following conditions are true:
@@ -158,6 +158,9 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
 - The UDF does not contain multiple RETURN statements <sup>6</sup>.
 - The UDF is not called from a RETURN statement <sup>6</sup>.
 - The UDF does not reference the `STRING_AGG` function <sup>6</sup>. 
+- The UDF does not reference remote tables <sup>7</sup>.
+- The UDF-calling query does not use `GROUPING SETS`, `CUBE`, or `ROLLUP` <sup>7</sup>.
+- The UDF-calling query does not contain a variable that is used as a UDF parameter for assignment (for example, `SELECT @y = 2`, `@x = UDF(@y)`)<sup>7</sup>.
 
 <sup>1</sup> `SELECT` with variable accumulation/aggregation is not supported for inlining (such as `SELECT @val += col1 FROM table1`).
 
@@ -170,6 +173,8 @@ Depending upon the complexity of the logic in the UDF, the resulting query plan 
 <sup>5</sup> Restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU4
 
 <sup>6</sup> Restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU5
+
+<sup>7</sup> Restriction added in [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6
 
 > [!NOTE]
 > For information on the latest T-SQL Scalar UDF Inlining fixes and changes to inlining eligibility scenarios, see the Knowledge Base article: [FIX: Scalar UDF Inlining issues in SQL Server 2019](https://support.microsoft.com/help/4538581).

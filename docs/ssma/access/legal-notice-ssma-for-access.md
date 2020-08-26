@@ -1,4 +1,5 @@
 ---
+description: "Legal Notice (SSMA for Access)"
 title: "Legal Notice (SSMA for Access) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -11,8 +12,8 @@ helpviewer_keywords:
   - "disclaimer"
   - "legal notice"
 ms.assetid: d614b508-48ad-459e-ae86-79ee9d027a73
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Legal Notice (SSMA for Access)
 This documentation, including sample applications herein, is provided for information purposes only, and this documentation is provided without any warranties, either express or implied. Information in this documentation, including URL and other Internet Web site references, is subject to change without notice. The entire risk of the use or the results of the use of this documentation remains with the user.  

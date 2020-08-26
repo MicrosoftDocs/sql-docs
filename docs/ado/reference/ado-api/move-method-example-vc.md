@@ -1,4 +1,5 @@
 ---
+description: "Move Method Example (VC++)"
 title: "Move Method Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Move Method Example (VC++)
-This example uses the [Move](../../../ado/reference/ado-api/move-method-ado.md) method to position the record pointer based on user input.  
+This example uses the [Move](./move-method-ado.md) method to position the record pointer based on user input.  
   
 ## Example  
   
@@ -252,4 +253,4 @@ Enter number of records to Move
 ```  
   
 ## See Also  
- [Move Method (ADO)](../../../ado/reference/ado-api/move-method-ado.md)
+ [Move Method (ADO)](./move-method-ado.md)

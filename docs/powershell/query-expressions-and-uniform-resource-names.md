@@ -5,7 +5,7 @@ ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql
 ms.reviewer: ""
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 helpviewer_keywords: 
   - "query expressions"
@@ -85,9 +85,9 @@ Object1[<FilterExpression1>]/ ... /ObjectN[<FilterExpressionN>]
  Enumerates all objects where the value of the specified string property is exactly the same as the character pattern that is specified in '*PatternString*'.  
   
  \@*DatePropertyName*= datetime('*DateString*')  
- Enumerates all objects where the value of the specified date property matches the date that is specified in '*DateString*'. *DateString* must follow the format yyyy-mm-dd hh:mi:ss.mmm  
+ Enumerates all objects where the value of the specified date property matches the date that is specified in '*DateString*'. *DateString* must follow the format yyyy-mm-dd hh:mi:ss.mmm.  
   
-|||  
+|DateString component|Description|  
 |-|-|  
 |yyyy|Four digit year.|  
 |mm|Two digit month (01 through 12).|  

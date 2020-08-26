@@ -1,4 +1,5 @@
 ---
+description: "RPC Output Parameter Event Class"
 title: "RPC Output Parameter Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

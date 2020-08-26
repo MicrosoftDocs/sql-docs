@@ -1,4 +1,5 @@
 ---
+description: "Catalog ActiveConnection Property Example (VC++)"
 title: "Catalog ActiveConnection Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Catalog ActiveConnection Property Example (VC++)
-Setting the [ActiveConnection](../../../ado/reference/adox-api/activeconnection-property-adox.md) property to a valid, open connection "opens" the catalog. From an open catalog, you can access the schema objects contained within that catalog.  
+Setting the [ActiveConnection](./activeconnection-property-adox.md) property to a valid, open connection "opens" the catalog. From an open catalog, you can access the schema objects contained within that catalog.  
   
 ```  
 // CatalogActiveConnectionCpp.cpp  
@@ -106,4 +107,4 @@ void OpenConnectionWithStringX() {
 ```  
   
 ## See Also  
- [ActiveConnection Property (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)
+ [ActiveConnection Property (ADOX)](./activeconnection-property-adox.md)

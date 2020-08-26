@@ -1,4 +1,5 @@
 ---
+description: "Data Quality Client Application"
 title: "Data Quality Client Application"
 ms.date: "10/01/2012"
 ms.prod: sql

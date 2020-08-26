@@ -1,4 +1,5 @@
 ---
+description: "Connecting Directly to Drivers"
 title: "Connecting Directly to Drivers | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

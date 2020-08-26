@@ -1,4 +1,5 @@
 ---
+description: "sys.key_encryptions (Transact-SQL)"
 title: "sys.key_encryptions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/18/2017"

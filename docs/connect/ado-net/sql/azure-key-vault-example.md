@@ -1,4 +1,5 @@
 ---
+description: "Example demonstrating use of Azure Key Vault provider with Always Encrypted"
 title: "Example demonstrating use of Azure Key Vault provider with Always Encrypted | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/18/2019
@@ -14,7 +15,7 @@ ms.author: v-jizho2
 
 # Example demonstrating use of Azure Key Vault provider with Always Encrypted
 
-[!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx-winonly.md)]
+[!INCLUDE [sqlserver2019-windows-only](../../../includes/applies-to-version/sqlserver2019-windows-only.md)]
 
 [!INCLUDE [appliesto-netfx-netcore-xxxx-md](../../../includes/appliesto-netfx-netcore-xxxx-md.md)]
 

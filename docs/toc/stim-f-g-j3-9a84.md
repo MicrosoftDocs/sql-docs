@@ -1,5 +1,6 @@
 ---
-title: Initialize a Subscription with a Snapshot | Microsoft Docs
+description: "Initialize a Subscription with a Snapshot (9a84)"
+title: Initialize a Subscription with a Snapshot (9a84) | Microsoft Docs
 ms.date: 02/29/2020
 ms.prod: sql
 ms.technology: replication
@@ -12,7 +13,7 @@ ROBOTS: NOINDEX, NOFOLLOW
 ms.localizationpriority: "null"
 localization_priority: "None"
 ---
-# Initialize a Subscription with a Snapshot
+# Initialize a Subscription with a Snapshot (9a84)
 
 [!INCLUDE[sql-asdbmi](../includes/applies-to-version/sql-asdbmi.md)]
 

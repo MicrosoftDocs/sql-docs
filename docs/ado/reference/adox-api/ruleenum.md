@@ -1,4 +1,5 @@
 ---
+description: "RuleEnum"
 title: "RuleEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # RuleEnum
-Specifies the rule to follow when a [Key](../../../ado/reference/adox-api/key-object-adox.md) is deleted.  
+Specifies the rule to follow when a [Key](./key-object-adox.md) is deleted.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -27,4 +28,4 @@ Specifies the rule to follow when a [Key](../../../ado/reference/adox-api/key-ob
 |**adRISetNull**|2|Foreign key value is set to null.|  
   
 ## Applies To  
- [DeleteRule Property (ADOX)](../../../ado/reference/adox-api/deleterule-property-adox.md)
+ [DeleteRule Property (ADOX)](./deleterule-property-adox.md)

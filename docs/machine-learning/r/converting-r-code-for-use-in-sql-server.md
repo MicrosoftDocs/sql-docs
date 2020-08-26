@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Convert R code for execution in SQL Server (In-Database) instances
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 This article provides high-level guidance on how to modify R code to work in SQL Server. 
 
@@ -130,7 +130,7 @@ How much you change your code depends on whether you intend to submit the R code
 
 + If your code is relatively simple, you can embed it in a T-SQL user-defined function without modification, as described in this samples:
 
-    + [Feature engineering using T-SQL and R](../tutorials/sqldev-create-data-features-using-t-sql.md)
+    + [Feature engineering using T-SQL and R](../tutorials/r-taxi-classification-create-features.md)
 
 + If the code is more complex, use the R package **sqlrutils** to convert your code. This package is designed to help experienced R users write good stored procedure code. 
 
@@ -160,7 +160,7 @@ To view examples of how an R solution can be deployed in SQL Server, see these s
 
 + [Build a predictive model for  ski rental business using R and SQL Server](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction/)
 
-+ [In-Database Analytics for the SQL Developer](../tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [In-Database Analytics for the SQL Developer](../tutorials/r-taxi-classification-introduction.md)
   Demonstrates how you can make your R code more modular by wrapping it  in stored procedures
 
 + [End-to-End Data Science Solution](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md)

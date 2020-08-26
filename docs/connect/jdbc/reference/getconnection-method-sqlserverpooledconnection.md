@@ -1,4 +1,5 @@
 ---
+description: "getConnection Method (SQLServerPooledConnection)"
 title: "getConnection Method (SQLServerPooledConnection) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

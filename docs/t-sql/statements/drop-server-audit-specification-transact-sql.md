@@ -1,4 +1,5 @@
 ---
+description: "DROP SERVER AUDIT SPECIFICATION (Transact-SQL)"
 title: "DROP SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

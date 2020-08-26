@@ -1,4 +1,5 @@
 ---
+description: "Manage a CDC Instance"
 title: "Manage a CDC Instance | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"
@@ -65,7 +66,7 @@ ms.author: chugu
   
 -   **Status**: An icon that indicates the current status for the CDC instance. The following describes the statuses.  
   
-    |||  
+    |Icon|Statuses and descriptions|  
     |-|-|  
     |![Error](../../integration-services/change-data-capture/media/error.gif "Error")|**Error**. The Oracle CDC Instance is not running because a non-retryable error occurred. The following sub-statuses are available:<br /><br /> **Misconfigured**: A configuration error occurred that requires manual intervention.<br /><br /> **Password Required**: No password was set for the Oracle CDC Instance or the password is not valid.<br /><br /> **Unexpected**. All other non-recoverable errors.|  
     |![Okay](../../integration-services/change-data-capture/media/okay.gif "Okay")|**Running**: The CDC Instance is running and is processing change records. The following sub-statuses are available:<br /><br /> **Idle**: All change records have been processed and stored in the target change tables. There are no more active transactions.<br /><br /> **Processing**: There are change records being process that are not yet written to the change tables.|  

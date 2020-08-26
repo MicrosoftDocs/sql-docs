@@ -1,4 +1,5 @@
 ---
+description: "Uses of Catalog Data"
 title: "Uses of Catalog Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

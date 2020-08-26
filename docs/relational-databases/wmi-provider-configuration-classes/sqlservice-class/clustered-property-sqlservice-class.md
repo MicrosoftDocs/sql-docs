@@ -1,4 +1,5 @@
 ---
+description: "Clustered Property (SqlService Class)"
 title: "Clustered Property (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"

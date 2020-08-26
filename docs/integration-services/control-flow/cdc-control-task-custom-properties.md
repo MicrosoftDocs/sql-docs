@@ -1,4 +1,5 @@
 ---
+description: "CDC Control Task Custom Properties"
 title: "CDC Control Task Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

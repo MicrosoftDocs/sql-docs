@@ -1,4 +1,5 @@
 ---
+description: "Provider and DefaultDatabase Properties Example (VC++)"
 title: "Provider and DefaultDatabase Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Provider and DefaultDatabase Properties Example (VC++)
-This example demonstrates the [Provider](../../../ado/reference/ado-api/provider-property-ado.md) property by opening three [Connection](../../../ado/reference/ado-api/connection-object-ado.md) objects using different providers. It also uses the [DefaultDatabase](../../../ado/reference/ado-api/defaultdatabase-property.md) property to set the default database for the Microsoft ODBC Provider.  
+This example demonstrates the [Provider](./provider-property-ado.md) property by opening three [Connection](./connection-object-ado.md) objects using different providers. It also uses the [DefaultDatabase](./defaultdatabase-property.md) property to set the default database for the Microsoft ODBC Provider.  
   
 ```  
 // Provider_and_DefaultDatabase_Properties.cpp  
@@ -128,6 +129,6 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [DefaultDatabase Property](../../../ado/reference/ado-api/defaultdatabase-property.md)   
- [Provider Property (ADO)](../../../ado/reference/ado-api/provider-property-ado.md)
+ [Connection Object (ADO)](./connection-object-ado.md)   
+ [DefaultDatabase Property](./defaultdatabase-property.md)   
+ [Provider Property (ADO)](./provider-property-ado.md)

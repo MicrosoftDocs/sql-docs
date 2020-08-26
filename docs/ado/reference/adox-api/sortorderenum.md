@@ -1,4 +1,5 @@
 ---
+description: "SortOrderEnum"
 title: "SortOrderEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -25,4 +26,4 @@ Specifies the sort sequence for an indexed column.
 |**adSortDescending**|2|The sort sequence for the column is descending.|  
   
 ## Applies To  
- [SortOrder Property (ADOX)](../../../ado/reference/adox-api/sortorder-property-adox.md)
+ [SortOrder Property (ADOX)](./sortorder-property-adox.md)

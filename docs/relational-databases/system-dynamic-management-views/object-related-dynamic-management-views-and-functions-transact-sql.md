@@ -1,4 +1,5 @@
 ---
+description: "Object Related Dynamic Management Views and Functions (Transact-SQL)"
 title: "Object Related Dynamic Management Views and Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/10/2017"

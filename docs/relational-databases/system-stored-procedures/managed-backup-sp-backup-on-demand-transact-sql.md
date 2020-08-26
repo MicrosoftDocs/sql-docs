@@ -1,4 +1,5 @@
 ---
+description: "managed_backup.sp_backup_on_demand (Transact-SQL)"
 title: "managed_backup.sp_backup_on_demand (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

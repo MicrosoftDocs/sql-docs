@@ -1,4 +1,5 @@
 ---
+description: "CLOSE SYMMETRIC KEY (Transact-SQL)"
 title: "CLOSE SYMMETRIC KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_alert (Transact-SQL)"
 title: "sp_delete_alert (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "View a Saved Trace (Transact-SQL)"
 title: "View a Saved Trace (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Cell Object (ADO MD)"
 title: "Cell Object (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -20,19 +21,19 @@ ms.author: jroth
 Represents the data at the intersection of axis coordinates contained in a cellset.  
   
 ## Remarks  
- A **Cell** object is returned by the [Item](../../../ado/reference/ado-md-api/item-property-ado-md-cellset.md) property of a [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) object.  
+ A **Cell** object is returned by the [Item](./item-property-ado-md-cellset.md) property of a [Cellset](./cellset-object-ado-md.md) object.  
   
  With the collections and properties of a **Cell** object, you can do the following:  
   
--   Return the data in the **Cell** with the [Value](../../../ado/reference/ado-md-api/value-property-ado-md.md) property.  
+-   Return the data in the **Cell** with the [Value](./value-property-ado-md.md) property.  
   
--   Return the string representing the formatted display of the **Value** property with the [FormattedValue](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md) property.  
+-   Return the string representing the formatted display of the **Value** property with the [FormattedValue](./formattedvalue-property-ado-md.md) property.  
   
--   Return the ordinal value of the **Cell** within the **Cellset** with the [Ordinal](../../../ado/reference/ado-md-api/ordinal-property-ado-md-cell.md) property.  
+-   Return the ordinal value of the **Cell** within the **Cellset** with the [Ordinal](./ordinal-property-ado-md-cell.md) property.  
   
--   Determine the position of the **Cell** within the [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) with the [Positions](../../../ado/reference/ado-md-api/positions-collection-ado-md.md) collection.  
+-   Determine the position of the **Cell** within the [CubeDef](./cubedef-object-ado-md.md) with the [Positions](./positions-collection-ado-md.md) collection.  
   
--   Retrieve other information about the **Cell** with the standard ADO [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection.  
+-   Retrieve other information about the **Cell** with the standard ADO [Properties](../ado-api/properties-collection-ado.md) collection.  
   
  The **Properties** collection contains provider-supplied properties. The following table lists properties that might be available. The actual property list may differ depending upon the implementation of the provider. See the documentation for your provider for a more complete list of available properties.  
   
@@ -47,10 +48,10 @@ Represents the data at the intersection of axis coordinates contained in a cells
   
  This section contains the following topic.  
   
--   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/cell-object-properties-methods-and-events.md)  
+-   [Properties, Methods, and Events](./cell-object-properties-methods-and-events.md)  
   
 ## See Also  
- [Axis Example (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
- [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)   
- [Positions Collection (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   
- [Properties Collection (ADO)](../../../ado/reference/ado-api/properties-collection-ado.md)
+ [Axis Example (VBScript)](./axis-example-vbscript.md)   
+ [Cellset Object (ADO MD)](./cellset-object-ado-md.md)   
+ [Positions Collection (ADO MD)](./positions-collection-ado-md.md)   
+ [Properties Collection (ADO)](../ado-api/properties-collection-ado.md)

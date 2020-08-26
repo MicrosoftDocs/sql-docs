@@ -1,4 +1,5 @@
 ---
+description: "Power BI Report Server Integration (Configuration Manager)"
 title: "Power BI Report Server Integration (Configuration Manager) | Microsoft Docs"
 author: maggiesMSFT
 ms.author: maggies

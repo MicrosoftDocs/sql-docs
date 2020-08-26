@@ -1,4 +1,5 @@
 ---
+description: "Running the Address Book SQL Script"
 title: "Running the Address Book SQL Script | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -63,6 +64,4 @@ ms.author: jroth
 7.  After it executes, close the **Query**, **Query Analyzer**, and **Enterprise Manager** windows.  
   
 ## See Also  
- [Running the Address Book Sample Application](../../../ado/guide/remote-data-service/running-the-address-book-sample-application.md)
-
-
+ [Running the Address Book Sample Application](./running-the-address-book-sample-application.md)

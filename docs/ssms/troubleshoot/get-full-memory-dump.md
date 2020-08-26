@@ -1,6 +1,7 @@
 ---
+description: "Get Full Memory Dump"
 title: Get Full Memory Dump to troubleshoot SSMS
-Description: Troubleshooting an SSMS unresponsive or crash by collecting a full memory dump
+Description: Capture diagnostic information from SQL Server Management Studio (SSMS) so you can troubleshoot a crash or an unresponsive system.
 ms.prod: sql
 ms.prod_service: "sql-tools"
 ms.technology: ssms

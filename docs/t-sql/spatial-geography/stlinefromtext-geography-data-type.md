@@ -1,4 +1,5 @@
 ---
+description: "STLineFromText (geography Data Type)"
 title: "STLineFromText (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"

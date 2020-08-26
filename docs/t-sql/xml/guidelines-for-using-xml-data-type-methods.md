@@ -1,4 +1,5 @@
 ---
+description: "Guidelines for Using xml Data Type Methods"
 title: Guidelines for Using xml Data Type Methods
 ms.custom: ""
 ms.date: "03/04/2017"

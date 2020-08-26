@@ -1,4 +1,5 @@
 ---
+description: "Performance Counters"
 title: "Performance Counters | Microsoft Docs"
 ms.custom: supportability
 ms.date: "08/27/2016"

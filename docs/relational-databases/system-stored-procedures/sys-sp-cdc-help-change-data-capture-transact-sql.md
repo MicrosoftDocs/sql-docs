@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_cdc_help_change_data_capture (Transact-SQL)"
 title: "sys.sp_cdc_help_change_data_capture (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

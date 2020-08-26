@@ -1,4 +1,5 @@
 ---
+description: "RecordOpenOptionsEnum"
 title: "RecordOpenOptionsEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # RecordOpenOptionsEnum
-Specifies options for opening a [Record](../../../ado/reference/ado-api/record-object-ado.md). These values may be combined by using OR.  
+Specifies options for opening a [Record](./record-object-ado.md). These values may be combined by using OR.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -32,4 +33,4 @@ Specifies options for opening a [Record](../../../ado/reference/ado-api/record-o
  These constants do not have ADO/WFC equivalents.  
   
 ## Applies To  
- [Open Method (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)
+ [Open Method (ADO Record)](./open-method-ado-record.md)

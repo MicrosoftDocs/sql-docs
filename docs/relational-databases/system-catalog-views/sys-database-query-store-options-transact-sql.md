@@ -1,4 +1,5 @@
 ---
+description: "sys.database_query_store_options (Transact-SQL)"
 title: "sys.database_query_store_options (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/27/2020"
@@ -23,7 +24,7 @@ ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.database_query_store_options (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
 
   Returns the Query Store options for this database.  
   

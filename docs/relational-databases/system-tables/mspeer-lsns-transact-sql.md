@@ -1,4 +1,5 @@
 ---
+description: "MSpeer_lsns (Transact-SQL)"
 title: "MSpeer_lsns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

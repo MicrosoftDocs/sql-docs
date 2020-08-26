@@ -1,4 +1,5 @@
 ---
+description: "sp_updateextendedproperty (Transact-SQL)"
 title: "sp_updateextendedproperty (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/12/2016"

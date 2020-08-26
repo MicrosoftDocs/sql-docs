@@ -1,4 +1,5 @@
 ---
+description: "Translation DLL Function Summary"
 title: "Translation DLL Function Summary | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "BACKUP SERVICE MASTER KEY (Transact-SQL)"
 title: "BACKUP SERVICE MASTER KEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

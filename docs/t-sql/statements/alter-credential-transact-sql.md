@@ -1,4 +1,5 @@
-﻿---
+---
+description: "ALTER CREDENTIAL (Transact-SQL)"
 title: "ALTER CREDENTIAL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 09/07/2018

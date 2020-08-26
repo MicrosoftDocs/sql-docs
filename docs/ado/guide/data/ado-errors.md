@@ -1,4 +1,5 @@
 ---
+description: "ADO Run-Time Errors"
 title: "ADO Errors | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -83,7 +84,7 @@ Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
  The error message includes each piece of information provided by the Visual Basic **Err** object except for the **LastDLLError** value, which does not apply here. The error number tells you which error has occurred. The description is useful in cases in which you do not want to handle the error yourself. You can simply pass it along to the user. Although you will usually want to use messages customized for your application, you cannot anticipate every error; the description gives some clue as to what went wrong. In the sample code, the error was reported by the **Connection** object. You will see the object's type or programmatic ID here - not a variable name.
 
 > [!NOTE]
->  The Visual Basic **Err** object only contains information about the most recent error. The ADO **Errors** collection of the **Connection** object contains one **Error** object for each error raised by the most recent ADO operation. Use the **Errors** collection rather than the **Err** object to handle multiple errors. For more information about the **Errors** collection, see [Provider Errors](../../../ado/guide/data/provider-errors.md). However, if there is no valid **Connection** object, the **Err** object is the only source for information about ADO errors.
+>  The Visual Basic **Err** object only contains information about the most recent error. The ADO **Errors** collection of the **Connection** object contains one **Error** object for each error raised by the most recent ADO operation. Use the **Errors** collection rather than the **Err** object to handle multiple errors. For more information about the **Errors** collection, see [Provider Errors](./provider-errors.md). However, if there is no valid **Connection** object, the **Err** object is the only source for information about ADO errors.
 
  What kinds of operations are likely to cause ADO errors? Common ADO errors can involve opening an object such as a **Connection** or **Recordset**, attempting to update data, or calling a method or property that is not supported by your provider.
 
@@ -91,4 +92,4 @@ Help File: E:\WINNT\HELP\ADO260.CHM Topic ID: 1003705
 
  The following topic provides more information about ADO errors.
 
--   [ADO Error Reference](../../../ado/guide/data/ado-error-reference.md)
+-   [ADO Error Reference](./ado-error-reference.md)

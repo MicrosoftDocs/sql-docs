@@ -1,4 +1,5 @@
 ---
+description: "DROP ASSEMBLY (Transact-SQL)"
 title: "DROP ASSEMBLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"

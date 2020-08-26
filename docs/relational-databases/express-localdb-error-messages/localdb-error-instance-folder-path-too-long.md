@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG"
 title: "LOCALDB_ERROR_INSTANCE_FOLDER_PATH_TOO_LONG | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,8 +16,8 @@ ms.author: "sstein"
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| --------- | ----- | 
 |Product Name|SQL Server|  
 |Event ID|260|  
 |Event Source|SQL Server Local Database Runtime 12.0|  

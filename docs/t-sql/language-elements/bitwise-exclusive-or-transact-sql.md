@@ -1,4 +1,5 @@
 ---
+description: "^ (Bitwise Exclusive OR) (Transact-SQL)"
 title: "^ (Bitwise Exclusive OR) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"

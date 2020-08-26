@@ -1,4 +1,5 @@
 ---
+description: "Lesson 2: Add looping with SSIS"
 title: "Lesson 2: Add looping with SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"

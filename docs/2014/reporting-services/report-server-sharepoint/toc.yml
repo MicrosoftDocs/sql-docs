@@ -1,5 +1,0 @@
-- name: Add the Report Viewer Web Part to a Web Page
-- name: Report Server (SharePoint Mode)
-  items:
-  - name: SharePoint Service and Service Applications
-- name: Configuration and Administration (SharePoint Mode)

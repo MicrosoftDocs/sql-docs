@@ -1,4 +1,5 @@
 ---
+description: "BEGIN CONVERSATION TIMER (Transact-SQL)"
 title: "BEGIN CONVERSATION TIMER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

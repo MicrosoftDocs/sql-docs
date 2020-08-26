@@ -1,4 +1,5 @@
 ---
+description: "WHERE CURRENT OF Clause Limitations"
 title: "WHERE CURRENT OF Clause Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

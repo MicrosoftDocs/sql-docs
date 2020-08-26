@@ -1,4 +1,5 @@
 ---
+description: "Receiving Results"
 title: "Receiving Results | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

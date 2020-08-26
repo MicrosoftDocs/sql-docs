@@ -1,4 +1,5 @@
 ---
+description: "sys.sysoledbusers (Transact-SQL)"
 title: "sys.sysoledbusers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

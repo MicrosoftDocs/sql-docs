@@ -1,4 +1,5 @@
 ---
+description: "Append Method (ADOX Views)"
 title: "Append Method (ADOX Views) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # Append Method (ADOX Views)
-Creates a new [View](../../../ado/reference/adox-api/view-object-adox.md) object and appends it to the [Views](../../../ado/reference/adox-api/views-collection-adox.md) collection.  
+Creates a new [View](./view-object-adox.md) object and appends it to the [Views](./views-collection-adox.md) collection.  
   
 ## Syntax  
   
@@ -32,7 +33,7 @@ Views.Append Name, Command
  A **String** value that specifies the name of the view to create.  
   
  *Command*  
- An ADO [Command](../../../ado/reference/ado-api/command-object-ado.md) object that represents the view to create.  
+ An ADO [Command](../ado-api/command-object-ado.md) object that represents the view to create.  
   
 ## Remarks  
  Creates a new view in the data source with the name and attributes specified in the **Command** object.  
@@ -43,14 +44,14 @@ Views.Append Name, Command
 >  When using the OLE DB Provider for Microsoft Jet, the **Views** collection **Append** method will allow you to specify a **Procedure** rather than a **View** in the *Command* parameter. The **Procedure** will be added to the data source and will be added to the **Views** collection. After the **Append**, if the **Procedures** and **Views** collections are refreshed, the **Procedure** will no longer be in the **Views** collection and will appear in the **Procedures** collection.  
   
 ## Applies To  
- [Views Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)  
+ [Views Collection (ADOX)](./views-collection-adox.md)  
   
 ## See Also  
- [Views Append Method Example (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Append Method (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append Method (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append Method (ADOX Indexes)](../../../ado/reference/adox-api/append-method-adox-indexes.md)   
- [Append Method (ADOX Keys)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append Method (ADOX Procedures)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append Method (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append Method (ADOX Users)](../../../ado/reference/adox-api/append-method-adox-users.md)
+ [Views Append Method Example (VB)](./views-append-method-example-vb.md)   
+ [Append Method (ADOX Columns)](./append-method-adox-columns.md)   
+ [Append Method (ADOX Groups)](./append-method-adox-groups.md)   
+ [Append Method (ADOX Indexes)](./append-method-adox-indexes.md)   
+ [Append Method (ADOX Keys)](./append-method-adox-keys.md)   
+ [Append Method (ADOX Procedures)](./append-method-adox-procedures.md)   
+ [Append Method (ADOX Tables)](./append-method-adox-tables.md)   
+ [Append Method (ADOX Users)](./append-method-adox-users.md)

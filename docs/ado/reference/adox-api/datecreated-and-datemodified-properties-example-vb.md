@@ -1,4 +1,5 @@
 ---
+description: "DateCreated and DateModified Properties Example (VB)"
 title: "DateCreated and DateModified Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # DateCreated and DateModified Properties Example (VB)
-This example demonstrates the [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) and [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) properties by adding a new [Column](../../../ado/reference/adox-api/column-object-adox.md) to an existing [Table](../../../ado/reference/adox-api/table-object-adox.md) and by creating a new **Table**. The DateOutput procedure is required for this example to run.  
+This example demonstrates the [DateCreated](./datecreated-property-adox.md) and [DateModified](./datemodified-property-adox.md) properties by adding a new [Column](./column-object-adox.md) to an existing [Table](./table-object-adox.md) and by creating a new **Table**. The DateOutput procedure is required for this example to run.  
   
 ```  
 ' BeginDateCreatedVB  
@@ -89,9 +90,9 @@ End Sub
 ```  
   
 ## See Also  
- [DateCreated Property (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)   
- [DateModified Property (ADOX)](../../../ado/reference/adox-api/datemodified-property-adox.md)   
- [Procedure Object (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)   
- [Procedures Collection (ADOX)](../../../ado/reference/adox-api/procedures-collection-adox.md)   
- [View Object (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Views Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [DateCreated Property (ADOX)](./datecreated-property-adox.md)   
+ [DateModified Property (ADOX)](./datemodified-property-adox.md)   
+ [Procedure Object (ADOX)](./procedure-object-adox.md)   
+ [Procedures Collection (ADOX)](./procedures-collection-adox.md)   
+ [View Object (ADOX)](./view-object-adox.md)   
+ [Views Collection (ADOX)](./views-collection-adox.md)

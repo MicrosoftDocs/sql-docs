@@ -1,4 +1,5 @@
 ---
+description: "Source Property Example (VC++)"
 title: "Source Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Source Property Example (VC++)
-This example demonstrates the [Source](../../../ado/reference/ado-api/source-property-ado-recordset.md) property by opening three [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objects based on different data sources.  
+This example demonstrates the [Source](./source-property-ado-recordset.md) property by opening three [Recordset](./recordset-object-ado.md) objects based on different data sources.  
   
 ```  
 // Source_Property_Sample.cpp  
@@ -151,5 +152,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Source Property (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)
+ [Recordset Object (ADO)](./recordset-object-ado.md)   
+ [Source Property (ADO Recordset)](./source-property-ado-recordset.md)

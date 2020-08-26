@@ -1,6 +1,6 @@
 ---
-title: "OLE DB Driver for SQL Server Programming | Microsoft Docs"
-description: "OLE DB Driver for SQL Server Programming"
+title: "OLE DB Driver for SQL Server Programming"
+description: "Learn about programming applications using the OLE DB Driver for SQL Server, which implements the OLE DB API to enable applications to connect to the database."
 ms.custom: ""
 ms.date: "06/12/2018"
 ms.prod: sql
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "OLE DB"
   - "OLE DB Driver for SQL Server"
   - "OLE DB Driver for SQL Server, OLE DB"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # OLE DB Driver for SQL Server Programming
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

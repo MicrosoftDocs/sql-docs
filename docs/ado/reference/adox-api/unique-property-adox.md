@@ -1,4 +1,5 @@
 ---
+description: "Unique Property (ADOX)"
 title: "Unique Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -27,11 +28,11 @@ Indicates whether the index keys must be unique.
 ## Remarks  
  The default value is **False**.  
   
- This property is read-only on [Index](../../../ado/reference/adox-api/index-object-adox.md) objects already appended to a collection.  
+ This property is read-only on [Index](./index-object-adox.md) objects already appended to a collection.  
   
 ## Applies To  
- [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)  
+ [Index Object (ADOX)](./index-object-adox.md)  
   
 ## See Also  
- [PrimaryKey and Unique Properties Example (VB)](../../../ado/reference/adox-api/primarykey-and-unique-properties-example-vb.md)   
- [Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)
+ [PrimaryKey and Unique Properties Example (VB)](./primarykey-and-unique-properties-example-vb.md)   
+ [Key Object (ADOX)](./key-object-adox.md)

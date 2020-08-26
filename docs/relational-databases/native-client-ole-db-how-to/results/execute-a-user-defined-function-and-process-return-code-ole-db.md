@@ -1,4 +1,5 @@
 ---
+description: "Execute a SQL Server Native Client User-Defined Function and Process Return Code (OLE DB)"
 title: "User-Defined Function, Return Code (OLE DB)"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Execute a User-Defined Function and Process Return Code (OLE DB)
+# Execute a SQL Server Native Client User-Defined Function and Process Return Code (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   In this example, a user-defined function is executed, and the return code is printed. This sample is not supported on IA64.  

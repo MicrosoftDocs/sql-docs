@@ -1,4 +1,5 @@
 ---
+description: "Keep the Affinity Mask Default Value"
 title: "Keep the Affinity Mask Default Value | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

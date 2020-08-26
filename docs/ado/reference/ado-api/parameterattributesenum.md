@@ -1,4 +1,5 @@
 ---
+description: "ParameterAttributesEnum"
 title: "ParameterAttributesEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # ParameterAttributesEnum
-Specifies the attributes of a [Parameter](../../../ado/reference/ado-api/parameter-object.md) object.  
+Specifies the attributes of a [Parameter](./parameter-object.md) object.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -35,4 +36,4 @@ Specifies the attributes of a [Parameter](../../../ado/reference/ado-api/paramet
 |AdoEnums.ParameterAttributes.LONG|  
   
 ## Applies To  
- [Attributes Property (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)
+ [Attributes Property (ADO)](./attributes-property-ado.md)

@@ -1,4 +1,5 @@
 ---
+description: "Attributes Property Example (VB)"
 title: "Attributes Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Attributes Property Example (VB)
-This example demonstrates the [Attributes](../../../ado/reference/adox-api/attributes-property-adox.md) property of a [Column](../../../ado/reference/adox-api/column-object-adox.md). Setting it to **adColNullable** allows the user to set the value of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) [Field](../../../ado/reference/ado-api/field-object.md) to an empty string. In this situation, the user can distinguish between a record where data is not known and a record where the data does not apply.  
+This example demonstrates the [Attributes](./attributes-property-adox.md) property of a [Column](./column-object-adox.md). Setting it to **adColNullable** allows the user to set the value of a [Recordset](../ado-api/recordset-object-ado.md) [Field](../ado-api/field-object.md) to an empty string. In this situation, the user can distinguish between a record where data is not known and a record where the data does not apply.  
   
 ```  
 ' BeginAttributesVB  
@@ -120,6 +121,6 @@ End Sub
 ```  
   
 ## See Also  
- [Attributes Property (ADOX)](../../../ado/reference/adox-api/attributes-property-adox.md)   
- [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)
+ [Attributes Property (ADOX)](./attributes-property-adox.md)   
+ [Catalog Object (ADOX)](./catalog-object-adox.md)   
+ [Column Object (ADOX)](./column-object-adox.md)

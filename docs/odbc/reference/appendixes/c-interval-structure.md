@@ -1,4 +1,5 @@
 ---
+description: "C Interval Structure"
 title: "C Interval Structure | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sql_variant Support for Date and Time Types"
 title: "sql_variant Support for Date and Time Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

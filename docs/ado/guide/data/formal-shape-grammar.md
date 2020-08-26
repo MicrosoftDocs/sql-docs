@@ -1,4 +1,5 @@
 ---
+description: "Formal Shape Grammar"
 title: "Formal Shape Grammar | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -62,10 +63,10 @@ This is the formal grammar for creating any shape command:
 |\<expression>|A Visual Basic for Applications expression whose operands are other non-CALC columns in the same row.|  
   
 ## See Also  
- [Accessing Rows in a Hierarchical Recordset](../../../ado/guide/data/accessing-rows-in-a-hierarchical-recordset.md)   
- [Data Shaping Overview](../../../ado/guide/data/data-shaping-overview.md)   
- [Required Providers for Data Shaping](../../../ado/guide/data/required-providers-for-data-shaping.md)   
- [Shape APPEND Clause](../../../ado/guide/data/shape-append-clause.md)   
- [Shape Commands in General](../../../ado/guide/data/shape-commands-in-general.md)   
- [Shape COMPUTE Clause](../../../ado/guide/data/shape-compute-clause.md)   
- [Visual Basic for Applications functions](../../../ado/guide/data/visual-basic-for-applications-functions.md)
+ [Accessing Rows in a Hierarchical Recordset](./accessing-rows-in-a-hierarchical-recordset.md)   
+ [Data Shaping Overview](./data-shaping-overview.md)   
+ [Required Providers for Data Shaping](./required-providers-for-data-shaping.md)   
+ [Shape APPEND Clause](./shape-append-clause.md)   
+ [Shape Commands in General](./shape-commands-in-general.md)   
+ [Shape COMPUTE Clause](./shape-compute-clause.md)   
+ [Visual Basic for Applications functions](./visual-basic-for-applications-functions.md)

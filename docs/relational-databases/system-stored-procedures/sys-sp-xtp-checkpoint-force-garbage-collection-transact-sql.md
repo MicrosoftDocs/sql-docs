@@ -1,4 +1,5 @@
 ---
+description: "sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)"
 title: "sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/02/2016"
@@ -19,7 +20,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.sp_xtp_checkpoint_force_garbage_collection (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Marks source files used in the merge operation with the log sequence number (LSN) after which they are not needed and can be garbage collected. Also, it moves the files whose associated LSN is lower than the log truncation point to filestream garbage collection.  
   

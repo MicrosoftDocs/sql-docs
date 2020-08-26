@@ -1,4 +1,5 @@
 ---
+description: "SecurityCertificate Class"
 title: "SecurityCertificate Class"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sp_syscollector_update_collection_item (Transact-SQL)"
 title: "sp_syscollector_update_collection_item (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"

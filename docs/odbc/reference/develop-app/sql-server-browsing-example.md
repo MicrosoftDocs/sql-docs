@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Browsing Example"
 title: "SQL Server Browsing Example | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

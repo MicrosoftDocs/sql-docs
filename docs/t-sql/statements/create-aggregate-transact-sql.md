@@ -1,4 +1,5 @@
 ---
+description: "CREATE AGGREGATE (Transact-SQL)"
 title: "CREATE AGGREGATE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

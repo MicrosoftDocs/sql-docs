@@ -1,4 +1,5 @@
 ---
+description: "binary and varbinary (Transact-SQL)"
 title: "binary and varbinary (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/16/2017"

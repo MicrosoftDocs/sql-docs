@@ -1,4 +1,5 @@
 ---
+description: "Index Disk Space Example"
 title: "Index Disk Space Example | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/02/2017"

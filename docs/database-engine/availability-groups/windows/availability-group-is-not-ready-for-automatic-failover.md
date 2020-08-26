@@ -1,6 +1,6 @@
 ---
 title: "Availability group is not ready for automatic failover"
-description: "Identify possible reasons why an Always On availability group is not ready for failover."
+description: "Learn how to identify possible reasons why an Always On availability group is not ready for failover."
 ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "getNString Method (java.lang.String) (SQLServerResultSet)"
 title: "getNString Method (java.lang.String) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

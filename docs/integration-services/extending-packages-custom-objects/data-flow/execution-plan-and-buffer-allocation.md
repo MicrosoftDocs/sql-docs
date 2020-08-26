@@ -1,4 +1,5 @@
 ---
+description: "Execution Plan and Buffer Allocation"
 title: "Execution Plan and Buffer Allocation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

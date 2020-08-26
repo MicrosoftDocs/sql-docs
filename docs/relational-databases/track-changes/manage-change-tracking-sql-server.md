@@ -1,4 +1,5 @@
 ---
+description: "Manage Change Tracking (SQL Server)"
 title: "Manage Change Tracking"
 ms.custom: seo-dt-2019
 ms.date: "08/08/2016"

@@ -1,4 +1,5 @@
 ---
+description: "View Object (ADOX)"
 title: "View Object (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,26 +18,26 @@ author: rothja
 ms.author: jroth
 ---
 # View Object (ADOX)
-Represents a filtered set of records or a virtual table. When used in conjunction with the ADO [Command](../../../ado/reference/ado-api/command-object-ado.md) object, the **View** object can be used for adding, deleting, or modifying views.  
+Represents a filtered set of records or a virtual table. When used in conjunction with the ADO [Command](../ado-api/command-object-ado.md) object, the **View** object can be used for adding, deleting, or modifying views.  
   
 ## Remarks  
  A view is a virtual table, created from other database tables or views. The **View** object allows you to create a view without having to know or use the provider's "CREATE VIEW" syntax.  
   
  With the properties of a **View** object, you can:  
   
--   Identify the view with the [Name](../../../ado/reference/adox-api/name-property-adox.md) property.  
+-   Identify the view with the [Name](./name-property-adox.md) property.  
   
--   Specify the ADO **Command** object that can be used to add, delete, or modify views with the [Command](../../../ado/reference/adox-api/command-property-adox.md) property.  
+-   Specify the ADO **Command** object that can be used to add, delete, or modify views with the [Command](./command-property-adox.md) property.  
   
--   Return date information with the [DateCreated](../../../ado/reference/adox-api/datecreated-property-adox.md) and [DateModified](../../../ado/reference/adox-api/datemodified-property-adox.md) properties.  
+-   Return date information with the [DateCreated](./datecreated-property-adox.md) and [DateModified](./datemodified-property-adox.md) properties.  
   
  This section contains the following topic.  
   
--   [View Object Properties, Methods, and Events](../../../ado/reference/adox-api/view-object-properties-methods-and-events.md)  
+-   [View Object Properties, Methods, and Events](./view-object-properties-methods-and-events.md)  
   
 ## See Also  
- [Views and Fields Collections Example (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Views Append Method Example (VB)](../../../ado/reference/adox-api/views-append-method-example-vb.md)   
- [Views Collection, CommandText Property Example (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)   
- [Views Delete Method Example (VB)](../../../ado/reference/adox-api/views-delete-method-example-vb.md)   
- [Views Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [Views and Fields Collections Example (VB)](./views-and-fields-collections-example-vb.md)   
+ [Views Append Method Example (VB)](./views-append-method-example-vb.md)   
+ [Views Collection, CommandText Property Example (VB)](./views-collection-commandtext-property-example-vb.md)   
+ [Views Delete Method Example (VB)](./views-delete-method-example-vb.md)   
+ [Views Collection (ADOX)](./views-collection-adox.md)

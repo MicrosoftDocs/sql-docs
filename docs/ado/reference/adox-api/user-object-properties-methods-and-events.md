@@ -1,4 +1,5 @@
 ---
+description: "User Object Properties, Methods, and Events"
 title: "User Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,23 +16,23 @@ ms.author: jroth
 ---
 # User Object Properties, Methods, and Events
 ## Properties/Collections  
- [Name Property](../../../ado/reference/adox-api/name-property-adox.md)  
+ [Name Property](./name-property-adox.md)  
   
- [ParentCatalog Property (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)  
+ [ParentCatalog Property (ADOX)](./parentcatalog-property-adox.md)  
   
- [Groups Collection](../../../ado/reference/adox-api/groups-collection-adox.md)  
+ [Groups Collection](./groups-collection-adox.md)  
   
- [Properties Collection](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Properties Collection](../ado-api/properties-collection-ado.md)  
   
 ## Methods  
- [ChangePassword Method](../../../ado/reference/adox-api/changepassword-method-adox.md)  
+ [ChangePassword Method](./changepassword-method-adox.md)  
   
- [GetPermissions Method](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+ [GetPermissions Method](./getpermissions-method-adox.md)  
   
- [SetPermissions Method](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+ [SetPermissions Method](./setpermissions-method-adox.md)  
   
 ## Events  
  None.  
   
 ## See Also  
- [User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)
+ [User Object (ADOX)](./user-object-adox.md)

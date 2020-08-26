@@ -1,4 +1,5 @@
 ---
+description: "Step 3: Server Obtains a Recordset (RDS Tutorial)"
 title: "Step 3: Server Obtains a Recordset (RDS Tutorial) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -32,5 +33,5 @@ End Function
 ```  
   
 ## See Also  
- [Step 4: Server Returns the Recordset (RDS Tutorial)](../../../ado/guide/remote-data-service/step-4-server-returns-the-recordset-rds-tutorial.md)   
- [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Step 4: Server Returns the Recordset (RDS Tutorial)](./step-4-server-returns-the-recordset-rds-tutorial.md)   
+ [RDS Tutorial (VBScript)](./rds-tutorial-vbscript.md)

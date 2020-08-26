@@ -1,6 +1,6 @@
 ---
 title: "Use read-scale with availability groups"
-description: "A description of how to achieve read-scale when using Always On availability groups. "
+description: "Learn details about how to achieve read-scale when using Always On availability groups, and about using distributed availability groups for geographic read-scale."
 ms.custom: "seodec18"
 ms.date: "10/24/2017"
 ms.prod: sql

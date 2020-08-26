@@ -1,4 +1,5 @@
 ---
+description: "syssubscriptions (System View) (Transact-SQL)"
 title: "syssubscriptions (System View) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

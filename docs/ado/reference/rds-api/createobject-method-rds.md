@@ -1,4 +1,5 @@
 ---
+description: "CreateObject Method (RDS)"
 title: "CreateObject Method (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -35,7 +36,7 @@ Creates the proxy for the target business object and returns a pointer to it. Th
  An object variable that evaluates to an object that is the type specified in *ProgID*.  
   
  *DataSpace*  
- An object variable that represents an [RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) object used to create an instance of the new object.  
+ An object variable that represents an [RDS.DataSpace](./dataspace-object-rds.md) object used to create an instance of the new object.  
   
  *ProgID*  
  A **String** value that contains the programmatic identifier specifying a server-side business object that implements your application's business rules.  
@@ -47,11 +48,9 @@ Creates the proxy for the target business object and returns a pointer to it. Th
  The *HTTP protocol* is the standard Web protocol; *HTTPS* is a secure Web protocol. Use the *DCOM protocol* when running a local-area network without HTTP. The *in-process* protocol is a local dynamic-link library (DLL); it does not use a network.  
   
 ## Applies To  
- [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)  
+ [DataSpace Object (RDS)](./dataspace-object-rds.md)  
   
 ## See Also  
- [DataFactory Object, Query Method, and CreateObject Method Example (VBScript)](../../../ado/reference/rds-api/datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
- [DataSpace Object and CreateObject Method Example (VBScript)](../../../ado/reference/rds-api/dataspace-object-and-createobject-method-example-vbscript.md)   
- [CreateRecordset Method (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)
-
-
+ [DataFactory Object, Query Method, and CreateObject Method Example (VBScript)](./datafactory-object-query-method-and-createobject-method-example-vbscript.md)   
+ [DataSpace Object and CreateObject Method Example (VBScript)](./dataspace-object-and-createobject-method-example-vbscript.md)   
+ [CreateRecordset Method (RDS)](./createrecordset-method-rds.md)

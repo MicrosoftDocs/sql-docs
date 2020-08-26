@@ -1,4 +1,5 @@
 ---
+description: "IS_SRVROLEMEMBER (Transact-SQL)"
 title: IS_SRVROLEMEMBER (Transact-SQL)
 ms.custom: ""
 ms.date: "03/14/2017"

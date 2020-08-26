@@ -1,4 +1,5 @@
 ---
+description: "Columns Collection Properties, Methods, and Events"
 title: "Columns Collection Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -15,19 +16,19 @@ ms.author: jroth
 ---
 # Columns Collection Properties, Methods, and Events
 ## Properties  
- [Count Property](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count Property](../ado-api/count-property-ado.md)  
   
- [Item Property](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item Property](../ado-api/item-property-ado.md)  
   
 ## Methods  
- [Append Method (Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)  
+ [Append Method (Columns)](./append-method-adox-columns.md)  
   
- [Delete Method (Collections)](../../../ado/reference/adox-api/delete-method-adox-collections.md)  
+ [Delete Method (Collections)](./delete-method-adox-collections.md)  
   
- [Refresh Method](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh Method](../ado-api/refresh-method-ado.md)  
   
 ## Events  
  None.  
   
 ## See Also  
- [Columns Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)
+ [Columns Collection (ADOX)](./columns-collection-adox.md)

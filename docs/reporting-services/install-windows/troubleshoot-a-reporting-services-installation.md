@@ -1,4 +1,5 @@
 ---
+description: "Troubleshoot a Reporting Services installation"
 title: "Troubleshoot a Reporting Services installation | Microsoft Docs"
 ms.date: 01/17/2018
 ms.prod: reporting-services

@@ -1,4 +1,5 @@
 ---
+description: "TRUNCATE TABLE (Transact-SQL)"
 title: "TRUNCATE TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"

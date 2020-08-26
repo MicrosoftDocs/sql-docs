@@ -1,4 +1,5 @@
 ---
+description: "sys.service_contract_message_usages (Transact-SQL)"
 title: "sys.service_contract_message_usages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

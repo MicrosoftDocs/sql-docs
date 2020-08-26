@@ -1,6 +1,6 @@
 ---
 title: Obtain a FAST_FORWARD cursor (OLE DB driver)
-description: "Obtain a FAST_FORWARD cursor using OLE DB Driver for SQL Server"
+description: Learn how to set the rowset properties to obtain a FAST_FORWARD cursor using OLE DB Driver for SQL Server with this example.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -10,8 +10,8 @@ ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "fast forward-only cursors"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Obtain a FAST_FORWARD Cursor
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

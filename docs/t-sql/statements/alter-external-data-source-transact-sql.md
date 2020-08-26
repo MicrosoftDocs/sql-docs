@@ -1,4 +1,5 @@
 ---
+description: "ALTER EXTERNAL DATA SOURCE (Transact-SQL)"
 title: "ALTER EXTERNAL DATA SOURCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2019"

@@ -1,4 +1,5 @@
 ---
+description: "ODBC Scalar Functions (Transact-SQL)"
 title: "ODBC Scalar Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

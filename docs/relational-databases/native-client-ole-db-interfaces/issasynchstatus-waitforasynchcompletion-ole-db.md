@@ -1,4 +1,5 @@
 ---
+description: "ISSAsynchStatus::WaitForAsynchCompletion in SQL Server Native Client (OLE DB)"
 title: "ISSAsynchStatus::WaitForAsynchCompletion (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -17,7 +18,7 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
+# ISSAsynchStatus::WaitForAsynchCompletion in SQL Server Native Client (OLE DB)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Waits until the asynchronously executing operation is complete or until a time-out occurs.  

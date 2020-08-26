@@ -1,4 +1,5 @@
 ---
+description: "Repair a Failed SQL Server Installation"
 title: "Repair a Failed SQL Server Installation | Microsoft Docs"
 deescription: This article describes the scenarios where you can try a repair operation to fix failed SQL Server installation.
 ms.custom: ""

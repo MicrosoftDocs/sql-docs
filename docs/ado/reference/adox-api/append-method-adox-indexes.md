@@ -1,4 +1,5 @@
 ---
+description: "Append Method (ADOX Indexes)"
 title: "Append Method (ADOX Indexes) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Append Method (ADOX Indexes)
-Adds a new [Index](../../../ado/reference/adox-api/index-object-adox.md) object to the [Indexes](../../../ado/reference/adox-api/indexes-collection-adox.md) collection.  
+Adds a new [Index](./index-object-adox.md) object to the [Indexes](./indexes-collection-adox.md) collection.  
   
 ## Syntax  
   
@@ -31,7 +32,7 @@ Indexes.Append Index [,Columns]
  The **Index** object to append or the name of the index to create and append.  
   
  *Columns*  
- Optional. A **Variant** value that specifies the name(s) of the column(s) to be indexed. The *Columns* parameter corresponds to the value(s) of the [Name](../../../ado/reference/adox-api/name-property-adox.md) property of a [Column](../../../ado/reference/adox-api/column-object-adox.md) object or objects.  
+ Optional. A **Variant** value that specifies the name(s) of the column(s) to be indexed. The *Columns* parameter corresponds to the value(s) of the [Name](./name-property-adox.md) property of a [Column](./column-object-adox.md) object or objects.  
   
 ## Remarks  
  The *Columns* parameter can take either the name of a column or an array of column names.  
@@ -39,14 +40,14 @@ Indexes.Append Index [,Columns]
  An error will occur if the provider does not support creating indexes.  
   
 ## Applies To  
- [Indexes Collection (ADOX)](../../../ado/reference/adox-api/indexes-collection-adox.md)  
+ [Indexes Collection (ADOX)](./indexes-collection-adox.md)  
   
 ## See Also  
- [Indexes Append Method Example (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
- [Append Method (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append Method (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   
- [Append Method (ADOX Keys)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Append Method (ADOX Procedures)](../../../ado/reference/adox-api/append-method-adox-procedures.md)   
- [Append Method (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Append Method (ADOX Users)](../../../ado/reference/adox-api/append-method-adox-users.md)   
- [Append Method (ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)
+ [Indexes Append Method Example (VB)](./indexes-append-method-example-vb.md)   
+ [Append Method (ADOX Columns)](./append-method-adox-columns.md)   
+ [Append Method (ADOX Groups)](./append-method-adox-groups.md)   
+ [Append Method (ADOX Keys)](./append-method-adox-keys.md)   
+ [Append Method (ADOX Procedures)](./append-method-adox-procedures.md)   
+ [Append Method (ADOX Tables)](./append-method-adox-tables.md)   
+ [Append Method (ADOX Users)](./append-method-adox-users.md)   
+ [Append Method (ADOX Views)](./append-method-adox-views.md)

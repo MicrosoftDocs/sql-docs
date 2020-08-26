@@ -1,4 +1,5 @@
 ---
+description: "Implement a Lookup in No Cache or Partial Cache Mode"
 title: "Implement a Lookup in No Cache or Partial Cache Mode | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

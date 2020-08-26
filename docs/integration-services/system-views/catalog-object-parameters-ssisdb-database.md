@@ -1,4 +1,5 @@
 ---
+description: "catalog.object_parameters (SSISDB Database)"
 title: "catalog.object_parameters (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

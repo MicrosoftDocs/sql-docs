@@ -1,4 +1,5 @@
 ---
+description: "Persisting Filtered and Hierarchical Recordsets"
 title: "Persisting Filtered and Hierarchical Recordsets | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

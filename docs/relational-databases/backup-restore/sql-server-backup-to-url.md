@@ -34,7 +34,7 @@ ms.author: mathoma
 - Customers that need to backup to page blobs via a proxy server will need to use backuptourl.exe. 
 
 
-Backup of a large database to blob storage is subject to the limitations listed in [Managed instance T-SQL differences, limitations, and known issues](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
+Backup of a large database to blob storage is subject to the limitations listed in [Managed Instance T-SQL differences, limitations, and known issues](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup).
 
  If the database is too large, either:
 - Use backup compression

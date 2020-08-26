@@ -1,4 +1,5 @@
 ---
+description: "CacheSize Property Example (VC++)"
 title: "CacheSize Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # CacheSize Property Example (VC++)
-This example uses the [CacheSize](../../../ado/reference/ado-api/cachesize-property-ado.md) property to show the difference in performance for an operation performed with and without a 30-record cache.  
+This example uses the [CacheSize](./cachesize-property-ado.md) property to show the difference in performance for an operation performed with and without a 30-record cache.  
   
 ```  
 // CacheSize_Property_Sample.cpp  
@@ -155,5 +156,5 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [CacheSize Property (ADO)](../../../ado/reference/ado-api/cachesize-property-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CacheSize Property (ADO)](./cachesize-property-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

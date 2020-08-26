@@ -1,8 +1,0 @@
-- name: Analysis Services Connection Manager
-- name: FTP Connection Manager
-- name: HTTP Connection Manager
-- name: MSMQ Connection Manager
-- name: SMTP Connection Manager
-- name: SMO Connection Manager
-- name: WMI Connection Manager
-- name: Add, Delete, or Share a Connection Manager in a Package

@@ -1,4 +1,5 @@
 ---
+description: "ADO API Reference"
 title: "ADO API Reference | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,29 +19,29 @@ This section of the ADO documentation contains topics for each ADO object, colle
   
  For more information, search for a specific topic in the index or refer to the following topics:  
   
--   [ADO Object Model](../../../ado/reference/ado-api/ado-object-model.md)  
+-   [ADO Object Model](./ado-object-model.md)  
   
--   [ADO Objects and Interfaces](../../../ado/reference/ado-api/ado-objects-and-interfaces.md)  
+-   [ADO Objects and Interfaces](./ado-objects-and-interfaces.md)  
   
--   [ADO Collections](../../../ado/reference/ado-api/ado-collections.md)  
+-   [ADO Collections](./ado-collections.md)  
   
--   [ADO Properties](../../../ado/reference/ado-api/ado-properties.md)  
+-   [ADO Properties](./ado-properties.md)  
   
--   [ADO Dynamic Properties](../../../ado/reference/ado-api/ado-dynamic-properties.md)  
+-   [ADO Dynamic Properties](./ado-dynamic-properties.md)  
   
--   [ADO Methods](../../../ado/reference/ado-api/ado-methods.md)  
+-   [ADO Methods](./ado-methods.md)  
   
--   [ADO Events](../../../ado/reference/ado-api/ado-events.md)  
+-   [ADO Events](./ado-events.md)  
   
--   [ADO Enumerated Constants](../../../ado/reference/ado-api/ado-enumerated-constants.md)  
+-   [ADO Enumerated Constants](./ado-enumerated-constants.md)  
   
--   [ADO Syntax Indexes](../../../ado/reference/ado-api/ado-syntax-indexes.md)  
+-   [ADO Syntax Indexes](./ado-syntax-indexes.md)  
   
--   [ADO Code Examples](../../../ado/reference/ado-api/ado-code-examples.md)  
+-   [ADO Code Examples](./ado-code-examples.md)  
   
 ## See Also  
- [Appendix D: ADO Samples](../../../ado/guide/appendixes/appendix-d-ado-samples.md)   
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Appendix C: Programming with ADO](../../../ado/guide/appendixes/appendix-c-programming-with-ado.md)   
- [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)   
- [ADO History](../../../ado/guide/ado-history.md)
+ [Appendix D: ADO Samples](../../guide/appendixes/appendix-d-ado-samples.md)   
+ [Microsoft ActiveX Data Objects (ADO)](../../microsoft-activex-data-objects-ado.md)   
+ [Appendix C: Programming with ADO](../../guide/appendixes/appendix-c-programming-with-ado.md)   
+ [Appendix A: Providers](../../guide/appendixes/appendix-a-providers.md)   
+ [ADO History](../../guide/ado-history.md)

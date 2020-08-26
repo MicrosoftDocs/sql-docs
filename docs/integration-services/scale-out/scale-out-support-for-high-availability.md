@@ -1,6 +1,6 @@
 ---
 title: "Scale Out Support for High Availability | Microsoft Docs"
-description: "This article describes how to configure SSIS Scale Out for high availability"
+description: "Learn to configure SQL Server Integration Services (SSIS) Scale Out Master side for high availability."
 ms.custom: performance
 ms.date: "05/23/2018"
 ms.prod: sql

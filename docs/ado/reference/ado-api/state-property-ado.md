@@ -1,4 +1,5 @@
 ---
+description: "State Property (ADO)"
 title: "State Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -20,7 +21,7 @@ ms.author: jroth
 Indicates for all applicable objects whether the state of the object is open or closed. If the object is executing an asynchronous method, indicates whether the current state of the object is connecting, executing, or retrieving.  
   
 ## Return Value  
- Returns a **Long** value that can be an [ObjectStateEnum](../../../ado/reference/ado-api/objectstateenum.md) value. The default value is **adStateClosed**.  
+ Returns a **Long** value that can be an [ObjectStateEnum](./objectstateenum.md) value. The default value is **adStateClosed**.  
   
 ## Remarks  
  You can use the **State** property to determine the current state of a given object at any time.  
@@ -33,18 +34,18 @@ Indicates for all applicable objects whether the state of the object is open or 
 
 :::row:::
     :::column:::
-        [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)  
-        [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Command Object (ADO)](./command-object-ado.md)  
+        [Connection Object (ADO)](./connection-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
-        [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Record Object (ADO)](./record-object-ado.md)  
+        [Recordset Object (ADO)](./recordset-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Stream Object (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## See Also  
- [ConnectionString, ConnectionTimeout, and State Properties Example (VB)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
- [ConnectionString, ConnectionTimeout, and State Properties Example (VC++)](../../../ado/reference/ado-api/connectionstring-connectiontimeout-and-state-properties-example-vc.md)   
+ [ConnectionString, ConnectionTimeout, and State Properties Example (VB)](./connectionstring-connectiontimeout-and-state-properties-example-vb.md)   
+ [ConnectionString, ConnectionTimeout, and State Properties Example (VC++)](./connectionstring-connectiontimeout-and-state-properties-example-vc.md)

@@ -1,4 +1,5 @@
 ---
+description: "SQL Statements Constructed at Run Time"
 title: "SQL Statements Constructed at Run Time | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

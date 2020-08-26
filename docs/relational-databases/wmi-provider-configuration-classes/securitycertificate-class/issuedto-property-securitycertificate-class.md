@@ -1,4 +1,5 @@
 ---
+description: "IssuedTo Property (SecurityCertificate Class)"
 title: "IssuedTo Property (SecurityCertificate)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"

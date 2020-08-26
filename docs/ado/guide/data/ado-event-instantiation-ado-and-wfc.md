@@ -1,4 +1,5 @@
 ---
+description: "ADO Event Instantiation: ADO and WFC"
 title: "ADO Event Instantiation: ADO and WFC | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -46,7 +47,7 @@ ADO for Windows Foundation Classes (ADO/WFC) builds on the ADO event model and p
     public void onConnectComplete(Object sender,ConnectionEvent e)  
     ```  
   
-     The first argument is the type of object that sent the event ([Connection](../../../ado/reference/ado-api/connection-object-ado.md) or [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)), and the second argument is the ADO/WFC event object (**ConnectionEvent** or **RecordsetEvent**).  
+     The first argument is the type of object that sent the event ([Connection](../../reference/ado-api/connection-object-ado.md) or [Recordset](../../reference/ado-api/recordset-object-ado.md)), and the second argument is the ADO/WFC event object (**ConnectionEvent** or **RecordsetEvent**).  
   
      The signature of your event handler is simpler than an ADO event. However, you must still understand the ADO event model to know what parameters apply to an event and how to respond.  
   
@@ -55,8 +56,8 @@ ADO for Windows Foundation Classes (ADO/WFC) builds on the ADO event model and p
 7.  When you are finished processing, remove your handler from the list of ADO/WFC event handlers. Use the method with a name such as **removeOn**_EventName_(*handler*).  
   
 ## See Also  
- [ADO Event Handler Summary](../../../ado/guide/data/ado-event-handler-summary.md)   
- [ADO - WFC Syntax Index](../../../ado/reference/ado-api/ado-wfc-syntax-index.md)   
- [Event Parameters](../../../ado/guide/data/event-parameters.md)   
- [How Event Handlers Work Together](../../../ado/guide/data/how-event-handlers-work-together.md)   
- [Types of Events](../../../ado/guide/data/types-of-events.md)
+ [ADO Event Handler Summary](./ado-event-handler-summary.md)   
+ [ADO - WFC Syntax Index](../../reference/ado-api/ado-wfc-syntax-index.md)   
+ [Event Parameters](./event-parameters.md)   
+ [How Event Handlers Work Together](./how-event-handlers-work-together.md)   
+ [Types of Events](./types-of-events.md)

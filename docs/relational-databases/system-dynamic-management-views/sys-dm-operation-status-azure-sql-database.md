@@ -1,5 +1,6 @@
 ---
-title: "sys.dm_operation_status (Azure SQL Database) | Microsoft Docs"
+description: "sys.dm_operation_status"
+title: "sys.dm_operation_status | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/05/2017"
 ms.service: sql-database
@@ -20,9 +21,9 @@ author: CarlRabeler
 ms.author: carlrab
 monikerRange: "= azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
-# sys.dm_operation_status (Azure SQL Database)
+# sys.dm_operation_status
 
-[!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
+[!INCLUDE [asdb-asdbmi-asa](../../includes/applies-to-version/asdb-asdbmi-asa.md)]
 
   Returns information about operations performed on databases in a [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] server.  
   

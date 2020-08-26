@@ -1,4 +1,5 @@
 ---
+description: "Execute, Requery, and Clear Methods Example (VBScript)"
 title: "Execute, Requery, and Clear Methods Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

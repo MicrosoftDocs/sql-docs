@@ -152,7 +152,7 @@ The following table defines the accepted formats and rules for inserting literal
   
 ## See Also  
  
-[Distributed data](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-distributed-data/)  
+[Distributed data](/azure/synapse-analytics/sql-data-warehouse/massively-parallel-processing-mpp-architecture)  
 [INSERT](../t-sql/statements/insert-transact-sql.md)  
   
 <!-- MISSING LINKS

@@ -1,4 +1,5 @@
 ---
+description: "Using the VFP FoxPro ODBC Driver with Your Visual Basic Application"
 title: "Use the VFP FoxPro ODBC Driver with Your Visual Basic Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

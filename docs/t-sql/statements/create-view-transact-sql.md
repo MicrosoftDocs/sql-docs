@@ -1,4 +1,5 @@
 ---
+description: "CREATE VIEW (Transact-SQL)"
 title: CREATE VIEW (Transact-SQL)
 ms.custom: ""
 ms.date: 04/16/2020
@@ -137,8 +138,8 @@ OR ALTER
  CHECK OPTION  
  Forces all data modification statements executed against the view to follow the criteria set within *select_statement*. When a row is modified through a view, the WITH CHECK OPTION makes sure the data remains visible through the view after the modification is committed.  
   
-> [!NOTE]  
->  Any updates performed directly to a view's underlying tables are not verified against the view, even if CHECK OPTION is specified.  
+> [!NOTE]
+>  The CHECK OPTION only applies to updates made through the view. It has no applicability to any updates performed directly to a view's underlying tables.  
   
  ENCRYPTION  
  **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].  

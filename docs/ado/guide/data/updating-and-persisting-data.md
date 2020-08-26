@@ -1,4 +1,5 @@
 ---
+description: "Updating and Persisting Data"
 title: "Updating and Persisting Data | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

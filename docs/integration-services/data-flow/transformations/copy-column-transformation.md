@@ -1,4 +1,5 @@
 ---
+description: "Copy Column Transformation"
 title: "Copy Column Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

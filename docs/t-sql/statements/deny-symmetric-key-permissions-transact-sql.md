@@ -1,4 +1,5 @@
 ---
+description: "DENY Symmetric Key Permissions (Transact-SQL)"
 title: "DENY Symmetric Key Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/09/2017"

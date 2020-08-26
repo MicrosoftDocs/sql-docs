@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Native Client Conversions Performed from Client to Server"
 title: "Conversions Performed from Client to Server"
 ms.date: "03/14/2017"
 ms.prod: sql
@@ -64,9 +65,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 |15|Conversion semantics prior to [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] for **datetime** are maintained. Seconds are rounded to the nearest 300th of a second.|  
 |16|The conversion behavior of a value (of a given type) embedded in a SSVARIANT client struct is the same as the behavior of the same value and type when not embedded in a SSVARIANT client struct.|  
   
-||||  
-|-|-|-|  
 |Type|Length (in chars)|Scale|  
+|-|-|-|  
 |DBTIME2|8, 10..18|0,1..9|  
 |DBTIMESTAMP|19, 21..29|0,1..9|  
 |DBTIMESTAMPOFFSET|26, 28..36|0,1..9|  

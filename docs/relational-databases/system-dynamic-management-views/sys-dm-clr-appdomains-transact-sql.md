@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_clr_appdomains (Transact-SQL)"
 title: "sys.dm_clr_appdomains (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

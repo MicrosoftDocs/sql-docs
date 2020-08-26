@@ -1,4 +1,5 @@
 ---
+description: "RecordTypeEnum"
 title: "RecordTypeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # RecordTypeEnum
-Specifies the type of [Record](../../../ado/reference/ado-api/record-object-ado.md) object.  
+Specifies the type of [Record](./record-object-ado.md) object.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -30,4 +31,4 @@ Specifies the type of [Record](../../../ado/reference/ado-api/record-object-ado.
  These constants do not have ADO/WFC equivalents.  
   
 ## Applies To  
- [RecordType Property (ADO)](../../../ado/reference/ado-api/recordtype-property-ado.md)
+ [RecordType Property (ADO)](./recordtype-property-ado.md)

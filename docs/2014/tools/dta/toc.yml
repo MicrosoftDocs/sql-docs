@@ -1,7 +1,0 @@
-- name: XML Input File Reference (Database Engine Tuning Advisor)
-- name: XML Input File Samples (DTA)
-- name: 'Tutorial: Database Engine Tuning Advisor'
-  items:
-  - name: 'Lesson 1: Basic Navigation in Database Engine Tuning Advisor'
-  - name: 'Lesson 2: Using Database Engine Tuning Advisor'
-  - name: 'Lesson 3: Using the dta Command Prompt Utility'

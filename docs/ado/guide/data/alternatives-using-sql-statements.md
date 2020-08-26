@@ -1,4 +1,5 @@
 ---
+description: "Alternatives: Using SQL Statements"
 title: "Alternatives: Using SQL Statements | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

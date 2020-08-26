@@ -1,4 +1,5 @@
 ---
+description: "Records and Provider-Supplied Fields"
 title: "Records and Provider-Supplied Fields | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

@@ -1,4 +1,5 @@
 ---
+description: "RDS Code Examples"
 title: "RDS Code Examples | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""
@@ -21,8 +22,8 @@ ms.author: jroth
   
  **Note** Paste the entire code example into your code editor. The example may not run correctly if partial examples are used or if paragraph formatting is lost.  
   
--   [RDS Code Examples in Microsoft Visual Basic](../../../ado/reference/rds-api/rds-code-examples-in-visual-basic.md)  
+-   [RDS Code Examples in Microsoft Visual Basic](./rds-code-examples-in-visual-basic.md)  
   
--   [RDS Code Examples in Microsoft Visual Basic Scripting Edition](../../../ado/reference/rds-api/rds-code-examples-in-vbscript.md)  
+-   [RDS Code Examples in Microsoft Visual Basic Scripting Edition](./rds-code-examples-in-vbscript.md)  
   
--   [RDS Code Examples in Microsoft Visual C++](../../../ado/reference/rds-api/rds-code-examples-in-visual-c.md)  
+-   [RDS Code Examples in Microsoft Visual C++](./rds-code-examples-in-visual-c.md)

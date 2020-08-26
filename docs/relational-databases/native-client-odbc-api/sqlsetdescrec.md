@@ -1,4 +1,5 @@
 ---
+description: "SQLSetDescRec"
 title: "SQLSetDescRec | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -40,8 +41,8 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ## SQLSetDescRec Support for Enhanced Date and Time Features  
  The values allowed for date/time types are as follows:  
   
-||*Type*|*SubType*|*Length*|*Precision*|*Scale*|  
-|-|------------|---------------|--------------|-----------------|-------------|  
+| Attribute | *Type* | *SubType* | *Length* | *Precision* | *Scale* |
+| --------- | ------ | --------- | -------- | ----------- | ------- |
 |datetime|SQL_DATETIME|SQL_CODE_TIMESTAMP|4|3|3|  
 |smalldatetime|SQL_SQL_DATETIME|SQL_CODE_TIMESTAMP|8|0|0|  
 |date|SQL_DATETIME|SQL_CODE_DATE|6|0|0|  

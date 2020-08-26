@@ -1,4 +1,5 @@
 ---
+description: "Database Mirroring - sys.dm_db_mirroring_connections"
 title: "sys.dm_db_mirroring_connections (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

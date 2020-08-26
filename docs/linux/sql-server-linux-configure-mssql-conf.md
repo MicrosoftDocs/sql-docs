@@ -3,7 +3,7 @@ title: Configure SQL Server settings on Linux
 description: This article describes how to use the mssql-conf tool to  configure SQL Server settings on Linux.
 author: VanMSFT 
 ms.author: vanto
-ms.date: 07/30/2019
+ms.date: 08/12/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -18,7 +18,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 **mssql-conf** is a configuration script that installs with SQL Server 2017 for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. It modifies the [**mssql.conf file**](#mssql-conf-format) where configuration values are stored. You can use **mssql-conf** utility to set the following parameters:
 
-|||
+|Parameter|Description|
 |---|---|
 | [Agent](#agent) | Enable SQL Server Agent. |
 | [Collation](#collation) | Set a new collation for SQL Server on Linux. |
@@ -36,6 +36,8 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 | [Local Audit directory](#localaudit) | Set a directory to add Local Audit files. |
 | [Locale](#lcid) | Set the locale for SQL Server to use. |
 | [Memory limit](#memorylimit) | Set the memory limit for SQL Server. |
+| [Network settings](#network) | Additional network settings for SQL Server. |
+| [Microsoft Distributed Transaction Coordinator](#msdtc) | Configure and troubleshoot MSDTC on Linux. |
 | [TCP port](#tcpport) | Change the port where SQL Server listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
 | [Traceflags](#traceflags) | Set the traceflags that the service is going to use. |
@@ -46,7 +48,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 
 **mssql-conf** is a configuration script that installs with [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] for Red Hat Enterprise Linux, SUSE Linux Enterprise Server, and Ubuntu. You can use this utility to set the following parameters:
 
-|||
+|Parameter|Description|
 |---|---|
 | [Agent](#agent) | Enable SQL Server Agent |
 | [Collation](#collation) | Set a new collation for SQL Server on Linux. |
@@ -66,6 +68,7 @@ ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
 | [Memory limit](#memorylimit) | Set the memory limit for SQL Server. |
 | [Microsoft Distributed Transaction Coordinator](#msdtc) | Configure and troubleshoot MSDTC on Linux. |
 | [MLServices EULAs](#mlservices-eula) | Accept R and Python EULAs for mlservices packages. Applies to SQL Server 2019 only.|
+| [Network settings](#network) | Additional network settings for SQL Server. |
 | [outboundnetworkaccess](#mlservices-outbound-access) |Enable outbound network access for [mlservices](sql-server-linux-setup-machine-learning.md) R, Python, and Java extensions.|
 | [TCP port](#tcpport) | Change the port where SQL Server listens for connections. |
 | [TLS](#tls) | Configure Transport Level Security. |
@@ -101,6 +104,34 @@ To change this setting, use the following steps:
    ```bash
    sudo systemctl restart mssql-server
    ```
+
+### <a id="dbmail"></a> Set the default database mail profile for SQL Server on Linux
+
+The **sqlpagent.databasemailprofile** allows you to set the default DB Mail profile for email alerts.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+```
+
+### <a id="agenterrorlog"></a> SQL Agent error logs
+
+The **sqlpagent.errorlogfile** and **sqlpagent.errorlogginglevel** settings allows you to set the SQL Agent log file path and logging level respectively. 
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.errorfile <path>
+```
+
+SQL Agent logging levels are bitmask values that equal:
+
+- 1 = Errors
+- 2 = Warnings
+- 4 = Info
+
+If you want to capture all levels, use `7` as the value.
+
+```bash
+sudo /opt/mssql/bin/mssql-conf set sqlagent.errorlogginglevel <level>
+```
 
 ## <a id="collation"></a> Change the SQL Server collation
 
@@ -329,6 +360,7 @@ To change these settings:
    sudo systemctl restart mssql-server
    ```
 
+The `errorlog.numerrorlogs` setting will allow you to specify the number of error logs maintained before cycling the log.
 
 ## <a id="backupdir"></a> Change the default backup directory location
 
@@ -394,13 +426,6 @@ The first phase capture is controlled by the **coredump.coredumptype** setting, 
     | **filtered** | Filtered uses a subtraction-based design where all memory in the process is included unless specifically excluded. The design understands the internals of SQLPAL and the host environment, excluding certain regions from the dump.
     | **full** | Full is a complete process dump that includes all regions located in **/proc/$pid/maps**. This is not controlled by **coredump.captureminiandfull** setting. |
 
-## <a id="dbmail"></a> Set the default database mail profile for SQL Server on Linux
-
-The **sqlpagent.databasemailprofile** allows you to set the default DB Mail profile for email alerts.
-
-```bash
-sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
-```
 ## <a id="hadr"></a> High Availability
 
 The **hadr.hadrenabled** option enables availability groups on your SQL Server instance. The following command enables availability groups by setting **hadr.hadrenabled** to 1. You must restart SQL Server for the setting to take effect.
@@ -479,7 +504,14 @@ The **memory.memorylimitmb** setting controls the amount physical memory (in MB)
    sudo systemctl restart mssql-server
    ```
 
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+### Additional memory settings
+
+The following options are available to the memory settings.
+
+|Option |Description |
+|--- |--- |
+| memory.disablememorypressure | SQL Server disable memory pressure. Values can be `true` or `false`. |
+| memory.memory_optimized | Enable or disable SQL Server memory optimized features - persistent memory file enlightenment, memory protection. Values can be `true` or `false`. |
 
 ## <a id="msdtc"></a> Configure MSDTC
 
@@ -521,7 +553,6 @@ There are several other settings for mssql-conf that you can use to monitor and 
 | distributedtransaction.tracefilepath | Folder in which trace files should be stored |
 | distributedtransaction.turnoffrpcsecurity | Enable or disable RPC security for distributed transactions |
 
-::: moniker-end
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
 ## <a id="mlservices-eula"></a> Accept MLServices EULAs
@@ -618,9 +649,25 @@ The following options configure TLS for an instance of SQL Server running on Lin
 
 For an example of using the TLS settings, see [Encrypting Connections to SQL Server on Linux](sql-server-linux-encrypted-connections.md).
 
+## <a id="network"></a> Network settings
+
+See [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md) for comprehensive information on using AD authentication with SQL Server on Linux.
+
+The following options are additional network settings configurable using `mssql-conf`.
+
+|Option |Description |
+|--- |--- |
+| network.disablesssd | Disable querying SSSD for AD account information and default to LDAP calls. Values can be `true` or `false`. |
+| network.enablekdcfromkrb5conf | Enable looking up KDC information from krb5.conf. Values can be `true` or `false`. |
+| network.forcesecureldap | Force using LDAPS to contact domain controller. Values can be `true` or `false`. |
+| network.ipaddress | IP address for incoming connections. |
+| network.kerberoscredupdatefrequency | Time in seconds between checks for kerberos credentials that need to be updated. Value is an integer.|
+| network.privilegedadaccount | Privileged AD user to use for AD authentication. Value is `<username>`. For more information, see [Tutorial: Use Active Directory authentication with SQL Server on Linux](sql-server-linux-active-directory-authentication.md#spn)|
+| uncmapping | Maps UNC path to a local path. For example, `sudo /opt/mssql/bin/mssql-conf set uncmapping //servername/sharename /tmp/folder`. |
+
 ## <a id="traceflags"></a> Enable/Disable traceflags
 
-This **traceflag** option enables or disables traceflags for the startup of the SQL Server service. To enable/disable a traceflag use the following commands:
+This **traceflag** option enables or disables traceflags for the startup of the SQL Server service. To enable/disable a traceflag, use the following commands:
 
 1. Enable a traceflag using the following command. For example, for Traceflag 1234:
 
@@ -670,7 +717,7 @@ To view any configured settings, run the following command to output the content
 sudo cat /var/opt/mssql/mssql.conf
 ```
 
-Note that any settings not shown in this file are using their default values. The next section provides a sample **mssql.conf** file.
+Any settings not shown in this file are using their default values. The next section provides a sample **mssql.conf** file.
 
 
 ## <a id="mssql-conf-format"></a> mssql.conf format

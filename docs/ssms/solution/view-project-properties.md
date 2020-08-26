@@ -1,4 +1,5 @@
 ---
+description: "View Project Properties"
 title: "View Project Properties"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"

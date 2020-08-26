@@ -1,4 +1,5 @@
 ---
+description: "RDS Usage and Security"
 title: "RDS Usage and Security | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -22,17 +23,15 @@ Use the information in this section to set up your server and use RDS quickly. T
   
  This section contains the following topics.  
   
--   [Configuring RDS](../../../ado/guide/remote-data-service/configuring-rds.md)  
+-   [Configuring RDS](./configuring-rds.md)  
   
--   [Using Related Technologies with RDS](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)  
+-   [Using Related Technologies with RDS](./using-related-technologies-with-rds.md)  
   
--   [DataFactory Customization](../../../ado/guide/remote-data-service/datafactory-customization.md)  
+-   [DataFactory Customization](./datafactory-customization.md)  
   
--   [Troubleshooting RDS](../../../ado/guide/remote-data-service/troubleshooting-rds.md)  
+-   [Troubleshooting RDS](./troubleshooting-rds.md)  
   
 ## See Also  
- [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)   
- [RDS Scenario](../../../ado/guide/remote-data-service/rds-scenario.md)   
- [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)
-
-
+ [RDS Fundamentals](./rds-fundamentals.md)   
+ [RDS Scenario](./rds-scenario.md)   
+ [RDS Tutorial](./rds-tutorial.md)

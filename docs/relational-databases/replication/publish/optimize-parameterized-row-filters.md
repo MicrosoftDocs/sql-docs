@@ -1,4 +1,5 @@
 ---
+description: "Optimize Parameterized Row Filters"
 title: "Optimize Parameterized Row Filters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

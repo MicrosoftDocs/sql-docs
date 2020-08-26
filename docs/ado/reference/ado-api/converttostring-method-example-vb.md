@@ -1,4 +1,5 @@
 ---
+description: "ConvertToString Method Example (VB)"
 title: "ConvertToString Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -93,5 +94,5 @@ End Sub
 ```  
   
 ## See Also  
- [ConvertToString Method (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ConvertToString Method (RDS)](../rds-api/converttostring-method-rds.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

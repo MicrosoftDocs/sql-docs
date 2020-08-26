@@ -1,4 +1,5 @@
 ---
+description: "getBytes Method (int)"
 title: "getBytes Method (int) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

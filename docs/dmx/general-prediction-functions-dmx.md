@@ -1,4 +1,5 @@
 ---
+description: "General Prediction Functions (DMX)"
 title: "General Prediction Functions (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -16,15 +17,23 @@ author: minewiskan
   
 ## Common Functions  
  You can use functions to extend the results that a mining model returns. You can use the following functions for any **SELECT** statement that returns a table expression:  
-  
-|||  
-|-|-|  
-|[BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)|[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)|  
-|[BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)|[TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)|  
-|[Predict &#40;DMX&#41;](../dmx/predict-dmx.md)|[TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)|  
-|[RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|[TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)|  
-|[RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)||  
-  
+
+:::row:::
+    :::column:::
+        [BottomCount &#40;DMX&#41;](../dmx/bottomcount-dmx.md)  
+        [BottomPercent &#40;DMX&#41;](../dmx/bottompercent-dmx.md)  
+        [Predict &#40;DMX&#41;](../dmx/predict-dmx.md)  
+        [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)  
+        [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)  
+    :::column-end:::
+    :::column:::
+        [RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)  
+        [TopCount &#40;DMX&#41;](../dmx/topcount-dmx.md)  
+        [TopPercent &#40;DMX&#41;](../dmx/toppercent-dmx.md)  
+        [TopSum &#40;DMX&#41;](../dmx/topsum-dmx.md)  
+    :::column-end:::
+:::row-end:::
+
  In addition, the following functions are supported for almost all model types:  
   
 -   [Exists &#40;DMX&#41;](../dmx/exists-dmx.md)  
@@ -55,7 +64,7 @@ author: minewiskan
 |Query type|Supported functions|Remarks|  
 |----------------|-------------------------|-------------|  
 |[SELECT DISTINCT FROM \<model>](../dmx/select-distinct-from-model-dmx.md)|[RangeMin &#40;DMX&#41;](../dmx/rangemin-dmx.md)<br /><br /> [RangeMid &#40;DMX&#41;](../dmx/rangemid-dmx.md)<br /><br /> [RangeMax &#40;DMX&#41;](../dmx/rangemax-dmx.md)|These functions can be used to provide maximum values, minimum values, and means for any column that contains numeric data type, regardless of whether the column is continuous or has been discretized.|  
-|[SELECT FROM \<model>.CONTENT](../dmx/select-from-model-content-dmx.md)<br /><br /> or<br /><br /> [SELECT FROM \<model>.DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|This function retrieves child nodes for the specified node in the model, and can be used, for example, to iterate through the nodes in the mining model content. The arrangement of the nodes in the mining model content depends on the model type. For information about the structure for each mining model type, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> If you have saved the mining model content as a dimension, you can also use other Multidimensional Expressions (MDX) functions that are avaialble for querying an attribute hierarchy.|  
+|[SELECT FROM \<model>.CONTENT](../dmx/select-from-model-content-dmx.md)<br /><br /> or<br /><br /> [SELECT FROM \<model>.DIMENSION_CONTENT](../dmx/select-from-model-dimension-content-dmx.md)|[IsDescendant &#40;DMX&#41;](../dmx/isdescendant-dmx.md)|This function retrieves child nodes for the specified node in the model, and can be used, for example, to iterate through the nodes in the mining model content. The arrangement of the nodes in the mining model content depends on the model type. For information about the structure for each mining model type, see [Mining Model Content &#40;Analysis Services - Data Mining&#41;](https://docs.microsoft.com/analysis-services/data-mining/mining-model-content-analysis-services-data-mining).<br /><br /> If you have saved the mining model content as a dimension, you can also use other Multidimensional Expressions (MDX) functions that are available for querying an attribute hierarchy.|  
 |[SELECT FROM \<model>.CASES](../dmx/select-from-model-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)<br /><br /> [ClientSettingsGeneralFlag Class](../relational-databases/wmi-provider-configuration-classes/clientsettingsgeneralflag-class/clientsettingsgeneralflag-class.md)<br /><br /> [IsTrainingCase &#40;DMX&#41;](../dmx/istrainingcase-dmx.md)<br /><br /> [IsTestCase &#40;DMX&#41;](../dmx/istestcase-dmx.md)|The Lag function is supported only for time series models.<br /><br /> The IsTestCase function is supported in models that are based on a structure that was created using the holdout option, to create a testing data set. If the model is not based on a structure with holdout test set, all cases are considered training cases.|  
 |[SELECT FROM \<model>.SAMPLE_CASES](../dmx/select-from-model-sample-cases-dmx.md)|[IsInNode &#40;DMX&#41;](../dmx/isinnode-dmx.md)|In this context, the IsInNode function returns a case that belongs to a set of idealized sample cases.|  
 |SELECT FROM \<model>.PMML|Not applicable. Use XML query functions instead.|PMML representations are supported only for the following model types:<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Decision Trees<br /><br /> [!INCLUDE[msCoName](../includes/msconame-md.md)] Clustering|  

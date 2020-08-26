@@ -1,4 +1,5 @@
 ---
+description: "Connection (Visual C++ Syntax Index with #import)"
 title: "Connection (Visual C++ Syntax Index with #import) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -82,4 +83,4 @@ __declspec(property(get=GetState)) long State;
 ```  
   
 ## See Also  
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection Object (ADO)](./connection-object-ado.md)

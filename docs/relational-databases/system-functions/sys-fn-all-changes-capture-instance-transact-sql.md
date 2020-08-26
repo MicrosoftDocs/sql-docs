@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL)"
 title: "sys.fn_all_changes_&lt;capture_instance&gt; (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"

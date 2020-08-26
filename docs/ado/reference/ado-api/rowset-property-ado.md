@@ -1,4 +1,5 @@
 ---
+description: "Rowset Property (ADO)"
 title: "Rowset Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -43,4 +44,4 @@ HRESULT put_Rowset([in] IUnknown* pRowset);
  This property method returns the standard HRESULT values, including S_OK and E_FAIL.  
   
 ## Applies To  
- [ADORecordsetConstruction Interface](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)
+ [ADORecordsetConstruction Interface](./adorecordsetconstruction-interface.md)

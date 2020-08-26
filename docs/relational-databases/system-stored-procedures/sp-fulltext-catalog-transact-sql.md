@@ -1,4 +1,5 @@
 ---
+description: "sp_fulltext_catalog (Transact-SQL)"
 title: "sp_fulltext_catalog (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

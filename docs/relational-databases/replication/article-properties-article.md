@@ -1,4 +1,5 @@
 ---
+description: "Article Properties - &lt;Article&gt;"
 title: "Article Properties - &lt;Article&gt; | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "ADO Programmer&#39;s Reference"
 title: "ADO Programmer&#39;s Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -16,10 +17,10 @@ ms.author: jroth
 # ADO Programmer&#39;s Reference
 This section contains the following topics.  
   
--   [ADO API Reference](../../ado/reference/ado-api/ado-api-reference.md)  
+-   [ADO API Reference](./ado-api/ado-api-reference.md)  
   
--   [RDS API Reference](../../ado/reference/rds-api/rds-api-reference.md)  
+-   [RDS API Reference](./rds-api/rds-api-reference.md)  
   
--   [ADO MD API Reference](../../ado/reference/ado-md-api/ado-md-api-reference.md)  
+-   [ADO MD API Reference](./ado-md-api/ado-md-object-model.md?view=sql-server-ver15)  
   
--   [ADOX API Reference](../../ado/reference/adox-api/adox-api-reference.md)
+-   [ADOX API Reference](./adox-api/adox-object-model.md?view=sql-server-ver15)

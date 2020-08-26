@@ -1,4 +1,5 @@
 ---
+description: "CREATE TABLE (Azure SQL Data Warehouse)"
 title: "CREATE TABLE (Azure SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/03/2019"
@@ -255,7 +256,7 @@ Same as `datetime`, except that you can specify the number of fractional seconds
 | `money`|8|  
 | `smallmoney` |4|  
   
- `bigint` | `int` | `smallint` | `tinyint`  
+ `bigint` \| `int` \| `smallint` \| `tinyint`  
  Exact-number data types that use integer data. The storage is shown in the following table.  
   
 | Data Type | Storage bytes |  

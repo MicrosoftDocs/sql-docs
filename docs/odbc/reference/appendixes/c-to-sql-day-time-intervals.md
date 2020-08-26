@@ -1,4 +1,5 @@
 ---
+description: "C to SQL: Day-Time Intervals"
 title: "C to SQL: Day-Time Intervals | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

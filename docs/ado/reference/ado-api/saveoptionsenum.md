@@ -1,4 +1,5 @@
 ---
+description: "SaveOptionsEnum"
 title: "SaveOptionsEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # SaveOptionsEnum
-Specifies whether a file should be created or overwritten when saving from a [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object. The values can be **adSaveCreateNotExist** or **adSaveCreateOverWrite**..  
+Specifies whether a file should be created or overwritten when saving from a [Stream](./stream-object-ado.md) object. The values can be **adSaveCreateNotExist** or **adSaveCreateOverWrite**..  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -28,4 +29,4 @@ Specifies whether a file should be created or overwritten when saving from a [St
  These constants do not have ADO/WFC equivalents.  
   
 ## Applies To  
- [SaveToFile Method](../../../ado/reference/ado-api/savetofile-method.md)
+ [SaveToFile Method](./savetofile-method.md)

@@ -1,4 +1,5 @@
 ---
+description: "Granting Guest Privileges to a Web Server Computer"
 title: "Granting Guest Privileges to a Web Server Computer | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

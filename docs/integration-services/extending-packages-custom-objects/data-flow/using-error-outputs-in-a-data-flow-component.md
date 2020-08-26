@@ -1,4 +1,5 @@
 ---
+description: "Using Error Outputs in a Data Flow Component"
 title: "Using Error Outputs in a Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

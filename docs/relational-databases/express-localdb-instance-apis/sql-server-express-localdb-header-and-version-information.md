@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Express LocalDB Header and Version Information"
 title: "SQL Server Express LocalDB header & version information"
 ms.date: "03/14/2017"
 ms.prod: sql

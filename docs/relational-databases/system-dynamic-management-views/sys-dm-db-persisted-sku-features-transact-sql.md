@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_persisted_sku_features (Transact-SQL)"
 title: "sys.dm_db_persisted_sku_features (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/23/2017"

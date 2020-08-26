@@ -1,4 +1,5 @@
 ---
+description: "MarshalOptions Property Example (VB)"
 title: "MarshalOptions Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # MarshalOptions Property Example (VB)
-This example uses the [MarshalOptions](../../../ado/reference/ado-api/marshaloptions-property-ado.md) property to specify what rows are sent back to the server - All Rows or only Modified Rows.  
+This example uses the [MarshalOptions](./marshaloptions-property-ado.md) property to specify what rows are sent back to the server - All Rows or only Modified Rows.  
   
 ```  
 'BeginMarshalOptionsVB  
@@ -126,5 +127,5 @@ End Sub
 ```  
   
 ## See Also  
- [MarshalOptions Property (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)   
- [MarshalOptionsEnum](../../../ado/reference/ado-api/marshaloptionsenum.md)
+ [MarshalOptions Property (ADO)](./marshaloptions-property-ado.md)   
+ [MarshalOptionsEnum](./marshaloptionsenum.md)

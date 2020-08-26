@@ -1,4 +1,5 @@
 ---
+description: "Security Architecture for Web Synchronization"
 title: "Security Architecture for Web Synchronization | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,5 +1,6 @@
 ---
 title: "Extended Stored Procedures (Transact-SQL)"
+description: Learn about extended stored procedures that you can use when you work with Stretch-enabled databases. See how to reconcile columns and perform other tasks.
 titleSuffix: SQL Server Stretch Database
 ms.custom: seo-dt-2019
 ms.date: "06/10/2016"

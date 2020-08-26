@@ -1,4 +1,5 @@
 ---
+description: "MSpeer_response (Transact-SQL)"
 title: "MSpeer_response (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

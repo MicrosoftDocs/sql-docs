@@ -1,6 +1,6 @@
 ---
 title: "Data type mapping in ITableDefinition (OLE DB driver) | Microsoft Docs"
-description: "Data type mapping in ITableDefinition"
+description: Learn how an OLE DB Driver for SQL Server consumer can specify SQL Server data types when creating tables by using the ITableDefinition::CreateTable method.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "data types [OLE DB]"
   - "CreateTable function"
   - "OLE DB, data types"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Data Type Mapping in ITableDefinition
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

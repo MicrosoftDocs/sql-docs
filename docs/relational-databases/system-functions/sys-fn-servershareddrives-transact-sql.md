@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_servershareddrives (Transact-SQL)"
 title: "sys.fn_servershareddrives (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

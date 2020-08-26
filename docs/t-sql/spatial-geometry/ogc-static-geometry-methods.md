@@ -1,4 +1,5 @@
 ---
+description: "OGC Static Geometry Methods"
 title: "OGC Static Geometry Methods | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

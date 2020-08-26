@@ -1,4 +1,5 @@
 ---
+description: "setInt Method (SQLServerPreparedStatement)"
 title: "setInt Method (SQLServerPreparedStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

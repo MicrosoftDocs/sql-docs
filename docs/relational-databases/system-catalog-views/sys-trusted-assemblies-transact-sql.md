@@ -1,4 +1,5 @@
 ---
+description: "sys.trusted_assemblies (Transact-SQL)"
 title: "sys.trusted_assemblies (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/14/2017"

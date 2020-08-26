@@ -1,4 +1,5 @@
 ---
+description: "Optimize JSON processing with in-memory OLTP"
 title: "Optimize JSON processing with in-memory OLTP"
 ms.date: 06/03/2020
 ms.prod: sql

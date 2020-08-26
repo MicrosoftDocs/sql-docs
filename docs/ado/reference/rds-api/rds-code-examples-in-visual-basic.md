@@ -1,4 +1,5 @@
 ---
+description: "RDS Code Examples in Visual Basic"
 title: "RDS Code Examples in Visual Basic | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""
@@ -27,8 +28,6 @@ ms.author: jroth
   
 ## Properties  
   
--   [Handler Property Example](../../../ado/reference/rds-api/handler-property-example-vb.md)  
+-   [Handler Property Example](./handler-property-example-vb.md)  
   
--   [InternetTimeout Property Example](../../../ado/reference/rds-api/internettimeout-property-example-vb.md)
-
-
+-   [InternetTimeout Property Example](./internettimeout-property-example-vb.md)

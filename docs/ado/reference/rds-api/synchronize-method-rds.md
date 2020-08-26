@@ -1,4 +1,5 @@
 ---
+description: "Synchronize Method (RDS)"
 title: "Synchronize Method (RDS) | Microsoft Docs"
 ms.technology: connectivity
 ms.custom: ""
@@ -61,6 +62,4 @@ object.Synchronize(ConnectionString As String, HandlerString As String, lSynchro
  The *HandlerString* parameter may be null. What happens in this case depends on how the RDS server is configured. A handler string of "MSDFMAP.handler" indicates that the Microsoft supplied handler (Msdfmap.dll) should be used. A handler string of "MASDFMAP.handler,sample.ini" indicates that the Msdfmap.dll handler should be used and that the argument "sample.ini" should be passed to the handler. Msdfmap.dll will then interpret the argument as a direction to use the sample.ini to check the connection and query strings.  
   
 ## Applies To  
- [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory Object (RDSServer)](./datafactory-object-rdsserver.md)

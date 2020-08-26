@@ -1,4 +1,5 @@
 ---
+description: "Create a New Solution"
 title: "Create a New Solution"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -35,5 +36,5 @@ To access Solution Explorer, click **Solution Explorer** on the **View** menu.
   
 ## See Also  
 [Solution Explorer](../../ssms/solution/solution-explorer.md)  
-[Open Solutions from Source Control](https://msdn.microsoft.com/library/ms174216.aspx)  
+[Open Solutions from Source Control](https://docs.microsoft.com/sql/azure-data-studio/source-control)  
   

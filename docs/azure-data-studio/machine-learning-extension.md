@@ -5,7 +5,7 @@ description: The Machine Learning extension for Azure Data Studio enables you to
 ms.date: "05/19/2020"
 ms.reviewer: "sstein"
 ms.prod: azure-data-studio
-ms.technology: machine-learning
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
@@ -17,13 +17,30 @@ The Machine Learning extension for [Azure Data Studio](what-is.md) enables you t
 
 ## Prerequisites
 
-The following prerequisites need to be installed on the computer you run Azure Data Studio on.
+The following prerequisites need to be installed on the computer you run Azure Data Studio.
 
 - [Python 3](https://www.python.org/downloads/). Once you have installed Python, you need to specify the local path to a Python installation under [Extension Settings](#settings). If you have used a [Python kernel notebook](notebooks-tutorial-python-kernel.md) in Azure Data Studio, the extension will use the path from the notebook by default.
 
 - [Microsoft ODBC driver 17 for SQL Server](../connect/odbc/download-odbc-driver-for-sql-server.md) for Windows, macOS, or Linux.
 
 - [R 3.5](https://www.r-project.org/) (optional). Other version than 3.5 is currently not supported. Once you have installed R 3.5, you need to enable R and specify the local path to an R installation under [Extension Settings](#settings). This is only required if you want to manage R packages in your database.
+
+### Trouble installing Python 3 from within ADS?
+If you attempt to install Python 3 but get an error about TLS/SSL, add these two, optional components:
+
+_sample error:_
+```
+$: ~/0.0.1/bin/python3 -m pip install --user "jupyter>=1.0.0" --extra-index-url https://prose-python-packages.azurewebsites.net
+WARNING: pip is configured with locations that require TLS/SSL, however the ssl module in Python is not available.
+Looking in indexes: https://pypi.org/simple, https://prose-python-packages.azurewebsites.net
+Requirement already satisfied: jupyter
+```
+
+_install these:_
+
+- [Homebrew](https://brew.sh) (optional). Install homebrew, then run `brew update` from the command line.
+
+- *openssl* (optional). Next run `brew install openssl`.
 
 ## Install the extension
 

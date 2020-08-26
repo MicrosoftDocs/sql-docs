@@ -1,4 +1,5 @@
 ---
+description: "Replication Monitor"
 title: "Replication Monitor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Define and Modify a Column Filter"
 title: "Define and Modify a Column Filter | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,6 +1,6 @@
 ---
 title: "Use contained databases with availability groups"
-description: "How to use contained databases with an Always On availability group"
+description: "Learn about the using a contained database with Always On availability groups in SQL Server 2019 (15.x)."
 ms.custom: "seodec18"
 ms.date: "05/17/2016"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "Log Shipping Stored Procedures (Transact-SQL)"
 title: "Log Shipping Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

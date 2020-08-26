@@ -1,4 +1,5 @@
 ---
+description: "Creating a Custom Data Flow Component"
 title: "Creating a Custom Data Flow Component | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

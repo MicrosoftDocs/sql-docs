@@ -1,4 +1,5 @@
 ---
+description: "DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)"
 title: DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 ms.custom: ""
 ms.date: "07/03/2019"
@@ -16,7 +17,7 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 
 # DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Shows the storage space used result set caching for an Azure [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] database.
   

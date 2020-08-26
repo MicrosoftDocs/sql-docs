@@ -1,4 +1,5 @@
 ---
+description: "AND (MDX)"
 title: "AND (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

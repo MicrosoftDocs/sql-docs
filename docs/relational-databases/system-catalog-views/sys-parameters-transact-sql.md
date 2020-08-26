@@ -1,4 +1,5 @@
 ---
+description: "sys.parameters (Transact-SQL)"
 title: "sys.parameters (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

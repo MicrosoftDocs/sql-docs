@@ -1,7 +1,7 @@
 ---
 title: azdata bdc endpoint reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc endpoint commands.
+description: Use this reference article to understand SQL commands in the azdata tool, specifically the bdc endpoint commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab

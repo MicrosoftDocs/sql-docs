@@ -1,4 +1,5 @@
 ---
+description: "setNClob Method (int, java.io.Reader, long)"
 title: "setNClob Method (int, java.io.Reader, long) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

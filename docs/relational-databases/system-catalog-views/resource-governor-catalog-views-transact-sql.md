@@ -1,4 +1,5 @@
 ---
+description: "Resource Governor Catalog Views (Transact-SQL)"
 title: "Resource Governor Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2016"
@@ -17,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Resource Governor Catalog Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   This section contains Resource Governor information for the following catalog views. These views are optimized for performance and utility. When possible, use these catalog views to access Resource Governor metadata.  
 

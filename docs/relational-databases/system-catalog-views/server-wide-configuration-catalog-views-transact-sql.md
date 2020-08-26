@@ -1,4 +1,5 @@
 ---
+description: "Server-wide Configuration Catalog Views (Transact-SQL)"
 title: "Server-wide Configuration Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2015"
@@ -17,7 +18,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # Server-wide Configuration Catalog Views (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   This section contains the following catalog views.  
 

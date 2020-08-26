@@ -1,4 +1,5 @@
 ---
+description: "Manage accelerated database recovery"
 title: "Manage accelerated database recovery | Microsoft Docs"
 ms.date: "08/12/2019"
 ms.prod: sql

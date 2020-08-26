@@ -1,4 +1,5 @@
 ---
+description: "sp_droppullsubscription (Transact-SQL)"
 title: "sp_droppullsubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

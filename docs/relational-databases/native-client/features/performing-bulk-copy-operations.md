@@ -1,4 +1,5 @@
 ---
+description: "Performing Bulk Copy Operations in SQL Server Native Client"
 title: "Performing Bulk Copy Operations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -16,7 +17,7 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Performing Bulk Copy Operations
+# Performing Bulk Copy Operations in SQL Server Native Client 
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] bulk copy feature supports the transfer of large amounts of data into or out of a [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] table or view. Data can also be transferred out by specifying a SELECT statement. The data can be moved between [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] and an operating-system data file, such as an ASCII file. The data file can have different formats; the format is defined to bulk copy in a format file. Optionally, data can be loaded into program variables and transferred to [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] using bulk copy functions and methods.  

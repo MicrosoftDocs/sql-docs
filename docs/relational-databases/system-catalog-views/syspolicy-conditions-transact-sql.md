@@ -1,4 +1,5 @@
 ---
+description: "syspolicy_conditions (Transact-SQL)"
 title: "syspolicy_conditions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "IDENT_CURRENT (Transact-SQL)"
 title: "IDENT_CURRENT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

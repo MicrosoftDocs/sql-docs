@@ -1,4 +1,5 @@
 ---
+description: "DBCC CLEANTABLE (Transact-SQL)"
 title: DBCC CLEANTABLE (Transact-SQL)
 ms.custom: ""
 ms.date: "11/14/2017"

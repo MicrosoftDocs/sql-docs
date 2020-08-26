@@ -1,4 +1,5 @@
 ---
+description: "FetchComplete Event (ADO)"
 title: "FetchComplete Event (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity

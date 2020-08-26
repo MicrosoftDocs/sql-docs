@@ -1,4 +1,5 @@
 ---
+description: "BOF, EOF Properties (ADO)"
 title: "BOF, EOF Properties (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -19,7 +20,7 @@ author: rothja
 ms.author: jroth
 ---
 # BOF, EOF Properties (ADO)
--   **BOF** Indicates that the current record position is before the first record in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  
+-   **BOF** Indicates that the current record position is before the first record in a [Recordset](./recordset-object-ado.md) object.  
   
 -   **EOF** Indicates that the current record position is after the last record in a **Recordset** object.  
   
@@ -35,7 +36,7 @@ ms.author: jroth
   
  If either the **BOF** or **EOF** property is **True**, there is no current record.  
   
- If you open a **Recordset** object containing no records, the **BOF** and **EOF** properties are set to **True** (see the [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md) property for more information about this state of a **Recordset**). When you open a **Recordset** object that contains at least one record, the first record is the current record and the **BOF** and **EOF** properties are **False**.  
+ If you open a **Recordset** object containing no records, the **BOF** and **EOF** properties are set to **True** (see the [RecordCount](./recordcount-property-ado.md) property for more information about this state of a **Recordset**). When you open a **Recordset** object that contains at least one record, the first record is the current record and the **BOF** and **EOF** properties are **False**.  
   
  If you delete the last remaining record in the **Recordset** object, the **BOF** and **EOF** properties may remain **False** until you attempt to reposition the current record.  
   
@@ -60,8 +61,8 @@ ms.author: jroth
 |**MoveNext**, **Move** > 0|No change|Set to **True**|  
   
 ## Applies To  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset Object (ADO)](./recordset-object-ado.md)  
   
 ## See Also  
- [BOF, EOF, and Bookmark Properties Example (VB)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vb.md)   
- [BOF, EOF, and Bookmark Properties Example (VC++)](../../../ado/reference/ado-api/bof-eof-and-bookmark-properties-example-vc.md)   
+ [BOF, EOF, and Bookmark Properties Example (VB)](./bof-eof-and-bookmark-properties-example-vb.md)   
+ [BOF, EOF, and Bookmark Properties Example (VC++)](./bof-eof-and-bookmark-properties-example-vc.md)

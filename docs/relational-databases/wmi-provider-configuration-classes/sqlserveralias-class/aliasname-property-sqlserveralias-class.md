@@ -1,4 +1,5 @@
 ---
+description: "AliasName Property (SqlServerAlias Class)"
 title: "AliasName Property (SqlServerAlias)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

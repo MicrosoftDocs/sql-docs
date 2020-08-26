@@ -9,9 +9,9 @@ ms.technology: t-sql
 ms.topic: "language-reference"
 f1_keywords: 
   - "BULK_TSQL"
-  - "BULK INSERT"
+  - "BULK_INSERT"
   - "BULK_INSERT_TSQL"
-  - "BULK"
+  - "BULK INSERT"
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
@@ -331,7 +331,7 @@ Before [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1, comma-sep
 
 ## Logging Behavior
 
- For information about when row-insert operations that are performed by bulk import into SQL SErver are logged in the transaction log, see [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md). Minimal logging is not supported in Azure SQL Database.
+ For information about when row-insert operations that are performed by bulk import into SQL Server are logged in the transaction log, see [Prerequisites for Minimal Logging in Bulk Import](../../relational-databases/import-export/prerequisites-for-minimal-logging-in-bulk-import.md). Minimal logging is not supported in Azure SQL Database.
 
 ## <a name="Limitations"></a> Restrictions
 

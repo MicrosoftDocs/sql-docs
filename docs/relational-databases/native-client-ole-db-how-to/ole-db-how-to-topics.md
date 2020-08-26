@@ -1,4 +1,5 @@
 ---
+description: "OLE DB How-to Topics (Native Client OLE DB provider)"
 title: How-to topics (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# OLE DB How-to Topics
+# OLE DB How-to Topics (Native Client OLE DB provider)
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   To use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB provider, you have to understand how to make a connection to the server, execute the command, and process the results.  

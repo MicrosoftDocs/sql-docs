@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_log_space_usage (Transact-SQL)"
 title: "sys.dm_db_log_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/29/2017"

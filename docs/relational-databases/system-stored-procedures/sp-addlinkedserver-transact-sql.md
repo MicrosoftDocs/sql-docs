@@ -1,4 +1,5 @@
 ---
+description: "sp_addlinkedserver (Transact-SQL)"
 title: "sp_addlinkedserver (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2016"
@@ -289,7 +290,7 @@ EXEC sp_addlinkedserver
   
 ```sql  
 -- Configure the linked server  
--- Add one Azure SQL DB as Linked Server  
+-- Add one Azure SQL Database as Linked Server  
 EXEC sp_addlinkedserver  
   @server='myLinkedServer', -- here you can specify the name of the linked server  
   @srvproduct='',       

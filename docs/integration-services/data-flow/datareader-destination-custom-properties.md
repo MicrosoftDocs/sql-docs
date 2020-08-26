@@ -1,4 +1,5 @@
 ---
+description: "DataReader Destination Custom Properties"
 title: "DataReader Destination Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

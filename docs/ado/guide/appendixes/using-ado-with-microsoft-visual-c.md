@@ -1,4 +1,5 @@
 ---
+description: "Using ADO with Microsoft Visual C++"
 title: "Using ADO with Microsoft Visual C++ | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -18,20 +19,20 @@ ms.author: jroth
 # Using ADO with Microsoft Visual C++
 For information about using ADO with Visual C++, see the following sections:  
   
--   [Visual C++ ADO Programming](../../../ado/guide/appendixes/visual-c-ado-programming.md)  
+-   [Visual C++ ADO Programming](./visual-c-ado-programming.md)  
   
--   [Visual C++ Extensions for ADO](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)  
+-   [Visual C++ Extensions for ADO](./visual-c-extensions-for-ado.md)  
   
--   [Using Visual C++ Extensions](../../../ado/guide/appendixes/using-visual-c-extensions.md)  
+-   [Using Visual C++ Extensions](./using-visual-c-extensions.md)  
   
--   [Visual C++ Extensions Header](../../../ado/guide/appendixes/visual-c-extensions-header.md)  
+-   [Visual C++ Extensions Header](./visual-c-extensions-header.md)  
   
--   [Visual C++ Extensions Example](../../../ado/guide/appendixes/visual-c-extensions-example.md)  
+-   [Visual C++ Extensions Example](./visual-c-extensions-example.md)  
   
 ## See Also  
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [ADO for Visual C++ Syntax Index for COM](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
- [ADO for Visual C++ Syntax Index with #import](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
- [Using ADO with Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [Using ADO with Scripting Languages](../../../ado/guide/appendixes/using-ado-with-scripting-languages.md)   
- [Visual C++ Extensions for ADO](../../../ado/guide/appendixes/visual-c-extensions-for-ado.md)
+ [Microsoft ActiveX Data Objects (ADO)](../../microsoft-activex-data-objects-ado.md)   
+ [ADO for Visual C++ Syntax Index for COM](../../reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)   
+ [ADO for Visual C++ Syntax Index with #import](../../reference/ado-api/ado-for-visual-c-syntax-index-with-sharpimport.md)   
+ [Using ADO with Microsoft Visual Basic](./using-ado-with-microsoft-visual-basic.md)   
+ [Using ADO with Scripting Languages](./using-ado-with-scripting-languages.md)   
+ [Visual C++ Extensions for ADO](./visual-c-extensions-for-ado.md)

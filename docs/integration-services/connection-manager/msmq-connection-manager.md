@@ -1,4 +1,5 @@
 ---
+description: "MSMQ Connection Manager"
 title: "MSMQ Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

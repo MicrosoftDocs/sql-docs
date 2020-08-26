@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INSUFFICIENT_BUFFER"
 title: "LOCALDB_ERROR_INSUFFICIENT_BUFFER | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,8 +16,8 @@ ms.author: "sstein"
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| --------- | ----- |
 |Product Name|SQL Server|  
 |Event ID|276|  
 |Event Source|SQL Server Local Database Runtime 12.0|  

@@ -1,4 +1,5 @@
 ---
+description: "sp_changelogreader_agent (Transact-SQL)"
 title: "sp_changelogreader_agent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/15/2018"
@@ -38,7 +39,7 @@ sp_changelogreader_agent [ [ @job_login = ] 'job_login' ]
   
 ## Arguments  
 `[ @job_login = ] 'job_login'`
- Is the login for the account under which the agent runs. *job_login* is **nvarchar(257)**, with a default of NULL. On Azure SQL Database Managed Instance, use a SQL Server account. *This cannot be changed for a non-*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*  
+ Is the login for the account under which the agent runs. *job_login* is **nvarchar(257)**, with a default of NULL. On Azure SQL Managed Instance, use a SQL Server account. *This cannot be changed for a non-*[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *publisher.*  
   
 `[ @job_password = ] 'job_password'`
  Is the password for the account under which the agent runs. *job_password* is **sysname**, with a default of NULL.  

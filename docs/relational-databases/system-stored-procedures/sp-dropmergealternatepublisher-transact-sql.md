@@ -1,4 +1,5 @@
 ---
+description: "sp_dropmergealternatepublisher (Transact-SQL)"
 title: "sp_dropmergealternatepublisher (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

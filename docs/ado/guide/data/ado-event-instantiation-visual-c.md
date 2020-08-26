@@ -1,4 +1,5 @@
 ---
+description: "ADO Event Instantiation: Visual C++"
 title: "ADO Event Instantiation: Visual C++ | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
@@ -14,7 +15,7 @@ author: rothja
 ms.author: jroth
 ---
 # ADO Event Instantiation: Visual C++
-This is a schematic description of how to instantiate ADO events in Microsoft® Visual C++®. See [ADO Events Model Example (VC++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md) for a complete description.  
+This is a schematic description of how to instantiate ADO events in Microsoft® Visual C++®. See [ADO Events Model Example (VC++)](../../reference/ado-api/ado-events-model-example-vc.md) for a complete description.  
   
  Create classes derived from the **ConnectionEventsVt** and **RecordsetEventsVt** interfaces found in the file adoint.h.  
   
@@ -61,7 +62,7 @@ STDMETHODIMP CConnEvent::ConnectComplete(
   
  The event classes inherit from **IUnknown**, so you must also implement the **QueryInterface**, **AddRef**, and **Release** methods. Also implement class constructors and destructors. Choose the Visual C++ tools with which you are most comfortable to simplify this part of the task.  
   
- Make it known that your event handlers are available by issuing **QueryInterface** on the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) and [Connection](../../../ado/reference/ado-api/connection-object-ado.md) objects for the **IConnectionPointContainer** and **IConnectionPoint** interfaces. Then issue **IConnectionPoint::Advise** for each class.  
+ Make it known that your event handlers are available by issuing **QueryInterface** on the [Recordset](../../reference/ado-api/recordset-object-ado.md) and [Connection](../../reference/ado-api/connection-object-ado.md) objects for the **IConnectionPointContainer** and **IConnectionPoint** interfaces. Then issue **IConnectionPoint::Advise** for each class.  
   
  For example, assume you are using a Boolean function that returns **True** if it successfully informs a **Recordset** object that you have event handlers available.  
   

@@ -1,4 +1,5 @@
 ---
+description: "SET FIPS_FLAGGER (Transact-SQL)"
 title: "SET FIPS_FLAGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2017"

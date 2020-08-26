@@ -1,4 +1,5 @@
 ---
+description: "AcceptPause Property (SqlService Class)"
 title: "AcceptPause Property (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"

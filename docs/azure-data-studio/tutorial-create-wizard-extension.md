@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Create wizard extension"
+title: Create wizard extension
 description: This tutorial demonstrates how to create a wizard extension to add custom functionality to Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio

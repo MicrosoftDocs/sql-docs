@@ -1,5 +1,5 @@
 ---
-title: Tutorial: Create a Jupyter Notebook extension
+title: Create a Jupyter Notebook extension
 description: Learn about how to package notebooks into an extension using the extension generator
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio

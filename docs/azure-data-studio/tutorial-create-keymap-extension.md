@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Create keymap extension"
+title: Create keymap extension
 description: This tutorial demonstrates how to create a keymap extension to add custom functionality to Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio

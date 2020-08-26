@@ -1,5 +1,5 @@
 ---
-title: "Tutorial: Create dashboard extension"
+title: Create dashboard extension
 description: This tutorial demonstrates how to create a dashboard extension to add custom functionality to Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio

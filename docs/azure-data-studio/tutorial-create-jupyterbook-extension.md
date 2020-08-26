@@ -1,5 +1,5 @@
 ---
-title: Tutorial: Create a Jupyter Book extension
+title: Create a Jupyter Book extension
 description: Learn about how to package a Jupyter Book into an extension using the extension generator
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio

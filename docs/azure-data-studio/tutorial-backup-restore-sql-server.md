@@ -11,7 +11,7 @@ ms.custom: "seodec18"
 ms.date: 11/04/2019
 ---
 
-# Backup and Restore databases using Azure Data Studio
+# Tutorial: Backup and Restore databases using Azure Data Studio
 
 In this tutorial, you learn how to use Azure Data Studio to:
 > [!div class="checklist"]

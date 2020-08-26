@@ -5,7 +5,7 @@ description: Learn how to manage Python or R packages in your database with the 
 ms.date: "05/19/2020"
 ms.reviewer: "sstein"
 ms.prod: azure-data-studio
-ms.technology: azure-data-studio
+ms.technology: machine-learning
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph

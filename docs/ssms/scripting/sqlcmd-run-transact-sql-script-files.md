@@ -4,7 +4,7 @@ description: Learn how to use sqlcmd to run a Transact-SQL script file. It can c
 ms.custom: seo-lt-2019
 ms.date: "07/15/2016"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

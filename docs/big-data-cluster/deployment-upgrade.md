@@ -35,8 +35,8 @@ This section explains how to upgrade a SQL Server BDC from a supported release (
 
    Make sure no active Livy sessions or batch jobs are running in Azure Data Studio. An easy way to confirm this is either through `curl` command or a browser to request these URLs:
 
-    - `https://knox.azdata.local:30443/gateway/default/livy/v1/sessions`
-    - `https://knox.azdata.local:30443/gateway/default/livy/v1/batches`
+    - `<your-gateway-endpoint>/gateway/default/livy/v1/sessions`
+    - `<your-gateway-endpoint>/gateway/default/livy/v1/batches`
 
 1. Back up SQL Server master instance.
 

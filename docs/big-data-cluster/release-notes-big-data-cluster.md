@@ -187,8 +187,7 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
    Otherwise you may run into a 404 error with Livy during the upgrade process. To resolve this problem after the upgraded has started, restart the Livy server on both sparkhead nodes. For example:
 
    ```console
-   kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec
-supervisorctl restart livy
+   kubectl -n <clustername> exec -it sparkhead-0/sparkhead-1 -c hadoop-livy-sparkhistory -- exec supervisorctl restart livy
    ```
 
 ### Big data cluster generated service accounts passwords expiration

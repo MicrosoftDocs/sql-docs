@@ -3,7 +3,7 @@ title: "Query and text editors (SSMS)"
 description: Learn how to use SQL Server Management Studio (SSMS) editors to interactively query, edit, and test files.
 ms.custom: seo-lt-2019 
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Query Editor [SQL Server Management Studio]"

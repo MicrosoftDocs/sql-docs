@@ -1,7 +1,7 @@
 ---
-title: Deploy private cluster
+title: Deploy BDC in Azure Kubernetes Service (AKS) private cluster
 titleSuffix: SQL Server Big Data Cluster
-description: Learn how to deploy a SQL Server Big Data Clusters with AKS private cluster with advanced networking (CNI).
+description: Learn how to deploy a SQL Server Big Data Clusters with Azure Kubernetes Service (AKS) private cluster with advanced networking (CNI).
 author: cloudmelon
 ms.author: melqin
 ms.reviewer: mikeray

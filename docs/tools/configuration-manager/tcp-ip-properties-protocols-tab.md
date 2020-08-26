@@ -6,7 +6,7 @@ ms.date: "08/24/2016"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "TCP/IP [SQL Server], configuration options"

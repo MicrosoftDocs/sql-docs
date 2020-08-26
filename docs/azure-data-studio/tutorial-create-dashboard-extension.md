@@ -5,10 +5,10 @@ ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan
 ms.topic: tutorial
-author: t-anjaga
+author: anjalia
 ms.author: t-anjaga
 ms.custom:
-ms.date: 8/20/2020
+ms.date: 08/26/2020
 ---
 
 # Tutorial: Create an Azure Data Studio Dashboard extension

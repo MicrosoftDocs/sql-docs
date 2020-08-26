@@ -97,7 +97,7 @@
     - name: Wizard Extension
       href: tutorial-create-wizard-extension.md
     - name: Database Extension
-      href: tutorial-create-database-extension.md
+      href: tutorial-create-dashboard-extension.md
   - name: Integrated terminal (PowerShell, Bash)
     href: integrated-terminal.md
   - name: Keyboard shortcuts

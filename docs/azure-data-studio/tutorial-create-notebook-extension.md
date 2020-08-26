@@ -4,11 +4,11 @@ description: Learn about how to package notebooks into an extension using the ex
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: tutorial
-author: "t-lajian"
-ms.author: "maghan"
+author: anjalia
+ms.author: t-lajian
 ms.reviewer: alayu, maghan
 ms.custom: 
-ms.date: 08/17/2020
+ms.date: 08/26/2020
 ---
 
 # Tutorial: Create a Jupyter Notebook extension

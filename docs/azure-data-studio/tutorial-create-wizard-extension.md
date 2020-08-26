@@ -5,10 +5,10 @@ ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan
 ms.topic: tutorial
-author: t-anjaga
-ms.author: t-anjaga
+author: anjalia
+ms.author: t-lajian
 ms.custom:
-ms.date: 8/18/2020
+ms.date: 08/26/2020
 ---
 
 # Tutorial: Create an Azure Data Studio Wizard extension

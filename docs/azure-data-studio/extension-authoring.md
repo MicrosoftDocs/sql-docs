@@ -4,11 +4,11 @@ description: You can add functionality to Azure Data Studio with an extension. L
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: "markingmyname"
-ms.author: "maghan"
+author: markingmyname
+ms.author: maghan
 ms.reviewer: alayu 
-ms.custom: "seodec18"
-ms.date: "09/24/2018"
+ms.custom: seodec18
+ms.date: 08/26/2020
 ---
 
 # Extend the functionality by creating Azure Data Studio extensions

@@ -87,6 +87,7 @@ Specifies the total server memory that can be used by requests in this external 
 MAX_PROCESSES =*value*  
 Specifies the maximum number of processes allowed for the external resource pool. Specify 0 to set an unlimited threshold for the pool, which is thereafter bound only by computer resources.
 ::: moniker-end
+::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
 Specifies the maximum average CPU bandwidth that all requests in the external resource pool can receive when there is CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
 
@@ -100,7 +101,7 @@ Specifies the total server memory that can be used by requests in this external 
 
 MAX_PROCESSES =*value*  
 Specifies the maximum number of processes allowed for the external resource pool. Specify 0 to set an unlimited threshold for the pool, which is thereafter bound only by computer resources.
-
+::: moniker-end
 ## Remarks
 
 The [!INCLUDE[ssDE](../../includes/ssde-md.md)] implements the resource pool when you execute the [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) statement.
@@ -127,7 +128,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
 ::: moniker-end
-
+::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (
@@ -139,7 +140,7 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
-
+::: moniker-end
 ## See also
 
 + [Resource governance for machine learning in SQL Server](../../machine-learning/administration/resource-governor.md)

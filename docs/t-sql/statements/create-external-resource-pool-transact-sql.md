@@ -56,6 +56,7 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]  
 ```  
 ::: moniker-end
+::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
 [ WITH (  
@@ -75,7 +76,7 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 <CPU_range_spec> ::=    
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]  
 ```  
-
+::: moniker-end
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
@@ -94,7 +95,7 @@ Specifies the total server memory that can be used by requests in this external 
 MAX_PROCESSES =*value*  
 The maximum number of processes allowed for the external resource pool. 0 = unlimited threshold for the pool, which is thereafter bound only by computer resources.
 ::: moniker-end
-
+::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
 The maximum average CPU bandwidth for all requests in the external resource pool can receive when there's CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
 
@@ -110,7 +111,7 @@ Specifies the total server memory that can be used by requests in this external 
 
 MAX_PROCESSES =*value*  
 The maximum number of processes allowed for the external resource pool. 0 = unlimited threshold for the pool, which is thereafter bound only by computer resources.
-
+::: moniker-end
 ## Remarks
 
 The [!INCLUDE[ssDE](../../includes/ssde-md.md)] implements the resource pool when you execute the [ALTER RESOURCE GOVERNOR RECONFIGURE](../../t-sql/statements/alter-resource-governor-transact-sql.md) statement.
@@ -137,7 +138,8 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
- ::: moniker-end
+::: moniker-end
+::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ```sql
 CREATE EXTERNAL RESOURCE POOL ep_1
 WITH (  
@@ -149,7 +151,7 @@ GO
 ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
- 
+::: moniker-end
 ## See also
 
 + [external scripts enabled Server Configuration Option](../../database-engine/configure-windows/external-scripts-enabled-server-configuration-option.md)

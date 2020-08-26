@@ -84,7 +84,7 @@ The process to publish updates is similar to publishing the extension. Please ma
 
 Refer to one of the following extension authoring tutorials for step-by-step instructions on how to get started:
 
-- **[Keymap Extension Tutorial](tutorial-create-keymap-extension.md)**
+- [Keymap Extension Tutorial](tutorial-create-keymap-extension.md)
 - [Dashboard Extension Tutorial](tutorial-create-dashboard-extension.md)
 - [Notebook Extension Tutorial](tutorial-create-notebook-extension.md)
 - [Jupyter Book Extension Tutorial](tutorial-create-jupyterbook-extension.md)

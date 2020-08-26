@@ -96,7 +96,7 @@
       href: tutorial-create-jupyterbook-extension.md
     - name: Wizard Extension
       href: tutorial-create-wizard-extension.md
-    - name: Database Extension
+    - name: Dashboard Extension
       href: tutorial-create-dashboard-extension.md
   - name: Integrated terminal (PowerShell, Bash)
     href: integrated-terminal.md

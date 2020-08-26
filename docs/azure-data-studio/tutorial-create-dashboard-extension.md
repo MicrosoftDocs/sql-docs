@@ -51,9 +51,10 @@ There are two variations of the dashboard: the 'server dashboard' that summarize
 
 There are 3 key contribution points for extensions to add functionality to the dashboard:
 
-- Graphs that run against your SQL Server
-- Homepage Actions</span>: Action buttons at the top of the connection toolbar
-- Full Dashboard Tab</span>: A separate tab in the dashboard for your extension. Can be added to either a server or database dashboard. Customizable with widgets, a toolbar, and a navigation section.
+- Widgets: Graphs that run against your SQL Server (see green in image below).
+- Homepage Actions: Action buttons at the top of the connection toolbar (see red in image below).
+- Full Dashboard Tab: A separate tab in the dashboard for your extension (see purple in image below).
+    - Can be added to either a server or database dashboard. Customizable with widgets, a toolbar, and a navigation section.
 
 ![contribution points](./media/tutorial-create-dashboard-extension/dashboard_contrib_points.png)
 

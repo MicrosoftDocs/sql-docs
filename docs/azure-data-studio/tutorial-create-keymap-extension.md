@@ -148,7 +148,7 @@ Navigate to the base directory of the extension, and run `vsce package`. I had t
 
 Once this was done, my ssmskeymap-0.1.0.vsix file was created and ready to install and share with the world!
 
-![install extension](./media/tutorial-create-keymap-extension/extensions.png)
+![Install](./media/tutorial-create-keymap-extension/extensions.png)
 
 
 ## Publish your extension to the marketplace

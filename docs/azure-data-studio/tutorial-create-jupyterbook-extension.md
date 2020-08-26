@@ -5,9 +5,9 @@ ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: tutorial
 author: anjalia
-ms.author: t-lajian
+ms.author: t-anjaga
 ms.reviewer: alayu, maghan
-ms.custom: 
+ms.custom:
 ms.date: 08/26/2020
 ---
 
@@ -158,7 +158,7 @@ After these lines were added, my test-book-0.0.1.vsix file was created and ready
 
 To run and test your extension, open Azure Data Studio and open the command palette (`Ctrl + Shift + P`). Find the command **Extensions: Install from VSIX** and navigate to the folder containing your new extension. It should now show up in your extension panel in Azure Data Studio.
 
-   ![install-vsix](./media/tutorial-create-jupyterbook-extension/install-vsix.png)
+   ![Install](./media/tutorial-create-jupyterbook-extension/install-vsix.png)
 
 Open the command palette again and find the command that we registered, **Launch Book: Test Notebook**. Upon running, it should open the Jupyter Book that we packaged with our extension.
 

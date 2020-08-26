@@ -6,7 +6,7 @@ ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan
 ms.topic: tutorial
 author: anjalia
-ms.author: t-lajian
+ms.author: t-anjaga
 ms.custom:
 ms.date: 08/26/2020
 ---
@@ -110,7 +110,7 @@ Edit the `README.md` to your liking, then navigate to the base directory of the 
 
 After these lines were added, a my-test-extension-0.0.1.vsix file was created and ready to install in Azure Data Studio.
 
-![install vsix](./media/tutorial-create-wizard-extension/install-vsix.png)
+![Install](./media/tutorial-create-wizard-extension/install-vsix.png)
 
 ## Publish your extension to the marketplace
 

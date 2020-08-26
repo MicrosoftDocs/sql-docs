@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Status Property Example (Field) (VB)
-The following example opens a document from a read/write folder using the [Internet Publishing Provider](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). The [Status](../../../ado/reference/ado-api/status-property-ado-field.md) property of a [Field](../../../ado/reference/ado-api/field-object.md) object of the [Record](../../../ado/reference/ado-api/record-object-ado.md) will first be set to **adFieldPendingInsert**, then be updated to **adFieldOk**.  
+The following example opens a document from a read/write folder using the [Internet Publishing Provider](../../guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md). The [Status](./status-property-ado-field.md) property of a [Field](./field-object.md) object of the [Record](./record-object-ado.md) will first be set to **adFieldPendingInsert**, then be updated to **adFieldOk**.  
   
 ```  
 'BeginStatusFieldVB  
@@ -80,13 +80,13 @@ End Sub
 Attribute VB_Name = "StatusField"  
 ```  
   
- The following code deletes a **Field** from a **Record** opened on a read-only document. **Status** will be set to **adFieldPendingDelete**. At [Update](../../../ado/reference/ado-api/update-method.md), the delete will fail and **Status** will be **adFieldPendingDelete** plus **adFieldPermissionDenied**. [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) clears the pending **Status** setting.  
+ The following code deletes a **Field** from a **Record** opened on a read-only document. **Status** will be set to **adFieldPendingDelete**. At [Update](./update-method.md), the delete will fail and **Status** will be **adFieldPendingDelete** plus **adFieldPermissionDenied**. [CancelUpdate](./cancelupdate-method-ado.md) clears the pending **Status** setting.  
   
 ```  
 Attribute VB_Name = "StatusField"  
 ```  
   
 ## See Also  
- [Field Object](../../../ado/reference/ado-api/field-object.md)   
- [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
- [Status Property (ADO Field)](../../../ado/reference/ado-api/status-property-ado-field.md)
+ [Field Object](./field-object.md)   
+ [Record Object (ADO)](./record-object-ado.md)   
+ [Status Property (ADO Field)](./status-property-ado-field.md)

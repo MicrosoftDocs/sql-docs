@@ -22,12 +22,12 @@ ms.author: jroth
   
  This section contains the following topics.  
   
--   [Jumping to a Record](../../../ado/guide/data/jumping-to-a-record.md)  
+-   [Jumping to a Record](./jumping-to-a-record.md)  
   
--   [More Ways to Move in a Recordset](../../../ado/guide/data/more-ways-to-move-in-a-recordset.md)  
+-   [More Ways to Move in a Recordset](./more-ways-to-move-in-a-recordset.md)  
   
--   [Using Bookmarks](../../../ado/guide/data/using-bookmarks.md)  
+-   [Using Bookmarks](./using-bookmarks.md)  
   
--   [Using Pages](../../../ado/guide/data/using-pages.md)  
+-   [Using Pages](./using-pages.md)  
   
--   [Recordset Positioning](../../../ado/guide/data/recordset-positioning.md)
+-   [Recordset Positioning](./recordset-positioning.md)

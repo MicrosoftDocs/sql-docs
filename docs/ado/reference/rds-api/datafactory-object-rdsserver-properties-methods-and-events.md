@@ -25,19 +25,17 @@ ms.author: jroth
   
 |Method|Description|  
 |-|-|  
-|[ConvertToString Method (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)|Converts a recordset into a MIME64 string.|  
-|[CreateRecordset Method (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)|Creates and returns an empty recordset.|  
-|[Execute Method (RDS)](../../../ado/reference/rds-api/execute-method-rds.md)|Execute the request and create an advanced data rowset (for use with ADO 2.5 or later).|  
-|[Execute21 Method (RDS)](../../../ado/reference/rds-api/execute21-method-rds.md)|Execute the request and create an advanced data rowset (for use with ADO 2.1).|  
-|[Query Method (RDS)](../../../ado/reference/rds-api/query-method-rds.md)|Execute the request and create an advanced data rowset.|  
-|[SubmitChanges Method (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)|Given a recordset with pending changes, this method submits them to the database identified in the connection string.|  
-|[Synchronize Method (RDS)](../../../ado/reference/rds-api/synchronize-method-rds.md)|Synchronize the given recordset with the database specified by the connection string (for use with ADO 2.5 or later).|  
-|[Synchronize21 Method (RDS)](../../../ado/reference/rds-api/synchronize21-method-rds.md)|Synchronize the given recordset with the database specified by the connection string (for use with ADO 2.1).|  
+|[ConvertToString Method (RDS)](./converttostring-method-rds.md)|Converts a recordset into a MIME64 string.|  
+|[CreateRecordset Method (RDS)](./createrecordset-method-rds.md)|Creates and returns an empty recordset.|  
+|[Execute Method (RDS)](./execute-method-rds.md)|Execute the request and create an advanced data rowset (for use with ADO 2.5 or later).|  
+|[Execute21 Method (RDS)](./execute21-method-rds.md)|Execute the request and create an advanced data rowset (for use with ADO 2.1).|  
+|[Query Method (RDS)](./query-method-rds.md)|Execute the request and create an advanced data rowset.|  
+|[SubmitChanges Method (RDS)](./submitchanges-method-rds.md)|Given a recordset with pending changes, this method submits them to the database identified in the connection string.|  
+|[Synchronize Method (RDS)](./synchronize-method-rds.md)|Synchronize the given recordset with the database specified by the connection string (for use with ADO 2.5 or later).|  
+|[Synchronize21 Method (RDS)](./synchronize21-method-rds.md)|Synchronize the given recordset with the database specified by the connection string (for use with ADO 2.1).|  
   
 ## Events  
  None.  
   
 ## See Also  
- [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory Object (RDSServer)](./datafactory-object-rdsserver.md)

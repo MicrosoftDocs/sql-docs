@@ -120,4 +120,4 @@ Rs.Open "SHAPE {select stor_id, stor_name, state from stores} APPEND ({select st
 -   If a child record has references to more than one parent record, then on reopening the Recordset, the child Recordset may contain duplicate records. However, these duplicates will only be visible if the user works directly with the underlying child rowset. If a chapter is used to navigate the child Recordset (that is the only way to navigate through ADO), the duplicates are not visible.  
   
 ## See Also  
- [Persisting Records in XML Format](../../../ado/guide/data/persisting-records-in-xml-format.md)
+ [Persisting Records in XML Format](./persisting-records-in-xml-format.md)

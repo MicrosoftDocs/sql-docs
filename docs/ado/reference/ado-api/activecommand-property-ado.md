@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # ActiveCommand Property (ADO)
-Indicates the [Command](../../../ado/reference/ado-api/command-object-ado.md) object that created the associated [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object.  
+Indicates the [Command](./command-object-ado.md) object that created the associated [Recordset](./recordset-object-ado.md) object.  
   
 ## Return Value  
  Returns a **Variant** that contains a **Command** object. Default is a null object reference.  
@@ -31,10 +31,10 @@ Indicates the [Command](../../../ado/reference/ado-api/command-object-ado.md) ob
  Use this property to find the associated **Command** object when you are given only the resulting **Recordset** object.  
   
 ## Applies To  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset Object (ADO)](./recordset-object-ado.md)  
   
 ## See Also  
- [ActiveCommand Property Example (VB)](../../../ado/reference/ado-api/activecommand-property-example-vb.md)   
- [ActiveCommand Property Example (JScript)](../../../ado/reference/ado-api/activecommand-property-example-jscript.md)   
- [ActiveCommand Property Example (VC++)](../../../ado/reference/ado-api/activecommand-property-example-vc.md)   
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [ActiveCommand Property Example (VB)](./activecommand-property-example-vb.md)   
+ [ActiveCommand Property Example (JScript)](./activecommand-property-example-jscript.md)   
+ [ActiveCommand Property Example (VC++)](./activecommand-property-example-vc.md)   
+ [Command Object (ADO)](./command-object-ado.md)

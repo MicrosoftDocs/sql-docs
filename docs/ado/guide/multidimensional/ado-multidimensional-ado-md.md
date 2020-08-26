@@ -17,4 +17,4 @@ ms.author: jroth
 # ADO (Multidimensional) (ADO MD)
 This section contains the following topic.  
   
--   [ADO MD Fundamentals](../../../ado/guide/multidimensional/ado-md-fundamentals.md)
+-   [ADO MD Fundamentals](./ado-md-fundamentals.md)

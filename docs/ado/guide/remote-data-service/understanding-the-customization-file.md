@@ -62,11 +62,10 @@ identifier
 -   The **logs** section is used whenever the **DataFactory** is in operation.  
   
 ## See Also  
- [Customization File Connect Section](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Customization File Logs Section](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Customization File SQL Section](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Customization File UserList Section](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory Customization](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Required Client Settings](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Writing Your Own Customized Handler](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
+ [Customization File Connect Section](./customization-file-connect-section.md)   
+ [Customization File Logs Section](./customization-file-logs-section.md)   
+ [Customization File SQL Section](./customization-file-sql-section.md)   
+ [Customization File UserList Section](./customization-file-userlist-section.md)   
+ [DataFactory Customization](./datafactory-customization.md)   
+ [Required Client Settings](./required-client-settings.md)   
+ [Writing Your Own Customized Handler](./writing-your-own-customized-handler.md)

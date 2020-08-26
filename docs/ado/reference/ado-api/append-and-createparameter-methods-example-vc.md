@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Append and CreateParameter Methods Example (VC++)
-This example uses the [Append](../../../ado/reference/ado-api/append-method-ado.md) and [CreateParameter](../../../ado/reference/ado-api/createparameter-method-ado.md) methods to execute a stored procedure with an input parameter.  
+This example uses the [Append](./append-method-ado.md) and [CreateParameter](./createparameter-method-ado.md) methods to execute a stored procedure with an input parameter.  
   
 ## Example  
   
@@ -198,5 +198,5 @@ Authors with 25 percent royalty
 ```  
   
 ## See Also  
- [Append Method (ADO)](../../../ado/reference/ado-api/append-method-ado.md)   
- [CreateParameter Method (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)
+ [Append Method (ADO)](./append-method-ado.md)   
+ [CreateParameter Method (ADO)](./createparameter-method-ado.md)

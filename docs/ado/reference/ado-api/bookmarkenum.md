@@ -39,9 +39,9 @@ Specifies a bookmark indicating where the operation should begin.
 
 :::row:::
     :::column:::
-        [GetRows Method (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)  
+        [GetRows Method (ADO)](./getrows-method-ado.md)  
     :::column-end:::
     :::column:::
-        [Move Method (ADO)](../../../ado/reference/ado-api/move-method-ado.md)  
+        [Move Method (ADO)](./move-method-ado.md)  
     :::column-end:::
 :::row-end:::

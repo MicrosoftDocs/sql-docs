@@ -25,13 +25,13 @@ Indicates one or more characteristics of an object.
 ## Settings and Return Values  
  Sets or returns a **Long** value.  
   
- For a [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object, the **Attributes** property is read/write, and its value can be the sum of one or more [XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md) values. The default is zero (0).  
+ For a [Connection](./connection-object-ado.md) object, the **Attributes** property is read/write, and its value can be the sum of one or more [XactAttributeEnum](./xactattributeenum.md) values. The default is zero (0).  
   
- For a [Parameter](../../../ado/reference/ado-api/parameter-object.md) object, the **Attributes** property is read/write, and its value can be the sum of any one or more [ParameterAttributesEnum](../../../ado/reference/ado-api/parameterattributesenum.md) values. The default is **adParamSigned**.  
+ For a [Parameter](./parameter-object.md) object, the **Attributes** property is read/write, and its value can be the sum of any one or more [ParameterAttributesEnum](./parameterattributesenum.md) values. The default is **adParamSigned**.  
   
- For a [Field](../../../ado/reference/ado-api/field-object.md) object, the **Attributes** property can be the sum of one or more [FieldAttributeEnum](../../../ado/reference/ado-api/fieldattributeenum.md) values. It is normally read-only. However, for new **Field** objects that have been appended to the [Fields](../../../ado/reference/ado-api/fields-collection-ado.md) collection of a [Record](../../../ado/reference/ado-api/record-object-ado.md), **Attributes** is read/write only after the [Value](../../../ado/reference/ado-api/value-property-ado.md) property for the **Field** has been specified and the new **Field** has been successfully added by the data provider by calling the [Update](../../../ado/reference/ado-api/update-method.md) method of the **Fields** collection.  
+ For a [Field](./field-object.md) object, the **Attributes** property can be the sum of one or more [FieldAttributeEnum](./fieldattributeenum.md) values. It is normally read-only. However, for new **Field** objects that have been appended to the [Fields](./fields-collection-ado.md) collection of a [Record](./record-object-ado.md), **Attributes** is read/write only after the [Value](./value-property-ado.md) property for the **Field** has been specified and the new **Field** has been successfully added by the data provider by calling the [Update](./update-method.md) method of the **Fields** collection.  
   
- For a [Property](../../../ado/reference/ado-api/property-object-ado.md) object, the **Attributes** property is read-only, and its value can be the sum of any one or more [PropertyAttributesEnum](../../../ado/reference/ado-api/propertyattributesenum.md) values.  
+ For a [Property](./property-object-ado.md) object, the **Attributes** property is read-only, and its value can be the sum of any one or more [PropertyAttributesEnum](./propertyattributesenum.md) values.  
   
 ## Remarks  
  Use the **Attributes** property to set or return characteristics of **Connection** objects, **Parameter** objects, **Field** objects, or **Property** objects.  
@@ -45,18 +45,18 @@ Indicates one or more characteristics of an object.
 
 :::row:::
     :::column:::
-        [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
-        [Field Object](../../../ado/reference/ado-api/field-object.md)  
+        [Connection Object (ADO)](./connection-object-ado.md)  
+        [Field Object](./field-object.md)  
     :::column-end:::
     :::column:::
-        [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)  
-        [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)  
+        [Parameter Object](./parameter-object.md)  
+        [Property Object (ADO)](./property-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## See Also  
- [Attributes and Name Properties Example (VB)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vb.md)   
- [Attributes and Name Properties Example (VC++)](../../../ado/reference/ado-api/attributes-and-name-properties-example-vc.md)   
- [AppendChunk Method (ADO)](../../../ado/reference/ado-api/appendchunk-method-ado.md)   
- [BeginTrans, CommitTrans, and RollbackTrans Methods (ADO)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)   
- [GetChunk Method (ADO)](../../../ado/reference/ado-api/getchunk-method-ado.md)
+ [Attributes and Name Properties Example (VB)](./attributes-and-name-properties-example-vb.md)   
+ [Attributes and Name Properties Example (VC++)](./attributes-and-name-properties-example-vc.md)   
+ [AppendChunk Method (ADO)](./appendchunk-method-ado.md)   
+ [BeginTrans, CommitTrans, and RollbackTrans Methods (ADO)](./begintrans-committrans-and-rollbacktrans-methods-ado.md)   
+ [GetChunk Method (ADO)](./getchunk-method-ado.md)

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SQLGetInfo function"
   - "concurrency [OLE DB Driver for SQL Server]"
   - "SQLSetConnectAttr function"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Working with Snapshot Isolation
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

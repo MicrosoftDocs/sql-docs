@@ -25,7 +25,7 @@ ms.author: jroth
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- The following code shows how to set the [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) **Server** parameter at designtime and bind it to a data-aware HTML table using a data source. Cut and paste the following code to Notepad or another text editor and save it as **FilterColumnVBS.asp**.  
+ The following code shows how to set the [RDS.DataControl](./datacontrol-object-rds.md) **Server** parameter at designtime and bind it to a data-aware HTML table using a data source. Cut and paste the following code to Notepad or another text editor and save it as **FilterColumnVBS.asp**.  
   
 ```  
 <!-- BeginFilterColumnVBS -->  
@@ -199,12 +199,10 @@ End Sub
 ```  
   
 ## See Also  
- [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [FilterColumn Property (RDS)](../../../ado/reference/rds-api/filtercolumn-property-rds.md)   
- [FilterCriterion Property (RDS)](../../../ado/reference/rds-api/filtercriterion-property-rds.md)   
- [FilterValue Property (RDS)](../../../ado/reference/rds-api/filtervalue-property-rds.md)   
- [Reset Method (RDS)](../../../ado/reference/rds-api/reset-method-rds.md)   
- [SortColumn Property (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [SortDirection Property (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
-
-
+ [DataControl Object (RDS)](./datacontrol-object-rds.md)   
+ [FilterColumn Property (RDS)](./filtercolumn-property-rds.md)   
+ [FilterCriterion Property (RDS)](./filtercriterion-property-rds.md)   
+ [FilterValue Property (RDS)](./filtervalue-property-rds.md)   
+ [Reset Method (RDS)](./reset-method-rds.md)   
+ [SortColumn Property (RDS)](./sortcolumn-property-rds.md)   
+ [SortDirection Property (RDS)](./sortdirection-property-rds.md)

@@ -18,9 +18,9 @@ author: rothja
 ms.author: jroth
 ---
 # Save and Open Methods Example (VB)
-These three examples demonstrate how the [Save](../../../ado/reference/ado-api/save-method.md) and [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) methods can be used together.  
+These three examples demonstrate how the [Save](./save-method.md) and [Open](./open-method-ado-recordset.md) methods can be used together.  
   
- Assume that you are going on a business trip and want to take along a table from a database. Before you go, you access the data as a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) and save it in a transportable form. When you arrive at your destination, you access the **Recordset** as a local, disconnected **Recordset**. You make changes to the **Recordset**, and then save it again. Finally, when you return home, you connect to the database again and update it with the changes you made on the road.  
+ Assume that you are going on a business trip and want to take along a table from a database. Before you go, you access the data as a [Recordset](./recordset-object-ado.md) and save it in a transportable form. When you arrive at your destination, you access the **Recordset** as a local, disconnected **Recordset**. You make changes to the **Recordset**, and then save it again. Finally, when you return home, you connect to the database again and update it with the changes you made on the road.  
   
  First, access and save the ***Authors*** table.  
   
@@ -92,7 +92,7 @@ Attribute VB_Name = "Save"
 ```  
   
 ## See Also  
- [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [More About Recordset Persistence](../../../ado/guide/data/more-about-recordset-persistence.md)   
- [Save Method](../../../ado/reference/ado-api/save-method.md)
+ [Open Method (ADO Recordset)](./open-method-ado-recordset.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)   
+ [More About Recordset Persistence](../../guide/data/more-about-recordset-persistence.md)   
+ [Save Method](./save-method.md)

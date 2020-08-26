@@ -34,4 +34,4 @@ Specifies which records should be returned to the server.
 |AdoEnums.MarshalOptions.MODIFIEDONLY|  
   
 ## Applies To  
- [MarshalOptions Property (ADO)](../../../ado/reference/ado-api/marshaloptions-property-ado.md)
+ [MarshalOptions Property (ADO)](./marshaloptions-property-ado.md)

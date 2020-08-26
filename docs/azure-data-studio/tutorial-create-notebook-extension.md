@@ -2,13 +2,13 @@
 title: Tutorial: Create a Jupyter Notebook extension
 description: Learn about how to package notebooks into an extension using the extension generator
 ms.prod: azure-data-studio
-ms.technology: 
-ms.topic: conceptual
+ms.technology: azure-data-studio
+ms.topic: tutorial
 author: "t-lajian"
 ms.author: "maghan"
-ms.reviewer: "alayu, maghan, sstein"
+ms.reviewer: alayu, maghan
 ms.custom: 
-ms.date: "08/17/2020"
+ms.date: 08/17/2020
 ---
 
 # Tutorial: Create a Jupyter Notebook extension
@@ -127,7 +127,9 @@ We have an activation event for the command and we have also added specific cont
 
 To share with others you need to package the extension into a single file. This can be published to the Azure Data Studio extension marketplace, or shared among your team or community. To do this, you need to install another npm package from the command line:
 
+```console
 `npm install -g vsce`
+```
 
 Edit the `README.md` to your liking, then navigate to the base directory of the extension, and run `vsce package`. You can optionally link a repository with your extension or continue without one. To add one, add a similar line to your `package.json` file.
 
@@ -166,7 +168,6 @@ In this tutorial, you learned how to:
 > * Create your extension
 > * Package your extension
 > * Publish your extension to the marketplace
-
 
 We hope after reading this you'll be inspired to build your own extension for Azure Data Studio. 
 

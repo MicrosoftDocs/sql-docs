@@ -121,8 +121,6 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 - Join your macOS to the Active Directory Domain Controller by following these steps:
 
-
-
 ## Configure KDC in krb5.conf
 
 Edit the `/etc/krb5.conf` in an editor of your choice. Configure the following keys

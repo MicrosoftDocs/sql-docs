@@ -6,7 +6,7 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"
-ms.reviewer: "alayu, maghan, sstein"
+ms.reviewer: alayu 
 ms.custom: "seodec18"
 ms.date: "09/24/2018"
 ---
@@ -16,7 +16,6 @@ ms.date: "09/24/2018"
 Extensions in Azure Data Studio provide an easy way to add more functionality to the base Azure Data Studio installation.
 
 Extensions are provided by the Azure Data Studio team (Microsoft), as well as the 3rd party community (you!).
-
 
 ## Author an extension
 
@@ -30,7 +29,7 @@ To develop an extension, you need [Node.js](https://nodejs.org/) installed and a
 
 To create your new extension, you can use the Azure Data Studio Extension Generator. The Yeoman [Extension Generator](https://www.npmjs.com/package/generator-azuredatastudio) is a beneficial starting point for extension projects. To launch the generator, type the following in a command prompt:
 
-```
+```console
 npm install -g yo generator-azuredatastudio # Install the generator
 yo azuredatastudio
 ```
@@ -40,7 +39,6 @@ For an in-depth guide on how to get started with your extension template, see [C
 **Extensibility References**
 
 To learn about Azure Data Studio Extensibility see [Extensibility overview](extensibility.md). You can also see examples of how to use the API in existing [samples](https://github.com/Microsoft/azuredatastudio/tree/main/samples).
-
 
 ## Debug an extension
 
@@ -80,9 +78,6 @@ Your extension will be reviewed and added to the extension gallery.
 
 **Publishing extension updates**
 
-<<<<<<< HEAD
-The process to publish updates is similar to publishing the extension. Please make sure the version is updated in package.json.
-=======
 The process to publish updates is similar to publishing the extension. Please make sure the version is updated in package.json.
 
 ## Next Steps
@@ -94,4 +89,3 @@ Refer to one of the following extension authoring tutorials for step-by-step ins
 - [Notebook Extension Tutorial](tutorial-create-notebook-extension.md)
 - [Jupyter Book Extension Tutorial](tutorial-create-jupyterbook-extension.md)
 - [Wizard Extension Tutorial](tutorial-create-wizard-extension.md)
->>>>>>> ae5a5cf388a3c2e8c55affeafd19b2d20e26570a

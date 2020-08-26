@@ -1,15 +1,16 @@
 ---
 title: "Tutorial: Create keymap extension"
 description: This tutorial demonstrates how to create a keymap extension to add custom functionality to Azure Data Studio.
-ms.custom: "seodec18"
-ms.date: 08/18/2020
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: "alayu, maghan, sstein"
-ms.topic: "tutorial"
-author: rothja
-ms.author: jroth
+ms.reviewer: alayu, maghan
+ms.topic: tutorial
+author: markingmyname
+ms.author: maghan
+ms.custom: "seodec18"
+ms.date: 08/18/2020
 ---
+
 # Tutorial: Create an Azure Data Studio Keymap extension
 
 This tutorial demonstrates how to create a new Azure Data Studio extension. The extension creates familiar SSMS key bindings in Azure Data Studio.
@@ -32,7 +33,6 @@ Azure Data Studio is built on the same framework as Visual Studio Code, so exten
 - [Visual Studio Code](https://code.visualstudio.com) to debug the extension.
 - The Azure Data Studio [Debug extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) (optional). This lets you test your extension without needing to package and install it into Azure Data Studio.
 - Ensure `azuredatastudio` is in your path. For Windows, make sure you choose the `Add to Path` option in setup.exe. For Mac or Linux, run the *Install 'azuredatastudio' command in PATH* option.
-
 
 ## Install the extension generator
 
@@ -76,7 +76,6 @@ It's easy to find and replace these key bindings. Run *Open Keyboard Shortcuts
 ![keyboard shortcuts](./media/tutorial-create-keymap-extension/keyboard-shortcuts.png)
 
 ![keybindings.json extension](./media/tutorial-create-keymap-extension/keybindings-json.png)
-
 
 **Step 2: Add shortcuts to the extension**
 
@@ -131,7 +130,9 @@ Key maps are one of the quickest extensions to create, so your new extension sho
 
 To share with others you need to package the extension into a single file. This can be published to the Azure Data Studio extension marketplace, or shared among your team or community. To do this, you need to install another npm package from the command line:
 
+```console
 `npm install -g vsce`
+```
 
 Navigate to the base directory of the extension, and run `vsce package`. I had to add in a couple of extra lines to stop the *vsce* tool from complaining:
 

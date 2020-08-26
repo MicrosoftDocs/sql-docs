@@ -2,11 +2,11 @@
 title: Tutorial: Create a Jupyter Book extension
 description: Learn about how to package a Jupyter Book into an extension using the extension generator
 ms.prod: azure-data-studio
-ms.technology: 
-ms.topic: conceptual
+ms.technology: azure-data-studio
+ms.topic: tutorial
 author: "t-lajian"
 ms.author: "maghan"
-ms.reviewer: "alayu, maghan, sstein"
+ms.reviewer: alayu, maghan
 ms.custom: 
 ms.date: "08/17/2020"
 ---
@@ -43,12 +43,13 @@ Azure Data Studio is built on the same framework as Visual Studio Code, so exten
 - [Visual Studio Code](https://code.visualstudio.com) to make any changes to your extension and debug the extension.
 - Ensure `azuredatastudio` is in your path. For Windows, make sure you choose the `Add to Path` option in setup.exe. For Mac or Linux, run the *Install 'azuredatastudio' command in PATH* option.
 
-
 ## Install the extension generator
 
 To simplify the process of creating extensions, we've built an [extension generator](https://www.npmjs.com/package/generator-azuredatastudio) using Yeoman. To install it, run the following from the command prompt:
 
+```console
 `npm install -g yo generator-azuredatastudio`
+```
 
 ## Create your extension
 

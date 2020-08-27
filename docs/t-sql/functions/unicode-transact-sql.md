@@ -68,10 +68,17 @@ SELECT UNICODE(@nstring), NCHAR(UNICODE(@nstring));
 ### B. Using SUBSTRING, UNICODE, and CONVERT  
  The following example uses the `SUBSTRING`, `UNICODE`, and `CONVERT` functions to print the character number, the Unicode character, and the UNICODE value of each of the characters in the string `Åkergatan 24`.  
   
-```sql  
+```sql 
+/*
+    changes made to accomodate certain unicode strings such as
+      a:- abृ
+*/ 
+set nocount on;
+
 -- The @position variable holds the position of the character currently  
 -- being processed. The @nstring variable is the Unicode character   
--- string to process.  
+-- string to process.
+
 DECLARE @position int, @nstring nchar(12);  
 -- Initialize the current position variable to the first character in   
 -- the string.  
@@ -87,9 +94,12 @@ PRINT 'Character #' + ' ' + 'Unicode Character' + ' ' + 'UNICODE Value';
 WHILE @position <= LEN(@nstring)  
 -- While these are still characters in the character string,  
    BEGIN;  
-   SELECT @position,   
-      CONVERT(char(17), SUBSTRING(@nstring, @position, 1)),  
-      UNICODE(SUBSTRING(@nstring, @position, 1));  
+   SELECT 
+       [position] = @position   
+      -- CONVERT(char(17), SUBSTRING(@nstring, @position, 1))
+      , [character] = SUBSTRING(@nstring, @position, 1)
+      , [unicodeValue] = UNICODE(SUBSTRING(@nstring, @position, 1))
+      ;  
    SELECT @position = @position + 1;  
    END;  
 ```  

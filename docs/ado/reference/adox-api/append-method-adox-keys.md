@@ -3,7 +3,7 @@ description: "Append Method (ADOX Keys)"
 title: "Append Method (ADOX Keys) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

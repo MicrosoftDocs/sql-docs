@@ -3,7 +3,7 @@ description: "Recordset Dynamic Properties in XML"
 title: "Recordset Dynamic Properties in XML | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

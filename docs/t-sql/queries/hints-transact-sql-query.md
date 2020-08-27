@@ -80,7 +80,7 @@ Query hints specify that the indicated hints are used in the scope of a query. T
 ## Syntax  
   
 ```syntaxsql
-<query_hint > ::=   
+<query_hint> ::=   
 { { HASH | ORDER } GROUP   
   | { CONCAT | HASH | MERGE } UNION   
   | { LOOP | MERGE | HASH } JOIN   
@@ -103,7 +103,7 @@ Query hints specify that the indicated hints are used in the scope of a query. T
   | QUERYTRACEON trace_flag   
   | RECOMPILE  
   | ROBUST PLAN   
-  | USE HINT ( '<hint_name>' 
+  | USE HINT (
   |       'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' ,
   |       'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 
   |       'DISABLE_BATCH_MODE_ADAPTIVE_JOINS' ,

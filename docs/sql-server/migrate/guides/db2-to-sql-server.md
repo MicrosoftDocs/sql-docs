@@ -45,9 +45,9 @@ To create an assessment, follow these steps:
 
 1. Open SQL Server Migration Assistant (SSMA) for DB2. 
 1. Select **File** and then choose **New Project**. 
-1. Provide a project name, a location to save your project, and then select a SQL Server migration target from the drop-down. 
-1. Select **OK**. 
+1. Provide a project name, a location to save your project, and then select a SQL Server migration target from the drop-down. Select **OK**. 
 
+   :::image type="content" source="media/db2-to-sql-server/new-project.png" alt-text="Provide project details and select OK to save.:::
 
 
 1. Enter in values for the DB2 connection details on the **Connect to DB2** dialog box. 
@@ -74,9 +74,10 @@ Validate the default data type mappings and change them based on requirements if
 1. Select **Tools** from the menu. 
 1. Select **Project Settings**. 
 1. Select the **Type mappings** tab. 
-1. You can change the type mapping for each table by selecting the table in the **DB2 Metadata explorer**. 
 
    :::image type="content" source="media/db2-to-sql-server/type-mapping.png" alt-text="Select the schema and then type-mapping":::
+
+1. You can change the type mapping for each table by selecting the table in the **DB2 Metadata explorer**. 
 
 ### Schema conversion 
 
@@ -106,7 +107,7 @@ To migrate your data, follow these steps:
 
 1. Publish the schema: Right-click the database from the **Databases** node in the **SQL Server Metadata Explorer** and choose **Synchronize with Database**.
 
-
+   :::image type="content" source="media/db2-to-sql-server/synchronize-with-database.png" alt-text="Right-click the database and choose synchronize with database":::
 
 1. Migrate the data: Right-click the schema from the **DB2 Metadata Explorer** and choose **Migrate Data**. 
 

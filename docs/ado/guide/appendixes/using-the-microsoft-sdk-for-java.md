@@ -3,7 +3,7 @@ description: "Using the Microsoft SDK for Java"
 title: "Using the Microsoft SDK for Java | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""

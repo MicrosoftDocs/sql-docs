@@ -44,7 +44,7 @@ For more information about package location and installation paths, see [Get Pyt
 
 + Packages must be compliant with the version of Python you have, and the version of Python on the server must match the version of Python on the client computer. For information on which version of Python is included with each SQL Server version, see the [Python and R versions](../sql-server-machine-learning-services.md#versions). To confirm the version of Python in a particular SQL instance, see [View the version of Python](python-package-information.md#bkmk_SQLPythonVersion).
 
-+ Package installation is specific to the SQL instance, database, and user you specify in the connection information you provide to **sqlmlutils**. To use the package in multiple SQL instances or databases, or for different users, you'll need to install the package for each one. The exception is that if the package is installed using the database administrator account, then the package is available to all users in that database.
++ Package installation is specific to the SQL instance, database, and user you specify in the connection information you provide to **sqlmlutils**. To use the package in multiple SQL instances or databases, or for different users, you'll need to install the package for each one. The exception is that if the package is installed by a member of `dbo`, the library is public and can be shared with all users.
 
 + The Python package library is located in the Program Files folder of your SQL Server instance and, by default, installing in this folder requires administrator permissions. For more information, see [Package library location](../package-management/python-package-information.md#default-python-library-location).
 

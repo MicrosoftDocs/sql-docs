@@ -69,7 +69,8 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 <CPU_range_spec> ::=
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
 ```  
- 
+::: moniker-end
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments

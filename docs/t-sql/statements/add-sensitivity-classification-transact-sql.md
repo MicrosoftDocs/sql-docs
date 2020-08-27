@@ -107,7 +107,7 @@ The following example classifies the columns **dbo.sales.price** and **dbo.sales
 ```sql
 ADD SENSITIVITY CLASSIFICATION TO
     dbo.sales.price, dbo.sales.discount
-    WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial', RANK='CRITICAL' )
+    WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial', RANK=CRITICAL )
 ```  
 
 ### B. Classifying only a label

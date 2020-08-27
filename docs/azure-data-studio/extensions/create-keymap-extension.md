@@ -8,7 +8,7 @@ ms.topic: tutorial
 author: markingmyname
 ms.author: maghan
 ms.custom: "seodec18"
-ms.date: 08/26/2020
+ms.date: 08/27/2020
 ---
 
 # Tutorial: Create an Azure Data Studio Keymap extension

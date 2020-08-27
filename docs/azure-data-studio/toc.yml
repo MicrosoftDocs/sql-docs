@@ -88,15 +88,15 @@
       href: extension-authoring.md
     - name: Extensibility APIs
       href: extensibility-apis.md
-    - name: Keymap Extension
+    - name: Keymap extension
       href: create-keymap-extension.md
-    - name: Dashboard Extension
+    - name: Dashboard extension
       href: tutorial-create-dashboard-extension.md
-    - name: Notebook Extension
+    - name: Notebook extension
       href: tutorial-create-notebook-extension.md
-    - name: Jupyter Book Extension
+    - name: Jupyter Book extension
       href: create-jupyter-book-extension.md
-    - name: Wizard Extension
+    - name: Wizard extension
       href: tutorial-create-wizard-extension.md
   - name: Integrated terminal (PowerShell, Bash)
     href: integrated-terminal.md

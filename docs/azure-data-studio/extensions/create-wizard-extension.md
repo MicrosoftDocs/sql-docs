@@ -8,7 +8,7 @@ ms.topic: tutorial
 author: anjalia
 ms.author: t-anjaga
 ms.custom:
-ms.date: 08/26/2020
+ms.date: 08/27/2020
 ---
 
 # Tutorial: Create an Azure Data Studio Wizard extension
@@ -17,12 +17,12 @@ This tutorial demonstrates how to create a new **Azure Data Studio Wizard extens
 
 During this tutorial you learn how to:
 > [!div class="checklist"]
-> * Install the extension generator
-> * Create your extension
-> * Add a custom wizard to your extension
-> * Test your extension
-> * Package your extension
-> * Publish your extension to the marketplace
+> - Install the extension generator
+> - Create your extension
+> - Add a custom wizard to your extension
+> - Test your extension
+> - Package your extension
+> - Publish your extension to the marketplace
 
 ## Prerequisites
 
@@ -97,7 +97,9 @@ Once you are familiar with the template, here are some additional ideas to try:
 
 To share with others you need to package the extension into a single file. This can be published to the Azure Data Studio extension marketplace, or shared among your team or community. To do this, you need to install another npm package from the command line:
 
-`npm install -g vsce`
+```console
+npm install -g vsce`
+```
 
 Edit the `README.md` to your liking, then navigate to the base directory of the extension, and run `vsce package`. You can optionally link a repository with your extension or continue without one. To add one, add a similar line to your `package.json` file.
 
@@ -120,12 +122,12 @@ The Azure Data Studio extension marketplace is not totally implemented yet, but 
 
 In this tutorial, you learned how to:
 > [!div class="checklist"]
-> * Install the extension generator
-> * Create your extension
-> * Add a custom wizard to your extension
-> * Test your extension
-> * Package your extension
-> * Publish your extension to the marketplace
+> - Install the extension generator
+> - Create your extension
+> - Add a custom wizard to your extension
+> - Test your extension
+> - Package your extension
+> - Publish your extension to the marketplace
 
 We hope after reading this you'll be inspired to build your own extension for Azure Data Studio. We have support for Dashboard Insights (pretty graphs that run against your SQL Server), a number of SQL-specific APIs, and a huge existing set of extension points inherited from Visual Studio Code.
 
@@ -136,4 +138,4 @@ You can always refer to the [Visual Studio Code extension guide](https://code.vi
 To learn how to work with T-SQL in Azure Data Studio, complete the T-SQL Editor tutorial:
 
 > [!div class="nextstepaction"]
-> [Use the Transact-SQL editor to create database objects](tutorial-sql-editor.md).
+> [Use the Transact-SQL editor to create database objects](tutorial-sql-editor.md)

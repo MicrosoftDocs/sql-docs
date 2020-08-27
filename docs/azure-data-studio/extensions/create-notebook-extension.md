@@ -8,7 +8,7 @@ author: anjalia
 ms.author: t-anjaga
 ms.reviewer: alayu, maghan
 ms.custom: 
-ms.date: 08/26/2020
+ms.date: 08/27/2020
 ---
 
 # Tutorial: Create a Jupyter Notebook extension

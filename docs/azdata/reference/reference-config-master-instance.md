@@ -46,8 +46,8 @@ pid = Enterprise
 traceflag0 = 1204
 ```
 
-For instructions, see [Configure master instance of [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]](configure-sql-server-master-instance.md).
+For instructions, see [Configure master instance of [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]](../../big-data-cluster/configure-sql-server-master-instance.md).
 
 ## Next steps
 
-[Configure master instance of [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]](configure-sql-server-master-instance.md)
+[Configure master instance of [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)]](../../big-data-cluster/configure-sql-server-master-instance.md)

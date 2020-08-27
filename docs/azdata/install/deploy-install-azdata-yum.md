@@ -23,7 +23,7 @@ For Linux distributions with `yum` there is a package for the `azdata-cli`. The 
 ## Install with yum
 
 >[!IMPORTANT]
-> The RPM package of the `azdata-cli` depends on the python3 package. On your system, this may be a Python version which predates the requirement of *Python 3.6.x*. If this poses an issue for you, find a replacement python3 package or follow the manual install instructions that use [`pip`](deploy-install-azdata-pip.md).
+> The RPM package of the `azdata-cli` depends on the python3 package. On your system, this may be a Python version which predates the requirement of *Python 3.6.x*. If this poses an issue for you, find a replacement python3 package or follow the manual install instructions that use [`pip`](../install/deploy-install-azdata-pip.md).
 
 1. Import the Microsoft repository key
 

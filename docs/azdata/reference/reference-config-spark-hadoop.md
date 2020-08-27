@@ -33,7 +33,7 @@ You can find all possible configurations and the defaults for each at the associ
 > There are some configuration settings that we change the default for. The JSON below lists these settings and their defaults. These settings can still be changed. For settings not listed in the JSON please refer to the links above.
 
 > [!NOTE]
-> To include Spark in the Storage pool, set the boolean value `includeSpark` in the `bdc.json` configuration file at `spec.resources.storage-0.spec.settings.spark`. See [Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md) for instructions.
+> To include Spark in the Storage pool, set the boolean value `includeSpark` in the `bdc.json` configuration file at `spec.resources.storage-0.spec.settings.spark`. See [Configure Apache Spark and Apache Hadoop in Big Data Clusters](../../big-data-cluster/configure-spark-hdfs.md) for instructions.
 
 
 ###  Big Data Clusters specific default configurations
@@ -341,4 +341,4 @@ The following `gateway` configurations for are unsupported and cannot be changed
 
 ## Next steps
 
-[Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)
+[Configure Apache Spark and Apache Hadoop in Big Data Clusters](../../big-data-cluster/configure-spark-hdfs.md)

@@ -6,7 +6,7 @@ ms.date: 11/08/2018
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords:
   - "ADO, security"

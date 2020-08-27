@@ -3,7 +3,7 @@ description: "Minimizing Log File Space Usage"
 title: "Minimizing Log File Space Usage | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""

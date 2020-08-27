@@ -2,7 +2,7 @@
 description: "ADO Dynamic Property Index"
 title: "ADO Dynamic Property Index | Microsoft Docs"
 ms.prod: sql
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

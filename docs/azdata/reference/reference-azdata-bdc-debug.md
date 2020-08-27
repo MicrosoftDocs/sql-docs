@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # azdata bdc debug
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
 

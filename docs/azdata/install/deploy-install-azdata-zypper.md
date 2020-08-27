@@ -18,7 +18,7 @@ For Linux distributions with `zypper` there is a package for the `azdata-cli`. T
 - openSUSE 42.2 (leap) +
 - SLES 12 SP 2 +
 
-[!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
+[!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 
 ## Install with zypper
 >[!IMPORTANT]
@@ -74,4 +74,4 @@ Remove the package from your system
 
 ## Next steps
 
-For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).

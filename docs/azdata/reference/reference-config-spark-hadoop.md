@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Apache Spark & Apache Hadoop (HDFS) configuration properties
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 In order to configure Apache Spark and Apache Hadoop in Big Data Clusters, you need to modify the cluster profile (bdc.json) at deployment time.
 

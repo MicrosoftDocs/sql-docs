@@ -13,11 +13,11 @@ ms.technology: big-data-cluster
 
 # Install `azdata` with apt
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes how to install `azdata` for SQL Server 2019 Big Data Clusters on Linux. Before these package managers were available, the installation of `azdata` required `pip`.
 
-[!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
+[!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 
 ## <a id="linux"></a>Install `azdata` for Linux
 
@@ -107,4 +107,4 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 
 ## Next steps
 
-For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).

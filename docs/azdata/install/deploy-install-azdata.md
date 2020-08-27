@@ -13,7 +13,7 @@ ms.technology: big-data-cluster
 
 # Install `azdata`
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 `azdata` is a command-line utility written in Python to bootstrap and manage the big data cluster via REST APIs. 
 
@@ -33,8 +33,8 @@ To find your installed version and see if you need to update, run `azdata --vers
    * [Install with Zypper on openSUSE or SLE](deploy-install-azdata-zypper.md)
    * [Install from script](deploy-install-azdata-pip.md)
 
-[!INCLUDE [azdata-package-installation-remove-pip-install](../includes/azdata-package-installation-remove-pip-install.md)]
+[!INCLUDE [azdata-package-installation-remove-pip-install](../../includes/azdata-package-installation-remove-pip-install.md)]
 
 ## Next steps
 
-For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md).
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md).

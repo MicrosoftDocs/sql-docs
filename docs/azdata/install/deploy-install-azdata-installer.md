@@ -11,9 +11,9 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# Install `azdata` to manage [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] with Windows Installer
+# Install `azdata` to manage [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] with Windows Installer
 
-[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
 
 This article describes how to install `azdata` for SQL Server 2019 Big Data Clusters on Windows. Before the Windows Installation was available, the installation of `azdata` required `pip`.
 
@@ -64,4 +64,4 @@ The program to uninstall is called `Azdata CLI` . Select this application, then 
 
 ## Next steps
 
-For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]?](big-data-cluster-overview.md)
+For more information about big data clusters, see [What are [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ver15.md)]?](../../big-data-cluster/big-data-cluster-overview.md)

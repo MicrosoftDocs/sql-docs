@@ -44,9 +44,9 @@ For more information about package location and installation paths, see [Get Pyt
 
 + Packages must be compliant with the version of Python you have, and the version of Python on the server must match the version of Python on the client computer. For information on which version of Python is included with each SQL Server version, see the [Python and R versions](../sql-server-machine-learning-services.md#versions). To confirm the version of Python in a particular SQL instance, see [View the version of Python](python-package-information.md#bkmk_SQLPythonVersion).
 
-+ Package installation is specific to the SQL instance, database, and user you specify in the connection information you provide to **sqlmlutils**. To use the package in multiple SQL instances or databases, or for different users, you'll need to install the package for each one. The exception is that if the package is installed by a member of `dbo`, the library is public and can be shared with all users.
-
 + The Python package library is located in the Program Files folder of your SQL Server instance and, by default, installing in this folder requires administrator permissions. For more information, see [Package library location](../package-management/python-package-information.md#default-python-library-location).
+
++ Package installation is specific to the SQL instance, database, and user you specify in the connection information you provide to **sqlmlutils**. To use the package in multiple SQL instances or databases, or for different users, you'll need to install the package for each one. The exception is that if the package is installed by a member of `dbo`, the library is public and can be shared with all users.
 
 + Before adding a package, consider whether the package is a good fit for the SQL Server environment.
 
@@ -94,7 +94,7 @@ You can also install **sqlmlutils** from a zip file:
 
 ## Add a Python package on SQL Server
 
-Using **sqlmlutils**, you can add a Python package to a SQL instance. You can then use those packages in your Python code running in the SQL instance. **sqlmlutils** uses [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) to install the package and each of its dependencies.
+Using **sqlmlutils**, you can add Python packages to a SQL instance. You can then use those packages in your Python code running in the SQL instance. **sqlmlutils** uses [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md) to install the package and each of its dependencies.
 
 In the following example, you'll add the [text-tools](https://pypi.org/project/text-tools/) package to SQL Server.
 

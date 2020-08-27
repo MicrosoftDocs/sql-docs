@@ -341,4 +341,4 @@ The following `gateway` configurations for are unsupported and cannot be changed
 
 ## Next steps
 
-[Configure Apache Spark and Apache Hadoop in Big Data Clusters](../../big-data-cluster/configure-spark-hdfs.md)
+[Configure Apache Spark and Apache Hadoop in Big Data Clusters](configure-spark-hdfs.md)

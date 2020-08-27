@@ -3,7 +3,7 @@ description: "Setting DCOM Stream Marshaling Format"
 title: "Setting DCOM Stream Marshaling Format | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""

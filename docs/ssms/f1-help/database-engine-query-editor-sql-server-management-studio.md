@@ -43,22 +43,17 @@ ms.date: 03/03/2020
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-This article is intended to explain the base query editor's features and functions in SQL Server Management Studio (SSMS). 
+This article is intended to explain the base query editor's features and functions in SQL Server Management Studio (SSMS).
 
 > [!Note]
-> If you are interested in learning about how to use T-SQL, MDX, DAX, or a basic Text editor, please visit the [Editor tasks](#editor-tasks) section.
+> If you are interested in learning about tasks that can be done in the editor, please visit the [Editor tasks](#editor-tasks) section.
 >
-> If you are interested in Transact-SQL (T-SQL) commands, please view the Transact-SQL F1 Help section.
+> If you are interested in Transact-SQL (T-SQL) F1 Help, please view the [Transact-SQL F1 Help](#transact-sql-f1-help) section.
 
-You can use the SQL Server Management Studio (SSMS) editors to interactively edit and test a Transact-SQL (T-SQL), MDX, DMX, or XML/A script to edit an XML or plain text file. Each editor is supported by a language-specific service that colors keywords, and checks for syntax and usage errors.
-
+The editors in SSMS share a typical architecture. The text editor implements the base level of functionality and can be used as a basic editor for text files. The other editors, or query editors, extend this functionality base by including a language service that defines the syntax of one of the languages supported in SQL Server. The query editors also implement varying levels of support for editor features such as IntelliSense and debugging. The query editors include the Database Engine Query Editor for use in building scripts containing T-SQL and XQuery statements, the MDX editor for the MDX language, the DMX editor for the DMX language, and the XML/A editor for the XML for Analysis language.
 You can use the Query Editor to create and run scripts containing Transact-SQL statements.
 
 ![New query](media/database-engine-query-editor-sql-server-management-studio/new-query.png)
-
-## SSMS Editors
-
-The editors in SSMS share a typical architecture. The text editor implements the base level of functionality and can be used as a basic editor for text files. The other editors, or query editors, extend this functionality base by including a language service that defines the syntax of one of the languages supported in SQL Server. The query editors also implement varying levels of support for editor features such as IntelliSense and debugging. The query editors include the Database Engine Query Editor for use in building scripts containing T-SQL and XQuery statements, the MDX editor for the MDX language, the DMX editor for the DMX language, and the XML/A editor for the XML for Analysis language.
 
 ## SQL Editor toolbar
 
@@ -152,7 +147,7 @@ You can also return results to text by selecting Ctrl + D or from the [context m
 
 ### Results to File using the editor toolbar
 
-When the query executes, the **Save Results** dialog box opens. In **Save In**, select the folder in which you want to save the file. In **Filename**, type the name of the file, and then select **Save** to save the query results as a **Report** file that has the .rpt extension. For advanced options, click the down-arrow on the **Save** button, and then select **Save with Encoding**.
+When the query executes, the **Save Results** dialog box opens. In **Save In**, select the folder in which you want to save the file. In **Filename**, type the name of the file, and then select **Save** to save the query results as a **Report** file that has the .rpt extension. For advanced options, select the down-arrow on the **Save** button, and then select **Save with Encoding**.
 
 You can also return results to text by selecting Ctrl + Shift + F or from the [context menu](#results-using-the-context-menu).
 
@@ -184,7 +179,7 @@ Opens a dialog box that you can use to specify values for parameters in stored p
 
 You can access the context menu by *right-clicking* anywhere in the query editor. The options in the context menu are similar to the SQL Editor Toolbar. With the context menu, you see the same options as **Connect** and **Execute**, but you also get other options listed, such as **Insert Snippet** and **Surround With**.
 
-![Context menu options](media/database-engine-query-editor-sql-server-management-studio/context-menu.png)
+![Options](media/database-engine-query-editor-sql-server-management-studio/context-menu.png)
 
 ### Insert Snippet using the context menu
 
@@ -196,7 +191,7 @@ A surround-with snippet is a template you can use as a starting point when enclo
 
 ### Connection using the context menu
 
-![Context menu options](media/database-engine-query-editor-sql-server-management-studio/context-menu-connections.png)
+![Connections](media/database-engine-query-editor-sql-server-management-studio/context-menu-connections.png)
 
 There are more **Connection** options in the context menu compared to the toolbar options in SSMS.
 
@@ -230,7 +225,7 @@ SQL Server Profiler is an interface to create and manage traces and analyze and 
 
 ### Analyze Query in Database Engine Tuning Advisor using the context menu
 
-The Microsoft Database Engine Tuning Advisor (DTA) analyzes databases and makes recommendations that you can use to optimize query performance. You can use the Database Engine Tuning Advisor to select and create an optimal set of indexes, indexed views, or table partitions without having an expert understanding of the database structure or the internals of SQL Server. Using the DTA, you can perform the following tasks.
+The Microsoft Database Engine Tuning Advisor (DTA) analyzes databases and makes recommendations that you use to optimize query performance. You use the Database Engine Tuning Advisor to select and create an optimal set of indexes, indexed views, or table partitions without having an expert understanding of the database structure or the internals of SQL Server. Using the DTA, you can perform the following tasks.
 
 ### Design Query in Editor using the context menu
 
@@ -258,13 +253,13 @@ You can select any of the *Result* options you want from the context menu.
 
 - **Results to Grid** - Returns the query results as one or more grids in the **Results** window.
 
-- **Results to File** - When the query executes, the **Save Results** dialog box opens. In **Save In**, select the folder in which you want to save the file. In **File name**, type the file's name, and then select **Save** to save the query results as a **Report** file with the .rpt extension. For advanced options, click the down-arrow on the **Save** button, and then select **Save with Encoding**.
+- **Results to File** - When the query executes, the **Save Results** dialog box opens. In **Save In**, select the folder in which you want to save the file. In **File name**, type the file's name, and then select **Save** to save the query results as a **Report** file with the .rpt extension. For advanced options, select the down-arrow on the **Save** button, and then select **Save with Encoding**.
 
 ### Properties Window using the context menu
 
 The [Properties Window](../menu-help/properties-window-f1-help-management-studio.md) describes the state of an item in SQL Server Management Studio, such as a connection or a Showplan operator, and information about database objects such as tables, views, and designers.
 
-You can use the Properties window to view the properties of the current connection. Many properties are read-only in the Properties window but can be changed elsewhere in the Management Studio. For example, the Database property of a query is read-only in the Properties window but can be changed on the tool bar.
+You use the Properties window to view the properties of the current connection. Many properties are read-only in the Properties window but can be changed elsewhere in the Management Studio. For example, the Database property of a query is read-only in the Properties window but can be changed on the tool bar.
 
 ### Query Options using the context menu
 

@@ -226,7 +226,7 @@ The columns that the OPENJSON function returns depend on the WITH option.
         |------------------------------|--------------------|  
         |0|null|  
         |1|string|  
-        |2|int|  
+        |2|number|  
         |3|true/false|  
         |4|array|  
         |5|object|  

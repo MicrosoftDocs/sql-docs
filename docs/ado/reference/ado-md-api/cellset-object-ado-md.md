@@ -27,7 +27,6 @@ Represents the results of a multidimensional query. It is a collection of cells 
 cst.Axes(0).Positions(0).Members(0).Caption  
 ```  
   
-## Remarks  
  There is no notion of a current cell within a cellset. Instead, the [Item](./item-property-ado-md-cellset.md) property retrieves a specific [Cell](./cell-object-ado-md.md) object from the cellset. The arguments of the **Item** property determine which cell is retrieved. You can specify the unique ordinal value of a cell. You can also retrieve cells by using their position numbers along each axis of the cellset. For more information about retrieving cells, see the [Item](./item-property-ado-md-cellset.md) property.  
   
  With the collections, methods, and properties of a **Cellset** object, you can do the following:  

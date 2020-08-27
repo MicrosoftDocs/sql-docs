@@ -49,7 +49,6 @@ Cell = Cellset.Item ( Positions)
 Cellset.Item ( Positions )Cellset ( Positions )  
 ```  
   
-## Remarks  
  The *Positions* argument specifies which cell to return. You can specify the cell by ordinal position or by the position along each axis. When specifying the cell by position along each axis, you can specify the numeric value of the position or the names of the members for each position.  
   
  The ordinal position is a number that uniquely identifies one cell within the **Cellset**. Conceptually, cells are numbered in a **Cellset** as if the **Cellset** were a *p*-dimensional array, where *p* is the number of axes. Cells are addressed in row-major order. Below is the formula for calculating the ordinal number of a cell:  

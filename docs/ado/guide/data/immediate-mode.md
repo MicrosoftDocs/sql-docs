@@ -1,5 +1,6 @@
 ---
 title: "Immediate Mode | Microsoft Docs"
+description: Describes immediate mode, which is in effect when the LockType property is set to adLockOptimistic or adLockPessimistic.
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado

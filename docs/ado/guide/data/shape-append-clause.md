@@ -90,8 +90,7 @@ SHAPE [parent-command [[AS] parent-alias]]
 > [!NOTE]
 >  The clause after the APPEND keyword is actually a list, where each clause is separated by a comma and defines another column to be appended to the parent.  
   
-## Remarks  
- When you construct provider commands from user input as part of a SHAPE command, SHAPE will treat the user-supplied a provider command as an opaque string and pass them faithfully to the provider. For example, in the following SHAPE command,  
+When you construct provider commands from user input as part of a SHAPE command, SHAPE will treat the user-supplied a provider command as an opaque string and pass them faithfully to the provider. For example, in the following SHAPE command,  
   
 ```  
 SHAPE {select * from t1} APPEND ({select * from t2} RELATE k1 TO k2)  

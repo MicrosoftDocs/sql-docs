@@ -1,5 +1,6 @@
 ---
 title: "Using AddNew in Immediate and Batch Modes | Microsoft Docs"
+description: Explains how to use AddNew in Immediate and Batch Modes.
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: ado

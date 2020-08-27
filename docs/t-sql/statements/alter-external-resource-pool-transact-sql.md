@@ -50,7 +50,9 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
 ```  
 ::: moniker-end
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
  ```syntaxsql
+
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
     [ MAX_CPU_PERCENT = value ]

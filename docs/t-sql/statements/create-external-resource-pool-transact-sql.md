@@ -56,7 +56,8 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]  
 ```  
 ::: moniker-end
-::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+
 ```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
 [ WITH (  

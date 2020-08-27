@@ -83,7 +83,7 @@ Extents are the basic unit in which space is managed. An extent is eight physica
 * **Uniform** extents are owned by a single object; all eight pages in the extent can only be used by the owning object.
 * **Mixed** extents are shared by up to eight objects. Each of the eight pages in the extent can be owned by a different object.
 
-![extents](../relational-databases/media/extents.gif)
+![Uniform and Mixed extents](../relational-databases/media/extents.gif)
 
 Up to, and including, [!INCLUDE[ssSQL14](../includes/sssql14-md.md)], [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] does not allocate whole extents to tables with small amounts of data. A new table or index generally allocates pages from mixed extents. When the table or index grows to the point that it has eight pages, it then switches to use uniform extents for subsequent allocations. If you create an index on an existing table that has enough rows to generate eight pages in the index, all allocations to the index are in uniform extents. 
 

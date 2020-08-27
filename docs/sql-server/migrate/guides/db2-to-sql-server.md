@@ -47,7 +47,7 @@ To create an assessment, follow these steps:
 1. Select **File** and then choose **New Project**. 
 1. Provide a project name, a location to save your project, and then select a SQL Server migration target from the drop-down. Select **OK**. 
 
-   :::image type="content" source="media/db2-to-sql-server/new-project.png" alt-text="Provide project details and select OK to save.:::
+   :::image type="content" source="media/db2-to-sql-server/new-project.png" alt-text="Provide project details and select OK to save.":::
 
 
 1. Enter in values for the DB2 connection details on the **Connect to DB2** dialog box. 

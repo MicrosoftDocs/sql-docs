@@ -3,7 +3,7 @@ description: "ADO MD Code Examples in Visual Basic, Scripting Edition"
 title: "ADO MD Code Examples in Visual Basic, Scripting Edition | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

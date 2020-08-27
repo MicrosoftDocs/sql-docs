@@ -3,7 +3,7 @@ description: "Enabling a DLL to Run on DCOM"
 title: "Enabling a DLL to Run on DCOM | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""

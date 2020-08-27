@@ -60,7 +60,7 @@ ms.author: vanto
 # Hints (Transact-SQL) - Query
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
-Query hints specify that the indicated hints should be used throughout the query. They affect all operators in the statement. If UNION is involved in the main query, only the last query involving a UNION operation can have the OPTION clause. Query hints are specified as part of the [OPTION clause](../../t-sql/queries/option-clause-transact-sql.md). Error 8622 occurs if one or more query hints cause the Query Optimizer not to generate a valid plan.  
+Query hints specify that the indicated hints are used in the scope of a query. They affect all operators in the statement. If UNION is involved in the main query, only the last query involving a UNION operation can have the OPTION clause. Query hints are specified as part of the [OPTION clause](../../t-sql/queries/option-clause-transact-sql.md). Error 8622 occurs if one or more query hints cause the Query Optimizer not to generate a valid plan.  
   
 > [!CAUTION]  
 > Because the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Query Optimizer typically selects the best execution plan for a query, we recommend only using hints as a last resort for experienced developers and database administrators.  
@@ -80,7 +80,7 @@ Query hints specify that the indicated hints should be used throughout the query
 ## Syntax  
   
 ```syntaxsql
-<query_hint > ::=   
+<query_hint> ::=   
 { { HASH | ORDER } GROUP   
   | { CONCAT | HASH | MERGE } UNION   
   | { LOOP | MERGE | HASH } JOIN   
@@ -103,7 +103,25 @@ Query hints specify that the indicated hints should be used throughout the query
   | QUERYTRACEON trace_flag   
   | RECOMPILE  
   | ROBUST PLAN   
-  | USE HINT ( '<hint_name>' [ , ...n ] )
+  | USE HINT (
+  |       'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' ,
+  |       'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES', 
+  |       'DISABLE_BATCH_MODE_ADAPTIVE_JOINS' ,
+  |       'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK',
+  |       'DISABLE_DEFERRED_COMPILATION_TV',
+  |       'DISABLE_INTERLEAVED_EXECUTION_TVF',
+  |       'DISABLE_OPTIMIZED_NESTED_LOOP',
+  |       'DISABLE_OPTIMIZER_ROWGOAL',
+  |       'DISABLE_PARAMETER_SNIFFING',
+  |       'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK',
+  |       'DISABLE_TSQL_SCALAR_UDF_INLINING',
+  |       'DISALLOW_BATCH_MODE',
+  |       'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS',
+  |       'ENABLE_QUERY_OPTIMIZER_HOTFIXES',
+  |       'FORCE_DEFAULT_CARDINALITY_ESTIMATION',
+  |       'FORCE_LEGACY_CARDINALITY_ESTIMATION',
+  |       'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n',
+  |       'QUERY_PLAN_PROFILE'  [ , ...n ] )
   | USE PLAN N'xml_plan'  
   | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
 }  

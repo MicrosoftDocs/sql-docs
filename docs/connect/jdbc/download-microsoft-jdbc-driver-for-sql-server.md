@@ -25,7 +25,7 @@ Version 8.4 is the latest general availability (GA) version. It supports Java 8,
 ### Version information
 
 - Release number: 8.4.1
-- Released: July 31, 2020
+- Released: August 27, 2020
 
 When you download the driver, there are multiple JAR files. The name of the JAR file indicates the version of Java that it supports.
 

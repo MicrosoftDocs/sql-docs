@@ -58722,7 +58722,7 @@
     },
     {
       "source_path": "docs/azure-data-studio/tutorial-create-extension.md",
-      "redirect_url": "/sql/azure-data-studio/tutorial-create-keymap-extension",
+      "redirect_url": "/sql/azure-data-studio/extensions/create-keymap-extension",
       "redirect_document_id": false
     }
   ]

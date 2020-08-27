@@ -3,7 +3,7 @@ description: "Microsoft OLE DB Provider for ODBC Overview"
 title: "Microsoft OLE DB Provider for ODBC | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""

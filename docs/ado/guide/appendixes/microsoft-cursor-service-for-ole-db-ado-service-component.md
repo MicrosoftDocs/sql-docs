@@ -3,7 +3,7 @@ description: "Microsoft Cursor Service for OLE DB (ADO Service Component)"
 title: "Microsoft Cursor Service for OLE DB (ADO Service Component) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""

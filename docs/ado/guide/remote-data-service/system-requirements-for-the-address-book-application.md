@@ -3,7 +3,7 @@ description: "System Requirements for the Address Book Application"
 title: "System Requirements for the Address Book Application | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""

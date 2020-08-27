@@ -96,7 +96,8 @@ Specifies the total server memory that can be used by requests in this external 
 MAX_PROCESSES =*value*  
 The maximum number of processes allowed for the external resource pool. 0 = unlimited threshold for the pool, which is thereafter bound only by computer resources.
 ::: moniker-end
-::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+
 MAX_CPU_PERCENT =*value*  
 The maximum average CPU bandwidth for all requests in the external resource pool can receive when there's CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
 

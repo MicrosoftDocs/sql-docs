@@ -1,5 +1,5 @@
 ---
-description: "SQL Server Management Studio (SSMS) Query Editor"
+description: SQL Server Management Studio (SSMS) Query Editor
 title: SSMS Query Editor
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -37,8 +37,9 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 03/03/2020
+ms.date: 08/28/2020
 ---
+
 # SQL Server Management Studio (SSMS) Query Editor
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
@@ -183,7 +184,7 @@ You can access the context menu by *right-clicking* anywhere in the query editor
 
 ### Insert Snippet using the context menu
 
-A Transact-SQL code snippet is a template you can use as a starting point when writing new Transact-SQL statements in the Query Editor.
+A [T-SQL Code Snippets](../scripting/add-transact-sql-snippets.md) is a template you can use as a starting point when writing new Transact-SQL statements in the Query Editor.
 
 ### Surround With using the context menu
 

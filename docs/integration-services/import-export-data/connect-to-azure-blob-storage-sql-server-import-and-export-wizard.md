@@ -46,7 +46,7 @@ Enter the key for the Azure storage account.
  Specify whether to use HTTP or HTTPS to connect to the storage account.  
   
  **Use local developer account**  
- Specify whether to use the storage emulator on the local computer.  
+ Specify whether to use the Storage Emulator on the local computer.  
   
  **Blob container name**  
  Select from the list of storage containers available in the specified storage account.  

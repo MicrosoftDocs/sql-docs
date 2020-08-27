@@ -2,7 +2,7 @@
 title: "Microsoft JDBC Driver for SQL Server support matrix"
 description: "This page contains the support matrix and support life-cycle policy for the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "08/06/2020"
+ms.date: "08/24/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -28,7 +28,7 @@ The following Microsoft JDBC Drivers are supported, until the indicated End of S
   
 |Driver Name|Driver Package Version|Applicable JAR(s)|End of Mainstream Support|
 |-|-|-|-|  
-|Microsoft JDBC Driver 8.4 for SQL Server|8.4|mssql-jdbc-8.4.0.jre14.jar<br> mssql-jdbc-8.4.0.jre11.jar<br> mssql-jdbc-8.4.0.jre8.jar|July 31, 2025|
+|Microsoft JDBC Driver 8.4 for SQL Server|8.4|mssql-jdbc-8.4.1.jre14.jar<br> mssql-jdbc-8.4.1.jre11.jar<br> mssql-jdbc-8.4.1.jre8.jar|July 31, 2025|
 |Microsoft JDBC Driver 8.2 for SQL Server|8.2|mssql-jdbc-8.2.2.jre13.jar<br> mssql-jdbc-8.2.2.jre11.jar<br> mssql-jdbc-8.2.2.jre8.jar|March 24, 2025|
 |Microsoft JDBC Driver 7.4 for SQL Server|7.4|mssql-jdbc-7.4.1.jre12.jar<br> mssql-jdbc-7.4.1.jre11.jar<br> mssql-jdbc-7.4.1.jre8.jar|August 2, 2024|
 |Microsoft JDBC Driver 7.2 for SQL Server|7.2|mssql-jdbc-7.2.2.jre11.jar<br> mssql-jdbc-7.2.2.jre8.jar|April 16, 2024|

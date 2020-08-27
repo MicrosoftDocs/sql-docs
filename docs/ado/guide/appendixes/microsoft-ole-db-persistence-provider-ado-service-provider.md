@@ -3,7 +3,7 @@ description: "Microsoft OLE DB Persistence Provider (ADO Service Provider)"
 title: "Microsoft OLE DB Persistence Provider (ADO Service Provider) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""

@@ -3,7 +3,7 @@ description: "Groups and Users Append, ChangePassword Methods Example (VC++)"
 title: "Groups and Users Append, ChangePassword Methods Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

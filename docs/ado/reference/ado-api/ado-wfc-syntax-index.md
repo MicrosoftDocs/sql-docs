@@ -1,11 +1,11 @@
 ---
 description: "ADO - WFC Syntax Index"
 title: "ADO - WFC Syntax Index | Microsoft Docs"
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: 
 ms.date: "02/15/2017"
 ms.reviewer: 
-ms.prod: sql  
+ms.prod: sql
 ms.prod_service: connectivity
 ms.topic: conceptual
 apitype: "COM"

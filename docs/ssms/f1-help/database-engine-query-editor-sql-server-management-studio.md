@@ -1,6 +1,6 @@
 ---
-description: SQL Server Management Studio (SSMS) Query Editor
 title: SSMS Query Editor
+description: SQL Server Management Studio (SSMS) Query Editor
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.technology: ssms
@@ -11,25 +11,25 @@ f1_keywords:
 dev_langs: 
   - "TSQL"
 helpviewer_keywords: 
-  - "Query Editor [Database Engine]"
-  - "Transact-SQL Editor See Query Editor [Database Engine]"
-  - "Database Engine Query Editor See Query Editor [Database Engine]"
-  - "Query Editor [Database Engine], Toolbar"
-  - "editors [SQL Server Management Studio], Database Engine Query Editor"
-  - "Query Editor [Database Engine], Features"
+  - "SQL Server Management Studio [SQL Server], editor"
   - "SQL Server Management Studio [SQL Server], Database Engine Query Editor"
+  - "SQL Server Management Studio [SQL Server], templates"
+  - "SQL Server Management Studio [SQL Server], query editor"
   - "Query Editor [SQL Server Management Studio]"
-  - "Code Editor [SQL Server Management Studio], about Query Editor"
+  - "Query Editor [Database Engine]"
+  - "Query Editor [Database Engine], Features"
+  - "Query Editor [Database Engine], Toolbar"
   - "Query Editor [SQL Server Management Studio], full screen mode"
   - "Query Editor [Database Engine], templates"
+  - "Query Editor [SQL Server Management Studio], about Query Editor"
+  - "Transact-SQL Editor See Query Editor [Database Engine]"
+  - "Database Engine Query Editor See Query Editor [Database Engine]"
+  - "Code Editor [SQL Server Management Studio], about Query Editor"
+  - "editors [SQL Server Management Studio], Database Engine Query Editor"
   - "full screen mode [SQL Server Management Studio]"
-  - "SQL Server Management Studio [SQL Server], templates"
   - "writing scripts"
   - "modifying scripts"
-  - "SQL Server Management Studio [SQL Server], query editor"
-  - "Query Editor [SQL Server Management Studio], about Query Editor"
   - "writing queries"
-  - "SQL Server Management Studio [SQL Server], editor"
   - "scripts [SQL Server], SQL Server Management Studio"
   - "queries [SQL Server], SQL Server Management Studio"
 ms.assetid: 05cfae9b-96d5-4a35-a098-0bc3a548bcfc

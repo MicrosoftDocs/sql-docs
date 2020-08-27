@@ -3,7 +3,7 @@ description: "Address Book Navigation Buttons"
 title: "Address Book Navigation Buttons | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""

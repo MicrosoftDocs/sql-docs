@@ -3,7 +3,7 @@ description: "Deadlocks with Read Repeatable Isolation Level"
 title: "Deadlocks with Read Repeatable Isolation Level | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""

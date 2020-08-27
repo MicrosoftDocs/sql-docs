@@ -128,7 +128,8 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
+
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (

@@ -14,7 +14,7 @@ ms.technology: big-data-cluster
 
 # Deployment configuration file reference for big data clusters
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+[!INCLUDE[SQL Server 2019](../includes/applies-to-version/sqlserver2019.md)]
 
 This article provides a JSON file that documents the structure of a SQL Server 2019 big data cluster deployment configuration file.
 
@@ -429,4 +429,4 @@ Use the following JSON file as a reference for the structure and settings in a b
 
 ## Next steps
 
-For more information on how to use and customize deployment configuration files, see [How to deploy [!INCLUDE[big-data-clusters-2019](../../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).
+For more information on how to use and customize deployment configuration files, see [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile).

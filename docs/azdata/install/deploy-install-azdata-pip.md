@@ -29,7 +29,7 @@ pip3 install -U requests
 ```
 
 > [!IMPORTANT]
-> If you are installing a newer version of big data clusters, back up your data and delete the old cluster upgrading `azdata` and installing the new release. For more information, see [Upgrading to a new release](deployment-upgrade.md).
+> If you are installing a newer version of big data clusters, back up your data and delete the old cluster upgrading `azdata` and installing the new release. For more information, see [Upgrading to a new release](../../big-data-cluster/deployment-upgrade.md).
 
 ## <a id="windows"></a> Windows `azdata` installation
 

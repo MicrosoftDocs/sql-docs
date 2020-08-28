@@ -50,6 +50,8 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
 ```  
 ::: moniker-end
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
  ```syntaxsql
 ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 [ WITH (
@@ -69,7 +71,8 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 <CPU_range_spec> ::=
 { CPU_ID | CPU_ID  TO CPU_ID } [ ,...n ]
 ```  
- 
+::: moniker-end 
+
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
@@ -77,6 +80,7 @@ ALTER EXTERNAL RESOURCE POOL { pool_name | "default" }
 { *pool_name* | "default" }  
 Is the name of an existing user-defined external resource pool or the default external resource pool that is created when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is installed.
 "default" must be enclosed by quotation marks ("") or brackets ([]) when used with `ALTER EXTERNAL RESOURCE POOL` to avoid conflict with `DEFAULT`, which is a system reserved word.
+
 ::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
 Specifies the maximum average CPU bandwidth that all requests in the external resource pool can receive when there is CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
@@ -87,7 +91,8 @@ Specifies the total server memory that can be used by requests in this external 
 MAX_PROCESSES =*value*  
 Specifies the maximum number of processes allowed for the external resource pool. Specify 0 to set an unlimited threshold for the pool, which is thereafter bound only by computer resources.
 ::: moniker-end
-::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 MAX_CPU_PERCENT =*value*  
 Specifies the maximum average CPU bandwidth that all requests in the external resource pool can receive when there is CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
 
@@ -128,7 +133,8 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
 ::: moniker-end
-::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ```sql
 ALTER EXTERNAL RESOURCE POOL ep_1
 WITH (
@@ -141,6 +147,7 @@ ALTER RESOURCE GOVERNOR RECONFIGURE;
 GO
 ```
 ::: moniker-end
+
 ## See also
 
 + [Resource governance for machine learning in SQL Server](../../machine-learning/administration/resource-governor.md)

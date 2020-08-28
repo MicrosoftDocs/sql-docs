@@ -44,18 +44,18 @@ To learn about Azure Data Studio Extensibility see [Extensibility overview](exte
 
 You can debug your new extension using Visual Studio Code extension [Azure Data Studio Debug](https://github.com/kevcunnane/sqlops-debug).
 
-Steps
-1. Open your extension with [Visual Studio Code](https://code.visualstudio.com/).
-1. Install the Azure Data Studio Debug extension.
-1. Press **F5** or click the Debug icon and click **Start**.
-1. A new instance of Azure Data Studio starts in a special mode (Extension Development Host) and this new instance is now aware of your extension.
+Steps:
 
+1. Open your extension with [Visual Studio Code](https://code.visualstudio.com/).
+2. Install the Azure Data Studio Debug extension.
+3. Press **F5** or click the Debug icon and click **Start**.
+4. A new instance of Azure Data Studio starts in a special mode (Extension Development Host) and this new instance is now aware of your extension.
 
 ## Create an extension package
 
 After writing your extension, you need to create a VSIX package to be able to install it in Azure Data Studio. You can use [vsce](https://github.com/Microsoft/vscode-vsce) (Visual Studio Code Extensions) to create the VSIX package. 
 
-```
+```console
 npm install -g vsce
 cd myExtensionName
 vsce package
@@ -63,7 +63,6 @@ vsce package
 ```
 
 With a VSIX package, you can share your extension locally and privately by sharing the `.vsix` file and using the command **Extensions: Install From VSIX File** from the Command Palette to install the extension into Azure Data Studio.
-
 
 ## Publish an extension
 
@@ -84,9 +83,8 @@ The process to publish updates is similar to publishing the extension. Please ma
 
 Refer to one of the following extension authoring tutorials for step-by-step instructions on how to get started:
 
-- [Keymap Extension Tutorial](tutorial-create-keymap-extension.md)
-- [Dashboard Extension Tutorial](tutorial-create-dashboard-extension.md)
-- [Notebook Extension Tutorial](tutorial-create-notebook-extension.md)
-- [Jupyter Book Extension Tutorial](tutorial-create-jupyterbook-extension.md)
-- [Wizard Extension Tutorial](tutorial-create-wizard-extension.md)
- 
+- [Keymap Extension Tutorial](extensions/create-keymap-extension.md)
+- [Dashboard Extension Tutorial](extensions/create-dashboard-extension.md)
+- [Notebook Extension Tutorial](extensions/create-notebook-extension.md)
+- [Jupyter Book Extension Tutorial](extensions/create-jupyter-book-extension.md)
+- [Wizard Extension Tutorial](extensions/create-wizard-extension.md)

@@ -3,7 +3,7 @@ description: "RecordCount Property (ADO)"
 title: "RecordCount Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "03/20/2018"
 ms.reviewer: ""

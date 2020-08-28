@@ -2,7 +2,7 @@
 title: "Using Always Encrypted with the JDBC driver"
 description: "Learn how to use Always Encrypted in your Java application with the JDBC driver for SQL Server to encrypt sensitive data on the server."
 ms.custom: ""
-ms.date: "07/10/2020"
+ms.date: "08/24/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -94,7 +94,7 @@ String connectionUrl = "jdbc:sqlserver://<server>:<port>;user=<user>;password=<p
 The JDBC driver automatically instantiates a **SQLServerColumnEncryptionAzureKeyVaultProvider** object when these credentials are present among the connection properties.
 
 > [!IMPORTANT]
-> The connection properties **keyVaultProviderClientId** and **keyVaultProviderClientKey** have been deprecated as of v8.4.0. Users are encouraged to use **keyStoreAuthentication**, **KeyStorePrincipalId**, and **KeyStoreSecret** instead.
+> The connection properties **keyVaultProviderClientId** and **keyVaultProviderClientKey** have been deprecated as of v8.4.1. Users are encouraged to use **keyStoreAuthentication**, **KeyStorePrincipalId**, and **KeyStoreSecret** instead.
 
 #### JDBC driver version prior to 7.4.1
 
@@ -127,13 +127,13 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 
 ### Using Azure Key Vault authentication with Managed Identities
 
-Starting with JDBC Driver **8.4.0**, the driver added support to authenticate to Azure Key Vaults using Managed Identities.
+Starting with JDBC Driver **8.4.1**, the driver added support to authenticate to Azure Key Vaults using Managed Identities.
 
 If the application is hosted in Azure, the user can use [Managed Identities](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview) to authenticate to the Azure Key Vault, thus eliminating the need to provide and expose any credentials in the code. 
 
 #### Connection properties for Key Vault authentication with Managed Identities
 
-For JDBC Driver 8.4.0 and later, the driver introduced the following connection properties:
+For JDBC Driver 8.4.1 and later, the driver introduced the following connection properties:
 
 | ConnectionProperty    | Possible Value Pairing 1 | Possible Value Pairing 2 | Possible Value Pairing 3 |
 | ---|---|---|----|

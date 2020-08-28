@@ -6,7 +6,7 @@ ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords: 
   - "libraries [ADO]"

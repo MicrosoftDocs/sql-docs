@@ -58,7 +58,7 @@ CREATE EXTERNAL RESOURCE POOL pool_name
 ```  
 ::: moniker-end
 
-::: moniker range="=sql-server-2016|||=sql-server-2017||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 ```syntaxsql
 CREATE EXTERNAL RESOURCE POOL pool_name  
 [ WITH (  

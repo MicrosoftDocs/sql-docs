@@ -14,9 +14,9 @@ helpviewer_keywords:
   - "SPNs [SQL Server]"
 author: David-Engel
 ms.author: v-daenge
+monikerRange: ">= sql-server-2016"
 ---
-# Service Principal Name (SPN) Support in Client Connections
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
+# Service Principal Name (SPN) Support in Client Connections for SQL Server ~ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

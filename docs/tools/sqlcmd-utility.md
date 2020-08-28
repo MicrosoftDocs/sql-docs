@@ -26,7 +26,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
+ms.date: 08/27/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 
@@ -170,7 +170,7 @@ This switch is used by the client when connecting to SQL Database or SQL Data Wa
 
 > [!IMPORTANT]
 > The `-G` option only applies to Azure SQL Database and Azure Data Warehouse.
-> AAD Integrated and Interactive Authentication is not currently supported on Linux or macOS.
+> AAD Interactive Authentication is not currently supported on Linux or macOS. AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql) version 17.6.1 or higher and a properly configured Kerberos environment.
 
 - **Azure Active Directory Username and Password:** 
 

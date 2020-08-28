@@ -32,8 +32,7 @@ ms.author: maghan
 ## Syntax  
   
 ```  
-  
-MIN_ACTIVE_ROWVERSION  
+MIN_ACTIVE_ROWVERSION ( ) 
 ```  
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]

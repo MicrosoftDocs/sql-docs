@@ -125,7 +125,7 @@ Query hints specify that the indicated hints are used in the scope of a query. T
   | ROWLOCK   
   | SERIALIZABLE   
   | SNAPSHOT  
-  | SPATIAL_WINDOW_MAX_CELLS = < integer value >  
+  | SPATIAL_WINDOW_MAX_CELLS = <integer_value>  
   | TABLOCK   
   | TABLOCKX   
   | UPDLOCK   
@@ -384,7 +384,7 @@ TABLE HINT **(**_<exposed\_object\_name>_ [ **,** \<table_hint> [ [**,** ]..._n_
  When you specify _exposed\_object\_name_ without also specifying a table hint, any indexes you specify in the query as part of a table hint for the object are disregarded. The Query Optimizer then determines index usage. You can use this technique to eliminate the effect of an INDEX table hint when you can't modify the original query. See Example J.  
   
 **\<table_hint> ::=** { 
-NOEXPAND [ , INDEX ( _<index\_value>_ [ ,...n ] ) | INDEX = ( _<index\_value>_ ) ] \| INDEX ( _<index\_value>_ [ ,...n ] ) | INDEX = ( _<index\_value>_ ) \| FORCESEEK [**(**_<index\_value>_**(**_<index\_column\_name>_ [**,**... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK }    
+NOEXPAND [ , INDEX ( _<index\_value>_ [ ,...n ] ) | INDEX = ( _<index\_value>_ ) ] \| INDEX ( _<index\_value>_ [ ,...n ] ) | INDEX = ( _<index\_value>_ ) \| FORCESEEK [**(**_<index\_value>_**(**_<index\_column\_name>_ [**,**... ] **))** ] \| FORCESCAN \| HOLDLOCK \| NOLOCK \| NOWAIT \| PAGLOCK \| READCOMMITTED \| READCOMMITTEDLOCK \| READPAST \| READUNCOMMITTED \| REPEATABLEREAD \| ROWLOCK \| SERIALIZABLE \| SNAPSHOT \| SPATIAL_WINDOW_MAX_CELLS = _<integer\_value>_ \| TABLOCK \| TABLOCKX \| UPDLOCK \| XLOCK }    
 Is the table hint to apply to the table or view that corresponds to *exposed_object_name* as a query hint. For a description of these hints, see [Table Hints &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md).  
   
  Table hints other than INDEX, FORCESCAN, and FORCESEEK are disallowed as query hints unless the query already has a WITH clause specifying the table hint. For more information, see the [Remarks section](#Remarks).  

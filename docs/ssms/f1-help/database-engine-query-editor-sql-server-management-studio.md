@@ -44,7 +44,7 @@ ms.date: 08/28/2020
 
 [!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
-This article is intended to explain the base query editor's features and functions in SQL Server Management Studio (SSMS).
+This article explains the query editor's features and functions in SQL Server Management Studio (SSMS).
 
 > [!Note]
 > If you are interested in learning about tasks that can be done in the editor, please visit the [Editor tasks](#editor-tasks) section.

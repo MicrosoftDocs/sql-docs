@@ -2,7 +2,7 @@
 description: "ALTER DATABASE (Transact-SQL)"
 title: "ALTER DATABASE (Transact-SQL)| Microsoft Docs"
 ms.custom: ""
-ms.date: 07/21/2020
+ms.date: 08/27/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -620,7 +620,7 @@ ELASTIC_POOL (name = \<elastic_pool_name>)
 When ELASTIC_POOL is not specified, the secondary database is not created in an elastic pool. When ELASTIC_POOL is specified, the secondary database is created in the specified pool.
 
 > [!IMPORTANT]
-> The user executing the ADD SECONDARY command must be DBManager on primary server, have db_owner membership in local database, and DBManager on secondary server.
+> The user executing the ADD SECONDARY command must be DBManager on primary server, have db_owner membership in local database, and DBManager on secondary server. The client IP address must be added to the allowed list under firewall rules for both the primary and secondary servers. In case of different client IP addresses, the exact same client IP address that has been added on the primary server must also be added to the secondary. This is a required step to be done before running the ADD SECONDARY command to initiate geo-replication.
 
 REMOVE SECONDARY ON SERVER \<partner_server_name>
 Removes the specified geo-replicated secondary database on the specified server. The command is executed on the master database on the server hosting the primary database.

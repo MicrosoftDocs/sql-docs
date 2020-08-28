@@ -17,17 +17,19 @@ This tutorial demonstrates how to create a new Notebooks Azure Data Studio exten
 
 During this tutorial you learn how to:
 > [!div class="checklist"]
-> * Create an extension project
-> * Install the extension generator
-> * Create your notebook extension
-> * Run your extension
-> * Package your extension
-> * Publish your extension to the marketplace
+> - Create an extension project
+> - Install the extension generator
+> - Create your notebook extension
+> - Run your extension
+> - Package your extension
+> - Publish your extension to the marketplace
 
-### APIs used
+## APIs used
+
 - `azdata.nb.showNotebookDocument`
 
 ### Extension use cases
+
 There are a few different reasons why you would create a notebook extension: 
 - Share interactive documentation 
 - Save and have constant access to that notebook
@@ -42,12 +44,13 @@ Azure Data Studio is built on the same framework as Visual Studio Code, so exten
 - [Visual Studio Code](https://code.visualstudio.com) to debug the extension.
 - Ensure `azuredatastudio` is in your path. For Windows, make sure you choose the `Add to Path` option in setup.exe. For Mac or Linux, run the *Install 'azuredatastudio' command in PATH* option.
 
-
 ## Install the extension generator
 
 To simplify the process of creating extensions, we've built an [extension generator](https://www.npmjs.com/package/generator-azuredatastudio) using Yeoman. To install it, run the following from the command prompt:
 
+```console
 `npm install -g yo generator-azuredatastudio`
+```
 
 ## Create your extension
 
@@ -59,32 +62,31 @@ To create an extension:
 
 2. Choose **New Notebooks (Individual)** from the list of extension types:
 
-   ![extension generator](./media/tutorial-create-notebook-extension/notebook-extension-generator.png)
+   :::image type="content" source="media/notebook-extension/notebook-extension-generator.png" alt-text="Notebook extension generator":::
 
-3. Follow the steps to fill in the extension name (for this tutorial, use **Test Notebook**), a publisher name (for this tutorial, use **Microsoft**), and add a description. 
+3. Follow the steps to fill in the extension name (for this tutorial, use **Test Notebook**), a publisher name (for this tutorial, use **Microsoft**), and add a description.
 
 Now, this is where some branching exists - you can either add Jupyter Notebooks that you've already created, or you can use sample notebooks provided to you through the generator.
 
-For this tutorial, we will use a sample Python notebook: 
+For this tutorial, we will use a sample Python notebook:
 
-   ![select python sample](./media/tutorial-create-notebook-extension/notebook-sample-generator.png)
+   :::image type="content" source="media/notebook-extension/notebook-sample-generator.png" alt-text="Select python sample":::
 
-If you have notebooks that you are interested in shipping, answer that you have existing notebooks you would like to ship and provide the absolute file path where all of your notebooks or markdown files live. 
-
+If you have notebooks that you are interested in shipping, answer that you have existing notebooks you would like to ship and provide the absolute file path where all of your notebooks or markdown files live.
 
 Completing the previous steps creates a new folder with the sample notebook. Open the folder in Visual Studio Code and you're ready to ship your new notebook extension!
 
-## Understanding your extension 
+## Understanding your extension
 
 This is what your project should currently look like:
 
    ![extension file structure](./media/tutorial-create-notebook-extension/notebook-filestructure-generator.png)
 
-The `vsc-extension-quickstart.md` provides you with a reference of the important files. The `README.md` is where you can provide documentation for your new extension. Note the `package.json`, `notebook.ts`, and `pySample.ipynb` files. 
+The `vsc-extension-quickstart.md` provides you with a reference of the important files. The `README.md` is where you can provide documentation for your new extension. Note the `package.json`, `notebook.ts`, and `pySample.ipynb` files.
 
 If there are any files or folders that you do not wish to publish, you can include their names in the `.vscodeignore` file.
 
-Let's take a look at `notebook.ts` to understand what our newly formed extension is doing. 
+Let's take a look at `notebook.ts` to understand what our newly formed extension is doing.
 
 ```javascript
 // This function is called when you run the command `Launch Notebooks: Test Notebook` from
@@ -96,7 +98,7 @@ export function activate(context: vscode.ExtensionContext) {
         notebooksToDisplay.forEach(name => {
             azdata.nb.showNotebookDocument(vscode.Uri.file(name));
         });
-    })); 
+    }));
 
     // Add other code here if you want to register another command
 }
@@ -144,13 +146,13 @@ Once this was done, my test-notebook-0.0.1.vsix file was created and ready to in
 
 ## Run your extension
 
-To run and test your extension, open Azure Data Studio and open the command palette (`Ctrl + Shift + P`). Find the command **Extensions: Install from VSIX** and navigate to the folder containing your new extension. 
+To run and test your extension, open Azure Data Studio and open the command palette (`Ctrl + Shift + P`). Find the command **Extensions: Install from VSIX** and navigate to the folder containing your new extension.
 
-   ![Install](./media/tutorial-create-notebook-extension/install-vsix.png)
+   :::image type="content" source="media/notebook-extension/install-vsix.png" alt-text="Install VSIX":::
 
 Your should now show up in your extension panel in Azure Data Studio. Open the command palette again and you'll find the new command that we created with our extension, **Launch Book: Test Book**. Upon running, it should open the Jupyter Book that we packaged with our extension.
 
-   ![notebook-command](./media/tutorial-create-notebook-extension/notebook-launch-ads.png)
+   :::image type="content" source="media/notebook-extension/notebook-launch-ads.png" alt-text="Notebook-command":::
 
 Congratulations! You built and can now ship your first Jupyter Notebook extension.
 
@@ -162,14 +164,14 @@ The Azure Data Studio extension marketplace is not fully implemented yet. To pub
 
 In this tutorial, you learned how to:
 > [!div class="checklist"]
-> * Create an extension project
-> * Install the extension generator
-> * Create your notebook extension
-> * Create your extension
-> * Package your extension
-> * Publish your extension to the marketplace
+> - Create an extension project
+> - Install the extension generator
+> -Create your notebook extension
+> - Create your extension
+> - Package your extension
+> - Publish your extension to the marketplace
 
-We hope after reading this you'll be inspired to build your own extension for Azure Data Studio. 
+We hope after reading this you'll be inspired to build your own extension for Azure Data Studio.
 
 If you have an idea but are not sure how to get started, please open an issue or tweet at the team: [azuredatastudio](https://twitter.com/azuredatastudio).
 

@@ -53,7 +53,7 @@ Steps:
 
 ## Create an extension package
 
-After writing your extension, you need to create a VSIX package to be able to install it in Azure Data Studio. You can use [vsce](https://github.com/Microsoft/vscode-vsce) (Visual Studio Code Extensions) to create the VSIX package. 
+After writing your extension, you need to create a VSIX package to be able to install it in Azure Data Studio. You can use [vsce](https://github.com/Microsoft/vscode-vsce) (Visual Studio Code Extensions) to create the VSIX package.
 
 ```console
 npm install -g vsce
@@ -83,8 +83,8 @@ The process to publish updates is similar to publishing the extension. Please ma
 
 Refer to one of the following extension authoring tutorials for step-by-step instructions on how to get started:
 
-- [Keymap Extension Tutorial](extensions/create-keymap-extension.md)
-- [Dashboard Extension Tutorial](extensions/create-dashboard-extension.md)
-- [Notebook Extension Tutorial](extensions/create-notebook-extension.md)
-- [Jupyter Book Extension Tutorial](extensions/create-jupyter-book-extension.md)
-- [Wizard Extension Tutorial](extensions/create-wizard-extension.md)
+- [Keymap Extension Tutorial](extensions/keymap-extension.md)
+- [Dashboard Extension Tutorial](extensions/dashboard-extension.md)
+- [Notebook Extension Tutorial](extensions/notebook-extension.md)
+- [Jupyter Book Extension Tutorial](extensions/jupyter-book-extension.md)
+- [Wizard Extension Tutorial](extensions/wizard-extension.md)

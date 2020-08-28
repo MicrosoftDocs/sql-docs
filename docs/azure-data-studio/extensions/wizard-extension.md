@@ -37,7 +37,9 @@ Azure Data Studio is built on the same framework as Visual Studio Code, so exten
 
 To simplify the process of creating extensions, we've built an [extension generator](https://code.visualstudio.com/docs/extensions/yocode) using Yeoman. To install it, run the following from the command prompt:
 
+```console
 `npm install -g yo generator-azuredatastudio`
+```
 
 ## Create your wizard extension
 
@@ -45,7 +47,7 @@ To simplify the process of creating extensions, we've built an [extension genera
 
 Wizards are a user interface type that present step-by-step pages for users to fill in, in order to accomplish a task. Common examples include software setup wizards and troubleshooting wizards. For example:
 
-![dacpac wizard](./media/tutorial-create-wizard-extension/dacpac_wizard.gif)
+:::image type="content" source="media/wizard-extension/dacpac-wizard.gif" alt-text="Dacpac wizard":::
 
 Because wizards are often helpful when working with data and extending the functionality of Azure Data Studio, Azure Data Studio offers APIs to create your own custom wizards. We will be walking through how to generate a Wizard template and modify it to create your own custom wizard.
 
@@ -61,7 +63,7 @@ To create an extension:
 
 3. Follow the steps to fill in the extension name (for this tutorial, use **My Test Extension**), and add a description.
 
-![extension generator](./media/tutorial-create-wizard-extension/extension_generator.png)
+    :::image type="content" source="media/wizard-extension/extension-generator.png" alt-text="Extension generator":::
 
 Completing the previous steps creates a new folder. Open the folder in Visual Studio Code and you're ready to create your own wizard extension!
 
@@ -71,7 +73,7 @@ Let's see what the wizard template gives us by running the extension. Before run
 
 Select **F5** in VS Code to launch Azure Data Studio in debug mode with the extension running. Then, in Azure Data Studio, run the **Launch Wizard** command from the Command Palette (Ctr+Shift+P) in the new window. This will launch the default wizard that this extension contributes:
 
-![wizard template](./media/tutorial-create-wizard-extension/wizard_template.gif)
+:::image type="content" source="media/wizard-extension/wizard_template.gif" alt-text="Wizard template":::
 
 Next, we will look at how to modify this default wizard.
 
@@ -85,8 +87,7 @@ The most important files to get started with extension development are `package.
 
 Let's make a change to the wizard: we'll add a 4th, blank page. Modify `src/main.ts` as shown below, and you should see an additional page show up when you launch the wizard.
 
-![wizard main](./media/tutorial-create-wizard-extension/wizard_main.png)
-
+:::image type="content" source="media/wizard-extension/wizard-main.png" alt-text="Wizard main":::
 Once you are familiar with the template, here are some additional ideas to try:
 
 - Add a button with a width of 300 to your new page
@@ -112,7 +113,7 @@ Edit the `README.md` to your liking, then navigate to the base directory of the 
 
 After these lines were added, a my-test-extension-0.0.1.vsix file was created and ready to install in Azure Data Studio.
 
-![Install](./media/tutorial-create-wizard-extension/install-vsix.png)
+:::image type="content" source="media/wizard-extension/install-vsix.png" alt-text="Install VSIX":::
 
 ## Publish your extension to the marketplace
 
@@ -138,4 +139,4 @@ You can always refer to the [Visual Studio Code extension guide](https://code.vi
 To learn how to work with T-SQL in Azure Data Studio, complete the T-SQL Editor tutorial:
 
 > [!div class="nextstepaction"]
-> [Use the Transact-SQL editor to create database objects](tutorial-sql-editor.md)
+> [Use the Transact-SQL editor to create database objects](../tutorial-sql-editor.md)

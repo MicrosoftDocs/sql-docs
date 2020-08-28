@@ -176,4 +176,4 @@ You can always refer to the [Visual Studio Code extension guide](https://code.vi
 To learn how to work with T-SQL in Azure Data Studio, complete the T-SQL Editor tutorial:
 
 > [!div class="nextstepaction"]
-> [Use the Transact-SQL editor to create database objects](tutorial-sql-editor.md).
+> [Use the Transact-SQL editor to create database objects](../tutorial-sql-editor.md)

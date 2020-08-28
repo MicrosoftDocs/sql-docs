@@ -91,7 +91,6 @@ Is the user-defined name for the external resource pool. *pool_name* is alphanum
 MAX_CPU_PERCENT =*value*  
 The maximum average CPU bandwidth for all requests in the external resource pool can receive when there's CPU contention. *value* is an integer. The allowed range for *value* is from 1 through 100.
 
-When you use AFFINITY NUMANODE = **(\<NUMA_node_range_spec> **)**, the external resource pool is affinitized to the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] physical CPUs that correspond to the given NUMA node or range of nodes. 
 
 MAX_MEMORY_PERCENT =*value*  
 Specifies the total server memory that can be used by requests in this external resource pool. *value* is an integer. The allowed range for *value* is from 1 through 100.

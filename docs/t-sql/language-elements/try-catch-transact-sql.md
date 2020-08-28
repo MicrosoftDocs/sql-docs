@@ -313,7 +313,8 @@ BEGIN CATCH
         ROLLBACK TRANSACTION;  
     END;  
   
-    -- Test whether the transaction is committable.  
+    -- Test whether the transaction is committable.
+    -- It maybe required to commit statements in a catch block. For ex: all previous (and further) inserts/updates/deletes in a batch of similar individually similar but unrelated statements.
     IF (XACT_STATE()) = 1  
     BEGIN  
         PRINT  

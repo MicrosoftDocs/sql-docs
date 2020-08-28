@@ -15,10 +15,10 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 # sys.pdw_permanent_table_mappings (Transact-SQL)
 [!INCLUDE [applies-to-version/asa](../../includes/applies-to-version/asa.md)]
 
-  Ties permanent user tables to internal object names by **object_id**. Recommended for better performance over **sys.pdw_table_mappings**.  
+  Ties permanent user tables to internal object names by **object_id**.  
   
 > [!NOTE]
-> **sys.pdw_permanent_table_mappings** holds mappings to permanent tables and does not include temporary table mappings.
+> **sys.pdw_permanent_table_mappings** holds mappings to permanent tables and does not include temporary or external table mappings.
 
 |Column Name|Data Type|Description|  
 |-----------------|---------------|-----------------|  

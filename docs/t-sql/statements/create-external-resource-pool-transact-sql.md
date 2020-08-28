@@ -29,7 +29,7 @@ monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allv
 
 Creates an external pool to define resources for external processes. A resource pool represents a subset of the physical resources (memory and CPUs) of a Database Engine instance. A Resource Governor can distribute server resources among resource pools, up to a maximum of 64 pools.
 
-::: moniker range="=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
+::: moniker range="=sql-server-2016||=sqlallproducts-allversions"
 For [!INCLUDE[rsql-productname-md](../../includes/rsql-productname-md.md)] in [!INCLUDE[sssql15-md](../../includes/sssql15-md.md)], the external pool governs `rterm.exe`, `BxlServer.exe`, and other processes spawned by them.
 ::: moniker-end
 

@@ -75,9 +75,6 @@ ORDER BY    table_nm
 ,           sm.name ;
 ```
 
->[!TIP]
-> For improved performance in Synapse SQL, consider using **sys.pdw_permanent_table_mappings** instead of **sys.pdw_table_mappings** on permanent user tables. See **[sys.pdw_permanent_table_mappings &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md)** for more information.
-
 ## Permissions
 
 Requires **VIEW SERVER STATE** permission.

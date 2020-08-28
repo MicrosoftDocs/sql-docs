@@ -2,7 +2,7 @@
 description: "DROP EXTERNAL LIBRARY (Transact-SQL)"
 title: "DROP EXTERNAL LIBRARY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/10/2020
+ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning
@@ -68,6 +68,8 @@ An informational message is returned if the statement was successful.
 ## Remarks
 
 Unlike other `DROP` statements in SQL Server, this statement supports specifying an optional authorization clause. This allows **dbo** or users in the **db_owner** role to drop a package library uploaded by a regular user in the database.
+
+A number of packages, referred to as *system packages*, are pre-installed in a SQL instance. System packages cannot be added, updated, or removed by the user.
 
 ## Examples
 

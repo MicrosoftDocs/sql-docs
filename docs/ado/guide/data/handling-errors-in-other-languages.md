@@ -3,7 +3,7 @@ description: "Handling Errors In Other Languages"
 title: "Handling Errors In Other Languages | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "02/14/2017"
 ms.reviewer: ""

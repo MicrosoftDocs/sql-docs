@@ -747,13 +747,13 @@ ON
 Enables the Query Store.
 
 OFF      
-Disables the Query Store. OFF is the default value. FORCED is optional. FORCED aborts all running Query Store background tasks, and skips the synchronous flush when Query Store is turned off. Causes Query Store to shut down as fast as possible. Effectively turns off Query Store immediately. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 introduces FORCED.
+Disables the Query Store. OFF is the default value. FORCED is optional. FORCED aborts all running Query Store background tasks, and skips the synchronous flush when Query Store is turned off. Causes the Query Store to shut down as fast as possible. FORCED applies to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 and later builds.
 
 > [!NOTE]  
 > Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
-Remove the contents of the Query Store.
+Removes query-related data from the Query Store. ALL is optional. ALL removes query-related data and metadata from the Query Store.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }     
 Describes the operation mode of the Query Store.

@@ -78,7 +78,12 @@ The below behaviors are expected for [!INCLUDE[ssSQL17](../../includes/sssql17-m
 - If the compatibility level of a user database was 100 or higher before the upgrade, it remains the same after upgrade.
 - If the compatibility level of a user database was 90 before upgrade, in the upgraded database, the compatibility level is set to 100, which is the lowest supported compatibility level in [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)].
 - The compatibility levels of the tempdb, model, msdb and Resource databases are set to the default compatibility level for a given [!INCLUDE[ssDE](../../includes/ssde-md.md)] version. 
-- The master system database retains the compatibility level it had before upgrade.
+- The master system database retains the compatibility level it had before upgrade. This will not impact user database behavior. 
+
+For pre-existing databases running at lower compatibility levels, as long as the application does not need to leverage enhancements that are only available in a higher database compatibility level, it is a valid approach to maintain the previous database compatibility level. For new development work, or when an existing application requires use of new features such as [Intelligent Query Processing](../../relational-databases/performance/intelligent-query-processing.md), as well as some new [!INCLUDE[tsql](../../includes/tsql-md.md)], plan to upgrade the database compatibility level to the latest available. For more information, see [Compatibility levels and Database Engine upgrades](../../database-engine/install-windows/compatibility-certification.md#compatibility-levels-and-database-engine-upgrades).     
+
+> [!NOTE]
+> If there are no user objects and dependencies, it is generally safe to upgrade to the default compatibility level. For more information, see [Recommendations - master Database](../../relational-databases/databases/master-database.md#recommendations).
 
 Use `ALTER DATABASE` to change the compatibility level of the database. The new compatibility level setting for a database takes effect when a `USE <database>` command is issued, or a new login is processed with that database as the default database context.
 To view the current compatibility level of a database, query the `compatibility_level` column in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view.

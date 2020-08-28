@@ -226,4 +226,4 @@ This is a hotfix version released for SQL Server 2019 only.
 #### Bugfixes
 
 1. In certain cases, test connection malfunctions for Data Lake Storage Gen2 with the error message "Attempted to access an element as a type incompatible with the array"
-1. Bring back support for Azure storage emulator
+1. Bring back support for Azure Storage Emulator

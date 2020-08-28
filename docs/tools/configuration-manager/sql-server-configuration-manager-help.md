@@ -6,7 +6,7 @@ ms.date: "02/01/2018"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "SQL Server Configuration Manager, help"

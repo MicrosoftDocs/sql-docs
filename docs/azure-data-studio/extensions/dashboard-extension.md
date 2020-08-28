@@ -4,7 +4,7 @@ description: This tutorial demonstrates how to create a dashboard extension to a
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan
-ms.topic: tutorial
+ms.topic: how-to
 author: anjalia
 ms.author: t-anjaga
 ms.custom:

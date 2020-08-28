@@ -4,14 +4,14 @@ description: This tutorial demonstrates how to create a keymap extension to add 
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan
-ms.topic: tutorial
+ms.topic: how-to
 author: markingmyname
 ms.author: maghan
 ms.custom: "seodec18"
 ms.date: 08/28/2020
 ---
 
-# Tutorial: Create an Azure Data Studio Keymap extension
+# Create an Azure Data Studio Keymap extension
 
 This tutorial demonstrates how to create a new Azure Data Studio extension. The extension creates familiar SSMS key bindings in Azure Data Studio.
 
@@ -52,7 +52,7 @@ To create an extension:
 
 2. Choose **New Keymap** from the list of extension types:
 
-   ![extension generator](./media/tutorial-create-keymap-extension/extension-generator.png)
+   :::image type="content" source="media/keymap-extension/extension-generator.png" alt-text="Extension generator":::
 
 3. Follow the steps to fill in the extension name (for this tutorial, use **ssmskeymap2**), and add a description.
 
@@ -74,9 +74,9 @@ The top things I saw missing were:
 
 It's easy to find and replace these key bindings. Run *Open Keyboard Shortcuts* to show the **Keyboard Shortcuts** tab in Azure Data Studio, search for *query* and then choose **Change Key binding**. Once you're done changing the keybinding, you can see the updated mapping in the keybindings.json file (run *Open Keyboard Shortcuts* to see it).
 
-![keyboard shortcuts](./media/tutorial-create-keymap-extension/keyboard-shortcuts.png)
+:::image type="content" source="media/keymap-extension/keyboard-shortcuts.png" alt-text="Keyboard shortcuts":::
 
-![keybindings.json extension](./media/tutorial-create-keymap-extension/keybindings-json.png)
+:::image type="content" source="media/keymap-extension/key-bindings-json.png" alt-text="Keybindings.json extension":::
 
 **Step 2: Add shortcuts to the extension**
 
@@ -121,9 +121,9 @@ Ensure the Azure Data Studio Debug extension is installed in Visual Studio Code.
 
 Select **F5** to launch Azure Data Studio in debug mode with the extension running:
 
-:::image type="content" source="media/create-keymap-extension/install-extension.png" alt-text="Install extension":::
+:::image type="content" source="media/keymap-extension/install-extension.png" alt-text="Install extension":::
 
-:::image type="content" source="media/create-keymap-extension/test-extension.png" alt-text="test extension":::
+:::image type="content" source="media/keymap-extension/test-extension.png" alt-text="test extension":::
 
 Key maps are one of the quickest extensions to create, so your new extension should now be successfully working and ready to share.
 
@@ -149,7 +149,7 @@ Navigate to the base directory of the extension, and run `vsce package`. I had t
 
 Once this was done, my ssmskeymap-0.1.0.vsix file was created and ready to install and share with the world!
 
-:::image type="content" source="media/create-keymap-extension/extensions.png" alt-text="Install":::
+:::image type="content" source="media/keymap-extension/extensions.png" alt-text="Install":::
 
 ## Publish your extension to the marketplace
 

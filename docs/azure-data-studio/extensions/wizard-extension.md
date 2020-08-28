@@ -4,14 +4,14 @@ description: This tutorial demonstrates how to create a wizard extension to add 
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan
-ms.topic: tutorial
+ms.topic: how-to
 author: anjalia
 ms.author: t-anjaga
 ms.custom:
 ms.date: 08/28/2020
 ---
 
-# Tutorial: Create an Azure Data Studio Wizard extension
+# Create an Azure Data Studio Wizard extension
 
 This tutorial demonstrates how to create a new **Azure Data Studio Wizard extension**. The extension contributes a wizard to interact with users in Azure Data Studio.
 

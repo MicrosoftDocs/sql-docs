@@ -40,6 +40,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |classifier_name|**sysname**|For requests utilizing resources, The name of the classifier used for assigning resources and importance.||
 |resource_allocation_percentage|**decimal(5,2)**|The percentage amount of resources allocated to the request.</br>Applies to: Azure SQL Data Warehouse|
 |result_cache_hit|**decimal**|Details whether a completed query used result set cache.  </br>Applies to: Azure SQL Data Warehouse| 1 = Result set cache hit </br> 0 = Result set cache miss </br> Negative values = Reasons why result set caching was not used.  See remarks section for details.|
+|command2|**nvarchar9max)**|Holds the full text of the request as submitted by the user. Holds queries that are longer than 4000 characters.|Any valid query or request text. NULL = Queries that are 4000 characters long or less, for these queries the full text can be found under the command column.|
 ||||
   
 ## Remarks 

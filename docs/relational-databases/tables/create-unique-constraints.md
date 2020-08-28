@@ -100,7 +100,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
     ```  
   
-#### To create a unique constraint in a new table  
+#### To create a unique constraint on a new table  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

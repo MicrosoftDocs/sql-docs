@@ -1,5 +1,5 @@
 ---
-title: SSMS Query Editor
+title: SSMS Query Editor 
 description: SQL Server Management Studio (SSMS) Query Editor
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -47,9 +47,9 @@ ms.date: 08/28/2020
 This article explains the query editor's features and functions in SQL Server Management Studio (SSMS).
 
 > [!Note]
-> If you are interested in learning about tasks that can be done in the editor, please visit the [Editor tasks](#editor-tasks) section.
+> If you want to learn how to use Transact-SQL (T-SQL) F1 Help, please view the [Transact-SQL F1 Help](#transact-sql-f1-help) section.
 >
-> If you are interested in Transact-SQL (T-SQL) F1 Help, please view the [Transact-SQL F1 Help](#transact-sql-f1-help) section.
+> If you want to learn about tasks that you can do with the editor, please visit the [Editor tasks](#editor-tasks) section.
 
 The editors in SSMS share a typical architecture. The text editor implements the base level of functionality and can be used as a basic editor for text files. The other editors, or query editors, extend this functionality base by including a language service that defines the syntax of one of the languages supported in SQL Server. The query editors also implement varying levels of support for editor features such as IntelliSense and debugging. The query editors include the Database Engine Query Editor for use in building scripts containing T-SQL and XQuery statements, the MDX editor for the MDX language, the DMX editor for the DMX language, and the XML/A editor for the XML for Analysis language.
 You can use the Query Editor to create and run scripts containing Transact-SQL statements.

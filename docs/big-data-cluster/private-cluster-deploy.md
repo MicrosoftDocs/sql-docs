@@ -25,7 +25,7 @@ This article demonstrates how to use an AKS private cluster to restrict the use 
 
 ## Deploy private BDC cluster with AKS private cluster
 
-To get started, create a [AKS private cluster](/azure/aks/private-clusters) to make sure the network traffic between API server and node pools remains on the private network only. The control plane or API server has internal IP addresses in an AKS private cluster.  
+To get started, create a [AKS private cluster](/azure/aks/private-clusters) to make sure the network traffic between API server and node pools remains on the private network only. The control plane or API server has internal IP addresses in an AKS private cluster.
 
 This section shows you deploy a BDC cluster in Azure Kubernetes Service (AKS) private cluster with advanced networking (CNI).
 
@@ -63,7 +63,7 @@ echo $SUBNET_ID
 
 ### Create AKS private cluster with advanced networking (CNI)
 
-To be able to get to next step, you need to provision an AKS cluster with Standard Load Balancer with private cluster feature enabled.  Your command will look like as follows: 
+To be able to get to next step, you need to provision an AKS cluster with Standard Load Balancer with private cluster feature enabled. Your command will look like as follows: 
 
 ```console
 az aks create \
@@ -81,8 +81,8 @@ az aks create \
     --generate-ssh-keys
 ```
 
-After a successful deployment, you can go to `<MC_yourakscluster>` resource group and you’ll find the kube-apiserver is a private endpoint (as showed in the following).  
- 
+After a successful deployment, you can go to `<MC_yourakscluster>` resource group and you’ll find the `kube-apiserver` is a private endpoint. For example, see the following section.
+
 ## Connect to an AKS cluster
 
 ```console
@@ -112,9 +112,11 @@ azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.gate
 azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.appproxy.spec.endpoints[0].serviceType=NodePort"
 ```
 
-## Deploy private SQL Server Big Data Cluster with HA 
+## Deploy private SQL Server Big Data Cluster with HA
 
-In case you are  [deploying a SQL Server Big Data Cluster ( SQL-BDC ) with high availability ( HA )]( deployment-high-availability.md),  you’ll be using deploy aks-dev-test-ha deployment profile. After a successful deployment, you can use the same `kubectl get svc` command and you’ll see an additional ‘master-secondary-svc’ service is created which  you need to configure ServiceType as NodePort (as the following) . Other steps will be similar to what mentioned in previous section. 
+In case you are [deploying a SQL Server Big Data Cluster (SQL-BDC) with high availability (HA)](deployment-high-availability.md), you’ll be using deploy `aks-dev-test-ha` deployment profile. After a successful deployment, you can use the same `kubectl get svc` command and you’ll see an additional `master-secondary-svc` service is created. You need to configure `ServiceType` as `NodePort`. Other steps will be similar to what mentioned in previous section.
+
+The following example sets the `ServiceType` as `NodePort`:
 
 ```console
 azdata bdc config replace -c private-bdc-aks /bdc.json -j "$.spec.resources.master.spec.endpoints[1].serviceType=NodePort"
@@ -139,17 +141,15 @@ The deployment will take a few minutes and you can use the following command to 
 
 ## Check the service status
 
-Make sure using the following command to check the services and they are all in healthy without any external IPs:
+Use the following command to check the services. Verify that they are all healthy without any external IPs:
 
 ```console
 kubectl get services -n mssql-cluster
 ```
 
-Please check how to [manage BDC in AKS private cluster](private-cluster-manage.md)  and then the next step is to [connect to BDC cluster](connect-to-big-data-cluster.md).
-
+See how to [manage BDC in AKS private cluster](private-cluster-manage.md) and then the next step is to [connect to BDC cluster](connect-to-big-data-cluster.md).
 
 See automation scripts for this scenario at [SQL Server Samples repository on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/private-aks).
-
 
 ## Next steps
 

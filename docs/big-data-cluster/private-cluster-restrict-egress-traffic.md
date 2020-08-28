@@ -23,8 +23,9 @@ By default, AKS clusters have unrestricted outbound (egress) internet access for
 * Dev Space enabled and more scenarios of similar nature
 
 > [!NOTE]
-> Currently, when you deploy BDC in Azure Kubernetes Service ( AKS ) private cluster, there is no inbound dependencies in the scenario besides what we mentioned in this article, you can find all outbound dependencies at [control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)]( /azure/aks/limit-egress-traffic) . 
-This article covers how to deploy BDC in AKS private cluster with advanced networking and UDR (user-defined route) as well as its further integration with enterprise-grade networking environment. 
+> Currently, when you deploy BDC in Azure Kubernetes Service (AKS) private cluster, there is no inbound dependencies in the scenario besides what we mentioned in this article, you can find all outbound dependencies at [control egress traffic for cluster nodes in Azure Kubernetes Service (AKS)](/azure/aks/limit-egress-traffic) .
+
+This article covers how to deploy BDC in AKS private cluster with advanced networking and UDR (user-defined route) as well as its further integration with enterprise-grade networking environment.
 
 ## Use Azure firewall to restrict egress traffic
 
@@ -246,8 +247,6 @@ Use third party firewall to restrict egress traffic when deployed BDC with AKS p
 Please check how to [manage BDC in AKS private cluster](private-cluster-manage.md)  and then the next step is to [connect to BDC cluster](connect-to-big-data-cluster.md).
 
 See automation scripts for this scenario at [SQL Server Samples repository on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/private-aks).
-
-
 
 ## Next steps
 

@@ -15,7 +15,7 @@ ms.technology: big-data-cluster
 
 This article explains how to manage an Azure Kubernetes Service (AKS) private cluster with SQL Server big data clusters (BDC) deployed in Azure.
 
-To manage the AKS private cluster, you can use the same set of options mentioned in previous section about How to manage  BDC in AKS private cluster. 
+To manage the AKS private cluster, you can use the same set of options mentioned in previous section about How to manage  BDC in AKS private cluster.
 
 The easiest option is to:
 

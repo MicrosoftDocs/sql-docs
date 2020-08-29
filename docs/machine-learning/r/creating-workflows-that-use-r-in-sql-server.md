@@ -4,7 +4,7 @@ description: Integration scenarios combining SQL Server Machine Learning Service
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 03/17/2019  
+ms.date: 08/28/2020  
 ms.topic: how-to
 author: dphansen
 ms.author: davidph

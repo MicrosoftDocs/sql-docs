@@ -4,7 +4,7 @@ description: Embed R language code in a SQL Server stored procedure to make it a
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 03/15/2019  
+ms.date: 08/28/2020  
 ms.topic: how-to
 author: dphansen
 ms.author: davidph

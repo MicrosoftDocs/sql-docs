@@ -4,7 +4,7 @@ description: Migrate R code to a SQL Server stored procedure for solution deploy
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 04/15/2018  
+ms.date: 08/28/2020  
 ms.topic: how-to
 author: dphansen
 ms.author: davidph

@@ -57,9 +57,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
 3.  In the **Indexes/Keys** dialog box, click **Add**.  
   
-4.  In the grid under **General**, click **Type** and choose **Unique Key** from the drop-down list box to the right of the property.  
+4.  In the grid under **General**, click **Type** and choose **Unique Key** from the drop-down list box to the right of the property, and then click **Close**.  
   
-5.  On the **File** menu, click **Save**_table name_.  
+5.  On the **File** menu, click **Save** _table name_.  
 
 ##  <a name="TsqlProcedure"></a> Using Transact-SQL  
   
@@ -100,7 +100,7 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
     ```  
   
-#### To create a unique constraint in an new table  
+#### To create a unique constraint on a new table  
   
 1.  In **Object Explorer**, connect to an instance of [!INCLUDE[ssDE](../../includes/ssde-md.md)].  
   

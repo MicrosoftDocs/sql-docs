@@ -61,7 +61,7 @@ The following third-party sources and destinations are not supported:
 
 -   Oracle Source and Destination by Attunity
 -   Teradata Source and Destination by Attunity
--   SAP BI Source and Destination
+-   SAP BW Source and Destination
 
 ## Validate tasks and components
 

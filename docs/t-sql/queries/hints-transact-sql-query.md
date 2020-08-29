@@ -85,7 +85,7 @@ Query hints specify that the indicated hints are used in the scope of a query. T
   | { CONCAT | HASH | MERGE } UNION   
   | { LOOP | MERGE | HASH } JOIN   
   | EXPAND VIEWS   
-  | FAST number_rows   
+  | FAST <integer_value>   
   | FORCE ORDER   
   | { FORCE | DISABLE } EXTERNALPUSHDOWN
   | { FORCE | DISABLE } SCALEOUTEXECUTION
@@ -173,12 +173,13 @@ Specifies the indexed views are expanded. Also specifies the Query Optimizer won
   
 This query hint virtually disallows direct use of indexed views and indexes on indexed views in the query plan.  
   
-The indexed view remains condensed if there's a direct reference to the view in the query's SELECT part. The view also remains condensed if you specify WITH (NOEXPAND) or WITH (NOEXPAND, INDEX(index\_value_ [ **,**_...n_ ] ) ). For more information about the query hint NOEXPAND, see [Using NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
+> [!NOTE]
+> The indexed view remains condensed if there's a direct reference to the view in the query's SELECT part. The view also remains condensed if you specify WITH (NOEXPAND) or WITH (NOEXPAND, INDEX( _<index\_value>_ [ **,**_...n_ ] ) ). For more information about the query hint NOEXPAND, see [Using NOEXPAND](../../t-sql/queries/hints-transact-sql-table.md#using-noexpand).  
   
 The hint only affects the views in the statements' SELECT part, including those views in INSERT, UPDATE, MERGE, and DELETE statements.  
   
-FAST _number\_rows_  
-Specifies that the query is optimized for fast retrieval of the first _number\_rows_. This result is a nonnegative integer. After the first _number\_rows_ are returned, the query continues execution and produces its full result set.  
+FAST _<integer\_value>_  
+Specifies that the query is optimized for fast retrieval of the first _<integer\_value>_ number of rows. This result is a non-negative integer. After the first _<integer\_value>_ number of rows are returned, the query continues execution and produces its full result set.  
   
 FORCE ORDER  
 Specifies that the join order indicated by the query syntax is preserved during query optimization. Using FORCE ORDER doesn't affect possible role reversal behavior of the Query Optimizer.  

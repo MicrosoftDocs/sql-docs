@@ -2,7 +2,7 @@
 description: "CREATE FUNCTION (SQL Data Warehouse)"
 title: "CREATE FUNCTION (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/10/2017"
+ms.date: "08/06/2020"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 # CREATE FUNCTION (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Creates a user-defined function in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. The return value must be a scalar (single) value. Use this statement to create a reusable routine that can be used in these ways:  
+  Creates a user-defined function in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the return value must be a scalar (single) value. In [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], the return value may be either a scalar value or a table. Use this statement to create a reusable routine that can be used in these ways:  
   
 -   In [!INCLUDE[tsql](../../includes/tsql-md.md)] statements such as SELECT  
   
@@ -30,12 +30,14 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 -   To replace a stored procedure  
   
+-   Use an inline function as a filter predicate for a security policy  
+  
  ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## Syntax  
   
 ```syntaxsql
---Transact-SQL Scalar Function Syntax  
+-- Transact-SQL Scalar Function Syntax  
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
     [ = default ] }   
@@ -56,8 +58,22 @@ RETURNS return_data_type
     [ SCHEMABINDING ]  
   | [ RETURNS NULL ON NULL INPUT | CALLED ON NULL INPUT ]  
 }  
-  
 ```  
+
+```syntaxsql
+-- Transact-SQL Inline Table-Valued Function Syntax (in Azure Synapse Analytics)
+CREATE FUNCTION [ schema_name. ] function_name
+( [ { @parameter_name [ AS ] parameter_data_type
+    [ = default ] }
+    [ ,...n ]
+  ]
+)
+RETURNS TABLE
+    [ WITH SCHEMABINDING ]
+    [ AS ]
+    RETURN [ ( ] select_stmt [ ) ]
+[ ; ]
+```
   
 ## Arguments  
  *schema_name*  
@@ -97,6 +113,9 @@ RETURNS return_data_type
   
  *scalar_expression*  
  Specifies the scalar value that the scalar function returns.  
+
+ *select_stmt* **APPLIES TO**: Azure Synapse Analytics  
+ Is the single SELECT statement that defines the return value of an inline table-valued function (TVF).
   
  **\<function_option>::=** 
   
@@ -185,6 +204,35 @@ GO
   
 SELECT dbo.ConvertInput(15) AS 'ConvertedValue';  
 ```  
+
+## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
+
+### A. Creating an inline table-valued function
+ The following example creates an inline table-valued function to return some key information on modules, based on the `objectType` parameter. It makes use of some of the system catalog views mentioned in [Metadata](#Metadata).
+
+```sql
+CREATE FUNCTION dbo.ModuleByType(@objectType CHAR(2))
+RETURNS TABLE
+AS
+RETURN
+(
+	SELECT 
+		sm.object_id AS 'Object Id',
+		o.create_date AS 'Date Created',
+		OBJECT_NAME(sm.object_id) AS 'Name',
+		o.type AS 'Type',
+		o.type_desc AS 'Type Description', 
+		sm.definition AS 'Module Description'
+	FROM sys.sql_modules AS sm  
+	JOIN sys.objects AS o ON sm.object_id = o.object_id
+	WHERE type = @objectType
+);
+GO
+```
+The function is called to return all view (**V**) objects with:
+```sql
+select * from dbo.ModuleByType('V');
+```
   
 ## See Also  
  [ALTER FUNCTION (SQL Server PDW)](https://msdn.microsoft.com/25ff3798-eb54-4516-9973-d8f707a13f6c)   

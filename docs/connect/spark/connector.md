@@ -130,28 +130,28 @@ For more information and explanation, see the resolution to [https://github.com/
 > [!WARNING]
 > The `overwrite` mode first drops the table if it already exists in the database by default. Please use this option with due care to avoid unexpected data loss.
 
-When using mode `overwrite` if you do not use the option `truncate` on recreation of the table, indexes will be lost. For example a columnstore table would now be a heap. If you want to maintain existing indexing please also specify option `truncate` with value true. i.e .option(`truncate`,true)
+When using mode `overwrite` if you do not use the option `truncate` on recreation of the table, indexes will be lost. For example a columnstore table would now be a heap. If you want to maintain existing indexing please also specify option `truncate` with value true. i.e .option(`truncate",true)
 
 ```python
-server_name = `jdbc:sqlserver://{SERVER_ADDR}`
-database_name = `database_name`
-url = server_name + `;` + `databaseName=` + database_name + `;`
+server_name = "jdbc:sqlserver://{SERVER_ADDR}"
+database_name = "database_name"
+url = server_name + ";" + "databaseName=" + database_name + ";"
 
-table_name = `table_name`
-username = `username`
-password = `password123!#` # Please specify password here
+table_name = "table_name"
+username = "username"
+password = "password123!#" # Please specify password here
 
 try:
   df.write \
-    .format(`com.microsoft.sqlserver.jdbc.spark`) \
-    .mode(`overwrite`) \
-    .option(`url`, url) \
-    .option(`dbtable`, table_name) \
-    .option(`user`, username) \
-    .option(`password`, password) \
+    .format("com.microsoft.sqlserver.jdbc.spark") \
+    .mode("overwrite") \
+    .option("url", url) \
+    .option("dbtable", table_name) \
+    .option("user", username) \
+    .option("password", password) \
     .save()
 except ValueError as error :
-    print(`Connector write failed`, error)
+    print("Connector write failed", error)
 ```
 
 ### Append to SQL Table
@@ -159,15 +159,15 @@ except ValueError as error :
 ```python
 try:
   df.write \
-    .format(`com.microsoft.sqlserver.jdbc.spark`) \
-    .mode(`append`) \
-    .option(`url`, url) \
-    .option(`dbtable`, table_name) \
-    .option(`user`, username) \
-    .option(`password`, password) \
+    .format("com.microsoft.sqlserver.jdbc.spark") \
+    .mode("append") \
+    .option("url", url) \
+    .option("dbtable", table_name) \
+    .option("user", username) \
+    .option("password", password) \
     .save()
 except ValueError as error :
-    print(`Connector write failed`, error)
+    print("Connector write failed", error)
 ```
 
 ### Specifying the isolation level
@@ -175,18 +175,18 @@ except ValueError as error :
 This connector by default uses READ_COMMITTED isolation level when performing the bulk insert into the database. If you wish to override this to another isolation level, please use the `mssqlIsolationLevel` option as shown below.
 
 ```python
-    .option(`mssqlIsolationLevel`, `READ_UNCOMMITTED`) \
+    .option("mssqlIsolationLevel", "READ_UNCOMMITTED") \
 ```
 
 ### Read from SQL Table
 
 ```python
 jdbcDF = spark.read \
-        .format(`com.microsoft.sqlserver.jdbc.spark`) \
-        .option(`url`, url) \
-        .option(`dbtable`, table_name) \
-        .option(`user`, username) \
-        .option(`password`, password).load()
+        .format("com.microsoft.sqlserver.jdbc.spark") \
+        .option("url", url) \
+        .option("dbtable", table_name) \
+        .option("user", username) \
+        .option("password", password).load()
 ```
 
 ### Azure Active Directory Authentication
@@ -196,15 +196,15 @@ jdbcDF = spark.read \
 ```python
 context = adal.AuthenticationContext(authority)
 token = context.acquire_token_with_client_credentials(resource_app_id_url, service_principal_id, service_principal_secret)
-access_token = token[`accessToken`]
+access_token = token["accessToken"]
 
 jdbc_db = spark.read \
-        .format(`com.microsoft.sqlserver.jdbc.spark`) \
-        .option(`url`, url) \
-        .option(`dbtable`, table_name) \
-        .option(`accessToken`, access_token) \
-        .option(`encrypt`, `true`) \
-        .option(`hostNameInCertificate`, `*.database.windows.net`) \
+        .format("com.microsoft.sqlserver.jdbc.spark") \
+        .option("url", url) \
+        .option("dbtable", table_name) \
+        .option("accessToken", access_token) \
+        .option("encrypt", "true") \
+        .option("hostNameInCertificate", "*.database.windows.net") \
         .load()
 ```
 
@@ -212,14 +212,14 @@ jdbc_db = spark.read \
 
 ```python
 jdbc_df = spark.read \
-        .format(`com.microsoft.sqlserver.jdbc.spark`) \
-        .option(`url`, url) \
-        .option(`dbtable`, table_name) \
-        .option(`authentication`, `ActiveDirectoryPassword`) \
-        .option(`user`, user_name) \
-        .option(`password`, password) \
-        .option(`encrypt`, `true`) \
-        .option(`hostNameInCertificate`, `*.database.windows.net`) \
+        .format("com.microsoft.sqlserver.jdbc.spark") \
+        .option("url", url) \
+        .option("dbtable", table_name) \
+        .option("authentication", "ActiveDirectoryPassword") \
+        .option("user", user_name) \
+        .option("password", password) \
+        .option("encrypt", "true") \
+        .option("hostNameInCertificate", "*.database.windows.net") \
         .load()
 ```
 

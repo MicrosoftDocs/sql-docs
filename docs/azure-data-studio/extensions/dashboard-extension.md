@@ -49,7 +49,7 @@ The Azure Data Studio connection dashboard is a powerful tool that summarizes an
 
 There are two variations of the dashboard: the 'server dashboard' that summarizes the entire server, and the 'database dashboard' that summarizes an individual database. You can access either by right-clicking on a server or a database in the Connections viewlet of Azure Data Studio, and clicking **Manage**:
 
-:::image type="content" source="media/create-dashboard-extension/dashboard-summary.gif" alt-text="Dashboards intro":::
+:::image type="content" source="media/dashboard-extension/dashboard-summary.gif" alt-text="Dashboards intro":::
 
 There are 3 key contribution points for extensions to add functionality to the dashboard:
 
@@ -96,7 +96,7 @@ Here are some changes to try out:
 
 - Play around with the insights types, including 'bar', 'horizontalBar', 'timeSeries'
 - Write your own queries to run against your SQL Server connection
-- Refer to this [sample insight tutorial](tutorial-qds-sql-server.md) or [this one](tutorial-table-space-sql-server.md) for specific insight tutorials
+- Refer to this [sample insight tutorial](../tutorial-qds-sql-server.md) or [this one](../tutorial-table-space-sql-server.md) for specific insight tutorials
 
 ## Package your extension
 
@@ -143,4 +143,4 @@ You can always refer to the [Visual Studio Code extension guide](https://code.vi
 To learn how to work with T-SQL in Azure Data Studio, complete the T-SQL Editor tutorial:
 
 > [!div class="nextstepaction"]
-> [Use the Transact-SQL editor to create database objects](tutorial-sql-editor.md).
+> [Use the Transact-SQL editor to create database objects](../tutorial-sql-editor.md).

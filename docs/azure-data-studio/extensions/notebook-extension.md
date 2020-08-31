@@ -80,7 +80,7 @@ Completing the previous steps creates a new folder with the sample notebook. Ope
 
 This is what your project should currently look like:
 
-   ![extension file structure](./media/tutorial-create-notebook-extension/notebook-filestructure-generator.png)
+   ![extension file structure](./media/notebook-extension/notebook-filestructure-generator.png)
 
 The `vsc-extension-quickstart.md` provides you with a reference of the important files. The `README.md` is where you can provide documentation for your new extension. Note the `package.json`, `notebook.ts`, and `pySample.ipynb` files.
 

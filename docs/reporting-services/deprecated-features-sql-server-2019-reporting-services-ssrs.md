@@ -1,6 +1,6 @@
 ---
 title: "Deprecated features in SQL Server 2019 Reporting Services | Microsoft Docs"
-description: This article describes features that will be deprecated in the next version of SQL Server Reporting Services.
+description: This article describes features in SQL Server 2019 Reporting Services that will be deprecated in the next version of SQL Server Reporting Services.
 ms.date: 08/31/2019
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"

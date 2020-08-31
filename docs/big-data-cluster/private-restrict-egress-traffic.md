@@ -250,6 +250,6 @@ See automation scripts for this scenario at [SQL Server Samples repository on Gi
 
 ## Next steps
 
-[Manage big data cluster in AKS private cluster](private-cluster-manage.md)
+[Manage big data cluster in AKS private cluster](private-manage.md)
 
 [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)

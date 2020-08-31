@@ -153,7 +153,7 @@ See automation scripts for this scenario at [SQL Server Samples repository on Gi
 
 ## Next steps
 
-[Manage a private cluster](private-cluster-manage.md)
+[Manage a private cluster](private-manage.md)
 
 [Restrict egress traffic of Private BDC cluster](private-cluster-restrict-egress-traffic.md)
 

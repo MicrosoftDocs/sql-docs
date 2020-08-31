@@ -2777,11 +2777,6 @@
         - name: Azure Key Vault sample version 6.0.0
           href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
 
-- name: Spark
-  items:
-  - name: Connector for SQL Server
-    href: ../connect/spark/connector.md
-
 - name: Node.js
   items:
   - name: Node.js Driver for SQL Server
@@ -5817,7 +5812,10 @@
   - name: "Step 3: Proof of concept connecting to SQL using Ruby"
     href: ../connect/ruby/step-3-proof-of-concept-connecting-to-sql-using-ruby.md
 
-
+- name: Spark
+  items:
+  - name: Connector for SQL Server
+    href: ../connect/spark/connector.md
 
 # docs/ado/
 - name: ADO

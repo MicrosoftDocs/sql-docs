@@ -24,7 +24,7 @@ This library contains the source code for the Apache Spark Connector for SQL Ser
 
 This is a V1 release of the Apache Spark Connector for SQL Server and Azure SQL. It is a high-performance connector that enables you transfer data from Spark to SQLServer.
 
-For main changes from previous releases and known issues please refer to [CHANGELIST](docs/CHANGELIST.md)
+For the latest information about the connector, see [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
 
 ## Supported Features
 
@@ -114,17 +114,7 @@ The Apache Spark Connector for SQL Server and Azure SQL is based on the Spark Da
 
 To include the connector in your projects download this repository and build the jar using SBT.
 
-### Migrating from Legacy Azure SQL Connector for Spark
-
-#### Receiving `java.lang.NoClassDefFoundError` when trying to use the new connector with Azure Databricks?
-
-If you are migrating from the previous Azure SQL Connector for Spark and have manually installed drivers onto that cluster for AAD compatibility, you will most likely need to remove those custom drivers, restore the previous drivers that ship by default with Databricks, uninstall the previous connector, and restart your cluster.  You may be better off spinning up a new cluster. 
-
-With this new connector, you should be able to simply install onto a cluster (new or existing cluster that hasn't had its drivers modified) or a cluster which previously used modified drivers for the older Azure SQL Connector for Spark provided the modified drivers were removed and the previous default drivers restored.
-
-For more information and explanation, see the resolution to [https://github.com/microsoft/sql-spark-connector/issues/26](https://github.com/microsoft/sql-spark-connector/issues/26#issuecomment-672006339).
-
-### Write to a new SQL Table
+## Write to a new SQL Table
 
 > [!WARNING]
 > The `overwrite` mode first drops the table if it already exists in the database by default. Please use this option with due care to avoid unexpected data loss.
@@ -169,7 +159,7 @@ except ValueError as error :
     print("Connector write failed", error)
 ```
 
-### Specifying the isolation level
+## Specify the isolation level
 
 This connector by default uses READ_COMMITTED isolation level when performing the bulk insert into the database. If you wish to override this to another isolation level, please use the `mssqlIsolationLevel` option as shown below.
 
@@ -177,7 +167,7 @@ This connector by default uses READ_COMMITTED isolation level when performing th
     .option("mssqlIsolationLevel", "READ_UNCOMMITTED") \
 ```
 
-### Read from SQL Table
+## Read from SQL Table
 
 ```python
 jdbcDF = spark.read \
@@ -188,9 +178,9 @@ jdbcDF = spark.read \
         .option("password", password).load()
 ```
 
-### Azure Active Directory Authentication
+## Azure Active Directory Authentication
 
-#### Python Example with Service Principal
+### Python Example with Service Principal
 
 ```python
 context = adal.AuthenticationContext(authority)
@@ -207,7 +197,7 @@ jdbc_db = spark.read \
         .load()
 ```
 
-#### Python Example with Active Directory Password
+### Python Example with Active Directory Password
 
 ```python
 jdbc_df = spark.read \
@@ -254,4 +244,4 @@ contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additio
 
 ## Next steps
 
-Visit the [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector)
+Visit the [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).

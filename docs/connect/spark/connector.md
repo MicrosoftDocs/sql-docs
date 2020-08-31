@@ -20,11 +20,7 @@ This library contains the source code for the Apache Spark Connector for SQL Ser
 
 [Apache Spark](https://spark.apache.org/) is a unified analytics engine for large-scale data processing.
 
-## About This Release
-
-This is a V1 release of the Apache Spark Connector for SQL Server and Azure SQL. It is a high-performance connector that enables you transfer data from Spark to SQLServer.
-
-For the latest information about the connector, see [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
+You can build the connector from source or download the jar from the Release section in Github. For the latest information about the connector, see [SQL Spark connector GitHub repository](https://github.com/microsoft/sql-spark-connector).
 
 ## Supported Features
 
@@ -224,23 +220,6 @@ Check the [sample notebooks](https://github.com/microsoft/sql-spark-connector/tr
 ## Support
 
 The Apache Spark Connector for Azure SQL and SQL Server is an open-source project. This connector does not come with any Microsoft support. For issues with or questions about the connector, please create an Issue in this project repository. The connector community is active and monitoring submissions.
-
-## Roadmap
-Visit the Connector project in the **Projects** tab to see needed / planned items. Feel free to make an issue and start contributing!
-
-## Contributing
-
-This project welcomes contributions and suggestions.  Most contributions require you to agree to a
-Contributor License Agreement (CLA) declaring that you have the right to, and actually do, grant us
-the rights to use your contribution. For details, visit https://cla.opensource.microsoft.com.
-
-When you submit a pull request, a CLA bot will automatically determine whether you need to provide
-a CLA and decorate the PR appropriately (e.g., status check, comment). Simply follow the instructions
-provided by the bot. You will only need to do this once across all repos using our CLA.
-
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or
-contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
 
 ## Next steps
 

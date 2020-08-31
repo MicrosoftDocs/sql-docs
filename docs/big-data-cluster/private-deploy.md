@@ -95,7 +95,7 @@ After connecting to an AKS cluster, you can start to deploy BDC, and you can pre
 
 ```console
 azdata bdc config init --source aks-dev-test --target private-bdc-aks --force
-```console
+```
 
 Generate and config BDC custom deployment profile:
 
@@ -136,7 +136,7 @@ azdata bdc create --config-profile private-bdc-aks --accept-eula yes
 The deployment will take a few minutes and you can use the following command to check the deployment status: 
 
 ```console
- kubectl get pods -n mssql-cluster -w
+kubectl get pods -n mssql-cluster -w
 ```
 
 ## Check the service status

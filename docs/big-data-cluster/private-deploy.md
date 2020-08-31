@@ -147,7 +147,7 @@ Use the following command to check the services. Verify that they are all health
 kubectl get services -n mssql-cluster
 ```
 
-See how to [manage BDC in AKS private cluster](private-cluster-manage.md) and then the next step is to [connect to BDC cluster](connect-to-big-data-cluster.md).
+See how to [manage BDC in AKS private cluster](private-manage.md) and then the next step is to [connect to BDC cluster](connect-to-big-data-cluster.md).
 
 See automation scripts for this scenario at [SQL Server Samples repository on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/private-aks).
 
@@ -155,6 +155,6 @@ See automation scripts for this scenario at [SQL Server Samples repository on Gi
 
 [Manage a private cluster](private-manage.md)
 
-[Restrict egress traffic of Private BDC cluster](private-cluster-restrict-egress-traffic.md)
+[Restrict egress traffic of Private BDC cluster](private-restrict-egress-traffic.md)
 
 [Connect to a SQL Server big data cluster with Azure Data Studio](connect-to-big-data-cluster.md)

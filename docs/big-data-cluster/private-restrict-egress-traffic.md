@@ -249,7 +249,7 @@ Use a third party firewall to restrict egress traffic when deployed BDC with AKS
 * Azure Global required network rules / FQDN/application rules mentioned here.
 * Optional recommended FQDN / application rules for AKS clusters mentioned here. 
 
-Please check how to [manage BDC in AKS private cluster](private-cluster-manage.md)  and then the next step is to [connect to BDC cluster](connect-to-big-data-cluster.md).
+Please check how to [manage BDC in AKS private cluster](private-manage.md)  and then the next step is to [connect to BDC cluster](connect-to-big-data-cluster.md).
 
 See automation scripts for this scenario at [SQL Server Samples repository on GitHub](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/private-aks).
 

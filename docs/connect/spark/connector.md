@@ -1,11 +1,11 @@
 ---
-title: `Apache Spark connector for SQL Server`
-description: `Learn how to use the Apache Spark connector for SQL Server.` 
-ms.custom: ``
-ms.date: `08/31/2020`
+title: "Apache Spark connector for SQL Server"
+description: "Learn how to use the Apache Spark connector for SQL Server." 
+ms.custom: ""
+ms.date: 08/31/2020
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ``
+ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: conceptual
 author: rajmera3

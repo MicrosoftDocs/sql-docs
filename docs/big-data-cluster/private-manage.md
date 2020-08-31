@@ -17,7 +17,7 @@ This article explains how to manage an Azure Kubernetes Service (AKS) private cl
 
 As described in [Create a private cluster](/azure/aks/private-clusters/), the AKS private cluster API server endpoint has no public IP address. To manage, the API server, use a VM that has access to the AKS clusters's Azure Virtual Network (VNet).
 
-## Simplest option: Azure VM - same VNet
+## Azure VM - same VNet
 
 The simplest method is to deploy an Azure VM in the same VNet as the AKS cluster.
 

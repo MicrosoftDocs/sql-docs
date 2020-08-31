@@ -40,6 +40,35 @@ GeneMi , 2019/03/22.
 P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
 
+## 15.9.6,&nbsp; SSDT for VS 2017
+
+_Released:_ &nbsp; Aug 31, 2020  
+_Build Number:_ &nbsp; 14.0.16222.0  
+_SSDT for Visual Studio 2017._
+
+### What's New?
+
+| New Item | Details |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Fixed an issue that **Preview** button doesn't work on the OLE DB source when connecting to a SQL Server Analysis Services (SSAS) data source. |
+| Integration Services (SSIS) | Fixed an issue that removing an input or output of a data flow component before removing the associated path might cause a COMException error. |
+| Integration Services (SSIS) | Fixed an issue that the SSAS Processing task can't connect to a Power BI workspace and refresh its models. |
+| Integration Services (SSIS) | Fixed an issue that Visual Studio hangs on debugging script task/component when using x64 runtime and targeting SQL Server 2017. |
+| Integration Services (SSIS) | Fixed an issue that the Import/Export wizard crashes when selecting a MySQL driver in some environments. |
+| Integration Services (SSIS) | Fixed some issues related to accessibility and high DPI. |
+| Integration Services (SSIS) | Allow users to skip validation when opening packages, which improves performance. For more information, see [Accelerate opening SSIS packages in SSDT](https://techcommunity.microsoft.com/t5/sql-server-integration-services/accelerate-the-opening-of-ssis-package-in-ssdt/ba-p/1607099). |
+| Integration Services (SSIS) | Block deployment to Azure-SSIS when target server version isn't SQL Server 2017. |
+
+### Known issues
+
+| Known issue | Details |
+| :---------- | :------ |
+| SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue applies only to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog isn't affected. |
+| Power Query Source might not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
+| Power Query Source might not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
+| Power Query Source isn't localized. | &nbsp; |
+| &nbsp; | &nbsp; |
+
 ## 15.9.5,&nbsp; SSDT for VS 2017
 
 _Released:_ &nbsp; May 27, 2020  

@@ -2777,7 +2777,10 @@
         - name: Azure Key Vault sample version 6.0.0
           href: ../connect/jdbc/azure-key-vault-sample-version-6.0.0.md
 
-
+- name: Spark
+  items:
+  -name: Connector for SQL Server
+    href: ../connect/spark/connector.md
 
 - name: Node.js
   items:

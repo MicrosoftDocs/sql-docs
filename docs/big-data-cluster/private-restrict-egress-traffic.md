@@ -161,7 +161,12 @@ You can associate user-defined route table (UDR) to AKS cluster where deployed B
 ```azurecli
 az network vnet subnet update -g $RESOURCE_GROUP --vnet-name $VNET_NAME --name $SUBNET_NAME --route-table $FWROUTE_TABLE_NAME
 ```
-## Create service principal (SP) and assign permissions to the VNet
+
+## Create & configure service principal (SP)
+
+In this step, you need to create the service principal and assign permission to the virtual network.
+
+See the following example: 
 
 ```azurecli
 # Create SP and Assign Permission to Virtual Network
@@ -238,10 +243,10 @@ azdata bdc create --config-profile private-bdc-aks --accept-eula yes
 
 ## Use third party firewall instead of Azure Firewall
 
-Use third party firewall to restrict egress traffic when deployed BDC with AKS private cluster. For example, [Palo Alto Networks](https://www.paloaltonetworks.com/) provides firewall products in the Azure Marketplace. These firewalls can be used in private deployment solutions with more compliant configurations. Any firewall should provide the following network rules:
+Use a third party firewall to restrict egress traffic when deployed BDC with AKS private cluster. For example, see [Azure Marketplace firewalls](https://azuremarketplace.microsoft.com/marketplace/apps?search=firewall&page=1). Third party firewalls can be used in private deployment solutions with more compliant configurations. The firewall should provide the following network rules:
 
-* All the required outbound network rules and FQDNs for AKS clusters and all Wildcard HTTP/HTTPS endpoints and dependencies that can vary with your AKS cluster based on a number of qualifiers and your actual requirements. 
-* Azure Global required network rules / FQDN/application rules mentioned here. 
+* All the required outbound network rules and FQDNs for AKS clusters and all wildcard HTTP/HTTPS endpoints and dependencies that can vary with your AKS cluster based on a number of qualifiers and your actual requirements.
+* Azure Global required network rules / FQDN/application rules mentioned here.
 * Optional recommended FQDN / application rules for AKS clusters mentioned here. 
 
 Please check how to [manage BDC in AKS private cluster](private-cluster-manage.md)  and then the next step is to [connect to BDC cluster](connect-to-big-data-cluster.md).

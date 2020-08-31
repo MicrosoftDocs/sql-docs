@@ -2780,7 +2780,7 @@
 - name: Spark
   items:
   - name: Connector for SQL Server
-    href: ../connect/spark/connector.md
+    href: ../spark/connector.md
 
 - name: Node.js
   items:

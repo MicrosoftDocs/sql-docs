@@ -1,4 +1,5 @@
 ---
+description: "Progress Report Event Category"
 title: "Progress Report Event Category | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

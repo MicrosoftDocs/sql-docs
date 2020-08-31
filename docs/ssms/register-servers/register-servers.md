@@ -1,4 +1,5 @@
 ---
+description: "Register Servers"
 title: Register Servers
 ms.prod: sql
 ms.prod_service: sql-tools

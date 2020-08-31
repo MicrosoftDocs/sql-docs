@@ -1,6 +1,6 @@
 ---
 title: Sessions (OLE DB driver)
-description: "Sessions in OLE DB Driver for SQL Server"
+description: Learn how to use the OLE DB Driver for SQL Server to connect to a SQL Server database. A session represents a single connection to an instance of SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -11,8 +11,8 @@ ms.topic: "reference"
 helpviewer_keywords: 
   - "sessions [OLE DB]"
   - "OLE DB Driver for SQL Server, sessions"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Sessions
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

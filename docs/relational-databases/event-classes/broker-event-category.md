@@ -1,4 +1,5 @@
 ---
+description: "Broker Event Category"
 title: "Broker Event Category | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2019"

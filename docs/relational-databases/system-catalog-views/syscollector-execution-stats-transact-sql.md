@@ -1,4 +1,5 @@
 ---
+description: "syscollector_execution_stats (Transact-SQL)"
 title: "syscollector_execution_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

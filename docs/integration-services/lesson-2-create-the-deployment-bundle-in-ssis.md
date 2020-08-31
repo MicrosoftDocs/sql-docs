@@ -1,4 +1,5 @@
 ---
+description: "Lesson 2: Create the Deployment Bundle in SSIS"
 title: "Lesson 2: Create the Deployment Bundle in SSIS | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

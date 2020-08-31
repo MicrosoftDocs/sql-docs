@@ -1,4 +1,5 @@
 ---
+description: "Explicit Data Type Conversion Function"
 title: "Explicit Data Type Conversion Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

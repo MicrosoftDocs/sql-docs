@@ -1,4 +1,5 @@
 ---
+description: "CDC Instance Deployment Script"
 title: "CDC Instance Deployment Script | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

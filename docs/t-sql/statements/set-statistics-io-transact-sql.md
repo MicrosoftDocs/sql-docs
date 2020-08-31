@@ -1,4 +1,5 @@
 ---
+description: "SET STATISTICS IO (Transact-SQL)"
 title: "SET STATISTICS IO (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/10/2016"
@@ -40,7 +41,9 @@ ms.author: carlrab
 SET STATISTICS IO { ON | OFF }  
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  When STATISTICS IO is ON, statistical information is displayed, and when OFF, the information isn't displayed.   
   
  After this option is set ON, all [!INCLUDE[tsql](../../includes/tsql-md.md)] statements return the statistical information until the option is set to OFF.  

@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_cdc_map_time_to_lsn (Transact-SQL)"
 title: "sys.fn_cdc_map_time_to_lsn (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -43,7 +44,7 @@ sys.fn_cdc_map_time_to_lsn ( '<relational_operator>', tracking_time )
 ```  
   
 ## Arguments  
- **'**<relational_operator>**'** { largest less than | largest less than or equal | smallest greater than | smallest greater than or equal }  
+ **'**<relational_operator>**'** { largest less than \| largest less than or equal \| smallest greater than \| smallest greater than or equal }  
  Is used to identify a distinct LSN value in within the **cdc.lsn_time_mapping** table with an associated **tran_end_time** that satisfies the relation when compared to the *tracking_time* value.  
   
  *relational_operator* is **nvarchar(30)**.  

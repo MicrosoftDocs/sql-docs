@@ -1,8 +1,9 @@
 ---
+description: "Value Property (ADO MD)"
 title: "Value Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,13 +19,13 @@ author: rothja
 ms.author: jroth
 ---
 # Value Property (ADO MD)
-Indicates the value of the current [cell](../../../ado/reference/ado-md-api/cell-object-ado-md.md).  
+Indicates the value of the current [cell](./cell-object-ado-md.md).  
   
 ## Return Values  
  Returns a **Variant** and is read-only.  
   
 ## Applies To  
- [Cell Object (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
+ [Cell Object (ADO MD)](./cell-object-ado-md.md)  
   
 ## See Also  
- [FormattedValue Property (ADO MD)](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)
+ [FormattedValue Property (ADO MD)](./formattedvalue-property-ado-md.md)

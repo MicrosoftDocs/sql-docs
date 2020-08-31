@@ -1,4 +1,5 @@
 ---
+description: "Database Mirroring - sys.dm_db_mirroring_auto_page_repair"
 title: "sys.dm_db_mirroring_auto_page_repair (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

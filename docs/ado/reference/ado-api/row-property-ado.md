@@ -1,8 +1,9 @@
 ---
+description: "Row Property (ADO)"
 title: "Row Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -21,7 +22,7 @@ author: rothja
 ms.author: jroth
 ---
 # Row Property (ADO)
-Gets or sets an OLE DB **Row** object from or on an [ADORecordConstruction Interface](../../../ado/reference/ado-api/adorecordconstruction-interface.md) object. When you use **put_Row** to set a **Row** object, a row is turned into an ADO **Record** object.  
+Gets or sets an OLE DB **Row** object from or on an [ADORecordConstruction Interface](./adorecordconstruction-interface.md) object. When you use **put_Row** to set a **Row** object, a row is turned into an ADO **Record** object.  
   
 ## Read/write.Syntax  
   
@@ -41,4 +42,4 @@ HRESULT put_Row([in] IUnknown* pRow);
  This property method returns the standard HRESULT values, including S_OK and E_FAIL.  
   
 ## Applies To  
- [ADORecordConstruction Interface](../../../ado/reference/ado-api/adorecordconstruction-interface.md)
+ [ADORecordConstruction Interface](./adorecordconstruction-interface.md)

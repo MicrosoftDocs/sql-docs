@@ -1,4 +1,5 @@
 ---
+description: "Add or Change a Property Expression"
 title: "Add or Change a Property Expression | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

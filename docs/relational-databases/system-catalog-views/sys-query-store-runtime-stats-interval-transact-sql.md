@@ -1,4 +1,5 @@
 ---
+description: "sys.query_store_runtime_stats_interval (Transact-SQL)"
 title: "sys.query_store_runtime_stats_interval (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/23/2019"

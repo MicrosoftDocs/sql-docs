@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Backup and Restore with Microsoft Azure Blob Storage Service"
 title: "Backup & restore with Azure Blob Storage"
 storage: Learn about SQL Server backup to and restore from Azure Blob storage, including the benefits of using Azure Blob storage to store SQL Server backups.
 ms.custom: seo-lt-2019

@@ -1,4 +1,5 @@
 ---
+description: "LIKE Predicate Escape Character"
 title: "LIKE Predicate Escape Character | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "catalog.delete_folder (SSISDB Database)"
 title: "catalog.delete_folder (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

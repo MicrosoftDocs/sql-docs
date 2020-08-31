@@ -1,4 +1,5 @@
 ---
+description: "Functions (MDX Syntax)"
 title: "Functions (MDX Syntax) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

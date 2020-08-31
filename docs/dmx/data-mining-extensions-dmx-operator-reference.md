@@ -1,4 +1,5 @@
 ---
+description: "Data Mining Extensions (DMX) Operator Reference"
 title: "Data Mining Extensions (DMX) Operator Reference | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

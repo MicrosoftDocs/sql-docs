@@ -1,7 +1,8 @@
 ---
+description: "CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server"
 title: "CREATE EXTERNAL LIBRARY (Transact-SQL) - SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: 06/10/2020
+ms.date: 08/26/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: machine-learning
@@ -21,7 +22,7 @@ manager: cgronlund
 monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-current||=sqlallproducts-allversions"
 ---
 # CREATE EXTERNAL LIBRARY (Transact-SQL)  
-[!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
+[!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
 ::: moniker range=">=sql-server-2017||>=sql-server-linux-ver15||sqlallproducts-allversions"
 Uploads R, Python, or Java package files to a database from the specified byte stream or file path. This statement serves as a generic mechanism for the database administrator to upload artifacts needed for any new external language runtimes and OS platforms supported by [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)]. 
@@ -141,7 +142,9 @@ WITH ( LANGUAGE = <language> )
 
 **library_name**
 
-Libraries are added to the database scoped to the user. Library names must be unique within the context of a specific user or owner. For example, two users **RUser1** and **RUser2** can both individually and separately upload the R library `ggplot2`. However, if **RUser1** wanted to upload a newer version of `ggplot2`, the second instance must be named differently or must replace the existing library. 
+Libraries uploaded to the instance can be either public or private. If the library is created by a member of `dbo`, the library is public and can be shared with all users. Otherwise, the library is private to that user only.
+
+Library names must be unique within the context of a specific user or owner. For example, two users **RUser1** and **RUser2** can both individually and separately upload the R library `ggplot2`. However, if **RUser1** wanted to upload a newer version of `ggplot2`, the second instance must be named differently or must replace the existing library.
 
 Library names cannot be arbitrarily assigned; the library name should be the same as the name required to load the library in the external script.
 
@@ -203,6 +206,8 @@ Specifies the language of the package. The value can be `R` or `Python` in Azure
 Specifies the language of the package. The value can be `R`, `Python`, or the name of an external language (see [CREATE EXTERNAL LANGUAGE](create-external-language-transact-sql.md)).
 ::: moniker-end
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Remarks
 
 ::: moniker range=">=sql-server-2017 <=sql-server-2017||=sqlallproducts-allversions"
@@ -219,6 +224,8 @@ For the Python language, the package in a .whl or .zip file must be prepared in 
 The `CREATE EXTERNAL LIBRARY` statement uploads the library bits to the database. The library is installed when a user runs an external script using [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) and calls the package or library.
 
 Libraries uploaded to the instance can be either public or private. If the library is created by a member of `dbo`, the library is public and can be shared with all users. Otherwise, the library is private to that user only.
+
+A number of packages, referred to as *system packages*, are pre-installed in a SQL instance. System packages cannot be added, updated, or removed by the user.
 
 ## Permissions
 

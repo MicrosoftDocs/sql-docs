@@ -1,8 +1,9 @@
 ---
+description: "Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)"
 title: "Create a New Foreign Key Relationship between Tables Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -67,17 +68,17 @@ End Sub
 ```  
   
 ## See Also  
- [Append Method (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append Method (ADOX Keys)](../../../ado/reference/adox-api/append-method-adox-keys.md)   
- [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)   
- [Keys Collection (ADOX)](../../../ado/reference/adox-api/keys-collection-adox.md)   
- [Name Property (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [RelatedColumn Property (ADOX)](../../../ado/reference/adox-api/relatedcolumn-property-adox.md)   
- [RelatedTable Property (ADOX)](../../../ado/reference/adox-api/relatedtable-property-adox.md)   
- [Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Tables Collection (ADOX)](../../../ado/reference/adox-api/tables-collection-adox.md)   
- [Type Property (Key) (ADOX)](../../../ado/reference/adox-api/type-property-key-adox.md)   
- [UpdateRule Property (ADOX)](../../../ado/reference/adox-api/updaterule-property-adox.md)
+ [Append Method (ADOX Columns)](./append-method-adox-columns.md)   
+ [Append Method (ADOX Keys)](./append-method-adox-keys.md)   
+ [Catalog Object (ADOX)](./catalog-object-adox.md)   
+ [Column Object (ADOX)](./column-object-adox.md)   
+ [Columns Collection (ADOX)](./columns-collection-adox.md)   
+ [Key Object (ADOX)](./key-object-adox.md)   
+ [Keys Collection (ADOX)](./keys-collection-adox.md)   
+ [Name Property (ADOX)](./name-property-adox.md)   
+ [RelatedColumn Property (ADOX)](./relatedcolumn-property-adox.md)   
+ [RelatedTable Property (ADOX)](./relatedtable-property-adox.md)   
+ [Table Object (ADOX)](./table-object-adox.md)   
+ [Tables Collection (ADOX)](./tables-collection-adox.md)   
+ [Type Property (Key) (ADOX)](./type-property-key-adox.md)   
+ [UpdateRule Property (ADOX)](./updaterule-property-adox.md)

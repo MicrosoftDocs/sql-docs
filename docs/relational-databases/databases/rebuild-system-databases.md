@@ -1,4 +1,5 @@
 ---
+description: "Rebuild System Databases"
 title: "Rebuild System Databases | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/06/2016"

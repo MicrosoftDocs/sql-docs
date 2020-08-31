@@ -1,4 +1,5 @@
 ---
+description: "Legacy Package Deployment (SSIS)"
 title: "Legacy Package Deployment (SSIS) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -41,7 +42,7 @@ ms.author: chugu
   
  There are four steps in the package deployment process:  
   
-1.  The first optional step is optional and involves creating package configurations that update properties of package elements at run time. The configurations are automatically included when you deploy the packages.  
+1.  The first step is optional and involves creating package configurations that update properties of package elements at run time. The configurations are automatically included when you deploy the packages.  
   
 2.  The second step is to build the [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] project to create a package deployment utility. The deployment utility for the project contains the packages that you want to deploy  
   

@@ -1,4 +1,5 @@
 ---
+description: "System Functions (Transact-SQL)"
 title: "System Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

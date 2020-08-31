@@ -1,8 +1,9 @@
 ---
+description: "Customization File SQL Section"
 title: "Customization File SQL Section | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -45,12 +46,10 @@ SQL = " "
 |***sqlString***|An SQL string that replaces the client string.|  
   
 ## See Also  
- [Customization File Connect Section](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Customization File Logs Section](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Customization File UserList Section](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory Customization](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Required Client Settings](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Understanding the Customization File](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)   
- [Writing Your Own Customized Handler](../../../ado/guide/remote-data-service/writing-your-own-customized-handler.md)
-
-
+ [Customization File Connect Section](./customization-file-connect-section.md)   
+ [Customization File Logs Section](./customization-file-logs-section.md)   
+ [Customization File UserList Section](./customization-file-userlist-section.md)   
+ [DataFactory Customization](./datafactory-customization.md)   
+ [Required Client Settings](./required-client-settings.md)   
+ [Understanding the Customization File](./understanding-the-customization-file.md)   
+ [Writing Your Own Customized Handler](./writing-your-own-customized-handler.md)

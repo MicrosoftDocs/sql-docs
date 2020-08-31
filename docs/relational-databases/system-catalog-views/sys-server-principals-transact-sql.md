@@ -1,4 +1,5 @@
 ---
+description: "sys.server_principals (Transact-SQL)"
 title: "sys.server_principals (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

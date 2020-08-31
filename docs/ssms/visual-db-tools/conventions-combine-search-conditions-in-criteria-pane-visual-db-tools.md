@@ -1,4 +1,5 @@
 ---
+description: "Conventions for Combining Search Conditions in the Criteria Pane (Visual Database Tools)"
 title: Conventions for Combining Search Conditions in the Criteria Pane
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

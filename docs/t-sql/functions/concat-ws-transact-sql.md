@@ -1,4 +1,5 @@
 ---
+description: "CONCAT_WS (Transact-SQL)"
 title: "CONCAT_WS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/25/2018"
@@ -32,11 +33,11 @@ CONCAT_WS ( separator, argument1, argument2 [, argumentN]... )
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
-separator  
+*separator*
 An expression of any character type (`char`, `nchar`, `nvarchar`, or `varchar`).
 
-argument1, argument2, argument*N*  
-An expression of any type.
+*argument1, argument2, argumentN*
+An expression of any type. The `CONCAT_WS` function requires at least two arguments, and no more than 254 arguments.
 
 ## Return types
 A string value whose length and type depend on the input.

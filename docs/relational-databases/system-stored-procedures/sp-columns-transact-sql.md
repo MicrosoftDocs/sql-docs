@@ -1,4 +1,5 @@
 ---
+description: "sp_columns (Transact-SQL)"
 title: "sp_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/17/2016"
@@ -28,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server, Azure SQL Database, Azure SQL Data Warehouse, Parallel Data Warehouse  
   
 sp_columns [ @table_name = ] object  
@@ -95,7 +96,7 @@ sp_columns [ @table_name = ] object
 ## Examples  
  The following example returns column information for a specified table.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 EXEC sp_columns @table_name = N'Department',  
@@ -105,7 +106,7 @@ EXEC sp_columns @table_name = N'Department',
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] and [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]  
  The following example returns column information for a specified table.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXEC sp_columns @table_name = N'DimEmployee',  

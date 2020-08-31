@@ -1,4 +1,5 @@
 ---
+description: "State Transition Checks"
 title: "State Transition Checks | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

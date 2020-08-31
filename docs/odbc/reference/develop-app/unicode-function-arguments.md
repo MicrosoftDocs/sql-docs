@@ -1,4 +1,5 @@
 ---
+description: "Unicode Function Arguments"
 title: "Unicode Function Arguments | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -30,7 +31,7 @@ The ODBC 3.5 (or higher) Driver Manager supports both ANSI and Unicode versions 
 |**SQLColAttribute**|**SQLGetInfo**|  
 |**SQLColAttributes**|**SQLGetStmtAttr**|  
 |**SQLColumnPrivileges**|**SQLGetTypeInfo**|  
-|**SQLColumns**|**SQLNativeSQL**|  
+|**SQLColumns**|**SQLNativeSql**|  
 |**SQLConnect**|**SQLPrepare**|  
 |**SQLDataSources**|**SQLPrimaryKeys**|  
 |**SQLDescribeCol**|**SQLProcedureColumns**|  

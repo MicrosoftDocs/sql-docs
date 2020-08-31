@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_compute_node_status (Transact-SQL)"
 title: "sys.dm_exec_compute_node_status (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/04/2019

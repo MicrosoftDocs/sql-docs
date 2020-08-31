@@ -1,17 +1,18 @@
 ---
+description: "Microsoft ActiveX Data Objects (ADO)"
 title: "Microsoft ActiveX Data Objects (ADO) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ADO, about"
 ms.assetid: 2fa6237b-44b8-4b6c-9952-5acd80a54e20
-author: MightyPen
-ms.author: genemi
+author: rothja
+ms.author: jroth
 ---
 # Microsoft ActiveX Data Objects (ADO)
 
@@ -43,21 +44,19 @@ Each section in this article describes a component of ADO.
  ADOX is a companion library to the core ADO objects. It exposes additional objects for creating, modifying, and deleting schema objects, such as tables and procedures. It also includes security objects to maintain users and groups and to grant and revoke permissions on objects.  
   
 ## Documentation  
- [ADO Security Design Issues](../ado/guide/ado-security-design-issues.md)  
+ [ADO Security Design Issues](./guide/ado-security-design-issues.md)  
   
- [ADO Programmer's Guide](../ado/guide/ado-programmer-s-guide.md)  
+ [ADO Programmer's Guide](./guide/ado-programmer-s-guide.md)  
   
  An introduction to using ADO, RDS, ADO MD, and ADOX.  
   
- [ADO Programmer's Reference](../ado/reference/ado-programmer-s-reference.md)  
+ [ADO Programmer's Reference](./reference/ado-programmer-s-reference.md)  
   
  This section of the ADO documentation contains topics for each ADO, RDS, ADO MD, and ADOX object, collection, property, dynamic property, method, event, and enumeration.  
   
- [ADO Glossary](../ado/ado-glossary.md)  
+ [ADO Glossary](./ado-glossary.md)  
   
 ## Support  
  For free help with ADO issues, try posting to the ADO public newsgroup. This newsgroup is monitored by Microsoft Product Support Services (PSS) support professionals who cover ADO, and by other experienced ADO developers.  
   
  Further information about support options can be found on the Microsoft Help and Support Web site.
-
-

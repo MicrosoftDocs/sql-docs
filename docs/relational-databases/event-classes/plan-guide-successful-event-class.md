@@ -1,4 +1,5 @@
 ---
+description: "Plan Guide Successful Event Class"
 title: "Plan Guide Successful Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

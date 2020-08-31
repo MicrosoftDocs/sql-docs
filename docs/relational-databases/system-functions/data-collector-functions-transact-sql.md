@@ -1,4 +1,5 @@
 ---
+description: "Data Collector Functions  (Transact-SQL)"
 title: "Data Collector Functions  (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

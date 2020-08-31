@@ -1,4 +1,5 @@
 ---
+description: "Bulk Copying from Program Variables"
 title: "Bulk Copying from Program Variables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

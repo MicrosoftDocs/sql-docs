@@ -1,5 +1,6 @@
 ---
-title: "Resynchronizing Rows | Microsoft Docs"
+description: "Updating Data in Rowsets - Resynchronizing Rows in SQL Server Native Client"
+title: Resynchronizing rows (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

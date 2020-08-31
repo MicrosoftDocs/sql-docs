@@ -1,4 +1,5 @@
 ---
+description: "Query Spatial Data for Nearest Neighbor"
 title: "Query Spatial Data for Nearest Neighbor | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

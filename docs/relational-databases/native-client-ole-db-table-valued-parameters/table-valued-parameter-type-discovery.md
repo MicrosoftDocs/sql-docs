@@ -1,5 +1,6 @@
 ---
-title: "Table-Valued Parameter Type Discovery | Microsoft Docs"
+description: "Table-Valued Parameter Type Discovery"
+title: Table-valued parameter type discovery (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

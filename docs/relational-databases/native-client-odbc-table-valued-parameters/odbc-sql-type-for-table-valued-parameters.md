@@ -1,4 +1,5 @@
 ---
+description: "ODBC SQL Type for Table-Valued Parameters"
 title: "ODBC SQL Type for Table-Valued Parameters | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

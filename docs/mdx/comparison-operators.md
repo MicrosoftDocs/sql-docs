@@ -1,4 +1,5 @@
 ---
+description: "Comparison Operators"
 title: "Comparison Operators | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

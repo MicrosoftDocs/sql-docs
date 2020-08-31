@@ -1,4 +1,5 @@
 ---
+description: "Check Database Integrity Task"
 title: "Check Database Integrity Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

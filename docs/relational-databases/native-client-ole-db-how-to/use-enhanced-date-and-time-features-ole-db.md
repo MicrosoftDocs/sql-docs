@@ -1,5 +1,6 @@
 ---
-title: "Use Enhanced Date and Time Features (OLE DB) | Microsoft Docs"
+description: "Use Enhanced Date and Time Features in SQL Server Native Client (OLE DB)"
+title: Use enhanced date and time features (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"
 ms.prod: sql

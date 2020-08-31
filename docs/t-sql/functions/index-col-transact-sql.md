@@ -1,4 +1,5 @@
 ---
+description: "INDEX_COL (Transact-SQL)"
 title: "INDEX_COL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

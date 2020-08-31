@@ -1,4 +1,5 @@
 ---
+description: "SET SHOWPLAN_ALL (Transact-SQL)"
 title: "SET SHOWPLAN_ALL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 04/16/2020
@@ -41,7 +42,9 @@ ms.author: carlrab
 SET SHOWPLAN_ALL { ON | OFF }  
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  The setting of SET SHOWPLAN_ALL is set at execute or run time and not at parse time.  
   
  When `SET SHOWPLAN_ALL` is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns execution information for each statement without executing it, and [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are not executed. After this option is set ON, information about all subsequent [!INCLUDE[tsql](../../includes/tsql-md.md)] statements are returned until the option is set OFF. For example, if a CREATE TABLE statement is executed while `SET SHOWPLAN_ALL` is ON, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error message from a subsequent SELECT statement involving that same table, informing users that the specified table does not exist. Therefore, subsequent references to this table fail. When SET SHOWPLAN_ALL is OFF, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] executes the statements without generating a report.  

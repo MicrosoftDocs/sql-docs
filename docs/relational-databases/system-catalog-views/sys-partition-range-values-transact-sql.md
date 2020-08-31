@@ -1,4 +1,5 @@
 ---
+description: "sys.partition_range_values (Transact-SQL)"
 title: "sys.partition_range_values (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

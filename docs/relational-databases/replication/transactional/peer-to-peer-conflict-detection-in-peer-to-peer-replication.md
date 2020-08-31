@@ -1,4 +1,5 @@
 ---
+description: "Peer-to-Peer - Conflict Detection in Peer-to-Peer Replication"
 title: "Conflict Detection in Peer-to-Peer Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

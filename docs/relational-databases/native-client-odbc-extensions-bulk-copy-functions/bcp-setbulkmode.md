@@ -1,4 +1,5 @@
 ---
+description: "bcp_setbulkmode"
 title: "bcp_setbulkmode | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

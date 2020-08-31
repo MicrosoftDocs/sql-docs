@@ -1,4 +1,5 @@
 ---
+description: "BEGIN TRANSACTION (Transact-SQL)"
 title: "BEGIN TRANSACTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

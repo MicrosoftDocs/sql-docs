@@ -1,4 +1,5 @@
 ---
+description: "Collation Precedence"
 title: "Collation Precedence | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Service Principal Names (SPNs) in Client Connections (OLE DB)"
 title: "OLE DB Service Principal Names connections"
 ms.custom: ""
 ms.date: "03/14/2017"

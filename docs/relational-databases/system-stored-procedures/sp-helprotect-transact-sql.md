@@ -1,4 +1,5 @@
 ---
+description: "sp_helprotect (Transact-SQL)"
 title: "sp_helprotect (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

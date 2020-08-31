@@ -1,4 +1,5 @@
 ---
+description: "Operators (SSIS Expression)"
 title: "Operators (SSIS Expression) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

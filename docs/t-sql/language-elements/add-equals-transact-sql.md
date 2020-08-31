@@ -1,4 +1,5 @@
 ---
+description: "+= (Addition Assignment) (Transact-SQL)"
 title: "+= (Addition Assignment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

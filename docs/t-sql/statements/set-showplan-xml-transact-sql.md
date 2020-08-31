@@ -1,4 +1,5 @@
 ---
+description: "SET SHOWPLAN_XML (Transact-SQL)"
 title: "SET SHOWPLAN_XML (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2018"
@@ -38,6 +39,8 @@ Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] not to execute 
 ```syntaxsql
 SET SHOWPLAN_XML { ON | OFF }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Remarks
 

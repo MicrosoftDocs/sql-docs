@@ -1,4 +1,5 @@
 ---
+description: "cdc.&lt;capture_instance&gt;_CT (Transact-SQL)"
 title: "cdc.&lt;capture_instance&gt;_CT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"

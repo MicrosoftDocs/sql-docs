@@ -39,6 +39,8 @@
     href: ../machine-learning/install/sql-pretrained-models-install.md
   - name: Upgrade Python and R
     href: ../machine-learning/install/upgrade-r-and-python.md
+  - name: Change default language version
+    href: ../machine-learning/install/change-default-language-runtime-version.md
   - name: Azure Data Studio notebooks
     href: ../machine-learning/install/sql-machine-learning-azure-data-studio.md
   - name: Set up a Python client
@@ -97,20 +99,20 @@
         href: ../machine-learning/tutorials/python-clustering-model-build.md
       - name: 4 - Deploy the model
         href: ../machine-learning/tutorials/python-clustering-model-deploy.md
-    - name: Create a Python model using revoscalepy
-      href: ../machine-learning/tutorials/use-python-revoscalepy-to-create-model.md
-    - name: Python for SQL developers
+    - name: NYC taxi tips (classification)
       items:
       - name: 1 - Introduction
-        href: ../machine-learning/tutorials/sqldev-in-database-python-for-sql-developers.md
+        href: ../machine-learning/tutorials/python-taxi-classification-introduction.md
       - name: 2 - Data exploration
-        href: ../machine-learning/tutorials/sqldev-py3-explore-and-visualize-the-data.md
+        href: ../machine-learning/tutorials/python-taxi-classification-explore-data.md
       - name: 3 - Feature engineering
-        href: ../machine-learning/tutorials/sqldev-py4-create-data-features-using-t-sql.md
+        href: ../machine-learning/tutorials/python-taxi-classification-create-features.md
       - name: 4 - Train and deploy
-        href: ../machine-learning/tutorials/sqldev-py5-train-and-save-a-model-using-t-sql.md
+        href: ../machine-learning/tutorials/python-taxi-classification-train-model.md
       - name: 5 - Predictions
-        href: ../machine-learning/tutorials/sqldev-py6-operationalize-the-model.md
+        href: ../machine-learning/tutorials/python-taxi-classification-deploy-model.md
+    - name: Create a Python model using revoscalepy
+      href: ../machine-learning/tutorials/use-python-revoscalepy-to-create-model.md
   - name: R
     items:
     - name: R tutorials
@@ -135,20 +137,20 @@
         href: ../machine-learning/tutorials/r-clustering-model-build.md
       - name: 4 - Deploy the model
         href: ../machine-learning/tutorials/r-clustering-model-deploy.md
-    - name: Create partition-based models
-      href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
-    - name: Use R in T-SQL
+    - name: NYC taxi tips (classification)
       items:
       - name: 1. Introduction
-        href: ../machine-learning/tutorials/sqldev-in-database-r-for-sql-developers.md
+        href: ../machine-learning/tutorials/r-taxi-classification-introduction.md
       - name: 2. Data exploration
-        href: ../machine-learning/tutorials/sqldev-explore-and-visualize-the-data.md
+        href: ../machine-learning/tutorials/r-taxi-classification-explore-data.md
       - name: 3. Feature engineering
-        href: ../machine-learning/tutorials/sqldev-create-data-features-using-t-sql.md
+        href: ../machine-learning/tutorials/r-taxi-classification-create-features.md
       - name: 4. Train and deploy
-        href: ../machine-learning/tutorials/sqldev-train-and-save-a-model-using-t-sql.md
+        href: ../machine-learning/tutorials/r-taxi-classification-train-model.md
       - name: 5. Predictions
-        href: ../machine-learning/tutorials/sqldev-operationalize-the-model.md
+        href: ../machine-learning/tutorials/r-taxi-classification-deploy-model.md
+    - name: Create partition-based models
+      href: ../machine-learning/tutorials/r-tutorial-create-models-per-partition.md
     - name: Use SQL ML in R tools
       items:
       - name: 1. Introduction
@@ -267,8 +269,6 @@
     items:
     - name: Native scoring with PREDICT T-SQL
       href: ../machine-learning/predictions/native-scoring-predict-transact-sql.md
-    - name: How to generate predictions
-      href: ../machine-learning/predictions/how-to-do-realtime-scoring.md
     - name: Real-time scoring with sp_rxPredict
       href: ../machine-learning/predictions/real-time-scoring.md
   - name: Package management
@@ -385,8 +385,6 @@
       href: ../machine-learning/troubleshooting/known-issues-for-sql-server-machine-learning-services.md
     - name: Collect data for troubleshooting
       href: ../machine-learning/troubleshooting/data-collection-ml-troubleshooting-process.md
-    - name: Install and upgrade FAQ
-      href: ../machine-learning/troubleshooting/upgrade-and-installation-faq-sql-server-r-services.md
     - name: Launchpad and external script issues
       href: ../machine-learning/troubleshooting/common-issues-external-script-execution.md
     - name: Common R scripting errors

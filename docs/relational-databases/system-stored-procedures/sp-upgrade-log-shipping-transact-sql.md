@@ -1,4 +1,5 @@
 ---
+description: "sp_upgrade_log_shipping (Transact-SQL)"
 title: "sp_upgrade_log_shipping (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

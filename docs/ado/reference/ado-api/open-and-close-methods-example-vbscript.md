@@ -1,8 +1,9 @@
 ---
+description: "Open and Close Methods Example (VBScript)"
 title: "Open and Close Methods Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Open and Close Methods Example (VBScript)
-This example uses the [Open](../../../ado/reference/ado-api/open-method-ado-recordset.md) and [Close](../../../ado/reference/ado-api/close-method-ado.md) methods on both [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) and [Connection](../../../ado/reference/ado-api/connection-object-ado.md) objects that have been opened.  
+This example uses the [Open](./open-method-ado-recordset.md) and [Close](./close-method-ado.md) methods on both [Recordset](./recordset-object-ado.md) and [Connection](./connection-object-ado.md) objects that have been opened.  
   
  Use the following example in an Active Server Page (ASP). Use **Find** to locate the file Adovbs.inc and place it in the directory you plan to use. Cut and paste the following code into Notepad or another text editor, and save it as **OpenVBS.asp**. You can view the result in any browser.  
   
@@ -156,8 +157,8 @@ BODY {
 ```  
   
 ## See Also  
- [Close Method (ADO)](../../../ado/reference/ado-api/close-method-ado.md)   
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open Method (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   
- [Open Method (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Close Method (ADO)](./close-method-ado.md)   
+ [Connection Object (ADO)](./connection-object-ado.md)   
+ [Open Method (ADO Connection)](./open-method-ado-connection.md)   
+ [Open Method (ADO Recordset)](./open-method-ado-recordset.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

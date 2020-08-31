@@ -1,4 +1,5 @@
 ---
+description: "&amp;= (Bitwise AND Assignment) (Transact-SQL)"
 title: "&amp;= (Bitwise AND Assignment) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/10/2017"

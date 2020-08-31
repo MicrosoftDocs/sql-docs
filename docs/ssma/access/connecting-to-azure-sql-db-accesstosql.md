@@ -1,5 +1,5 @@
 ---
-title: "Connecting to Azure SQL DB (AccessToSQL) | Microsoft Docs"
+title: "Connecting to Azure SQL Database (AccessToSQL) | Microsoft Docs"
 description: Learn how to connect to a target instance of Azure SQL Database to migrate Access databases. SSMA obtains metadata about databases in Azure SQL Database.
 ms.prod: sql
 ms.custom: ""
@@ -17,10 +17,10 @@ helpviewer_keywords:
   - "SQL Azure, reconnecting"
   - "SQL Azure, synchronizing metadata"
 ms.assetid: 1ba0d113-dc05-4431-8689-e14a8821bafd
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
-# Connecting to Azure SQL DB (AccessToSQL)
+# Connecting to Azure SQL Database (AccessToSQL)
 To migrate Access databases to SQL Azure, you must connect to the target instance of SQL Azure. When you connect, SSMA obtains metadata about all the databases in the instance of SQL Azure and displays database metadata in the SQL Azure Metadata Explorer. SSMA stores information about which instance of SQL Azure you are connected to, but does not store passwords.  
   
 Your connection to SQL Azure stays active until you close the project. When you reopen the project, you must reconnect to SQL Azure if you want an active connection to the server. You can work offline until you load database objects into SQL Azure and migrate data.  
@@ -50,7 +50,7 @@ When you define the connection properties, you also specify the database where o
   
 2.  In the connection dialog box, enter or select the server name of SQL Azure.  
   
-3.  Enter, select or **Browse** the Database name.  
+3.  Enter, select, or **Browse** the Database name.  
   
 4.  Enter or select **UserName**.  
   
@@ -63,10 +63,10 @@ When you define the connection properties, you also specify the database where o
 > [!IMPORTANT]  
 > SSMA for Access does not support connection to **master** database in SQL Azure.  
   
-If there are no databases in the SQL Azure account, you can create the very first database using **Create Azure Database** option that appears on the click of **Browse** button.  
+If there are no databases in the SQL Azure account, you can create the first database using **Create Azure Database** option that appears on the click of **Browse** button.  
   
 ## Synchronizing SQL Azure Metadata  
-Metadata about SQL Azure databases is not automatically updated. The metadata in SQL Azure Metadata Explorer is a snapshot of the metadata when you first connected to SQL Azure, or the last time that you manually updated metadata. You can manually update metadata for all databases, or for any single database or database object.  
+Metadata about databases in Azure SQL Database is not automatically updated. The metadata in SQL Azure Metadata Explorer is a snapshot of the metadata when you first connected to SQL Azure, or the last time that you manually updated metadata. You can manually update metadata for all databases, or for any single database or database object.  
   
 **To synchronize metadata**  
   
@@ -83,17 +83,17 @@ If SQL Azure schemas change after you connect, you can refresh metadata from the
   
 **To refresh SQL Azure metadata**  
   
--   In SQL Azure Metadata Explorer, right click **Databases**, and then select **Refresh from Database**.  
+-   In SQL Azure Metadata Explorer, right-click **Databases**, and then select **Refresh from Database**.  
   
 ## Reconnecting to SQL Azure  
 Your connection to SQL Azure stays active until you close the project. When you reopen the project, you must reconnect to SQL Azure if you want an active connection to the server. You can work offline until you load database objects into SQL Azure and migrate data.  
   
 The procedure for reconnecting to SQL Azure is the same as the procedure for establishing a connection.  
   
-## Next Step  
+## Next steps  
 The next step in the migration depends on your project needs:  
   
--   To customize the mapping between Access schemas and SQL Azure databases and schemas, see [Mapping Access Databases to SQL Server Schemas](mapping-source-and-target-databases-accesstosql.md).  
+-   To customize the mapping between Access schemas and Azure SQL Database, see [Mapping Access Databases to SQL Server Schemas](mapping-source-and-target-databases-accesstosql.md).  
   
 -   To customize configuration options for the projects, see [Setting Project Options](setting-conversion-and-migration-options-accesstosql.md).  
   

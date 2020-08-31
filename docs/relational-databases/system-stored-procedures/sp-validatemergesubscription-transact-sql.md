@@ -1,4 +1,5 @@
 ---
+description: "sp_validatemergesubscription (Transact-SQL)"
 title: "sp_validatemergesubscription (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

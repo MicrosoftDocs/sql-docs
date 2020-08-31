@@ -1,4 +1,5 @@
 ---
+description: "ALTER TABLE computed_column_definition (Transact-SQL)"
 title: "computed_column_definition (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/05/2017"

@@ -1,4 +1,5 @@
 ---
+description: "CREATE FULLTEXT INDEX (Transact-SQL)"
 title: "CREATE FULLTEXT INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/05/2017"

@@ -1,6 +1,6 @@
 ---
-title: "Step 2: Create a SQL database for ADO.NET development | Microsoft Docs"
-description: "Describes how to create a SQL database for ADO.NET development."
+title: "Step 2: Create a SQL database for ADO.NET development"
+description: "Learn how to create a SQL database for ADO.NET development using Microsoft.Data.SqlClient."
 ms.custom: ""
 ms.date: "08/15/2019"
 ms.prod: sql

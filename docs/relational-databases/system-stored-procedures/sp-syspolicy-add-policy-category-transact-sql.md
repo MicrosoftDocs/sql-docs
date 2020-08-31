@@ -1,4 +1,5 @@
 ---
+description: "sp_syspolicy_add_policy_category (Transact-SQL)"
 title: "sp_syspolicy_add_policy_category (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

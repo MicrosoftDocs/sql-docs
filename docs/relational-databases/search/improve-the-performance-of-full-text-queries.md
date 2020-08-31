@@ -1,4 +1,5 @@
 ---
+description: "Improve the Performance of Full-Text Queries"
 title: "Improve the Performance of Full-Text Queries | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

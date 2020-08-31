@@ -1,4 +1,5 @@
 ---
+description: "Visual FoxPro Language Reference"
 title: "Visual FoxPro Language Reference | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

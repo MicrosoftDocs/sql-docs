@@ -1,6 +1,6 @@
 ---
 title: "ISSAsynchStatus::WaitForAsynchCompletion (OLE DB driver) | Microsoft Docs"
-description: "ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)"
+description: Learn how the ISSAsynchStatus::WaitForAsynchCompletion method waits until an asynchronous operation is complete or it times out in OLE DB Driver for SQL Server.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -13,8 +13,8 @@ apiname:
 apitype: "COM"
 helpviewer_keywords: 
   - "WaitForAsynchCompletion method"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # ISSAsynchStatus::WaitForAsynchCompletion (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

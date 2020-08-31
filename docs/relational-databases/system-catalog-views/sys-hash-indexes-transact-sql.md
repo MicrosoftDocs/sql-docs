@@ -1,4 +1,5 @@
 ---
+description: "sys.hash_indexes (Transact-SQL)"
 title: "sys.hash_indexes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

@@ -1,4 +1,5 @@
 ---
+description: "CREATE ASSEMBLY (Transact-SQL)"
 title: "CREATE ASSEMBLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2018"

@@ -1,4 +1,5 @@
 ---
+description: "In-memory database systems and technologies"
 title: "In-memory database systems features and technologies"
 ms.date: 10/30/2019
 ms.prod: sql

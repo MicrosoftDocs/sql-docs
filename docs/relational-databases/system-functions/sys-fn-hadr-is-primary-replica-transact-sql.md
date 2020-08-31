@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_hadr_is_primary_replica (Transact-SQL)"
 title: "sys.fn_hadr_is_primary_replica (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"
@@ -22,7 +23,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # sys.fn_hadr_is_primary_replica (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Used to determine if the current replica is the primary replica.  
   

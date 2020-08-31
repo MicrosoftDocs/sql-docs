@@ -1,8 +1,9 @@
 ---
+description: "put_OLEDBCommand Method"
 title: "put_OLEDBCommand Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -30,4 +31,4 @@ HRESULT put_OLEDBCommand(
  [in] Pointer to an OLE DB Command object.  
   
 ## Applies To  
- [IADOCommandConstruction](https://msdn.microsoft.com/library/windows/desktop/aa965677.aspx)
+ [IADOCommandConstruction](/previous-versions/windows/desktop/aa965677(v=vs.85))

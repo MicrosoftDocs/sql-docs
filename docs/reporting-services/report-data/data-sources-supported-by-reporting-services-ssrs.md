@@ -153,7 +153,7 @@ ms.author: maggies
   
  If you use the query designer in graphical mode, the query is analyzed and possibly rewritten. A text-based query designer is also available for writing queries. Use the text-based query designer when you want to control the exact [!INCLUDE[tsql](../../includes/tsql-md.md)] syntax that is used for a query.   
   
- Retrieving data from [!INCLUDE[ssSDS](../../includes/sssds-md.md)], SQL Data Warehouse and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is similar, but there are a few requirements that apply only to [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. For more information, see [SQL Azure Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
+ Retrieving data from [!INCLUDE[ssSDS](../../includes/sssds-md.md)], SQL Data Warehouse and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is similar, but there are a few requirements that apply only to [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. For more information, see [Azure SQL Connection Type &#40;SSRS&#41;](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md).  
   
  [Return to Data sources table](#DataSourcesTable)  
   

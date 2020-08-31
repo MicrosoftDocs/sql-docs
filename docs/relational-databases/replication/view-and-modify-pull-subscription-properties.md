@@ -1,4 +1,5 @@
 ---
+description: "View and Modify Pull Subscription Properties"
 title: "View and Modify Pull Subscription Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

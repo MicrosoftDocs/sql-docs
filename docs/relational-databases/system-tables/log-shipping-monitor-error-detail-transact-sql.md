@@ -1,4 +1,5 @@
 ---
+description: "log_shipping_monitor_error_detail (Transact-SQL)"
 title: "log_shipping_monitor_error_detail (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

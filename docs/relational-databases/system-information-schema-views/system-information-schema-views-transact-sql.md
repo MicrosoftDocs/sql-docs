@@ -1,4 +1,5 @@
 ---
+description: "System Information Schema Views (Transact-SQL)"
 title: "System Information Schema Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2019"

@@ -1,4 +1,5 @@
 ---
+description: "MDX Data Manipulation - CLEAR CALCULATIONS"
 title: "CLEAR CALCULATIONS Statement (MDX) | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

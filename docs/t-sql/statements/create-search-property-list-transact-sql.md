@@ -1,4 +1,5 @@
 ---
+description: "CREATE SEARCH PROPERTY LIST (Transact-SQL)"
 title: "CREATE SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"

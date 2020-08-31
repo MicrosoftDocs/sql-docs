@@ -1,4 +1,5 @@
 ---
+description: "Filestream and FileTable Dynamic Management Views (Transact-SQL)"
 title: "Filestream and FileTable Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

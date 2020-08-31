@@ -1,4 +1,5 @@
 ---
+description: "cdc.ddl_history (Transact-SQL)"
 title: "cdc.ddl_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

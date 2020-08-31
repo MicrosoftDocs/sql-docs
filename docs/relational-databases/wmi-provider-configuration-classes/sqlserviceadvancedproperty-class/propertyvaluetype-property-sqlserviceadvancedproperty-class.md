@@ -1,4 +1,5 @@
 ---
+description: "PropertyValueType Property (SqlServiceAdvancedProperty Class)"
 title: "PropertyValueType Property (SqlServiceAdvancedProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"

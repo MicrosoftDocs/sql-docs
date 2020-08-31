@@ -1,4 +1,5 @@
 ---
+description: "Change Tracking - sys.dm_tran_commit_table"
 title: "sys.dm_tran_commit_table (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

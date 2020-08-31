@@ -1,7 +1,8 @@
 ---
-title: "PDO::lastInsertId | Microsoft Docs"
+title: "PDO::lastInsertId"
+description: "API reference for the PDO::lastInsertId function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "07/31/2018"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

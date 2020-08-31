@@ -1,4 +1,5 @@
 ---
+description: "CDC Control Task"
 title: "CDC Control Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

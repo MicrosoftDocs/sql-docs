@@ -1,4 +1,5 @@
 ---
+description: "PredictTimeSeries (DMX)"
 title: "PredictTimeSeries (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -187,7 +188,7 @@ WHERE ([Model Region] = 'M200 Europe'
   
 -   Returns new predictions for the remaining three time slices based on the newly expanded model.  
   
- The following table lists the results of the Example 2 query. Notice that the first two values returned for M200 Europe are exactly the same as the new values that you provided. This behavior is by design; if you want to start predictions after the end of the new data, you must specify a starting and ending time step. For an example of how to do this, see [Lesson 5: Extending the Time Series Model](https://msdn.microsoft.com/library/7aad4946-c903-4e25-88b9-b087c20cb67d).  
+ The following table lists the results of the Example 2 query. Notice that the first two values returned for M200 Europe are exactly the same as the new values that you provided. This behavior is by design; if you want to start predictions after the end of the new data, you must specify a starting and ending time step.  
   
  Also, notice that you did not supply new data for the Pacific region. Therefore, [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] returns new predictions for all five time slices.  
   

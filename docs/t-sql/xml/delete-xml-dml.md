@@ -1,4 +1,5 @@
 ---
+description: "delete (XML DML)"
 title: delete (XML DML)
 ms.custom: ""
 ms.date: "07/26/2017"

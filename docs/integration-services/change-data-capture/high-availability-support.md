@@ -1,4 +1,5 @@
 ---
+description: "High Availability Support"
 title: "High Availability Support | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

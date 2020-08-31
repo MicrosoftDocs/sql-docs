@@ -1,8 +1,9 @@
 ---
+description: "Sort Property"
 title: "Sort Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -23,13 +24,13 @@ author: rothja
 ms.author: jroth
 ---
 # Sort Property
-Indicates one or more field names on which the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) is sorted, and whether each field is sorted in ascending or descending order.  
+Indicates one or more field names on which the [Recordset](./recordset-object-ado.md) is sorted, and whether each field is sorted in ascending or descending order.  
   
 ## Settings and Return Values  
  Sets or returns a **String** value that indicates the field names in the **Recordset** on which to sort. Each name is separated by a comma, and is optionally followed by a blank and the keyword, **ASC**, which sorts the field in ascending order, or **DESC**, which sorts the field in descending order. By default, if no keyword is specified, the field is sorted in ascending order.  
   
 ## Remarks  
- This property requires the [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) property to be set to **adUseClient**. A temporary index will be created for each field specified in the **Sort** property if an index does not already exist.  
+ This property requires the [CursorLocation](./cursorlocation-property-ado.md) property to be set to **adUseClient**. A temporary index will be created for each field specified in the **Sort** property if an index does not already exist.  
   
  The sort operation is efficient because data is not physically rearranged, but is simply accessed in the order specified by the index.  
   
@@ -44,11 +45,11 @@ Indicates one or more field names on which the [Recordset](../../../ado/referenc
  No field can be named "ASC" or "DESC" because those names conflict with the keywords **ASC** and **DESC**. You can create an alias for a field with a conflicting name by using the **AS** keyword in the query that returns the **Recordset**.  
   
 ## Applies To  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset Object (ADO)](./recordset-object-ado.md)  
   
 ## See Also  
- [Sort Property Example (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
- [Sort Property Example (VC++)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
- [Optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   
- [SortColumn Property (RDS)](../../../ado/reference/rds-api/sortcolumn-property-rds.md)   
- [SortDirection Property (RDS)](../../../ado/reference/rds-api/sortdirection-property-rds.md)
+ [Sort Property Example (VB)](./sort-property-example-vb.md)   
+ [Sort Property Example (VC++)](./sort-property-example-vc.md)   
+ [Optimize Property-Dynamic (ADO)](./optimize-property-dynamic-ado.md)   
+ [SortColumn Property (RDS)](../rds-api/sortcolumn-property-rds.md)   
+ [SortDirection Property (RDS)](../rds-api/sortdirection-property-rds.md)

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_repl_tranhash (Transact-SQL)"
 title: "sys.dm_repl_tranhash (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

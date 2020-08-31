@@ -6,7 +6,7 @@ ms.author: alayu
 ms.reviewer: achatter, maghan, mikeray
 ms.topic: conceptual
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.custom: seo-lt-2019
 ms.date: 07/01/2020
 ---
@@ -17,7 +17,7 @@ ms.date: 07/01/2020
 
 Jupyter Notebook is an open-source web application that allows you to create and share documents containing live code, equations, visualizations, and narrative text. Usage includes data cleaning and transformation, numerical simulation, statistical modeling, data visualization, and machine learning.
 
-This article describes how to create a new notebook in the latest release of [**Azure Data Studio**](../azure-data-studio/download.md) and how to start authoring your own notebooks using different kernels.
+This article describes how to create a new notebook in the latest release of [**Azure Data Studio**](./download-azure-data-studio.md?view=sql-server-ver15) and how to start authoring your own notebooks using different kernels.
 
 Watch this short 5-minute video for an introduction to notebooks in Azure Data Studio:
 
@@ -46,7 +46,7 @@ Azure Data Studio notebooks support a number of different kernels, including SQL
 **Attach to** provides the context for the kernel. For example, if you're using SQL Kernel, then you can attach to any of your SQL Server instances.
 If you're using Python3 Kernel you attach to **localhost** and you can use this kernel for your local Python development.
 
-SQL Kernel can also be used to connect to PostgreSQL server instances. If you're a PostgreSQL developer and want to connect the notebooks to your PostgreSQL Server, then download the [**PostgreSQL extension**](../azure-data-studio/postgres-extension.md) in the Azure Data Studio extension Marketplace and connect to the PostgreSQL server.
+SQL Kernel can also be used to connect to PostgreSQL server instances. If you're a PostgreSQL developer and want to connect the notebooks to your PostgreSQL Server, then download the [**PostgreSQL extension**](./postgres-extension.md) in the Azure Data Studio extension Marketplace and connect to the PostgreSQL server.
 
 If you're connected to SQL Server 2019 big data cluster, the default **Attach to** is the end point of the cluster. You can submit Python, Scala, and R code using the Spark compute of the cluster.
 

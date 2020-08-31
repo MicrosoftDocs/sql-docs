@@ -1,6 +1,6 @@
 ---
 title: Rowset properties and behaviors (OLE DB driver)
-description: "Rowset properties and behaviors in OLE DB Driver for SQL Server"
+description: These are the OLE DB Driver for SQL Server rowset properties, including property name and description.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, rowsets"
   - "properties [OLE DB]"
   - "OLE DB rowsets, properties"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Rowset Properties and Behaviors
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

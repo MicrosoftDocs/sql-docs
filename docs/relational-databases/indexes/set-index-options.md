@@ -1,4 +1,5 @@
 ---
+description: "Set Index Options"
 title: "Set Index Options | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/26/2019

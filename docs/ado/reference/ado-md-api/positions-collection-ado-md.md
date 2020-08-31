@@ -1,8 +1,9 @@
 ---
+description: "Positions Collection (ADO MD)"
 title: "Positions Collection (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,23 +20,23 @@ author: rothja
 ms.author: jroth
 ---
 # Positions Collection (ADO MD)
-Contains the [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) objects that define a point on an axis.  
+Contains the [Position](./position-object-ado-md.md) objects that define a point on an axis.  
   
 ## Remarks  
  **Positions** is a standard ADO collection. With the properties and methods of a collection, you can do the following:  
   
--   Obtain the number of objects in the collection with the [Count](../../../ado/reference/ado-api/count-property-ado.md) property.  
+-   Obtain the number of objects in the collection with the [Count](../ado-api/count-property-ado.md) property.  
   
--   Return an object from the collection with the default [Item](../../../ado/reference/ado-api/item-property-ado.md) property.  
+-   Return an object from the collection with the default [Item](../ado-api/item-property-ado.md) property.  
   
--   Update the objects in the collection from the provider with the [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) method.  
+-   Update the objects in the collection from the provider with the [Refresh](../ado-api/refresh-method-ado.md) method.  
   
  This section contains the following topic.  
   
--   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/positions-collection-properties-methods-and-events.md)  
+-   [Properties, Methods, and Events](./positions-collection-properties-methods-and-events.md)  
   
 ## See Also  
- [Cellset Example (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Axis Object (ADO MD)](../../../ado/reference/ado-md-api/axis-object-ado-md.md)   
- [Cell Object (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)   
- [Position Object (ADO MD)](../../../ado/reference/ado-md-api/position-object-ado-md.md)
+ [Cellset Example (VB)](./cellset-example-vb.md)   
+ [Axis Object (ADO MD)](./axis-object-ado-md.md)   
+ [Cell Object (ADO MD)](./cell-object-ado-md.md)   
+ [Position Object (ADO MD)](./position-object-ado-md.md)

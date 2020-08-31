@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID"
 title: "LOCALDB_ERROR_UNKNOWN_LANGUAGE_ID | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

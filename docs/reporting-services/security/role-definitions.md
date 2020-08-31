@@ -1,4 +1,5 @@
 ---
+description: "Role Definitions"
 title: "Role Definitions | Microsoft Docs"
 ms.date: 03/14/2017
 ms.prod: reporting-services

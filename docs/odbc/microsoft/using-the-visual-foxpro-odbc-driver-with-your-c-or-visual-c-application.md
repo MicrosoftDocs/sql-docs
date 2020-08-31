@@ -1,4 +1,5 @@
 ---
+description: "Use the Visual FoxPro ODBC Driver with Your C or Visual C++ Application"
 title: "Use Visual FoxPro ODBC Driver with C or Visual C++ Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

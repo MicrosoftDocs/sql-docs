@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)"
 title: "sys.dm_resource_governor_resource_pool_volumes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -21,7 +22,7 @@ author: CarlRabeler
 ms.author: carlrab
 ---
 # sys.dm_resource_governor_resource_pool_volumes (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
   Returns information about the current resource pool IO statistics for each disk volume. This information is also available at the resource pool level in [sys.dm_resource_governor_resource_pools &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-resource-pools-transact-sql.md).  
   

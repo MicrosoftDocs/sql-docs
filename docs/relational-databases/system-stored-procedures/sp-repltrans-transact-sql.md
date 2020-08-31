@@ -1,4 +1,5 @@
 ---
+description: "sp_repltrans (Transact-SQL)"
 title: "sp_repltrans (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

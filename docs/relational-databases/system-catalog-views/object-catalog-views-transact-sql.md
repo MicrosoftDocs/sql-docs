@@ -1,4 +1,5 @@
 ---
+description: "Object Catalog Views (Transact-SQL)"
 title: "Object Catalog Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/19/2019
@@ -18,7 +19,7 @@ ms.author: carlrab
 ---
 # Object Catalog Views (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]
 
 This section contains links to the following catalog views.
 

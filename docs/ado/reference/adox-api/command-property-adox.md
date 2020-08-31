@@ -1,8 +1,9 @@
 ---
+description: "Command Property (ADOX)"
 title: "Command Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # Command Property (ADOX)
-Specifies an ADO [Command](../../../ado/reference/ado-api/command-object-ado.md) object that can be used to create or execute the procedure.  
+Specifies an ADO [Command](../ado-api/command-object-ado.md) object that can be used to create or execute the procedure.  
   
 ## Settings and Return Values  
  Sets or returns a valid ADO **Command** object.  
@@ -30,15 +31,15 @@ Specifies an ADO [Command](../../../ado/reference/ado-api/command-object-ado.md)
 
 :::row:::
     :::column:::
-        [Procedure Object (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)  
+        [Procedure Object (ADOX)](./procedure-object-adox.md)  
     :::column-end:::
     :::column:::
-        [View Object (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)  
+        [View Object (ADOX)](./view-object-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## See Also  
- [Command and CommandText Properties Example (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
- [Parameters Collection, Command Property Example (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
- [Views and Fields Collections Example (VB)](../../../ado/reference/adox-api/views-and-fields-collections-example-vb.md)   
- [Views Collection, CommandText Property Example (VB)](../../../ado/reference/adox-api/views-collection-commandtext-property-example-vb.md)
+ [Command and CommandText Properties Example (VB)](./command-and-commandtext-properties-example-vb.md)   
+ [Parameters Collection, Command Property Example (VB)](./parameters-collection-command-property-example-vb.md)   
+ [Views and Fields Collections Example (VB)](./views-and-fields-collections-example-vb.md)   
+ [Views Collection, CommandText Property Example (VB)](./views-collection-commandtext-property-example-vb.md)

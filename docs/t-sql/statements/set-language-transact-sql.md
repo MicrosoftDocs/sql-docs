@@ -1,4 +1,5 @@
 ---
+description: "SET LANGUAGE (Transact-SQL)"
 title: "SET LANGUAGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/05/2017"
@@ -38,7 +39,9 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
 SET LANGUAGE { [ N ] 'language' | @language_var }   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  [**N**]**'**_language_**'** | **@**_language\_var_  
  Is the name of the language as stored in [sys.syslanguages](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md). This argument can be either Unicode or DBCS converted to Unicode. To specify a language in Unicode, use **N'**_language_**'**. If specified as a variable, the variable must be **sysname**.  
   

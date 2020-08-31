@@ -1,6 +1,6 @@
 ---
 title: "Data type mapping in rowsets and parameters (OLE DB driver) | Microsoft Docs"
-description: "Data Type mapping in rowsets and parameters"
+description: Learn how the OLE DB Driver for SQL Server represents SQL Server data in rowsets and as parameter values, by using the OLE DB defined data types.
 ms.custom: ""
 ms.date: "02/21/2020"
 ms.prod: sql
@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "SSPROP_ALLOWNATIVEVARIANT property"
   - "GetParameterInfo function"
   - "OLE DB, data types"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Data Type Mapping in Rowsets and Parameters
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

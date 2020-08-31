@@ -1,4 +1,5 @@
 ---
+description: "Analysis Services Connection Manager"
 title: "Analysis Services Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/25/2019

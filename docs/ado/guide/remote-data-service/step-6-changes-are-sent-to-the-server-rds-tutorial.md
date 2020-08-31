@@ -1,8 +1,9 @@
 ---
+description: "Step 6: Changes are Sent to the Server (RDS Tutorial)"
 title: "Step 6: Changes are Sent to the Server (RDS Tutorial) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -28,7 +29,7 @@ rs.   ' The equivalent of
 ...  
 ```  
   
- **Part A** Assume for this case that you have only used the [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) and that a **Recordset** object is now associated with the **RDS.DataControl**. The [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) method updates the data source with any changes to the **Recordset** object if the [Server](../../../ado/reference/rds-api/server-property-rds.md) and [Connect](../../../ado/reference/rds-api/connect-property-rds.md) properties are still set.  
+ **Part A** Assume for this case that you have only used the [RDS.DataControl](../../reference/rds-api/datacontrol-object-rds.md) and that a **Recordset** object is now associated with the **RDS.DataControl**. The [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md) method updates the data source with any changes to the **Recordset** object if the [Server](../../reference/rds-api/server-property-rds.md) and [Connect](../../reference/rds-api/connect-property-rds.md) properties are still set.  
   
 ```vb
 Sub RDSTutorial6A()  
@@ -46,7 +47,7 @@ DC.
 ...  
 ```  
   
- **Part B** Alternatively, you could update the server with the [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) object, specifying a connection and a **Recordset** object.  
+ **Part B** Alternatively, you could update the server with the [RDSServer.DataFactory](../../reference/rds-api/datafactory-object-rdsserver.md) object, specifying a connection and a **Recordset** object.  
   
 ```vb
 Sub RDSTutorial6B()  
@@ -69,6 +70,6 @@ End Sub
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## See Also  
- [Microsoft OLE DB Remoting Provider (ADO Service Provider)](../../../ado/guide/appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
- [RDS Tutorial](../../../ado/guide/remote-data-service/rds-tutorial.md)   
- [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Microsoft OLE DB Remoting Provider (ADO Service Provider)](../appendixes/microsoft-ole-db-remoting-provider-ado-service-provider.md)   
+ [RDS Tutorial](./rds-tutorial.md)   
+ [RDS Tutorial (VBScript)](./rds-tutorial-vbscript.md)

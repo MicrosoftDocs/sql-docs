@@ -1,4 +1,5 @@
 ---
+description: "Finishing Test Case Preparation (SybaseToSQL)"
 title: "Finishing Test Case Preparation (SybaseToSQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
@@ -9,8 +10,8 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Tester Component,Test Case Settings"
 ms.assetid: 8b2a49b0-4296-4f3f-9e56-323aa6a6fa8e
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Finishing Test Case Preparation (SybaseToSQL)
 The wizard's final page displays the Test Case description and information about objects involved in the test. In addition, on this page you can set the test execution options.  

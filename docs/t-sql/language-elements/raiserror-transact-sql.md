@@ -1,4 +1,5 @@
 ---
+description: "RAISERROR (Transact-SQL)"
 title: "RAISERROR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2017"

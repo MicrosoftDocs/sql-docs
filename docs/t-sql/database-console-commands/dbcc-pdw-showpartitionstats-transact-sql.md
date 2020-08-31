@@ -1,4 +1,5 @@
 ---
+description: "DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)"
 title: DBCC PDW_SHOWPARTITIONSTATS (Transact-SQL)
 ms.custom: ""
 ms.date: "07/17/2017"

@@ -1,8 +1,9 @@
 ---
+description: "Type Property (ADO MD)"
 title: "Type Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,13 +19,13 @@ author: rothja
 ms.author: jroth
 ---
 # Type Property (ADO MD)
-Indicates the type of the current [member](../../../ado/reference/ado-md-api/member-object-ado-md.md).  
+Indicates the type of the current [member](./member-object-ado-md.md).  
   
 ## Return Values  
- Returns a [MemberTypeEnum](../../../ado/reference/ado-md-api/membertypeenum.md) value and is read-only.  
+ Returns a [MemberTypeEnum](./membertypeenum.md) value and is read-only.  
   
 ## Remarks  
- This property is supported only on [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) objects belonging to a [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) object. An error occurs when this property is referenced from **Member** objects belonging to a [Position](../../../ado/reference/ado-md-api/position-object-ado-md.md) object.  
+ This property is supported only on [Member](./member-object-ado-md.md) objects belonging to a [Level](./level-object-ado-md.md) object. An error occurs when this property is referenced from **Member** objects belonging to a [Position](./position-object-ado-md.md) object.  
   
 ## Applies To  
- [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)
+ [Member Object (ADO MD)](./member-object-ado-md.md)

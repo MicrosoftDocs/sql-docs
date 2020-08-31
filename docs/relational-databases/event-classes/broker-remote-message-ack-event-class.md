@@ -1,4 +1,5 @@
 ---
+description: "Broker:Remote Message Ack Event Class"
 title: "Broker:Remote Message Ack Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2019"

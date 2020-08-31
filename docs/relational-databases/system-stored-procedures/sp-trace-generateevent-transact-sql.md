@@ -1,4 +1,5 @@
 ---
+description: "sp_trace_generateevent (Transact-SQL)"
 title: "sp_trace_generateevent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"

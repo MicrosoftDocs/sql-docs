@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_server_audit_status (Transact-SQL)"
 title: "sys.dm_server_audit_status (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/19/2016"

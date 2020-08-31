@@ -1,4 +1,5 @@
 ---
+description: "catalog.add_execution_worker (SSISDB Database)"
 title: "catalog.add_execution_worker (SSISDB Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"

@@ -1,4 +1,5 @@
 ---
+description: "OData Connection Manager"
 title: "OData Connection Manager | Microsoft Docs"
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -55,9 +56,8 @@ To connect to Microsoft Dynamics AX Online or Microsoft Dynamics CRM online, you
 ## OData Connection Manager Properties  
  The following list describes the properties of the OData connection manager.  
   
-|||  
-|-|-|  
 |Property|Description|  
+|-|-|  
 |Url|URL to the service document.|  
 |UserName|User name to use for authentication, if required.|  
 |Password|Password to use for authentication, if required.|  

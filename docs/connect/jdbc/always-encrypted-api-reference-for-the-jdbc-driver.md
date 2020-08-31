@@ -1,4 +1,5 @@
 ---
+description: "Always Encrypted API reference for the JDBC driver"
 title: "Always Encrypted API reference for the JDBC driver | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

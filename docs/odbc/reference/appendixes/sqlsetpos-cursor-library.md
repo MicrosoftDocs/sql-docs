@@ -1,4 +1,5 @@
 ---
+description: "SQLSetPos (Cursor Library)"
 title: "SQLSetPos (Cursor Library) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

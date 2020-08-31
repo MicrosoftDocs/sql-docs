@@ -1,4 +1,5 @@
 ---
+description: "SQL Statements Entered by the User"
 title: "SQL Statements Entered by the User | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

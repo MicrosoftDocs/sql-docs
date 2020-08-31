@@ -1,4 +1,5 @@
 ---
+description: "Using Cube and Subcube Expressions"
 title: "Using Cube and Subcube Expressions | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

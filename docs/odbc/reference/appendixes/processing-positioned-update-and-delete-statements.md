@@ -1,4 +1,5 @@
 ---
+description: "Processing Positioned Update and Delete Statements"
 title: "Processing Positioned Update and Delete Statements | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

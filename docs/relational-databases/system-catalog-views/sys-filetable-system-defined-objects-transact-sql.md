@@ -1,4 +1,5 @@
 ---
+description: "sys.filetable_system_defined_objects (Transact-SQL)"
 title: "sys.filetable_system_defined_objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

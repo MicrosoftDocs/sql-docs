@@ -1,4 +1,5 @@
 ---
+description: "sys.spatial_index_tessellations (Transact-SQL)"
 title: "sys.spatial_index_tessellations (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

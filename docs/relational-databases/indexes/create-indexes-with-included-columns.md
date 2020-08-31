@@ -1,4 +1,5 @@
 ---
+description: "Create Indexes with Included Columns"
 title: "Create Indexes with Included Columns | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2017"

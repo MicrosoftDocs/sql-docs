@@ -1,8 +1,9 @@
 ---
+description: "CreateRecordset Method (RDS)"
 title: "CreateRecordset Method (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -21,7 +22,7 @@ author: rothja
 ms.author: jroth
 ---
 # CreateRecordset Method (RDS)
-Creates an empty, disconnected [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Creates an empty, disconnected [Recordset](../ado-api/recordset-object-ado.md).  
   
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
@@ -35,7 +36,7 @@ object.CreateRecordset(ColumnInfos)
   
 #### Parameters  
  *Object*  
- An object variable that represents an [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) or [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object.  
+ An object variable that represents an [RDSServer.DataFactory](./datafactory-object-rdsserver.md) or [RDS.DataControl](./datacontrol-object-rds.md) object.  
   
  *ColumnsInfos*  
  A **Variant** array of attributes that defines each column in the **Recordset** created. Each column definition contains an array of four required attributes and one optional attribute.  
@@ -53,7 +54,7 @@ object.CreateRecordset(ColumnInfos)
 ## Remarks  
  The server-side business object can populate the resulting **Recordset** with data from a non-OLE DB data provider, such as an operating system file containing stock quotes.  
   
- The following table lists the [DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md) values supported by the **CreateRecordset** method. The number listed is the reference number used to define fields.  
+ The following table lists the [DataTypeEnum](../ado-api/datatypeenum.md) values supported by the **CreateRecordset** method. The number listed is the reference number used to define fields.  
   
  Each of the data types is either fixed length or variable length. Fixed-length types should be defined with a size of -1, because the size is predetermined and a size definition is still required. Variable-length data types allow a size from 1 to 32767.  
   
@@ -96,17 +97,14 @@ object.CreateRecordset(ColumnInfos)
 
 :::row:::
     :::column:::
-        [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
+        [DataControl Object (RDS)](./datacontrol-object-rds.md)  
     :::column-end:::
     :::column:::
-        [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)  
+        [DataFactory Object (RDSServer)](./datafactory-object-rdsserver.md)  
     :::column-end:::
 :::row-end:::
 
 ## See Also  
- [CreateRecordset Method Example (VB)](../../../ado/reference/ado-api/createrecordset-method-example-vb.md)   
- [CreateRecordset Method Example (VBScript)](../../../ado/reference/rds-api/createrecordset-method-example-vbscript.md)   
- [CreateObject Method (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)
-
-
-
+ [CreateRecordset Method Example (VB)](../ado-api/createrecordset-method-example-vb.md)   
+ [CreateRecordset Method Example (VBScript)](./createrecordset-method-example-vbscript.md)   
+ [CreateObject Method (RDS)](./createobject-method-rds.md)

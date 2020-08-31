@@ -1,4 +1,5 @@
 ---
+description: "ExistingConnection Event Class"
 title: "ExistingConnection Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

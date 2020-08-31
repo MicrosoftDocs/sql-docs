@@ -1,5 +1,6 @@
 ---
-title: "Using savepoints | Microsoft Docs"
+title: "Using savepoints"
+description: "Learn how to use savepoints as part of transaction management in your application when using the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

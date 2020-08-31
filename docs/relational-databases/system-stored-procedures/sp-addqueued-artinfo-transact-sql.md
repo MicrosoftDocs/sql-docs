@@ -1,4 +1,5 @@
 ---
+description: "sp_addqueued_artinfo (Transact-SQL)"
 title: "sp_addqueued_artinfo (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

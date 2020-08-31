@@ -1,4 +1,5 @@
 ---
+description: "catalog.startup"
 title: "catalog.startup | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

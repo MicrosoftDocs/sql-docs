@@ -1,4 +1,5 @@
 ---
+description: "Create User-defined Functions (Database Engine)"
 title: "Create User-defined Functions (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/09/2017"

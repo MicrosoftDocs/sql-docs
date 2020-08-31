@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL)"
 title: "sys.dm_db_objects_disabled_on_compatibility_level_change (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

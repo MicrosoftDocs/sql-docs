@@ -1,4 +1,5 @@
 ---
+description: "GetRoot (Database Engine)"
 title: "GetRoot (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"

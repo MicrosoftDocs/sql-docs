@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_category (Transact-SQL)"
 title: "sp_delete_category (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"

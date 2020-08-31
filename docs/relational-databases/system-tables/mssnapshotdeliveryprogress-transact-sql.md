@@ -1,4 +1,5 @@
 ---
+description: "MSsnapshotdeliveryprogress (Transact-SQL)"
 title: "MSsnapshotdeliveryprogress (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

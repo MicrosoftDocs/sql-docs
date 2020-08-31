@@ -1,4 +1,5 @@
 ---
+description: "DQS Knowledge Bases and Domains"
 title: "DQS Knowledge Bases and Domains"
 ms.date: "10/01/2012"
 ms.prod: sql

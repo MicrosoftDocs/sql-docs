@@ -63,19 +63,19 @@
       - name: Install azdata
         items:
         - name: Install
-          href: big-data-cluster/deploy-install-azdata.md
+          href: azdata/install/deploy-install-azdata.md
         - name: macOS
-          href: big-data-cluster/deploy-install-azdata-macos.md
+          href: azdata/install/deploy-install-azdata-macos.md
         - name: Windows
-          href: big-data-cluster/deploy-install-azdata-installer.md
+          href: azdata/install/deploy-install-azdata-installer.md
         - name: Linux with apt
-          href: big-data-cluster/deploy-install-azdata-linux-package.md
+          href: azdata/install/deploy-install-azdata-linux-package.md
         - name: Linux with yum
-          href: big-data-cluster/deploy-install-azdata-yum.md
+          href: azdata/install/deploy-install-azdata-yum.md
         - name: Linux with zypper
-          href: big-data-cluster/deploy-install-azdata-zypper.md
+          href: azdata/install/deploy-install-azdata-zypper.md
         - name: With pip
-          href: big-data-cluster/deploy-install-azdata-pip.md
+          href: azdata/install/deploy-install-azdata-pip.md
     - name: Deploy
       items:
       - name: Deployment guidance
@@ -132,10 +132,20 @@
       href: big-data-cluster/concept-compute-pool.md
     - name: Security
       href: big-data-cluster/concept-security.md
+    - name: Private cluster
+      items:
+      - name: Deploy
+        href: big-data-cluster/private-deploy.md
+      - name: Manage
+        href: big-data-cluster/private-manage.md
+      - name: Restrict traffic
+        href: big-data-cluster/private-restrict-egress-traffic.md
   - name: How-to guides
     items:
     - name: Configure
       items:
+      - name: Cluster
+        href: big-data-cluster/configure-cluster.md
       - name: SQL Server master instance
         href: big-data-cluster/configure-sql-server-master-instance.md
       - name: Configure Apache Spark & Apache Hadoop
@@ -175,11 +185,15 @@
     - name: Deploy and consume apps
       items:
       - name: Deploy with azdata
-        href: big-data-cluster/big-data-cluster-create-apps.md
+        href: big-data-cluster/app-create.md
       - name: Deploy with VS Code
         href: big-data-cluster/app-deployment-extension.md
       - name: Consume apps
-        href: big-data-cluster/big-data-cluster-consume-apps.md
+        href: big-data-cluster/app-consume.md
+      - name: Run apps
+        href: big-data-cluster/app-run.md
+      - name: Monitor apps
+        href: big-data-cluster/app-monitor.md
     - name: Big Data/Machine Learning
       items:
       - name: Use Machine Learning Services (Python, R)
@@ -231,6 +245,19 @@
               href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
             - name: 4 - Deploy the model
               href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+          - name: NYC taxi tips (classification)
+            items:
+            - name: 1 - Introduction
+              href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 2 - Data exploration
+              href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 3 - Feature engineering
+              href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 4 - Train and deploy
+              href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 5 - Predictions
+              href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+
         - name: R
           items:
           - name: Ski rental (decision tree)
@@ -253,7 +280,18 @@
               href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
             - name: 4 - Deploy the model
               href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
-
+          - name: NYC taxi tips (classification)
+            items:
+            - name: 1 - Introduction
+              href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 2 - Data exploration
+              href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 3 - Feature engineering
+              href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 4 - Train and deploy
+              href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+            - name: 5 - Predictions
+              href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
       - name: Manage Python, R packages
         items:
         - name: Python
@@ -345,64 +383,70 @@
       items:
       - name: Deployment configuration file
         href: big-data-cluster/reference-deployment-config.md
+    - name: Configuration
+      items:
+      - name: Master instance
+        href: big-data-cluster/reference-config-master-instance.md
+      - name: Apache Spark & Apache Hadoop
+        href: big-data-cluster/reference-config-spark-hadoop.md
     - name: azdata reference
       items:
       - name: azdata
         items:
         - name: azdata
-          href: big-data-cluster/reference-azdata.md
+          href: azdata/reference/reference-azdata.md
         - name: notebook
-          href: big-data-cluster/reference-azdata-notebook.md
+          href: azdata/reference/reference-azdata-notebook.md
         - name: sql
-          href: big-data-cluster/reference-azdata-sql.md
+          href: azdata/reference/reference-azdata-sql.md
       - name: App Deploy
         items:
         - name: app
-          href: big-data-cluster/reference-azdata-app.md
+          href: azdata/reference/reference-azdata-app.md
         - name: app template
-          href: big-data-cluster/reference-azdata-app-template.md
+          href: azdata/reference/reference-azdata-app-template.md
       - name: Cluster
         items:
         - name: bdc
-          href: big-data-cluster/reference-azdata-bdc.md
+          href: azdata/reference/reference-azdata-bdc.md
         - name: bdc app
-          href: big-data-cluster/reference-azdata-bdc-app.md
+          href: azdata/reference/reference-azdata-bdc-app.md
         - name: bdc app status
-          href: big-data-cluster/reference-azdata-bdc-app-status.md
+          href: azdata/reference/reference-azdata-bdc-app-status.md
         - name: bdc config
-          href: big-data-cluster/reference-azdata-bdc-config.md
+          href: azdata/reference/reference-azdata-bdc-config.md
         - name: bdc control
-          href: big-data-cluster/reference-azdata-bdc-control.md
+          href: azdata/reference/reference-azdata-bdc-control.md
         - name: bdc control status
-          href: big-data-cluster/reference-azdata-bdc-control-status.md          
+          href: azdata/reference/reference-azdata-bdc-control-status.md          
         - name: bdc debug
-          href: big-data-cluster/reference-azdata-bdc-debug.md
+          href: azdata/reference/reference-azdata-bdc-debug.md
         - name: bdc endpoint
-          href: big-data-cluster/reference-azdata-bdc-endpoint.md
+          href: azdata/reference/reference-azdata-bdc-endpoint.md
         - name: bdc gateway
-          href: big-data-cluster/reference-azdata-bdc-gateway.md
+          href: azdata/reference/reference-azdata-bdc-gateway.md
         - name: bdc gateway status
-          href: big-data-cluster/reference-azdata-bdc-gateway-status.md
+          href: azdata/reference/reference-azdata-bdc-gateway-status.md
         - name: bdc hdfs
-          href: big-data-cluster/reference-azdata-bdc-hdfs.md
+          href: azdata/reference/reference-azdata-bdc-hdfs.md
         - name: bdc hdfs mount
-          href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
+          href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
         - name: bdc hdfs status
-          href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
+          href: azdata/reference/reference-azdata-bdc-hdfs-status.md
         - name: bdc spark
-          href: big-data-cluster/reference-azdata-bdc-spark.md        
+          href: azdata/reference/reference-azdata-bdc-spark.md        
         - name: bdc spark batch
-          href: big-data-cluster/reference-azdata-bdc-spark-batch.md        
+          href: azdata/reference/reference-azdata-bdc-spark-batch.md        
         - name: bdc spark session
-          href: big-data-cluster/reference-azdata-bdc-spark-session.md        
+          href: azdata/reference/reference-azdata-bdc-spark-session.md        
         - name: bdc spark statement
-          href: big-data-cluster/reference-azdata-bdc-spark-statement.md        
+          href: azdata/reference/reference-azdata-bdc-spark-statement.md        
         - name: bdc spark status
-          href: big-data-cluster/reference-azdata-bdc-spark-status.md        
+          href: azdata/reference/reference-azdata-bdc-spark-status.md        
         - name: bdc sql
-          href: big-data-cluster/reference-azdata-bdc-sql.md
+          href: azdata/reference/reference-azdata-bdc-sql.md
         - name: bdc status
-          href: big-data-cluster/reference-azdata-bdc-status.md
+          href: azdata/reference/reference-azdata-bdc-status.md
 - name: Business continuity
   items:
   - name: Overview
@@ -4711,6 +4755,8 @@
         href: database-engine/configure-windows/hide-an-instance-of-sql-server-database-engine.md
       - name: Configure the Database Engine to Listen on Multiple TCP Ports
         href: database-engine/configure-windows/configure-the-database-engine-to-listen-on-multiple-tcp-ports.md
+      - name: How to enable the TCP protocol with SQLPS
+        href: powershell/how-to-enable-tcp-sqlps.md
       - name: Determine Whether the Database Engine Is Installed & Started
         href: database-engine/configure-windows/determine-whether-the-database-engine-is-installed-and-started.md
       - name: Connect to the Database Engine Using Extended Protection
@@ -6352,7 +6398,7 @@
       - name: Utility Explorer F1 Help
         href: relational-databases/manage/utility-explorer-f1-help.md
     - name: SQL Assessment API
-      href: sql-assessment-api/sql-assessment-api-overview.md
+      href: tools/sql-assessment-api/sql-assessment-api-overview.md
   - name: Monitor
     href: relational-databases/performance/monitor-and-tune-for-performance.md
     items:
@@ -8414,6 +8460,8 @@
       items:
       - name: Connect & query SQL Server
         href: ssms/tutorials/connect-query-sql-server.md
+      - name: Import Flat File
+        href: relational-databases/import-export/import-flat-file-wizard.md
     - name: Concepts
       items:
       - name: Tool Windows in SSMS
@@ -8428,6 +8476,8 @@
         href: ssms/use-of-sql-server-features-and-capabilities-wwi-oltp.md
       - name: Add an External Tool to the Tools Menu
         href: ssms/add-an-external-tool-to-the-tools-menu-sql-server-management-studio.md
+      - name: Install Extensions in SQL Server Management Studio (SSMS)
+        href: ssms/install-extensions-in-sql-server-management-studio-ssms.md
       - name: SSMS Utility
         href: ssms/ssms-utility.md
       - name: SSMS Keyboard Shortcuts
@@ -9764,10 +9814,10 @@
     items: 
     - name: Extended features and tools
       href: tools/download-sql-feature-packs.md
-  - name: Visual Studio Code
+  - name: Visual Studio Code 
     items: 
     - name: T-SQL scripts
-      href: visual-studio-code/sql-server-develop-use-vscode.md
+      href: tools/visual-studio-code/sql-server-develop-use-vscode.md
 - name: Tutorials
   items:
   - name: SQL Server
@@ -9838,6 +9888,12 @@
       href: linux/quickstart-install-connect-clouds.md
   - name: Tutorials
     items:
+    - name: New to SQL Server docs
+      href: linux/new-to-sql-learning-resources.yml
+    - name: New to Linux docs
+      href: linux/new-to-linux-learning-resources.yml
+    - name: New to Linux resources
+      href: linux/new-to-linux-resources.md
     - name: Migrate from Windows
       href: linux/sql-server-linux-migrate-restore-database.md
     - name: Migrate to Docker
@@ -10069,8 +10125,8 @@
     items:
     - name: Educational resources 
       href: sql-server/educational-sql-resources.yml
-    - name: Microsoft Virtual Academy >>
-      href: https://mva.microsoft.com/product-training/sql-server  # TODO: MVA website is being retired in 2019.  (Removed trailing '#!lang=1033'.)
+    - name: Microsoft Learn >>
+      href: https://docs.microsoft.com/learn/
     - name: SQL on Channel 9 >>
       href: https://channel9.msdn.com/Search
   - name: Help
@@ -11841,6 +11897,8 @@
         href: relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md
       - name: sys.pdw_nodes_tables
         href: relational-databases/system-catalog-views/sys-pdw-nodes-tables-transact-sql.md
+      - name: sys.pdw_permanent_table_mappings
+        href: relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md
       - name: sys.pdw_replicated_table_cache_state
         href: relational-databases/system-catalog-views/sys-pdw-replicated-table-cache-state-transact-sql.md
       - name: sys.pdw_table_distribution_properties

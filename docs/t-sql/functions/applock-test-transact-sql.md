@@ -1,4 +1,5 @@
 ---
+description: "APPLOCK_TEST (Transact-SQL)"
 title: "APPLOCK_TEST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"

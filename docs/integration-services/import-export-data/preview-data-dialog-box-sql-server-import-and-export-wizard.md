@@ -1,4 +1,5 @@
 ---
+description: "Preview Data Dialog Box (SQL Server Import and Export Wizard)"
 title: "Preview Data Dialog Box (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/16/2017"

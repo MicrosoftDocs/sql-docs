@@ -1,4 +1,5 @@
 ---
+description: "Comparing Scripting Solutions and Custom Objects"
 title: "Comparing Scripting Solutions and Custom Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

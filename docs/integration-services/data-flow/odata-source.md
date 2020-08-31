@@ -1,4 +1,5 @@
 ---
+description: "OData Source"
 title: "OData Source | Microsoft Docs"
 ms.date: "09/17/2018"
 ms.prod: sql

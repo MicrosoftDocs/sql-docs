@@ -1,10 +1,11 @@
 ---
+description: "RDS Code Examples in Visual C++"
 title: "RDS Code Examples in Visual C++ | Microsoft Docs"
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
-ms.prod: sql  
+ms.prod: sql
 ms.prod_service: connectivity
 ms.topic: conceptual
 dev_langs: 
@@ -25,8 +26,6 @@ Use the following code examples to learn how to use RDS properties when writing 
 > [!NOTE]
 >  Paste the entire code example, from beginning to end, into your code editor. The example may not run correctly if partial examples are used or if paragraph formatting is lost.  
   
--   [Handler Property Example](../../../ado/reference/rds-api/handler-property-example-vc.md)  
+-   [Handler Property Example](./handler-property-example-vc.md)  
   
--   [InternetTimeout Property Example](../../../ado/reference/rds-api/internettimeout-property-example-vc.md)
-
-
+-   [InternetTimeout Property Example](./internettimeout-property-example-vc.md)

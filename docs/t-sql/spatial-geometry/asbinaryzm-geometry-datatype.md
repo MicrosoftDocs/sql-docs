@@ -1,4 +1,5 @@
 ---
+description: "AsBinaryZM (geometry DataType)"
 title: "AsBinaryZM (geometry DataType) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Commit and Rollback Behavior"
 title: "Commit and Rollback Behavior | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

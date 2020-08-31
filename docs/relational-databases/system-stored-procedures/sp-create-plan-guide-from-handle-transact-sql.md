@@ -1,4 +1,5 @@
 ---
+description: "sp_create_plan_guide_from_handle (Transact-SQL)"
 title: "sp_create_plan_guide_from_handle (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

@@ -1,4 +1,5 @@
 ---
+description: "CREATE SECURITY POLICY (Transact-SQL)"
 title: "CREATE SECURITY POLICY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -27,7 +28,8 @@ author: VanMSFT
 ms.author: vanto
 ---
 # CREATE SECURITY POLICY (Transact-SQL)
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asa.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
 
   Creates a security policy for row level security.  
   
@@ -83,7 +85,8 @@ CREATE SECURITY POLICY [schema_name. ] security_policy_name
  [*table_schema_name*.] *table_name*  
  Is the target table to which the security predicate will be applied. Multiple disabled security policies can target a single table, but only one can be enabled at any given time.  
   
-## Remarks  
+
+## Remarks
  When using predicate functions with memory-optimized tables, you must include **SCHEMABINDING** and use the **WITH NATIVE_COMPILATION** compilation hint.  
   
  Block predicates are evaluated after the corresponding DML operation is executed. Therefore, a READ UNCOMMITTED query can see transient values that will be rolled back.  

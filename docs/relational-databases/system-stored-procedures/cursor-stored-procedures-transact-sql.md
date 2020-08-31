@@ -1,4 +1,5 @@
 ---
+description: "Cursor Stored Procedures (Transact-SQL)"
 title: "Cursor Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

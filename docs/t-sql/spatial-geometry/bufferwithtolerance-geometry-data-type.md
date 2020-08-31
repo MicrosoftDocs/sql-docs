@@ -1,4 +1,5 @@
 ---
+description: "BufferWithTolerance (geometry Data Type)"
 title: "BufferWithTolerance (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"

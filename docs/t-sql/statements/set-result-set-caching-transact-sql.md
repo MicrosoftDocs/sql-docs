@@ -1,4 +1,5 @@
 ---
+description: "SET RESULT_SET_CACHING (Transact-SQL)"
 title: "SET RESULT_SET_CACHING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 04/16/2020

@@ -1,4 +1,5 @@
 ---
+description: "Messages (for errors) Catalog Views - sys.messages"
 title: "sys.messages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

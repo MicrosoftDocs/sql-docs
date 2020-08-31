@@ -1,4 +1,5 @@
 ---
+description: "sp_syspolicy_repair_policy_automation (Transact-SQL)"
 title: "sp_syspolicy_repair_policy_automation (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

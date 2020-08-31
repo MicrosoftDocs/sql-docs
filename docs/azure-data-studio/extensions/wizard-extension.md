@@ -73,7 +73,7 @@ Let's see what the wizard template gives us by running the extension. Before run
 
 Select **F5** in VS Code to launch Azure Data Studio in debug mode with the extension running. Then, in Azure Data Studio, run the **Launch Wizard** command from the Command Palette (Ctr+Shift+P) in the new window. This will launch the default wizard that this extension contributes:
 
-:::image type="content" source="media/wizard-extension/wizard_template.gif" alt-text="Wizard template":::
+:::image type="content" source="media/wizard-extension/wizard-template.gif" alt-text="Wizard template":::
 
 Next, we will look at how to modify this default wizard.
 

@@ -12,9 +12,9 @@ ms.author: raajmera
 ms.reviewer: mikeray
 ---
 
-# Apache Spark Connector for SQL Server and Azure SQL
+# Apache Spark connector: SQL Server & Azure SQL
 
-The Apache Spark Connector for SQL Server and Azure SQL is a high-performance connector that enables you to use transactional data in big data analytics and persist results for ad-hoc queries or reporting. The connector allows you to use any SQL database, on-premises or in the cloud, as an input data source or output data sink for Spark jobs.
+The Apache Spark connector for SQL Server and Azure SQL is a high-performance connector that enables you to use transactional data in big data analytics and persist results for ad-hoc queries or reporting. The connector allows you to use any SQL database, on-premises or in the cloud, as an input data source or output data sink for Spark jobs.
 
 This library contains the source code for the Apache Spark Connector for SQL Server and Azure SQL.
 

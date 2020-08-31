@@ -53,7 +53,7 @@ In addition following options are supported
 | Option | Default | Description |
 | --------- | ------------------ | ------------------------------------------ |
 | `reliabilityLevel` | `BEST_EFFORT` | `BEST_EFFORT` or `NO_DUPLICATES`. `NO_DUPLICATES` implements a reliable insert in executor restart scenarios |
-| `dataPoolDataSource` | `none` | `none` implies the value is not set and the connector should write to a single instance of SQl Server. Set this value to data source name to write to a data pool table in a SQL Server Big Data Cluster|
+| `dataPoolDataSource` | `none` | `none` implies the value is not set and the connector should write to a single instance of SQL Server. Set this value to data source name to write to a data pool table in a SQL Server Big Data Cluster|
 | `isolationLevel` | `READ_COMMITTED` | Specify the isolation level |
 | `tableLock` | `false` | Implements an insert with `TABLOCK` option to improve write performance |
 
@@ -61,7 +61,7 @@ Other [bulk copy options](../jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlser
 
 ## Performance comparison
 
-Apache Spark Connector for SQL Server and Azure SQL is up to 15x faster than generic JDBC connector for writing to SQL Server. Performance characteristics vary on type, volume of data, options used, and may show run to run variations. The following performance results are the time taken to overwrite a sql table with 143.9M rows in a spark `dataframe`. The spark `dataframe` is constructed by reading `store_sales` HDFS table generated using [spark TPCDS Benchmark](https://github.com/databricks/spark-sql-perf). Time to read `store_sales` to `dataframe` is excluded. The results are averaged over 3 runs.
+Apache Spark Connector for SQL Server and Azure SQL is up to 15x faster than generic JDBC connector for writing to SQL Server. Performance characteristics vary on type, volume of data, options used, and may show run to run variations. The following performance results are the time taken to overwrite a SQL table with 143.9M rows in a spark `dataframe`. The spark `dataframe` is constructed by reading `store_sales` HDFS table generated using [spark TPCDS Benchmark](https://github.com/databricks/spark-sql-perf). Time to read `store_sales` to `dataframe` is excluded. The results are averaged over 3 runs.
 
 | Connector Type | Options | Description |  Time to write |
 | --------- | ------------------ | -------------------------------------| ---------- |
@@ -73,8 +73,8 @@ Apache Spark Connector for SQL Server and Azure SQL is up to 15x faster than gen
 
 Config
 
-- Spark config : num_executors = 20, executor_memory = '1664m', executor_cores = 2
-- Data Gen config : scale_factor=50, partitioned_tables=true
+- Spark config: num_executors = 20, executor_memory = '1664m', executor_cores = 2
+- Data Gen config: scale_factor=50, partitioned_tables=true
 - Data file `store_sales` with nr of rows 143,997,590
 
 Environment
@@ -87,7 +87,7 @@ Environment
 
 ### `java.lang.NoClassDefFoundError: com/microsoft/aad/adal4j/AuthenticationException`
 
-This issue arises from using an older version of the mssql driver (which is now included in this connector) in your hadoop environment. If you are coming from using the previous Azure SQL Connector and have manually installed drivers onto that cluster for AAD compatibility, you will need to remove those drivers.
+This issue arises from using an older version of the mssql driver (which is now included in this connector) in your hadoop environment. If you are coming from using the previous Azure SQL Connector and have manually installed drivers onto that cluster for Azure Active Directory (AAD) compatibility, you will need to remove those drivers.
 
 Steps to fix the issue:
 
@@ -129,7 +129,7 @@ For more information and explanation, see the resolution to [https://github.com/
 > [!WARNING]
 > The `overwrite` mode first drops the table if it already exists in the database by default. Please use this option with due care to avoid unexpected data loss.
 
-When using mode `overwrite` if you do not use the option `truncate` on recreation of the table, indexes will be lost. For example a columnstore table would now be a heap. If you want to maintain existing indexing please also specify option `truncate` with value true. i.e .option(`truncate",true)
+When using mode `overwrite` if you do not use the option `truncate` on recreation of the table, indexes will be lost. For example a columnstore table would now be a heap. If you want to maintain existing indexing please also specify option `truncate` with value true. i.e .option(`truncate`,true)
 
 ```python
 server_name = "jdbc:sqlserver://{SERVER_ADDR}"
@@ -233,7 +233,7 @@ Check the [sample notebooks](https://github.com/microsoft/sql-spark-connector/tr
 
 ## Support
 
-The Apache Spark Connector for Azure SQL and SQL Server is an open source project. This connector does not come with any Microsoft support. For issues with or questions about the connector, please create an Issue in this project repository. The connector community is active and monitoring submissions.
+The Apache Spark Connector for Azure SQL and SQL Server is an open-source project. This connector does not come with any Microsoft support. For issues with or questions about the connector, please create an Issue in this project repository. The connector community is active and monitoring submissions.
 
 ## Roadmap
 Visit the Connector project in the **Projects** tab to see needed / planned items. Feel free to make an issue and start contributing!

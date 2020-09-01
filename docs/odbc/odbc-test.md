@@ -39,6 +39,6 @@ Help topics that were formerly included within this section of the documentation
 
 Note that the 64-bit versions of these applications, meant for 64-bit Microsoft Windows operating systems, have the same names as the 32-bit versions, even though they are separate files. i.e. the name for the Unicode version of the 64-bit version of ODBC Test is `odbct32w.exe`.
 
-## Open Source
+## Open source
 
 ODBC Test is open source. To view the code and build the latest version of ODBC Test yourself, go to the [GitHub repository for ODBC Test](https://github.com/microsoft/ODBCTest).

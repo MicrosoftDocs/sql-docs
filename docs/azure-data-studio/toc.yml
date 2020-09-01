@@ -86,10 +86,18 @@
       href: extensibility.md
     - name: Extension authoring
       href: extension-authoring.md
-    - name: Create an extension
-      href: tutorial-create-extension.md
     - name: Extensibility APIs
       href: extensibility-apis.md
+    - name: Keymap extension
+      href: extensions/keymap-extension.md
+    - name: Dashboard extension
+      href: extensions/dashboard-extension.md
+    - name: Notebook extension
+      href: extensions/notebook-extension.md
+    - name: Jupyter Book extension
+      href: extensions/jupyter-book-extension.md
+    - name: Wizard extension
+      href: extensions/wizard-extension.md
   - name: Integrated terminal (PowerShell, Bash)
     href: integrated-terminal.md
   - name: Keyboard shortcuts

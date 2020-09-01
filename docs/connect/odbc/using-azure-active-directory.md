@@ -53,27 +53,27 @@ It is possible to use the new Azure AD authentication options when creating or e
 
 `Authentication=ActiveDirectoryIntegrated` for Azure Active Directory Integrated authentication to Azure SQL Database
 
-![create-dsn-ad-integrated.png](windows/create-dsn-ad-integrated.png)
+![The DSN creation and editing screen with Azure Active Directory Integrated authentication selected.](windows/create-dsn-ad-integrated.png)
 
 `Authentication=ActiveDirectoryPassword` for Azure Active Directory username/password authentication to Azure SQL Database
 
-![create-dsn-ad-password.png](windows/create-dsn-ad-password.png)
+![The DSN creation and editing screen with Azure Active Directory Password authentication selected.](windows/create-dsn-ad-password.png)
 
 `Authentication=ActiveDirectoryInteractive` for Azure Active Directory interactive authentication to Azure SQL Database
 
-![create-dsn-ad-interactive.png](windows/create-dsn-ad-interactive.png)
+![The DSN creation and editing screen with Azure Active Directory Interactive authentication selected.](windows/create-dsn-ad-interactive.png)
 
 `Authentication=SqlPassword` for username/password authentication to SQL Server (Azure or otherwise)
 
-![create-dsn-ad-sql-server.png](windows/create-dsn-ad-sql-server.png)
+![The DSN creation and editing screen with SQL Server authentication selected.](windows/create-dsn-ad-sql-server.png)
 
 `Trusted_Connection=Yes` for Windows legacy SSPI integrated authentication
 
-![create-dsn-win-sspi.png](windows/create-dsn-win-sspi.png)
+![The DSN creation and editing screen with Integrated Windows authentication selected.](windows/create-dsn-win-sspi.png)
 
 `Authentication=ActiveDirectoryMsi` for Azure Active Directory Managed Identity authentication
 
-![create-dsn-ad-msi.png](windows/create-dsn-ad-msi.png)
+![The DSN creation and editing screen with Managed Service Identity authentication selected.](windows/create-dsn-ad-msi.png)
 
 The six options correspond to `Trusted_Connection=Yes` (existing legacy Windows SSPI-only integrated authentication) and `Authentication=` `ActiveDirectoryIntegrated`, `SqlPassword`, `ActiveDirectoryPassword`, `ActiveDirectoryInteractive`, and `ActiveDirectoryMsi` respectively.
 
@@ -81,7 +81,7 @@ The six options correspond to `Trusted_Connection=Yes` (existing legacy Windows 
 
 The prompt dialog displayed by SQLDriverConnect when it requests information required to complete the connection contains four new options for Azure AD authentication:
 
-![server-login.png](windows/server-login.png)
+![The SQL Server Login dialog displayed by SQLDriverConnect.](windows/server-login.png)
 
 These options correspond to the same six available in the DSN setup UI above.
 
@@ -101,7 +101,7 @@ These options correspond to the same six available in the DSN setup UI above.
 7. (_Windows driver only_.) Azure AD Interactive Authentication uses Azure Multi-factor Authentication technology to set up connection. In this mode, by providing the login ID, an Azure Authentication dialog is triggered and allows the user to input the password to complete the connection. The username is passed in the connection string.
 `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
 
-![WindowsAzureAuth.png](windows/WindowsAzureAuth.png)
+![Windows Azure Authentication UI when using Active Directory Interactive authentication.](windows/WindowsAzureAuth.png)
 
 8. Azure Active Directory Managed Identity Authentication uses system-assigned or user-assigned identity for authentication to set up connection. For user-assigned identity, UID is set to the object ID of the user identity.<br>
 For system-assigned identity,<br>

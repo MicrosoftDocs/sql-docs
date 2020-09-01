@@ -25,7 +25,7 @@ Traditionally, integration of data science solutions has meant extensive recodin
 
 A more comprehensive example of deploying R code into production by using stored procedures can be found at [Tutorial: R data analytics for SQL developers](../../machine-learning/tutorials/r-taxi-classification-introduction.md)
 
-## Guidelines for optimizing R code for SQl
+## Guidelines for optimizing R code for SQL
 
 Converting your R code in SQL is easier if some optimizations are done beforehand in the R or Python code. These include avoiding data types that cause problems, avoiding unnecessary data conversions, and rewriting the R code as a single function call that can be easily parameterized. For more information, see:
 

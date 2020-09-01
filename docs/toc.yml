@@ -6227,6 +6227,8 @@
         items:
         - name: Asymmetric Keys Encryption Strength
           href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
+        - name: Backup Files On Separate Devices from the Database Files
+          href: relational-databases/policy-based-management/backup-files-on-separate-devices-from-database-files.md
         - name: Check Disk Input & Output Subsystem for I/O Delay Problems
           href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
         - name: Check Disk Input-Output Subsystem for Read Retry Problems
@@ -6235,6 +6237,8 @@
           href: relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md
         - name: Correct Affinity Mask & Affinity Input & Output Mask Overlap
           href: relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+        - name: Database Recovery Model
+          href: relational-databases/policy-based-management/database-recovery-model.md
         - name: Default Trace Log Files Disabled
           href: relational-databases/policy-based-management/default-trace-log-files-disabled.md
         - name: Detect Failed Input & Output Requests
@@ -6269,6 +6273,8 @@
           href: relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md
         - name: Set the AUTO_SHRINK Database Option to OFF
           href: relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md
+        - name: Set collation of user databases to match master and model databases
+          href: relational-databases/policy-based-management/set-collation-of-user-defined-databases-to-match-master-model-databases.md
         - name: Set the Max Degree of Parallelism Option for Optimal Performance
           href: relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md
         - name: Set the PAGE_VERIFY Database Option to CHECKSUM

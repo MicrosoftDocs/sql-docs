@@ -1,7 +1,7 @@
 ---
 title: "Deprecated features in SQL Server 2019 Reporting Services | Microsoft Docs"
-description: This article describes features that will be deprecated in the next version of SQL Server Reporting Services.
-ms.date: 11/21/2019
+description: This article describes features in SQL Server 2019 Reporting Services that will be deprecated in the next version of SQL Server Reporting Services.
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: reporting-services
@@ -38,6 +38,7 @@ SQL Server Reporting Services supports the following features in the next versio
 | Report Server | Mobile Reports and Mobile Report Publisher | Power BI reports in Power BI Report Server offer mobile capabilities. |
 | Report Server | XLS and DOC render formats | XLSX and DOCX formats are available and supported. |
 | Report Server | Atom Data Feed | oData feed support is available for shared datasets in SSRS and Power BI Report Server. |
+| Report Server | Pin to Power BI | Paginated report support is now available directly in the Power BI service.  |
 
 ## See also
 

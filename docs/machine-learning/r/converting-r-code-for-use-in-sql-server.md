@@ -116,7 +116,6 @@ How much you change your code depends on whether you intend to submit the R code
 
 + Consult with a database developer to determine ways to improve performance by using SQL Server features such as [memory-optimized tables](https://docs.microsoft.com/sql/relational-databases/in-memory-oltp/introduction-to-memory-optimized-tables), or, if you have Enterprise Edition, [Resource Governor](https://docs.microsoft.com/sql/relational-databases/resource-governor/resource-governor)).
 
-    For more information, see [SQL Server Optimization Tips and Tricks for Analytics Services](https://gallery.cortanaintelligence.com/Tutorial/SQL-Server-Optimization-Tips-and-Tricks-for-Analytics-Services)
 
 ### Step 3. Prepare for deployment
 

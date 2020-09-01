@@ -4,7 +4,7 @@ description: Use the sqlrutils R package in SQL Server to bundle R language code
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 08/28/2020  
+ms.date: 08/31/2020  
 ms.topic: how-to
 author: dphansen
 ms.author: davidph

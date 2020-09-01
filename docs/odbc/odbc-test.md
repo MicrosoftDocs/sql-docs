@@ -41,4 +41,4 @@ Note that the 64-bit versions of these applications, meant for 64-bit Microsoft 
 
 ## Open Source
 
-ODBC Test is also open source. To view the code and build the latest version of ODBC Test yourself, go to the [GitHub repository for ODBC Test](https://github.com/microsoft/ODBCTest).
+ODBC Test is open source. To view the code and build the latest version of ODBC Test yourself, go to the [GitHub repository for ODBC Test](https://github.com/microsoft/ODBCTest).

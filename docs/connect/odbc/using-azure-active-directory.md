@@ -2,7 +2,7 @@
 title: "Using Azure Active Directory with the ODBC Driver"
 description: "The Microsoft ODBC Driver for SQL Server allows ODBC applications to connect to an instance of Azure SQL Database using Azure Active Directory."
 ms.custom: ""
-ms.date: "08/06/2020"
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -139,14 +139,14 @@ The `ACCESSTOKEN` is a variable-length structure consisting of a 4-byte _length_
 The following sample shows the code required to connect to SQL Server using Azure Active Directory with connection keywords. Note that there is no need to change the application code itself; the connection string, or DSN if one is used, is the only modification needed to use Azure AD for authentication:
 ~~~
     ...
-    SQLCHAR connString[] = "Driver={ODBC Driver 13 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword"
+    SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server};UID=myuser;PWD=myPass;Authentication=ActiveDirectoryPassword"
     ...
     SQLDriverConnect(hDbc, NULL, connString, SQL_NTS, NULL, 0, NULL, SQL_DRIVER_NOPROMPT);    
     ...
 ~~~
 The following sample shows the code required to connect to SQL Server using Azure Active Directory with access token authentication. In this case, it is necessary to modify application code to process the access token and set the associated connection attribute.
 ~~~
-    SQLCHAR connString[] = "Driver={ODBC Driver 13 for SQL Server};Server={server}"
+    SQLCHAR connString[] = "Driver={ODBC Driver 17 for SQL Server};Server={server}"
     SQLCHAR accessToken[] = "eyJ0eXAiOi..."; // In the format extracted from an OAuth JSON response
     ...
     DWORD dataSize = 2 * strlen(accessToken);

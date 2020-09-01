@@ -174,7 +174,7 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
 > [!NOTE]  
 >  Pausing Database Engine Tuning Advisor is not supported. If you click the **Start Analysis** toolbar button after clicking either the **Stop Analysis** or **Stop Analysis (With Recommendations)** toolbar buttons, Database Engine Tuning Advisor starts a new tuning session.  
   
-##### To tune a database using a workload file or table as input  
+#### To tune a database using a workload file or table as input  
   
 1.  Determine the database features (indexes, indexed views, partitioning) you want Database Engine Tuning Advisor to consider adding, removing, or retaining during analysis.  
   
@@ -189,7 +189,6 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
      The format for specifying a table is  
   
     ```  
-  
     database_name.schema_name.table_name  
     ```  
   
@@ -229,7 +228,7 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
   
  For more information about **dta** utility syntax and examples, see [dta Utility](../../tools/dta/dta-utility.md).  
   
-##### To tune a database by using the plan cache  
+#### To tune a database by using the plan cache  
   
 1.  Specify the **-ip** option. The top 1,000 plan cache events for the selected databases are analyzed.  
   
@@ -251,7 +250,7 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
     dta -E -D DatabaseName -ip -ipf -n 2000 -s SessionName2  
     ```  
   
-##### To tune a database by using a workload and dta utility default settings  
+#### To tune a database by using a workload and dta utility default settings  
   
 1.  Determine the database features (indexes, indexed views, partitioning) you want Database Engine Tuning Advisor to consider adding, removing, or retaining during analysis.  
   
@@ -267,7 +266,7 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
   
      The four options shown here (database name, workload, connection type, and session name) are mandatory.  
   
-##### To tune a remote database or a named instance for a specific duration  
+#### To tune a remote database or a named instance for a specific duration  
   
 1.  Determine the database features (indexes, indexed views, partitioning) you want Database Engine Tuning Advisor to consider adding, removing, or retaining during analysis.  
   
@@ -282,7 +281,7 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
   
      where `-S` specifies a remote server name and instance (or a named instance on the local server) and `-D` specifies the name of the database you want to tune. The `-it` option specifies the name of the workload table, `-U` and `-P` specify the login ID and password to the remote database, `-s` specifies the tuning session name, and `-A` specifies the tuning session duration in minutes. By default, the **dta** utility uses an 8-hour tuning duration. If you would like Database Engine Tuning Advisor to tune a workload for an unlimited amount of time, specify **0** (zero) with the `-A` option.  
   
-##### To tune a database using an XML input file  
+#### To tune a database using an XML input file  
   
 1.  Determine the database features (indexes, indexed views, partitioning) you want Database Engine Tuning Advisor to consider adding, removing, or retaining during analysis.  
   
@@ -305,7 +304,7 @@ See [Tuning Database Using Workload from Query Store](../../relational-databases
   
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML schema is available in your [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] installation in the following location:  
   
- C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd  
+ `C:\Program Files\Microsoft SQL Server\100\Tools\Binn\schemas\sqlserver\2004\07\dta\dtaschema.xsd` 
   
  The [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor XML schema is also available online at this [Microsoft Web site](https://go.microsoft.com/fwlink/?linkid=43100&clcid=0x409).  
   
@@ -409,7 +408,7 @@ database_name.owner_name.table_name
  Limits the time for the current tuning session. Providing more time for turning improves the quality of the recommendations. To ensure the best recommendations, do not select this option.  
   
 > [!NOTE]  
->  [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor consumes system resources during analysis. Use **Limit tuning time** to stop tuning before periods of anticipated heavy workload on the server being tuned.  
+> [!INCLUDE[ssDE](../../includes/ssde-md.md)] Tuning Advisor consumes system resources during analysis. Use **Limit tuning time** to stop tuning before periods of anticipated heavy workload on the server being tuned.  
   
  **Advanced Options**  
  Use the **Advanced Tuning Options** dialog box to configure the maximum space, maximum key columns, and online index recommendations.  
@@ -512,6 +511,6 @@ database_name.owner_name.table_name
   
 ## See Also  
  [View and Work with the Output from the Database Engine Tuning Advisor](../../relational-databases/performance/view-and-work-with-the-output-from-the-database-engine-tuning-advisor.md)   
- [dta Utility](../../tools/dta/dta-utility.md)  
-  
+ [dta Utility](../../tools/dta/dta-utility.md)    
+ [Tutorial: Database Engine Tuning Advisor](../../tools/dta/tutorial-database-engine-tuning-advisor.md)
   

@@ -5,8 +5,8 @@ ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.reviewer: alayu, maghan
 ms.topic: how-to
-author: anjalia
-ms.author: t-anjaga
+author: yualan
+ms.author: alayu
 ms.custom:
 ms.date: 08/28/2020
 ---

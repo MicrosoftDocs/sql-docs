@@ -735,8 +735,8 @@ In most cases, the [!INCLUDE[ssde_md](../includes/ssde_md.md)] delivers the best
 -   Using an isolation level that does not generate shared locks for read operations:
     -  READ COMMITTED isolation level when the READ_COMMITTED_SNAPSHOT database option is ON.
     -  SNAPSHOT isolation level.
-    -  READ UNCOMMITTED isolation level. This can only be used for systems that can operate with dirty reads.
-
+    -  READ UNCOMMITTED isolation level. This can only be used for systems that can operate with dirty reads.    
+  
     > [!NOTE]
     > Changing the isolation level affects all tables on the instance of the [!INCLUDE[ssde_md](../includes/ssde_md.md)].
 

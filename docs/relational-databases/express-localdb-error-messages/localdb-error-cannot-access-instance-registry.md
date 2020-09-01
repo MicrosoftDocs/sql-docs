@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY"
 title: "LOCALDB_ERROR_CANNOT_ACCESS_INSTANCE_REGISTRY | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

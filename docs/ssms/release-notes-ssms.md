@@ -79,14 +79,15 @@ SSMS 18.6 is the latest general availability (GA) release of SSMS. If you need a
 | General SSMS | Addressed three common sources of hangs in SSMS. |
 | General SSMS | Fixed a few issues related to SSMS Connection Dialog *forgetting* entries (server/user/passwords). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40256401) and [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40015519). |
 | General SSMS | Fixed an issue on the **Statistic Properties** dialog where selecting the **Update statistics for these columns** checkbox and selecting **OK** yields no effect. Statistics are not updated, and trying to script the action yields a *There is no action to be scripted* message). See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37799992). |
+| General SSMS | Addressed issues related to [CVE-2020-1455](https://portal.msrc.microsoft.com/en-US/security-guidance/advisory/CVE-2020-1455). | 
 | Import/Export Data-Tier Application | Fixed an issue where the SSMS was throwing an error when importing a bacpac file. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/40229137). |
 | Integration Services | Fixed a bug that customers can't edit a SQL agent job step when using SSMS versions 18.4 or earlier to execute SSIS packages in Azure SQL Managed Instance. |
 | Integration Services | Fixed a bug where the **Use 32-bit runtime** option is missing in the **Execution options** tab to execute an SSIS package in a SQL agent job step for an on-premises SQL Server. |
 | Intellisense / Editor | Fixed an issue where an error dialog may pop up when doing File -> New -> Database Engine Query. |
-| Object Explorer | Fixed an issue where *Properties window* was not available for SQL Azure Databases when right-clicking on a Table or Index node in Object Explorer. |
+| Object Explorer | Fixed an issue where *Properties window* was not available for Azure SQL Database when right-clicking on a Table or Index node in Object Explorer. |
 | Object Explorer | Addressed an issue where SSMS can't expand databases node for master in Azure if there's a control plane outage affecting sys.database_service_objectives. |
 | Reports | Fixed several standard reports that were broken on Linux </br></br> Example: Memory Consumption report was failing with an error similar to "/var/opt/mssql/log/log_116.trc\log.trc' is invalid…"). |
-| SMO / Scripting | Updated the logic to create new SQL Azure Databases to use Gen5_2 as the default SLO. |
+| SMO / Scripting | Updated the logic to create new databases in Azure SQL Database to use Gen5_2 as the default SLO. |
 | Xevent UI | Fixed long outstanding issue (introduced in SSMS 18.0) where "Save to XEL file…" was throwing an error. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37695592). |
 
 #### Known issues (18.6)
@@ -464,7 +465,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 | High DPI | Fixed layout of controls in *New Availability Group* page, which is on some localized version of SSMS. |
 | High DPI | Fixed layout of *New Job Schedule* page. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37632094) for more details. |
 | Import flat file | Fixed in an issue where rows could be silently lost during the import.|
-| Intellisense/editor | Reduced SMO-based query traffic to Azure SQL Databases for IntelliSense. |
+| Intellisense/editor | Reduced SMO-based query traffic to Azure SQL Database for IntelliSense. |
 | Intellisense/editor | Fixed grammatical error in the tooltip displayed when typing T-SQL to create a user. Also, fixed the error message to disambiguate between users and logins. |
 | Log Viewer | Fixed an issue where SSMS always opens the current server (or agent) log, even if double-clicking an older archive sign in the Object Explorer. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37633648) for more details. |
 | SSMS setup | Fixed the issue that was causing SSMS setup to fail when the setup log path contained spaces. See [SQL Server user feedback](https://feedback.azure.com/forums/908035/suggestions/37496110) for more details. |
@@ -544,7 +545,7 @@ You can reference [SQL Server user feedback](https://feedback.azure.com/forums/9
 |Azure Data Studio integration|Added menu item to start/download Azure Data Studio.|
 |Azure Data Studio integration|Added "Start Azure Data Studio" menu item to Object Explorer.|
 |Azure Data Studio integration|When right-clicking on a database node in OE, the user is presented with context menus to either run a query or create a new notebook in Azure Data Studio.|
-|Azure SQL support| SLO/Edition/MaxSize database properties now accept custom names, making it easier to support future editions of Azure SQL Databases.|
+|Azure SQL support| SLO/Edition/MaxSize database properties now accept custom names, making it easier to support future editions of Azure SQL Database.|
 |Azure SQL support| Added support for vCore SKUs (General Purpose and Business Critical): Gen4_24 and all the Gen5.|
 |Azure SQL Managed Instance|Added new "AAD logins" as a new login type in SMO and SSMS when connected to Azure SQL Managed Instance.|
 |Always On|Rehash RTO (estimated recovery time)  and RPO (estimated data loss) in SSMS Always on Dashboard. See the updated documentation at [https://docs.microsoft.com/sql/database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups](../database-engine/availability-groups/windows/monitor-performance-for-always-on-availability-groups.md).|

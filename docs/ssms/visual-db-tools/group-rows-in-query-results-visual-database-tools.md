@@ -1,4 +1,5 @@
 ---
+description: "Group Rows in Query Results (Visual Database Tools)"
 title: Group Rows in Query Results
 ms.prod: sql
 ms.prod_service: sql-tools

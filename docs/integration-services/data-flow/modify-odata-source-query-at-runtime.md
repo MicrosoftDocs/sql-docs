@@ -1,4 +1,5 @@
 ---
+description: "Provide an OData Source Query at Runtime"
 title: "Provide an OData Source Query at Runtime | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

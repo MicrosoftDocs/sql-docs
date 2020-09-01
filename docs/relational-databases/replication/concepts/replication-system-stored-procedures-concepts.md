@@ -1,4 +1,5 @@
 ---
+description: "Replication System Stored Procedures Concepts"
 title: "Replication System Stored Procedures Concepts | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "T-SQL Tutorial: Create & query database objects"
 title: "T-SQL Tutorial: Create & query database objects| Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2018"

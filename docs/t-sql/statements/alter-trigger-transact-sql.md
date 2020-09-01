@@ -1,4 +1,5 @@
 ---
+description: "ALTER TRIGGER (Transact-SQL)"
 title: "ALTER TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/08/2017"

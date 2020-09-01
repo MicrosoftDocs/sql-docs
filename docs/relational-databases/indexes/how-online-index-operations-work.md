@@ -1,4 +1,5 @@
 ---
+description: "How Online Index Operations Work"
 title: How Online Index Operations Work | Microsoft Docs
 ms.custom: ""
 ms.date: 02/17/2017

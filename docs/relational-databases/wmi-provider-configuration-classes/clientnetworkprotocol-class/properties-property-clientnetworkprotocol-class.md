@@ -1,4 +1,5 @@
 ---
+description: "Properties Property (ClientNetworkProtocol Class)"
 title: "Properties Property (ClientNetworkProtocol)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

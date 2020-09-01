@@ -1,4 +1,5 @@
 ---
+description: "Tune Automated Administration Across an Enterprise"
 title: Tune Automated Administration Across an Enterprise
 ms.prod: sql
 ms.prod_service: sql-tools

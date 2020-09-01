@@ -1,4 +1,5 @@
 ---
+description: "sp_helpmergedeleteconflictrows (Transact-SQL)"
 title: "sp_helpmergedeleteconflictrows (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

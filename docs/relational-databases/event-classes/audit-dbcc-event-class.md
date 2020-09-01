@@ -1,4 +1,5 @@
 ---
+description: "Audit DBCC Event Class"
 title: "Audit DBCC Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

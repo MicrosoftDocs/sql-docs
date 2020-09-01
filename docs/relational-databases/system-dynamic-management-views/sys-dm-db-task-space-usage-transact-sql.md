@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_db_task_space_usage (Transact-SQL)"
 title: "sys.dm_db_task_space_usage (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

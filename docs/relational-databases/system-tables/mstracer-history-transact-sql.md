@@ -1,4 +1,5 @@
 ---
+description: "MStracer_history (Transact-SQL)"
 title: "MStracer_history (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

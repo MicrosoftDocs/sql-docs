@@ -1,4 +1,5 @@
 ---
+description: "xp_revokelogin (Transact-SQL)"
 title: "xp_revokelogin (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

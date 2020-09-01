@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_get_audit_file (Transact-SQL)"
 title: "sys.fn_get_audit_file (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/19/2020"
@@ -87,19 +88,19 @@ fn_get_audit_file ( file_pattern,
 | audit_schema_version | **int** | Always 1 |  
 | class_type | **varchar(2)** | The type of auditable entity that the audit occurs on. Is not nullable. |  
 | client_ip | **nvarchar(128)** | **Applies to**: Azure SQL Database + SQL Server (starting with 2017)<br /><br /> 	Source IP of the client application |  
-| connection_id | GUID | **Applies to**: Azure SQL Database and SQL Managed instance<br /><br /> ID of the connection in the server |
+| connection_id | GUID | **Applies to**: Azure SQL Database and SQL Managed Instance<br /><br /> ID of the connection in the server |
 | data_sensitivity_information | nvarchar(4000) | **Applies to**: Azure SQL Database only<br /><br /> Information types and sensitivity labels returned by the audited query, based on the classified columns in the database. Learn more about [Azure SQL Database data discover and classification](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
 | database_name | **sysname** | The database context in which the action occurred. Is nullable. Returns NULL for audits occurring at the server level. |  
 | database_principal_id | **int** |ID of the database user context that the action is performed in. Is not nullable. Returns 0 if this does not apply. For example, a server operation.|
 | database_principal_name | **sysname** | Current user. Is nullable. Returns NULL if not available. |  
-| duration_milliseconds | **bigint** | **Applies to**: Azure SQL Database and SQL Managed instance<br /><br /> Query execution duration in milliseconds |
+| duration_milliseconds | **bigint** | **Applies to**: Azure SQL Database and SQL Managed Instance<br /><br /> Query execution duration in milliseconds |
 | event_time | **datetime2** | Date and time when the auditable action is fired. Is not nullable. |  
 | file_name | **varchar(260)** | The path and name of the audit log file that the record came from. Is not nullable. |
 | is_column_permission | **bit** | Flag indicating if this is a column level permission. Is not nullable. Returns 0 when the permission_bitmask = 0.<br /> 1 = true<br /> 0 = false |
 | object_id | **int** | The ID of the entity on which the audit occurred. This includes the following:<br /> Server objects<br /> Databases<br /> Database objects<br /> Schema objects<br /> Is not nullable. Returns 0 if the entity is the Server itself or if the audit is not performed at an object level. For example, Authentication. |  
 | object_name | **sysname** | The name of the entity on which the audit occurred. This includes the following:<br /> Server objects<br /> Databases<br /> Database objects<br /> Schema objects<br /> Is nullable. Returns NULL if the entity is the Server itself or if the audit is not performed at an object level. For example, Authentication. |
 | permission_bitmask | **varbinary(16)** | In some actions, this is the permissions that were grant, denied, or revoked. |
-| response_rows | **bigint** | **Applies to**: Azure SQL Database and SQL Managed instance<br /><br /> Number of rows returned in the result set. |  
+| response_rows | **bigint** | **Applies to**: Azure SQL Database and SQL Managed Instance<br /><br /> Number of rows returned in the result set. |  
 | schema_name | **sysname** | The schema context in which the action occurred. Is nullable. Returns NULL for audits occurring outside a schema. |  
 | sequence_group_id | **varbinary** | **Applies to**: SQL Server only (starting with 2016)<br /><br /> 	Unique identifier |  
 | sequence_number | **int** | Tracks the sequence of records within a single audit record that was too large to fit in the write buffer for audits. Is not nullable. |  
@@ -117,8 +118,8 @@ fn_get_audit_file ( file_pattern,
 | target_server_principal_name | **sysname** | Target login of action. Is nullable. Returns NULL if not applicable. |  
 | target_server_principal_sid | **varbinary** | SID of target login. Is nullable. Returns NULL if not applicable. |  
 | transaction_id | **bigint** | **Applies to**: SQL Server only (starting with 2016)<br /><br /> Unique identifier to identify multiple audit events in one transaction |  
-| user_defined_event_id | **smallint** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, Azure SQL Database and SQL Managed instance<br /><br /> User defined event id passed as an argument to **sp_audit_write**. **NULL** for system events (default) and non-zero for user-defined event. For more information, see [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
-| user_defined_information | **nvarchar(4000)** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, Azure SQL Database and SQL Managed instance<br /><br /> Used to record any extra information the user wants to record in audit log by using the **sp_audit_write** stored procedure. |  
+| user_defined_event_id | **smallint** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, Azure SQL Database and SQL Managed Instance<br /><br /> User defined event id passed as an argument to **sp_audit_write**. **NULL** for system events (default) and non-zero for user-defined event. For more information, see [sp_audit_write &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md). |  
+| user_defined_information | **nvarchar(4000)** | **Applies to**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later, Azure SQL Database and SQL Managed Instance<br /><br /> Used to record any extra information the user wants to record in audit log by using the **sp_audit_write** stored procedure. |  
 
   
 ## Remarks  

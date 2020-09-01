@@ -1,4 +1,5 @@
 ---
+description: "PreConnect:Starting Event Class"
 title: "PreConnect:Starting Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

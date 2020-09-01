@@ -1,4 +1,5 @@
 ---
+description: "Export Registered Server Information (SQL Server Management Studio)"
 title: Export Registered Server Information
 ms.prod: sql
 ms.prod_service: sql-tools

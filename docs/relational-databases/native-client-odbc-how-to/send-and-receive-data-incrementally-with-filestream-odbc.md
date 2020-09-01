@@ -1,4 +1,5 @@
 ---
+description: "Send and Receive Data Incrementally with FILESTREAM (ODBC)"
 title: "Data incrementally, FILESTREAM (ODBC)"
 ms.custom: ""
 ms.date: "03/14/2017"

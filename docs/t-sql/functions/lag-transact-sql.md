@@ -1,4 +1,5 @@
 ---
+description: "LAG (Transact-SQL)"
 title: "LAG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/09/2017"

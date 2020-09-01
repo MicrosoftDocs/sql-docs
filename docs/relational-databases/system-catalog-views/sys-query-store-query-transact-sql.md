@@ -1,4 +1,5 @@
 ---
+description: "sys.query_store_query (Transact-SQL)"
 title: "sys.query_store_query (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/23/2019"

@@ -1,4 +1,5 @@
 ---
+description: "ALTER LOGIN (Transact-SQL)"
 title: "ALTER LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 01/10/2020
@@ -40,7 +41,7 @@ Changes the properties of a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -291,7 +292,7 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />single database/elastic pool \*_**
+        **_\* SQL Database \*_**
     :::column-end:::
     :::column:::
         [SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -306,7 +307,7 @@ GO
 
 &nbsp;
 
-## Azure SQL Database single database/elastic pool
+## SQL Database
 
 ## SQL Server
 
@@ -468,7 +469,7 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* SQL Database<br />Managed Instance \*_**
@@ -749,7 +750,7 @@ ALTER LOGIN [joe@contoso.com] DISABLE
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -923,7 +924,7 @@ GO
         [SQL Server](alter-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-login-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />Managed Instance](alter-login-transact-sql.md?view=azuresqldb-mi-current)

@@ -1,4 +1,5 @@
 ---
+description: "CREATE FULLTEXT STOPLIST (Transact-SQL)"
 title: "CREATE FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

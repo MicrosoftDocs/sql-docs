@@ -1,4 +1,5 @@
 ---
+description: "Unique Constraints and Check Constraints"
 title: "Unique Constraints and Check Constraints | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/27/2017"

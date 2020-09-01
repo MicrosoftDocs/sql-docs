@@ -1,4 +1,5 @@
 ---
+description: "Returning Array Parameters from Stored Procedures"
 title: "Returning Array Parameters from Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

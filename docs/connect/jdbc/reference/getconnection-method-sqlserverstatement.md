@@ -1,4 +1,5 @@
 ---
+description: "getConnection Method (SQLServerStatement)"
 title: "getConnection Method (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

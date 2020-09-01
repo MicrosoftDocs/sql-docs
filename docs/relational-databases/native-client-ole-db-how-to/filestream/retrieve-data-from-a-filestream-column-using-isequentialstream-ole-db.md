@@ -1,4 +1,5 @@
 ---
+description: "Retrieve Data from a FILESTREAM Column Using ISequentialStream in SQL Server Native Client (OLE DB)"
 title: "FILESTREAM using ISequentialStream (OLE DB)"
 ms.custom: ""
 ms.date: "03/07/2017"

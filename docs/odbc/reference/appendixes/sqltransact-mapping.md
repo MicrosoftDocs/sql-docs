@@ -1,4 +1,5 @@
 ---
+description: "SQLTransact Mapping"
 title: "SQLTransact Mapping | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

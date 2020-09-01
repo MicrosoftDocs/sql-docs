@@ -1,4 +1,5 @@
 ---
+description: "CREATE LOGIN (Transact-SQL)"
 title: "CREATE LOGIN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 07/29/2020
@@ -45,7 +46,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [Azure SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -292,7 +293,7 @@ CHECK_EXPIRATION = OFF ;
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* Azure SQL Database<br />single database/elastic pool \*_**
+        **_\* Azure SQL Database \*_**
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -307,7 +308,7 @@ CHECK_EXPIRATION = OFF ;
 
 &nbsp;
 
-## Azure SQL Database single database/elastic pool
+## SQL Database
 
 ## Syntax
 
@@ -413,7 +414,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* Azure SQL<br />Managed Instance \*_**
@@ -617,7 +618,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)
@@ -748,7 +749,7 @@ GO
         [SQL Server](create-login-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [Azure SQL Database<br />single database/elastic pool](create-login-transact-sql.md?view=azuresqldb-current)
+        [Azure SQL Database](create-login-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [Azure SQL<br />Managed Instance](create-login-transact-sql.md?view=azuresqldb-mi-current)

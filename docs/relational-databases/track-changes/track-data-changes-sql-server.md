@@ -1,4 +1,5 @@
 ---
+description: "Track Data Changes (SQL Server)"
 title: "Track Data Changes"
 ms.custom: seo-dt-2019
 ms.date: "08/08/2016"

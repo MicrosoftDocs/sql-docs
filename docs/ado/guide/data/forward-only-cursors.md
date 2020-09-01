@@ -1,8 +1,9 @@
 ---
+description: "Forward-Only Cursors"
 title: "Forward-Only Cursors | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -24,6 +25,6 @@ The typical default cursor type, called a forward-only (or non-scrollable) curso
  If your application does not require scrolling through the result set, the forward-only cursor is the best way to retrieve data quickly with the least amount of overhead. Use the **adOpenForwardOnly CursorTypeEnum** to indicate that you want to use a forward-only cursor in ADO.  
   
 ## See Also  
- [Static Cursors](../../../ado/guide/data/static-cursors.md)   
- [Keyset Cursors](../../../ado/guide/data/keyset-cursors.md)   
- [Dynamic Cursors](../../../ado/guide/data/dynamic-cursors.md)
+ [Static Cursors](./static-cursors.md)   
+ [Keyset Cursors](./keyset-cursors.md)   
+ [Dynamic Cursors](./dynamic-cursors.md)

@@ -1,4 +1,5 @@
 ---
+description: "ProtocolDLL Property (ServerNetworkProtocol Class)"
 title: "ProtocolDLL Property (ServerNetworkProtocol)"
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"

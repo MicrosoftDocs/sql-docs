@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_column_encryption_enclave (Transact-SQL)"
 title: "sys.dm_column_encryption_enclave (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/11/2019"

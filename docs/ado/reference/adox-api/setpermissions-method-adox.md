@@ -1,8 +1,9 @@
 ---
+description: "SetPermissions Method (ADOX)"
 title: "SetPermissions Method (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,7 +21,7 @@ author: rothja
 ms.author: jroth
 ---
 # SetPermissions Method (ADOX)
-Specifies the permissions for a [group](../../../ado/reference/adox-api/group-object-adox.md) or [user](../../../ado/reference/adox-api/user-object-adox.md) on an object.  
+Specifies the permissions for a [group](./group-object-adox.md) or [user](./user-object-adox.md) on an object.  
   
 ## Syntax  
   
@@ -34,16 +35,16 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
  A **String** value that specifies the name of the object for which to set permissions.  
   
  *ObjectType*  
- A **Long** value which can be one of the [ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md) constants, that specifies the type of the object for which to get permissions.  
+ A **Long** value which can be one of the [ObjectTypeEnum](./objecttypeenum.md) constants, that specifies the type of the object for which to get permissions.  
   
  *Action*  
- A **Long** value which can be one of the [ActionEnum](../../../ado/reference/adox-api/actionenum.md) constants that specifies the type of action to perform when setting permissions.  
+ A **Long** value which can be one of the [ActionEnum](./actionenum.md) constants that specifies the type of action to perform when setting permissions.  
   
  *Rights*  
- A **Long** value which can be a bitmask of one or more of the [RightsEnum](../../../ado/reference/adox-api/rightsenum.md) constants, that indicates the rights to set.  
+ A **Long** value which can be a bitmask of one or more of the [RightsEnum](./rightsenum.md) constants, that indicates the rights to set.  
   
  *Inherit*  
- Optional. A **Long** value which can be one of the [InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md) constants, that specifies how objects will inherit these permissions. The default value is **adInheritNone**.  
+ Optional. A **Long** value which can be one of the [InheritTypeEnum](./inherittypeenum.md) constants, that specifies how objects will inherit these permissions. The default value is **adInheritNone**.  
   
  *ObjectTypeId*  
  Optional. A **Variant** value that specifies the GUID for a provider object type that is not defined by the OLE DB specification. This parameter is required if *ObjectType* is set to **adPermObjProviderSpecific**; otherwise, it is not used.  
@@ -58,14 +59,14 @@ GroupOrUser.SetPermissions Name, ObjectType, Action, Rights [, Inherit] [, Objec
 
 :::row:::
     :::column:::
-        [Group Object (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)  
+        [Group Object (ADOX)](./group-object-adox.md)  
     :::column-end:::
     :::column:::
-        [User Object (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)  
+        [User Object (ADOX)](./user-object-adox.md)  
     :::column-end:::
 :::row-end:::
 
 ## See Also  
- [GetPermissions and SetPermissions Methods Example (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
- [GetPermissions Method (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)   
- [Name Property (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)
+ [GetPermissions and SetPermissions Methods Example (VB)](./getpermissions-and-setpermissions-methods-example-vb.md)   
+ [GetPermissions Method (ADOX)](./getpermissions-method-adox.md)   
+ [Name Property (ADOX)](./name-property-adox.md)

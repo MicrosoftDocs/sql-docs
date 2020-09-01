@@ -1,4 +1,5 @@
 ---
+description: "Default Trace Log Files Disabled"
 title: "Default Trace Log Files Disabled | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

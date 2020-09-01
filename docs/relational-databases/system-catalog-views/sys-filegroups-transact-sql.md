@@ -1,4 +1,5 @@
 ---
+description: "sys.filegroups (Transact-SQL)"
 title: "sys.filegroups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/24/2016"

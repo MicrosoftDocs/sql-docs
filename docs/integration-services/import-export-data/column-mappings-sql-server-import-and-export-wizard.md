@@ -1,4 +1,5 @@
 ---
+description: "Column Mappings (SQL Server Import and Export Wizard)"
 title: "Column Mappings (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"

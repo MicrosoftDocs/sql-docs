@@ -1,4 +1,5 @@
 ---
+description: "Use Rowset Binding (ODBC)"
 title: "Use Rowset Binding (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

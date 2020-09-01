@@ -1,4 +1,5 @@
 ---
+description: "ENCRYPTBYPASSPHRASE (Transact-SQL)"
 title: "ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"

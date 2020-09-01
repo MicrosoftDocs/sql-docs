@@ -1,4 +1,5 @@
 ---
+description: "sp_describe_first_result_set (Transact-SQL)"
 title: "sp_describe_first_result_set (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2018"

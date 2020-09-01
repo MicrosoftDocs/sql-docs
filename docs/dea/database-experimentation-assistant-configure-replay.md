@@ -9,8 +9,8 @@ ms.suite: sql
 ms.technology: dea
 ms.tgt_pltfrm: ""
 ms.topic: conceptual
-author: HJToland3
-ms.author: jtoland
+author: pochiraju
+ms.author: rajpo
 ms.reviewer: mathoma
 ---
 

@@ -1,4 +1,5 @@
 ---
+description: "MSreplmonthresholdmetrics (Transact-SQL)"
 title: "MSreplmonthresholdmetrics (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Query Notifications - sys.dm_qn_subscriptions"
 title: "sys.dm_qn_subscriptions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

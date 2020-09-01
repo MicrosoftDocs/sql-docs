@@ -1,4 +1,5 @@
 ---
+description: "OPENXML (Transact-SQL)"
 title: "OPENXML (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/20/2018"

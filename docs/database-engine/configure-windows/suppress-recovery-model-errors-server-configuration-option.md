@@ -1,4 +1,5 @@
 ---
+description: "Suppress recovery model errors - server configuration option"
 title: "Suppress recovery model errors - server configuration option | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/20/2020"

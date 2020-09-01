@@ -1,4 +1,5 @@
 ---
+description: "Filestream and FileTable System Stored Procedures (Transact-SQL)"
 title: "Filestream and FileTable System Stored Procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

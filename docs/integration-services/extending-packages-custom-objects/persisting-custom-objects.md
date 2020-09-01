@@ -1,4 +1,5 @@
 ---
+description: "Persisting Custom Objects"
 title: "Persisting Custom Objects | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

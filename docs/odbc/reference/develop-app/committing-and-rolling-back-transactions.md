@@ -1,4 +1,5 @@
 ---
+description: "Committing and Rolling Back Transactions"
 title: "Committing and Rolling Back Transactions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

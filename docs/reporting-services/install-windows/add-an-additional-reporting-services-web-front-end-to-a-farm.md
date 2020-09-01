@@ -1,4 +1,5 @@
 ---
+description: "Add an Additional Reporting Services Web Front-end to a Farm"
 title: "Add an Additional Reporting Services Web Front-end to a Farm | Microsoft Docs"
 ms.date: 05/30/2017
 ms.prod: reporting-services

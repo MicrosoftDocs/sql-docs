@@ -1,4 +1,5 @@
 ---
+description: "sp_trace_setfilter (Transact-SQL)"
 title: "sp_trace_setfilter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

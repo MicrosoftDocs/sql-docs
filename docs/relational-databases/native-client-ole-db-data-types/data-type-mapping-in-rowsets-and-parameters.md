@@ -1,4 +1,5 @@
 ---
+description: "Data type mapping in rowsets and parameters (Native Client OLE DB provider)"
 title: "Data type mapping in rowsets and parameters (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

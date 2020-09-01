@@ -12,7 +12,7 @@ ms.reviewer: davidph
 monikerRange: "=sql-server-2017||=sqlallproducts-allversions"
 ---
 # Install packages with Python tools on SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 This article describes how to use standard Python tools to install new Python packages on an instance of SQL Server Machine Learning Services. In general, the process for installing new packages is similar to that in a standard Python environment. However, some additional steps are required if the server does not have an Internet connection.
 

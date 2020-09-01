@@ -1,4 +1,5 @@
 ---
+description: "REVOKE Database Scoped Credential (Transact-SQL)"
 title: "REVOKE Database Scoped Credential (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/16/2016"

@@ -1,4 +1,5 @@
 ---
+description: "Raising and Defining Events in a Custom Task"
 title: "Raising and Defining Events in a Custom Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Using User-Defined Tables"
 title: "Using User-Defined Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"

@@ -1,11 +1,12 @@
 ---
+description: "Referencing the ADO Libraries In a Visual Basic 6 Application"
 title: "Referencing the ADO Libraries In a Visual Basic 6 Application | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.topic: conceptual
 dev_langs: 
   - "VB"

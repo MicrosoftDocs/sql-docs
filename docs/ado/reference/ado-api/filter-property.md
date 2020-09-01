@@ -1,8 +1,9 @@
 ---
+description: "Filter Property"
 title: "Filter Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "03/20/2018"
 ms.reviewer: ""
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Filter Property
-Indicates a filter for data in a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md).  
+Indicates a filter for data in a [Recordset](./recordset-object-ado.md).  
   
 ## Settings and Return Values
 
@@ -27,11 +28,11 @@ Sets or returns a **Variant** value, which can contain one of the following item
   
 -   **Array of bookmarks:** An array of unique bookmark values that point to records in the **Recordset** object.  
   
--   A [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md) value.  
+-   A [FilterGroupEnum](./filtergroupenum.md) value.  
   
 ## Remarks
 
-Use the **Filter** property to selectively screen out records in a **Recordset** object. The filtered **Recordset** becomes the current cursor. Other properties that return values based on the current **cursor** are affected, such as [AbsolutePosition Property (ADO)](../../../ado/reference/ado-api/absoluteposition-property-ado.md), [AbsolutePage Property (ADO)](../../../ado/reference/ado-api/absolutepage-property-ado.md), [RecordCount Property (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md), and [PageCount Property (ADO)](../../../ado/reference/ado-api/pagecount-property-ado.md). Setting the **Filter** property to a specific new value moves the current record to the first record that satisfies the new value.
+Use the **Filter** property to selectively screen out records in a **Recordset** object. The filtered **Recordset** becomes the current cursor. Other properties that return values based on the current **cursor** are affected, such as [AbsolutePosition Property (ADO)](./absoluteposition-property-ado.md), [AbsolutePage Property (ADO)](./absolutepage-property-ado.md), [RecordCount Property (ADO)](./recordcount-property-ado.md), and [PageCount Property (ADO)](./pagecount-property-ado.md). Setting the **Filter** property to a specific new value moves the current record to the first record that satisfies the new value.
   
 The criteria string is made up of clauses in the form *FieldName-Operator-Value* (for example, `"LastName = 'Smith'"`). You can create compound clauses by concatenating individual clauses with **AND** (for example, `"LastName = 'Smith' AND FirstName = 'John'"`) or **OR** (for example, `"LastName = 'Smith' OR LastName = 'Jones'"`). For criteria strings, Use the following guidelines:
 
@@ -52,9 +53,9 @@ The criteria string is made up of clauses in the form *FieldName-Operator-Value*
   
 -   In a **LIKE** clause, you can use a wildcard at the beginning and end of the pattern. For example, you can use `LastName Like '*mit*'`. Or with **LIKE** you can use a wildcard only at the end of the pattern. For example, `LastName Like 'Smit*'`.  
   
- The filter constants make it easier to resolve individual record conflicts during batch update mode by allowing you to view, for example, only those records that were affected during the last [UpdateBatch Method](../../../ado/reference/ado-api/updatebatch-method.md) method call.  
+ The filter constants make it easier to resolve individual record conflicts during batch update mode by allowing you to view, for example, only those records that were affected during the last [UpdateBatch Method](./updatebatch-method.md) method call.  
   
-Setting the **Filter** property itself might fail due to a conflict with the underlying data. For example, this failure can happen when a record has already been deleted by another user. In such a case, the provider returns warnings to the [Errors Collection (ADO)](../../../ado/reference/ado-api/errors-collection-ado.md) collection, but does not halt program execution. An error at run time occurs only if there are conflicts on all the requested records. Use the [Status Property (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md) property to locate records with conflicts.  
+Setting the **Filter** property itself might fail due to a conflict with the underlying data. For example, this failure can happen when a record has already been deleted by another user. In such a case, the provider returns warnings to the [Errors Collection (ADO)](./errors-collection-ado.md) collection, but does not halt program execution. An error at run time occurs only if there are conflicts on all the requested records. Use the [Status Property (ADO Recordset)](./status-property-ado-recordset.md) property to locate records with conflicts.  
   
 Setting the **Filter** property to a zero-length string ("") has the same effect as using the **adFilterNone** constant.
   
@@ -67,7 +68,7 @@ Suppose that a **Recordset** is filtered based on a field of some variant type, 
 
 This configuration produces the error during run time. However, `rs.Filter = "C=2"` applied on the same field will not produce any error. And the field is filtered out of the current record set.
 
-See the [Bookmark Property (ADO)](../../../ado/reference/ado-api/bookmark-property-ado.md) property for an explanation of bookmark values from which you can build an array to use with the Filter property.
+See the [Bookmark Property (ADO)](./bookmark-property-ado.md) property for an explanation of bookmark values from which you can build an array to use with the Filter property.
 
 Only Filters in the form of criteria strings affect the contents of a persisted **Recordset**. An example of a criteria string is `OrderDate > '12/31/1999'`. Filters created with an array of bookmarks, or using a value from the **FilterGroupEnum**, do not affect the contents of the persisted **Recordset**. These rules apply to Recordsets created with either client-side or server-side cursors.
   
@@ -93,11 +94,11 @@ The following table summarizes the effects of **adFilterPendingRecords** in diff
   
 ## Applies To
 
-[Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+[Recordset Object (ADO)](./recordset-object-ado.md)  
   
 ## See Also
 
-[Filter and RecordCount Properties Example (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)
-[Filter and RecordCount Properties Example (VC++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)
-[Clear Method (ADO)](../../../ado/reference/ado-api/clear-method-ado.md)
-[Optimize Property-Dynamic (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)
+[Filter and RecordCount Properties Example (VB)](./filter-and-recordcount-properties-example-vb.md)
+[Filter and RecordCount Properties Example (VC++)](./filter-and-recordcount-properties-example-vc.md)
+[Clear Method (ADO)](./clear-method-ado.md)
+[Optimize Property-Dynamic (ADO)](./optimize-property-dynamic-ado.md)

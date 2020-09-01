@@ -1,4 +1,5 @@
 ---
+description: "Manage Logins in the Publication Access List"
 title: "Manage Logins in the Publication Access List | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

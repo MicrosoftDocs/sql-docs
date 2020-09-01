@@ -1,4 +1,5 @@
 ---
+description: "Replication over the Internet"
 title: "Replication over the Internet | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

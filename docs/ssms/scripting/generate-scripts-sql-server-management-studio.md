@@ -3,7 +3,7 @@ title: Generate Scripts
 description: Learn how to use the Generate and Publish Scripts Wizard to create Transact-SQL scripts for multiple objects, and how to use the Script as menu in Object Explorer to generate scripts for individual or multiple objects.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 ms.assetid: 9711c617-3c68-4e5a-aea3-befc64d51524
 author: markingmyname
@@ -62,7 +62,7 @@ You can use the **Object Explorer Details** pane to generate a script for multip
 
 4. Open the **Object Explorer Details** pane by either selecting **F7**, or opening the **View** menu and selecting **Object Explorer Details**.
 
-    ![Object Explorer](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
+    ![View menu](media/generate-scripts-sql-server-management-studio/object-explorer-details-view-menu.png)
 
 5. Left-click one of the objects you want to script.
 
@@ -70,4 +70,4 @@ You can use the **Object Explorer Details** pane to generate a script for multip
 
 7. Right-click one of the selected objects, and select **Script \<object type> as**.
 
-    ![Object Explorer](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)
+    ![Details](media/generate-scripts-sql-server-management-studio/object-explorer-details.png)

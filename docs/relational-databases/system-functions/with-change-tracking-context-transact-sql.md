@@ -1,4 +1,5 @@
 ---
+description: "WITH CHANGE_TRACKING_CONTEXT (Transact-SQL)"
 title: "WITH CHANGE_TRACKING_CONTEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"

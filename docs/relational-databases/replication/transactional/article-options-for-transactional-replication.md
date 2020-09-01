@@ -1,4 +1,5 @@
 ---
+description: "Article Options for Transactional Replication"
 title: "Article Options for Transactional Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

@@ -1,4 +1,5 @@
 ---
+description: "sys.database_filestream_options (Transact-SQL)"
 title: "sys.database_filestream_options (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

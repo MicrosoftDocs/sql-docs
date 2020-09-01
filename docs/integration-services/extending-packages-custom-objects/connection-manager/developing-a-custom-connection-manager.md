@@ -1,4 +1,5 @@
 ---
+description: "Developing a Custom Connection Manager"
 title: "Developing a Custom Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

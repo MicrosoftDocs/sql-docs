@@ -1,4 +1,5 @@
 ---
+description: "SQLGetPrivateProfileString Function"
 title: "SQLGetPrivateProfileString Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

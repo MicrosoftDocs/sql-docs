@@ -1,4 +1,5 @@
 ---
+description: "Use OPENJSON with the Default Schema"
 title: "Use OPENJSON with the Default Schema"
 ms.date: 06/03/2020
 ms.prod: sql

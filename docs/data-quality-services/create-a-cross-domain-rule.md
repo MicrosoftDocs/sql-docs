@@ -1,4 +1,5 @@
 ---
+description: "Create a Cross-Domain Rule"
 title: "Create a Cross-Domain Rule"
 ms.date: "11/22/2011"
 ms.prod: sql

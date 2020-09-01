@@ -1,4 +1,5 @@
 ---
+description: "Refresh Data in Replication Monitor"
 title: "Refresh Data in Replication Monitor | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

@@ -1,8 +1,9 @@
 ---
+description: "MemberTypeEnum"
 title: "MemberTypeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # MemberTypeEnum
-Specifies the setting for the [Type](../../../ado/reference/ado-md-api/type-property-ado-md.md) property of a [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) object.  
+Specifies the setting for the [Type](./type-property-ado-md.md) property of a [Member](./member-object-ado-md.md) object.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  

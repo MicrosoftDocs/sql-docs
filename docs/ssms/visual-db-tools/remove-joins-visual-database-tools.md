@@ -1,4 +1,5 @@
 ---
+description: "Remove Joins (Visual Database Tools)"
 title: Remove Joins
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

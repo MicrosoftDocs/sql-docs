@@ -1,4 +1,5 @@
 ---
+description: "Configure column encryption in-place using Always Encrypted with secure enclaves"
 title: "Configure column encryption in-place using Always Encrypted with secure enclaves | Microsoft Docs"
 ms.custom: ""
 ms.date: 10/10/2019

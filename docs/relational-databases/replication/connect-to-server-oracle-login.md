@@ -1,4 +1,5 @@
 ---
+description: "Connect to Server (Oracle), Login"
 title: "Connect to Server (Oracle), Login | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

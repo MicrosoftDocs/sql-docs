@@ -7,7 +7,7 @@ ms.author: yanacai
 ms.reviewer: alayu, maghan, sstein
 ms.topic: quickstart
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.date: 09/24/2018
 ---
 

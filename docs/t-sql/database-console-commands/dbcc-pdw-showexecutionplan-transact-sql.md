@@ -1,4 +1,5 @@
 ---
+description: "DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)"
 title: DBCC PDW_SHOWEXECUTIONPLAN (Transact-SQL)
 ms.custom: ""
 ms.date: "07/16/2017"
@@ -40,7 +41,7 @@ DBCC PDW_SHOWEXECUTIONPLAN ( pdw_node_id, spid )
 
 ## Arguments  
  *distribution_id*  
- Identifier for the distribution that is running the query plan. This is an integer and cannot be NULL. Used when targeting [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
+ Identifier for the distribution that is running the query plan. This is an integer and cannot be NULL. Value must be between 1 and 60. Used when targeting [!INCLUDE[ssSDW](../../includes/sssdw-md.md)].  
   
  *pdw_node_id*  
  Identifier for the node that is running the query plan. This is an integer and cannot be NULL. Used when targeting an Appliance.  

@@ -1,4 +1,5 @@
 ---
+description: "SET DEADLOCK_PRIORITY (Transact-SQL)"
 title: "SET DEADLOCK_PRIORITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -41,7 +42,9 @@ SET DEADLOCK_PRIORITY { LOW | NORMAL | HIGH | <numeric-priority> | @deadlock_var
 <numeric-priority> ::= { -10 | -9 | -8 | ... | 0 | ... | 8 | 9 | 10 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  LOW  
  Specifies that the current session will be the deadlock victim if it is involved in a deadlock and other sessions involved in the deadlock chain have deadlock priority set to either NORMAL or HIGH or to an integer value greater than -5. The current session will not be the deadlock victim if the other sessions have deadlock priority set to an integer value less than -5. It also specifies that the current session is eligible to be the deadlock victim if another session has set deadlock priority set to LOW or to an integer value equal to -5.  
   

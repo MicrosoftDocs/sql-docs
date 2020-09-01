@@ -1,4 +1,5 @@
 ---
+description: "Assign a Flag to a Version (Master Data Services)"
 title: Assign a Flag to a Version
 ms.custom: ""
 ms.date: "03/01/2017"

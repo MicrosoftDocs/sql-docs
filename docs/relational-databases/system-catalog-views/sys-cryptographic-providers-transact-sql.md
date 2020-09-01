@@ -1,4 +1,5 @@
 ---
+description: "sys.cryptographic_providers (Transact-SQL)"
 title: "sys.cryptographic_providers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

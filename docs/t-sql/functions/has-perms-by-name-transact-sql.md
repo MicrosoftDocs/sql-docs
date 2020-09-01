@@ -1,4 +1,5 @@
 ---
+description: "HAS_PERMS_BY_NAME (Transact-SQL)"
 title: "HAS_PERMS_BY_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/29/2017"

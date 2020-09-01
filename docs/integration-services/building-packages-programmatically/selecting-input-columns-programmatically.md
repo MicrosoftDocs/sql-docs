@@ -1,4 +1,5 @@
 ---
+description: "Selecting Input Columns Programmatically"
 title: "Selecting Input Columns Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

@@ -1,7 +1,8 @@
 ---
+description: "ALTER DATABASE (Transact-SQL)"
 title: "ALTER DATABASE (Transact-SQL)| Microsoft Docs"
 ms.custom: ""
-ms.date: 07/21/2020
+ms.date: 08/27/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: t-sql
@@ -44,7 +45,7 @@ For more information about the syntax conventions, see [Transact-SQL Syntax Conv
         **_\* SQL Server \*_** &nbsp;
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
@@ -296,7 +297,7 @@ GO
         [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        **_\* SQL Database<br />single database/elastic pool \*_** &nbsp;
+        **_\* SQL Database \*_** &nbsp;
     :::column-end:::
     :::column:::
         [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
@@ -311,9 +312,9 @@ GO
 
 &nbsp;
 
-## Overview: Azure SQL Database single database/elastic pool
+## Overview: SQL Database
 
-In Azure SQL Database, use this statement to modify a database on a single database/elastic pool. Use this statement to change the name of a database, change the edition and service objective of the database, join or remove the database to or from an elastic pool, set database options, add or remove the database as a secondary in a geo-replication relationship, and set the database compatibility level.
+In Azure SQL Database, use this statement to modify a database. Use this statement to change the name of a database, change the edition and service objective of the database, join or remove the database to or from an elastic pool, set database options, add or remove the database as a secondary in a geo-replication relationship, and set the database compatibility level.
 
 Because of its length, the ALTER DATABASE syntax is separated into the multiple articles.
 
@@ -619,7 +620,7 @@ ELASTIC_POOL (name = \<elastic_pool_name>)
 When ELASTIC_POOL is not specified, the secondary database is not created in an elastic pool. When ELASTIC_POOL is specified, the secondary database is created in the specified pool.
 
 > [!IMPORTANT]
-> The user executing the ADD SECONDARY command must be DBManager on primary server, have db_owner membership in local database, and DBManager on secondary server.
+> The user executing the ADD SECONDARY command must be DBManager on primary server, have db_owner membership in local database, and DBManager on secondary server. The client IP address must be added to the allowed list under firewall rules for both the primary and secondary servers. In case of different client IP addresses, the exact same client IP address that has been added on the primary server must also be added to the secondary. This is a required step to be done before running the ADD SECONDARY command to initiate geo-replication.
 
 REMOVE SECONDARY ON SERVER \<partner_server_name>
 Removes the specified geo-replicated secondary database on the specified server. The command is executed on the master database on the server hosting the primary database.
@@ -762,7 +763,7 @@ ALTER DATABASE [db1] MODIFY (EDITION = 'Standard', MAXSIZE = 250 GB, SERVICE_OBJ
         [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         **_\* SQL Database<br />Managed Instance \*_** &nbsp;
@@ -904,7 +905,7 @@ ALTER DATABASE WideWorldImporters
         [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)
@@ -1046,7 +1047,7 @@ ALTER DATABASE dw1 MODIFY ( MAXSIZE=10240 GB, SERVICE_OBJECTIVE= 'DW1200' );
         [SQL Server](alter-database-transact-sql.md?view=sql-server-2017)
     :::column-end:::
     :::column:::
-        [SQL Database<br />single database/elastic pool](alter-database-transact-sql.md?view=azuresqldb-current)
+        [SQL Database](alter-database-transact-sql.md?view=azuresqldb-current)
     :::column-end:::
     :::column:::
         [SQL Database<br />Managed Instance](alter-database-transact-sql.md?view=azuresqldb-mi-current)

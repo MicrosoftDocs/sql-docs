@@ -1,4 +1,5 @@
 ---
+description: "OLE DB Table-Valued Parameter Type Support (Native Client OLE DB provider)"
 title: Table-valued parameter type support (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/06/2017"

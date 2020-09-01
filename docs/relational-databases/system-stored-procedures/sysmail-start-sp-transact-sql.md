@@ -1,4 +1,5 @@
 ---
+description: "sysmail_start_sp (Transact-SQL)"
 title: "sysmail_start_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "SetCurrentCertificate Method (SecurityCertificate Class)"
 title: "SetCurrentCertificate Method (SecurityCertificate)"
 ms.custom: seo-lt-2019
 ms.date: "03/03/2017"

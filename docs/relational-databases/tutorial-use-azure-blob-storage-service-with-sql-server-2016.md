@@ -1,4 +1,5 @@
 ---
+description: "Tutorial: Use Azure Blob storage service with SQL Server 2016"
 title: "Tutorial: Use Azure Blob storage service with SQL Server 2016"
 ms.custom: seo-dt-2019
 ms.date: 07/22/2020

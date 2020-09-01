@@ -1,4 +1,5 @@
 ---
+description: "Validate a Version against Business Rules (Master Data Services)"
 title: Validate a Version against Business Rules
 ms.custom: ""
 ms.date: "03/01/2017"

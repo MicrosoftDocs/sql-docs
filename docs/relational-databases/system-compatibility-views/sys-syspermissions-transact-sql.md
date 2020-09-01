@@ -1,4 +1,5 @@
 ---
+description: "sys.syspermissions (Transact-SQL)"
 title: "sys.syspermissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

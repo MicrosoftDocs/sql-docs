@@ -1,4 +1,5 @@
 ---
+description: "LEN (Transact-SQL)"
 title: "LEN (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/03/2015"

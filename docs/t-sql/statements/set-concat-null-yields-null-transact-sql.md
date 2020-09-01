@@ -1,4 +1,5 @@
 ---
+description: "SET CONCAT_NULL_YIELDS_NULL (Transact-SQL)"
 title: "SET CONCAT_NULL_YIELDS_NULL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -48,7 +49,9 @@ SET CONCAT_NULL_YIELDS_NULL { ON | OFF }
 SET CONCAT_NULL_YIELDS_NULL ON    
 ```  
   
-## Remarks  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Remarks
  When SET CONCAT_NULL_YIELDS_NULL is ON, concatenating a null value with a string yields a NULL result. For example, `SELECT 'abc' + NULL` yields `NULL`. When SET CONCAT_NULL_YIELDS_NULL is OFF, concatenating a null value with a string yields the string itself (the null value is treated as an empty string). For example, `SELECT 'abc' + NULL` yields `abc`.  
   
  If SET CONCAT_NULL_YIELDS_NULL is not specified, the setting of the **CONCAT_NULL_YIELDS_NULL** database option applies.  

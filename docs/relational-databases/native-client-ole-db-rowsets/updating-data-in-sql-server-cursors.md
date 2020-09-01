@@ -1,4 +1,5 @@
 ---
+description: "Updating Data in SQL Server Cursors in SQL Server Native Client"
 title: Update data in cursors (Native Client OLE DB provider)
 ms.custom: ""
 ms.date: "03/14/2017"

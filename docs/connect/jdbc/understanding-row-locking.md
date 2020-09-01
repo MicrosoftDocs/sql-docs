@@ -1,4 +1,5 @@
 ---
+description: "Understanding row locking"
 title: "Understanding row locking | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

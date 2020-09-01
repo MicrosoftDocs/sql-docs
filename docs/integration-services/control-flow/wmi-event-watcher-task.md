@@ -1,4 +1,5 @@
 ---
+description: "WMI Event Watcher Task"
 title: "WMI Event Watcher Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

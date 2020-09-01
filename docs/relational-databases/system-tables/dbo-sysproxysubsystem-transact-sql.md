@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysproxysubsystem (Transact-SQL)"
 title: "dbo.sysproxysubsystem (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

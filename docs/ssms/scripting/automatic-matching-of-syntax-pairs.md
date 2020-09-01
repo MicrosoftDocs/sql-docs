@@ -3,7 +3,7 @@ title: "Automatic Matching of Syntax Pairs"
 description: Learn about automatic matching of syntax pairs in Query Editor (delimiter matching), XMLA Query Editor (brace matching), and MDX and DMX (parenthesis matching).
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "IntelliSense [SQL Server], delimiter highlighting"

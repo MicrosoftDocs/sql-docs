@@ -2,7 +2,7 @@
 title: Back up and restore a database
 description: Follow this tutorial to learn how to back up and restore databases using Azure Data Studio.
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.topic: "tutorial"
 author: "markingmyname"
 ms.author: "maghan"
@@ -27,7 +27,7 @@ This tutorial requires the SQL Server *TutorialDB*. To create the *TutorialDB* d
 
 * [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
 
-This tutorial requires connecting to a SQL Server database. Azure SQL Database has automated backups, so Azure Data Studio doesn't perform Azure SQL Database backup and restore. For details, see [Learn about automatic SQL Database backups](https://docs.microsoft.com/azure/sql-database/sql-database-automated-backups).
+This tutorial requires connecting to a SQL Server database. Azure SQL Database has automated backups, so Azure Data Studio doesn't perform Azure SQL Database backup and restore. For details, see [Learn about automatic SQL Database backups](/azure/sql-database/sql-database-automated-backups).
 
 ## Back up a database
 

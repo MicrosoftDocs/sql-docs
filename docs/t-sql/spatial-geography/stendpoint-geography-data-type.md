@@ -1,4 +1,5 @@
 ---
+description: "STEndPoint (geography Data Type)"
 title: "STEndPoint (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

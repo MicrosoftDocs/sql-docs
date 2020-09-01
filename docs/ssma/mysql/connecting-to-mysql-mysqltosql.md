@@ -11,8 +11,8 @@ helpviewer_keywords:
   - "Connecting to MySQL, MySQL permission"
   - "Connecting to MySQL,reconnecting"
 ms.assetid: 084c7020-f729-4f91-90e0-143f85fa68d1
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Connecting to MySQL (MySQLToSQL)
 To migrate MySQL databases to SQL Server or SQL Azure, you must connect to the MySQL database that you want to migrate. When you connect, SSMA obtains metadata about all MySQL schemas, and then displays it in the MySQL Metadata Explorer pane. SSMA stores information about the database server, but does not store passwords.  

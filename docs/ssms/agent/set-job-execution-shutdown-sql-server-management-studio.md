@@ -1,4 +1,5 @@
 ---
+description: "Set Job Execution Shutdown"
 title: Set Job Execution Shutdown
 ms.prod: sql
 ms.prod_service: sql-tools

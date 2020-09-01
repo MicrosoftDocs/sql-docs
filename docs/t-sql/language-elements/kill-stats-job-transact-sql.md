@@ -1,4 +1,5 @@
 ---
+description: "KILL STATS JOB (Transact-SQL)"
 title: "KILL STATS JOB (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/27/2017"

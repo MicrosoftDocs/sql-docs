@@ -1,4 +1,5 @@
 ---
+description: "Give Others Ownership of a Job"
 title: "Give Others Ownership of a Job"
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017

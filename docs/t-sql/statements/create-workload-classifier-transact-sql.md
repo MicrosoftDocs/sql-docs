@@ -1,4 +1,5 @@
 ---
+description: "CREATE WORKLOAD Classifier (Transact-SQL)"
 title: "CREATE WORKLOAD Classifier (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/11/2020

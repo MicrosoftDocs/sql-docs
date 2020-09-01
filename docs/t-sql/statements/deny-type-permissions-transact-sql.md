@@ -1,4 +1,5 @@
 ---
+description: "DENY Type Permissions (Transact-SQL)"
 title: "DENY Type Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/09/2017"

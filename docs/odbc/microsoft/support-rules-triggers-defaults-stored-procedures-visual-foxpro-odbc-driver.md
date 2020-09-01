@@ -1,4 +1,5 @@
 ---
+description: "Support for Rules, Triggers, Default Values, and Stored Procedures (Visual FoxPro ODBC Driver)"
 title: "Support for Rules, Triggers, Default Values, and Stored Procedures | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

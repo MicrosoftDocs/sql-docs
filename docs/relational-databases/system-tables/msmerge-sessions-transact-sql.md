@@ -1,4 +1,5 @@
 ---
+description: "MSmerge_sessions (Transact-SQL)"
 title: "MSmerge_sessions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

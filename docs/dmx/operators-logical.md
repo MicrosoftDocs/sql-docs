@@ -1,4 +1,5 @@
 ---
+description: "Logical Operators (DMX)"
 title: "Logical Operators (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

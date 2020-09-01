@@ -1,4 +1,5 @@
 ---
+description: "View or Change Registered Filters and Word Breakers"
 title: "View or change registered filters & word breakers"
 ms.date: "03/14/2017"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "managed_backup.fn_backup_instance_config (Transact-SQL)"
 title: "managed_backup.fn_backup_instance_config (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

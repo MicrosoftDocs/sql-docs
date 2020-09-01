@@ -1,4 +1,5 @@
 ---
+description: "Understanding the Differences between Local and Remote Execution"
 title: "Understanding the Differences between Local and Remote Execution | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/17/2017"

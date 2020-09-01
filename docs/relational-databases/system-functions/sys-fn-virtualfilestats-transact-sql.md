@@ -1,4 +1,5 @@
 ---
+description: "sys.fn_virtualfilestats (Transact-SQL)"
 title: "sys.fn_virtualfilestats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/16/2016"

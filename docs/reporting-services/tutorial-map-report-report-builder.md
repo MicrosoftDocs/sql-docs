@@ -28,7 +28,7 @@ In this tutorial, you build a map report that displays store locations in New Yo
 Estimated time to complete this tutorial: 30 minutes.  
   
 ## Requirements  
-For this tutorial, the report server must be configured to support Bing maps as a background. For more information, see [Plan for Map Report Support](https://msdn.microsoft.com/5ddc97a7-7ee5-475d-bc49-3b814dce7e19). 
+For this tutorial, the report server must be configured to support Bing maps as a background. For more information, see [Plan for Map Report Support](https://docs.microsoft.com/sql/reporting-services/report-design/plan-a-map-report-report-builder-and-ssrs). 
 
 For information about other requirements, see [Prerequisites for Tutorials &#40;Report Builder&#41;](../reporting-services/prerequisites-for-tutorials-report-builder.md).  
   

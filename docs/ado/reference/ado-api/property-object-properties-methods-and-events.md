@@ -1,8 +1,9 @@
 ---
+description: "Property Object Properties, Methods, and Events"
 title: "Property Object Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -15,13 +16,13 @@ ms.author: jroth
 ---
 # Property Object Properties, Methods, and Events
 ## Properties  
- [Attributes Property](../../../ado/reference/ado-api/attributes-property-ado.md)  
+ [Attributes Property](./attributes-property-ado.md)  
   
- [Name Property](../../../ado/reference/ado-api/name-property-ado.md)  
+ [Name Property](./name-property-ado.md)  
   
- [Type Property](../../../ado/reference/ado-api/type-property-ado.md)  
+ [Type Property](./type-property-ado.md)  
   
- [Value Property](../../../ado/reference/ado-api/value-property-ado.md)  
+ [Value Property](./value-property-ado.md)  
   
 ## Methods  
  None.  
@@ -30,4 +31,4 @@ ms.author: jroth
  None.  
   
 ## See Also  
- [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)
+ [Property Object (ADO)](./property-object-ado.md)

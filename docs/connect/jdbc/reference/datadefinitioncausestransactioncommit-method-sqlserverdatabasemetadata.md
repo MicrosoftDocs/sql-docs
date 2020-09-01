@@ -1,4 +1,5 @@
 ---
+description: "dataDefinitionCausesTransactionCommit Method (SQLServerDatabaseMetaData)"
 title: "Does Data Definition Statement Force Transaction Commit. | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

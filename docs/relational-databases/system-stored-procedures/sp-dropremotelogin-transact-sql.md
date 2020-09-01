@@ -1,4 +1,5 @@
 ---
+description: "sp_dropremotelogin (Transact-SQL)"
 title: "sp_dropremotelogin (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

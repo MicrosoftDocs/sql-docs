@@ -1,4 +1,5 @@
 ---
+description: "Split a Dataset by Using the Conditional Split Transformation"
 title: "Split a Dataset by Using the Conditional Split Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

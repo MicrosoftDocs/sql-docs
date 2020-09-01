@@ -1,4 +1,5 @@
 ---
+description: "Defect Multiple Target Servers from a Master Server"
 title: Defect Multiple Target Servers from a Master Server
 ms.prod: sql
 ms.prod_service: sql-tools

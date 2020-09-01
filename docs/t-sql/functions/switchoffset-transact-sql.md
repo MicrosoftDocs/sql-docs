@@ -1,4 +1,5 @@
 ---
+description: "SWITCHOFFSET (Transact-SQL)"
 title: "SWITCHOFFSET (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/02/2015"

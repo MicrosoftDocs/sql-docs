@@ -1,4 +1,5 @@
 ---
+description: "ALTER SCHEMA (Transact-SQL)"
 title: "ALTER SCHEMA (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/09/2020"
@@ -98,7 +99,7 @@ ALTER SCHEMA schema_name
 ### A. Transferring ownership of a table  
  The following example modifies the schema `HumanResources` by transferring the table `Address` from schema `Person` into the 'HumanResources` schema.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 ALTER SCHEMA HumanResources TRANSFER Person.Address;  
@@ -108,11 +109,11 @@ GO
 ### B. Transferring ownership of a type  
  The following example creates a type in the `Production` schema, and then transfers the type to the `Person` schema.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
   
-CREATE TYPE Production.TestType FROM [varchar](10) NOT NULL ;  
+CREATE TYPE Production.TestType FROM [VARCHAR](10) NOT NULL ;  
 GO  
   
 -- Check the type owner.  
@@ -139,10 +140,10 @@ GO
 ### C. Transferring ownership of a table  
  The following example creates a table `Region` in the `dbo` schema, creates a `Sales` schema, and then moves the `Region` table from the `dbo` schema to the `Sales` schema.  
   
-```  
+```sql  
 CREATE TABLE dbo.Region   
-    (Region_id int NOT NULL,  
-    Region_Name char(5) NOT NULL)  
+    (Region_id INT NOT NULL,  
+    Region_Name CHAR(5) NOT NULL)  
 WITH (DISTRIBUTION = REPLICATE);  
 GO  
   

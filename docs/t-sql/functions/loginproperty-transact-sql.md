@@ -1,4 +1,5 @@
 ---
+description: "LOGINPROPERTY (Transact-SQL)"
 title: "LOGINPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Add Members to a Collection (Master Data Services)"
 title: Add Members to a Collection
 ms.custom: ""
 ms.date: "03/01/2017"

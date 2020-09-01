@@ -1,4 +1,5 @@
 ---
+description: "Lesson 6-2: Convert the project to the Project Deployment Model"
 title: "Step 2: Convert the project to the Project Deployment Model | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/11/2019"

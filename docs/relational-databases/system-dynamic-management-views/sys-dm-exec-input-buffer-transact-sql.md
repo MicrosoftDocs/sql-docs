@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_input_buffer (Transact-SQL)"
 title: "sys.dm_exec_input_buffer (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2019"

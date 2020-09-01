@@ -1,4 +1,5 @@
 ---
+description: "Delete a Policy-Based Management Policy"
 title: "Delete a Policy-Based Management Policy | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/01/2016"

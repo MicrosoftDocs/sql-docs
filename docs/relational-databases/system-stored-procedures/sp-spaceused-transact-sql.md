@@ -1,4 +1,5 @@
 ---
+description: "sp_spaceused (Transact-SQL)"
 title: "sp_spaceused (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/14/2017"
@@ -28,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
   
 ## Syntax  
   
-```  
+```syntaxsql  
 sp_spaceused [[ @objname = ] 'objname' ]   
 [, [ @updateusage = ] 'updateusage' ]  
 [, [ @mode = ] 'mode' ]  

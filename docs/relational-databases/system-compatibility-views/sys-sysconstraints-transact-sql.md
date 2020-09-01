@@ -1,4 +1,5 @@
 ---
+description: "sys.sysconstraints (Transact-SQL)"
 title: "sys.sysconstraints (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

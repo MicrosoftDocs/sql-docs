@@ -1,4 +1,5 @@
 ---
+description: "Create a Publication from an Oracle Database"
 title: "Create a Publication from an Oracle Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

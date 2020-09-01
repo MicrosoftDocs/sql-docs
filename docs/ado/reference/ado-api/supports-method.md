@@ -1,8 +1,9 @@
 ---
+description: "Supports Method"
 title: "Supports Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # Supports Method
-Determines whether a specified [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object supports a particular type of functionality.  
+Determines whether a specified [Recordset](./recordset-object-ado.md) object supports a particular type of functionality.  
   
 ## Syntax  
   
@@ -32,7 +33,7 @@ boolean = recordset.Supports(CursorOptions )
   
 #### Parameters  
  *CursorOptions*  
- A **Long** expression that consists of one or more [CursorOptionEnum](../../../ado/reference/ado-api/cursoroptionenum.md) values.  
+ A **Long** expression that consists of one or more [CursorOptionEnum](./cursoroptionenum.md) values.  
   
 ## Remarks  
  Use the **Supports** method to determine what types of functionality a **Recordset** object supports. If the **Recordset** object supports the features whose corresponding constants are in *CursorOptions*, the **Supports** method returns **True**. Otherwise, it returns **False**.  
@@ -41,9 +42,9 @@ boolean = recordset.Supports(CursorOptions )
 >  Although the **Supports** method may return **True** for a given functionality, it does not guarantee that the provider can make the feature available under all circumstances. The **Supports** method simply returns whether the provider can support the specified functionality, assuming certain conditions are met. For example, the **Supports** method may indicate that a **Recordset** object supports updates even though the cursor is based on a multiple table join, some columns of which are not updatable.  
   
 ## Applies To  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset Object (ADO)](./recordset-object-ado.md)  
   
 ## See Also  
- [Supports Method Example (VB)](../../../ado/reference/ado-api/supports-method-example-vb.md)   
- [Supports Method Example (VC++)](../../../ado/reference/ado-api/supports-method-example-vc.md)   
- [CursorType Property (ADO)](../../../ado/reference/ado-api/cursortype-property-ado.md)
+ [Supports Method Example (VB)](./supports-method-example-vb.md)   
+ [Supports Method Example (VC++)](./supports-method-example-vc.md)   
+ [CursorType Property (ADO)](./cursortype-property-ado.md)

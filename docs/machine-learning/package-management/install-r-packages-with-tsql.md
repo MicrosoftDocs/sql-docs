@@ -13,7 +13,7 @@ monikerRange: "=sql-server-2017||=sqlallproducts-allversions"
 ---
 
 # Use T-SQL (CREATE EXTERNAL LIBRARY) to install R packages on SQL Server
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2017 only](../../includes/applies-to-version/sqlserver2017-only.md)]
 
 This article explains how to install new R packages on an instance of SQL Server where machine learning is enabled. There are multiple approaches to choose from. Using T-SQL works best for server administrators who are unfamiliar with R.
 
@@ -59,12 +59,6 @@ If the library is successfully created, you can run the package in SQL Server, b
 EXEC sp_execute_external_script
 @language =N'R',
 @script=N'library(randomForest)'
-```
-
-The catalog view sys.external_libraries lists a row for each external library that has been uploaded into the database.
-
-```sql
-SELECT * from sys.external_libraries
 ```
 
 ## See also

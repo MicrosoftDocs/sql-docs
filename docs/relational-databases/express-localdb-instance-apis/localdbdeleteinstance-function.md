@@ -1,4 +1,5 @@
 ---
+description: "LocalDBDeleteInstance Function"
 title: "LocalDBDeleteInstance Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

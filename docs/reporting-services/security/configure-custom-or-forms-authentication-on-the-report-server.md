@@ -1,4 +1,5 @@
 ---
+description: "Configure Custom or Forms Authentication on the Report Server"
 title: "Configure Custom or Forms Authentication on the Report Server | Microsoft Docs"
 ms.date: 04/18/2017
 ms.prod: reporting-services

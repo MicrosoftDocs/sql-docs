@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Agent Error Log"
 title: SQL Server Agent Error Log
 ms.prod: sql
 ms.prod_service: sql-tools

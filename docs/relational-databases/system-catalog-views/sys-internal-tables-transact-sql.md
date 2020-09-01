@@ -1,4 +1,5 @@
 ---
+description: "sys.internal_tables (Transact-SQL)"
 title: "sys.internal_tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2019"

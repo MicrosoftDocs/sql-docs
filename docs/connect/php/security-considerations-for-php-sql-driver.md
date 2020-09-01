@@ -1,4 +1,5 @@
 ---
+description: "Security Considerations for the Microsoft Drivers for PHP for SQL Server"
 title: "Security Considerations for the Microsoft Drivers for PHP for SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/26/2018"

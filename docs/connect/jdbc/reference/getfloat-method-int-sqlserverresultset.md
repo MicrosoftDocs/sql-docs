@@ -1,4 +1,5 @@
 ---
+description: "getFloat Method (int) (SQLServerResultSet)"
 title: "getFloat Method (int) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

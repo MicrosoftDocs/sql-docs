@@ -1,4 +1,5 @@
 ---
+description: "RESTORE Statements - LABELONLY (Transact-SQL)"
 title: "RESTORE LABELONLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"

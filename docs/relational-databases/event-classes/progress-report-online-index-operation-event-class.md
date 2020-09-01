@@ -1,4 +1,5 @@
 ---
+description: "Progress Report: Online Index Operation Event Class"
 title: "Progress Report: Online Index Operation Event Class"
 ms.date: 06/03/2020
 ms.prod: sql

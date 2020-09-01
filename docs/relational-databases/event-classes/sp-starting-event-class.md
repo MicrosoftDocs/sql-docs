@@ -1,4 +1,5 @@
 ---
+description: "SP:Starting Event Class"
 title: "SP:Starting Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

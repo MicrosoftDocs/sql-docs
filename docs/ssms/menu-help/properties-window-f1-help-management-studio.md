@@ -1,4 +1,5 @@
 ---
+description: "Properties Window F1 Help (Management Studio)"
 title: "Properties Window F1 Help (Management Studio)"
 ms.prod: sql
 ms.prod_service: sql-tools

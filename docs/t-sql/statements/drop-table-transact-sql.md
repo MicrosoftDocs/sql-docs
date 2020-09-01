@@ -1,4 +1,5 @@
 ---
+description: "DROP TABLE (Transact-SQL)"
 title: "DROP TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/12/2017"
@@ -104,22 +105,22 @@ DROP TABLE { database_name.schema_name.table_name | schema_name.table_name | tab
 ### A. Dropping a table in the current database  
  The following example removes the `ProductVendor1` table and its data and indexes from the current database.  
   
-```  
+```sql  
 DROP TABLE ProductVendor1 ;  
 ```  
   
 ### B. Dropping a table in another database  
  The following example drops the `SalesPerson2` table in the [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] database. The example can be executed from any database on the server instance.  
   
-```  
+```sql  
 DROP TABLE AdventureWorks2012.dbo.SalesPerson2 ;  
 ```  
   
 ### C. Dropping a temporary table  
  The following example creates a temporary table, tests for its existence, drops it, and tests again for its existence. This example does not use the **IF EXISTS** syntax which is available beginning with [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)].  
   
-```  
-CREATE TABLE #temptable (col1 int);  
+```sql  
+CREATE TABLE #temptable (col1 INT);  
 GO  
 INSERT INTO #temptable  
 VALUES (10);  
@@ -131,7 +132,6 @@ DROP TABLE #temptable;
 GO  
 --Test the drop.  
 SELECT * FROM #temptable;  
-  
 ```  
   
 ### D. Dropping a table using IF EXISTS  
@@ -140,8 +140,8 @@ SELECT * FROM #temptable;
   
  The following example creates a table named T1. Then the second statement drops the table. The third statement performs no action because the table is already deleted, however it does not cause an error.  
   
-```  
-CREATE TABLE T1 (Col1 int);  
+```sql  
+CREATE TABLE T1 (Col1 INT);  
 GO  
 DROP TABLE IF EXISTS T1;  
 GO  

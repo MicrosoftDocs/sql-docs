@@ -1,4 +1,5 @@
 ---
+description: "Location of Cache"
 title: "Location of Cache | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

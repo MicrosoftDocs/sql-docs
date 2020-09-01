@@ -1,4 +1,5 @@
 ---
+description: "STIsValid (geography Data Type)"
 title: "STIsValid (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

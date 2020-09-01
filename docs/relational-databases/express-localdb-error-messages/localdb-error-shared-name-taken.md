@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_SHARED_NAME_TAKEN"
 title: "LOCALDB_ERROR_SHARED_NAME_TAKEN | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

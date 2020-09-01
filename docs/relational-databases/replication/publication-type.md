@@ -1,4 +1,5 @@
 ---
+description: "Publication Type"
 title: "Publication Type | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

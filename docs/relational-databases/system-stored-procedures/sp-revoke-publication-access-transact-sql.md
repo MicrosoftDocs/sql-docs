@@ -1,4 +1,5 @@
 ---
+description: "sp_revoke_publication_access (Transact-SQL)"
 title: "sp_revoke_publication_access (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

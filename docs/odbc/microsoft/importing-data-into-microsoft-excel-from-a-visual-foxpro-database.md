@@ -1,4 +1,5 @@
 ---
+description: "Importing Data into Microsoft Excel from a Visual FoxPro Database"
 title: "Importing Data into Microsoft Excel from a Visual FoxPro Database | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

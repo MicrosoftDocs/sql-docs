@@ -1,8 +1,9 @@
 ---
+description: "DataFactory Object, Query Method, and CreateObject Method Example (VBScript)"
 title: "Create RDSServer.DataFactory Object using CreateObject (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -21,7 +22,7 @@ ms.author: jroth
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- This example creates an [RDSServer.DataFactory](../../../ado/reference/rds-api/datafactory-object-rdsserver.md) object using the [CreateObject](../../../ado/reference/rds-api/createobject-method-rds.md) method of the [RDS.DataSpace](../../../ado/reference/rds-api/dataspace-object-rds.md) object. To test this example, cut and paste this code between the \<Body> and \</Body> tags in a normal HTML document and name it **DataFactoryVBS.asp**. ASP script will identify your server.  
+ This example creates an [RDSServer.DataFactory](./datafactory-object-rdsserver.md) object using the [CreateObject](./createobject-method-rds.md) method of the [RDS.DataSpace](./dataspace-object-rds.md) object. To test this example, cut and paste this code between the \<Body> and \</Body> tags in a normal HTML document and name it **DataFactoryVBS.asp**. ASP script will identify your server.  
   
 ```  
 <!-- BeginDataFactoryVBS -->  
@@ -131,9 +132,7 @@ to bring back a Recordset. </H4>
 ```  
   
 ## See Also  
- [CreateObject Method (RDS)](../../../ado/reference/rds-api/createobject-method-rds.md)   
- [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)   
- [DataSpace Object (RDS)](../../../ado/reference/rds-api/dataspace-object-rds.md)   
- [Query Method (RDS)](../../../ado/reference/rds-api/query-method-rds.md)
-
-
+ [CreateObject Method (RDS)](./createobject-method-rds.md)   
+ [DataFactory Object (RDSServer)](./datafactory-object-rdsserver.md)   
+ [DataSpace Object (RDS)](./dataspace-object-rds.md)   
+ [Query Method (RDS)](./query-method-rds.md)

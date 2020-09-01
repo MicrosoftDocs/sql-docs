@@ -1,4 +1,5 @@
 ---
+description: "execute Method (java.lang.String) (SQLServerStatement)"
 title: "execute Method (java.lang.String) (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "DENY (Transact-SQL)"
 title: DENY (Transact-SQL)
 ms.custom: ""
 ms.date: "05/15/2017"

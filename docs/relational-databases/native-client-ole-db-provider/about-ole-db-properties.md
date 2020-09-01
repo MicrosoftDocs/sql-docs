@@ -1,4 +1,5 @@
 ---
+description: "About SQL Server Native Client OLE DB Properties"
 title: "About OLE DB Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

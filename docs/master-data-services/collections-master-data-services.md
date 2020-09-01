@@ -1,4 +1,5 @@
 ---
+description: "Collections (Master Data Services)"
 title: Collections
 ms.custom: ""
 ms.date: "04/01/2016"

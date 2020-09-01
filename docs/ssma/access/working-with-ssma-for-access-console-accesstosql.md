@@ -1,4 +1,5 @@
 ---
+description: "Working with SSMA for Access Console (AccessToSQL)"
 title: "Working with SSMA for Access Console (AccessToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,9 +8,9 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: ef94e843-9f88-45a2-86c4-a0af268738c4
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: murato
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Working with SSMA for Access Console (AccessToSQL)
 Microsoft SQL Server Migration Assistant (SSMA) for Access is now accessible through a console application at command line. The script files form the input to the application for executing the commands. As a console application, SSMA enables script-level interfacing, reduces the migration cycle, and scales the migration effort.  

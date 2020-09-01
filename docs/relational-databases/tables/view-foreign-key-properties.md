@@ -1,4 +1,5 @@
 ---
+description: "View Foreign Key Properties"
 title: "View Foreign Key Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

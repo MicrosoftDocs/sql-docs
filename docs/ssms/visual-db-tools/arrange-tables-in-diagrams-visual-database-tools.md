@@ -1,4 +1,5 @@
 ---
+description: "Arrange Tables in Diagrams (Visual Database Tools)"
 title: Arrange Tables in Diagrams
 ms.prod: sql
 ms.prod_service: sql-tools

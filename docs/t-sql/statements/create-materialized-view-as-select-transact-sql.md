@@ -1,4 +1,5 @@
 ---
+description: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL)"
 title: "CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2020"
@@ -136,7 +137,8 @@ To find out if a SQL statement can benefit from a new materialized view, run the
 
 ## Permissions
 
-Requires CREATE VIEW permission in the database and ALTER permission on the schema in which the view is being created. 
+Requires 1) REFERENCES and CREATE VIEW permission OR 2) CONTROL permission on the schema in which the view is being created. 
+
   
 ## See also
 

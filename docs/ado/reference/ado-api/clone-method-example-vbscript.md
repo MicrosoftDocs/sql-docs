@@ -1,8 +1,9 @@
 ---
+description: "Clone Method Example (VBScript)"
 title: "Clone Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Clone Method Example (VBScript)
-This example uses the [Clone](../../../ado/reference/ado-api/clone-method-ado.md) method to create copies of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) and then lets the user position the record pointer of each copy independently.  
+This example uses the [Clone](./clone-method-ado.md) method to create copies of a [Recordset](./recordset-object-ado.md) and then lets the user position the record pointer of each copy independently.  
   
  Use the following example in an Active Server Page (ASP). This example uses the **Northwind** database distributed with Microsoft Access. Cut and paste the following code to Notepad or another text editor and save it as CloneVBS.asp. You can view the result in any client browser.  
   
@@ -112,5 +113,5 @@ This example uses the [Clone](../../../ado/reference/ado-api/clone-method-ado.md
 ```  
   
 ## See Also  
- [Clone Method (ADO)](../../../ado/reference/ado-api/clone-method-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Clone Method (ADO)](./clone-method-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

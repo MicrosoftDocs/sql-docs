@@ -17,7 +17,7 @@ ms.author: davidph
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # External Scripts Enabled server configuration option
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 Use the **external scripts enabled** option to enable the execution of scripts with certain remote language extensions. This property is OFF by default. When **Machine Learning Services** is installed, setup can optionally set this property to true.
 

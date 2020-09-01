@@ -1,4 +1,5 @@
 ---
+description: "Resource Governor Related Dynamic Management Views (Transact-SQL)"
 title: "Resource Governor Related Dynamic Management Views (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/28/2018"

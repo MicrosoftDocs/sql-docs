@@ -1,4 +1,5 @@
 ---
+description: "Adding an Extended Stored Procedure to SQL Server"
 title: "Adding an Extended Stored Procedure to SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

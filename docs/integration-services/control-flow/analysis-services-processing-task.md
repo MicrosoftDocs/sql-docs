@@ -1,4 +1,5 @@
 ---
+description: "Analysis Services Processing Task"
 title: "Analysis Services Processing Task | Microsoft Docs"
 ms.date: "03/14/2017"
 ms.prod: sql

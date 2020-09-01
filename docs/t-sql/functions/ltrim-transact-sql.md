@@ -1,4 +1,5 @@
 ---
+description: "LTRIM (Transact-SQL)"
 title: "LTRIM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/27/2017"

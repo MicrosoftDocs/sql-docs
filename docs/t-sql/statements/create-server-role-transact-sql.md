@@ -1,4 +1,5 @@
 ---
+description: "CREATE SERVER ROLE (Transact-SQL)"
 title: "CREATE SERVER ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/02/2016"

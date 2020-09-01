@@ -1,4 +1,5 @@
 ---
+description: "FULLTEXTCATALOGPROPERTY (Transact-SQL)"
 title: "FULLTEXTCATALOGPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

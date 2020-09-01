@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_xe_database_sessions (Azure SQL Database)"
 title: "sys.dm_xe_database_sessions (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Create and Deploy a Cache for the Lookup Transformation"
 title: "Create and Deploy a Cache for the Lookup Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/01/2017"

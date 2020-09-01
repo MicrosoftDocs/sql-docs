@@ -1,4 +1,5 @@
 ---
+description: "DROP DATABASE (Transact-SQL)"
 title: "DROP DATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2019"
@@ -45,6 +46,8 @@ DROP DATABASE [ IF EXISTS ] { database_name | database_snapshot_name } [ ,...n ]
 -- Azure SQL Database, Azure SQL Data Warehouse and Analytics Platform System Syntax
 DROP DATABASE database_name [;]
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

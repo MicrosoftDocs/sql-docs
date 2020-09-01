@@ -1,6 +1,6 @@
 ---
 title: Use large CLR UDTs (OLE DB driver)
-description: "Use large CLR UDTs (OLE DB)"
+description: Learn how to fetch rows with large user-defined types from a result set in OLE DB Driver for SQL Server with this example.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -8,8 +8,8 @@ ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Use Large CLR UDTs (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

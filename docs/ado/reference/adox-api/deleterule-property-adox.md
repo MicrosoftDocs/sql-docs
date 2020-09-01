@@ -1,8 +1,9 @@
 ---
+description: "DeleteRule Property (ADOX)"
 title: "DeleteRule Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -24,13 +25,13 @@ ms.author: jroth
 Indicates the action performed when a primary key is deleted.  
   
 ## Settings and Return Values  
- Sets and returns a **Long** value that can be one of the [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) constants. The default value is **adRINone**.  
+ Sets and returns a **Long** value that can be one of the [RuleEnum](./ruleenum.md) constants. The default value is **adRINone**.  
   
 ## Remarks  
- This property is read-only on [Key](../../../ado/reference/adox-api/key-object-adox.md) objects already appended to a collection.  
+ This property is read-only on [Key](./key-object-adox.md) objects already appended to a collection.  
   
 ## Applies To  
- [Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [Key Object (ADOX)](./key-object-adox.md)  
   
 ## See Also  
- [DeleteRule Property Example (VB)](../../../ado/reference/adox-api/deleterule-property-example-vb.md)
+ [DeleteRule Property Example (VB)](./deleterule-property-example-vb.md)

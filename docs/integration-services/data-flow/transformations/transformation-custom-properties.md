@@ -1,4 +1,5 @@
 ---
+description: "Transformation Custom Properties"
 title: "Transformation Custom Properties | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

@@ -1,4 +1,5 @@
 ---
+description: "Connect to Azure Blob Storage (SQL Server Import and Export Wizard)"
 title: "Connect to Azure Blob Storage (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/17/2017"
@@ -45,7 +46,7 @@ Enter the key for the Azure storage account.
  Specify whether to use HTTP or HTTPS to connect to the storage account.  
   
  **Use local developer account**  
- Specify whether to use the storage emulator on the local computer.  
+ Specify whether to use the Azure Storage Emulator on the local computer.  
   
  **Blob container name**  
  Select from the list of storage containers available in the specified storage account.  

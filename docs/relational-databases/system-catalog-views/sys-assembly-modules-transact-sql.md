@@ -1,4 +1,5 @@
 ---
+description: "sys.assembly_modules (Transact-SQL)"
 title: "sys.assembly_modules (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"

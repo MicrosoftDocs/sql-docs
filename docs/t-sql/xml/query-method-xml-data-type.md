@@ -1,4 +1,5 @@
 ---
+description: "query() Method (xml Data Type)"
 title: query() Method (xml Data Type)
 ms.custom: ""
 ms.date: 04/16/2020

@@ -1,4 +1,5 @@
 ---
+description: "char and varchar (Transact-SQL)"
 title: char and varchar (Transact-SQL)
 ms.custom: ""
 ms.date: "11/19/2019"
@@ -174,10 +175,17 @@ String                                       TruncatedValue
 ## See also
 
 [nchar and nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)
+
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+
 [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md)
+
 [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)
+
 [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
+
 [Estimate the Size of a Database](../../relational-databases/databases/estimate-the-size-of-a-database.md)
+
 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
+
 [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)

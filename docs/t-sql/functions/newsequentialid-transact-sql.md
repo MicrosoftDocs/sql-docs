@@ -1,4 +1,5 @@
 ---
+description: "NEWSEQUENTIALID (Transact-SQL)"
 title: "NEWSEQUENTIALID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2015"
@@ -36,11 +37,13 @@ ms.author: jrasnick
   
 ## Syntax  
   
-```  
-  
+```syntaxsql
 NEWSEQUENTIALID ( )  
-```  
-  
+```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+
 ## Return Type  
  **uniqueidentifier**  
   

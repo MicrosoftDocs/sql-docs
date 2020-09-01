@@ -1,4 +1,5 @@
 ---
+description: "sp_delete_maintenance_plan (Transact-SQL)"
 title: "sp_delete_maintenance_plan (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

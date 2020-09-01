@@ -1,14 +1,14 @@
 ---
 title: "End of support options"
 description: Learn about the different options available for SQL Server products that have reached end of support, such as SQL Server 2005, SQL Server 2008, and SQL Server 2008 R2. 
-ms.date: "12/18/2019"
+ms.date: 08/12/2020
 ms.prod: sql
 ms.technology: install
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
 ms.reviewer: pmasl
-monikerRange: "=sql-server-previousversions||>=sql-server-2016||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # SQL Server end of support options 
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
@@ -74,7 +74,7 @@ Hardware requirements:
 - [SQL Server 2019](../install/hardware-and-software-requirements-for-installing-sql-server-ver15.md)    
 
 Supported version and edition upgrades:
-- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016) 
+- [SQL Server 2016](../../database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true) 
 - [SQL Server 2017](../../database-engine/install-windows/supported-version-and-edition-upgrades-2017.md)
 - [SQL Server 2019](../../database-engine/install-windows/supported-version-and-edition-upgrades-version-15.md)
 
@@ -193,7 +193,7 @@ Tools:
 
 ## SQL Managed Instance
 
-If you'd like to take advantage of offloading maintenance and cost, but find the feature set of an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database too limiting, you can move to [SQL Managed Instance](/azure/sql-database/sql-database-managed-instance). A managed instance closely resembles an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], without having to worry about such things as hardware failure, or patching. Managed instance is a collection of system and user databases with a shared set of resources that is lift-and-shift ready, and can be used for most migrations to the cloud. This option is best for new applications or existing on-premises applications that want to use the latest stable [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features and that are migrated to the cloud with minimal changes. 
+If you'd like to take advantage of offloading maintenance and cost, but find the feature set of an [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database too limiting, you can move to [SQL Managed Instance](/azure/sql-database/sql-database-managed-instance). A managed instance closely resembles an on-premises [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], without having to worry about such things as hardware failure, or patching. Managed Instance is a collection of system and user databases with a shared set of resources that is lift-and-shift ready, and can be used for most migrations to the cloud. This option is best for new applications or existing on-premises applications that want to use the latest stable [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] features and that are migrated to the cloud with minimal changes. 
 
 ### Benefits
 

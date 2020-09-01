@@ -1,8 +1,9 @@
 ---
+description: "Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VC++)"
 title: "Error Object Properties Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""

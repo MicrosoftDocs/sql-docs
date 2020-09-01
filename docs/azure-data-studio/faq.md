@@ -2,7 +2,7 @@
 title: Azure Data Studio FAQ
 description: 'Get answers to questions frequently asked about Azure Data Studio, such as "What does it do?", "Who should use it?", and "How much does it cost?".'
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: "markingmyname"
 ms.author: "maghan"

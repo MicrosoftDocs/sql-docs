@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Operationalize R code using stored procedures in SQL Server Machine Learning Services
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 When using the R and Python features in SQL Server Machine Learning Services, the most common approach for moving solutions to a production environment is by embedding code in stored procedures. This article summarizes the key points for the SQL developer to consider when operationalizing R code using SQL Server.
 

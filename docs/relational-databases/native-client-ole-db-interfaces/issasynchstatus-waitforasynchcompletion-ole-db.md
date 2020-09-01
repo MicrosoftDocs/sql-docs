@@ -1,4 +1,5 @@
 ---
+description: "ISSAsynchStatus::WaitForAsynchCompletion in SQL Server Native Client (OLE DB)"
 title: "ISSAsynchStatus::WaitForAsynchCompletion (Native Client OLE DB provider) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

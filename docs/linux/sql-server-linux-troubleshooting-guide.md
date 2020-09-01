@@ -1,6 +1,6 @@
 ---
 title: Troubleshoot SQL Server on Linux
-description: Provides troubleshooting tips for using SQL Server on Linux.
+description: Troubleshoot Microsoft SQL Server running on Linux or in a Docker container. Learn where to find information about supported features and known limitations.
 author: VanMSFT 
 ms.author: vanto
 ms.date: 05/01/2018

@@ -1,8 +1,9 @@
 ---
+description: "Count Property Example (VC++)"
 title: "Count Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Count Property Example (VC++)
-This example demonstrates the [Count](../../../ado/reference/ado-api/count-property-ado.md) property with two collections in the ***Employee*** database. The property obtains the number of objects in each collection, and sets the upper limit for loops that enumerate these collections.  
+This example demonstrates the [Count](./count-property-ado.md) property with two collections in the ***Employee*** database. The property obtains the number of objects in each collection, and sets the upper limit for loops that enumerate these collections.  
   
 ```  
 // BeginCountCpp.cpp  
@@ -125,4 +126,4 @@ void PrintComError(_com_error &e) {
 ```  
   
 ## See Also  
- [Count Property (ADO)](../../../ado/reference/ado-api/count-property-ado.md)
+ [Count Property (ADO)](./count-property-ado.md)

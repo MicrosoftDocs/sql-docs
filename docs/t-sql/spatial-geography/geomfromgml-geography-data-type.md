@@ -1,4 +1,5 @@
 ---
+description: "GeomFromGML (geography Data Type)"
 title: "GeomFromGML (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"

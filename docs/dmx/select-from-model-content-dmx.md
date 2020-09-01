@@ -1,4 +1,5 @@
 ---
+description: "SELECT FROM &lt;model&gt;.CONTENT (DMX)"
 title: "SELECT FROM &lt;model&gt;.CONTENT (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql

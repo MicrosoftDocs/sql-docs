@@ -1,4 +1,5 @@
 ---
+description: "supportsANSI92EntryLevelSQL Method (SQLServerDatabaseMetaData)"
 title: "supportsANSI92EntryLevelSQL Method (SQLServerDatabaseMetaData) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

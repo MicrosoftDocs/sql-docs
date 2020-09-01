@@ -68,7 +68,7 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 | [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
 
 > [!NOTE]
-> SQL Server 2019 CU7 does not apply to SQL Server Big Data Clusters
+> There are no SQL Server 2019 Big Data Clusters updates for CU7.
 
 ## How to install updates
 

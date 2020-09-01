@@ -208,7 +208,7 @@ SELECT dbo.ConvertInput(15) AS 'ConvertedValue';
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
 
 ### A. Creating an inline table-valued function
- The following example creates an inline table-valued function to return some key information on modules, based on the `objectType` parameter. It includes a default value for `objectType` to return all modules when the function is called with the DEFAULT parameter. It makes use of some of the system catalog views mentioned in [Metadata](#Metadata).
+ The following example creates an inline table-valued function to return some key information on modules, filtering by the `objectType` parameter. It includes a default value to return all modules when the function is called with the DEFAULT parameter. This example makes use of some of the system catalog views mentioned in [Metadata](#metadata).
 
 ```sql
 CREATE FUNCTION dbo.ModulesByType(@objectType CHAR(2) = '%%')

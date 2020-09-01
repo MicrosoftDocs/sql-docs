@@ -302,13 +302,16 @@ You can minimize locking contention while protecting transactions from dirty rea
 For more information about isolation levels, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 > [!NOTE]  
-> If you receive the error message 601 when READUNCOMMITTED is specified, resolve it as you would a deadlock error (1205), and retry your statement.  
+> If you receive the [error message 601](../../relational-databases/errors-events/database-engine-events-and-errors.md#errors--2-to-999) when READUNCOMMITTED is specified, resolve it as you would a deadlock error ([error message 1205](../../relational-databases/errors-events/mssqlserver-1205-database-engine-error.md)), and retry your statement.  
   
 REPEATABLEREAD  
 Specifies that a scan is performed with the same locking semantics as a transaction running at REPEATABLE READ isolation level. For more information about isolation levels, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  
   
 ROWLOCK  
 Specifies that row locks are taken when page or table locks are ordinarily taken. When specified in transactions operating at the SNAPSHOT isolation level, row locks are not taken unless ROWLOCK is combined with other table hints that require locks, such as UPDLOCK and HOLDLOCK.  
+
+> [!NOTE]
+> ROWLOCK can't be used when referencing a table with a clustered columnstore index.  
   
 SERIALIZABLE  
 Is equivalent to HOLDLOCK. Makes shared locks more restrictive by holding them until a transaction is completed, instead of releasing the shared lock as soon as the required table or data page is no longer needed, whether the transaction has been completed or not. The scan is performed with the same semantics as a transaction running at the SERIALIZABLE isolation level. For more information about isolation levels, see [SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md).  

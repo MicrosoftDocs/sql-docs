@@ -59,7 +59,6 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 
 | Release          | BDC Version    | `azdata` Version| Release date |
 |------------------|----------------|-----------------|--------------|
-| [CU7](#cu7)      | 15.0.4063.15   | 20.1.0          | 2020-08-28   |
 | [CU6](#cu6)      | 15.0.4053.23   | 20.0.1          | 2020-08-04   |
 | [CU5](#cu5)      | 15.0.4043.16   | 20.0.0          | 2020-06-22   |
 | [CU4](#cu4)      | 15.0.4033.1    | 15.0.4033       | 2020-03-31   |
@@ -68,19 +67,12 @@ The following table lists the release history for [!INCLUDE[big-data-clusters-20
 | [CU1](#cu1)      | 15.0.4003.23   | 15.0.4003       | 2020-01-07   |
 | [GDR1](#rtm)     | 15.0.2070.34   | 15.0.2070       | 2019-11-04   |
 
+> [!NOTE]
+> SQL Server 2019 CU7 does not apply to SQL Server Big Data Clusters
+
 ## How to install updates
 
 To install updates, see [How to upgrade [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deployment-upgrade.md).
-
-## <a id="cu7"></a> CU7 (August 2020)
-
-Cumulative Update 7 (CU7) release for SQL Server 2019.
-
-|Package version | Image tag |
-|-----|-----|
-|15.0.4063.15 |[2019-CU7-ubuntu-16.04]
-
-Before you start to upgrade to CU7, empty Livy jobs in the big data cluster.
 
 ## <a id="cu6"></a> CU6 (July 2020)
 
@@ -171,9 +163,9 @@ SQL Server 2019 General Distribution Release 1 (GDR1) - introduces general avail
 
 ## Known issues
 
-### Empty Livy jobs before you apply CU7
+### Empty Livy jobs before you apply cumulative updates
 
-- **Affected releases**: Through CU7
+- **Affected releases**: Through current cumulative update
 
 - **Issue and customer impact**: During an upgrade, sparkhead returns 404 error.
 

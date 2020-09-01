@@ -3,7 +3,7 @@ description: "Named Commands"
 title: "Named Commands | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,7 +16,7 @@ author: rothja
 ms.author: jroth
 ---
 # Named Commands
-[Creating and Executing a Simple Command](../../../ado/guide/data/creating-and-executing-a-simple-command.md) shows one way to execute a command. There is another way: you can make it a named command, and then call this named command directly on the **Connection** object (assigned to the **ActiveConnection** property of the **Command** object). Naming a command means assigning a name to the **Name** property of a **Command** object. For example,  
+[Creating and Executing a Simple Command](./creating-and-executing-a-simple-command.md) shows one way to execute a command. There is another way: you can make it a named command, and then call this named command directly on the **Connection** object (assigned to the **ActiveConnection** property of the **Command** object). Naming a command means assigning a name to the **Name** property of a **Command** object. For example,  
   
 ```  
 objCmd.Name = "GetCustomers"  
@@ -85,4 +85,4 @@ ErrHandler:
 ```  
   
 ## See Also  
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection Object (ADO)](../../reference/ado-api/connection-object-ado.md)

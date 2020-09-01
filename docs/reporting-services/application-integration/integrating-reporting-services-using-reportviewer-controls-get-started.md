@@ -2,7 +2,7 @@
 title: "Get started with Report Viewer controls"
 description: The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps. 
 ms.custom: seo-lt-2019
-ms.date: 08/05/2020
+ms.date: 08/31/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
@@ -19,7 +19,7 @@ The Report Viewer controls can be used to integrate Reporting Services RDL repor
 
 1. Create a new **ASP.NET Empty Web Site** or open an existing ASP.NET project.
 
-    You can use .NET Framework 4.5.2 or any newer version.
+    You can use .NET Framework 4.6 or any newer version.
 
     ![Screenshot of creating a new ASP.NET Empty Web Site.](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
 
@@ -83,7 +83,7 @@ Make sure to update any assembly references to version *15.0.0.0*, including the
   -->
 <configuration>
   <system.web>
-    <compilation debug="true" targetFramework="4.5.2">
+    <compilation debug="true" targetFramework="4.6">
       <assemblies>
         <!-- All assemblies updated to version 15.0.0.0. -->
         <add assembly="Microsoft.ReportViewer.Common, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
@@ -100,7 +100,7 @@ Make sure to update any assembly references to version *15.0.0.0*, including the
           type="Microsoft.Reporting.RdlBuildProvider, Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845DCD8080CC91"/>
       </buildProviders>
     </compilation>
-    <httpRuntime targetFramework="4.5.2"/>
+    <httpRuntime targetFramework="4.6"/>
     <httpHandlers>
       <!-- Version updated to 15.0.0.0 -->
       <add path="Reserved.ReportViewerWebControl.axd" verb="*"
@@ -135,7 +135,7 @@ Make sure to update any assembly references to version *15.0.0.0*, including the
 
 1. Create a new **Windows Forms Application** or open an existing project.
 
-    You can use .NET Framework 4.5.2 or any newer version.
+    You can use .NET Framework 4.6 or any newer version.
     
     ![Screenshot of creating a new Windows Forms Application.](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
 

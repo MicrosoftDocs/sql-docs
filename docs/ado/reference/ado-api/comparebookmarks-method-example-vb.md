@@ -3,7 +3,7 @@ description: "CompareBookmarks Method Example (VB)"
 title: "CompareBookmarks Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,9 +17,9 @@ author: rothja
 ms.author: jroth
 ---
 # CompareBookmarks Method Example (VB)
-This example demonstrates the [CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md) method. The relative value of bookmarks is seldom needed unless a particular bookmark is somehow special.  
+This example demonstrates the [CompareBookmarks](./comparebookmarks-method-ado.md) method. The relative value of bookmarks is seldom needed unless a particular bookmark is somehow special.  
   
- Designate a random row of a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) derived from the ***Authors*** table as the target of a search. Then display the position of each row relative to that target.  
+ Designate a random row of a [Recordset](./recordset-object-ado.md) derived from the ***Authors*** table as the target of a search. Then display the position of each row relative to that target.  
   
 ```  
 'BeginCompareBookmarksVB  
@@ -128,6 +128,6 @@ End Sub
 ```  
   
 ## See Also  
- [CompareBookmarks Method (ADO)](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)   
- [CompareEnum](../../../ado/reference/ado-api/compareenum.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [CompareBookmarks Method (ADO)](./comparebookmarks-method-ado.md)   
+ [CompareEnum](./compareenum.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

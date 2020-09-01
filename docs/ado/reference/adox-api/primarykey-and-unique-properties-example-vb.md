@@ -3,7 +3,7 @@ description: "PrimaryKey and Unique Properties Example (VB)"
 title: "PrimaryKey and Unique Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # PrimaryKey and Unique Properties Example (VB)
-This example demonstrates the [PrimaryKey](../../../ado/reference/adox-api/primarykey-property-adox.md) and [Unique](../../../ado/reference/adox-api/unique-property-adox.md) properties of an [Index](../../../ado/reference/adox-api/index-object-adox.md). The code creates a new table with two columns. The **PrimaryKey** and **Unique** properties are used to make one column the primary key for which duplicate values are not allowed.  
+This example demonstrates the [PrimaryKey](./primarykey-property-adox.md) and [Unique](./unique-property-adox.md) properties of an [Index](./index-object-adox.md). The code creates a new table with two columns. The **PrimaryKey** and **Unique** properties are used to make one column the primary key for which duplicate values are not allowed.  
   
 ```  
 ' BeginPrimaryKeyVB  
@@ -108,6 +108,6 @@ End Sub
 ```  
   
 ## See Also  
- [Index Object (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)   
- [PrimaryKey Property (ADOX)](../../../ado/reference/adox-api/primarykey-property-adox.md)   
- [Unique Property (ADOX)](../../../ado/reference/adox-api/unique-property-adox.md)
+ [Index Object (ADOX)](./index-object-adox.md)   
+ [PrimaryKey Property (ADOX)](./primarykey-property-adox.md)   
+ [Unique Property (ADOX)](./unique-property-adox.md)

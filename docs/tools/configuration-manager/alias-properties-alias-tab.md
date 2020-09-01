@@ -4,7 +4,7 @@ description: Use the Alias tab of the Properties dialog box to configure an alia
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: 2d1498e2-129c-4ce7-88e5-408e4037243c
 author: markingmyname
@@ -42,4 +42,4 @@ The name of the [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ss
 
 - [Creating a Valid Connection String Using Shared Memory Protocol](../../tools/configuration-manager/creating-a-valid-connection-string-using-shared-memory-protocol.md)
 - [Creating a Valid Connection String Using TCP IP](../../tools/configuration-manager/creating-a-valid-connection-string-using-tcp-ip.md)
-- [Creating a Valid Connection String Using Named Pipes](https://msdn.microsoft.com/library/90930ff2-143b-4651-8ae3-297103600e4f)
+- [Creating a Valid Connection String Using Named Pipes](/previous-versions/sql/sql-server-2016/ms189307(v=sql.130))

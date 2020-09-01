@@ -31,8 +31,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 |**total_rows**|**bigint**|Total rows physically stored in the row group. Some may have been deleted but they are still stored. The maximum number of rows in a row group is 1,048,576 (hexadecimal FFFFF).|  
 |**deleted_rows**|**bigint**|Number of rows physically stored in the row group that are marked for deletion.<br /><br /> Always 0 for DELTA row groups.|  
 |**size_in_bytes**|**int**|Combined size, in bytes, of all the pages in this row group. This size does not include the size required to store metadata or shared dictionaries.|  
-|**pdw_node_id**|**int**|Unique id of a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] node.|  
-|**distribution_id**|**int**|Unique id of the distribution.|
+|**pdw_node_id**|**int**|Unique ID of a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] node.|  
+|**distribution_id**|**int**|Unique ID of the distribution.|
   
 ## Remarks  
  Returns one row for each columnstore row group for each table having a clustered or nonclustered columnstore index.  

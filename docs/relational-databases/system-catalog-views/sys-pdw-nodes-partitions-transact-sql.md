@@ -21,9 +21,9 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|partition_id|**bigint**|id of the partition. Is unique within a database.|  
-|object_id|**int**|id of the object to which this partition belongs. Every table or view is composed of at least one partition.|  
-|index_id|**int**|id of the index within the object to which this partition belongs.|  
+|partition_id|**bigint**|ID of the partition. Is unique within a database.|  
+|object_id|**int**|ID of the object to which this partition belongs. Every table or view is composed of at least one partition.|  
+|index_id|**int**|ID of the index within the object to which this partition belongs.|  
 |partition_number|**int**|1-based partition number within the owning index or heap. For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], the value of this column is 1.|  
 |hobt_id|**bigint**|ID of the data heap or B-tree (HoBT) that contains the rows for this partition.|  
 |rows|**bigint**|Approximate number of rows in this partition. |  

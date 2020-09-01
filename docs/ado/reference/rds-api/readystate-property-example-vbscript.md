@@ -1,11 +1,11 @@
 ---
 description: "ReadyState Property Example (VBScript)"
 title: "ReadyState Property Example (VBScript) | Microsoft Docs"
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
-ms.prod: sql  
+ms.prod: sql
 ms.prod_service: connectivity
 ms.topic: conceptual
 dev_langs: 
@@ -20,7 +20,7 @@ ms.author: jroth
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- The following example shows how to read the [ReadyState](../../../ado/reference/rds-api/readystate-property-rds.md) property of the [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object at run time in VBScript code. **ReadyState** is a read-only property.  
+ The following example shows how to read the [ReadyState](./readystate-property-rds.md) property of the [RDS.DataControl](./datacontrol-object-rds.md) object at run time in VBScript code. **ReadyState** is a read-only property.  
   
  To test this example, cut and paste this code between the \<Body> and \</Body> tags in a normal HTML document and name it **RDSReadySt.asp**. Use **Find** to locate the file Adovbs.inc and place it in the directory you plan to use. ASP script will identify your server.  
   
@@ -105,7 +105,5 @@ body {
 ```  
   
 ## See Also  
- [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [ReadyState Property (RDS)](../../../ado/reference/rds-api/readystate-property-rds.md)
-
-
+ [DataControl Object (RDS)](./datacontrol-object-rds.md)   
+ [ReadyState Property (RDS)](./readystate-property-rds.md)

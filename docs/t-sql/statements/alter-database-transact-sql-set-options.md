@@ -188,11 +188,13 @@ SET
   | TRANSFORM_NOISE_WORDS = { OFF | ON }
   | TWO_DIGIT_YEAR_CUTOFF = { 1753, ..., 2049, ..., 9999 }
 }
+
 <FILESTREAM_option> ::=
 {
     NON_TRANSACTED_ACCESS = { OFF | READ_ONLY | FULL
   | DIRECTORY_NAME = <directory_name>
 }
+
 <HADR_options> ::=
     ALTER DATABASE SET HADR
 
@@ -206,7 +208,7 @@ SET
 {
     QUERY_STORE
     {
- = OFF
+          = OFF [ FORCED ] 
         | = ON [ ( <query_store_option_list> [,...n] ) ]
         | ( < query_store_option_list> [,...n] )
         | CLEAR [ ALL ]
@@ -229,7 +231,7 @@ SET
 
 <query_capture_policy_option_list> :: =
 {
-    STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
+      STALE_CAPTURE_POLICY_THRESHOLD = number { DAYS | HOURS }
     | EXECUTION_COUNT = number
     | TOTAL_COMPILE_CPU_TIME_MS = number
     | TOTAL_EXECUTION_CPU_TIME_MS = number
@@ -247,11 +249,12 @@ SET
     REMOTE_DATA_ARCHIVE =
     {
         ON ( SERVER = <server_name> ,
-{CREDENTIAL = <db_scoped_credential_name>
-   | FEDERATED_SERVICE_ACCOUNT = ON | OFF
-}
-      )
-      | OFF
+             { 
+                  CREDENTIAL = <db_scoped_credential_name>
+                  | FEDERATED_SERVICE_ACCOUNT = ON | OFF
+             }
+        )
+        | OFF
     }
 }
 
@@ -267,8 +270,8 @@ SET
 <snapshot_option> ::=
 {
     ALLOW_SNAPSHOT_ISOLATION { ON | OFF }
-  | READ_COMMITTED_SNAPSHOT {ON | OFF }
-  | MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = {ON | OFF }
+  | READ_COMMITTED_SNAPSHOT { ON | OFF }
+  | MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT = { ON | OFF }
 }
 <sql_option> ::=
 {
@@ -293,7 +296,9 @@ SET
   | ROLLBACK IMMEDIATE
   | NO_WAIT
 }
-<temporal_history_retention>::=TEMPORAL_HISTORY_RETENTION { ON | OFF }
+
+<temporal_history_retention> ::=
+    TEMPORAL_HISTORY_RETENTION { ON | OFF }
 ```
 
 ## Arguments
@@ -331,9 +336,9 @@ The AUTO_CLOSE option is useful for desktop databases because it allows for data
 >
 > When AUTO_CLOSE is set to ON, some columns in the [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) catalog view and the [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) function will return NULL because the database is unavailable to retrieve the data. To resolve this issue, run a USE statement to open the database.
 >
-> Database mirroring requires AUTO_CLOSE OFF.
+> Database mirroring requires AUTO_CLOSE set to OFF.
 
-When the database is set to AUTOCLOSE = ON, an operation that initiates an automatic database shutdown clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, for each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. This message is logged every five minutes as long as the cache is flushed within that time interval.
+When the database is set to `AUTOCLOSE = ON`, an operation that initiates an automatic database shutdown clears the plan cache for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Clearing the plan cache causes a recompilation of all subsequent execution plans and can cause a sudden, temporary decrease in query performance. Starting with [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2, for each cleared cache store in the plan cache, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains the following informational message: `SQL Server has encountered %d occurrence(s) of cachestore flush for the '%s' cachestore (part of plan cache) due to some database maintenance or reconfigure operations`. This message is logged every five minutes as long as the cache is flushed within that time interval.
 
 <a name="auto_create_statistics"></a> AUTO_CREATE_STATISTICS { **ON** | OFF }     
 ON     
@@ -742,13 +747,13 @@ ON
 Enables the Query Store.
 
 OFF      
-Disables the Query Store. OFF is the default value. FORCED is optional. FORCED aborts all running Query Store background tasks, and skips the synchronous flush when Query Store is turned off. Causes Query Store to shut down as fast as possible. Effectively turns off Query Store immediately. [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 introduces FORCED.
+Disables the Query Store. OFF is the default value. FORCED is optional. FORCED aborts all running Query Store background tasks, and skips the synchronous flush when Query Store is turned off. Causes the Query Store to shut down as fast as possible. FORCED applies to [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CU6 and later builds.
 
 > [!NOTE]  
 > Query Store cannot be disabled in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] single database and Elastic Pool. Executing `ALTER DATABASE [database] SET QUERY_STORE = OFF` will return the warning `'QUERY_STORE=OFF' is not supported in this version of SQL Server.`. 
 
 CLEAR     
-Remove the contents of the Query Store.
+Removes query-related data from the Query Store. ALL is optional. ALL removes query-related data and metadata from the Query Store.
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }     
 Describes the operation mode of the Query Store.

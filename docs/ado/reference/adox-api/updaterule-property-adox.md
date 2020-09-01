@@ -3,7 +3,7 @@ description: "UpdateRule Property (ADOX)"
 title: "UpdateRule Property (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -22,16 +22,16 @@ author: rothja
 ms.author: jroth
 ---
 # UpdateRule Property (ADOX)
-Indicates the action performed when a primary [Key](../../../ado/reference/adox-api/key-object-adox.md) is updated.  
+Indicates the action performed when a primary [Key](./key-object-adox.md) is updated.  
   
 ## Settings and Return Values  
- Sets and returns a **Long** value that can be one of the [RuleEnum](../../../ado/reference/adox-api/ruleenum.md) constants. The default value is **adRINone**.  
+ Sets and returns a **Long** value that can be one of the [RuleEnum](./ruleenum.md) constants. The default value is **adRINone**.  
   
 ## Remarks  
- This property is read-only on [Key](../../../ado/reference/adox-api/key-object-adox.md) objects already appended to the collection.  
+ This property is read-only on [Key](./key-object-adox.md) objects already appended to the collection.  
   
 ## Applies To  
- [Key Object (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
+ [Key Object (ADOX)](./key-object-adox.md)  
   
 ## See Also  
- [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)
+ [Keys Append Method, Key Type, RelatedColumn, RelatedTable and UpdateRule Properties Example (VB)](./keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)

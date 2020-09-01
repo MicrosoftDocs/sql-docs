@@ -3,7 +3,7 @@ description: "RecordStatusEnum"
 title: "RecordStatusEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # RecordStatusEnum
-Specifies the [status](../../../ado/reference/ado-api/status-property-ado-recordset.md) of a record with regard to batch updates and other bulk operations.  
+Specifies the [status](./status-property-ado-recordset.md) of a record with regard to batch updates and other bulk operations.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -68,4 +68,4 @@ Specifies the [status](../../../ado/reference/ado-api/status-property-ado-record
 |AdoEnums.RecordStatus.UNMODIFIED|  
   
 ## Applies To  
- [Status Property (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)
+ [Status Property (ADO Recordset)](./status-property-ado-recordset.md)

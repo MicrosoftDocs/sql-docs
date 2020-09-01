@@ -3,7 +3,7 @@ description: "Type Property Example (Property) (VB)"
 title: "Type Property Example (Property) (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,9 +17,9 @@ author: rothja
 ms.author: jroth
 ---
 # Type Property Example (Property) (VB)
-This example demonstrates the [Type](../../../ado/reference/ado-api/type-property-ado.md) property. It is a model of a utility for listing the names and types of a collection, like [Properties](../../../ado/reference/ado-api/properties-collection-ado.md), [Fields](../../../ado/reference/ado-api/fields-collection-ado.md), etc.  
+This example demonstrates the [Type](./type-property-ado.md) property. It is a model of a utility for listing the names and types of a collection, like [Properties](./properties-collection-ado.md), [Fields](./fields-collection-ado.md), etc.  
   
- We do not need to open the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) to access its **Properties** collection; they come into existence when the **Recordset** object is instantiated. However, setting the [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) property to **adUseClient** adds several dynamic properties to the **Recordset** object's **Properties** collection, making the example a little more interesting. For sake of illustration, we explicitly use the [Item](../../../ado/reference/ado-api/item-property-ado.md) property to access each [Property](../../../ado/reference/ado-api/property-object-ado.md) object.  
+ We do not need to open the [Recordset](./recordset-object-ado.md) to access its **Properties** collection; they come into existence when the **Recordset** object is instantiated. However, setting the [CursorLocation](./cursorlocation-property-ado.md) property to **adUseClient** adds several dynamic properties to the **Recordset** object's **Properties** collection, making the example a little more interesting. For sake of illustration, we explicitly use the [Item](./item-property-ado.md) property to access each [Property](./property-object-ado.md) object.  
   
 ```  
 'BeginTypePropertyVB  
@@ -143,5 +143,5 @@ End Sub
 ```  
   
 ## See Also  
- [Property Object (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
- [Type Property (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
+ [Property Object (ADO)](./property-object-ado.md)   
+ [Type Property (ADO)](./type-property-ado.md)

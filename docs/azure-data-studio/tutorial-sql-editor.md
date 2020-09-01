@@ -2,7 +2,7 @@
 title: Use the Transact-SQL editor to create database objects
 description: Follow this tutorial to learn how to use the Transact-SQL editor to perform core database tasks, including creation and search of database objects.
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.topic: "tutorial"
 author: "markingmyname"
 ms.author: "maghan"

@@ -25,12 +25,12 @@ Database Engine Tuning Advisor provides a graphical user interface (GUI) based w
 
 To complete this tutorial, you need SQL Server Management Studio, access to a server that's running SQL Server, and an AdventureWorks database.
 
-- Install [SQL Server Management Studio.](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)
+- Install [SQL Server Management Studio.](../../ssms/download-sql-server-management-studio-ssms.md)
 - Install [SQL Server 2017 Developer Edition.](https://www.microsoft.com/sql-server/sql-server-downloads)
-- Download [AdventureWorks2017 sample databases.](https://docs.microsoft.com/sql/samples/adventureworks-install-configure?view=sql-server-2017)
+- Download [AdventureWorks2017 sample databases.](../../samples/adventureworks-install-configure.md?view=sql-server-2017)
 
 
-Instructions for restoring databases in SSMS are here: [Restore a database.](https://docs.microsoft.com/sql/relational-databases/backup-restore/restore-a-database-backup-using-ssms?view=sql-server-2017)
+Instructions for restoring databases in SSMS are here: [Restore a database.](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md?view=sql-server-2017)
 
   >[!NOTE]
   > This tutorial is meant for a user familiar with using SQL Server Management Studio and basic database administration tasks. 
@@ -84,6 +84,5 @@ Two main panes are displayed in the Database Engine Tuning Advisor GUI when it i
   
 ## Next Lesson  
 [Lesson 2: Using Database Engine Tuning Advisor](../../tools/dta/lesson-2-using-database-engine-tuning-advisor.md)  
-  
   
   

@@ -17,6 +17,9 @@ ms.author: "maghan"
 # The SQL Server Management Studio Environment
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] provides a rich environment for managing and developing queries in [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)].  
+
+> [!NOTE]
+> Conflicts with graphics drivers have been found to cause issues in the SQL Server Management Studio rendering process and as such hardware graphics acceleration is disabled by default.  If you experience rendering or other visual problems in the SSMS interface, please verify "Use hardware graphics acceleration if available" is *unchecked* in Tools>Options.
   
 ## In This Section  
 [General User Interface Elements](../ssms/general-user-interface-elements.md)  

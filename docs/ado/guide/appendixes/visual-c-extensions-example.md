@@ -3,7 +3,7 @@ description: "Visual C++ Extensions Example"
 title: "Visual C++ Extensions Example | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""
@@ -105,5 +105,5 @@ int main() {
 ```  
   
 ## See Also  
- [Using Visual C++ Extensions](../../../ado/guide/appendixes/using-visual-c-extensions.md)   
- [Visual C++ Extensions Header](../../../ado/guide/appendixes/visual-c-extensions-header.md)
+ [Using Visual C++ Extensions](./using-visual-c-extensions.md)   
+ [Visual C++ Extensions Header](./visual-c-extensions-header.md)

@@ -12,8 +12,8 @@ helpviewer_keywords:
   - "conversions [OLE DB]"
   - "bindings [OLE DB]"
   - "OLE DB, bindings and conversions"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Conversions (OLE DB)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

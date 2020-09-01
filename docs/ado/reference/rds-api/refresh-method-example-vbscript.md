@@ -1,11 +1,11 @@
 ---
 description: "Refresh Method Example (VBScript)"
 title: "Refresh Method Example (VBScript) | Microsoft Docs"
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: 
-ms.prod: sql  
+ms.prod: sql
 ms.prod_service: connectivity
 ms.topic: conceptual
 dev_langs: 
@@ -20,7 +20,7 @@ ms.author: jroth
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- The following example shows how to set the necessary parameters of [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) at run time. The manner in which a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) is retrieved using the [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) method is determined by the settings of the [ExecuteOptions](../../../ado/reference/rds-api/executeoptions-property-rds.md) and [FetchOptions](../../../ado/reference/rds-api/fetchoptions-property-rds.md) properties. To test this example, cut and paste the following code into a normal ASP document and name it **RefreshVBS.asp**. Use **Find** to locate the file Adovbs.inc and place it in the directory you plan to use. ASP script will identify your server.  
+ The following example shows how to set the necessary parameters of [RDS.DataControl](./datacontrol-object-rds.md) at run time. The manner in which a [Recordset](../ado-api/recordset-object-ado.md) is retrieved using the [Refresh](../ado-api/refresh-method-ado.md) method is determined by the settings of the [ExecuteOptions](./executeoptions-property-rds.md) and [FetchOptions](./fetchoptions-property-rds.md) properties. To test this example, cut and paste the following code into a normal ASP document and name it **RefreshVBS.asp**. Use **Find** to locate the file Adovbs.inc and place it in the directory you plan to use. ASP script will identify your server.  
   
 ```  
 <!-- BeginRefreshVBS -->  
@@ -170,10 +170,8 @@ End Sub
 ```  
   
 ## See Also  
- [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [ExecuteOptions Property (RDS)](../../../ado/reference/rds-api/executeoptions-property-rds.md)   
- [FetchOptions Property (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Refresh Method (ADO)](../../../ado/reference/ado-api/refresh-method-ado.md)
-
-
+ [DataControl Object (RDS)](./datacontrol-object-rds.md)   
+ [ExecuteOptions Property (RDS)](./executeoptions-property-rds.md)   
+ [FetchOptions Property (RDS)](./fetchoptions-property-rds.md)   
+ [Recordset Object (ADO)](../ado-api/recordset-object-ado.md)   
+ [Refresh Method (ADO)](../ado-api/refresh-method-ado.md)

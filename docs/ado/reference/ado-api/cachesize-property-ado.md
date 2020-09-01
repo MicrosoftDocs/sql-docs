@@ -3,7 +3,7 @@ description: "CacheSize Property (ADO)"
 title: "CacheSize Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # CacheSize Property (ADO)
-Indicates the number of records from a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object that are cached locally in memory.  
+Indicates the number of records from a [Recordset](./recordset-object-ado.md) object that are cached locally in memory.  
   
 ## Settings and Return Values  
  Sets or returns a **Long** value that must be greater than 0. Default is 1.  
@@ -35,14 +35,14 @@ Indicates the number of records from a [Recordset](../../../ado/reference/ado-ap
   
  A **CacheSize** setting of zero is not allowed and returns an error.  
   
- Records retrieved from the cache don't reflect concurrent changes that other users made to the source data. To force an update of all the cached data, use the [Resync](../../../ado/reference/ado-api/resync-method.md) method.  
+ Records retrieved from the cache don't reflect concurrent changes that other users made to the source data. To force an update of all the cached data, use the [Resync](./resync-method.md) method.  
   
- If **CacheSize** is set to a value greater than one, the navigation methods ([Move](../../../ado/reference/ado-api/move-method-ado.md), [MoveFirst, MoveLast, MoveNext, and MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) may result in navigation to a deleted record, if deletion occurs after the records were retrieved. After the initial fetch, subsequent deletions will not be reflected in your data cache until you attempt to access a data value from a deleted row. However, setting **CacheSize** to one eliminates this issue since deleted rows cannot be fetched.  
+ If **CacheSize** is set to a value greater than one, the navigation methods ([Move](./move-method-ado.md), [MoveFirst, MoveLast, MoveNext, and MovePrevious](./movefirst-movelast-movenext-and-moveprevious-methods-ado.md)) may result in navigation to a deleted record, if deletion occurs after the records were retrieved. After the initial fetch, subsequent deletions will not be reflected in your data cache until you attempt to access a data value from a deleted row. However, setting **CacheSize** to one eliminates this issue since deleted rows cannot be fetched.  
   
 ## Applies To  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+ [Recordset Object (ADO)](./recordset-object-ado.md)  
   
 ## See Also  
- [CacheSize Property Example (VB)](../../../ado/reference/ado-api/cachesize-property-example-vb.md)   
- [CacheSize Property Example (VC++)](../../../ado/reference/ado-api/cachesize-property-example-vc.md)   
- [CacheSize Property Example (JScript)](../../../ado/reference/ado-api/cachesize-property-example-jscript.md)
+ [CacheSize Property Example (VB)](./cachesize-property-example-vb.md)   
+ [CacheSize Property Example (VC++)](./cachesize-property-example-vc.md)   
+ [CacheSize Property Example (JScript)](./cachesize-property-example-jscript.md)

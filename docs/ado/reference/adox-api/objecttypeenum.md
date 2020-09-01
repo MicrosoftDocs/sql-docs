@@ -3,7 +3,7 @@ description: "ObjectTypeEnum"
 title: "ObjectTypeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -33,11 +33,11 @@ Specifies the type of database object for which to set permissions or ownership.
 
 :::row:::
     :::column:::
-        [GetObjectOwner Method (ADOX)](../../../ado/reference/adox-api/getobjectowner-method-adox.md)  
-        [GetPermissions Method (ADOX)](../../../ado/reference/adox-api/getpermissions-method-adox.md)  
+        [GetObjectOwner Method (ADOX)](./getobjectowner-method-adox.md)  
+        [GetPermissions Method (ADOX)](./getpermissions-method-adox.md)  
     :::column-end:::
     :::column:::
-        [SetObjectOwner Method](../../../ado/reference/adox-api/setobjectowner-method.md)  
-        [SetPermissions Method (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)  
+        [SetObjectOwner Method](./setobjectowner-method.md)  
+        [SetPermissions Method (ADOX)](./setpermissions-method-adox.md)  
     :::column-end:::
 :::row-end:::

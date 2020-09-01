@@ -42,6 +42,14 @@ ms.author: mikeray
 |Redo on database mirroring|Deferred transaction|  
 |Filegroup is offline|Deferred transaction|  
   
+### Requirements and Limitations
+
+ - The database must use the FULL or BULK-LOGGED recovery model.
+ - At least one database and log backup must have been completed for the database
+ - Deffered transactions do not apply to errors encountered during a rollback of a transaction after the database is online. (e.g. a runtime error)
+ - Transactions cannot be deferred for recovery failures during a database attach
+ - Some transactions such as system transactions (Ex. page allocation) cannot be deferred
+
 ## Moving a Transaction Out of the DEFERRED State  
   
 > [!IMPORTANT]  

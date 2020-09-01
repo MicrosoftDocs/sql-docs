@@ -3,7 +3,7 @@ description: "Detecting and Resolving Conflicts"
 title: "Detecting and Resolving Conflicts | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -108,7 +108,7 @@ If you are dealing with your Recordset in immediate mode, there is much less cha
   
  You can use the Status property of the current Record or of a specific Field to determine what kind of a conflict has occurred.  
   
- For detailed information about error handling, see [Error Handling](../../../ado/guide/data/error-handling.md).  
+ For detailed information about error handling, see [Error Handling](./error-handling.md).  
   
 ## See Also  
- [Batch Mode](../../../ado/guide/data/batch-mode.md)
+ [Batch Mode](./batch-mode.md)

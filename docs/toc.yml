@@ -63,19 +63,19 @@
       - name: Install azdata
         items:
         - name: Install
-          href: big-data-cluster/deploy-install-azdata.md
+          href: azdata/install/deploy-install-azdata.md
         - name: macOS
-          href: big-data-cluster/deploy-install-azdata-macos.md
+          href: azdata/install/deploy-install-azdata-macos.md
         - name: Windows
-          href: big-data-cluster/deploy-install-azdata-installer.md
+          href: azdata/install/deploy-install-azdata-installer.md
         - name: Linux with apt
-          href: big-data-cluster/deploy-install-azdata-linux-package.md
+          href: azdata/install/deploy-install-azdata-linux-package.md
         - name: Linux with yum
-          href: big-data-cluster/deploy-install-azdata-yum.md
+          href: azdata/install/deploy-install-azdata-yum.md
         - name: Linux with zypper
-          href: big-data-cluster/deploy-install-azdata-zypper.md
+          href: azdata/install/deploy-install-azdata-zypper.md
         - name: With pip
-          href: big-data-cluster/deploy-install-azdata-pip.md
+          href: azdata/install/deploy-install-azdata-pip.md
     - name: Deploy
       items:
       - name: Deployment guidance
@@ -132,6 +132,14 @@
       href: big-data-cluster/concept-compute-pool.md
     - name: Security
       href: big-data-cluster/concept-security.md
+    - name: Private cluster
+      items:
+      - name: Deploy
+        href: big-data-cluster/private-deploy.md
+      - name: Manage
+        href: big-data-cluster/private-manage.md
+      - name: Restrict traffic
+        href: big-data-cluster/private-restrict-egress-traffic.md
   - name: How-to guides
     items:
     - name: Configure
@@ -177,11 +185,15 @@
     - name: Deploy and consume apps
       items:
       - name: Deploy with azdata
-        href: big-data-cluster/big-data-cluster-create-apps.md
+        href: big-data-cluster/app-create.md
       - name: Deploy with VS Code
         href: big-data-cluster/app-deployment-extension.md
       - name: Consume apps
-        href: big-data-cluster/big-data-cluster-consume-apps.md
+        href: big-data-cluster/app-consume.md
+      - name: Run apps
+        href: big-data-cluster/app-run.md
+      - name: Monitor apps
+        href: big-data-cluster/app-monitor.md
     - name: Big Data/Machine Learning
       items:
       - name: Use Machine Learning Services (Python, R)
@@ -382,59 +394,59 @@
       - name: azdata
         items:
         - name: azdata
-          href: big-data-cluster/reference-azdata.md
+          href: azdata/reference/reference-azdata.md
         - name: notebook
-          href: big-data-cluster/reference-azdata-notebook.md
+          href: azdata/reference/reference-azdata-notebook.md
         - name: sql
-          href: big-data-cluster/reference-azdata-sql.md
+          href: azdata/reference/reference-azdata-sql.md
       - name: App Deploy
         items:
         - name: app
-          href: big-data-cluster/reference-azdata-app.md
+          href: azdata/reference/reference-azdata-app.md
         - name: app template
-          href: big-data-cluster/reference-azdata-app-template.md
+          href: azdata/reference/reference-azdata-app-template.md
       - name: Cluster
         items:
         - name: bdc
-          href: big-data-cluster/reference-azdata-bdc.md
+          href: azdata/reference/reference-azdata-bdc.md
         - name: bdc app
-          href: big-data-cluster/reference-azdata-bdc-app.md
+          href: azdata/reference/reference-azdata-bdc-app.md
         - name: bdc app status
-          href: big-data-cluster/reference-azdata-bdc-app-status.md
+          href: azdata/reference/reference-azdata-bdc-app-status.md
         - name: bdc config
-          href: big-data-cluster/reference-azdata-bdc-config.md
+          href: azdata/reference/reference-azdata-bdc-config.md
         - name: bdc control
-          href: big-data-cluster/reference-azdata-bdc-control.md
+          href: azdata/reference/reference-azdata-bdc-control.md
         - name: bdc control status
-          href: big-data-cluster/reference-azdata-bdc-control-status.md          
+          href: azdata/reference/reference-azdata-bdc-control-status.md          
         - name: bdc debug
-          href: big-data-cluster/reference-azdata-bdc-debug.md
+          href: azdata/reference/reference-azdata-bdc-debug.md
         - name: bdc endpoint
-          href: big-data-cluster/reference-azdata-bdc-endpoint.md
+          href: azdata/reference/reference-azdata-bdc-endpoint.md
         - name: bdc gateway
-          href: big-data-cluster/reference-azdata-bdc-gateway.md
+          href: azdata/reference/reference-azdata-bdc-gateway.md
         - name: bdc gateway status
-          href: big-data-cluster/reference-azdata-bdc-gateway-status.md
+          href: azdata/reference/reference-azdata-bdc-gateway-status.md
         - name: bdc hdfs
-          href: big-data-cluster/reference-azdata-bdc-hdfs.md
+          href: azdata/reference/reference-azdata-bdc-hdfs.md
         - name: bdc hdfs mount
-          href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
+          href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
         - name: bdc hdfs status
-          href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
+          href: azdata/reference/reference-azdata-bdc-hdfs-status.md
         - name: bdc spark
-          href: big-data-cluster/reference-azdata-bdc-spark.md        
+          href: azdata/reference/reference-azdata-bdc-spark.md        
         - name: bdc spark batch
-          href: big-data-cluster/reference-azdata-bdc-spark-batch.md        
+          href: azdata/reference/reference-azdata-bdc-spark-batch.md        
         - name: bdc spark session
-          href: big-data-cluster/reference-azdata-bdc-spark-session.md        
+          href: azdata/reference/reference-azdata-bdc-spark-session.md        
         - name: bdc spark statement
-          href: big-data-cluster/reference-azdata-bdc-spark-statement.md        
+          href: azdata/reference/reference-azdata-bdc-spark-statement.md        
         - name: bdc spark status
-          href: big-data-cluster/reference-azdata-bdc-spark-status.md        
+          href: azdata/reference/reference-azdata-bdc-spark-status.md        
         - name: bdc sql
-          href: big-data-cluster/reference-azdata-bdc-sql.md
+          href: azdata/reference/reference-azdata-bdc-sql.md
         - name: bdc status
-          href: big-data-cluster/reference-azdata-bdc-status.md
+          href: azdata/reference/reference-azdata-bdc-status.md
 - name: Business continuity
   items:
   - name: Overview
@@ -6215,6 +6227,8 @@
         items:
         - name: Asymmetric Keys Encryption Strength
           href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
+        - name: Backup Files On Separate Devices from the Database Files
+          href: relational-databases/policy-based-management/backup-files-on-separate-devices-from-database-files.md
         - name: Check Disk Input & Output Subsystem for I/O Delay Problems
           href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
         - name: Check Disk Input-Output Subsystem for Read Retry Problems
@@ -6223,6 +6237,8 @@
           href: relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md
         - name: Correct Affinity Mask & Affinity Input & Output Mask Overlap
           href: relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+        - name: Database Recovery Model
+          href: relational-databases/policy-based-management/database-recovery-model.md
         - name: Default Trace Log Files Disabled
           href: relational-databases/policy-based-management/default-trace-log-files-disabled.md
         - name: Detect Failed Input & Output Requests
@@ -6257,6 +6273,8 @@
           href: relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md
         - name: Set the AUTO_SHRINK Database Option to OFF
           href: relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md
+        - name: Set collation of user databases to match master and model databases
+          href: relational-databases/policy-based-management/set-collation-of-user-defined-databases-to-match-master-model-databases.md
         - name: Set the Max Degree of Parallelism Option for Optimal Performance
           href: relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md
         - name: Set the PAGE_VERIFY Database Option to CHECKSUM
@@ -8448,6 +8466,8 @@
       items:
       - name: Connect & query SQL Server
         href: ssms/tutorials/connect-query-sql-server.md
+      - name: Import Flat File
+        href: relational-databases/import-export/import-flat-file-wizard.md
     - name: Concepts
       items:
       - name: Tool Windows in SSMS
@@ -9874,6 +9894,12 @@
       href: linux/quickstart-install-connect-clouds.md
   - name: Tutorials
     items:
+    - name: New to SQL Server docs
+      href: linux/new-to-sql-learning-resources.yml
+    - name: New to Linux docs
+      href: linux/new-to-linux-learning-resources.yml
+    - name: New to Linux resources
+      href: linux/new-to-linux-resources.md
     - name: Migrate from Windows
       href: linux/sql-server-linux-migrate-restore-database.md
     - name: Migrate to Docker
@@ -10105,8 +10131,8 @@
     items:
     - name: Educational resources 
       href: sql-server/educational-sql-resources.yml
-    - name: Microsoft Virtual Academy >>
-      href: https://mva.microsoft.com/product-training/sql-server  # TODO: MVA website is being retired in 2019.  (Removed trailing '#!lang=1033'.)
+    - name: Microsoft Learn >>
+      href: https://docs.microsoft.com/learn/
     - name: SQL on Channel 9 >>
       href: https://channel9.msdn.com/Search
   - name: Help
@@ -11877,6 +11903,8 @@
         href: relational-databases/system-catalog-views/sys-pdw-nodes-pdw-physical-databases-transact-sql.md
       - name: sys.pdw_nodes_tables
         href: relational-databases/system-catalog-views/sys-pdw-nodes-tables-transact-sql.md
+      - name: sys.pdw_permanent_table_mappings
+        href: relational-databases/system-catalog-views/sys-pdw-permanent-table-mappings-transact-sql.md
       - name: sys.pdw_replicated_table_cache_state
         href: relational-databases/system-catalog-views/sys-pdw-replicated-table-cache-state-transact-sql.md
       - name: sys.pdw_table_distribution_properties

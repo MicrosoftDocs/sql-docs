@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "ISequentialStream interface"
   - "GetColumns method"
   - "BLOBs, fetching"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Fetching BLOB Data by Using IRow::GetColumns and ISequentialStream
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

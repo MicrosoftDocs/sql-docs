@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "data types [OLE DB]"
   - "CreateTable function"
   - "OLE DB, data types"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Data Type Mapping in ITableDefinition
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

@@ -3,7 +3,7 @@ description: "ADORecordConstruction Interface"
 title: "ADORecordConstruction Interface | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -26,8 +26,8 @@ The **ADORecordConstruction**interface is used to construct an ADO **Record** ob
   
 |Property|Description|  
 |-|-|  
-|[ParentRow](../../../ado/reference/ado-api/parentrow-property-ado.md)|Write-only.<br />Sets the container of an OLE DB **Row** object on this ADO **Record** object.|  
-|[Row](../../../ado/reference/ado-api/row-property-ado.md)|Read/Write.<br />Gets/sets an OLE DB **Row** object from/on this ADO **Record** object.|  
+|[ParentRow](./parentrow-property-ado.md)|Write-only.<br />Sets the container of an OLE DB **Row** object on this ADO **Record** object.|  
+|[Row](./row-property-ado.md)|Read/Write.<br />Gets/sets an OLE DB **Row** object from/on this ADO **Record** object.|  
   
 ## Methods  
  None.  

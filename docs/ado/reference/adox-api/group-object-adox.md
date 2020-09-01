@@ -3,7 +3,7 @@ description: "Group Object (ADOX)"
 title: "Group Object (ADOX) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -21,22 +21,22 @@ ms.author: jroth
 Represents a group account that has access permissions within a secured database.  
   
 ## Remarks  
- The [Groups](../../../ado/reference/adox-api/groups-collection-adox.md) collection of a [Catalog](../../../ado/reference/adox-api/catalog-object-adox.md) represents all the catalog's group accounts. The **Groups** collection for a [User](../../../ado/reference/adox-api/user-object-adox.md) represents only the group to which the user belongs.  
+ The [Groups](./groups-collection-adox.md) collection of a [Catalog](./catalog-object-adox.md) represents all the catalog's group accounts. The **Groups** collection for a [User](./user-object-adox.md) represents only the group to which the user belongs.  
   
  With the properties, collections, and methods of a **Group** object, you can:  
   
--   Identify the group with the [Name](../../../ado/reference/adox-api/name-property-adox.md) property.  
+-   Identify the group with the [Name](./name-property-adox.md) property.  
   
--   Determine whether a group has read, write, or delete permissions with the [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) and [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) methods.  
+-   Determine whether a group has read, write, or delete permissions with the [GetPermissions](./getpermissions-method-adox.md) and [SetPermissions](./setpermissions-method-adox.md) methods.  
   
--   Access the user accounts that have memberships in the group with the [Users](../../../ado/reference/adox-api/users-collection-adox.md) collection.  
+-   Access the user accounts that have memberships in the group with the [Users](./users-collection-adox.md) collection.  
   
--   Access provider-specific properties with the [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection.  
+-   Access provider-specific properties with the [Properties](../ado-api/properties-collection-ado.md) collection.  
   
  This section contains the following topic.  
   
--   [Group Object Properties, Methods, and Events](../../../ado/reference/adox-api/group-object-properties-methods-and-events.md)  
+-   [Group Object Properties, Methods, and Events](./group-object-properties-methods-and-events.md)  
   
 ## See Also  
- [Groups Collection (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
- [Users Collection (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)
+ [Groups Collection (ADOX)](./groups-collection-adox.md)   
+ [Users Collection (ADOX)](./users-collection-adox.md)

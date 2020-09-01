@@ -3,7 +3,7 @@ description: "ActiveConnection Property (ADO MD)"
 title: "ActiveConnection Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,7 +20,7 @@ author: rothja
 ms.author: jroth
 ---
 # ActiveConnection Property (ADO MD)
-Indicates to which ADO [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object the current cellset or catalog currently belongs.  
+Indicates to which ADO [Connection](../ado-api/connection-object-ado.md) object the current cellset or catalog currently belongs.  
   
 ## Settings and Return Values  
  Sets or returns a **Variant** that contains a string defining a connection or **Connection** object. The default is empty.  
@@ -28,9 +28,9 @@ Indicates to which ADO [Connection](../../../ado/reference/ado-api/connection-ob
 ## Remarks  
  You can set this property to a valid ADO **Connection** object or to a valid connection string. When this property is set to a connection string, the provider creates a new **Connection** object using this definition and opens the connection.  
   
- If you use the *ActiveConnection* argument of the [Open](../../../ado/reference/ado-md-api/open-method-ado-md.md) method to open a [Cellset](../../../ado/reference/ado-md-api/cellset-object-ado-md.md) object, the **ActiveConnection** property will inherit the value of the argument.  
+ If you use the *ActiveConnection* argument of the [Open](./open-method-ado-md.md) method to open a [Cellset](./cellset-object-ado-md.md) object, the **ActiveConnection** property will inherit the value of the argument.  
   
- Setting the **ActiveConnection** property of a [Catalog](../../../ado/reference/ado-md-api/catalog-object-ado-md.md) object to **Nothing** releases the associated data, including data in the [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) collection and any related [Dimension](../../../ado/reference/ado-md-api/dimension-object-ado-md.md), [Hierarchy](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md), [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md), and [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) objects. Closing a **Connection** object that was used to open a **Catalog** has the same effect as setting the **ActiveConnection** property to **Nothing**.  
+ Setting the **ActiveConnection** property of a [Catalog](./catalog-object-ado-md.md) object to **Nothing** releases the associated data, including data in the [CubeDefs](./cubedefs-collection-ado-md.md) collection and any related [Dimension](./dimension-object-ado-md.md), [Hierarchy](./hierarchy-object-ado-md.md), [Level](./level-object-ado-md.md), and [Member](./member-object-ado-md.md) objects. Closing a **Connection** object that was used to open a **Catalog** has the same effect as setting the **ActiveConnection** property to **Nothing**.  
   
  Changing the default database of the connection referenced by the **ActiveConnection** property of a **Catalog** object invalidates the contents of the **Catalog**.  
   
@@ -55,14 +55,14 @@ Indicates to which ADO [Connection](../../../ado/reference/ado-api/connection-ob
 
 :::row:::
     :::column:::
-        [Catalog Object (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)  
+        [Catalog Object (ADO MD)](./catalog-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Cellset Object (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)  
+        [Cellset Object (ADO MD)](./cellset-object-ado-md.md)  
     :::column-end:::
 :::row-end:::
 
 ## See Also  
- [Cellset Example (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [Open Method (ADO MD)](../../../ado/reference/ado-md-api/open-method-ado-md.md)
+ [Cellset Example (VB)](./cellset-example-vb.md)   
+ [Connection Object (ADO)](../ado-api/connection-object-ado.md)   
+ [Open Method (ADO MD)](./open-method-ado-md.md)

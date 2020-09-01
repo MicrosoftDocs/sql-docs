@@ -3,7 +3,7 @@ description: "OLE DB Providers (ADO)"
 title: "OLE DB Providers (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -36,6 +36,6 @@ OLE DB defines a set of COM interfaces to provide applications with uniform acce
   
  This section contains the following topics.  
   
--   [Data Providers](../../../ado/guide/data/data-providers.md)  
+-   [Data Providers](./data-providers.md)  
   
--   [Service Providers and Components](../../../ado/guide/data/service-providers-and-components.md)
+-   [Service Providers and Components](./service-providers-and-components.md)

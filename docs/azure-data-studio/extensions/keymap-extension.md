@@ -1,27 +1,29 @@
 ---
-title: "Tutorial: Create an extension"
-description: This tutorial demonstrates how to create an extension to add custom functionality to Azure Data Studio.
-ms.custom: "seodec18"
-ms.date: 12/10/2019
+title: Create keymap extension
+description: This tutorial demonstrates how to create a keymap extension to add custom functionality to Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
-ms.reviewer: "alayu, maghan, sstein"
-ms.topic: "tutorial"
-author: rothja
-ms.author: jroth
+ms.reviewer: alayu, maghan
+ms.topic: how-to
+author: markingmyname
+ms.author: maghan
+ms.custom: "seodec18"
+ms.date: 08/28/2020
 ---
-# Tutorial: Create an Azure Data Studio extension
+
+# Create an Azure Data Studio Keymap extension
 
 This tutorial demonstrates how to create a new Azure Data Studio extension. The extension creates familiar SSMS key bindings in Azure Data Studio.
 
 During this tutorial you learn how to:
 > [!div class="checklist"]
-> * Create an extension project
-> * Install the extension generator
-> * Create your extension
-> * Test your extension
-> * Package your extension
-> * Publish your extension to the marketplace
+> - Create an extension project
+> - Install the extension generator
+> - Create your extension
+> - Add custom key-bindings to your extension
+> - Test your extension
+> - Package your extension
+> - Publish your extension to the marketplace
 
 ## Prerequisites
 
@@ -32,14 +34,15 @@ Azure Data Studio is built on the same framework as Visual Studio Code, so exten
 - The Azure Data Studio [Debug extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.sqlops-debug) (optional). This lets you test your extension without needing to package and install it into Azure Data Studio.
 - Ensure `azuredatastudio` is in your path. For Windows, make sure you choose the `Add to Path` option in setup.exe. For Mac or Linux, run the *Install 'azuredatastudio' command in PATH* option.
 
-
 ## Install the extension generator
 
 To simplify the process of creating extensions, we've built an [extension generator](https://code.visualstudio.com/docs/extensions/yocode) using Yeoman. To install it, run the following from the command prompt:
 
+```console
 `npm install -g yo generator-azuredatastudio`
+```
 
-## Create your extension
+## Create your keymap extension
 
 To create an extension:
 
@@ -49,12 +52,11 @@ To create an extension:
 
 2. Choose **New Keymap** from the list of extension types:
 
-   ![extension generator](./media/tutorial-create-extension/extension-generator.png)
+   :::image type="content" source="media/keymap-extension/extension-generator.png" alt-text="Extension generator":::
 
 3. Follow the steps to fill in the extension name (for this tutorial, use **ssmskeymap2**), and add a description.
 
 Completing the previous steps creates a new folder. Open the folder in Visual Studio Code and you're ready to create your own key binding extension!
-
 
 ### Add a keyboard shortcut
 
@@ -72,10 +74,9 @@ The top things I saw missing were:
 
 It's easy to find and replace these key bindings. Run *Open Keyboard Shortcuts* to show the **Keyboard Shortcuts** tab in Azure Data Studio, search for *query* and then choose **Change Key binding**. Once you're done changing the keybinding, you can see the updated mapping in the keybindings.json file (run *Open Keyboard Shortcuts* to see it).
 
-![keyboard shortcuts](./media/tutorial-create-extension/keyboard-shortcuts.png)
+:::image type="content" source="media/keymap-extension/keyboard-shortcuts.png" alt-text="Keyboard shortcuts":::
 
-![keybindings.json extension](./media/tutorial-create-extension/keybindings-json.png)
-
+:::image type="content" source="media/keymap-extension/key-bindings-json.png" alt-text="Keybindings.json extension":::
 
 **Step 2: Add shortcuts to the extension**
 
@@ -120,9 +121,9 @@ Ensure the Azure Data Studio Debug extension is installed in Visual Studio Code.
 
 Select **F5** to launch Azure Data Studio in debug mode with the extension running:
 
-![install extension](./media/tutorial-create-extension/install-extension.png)
+:::image type="content" source="media/keymap-extension/install-extension.png" alt-text="Install extension":::
 
-![test extension](./media/tutorial-create-extension/test-extension.png)
+:::image type="content" source="media/keymap-extension/test-extension.png" alt-text="test extension":::
 
 Key maps are one of the quickest extensions to create, so your new extension should now be successfully working and ready to share.
 
@@ -130,7 +131,9 @@ Key maps are one of the quickest extensions to create, so your new extension sho
 
 To share with others you need to package the extension into a single file. This can be published to the Azure Data Studio extension marketplace, or shared among your team or community. To do this, you need to install another npm package from the command line:
 
+```console
 `npm install -g vsce`
+```
 
 Navigate to the base directory of the extension, and run `vsce package`. I had to add in a couple of extra lines to stop the *vsce* tool from complaining:
 
@@ -146,25 +149,23 @@ Navigate to the base directory of the extension, and run `vsce package`. I had t
 
 Once this was done, my ssmskeymap-0.1.0.vsix file was created and ready to install and share with the world!
 
-![install extension](./media/tutorial-create-extension/extensions.png)
-
+:::image type="content" source="media/keymap-extension/extensions.png" alt-text="Install":::
 
 ## Publish your extension to the marketplace
 
 The Azure Data Studio extension marketplace is not totally implemented yet, but the current process is to host the extension VSIX somewhere (for example, a GitHub Release page) then submit a PR updating [this JSON file](https://github.com/Microsoft/azuredatastudio/blob/release/extensions/extensionsGallery.json) with your extension info.
 
-
 ## Next steps
 
 In this tutorial, you learned how to:
 > [!div class="checklist"]
-> * Create an extension project
-> * Install the extension generator
-> * Create your extension
-> * Test your extension
-> * Package your extension
-> * Publish your extension to the marketplace
-
+> - Create an extension project
+> - Install the extension generator
+> - Create your extension
+> - Add custom key-bindings to your extension
+> - Test your extension
+> - Package your extension
+> - Publish your extension to the marketplace
 
 We hope after reading this you'll be inspired to build your own extension for Azure Data Studio. We have support for Dashboard Insights (pretty graphs that run against your SQL Server), a number of SQL-specific APIs, and a huge existing set of extension points inherited from Visual Studio Code.
 
@@ -172,8 +173,7 @@ If you have an idea but are not sure how to get started, please open an issue or
 
 You can always refer to the [Visual Studio Code extension guide](https://code.visualstudio.com/docs/extensions/overview) because it covers all the existing APIs and patterns.
 
-
 To learn how to work with T-SQL in Azure Data Studio, complete the T-SQL Editor tutorial:
 
 > [!div class="nextstepaction"]
-> [Use the Transact-SQL editor to create database objects](tutorial-sql-editor.md).
+> [Use the Transact-SQL editor to create database objects](../tutorial-sql-editor.md)

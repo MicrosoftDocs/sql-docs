@@ -1,4 +1,5 @@
 ---
+description: "sp_execute_remote (Azure SQL Database)"
 title: "sp_execute_remote (Azure SQL Database) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/01/2017"

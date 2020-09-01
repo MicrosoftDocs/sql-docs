@@ -1,4 +1,5 @@
 ---
+description: "CREATE FUNCTION (Transact-SQL)"
 title: "CREATE FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 03/16/2020
@@ -258,6 +259,8 @@ RETURNS return_data_type
 }
 
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

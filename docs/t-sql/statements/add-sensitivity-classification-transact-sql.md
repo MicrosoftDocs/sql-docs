@@ -1,4 +1,5 @@
 ---
+description: "ADD SENSITIVITY CLASSIFICATION (Transact-SQL)"
 title: ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 ms.prod: sql
 ms.technology: t-sql
@@ -26,7 +27,7 @@ monikerRange: " >= sql-server-linux-ver15 || >= sql-server-ver15 || = azuresqldb
 
 # ADD SENSITIVITY CLASSIFICATION (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
 Adds metadata about the sensitivity classification to one or more database columns. The classification can include a sensitivity label and an information type.
 
@@ -106,7 +107,7 @@ The following example classifies the columns **dbo.sales.price** and **dbo.sales
 ```sql
 ADD SENSITIVITY CLASSIFICATION TO
     dbo.sales.price, dbo.sales.discount
-    WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial', RANK='CRITICAL' )
+    WITH ( LABEL='Highly Confidential', INFORMATION_TYPE='Financial', RANK=CRITICAL )
 ```  
 
 ### B. Classifying only a label

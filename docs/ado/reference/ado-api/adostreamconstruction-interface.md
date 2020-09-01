@@ -1,8 +1,9 @@
 ---
+description: "ADOStreamConstruction Interface"
 title: "ADOStreamConstruction Interface | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -21,9 +22,9 @@ The **ADOStreamConstruction** interface is used to construct an ADO **Stream** o
   
 ## Properties  
   
-|||  
+|Property|Description|  
 |-|-|  
-|[Stream Property](../../../ado/reference/ado-api/stream-property.md)|Read/Write. Gets/sets an OLE DB **Stream** object.|  
+|[Stream](./stream-property.md)|Read/Write. Gets/sets an OLE DB **Stream** object.|  
   
 ## Methods  
  None.  
@@ -67,4 +68,4 @@ adoStrConstruct->put_Stream(pUnk);
  **UUID:** 00000283-0000-0010-8000-00AA006D2EA4  
   
 ## See Also  
- [ADO API Reference](../../../ado/reference/ado-api/ado-api-reference.md)
+ [ADO API Reference](./ado-api-reference.md)

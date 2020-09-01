@@ -1,4 +1,5 @@
 ---
+description: "KEY_NAME (Transact-SQL)"
 title: "KEY_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -32,7 +33,9 @@ ms.author: vanto
 KEY_NAME ( ciphertext | key_guid )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *ciphertext*  
  Is the text encrypted by the symmetric key. *cyphertext* is type **varbinary(8000)**.  
   

@@ -1,4 +1,5 @@
 ---
+description: "ALTER ASSEMBLY (Transact-SQL)"
 title: "ALTER ASSEMBLY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/07/2017"
@@ -61,7 +62,9 @@ ALTER ASSEMBLY assembly_name
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *assembly_name*  
  Is the name of the assembly you want to modify. *assembly_name* must already exist in the database.  
   

@@ -1,4 +1,5 @@
 ---
+description: "OBJECT_DEFINITION (Transact-SQL)"
 title: "OBJECT_DEFINITION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -35,7 +36,9 @@ ms.author: vanto
 OBJECT_DEFINITION ( object_id )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *object_id*  
  Is the ID of the object to be used. *object_id* is **int**, and assumed to represent an object in the current database context.  
   

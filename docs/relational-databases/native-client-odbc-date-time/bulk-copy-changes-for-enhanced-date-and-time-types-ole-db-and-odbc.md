@@ -1,4 +1,5 @@
 ---
+description: "Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC)"
 title: "Bulk Copy, enhanced types, OLE DB"
 ms.custom: ""
 ms.date: 12/18/2019
@@ -15,7 +16,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Bulk Copy Changes for Enhanced Date and Time Types (OLE DB and ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic describes the date/time enhancements to support bulk copy functionality. The information in this topic is valid for both OLE DB and ODBC in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client.  
   

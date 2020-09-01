@@ -1,7 +1,8 @@
 ---
-title: "PDO::getAttribute | Microsoft Docs"
+title: "PDO::getAttribute"
+description: "API reference for the PDO::getAttribute function in the Microsoft PDO_SQLSRV Driver for PHP for SQL Server."
 ms.custom: ""
-ms.date: "07/13/2017"
+ms.date: "08/10/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""

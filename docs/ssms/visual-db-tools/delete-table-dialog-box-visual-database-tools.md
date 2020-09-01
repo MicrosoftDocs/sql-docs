@@ -1,4 +1,5 @@
 ---
+description: "Delete Table Dialog Box (Visual Database Tools)"
 title: Delete Table Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,7 +17,7 @@ ms.reviewer:
 
 ---
 # Delete Table Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 This dialog box allows you to specify the table from which to delete records. This dialog box appears if more than one table is displayed in the Diagram pane when you change the type of a query to a DELETE query.  
   
 Select the table to delete records from, and then choose **OK**.  

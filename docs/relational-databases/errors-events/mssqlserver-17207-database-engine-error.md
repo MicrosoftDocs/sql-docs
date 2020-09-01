@@ -1,7 +1,8 @@
 ---
-title: "MSSQLSERVER_17204 | Microsoft Docs"
+description: "MSSQLSERVER_17207"
+title: MSSQLSERVER_17207
 ms.custom: ""
-ms.date: 06/03/2020
+ms.date: 07/25/2020
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: supportability
@@ -74,7 +75,7 @@ The operating system error information printed in these error messages is the ro
 1. Resolving error 17207 involves understanding the associated operating system error code and diagnosing that error. Once the operating system error condition is resolved, then you can attempt to restart the database (using ALTER DATABASE SET ONLINE, for example) or the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] instance to bring the affected database online. In some cases, you may not be able to resolve the operating system error, so you will have to take specific corrective actions. We'll discuss these actions in this section.
 1. If the 17207 error message contains only an error code and not an error description, then you can try resolving the error code using the command from an operating system shell: net helpmsg <error code> . If you are getting an 8-digit status code as the error code, then you can refer to the information sources like [How do I convert an HRESULT to a Win32 error code?](https://devblogs.microsoft.com/oldnewthing/20061103-07/?p=29133) to decode what these status codes into OS errors.
 1. If you are getting the ```Access is Denied``` operating system error = 5, consider these methods:
-   -  Check the permissions that are set on the file by looking at the properties of the file in Windows Explorer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses Windows groups to provision access control on the various file resources. Make sure the appropriate group (with names like SQLServerMSSQLUser$ComputerName$MSSQLSERVER or SQLServerMSSQLUser$ComputerName$InstanceName) has the required permissions on the database file that is mentioned in the error message. Review [Configure File System Permissions for Database Engine Access](../../2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access.md)  for more details. Ensure that the Windows group actually includes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account or the service SID.
+   -  Check the permissions that are set on the file by looking at the properties of the file in Windows Explorer. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses Windows groups to provision access control on the various file resources. Make sure the appropriate group (with names like SQLServerMSSQLUser$ComputerName$MSSQLSERVER or SQLServerMSSQLUser$ComputerName$InstanceName) has the required permissions on the database file that is mentioned in the error message. Review [Configure File System Permissions for Database Engine Access](/previous-versions/sql/2014/database-engine/configure-windows/configure-file-system-permissions-for-database-engine-access?view=sql-server-2014)  for more details. Ensure that the Windows group actually includes the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service startup account or the service SID.
    -  Review the user account under which the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service is currently running. You can use the Windows Task Manager to get this information. Look for the "User Name" value for the executable "sqlservr.exe". Also if you recently changed the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] service account, know that the supported way to do this operation is to use the SQL Server Configuration Manager utility. More information on this is available at [SQL Server Configuration Manager](../sql-server-configuration-manager.md). 
    -  Depending on the type of operation (opening databases during server startup, attaching a database, database restore, and so on), the account that is used for impersonation and accessing the database file may vary. Review the topic [Securing Data and Log Files](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/ms189128(v=sql.105)?redirectedfrom=MSDN) to understand which operation sets what permission and to which accounts. Use a tool like Windows SysInternals [Process Monitor](https://docs.microsoft.com/sysinternals/downloads/procmon) to understand if the file access is happening under the security context of the SQL Server instance service startup account (or Service SID) or an impersonated account.
 
@@ -97,7 +98,7 @@ The operating system error information printed in these error messages is the ro
         Impersonating: DomainName\UserName
         ```
   
-1. If you are getting ```The system cannot find the file specified``` OS error = 3:
+1. If you are getting `The system cannot find the file specified` OS error = 3:
    - Review the complete path from the error message.
    - Ensure the disk drive and the folder path is visible and accessible from Windows Explorer.
    - Review the Windows Event log to find out if any problems exist with this disk drive.
@@ -107,7 +108,7 @@ The operating system error information printed in these error messages is the ro
      - If the file that produced the error is a transaction log file, review the information under the sections "FOR ATTACH" and "FOR ATTACH_REBUILD_LOG" of the topic [CREATE DATABASE (Transact-SQL)](../../t-sql/statements/create-database-transact-sql.md) to understand how you can recreate the missing transaction log files.
    - Ensure that any disk or network location [like iSCSI drive] is available before [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] attempts to access the database files on these locations. If needed create the required dependencies in Cluster Administrator or Service Control Manager.
 
-1. If you're getting the ```The process cannot access the file because it is being used by another process``` operating system error = 32:
+1. If you're getting the `The process cannot access the file because it is being used by another process` operating system error = 32:
    - Use a tool like [Process Explorer](https://docs.microsoft.com/sysinternals/downloads/process-explorer) or [Handle](https://docs.microsoft.com/sysinternals/downloads/handle) from Windows Sysinternals to find out if another process or service has acquired exclusive lock on this database file.
    - Stop that process from accessing [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Database files. Common examples include anti-virus programs (see guidance for file exclusions in the following [KB article](https://support.microsoft.com/help/309422/choosing-antivirus-software-for-computers-that-run-sql-server)).
    - In a cluster environment, make sure that the sqlservr.exe process from the previous owning node has actually released the handles to the database files. Normally this doesn't occur, but misconfigurations of the cluster or I/O paths can lead to such issues.

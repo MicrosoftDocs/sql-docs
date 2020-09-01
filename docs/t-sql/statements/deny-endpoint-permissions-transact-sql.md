@@ -1,4 +1,5 @@
 ---
+description: "DENY Endpoint Permissions (Transact-SQL)"
 title: "DENY Endpoint Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/15/2017"
@@ -41,7 +42,9 @@ DENY permission  [ ,...n ] ON ENDPOINT :: endpoint_name
     | SQL_Server_login_from_AsymKey  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on an endpoint. For a list of the permissions, see the Remarks section later in this topic.  
   

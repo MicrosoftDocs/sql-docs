@@ -1,8 +1,9 @@
 ---
 title: Generate and Publish Scripts Wizard
+description: Learn how to use the Generate and Publish Scripts Wizard to create scripts to transfer a database between database instances. The instances can be instances of the SQL Server Database Engine or Azure SQL Database.
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 f1_keywords: 
@@ -47,7 +48,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Generate and Publish Scripts Wizard
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 You can use the **Generate and Publish Scripts Wizard** to create scripts for transferring a database between instances of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] or [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]. You can generate scripts for a database on an instance of the Database Engine in your local network, or from [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. The generated scripts can be run on another instance of the Database Engine or [!INCLUDE[ssSDS](../../includes/sssds-md.md)]. You can also use the wizard to publish the contents of a database directly to a Web service created by using the Database Publishing Services. You can create scripts for an entire database, or limit it to specific objects.
 
@@ -123,7 +124,7 @@ Use this page to specify if you want the wizard to save scripts to the location 
 
 **Save Scripts to a Specific Location** - save one or more Transact-SQL script files to a location you specify.
 
-![Save](media/generate-and-publish-scripts-wizard/save.png)
+![Save as notebook](media/generate-and-publish-scripts-wizard/save.png)
 
 - **[Save as notebook](../../azure-data-studio/notebooks-guidance.md)** - Save the script to one or more .sql files. Select the browse button (**...**) to specify a name and location for the file.
 
@@ -217,7 +218,7 @@ Use this page to specify how you want this wizard to generate scripts. Many diff
 
 ### <a name="Summary"></a> Summary Page
 
-![Summary](media/generate-and-publish-scripts-wizard/summary.png)
+![GS Summary](media/generate-and-publish-scripts-wizard/summary.png)
 
 This page summarizes the options that you have selected in this wizard. To change an option, select **Previous**. To begin generating scripts that are saved or published, select **Next**.
 

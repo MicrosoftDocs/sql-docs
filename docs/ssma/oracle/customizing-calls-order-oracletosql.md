@@ -1,4 +1,5 @@
 ---
+description: "Customizing Calls Order (OracleToSQL)"
 title: "Customizing Calls Order (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -9,9 +10,9 @@ ms.topic: conceptual
 helpviewer_keywords: 
   - "Customizing order"
 ms.assetid: 9d273ee3-2438-45cc-b4d1-8d3b549904b4
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Customizing Calls Order (OracleToSQL)
 At this step you select the order in which the objects to test will be invoked.  

@@ -1,5 +1,6 @@
 ---
-title: "Getting the driver version | Microsoft Docs"
+title: "Getting the driver version"
+description: "Learn how and where to find the version of the Microsoft JDBC Driver for SQL Server."
 ms.custom: ""
 ms.date: "08/12/2019"
 ms.prod: sql

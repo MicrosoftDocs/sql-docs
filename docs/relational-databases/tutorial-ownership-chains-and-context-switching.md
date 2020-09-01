@@ -1,4 +1,5 @@
 ---
+description: "Tutorial: Ownership Chains and Context Switching"
 title: "Tutorial: Ownership Chains and Context Switching"
 ms.custom: seo-dt-2019
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ author: "MashaMSFT"
 ms.author: "mathoma"
 ---
 # Tutorial: Ownership Chains and Context Switching
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../includes/applies-to-version/sqlserver.md)]
 This tutorial uses a scenario to illustrate [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] security concepts involving ownership chains and user context switching.  
   
 > [!NOTE]  

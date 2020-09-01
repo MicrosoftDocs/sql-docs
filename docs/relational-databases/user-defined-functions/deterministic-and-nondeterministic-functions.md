@@ -1,4 +1,5 @@
 ---
+description: "Deterministic and Nondeterministic Functions"
 title: "Deterministic and Nondeterministic Functions | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2017"
@@ -33,20 +34,126 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  The following built-in functions from categories of built-in functions other than string functions are always deterministic.  
   
-||||  
-|-|-|-|  
-|ABS|DATEDIFF|POWER|  
-|ACOS|DAY|RADIANS|  
-|ASIN|DEGREES|ROUND|  
-|ATAN|EXP|SIGN|  
-|ATN2|FLOOR|SIN|  
-|CEILING|ISNULL|SQUARE|  
-|COALESCE|ISNUMERIC|SQRT|  
-|COS|LOG|TAN|  
-|COT|LOG10|YEAR|  
-|DATALENGTH|MONTH||  
-|DATEADD|NULLIF||  
-  
+:::row:::
+    :::column:::
+        ABS
+    :::column-end:::
+    :::column:::
+        DATEDIFF
+    :::column-end:::
+    :::column:::
+        POWER
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ACOS
+    :::column-end:::
+    :::column:::
+        DAY
+    :::column-end:::
+    :::column:::
+        RADIANS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ASIN
+    :::column-end:::
+    :::column:::
+        DEGREES
+    :::column-end:::
+    :::column:::
+        ROUND
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ATAN
+    :::column-end:::
+    :::column:::
+        EXP
+    :::column-end:::
+    :::column:::
+        SIGN
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        ATN2
+    :::column-end:::
+    :::column:::
+        FLOOR
+    :::column-end:::
+    :::column:::
+        SIN
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CEILING
+    :::column-end:::
+    :::column:::
+        ISNULL
+    :::column-end:::
+    :::column:::
+        SQUARE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        COALESCE
+    :::column-end:::
+    :::column:::
+        ISNUMERIC
+    :::column-end:::
+    :::column:::
+        SQRT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        COS
+    :::column-end:::
+    :::column:::
+        LOG
+    :::column-end:::
+    :::column:::
+        TAN
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        COT
+    :::column-end:::
+    :::column:::
+        LOG10
+    :::column-end:::
+    :::column:::
+        YEAR
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DATALENGTH
+    :::column-end:::
+    :::column:::
+        MONTH
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DATEADD
+    :::column-end:::
+    :::column:::
+        NULLIF
+    :::column-end:::
+    :::column:::
+    :::column-end:::
+:::row-end:::
+ 
  The following functions are not always deterministic, but can be used in indexed views or indexes on computed columns when they are specified in a deterministic manner.  
   
 |Function|Comments|  
@@ -62,28 +169,159 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
   
  The following built-in functions from other categories are always nondeterministic.  
   
-|||  
-|-|-|  
-|@@CONNECTIONS|GETDATE|  
-|@@CPU_BUSY|GETUTCDATE|  
-|@@DBTS|GET_TRANSMISSION_STATUS|  
-|@@IDLE|LAG|  
-|@@IO_BUSY|LAST_VALUE|  
-|@@MAX_CONNECTIONS|LEAD|  
-|@@PACK_RECEIVED|MIN_ACTIVE_ROWVERSION|  
-|@@PACK_SENT|NEWID|  
-|@@PACKET_ERRORS|NEWSEQUENTIALID|  
-|@@TIMETICKS|NEXT VALUE FOR|  
-|@@TOTAL_ERRORS|NTILE|  
-|@@TOTAL_READ|PARSENAME|  
-|@@TOTAL_WRITE|PERCENTILE_CONT|  
-|AT TIME ZONE|PERCENTILE_DISC|
-|CUME_DIST|PERCENT_RANK|  
-|CURRENT_TIMESTAMP|RAND|  
-|DENSE_RANK|RANK|  
-|FIRST_VALUE|ROW_NUMBER|   
-|FORMAT|TEXTPTR|  
-  
+:::row:::
+    :::column:::
+        @@CONNECTIONS
+    :::column-end:::
+    :::column:::
+        GETDATE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@CPU_BUSY
+    :::column-end:::
+    :::column:::
+        GETUTCDATE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@DBTS
+    :::column-end:::
+    :::column:::
+        GET_TRANSMISSION_STATUS
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@IDLE
+    :::column-end:::
+    :::column:::
+        LAG
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@IO_BUSY
+    :::column-end:::
+    :::column:::
+        LAST_VALUE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@MAX_CONNECTIONS
+    :::column-end:::
+    :::column:::
+        LEAD
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@PACK_RECEIVED
+    :::column-end:::
+    :::column:::
+        MIN_ACTIVE_ROWVERSION
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@PACK_SENT
+    :::column-end:::
+    :::column:::
+        NEWID
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@PACKET_ERRORS
+    :::column-end:::
+    :::column:::
+        NEWSEQUENTIALID
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@TIMETICKS
+    :::column-end:::
+    :::column:::
+        NEXT VALUE FOR
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@TOTAL_ERRORS
+    :::column-end:::
+    :::column:::
+        NTILE
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@TOTAL_READ
+    :::column-end:::
+    :::column:::
+        PARSENAME
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        @@TOTAL_WRITE
+    :::column-end:::
+    :::column:::
+        PERCENTILE_CONT
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        AT TIME ZONE
+    :::column-end:::
+    :::column:::
+        PERCENTILE_DISC
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        CUME_DIST
+    :::column-end:::
+    :::column:::
+        PERCENT_RANK
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        CURRENT_TIMESTAMP
+    :::column-end:::
+    :::column:::
+        RAND
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        DENSE_RANK
+    :::column-end:::
+    :::column:::
+        RANK
+    :::column-end:::
+:::row-end:::  
+:::row:::
+    :::column:::
+        FIRST_VALUE
+    :::column-end:::
+    :::column:::
+        ROW_NUMBER
+    :::column-end:::
+:::row-end:::   
+:::row:::
+    :::column:::
+        FORMAT
+    :::column-end:::
+    :::column:::
+        TEXTPTR
+    :::column-end:::
+:::row-end:::
+ 
 ## Calling Extended Stored Procedures from Functions  
  Functions that call extended stored procedures are nondeterministic, because the extended stored procedures can cause side effects on the database. Side effects are changes to a global state of the database, such as an update to a table, or to an external resource, such as a file or the network; for example, modifying a file or sending an e-mail message. Do not rely on returning a consistent result set when executing an extended stored procedure from a user-defined function. User-defined functions that create side effects on the database are not recommended.  
   

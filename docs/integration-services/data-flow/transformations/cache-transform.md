@@ -1,4 +1,5 @@
 ---
+description: "Cache Transform"
 title: "Cache Transform | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -19,7 +20,7 @@ ms.author: chugu
 ---
 # Cache Transform
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Cache Transform transformation generates a reference dataset for the Lookup Transformation by writing data from a connected data source in the data flow to a Cache connection manager. The Lookup transformation performs lookups by joining data in input columns from a connected data source with columns in the reference database.  

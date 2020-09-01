@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_xe_object_columns (Transact-SQL)"
 title: "sys.dm_xe_object_columns (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

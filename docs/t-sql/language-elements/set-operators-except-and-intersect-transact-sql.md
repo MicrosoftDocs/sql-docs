@@ -1,4 +1,5 @@
 ---
+description: "Set Operators - EXCEPT and INTERSECT (Transact-SQL)"
 title: "EXCEPT and INTERSECT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -25,7 +26,7 @@ ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Set Operators - EXCEPT and INTERSECT (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Returns distinct rows by comparing the results of two queries.  
   
@@ -49,7 +50,9 @@ To combine the result sets of two queries that use EXCEPT or INTERSECT, the basi
 { <query_specification> | ( <query_expression> ) }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 \<_query\_specification_> | ( \<_query\_expression_> )  
 Is a query specification or query expression that returns data to be compared with the data from another query specification or query expression. The definitions of the columns that are part of an EXCEPT or INTERSECT operation don't have to be the same. But, they must be comparable through implicit conversion. When data types differ, the rules for [data type precedence](../../t-sql/data-types/data-type-precedence-transact-sql.md) determine the data type that is run for comparison.  
   

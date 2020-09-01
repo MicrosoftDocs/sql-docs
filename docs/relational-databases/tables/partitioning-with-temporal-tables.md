@@ -1,4 +1,5 @@
 ---
+description: "Partitioning with Temporal Tables"
 title: "Partitioning with Temporal Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/26/2016"
@@ -14,7 +15,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Partitioning with temporal tables
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 You can use partitioning on both the current and the history table independently. However, partitioning cannot be used to change the content of the data without system-versioning.
 

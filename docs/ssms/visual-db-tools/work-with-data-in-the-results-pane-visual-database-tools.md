@@ -1,4 +1,5 @@
 ---
+description: "Work with Data in the Results Pane (Visual Database Tools)"
 title: Work with Data in the Results Pane
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,7 +23,7 @@ ms.reviewer:
 
 ---
 # Work with Data in the Results Pane (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 After you run a query or view, the results are shown in the Results pane. You can then work with those results. For example, you can add and delete rows, input or change data, and easily navigate through large results sets.  
   
 The following information can help you avoid problems and work effectively with your results sets.  

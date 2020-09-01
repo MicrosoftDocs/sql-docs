@@ -1,4 +1,5 @@
 ---
+description: "DISABLE TRIGGER (Transact-SQL)"
 title: "DISABLE TRIGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2017"
@@ -38,7 +39,9 @@ DISABLE TRIGGER { [ schema_name . ] trigger_name [ ,...n ] | ALL }
 ON { object_name | DATABASE | ALL SERVER } [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of the schema to which the trigger belongs. *schema_name* cannot be specified for DDL or logon triggers.  
   

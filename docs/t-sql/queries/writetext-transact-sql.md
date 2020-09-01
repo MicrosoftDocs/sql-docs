@@ -1,4 +1,5 @@
 ---
+description: "WRITETEXT (Transact-SQL)"
 title: "WRITETEXT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/23/2017"
@@ -43,7 +44,9 @@ WRITETEXT [BULK]
   [ WITH LOG ] { data }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  BULK  
  Enables upload tools to upload a binary data stream. The stream must be provided by the tool at the TDS protocol level. When the data stream is not present the query processor ignores the BULK option.  
   

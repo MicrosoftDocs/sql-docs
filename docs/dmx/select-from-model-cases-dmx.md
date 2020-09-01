@@ -1,4 +1,5 @@
 ---
+description: "SELECT FROM &lt;model&gt;.CASES (DMX)"
 title: "SELECT FROM &lt;model&gt;.CASES (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # SELECT FROM &lt;model&gt;.CASES (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Supports drillthrough, and returns the cases that were used to train the model. You can also return structure columns that are not included in the model, if drillthrough has been enabled on the mining structure and on the mining model, and if you have the appropriate permissions.  
   

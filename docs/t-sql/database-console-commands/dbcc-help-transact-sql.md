@@ -1,4 +1,5 @@
 ---
+description: "DBCC HELP (Transact-SQL)"
 title: "DBCC HELP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"
@@ -33,7 +34,9 @@ DBCC HELP ( 'dbcc_statement' | @dbcc_statement_var | '?' )
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *dbcc_statement* | *\@dbcc_statement_var*  
  Is the name of the DBCC command for which to receive syntax information. Provide only the part of the DBCC command that follows DBCC, for example, CHECKDB instead of DBCC CHECKDB.  
   

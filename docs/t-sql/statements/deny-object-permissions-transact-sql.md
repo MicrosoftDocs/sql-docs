@@ -1,4 +1,5 @@
 ---
+description: "DENY Object Permissions (Transact-SQL)"
 title: "DENY Object Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -47,7 +48,9 @@ DENY <permission> [ ,...n ] ON
     | Database_user_with_no_login  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on a schema-contained object. For a list of the permissions, see the Remarks section later in this topic.  
   

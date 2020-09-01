@@ -1,4 +1,5 @@
 ---
+description: "STAsBinary (geography Data Type)"
 title: "STAsBinary (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -32,7 +33,9 @@ ms.author: mlandzic
 .STAsBinary ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **varbinary(max)**  
   
  CLR return type: **SqlBytes**  

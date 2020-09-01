@@ -1,4 +1,5 @@
 ---
+description: "DENY Assembly Permissions (Transact-SQL)"
 title: "DENY Assembly Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -36,7 +37,9 @@ DENY { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
         [ AS denying_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be denied on an assembly. Listed below.  
   

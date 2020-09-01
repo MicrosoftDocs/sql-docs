@@ -1,4 +1,5 @@
 ---
+description: "sys.objects (Transact-SQL)"
 title: "sys.objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 05/20/2020
@@ -25,7 +26,7 @@ ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.objects (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Contains a row for each user-defined, schema-scoped object that is created within a database, including natively compiled scalar user-defined function.  
   

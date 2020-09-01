@@ -1,4 +1,5 @@
 ---
+description: "sp_trace_setevent (Transact-SQL)"
 title: "sp_trace_setevent (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -313,7 +314,7 @@ sp_trace_setevent [ @traceid = ] trace_id
   
  This table illustrates the interaction between **\@on** and **\@columnid**.  
   
-|@on|@columnid|Result|  
+|\@on|\@columnid|Result|  
 |---------|---------------|------------|  
 |ON (**1**)|NULL|Event is turned ON.<br /><br /> All Columns are cleared.|  
 ||NOT NULL|Column is turned ON for the specified Event.|  

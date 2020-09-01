@@ -1,4 +1,5 @@
 ---
+description: "SET FIPS_FLAGGER (Transact-SQL)"
 title: "SET FIPS_FLAGGER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2017"
@@ -35,7 +36,9 @@ ms.author: carlrab
 SET FIPS_FLAGGER ( 'level' |  OFF )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *level* **'**  
  Is the level of compliance against the FIPS 127-2 standard for which all database operations are checked. If a database operation conflicts with the level of ISO standards chosen, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] generates a warning.  
   

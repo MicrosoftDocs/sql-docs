@@ -1,4 +1,5 @@
 ---
+description: "ALTER RESOURCE GOVERNOR (Transact-SQL)"
 title: "ALTER RESOURCE GOVERNOR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"
@@ -49,7 +50,10 @@ ALTER RESOURCE GOVERNOR
 [ ; ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  DISABLE  
  Disables Resource Governor. Disabling Resource Governor has the following results:  
   

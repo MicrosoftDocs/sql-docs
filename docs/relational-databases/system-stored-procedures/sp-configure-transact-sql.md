@@ -1,4 +1,5 @@
 ---
+description: "sp_configure (Transact-SQL)"
 title: "sp_configure (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 11/04/2019
@@ -31,7 +32,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlal
   
 ## Syntax  
   
-```  
+```syntaxsql  
 -- Syntax for SQL Server  
   
 sp_configure [ [ @configname = ] 'option_name'   

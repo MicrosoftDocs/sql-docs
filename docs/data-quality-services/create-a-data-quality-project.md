@@ -1,4 +1,5 @@
 ---
+description: "Create a Data Quality Project"
 title: "Create a Data Quality Project"
 ms.date: "03/01/2017"
 ms.prod: sql

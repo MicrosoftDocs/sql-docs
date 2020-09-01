@@ -1,4 +1,5 @@
 ---
+description: "Execution Plan and Buffer Allocation"
 title: "Execution Plan and Buffer Allocation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -23,7 +24,7 @@ ms.author: chugu
 ---
 # Execution Plan and Buffer Allocation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Before execution, the data flow task examines its components and generates an execution plan for each sequence of components. This section provides details about the execution plan, how to view the plan, and how input and output buffers are allocated based on the execution plan.  

@@ -1,4 +1,5 @@
 ---
+description: "Connecting Data Flow Components Programmatically"
 title: "Connecting Data Flow Components Programmatically | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -21,7 +22,7 @@ ms.author: chugu
 ---
 # Connecting Data Flow Components Programmatically
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   After you have added components to the data flow task, you connect them to create an execution tree that represents the flow of data from sources through transformations to destinations. You use <xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSPath100> objects to connect the components in the data flow.  

@@ -1,4 +1,5 @@
 ---
+description: "CREATE QUEUE (Transact-SQL)"
 title: "CREATE QUEUE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/25/2019"
@@ -60,6 +61,8 @@ CREATE QUEUE <object>
 { database_name.schema_name.stored_procedure_name | schema_name.stored_procedure_name | stored_procedure_name }
 
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

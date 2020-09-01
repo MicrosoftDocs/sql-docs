@@ -1,4 +1,5 @@
 ---
+description: "GetReparentedValue (Database Engine)"
 title: "GetReparentedValue (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
@@ -35,7 +36,9 @@ node. GetReparentedValue ( oldRoot, newRoot )
 SqlHierarchyId GetReparentedValue ( SqlHierarchyId oldRoot , SqlHierarchyId newRoot )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 _oldRoot_  
 A **hierarchyid** that is the node that represents the level of the hierarchy that is to be modified.
   

@@ -1,4 +1,5 @@
 ---
+description: "DENY System Object Permissions (Transact-SQL)"
 title: "DENY System Object Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -32,7 +33,9 @@ ms.author: vanto
 DENY { SELECT | EXECUTE } ON [ sys.]system_object TO principal   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  [ **sys.**]  
  The **sys** qualifier is required only when you are referring to catalog views and dynamic management views.  
   

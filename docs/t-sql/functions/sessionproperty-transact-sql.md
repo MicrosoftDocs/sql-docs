@@ -1,4 +1,5 @@
 ---
+description: "SESSIONPROPERTY (Transact-SQL)"
 title: "SESSIONPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -34,7 +35,9 @@ ms.author: vanto
 SESSIONPROPERTY (option)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *option*  
  Is the current option setting for this session. *option* can be any of the following values.  
   

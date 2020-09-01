@@ -1,4 +1,5 @@
 ---
+description: "Access Data for the DQS Operations"
 title: "Access Data for the DQS Operations"
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -12,7 +13,7 @@ ms.author: sawinark
 ---
 # Access Data for the DQS Operations
 
-[!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
+[!INCLUDE [SQL Server - Windows only ](../../includes/applies-to-version/sql-windows-only.md)]
 
   To use your source data for [!INCLUDE[ssDQSnoversion](../../includes/ssdqsnoversion-md.md)] (DQS) operations, and export your processed data, you can do either of the following:  
   

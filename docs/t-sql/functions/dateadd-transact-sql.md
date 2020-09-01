@@ -28,7 +28,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATEADD (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function adds a specified *number* value (as a signed integer) to a specified *datepart* of an input *date* value, and then returns that modified value.
   
@@ -42,7 +42,9 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
 DATEADD (datepart , number , date )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *datepart*  
 The part of *date* to which `DATEADD` adds an **integer** *number*. This table lists all valid *datepart* arguments. 
 

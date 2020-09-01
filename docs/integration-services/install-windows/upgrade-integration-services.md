@@ -1,4 +1,5 @@
 ---
+description: "Upgrade Integration Services"
 title: "Upgrade Integration Services | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ manager: erikre
 ---
 # Upgrade Integration Services
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   If [!INCLUDE[ssISversion10](../../includes/ssisversion10-md.md)] or later is currently installed on your computer, you can upgrade to [!INCLUDE[ssISCurrent](../../includes/ssiscurrent-md.md)].  

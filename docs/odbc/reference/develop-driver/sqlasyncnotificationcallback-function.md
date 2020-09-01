@@ -1,4 +1,5 @@
 ---
+description: "SQLAsyncNotificationCallback Function"
 title: "SQLAsyncNotificationCallback Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

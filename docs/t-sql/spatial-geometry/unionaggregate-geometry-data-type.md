@@ -1,4 +1,5 @@
 ---
+description: "UnionAggregate (geometry Data Type)"
 title: "UnionAggregate (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -27,7 +28,9 @@ Performs a union operation on a set of geometry objects.
 UnionAggregate ( geometry_operand )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *geometry_operand*  
  Is a **geometry** type table column that holds the set of **geometry** objects on which to perform a union operation.  
   

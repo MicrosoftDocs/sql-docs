@@ -1,4 +1,5 @@
 ---
+description: "MSdbms_datatype_mapping (Transact-SQL)"
 title: "MSdbms_datatype_mapping (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

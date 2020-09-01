@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_sql_referencing_entities (Transact-SQL)"
 title: "sys.dm_sql_referencing_entities (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -54,17 +55,17 @@ sys.dm_sql_referencing_entities (
 ```  
   
 ## Arguments  
- *schema_name.referenced*_*entity_name*  
+ `schema_name.referenced_entity_name`
  Is the name of the referenced entity.  
   
- *schema_name* is required except when the referenced class is PARTITION_FUNCTION.  
+ `schema_name` is required except when the referenced class is PARTITION_FUNCTION.  
   
- *schema_name.referenced_entity_name* is **nvarchar(517)**.  
+ `schema_name.referenced_entity_name` is **nvarchar(517)**.  
   
- *<referenced_class>* ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }  
+ `<referenced_class> ::= { OBJECT  | TYPE | XML_SCHEMA_COLLECTION | PARTITION_FUNCTION }`
  Is the class of the referenced entity. Only one class can be specified per statement.  
   
- *<referenced_class>* is **nvarchar**(60).  
+ `<referenced_class>` is **nvarchar**(60).  
   
 ## Table Returned  
   

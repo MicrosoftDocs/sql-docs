@@ -1,4 +1,5 @@
 ---
+description: "sys.backup_devices (Transact-SQL)"
 title: "sys.backup_devices (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -29,8 +30,8 @@ ms.author: carlrab
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
 |**name**|**sysname**|Name of the backup device. Is unique in the set.|  
-|**type**|**tinyint**|Type of backup device:<br /><br /> 2 = Disk<br /><br /> 3 = Diskette (obsolete)<br /><br /> 5 = Tape<br /><br /> 6 = Pipe (obsolete)<br /><br /> 7 = Virtual device (for optional use by third-party backup vendors)<br /><br /> Typically, only disk (2) and tape (5) are used.|  
-|**type_desc**|**nvarchar(60)**|Description of backup device type:<br /><br /> DISK<br /><br /> DISKETTE (obsolete)<br /><br /> TAPE<br /><br /> PIPE (obsolete)<br /><br /> VIRTUAL_DEVICE (for optional use by third party backup vendors)<br /><br /> Typically, only DISK and TAPE are used.|  
+|**type**|**tinyint**|Type of backup device:<br /><br /> 2 = Disk<br /><br /> 3 = Diskette (obsolete)<br /><br /> 5 = Tape<br /><br /> 6 = Pipe (obsolete)<br /><br /> 7 = Virtual device (for optional use by third-party backup vendors)<br /><br /> 9 = URL<br /><br />Typically, only disk (2) and URL (9) are used.|  
+|**type_desc**|**nvarchar(60)**|Description of backup device type:<br /><br /> DISK<br /><br /> DISKETTE (obsolete)<br /><br /> TAPE<br /><br /> PIPE (obsolete)<br /><br /> VIRTUAL_DEVICE (for optional use by third party backup vendors)<br /><br /> URL <br /><br /> Typically, only DISK and URL are used.|  
 |**physical_name**|**nvarchar(260)**|Physical file name or path of the backup device.|  
   
 ## Permissions  

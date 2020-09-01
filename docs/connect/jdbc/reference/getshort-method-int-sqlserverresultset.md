@@ -1,4 +1,5 @@
 ---
+description: "getShort Method (int) (SQLServerResultSet)"
 title: "getShort Method (int) (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

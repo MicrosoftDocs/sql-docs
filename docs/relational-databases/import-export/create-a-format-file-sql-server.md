@@ -16,7 +16,7 @@ ms.author: mathoma
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Create a Format File (SQL Server)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   When you bulk import into a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] table or bulk export data from a table, you can use a format file to a flexible system for writing data files that requires little or no editing to comply with other data formats or to read data files from other software programs.  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] support two types of format file: non-XML format and XML format. The non-XML format is the original format that is supported by earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  

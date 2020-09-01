@@ -1,4 +1,5 @@
 ---
+description: "Windows Dialog Box (Microsoft Document Explorer Help)"
 title: "Windows Dialog Box (Microsoft Document Explorer Help)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -14,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Windows Dialog Box (Microsoft Document Explorer Help)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 This dialog box enables you to display, close, and arrange documents that are open in editors and designers. You can display this dialog box by clicking **Windows** on the **Window** menu.  
   
 ## Options  

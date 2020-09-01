@@ -2,7 +2,7 @@
 title: "Driver-Aware Connection Pooling in the ODBC Driver"
 description: "Learn about enhancements made to driver-aware connection pooling in the Microsoft ODBC Driver for SQL Server on Windows."
 ms.custom: ""
-ms.date: "05/06/2020"
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -37,7 +37,7 @@ If one of the following connection-attribute IDs or connection string keywords i
   
 -   If there is a difference in any of the following connection keywords between your connection string and a pooled connection string, a pooled connection is not used.  
   
-    |Keyword|ODBC Driver 13|ODBC Driver 11|
+    |Keyword|ODBC Driver 17/13|ODBC Driver 11|
     |-|-|-|
     |`Address`|Yes|Yes|
     |`AnsiNPW`|Yes|Yes|
@@ -62,7 +62,7 @@ If one of the following connection-attribute IDs or connection string keywords i
     
 - If there is a difference in any of the following connection attributes between your connection string and a pooled connection string, a pooled connection is not used.  
   
-    |Attribute|ODBC Driver 13|ODBC Driver 11|  
+    |Attribute|ODBC Driver 17/13|ODBC Driver 11|  
     |-|-|-|  
     |`SQL_ATTR_CURRENT_CATALOG`|Yes|Yes|
     |`SQL_ATTR_PACKET_SIZE`|Yes|Yes|
@@ -88,7 +88,7 @@ If one of the following connection-attribute IDs or connection string keywords i
   
      These connection keywords are not considered when the Driver Manager tries to match your connection with a connection in the pool. (Even if you change one of these parameters, an existing connection can be reused. The driver will reset the options, as needed.) These attributes can be reset in the client side without making an extra network call.  
   
-    |Keyword|ODBC Driver 13|ODBC Driver 11|  
+    |Keyword|ODBC Driver 17/13|ODBC Driver 11|  
     |-|-|-|  
     |`AutoTranslate`|Yes|Yes|
     |`Description`|Yes|Yes|
@@ -102,7 +102,7 @@ If one of the following connection-attribute IDs or connection string keywords i
   
      If you change one of the following connection attributes, an existing connection can be reused.  The driver will reset the value, as needed. The driver can reset these attributes in the client without making an extra network call.  
   
-    |Attribute|ODBC Driver 13|ODBC Driver 11|  
+    |Attribute|ODBC Driver 17/13|ODBC Driver 11|  
     |-|-|-|  
     |All statement attributes|Yes|Yes|
     |`SQL_ATTR_AUTOCOMMIT`|Yes|Yes|

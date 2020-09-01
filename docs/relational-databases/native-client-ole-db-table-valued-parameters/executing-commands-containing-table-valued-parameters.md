@@ -1,4 +1,5 @@
 ---
+description: "Executing SQL Server Native Client Commands Containing Table-Valued Parameters"
 title: "Commands with Table-Valued Parameters"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -14,8 +15,8 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Executing Commands Containing Table-Valued Parameters
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+# Executing SQL Server Native Client Commands Containing Table-Valued Parameters
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Executing a command that contains table-valued parameters requires two phases:  
   

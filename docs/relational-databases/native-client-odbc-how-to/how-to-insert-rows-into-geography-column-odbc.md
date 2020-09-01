@@ -1,4 +1,5 @@
 ---
+description: "How to: Insert Rows into Geography Column (ODBC)"
 title: "How to: Insert Rows into Geography Column (ODBC) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -13,7 +14,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # How to: Insert Rows into Geography Column (ODBC)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This sample inserts two rows into a table with a geography column from a WellKnownBinary (WKB) using 2 different bindings (SQLCCHAR and SQLCBINARY). Then it selects one row from that table and uses ::STAsText() to display it.The WKB is 0x01010000000700ECFAD03A4C4001008000B5DF07C0 and the application prints to the console: POINT(56.4595 -2.9842).  
   

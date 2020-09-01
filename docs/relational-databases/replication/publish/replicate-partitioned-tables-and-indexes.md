@@ -1,4 +1,5 @@
 ---
+description: "Replicate Partitioned Tables and Indexes"
 title: "Replicate Partitioned Tables and Indexes | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/10/2015"
@@ -19,7 +20,7 @@ ms.author: "mathoma"
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Replicate Partitioned Tables and Indexes
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[sql-asdbmi](../../../includes/applies-to-version/sql-asdbmi.md)]
   Partitioning makes large tables or indexes more manageable because partitioning enables you to manage and access subsets of data quickly and efficiently, and maintain the integrity of a data collection at the same time. For more information, see [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md). Replication supports partitioning by providing a set of properties that specify how partitioned tables and indexes should be treated.  
   
 ## Article Properties for Transactional and Merge Replication  

@@ -1,4 +1,5 @@
 ---
+description: "COLUMNPROPERTY (Transact-SQL)"
 title: "COLUMNPROPERTY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -33,7 +34,9 @@ This function returns column or parameter information.
 COLUMNPROPERTY ( id , column , property )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *id*  
 An [expression](../../t-sql/language-elements/expressions-transact-sql.md) containing the identifier (ID) of the table or procedure.
   

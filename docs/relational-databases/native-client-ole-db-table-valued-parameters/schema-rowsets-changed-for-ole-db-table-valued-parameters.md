@@ -1,4 +1,5 @@
 ---
+description: "Schema Rowsets Changed for OLE DB Table-Valued Parameters in SQL Server Native Client"
 title: "Schema rowsets, OLE DB Table-Valued Parameters"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -15,8 +16,8 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Schema Rowsets Changed for OLE DB Table-Valued Parameters
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+# Schema Rowsets Changed for OLE DB Table-Valued Parameters in SQL Server Native Client
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The following are the schema rowsets that have been changed or added to support table-valued parameters.  
   

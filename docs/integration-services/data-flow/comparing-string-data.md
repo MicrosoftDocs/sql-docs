@@ -1,4 +1,5 @@
 ---
+description: "Comparing String Data"
 title: "Comparing String Data | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -19,7 +20,7 @@ ms.author: chugu
 ---
 # Comparing String Data
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   String comparisons are an important part of many of the transformations performed by [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)], and string comparisons are also used in the evaluation of expressions in variables and property expressions. For example, the Sort transformation compares values in a dataset to sort data in ascending or descending order.  

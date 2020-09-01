@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;MAX_PRECISION (Transact-SQL)"
 title: "@@MAX_PRECISION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -36,7 +37,9 @@ ms.author: maghan
 @@MAX_PRECISION  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **tinyint**  
   
 ## Remarks  

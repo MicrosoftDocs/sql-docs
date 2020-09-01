@@ -1,4 +1,5 @@
 ---
+description: "ALTER ROUTE (Transact-SQL)"
 title: "ALTER ROUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/30/2018"
@@ -46,7 +47,10 @@ WITH
   
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *route_name*  
  Is the name of the route to change. Server, database, and schema names cannot be specified.  
   
@@ -77,7 +81,7 @@ WHERE database_id = DB_ID();
   
  ADDRESS **='**_next\_hop\_address_'  
 
- For Azure SQL Database managed instance, `ADDRESS` must be local.
+ For Azure SQL Managed Instance, `ADDRESS` must be local.
 
  Specifies the network address for this route. The *next_hop_address* specifies a TCP/IP address in the following format:  
   

@@ -1,4 +1,5 @@
 ---
+description: "sp_update_operator (Transact-SQL)"
 title: "sp_update_operator (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"

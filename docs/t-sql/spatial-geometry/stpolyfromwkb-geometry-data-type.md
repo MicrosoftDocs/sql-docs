@@ -1,4 +1,5 @@
 ---
+description: "STPolyFromWKB (geometry Data Type)"
 title: "STPolyFromWKB (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -30,7 +31,9 @@ Returns a **geometryPolygon** instance from an Open Geospatial Consortium (OGC) 
 STPolyFromWKB ( 'WKB_polygon' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *WKB_polygon*  
  Is the WKB representation of the **geometryPolygon** instance you wish to return. *WKB_polygon* is a **varbinary(max)** expression.  
   

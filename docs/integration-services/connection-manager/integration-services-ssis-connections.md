@@ -1,4 +1,5 @@
 ---
+description: "Integration Services (SSIS) Connections"
 title: "Integration Services (SSIS) Connections | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -26,7 +27,7 @@ ms.author: chugu
 ---
 # Integration Services (SSIS) Connections
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] packages use connections to perform different tasks and to implement [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] features:  

@@ -1,4 +1,5 @@
 ---
+description: "KEY_GUID (Transact-SQL)"
 title: "KEY_GUID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -34,7 +35,9 @@ ms.author: vanto
 Key_GUID( 'Key_Name' )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *Key_Name* **'**  
  The name of a symmetric key in the database.  
   

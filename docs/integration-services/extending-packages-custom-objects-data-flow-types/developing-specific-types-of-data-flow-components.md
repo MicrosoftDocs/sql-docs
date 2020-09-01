@@ -1,4 +1,5 @@
 ---
+description: "Developing Specific Types of Data Flow Components"
 title: "Developing Specific Types of Data Flow Components | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -20,7 +21,7 @@ ms.author: chugu
 ---
 # Developing Specific Types of Data Flow Components
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   This section covers the specifics of developing source components, transformation components with synchronous outputs, transformation components with asynchronous outputs, and destination components.  

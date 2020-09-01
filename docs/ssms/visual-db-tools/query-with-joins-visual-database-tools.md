@@ -1,4 +1,5 @@
 ---
+description: "Query with Joins (Visual Database Tools)"
 title: Query with Joins
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -21,7 +22,7 @@ ms.reviewer:
 
 ---
 # Query with Joins (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 A query result can include data from multiple tables or table-valued objects. To combine data from multiple table-valued objects, you use the JOIN operation from SQL.  
   
 For information about creating queries using multiple tables, see the following topics.  

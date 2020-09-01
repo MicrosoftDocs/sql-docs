@@ -60,6 +60,19 @@ This release of sqlpackage includes a standard Windows installer experience, and
    $ sqlpackage
    ```
 
+   > [!NOTE]
+   > Security settings may require modification to run sqlpackage on macOS. Use the following commands to interact with Gatekeeper from the command line.
+
+   **Before executing sqlpackage:**
+   ```bash
+   $ sudo spctl --master-disable
+   ```
+
+   **After executing sqlpackage:**
+   ```bash
+   $ sudo spctl --master-enable
+   ```
+
 ## Get sqlpackage .NET Core for Linux
 
 1. Download [sqlpackage for Linux](https://go.microsoft.com/fwlink/?linkid=2134311) by using one of the installers or the tar.gz archive:
@@ -118,9 +131,11 @@ sqlpackage runs on Windows, macOS, and Linux, and is supported on the following 
 - Windows 10
 - Windows 8.1
 - Windows 7 SP1
+- Windows Server Core
 - Windows Server 2008 R2
 - Windows Server 2012 R2
 - Windows Server 2016
+- Windows Server 2019
 
 ### macOS
 

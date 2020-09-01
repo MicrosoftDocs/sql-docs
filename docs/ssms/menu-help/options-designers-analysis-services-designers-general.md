@@ -1,4 +1,5 @@
 ---
+description: "Options (Designers - Analysis Services Designers - General)"
 title: "Options (Designers - Analysis Services Designers - General)"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -14,7 +15,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Options (Designers - Analysis Services Designers - General)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Use the **Designers**, **Maintenance Plans**, **Analysis Services**, **General** page to determine the default behavior of the Analysis Services Designers.  
   
 ## Connectivity  

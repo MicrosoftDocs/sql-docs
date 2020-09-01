@@ -1,4 +1,5 @@
 ---
+description: "MOVE CONVERSATION (Transact-SQL)"
 title: "MOVE CONVERSATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -40,7 +41,9 @@ MOVE CONVERSATION conversation_handle
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *conversation_handle*  
  Is a variable or constant containing the conversation handle of the conversation to be moved. *conversation_handle* must be of type **uniqueidentifier**.  
   

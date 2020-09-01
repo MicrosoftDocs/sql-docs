@@ -1,4 +1,5 @@
 ---
+description: "Rules for Entering Search Values (Visual Database Tools)"
 title: Rules for Entering Search Values
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -23,7 +24,7 @@ ms.reviewer:
 
 ---
 # Rules for Entering Search Values (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 This topic discusses the conventions you must use when entering the following types of literal values for a search condition:  
   
 -   Text values  

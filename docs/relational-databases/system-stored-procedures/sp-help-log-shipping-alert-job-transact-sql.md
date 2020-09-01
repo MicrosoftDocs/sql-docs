@@ -1,4 +1,5 @@
 ---
+description: "sp_help_log_shipping_alert_job (Transact-SQL)"
 title: "sp_help_log_shipping_alert_job (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

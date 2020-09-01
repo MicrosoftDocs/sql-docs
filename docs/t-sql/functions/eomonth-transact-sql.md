@@ -1,4 +1,5 @@
 ---
+description: "EOMONTH (Transact-SQL)"
 title: "EOMONTH (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -20,7 +21,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # EOMONTH (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This function returns the last day of the month containing a specified date, with an optional offset.  
   
@@ -32,7 +33,9 @@ This function returns the last day of the month containing a specified date, wit
 EOMONTH ( start_date [, month_to_add ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *start_date*  
 A date expression that specifies the date for which to return the last day of the month.  
   

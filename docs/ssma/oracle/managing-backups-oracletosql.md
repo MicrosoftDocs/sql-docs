@@ -1,4 +1,5 @@
 ---
+description: "Managing Backups (OracleToSQL)"
 title: "Managing Backups (OracleToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -10,9 +11,9 @@ helpviewer_keywords:
   - "Oracle Backup Management"
   - "SQL Server Backup Management"
 ms.assetid: a1a03ef9-b6e8-4127-bad0-eae261251472
-author: "Shamikg"
-ms.author: "Shamikg"
-manager: shamikg
+author: "nahk-ivanov"
+ms.author: "alexiva"
+manager: alexiva
 ---
 # Managing Backups (OracleToSQL)
 Oracle Backup Management lets you backup and restore table data before or after running a test. You can also manage the backup content with Manage Backup Contents dialog.  

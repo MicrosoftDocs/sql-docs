@@ -1,4 +1,5 @@
 ---
+description: "sp_stored_procedures (Transact-SQL)"
 title: "sp_stored_procedures (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

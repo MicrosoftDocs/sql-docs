@@ -1,4 +1,5 @@
 ---
+description: "dbo.sysjobservers (Transact-SQL)"
 title: "dbo.sysjobservers (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/26/2019"

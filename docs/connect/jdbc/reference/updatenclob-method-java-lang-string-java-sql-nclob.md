@@ -1,4 +1,5 @@
 ---
+description: "updateNClob Method (java.lang.String, java.sql.NClob)"
 title: "updateNClob Method (java.lang.String, java.sql.NClob) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "CREATE FULLTEXT INDEX (Transact-SQL)"
 title: "CREATE FULLTEXT INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/05/2017"
@@ -60,6 +61,8 @@ CREATE FULLTEXT INDEX ON table_name
  }  
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 *table_name*       
 Is the name of the table or indexed view that contains the column or columns included in the full-text index.  

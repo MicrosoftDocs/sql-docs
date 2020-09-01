@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Native Client Date and Time Improvements"
 title: "Date and Time Improvements | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -11,8 +12,8 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# Date and Time Improvements
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+# SQL Server Native Client Date and Time Improvements
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic describes the [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client support for the date and time data types that were added in [!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)].  
   

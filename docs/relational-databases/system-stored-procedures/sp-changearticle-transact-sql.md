@@ -1,4 +1,5 @@
 ---
+description: "sp_changearticle (Transact-SQL)"
 title: "sp_changearticle (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/28/2015"
@@ -211,9 +212,8 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ## Valid Schema Options  
  The following table describes the allowable values of *schema_option* based upon the replication type (shown across the top) and the article type (shown down the first column).  
   
-|Article type|Replication type||  
-|------------------|----------------------|------|  
-||Transactional|Snapshot|  
+| Article type | Replication type - Transactional | Replication type - Snapshot |
+| ------------ | -------------------------------- | --------------------------- |
 |**logbased**|All options|All options but **0x02**|  
 |**logbased manualfilter**|All options|All options but **0x02**|  
 |**logbased manualview**|All options|All options but **0x02**|  

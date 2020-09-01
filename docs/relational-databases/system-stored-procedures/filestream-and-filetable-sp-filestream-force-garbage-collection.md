@@ -1,4 +1,5 @@
 ---
+description: "sp_filestream_force_garbage_collection (Transact-SQL)"
 title: "sp_filestream_force_garbage_collection (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
@@ -47,9 +48,8 @@ sp_filestream_force_garbage_collection
   
 ## Return Code Values  
   
-|||  
-|-|-|  
-|Value|Description|  
+| Value | Description |
+| ----- | ----------- |   
 |0|Operation success|  
 |1|Operation failure|  
   

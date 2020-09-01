@@ -1,4 +1,5 @@
 ---
+description: "MSReportServer_Instance Members"
 title: "MSReportServer_Instance Members | Microsoft Docs"
 ms.date: 03/01/2017
 ms.prod: reporting-services
@@ -23,7 +24,7 @@ ms.author: maggies
   
 ## Public Properties  
   
-|||  
+|Property|Description|  
 |-|-|  
 |[EditionID](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionid.md)|Returns the edition of the report server.|  
 |[EditionName](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-properties-editionname.md)|Returns the human readable name of the report server edition.|  
@@ -34,7 +35,7 @@ ms.author: maggies
   
 ## Public Methods  
   
-|||  
+|Method|Description|  
 |-|-|  
 |[GetReportServerUrls Method &#40;WMI MSReportServer_Instance&#41;](../../reporting-services/wmi-provider-library-reference/msreportserver-instance-methods-getreportserverurls.md)|Lists URLs users can use to access the report server and report manager.|  
   

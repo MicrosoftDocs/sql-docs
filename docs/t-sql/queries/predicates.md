@@ -1,4 +1,5 @@
 ---
+description: "Predicates"
 title: "Predicates | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -29,13 +30,23 @@ ms.author: vanto
   
 ## In This Section  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] provides the following predicates.  
-  
-||  
-|-|  
-|[CONTAINS](../../t-sql/queries/contains-transact-sql.md)|  
-|[FREETEXT](../../t-sql/queries/freetext-transact-sql.md)|  
-|[IS &#91;NOT&#93; NULL](../../t-sql/queries/is-null-transact-sql.md)|  
-  
+
+:::row:::
+    :::column:::
+        [CONTAINS](../../t-sql/queries/contains-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [FREETEXT](../../t-sql/queries/freetext-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        [IS &#91;NOT&#93; NULL](../../t-sql/queries/is-null-transact-sql.md)
+    :::column-end:::
+:::row-end:::
+
 ## See Also  
  [BETWEEN &#40;Transact-SQL&#41;](../../t-sql/language-elements/between-transact-sql.md)   
  [EXISTS &#40;Transact-SQL&#41;](../../t-sql/language-elements/exists-transact-sql.md)   

@@ -1,4 +1,5 @@
 ---
+description: "Navigate in Database Diagram Designer (Visual Database Tools)"
 title: Navigate in Database Diagram Designer
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -17,7 +18,7 @@ ms.reviewer:
 
 ---
 # Navigate in Database Diagram Designer (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can work in Database Diagram Designer using the keyboard as well as the mouse. Refer to the following tables for specific methods used in the Database Diagram Designer.  
   
 |**To**|**Press**|  

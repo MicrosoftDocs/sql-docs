@@ -1,4 +1,5 @@
 ---
+description: "Set a Trace Filter (Transact-SQL)"
 title: "Set a Trace Filter (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"

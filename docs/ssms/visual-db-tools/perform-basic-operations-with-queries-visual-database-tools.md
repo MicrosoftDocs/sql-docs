@@ -1,4 +1,5 @@
 ---
+description: "Perform Basic Operations with Queries (Visual Database Tools)"
 title: Perform Basic Operations with Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -16,7 +17,7 @@ ms.reviewer:
 
 ---
 # Perform Basic Operations with Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The following fundamental operations apply to most or all queries.  
   
 ## In This Section  

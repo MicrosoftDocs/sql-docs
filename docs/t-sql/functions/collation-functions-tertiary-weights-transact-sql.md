@@ -1,4 +1,5 @@
 ---
+description: "Collation Functions - TERTIARY_WEIGHTS (Transact-SQL)"
 title: "TERTIARY_WEIGHTS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -22,7 +23,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Collation Functions - TERTIARY_WEIGHTS (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 For each character in a non-Unicode string expression - defined with a SQL tertiary collation - this function returns a binary string of weights.
   
@@ -34,7 +35,9 @@ For each character in a non-Unicode string expression - defined with a SQL terti
 TERTIARY_WEIGHTS( non_Unicode_character_string_expression )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *non_Unicode_character_string_expression*  
 A string [expression](../../t-sql/language-elements/expressions-transact-sql.md) of type **char**, **varchar**, or **varchar(max)** defined on a tertiary SQL collation. For a list of these collations, see Remarks.
   

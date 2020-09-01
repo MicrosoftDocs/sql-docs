@@ -1,4 +1,5 @@
 ---
+description: "DECRYPTBYASYMKEY (Transact-SQL)"
 title: "DECRYPTBYASYMKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -35,7 +36,9 @@ DecryptByAsymKey (Asym_Key_ID , { 'ciphertext' | @ciphertext }
     [ , 'Asym_Key_Password' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Asym_Key_ID*  
 The ID of an asymmetric key in the database. *Asym_Key_ID* has an **int** data type.  
   

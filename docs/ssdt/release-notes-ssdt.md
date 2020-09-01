@@ -16,7 +16,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Release notes for SQL Server Data Tools (SSDT)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 These release notes are for [SQL Server Data Tools (SSDT)](download-sql-server-data-tools-ssdt.md) for Visual Studio (VS).
 
@@ -39,6 +39,35 @@ GeneMi , 2019/03/22.
 
 P.S.  there's no need to keep this large HTML comment indefinitely.
 -->
+
+## 15.9.6,&nbsp; SSDT for VS 2017
+
+_Released:_ &nbsp; Aug 31, 2020  
+_Build Number:_ &nbsp; 14.0.16222.0  
+_SSDT for Visual Studio 2017._
+
+### What's New?
+
+| New Item | Details |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | Fixed an issue that **Preview** button doesn't work on the OLE DB source when connecting to a SQL Server Analysis Services (SSAS) data source. |
+| Integration Services (SSIS) | Fixed an issue that removing an input or output of a data flow component before removing the associated path might cause a COMException error. |
+| Integration Services (SSIS) | Fixed an issue that the SSAS Processing task can't connect to a Power BI workspace and refresh its models. |
+| Integration Services (SSIS) | Fixed an issue that Visual Studio hangs on debugging script task/component when using x64 runtime and targeting SQL Server 2017. |
+| Integration Services (SSIS) | Fixed an issue that the Import/Export wizard crashes when selecting a MySQL driver in some environments. |
+| Integration Services (SSIS) | Fixed some issues related to accessibility and high DPI. |
+| Integration Services (SSIS) | Allow users to skip validation when opening packages, which improves performance. For more information, see [Accelerate opening SSIS packages in SSDT](https://techcommunity.microsoft.com/t5/sql-server-integration-services/accelerate-the-opening-of-ssis-package-in-ssdt/ba-p/1607099). |
+| Integration Services (SSIS) | Block deployment to Azure-SSIS when target server version isn't SQL Server 2017. |
+
+### Known issues
+
+| Known issue | Details |
+| :---------- | :------ |
+| SSIS Execute Package Task doesn't support debugging when ExecuteOutOfProcess is set to True. | This issue applies only to debugging. Save, deploy, and execution via DTExec.exe or SSIS catalog isn't affected. |
+| Power Query Source might not support OData v4 when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
+| Power Query Source might not support using ODBC to connect to Oracle when SSIS and SSAS are installed on the same Visual Studio instance. | &nbsp; |
+| Power Query Source isn't localized. | &nbsp; |
+| &nbsp; | &nbsp; |
 
 ## 15.9.5,&nbsp; SSDT for VS 2017
 
@@ -636,7 +665,7 @@ _SSDT for Visual Studio 2015._
 
 **AS projects**
 - Significant performance fixes made to improve experience when committing DAX measure changes and other model edits.
-- Fixed a number of issues with Power Query integration in Analysis Services projects using 1400-compatability level tabular models.
+- Fixed a number of issues with Power Query integration in Analysis Services projects using 1400-compatibility level tabular models.
 - Fixed an issue in Multi-Dimensional projects in VS2017 only where Design Aggregation designer may fail to load.
 - Fixed an issue when dragging an item in the Analysis Services multi-dimensional DSV diagram that could crash VS 2017.
 - Fixed an issue in AS projects where the Deploy Dialog was not always in the foreground on top of Visual Studio.
@@ -985,7 +1014,7 @@ _For SQL Server 2016._
 **Updates and fixes**
 * **Database tools:**
     * From now on SSDT will never disable Transparent Data Encryption (TDE) on a database. Previously since the default encryption option in a project's database settings was disabled, it would turn off encryption. With this fix encryption can be enabled but never disabled during publish. 
-    * Increased the retry count and resiliency for Azure SQL DB connections during initial connection.
+    * Increased the retry count and resiliency for Azure SQL Database connections during initial connection.
     * If the default filegroup is not PRIMARY, Import/Publish to Azure V12 would fail. Now this setting is ignored when publishing.
     * Fixed an issue where when exporting a database with an object with Quoted Identifier on, export validation could fail in some instances.
     * Fixed an issue where the TEXTIMAGE_ON option was incorrectly added for Hekaton table creations where it is not allowed.

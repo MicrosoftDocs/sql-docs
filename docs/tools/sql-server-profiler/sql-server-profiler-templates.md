@@ -54,8 +54,7 @@ You can use [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] to cre
   
 ## See Also  
  [Create a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/create-a-trace-template-sql-server-profiler.md)   
- [Modify a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/modify-a-trace-template-sql-server-profiler.md)   
+ [Modify a Trace Template &#40;SQL Server Profiler&#41;](./modify-trace-templates.md?view=sql-server-ver15)   
  [Export a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/export-a-trace-template-sql-server-profiler.md)   
  [Import a Trace Template &#40;SQL Server Profiler&#41;](../../tools/sql-server-profiler/import-a-trace-template-sql-server-profiler.md)  
-  
   

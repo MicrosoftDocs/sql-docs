@@ -1,4 +1,5 @@
 ---
+description: "UPDATE - Trigger Functions (Transact-SQL)"
 title: "UPDATE() (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -40,7 +41,9 @@ ms.author: jrasnick
 UPDATE ( column )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *column*  
  Is the name of the column to test for either an INSERT or UPDATE action. Because the table name is specified in the ON clause of the trigger, do not include the table name before the column name. The column can be of any [data type](../../t-sql/data-types/data-types-transact-sql.md) supported by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. However, computed columns cannot be used in this context.  
   

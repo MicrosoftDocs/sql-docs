@@ -1,4 +1,5 @@
 ---
+description: "Objects Created on the Oracle Publisher"
 title: "Objects Created on the Oracle Publisher | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

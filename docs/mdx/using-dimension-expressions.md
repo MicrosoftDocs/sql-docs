@@ -1,4 +1,5 @@
 ---
+description: "Using Dimension Expressions"
 title: "Using Dimension Expressions | Microsoft Docs"
 ms.date: 06/04/2018
 ms.prod: sql

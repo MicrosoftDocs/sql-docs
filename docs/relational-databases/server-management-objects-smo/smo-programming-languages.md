@@ -1,4 +1,5 @@
 ---
+description: "SMO Programming Languages"
 title: "Programming Languages | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
@@ -21,7 +22,7 @@ ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SMO Programming Languages
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   This section describes how to program [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Objects (SMO) in [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C# .NET.
   

@@ -1,4 +1,5 @@
 ---
+description: "sp_refreshsqlmodule (Transact-SQL)"
 title: "sp_refreshsqlmodule (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/25/2018"
@@ -28,7 +29,7 @@ ms.author: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_refreshsqlmodule (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Updates the metadata for the specified non-schema-bound stored procedure, user-defined function, view, DML trigger, database-level DDL trigger, or server-level DDL trigger in the current database. Persistent metadata for these objects, such as data types of parameters, can become outdated because of changes to their underlying objects.
   
@@ -55,12 +56,11 @@ sys.sp_refreshsqlmodule [ @name = ] 'module_name'
   
 `[ , @namespace = ] ' \<class> '`
  Is the class of the specified module. When *module_name* is a DDL trigger, \<class> is required. *\<class>* is **nvarchar**(20). Valid inputs are:  
-  
-|||  
-|-|-|  
-|DATABASE_DDL_TRIGGER||  
-|SERVER_DDL_TRIGGER|**Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.|  
-  
+
+* DATABASE_DDL_TRIGGER
+
+* SERVER_DDL_TRIGGER - **Applies to**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later.
+
 ## Return Code Values  
  0 (success) or a nonzero number (failure)  
   

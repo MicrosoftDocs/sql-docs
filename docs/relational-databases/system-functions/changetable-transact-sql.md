@@ -1,4 +1,5 @@
 ---
+description: "CHANGETABLE (Transact-SQL)"
 title: "CHANGETABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2016"

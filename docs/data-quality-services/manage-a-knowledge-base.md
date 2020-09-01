@@ -1,4 +1,5 @@
 ---
+description: "Manage a Knowledge Base"
 title: "Manage a Knowledge Base"
 ms.date: "06/04/2013"
 ms.prod: sql

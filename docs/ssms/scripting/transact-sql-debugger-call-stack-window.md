@@ -1,8 +1,9 @@
 ---
 title: Call Stack Window
+description: Learn how to use the Call Stack Window of the Transact-SQL debugger to see parameter data types, and also values of stored procedures, functions, and triggers.
 titleSuffix: T-SQL debugger
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.topic: conceptual
 helpviewer_keywords: 
   - "Call Stack Window [Transact-SQL]"

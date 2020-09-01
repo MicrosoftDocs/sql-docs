@@ -1,4 +1,5 @@
 ---
+description: "setBytes Method (long, byte)"
 title: "setBytes Method (long, byte) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

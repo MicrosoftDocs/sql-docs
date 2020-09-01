@@ -1,4 +1,5 @@
 ---
+description: "DBCC CHECKTABLE (Transact-SQL)"
 title: "DBCC CHECKTABLE (Transact-SQL) | Microsoft Docs"
 ms.date: "11/14/2017"
 ms.prod: sql
@@ -56,7 +57,9 @@ DBCC CHECKTABLE
     ]    
 ```    
     
-## Arguments    
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table_name* | *view_name*  
  Is the table or indexed view for which to run integrity checks. Table or view names must comply with the rules for [identifiers](../../relational-databases/databases/database-identifiers.md).  
     

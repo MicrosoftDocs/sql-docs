@@ -1,4 +1,5 @@
 ---
+description: "BEGIN CONVERSATION TIMER (Transact-SQL)"
 title: "BEGIN CONVERSATION TIMER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -49,7 +50,9 @@ BEGIN CONVERSATION TIMER ( conversation_handle )
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  BEGIN CONVERSATION TIMER **(**_conversation\_handle_**)**  
  Specifies the conversation to time. The *conversation_handle* must be of type **uniqueidentifier**.  
   

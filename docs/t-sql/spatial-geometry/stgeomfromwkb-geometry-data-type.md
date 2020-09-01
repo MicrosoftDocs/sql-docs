@@ -1,4 +1,5 @@
 ---
+description: "STGeomFromWKB (geometry Data Type)"
 title: "STGeomFromWKB (geometry Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/03/2017"
@@ -30,7 +31,9 @@ Returns a **geometry** instance from an Open Geospatial Consortium (OGC) Well-Kn
 STGeomFromWKB ( 'WKB_geometry' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *WKB_geometry*  
  Is the WKB representation of the **geometry** instance you wish to return. *WKB_geometry* is a **varbinary(max)** expression.  
   

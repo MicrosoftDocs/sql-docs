@@ -1,5 +1,6 @@
 ---
-title: "CREATE SYNONYM (Transact-SQL) | Microsoft Docs"
+description: "CREATE SYNONYM (Transact-SQL)"
+title: CREATE SYNONYM (Transact-SQL)
 ms.custom: ""
 ms.date: "04/11/2017"
 ms.prod: sql
@@ -23,7 +24,9 @@ ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
 ---
+
 # CREATE SYNONYM (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
   Creates a new synonym.  
@@ -55,7 +58,9 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name_1*  
  Specifies the schema in which the synonym is created. If *schema* is not specified, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the default schema of the current user.  
   
@@ -83,15 +88,19 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  Synonyms can be created for the following types of objects:  
   
-|||  
-|-|-|  
-|Assembly (CLR) Stored Procedure|Assembly (CLR) Table-valued Function|  
-|Assembly (CLR) Scalar Function|Assembly Aggregate (CLR) Aggregate Functions|  
-|Replication-filter-procedure|Extended Stored Procedure|  
-|SQL Scalar Function|SQL Table-valued Function|  
-|SQL Inline-table-valued Function|SQL Stored Procedure|  
-|View|Table<sup>1</sup> (User-defined)|  
-  
+- Assembly (CLR) Stored Procedure
+- Assembly (CLR) Table-valued Function
+- Assembly (CLR) Scalar Function
+- Assembly Aggregate (CLR) Aggregate Functions
+- Replication-filter-procedure
+- Extended Stored Procedure
+- SQL Scalar Function
+- SQL Table-valued Function
+- SQL Inline-table-valued Function
+- SQL Stored Procedure
+- Table<sup>1</sup> (User-defined)
+- View
+
  <sup>1 Includes local and global temporary tables</sup>  
   
  Four-part names for function base objects are not supported.  

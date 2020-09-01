@@ -1,4 +1,5 @@
 ---
+description: "DBCC FREESYSTEMCACHE (Transact-SQL)"
 title: "DBCC FREESYSTEMCACHE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/25/2020"
@@ -41,7 +42,9 @@ DBCC FREESYSTEMCACHE
     ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 ( 'ALL' [,_pool\_name_ ] )  
 ALL specifies all supported caches.  
 _pool\_name_ specifies a Resource Governor pool cache. Only entries associated with this pool are freed.  

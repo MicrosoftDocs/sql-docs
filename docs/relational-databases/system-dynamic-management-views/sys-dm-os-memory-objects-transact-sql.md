@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_os_memory_objects (Transact-SQL)"
 title: "sys.dm_os_memory_objects (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/13/2017"
@@ -22,7 +23,7 @@ ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_os_memory_objects (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns memory objects that are currently allocated by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. You can use **sys.dm_os_memory_objects** to analyze memory use and to identify possible memory leaks.  
   

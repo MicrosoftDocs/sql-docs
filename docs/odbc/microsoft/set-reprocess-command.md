@@ -1,4 +1,5 @@
 ---
+description: "SET REPROCESS Command"
 title: "SET REPROCESS Command | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

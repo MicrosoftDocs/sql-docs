@@ -1,4 +1,5 @@
 ---
+description: "System Base Tables"
 title: "System Base Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

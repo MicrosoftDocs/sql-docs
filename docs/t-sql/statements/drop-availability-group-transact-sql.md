@@ -1,4 +1,5 @@
 ---
+description: "DROP AVAILABILITY GROUP (Transact-SQL)"
 title: "DROP AVAILABILITY GROUP (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -41,7 +42,9 @@ DROP AVAILABILITY GROUP group_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *group_name*  
  Specifies the name of the availability group to be dropped.  
   

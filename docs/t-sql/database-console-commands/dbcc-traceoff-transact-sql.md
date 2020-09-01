@@ -1,4 +1,5 @@
 ---
+description: "DBCC TRACEOFF (Transact-SQL)"
 title: "DBCC TRACEOFF (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/17/2017"
@@ -35,7 +36,9 @@ Disables the specified trace flags.
 DBCC TRACEOFF ( trace# [ ,...n ] [ , -1 ] ) [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *trace#*  
 Is the number of the trace flag to disable.  
   

@@ -1,4 +1,5 @@
 ---
+description: "ALTER DATABASE Database Mirroring (Transact-SQL)"
 title: "ALTER DATABASE Database Mirroring (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2019"
@@ -56,6 +57,8 @@ SET { <partner_option> | <witness_option> }
             }
   
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

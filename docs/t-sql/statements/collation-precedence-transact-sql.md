@@ -1,4 +1,5 @@
 ---
+description: "Collation Precedence"
 title: "Collation Precedence | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -28,7 +29,7 @@ ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Collation Precedence
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Collation precedence, also known as collation coercion rules, determines the following:  
   
@@ -221,16 +222,63 @@ THE CAST, CONVERT, and COLLATE functions are collation sensitive for **char**, *
  For the built-in functions that return a string but do not take a string input, the result string is Coercible-default and is assigned either the collation of the current database, or the collation of the database that contains the user-defined function, stored procedure, or trigger in which the function is referenced.  
   
  The following functions are collation-sensitive and their output strings have the collation label of the input string:  
-  
-|||  
-|-|-|  
-|CHARINDEX|REPLACE|  
-|DIFFERENCE|REVERSE|  
-|ISNUMERIC|RIGHT|  
-|LEFT|SOUNDEX|  
-|LEN|STUFF|  
-|LOWER|SUBSTRING|  
-|PATINDEX|UPPER|  
+
+:::row:::
+    :::column:::
+        CHARINDEX
+    :::column-end:::
+    :::column:::
+        REPLACE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        DIFFERENCE
+    :::column-end:::
+    :::column:::
+        REVERSE
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        ISNUMERIC
+    :::column-end:::
+    :::column:::
+        RIGHT
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        LEFT
+    :::column-end:::
+    :::column:::
+        SOUNDEX
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        LEN
+    :::column-end:::
+    :::column:::
+        STUFF
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        LOWER
+    :::column-end:::
+    :::column:::
+        SUBSTRING
+    :::column-end:::
+:::row-end:::
+:::row:::
+    :::column:::
+        PATINDEX
+    :::column-end:::
+    :::column:::
+        UPPER
+    :::column-end:::
+:::row-end:::
   
 ## See Also  
  [COLLATE &#40;Transact-SQL&#41;](~/t-sql/statements/collations.md)   

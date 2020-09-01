@@ -16,7 +16,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 # Binding and Data Transfer of Table-Valued Parameters and Column Values
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Table-valued parameters (TVP), like other parameters, must be bound before they're passed to the server. The application binds table-valued parameters the same way it binds other parameters: using SQLBindParameter or equivalent calls to SQLSetDescField or SQLSetDescRec. The server data type for a table-valued parameter is SQL_SS_TABLE. The C type can be specified either as SQL_C_DEFAULT or SQL_C_BINARY.  
 

@@ -1,4 +1,5 @@
 ---
+description: "Modifying Data in a System-Versioned Temporal Table"
 title: "Modifying Data in a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"
@@ -14,7 +15,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Modifying data in a system-versioned temporal table
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 Data in a system-versioned temporal table is modified using regular DML statements with one important difference: period column data cannot be directly modified. When data is updated, it is versioned, with the previous version of each updated row is inserted into the history table. When data is deleted, the delete is logical, with the row moved into the history table from the current table - it is not permanently deleted.
 
@@ -30,7 +33,7 @@ You can construct your **INSERT** statement when you have visible **PERIOD** col
 
   ```sql
   -- Insert with column list and without period columns
-  INSERT INTO [dbo].[Department]0
+  INSERT INTO [dbo].[Department]
     (  [DeptID]
           , [DeptName]
           , [ManagerID]

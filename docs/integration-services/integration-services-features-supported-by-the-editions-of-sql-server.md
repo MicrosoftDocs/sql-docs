@@ -1,4 +1,5 @@
 ---
+description: "Integration Services Features Supported by the Editions of SQL Server"
 title: "Integration Services Features Supported by the Editions of SQL Server | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Integration Services features supported by the editions of SQL Server
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  This topic provides details about the features of SQL Server Integration Services (SSIS) supported by the different editions of [!INCLUDE[ssNoVersion_md](../includes/ssnoversion-md.md)].  

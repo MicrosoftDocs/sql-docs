@@ -1,4 +1,5 @@
 ---
+description: "DROP FULLTEXT STOPLIST (Transact-SQL)"
 title: "DROP FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -40,7 +41,9 @@ DROP FULLTEXT STOPLIST stoplist_name
 ;  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *stoplist_name*  
  Is the name of the full-text stoplist to drop from the database.  
   

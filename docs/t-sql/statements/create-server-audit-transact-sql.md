@@ -1,5 +1,6 @@
 ---
-title: "CREATE SERVER AUDIT (Transact-SQL) | Microsoft Docs"
+description: "CREATE SERVER AUDIT (Transact-SQL)"
+title: CREATE SERVER AUDIT (Transact-SQL)
 ms.custom: ""
 ms.date: "01/07/2019"
 ms.prod: sql
@@ -23,7 +24,9 @@ author: VanMSFT
 ms.author: vanto
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
+
 # CREATE SERVER AUDIT (Transact-SQL)
+
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]
 
   Creates a server audit object using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Audit. For more information, see [SQL Server Audit &#40;Database Engine&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md).  
@@ -67,12 +70,14 @@ CREATE SERVER AUDIT audit_name
     event_field_name { = | < > | ! = | > | > = | < | < = | LIKE } { number | ' string ' }  
 ```  
   
-## Arguments  
- TO { FILE | APPLICATION_LOG | SECURITY_LOG | URL | EXTERNAL_MONITOR } 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
+ TO { FILE \| APPLICATION_LOG \| SECURITY_LOG \| URL \| EXTERNAL_MONITOR } 
  Determines the location of the audit target. The options are a binary file, The Windows Application log, or the Windows Security log. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] cannot write to the Windows Security log without configuring additional settings in Windows. For more information, see [Write SQL Server Audit Events to the Security Log](../../relational-databases/security/auditing/write-sql-server-audit-events-to-the-security-log.md).  
 
 > [!IMPORTANT]
-> In Azure SQL Database managed instance, SQL Audit works at the server level. Locations can only be `URL` or `EXTERNAL_MONITOR`.
+> In Azure SQL Managed Instance, SQL Audit works at the server level. Locations can only be `URL` or `EXTERNAL_MONITOR`.
   
  FILEPATH ='*os_file_path*'  
  The path of the audit log. The file name is generated based on the audit name and audit GUID.  

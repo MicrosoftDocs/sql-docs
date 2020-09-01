@@ -1,4 +1,5 @@
 ---
+description: "Create Make Table Queries (Visual Database Tools)"
 title: Create Make Table Queries
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -19,7 +20,7 @@ ms.reviewer:
 
 ---
 # Create Make Table Queries (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can copy rows into a new table using a Make Table query, which is useful for creating subsets of data to work with or copying the contents of a table from one database to another. A Make Table query is similar to an Insert Results query but creates a new table to copy rows into.  
   
 When you create a Make Table query, you specify:  

@@ -1,4 +1,5 @@
 ---
+description: "REVOKE Full-Text Permissions (Transact-SQL)"
 title: "REVOKE Full-Text Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -40,7 +41,9 @@ REVOKE [ GRANT OPTION FOR ] permission [ ,...n ] ON
     [ AS revoking_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  GRANT OPTION FOR  
  Indicates that the right to grant the specified permission to other principals will be revoked. The permission itself will not be revoked.  
   

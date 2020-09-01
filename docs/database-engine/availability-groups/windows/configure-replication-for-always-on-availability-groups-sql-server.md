@@ -1,6 +1,6 @@
 ---
 title: "Configure replication with availability groups"
-description: "Configure replication with your Always On availability group." 
+description: "Learn the detailed process required to configure SQL Server replication with your Always On availability group." 
 ms.custom: "seodec18"
 ms.date: "01/25/2019"
 ms.prod: sql
@@ -17,14 +17,14 @@ monikerRange: ">=sql-server-2016||=sqlallproducts-allversions"
 ---
 # Configure replication with Always On availability groups
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[sql windows only](../../../includes/applies-to-version/sql-windows-only.md)]
 
   Configuring [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] replication and Always On availability groups involves seven steps. Each step is described in more detail in the following sections.  
   
 ##  <a name="step1"></a> 1. Configure the Database Publications and Subscriptions  
  **Configure the distributor**  
   
- The distribution database cannot be placed in an availability group with SQL Server 2012 and SQL Server 2014. Placing the distribution database into an availability group is supported with SQL 2016 and greater. For more information, see [Configure distribution database in an availability group](../../../relational-databases/replication/configure-distribution-availability-group.md).
+ The distribution database cannot be placed in an availability group with SQL Server 2012 and SQL Server 2014. Placing the distribution database into an availability group is supported with SQL 2016 and greater, except for distribution databases used in merge, bidirectional, or peer-to-peer replication topologies. For more information, see [Configure distribution database in an availability group](../../../relational-databases/replication/configure-distribution-availability-group.md).
   
 1.  Configure distribution at the distributor. If stored procedures are being used for configuration, run **sp_adddistributor**. Use the *\@password* parameter to identify the password that will be used when a remote publisher connects to the distributor. The password will also be needed at each remote publisher when the remote distributor is set up.  
   
@@ -218,9 +218,8 @@ EXEC sys.sp_validate_replica_hosts_as_publishers
 -   [Create or Configure an Availability Group Listener &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/create-or-configure-an-availability-group-listener-sql-server.md)  
   
 ## See Also  
- [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)   
- [Always On Availability Groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
- [SQL Server Replication](../../../relational-databases/replication/sql-server-replication.md)  
-  
-  
+- [Prerequisites, Restrictions, and Recommendations for Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/prereqs-restrictions-recommendations-always-on-availability.md)   
+- [Overview of Always On Availability Groups &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md) 
+- [Always On Availability Groups: Interoperability &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/always-on-availability-groups-interoperability-sql-server.md)   
+- [SQL Server Replication](../../../relational-databases/replication/sql-server-replication.md)  
+- If you are using non-default ports, see [Walkthrough Publisher, Distributor, Subscriber in AlwaysOn Availability Groups](https://repltalk.com/2019/03/09/walkthrough-publisher-distributor-subscriber-in-alwayson-availability-groups).

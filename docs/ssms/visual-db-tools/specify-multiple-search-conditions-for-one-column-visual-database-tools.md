@@ -1,4 +1,5 @@
 ---
+description: "Specify Multiple Search Conditions for One Column (Visual Database Tools)"
 title: Specify Multiple Search Conditions for One Column
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -19,7 +20,7 @@ ms.reviewer:
 
 ---
 # Specify Multiple Search Conditions for One Column (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 In some instances, you might want to apply a number of search conditions to the same data column. For example, you might want to:  
   
 -   Search for several different names in an `employee` table or for employees who are in different salary ranges. This type of search requires an OR condition.  

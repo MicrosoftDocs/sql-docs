@@ -1,4 +1,5 @@
 ---
+description: "Connecting to SQL Server (DB2eToSQL)"
 title: "Connecting to SQL Server (DB2eToSQL) | Microsoft Docs"
 ms.prod: sql
 ms.custom: ""
@@ -7,11 +8,11 @@ ms.reviewer: ""
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: b59803cb-3cc6-41cc-8553-faf90851410e
-author: "Shamikg"
-ms.author: "Shamikg"
+author: "nahk-ivanov"
+ms.author: "alexiva"
 ---
 # Connecting to SQL Server (DB2eToSQL)
-To migrate DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 or Azure SQL DB you must connect to any of these target instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When you connect, SSMA obtains metadata about all the databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and displays database metadata in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadata Explorer. SSMA stores information about which instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you are connected to, but does not store passwords.  
+To migrate DB2 databases to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]2014 or Azure SQL Database you must connect to any of these target instances of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. When you connect, SSMA obtains metadata about all the databases in the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and displays database metadata in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadata Explorer. SSMA stores information about which instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you are connected to, but does not store passwords.  
   
 Your connection to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] stays active until you close the project. When you reopen the project, you must reconnect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] if you want an active connection to the server. You can work offline until you load database objects into [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] and migrate data.  
   
@@ -64,7 +65,7 @@ When you define the connection properties, you also specify the database where o
   
 7.  Click **Connect**.  
   
-**Higher Version Compatability**  
+**Higher Version compatibility**  
   
 -   You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 when the migration project created is [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2005.  
   
@@ -72,16 +73,15 @@ When you define the connection properties, you also specify the database where o
   
 -   You will be able to connect to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 and [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 when the project created is SQL Server 2012.  
   
-||||||  
+|PROJECT TYPE vs. TARGET SERVER VERSION|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Version:13.x)|Azure SQL Database|  
 |-|-|-|-|-|  
-|**PROJECT TYPE Vs TARGET SERVER VERSION**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012 <br />(Version:11.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014 <br />(Version:12.x)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 <br />(Version:13.x)|Azure SQL DB|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012|Yes|Yes|Yes||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014||Yes|Yes||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014|||Yes||  
-|Azure SQL DB||||Yes|  
+|Azure SQL Database||||Yes|  
   
 > [!IMPORTANT]  
-> Conversion of the database objects is carried out as per the project type but not as per the version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you are connected to. In case of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 or Azure SQL DB.  
+> Conversion of the database objects is carried out as per the project type but not as per the version of the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] you are connected to. In case of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2012, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2014, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2016 or Azure SQL Database.  
   
 ## Synchronizing SQL Server Metadata  
 Metadata about [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] databases is not automatically updated. The metadata in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Metadata Explorer is a snapshot of the metadata when you first connected to [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], or the last time that you manually updated metadata. You can manually update metadata for all databases, or for any single database or database object.  

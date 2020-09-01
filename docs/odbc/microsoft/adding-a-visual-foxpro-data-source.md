@@ -1,4 +1,5 @@
 ---
+description: "Adding a Visual FoxPro Data Source"
 title: "Adding a Visual FoxPro Data Source | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

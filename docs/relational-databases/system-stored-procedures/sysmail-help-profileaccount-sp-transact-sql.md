@@ -1,4 +1,5 @@
 ---
+description: "sysmail_help_profileaccount_sp (Transact-SQL)"
 title: "sysmail_help_profileaccount_sp (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -55,9 +56,8 @@ sysmail_help_profileaccount_sp
 ## Result Sets  
  Returns a result set with the following columns.  
   
-||||  
-|-|-|-|  
-|Column name|Data type|Description|  
+| Column name | Data type | Description |
+| ----------- | --------- | ----------- |
 |**profile_id**|**int**|The profile ID of the profile.|  
 |**profile_name**|**sysname**|The name of the profile.|  
 |**account_id**|**int**|The account ID of the account.|  

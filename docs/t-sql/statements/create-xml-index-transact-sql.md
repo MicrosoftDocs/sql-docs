@@ -1,4 +1,5 @@
 ---
+description: "CREATE XML INDEX (Transact-SQL)"
 title: "CREATE XML INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/10/2017"
@@ -68,7 +69,9 @@ CREATE [ PRIMARY ] XML INDEX index_name
   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  [PRIMARY] XML  
  Creates an XML index on the specified **xml** column. When PRIMARY is specified, a clustered index is created with the clustered key formed from the clustering key of the user table and an XML node identifier. Each table can have up to 249 XML indexes. Note the following when you create an XML index:  
   

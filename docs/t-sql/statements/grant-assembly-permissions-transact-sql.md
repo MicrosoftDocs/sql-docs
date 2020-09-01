@@ -1,4 +1,5 @@
 ---
+description: "GRANT Assembly Permissions (Transact-SQL)"
 title: "GRANT Assembly Permissions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/12/2017"
@@ -33,7 +34,9 @@ GRANT { permission [ ,...n ] } ON ASSEMBLY :: assembly_name
     [ AS granting_principal ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *permission*  
  Specifies a permission that can be granted on an assembly. Listed below.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Lat (geography Data Type)"
 title: "Lat (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -29,7 +30,9 @@ ms.author: mlandzic
 .Lat  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] type: **float**  
   
  CLR type: **SqlDouble**  

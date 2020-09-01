@@ -1,4 +1,5 @@
 ---
+description: "Rules for Conversions"
 title: "Rules for Conversions | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

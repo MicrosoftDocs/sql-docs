@@ -1,6 +1,6 @@
 ---
 title: "Configure a distributed availability group"
-description: "Describes how to create and configure an Always On distributed availability group. " 
+description: "Learn how to configure a distributed availability group by using a Transact-SQL example. Also learn where to find information about distributed availability groups." 
 ms.custom: "seodec18"
 ms.date: "01/28/2020"
 ms.prod: sql

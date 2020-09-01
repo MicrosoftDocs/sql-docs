@@ -1,4 +1,5 @@
 ---
+description: "DELETE (Transact-SQL)"
 title: "DELETE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/19/2020"
@@ -28,7 +29,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # DELETE (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Removes one or more rows from a table or view in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   
@@ -103,7 +104,9 @@ DELETE
 [; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  WITH \<common_table_expression>  
  Specifies the temporary named result set, also known as common table expression, defined within the scope of the DELETE statement. The result set is derived from a SELECT statement.  
   

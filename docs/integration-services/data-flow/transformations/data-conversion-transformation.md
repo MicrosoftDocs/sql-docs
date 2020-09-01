@@ -1,4 +1,5 @@
 ---
+description: "Data Conversion Transformation"
 title: "Data Conversion Transformation | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/16/2017"
@@ -20,7 +21,7 @@ ms.author: chugu
 ---
 # Data Conversion Transformation
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Data Conversion transformation converts the data in an input column to a different data type and then copies it to a new output column. For example, a package can extract data from multiple sources, and then use this transformation to convert columns to the data type required by the destination data store. You can apply multiple conversions to a single input column.  

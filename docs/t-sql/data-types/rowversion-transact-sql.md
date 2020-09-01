@@ -1,4 +1,5 @@
 ---
+description: "rowversion (Transact-SQL)"
 title: "rowversion (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"

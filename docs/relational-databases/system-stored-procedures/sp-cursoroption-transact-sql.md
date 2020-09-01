@@ -1,4 +1,5 @@
 ---
+description: "sp_cursoroption (Transact-SQL)"
 title: "sp_cursoroption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

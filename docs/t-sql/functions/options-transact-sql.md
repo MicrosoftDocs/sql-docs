@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;OPTIONS (Transact-SQL)"
 title: "@@OPTIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -33,7 +34,9 @@ ms.author: jrasnick
 @@OPTIONS  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  

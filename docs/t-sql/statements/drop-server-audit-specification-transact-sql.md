@@ -1,4 +1,5 @@
 ---
+description: "DROP SERVER AUDIT SPECIFICATION (Transact-SQL)"
 title: "DROP SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -35,7 +36,9 @@ DROP SERVER AUDIT SPECIFICATION audit_specification_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *audit_specification_name*  
  Name of an existing server audit specification object.  
   

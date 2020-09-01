@@ -1,4 +1,5 @@
 ---
+description: "Dependencies Property (SqlService Class)"
 title: "Dependencies Property (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"

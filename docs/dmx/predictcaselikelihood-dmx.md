@@ -1,4 +1,5 @@
 ---
+description: "PredictCaseLikelihood (DMX)"
 title: "PredictCaseLikelihood (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # PredictCaseLikelihood (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   This function returns the likelihood that an input case will fit in the existing model. Used only with clustering models.  
   

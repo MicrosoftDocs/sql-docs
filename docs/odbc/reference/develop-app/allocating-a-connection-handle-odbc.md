@@ -1,4 +1,5 @@
 ---
+description: "Allocating a Connection Handle ODBC"
 title: "Allocating a Connection Handle ODBC | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

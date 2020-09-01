@@ -1,4 +1,5 @@
 ---
+description: "setFloat Method (SQLServerCallableStatement)"
 title: "setFloat Method (SQLServerCallableStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

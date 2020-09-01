@@ -1,4 +1,5 @@
 ---
+description: "&#x40;&#x40;IO_BUSY (Transact-SQL)"
 title: "@@IO_BUSY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/18/2017"
@@ -38,8 +39,10 @@ ms.author: maghan
 ```  
 @@IO_BUSY  
 ```  
-  
-## Return Types  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **integer**  
   
 ## Remarks  

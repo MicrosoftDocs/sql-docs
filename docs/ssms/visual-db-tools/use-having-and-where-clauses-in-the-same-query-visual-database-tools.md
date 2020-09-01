@@ -1,4 +1,5 @@
 ---
+description: "Use HAVING and WHERE Clauses in the Same Query (Visual Database Tools)"
 title: Use HAVING and WHERE Clauses in the Same Query
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -22,7 +23,7 @@ ms.author: maghan
 ms.reviewer: 
 ---
 # Use HAVING and WHERE Clauses in the Same Query (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 In some instances, you might want to exclude individual rows from groups (using a WHERE clause) before applying a condition to groups as a whole (using a HAVING clause).  
   
 A HAVING clause is like a WHERE clause, but applies only to groups as a whole (that is, to the rows in the result set representing groups), whereas the WHERE clause applies to individual rows. A query can contain both a WHERE clause and a HAVING clause. In that case:  

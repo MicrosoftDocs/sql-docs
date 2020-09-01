@@ -1,4 +1,5 @@
 ---
+description: "APP_NAME (Transact-SQL)"
 title: "APP_NAME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/24/2017"
@@ -39,7 +40,9 @@ This function returns the application name for the current session, if the appli
 APP_NAME  ( )  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
 **nvarchar(128)**
   
 ## Remarks  

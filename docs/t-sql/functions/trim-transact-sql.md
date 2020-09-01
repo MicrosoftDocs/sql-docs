@@ -1,4 +1,5 @@
 ---
+description: "TRIM (Transact-SQL)"
 title: "TRIM (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/27/2019"
@@ -21,7 +22,7 @@ monikerRange: "= azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sq
 ---
 # TRIM (Transact-SQL)
 
-[!INCLUDE [sqlserver2017-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asdw.md)]
+[!INCLUDE [sqlserver2017-asdb-asdbmi-asa](../../includes/applies-to-version/sqlserver2017-asdb-asdbmi-asa.md)]
 
 Removes the space character `char(32)` or other specified characters from the start and end of a string.  
 
@@ -36,6 +37,8 @@ TRIM ( [ characters FROM ] string )
 -- Syntax for Azure SQL Data Warehouse
 TRIM ( string )
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

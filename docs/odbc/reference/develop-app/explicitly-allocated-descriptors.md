@@ -1,4 +1,5 @@
 ---
+description: "Explicitly Allocated Descriptors"
 title: "Explicitly Allocated Descriptors | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

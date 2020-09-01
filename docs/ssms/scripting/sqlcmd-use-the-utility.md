@@ -1,9 +1,10 @@
 ---
 title: "Use the sqlcmd Utility"
+description: Learn how to use the sqlcmd utility for ad hoc interactive execution of Transact-SQL statements and scripts, and for automating Transact-SQL scripting tasks.
 ms.custom: seo-lt-2019
 ms.date: "06/06/2017"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 dev_langs: 
@@ -19,7 +20,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sqlcmd - Use the utility
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The **sqlcmd** utility is a command-line utility for ad hoc, interactive execution of [!INCLUDE[tsql](../../includes/tsql-md.md)] statements and scripts and for automating [!INCLUDE[tsql](../../includes/tsql-md.md)] scripting tasks. To use **sqlcmd** interactively, or to build script files to be run using **sqlcmd**, users must understand [!INCLUDE[tsql](../../includes/tsql-md.md)]. The **sqlcmd** utility is typically used in the following ways:  
   
 -   Users enter [!INCLUDE[tsql](../../includes/tsql-md.md)] statements in a manner similar to working at the command prompt. The results are displayed at the command prompt. To open a Command Prompt window, enter "cmd" in the Windows search box and click **Command Prompt** to open. At the command prompt, type **sqlcmd** followed by a list of options that you want. For a complete list of the options that are supported by **sqlcmd**, see [sqlcmd Utility](../../tools/sqlcmd-utility.md).  

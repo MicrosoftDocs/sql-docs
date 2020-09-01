@@ -1,4 +1,5 @@
 ---
+description: "MERGE (Transact-SQL)"
 title: "MERGE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/20/2019"
@@ -49,7 +50,7 @@ WHERE NOT EXISTS (SELECT col FROM tbl_A A2 WHERE A2.col = tbl_B.col);
 MERGE
     [ TOP ( expression ) [ PERCENT ] ]
     [ INTO ] <target_table> [ WITH ( <merge_hint> ) ] [ [ AS ] table_alias ]  
-    USING <table_source>
+    USING <table_source> [ [ AS ] table_alias ]
     ON <merge_search_condition>  
     [ WHEN MATCHED [ AND <clause_search_condition> ]  
         THEN <merge_matched> ] [ ...n ]  
@@ -90,6 +91,8 @@ MERGE
     <search_condition> 
 ```  
   
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 WITH \<common_table_expression>  
@@ -116,12 +119,15 @@ If *target_table* is a view, any actions against it must satisfy the conditions 
 *target_table* can't be a remote table. *target_table* can't have any rules defined on it.  
   
 [ AS ] *table_alias*  
-An alternative name to reference a table.  
+An alternative name to reference a table for the *target_table*.  
   
 USING \<table_source>  
 Specifies the data source that's matched with the data rows in *target_table* based on \<merge_search condition>. The result of this match dictates the actions to take by the WHEN clauses of the MERGE statement. \<table_source> can be a remote table or a derived table that accesses remote tables.
   
 \<table_source> can be a derived table that uses the [!INCLUDE[tsql](../../includes/tsql-md.md)] [table value constructor](../../t-sql/queries/table-value-constructor-transact-sql.md) to construct a table by specifying multiple rows.  
+  
+ [ AS ] *table_alias*  
+An alternative name to reference a table for the table_source.   
   
 For more information about the syntax and arguments of this clause, see [FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md).  
   

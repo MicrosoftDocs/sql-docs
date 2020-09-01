@@ -1,4 +1,5 @@
 ---
+description: "ALTER FULLTEXT CATALOG (Transact-SQL)"
 title: "ALTER FULLTEXT CATALOG (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -41,7 +42,9 @@ ALTER FULLTEXT CATALOG catalog_name
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *catalog_name*  
  Specifies the name of the catalog to be modified. If a catalog with the specified name does not exist, [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] returns an error and does not perform the ALTER operation.  
   

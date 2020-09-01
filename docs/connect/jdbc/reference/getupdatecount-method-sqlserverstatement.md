@@ -1,4 +1,5 @@
 ---
+description: "getUpdateCount Method (SQLServerStatement)"
 title: "getUpdateCount Method (SQLServerStatement) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "SAP BW Source Editor (Error Output Page)"
 title: "SAP BW Source Editor (Error Output Page) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # SAP BW Source Editor (Error Output Page)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   Use the **Error Output** page of the **SAP BW Source Editor** to select error handling options and to set properties on error output columns.  

@@ -1,5 +1,6 @@
 ---
-title: "Binding Relational Data Inside XML Data | Microsoft Docs"
+description: "Binding Relational Data Inside XML Data"
+title: Binding Relational Data Inside XML Data
 ms.custom: ""
 ms.date: "07/26/2017"
 ms.prod: sql

@@ -1,4 +1,5 @@
 ---
+description: "END CONVERSATION (Transact-SQL)"
 title: "END CONVERSATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -43,7 +44,9 @@ END CONVERSATION conversation_handle
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *conversation_handle*  
  Is the conversation handle for the conversation to end.  
   

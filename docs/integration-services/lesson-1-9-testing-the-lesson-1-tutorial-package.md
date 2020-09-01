@@ -1,4 +1,5 @@
 ---
+description: "Step 9: Test the Lesson 1 tutorial package"
 title: "Step 9: Test the Lesson 1 tutorial package | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/03/2019"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 1-9: Test the Lesson 1 package
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

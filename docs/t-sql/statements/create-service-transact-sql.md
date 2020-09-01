@@ -1,4 +1,5 @@
 ---
+description: "CREATE SERVICE (Transact-SQL)"
 title: "CREATE SERVICE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -39,7 +40,9 @@ CREATE SERVICE service_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *service_name*  
  Is the name of the service to create. A new service is created in the current database and owned by the principal specified in the AUTHORIZATION clause. Server, database, and schema names cannot be specified. The *service_name* must be a valid **sysname**.  
   

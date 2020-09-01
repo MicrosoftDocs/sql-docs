@@ -1,4 +1,5 @@
 ---
+description: "DROP APPLICATION ROLE (Transact-SQL)"
 title: "DROP APPLICATION ROLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/15/2017"
@@ -36,7 +37,9 @@ ms.author: vanto
 DROP APPLICATION ROLE rolename  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *rolename*  
  Specifies the name of the application role to be dropped.  
   

@@ -1,4 +1,5 @@
 ---
+description: "UPDATE STATISTICS (Transact-SQL)"
 title: "UPDATE STATISTICS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2018"
@@ -23,7 +24,7 @@ ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # UPDATE STATISTICS (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Updates query optimization statistics on a table or indexed view. By default, the query optimizer already updates statistics as necessary to improve the query plan; in some cases you can improve query performance by using `UPDATE STATISTICS` or the stored procedure [sp_updatestats](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) to update statistics more frequently than the default updates.  
   
@@ -80,7 +81,9 @@ UPDATE STATISTICS [ schema_name . ] table_name
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table_or_indexed_view_name*  
  Is the name of the table or indexed view that contains the statistics object.  
   
@@ -207,23 +210,23 @@ Leverage solutions such as [Adaptive Index Defrag](https://github.com/Microsoft/
  The following syntax is not supported by PDW / SQL Data Warehouse  
   
 ```syntaxsql
-update statistics t1 (a,b);   
+UPDATE STATISTICS t1 (a,b);   
 ```  
   
 ```sql  
-update statistics t1 (a) with sample 10 rows;  
+UPDATE STATISTICS t1 (a) WITH SAMPLE 10 ROWS;  
 ```  
   
 ```sql  
-update statistics t1 (a) with NORECOMPUTE;  
+UPDATE STATISTICS t1 (a) WITH NORECOMPUTE;  
 ```  
   
 ```sql  
-update statistics t1 (a) with INCREMENTAL=ON;  
+UPDATE STATISTICS t1 (a) WITH INCREMENTAL = ON;  
 ```  
   
 ```sql  
-update statistics t1 (a) with stats_stream = 0x01;  
+UPDATE STATISTICS t1 (a) WITH stats_stream = 0x01;  
 ```  
   
 ## Permissions  

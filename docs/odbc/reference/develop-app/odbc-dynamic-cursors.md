@@ -1,4 +1,5 @@
 ---
+description: "ODBC Dynamic Cursors"
 title: "ODBC Dynamic Cursors | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

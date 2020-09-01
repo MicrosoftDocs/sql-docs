@@ -1,4 +1,5 @@
 ---
+description: "Parse (Database Engine)"
 title: "Parse (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
@@ -38,7 +39,9 @@ CAST ( input AS hierarchyid )
 static SqlHierarchyId Parse ( SqlString input )   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *input*  
 [!INCLUDE[tsql](../../includes/tsql-md.md)]: The character data type value that is being converted.
   

@@ -1,4 +1,5 @@
 ---
+description: "Deprecation Final Support Event Class"
 title: "Deprecation Final Support Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

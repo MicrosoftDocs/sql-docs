@@ -1,4 +1,5 @@
 ---
+description: "Variables (Transact-SQL)"
 title: "Variables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"
@@ -15,7 +16,7 @@ ms.author: jroth
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Variables (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 A Transact-SQL local variable is an object that can hold a single data value of a specific type. Variables in batches and scripts are typically used: 
 
@@ -24,10 +25,9 @@ A Transact-SQL local variable is an object that can hold a single data value of 
 * To save a data value to be returned by a stored procedure return code or function return value.
 
 > [!NOTE]
-> The names of some Transact-SQL system functions begin with two *at* signs (\@\@). Although in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the \@\@functions are referred to as global variables, they are not variables and do not have the same behaviors as variables. The \@\@functions are system functions, and their syntax usage follows the rules for functions.
-
-> [!NOTE]
-> Variables can not be used in views.
+> - The names of some Transact-SQL system functions begin with two *at* signs (\@\@). Although in earlier versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], the \@\@functions are referred to as global variables, \@\@functions aren't variables, and they don't have the same behaviors as variables. The \@\@functions are system functions, and their syntax usage follows the rules for functions.
+> - You can't use variables in a view.
+> - Changes to variables aren't affected by the rollback of a transaction.
 
 The following script creates a small test table and populates it with 26 rows. The script uses a variable to do three things: 
 

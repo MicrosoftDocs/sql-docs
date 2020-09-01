@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED"
 title: "LOCALDB_ERROR_AUTO_INSTANCE_CREATE_FAILED | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -15,7 +16,7 @@ ms.author: "sstein"
     
 ## Details  
   
-|||  
+|Category|Value|  
 |-|-|  
 |Product Name|SQL Server|  
 |Event ID|280|  

@@ -1,4 +1,5 @@
 ---
+description: "DBCC SHRINKFILE (Transact-SQL)"
 title: "DBCC SHRINKFILE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "11/14/2017"
@@ -51,7 +52,9 @@ DBCC SHRINKFILE
 [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *file_name*  
 The file to be shrunk's logical name.
   

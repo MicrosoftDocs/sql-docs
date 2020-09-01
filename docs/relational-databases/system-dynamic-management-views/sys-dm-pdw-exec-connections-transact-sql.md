@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_pdw_exec_connections (Transact-SQL)"
 title: "sys.dm_pdw_exec_connections (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -14,7 +15,7 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.dm_pdw_exec_connections (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Returns information about the connections established to this instance of [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] and the details of each connection.  
   
@@ -32,8 +33,8 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
   
 ## Relationship Cardinalities  
   
-||||  
-|-|-|-|  
+| From | To | Relationship |
+| ---- | -- | ------------ |
 |dm_pdw_exec_sessions.session_id|dm_pdw_exec_connections.session_id|One-to-one|  
 |dm_pdw_exec_requests.connection_id|dm_pdw_exec_connections.connection_id|Many to one|  
   

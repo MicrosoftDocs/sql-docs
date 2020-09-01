@@ -1,4 +1,5 @@
 ---
+description: "sys.availability_groups (Transact-SQL)"
 title: "sys.availability_groups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"
@@ -40,7 +41,12 @@ ms.author: carlrab
 |**basic_features**|**bit**|Specifies whether this is a Basic availability group. For more information, see [Basic Availability Groups &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/basic-availability-groups-always-on-availability-groups.md).|  
 |**dtc_support**|**bit**|Specifies whether DTC support has been enabled for this availability group. The **DTC_SUPPORT** option of **CREATE AVAILABILITY GROUP** controls this setting.|  
 |**db_failover**|**bit**|Specifies whether the availability group supports failover for database health conditions. The **DB_FAILOVER** option of **CREATE AVAILABILITY GROUP** controls this setting.|  
-|**is_distributed**|**bit**|Specifies whether this is a distributed availability group. For more information, see [Distributed Availability Groups &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|  
+|**is_distributed**|**bit**|Specifies whether this is a distributed availability group. For more information, see [Distributed Availability Groups &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/distributed-availability-groups-always-on-availability-groups.md).|
+|**cluster_type**|**tinyint**|0: Windows Server failover cluster <br/><br/>1: External cluster (for example, Linux Pacemaker)<br/><br/>2: None|
+|**cluster_type_desc**|**nvarchar(60)**|Text description of cluster type|
+|**required_synchronized_secondaries_to_commit**|**int**| The number of secondary replicas that must be in a synchronized state for a commit  to complete|
+|**sequence_number**|**bigint**|Identifies the availability group configuration sequence. Incrementally increases every time the availability group primary replica updates the configuration of the group.|
+|**is_contained**|**bit**|1: Big data cluster master instance configured for high-availability. <br/><br/> 0: all other.|
   
 ## Failure condition level  values  
  The following table describes the possible failure condition levels for the **failure_condition_level** column.  

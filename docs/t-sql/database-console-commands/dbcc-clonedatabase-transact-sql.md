@@ -1,4 +1,5 @@
 ---
+description: "DBCC CLONEDATABASE (Transact-SQL)"
 title: "DBCC CLONEDATABASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 04/23/2019
@@ -56,7 +57,9 @@ DBCC CLONEDATABASE
     [ WITH { [ NO_STATISTICS ] [ , NO_QUERYSTORE ] [ , VERIFY_CLONEDB | SERVICEBROKER ] [ , BACKUP_CLONEDB ] } ]     
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *source_database_name*  
 The name of the database to be copied. 
   

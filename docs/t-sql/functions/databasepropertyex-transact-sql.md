@@ -1,4 +1,5 @@
 ---
+description: "DATABASEPROPERTYEX (Transact-SQL)"
 title: "DATABASEPROPERTYEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/23/2018"
@@ -22,7 +23,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATABASEPROPERTYEX (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 For a specified database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], this function returns the current setting of the specified database option or property.
   
@@ -34,7 +35,9 @@ For a specified database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md
 DATABASEPROPERTYEX ( database , property )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *database*  
 An expression specifying the name of the database for which `DATABASEPROPERTYEX` will return the named property information. *database* has an **nvarchar(128)** data type.  
 

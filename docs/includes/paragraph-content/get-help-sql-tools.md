@@ -6,7 +6,7 @@ author: rothja
 ms.author: jroth
 ---
 
-## Get help for SQL tools
+## :::image type="icon" source="../media/info-tip.png" border="false"::: Get help for SQL tools
 
 - [All the ways to get help](https://docs.microsoft.com/sql/sql-server/sql-server-get-help)
 - [Submit an Azure Data Studio Git issue](https://github.com/Microsoft/azuredatastudio/issues)

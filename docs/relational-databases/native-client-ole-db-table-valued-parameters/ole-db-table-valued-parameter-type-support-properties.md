@@ -1,4 +1,5 @@
 ---
+description: "OLE DB Table-Valued Parameter Type Support in SQL Server Native Client (Properties)"
 title: "OLE DB Table-Valued Parameter type (Properties)"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -14,8 +15,8 @@ author: markingmyname
 ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
-# OLE DB Table-Valued Parameter Type Support (Properties)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+# OLE DB Table-Valued Parameter Type Support in SQL Server Native Client (Properties)
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   This topic provides information about OLE DB properties and property sets that are associated with table-valued parameter rowset objects.  
   

@@ -1,4 +1,5 @@
 ---
+description: "About Dialog Box"
 title: "About Dialog Box"
 ms.prod: sql
 ms.prod_service: "sql-tools"
@@ -17,7 +18,7 @@ ms.date: "01/19/2017"
 
 # About Dialog Box
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]  
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]  
 The **About** dialog box provides product information and allows you to access information about the machine the product is running on. For evaluation copies, the [!INCLUDE[msCoName](../includes/msconame_md.md)] [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] entry lists the number of days remaining until the installation expires. This dialog box is available on the **Help** menu.  
   
 ## Options  

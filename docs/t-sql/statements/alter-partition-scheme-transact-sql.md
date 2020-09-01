@@ -1,4 +1,5 @@
 ---
+description: "ALTER PARTITION SCHEME (Transact-SQL)"
 title: "ALTER PARTITION SCHEME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -41,7 +42,10 @@ ALTER PARTITION SCHEME partition_scheme_name
 NEXT USED [ filegroup_name ] [ ; ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *partition_scheme_name*  
  Is the name of the partition scheme to be altered.  
   

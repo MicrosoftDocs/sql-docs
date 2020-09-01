@@ -1,6 +1,6 @@
 ---
 title: "Send BLOB Data to SQL Server Using IROWSETFASTLOAD and ISEQUENTIALSTREAM | Microsoft Docs"
-description: "Send BLOB data to SQL Server using IROWSETFASTLOAD and ISEQUENTIALSTREAM"
+description: Learn how to use IRowsetFastLoad to stream varying length BLOB data per row to SQL Server. This example also demonstrates ISequentialStream.
 ms.custom: ""
 ms.date: "05/25/2020"
 ms.prod: sql
@@ -8,11 +8,11 @@ ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Send BLOB Data to SQL SERVER Using IROWSETFASTLOAD and ISEQUENTIALSTREAM (OLE DB)
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

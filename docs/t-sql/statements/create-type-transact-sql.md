@@ -1,4 +1,5 @@
 ---
+description: "CREATE TYPE (Transact-SQL)"
 title: "CREATE TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/05/2019"
@@ -159,7 +160,9 @@ column_name <data_type>
 }  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of the schema to which the alias data type or user-defined type belongs.  
   

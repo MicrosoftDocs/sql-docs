@@ -1,4 +1,5 @@
 ---
+description: "catalog.cleanup_server_log"
 title: "catalog.cleanup_server_log | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # catalog.cleanup_server_log 
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

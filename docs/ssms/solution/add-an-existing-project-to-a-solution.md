@@ -1,4 +1,5 @@
 ---
+description: "Add an Existing Project to a Solution"
 title: "Add an Existing Project to a Solution"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -18,7 +19,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Add an Existing Project to a Solution
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can add one or more projects to an existing solution. A project can be associated with more than one solution.  
   
 ### To add an existing project to a solution  

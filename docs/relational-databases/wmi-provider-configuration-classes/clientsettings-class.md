@@ -1,4 +1,5 @@
 ---
+description: "ClientSettings Class"
 title: "ClientSettings Class"
 ms.custom: ""
 ms.date: "03/14/2017"

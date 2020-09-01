@@ -1,4 +1,5 @@
 ---
+description: "ALTER BROKER PRIORITY (Transact-SQL)"
 title: "ALTER BROKER PRIORITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -44,7 +45,10 @@ FOR CONVERSATION
   
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *ConversationPriorityName*  
  Specifies the name of the conversation priority to be changed. The name must refer to a conversation priority in the current database.  
   

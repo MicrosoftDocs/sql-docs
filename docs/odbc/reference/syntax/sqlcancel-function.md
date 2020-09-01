@@ -1,4 +1,5 @@
 ---
+description: "SQLCancel Function"
 title: "SQLCancel Function | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

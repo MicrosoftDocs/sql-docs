@@ -1,4 +1,5 @@
 ---
+description: "STMLineFromWKB (geography Data Type)"
 title: "STMLineFromWKB (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
@@ -30,7 +31,9 @@ Returns a **geographyMultiLineString** instance from an Open Geospatial Consorti
 STMLineFromWKB ( 'WKB_multilinestring' , SRID )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *WKB_multilinestring*  
  Is the WKB representation of the **geographyMultiLineString** instance to return. *WKB_multilinestring* is a **varbinary(max)** expression.  
   

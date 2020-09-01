@@ -1,4 +1,5 @@
 ---
+description: "Supported Query Types (Visual Database Tools)"
 title: Supported Query Types
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -25,7 +26,7 @@ ms.reviewer:
 
 ---
 # Supported Query Types (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can create the following types of queries in the Diagram and Criteria panes (the graphical panes) of the [Query and View Designer](../../ssms/visual-db-tools/query-and-view-designer-tools-visual-database-tools.md):  
   
 -   **Select query** Retrieves data from one or more tables or views. This type of query creates an SQL SELECT statement.  

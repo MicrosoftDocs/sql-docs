@@ -1,4 +1,5 @@
 ---
+description: "ALTER SERVER AUDIT SPECIFICATION (Transact-SQL)"
 title: "ALTER SERVER AUDIT SPECIFICATION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/01/2017"
@@ -40,7 +41,10 @@ ALTER SERVER AUDIT SPECIFICATION audit_specification_name
 [ ; ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *audit_specification_name*  
  The name of the audit specification.  
   

@@ -1,4 +1,5 @@
 ---
+description: "$PARTITION (Transact-SQL)"
 title: "$PARTITION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -33,7 +34,9 @@ ms.author: jrasnick
 [ database_name. ] $PARTITION.partition_function_name(expression)  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *database_name*  
  Is the name of the database that contains the partition function.  
   

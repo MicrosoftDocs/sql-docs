@@ -1,4 +1,5 @@
 ---
+description: "HOST_ID (Transact-SQL)"
 title: "HOST_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -35,7 +36,9 @@ ms.author: vanto
 HOST_ID ()  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  **char(10)**  
   
 ## Remarks  

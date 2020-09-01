@@ -1,4 +1,5 @@
 ---
+description: "GROUPING_ID (Transact-SQL)"
 title: "GROUPING_ID (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -33,7 +34,9 @@ ms.author: vanto
 GROUPING_ID ( <column_expression>[ ,...n ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  \<column_expression>  
  Is a *column_expression* in a [GROUP BY](../../t-sql/queries/select-group-by-transact-sql.md) clause.  
   

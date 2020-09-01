@@ -1,4 +1,5 @@
 ---
+description: "getMinutesOffset Method (DateTimeOffset)"
 title: "getMinutesOffset Method (DateTimeOffset) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

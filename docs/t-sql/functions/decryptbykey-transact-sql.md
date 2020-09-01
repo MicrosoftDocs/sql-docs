@@ -1,4 +1,5 @@
 ---
+description: "DECRYPTBYKEY (Transact-SQL)"
 title: "DECRYPTBYKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -36,7 +37,9 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
     [ , add_authenticator, { authenticator | @authenticator } ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *ciphertext*  
 A variable of type **varbinary** containing data encrypted with the key.  
   

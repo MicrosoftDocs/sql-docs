@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_plan_attributes (Transact-SQL)"
 title: "sys.dm_exec_plan_attributes (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2017"
@@ -88,7 +89,7 @@ On [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium Tiers, requires the 
 |Option|Value|  
 |------------|-----------|  
 |ANSI_PADDING|1|  
-|Parallel Plan|2|  
+|ParallelPlan<br /><br /> Indicates that the plan parallelism options have changed.|2|  
 |FORCEPLAN|4|  
 |CONCAT_NULL_YIELDS_NULL|8|  
 |ANSI_WARNINGS|16|  

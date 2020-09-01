@@ -1,4 +1,5 @@
 ---
+description: "sp_remoteoption (Transact-SQL)"
 title: "sp_remoteoption (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

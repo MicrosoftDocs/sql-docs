@@ -1,4 +1,5 @@
 ---
+description: "SIGNBYASYMKEY (Transact-SQL)"
 title: "SIGNBYASYMKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -38,7 +39,9 @@ ms.author: vanto
 SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *Asym_Key_ID*  
  Is the ID of an asymmetric key in the current database. *Asym_Key_ID* is**int**.  
   

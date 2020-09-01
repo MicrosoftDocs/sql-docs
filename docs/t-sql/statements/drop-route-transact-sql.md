@@ -1,4 +1,5 @@
 ---
+description: "DROP ROUTE (Transact-SQL)"
 title: "DROP ROUTE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -37,7 +38,9 @@ DROP ROUTE route_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *route_name*  
  The name of the route to drop. Server, database, and schema names cannot be specified.  
   

@@ -1,4 +1,5 @@
 ---
+description: "PWDCOMPARE (Transact-SQL)"
 title: "PWDCOMPARE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -36,7 +37,9 @@ PWDCOMPARE ( 'clear_text_password'
    [ , version ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **'** *clear_text_password* **'**  
  Is the unencrypted password. *clear_text_password* is **sysname** (**nvarchar(128)**).  
   

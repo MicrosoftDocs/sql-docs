@@ -1,4 +1,5 @@
 ---
+description: "SQL Server Collation Name (Transact-SQL)"
 title: "SQL Server Collation Name (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "02/21/2019"
@@ -20,7 +21,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ---
 # SQL Server Collation Name (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Is a single string that specifies the collation name for a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] collation.
 
@@ -37,6 +38,8 @@ SQL_SortRules[_Pref]_CPCodepage_<ComparisonStyle>
 <ComparisonStyle> ::=
 _CaseSensitivity_AccentSensitivity | _BIN
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

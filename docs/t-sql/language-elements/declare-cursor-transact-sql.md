@@ -1,4 +1,5 @@
 ---
+description: "DECLARE CURSOR (Transact-SQL)"
 title: "DECLARE CURSOR (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -51,7 +52,9 @@ DECLARE cursor_name CURSOR [ LOCAL | GLOBAL ]
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *cursor_name*  
  Is the name of the [!INCLUDE[tsql](../../includes/tsql-md.md)] server cursor defined. *cursor_name* must conform to the rules for identifiers.  
   

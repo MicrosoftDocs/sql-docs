@@ -1,6 +1,6 @@
 ---
-title: "Filestream and OLE DB | Microsoft Docs"
-description: "Filestream and OLE DB"
+title: "Filestream and OLE DB (OLE DB driver) | Microsoft Docs"
+description: Learn how to use OLE DB Driver for SQL Server with the filestream feature with the four examples in this section.
 ms.custom: ""
 ms.date: "06/14/2018"
 ms.prod: sql
@@ -8,11 +8,11 @@ ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Filestream and OLE DB
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../../includes/driver_oledb_download.md)]
 

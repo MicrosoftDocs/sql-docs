@@ -1,4 +1,5 @@
 ---
+description: "Open and Configure Object Explorer"
 title: "Open and Configure Object Explorer"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -12,7 +13,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Open and Configure Object Explorer
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Open Object Explorer by using the **View** menu in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. Configure Obect Explorer options by using **Options** on the **Tools** menu.  
   
 ## Viewing Object Explorer  

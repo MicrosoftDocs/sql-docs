@@ -1,4 +1,5 @@
 ---
+description: "GET_TRANSMISSION_STATUS (Transact-SQL)"
 title: "GET_TRANSMISSION_STATUS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/26/2017"
@@ -40,7 +41,9 @@ ms.author: carlrab
 GET_TRANSMISSION_STATUS ( conversation_handle )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *conversation_id*  
  Is the conversation handle for the conversation. This parameter is of type **uniqueidentifier**.  
   

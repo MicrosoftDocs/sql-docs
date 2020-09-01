@@ -172,6 +172,8 @@ SELECT @@SERVERNAME,
 
 Setting `-h` and `--name` to the same value is a good way to easily identify the target container.
 
+5. As a final step, change your SA password because the `SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
+
 ::: moniker-end
 <!--End of 2017 "Pull and run" section-->
 
@@ -290,8 +292,14 @@ SELECT @@SERVERNAME,
 
 Setting `-h` and `--name` to the same value is a good way to easily identify the target container.
 
+
+5. As a final step, change your SA password because the `SA_PASSWORD` is visible in `ps -eax` output and stored in the environment variable of the same name. See steps below.
+
+
 ::: moniker-end
 <!--End of 2019 "Pull and run" section-->
+
+
 
 ## <a id="sapassword"></a> Change the SA password
 

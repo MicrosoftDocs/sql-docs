@@ -1,4 +1,5 @@
 ---
+description: "ConnectionValidSharedMemory function in dbmslpcn.dll Shared Memory"
 title: "ConnectionValidSharedMemory dbmslpcn.dll"
 ms.custom: ""
 ms.date: "03/07/2017"
@@ -12,7 +13,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ConnectionValidSharedMemory function in dbmslpcn.dll Shared Memory
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   The function determines whether SQL Server Shared Memory is installed and active.  
   

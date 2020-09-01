@@ -1,4 +1,5 @@
 ---
+description: "Prompting the User for Connection Information"
 title: "Prompting the User for Connection Information | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,9 +1,10 @@
 ---
 title: "Connect to the Database Engine With sqlcmd"
+description: "Learn how to select which protocol sqlcmd uses to communicate with SQL Server. The choices are: TCP/IP, named pipes, and shared memory." 
 ms.custom: seo-lt-2019
 ms.date: "03/14/2017"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 
@@ -20,7 +21,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sqlcmd - Connect to the Database Engine
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] supports client communication with the TCP/IP network protocol (the default), and the named pipes protocol. The shared memory protocol is also available if the client is connecting to an instance of the [!INCLUDE[ssDE](../../includes/ssde-md.md)] on the same computer. There are three common methods of selecting the protocol. The protocol used by the **sqlcmd** utility is determined in the following order:  
   
 -   **sqlcmd** uses the protocol specified as part of the connection string as described below.  

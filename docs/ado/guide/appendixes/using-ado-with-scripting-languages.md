@@ -1,8 +1,9 @@
 ---
+description: "Using ADO with Scripting Languages"
 title: "Using ADO with Scripting Languages | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -55,11 +56,11 @@ Within a scripting environment, ADO allows you to expose data by way of server-s
   
  The following topics contain more specific information about using ADO with scripting languages:  
   
--   [VBScript ADO Programming](../../../ado/guide/appendixes/vbscript-ado-programming.md)  
+-   [VBScript ADO Programming](./vbscript-ado-programming.md)  
   
--   [JScript ADO Programming](../../../ado/guide/appendixes/jscript-ado-programming.md)  
+-   [JScript ADO Programming](./jscript-ado-programming.md)  
   
 ## See Also  
- [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md)   
- [Using ADO with Microsoft Visual Basic](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-basic.md)   
- [Using ADO with Microsoft Visual C++](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)   
+ [Microsoft ActiveX Data Objects (ADO)](../../microsoft-activex-data-objects-ado.md)   
+ [Using ADO with Microsoft Visual Basic](./using-ado-with-microsoft-visual-basic.md)   
+ [Using ADO with Microsoft Visual C++](./using-ado-with-microsoft-visual-c.md)

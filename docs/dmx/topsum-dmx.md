@@ -1,4 +1,5 @@
 ---
+description: "TopSum (DMX)"
 title: "TopSum (DMX) | Microsoft Docs"
 ms.date: 06/07/2018
 ms.prod: sql
@@ -10,7 +11,7 @@ ms.reviewer: owend
 author: minewiskan
 ---
 # TopSum (DMX)
-[!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
+[!INCLUDE[ssas](../includes/applies-to-version/ssas.md)]
 
   Returns, in order of decreasing rank, the top-most rows of a table whose cumulative total is at least a specified value.  
   

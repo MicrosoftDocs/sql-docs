@@ -1,4 +1,5 @@
 ---
+description: "Set or Change the Server Collation"
 title: "Set or Change the Server Collation | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/10/2020"

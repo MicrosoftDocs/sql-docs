@@ -1,4 +1,5 @@
 ---
+description: "Breaking Changes in SQL Server Replication"
 title: "Breaking Changes in SQL Server Replication | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/22/2016"

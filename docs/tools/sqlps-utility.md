@@ -17,11 +17,11 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # sqlps Utility
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
   The **sqlps** utility starts a Windows PowerShell session with the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell provider and cmdlets loaded and registered. You can enter PowerShell commands or scripts that use the [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] PowerShell components to work with instances of [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and their objects.  
   
 > [!IMPORTANT]  
->  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Use the **sqlps** PowerShell module instead. For more information about the **sqlps** module, see [Import the SQLPS Module](../relational-databases/scripting/import-the-sqlps-module.md).  
+>  [!INCLUDE[ssNoteDepFutureAvoid](../includes/ssnotedepfutureavoid-md.md)] Use the **sqlps** PowerShell module instead. For more information about the **sqlps** module, see [Import the SQLPS Module](../powershell/download-sql-server-ps-module.md?view=sql-server-ver15).  
   
 ## Syntax  
   
@@ -117,6 +117,5 @@ sqlps -NoExit -Command "&{.\MyFolder.MyScript.ps1}"
   
 ## See Also  
  [Enable or Disable a Server Network Protocol](../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
- [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)  
-  
+ [SQL Server PowerShell](../powershell/sql-server-powershell.md?view=sql-server-ver15)  
   

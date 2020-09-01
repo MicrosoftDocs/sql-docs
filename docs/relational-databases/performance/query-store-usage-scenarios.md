@@ -1,5 +1,6 @@
 ---
 title: "Query Store Usage Scenarios | Microsoft Docs"
+description: Learn how Query Store can be used to track and ensure predictable workload performance. Consider several examples in SQL Server.
 ms.custom: ""
 ms.date: "11/29/2018"
 ms.prod: sql
@@ -15,7 +16,7 @@ ms.author: jrasnick
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query Store Usage Scenarios
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   Query Store can be used in wide set of scenarios when tracking and ensuring predictable workload performance is critical. Here are some examples you can consider:  
   

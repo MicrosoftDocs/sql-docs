@@ -1,4 +1,5 @@
 ---
+description: "Datetime Data Types"
 title: "Datetime Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -17,7 +17,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # Check the ODBC SQL Server Driver Version (Windows)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Your computer may contain a variety of ODBC drivers, from [!INCLUDE[msCoName](../../includes/msconame-md.md)] and from other companies. This topic describes how to use the Windows **ODBC Data Source Administrator** to check the version of the installed ODBC drivers.  
   
@@ -31,7 +31,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 
 > [!NOTE]  
->  For connections to Azure Active Directory Authentication for SQL Database install the latest driver, such as [ODBC Driver 13.1 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).   
+>  For connections to Azure Active Directory Authentication for SQL Database install the latest driver, such as [ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql).   
 
   
 ## See Also  

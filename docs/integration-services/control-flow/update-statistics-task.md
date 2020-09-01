@@ -1,4 +1,5 @@
 ---
+description: "Update Statistics Task"
 title: "Update Statistics Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -18,7 +19,7 @@ ms.author: chugu
 ---
 # Update Statistics Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Update Statistics task updates information about the distribution of key values for one or more statistics groups (collections) in the specified table or indexed view. For more information, see [Statistics](../../relational-databases/statistics/statistics.md).  

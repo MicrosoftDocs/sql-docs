@@ -1,4 +1,5 @@
 ---
+description: "Lesson 3-2: Add and configure logging"
 title: "Step 2: Add and configure logging | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/04/2019"
@@ -13,7 +14,7 @@ ms.author: chugu
 ---
 # Lesson 3-2: Add and configure logging
 
-[!INCLUDE[ssis-appliesto](../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 

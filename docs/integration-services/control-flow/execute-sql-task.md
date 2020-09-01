@@ -1,5 +1,6 @@
 ---
-title: "Execute SQL Task | Microsoft Docs"
+description: "Execute SQL Task"
+title: Execute SQL Task
 ms.custom: ""
 ms.date: "03/13/2017"
 ms.prod: sql
@@ -21,10 +22,10 @@ ms.assetid: bebb2e8c-0410-43b2-ac2f-6fc80c8f2e9e
 author: chugugrace
 ms.author: chugu
 ---
+
 # Execute SQL Task
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
-
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
   The Execute SQL task runs SQL statements or stored procedures from a package. The task can contain either a single SQL statement or multiple SQL statements that run sequentially. You can use the Execute SQL task for the following purposes:  
   

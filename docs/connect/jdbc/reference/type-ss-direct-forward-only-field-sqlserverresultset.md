@@ -1,4 +1,5 @@
 ---
+description: "TYPE_SS_DIRECT_FORWARD_ONLY Field (SQLServerResultSet)"
 title: "TYPE_SS_DIRECT_FORWARD_ONLY Field (SQLServerResultSet) | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

@@ -1,4 +1,5 @@
 ---
+description: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL)"
 title: "DECRYPTBYKEYAUTOASYMKEY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/09/2015"
@@ -35,7 +36,9 @@ DecryptByKeyAutoAsymKey ( akey_ID , akey_password
   [ , { authenticator | @authenticator } ] ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *akey_ID*  
 The ID of the asymmetric key used to encrypt the symmetric key. *akey_ID* has an **int** data type.  
   

@@ -1,4 +1,5 @@
 ---
+description: "CREATE SEARCH PROPERTY LIST (Transact-SQL)"
 title: "CREATE SEARCH PROPERTY LIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/10/2017"
@@ -40,7 +41,9 @@ CREATE SEARCH PROPERTY LIST new_list_name
 ;  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *new_list_name*  
  Is the name of the new search property list. *new_list_name* is an identifier with a maximum of 128 characters. *new_list_name* must be unique among all property lists in the current database, and conform to the rules for identifiers. *new_list_name* will be used when the full-text index is created.  
   

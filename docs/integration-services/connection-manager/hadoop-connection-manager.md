@@ -1,4 +1,5 @@
 ---
+description: "Hadoop Connection Manager"
 title: "Hadoop Connection Manager | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/29/2020
@@ -15,7 +16,7 @@ ms.author: chugu
 ---
 # Hadoop Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The Hadoop Connection Manager enables a SQL Server Integration Services (SSIS) package to connect to a Hadoop cluster, by using the values you specify for the properties.  

@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_xe_packages (Transact-SQL)"
 title: "sys.dm_xe_packages (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2016"
@@ -46,9 +47,8 @@ ms.author: carlrab
   
 ## Relationship Cardinalities  
   
-||||  
-|-|-|-|  
-|From|To|Relationship|  
+| From | To | Relationship |
+| ---- | -- | ------------ |  
 |sys.dm_xe_packages.module_address|sys.dm_os_loaded_modules.base_address|Many to one|  
   
 ## See also  

@@ -1,4 +1,5 @@
 ---
+description: "CollectionAggregate (geography Data Type)"
 title: "CollectionAggregate (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/30/2017"
@@ -27,7 +28,9 @@ Creates a **GeometryCollection** instance from a set of **geography** objects.
 ConvexHullAggregate ( geography_operand )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *geography_operand*  
  Is a **geography** type table column that represents a set of **geography** objects to be listed in the **GeometryCollection** instance.  
   

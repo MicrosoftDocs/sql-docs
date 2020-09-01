@@ -1,7 +1,8 @@
 ---
 title: SQL Server PowerShell
+description: Learn about the two SQL Server PowerShell modules, SqlServer and SQLPS, which include PowerShell Providers and cmdlets.
 ms.prod: sql
-ms.technology: scripting
+ms.technology: sql-server-powershell
 ms.topic: conceptual
 ms.assetid: 89b70725-bbe7-4ffe-a27d-2a40005a97e7
 author: markingmyname
@@ -13,7 +14,7 @@ ms.date: 06/11/2020
 
 # SQL Server PowerShell
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 **[Install SQL Server PowerShell](download-sql-server-ps-module.md)**
 

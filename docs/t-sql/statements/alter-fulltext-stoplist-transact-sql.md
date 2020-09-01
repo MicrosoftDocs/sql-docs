@@ -1,4 +1,5 @@
 ---
+description: "ALTER FULLTEXT STOPLIST (Transact-SQL)"
 title: "ALTER FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -45,7 +46,9 @@ ALTER FULLTEXT STOPLIST stoplist_name
 ;  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *stoplist_name*  
  Is the name of the stoplist being altered. *stoplist_name* can be a maximum of 128 characters.  
   

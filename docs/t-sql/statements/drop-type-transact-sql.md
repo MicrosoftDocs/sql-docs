@@ -1,4 +1,5 @@
 ---
+description: "DROP TYPE (Transact-SQL)"
 title: "DROP TYPE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/12/2017"
@@ -34,7 +35,9 @@ ms.author: carlrab
 DROP TYPE [ IF EXISTS ] [ schema_name. ] type_name [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *IF EXISTS*  
  **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] through [current version](https://go.microsoft.com/fwlink/p/?LinkId=299658)).  
   

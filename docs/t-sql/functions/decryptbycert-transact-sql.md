@@ -1,4 +1,5 @@
 ---
+description: "DECRYPTBYCERT (Transact-SQL)"
 title: "DECRYPTBYCERT (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -35,7 +36,9 @@ DecryptByCert ( certificate_ID , { 'ciphertext' | @ciphertext }
     [ , { 'cert_password' | @cert_password } ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *certificate_ID*  
 The ID of a certificate in the database. *certificate_ID* has an **int** data type.  
   

@@ -1,4 +1,5 @@
 ---
+description: "Overriding Default Precision and Scale for Numeric Data Types"
 title: "Overriding Default Precision and Scale for Numeric Data Types | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

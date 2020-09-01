@@ -1,4 +1,5 @@
 ---
+description: "Increase or Disable Blocked Process Threshold"
 title: "Increase or Disable Blocked Process Threshold | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

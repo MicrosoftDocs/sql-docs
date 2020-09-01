@@ -1,4 +1,5 @@
 ---
+description: "DROP PARTITION SCHEME (Transact-SQL)"
 title: "DROP PARTITION SCHEME (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -36,7 +37,9 @@ ms.author: carlrab
 DROP PARTITION SCHEME partition_scheme_name [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *partition_scheme_name*  
  Is the name of the partition scheme to be dropped.  
   

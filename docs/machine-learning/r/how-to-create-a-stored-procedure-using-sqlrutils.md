@@ -1,10 +1,10 @@
 ---
-title: Create an R stored procedure
+title: Create a function from bundled R code using the sqlrutils package
 description: Use the sqlrutils R package in SQL Server to bundle R language code into a single function that can be passed as an argument to a stored procedure.
 ms.prod: sql
 ms.technology: machine-learning-services
 
-ms.date: 04/15/2018  
+ms.date: 08/31/2020  
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -12,7 +12,7 @@ ms.custom: seo-lt-2019
 monikerRange: ">=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Create a stored procedure using sqlrutils
- [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE [SQL Server 2016 and later](../../includes/applies-to-version/sqlserver2016.md)]
 
 This article describes the steps for converting your R code to run as a T-SQL stored procedure. For best possible results, your code might need to be modified somewhat, to ensure that all inputs can be parameterized.
 

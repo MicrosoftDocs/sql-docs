@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_fts_index_population (Transact-SQL)"
 title: "sys.dm_fts_index_population (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/29/2017"

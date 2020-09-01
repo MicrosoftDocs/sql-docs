@@ -1,4 +1,5 @@
 ---
+description: "DBCC dllname (FREE) (Transact-SQL)"
 title: "DBCC dllname (FREE) (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/16/2017"
@@ -38,7 +39,9 @@ Unloads the specified extended stored procedure DLL from memory.
 DBCC <dllname> ( FREE ) [ WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  \<*dllname*>  
  Is the name of the DLL to release from memory.  
   

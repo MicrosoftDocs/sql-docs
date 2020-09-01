@@ -1,4 +1,5 @@
 ---
+description: "Connect to a Registered Server (SQL Server Management Studio)"
 title: Connect to a Registered Server
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -17,7 +18,7 @@ ms.date: 03/01/2017
 
 # Connect to a Registered Server (SQL Server Management Studio)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This topic describes how to connect to a registered server in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] by using [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]. If the server is not running or cannot be found on the network, Registered Servers displays an error.  
 

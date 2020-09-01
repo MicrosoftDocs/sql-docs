@@ -1,4 +1,5 @@
 ---
+description: "sys.pdw_nodes_partitions (Transact-SQL)"
 title: "sys.pdw_nodes_partitions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -14,15 +15,15 @@ ms.author: rortloff
 monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # sys.pdw_nodes_partitions (Transact-SQL)
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
+[!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
   Contains a row for each partition of all the tables, and most types of indexes in a [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] database. All tables and indexes contain at least one partition, whether or not they are explicitly partitioned.  
   
 |Column name|Data type|Description|  
 |-----------------|---------------|-----------------|  
-|partition_id|**bigint**|id of the partition. Is unique within a database.|  
-|object_id|**int**|id of the object to which this partition belongs. Every table or view is composed of at least one partition.|  
-|index_id|**int**|id of the index within the object to which this partition belongs.|  
+|partition_id|**bigint**|ID of the partition. Is unique within a database.|  
+|object_id|**int**|ID of the object to which this partition belongs. Every table or view is composed of at least one partition.|  
+|index_id|**int**|ID of the index within the object to which this partition belongs.|  
 |partition_number|**int**|1-based partition number within the owning index or heap. For [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], the value of this column is 1.|  
 |hobt_id|**bigint**|ID of the data heap or B-tree (HoBT) that contains the rows for this partition.|  
 |rows|**bigint**|Approximate number of rows in this partition. |  

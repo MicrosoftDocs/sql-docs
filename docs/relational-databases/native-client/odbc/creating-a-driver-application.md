@@ -1,4 +1,5 @@
 ---
+description: "Creating a Driver Application"
 title: "Create an Application"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -26,7 +27,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Creating a Driver Application
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   ODBC architecture has four components that perform the following functions.  
   

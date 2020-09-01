@@ -1,8 +1,9 @@
 ---
+description: "Aggregate Functions, the CALC Function, and the NEW Keyword"
 title: "Aggregate Functions, the CALC Function, and the NEW Keyword | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -33,7 +34,7 @@ Data shaping supports the following functions. The name assigned to the chapter 
   
 |Calculated expression|Description|  
 |---------------------------|-----------------|  
-|CALC(*expression*)|Calculates an arbitrary expression, but only on the row of the **Recordset** containing the CALC function. Any expression using these [Visual Basic for Applications (VBA) Functions](../../../ado/guide/data/visual-basic-for-applications-functions.md) is allowed.|  
+|CALC(*expression*)|Calculates an arbitrary expression, but only on the row of the **Recordset** containing the CALC function. Any expression using these [Visual Basic for Applications (VBA) Functions](./visual-basic-for-applications-functions.md) is allowed.|  
   
 |NEW keyword|Description|  
 |-----------------|-----------------|  
@@ -67,6 +68,6 @@ Data shaping supports the following functions. The name assigned to the chapter 
  When the new field is of type decimal (in OLE DB, DBTYPE_DECIMAL, or in ADO, adDecimal), you must specify the precision and scale values.  
   
 ## See Also  
- [Data Shaping Example](../../../ado/guide/data/data-shaping-example.md)   
- [Formal Shape Grammar](../../../ado/guide/data/formal-shape-grammar.md)   
- [Shape Commands in General](../../../ado/guide/data/shape-commands-in-general.md)
+ [Data Shaping Example](./data-shaping-example.md)   
+ [Formal Shape Grammar](./formal-shape-grammar.md)   
+ [Shape Commands in General](./shape-commands-in-general.md)

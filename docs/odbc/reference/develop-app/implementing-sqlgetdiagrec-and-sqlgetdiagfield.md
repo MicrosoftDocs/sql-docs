@@ -1,4 +1,5 @@
 ---
+description: "Implementing SQLGetDiagRec and SQLGetDiagField"
 title: "Implementing SQLGetDiagRec and SQLGetDiagField | Microsoft Docs"
 ms.custom: ""
 ms.date: "01/19/2017"

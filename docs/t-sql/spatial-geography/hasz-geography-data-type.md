@@ -1,4 +1,5 @@
 ---
+description: "HasZ (geography Data Type)"
 title: "HasZ (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "05/04/2017"
@@ -30,7 +31,9 @@ ms.author: mlandzic
 .HasZ  
 ```  
   
-## Return Types  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Return Types
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] return type: **bit**  
   
  CLR return type: **Boolean**  

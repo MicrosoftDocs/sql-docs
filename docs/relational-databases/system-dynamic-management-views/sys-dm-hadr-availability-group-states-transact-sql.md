@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_hadr_availability_group_states (Transact-SQL)"
 title: "sys.dm_hadr_availability_group_states (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/10/2016"

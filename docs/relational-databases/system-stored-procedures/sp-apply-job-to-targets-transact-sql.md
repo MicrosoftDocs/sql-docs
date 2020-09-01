@@ -1,4 +1,5 @@
 ---
+description: "sp_apply_job_to_targets (Transact-SQL)"
 title: "sp_apply_job_to_targets (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

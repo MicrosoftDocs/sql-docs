@@ -51,16 +51,18 @@ Modifies the files and filegroups associated with the database. Adds or removes 
 
 For more information about the syntax conventions, see [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md).
 
-## Click a product
-
-In the following row, click whichever product name you are interested in. The click displays different content here on this webpage, appropriate for whichever product you click.
+[!INCLUDE[select-product](../../includes/select-product.md)]
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-|||
-|-|-|-|
-|**_\* SQL Server \*_** &nbsp;|[SQL Database<br />managed instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)|
-|||
+:::row:::
+    :::column:::
+        **_\* SQL Server \*_** &nbsp;
+    :::column-end:::
+    :::column:::
+        [SQL Database<br />Managed Instance](alter-database-transact-sql-file-and-filegroup-options.md?view=azuresqldb-mi-current)
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
@@ -708,17 +710,22 @@ GO
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
 
-> |||
-> |-|-|-|
-> |[SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)|**_\* SQL Database<br />managed instance \*_**<br />&nbsp;|
+:::row:::
+    :::column:::
+        [SQL Server](alter-database-transact-sql-file-and-filegroup-options.md?view=sql-server-2017)
+    :::column-end:::
+    :::column:::
+        **_\* SQL Database<br />Managed Instance \*_**<br />&nbsp;
+    :::column-end:::
+:::row-end:::
 
 &nbsp;
 
-## Azure SQL Database managed instance
+## Azure SQL Managed Instance
 
-Use this statement with a database in Azure SQL Database managed instance.
+Use this statement with a database in Azure SQL Managed Instance.
 
-## Syntax for databases in a managed instance
+## Syntax for Azure SQL Managed Instance
 
 ```syntaxsql
 ALTER DATABASE database_name

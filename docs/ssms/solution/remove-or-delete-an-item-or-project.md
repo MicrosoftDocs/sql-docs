@@ -1,4 +1,5 @@
 ---
+description: "Remove or Delete an Item or Project"
 title: "Remove or Delete an Item or Project"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -16,7 +17,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Remove or Delete an Item or Project
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 Project items in [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] projects are Queries, Connections, and Miscellaneous files. You can remove project queries and miscellaneous files from your solution without erasing the files from storage. Remove a project or item when it is not useful in the current solution but you want to include it in another solution.  
   
 ### To remove a project item  

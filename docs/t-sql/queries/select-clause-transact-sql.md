@@ -1,4 +1,5 @@
 ---
+description: "SELECT Clause (Transact-SQL)"
 title: "SELECT Clause (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/09/2017"
@@ -57,7 +58,9 @@ SELECT [ ALL | DISTINCT ]
     } [ ,...n ]   
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  **ALL**  
  Specifies that duplicate rows can appear in the result set. ALL is the default.  
   

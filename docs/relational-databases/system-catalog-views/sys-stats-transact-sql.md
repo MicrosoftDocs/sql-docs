@@ -1,4 +1,5 @@
 ---
+description: "sys.stats (Transact-SQL)"
 title: "sys.stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/18/2017"
@@ -22,7 +23,7 @@ ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.stats (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Contains a row for each statistics object that exists for the tables, indexes, and indexed views in the database in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Every index will have a corresponding statistics row with the same name and ID (**index_id** = **stats_id**), but not every statistics row has a corresponding index.  
   

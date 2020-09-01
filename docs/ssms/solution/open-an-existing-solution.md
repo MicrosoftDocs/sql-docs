@@ -1,4 +1,5 @@
 ---
+description: "Open an Existing Solution"
 title: "Open an Existing Solution"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -15,7 +16,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Open an Existing Solution
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can have only one solution at a time open in Solution Explorer.  
   
 ### To open an existing solution  

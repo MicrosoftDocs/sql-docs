@@ -1,4 +1,5 @@
 ---
+description: "DROP RESOURCE POOL (Transact-SQL)"
 title: "DROP RESOURCE POOL (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -33,7 +34,9 @@ DROP RESOURCE POOL pool_name
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *pool_name*  
  Is the name of an existing user-defined resource pool.  
   

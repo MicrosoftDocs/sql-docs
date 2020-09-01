@@ -1,4 +1,5 @@
 ---
+description: "Columnstore indexes - Data Warehouse"
 title: "Columnstore indexes - Data Warehouse | Microsoft Docs"
 ms.custom: ""
 ms.date: "12/01/2017"
@@ -13,7 +14,7 @@ ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Columnstore indexes - Data Warehouse
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Columnstore indexes, in conjunction with partitioning, are essential for building a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] data warehouse.  
   

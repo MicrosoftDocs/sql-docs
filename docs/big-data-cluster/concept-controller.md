@@ -52,7 +52,7 @@ All communication to the controller service is conducted via a REST API over HTT
 Authentication to the controller service endpoint is either using an Active Directory identity or based on username and password. These credentials are provisioned at cluster bootstrap time using the input for environment variables `AZDATA_USERNAME` and `AZDATA_PASSWORD`.
 
 > [!NOTE]
-> You must provide a password that is in compliance with [SQL Server password complexity requirements](https://docs.microsoft.com/sql/relational-databases/security/password-policy?view=sql-server-2017).
+> You must provide a password that is in compliance with [SQL Server password complexity requirements](../relational-databases/security/password-policy.md?view=sql-server-2017).
 
 ## Next steps
 

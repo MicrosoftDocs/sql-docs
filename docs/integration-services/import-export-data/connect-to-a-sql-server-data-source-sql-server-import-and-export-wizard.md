@@ -1,4 +1,5 @@
 ---
+description: "Connect to a SQL Server Data Source (SQL Server Import and Export Wizard)"
 title: "Connect to a SQL Server Data Source (SQL Server Import and Export Wizard) | Microsoft Docs"
 ms.custom: ""
 ms.date: 06/29/2020
@@ -12,7 +13,7 @@ ms.author: chugu
 ---
 # Connect to a SQL Server Data Source (SQL Server Import and Export Wizard)
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
 This topic shows you how to connect to a **Microsoft SQL Server** data source from the **Choose a Data Source** or **Choose a Destination** page of the SQL Server Import and Export Wizard. There are several data providers that you can use to connect to SQL Server.
@@ -61,7 +62,7 @@ After you select **.NET Framework Data Provider for SQL Server** on the **Choose
 ODBC drivers aren't listed in the drop-down list of data sources. To connect with an ODBC driver, start by selecting the **.NET Framework Data Provider for ODBC** as the data source. This provider acts as a wrapper around the ODBC driver.
 
 > [!TIP]
-> **Get the latest driver**. Download the [Microsoft ODBC Driver 13 for SQL Server](https://www.microsoft.com/download/details.aspx?id=53339).
+> **Get the latest driver**. Download the [Microsoft ODBC Driver for SQL Server](https://aka.ms/downloadmsodbcsql).
 
 Here's the generic screen that you see immediately after selecting the .NET Framework Data Provider for ODBC.
 

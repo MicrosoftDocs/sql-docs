@@ -1,4 +1,5 @@
 ---
+description: "ALTER PARTITION FUNCTION (Transact-SQL)"
 title: "ALTER PARTITION FUNCTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -47,7 +48,10 @@ ALTER PARTITION FUNCTION partition_function_name()
 } [ ; ]  
 ```  
   
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *partition_function_name*  
 Is the name of the partition function to be modified.  
   

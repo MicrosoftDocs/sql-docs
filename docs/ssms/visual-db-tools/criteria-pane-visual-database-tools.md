@@ -1,4 +1,5 @@
 ---
+description: "Criteria Pane (Visual Database Tools)"
 title: Criteria Pane
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -21,7 +22,7 @@ ms.reviewer:
 
 ---
 # Criteria Pane (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 The Criteria pane allows you to specify query options - such as which data columns to display, how to order the results, and what rows to select - by entering your choices into a spreadsheet-like grid. In the Criteria pane you can specify the following:  
   
 -   Columns to display and column name aliases.  

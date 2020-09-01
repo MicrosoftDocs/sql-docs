@@ -1,4 +1,5 @@
 ---
+description: "LOCALDB_ERROR_INVALID_PARAMETER"
 title: "LOCALDB_ERROR_INVALID_PARAMETER | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -15,8 +16,8 @@ ms.author: "sstein"
     
 ## Details  
   
-|||  
-|-|-|  
+| Attribute | Value |
+| --------- | ----- |
 |Product Name|SQL Server|  
 |Event ID|257|  
 |Event Source|SQL Server Local Database Runtime 12.0|  

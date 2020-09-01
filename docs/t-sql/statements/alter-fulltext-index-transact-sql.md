@@ -1,4 +1,5 @@
 ---
+description: "ALTER FULLTEXT INDEX (Transact-SQL)"
 title: "ALTER FULLTEXT INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/27/2017"
@@ -59,7 +60,9 @@ ALTER FULLTEXT INDEX ON table_name
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table_name*  
  Is the name of the table or indexed view that contains the column or columns included in the full-text index. Specifying database and table owner names is optional.  
   

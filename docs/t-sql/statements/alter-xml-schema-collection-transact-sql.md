@@ -1,4 +1,5 @@
 ---
+description: "ALTER XML SCHEMA COLLECTION (Transact-SQL)"
 title: "ALTER XML SCHEMA COLLECTION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -43,7 +44,9 @@ ms.author: genemi
 ALTER XML SCHEMA COLLECTION [ relational_schema. ]sql_identifier ADD 'Schema Component'  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *relational_schema*  
  Identifies the relational schema name. If not specified, the default relational schema is assumed.  
   

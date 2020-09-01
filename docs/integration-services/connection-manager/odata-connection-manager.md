@@ -1,4 +1,5 @@
 ---
+description: "OData Connection Manager"
 title: "OData Connection Manager | Microsoft Docs"
 ms.date: "03/01/2017"
 ms.prod: sql
@@ -16,7 +17,7 @@ ms.author: chugu
 ---
 # OData Connection Manager
 
-[!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
  Connect to an OData data source with an OData connection manager. An OData Source component uses an OData connection manager to connect to an OData data source and consume data from the service. For more info, see [OData Source](../../integration-services/data-flow/odata-source.md).  
@@ -55,9 +56,8 @@ To connect to Microsoft Dynamics AX Online or Microsoft Dynamics CRM online, you
 ## OData Connection Manager Properties  
  The following list describes the properties of the OData connection manager.  
   
-|||  
-|-|-|  
 |Property|Description|  
+|-|-|  
 |Url|URL to the service document.|  
 |UserName|User name to use for authentication, if required.|  
 |Password|Password to use for authentication, if required.|  

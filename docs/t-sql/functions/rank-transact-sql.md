@@ -1,4 +1,5 @@
 ---
+description: "RANK (Transact-SQL)"
 title: "RANK (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/25/2016"
@@ -23,7 +24,7 @@ ms.author: jrasnick
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # RANK (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Returns the rank of each row within the partition of a result set. The rank of a row is one plus the number of ranks that come before the row in question.  
 
@@ -40,7 +41,9 @@ ROW_NUMBER and RANK are similar. ROW_NUMBER numbers all rows sequentially (for e
 RANK ( ) OVER ( [ partition_by_clause ] order_by_clause )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  OVER **(** [ _partition\_by\_clause_ ] _order\_by\_clause_**)**  
  *partition_by_clause* divides the result set produced by the FROM clause into partitions to which the function is applied. If not specified, the function treats all rows of the query result set as a single group. _order\_by\_clause_ determines the order of the data before the function is applied. The *order_by_clause* is required. The \<rows or range clause/> of the OVER clause cannot be specified for the RANK function. For more information, see [OVER Clause &#40;Transact-SQL&#41;](../../t-sql/queries/select-over-clause-transact-sql.md).  
   

@@ -1,4 +1,5 @@
 ---
+description: "sp_syspolicy_purge_health_state (Transact-SQL)"
 title: "sp_syspolicy_purge_health_state (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

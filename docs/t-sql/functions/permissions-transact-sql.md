@@ -1,4 +1,5 @@
 ---
+description: "PERMISSIONS (Transact-SQL)"
 title: "PERMISSIONS (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -41,7 +42,9 @@ ms.author: vanto
 PERMISSIONS ( [ objectid [ , 'column' ] ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *objectid*  
  Is the ID of a securable. If *objectid* is not specified, the bitmap value contains statement permissions for the current user; otherwise, the bitmap contains permissions on the securable for the current user. The securable specified must be in the current database. Use the [OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md) function to determine the *objectid* value.  
   

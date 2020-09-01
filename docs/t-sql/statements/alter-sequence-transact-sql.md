@@ -1,4 +1,5 @@
 ---
+description: "ALTER SEQUENCE (Transact-SQL)"
 title: "ALTER SEQUENCE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/08/2015"
@@ -44,7 +45,9 @@ ALTER SEQUENCE [schema_name. ] sequence_name
     [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *sequence_name*  
  Specifies the unique name by which the sequence is known in the database. Type is **sysname**.  
   

@@ -1,4 +1,5 @@
 ---
+description: "CREATE FULLTEXT STOPLIST (Transact-SQL)"
 title: "CREATE FULLTEXT STOPLIST (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -47,8 +48,10 @@ CREATE FULLTEXT STOPLIST stoplist_name
 [ AUTHORIZATION owner_name ]  
 ;  
 ```  
-  
-## Arguments  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *stoplist_name*  
  Is the name of the stoplist. *stoplist_name* can be a maximum of 128 characters. *stoplist_name* must be unique among all stoplists in the current database, and conform to the rules for identifiers.  
   

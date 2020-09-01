@@ -1,4 +1,5 @@
 ---
+description: "SetBoolValue Method (SqlServiceAdvancedProperty Class)"
 title: "SetBoolValue Method (SqlServiceAdvancedProperty)"
 ms.custom: seo-lt-2019
 ms.date: "03/06/2017"

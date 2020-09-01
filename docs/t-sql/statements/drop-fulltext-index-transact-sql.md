@@ -1,4 +1,5 @@
 ---
+description: "DROP FULLTEXT INDEX (Transact-SQL)"
 title: "DROP FULLTEXT INDEX (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -36,7 +37,9 @@ ms.author: carlrab
 DROP FULLTEXT INDEX ON table_name  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *table_name*  
  Is the name of the table or indexed view containing the full-text index to be removed.  
   

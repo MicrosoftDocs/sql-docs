@@ -1,4 +1,5 @@
 ---
+description: "sys.tables (Transact-SQL)"
 title: "sys.tables (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "06/22/2017"
@@ -22,7 +23,7 @@ ms.author: carlrab
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.tables (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
   Returns a row for each user table in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].  
   

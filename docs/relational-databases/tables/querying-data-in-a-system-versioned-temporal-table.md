@@ -1,4 +1,5 @@
 ---
+description: "Querying Data in a System-Versioned Temporal Table"
 title: "Querying Data in a System-Versioned Temporal Table | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/28/2016"
@@ -14,7 +15,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Querying data in a system-versioned temporal table
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 When you want to get latest (actual) state of data in a temporal table, you can query completely the same way as you query non-temporal table. If the PERIOD columns are not hidden, their values will appear in a SELECT \* query. If you specified **PERIOD** columns as hidden, their values won't appear in a SELECT \* query. When the **PERIOD** columns are hidden, reference the **PERIOD** columns specifically in the SELECT clause to return the values for these columns.
 

@@ -1,4 +1,5 @@
 ---
+description: "DBCC INPUTBUFFER (Transact-SQL)"
 title: "DBCC INPUTBUFFER (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "04/04/2018"
@@ -38,7 +39,9 @@ DBCC INPUTBUFFER ( session_id [ , request_id ])
 [WITH NO_INFOMSGS ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *session_id*  
 Is the session ID associated with each active primary connection.  
   

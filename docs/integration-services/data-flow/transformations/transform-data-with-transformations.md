@@ -1,4 +1,5 @@
 ---
+description: "Transform Data with Transformations"
 title: "Transform Data with Transformations | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/06/2017"
@@ -17,7 +18,7 @@ ms.author: chugu
 ---
 # Transform Data with Transformations
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] includes three types of data flow components: sources, transformations, and destinations.  

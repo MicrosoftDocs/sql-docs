@@ -1,4 +1,5 @@
 ---
+description: "Wrappers and interfaces"
 title: "Wrappers and interfaces | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/12/2019"

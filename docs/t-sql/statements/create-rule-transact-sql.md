@@ -1,4 +1,5 @@
 ---
+description: "CREATE RULE (Transact-SQL)"
 title: "CREATE RULE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -51,7 +52,9 @@ AS condition_expression
 [ ; ]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *schema_name*  
  Is the name of the schema to which the rule belongs.  
   

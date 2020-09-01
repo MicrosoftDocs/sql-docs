@@ -1,5 +1,6 @@
 ---
-title: "CREATE TABLE (Transact-SQL) | Microsoft Docs"
+description: "CREATE TABLE (Transact-SQL)"
+title: CREATE TABLE (Transact-SQL)
 ms.custom: ""
 ms.date: 02/24/2020
 ms.prod: sql
@@ -337,6 +338,8 @@ column_name <data_type>
 }
 ```
 
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Arguments
 
 *database_name*
@@ -622,7 +625,7 @@ Is the name of the table referenced by the FOREIGN KEY constraint, and the schem
 **(** *ref_column* [ **,**... *n* ] **)**
 Is a column, or list of columns, from the table referenced by the FOREIGN KEY constraint.
 
-ON DELETE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }
+ON DELETE { **NO ACTION** \| CASCADE \| SET NULL \| SET DEFAULT }
 Specifies what action happens to rows in the table created, if those rows have a referential relationship and the referenced row is deleted from the parent table. The default is NO ACTION.
 
 NO ACTION
@@ -647,7 +650,7 @@ If a `DELETE` statement is executed on a row in the **Vendor** table, and an `ON
 
 Conversely, if `NO ACTION` is specified, the [!INCLUDE[ssDE](../../includes/ssde-md.md)] raises an error and rolls back the delete action on the **Vendor** row if there is at least one row in the **ProductVendor** table that references it.
 
-ON UPDATE { **NO ACTION** | CASCADE | SET NULL | SET DEFAULT }
+ON UPDATE { **NO ACTION** \| CASCADE \ SET NULL \| SET DEFAULT }
 Specifies what action happens to rows in the table altered when those rows have a referential relationship and the referenced row is updated in the parent table. The default is NO ACTION.
 
 NO ACTION
@@ -878,7 +881,7 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 - Specify `PAUSED` to pause or postpone data migration. For more info, see [Pause and resume data migration -Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
 MEMORY_OPTIMIZED
-**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] managed instance does not support memory optimized tables.
+**Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Azure SQL Managed Instance does not support memory optimized tables.
 
 The value ON indicates that the table is memory optimized. Memory-optimized tables are part of the In-Memory OLTP feature, which is used to optimized the performance of transaction processing. To get started with In-Memory OLTP see [Quickstart 1: In-Memory OLTP Technologies for Faster Transact-SQL Performance](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md). For more in-depth information about memory-optimized tables see [Memory-Optimized Tables](../../relational-databases/in-memory-oltp/memory-optimized-tables.md).
 
@@ -1009,7 +1012,7 @@ Global temporary tables for [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)
 
 ### Troubleshooting global temporary tables for Azure SQL Database
 
-For the troubleshooting the tempdb, see [How to Monitor tempdb use](../../relational-databases/databases/tempdb-database.md#how-to-monitor-tempdb-use).
+For troubleshooting tempdb, see [How to Monitor tempdb use](../../relational-databases/databases/tempdb-database.md#monitoring-tempdb-use).
 
 > [!NOTE]
 > Only a server admin can access the troubleshooting DMVs in [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].

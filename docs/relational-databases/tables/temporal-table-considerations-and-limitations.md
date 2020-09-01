@@ -1,4 +1,5 @@
 ---
+description: "Temporal Table Considerations and Limitations"
 title: "Temporal Table Considerations and Limitations | Microsoft Docs"
 ms.custom: ""
 ms.date: "09/12/2017"
@@ -14,7 +15,9 @@ monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversio
 ---
 # Temporal Table Considerations and Limitations
 
-[!INCLUDE [sqlserver2016-asdb-asdbmi-asdw](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi-asdw.md)]
+
+[!INCLUDE [sqlserver2016-asdb-asdbmi](../../includes/applies-to-version/sqlserver2016-asdb-asdbmi.md)]
+
 
 There are some considerations and limitations to be aware of when working with temporal tables, due to the nature of system-versioning.
 

@@ -1,4 +1,5 @@
 ---
+description: "Use the Toolbox"
 title: "Use the Toolbox"
 ms.custom: seo-lt-2019
 ms.date: "01/19/2017"
@@ -17,7 +18,7 @@ author: "markingmyname"
 ms.author: "maghan"
 ---
 # Use the Toolbox
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 You can select and drag items, text, and controls from the Toolbox onto forms, pages, and designers, and drag items from these sources back into the Toolbox for reuse later. For example, in [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] you can drag a task onto a Maintenance Plan.  
   
 Items in the Toolbox are grouped into sections called tabs. Here is a reference list of common Toolbox tasks and how to do them:  

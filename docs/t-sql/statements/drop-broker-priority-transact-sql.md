@@ -1,4 +1,5 @@
 ---
+description: "DROP BROKER PRIORITY (Transact-SQL)"
 title: "DROP BROKER PRIORITY (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -33,7 +34,9 @@ DROP BROKER PRIORITY ConversationPriorityName
 [;]  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *ConversationPriorityName*  
  Specifies the name of the conversation priority to be removed.  
   

@@ -1,5 +1,6 @@
 ---
-title: "char and varchar (Transact-SQL) | Microsoft Docs"
+description: "char and varchar (Transact-SQL)"
+title: char and varchar (Transact-SQL)
 ms.custom: ""
 ms.date: "11/19/2019"
 ms.prod: sql
@@ -25,9 +26,10 @@ author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
+
 # char and varchar (Transact-SQL)
 
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 Character data types that are either fixed-size, **char**, or variable-size, **varchar**. Starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)], when a UTF-8 enabled collation is used, these data types store the full range of [Unicode](../../relational-databases/collations/collation-and-unicode-support.md#Unicode_Defn) character data and use the [UTF-8](https://www.wikipedia.org/wiki/UTF-8) character encoding. If a non-UTF-8 collation is specified, then these data types store only a subset of characters supported by the corresponding code page of that collation.
 
@@ -173,10 +175,17 @@ String                                       TruncatedValue
 ## See also
 
 [nchar and nvarchar &#40;Transact-SQL&#41;](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)
+
 [CAST and CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md)
+
 [COLLATE &#40;Transact-SQL&#41;](../../t-sql/statements/collations.md)
+
 [Data Type Conversion &#40;Database Engine&#41;](../../t-sql/data-types/data-type-conversion-database-engine.md)
+
 [Data Types &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)
+
 [Estimate the Size of a Database](../../relational-databases/databases/estimate-the-size-of-a-database.md)
+
 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)
+
 [Single-Byte and Multibyte Character Sets](/cpp/c-runtime-library/single-byte-and-multibyte-character-sets)

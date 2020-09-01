@@ -29,7 +29,7 @@ ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DATEPART (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 
 This function returns an integer representing the specified *datepart* of the specified *date*.
@@ -44,7 +44,9 @@ See [Date and Time Data Types and Functions &#40;Transact-SQL&#41;](../../t-sql/
 DATEPART ( datepart , date )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
 *datepart*  
 The specific part of the *date* argument for which `DATEPART` will return an **integer**. This table lists all valid *datepart* arguments.
 

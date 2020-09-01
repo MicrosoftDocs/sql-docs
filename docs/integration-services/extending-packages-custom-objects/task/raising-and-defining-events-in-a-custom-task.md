@@ -1,4 +1,5 @@
 ---
+description: "Raising and Defining Events in a Custom Task"
 title: "Raising and Defining Events in a Custom Task | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"
@@ -27,7 +28,7 @@ ms.author: chugu
 ---
 # Raising and Defining Events in a Custom Task
 
-[!INCLUDE[ssis-appliesto](../../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
+[!INCLUDE[sqlserver-ssis](../../../includes/applies-to-version/sqlserver-ssis.md)]
 
 
   The [!INCLUDE[ssISnoversion](../../../includes/ssisnoversion-md.md)] run-time engine provides a collection of events that provide status on the progress of a task as the task is validated and executed. The <xref:Microsoft.SqlServer.Dts.Runtime.IDTSComponentEvents> interface defines these events, and is provided to tasks as a parameter to the <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Validate%2A> and <xref:Microsoft.SqlServer.Dts.Runtime.Executable.Execute%2A> methods.  

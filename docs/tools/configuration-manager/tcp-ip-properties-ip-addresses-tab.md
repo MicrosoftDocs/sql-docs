@@ -6,7 +6,7 @@ ms.date: "08/24/2016"
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ""
-ms.technology: configuration
+ms.technology: tools-other
 ms.topic: conceptual
 helpviewer_keywords: 
   - "ports [SQL Server], listening on"
@@ -56,8 +56,7 @@ ms.author: maghan
  Search MSDN for topics such as **Configure a Server to Listen on a Specific TCP Port (SQL Server Configuration Manager)** and **Configure the Database Engine to Listen on Multiple TCP Ports**.  
   
 ## See Also  
- [Choosing a Network Protocol](https://msdn.microsoft.com/library/ms187892(v=sql.120).aspx)   
+ [Choosing a Network Protocol](../../database-engine/configure-windows/enable-or-disable-a-server-network-protocol.md)   
  [Creating a Valid Connection String Using TCP IP](creating-a-valid-connection-string-using-tcp-ip.md)   
  [SQL Server Browser Service](sql-server-browser-service.md)  
-  
   

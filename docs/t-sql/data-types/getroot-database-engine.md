@@ -1,4 +1,5 @@
 ---
+description: "GetRoot (Database Engine)"
 title: "GetRoot (Database Engine) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/22/2017"
@@ -18,7 +19,9 @@ ms.assetid: 240b70f1-eeda-44ab-b4bb-9e4af80fa7c0
 author: MikeRayMSFT
 ms.author: mikeray
 ---
+
 # GetRoot (Database Engine)
+
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]
 
 Returns the root of the hierarchy tree. GetRoot() is a static method.
@@ -34,7 +37,9 @@ hierarchyid::GetRoot ( )
 -- CLR syntax  
 static SqlHierarchyId GetRoot ( )   
 ```  
-  
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
 ## Return Types  
 **SQL Server return type:hierarchyid**
   

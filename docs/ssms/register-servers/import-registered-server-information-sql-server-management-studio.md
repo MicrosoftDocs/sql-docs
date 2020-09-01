@@ -1,4 +1,5 @@
 ---
+description: "Import Registered Server Information (SQL Server Management Studio)"
 title: Import Registered Server Information
 ms.prod: sql
 ms.prod_service: sql-tools
@@ -20,7 +21,7 @@ ms.date: 03/14/2017
 
 # Import Registered Server Information (SQL Server Management Studio)
 
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 This topic describes how to import saved registered server information in [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]. Exporting and then importing registered server files lets you easily configure several computers with the same servers in Registered Servers. This is useful when managing a large number of servers from computers in several locations, or when you want to configure basic connection settings for a less-experienced user.  
   

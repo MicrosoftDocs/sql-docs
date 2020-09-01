@@ -1,4 +1,5 @@
 ---
+description: "Audit Database Scope GDR Event Class"
 title: "Audit Database Scope GDR Event Class | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"

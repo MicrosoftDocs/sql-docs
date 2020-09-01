@@ -1,8 +1,9 @@
 ---
+description: "Step 4: Server Returns the Recordset (RDS Tutorial)"
 title: "Step 4: Server Returns the Recordset (RDS Tutorial) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -32,5 +33,5 @@ Sub RDSTutorial4()
 ```  
   
 ## See Also  
- [Step 5: DataControl is Made Usable (RDS Tutorial)](../../../ado/guide/remote-data-service/step-5-datacontrol-is-made-usable-rds-tutorial.md)   
- [RDS Tutorial (VBScript)](../../../ado/guide/remote-data-service/rds-tutorial-vbscript.md)   
+ [Step 5: DataControl is Made Usable (RDS Tutorial)](./step-5-datacontrol-is-made-usable-rds-tutorial.md)   
+ [RDS Tutorial (VBScript)](./rds-tutorial-vbscript.md)

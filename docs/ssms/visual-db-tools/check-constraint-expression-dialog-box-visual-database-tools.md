@@ -1,4 +1,5 @@
 ---
+description: "Check Constraint Expression Dialog Box (Visual Database Tools)"
 title: Check Constraint Expression Dialog Box
 ms.custom: seo-lt-2019
 ms.date: 01/19/2017
@@ -15,7 +16,7 @@ ms.reviewer:
 
 ---
 # Check Constraint Expression Dialog Box (Visual Database Tools)
-[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 When you attach a check constraint to a table or column, you must include an SQL expression. Type the check constraint expression in the box provided.  
   
 ## UI element list  

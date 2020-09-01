@@ -1,4 +1,5 @@
 ---
+description: "managed_backup.fn_available_backups (Transact-SQL)"
 title: "managed_backup.fn_available_backups (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -22,7 +23,7 @@ author: MikeRayMSFT
 ms.author: mikeray
 ---
 # managed_backup.fn_available_backups (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]
 
   Returns a table of 0, one or more rows of the available backup files for the specified database. The backup files returned are backups created by [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)].  
   

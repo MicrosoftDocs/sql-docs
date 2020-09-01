@@ -1,4 +1,5 @@
 ---
+description: "sys.dm_exec_sql_text (Transact-SQL)"
 title: "sys.dm_exec_sql_text (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "10/20/2017"
@@ -104,7 +105,7 @@ Execute the following T-SQL in a new query window in [!INCLUDE[ssManStudioFull](
         WAITFOR DELAY '00:02:00';
       ```
       
-    2.  Using **CROSS APPLY**.  
+  2.  Using **CROSS APPLY**.  
     The sql_handle from **sys.dm_exec_requests** will be passed to **sys.dm_exec_sql_text** using **CROSS APPLY**. Open a new query window and pass the spid identified in step 1. In this example the spid happens to be `59`.
 
         ```sql
@@ -114,7 +115,7 @@ Execute the following T-SQL in a new query window in [!INCLUDE[ssManStudioFull](
         WHERE session_id = 59 -- modify this value with your actual spid
          ```      
  
-    2.  Passing **sql_handle** directly.  
+  2.  Passing **sql_handle** directly.  
 Acquire the **sql_handle** from **sys.dm_exec_requests**. Then, pass the **sql_handle** directly to **sys.dm_exec_sql_text**. Open a new query window and pass the spid identified in step 1 to **sys.dm_exec_requests**. In this example the spid happens to be `59`. Then pass the returned **sql_handle** as an argument to **sys.dm_exec_sql_text**.
 
         ```sql

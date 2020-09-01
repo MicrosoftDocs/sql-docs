@@ -1,4 +1,5 @@
 ---
+description: "Using User-Defined Tables"
 title: "Using User-Defined Tables | Microsoft Docs"
 ms.custom: ""
 ms.date: "08/06/2017"
@@ -16,7 +17,7 @@ ms.author: "maghan"
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Using User-Defined Tables
-[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw.md)]
+[!INCLUDE [SQL Server ASDB, ASDBMI, ASDW ](../../../includes/applies-to-version/sql-asdb-asdbmi-asa.md)]
 
   User-defined tables represent tabular information. They are used as parameters when you pass tabular data into stored procedures or user-defined functions. User-defined tables cannot be used to represent columns in a database table.  
   

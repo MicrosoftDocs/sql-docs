@@ -1,4 +1,5 @@
 ---
+description: "Query Notifications Event Category"
 title: "Query Notifications Event Category | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/04/2017"

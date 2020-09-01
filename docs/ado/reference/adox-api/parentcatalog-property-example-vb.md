@@ -1,8 +1,9 @@
 ---
+description: "ParentCatalog Property Example (VB)"
 title: "ParentCatalog Property Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # ParentCatalog Property Example (VB)
-The following code demonstrates how to use the [ParentCatalog](../../../ado/reference/adox-api/parentcatalog-property-adox.md) property to access a provider-specific property prior to appending a table to a catalog. The property is **AutoIncrement**, which creates an AutoIncrement field in a Microsoft Jet database.  
+The following code demonstrates how to use the [ParentCatalog](./parentcatalog-property-adox.md) property to access a provider-specific property prior to appending a table to a catalog. The property is **AutoIncrement**, which creates an AutoIncrement field in a Microsoft Jet database.  
   
 ```  
 ' BeginCreateAutoIncrColumnVB  
@@ -78,12 +79,12 @@ End Sub
 ```  
   
 ## See Also  
- [Append Method (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
- [Append Method (ADOX Tables)](../../../ado/reference/adox-api/append-method-adox-tables.md)   
- [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [Column Object (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)   
- [Columns Collection (ADOX)](../../../ado/reference/adox-api/columns-collection-adox.md)   
- [Name Property (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
- [ParentCatalog Property (ADOX)](../../../ado/reference/adox-api/parentcatalog-property-adox.md)   
- [Table Object (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)   
- [Type Property (Column) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)
+ [Append Method (ADOX Columns)](./append-method-adox-columns.md)   
+ [Append Method (ADOX Tables)](./append-method-adox-tables.md)   
+ [Catalog Object (ADOX)](./catalog-object-adox.md)   
+ [Column Object (ADOX)](./column-object-adox.md)   
+ [Columns Collection (ADOX)](./columns-collection-adox.md)   
+ [Name Property (ADOX)](./name-property-adox.md)   
+ [ParentCatalog Property (ADOX)](./parentcatalog-property-adox.md)   
+ [Table Object (ADOX)](./table-object-adox.md)   
+ [Type Property (Column) (ADOX)](./type-property-column-adox.md)

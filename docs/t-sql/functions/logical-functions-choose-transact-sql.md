@@ -1,4 +1,5 @@
 ---
+description: "Logical Functions - CHOOSE (Transact-SQL)"
 title: "CHOOSE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -32,7 +33,9 @@ ms.author: maghan
 CHOOSE ( index, val_1, val_2 [, val_n ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *index*  
  Is an integer expression that represents a 1-based index into the list of the items following it.  
   

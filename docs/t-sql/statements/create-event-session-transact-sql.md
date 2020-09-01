@@ -1,4 +1,5 @@
 ---
+description: "CREATE EVENT SESSION (Transact-SQL)"
 title: "CREATE EVENT SESSION (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/10/2019"
@@ -98,6 +99,8 @@ ON { SERVER | DATABASE }
     [ [,] STARTUP_STATE = { ON | OFF } ]
 }
 ```
+
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
 ## Arguments
 

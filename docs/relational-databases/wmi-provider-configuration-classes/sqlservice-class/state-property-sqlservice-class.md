@@ -1,4 +1,5 @@
 ---
+description: "State Property (SqlService Class)"
 title: "State Property (SqlService)"
 ms.custom: seo-lt-2019
 ms.date: "03/04/2017"

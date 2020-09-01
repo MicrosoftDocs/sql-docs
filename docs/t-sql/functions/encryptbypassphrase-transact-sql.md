@@ -1,4 +1,5 @@
 ---
+description: "ENCRYPTBYPASSPHRASE (Transact-SQL)"
 title: "ENCRYPTBYPASSPHRASE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/03/2017"
@@ -37,7 +38,9 @@ EncryptByPassPhrase ( { 'passphrase' | @passphrase }
     , { authenticator | @authenticator } ] )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *passphrase*  
  A passphrase from which to generate a symmetric key.  
   

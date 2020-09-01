@@ -1,4 +1,5 @@
 ---
+description: "SET RESULT_SET_CACHING (Transact-SQL)"
 title: "SET RESULT_SET_CACHING (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: 04/16/2020
@@ -17,7 +18,7 @@ monikerRange: "=azure-sqldw-latest || = sqlallproducts-allversions"
 ---
 # SET RESULT SET CACHING (Transact-SQL) 
 
-[!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
+[!INCLUDE [asa](../../includes/applies-to-version/asa.md)]
 
 Controls the result set caching behavior for the current client session.  
 

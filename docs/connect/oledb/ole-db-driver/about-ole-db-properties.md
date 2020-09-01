@@ -1,6 +1,6 @@
 ---
 title: "About OLE DB connection properties | Microsoft Docs"
-description: "About OLE DB properties"
+description: In OLE DB Driver for SQL Server, consumers set property values to request specific object behavior. Learn about setting properties.
 ms.custom: ""
 ms.date: "05/20/2020"
 ms.prod: sql
@@ -12,11 +12,11 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, properties"
   - "properties [OLE DB]"
   - "property values [OLE DB Driver for SQL Server]"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # About OLE DB Properties
-[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 

@@ -1,4 +1,5 @@
 ---
+description: "Mathematical Functions (Transact-SQL)"
 title: "Mathematical Functions (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
 ms.date: "07/06/2017"
@@ -18,7 +19,7 @@ author: markingmyname
 ms.author: maghan
 ---
 # Mathematical Functions (Transact-SQL)
-[!INCLUDE [sql-asdb-asdbmi-asdw-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asdw-pdw.md)]
+[!INCLUDE [sql-asdb-asdbmi-asa-pdw](../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
 The following scalar functions perform a calculation, usually based on input values that are provided as arguments, and return a numeric value:  
   

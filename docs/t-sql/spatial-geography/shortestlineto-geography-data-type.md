@@ -1,4 +1,5 @@
 ---
+description: "ShortestLineTo (geography Data Type)"
 title: "ShortestLineTo (geography Data Type) | Microsoft Docs"
 ms.custom: ""
 ms.date: "03/14/2017"
@@ -30,7 +31,9 @@ ms.author: mlandzic
 .ShortestLineTo ( geography_other )  
 ```  
   
-## Arguments  
+[!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
+
+## Arguments
  *geography_other*  
  Specifies the second **geography** instance that the calling **geography** instance is trying to determine the shortest distance to.  
   

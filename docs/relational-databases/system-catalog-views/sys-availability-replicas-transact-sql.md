@@ -51,8 +51,8 @@ If the local server instance is unable to talk to the WSFC failover cluster, for
 |**modify_date**|**datetime**|Date that the replica was last modified.<br /><br /> NULL = Replica not on this server instance.|  
 |**backup_priority**|**int**|Represents the user-specified priority for performing backups on this replica relative to the other replicas in the same availability group. The value is an integer in the range of 0..100.<br /><br /> For more information, see [Active Secondaries: Backup on Secondary Replicas &#40;Always On Availability Groups&#41;](../../database-engine/availability-groups/windows/active-secondaries-backup-on-secondary-replicas-always-on-availability-groups.md).|  
 |**read_only_routing_url**|**nvarchar(256)**|Connectivity endpoint (URL) of the read only availability replica. For more information, see [Configure Read-Only Routing for an Availability Group &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/configure-read-only-routing-for-an-availability-group-sql-server.md).|  
-|**seeding_mode**|||
-|**seeding_mode_desc**|||
+|**seeding_mode**|**tinyint**|One of: </br></br> 0: Manual </br></br> 1: Automatic|
+|**seeding_mode_desc**|**nvarchar(60)**|Describes seeding mode. </br></br> MANUAL </br></br> AUTOMATIC|
   
 ## Security  
   

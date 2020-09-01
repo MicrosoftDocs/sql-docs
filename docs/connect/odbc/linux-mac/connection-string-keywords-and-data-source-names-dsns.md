@@ -2,7 +2,7 @@
 title: "Connecting using ODBC"
 description: "Learn how to create a connection to a database from Linux or macOS using the Microsoft ODBC Driver for SQL Server."
 ms.custom: ""
-ms.date: "05/11/2020"
+ms.date: 09/01/2020
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -82,7 +82,7 @@ Regardless of the settings for **Encrypt** and **TrustServerCertificate**, the s
 By default, encrypted connections always verify the server's certificate. However, if you connect to a server that has a self-signed certificate, also add the `TrustServerCertificate` option to bypass checking the certificate against the list of trusted certificate authorities:  
 
 ```
-Driver={ODBC Driver 13 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
+Driver={ODBC Driver 17 for SQL Server};Server=ServerNameHere;Encrypt=YES;TrustServerCertificate=YES  
 ```  
   
 TLS uses the OpenSSL library. The following table shows the minimum supported versions of OpenSSL and the default Certificate Trust Store locations for each platform:

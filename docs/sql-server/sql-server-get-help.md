@@ -39,7 +39,7 @@ There are a few communities that can help you with your SQL Server issues.
 - [Reddit](https://www.reddit.com/r/SQLServer/)
 - [Get help from the community with the #sqlhelp hash tag on twitter](https://twitter.com/hashtag/sqlhelp?src=hash) 
  
-## Feedback Suggestions
+## Feedback suggestions
 
 You can submit suggestions for improvement, as well as submit bugs for:
 
@@ -75,7 +75,7 @@ The following Twitter accounts provide updates about SQL Server:
 The following SQL Server blogs provide the latest information about SQL Server: 
 
 - [SQL Server Blog](https://cloudblogs.microsoft.com/sqlserver/)
-- [SQL Repl Talk](https://blogs.msdn.microsoft.com/repltalk/)
+- [SQL ReplTalk](https://blogs.msdn.microsoft.com/repltalk/)
 - [SQL Tiger Team](https://blogs.msdn.microsoft.com/sql_server_team/)
 - [SQL Support Team](https://techcommunity.microsoft.com/t5/SQL-Server-Support/bg-p/SQLServerSupport/)
 

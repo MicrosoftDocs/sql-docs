@@ -2,7 +2,7 @@
 description: "CREATE FUNCTION (SQL Data Warehouse)"
 title: "CREATE FUNCTION (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/06/2020"
+ms.date: "08/31/2020"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -37,7 +37,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 ## Syntax  
   
 ```syntaxsql
--- Transact-SQL Scalar Function Syntax  
+-- Transact-SQL Scalar Function Syntax  (in Azure Synapse Analytics and Parallel Data Warehouse)
 CREATE FUNCTION [ schema_name. ] function_name   
 ( [ { @parameter_name [ AS ] parameter_data_type   
     [ = default ] }   
@@ -61,7 +61,7 @@ RETURNS return_data_type
 ```  
 
 ```syntaxsql
--- Transact-SQL Inline Table-Valued Function Syntax (in Azure Synapse Analytics)
+-- Transact-SQL Inline Table-Valued Function Syntax (in Azure Synapse Analytics only)
 CREATE FUNCTION [ schema_name. ] function_name
 ( [ { @parameter_name [ AS ] parameter_data_type
     [ = default ] }
@@ -208,10 +208,10 @@ SELECT dbo.ConvertInput(15) AS 'ConvertedValue';
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
 
 ### A. Creating an inline table-valued function
- The following example creates an inline table-valued function to return some key information on modules, based on the `objectType` parameter. It makes use of some of the system catalog views mentioned in [Metadata](#Metadata).
+ The following example creates an inline table-valued function to return some key information on modules, based on the `objectType` parameter. It includes a default value for `objectType` to return all modules when the function is called with the DEFAULT parameter. It makes use of some of the system catalog views mentioned in [Metadata](#Metadata).
 
 ```sql
-CREATE FUNCTION dbo.ModuleByType(@objectType CHAR(2))
+CREATE FUNCTION dbo.ModulesByType(@objectType CHAR(2) = '%%')
 RETURNS TABLE
 AS
 RETURN
@@ -225,13 +225,13 @@ RETURN
 		sm.definition AS 'Module Description'
 	FROM sys.sql_modules AS sm  
 	JOIN sys.objects AS o ON sm.object_id = o.object_id
-	WHERE type = @objectType
+	WHERE o.type like '%' + @objectType + '%'
 );
 GO
 ```
-The function is called to return all view (**V**) objects with:
+The function can then be called to return all view (**V**) objects with:
 ```sql
-select * from dbo.ModuleByType('V');
+select * from dbo.ModulesByType('V');
 ```
   
 ## See Also  

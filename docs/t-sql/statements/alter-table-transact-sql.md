@@ -1079,7 +1079,7 @@ ALTER TABLE permissions apply to both tables involved in an ALTER TABLE SWITCH s
 
 If you've defined any columns in the ALTER TABLE statement to be of a common language runtime (CLR) user-defined type or alias data type, REFERENCES permission on the type is required.
 
-Adding a column that updates the rows of the table requires **UPDATE** permission on the table. For example, adding a **NOT NULL** column with a default value or adding an identity column when the table isn't empty.
+Adding or altering a column that updates the rows of the table requires **UPDATE** permission on the table. For example, adding a **NOT NULL** column with a default value or adding an identity column when the table isn't empty.
 
 ## <a name="Example_Top"></a> Examples
 

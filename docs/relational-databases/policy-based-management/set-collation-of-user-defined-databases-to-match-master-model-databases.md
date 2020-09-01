@@ -1,5 +1,5 @@
 ---
-title: "Set the Collation of User-defined Databases to Match master and model Databases"
+title: "Set the collation of user-defined databases to match master and model databases"
 description:  Learn how to enable a policy to check if the collations of user-defined databases and system databases are the same.
 ms.custom: seo-lt-2019
 ms.date: "08/31/2020"
@@ -13,11 +13,11 @@ helpviewer_keywords:
 author: dzsquared
 ms.author: drskwier
 ---
-# Set the Collation of User-defined Databases to Match master and model Databases
+# Set the collation of user-defined databases to match master and model databases
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
   This rule checks whether user-defined databases are defined by using a database collation that is the same as the collation for master or model.
   
-## Best Practices Recommendations  
+## Best practices recommendations  
  We recommend that the collations of user-defined databases match the collation of master or model. Otherwise, collation conflicts can occur that might prevent code from executing. For example, when a stored procedure joins one table to a temporary table, SQL Server might end the batch and return a collation conflict error if the collations of the user-defined database and the model database are different. This occurs because temporary tables are created in tempdb, which bases its collation on that of model.
 
   If you experience collation conflict errors, consider one of the following solutions:
@@ -28,11 +28,11 @@ ms.author: drskwier
 
   - Modify any stored procedures that join user tables to tables in tempdb to create the tables in tempdb by using the collation of the user database. To do this, add the COLLATE database_default clause to the column definitions of the temporary table, as shown in the following example:
   
-```
-CREATE TABLE #temp1 ( c1 int, c2 varchar(30) COLLATE database_default )
-```
+    ```
+    CREATE TABLE #temp1 ( c1 int, c2 varchar(30) COLLATE database_default )
+    ```
 
-## For More Information  
+## See also
   
  [Set or Change the Server Collation](../collations/set-or-change-the-server-collation.md)  
 

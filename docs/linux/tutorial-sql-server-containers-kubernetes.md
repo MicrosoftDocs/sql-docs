@@ -29,17 +29,17 @@ This tutorial demonstrates how to configure a highly available SQL Server instan
 
 Kubernetes 1.6 and later has support for [storage classes](https://kubernetes.io/docs/concepts/storage/storage-classes/), [persistent volume claims](https://kubernetes.io/docs/concepts/storage/storage-classes/#persistentvolumeclaims), and the [Azure disk volume type](https://github.com/kubernetes/examples/tree/master/staging/volumes/azure_disk). You can create and manage your SQL Server instances natively in Kubernetes. The example in this article shows how to create a [deployment](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/) to achieve a high availability configuration similar to a shared disk failover cluster instance. In this configuration, Kubernetes plays the role of the cluster orchestrator. When a SQL Server instance in a container fails, the orchestrator bootstraps another instance of the container that attaches to the same persistent storage.
 
-![Diagram of Kubernetes SQL Server cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
+![SQL Server container on Kubernetes cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql.png)
 
 In the preceding diagram, `mssql-server` is a container in a [pod](https://kubernetes.io/docs/concepts/workloads/pods/pod/). Kubernetes orchestrates the resources in the cluster. A [replica set](https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/) ensures that the pod is automatically recovered after a node failure. Applications connect to the service. In this case, the service represents a load balancer that hosts an IP address that stays the same after failure of the `mssql-server`.
 
 In the following diagram, the `mssql-server` container has failed. As the orchestrator, Kubernetes guarantees the correct count of healthy instances in the replica set, and starts a new container according to the configuration. The orchestrator starts a new pod on the same node, and `mssql-server` reconnects to the same persistent storage. The service connects to the re-created `mssql-server`.
 
-![Diagram of Kubernetes SQL Server cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
+![SQL Server pod fail on Kubernetes cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-pod-fail.png)
 
 In the following diagram, the node hosting the `mssql-server` container has failed. The orchestrator starts the new pod on a different node, and `mssql-server` reconnects to the same persistent storage. The service connects to the re-created `mssql-server`.
 
-![Diagram of Kubernetes SQL Server cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
+![SQL Server pod recover on Kubernetes cluster](media/tutorial-sql-server-containers-kubernetes/kubernetes-sql-after-node-fail.png)
 
 ## Prerequisites
 
@@ -153,60 +153,60 @@ In this step, create a manifest to describe the container based on the SQL Serve
 
 1. Create a manifest (a YAML file) to describe the deployment. The following example describes a deployment, including a container based on the SQL Server container image.
 
-```yaml
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: mssql-deployment
-spec:
-  replicas: 1
-  selector:
-     matchLabels:
+   ```yaml
+   apiVersion: apps/v1
+   kind: Deployment
+   metadata:
+     name: mssql-deployment
+   spec:
+     replicas: 1
+     selector:
+        matchLabels:
+          app: mssql
+     template:
+       metadata:
+         labels:
+           app: mssql
+       spec:
+         terminationGracePeriodSeconds: 30
+         securityContext:
+           fsGroup: 10001
+         containers:
+         - name: mssql
+           image: mcr.microsoft.com/mssql/server:2019-latest
+           ports:
+           - containerPort: 1433
+           env:
+           - name: MSSQL_PID
+             value: "Developer"
+           - name: ACCEPT_EULA
+             value: "Y"
+           - name: SA_PASSWORD
+             valueFrom:
+               secretKeyRef:
+                 name: mssql
+                 key: SA_PASSWORD 
+           volumeMounts:
+           - name: mssqldb
+             mountPath: /var/opt/mssql
+         volumes:
+         - name: mssqldb
+           persistentVolumeClaim:
+             claimName: mssql-data
+   ---
+   apiVersion: v1
+   kind: Service
+   metadata:
+     name: mssql-deployment
+   spec:
+     selector:
        app: mssql
-  template:
-    metadata:
-      labels:
-        app: mssql
-    spec:
-      terminationGracePeriodSeconds: 30
-      securityContext:
-        fsGroup: 10001
-      containers:
-      - name: mssql
-        image: mcr.microsoft.com/mssql/server:2019-latest
-        ports:
-        - containerPort: 1433
-        env:
-        - name: MSSQL_PID
-          value: "Developer"
-        - name: ACCEPT_EULA
-          value: "Y"
-        - name: SA_PASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: mssql
-              key: SA_PASSWORD 
-        volumeMounts:
-        - name: mssqldb
-          mountPath: /var/opt/mssql
-      volumes:
-      - name: mssqldb
-        persistentVolumeClaim:
-          claimName: mssql-data
----
-apiVersion: v1
-kind: Service
-metadata:
-  name: mssql-deployment
-spec:
-  selector:
-    app: mssql
-  ports:
-    - protocol: TCP
-      port: 1433
-      targetPort: 1433
-  type: LoadBalancer
-```
+     ports:
+       - protocol: TCP
+         port: 1433
+         targetPort: 1433
+     type: LoadBalancer
+   ```
 
    Copy the preceding code into a new file, named `sqldeployment.yaml`. Update the following values: 
 
@@ -223,12 +223,12 @@ spec:
      valueFrom:
        secretKeyRef:
          name: mssql
-         key: SA_PASSWORD 
+         key: SA_PASSWORD
      ```
-    
-     When Kubernetes deploys the container, it refers to the secret named `mssql` to get the value for the password. 
 
-    * `securityContext` : A securityContext defines privilege and access control settings for a Pod or Container, in this case it is specified at the pod level, so all containers ( in this case only one) adhere to that security context. In the security context we define the fsGroup with the value 10001 ( which is the GID for mssql group) means, all processes of the container are also part of the supplementary group ID 10001(mssql). The owner for volume /var/opt/mssql and any files created in that volume will be Group ID 10001(mssql group).
+    When Kubernetes deploys the container, it refers to the secret named `mssql` to get the value for the password.
+
+   * `securityContext` : A securityContext defines privilege and access control settings for a Pod or Container, in this case it is specified at the pod level, so all containers ( in this case only one) adhere to that security context. In the security context we define the fsGroup with the value 10001 ( which is the GID for mssql group) means, all processes of the container are also part of the supplementary group ID 10001(mssql). The owner for volume /var/opt/mssql and any files created in that volume will be Group ID 10001(mssql group).
 
    >[!NOTE]
    >By using the `LoadBalancer` service type, the SQL Server instance is accessible remotely (via the internet) at port 1433.
@@ -270,18 +270,20 @@ spec:
 
    ```azurecli
    az aks browse --resource-group <MyResourceGroup> --name <MyKubernetesClustername>
-   ```  
+   ```
+
 1. You can also verify the container is running as non-root by running the following command:
-   
+
     ```azurecli
     kubectl.exe exec <name of SQL POD> -it -- /bin/bash 
     ```
 
     and then run 'whoami' you should see the username as mssql. Which is a non-root user.
-    
+
     ```azurecli
-    whoami 
+    whoami
     ```
+
 ## Connect to the SQL Server instance
 
 If you configured the container as described, you can connect with an application from outside the Azure virtual network. Use the `sa` account and the external IP address for the service. Use the password that you configured as the Kubernetes secret. 
@@ -293,7 +295,7 @@ You can use the following applications to connect to the SQL Server instance.
 * [SSDT](https://docs.microsoft.com/sql/linux/sql-server-linux-develop-use-ssdt)
 
 * sqlcmd
-   
+
    To connect with `sqlcmd`, run the following command:
 
    ```cmd
@@ -301,9 +303,9 @@ You can use the following applications to connect to the SQL Server instance.
    ```
 
    Replace the following values:
-      
-    - `<External IP Address>` with the IP address for the `mssql-deployment` service 
-    - `MyC0m9l&xP@ssw0rd` with your password
+
+  * `<External IP Address>` with the IP address for the `mssql-deployment` service 
+  * `MyC0m9l&xP@ssw0rd` with your password
 
 ## Verify failure and recovery
 
@@ -322,6 +324,7 @@ To verify failure and recovery, you can delete the pod. Do the following steps:
    ```azurecli
    kubectl delete pod mssql-deployment-0
    ```
+
    `mssql-deployment-0` is the value returned from the previous step for pod name. 
 
 Kubernetes automatically re-creates the pod to recover a SQL Server instance, and connect to the persistent storage. Use `kubectl get pods` to verify that a new pod is deployed. Use `kubectl get services` to verify that the IP address for the new container is the same. 

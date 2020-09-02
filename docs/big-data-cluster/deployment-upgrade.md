@@ -1,4 +1,4 @@
----
+---Release 2019 cu 7 #16867
 title: Upgrade to a new release
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how to upgrade SQL Server Big Data Clusters to a new release.
@@ -126,7 +126,7 @@ In-place upgrade from a CTP or release candidate build of SQL Server Big Data Cl
 
 ### Backup and delete the old cluster
 
-There is no in place upgrade for big data clusters deployed before SQL Server 2019 GDR1 release. The only way to upgrade to a new release is to manually remove and recreate the cluster. Each release has a unique version of `azdata` that is not compatible with the previous version. Also, if a newer container image is downloaded on cluster deployed with different older version, the latest image might not be compatible with the older images on the cluster. The newer image is pulled if you are using the `latest` image tag for in the deployment configuration file for the container settings. By default, each release has a specific image tag corresponding to the SQl Server release version. To upgrade to the latest release, use the following steps:
+There is no in place upgrade for big data clusters deployed before SQL Server 2019 GDR1 release. The only way to upgrade to a new release is to manually remove and recreate the cluster. Each release has a unique version of `azdata` that is not compatible with the previous version. Also, if a newer container image is downloaded on cluster deployed with different older version, the latest image might not be compatible with the older images on the cluster. The newer image is pulled if you are using the `latest` image tag for in the deployment configuration file for the container settings. By default, each release has a specific image tag corresponding to the SQL Server release version. To upgrade to the latest release, use the following steps:
 
 1. Before deleting the old cluster, back up the data on the SQL Server master instance and on HDFS. For the SQL Server master instance, you can use [SQL Server backup and restore](data-ingestion-restore-database.md). For HDFS, you [can copy out the data with `curl`](data-ingestion-curl.md).
 

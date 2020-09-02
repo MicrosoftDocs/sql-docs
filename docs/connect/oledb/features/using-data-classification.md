@@ -1,7 +1,7 @@
 ---
 title: "Using Data Classification with Microsoft OLE DB Driver for SQL Server | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/28/2020"
+ms.date: "09/30/2020"
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ""
@@ -23,6 +23,9 @@ manager: kenvh
 
 For more information on how to assign classification to columns, see [SQL Data Discovery and Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification).
 
+> [!NOTE]  
+>  Since the ISSDataClassification interface exposes classification information obtained from the server, obtaining this interface through [in-memory rowsets](..\ole-db-table-valued-parameters\table-valued-parameter-rowset-creation.md#table-valued-parameter-rowset-creation) is not applicable, therefore, not supported.
+
 ## Code samples
 
 The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] queries can be executed in SSMS to set up the prerequisites for the sample C++ application:
@@ -36,8 +39,8 @@ GO
 
 CREATE TABLE [dbo].[mytable](
     [col1] [int] NULL,
-    [col2] [int] NULL,
-) ON [PRIMARY]
+    [col2] [int] NULL
+)
 GO
 
 ADD SENSITIVITY CLASSIFICATION TO [dbo].[mytable].[col1] WITH (label = 'Label1', label_id = 'LabelId1', information_type = 'Type1', information_type_id = 'TypeId1', rank = Medium)

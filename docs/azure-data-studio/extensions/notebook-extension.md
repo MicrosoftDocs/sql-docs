@@ -4,8 +4,8 @@ description: Learn about how to package notebooks into an extension using the ex
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: how-to
-author: anjalia
-ms.author: t-anjaga
+author: yualan
+ms.author: alayu
 ms.reviewer: alayu, maghan
 ms.custom: 
 ms.date: 08/28/2020

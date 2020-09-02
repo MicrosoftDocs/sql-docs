@@ -190,7 +190,7 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 
 ```syntaxsql
 
-CREATE CLUSTERED COLUMNSTORE INDEX INDEX index_name
+CREATE CLUSTERED COLUMNSTORE INDEX index_name
     ON [ database_name . [ schema ] . | schema . ] table_name
     [ORDER (column[,...n])]
     [WITH ( DROP_EXISTING = { ON | OFF } )]

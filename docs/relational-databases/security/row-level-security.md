@@ -2,7 +2,7 @@
 title: "Row-Level Security | Microsoft Docs"
 description: Learn how Row-Level Security uses group membership or execution context to control access to rows in a database table in SQL Server.
 ms.custom: ""
-ms.date: "05/14/2019"
+ms.date: "09/01/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse"
 ms.reviewer: ""
@@ -293,11 +293,18 @@ DROP SCHEMA Security;
 
 ### <a name="external"></a> B. Scenarios for using Row Level Security on an Azure Synapse external table
 
-This short example creates three users and an external table with six rows. It then creates an inline table-valued function and a security policy for the external table. The example shows how select statements are filtered for the various users.
+This short example creates three users and an external table with six rows. It then creates an inline table-valued function and a security policy for the external table. The example shows how select statements are filtered for the various users. 
 
-Create three user accounts that will demonstrate different access capabilities.
+### Prerequisites
+
+1. You must have a SQL pool. See [Create a Synapse SQL pool](/azure/synapse-analytics/sql-data-warehouse/create-data-warehouse-portal)
+1. The server hosting your SQL pool must be registered with AAD and you must have an Azure storage account with Storage Blog Contributor permissions. Follow the steps [here](/azure/azure-sql/database/vnet-service-endpoint-rule-overview#steps).
+1. Create a file system for your Azure Storage account. Use Storage Explorer to view your storage account. Right click on containers and select *Create file system*.  
+
+Once you have the prerequisites in place, create three user accounts that will demonstrate different access capabilities.
 
 ```sql
+--run in master
 CREATE LOGIN Manager WITH PASSWORD = 'somepassword'
 GO
 CREATE LOGIN Sales1 WITH PASSWORD = 'somepassword'
@@ -305,6 +312,7 @@ GO
 CREATE LOGIN Sales2 WITH PASSWORD = 'somepassword'
 GO
 
+--run in master and your SQL pool database
 CREATE USER Manager FOR LOGIN Manager;  
 CREATE USER Sales1  FOR LOGIN Sales1;  
 CREATE USER Sales2  FOR LOGIN Sales2 ;
@@ -338,16 +346,15 @@ SELECT * FROM Sales;
 Create an Azure Synapse external table from the Sales table created.
 
 ```sql
-CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<userpassword>Passq';
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<userpassword>';
 
 CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Identity';
 
-CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://<storage_account>.dfs.core.windows.net', CREDENTIAL = msi_cred);
-
+CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://<filesystemname@storage_account>.dfs.core.windows.net', CREDENTIAL = msi_cred);
 
 CREATE EXTERNAL FILE FORMAT MSIFormat  WITH (FORMAT_TYPE=DELIMITEDTEXT);
   
-CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='RLSExtTabletest.tbl', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
+CREATE EXTERNAL TABLE Sales_ext WITH (LOCATION='<yourtablename>', DATA_SOURCE=ext_datasource_with_abfss, FILE_FORMAT=MSIFormat, REJECT_TYPE=Percentage, REJECT_SAMPLE_VALUE=100, REJECT_VALUE=100)
 AS SELECT * FROM sales;
 ```
 

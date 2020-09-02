@@ -79,7 +79,7 @@ SET Details =
      (SELECT TOP 1 UnitPrice, OrderQty  
        FROM Sales.SalesOrderDetail D  
        WHERE D.SalesOrderId = SalesOrder.SalesOrderId  
-      FOR JSON AUTO 
+      FOR JSON AUTO) 
 ```  
   
 ## Use FOR JSON output in a C# client app  

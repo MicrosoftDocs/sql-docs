@@ -1,4 +1,4 @@
----Release 2019 cu 7 #16867
+---
 title: Upgrade to a new release
 titleSuffix: SQL Server Big Data Clusters
 description: Learn how to upgrade SQL Server Big Data Clusters to a new release.

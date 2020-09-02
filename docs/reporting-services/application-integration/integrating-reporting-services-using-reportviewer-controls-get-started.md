@@ -2,7 +2,7 @@
 title: "Get started with Report Viewer controls"
 description: The Report Viewer controls can be used to integrate Reporting Services RDL reports into WebForms and WinForms apps. 
 ms.custom: seo-lt-2019
-ms.date: 08/31/2020
+ms.date: 09/01/2020
 ms.prod: reporting-services
 ms.prod_service: "reporting-services-native"
 ms.technology: application-integration
@@ -21,7 +21,7 @@ The Report Viewer controls can be used to integrate Reporting Services RDL repor
 
     You can use .NET Framework 4.6 or any newer version.
 
-    ![Screenshot of creating a new ASP.NET Empty Web Site.](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project.png)
+    ![Screenshot of creating a new ASP.NET Empty Web Site.](../../reporting-services/application-integration/media/ssrs-create-new-aspnet-project-4-6.png)
 
 2. Install the Report Viewer control NuGet package via the **NuGet package manager console**.
 
@@ -137,7 +137,7 @@ Make sure to update any assembly references to version *15.0.0.0*, including the
 
     You can use .NET Framework 4.6 or any newer version.
     
-    ![Screenshot of creating a new Windows Forms Application.](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project.png)
+    ![Screenshot of creating a new Windows Forms Application.](../../reporting-services/application-integration/media/ssrs-create-new-winforms-project-4-6.png)
 
 2. Install the Report Viewer control NuGet package via the **NuGet package manager console**.
 

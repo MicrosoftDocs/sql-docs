@@ -10,7 +10,9 @@ ms.topic: conceptual
 author: "yualan"
 ms.author: "alayu"
 ---
+
 # SandDance for Azure Data Studio (Preview)
+
 Azure Data Studio now offers a way to create quick visualizations for your data. This extension is helpful when you are trying to look at the data and understand what's going on. We use a technology called SandDance from Microsoft Research, which can generate in-place visualizations of the data.
 
 ![sanddance-animation](https://user-images.githubusercontent.com/11507384/54236654-52d42800-44d1-11e9-859e-6c5d297a46d2.gif)

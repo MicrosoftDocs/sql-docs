@@ -1,5 +1,6 @@
 ---
 title: "Using Data Classification with Microsoft OLE DB Driver for SQL Server | Microsoft Docs"
+description: Learn how to use Microsoft OLE DB Driver for SQL Server to obtain classification information.
 ms.custom: ""
 ms.date: "09/30/2020"
 ms.prod: sql

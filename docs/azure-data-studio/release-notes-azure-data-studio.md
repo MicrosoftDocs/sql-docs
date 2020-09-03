@@ -24,7 +24,7 @@ August 12, 2020 &nbsp; / &nbsp; version: 1.21.0
 | Change | Details |
 | :----- | :------ |
 | New notebook features | &bull; &nbsp; Move cell locations <br/> &bull; &nbsp; Convert cells to Text Cell or Code cell
-| Jupyter Books picker | Users can now choose Jupyter Books from Github releases and open seamlessly in Azure Data Studio |
+| Jupyter Books picker | Users can now choose Jupyter Books from GitHub releases and open seamlessly in Azure Data Studio |
 | Search added to Notebooks Viewlet | Users can easily search through content across their notebooks and Jupyter Books |
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22August+2020+Release%22+is%3Aclosed). |
 | &nbsp; | &nbsp; |

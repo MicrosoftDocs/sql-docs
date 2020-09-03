@@ -13,16 +13,16 @@ ms.prod: sql
 
 You can connect your SQL Server instance on premises to Azure by following these steps.
 
-## Pre-requisites
+## Prerequisites
 
 * Your machine has at least one instance of SQL Server installed
 * For Linux machines, you have downloaded the az cli and connected your azure account. Follow the instructions on how to [install Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli-apt?view=azure-cli-latest).
 
 ## Generate a registration script for SQL Server
 
-In this step you generate a script that discovers all SQL Server instances installed on the machine and registers them as `__SQL Server - Azure Arc__` resources. If the hosting physical or virtual machine is not registered with Azure Arc, the script automatically does it.
+In this step you generate a script that discovers all SQL Server instances installed on the machine and registers them as __SQL Server - Azure Arc__ resources. If the hosting physical or virtual machine is not registered with Azure Arc, the script automatically does it.
 
-* Search for`__SQL Server - Azure Arc__` resource type and add a new one through the creation blade.
+* Search for__SQL Server - Azure Arc__ resource type and add a new one through the creation blade.
 
    :::image type="content" source="media/join/start-creation-of-sql-server-azure-arc-resource.png" alt-text="Azure SQL create":::
 
@@ -30,7 +30,7 @@ In this step you generate a script that discovers all SQL Server instances insta
 
 * Select the the subscription, resource group, Azure region and the host operating system. If required, also specify the proxy that your network uses to connect to Internet.
 
-   :::image type="content" source="media/join/server-details-sql-server-azure-arc.png)alt-text="Server details":::
+   :::image type="content" source="media/join/server-details-sql-server-azure-arc.png"alt-text="Server details":::
 
 * Go to the **Run script** tab and download the displayed registration script. The portal generates the script for the hosting OS you specified.
 
@@ -38,7 +38,7 @@ In this step you generate a script that discovers all SQL Server instances insta
 
 ## Connect the installed SQL Server instances to Azure Arc
 
-In this step you will take the script you downloaded from Azure portal and execute it on the target physical or virtual machine. As a result, each installed SQL Server instance on the machine will be registered as a `__SQL Server - Azure Arc__` resource. In addition, if the machines itself does not have the guest configuration agent installed, it will be installed automatically and registered as a `__Machine - Azure Arc__` resource.
+In this step you will take the script you downloaded from Azure portal and execute it on the target physical or virtual machine. As a result, each installed SQL Server instance on the machine will be registered as a __SQL Server - Azure Arc__ resource. In addition, if the machines itself does not have the guest configuration agent installed, it will be installed automatically and registered as a `__Machine - Azure Arc__` resource.
 
 ### Windows
 
@@ -62,22 +62,22 @@ sudo chmod +x ./<filename>.sh
 
 ## Register SQL Server instances on multiple machines
 
-You can automate registration of multiple SQL Servers using any enterprise management tool that supports launching the same script on a set of target machines. No modifications of the downloaded script will be required. Each of the target machines must meet the same [pre-requisites](#Pre-requisites).
+You can automate registration of multiple SQL Servers using any enterprise management tool that supports launching the same script on a set of target machines. No modifications of the downloaded script will be required. Each of the target machines must meet the same [prerequisites](#prerequisites).
 
 ## Validate the SQL Server - Azure Arc resources
 
-Go [Azure portal](https://ms.portal.azure.com/#home) and open the newly registered `__SQL Server - Azure Arc__` resource to validate.
+Go [Azure portal](https://ms.portal.azure.com/#home) and open the newly registered __SQL Server - Azure Arc__ resource to validate.
 
 :::image type="content" source="media/join/validate-sql-server-azure-arc.png" alt-text="Validate SQL Server Arc":::
 
 ## Un-register the SQL Server - Azure Arc resources
 
-To remove an existing`__SQL Server - Azure Arc__` resource, go to the resource group that contains it and remove it from the list of resources in the group.
+To remove an existing __SQL Server - Azure Arc__ resource, go to the resource group that contains it and remove it from the list of resources in the group.
 
-![Validate SQL Server Arc](../Assets/delete-sql-server-azure-arc.png)
+:::image type="content" source="media/join/delete-sql-server-azure-arc.png" alt-text="Delete SQL Server instance":::
 
 ## Next steps
 
-[Configure advanced data security for your SQL Server instance](002-configure-advanced-data-security-for-sql-server-instance.md)
+[Configure advanced data security for your SQL Server instance](configure-advanced-data-security.md)
 
 [Configure on-demand SQL assessment for your SQL Server instance](assess.md)

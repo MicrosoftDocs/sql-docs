@@ -2,7 +2,7 @@
 description: "sys.dm_os_volume_stats (Transact-SQL)"
 title: "sys.dm_os_volume_stats (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/06/2019"
+ms.date: "09/03/2020"
 ms.prod: sql
 ms.reviewer: ""
 ms.technology: system-objects
@@ -58,6 +58,7 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**supports_sparse_files**|**bit**|Indicates if the volume supports sparse files.  Cannot be null.|  
 |**is_read_only**|**bit**|Indicates if the volume is currently marked as read only. Cannot be null.|  
 |**is_compressed**|**bit**|Indicates if this volume is currently compressed. Cannot be null.|  
+|**incurs_seek_penalty**|**tinyint**|Indicates the type of storage supporting this volume. Possible values are:<br /><br /> 0: No seek penalty on this volume, typically when the volume is on a PMM or SSD device <br /><br /> 1: Seek penalty on this device, typically when the volume in on a HDD device<br /><br /> NULL: The storage type can't be determined, typically when the volume is on a UNC path or mounted shares<br /><br />**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])|  
   
 ## Security  
   

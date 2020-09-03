@@ -61,7 +61,7 @@ landingContent:
       - text: SQL Server on Linux
         url: ../linux/sql-server-linux-overview.md
       - text: SQL Server for Azure Arc
-        url: azure-arc/connect.md
+        url: azure-arc/overview.md
     - linkListType: quickstart
       links:
       - text: Connect & query (SSMS)

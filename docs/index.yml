@@ -92,7 +92,7 @@ conceptualContent:
           url: machine-learning/index.yml
           itemType: whats-new
         - text: SQL Server enabled Azure Arc
-          url: sql-server/azure-arc/connect.md
+          url: sql-server/azure-arc/overview.md
           itemType: whats-new
     - title: Install 
       links:

@@ -10125,6 +10125,8 @@
     href: /azure/virtual-machines/windows/sql/virtual-machines-windows-sql-server-iaas-overview
 - name: Azure Arc enabled SQL Server
   items:
+    - name: Overview
+      href: sql-server/azure-arc/overview.md
     - name: Connect
       href: sql-server/azure-arc/connect.md
     - name: Assess

@@ -1,15 +1,16 @@
 ---
 title: Getting Started with the SQL Database Projects extension
 description: Install and use the SQL Database Projects extension for Azure Data Studio
-ms.custom: "seodec18"
-ms.date: "07/30/2020"
-ms.reviewer: "drskwier, maghan, sstein"
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: "dzsquared"
-ms.author: "drskwier"
+author: dzsquared
+ms.author: drskwier
+ms.reviewer: maghan
+ms.custom: seodec18
+ms.date: 07/30/2020
 ---
+
 # Getting started with the SQL Database Projects extension (Preview)
 
 This article describes three ways to get started with the SQL Database Projects extension:

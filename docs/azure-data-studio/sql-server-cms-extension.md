@@ -1,14 +1,14 @@
 ---
 title: SQL Server Central Management Servers extension
 description: Learn how to install and use the SQL Server Central Management Servers extension. An extension for grouping servers and applying actions to the group.
-ms.reviewer: "alayu, maghan, sstein"
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
-author: "yualan"
-ms.author: "alayu"
-ms.custom: "seodec18"
-ms.date: "06/06/2019"
+author: yualan
+ms.author: alayu
+ms.reviewer: maghan, sstein
+ms.custom: seodec18
+ms.date: 06/06/2019
 ---
 
 # SQL Server Central Management Servers extension (Preview)

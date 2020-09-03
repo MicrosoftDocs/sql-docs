@@ -45,7 +45,7 @@ The tools below are the main command-line tools.
 |[**bcp**](bcp-utility.md)|The **b**ulk **c**opy **p**rogram utility (**bcp**) bulk copies data between an instance of [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] and a data file in a user-specified format.| **Windows</br>macOS</br>Linux** |
 |[**mssql-cli (preview)**](mssql-cli.md)|**mssql-cli** is an interactive command-line tool for querying SQL Server. Also, query SQL Server with a command-line tool that features IntelliSense, syntax high-lighting, and more. | **Windows</br>macOS</br>Linux** |
 |[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md) | **mssql-conf** configures SQL Server running on Linux. | **Linux** |
-|[**mssql-scripter**](https://github.com/Microsoft/mssql-scripter) | **mssql-scripter** is a multi-platform command-line experience for scripting SQL Server databases. | **Windows</br>macOS</br>Linux** |
+|[**mssql-scripter (preview)**](https://github.com/Microsoft/mssql-scripter) | **mssql-scripter** is a multi-platform command-line experience for scripting SQL Server databases. | **Windows</br>macOS</br>Linux** |
 | [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd** utility lets you enter Transact-SQL statements, system procedures, and script files at the command prompt. | **Windows</br>macOS</br>Linux** |
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage** is a command-line utility that automates several database development tasks. |**Windows</br>macOS</br>Linux** |
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** provides cmdlets for working with SQL. | **Windows</br>macOS</br>Linux** |

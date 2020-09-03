@@ -47,9 +47,9 @@ To simplify the process of creating extensions, we've built an [extension genera
 
 The Azure Data Studio connection dashboard is a powerful tool that summarizes and provides insight into a user's connections.
 
-There are two variations of the dashboard. The *server dashboard* summarizes the entire server, and the *database dashboard* summarizes an individual database. You can access either dashboard by right-clicking a server or a database in the Connections viewlet of Azure Data Studio, and selecting **Manage**:
+There are two variations of the dashboard. The *server dashboard* summarizes the entire server, and the *database dashboard* summarizes an individual database. You can access either dashboard by right-clicking a server or a database in the **Connections** viewlet of Azure Data Studio, and selecting **Manage**.
 
-:::image type="content" source="media/dashboard-extension/dashboard-summary.gif" alt-text="Dashboards intro":::
+:::image type="content" source="media/dashboard-extension/dashboard-summary.gif" alt-text="Screenshot that shows dashboards introduction.":::
 
 There are three key contribution points for extensions to add functionality to the dashboard:
 
@@ -57,7 +57,7 @@ There are three key contribution points for extensions to add functionality to t
 2. **Homepage Actions**: Action buttons at the top of the connection toolbar.
 3. **Widgets**: Graphs that run against your SQL Server.
 
-:::image type="content" source="media/dashboard-extension/dashboard-contrib-points.png" alt-text="Contribution points":::
+   :::image type="content" source="media/dashboard-extension/dashboard-contrib-points.png" alt-text="Screenshot that shows contribution points.":::
 
 ### Run the extension generator
 
@@ -71,11 +71,11 @@ To create an extension:
 
 1. Fill in the prompts, as shown, to create an extension that contributes a tab to the server dashboard.
 
-:::image type="content" source="media/dashboard-extension/dashboard-generator.png" alt-text="Extension generator":::
+   :::image type="content" source="media/dashboard-extension/dashboard-generator.png" alt-text="Screenshot that shows the extension generator.":::
 
-There are many prompts, so here's a little more information on what each question means:
+   There are many prompts, so here's a little more information on what each question means:
 
-:::image type="content" source="media/dashboard-extension/dashboard-flowchart.png" alt-text="Dashboards flowchart":::
+   :::image type="content" source="media/dashboard-extension/dashboard-flowchart.png" alt-text="Screenshot that shows a dashboard flowchart.":::
 
 Completing the previous steps creates a new folder. Open the folder in Visual Studio Code, and you're ready to create your own dashboard extension.
 
@@ -116,7 +116,7 @@ Edit the `README.md` file to your liking. Then go to the base directory of the e
 
 After these lines are added, a `my-test-extension-0.0.1.vsix` file is created and ready to install in Azure Data Studio.
 
-:::image type="content" source="media/dashboard-extension/install-vsix.png" alt-text="Install vsix":::
+:::image type="content" source="media/dashboard-extension/install-vsix.png" alt-text="Screenshot that shows installing VSIX.":::
 
 ## Publish your extension to the marketplace
 

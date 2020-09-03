@@ -11,7 +11,7 @@ ms.custom: seodec18
 ms.date: 8/12/2020
 ---
 
-# Download and install Azure Data Studio 
+# Download and install Azure Data Studio
 
 Azure Data Studio runs on Windows, macOS, and Linux.
 

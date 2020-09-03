@@ -5,7 +5,7 @@ description:
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 08/04/2020
+ms.date: 09/05/2020
 ms.topic: conceptual
 ms.prod: sql
 ---

@@ -508,6 +508,7 @@ ORDER BY message_id
 |    830    |    10    |    No    |    stale page (a page read returned a log sequence number (LSN) (%u:%u:%u) that is older than the last one that was written (%u:%u:%u))    |
 |    831    |    20    |    No    |    Unable to deallocate a kept page.    |
 |    832    |    24    |    Yes    |    A page that should have been constant has changed (expected checksum: %08x, actual checksum: %08x, database %d, file '%ls', page %S_PGID). This usually indicates a memory failure or other hardware or OS corruption.    |
+|    [832](mssqlserver-832-database-engine-error.md)    |    24    |    No    |    A page that should have been constant has changed (expected checksum: \<expected value>, actual checksum: \<actual value>, database \<dbid>, file \'<filename>', page \<pageno>). This usually indicates a memory failure or other hardware or OS corruption.    |
 |    [833](mssqlserver-833-database-engine-error.md)    |    10    |    No    |    SQL Server has encountered %d occurrence(s) of I/O requests taking longer than %d seconds to complete on file '%ls' in database '%ls' (%d). The OS file handle is 0x%p. The offset of the latest long I/O is: %#016I64x    |
 |    [844](mssqlserver-844-database-engine-error.md)    |    10    |    No    |    Time out occurred while waiting for buffer latch -- type %d, bp %p, page %d:%d, stat %#x, database id: %d, allocation unit id: %I64d%ls, task 0x%p : %d, waittime %d, flags 0x%I64x, owning task 0x%p. Continuing to wait.    |
 |    [845](mssqlserver-845-database-engine-error.md)    |    17    |    No    |    Time-out occurred while waiting for buffer latch type %d for page %S_PGID, database ID %d.    |
@@ -517,6 +518,9 @@ ORDER BY message_id
 |    849    |    10    |    Yes    |    Using locked pages for buffer pool.    |
 |    850    |    10    |    Yes    |    %I64u MB of large page memory allocated.    |
 |    851    |    10    |    No    |    the page is in an OFFLINE file which cannot be read    |
+|    [854](mssqlserver-854-database-engine-error.md)    |    10    |    Yes    |    Machine supports memory error recovery. SQL memory protection is enabled to recover from memory corruption.    |
+|    [855](mssqlserver-855-database-engine-error.md)    |    10    |    Yes    |    Uncorrectable hardware memory corruption detected. Your system may become unstable. Check the Windows event log for more details.    |
+|    [856](mssqlserver-856-database-engine-error.md)    |    10    |    Yes    |    SQL Server has detected hardware memory corruption in database '%ls', file ID: %u, page ID; %u, memory address: 0x%I64x and has successfully recovered the page.    |
 |    902    |    16    |    No    |    To change the %ls, the database must be in state in which a checkpoint can be executed.    |
 |    904    |    16    |    No    |    Database %ld cannot be autostarted during server shutdown or startup.    |
 |    [905](mssqlserver-905-database-engine-error.md)    |    21    |    Yes    |    Database '%.*ls' cannot be started in this edition of SQL Server because it contains a partition function '%.*ls'. Only Enterprise edition of SQL Server supports partitioning.    |
@@ -1426,7 +1430,7 @@ ORDER BY message_id
 |    3010    |    16    |    No    |    Invalid backup mirror specification. All mirrors must have the same number of members.    |
 |    3011    |    16    |    No    |    All backup devices must be of the same general class (for example, DISK and TAPE).    |
 |    3012    |    17    |    No    |    VDI ran out of buffer when SQL Server attempted to send differential information to SQL Writer.    |
-|    3013    |    16    |    No    |    %hs is terminating abnormally.    |
+|    [3013](mssqlserver-3013-database-engine-error.md)    |    16    |    No    |    BACKUP DATABASE is terminating abnormally.    |
 |    3014    |    10    |    No    |    %hs successfully processed %I64d pages in %d.%03d seconds (%d.%03d MB/sec).    |
 |    3015    |    10    |    No    |    %hs is not yet implemented.    |
 |    3016    |    16    |    No    |    Backup of file '%ls' is not permitted because it contains pages subject to an online restore sequence. Complete the restore sequence before taking the backup, or restrict the backup to exclude this file.    |
@@ -1435,7 +1439,7 @@ ORDER BY message_id
 |    3019    |    16    |    No    |    The restart-checkpoint file '%ls' is from a previous interrupted RESTORE operation and is inconsistent with the current RESTORE command. The restart command must use the same syntax as the interrupted command, with the addition of the RESTART clause. Alternatively, reissue the current statement without the RESTART clause.    |
 |    3021    |    16    |    No    |    Cannot perform a backup or restore operation within a transaction.    |
 |    3022    |    10    |    No    |    This backup is a file backup of read-write data from a database that uses the simple recovery model. This is only appropriate if you plan to set the filegroup to read-only followed by a differential file backup. Consult Books Online for more information on managing read-only data for the simple recovery model. In particular, consider how partial backups are used.    |
-|    3023    |    16    |    No    |    Backup, file manipulation operations (such as ALTER DATABASE ADD FILE) and encryption changes on a database must be serialized. Reissue the statement after the current backup or file manipulation operation is completed.    |
+|    [3023](mssqlserver-3023-database-engine-error.md)    |    16    |    No    |    Backup, file manipulation operations (such as ALTER DATABASE ADD FILE) and encryption changes on a database must be serialized. Reissue the statement after the current backup or file manipulation operation is completed.    |
 |    3024    |    16    |    No    |    You can only perform a full backup of the master database. Use BACKUP DATABASE to back up the entire master database.    |
 |    3025    |    16    |    No    |    Missing database name. Reissue the statement specifying a valid database name.    |
 |    3027    |    16    |    No    |    The filegroup "%.*ls" is not part of database "%.*ls".    |
@@ -1760,7 +1764,7 @@ ORDER BY message_id
 |    3856    |    10    |    No    |    Attribute (%ls) exists but should not for row (%ls) in sys.%ls%ls.    |
 |    3857    |    10    |    No    |    The attribute (%ls) is required but is missing for row (%ls) in sys.%ls%ls.    |
 |    3858    |    10    |    No    |    The attribute (%ls) of row (%ls) in sys.%ls%ls has an invalid value.    |
-|    3859    |    10    |    No    |    Warning: The system catalog was updated directly in database ID %d, most recently at %S_DATE.    |
+|    [3859](mssqlserver-3859-database-engine-error.md)    |    10    |    No    |    Warning: The system catalog was updated directly in database ID %d, most recently at %S_DATE.    |
 |    3860    |    10    |    No    |    Cannot upgrade database ID 32767. This ID value is reserved for SQL Server internal use.    |
 |    3862    |    10    |    No    |    CLR type '%.*ls'.'%.*ls' is disabled because the on disk format for this CLR type has been changed. Use DROP TYPE to remove this disabled type.    |
 |    3864    |    23    |    Yes    |    Could not find an entry for index with ID %d on object with ID %d in database with ID %d. Possible schema corruption. Run DBCC CHECKDB.    |
@@ -1983,7 +1987,7 @@ ORDER BY message_id
 |    4202    |    16    |    No    |    BACKUP LOG is not possible because bulk logged changes exist in the database and one or more filegroups are unavailable.    |
 |    4208    |    16    |    No    |    The statement %hs is not allowed while the recovery model is SIMPLE. Use BACKUP DATABASE or change the recovery model using ALTER DATABASE.    |
 |    4212    |    16    |    No    |    Cannot back up the log of the master database. Use BACKUP DATABASE instead.    |
-|    4214    |    16    |    No    |    BACKUP LOG cannot be performed because there is no current database backup.    |
+|    [4214](mssqlserver-4214-database-engine-error.md)    |    16    |    No    |    BACKUP LOG cannot be performed because there is no current database backup.    |
 |    4215    |    10    |    No    |    The log was not truncated because records at the beginning of the log are pending replication or Change Data Capture. Ensure the Log Reader Agent or capture job is running or use sp_repldone to mark transactions as distributed or captured.    |
 |    4217    |    10    |    No    |    BACKUP LOG cannot modify the database because the database is read-only. The backup will continue, although subsequent backups will duplicate the work of this backup.    |
 |    4218    |    16    |    No    |    Bulk-logged operations exist in the database. Perform a BACKUP LOG.    |
@@ -2326,7 +2330,7 @@ ORDER BY message_id
 |    5004    |    16    |    No    |    To use ALTER DATABASE, the database must be in a writable state in which a checkpoint can be executed.    |
 |    5006    |    16    |    No    |    Could not get exclusive use of %S_MSG '%.*ls' to perform the requested operation.    |
 |    5008    |    16    |    No    |    This ALTER DATABASE statement is not supported. Correct the syntax and execute the statement again.    |
-|    5009    |    16    |    No    |    One or more files listed in the statement could not be found or could not be initialized.    |
+|    [5009](mssqlserver-5009-database-engine-error.md)    |    16    |    No    |    One or more files listed in the statement could not be found or could not be initialized.    |
 |    5010    |    16    |    No    |    Log file name cannot be generated from a raw device. The log file name and path must be specified.    |
 |    5011    |    14    |    No    |    User does not have permission to alter database '%.*ls', the database does not exist, or the database is not in a state that allows access checks.    |
 |    5012    |    16    |    No    |    The name of the primary filegroup cannot be changed.    |
@@ -2456,7 +2460,7 @@ ORDER BY message_id
 |    5177    |    16    |    Yes    |    An unexpected error occurred while checking the sector size for file '%.*ls'. Move the file to a local NTFS volume, where the sector size can be retrieved. Check the SQL Server error log for more information.    |
 |    5178    |    16    |    Yes    |    Cannot use file '%.*ls' because it was originally formatted with sector size %d and is now on a volume with sector size %d. Move the file to a volume with a sector size that is the same as or smaller than the original sector size.    |
 |    5179    |    16    |    Yes    |    Cannot use file '%.*ls', because it is on a volume with sector size %d. SQL Server supports a maximum sector size of 4096 bytes. Move the file to a volume with a compatible sector size.    |
-|    5180    |    22    |    Yes    |    Could not open File Control Bank (FCB) for invalid file ID %d in database '%.*ls'. Verify the file location. Execute DBCC CHECKDB.    |
+|    [5180](mssqlserver-5180-database-engine-error.md)    |    22    |    Yes    |    Could not open File Control Bank (FCB) for invalid file ID %d in database '%.*ls'. Verify the file location. Execute DBCC CHECKDB.    |
 |    5181    |    16    |    No    |    Could not restart database "%.*ls". Reverting to the previous status.    |
 |    5182    |    10    |    Yes    |    New log file '%.*ls' was created.    |
 |    5183    |    16    |    No    |    Cannot create the file "%ls". Use WITH MOVE to specify a usable physical file name. Use WITH REPLACE to overwrite an existing file.    |
@@ -3205,7 +3209,7 @@ ORDER BY message_id
 |    7101    |    16    |    No    |    You need an active user transaction in order to use text pointers for a table with the option "text in row" set to ON.    |
 |    7102    |    20    |    Yes    |    Internal Error: Text manager cannot continue with current statement. Run DBCC CHECKTABLE.    |
 |    7104    |    16    |    No    |    Offset or size of data type is not valid. Data type must be of type int or smallint.    |
-|    7105    |    22    |    Yes    |    The Database ID %d, Page %S_PGID, slot %d for LOB data type node does not exist. This is usually caused by transactions that can read uncommitted data on a data page. Run DBCC CHECKTABLE.    |
+|    [7105](mssqlserver-7105-database-engine-error.md)    |    22    |    Yes    |    The Database ID %d, Page %S_PGID, slot %d for LOB data type node does not exist. This is usually caused by transactions that can read uncommitted data on a data page. Run DBCC CHECKTABLE.    |
 |    7106    |    16    |    Yes    |    Internal error: An attempt was made to update a LOB data type using a read-only text pointer.    |
 |    7107    |    16    |    No    |    You can have only 1,024 in-row text pointers in one transaction    |
 |    7108    |    22    |    Yes    |    Database ID %d, page %S_PGID, slot %d, link number %d is invalid. Run DBCC CHECKTABLE.    |
@@ -6537,7 +6541,7 @@ ORDER BY message_id
 |    17109    |    10    |    Yes    |    FallBack certificate was successfully created.    |
 |    17110    |    10    |    Yes    |    Registry startup parameters: %.*ls    |
 |    17111    |    10    |    Yes    |    Logging SQL Server messages in file '%s'.    |
-|    17112    |    16    |    Yes    |    An invalid startup option %c was supplied, either from the registry or the command prompt. Correct or remove the option.    |
+|    [17112](mssqlserver-17112-database-engine-error.md)    |    16    |    Yes    |    An invalid startup option %c was supplied, either from the registry or the command prompt. Correct or remove the option.    |
 |    17113    |    16    |    Yes    |    Error %ls occurred while opening file '%ls' to obtain configuration information at startup. An invalid startup option might have caused the error. Verify your startup options, and correct or remove them if necessary.    |
 |    17114    |    16    |    Yes    |    Error %ls occurred while opening file '%ls' to obtain configuration information at startup time. An invalid startup option might have caused the error. Verify your startup options, and correct or remove them if necessary.    |
 |    17115    |    10    |    Yes    |    Command Line Startup Parameters:%.*ls    |
@@ -6650,7 +6654,7 @@ ORDER BY message_id
 |    17656    |    10    |    Yes    |    Warning ******************    |
 |    17657    |    10    |    Yes    |    Attempting to change default collation to %s.    |
 |    17658    |    10    |    Yes    |    SQL Server started in single-user mode. This an informational message only. No user action is required.    |
-|    17659    |    10    |    Yes    |    Warning: System table ID %d has been updated directly in database ID %d and cache coherence may not have been maintained. SQL Server should be restarted.    |
+|    [17659](mssqlserver-17659-database-engine-error.md)    |    10    |    Yes    |    Warning: System table ID %d has been updated directly in database ID %d and cache coherence may not have been maintained. SQL Server should be restarted.    |
 |    [17660](mssqlserver-17660-database-engine-error.md)    |    10    |    Yes    |    Starting without recovery. This is an informational message only. No user action is required.    |
 |    17661    |    10    |    Yes    |    Recovering all databases, but not clearing tempdb. This is an informational message only. No user action is required.    |
 |    17663    |    10    |    Yes    |    Server name is '%s'. This is an informational message only. No user action is required.    |
@@ -6690,7 +6694,7 @@ ORDER BY message_id
 |    17889    |    16    |    Yes    |    A new connection was rejected because the maximum number of connections on session ID %d has been reached. Close an existing connection on this session and retry.%.*ls    |
 |    17890    |    10    |    Yes    |    A significant part of sql server process memory has been paged out. This may result in a performance degradation. Duration: %d seconds. Working set (KB): %I64d, committed (KB): %I64d, memory utilization: %d%%.    |
 |    17891    |    10    |    Yes    |    Resource Monitor (0x%lx) Worker 0x%p appears to be non-yielding on Node %ld. Memory freed: %I64d KB. Approx CPU Used: kernel %I64d ms, user %I64d ms, Interval: %I64d.    |
-|    17892    |    20    |    Yes    |    Logon failed for login '%.*ls' due to trigger execution.%.*ls    |
+|    [17892](mssqlserver-17892-database-engine-error.md)    |    14    |    Yes    |    Logon failed for login '%.*ls' due to trigger execution.%.*ls    |
 |    17894    |    10    |    Yes    |    Dispatcher (0x%lx) from dispatcher pool '%.*ls' Worker 0x%p appears to be non-yielding on Node %ld. Approx CPU Used: kernel %I64d ms, user %I64d ms, Interval: %I64d.    |
 |    &nbsp;    |    &nbsp;    |&nbsp;        |    &nbsp;    |
 

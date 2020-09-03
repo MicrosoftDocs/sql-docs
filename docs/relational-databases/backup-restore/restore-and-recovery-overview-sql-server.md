@@ -168,7 +168,7 @@ The Database Recovery Advisor facilitates constructing restore plans that implem
   
 For more information, see about the Database Recovery Advisor, see the following [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Manageability blogs:  
   
--   [Recovery Advisor: An Introduction](https://blogs.msdn.com/b/managingsql/archive/2011/07/13/recovery-advisor-an-introduction.aspx)  
+-   [Recovery Advisor: An Introduction](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-an-introduction)  
   
 -   [Recovery Advisor: Using SSMS to create/restore split backups](https://docs.microsoft.com/archive/blogs/managingsql/recovery-advisor-using-ssms-to-createrestore-split-backups)  
 

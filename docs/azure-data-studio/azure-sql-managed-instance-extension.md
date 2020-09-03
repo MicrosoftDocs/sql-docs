@@ -1,18 +1,17 @@
 ---
 title: Azure SQL Managed Instance extension
 description: Use Azure Data Studio with Azure SQL Managed Instance
-ms.custom: "seodec18"
-ms.date: "10/07/2019"
-ms.reviewer: alanyu, maghan, sstein
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
-manager: alanyu
+ms.reviewer: alayu, maghan, sstein
+ms.custom: seodec18
+ms.date: 10/07/2019
 ---
 
-# Azure SQL Managed Instance dashboard for Azure Data Studio (preview)
+# Azure SQL Managed Instance dashboard for Azure Data Studio (Preview)
 
 The Azure SQL Managed Instance extension provides a dashboard for working with an [Azure SQL Managed Instance](/azure/sql-database/sql-database-managed-instance-index) in [Azure Data Studio](https://github.com/Microsoft/azuredatastudio). This extension provides the following features:
 
@@ -34,7 +33,7 @@ With the extension installed, you'll see a **Managed Instance** tab in Azure Dat
 
 The extension displays technical characteristics and some resource usage of your managed instance.
 
-[ ![Managed Instance properties](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
+[![Managed Instance properties](media/azure-sql-mi-extension/ads-mi-tab1.png )](media/azure-sql-mi-extension/ads-mi-tab1.png#lightbox)
 
 The top pane shows the following details:
 
@@ -47,7 +46,7 @@ The top pane shows the following details:
 
 When you select the second pane in the **Managed Instance** tab, you get recommendations and alerts to help optimize your managed instance.
 
-[ ![Managed Instance recommendations](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
+[![Managed Instance recommendations](media/azure-sql-mi-extension/ads-mi-tab2.png )](media/azure-sql-mi-extension/ads-mi-tab2.png#lightbox)
 
 You might see some of the following recommendations:
 
@@ -64,7 +63,7 @@ Periodically review these recommendations, investigate the root causes, and take
 
 The third pane in the **Managed Instance** tab shows you the state of database replicas in your managed instance.
 
-[ ![Managed Instance replicas](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
+[![Managed Instance replicas](media/azure-sql-mi-extension/ads-mi-tab3.png )](media/azure-sql-mi-extension/ads-mi-tab3.png#lightbox)
 
 On the general-purpose service tier, every database has a single (primary) replica. On a business-critical tier instance, every database has one primary and three secondary replicas, one of which is used for read-only workloads. On the **Replicas** pane, you can monitor the synchronization process and verify that all secondary replicas are synchronized with the primary replica.
 
@@ -72,7 +71,7 @@ On the general-purpose service tier, every database has a single (primary) repli
 
 The fourth pane of **Managed Instance** shows the most recent and relevant SQL error log entries.
 
-[ ![Managed Instance log entries](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
+[![Managed Instance log entries](media/azure-sql-mi-extension/ads-mi-tab4.png )](media/azure-sql-mi-extension/ads-mi-tab4.png#lightbox)
 
 Although your managed instance generates a large number of log entries, most of them are internal/system information. Also, some log entries show physical database names (`GUID` values) instead of actual logical database names.
 

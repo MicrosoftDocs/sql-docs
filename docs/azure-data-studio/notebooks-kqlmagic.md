@@ -1,17 +1,17 @@
 ---
 title: Notebooks with Kqlmagic (Kusto Query Language) in Azure Data Studio
 description: This tutorial shows how you can create and run Kqlmagic in Azure Data Studio.
-author: markingmyname
-ms.author: maghan
-ms.reviewer: jukoesma
 ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
+author: markingmyname
+ms.author: maghan
+ms.reviewer: jukoesma
 ms.custom: ""
 ms.date: 04/27/2020
 ---
 
-# Kqlmagic extension in Azure Data Studio
+# Kqlmagic in Azure Data Studio
 
 **Kqlmagic** is a command that extends the capabilities of the Python kernel in **[Azure Data Studio notebooks](notebooks-guidance.md)**. You can combine Python and **[Kusto query language (KQL)](/azure/data-explorer/kusto/query)** to query and visualize data using rich Plot.ly library integrated with `render` commands. Kqlmagic brings you the benefit of notebooks, data analysis, and rich Python capabilities all in the same location. Supported data sources with Kqlmagic include **[Azure Data Explorer](/azure/data-explorer/data-explorer-overview)**, **[Application Insights](/azure/azure-monitor/app/app-insights-overview)**, and **[Azure Monitor logs](/azure/azure-monitor/platform/data-platform-logs)**.
 
@@ -87,7 +87,7 @@ This section explains how to run data analysis using Kqlmagic with an Azure Data
 
 1. Verify the **Kernel** is set to *Python3*.
 
-   ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
+   ![Kernel change](media/notebooks-kql-magic/change-kernel.png)
 
 2. Load Kqlmagic:
 
@@ -150,7 +150,7 @@ Query data using the [render operator](/azure/data-explorer/kusto/query/renderop
 
 1. Verify the **Kernel** is set to *Python3*.
 
-   ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
+   ![Kernel](media/notebooks-kql-magic/change-kernel.png)
 
 2. Load Kqlmagic:
 
@@ -170,7 +170,6 @@ Query data using the [render operator](/azure/data-explorer/kusto/query/renderop
    ```python
    %kql appinsights://appid='DEMO_APP';appkey='DEMO_KEY'
    ```
-
 
 ### Query and visualize for Application Insights
 
@@ -206,7 +205,7 @@ Query data using the [render operator](/azure/data-explorer/kusto/query/renderop
 
 1. Verify the **Kernel** is set to *Python3*.
 
-   ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
+   ![Change](media/notebooks-kql-magic/change-kernel.png)
 
 2. Load Kqlmagic:
 

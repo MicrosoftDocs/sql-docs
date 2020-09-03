@@ -1,7 +1,7 @@
 ---
-title:
+title: Configure advanced data security
 titleSuffix:  
-description: 
+description: Configure advanced data security for Azure Arc enabled SQL Server instance
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
@@ -9,50 +9,56 @@ ms.date: 09/05/2020
 ms.topic: conceptual
 ms.prod: sql
 ---
-# Configure advanced data security for Arc enabled SQL Server instance
+# Configure advanced data security for Azure Arc enabled SQL Server instance
 
 You can enable advanced data security for your SQL Server instances on premises by following these steps.
 
-## Pre-requisites
+## Prerequisites
 
 * Your SQL Server instance is onboarded to Arc-enabled SQL Server. Follow these the instructions to [onboard your SQL Server instance to  Arc-enabled SQL Server](connect.md).
 
-* Your user account is assigned one of the [Security Center Roles (RBAC)](https://docs.microsoft.com/azure/security-center/security-center-permissions)
+* Your user account is assigned one of the [Security Center Roles (RBAC)](/azure/security-center/security-center-permissions)
 
-## Create a new Log Analytics workspace
+## Create a Log Analytics workspace
 
-* Search for _Log Analytics workspaces_ resource type and add a new one through the creation blade.
+* Search for __Log Analytics workspaces__ resource type and add a new one through the creation blade.
 
-:::image type="content" source="media/configure-advanced-data-security/create-new-log-analytics-workspace.png" alt-text="Create new log analytics workspace":::
+   :::image type="content" source="media/configure-advanced-data-security/create-new-log-analytics-workspace.png" alt-text="Create new log analytics workspace":::
 
-> [!NOTE]
-> You can use a Log Analytics workspace in any region so if you already have one, you can use it. But we recommend creating it in the same region where your _Machine - Azure Arc_ resource is created.
+   > [!NOTE]
+   > You can use a Log Analytics workspace in any region so if you already have one, you can use it. But we recommend creating it in the same region where your __Machine - Azure Arc__ resource is created.
 
 * Go to the overview page of the Log Analytics workspace resource and select “Windows, Linux and other sources”. Copy the workspace ID and primary key for later use.
 
-:::image type="content" source="media/configure-advanced-data-security/log-analytics-workspace-blade.png" alt-text="Log analytics workspace blade":::
+   :::image type="content" source="media/configure-advanced-data-security/log-analytics-workspace-blade.png" alt-text="Log analytics workspace blade":::
 
-## Install Microsoft Monitoring Agent (MMA) on the remote machine
+## Install Microsoft Monitoring Agent (MMA)
 
-* Select the __Machine - Azure Arc__ resource for the virtual or physical server where the SQL Server instance is installed and add the extension __Microsoft Monitoring Agent - Azure Arc__ using the  **Extensions** feature. When asked to configure the Log Analytics workspace, use the workspace ID and primary you saved in the previous step.  \\
+The next step installs MMS on the remote machine
 
-:::image type="content" source="media/configure-advanced-data-security/install-mma-extension.png" alt-text="Install MMA extension":::
+* Select the __Machine - Azure Arc__ resource for the virtual or physical server where the SQL Server instance is installed and add the extension __Microsoft Monitoring Agent - Azure Arc__ using the  **Extensions** feature. When asked to configure the Log Analytics workspace, use the workspace ID and primary you saved in the previous step.
+
+   :::image type="content" source="media/configure-advanced-data-security/install-mma-extension.png" alt-text="Install MMA extension":::
 
 * After validation succeeds, click **Create** to start the MMA Arc Extension deployment workflow. When deployment completes the status will be updated to **Succeeded**.
 
 * For more details, see [Extension management with Azure Arc](/azure/azure-arc/servers/manage-vm-extensions)
 
-## Enable Advanced Data Security for SQL Server instance
+## Enable advanced data security
+
+Next, you need to enable advanced data security for SQL Server instance.
 
 * Go to Security Center and open the **Pricing & settings** page from the sidebar.
 
 * Select the workspace that you have configured for the MMA extension in the previous step
 
-* Select **Standard**. Make sure the option for **SQL servers on Machine (Preview)** is Enabled.
+* Select **Standard**. Make sure the option for **SQL servers on Machine (Preview)** is enabled.
 
-:::image type="content" source="media/configure-advanced-data-security/upgrade-log-analytics-workspace.png" alt-text="Upgrade log analytics workspace":::
+   :::image type="content" source="media/configure-advanced-data-security/upgrade-log-analytics-workspace.png" alt-text="Upgrade log analytics workspace":::
 
-## Explore security anomalies and threats in Azure Security Center
+## Explore
+
+Explore security anomalies and threats in Azure Security Center.
 
 * Open your SQL Server – Azure Arc resource and select **Security** in the left menu. to see the recommendations and alerts for that instance.
 

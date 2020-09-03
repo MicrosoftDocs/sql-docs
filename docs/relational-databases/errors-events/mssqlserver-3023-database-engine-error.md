@@ -4,14 +4,14 @@ title: MSSQLSERVER_3023
 ms.custom: ""
 ms.date: 08/20/2020
 ms.prod: sql
-ms.reviewer: ramakoni, pijocoder, suresh-kandoth, Masha
+ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
 ms.technology: supportability
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "3023 (Database Engine error)"
 ms.assetid: 
-author: SureshKa
-ms.author: ramakoni, Sureshka, vencher, tejasaks, docast
+author: suresh-kandoth
+ms.author: ramakoni,Sureshka,vencher,tejasaks,docast
 ---
 # MSSQLSERVER_3023
 

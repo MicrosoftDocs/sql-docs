@@ -4,14 +4,14 @@ title: MSSQLSERVER_3013
 ms.custom: ""
 ms.date: 08/20/2020
 ms.prod: sql
-ms.reviewer: ramakoni, pijocoder, suresh-kandoth, Masha
+ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
 ms.technology: supportability
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "3013 (Database Engine error)"
 ms.assetid: 
-author: SureshKa
-ms.author: ramakoni, SureshKa, Sureshka, vencher, tejasaks, docast
+author: suresh-kandoth
+ms.author: ramakoni,SureshKa,Sureshka,vencher,tejasaks,docast
 ---
 # MSSQLSERVER_3013
 

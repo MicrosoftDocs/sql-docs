@@ -4,13 +4,13 @@ title: MSSQLSERVER_17112
 ms.custom: ""
 ms.date: 08/20/2020
 ms.prod: sql
-ms.reviewer: ramakoni, pijocoder, suresh-kandoth, Masha
+ms.reviewer: ramakoni1, pijocoder, suresh-kandoth, Masha
 ms.technology: supportability
 ms.topic: "language-reference"
 helpviewer_keywords: 
   - "17112 (Database Engine error)"
 ms.assetid: 
-author:
+author: suresh-kandoth
 ms.author: ramakoni
 ---
 # MSSQLSERVER_17112

@@ -23,24 +23,25 @@ The SQL Server Profiler extension (preview) provides a simple SQL Server tracing
 - Monitoring the performance of SQL Server to tune workloads.
 - Correlating performance counters to diagnose problems.
 
-
 ## Install the SQL Server Profiler extension
 
 1. To open the extensions manager and access the available extensions, select the extensions icon, or select **Extensions** in the **View** menu.
 2. Select an available extension to view its details.
 
-   ![profiler extension manager](media/extensions/sql-server-profiler-extension/profiler-extension.png)
+    ![Profiler Extension Manager](media/extensions/sql-server-profiler-extension/profiler-extension.png)
 
-1. Select the extension you want and **Install** it.
-2. Select **Reload** to enable the extension (only required the first time you install an extension).
+3. Select the extension you want and **Install** it.
+4. Select **Reload** to enable the extension (only required the first time you install an extension).
 
 ## Start Profiler
 
 1. To start Profiler, first make a connection to a server in the Servers tab.
 2. After you make a connection, type **Alt + P** to launch Profiler.
 3. To start Profiler, type **Alt + S.** You can now start seeing Extended Events.
-    ![profiler extension manager](media/extensions/sql-server-profiler-extension/view-profiler.png)    
-1. To stop Profiler, type **Alt + S.** This hotkey is a toggle.
+
+    ![View profiler](media/extensions/sql-server-profiler-extension/view-profiler.png)
+
+4. To stop Profiler, type **Alt + S.** This hotkey is a toggle.
 
 ## Next steps
 

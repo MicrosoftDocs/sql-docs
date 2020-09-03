@@ -1,6 +1,6 @@
 ---
 title: SQL Database Projects extension
-description: Install and use the SQL Database Projects extension for Azure Data Studio
+description: Install and use the SQL Database Projects extension for Azure Data Studio.
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual

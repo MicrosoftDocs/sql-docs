@@ -36,7 +36,7 @@ The following tools provide a graphical user interface (GUI).
 | [**![SSDT image](../tools/media/overview-sql-tools/ssdt.svg)</br>SQL Server Data Tools (SSDT)**](../ssdt/download-sql-server-data-tools-ssdt.md) | A modern development tool for building SQL Server relational databases, Azure SQL databases, Analysis Services (AS) data models, Integration Services (IS) packages, and Reporting Services (RS) reports. With SSDT, you can design and deploy any SQL Server content type with the same ease as you would develop an application in **[Visual Studio](https://visualstudio.microsoft.com/downloads/)**. | **Windows** |
 | [**![VS Code image](../tools/media/overview-sql-tools/visual-studio-code.svg)</br></br>Visual Studio Code**](https://code.visualstudio.com/) | The **[mssql extension](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)** for Visual Studio Code is the official SQL Server extension that supports connections to SQL Server and rich editing experience for T-SQL in Visual Studio Code. Write T-SQL scripts in a light-weight editor. | **Windows</br>macOS</br>Linux** |
 
-## Command-line tools
+## Command-line tools 
 
 The tools below are the main command-line tools.
 

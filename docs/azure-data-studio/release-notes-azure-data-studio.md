@@ -412,10 +412,10 @@ March 18, 2019 &nbsp; / &nbsp; version: 1.5.1
 | :----- | :------ |
 | Added [PostgreSQL extension for Azure Data Studio](postgres-extension.md) | Supported features: <br/>&bull; &nbsp; Connection Dialog <br/>&bull; &nbsp; Object Explorer <br/>&bull; &nbsp; Query Editor <br/>&bull; &nbsp; Charting <br/>&bull; &nbsp; Dashboards <br/>&bull; &nbsp; Snippets <br/>&bull; &nbsp; Edit Data <br/>&bull; &nbsp; Notebooks |
 | Added SQL Notebooks | Added SQL Kernel support to built-in Notebook viewer: <br/>&bull; &nbsp; Supports T-SQL <br/>&bull; &nbsp; Support PGSQL |
-| Added PowerShell Extension  | Brings over the [PowerShell extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) experience from VS Code.  |
+| Added PowerShell Extension | Brings over the [PowerShell extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.PowerShell) experience from VS Code.  |
 | Added SQL Server dacpac extension  | Removes Data-Tier Application Wizard from SQL Server Import extension into a new extension.  |
 | Added Community extension QueryPlan.show | Adds integration support to visualize query plans  |
-| Updated SQL Server 2019 Preview extension | &bull; &nbsp; Jupyter Notebook support, specifically Python3, and Spark kernels, have moved into the core Azure Data Studio tool. <br/>&bull; &nbsp; Bug fixes to External Data Wizard  |
+| Updated SQL Server 2019 Preview extension | &bull; &nbsp; Jupyter Notebook support, specifically Python3, and Spark kernels, have moved into the core Azure Data Studio tool. <br/>&bull; &nbsp; Bug fixes to External Data Wizard |
 | Resolved bugs and issues. | See [Bugs and issues, on GitHub](https://github.com/Microsoft/azuredatastudio/milestone/25?closed=1). |
 | &nbsp; | &nbsp; |
 
@@ -473,7 +473,7 @@ January 09, 2019 &nbsp; / &nbsp; version: 1.3.8
 | :----- | :------ |
 | Added a new user installer for Windows. | Unlike the existing system installer, the new user installer does not require administrator privileges. This also enables an easier upgrade experience for non-administrators. |
 | Added Azure Active Directory Authentication support. | &nbsp; |
-| Announcing Idera SQL DM Performance Insights (Preview). | &nbsp; |
+| Announcing Idera SQL DM Performance Insights (preview). | &nbsp; |
 | Data-Tier Application Wizard support in SQL Server Import extension. | &nbsp; |
 | Update to the SQL Server 2019 Preview extension. | See [Data Virtualization extension](data-virtualization-extension.md?view=sql-server-ver15). |
 | SQL Server Profiler improvements. | &nbsp; |

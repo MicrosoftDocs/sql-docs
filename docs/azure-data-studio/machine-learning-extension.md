@@ -1,5 +1,5 @@
 ---
-title: Machine Learning extension (preview)
+title: Machine Learning extension
 titleSuffix: Azure Data Studio
 description: The Machine Learning extension for Azure Data Studio enables you to manage packages, import machine learning models, make predictions, and create notebooks to run experiments for your SQL databases.
 ms.date: "05/19/2020"
@@ -11,7 +11,7 @@ author: dphansen
 ms.author: davidph
 manager: cgronlun
 ---
-# Machine Learning extension (preview) for Azure Data Studio
+# Machine Learning extension for Azure Data Studio (Preview)
 
 The Machine Learning extension for [Azure Data Studio](what-is.md) enables you to manage packages, import machine learning models, make predictions, and create notebooks to run experiments for your SQL databases. This extension is currently in preview.
 
@@ -110,4 +110,4 @@ Follow the links under **Next steps** to see how you can use the Machine Learnin
 - [Import or view models](machine-learning-extension-import-view-models.md)
 - [Notebooks in Azure Data Studio](notebooks-guidance.md)
 - [SQL machine learning documentation](../machine-learning/index.yml)
-- [Machine learning and AI with ONNX in SQL Edge (Preview)](/azure/azure-sql-edge/onnx-overview)
+- [Machine learning and AI with ONNX in SQL Edge (preview)](/azure/azure-sql-edge/onnx-overview)

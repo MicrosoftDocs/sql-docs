@@ -11,63 +11,64 @@ ms.custom: "seodec18"
 ms.date: 11/04/2019
 ---
 
-# Tutorial: Backup and Restore databases using Azure Data Studio
+# Tutorial: Back up and restore databases using Azure Data Studio
 
 In this tutorial, you learn how to use Azure Data Studio to:
 > [!div class="checklist"]
-> * Back up a database 
-> * View the backup status
-> * Generate the script used to perform the backup
-> * Restore a database
-> * View the status of the restore task
+> * Back up a database.
+> * View the backup status.
+> * Generate the script used to perform the backup.
+> * Restore a database.
+> * View the status of the restore task.
 
 ## Prerequisites
 
-This tutorial requires the SQL Server *TutorialDB*. To create the *TutorialDB* database, complete one of the following quickstarts:
+This tutorial requires SQL Server *TutorialDB*. To create the TutorialDB database, complete the following quickstart:
 
-* [Connect and query SQL Server using [!INCLUDE[name-sos-short](../includes/name-sos-short.md)]](quickstart-sql-server.md)
+* [Use Azure Data Studio to connect and query SQL Server](quickstart-sql-server.md)
 
-This tutorial requires connecting to a SQL Server database. Azure SQL Database has automated backups, so Azure Data Studio doesn't perform Azure SQL Database backup and restore. For details, see [Learn about automatic SQL Database backups](/azure/sql-database/sql-database-automated-backups).
+This tutorial requires a connection to a SQL Server database. Azure SQL Database has automated backups, so Azure Data Studio doesn't perform Azure SQL Database backup and restore. For more information, see [Learn about automatic SQL Database backups](/azure/sql-database/sql-database-automated-backups).
 
 ## Back up a database
 
-1. Open the TutorialDB database dashboard (open the **SERVERS** sidebar (**CTRL+G**), expand **Databases**, right-Select **TutorialDB**, and select **Manage**).
+1. Open the TutorialDB database dashboard by opening the **SERVERS** sidebar. Then select **Ctrl+G**, expand **Databases**, right-click **TutorialDB**, and select **Manage**.
 
-2. Open the **Backup database** dialog (Select **Backup** on the **Tasks** widget).
+1. Open the **Backup database** dialog box by selecting **Backup** on the **Tasks** widget.
 
-   ![Tasks widget](./media/tutorial-backup-restore-sql-server/tasks.png)
+   ![Screenshot that shows the Tasks widget.](./media/tutorial-backup-restore-sql-server/tasks.png)
 
-3. This tutorial uses the default backup options, so Select **Backup**.
-   ![backup dialog](./media/tutorial-backup-restore-sql-server/backup-dialog.png)
+1. This tutorial uses the default backup options, so select **Backup**.
 
-After Selecting **Backup**, the **Backup database** dialog disappears and the backup process begins.
+   ![Screenshot that shows the Backup dialog box.](./media/tutorial-backup-restore-sql-server/backup-dialog.png)
 
-## View the backup status and view the backup script
+After you select **Backup**, the **Backup database** dialog box disappears and the backup process begins.
 
-1. The **Task History** pane appears or press **CTRL+T**.
+## View the backup status and the backup script
 
-   ![Task history](./media/tutorial-backup-restore-sql-server/task-history.png)
+1. The **Task History** pane appears, or select **Ctrl+T** to open it.
 
-2. To view the backup script in the editor, right-Select **Backup Database succeeded** and select **Script**.
+   ![Screenshot that shows the Task History pane.](./media/tutorial-backup-restore-sql-server/task-history.png)
 
-   ![backup script](./media/tutorial-backup-restore-sql-server/task-script.png)
+1. To view the backup script in the editor, right-click **Backup Database succeeded** and select **Script**.
+
+   ![Screenshot that shows backup script.](./media/tutorial-backup-restore-sql-server/task-script.png)
 
 ## Restore a database from a backup file
 
-1. Open the **SERVERS** sidebar (**CTRL+G**), right-Select your server, and select **Manage**.
+1. Open the **SERVERS** sidebar by selecting **Ctrl+G**. Then right-click your server, and select **Manage**.
 
-2. Open the **Restore database** dialog (Select **Restore** on the **Tasks** widget).
+1. Open the **Restore database** dialog box by selecting **Restore** on the **Tasks** widget.
 
-   ![Task restore](media/tutorial-backup-restore-sql-server/tasks-restore.png)
+   ![Screenshot that shows Task restore.](media/tutorial-backup-restore-sql-server/tasks-restore.png)
 
-3. Select **Backup file** in the **Restore from** field.
+1. Select **Backup file** in the **Restore from** box.
 
-4. Select the ellipses (...) in the **Backup file path** field, and select the latest backup file for *TutorialDB*.
+1. Select the ellipses (...) in the **Backup file path** box, and select the latest backup file for *TutorialDB*.
 
-5. Type **TutorialDB_Restored** in the **Target database** field in the **Destination** section to restore the backup file to a new database. Then select **Restore**.
+1. Enter **TutorialDB_Restored** in the **Target database** box in the **Destination** section to restore the backup file to a new database. Then select **Restore**.
 
-   ![Restore backup](./media/tutorial-backup-restore-sql-server/restore.png)
+   ![Screenshot that shows Restore backup.](./media/tutorial-backup-restore-sql-server/restore.png)
 
-6. To view the status of the restore operation, press **CTRL+T** to open the **Task History**.
+1. To view the status of the restore operation, select **Ctrl+T** to open the **Task History**.
 
-   ![History task restore](./media/tutorial-backup-restore-sql-server/task-history-restore.png)
+   ![Screenshot that shows History task restore.](./media/tutorial-backup-restore-sql-server/task-history-restore.png)

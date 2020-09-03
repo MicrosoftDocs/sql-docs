@@ -53,10 +53,9 @@ There are two variations of the dashboard. The *server dashboard* summarizes the
 
 There are three key contribution points for extensions to add functionality to the dashboard:
 
-- **Widgets**: Graphs that run against your SQL Server (the area outlined in green in the image).
-- **Homepage actions**: Action buttons at the top of the connection toolbar (the area outlined in red in the image).
-- **Full Dashboard tab**: A separate tab in the dashboard for your extension (the area outlined in purple in the image).
-    - Can be added to either a server or database dashboard. Customizable with widgets, a toolbar, and a navigation section.
+1. **Full Dashboard tab**: A separate tab in the dashboard for your extension. Can be added to either a server or database dashboard. Customizable with widgets, a toolbar, and a navigation section.
+2. **Homepage Actions**: Action buttons at the top of the connection toolbar.
+3. **Widgets**: Graphs that run against your SQL Server.
 
 :::image type="content" source="media/dashboard-extension/dashboard-contrib-points.png" alt-text="Contribution points":::
 
@@ -106,7 +105,7 @@ To share with others, you need to package the extension into a single file. Your
 `npm install -g vsce`
 ```
 
-Edit the `README.md` to your liking. Then go to the base directory of the extension, and run `vsce package`. You can optionally link a repository with your extension or continue without one. To add one, add a similar line to your `package.json` file.
+Edit the `README.md` file to your liking. Then go to the base directory of the extension, and run `vsce package`. You can optionally link a repository with your extension or continue without one. To add one, add a similar line to your `package.json` file.
 
 ```json
 "repository": {
@@ -115,7 +114,7 @@ Edit the `README.md` to your liking. Then go to the base directory of the extens
 }
 ```
 
-After these lines are added, a my-test-extension-0.0.1.vsix file is created and ready to install in Azure Data Studio.
+After these lines are added, a `my-test-extension-0.0.1.vsix` file is created and ready to install in Azure Data Studio.
 
 :::image type="content" source="media/dashboard-extension/install-vsix.png" alt-text="Install vsix":::
 

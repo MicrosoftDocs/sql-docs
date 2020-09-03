@@ -1,6 +1,6 @@
 ---
 title: Create a Jupyter Notebook extension
-description: Learn about how to package notebooks into an extension using the extension generator.
+description: Learn about how to package notebooks into an extension by using the extension generator.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: how-to
@@ -82,7 +82,7 @@ This is what your project should currently look like:
 
    :::image type="content" source="media/notebook-extension/notebook-file-structure-generator.png" alt-text="extension file structure":::
 
-The `vsc-extension-quickstart.md` provides you with a reference of the important files. The `README.md` file is where you can provide documentation for your new extension. Note the `package.json`, `notebook.ts`, and `pySample.ipynb` files.
+The `vsc-extension-quickstart.md` file provides you with a reference of the important files. The `README.md` file is where you can provide documentation for your new extension. Note the `package.json`, `notebook.ts`, and `pySample.ipynb` files.
 
 If there are any files or folders that you don't want to publish, you can include their names in the `.vscodeignore` file.
 
@@ -142,7 +142,7 @@ Edit the `README.md` file to your liking. Then go to the base directory of the e
 }
 ```
 
-After these lines are added, a my test-notebook-0.0.1.vsix file is created and ready to install and share with the world.
+After these lines are added, a `my test-notebook-0.0.1.vsix` file is created and ready to install and share with the world.
 
 ## Run your extension
 

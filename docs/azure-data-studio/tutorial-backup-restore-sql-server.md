@@ -1,6 +1,6 @@
 ---
 title: Back up and restore a database
-description: Follow this tutorial to learn how to back up and restore databases using Azure Data Studio.
+description: Follow this tutorial to learn how to back up and restore databases by using Azure Data Studio.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: tutorial

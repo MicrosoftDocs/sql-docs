@@ -87,7 +87,7 @@ This section explains how to run data analysis using Kqlmagic with an Azure Data
 
 1. Verify the **Kernel** is set to *Python3*.
 
-   ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
+   ![Kernel change](media/notebooks-kql-magic/change-kernel.png)
 
 2. Load Kqlmagic:
 
@@ -150,7 +150,7 @@ Query data using the [render operator](/azure/data-explorer/kusto/query/renderop
 
 1. Verify the **Kernel** is set to *Python3*.
 
-   ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
+   ![Kernel](media/notebooks-kql-magic/change-kernel.png)
 
 2. Load Kqlmagic:
 
@@ -170,7 +170,6 @@ Query data using the [render operator](/azure/data-explorer/kusto/query/renderop
    ```python
    %kql appinsights://appid='DEMO_APP';appkey='DEMO_KEY'
    ```
-
 
 ### Query and visualize for Application Insights
 
@@ -206,7 +205,7 @@ Query data using the [render operator](/azure/data-explorer/kusto/query/renderop
 
 1. Verify the **Kernel** is set to *Python3*.
 
-   ![New Notebook](media/notebooks-kql-magic/change-kernel.png)
+   ![Change](media/notebooks-kql-magic/change-kernel.png)
 
 2. Load Kqlmagic:
 

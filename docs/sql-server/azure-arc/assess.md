@@ -1,7 +1,7 @@
 ---
-title: Configure SQL assessment for Arc enabled SQL Server
-titleSuffix:  
-description: Configure on-demand assessment for Arc enabled instance of SQL Server
+title: Configure SQL assessment for Azure Arc enabled SQL Server
+titleSuffix:
+description: Configure on-demand assessment for Azure Arc enabled instance of SQL Server
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
@@ -9,9 +9,9 @@ ms.date: 09/05/2020
 ms.topic: conceptual
 ms.prod: sql
 ---
-# Configure on-demand SQL assessment for Arc enabled SQL Server instance
+# Configure on-demand SQL assessment for Azure Arc enabled SQL Server instance
 
-You can enable SQL assessment for your SQL Server instances on premises by following these steps.
+You can enable SQL assessment for your SQL Server instances by following these steps.
 
 ## Prerequisites
 

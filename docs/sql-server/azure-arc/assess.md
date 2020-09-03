@@ -13,11 +13,11 @@ ms.prod: sql
 
 You can enable SQL assessment for your SQL Server instances on premises by following these steps.
 
-## Pre-requisites
+## Prerequisites
 
 * Your SQL Server instance is connected to Azure Arc. Follow these the instructions to [onboard your SQL Server instance to  Arc-enabled SQL Server](connect.md).
 
-* The MMA extension is installed and configured on the machine. Follow these the instructions to [Install Microsoft Monitoring Agent (MMA)](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma-on-the-remote-machine).
+* The MMA extension is installed and configured on the machine. Follow these the instructions to [Install Microsoft Monitoring Agent (MMA)](configure-advanced-data-security.md#install-microsoft-monitoring-agent-mma).
 
 * You reviewed the SQL Server document at [Services Hub On-Demand Assessments Prerequisites](https://docs.microsoft.com/services-hub/health/assessment-prereq-docs#on-demand-assessment-prerequisite-documents).
 
@@ -25,7 +25,7 @@ You can enable SQL assessment for your SQL Server instances on premises by follo
 
 * Open your SQL Server – Azure Arc resource and select __Environment Health__ in the left menu.
 
-:::image type="content" source="media/assess/sql-assessment-heading-sql-server-arc.png" alt-text="Enable SQL assessment":::
+   :::image type="content" source="media/assess/sql-assessment-heading-sql-server-arc.png" alt-text="Enable SQL assessment":::
 
 * Specify a working directory on the data collection machine. During collection and analysis, data is temporarily stored under that folder. If the folder doesn't exist, it is created automatically.
 
@@ -33,12 +33,12 @@ You can enable SQL assessment for your SQL Server instances on premises by follo
 
 * Execute the script by using the following command in __cmd.exe__.
 
-```cmd.exe
-powershell.exe -ExecutionPolicy Bypass .\<filename>.ps1
-```
+   ```cmd.exe
+   powershell.exe -ExecutionPolicy Bypass .\<filename>.ps1
+   ```
 
-> [!NOTE]
-> The script schedules a task named *SQLAssessment* to run within an hour of running the previous script and then every 7 days. The task can be modified to run on a different date and time or even forced to run immediately from the task scheduler library > Microsoft > Operations Management Suite > AOI*** > Assessments > SQLAssessment. This task triggers data collection.
+   > [!NOTE]
+   > The script schedules a task named *SQLAssessment* to run within an hour of running the previous script and then every 7 days. The task can be modified to run on a different date and time or even forced to run immediately from the task scheduler library > Microsoft > Operations Management Suite > AOI*** > Assessments > SQLAssessment. This task triggers data collection.
 
 ## View the assessment results
 

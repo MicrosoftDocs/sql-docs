@@ -29,5 +29,5 @@
       topicHref: /sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports
 
   - name: Azure Data Studio
-    tocHref: /azure-data-studio/
-    topicHref: /azure-data-studio/index
+    tocHref: /sql/azure-data-studio/
+    topicHref: /sql/azure-data-studio/index

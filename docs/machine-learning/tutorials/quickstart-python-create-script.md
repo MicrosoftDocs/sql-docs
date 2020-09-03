@@ -16,15 +16,7 @@ monikerRange: ">=sql-server-2017||>=sql-server-linux-ver15||=azuresqldb-mi-curre
 # Quickstart: Run simple Python scripts with SQL machine learning
 [!INCLUDE [SQL Server 2017 SQL MI](../../includes/applies-to-version/sqlserver2017-asdbmi.md)]
 
-::: moniker range=">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
-In this quickstart, you'll run a set of simple Python scripts using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) or on [Big Data Clusters](../../big-data-cluster/machine-learning-services.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
-::: moniker-end
-::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
-In this quickstart, you'll run a set of simple Python scripts using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
-::: moniker-end
-::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
-In this quickstart, you'll run a set of simple Python scripts using [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a database.
-::: moniker-end
+In this quickstart, you'll run a set of simple Python scripts using [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md), [Azure SQL Managed Instance Machine Learning Services](/azure/azure-sql/managed-instance/machine-learning-services-overview), or on [SQL Server Big Data Clusters](../../big-data-cluster/machine-learning-services.md). You'll learn how to use the stored procedure [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) to execute the script in a SQL Server instance.
 
 ## Prerequisites
 

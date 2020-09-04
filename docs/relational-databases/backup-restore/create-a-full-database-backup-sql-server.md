@@ -393,7 +393,7 @@ $credential = Get-Credential
 $container = 'https://<myStorageAccount>blob.core.windows.net/<myContainer>'
 $fileName = '<myDatabase>.bak'
 $server = '<myServer>'
-$database = '<myDatabase>
+$database = '<myDatabase>'
 $backupFile = $container + '/' + $fileName
 
 Backup-SqlDatabase -ServerInstance $server -Database $database -BackupFile $backupFile -Credential $credential

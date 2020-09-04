@@ -15,8 +15,8 @@ apilocation:
 helpviewer_keywords: 
   - "ConnectionString property"
 ms.assetid: 8a3692b9-3a34-42e2-b0b9-28e6bd3a7aba
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ConnectionString Property (SqlServerAlias Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

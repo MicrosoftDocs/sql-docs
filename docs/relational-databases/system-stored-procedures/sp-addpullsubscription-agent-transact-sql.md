@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords:
   - "sp_addpullsubscription_agent"
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

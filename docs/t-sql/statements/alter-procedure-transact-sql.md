@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "modifying stored procedures"
   - "stored procedures [SQL Server], modifying"
 ms.assetid: ed9b2f76-11ec-498d-a95e-75b490a75733
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # ALTER PROCEDURE (Transact-SQL)

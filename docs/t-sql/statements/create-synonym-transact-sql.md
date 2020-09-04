@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "CREATE SYNONYM statement"
   - "synonyms [SQL Server], creating"
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 
 # CREATE SYNONYM (Transact-SQL)

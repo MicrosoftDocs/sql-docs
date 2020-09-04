@@ -45,8 +45,8 @@ helpviewer_keywords:
   - "number of columns per table"
   - "maximum number of bytes per row"
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE TABLE (Transact-SQL)
 

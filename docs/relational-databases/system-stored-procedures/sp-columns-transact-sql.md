@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_columns"
 ms.assetid: 2dec79cf-2baf-4c0f-8cbb-afb1a8654e1e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_columns (Transact-SQL)

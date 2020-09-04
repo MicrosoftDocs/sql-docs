@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "auto_update_statistics"
   - "Query Store options"
 ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current"
 ---
 # ALTER DATABASE SET options (Transact-SQL)

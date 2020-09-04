@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_delete_notification"
 ms.assetid: b55d3898-596d-47a5-a4f0-d65dc736223b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_delete_notification (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

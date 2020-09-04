@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_mergemetadataretentioncleanup"
 ms.assetid: 4e8d6343-2a38-421d-a3f3-c37d437a0f88
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_mergemetadataretentioncleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

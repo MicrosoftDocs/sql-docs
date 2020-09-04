@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], Transact-SQL statements"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 20e6e803-d6d5-48d5-b626-d1e0a73d174c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER DATABASE (Transact-SQL) SET HADR 
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

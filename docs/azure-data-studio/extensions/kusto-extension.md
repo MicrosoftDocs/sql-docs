@@ -15,14 +15,14 @@ ms.date: 09/22/2020
 
 The Kusto extension for [Azure Data Studio](../what-is.md) enables you to connect and query to [Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview) clusters. This extension is currently in preview.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-icon.png" alt-text="Kusto extension":::
-
 ## Prerequisites
 
-You need The following prerequisites:
+If you don't have an Azure subscription, create a free Azure account before you begin.
+
+You also need The following prerequisites:
 
 - [Azure Data Studio installed](../download-azure-data-studio.md).
-- [Azure Data Explorer cluster](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
+- [An Azure Data Explorer cluster and database](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
 
 ## Install the Kusto extension
 
@@ -36,7 +36,7 @@ To install the Kusto extension in Azure Data Studio, follow the steps below.
 
 4. Select **Install**.
 
-5. Select **Reload** to enable the extension. (This is only required the first time you install an extension).
+:::image type="content" source="media/kusto-extension/kusto-extension-icon.png" alt-text="Kusto extension":::
 
 ## Extension settings
 
@@ -62,7 +62,8 @@ To connect to an Azure Data Explorer cluster, follow the steps below.
 
 2. Fill in the **Connection Details** information.
     1. For **Connection type**, select *Kusto*.
-    2. For **Cluster**, enter in your Azure Data Explorer cluster
+    2. For **Cluster**, enter in your Azure Data Explorer cluster.
+        1. When entering the cluster name do not enter enter in the "https://" or a trailing "/".
     3. For **Authentication Type**, use the default - *Azure Active Directory - Universal with MFA account*.
     4. For **Account**, use your account information.
     5. For **Database**, use *Default*.
@@ -71,13 +72,33 @@ To connect to an Azure Data Explorer cluster, follow the steps below.
 
     :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Connection details":::
 
-## How to query an Azure Data Explorer cluster in Azure Data Studio
+## How to query a Kusto database in Azure Data Studio
 
-Now that you have setup a connection to your Azure Data Explorer cluster, you can query your cluster(s) using Kusto (KQL).
+Now that you have set up a connection to your Azure Data Explorer cluster, you can query your database(s) using Kusto (KQL).
 
-To create a new query tab, you can either select **File > New Query**, use *Ctrl + N*, or right-click the database and select **New Query**.
+To create a new query tab, you can either select **File > New Query**, use *Ctrl + N*, or ri the database and select **New Query**.
 
-Once you have your new query tab up, then enter your kusto query.
+Once you have your new query tab open, then enter your kusto query. 
+
+Here are some samples of Kusto queries:
+
+```kql
+StormEvents
+| limit 1000
+```
+
+```kql
+StormEvents
+| where EventType == "Waterspout"
+```
+
+## Productivity Tips
+
+Object Explorer / intellisense
+
+Add alias to your connection
+
+Right-click on the object explorer - Select top 1000 on the table & drag + drop.
 
 ## Next steps
 

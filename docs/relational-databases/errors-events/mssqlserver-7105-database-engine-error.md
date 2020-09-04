@@ -11,18 +11,10 @@ helpviewer_keywords:
   - "7105 (Database Engine error)"
 ms.assetid: 
 author: rgward
-ms.author: ramakoni,bobward
+ms.author: ramakoni
 ---
 # MSSQLSERVER_7105
-
- [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)]
- [!INCLUDE [SQL Server 2019](../../includes/sssqlv15-md.md)]
- [!INCLUDE [SQL Server 2017](../../includes/sssql17-md.md)]
- [!INCLUDE [SQL Server 2016](../../includes/sssql15-md.md)]
- [!INCLUDE [SQL Server 2014](../../includes/sssql14-md.md)]
- [!INCLUDE [SQL Server 2012](../../includes/sssql11-md.md)]
- [!INCLUDE [SQL Server 2008](../../includes/sskatmai-md.md)]
- [!INCLUDE [Azure SQL DB](../../includes/sssdsfull-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## Details
 
@@ -48,7 +40,7 @@ This error can occur due to one of the following reasons:
 
 - A database corruption problem exists within a database page or within the LOB page structures the database page references.
 - The query that is encountering the failure is using the `READ UNCOMMITTED ISOLATION LEVEL` or the `NOLOCK` query hint.
-- A problem exists within the SQL Server Engine causing the query to fail with this error.
+- A problem exists within the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine causing the query to fail with this error.
 
 See the Resolution and [More information](#more-information) sections to determine what is the cause for your specific problem and the appropriate solution.
 
@@ -57,7 +49,7 @@ See the Resolution and [More information](#more-information) sections to determi
 1. As the message indicates, the first step you should take is to run `DBCC CHECKDB` against the database or `DBCC CHECKTABLE` against the table where the problem was encountered.
 
     - The database ID is provided in the message.
-    - To find out the exact affected table without running `DBCC CHECKDB`, you will need to find out what tables were accessed by the query that encountered the error. One method is to use SQL Profiler to trace the query. However, in SQL Server 2008 and SQL Server 2008 R2 you may be able to find the query using the system_health Extended Events session. See this link for more information on how to use the system_health session: [Use the system_health Session](/sql/relational-databases/extended-events/use-the-system-health-session?view=sql-server-ver15).
+    - To find out the exact affected table without running `DBCC CHECKDB`, you will need to find out what tables were accessed by the query that encountered the error. One method is to use SQL Profiler to trace the query. However, in [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] and [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] R2 you may be able to find the query using the system_health Extended Events session. See this link for more information on how to use the system_health session: [Use the system_health Session](/sql/relational-databases/extended-events/use-the-system-health-session?view=sql-server-ver15).
 
     - As with any database consistency problem, you can resolve these errors by restoring from a known good Backup that does not contain this problem.
 

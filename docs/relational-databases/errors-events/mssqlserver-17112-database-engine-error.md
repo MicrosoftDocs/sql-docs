@@ -14,15 +14,7 @@ author: suresh-kandoth
 ms.author: ramakoni
 ---
 # MSSQLSERVER_17112
-
- [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)]
- [!INCLUDE [SQL Server 2019](../../includes/sssqlv15-md.md)]
- [!INCLUDE [SQL Server 2017](../../includes/sssql17-md.md)]
- [!INCLUDE [SQL Server 2016](../../includes/sssql15-md.md)]
- [!INCLUDE [SQL Server 2014](../../includes/sssql14-md.md)]
- [!INCLUDE [SQL Server 2012](../../includes/sssql11-md.md)]
- [!INCLUDE [SQL Server 2008](../../includes/sskatmai-md.md)]
- [!INCLUDE [Azure SQL DB](../../includes/sssdsfull-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## Details
 
@@ -40,7 +32,7 @@ ms.author: ramakoni
 
 This error indicates that an invalid startup option (link to Database Engine startup options) was specified. When a startup option is not properly specified, SQL Server either fails to start or may not run as expected. Error 17112 is also raised.
 
-In some cases, the instance might start, but when you review the SQL Server Error log, the startup parameters do not look right:
+In some cases, the instance might start, but when you review the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Error log, the startup parameters do not look right:
 
 > \<Datetime> Server Registry startup parameters:  
 \<Datetime> Server -d D:\Program Files\Microsoft SQL Server\MSSQL.1\MSSQL\DATA\master.mdf  
@@ -63,7 +55,7 @@ You encounter these problems due to the following reasons:
 
 ## User action
 
-Use the SQL Server Configuration Manager tool to supply and validate the startup parameters specified for the instance of SQL Server. Ensure each one of the startup parameters is delimited properly and that no special characters are present.
+Use the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager tool to supply and validate the startup parameters specified for the instance of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. Ensure each one of the startup parameters is delimited properly and that no special characters are present.
 
 ## More information
 

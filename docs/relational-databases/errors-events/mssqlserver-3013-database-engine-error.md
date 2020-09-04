@@ -11,18 +11,10 @@ helpviewer_keywords:
   - "3013 (Database Engine error)"
 ms.assetid: 
 author: suresh-kandoth
-ms.author: ramakoni,SureshKa,Sureshka,vencher,tejasaks,docast
+ms.author: ramakoni
 ---
 # MSSQLSERVER_3013
-
- [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)]
- [!INCLUDE [SQL Server 2019](../../includes/sssqlv15-md.md)]
- [!INCLUDE [SQL Server 2017](../../includes/sssql17-md.md)]
- [!INCLUDE [SQL Server 2016](../../includes/sssql15-md.md)]
- [!INCLUDE [SQL Server 2014](../../includes/sssql14-md.md)]
- [!INCLUDE [SQL Server 2012](../../includes/sssql11-md.md)]
- [!INCLUDE [SQL Server 2008](../../includes/sskatmai-md.md)]
- [!INCLUDE [Azure SQL DB](../../includes/sssdsfull-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## Details
 

@@ -11,18 +11,10 @@ helpviewer_keywords:
   - "3023 (Database Engine error)"
 ms.assetid: 
 author: suresh-kandoth
-ms.author: ramakoni,Sureshka,vencher,tejasaks,docast
+ms.author: ramakoni
 ---
 # MSSQLSERVER_3023
-
- [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)]
- [!INCLUDE [SQL Server 2019](../../includes/sssqlv15-md.md)]
- [!INCLUDE [SQL Server 2017](../../includes/sssql17-md.md)]
- [!INCLUDE [SQL Server 2016](../../includes/sssql15-md.md)]
- [!INCLUDE [SQL Server 2014](../../includes/sssql14-md.md)]
- [!INCLUDE [SQL Server 2012](../../includes/sssql11-md.md)]
- [!INCLUDE [SQL Server 2008](../../includes/sskatmai-md.md)]
- [!INCLUDE [Azure SQL DB](../../includes/sssdsfull-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## Details
 
@@ -38,7 +30,7 @@ ms.author: ramakoni,Sureshka,vencher,tejasaks,docast
 
 ## Explanation
 
-You try to run a Backup, shrink, or alter database command in SQL Server, and you encounter the following messages:
+You try to run a Backup, shrink, or alter database command in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], and you encounter the following messages:
 
 > Msg 3023, Level 16, State 2, Line 1  
 Backup and file manipulation operations (such as ALTER DATABASE ADD FILE) on a database must be serialized. Reissue the statement after the current backup or file manipulation operation is completed.
@@ -46,7 +38,7 @@ Backup and file manipulation operations (such as ALTER DATABASE ADD FILE) on a d
 > Msg 3013, Level 16, State 1, Line 1  
 BACKUP DATABASE is terminating abnormally.
 
-Additionally, the SQL Server error log contains messages like the following:
+Additionally, the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] error log contains messages like the following:
 
 > \<Datetime> Backup Error: 3041, Severity: 16, State: 1.  
 \<Datetime> Backup BACKUP failed to complete the command BACKUP DATABASE MyDatabase WITH DIFFERENTIAL. Check the backup application log for detailed messages.
@@ -71,7 +63,7 @@ Examine the schedules of the various database maintenance activities, and then a
 
 ## More information
 
-SQL Server records the start time and the end time of the Backup in the `msdb` database. You can examine the Backup history to determine whether there was a full database Backup occurring while an incremental Backup was attempted and therefore caused the error. You can use the following query to help you with this process:
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] records the start time and the end time of the Backup in the `msdb` database. You can examine the Backup history to determine whether there was a full database Backup occurring while an incremental Backup was attempted and therefore caused the error. You can use the following query to help you with this process:
 
 ```sql
 select database_name, type, backup_start_date, backup_finish_date

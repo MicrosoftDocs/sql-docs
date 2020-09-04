@@ -11,18 +11,10 @@ helpviewer_keywords:
   - "855 (Database Engine error)"
 ms.assetid: 
 author: suresh-kandoth
-ms.author: ramakoni,TejasAks,VenCher,AjayJ,SureshKa
+ms.author: ramakoni
 ---
 # MSSQLSERVER_855
-
- [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)]
- [!INCLUDE [SQL Server 2019](../../includes/sssqlv15-md.md)]
- [!INCLUDE [SQL Server 2017](../../includes/sssql17-md.md)]
- [!INCLUDE [SQL Server 2016](../../includes/sssql15-md.md)]
- [!INCLUDE [SQL Server 2014](../../includes/sssql14-md.md)]
- [!INCLUDE [SQL Server 2012](../../includes/sssql11-md.md)]
- [!INCLUDE [SQL Server 2008](../../includes/sskatmai-md.md)]
- [!INCLUDE [Azure SQL DB](../../includes/sssdsfull-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## Details
 
@@ -38,7 +30,7 @@ ms.author: ramakoni,TejasAks,VenCher,AjayJ,SureshKa
 
 ## Explanation
 
-This message indicates SQL server detected a bad memory page in a cached object outside of the buffer pool. This message is raised on systems that supports the ability to recover from memory errors. SQL server is unable to recover from these scenarios and logs this message.
+This message indicates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detected a bad memory page in a cached object outside of the buffer pool. This message is raised on systems that supports the ability to recover from memory errors. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is unable to recover from these scenarios and logs this message.
 
 ## User action
 
@@ -46,32 +38,32 @@ You should run hardware or system checks to determine if a memory or CPU problem
 
 ## More information
 
-On computers that have newer hardware and are running Windows Server 2012 or a later version, the hardware can notify the operating system and applications that memory pages (operating system pages) are marked as bad or damaged. Applications such as SQL Server can register these bad memory page notifications by using the following API set:
+On computers that have newer hardware and are running Windows Server 2012 or a later version, the hardware can notify the operating system and applications that memory pages (operating system pages) are marked as bad or damaged. Applications such as [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can register these bad memory page notifications by using the following API set:
 
 - `GetMemoryErrorHandlingCapabilities`
 - `RegisterBadMemoryNotification`
 - `BadMemoryCallbackRoutine`
 
-SQL Server adds support for these notifications in Microsoft SQL Server 2012 and later versions. During SQL Server startup, SQL Server checks whether the hardware supports this new feature. Additionally, you receive the following message in the error log:
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] adds support for these notifications in Microsoft [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and later versions. During [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] startup, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] checks whether the hardware supports this new feature. Additionally, you receive the following message in the error log:
 
 > \<Datetime> Server Machine supports memory error recovery. SQL memory protection is enabled to recover from memory corruption.
 
-Currently, only the buffer pool takes action when SQL Server receives these notifications. When it receives a notification, SQL Server has to iterate through the whole buffer pool and discover the address for each allocated buffer. Then, SQL Server uses the `QueryWorkingSetEX` API to check whether any of the memory pages that back the data page is marked as bad. The `PSAPI_WORKING_SET_EX_BLOCK` output structure that corresponds to this memory page will have its member bad set to 1 if there is any damaged reported.
+Currently, only the buffer pool takes action when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] receives these notifications. When it receives a notification, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] has to iterate through the whole buffer pool and discover the address for each allocated buffer. Then, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] uses the `QueryWorkingSetEX` API to check whether any of the memory pages that back the data page is marked as bad. The `PSAPI_WORKING_SET_EX_BLOCK` output structure that corresponds to this memory page will have its member bad set to 1 if there is any damaged reported.
 
-If that buffer pool or data page is currently not changed or not processing I/O, SQL Server can discard and de-commit the data page. Then, SQL Server logs the following message:
+If that buffer pool or data page is currently not changed or not processing I/O, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] can discard and de-commit the data page. Then, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logs the following message:
 
 > SQL Server has detected hardware memory corruption in database '%ls', file ID: %u, page ID; %u, memory address: 0x%I64x and has successfully recovered the page.
 
-When queries require that data page again, the buffer pool can read the data page back from disk and bring the contents back to the buffer pool. It is also possible for the on-disk version of the page to be in a damaged state. In that case, SQL Server may log additional errors such as error 824.
+When queries require that data page again, the buffer pool can read the data page back from disk and bring the contents back to the buffer pool. It is also possible for the on-disk version of the page to be in a damaged state. In that case, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] may log additional errors such as error 824.
 
-If the bad page is used not by the buffer pool but by some other cached object or structure, SQL Server logs the following message:
+If the bad page is used not by the buffer pool but by some other cached object or structure, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] logs the following message:
 
 > Uncorrectable hardware memory corruption detected. Your system may become unstable. Please check the Windows event log for more details.
 
 If the server is reporting memory errors, you should contact the computer hardware vendor and perform appropriate actions such as performing memory diagnostics, updating BIOS and firmware, and replacing bad memory modules.
 
-You can use SQL Server trace flag 849 to keep SQL Server from registering with the operating system for memory error notifications. However, be aware that trace flag 849 will disable SQL Server from receiving bad memory notifications from operating system. Therefore, we do not recommend that you use this trace flag under typical circumstances.
+You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace flag 849 to keep [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from registering with the operating system for memory error notifications. However, be aware that trace flag 849 will disable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from receiving bad memory notifications from operating system. Therefore, we do not recommend that you use this trace flag under typical circumstances.
 
-Also, be aware that, by default, SQL Server will receive these notifications on supported hardware.
+Also, be aware that, by default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will receive these notifications on supported hardware.
 
-You should also be aware that when SQL Server registers for these memory error notifications, the lazy writer system process does not perform constant page checks. For more information about constant page checks, see [How to troubleshoot Msg 832 (constant page has changed) in SQL Server](https://support.microsoft.com/help/2015759).
+You should also be aware that when [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] registers for these memory error notifications, the lazy writer system process does not perform constant page checks. For more information about constant page checks, see [How to troubleshoot Msg 832 (constant page has changed) in SQL Server](https://support.microsoft.com/help/2015759).

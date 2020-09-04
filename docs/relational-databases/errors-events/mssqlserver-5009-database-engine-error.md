@@ -11,18 +11,10 @@ helpviewer_keywords:
   - "5009 (Database Engine error)"
 ms.assetid: 
 author: suresh-kandoth
-ms.author: ramakoni,sureshka
+ms.author: ramakoni
 ---
 # MSSQLSERVER_5009
-
- [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)]
- [!INCLUDE [SQL Server 2019](../../includes/sssqlv15-md.md)]
- [!INCLUDE [SQL Server 2017](../../includes/sssql17-md.md)]
- [!INCLUDE [SQL Server 2016](../../includes/sssql15-md.md)]
- [!INCLUDE [SQL Server 2014](../../includes/sssql14-md.md)]
- [!INCLUDE [SQL Server 2012](../../includes/sssql11-md.md)]
- [!INCLUDE [SQL Server 2008](../../includes/sskatmai-md.md)]
- [!INCLUDE [Azure SQL DB](../../includes/sssdsfull-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## Details
 
@@ -42,13 +34,13 @@ This error indicates that you specified a file name or fileID in ALTER DATABASE 
 
 Consider the following scenario:
 
-- You have a Microsoft SQL Server database that uses a full or bulk-logged recovery model.
+- You have a Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that uses a full or bulk-logged recovery model.
 - You add a new data file that is named *db_file1* to the database.
 - You set the file type for the `db_file1` file as data.
 - You realize that you specified the file type incorrectly.
 - You remove the `db_file1` file, and then you back up the transaction log for this database.
 - You add a new log file that is named *db_file1* to the same database.
-- You try to remove the log file that is named *db_file1* by using the ALTER DATABASE statement or by using SQL Server Management Studio.
+- You try to remove the log file that is named *db_file1* by using the ALTER DATABASE statement or by using [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio.
 
 In this scenario, you receive an error message that resembles the following:
 
@@ -59,7 +51,7 @@ One or more files listed in the statement could not be found or could not be ini
 
 This issue occurs if the logical name of the file that you try to remove is not unique in the system catalog tables. For example, this issue occurs if the file existed in the database earlier, and then the file was removed.
 
-When you try to remove a file that has the same logical name, SQL Server tries to remove the dropped logical file. This results in the error message.
+When you try to remove a file that has the same logical name, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] tries to remove the dropped logical file. This results in the error message.
 
 ## User action
 

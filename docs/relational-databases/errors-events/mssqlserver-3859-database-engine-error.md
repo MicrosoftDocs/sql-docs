@@ -11,18 +11,10 @@ helpviewer_keywords:
   - "3859 (Database Engine error)"
 ms.assetid: 
 author: suresh-kandoth
-ms.author: ramakoni,sureshka
+ms.author: ramakoni
 ---
 # MSSQLSERVER_3859
-
- [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)]
- [!INCLUDE [SQL Server 2019](../../includes/sssqlv15-md.md)]
- [!INCLUDE [SQL Server 2017](../../includes/sssql17-md.md)]
- [!INCLUDE [SQL Server 2016](../../includes/sssql15-md.md)]
- [!INCLUDE [SQL Server 2014](../../includes/sssql14-md.md)]
- [!INCLUDE [SQL Server 2012](../../includes/sssql11-md.md)]
- [!INCLUDE [SQL Server 2008](../../includes/sskatmai-md.md)]
- [!INCLUDE [Azure SQL DB](../../includes/sssdsfull-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## Details
 
@@ -38,11 +30,11 @@ ms.author: ramakoni,sureshka
 
 ## Explanation
 
-This error indicates a user initiated changes to system tables. Manually updating system tables is not supported. The system tables should only be updated by the SQL Server database engine. When SQL Server detects user initiated changes to the system tables, error 3859 is raised in the following two scenarios:
+This error indicates a user initiated changes to system tables. Manually updating system tables is not supported. The system tables should only be updated by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detects user initiated changes to the system tables, error 3859 is raised in the following two scenarios:
 
 - Scenario 1
 
-    An event that resembles the following is logged in the SQL Server Error Log or in the Application log in Event Viewer when you start a SQL Server database that contains a system table that was manually updated:
+    An event that resembles the following is logged in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Error Log or in the Application log in Event Viewer when you start a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database that contains a system table that was manually updated:
 
     > Log Name: Application  
     Source: MSSQLSERVER
@@ -61,8 +53,6 @@ This error indicates a user initiated changes to system tables. Manually updatin
     CHECKDB found 0 allocation errors and 0 consistency errors in database '**db_name**'.  
     DBCC execution completed. If DBCC printed error messages, contact your system administrator.
 
-
-
 ## User action
 
 To resolve this issue, use one of the following methods.
@@ -71,11 +61,10 @@ To resolve this issue, use one of the following methods.
 If you have a clean backup of the database, restore the database from the backup.  
     > [!NOTE] This method works only if the backup does not have inconsistencies in the metadata.  
 
-
 - Method 2  
 If you cannot restore the database from a backup, export the data and the objects to a new database. Then, transfer the contents of the manually-updated database into the new database. Note You cannot repair inconsistencies in the system catalogs by using the REPAIR options in the DBCC CHECKDB commands. Therefore, because the command cannot repair metadata corruption, the command does not provide any recommended repair leve
 > [!NOTE]
-> 
+>
 > - You can view the data in the system tables through the system catalog views.
 ## More information
 

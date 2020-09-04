@@ -11,18 +11,10 @@ helpviewer_keywords:
   - "17659 (Database Engine error)"
 ms.assetid: 
 author: suresh-kandoth
-ms.author: ramakoni,sureshka
+ms.author: ramakoni
 ---
 # MSSQLSERVER_17659
-
- [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)]
- [!INCLUDE [SQL Server 2019](../../includes/sssqlv15-md.md)]
- [!INCLUDE [SQL Server 2017](../../includes/sssql17-md.md)]
- [!INCLUDE [SQL Server 2016](../../includes/sssql15-md.md)]
- [!INCLUDE [SQL Server 2014](../../includes/sssql14-md.md)]
- [!INCLUDE [SQL Server 2012](../../includes/sssql11-md.md)]
- [!INCLUDE [SQL Server 2008](../../includes/sskatmai-md.md)]
- [!INCLUDE [Azure SQL DB](../../includes/sssdsfull-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## Details
 
@@ -38,7 +30,7 @@ ms.author: ramakoni,sureshka
 
 ## Explanation
 
-This error indicates that a system object was updated directly. Manually updating system tables is not supported. The system tables should only be updated by the SQL Server database engine. When SQL Server detects user initiated changes to the system tables, error 17659 is raised. An event that resembles the following is logged in the SQL Server Error Log or in the Application log in Event Viewer in this scenario.
+This error indicates that a system object was updated directly. Manually updating system tables is not supported. The system tables should only be updated by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] database engine. When [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detects user initiated changes to the system tables, error 17659 is raised. An event that resembles the following is logged in the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Error Log or in the Application log in Event Viewer in this scenario.
 
 > Log Name: Application  
 Source: MSSQLServer  

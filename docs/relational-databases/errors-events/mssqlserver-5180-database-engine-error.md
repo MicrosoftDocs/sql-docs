@@ -11,18 +11,10 @@ helpviewer_keywords:
   - "5180 (Database Engine error)"
 ms.assetid: 
 author: rgward
-ms.author: ramakoni,bobward
+ms.author: ramakoni
 ---
 # MSSQLSERVER_5180
-
- [!INCLUDE [SQL Server](../../includes/ssnoversion-md.md)]
- [!INCLUDE [SQL Server 2019](../../includes/sssqlv15-md.md)]
- [!INCLUDE [SQL Server 2017](../../includes/sssql17-md.md)]
- [!INCLUDE [SQL Server 2016](../../includes/sssql15-md.md)]
- [!INCLUDE [SQL Server 2014](../../includes/sssql14-md.md)]
- [!INCLUDE [SQL Server 2012](../../includes/sssql11-md.md)]
- [!INCLUDE [SQL Server 2008](../../includes/sskatmai-md.md)]
- [!INCLUDE [Azure SQL DB](../../includes/sssdsfull-md.md)]
+ [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]
 
 ## Details
 
@@ -38,22 +30,22 @@ ms.author: ramakoni,bobward
 
 ## Explanation
 
-A query or operation may fail with an error 5180 when an invalid file ID is referenced by the SQL Server Engine. This is an example:
+A query or operation may fail with an error 5180 when an invalid file ID is referenced by the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine. This is an example:
 
 > Msg 5180, Level 22, State 1, Line 1  
 Could not open File Control Bank (FCB) for invalid file ID %d in database '%.*ls'. Verify the file location. Execute DBCC CHECKDB.
 
-Since the error is raised with severity 22, the user's session will be disconnected. This error message is written into the SQL Server Error Log and the Windows Application Event Log with EventID = 5180.
+Since the error is raised with severity 22, the user's session will be disconnected. This error message is written into the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Error Log and the Windows Application Event Log with EventID = 5180.
 
 ## Possible causes
 
-The SQL Server Engine references a file ID in many different situations mostly when referencing a page ID (since the file ID is the first portion of the page ID). If for any reason, the file ID being referenced is < 0 or is not a valid file ID in a database (per the valid file IDs listed in system catalog views such as sys.database_files), then a 5180 error can be encountered.
+The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine references a file ID in many different situations mostly when referencing a page ID (since the file ID is the first portion of the page ID). If for any reason, the file ID being referenced is < 0 or is not a valid file ID in a database (per the valid file IDs listed in system catalog views such as sys.database_files), then a 5180 error can be encountered.
 
 One possible cause is that a stored file ID is not valid. Since the forwarded record in a row references another page, when that page is accessed and the file ID is invalid, a 5180 error could be encountered. This condition would be a database corruption error on the page with the forwarded record. (In this example, DBCC CHECKDB would report Msg 8993).
 
 Another example is an invalid file ID as part of a page ID as stored in the page header for a next or prev page ID. This field is used to link a series of pages such as in a clustered index. If the file ID is invalid for the prev or next page, when the engine must reference this to traverse to the next or previous page, a 5180 error can be encountered. (In this example, DBCC CHECKDB reports Msg 8981).
 
-If the problem is not an invalid file ID due to a corrupted stored page ID, then the problem may be within the SQL Server Engine.
+If the problem is not an invalid file ID due to a corrupted stored page ID, then the problem may be within the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Engine.
 
 ## User action
 
@@ -67,5 +59,5 @@ The File Control Block (FCB) is an internal memory structure that keeps track of
 
 To find out what query encountered this error, you can use the following techniques:
 
-- For SQL Server 2008 and later versions, see if the system_health session has a record of the error, which should include the query text. See resource for more information about the system_health session: [Supporting SQL Server 2008: The system_health session](https://techcommunity.microsoft.com/t5/sql-server-support/supporting-sql-server-2008-the-system-health-session/ba-p/315509).
-- Use SQL Server Profiler and capture the `SQL:BatchStarting`, `RPC:Starting`, and Exception Events. Find the query that precedes the Exception Event for 5180 for the session associated with the Exception Event.
+- For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2008 and later versions, see if the system_health session has a record of the error, which should include the query text. See resource for more information about the system_health session: [Supporting SQL Server 2008: The system_health session](https://techcommunity.microsoft.com/t5/sql-server-support/supporting-sql-server-2008-the-system-health-session/ba-p/315509).
+- Use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Profiler and capture the `SQL:BatchStarting`, `RPC:Starting`, and Exception Events. Find the query that precedes the Exception Event for 5180 for the session associated with the Exception Event.

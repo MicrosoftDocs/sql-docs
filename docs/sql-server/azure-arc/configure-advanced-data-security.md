@@ -1,5 +1,5 @@
 ---
-title: Configure advanced data security:
+title: Configure advanced data security
 titleSuffix: Azure Arc
 description: Configure advanced data security for Azure Arc enabled SQL Server instance
 author: anosov1960

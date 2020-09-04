@@ -10253,6 +10253,8 @@
           href: relational-databases/errors-events/mssqlserver-824-database-engine-error.md
         - name: 825
           href: relational-databases/errors-events/mssqlserver-825-database-engine-error.md
+        - name: 832
+          href: relational-databases/errors-events/mssqlserver-832-database-engine-error.md
         - name: 833
           href: relational-databases/errors-events/mssqlserver-833-database-engine-error.md
         - name: 844
@@ -10263,6 +10265,12 @@
           href: relational-databases/errors-events/mssqlserver-846-database-engine-error.md
         - name: 847
           href: relational-databases/errors-events/mssqlserver-847-database-engine-error.md
+        - name: 854
+          href: relational-databases/errors-events/mssqlserver-854-database-engine-error.md
+        - name: 855
+          href: relational-databases/errors-events/mssqlserver-855-database-engine-error.md
+        - name: 856
+          href: relational-databases/errors-events/mssqlserver-856-database-engine-error.md
         - name: 905
           href: relational-databases/errors-events/mssqlserver-905-database-engine-error.md
         - name: 916
@@ -10375,6 +10383,10 @@
           href: relational-databases/errors-events/mssqlserver-2814-database-engine-error.md
       - name: Errors 3000 to 4850
         items:
+        - name: 3013
+          href: relational-databases/errors-events/mssqlserver-3013-database-engine-error.md
+        - name: 3023
+          href: relational-databases/errors-events/mssqlserver-3023-database-engine-error.md
         - name: 3151
           href: relational-databases/errors-events/mssqlserver-3151-database-engine-error.md
         - name: 3156
@@ -10417,18 +10429,26 @@
           href: relational-databases/errors-events/mssqlserver-3937-database-engine-error.md
         - name: 3961
           href: relational-databases/errors-events/mssqlserver-3961-database-engine-error.md
+        - name: 3859
+          href: relational-databases/errors-events/mssqlserver-3859-database-engine-error.md
         - name: 4064
           href: relational-databases/errors-events/mssqlserver-4064-database-engine-error.md
         - name: 4104
           href: relational-databases/errors-events/mssqlserver-4104-database-engine-error.md
         - name: 4186
           href: relational-databases/errors-events/mssqlserver-4186-database-engine-error.md
+        - name: 4214
+          href: relational-databases/errors-events/mssqlserver-4214-database-engine-error.md
         - name: 4846
           href: relational-databases/errors-events/mssqlserver-4846-database-engine-error.md
       - name: Errors 5000 to 8000
         items:
+        - name: 5009
+          href: relational-databases/errors-events/mssqlserver-5009-database-engine-error.md
         - name: 5120
           href: relational-databases/errors-events/mssqlserver-5120-database-engine-error.md
+        - name: 5180
+          href: relational-databases/errors-events/mssqlserver-5180-database-engine-error.md
         - name: 5228
           href: relational-databases/errors-events/mssqlserver-5228-database-engine-error.md
         - name: 5229
@@ -10457,6 +10477,8 @@
           href: relational-databases/errors-events/mssqlserver-5515-database-engine-error.md
         - name: 5554
           href: relational-databases/errors-events/mssqlserver-5554-database-engine-error.md
+        - name: 7105
+          href: relational-databases/errors-events/mssqlserver-7105-database-engine-error.md
         - name: 7308
           href: relational-databases/errors-events/mssqlserver-7308-database-engine-error.md
         - name: 7711
@@ -10685,6 +10707,8 @@
           href: relational-databases/errors-events/mssqlserver-17083-database-engine-error.md
         - name: 17084
           href: relational-databases/errors-events/mssqlserver-17084-database-engine-error.md
+        - name: 17112
+          href: relational-databases/errors-events/mssqlserver-17112-database-engine-error.md
         - name: 17128
           href: relational-databases/errors-events/mssqlserver-17128-database-engine-error.md
         - name: 17130
@@ -10705,6 +10729,8 @@
           href: relational-databases/errors-events/mssqlserver-17207-database-engine-error.md
         - name: 17300
           href: relational-databases/errors-events/mssqlserver-17300-database-engine-error.md
+        - name: 17659
+          href: relational-databases/errors-events/mssqlserver-17659-database-engine-error.md
         - name: 17660
           href: relational-databases/errors-events/mssqlserver-17660-database-engine-error.md
         - name: 17676
@@ -10721,6 +10747,8 @@
           href: relational-databases/errors-events/mssqlserver-17884-database-engine-error.md
         - name: 17887
           href: relational-databases/errors-events/mssqlserver-17887-database-engine-error.md
+        - name: 17892
+          href: relational-databases/errors-events/mssqlserver-17892-database-engine-error.md
         - name: 18264
           href: relational-databases/errors-events/mssqlserver-18264-database-engine-error.md
         - name: 18452

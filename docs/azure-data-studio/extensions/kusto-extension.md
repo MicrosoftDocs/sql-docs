@@ -56,7 +56,19 @@ The extensions settings look like this:
 
 ## How to connect to an Azure Data Explorer cluster
 
-To connect to an Azure Data Explorer cluster, follow the steps below.
+### Find your Azure Data Explorer cluster
+
+Find your Azure Data Explorer cluster in the [Azure portal](https://ms.portal.azure.com/#home), then find the URI for the cluster.
+
+:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri-03.png" alt-text="URI":::
+
+However, you can get started immediately using the *help.kusto.windows.net* cluster.
+
+For this article, we are using the help.kusto.windows.net cluster for examples.
+
+### Connection details
+
+To set up the Azure Data Explorer cluster you connect to, follow the steps below.
 
 1. Select **New connection** from the **Connections** pane.
 
@@ -78,16 +90,16 @@ Now that you have set up a connection to your Azure Data Explorer cluster, you c
 
 To create a new query tab, you can either select **File > New Query**, use *Ctrl + N*, or ri the database and select **New Query**.
 
-Once you have your new query tab open, then enter your kusto query. 
+Once you have your new query tab open, then enter your kusto query.
 
 Here are some samples of Kusto queries:
 
-```kql
+```kusto
 StormEvents
 | limit 1000
 ```
 
-```kql
+```kusto
 StormEvents
 | where EventType == "Waterspout"
 ```

@@ -16,23 +16,23 @@ You can connect your SQL Server instance on premises to Azure by following these
 ## Prerequisites
 
 * Your machine has at least one instance of SQL Server installed
-* For Linux machines, you have downloaded the az cli and connected your azure account. Follow the instructions on how to [install Azure CLI](https://docs.microsoft.com/cli/azure/install-azure-cli-apt?view=azure-cli-latest).
+* For Linux machines, you have downloaded AZ CLI and connected your Azure account. Follow the instructions on how to [install Azure CLI](/cli/azure/install-azure-cli-apt?view=azure-cli-latest).
 
 ## Generate a registration script for SQL Server
 
 In this step you generate a script that discovers all SQL Server instances installed on the machine and registers them as __SQL Server - Azure Arc__ resources. If the hosting physical or virtual machine is not registered with Azure Arc, the script automatically does it.
 
-* Search for__SQL Server - Azure Arc__ resource type and add a new one through the creation blade.
+1. Search for__SQL Server - Azure Arc__ resource type and add a new one through the creation blade.
 
    :::image type="content" source="media/join/start-creation-of-sql-server-azure-arc-resource.png" alt-text="Azure SQL create":::
 
-* Review the pre-requisites and go to the **Server details** tab.  
+1. Review the pre-requisites and go to the **Server details** tab.  
 
-* Select the the subscription, resource group, Azure region and the host operating system. If required, also specify the proxy that your network uses to connect to Internet.
+1. Select the the subscription, resource group, Azure region and the host operating system. If required, also specify the proxy that your network uses to connect to Internet.
 
    :::image type="content" source="media/join/server-details-sql-server-azure-arc.png"alt-text="Server details":::
 
-* Go to the **Run script** tab and download the displayed registration script. The portal generates the script for the hosting OS you specified.
+1. Go to the **Run script** tab and download the displayed registration script. The portal generates the script for the hosting OS you specified.
 
    :::image type="content" source="media/join/download-script-sql-server-azure-arc.png" alt-text="Download script":::
 
@@ -42,18 +42,18 @@ In this step you will take the script you downloaded from Azure portal and execu
 
 ### Windows
 
-* Open the script in an admin instance of Powershell ISE
+1. Open the script in an admin instance of PowerShell ISE
 
-* Execute the script
+1. Execute the script
 
 > [!NOTE]
-> \You may see issues the first time if you haven't previously installed the Az module for powershell. In that case follow the instructions in the script to install and connect your account and run the script again.
+> You may see issues the first time if you haven't previously installed the AZ module for powershell. In that case follow the instructions in the script to install and connect your account and run the script again.
 
 ### Linux
 
-* Follow these [instructions](https://docs.microsoft.com/cli/azure/install-azure-cli-apt?view=azure-cli-latest) to download the az CLI and connect your azure account.
+1. Follow these [instructions](/cli/azure/install-azure-cli-apt?view=azure-cli-latest) to download AZ CLI and connect your Azure account.
 
-* Grand the execution permission to the downloaded script and execute it.
+1. Grand the execution permission to the downloaded script and execute it.
 
 ```bash
 sudo chmod +x ./<filename>.sh

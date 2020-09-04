@@ -1,6 +1,6 @@
 ---
-title: Configure advanced data security
-titleSuffix:  
+title: Configure advanced data security:
+titleSuffix: Azure Arc
 description: Configure advanced data security for Azure Arc enabled SQL Server instance
 author: anosov1960
 ms.author: sashan 
@@ -21,14 +21,14 @@ You can enable advanced data security for your SQL Server instances on premises 
 
 ## Create a Log Analytics workspace
 
-* Search for __Log Analytics workspaces__ resource type and add a new one through the creation blade.
+1. Search for __Log Analytics workspaces__ resource type and add a new one through the creation blade.
 
    :::image type="content" source="media/configure-advanced-data-security/create-new-log-analytics-workspace.png" alt-text="Create new log analytics workspace":::
 
    > [!NOTE]
    > You can use a Log Analytics workspace in any region so if you already have one, you can use it. But we recommend creating it in the same region where your __Machine - Azure Arc__ resource is created.
 
-* Go to the overview page of the Log Analytics workspace resource and select “Windows, Linux and other sources”. Copy the workspace ID and primary key for later use.
+1. Go to the overview page of the Log Analytics workspace resource and select “Windows, Linux and other sources”. Copy the workspace ID and primary key for later use.
 
    :::image type="content" source="media/configure-advanced-data-security/log-analytics-workspace-blade.png" alt-text="Log analytics workspace blade":::
 
@@ -36,23 +36,23 @@ You can enable advanced data security for your SQL Server instances on premises 
 
 The next step installs MMS on the remote machine
 
-* Select the __Machine - Azure Arc__ resource for the virtual or physical server where the SQL Server instance is installed and add the extension __Microsoft Monitoring Agent - Azure Arc__ using the  **Extensions** feature. When asked to configure the Log Analytics workspace, use the workspace ID and primary you saved in the previous step.
+1. Select the __Machine - Azure Arc__ resource for the virtual or physical server where the SQL Server instance is installed and add the extension __Microsoft Monitoring Agent - Azure Arc__ using the  **Extensions** feature. When asked to configure the Log Analytics workspace, use the workspace ID and primary you saved in the previous step.
 
    :::image type="content" source="media/configure-advanced-data-security/install-mma-extension.png" alt-text="Install MMA extension":::
 
-* After validation succeeds, click **Create** to start the MMA Arc Extension deployment workflow. When deployment completes the status will be updated to **Succeeded**.
+1. After validation succeeds, click **Create** to start the MMA Arc Extension deployment workflow. When deployment completes the status will be updated to **Succeeded**.
 
-* For more details, see [Extension management with Azure Arc](/azure/azure-arc/servers/manage-vm-extensions)
+1. For more details, see [Extension management with Azure Arc](/azure/azure-arc/servers/manage-vm-extensions)
 
 ## Enable advanced data security
 
 Next, you need to enable advanced data security for SQL Server instance.
 
-* Go to Security Center and open the **Pricing & settings** page from the sidebar.
+1. Go to Security Center and open the **Pricing & settings** page from the sidebar.
 
-* Select the workspace that you have configured for the MMA extension in the previous step
+1. Select the workspace that you have configured for the MMA extension in the previous step
 
-* Select **Standard**. Make sure the option for **SQL servers on Machine (Preview)** is enabled.
+1. Select **Standard**. Make sure the option for **SQL servers on Machine (Preview)** is enabled.
 
    :::image type="content" source="media/configure-advanced-data-security/upgrade-log-analytics-workspace.png" alt-text="Upgrade log analytics workspace":::
 
@@ -60,19 +60,19 @@ Next, you need to enable advanced data security for SQL Server instance.
 
 Explore security anomalies and threats in Azure Security Center.
 
-* Open your SQL Server – Azure Arc resource and select **Security** in the left menu. to see the recommendations and alerts for that instance.
+1. Open your SQL Server – Azure Arc resource and select **Security** in the left menu. to see the recommendations and alerts for that instance.
 
    :::image type="content" source="media/configure-advanced-data-security/security-heading-sql-server-arc.png" alt-text="Security heading":::
 
-* Click on any of the recommendations to see the vulnerability details in __Security Center__ .
+1. Click on any of the recommendations to see the vulnerability details in __Security Center__ .
 
    :::image type="content" source="media/configure-advanced-data-security/vulnerabilities-report.png" alt-text="Vulnerabilities report":::
 
-* Click on any security alert for full details and further explore the attack in [Azure Sentinel](https://docs.microsoft.com/azure/sentinel/overview). The following diagram is an example of the brute force alert.
+1. Click on any security alert for full details and further explore the attack in [Azure Sentinel](https://docs.microsoft.com/azure/sentinel/overview). The following diagram is an example of the brute force alert.
 
    :::image type="content" source="media/configure-advanced-data-security/brute-force-alert.png" alt-text="Brute force alert":::
 
-* Click on **Take action** to mitigate the alert.
+1. Click on **Take action** to mitigate the alert.
 
    :::image type="content" source="media/configure-advanced-data-security/brute-force-alert-mitigation.png" alt-text="Brute force alert mitigation":::
 

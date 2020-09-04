@@ -23,15 +23,15 @@ You can enable SQL assessment for your SQL Server instances by following these s
 
 ## Enable on-demand SQL Assessment
 
-* Open your SQL Server – Azure Arc resource and select __Environment Health__ in the left menu.
+1. Open your SQL Server – Azure Arc resource and select __Environment Health__ in the left menu.
 
    :::image type="content" source="media/assess/sql-assessment-heading-sql-server-arc.png" alt-text="Enable SQL assessment":::
 
-* Specify a working directory on the data collection machine. During collection and analysis, data is temporarily stored under that folder. If the folder doesn't exist, it is created automatically.
+1. Specify a working directory on the data collection machine. During collection and analysis, data is temporarily stored under that folder. If the folder doesn't exist, it is created automatically.
 
-* Click on __Download configuration script__ and copy the downloaded script to the data collection  machine.
+1. Click on __Download configuration script__ and copy the downloaded script to the data collection  machine.
 
-* Execute the script by using the following command in __cmd.exe__.
+1. Execute the script by using the following command in __cmd.exe__.
 
    ```cmd.exe
    powershell.exe -ExecutionPolicy Bypass .\<filename>.ps1

@@ -54,7 +54,7 @@ For example, this topic applies to all versions, and has the following label.
   
  [!INCLUDE[tsql-appliesto-ss2008-all_md](../includes/tsql-appliesto-ss2008-all-md.md)]   
 
-Another example, the following label indicates a topic that applies only to Azure SQL Data Warehouse and Parallel Data Warehouse.
+Another example, the following label indicates a topic that applies only to Azure Synapse Analytics (formerly SQL Data Warehouse) and Parallel Data Warehouse.
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw_md](../includes/applies-to-version/asa-pdw.md)]
 

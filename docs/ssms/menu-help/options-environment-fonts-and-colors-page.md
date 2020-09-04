@@ -78,5 +78,3 @@ Displays a sample of the font style, size, and color scheme for the selected val
   
 ## See Also  
 [Color Coding in Code Editors](../../relational-databases/scripting/color-coding-in-query-editors.md)  
-[Options (Text Editor/Editor Tab and Status Bar Page)](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio)  
-  

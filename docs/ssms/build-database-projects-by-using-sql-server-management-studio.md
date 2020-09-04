@@ -64,6 +64,5 @@ A solution consists of one or more script projects. A project consists of one or
   
 ## See Also  
 [Use SQL Server Management Studio](../ssms/use-sql-server-management-studio.md)  
-[Writing, Analyzing, and Editing Queries with SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio)  
 [Solutions &#40;SQL Server Management Studio&#41;](../ssms/solution/solutions-sql-server-management-studio.md)  
   

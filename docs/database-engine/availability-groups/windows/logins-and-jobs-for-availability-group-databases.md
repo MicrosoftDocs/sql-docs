@@ -48,7 +48,7 @@ ms.author: mathoma
 > [!NOTE]  
 >  This problem affects Windows local accounts on different computers. However, this problem does not occur for domain accounts because the SID is the same on each of the computers.  
   
- For more information, see [Orphaned Users with Database Mirroring and Log Shipping](https://blogs.msdn.com/b/sqlserverfaq/archive/2009/04/13/orphaned-users-with-database-mirroring-and-log-shipping.aspx) (a Database Engine blog).  
+ For more information, see [Orphaned Users with Database Mirroring and Log Shipping](https://docs.microsoft.com/archive/blogs/sqlserverfaq/orphaned-users-with-database-mirroring-and-log-shipping) (a Database Engine blog).  
   
 ##  <a name="RelatedTasks"></a> Related Tasks  
   

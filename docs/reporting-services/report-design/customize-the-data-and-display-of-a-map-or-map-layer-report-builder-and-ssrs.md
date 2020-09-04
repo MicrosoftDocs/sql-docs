@@ -118,7 +118,7 @@ ms.author: maggies
   
  The group expression specifies how analytical data that has a relationship to spatial data is aggregated for each map element on the layer. By default, the group expression is the set of match fields that was specified for the relationship between the spatial data and the analytical data. For example, for a bubble map that displays city locations and population size for a country or region, the match fields include city name [City] and region name [Region] because there can be multiple cities with the same name. The corresponding group expression includes two fields: [City] and [Region].  
   
- For more information, see [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://go.microsoft.com/fwlink/?LinkID=214991).  
+ For more information, see [Map Tips: How To Import Shapefiles Into SQL Server and Aggregate Spatial Data](https://docs.microsoft.com/archive/blogs/seanboon/sql-server-2008-r2-map-tips-how-to-import-shapefiles-into-sql-server-and-aggregate-spatial-data).  
   
 ##  <a name="MapElements"></a> Change Options for the Map Elements on the Layer  
  Map elements are the points, lines, or polygons on a layer that are based on the spatial data. For map elements, the following options can be set. These options apply to all map elements on the layer, whether or not they are embedded:  

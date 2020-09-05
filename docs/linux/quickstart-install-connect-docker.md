@@ -286,7 +286,7 @@ Before starting the following steps, make sure that you have selected your prefe
 
    ![Docker ps command output](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see [Troubleshooting SQL Server Docker containers]((sql-server-linux-docker-container-troubleshooting.md)).
+4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see [Troubleshooting SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md).
 
 The `-h` (host name) parameter is also useful, but it is not used in this tutorial for simplicity. This changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:
 
@@ -533,6 +533,6 @@ After you have tried using the SQL Server container image for Docker, you might 
 
 ## Next steps
 
-For a tutorial on how to restore database backup files into a container, see [Restore a SQL Server database in a Linux Docker container](tutorial-restore-backup-in-sql-server-container.md). Explore other scenarios, such as running [multiple containers](sql-server-linux-docker-container-deployment.md#multiple), [data persistence](sql-server-linux-docker-container-configure.md#persist), and [troubleshooting]((sql-server-linux-docker-container-troubleshooting.md)).
+For a tutorial on how to restore database backup files into a container, see [Restore a SQL Server database in a Linux Docker container](tutorial-restore-backup-in-sql-server-container.md). Explore other scenarios, such as running [multiple containers](sql-server-linux-docker-container-deployment.md#multiple), [data persistence](sql-server-linux-docker-container-configure.md#persist), and [troubleshooting](sql-server-linux-docker-container-troubleshooting.md).
 
 Also, check out the [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker) for resources, feedback, and known issues.

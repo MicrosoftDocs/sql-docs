@@ -55,6 +55,7 @@ helpviewer_keywords:
   - "constraints [SQL Server], enabling"
   - "dropping constraints"
   - "dropping columns"
+  - "data retention policy"
   - "table changes [SQL Server]"
 ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
@@ -168,6 +169,18 @@ ALTER TABLE { database_name.schema_name.table_name | schema_name.table_name | ta
                         )
                       ]
                   }
+            | DATA_DELETION =
+                  {
+                     OFF 
+                  | ON
+                      ( FILTER_COLUMN = column_name
+                         , RETENTION_PERIOD =
+                          {
+                           INFINITE | number {DAY | DAYS | WEEK | WEEKS
+                            | MONTH | MONTHS | YEAR | YEARS }
+                          }
+                        )
+                  }  
           )
 
     | REBUILD
@@ -786,6 +799,26 @@ HISTORY_RETENTION_PERIOD = { **INFINITE** \| number {DAY \| DAYS \| WEEK \| WEEK
 **Applies to**: [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].
 
 Specifies finite or infinite retention for historical data in a temporal table. If omitted, infinite retention is assumed.
+
+SET (DATA_DELETION = { ON ( FILTER_COLUMN = column_name,   
+            RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS
+                  | MONTH | MONTHS | YEAR | YEARS } 
+                  }  )
+**Applies to:** Azure SQL Edge *only*
+
+Enables retention policy based cleanup of old or aged data from tables within a database. For more information see [Enable and Disable Data Retention](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable). The following parameters must be specified for data retention to be enabled. 
+
+- FILTER_COLUMN = { column_name }  
+Specifies the column, that should be used to determine if the rows in the table are obselete or not. The following data types are allowed for the filter column.
+  - Date
+  - DateTime
+  - DateTime2
+  - SmallDateTime
+  - DateTimeOffset
+
+- RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS
+                  | MONTH | MONTHS | YEAR | YEARS }}       
+Specifies the retention period policy for the table. The retention period is specified as a combination of an positive integer value and the date part unit. 
 
 SET **(** LOCK_ESCALATION = { AUTO \| TABLE \| DISABLE } **)**  
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] and later) and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)].

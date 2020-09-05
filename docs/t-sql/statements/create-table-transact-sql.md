@@ -234,7 +234,8 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
       }
     ]   
     [ DATA_DELETION = ON ( FILTER_COLUMN = column_name
-        , RETENTION_PERIOD = retention_period { DAYS | WEEKS | MONTHS | YEARS }) ]
+        , RETENTION_PERIOD = retention_period { DAY | DAYS | WEEK | WEEKS
+                  | MONTH | MONTHS | YEAR | YEARS }) ]
 }
   
 <table_stretch_options> ::=
@@ -896,7 +897,8 @@ Specifies the column, that should be used to determine if the rows in the table 
   - SmallDateTime
   - DateTimeOffset
 
-- RETENTION_PERIOD = retention_period { DAYS | WEEKS | MONTHS | YEARS }   
+- RETENTION_PERIOD = retention_period {DAY | DAYS | WEEK | WEEKS
+                  | MONTH | MONTHS | YEAR | YEARS }       
 Specifies the retention period policy for the table. The retention period is specified as a combination of an positive integer value and the date part unit. The following units are allowed DAYS, WEEKS, MONTHS and YEARS.   
 
 MEMORY_OPTIMIZED

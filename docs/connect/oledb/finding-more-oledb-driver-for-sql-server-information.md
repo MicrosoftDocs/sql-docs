@@ -24,7 +24,7 @@ ms.author: v-daenge
  [Data Access and Storage Developer Center](https://go.microsoft.com/fwlink?linkid=4173)  
  This site provides technical articles, sample code, and other resources for OLE DB Driver for SQL Server and other data access technologies.  
   
- [Data Access Blog](https://go.microsoft.com/fwlink/?LinkId=48617)  
+ [Data Access Blog](https://techcommunity.microsoft.com/t5/sql-server/bg-p/SQLServer/label-name/SQLServerDrivers)  
  This blog site provides information about data access technologies and allows you to interact directly with members of the product team.  
   
  [Windows Data Access Components](https://go.microsoft.com/fwlink/?LinkId=107907)  

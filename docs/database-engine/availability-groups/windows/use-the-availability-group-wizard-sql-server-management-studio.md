@@ -179,7 +179,7 @@ In most cases, you can use the New Availability Group Wizard to complete all of 
   
      [SQL Server Always On Team Blogs: The official SQL Server Always On Team Blog](https://blogs.msdn.microsoft.com/sqlalwayson/)  
   
-     [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
+     [CSS SQL Server Engineers Blogs](https://docs.microsoft.com/archive/blogs/psssql/)  
   
 -   **Videos:**  
   

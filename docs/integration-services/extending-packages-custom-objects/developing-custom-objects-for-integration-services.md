@@ -107,7 +107,7 @@ ms.author: chugu
   
 ## External Resources  
   
--   Blog entry, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](https://go.microsoft.com/fwlink/?LinkId=215662), on blogs.msdn.com.  
+-   Blog entry, [Visual Studio solution build process give a warning about indirect dependency on the .NET Framework assembly due to SSIS references](https://docs.microsoft.com/archive/blogs/jason_howell/visual-studio-2010-solution-build-process-give-a-warning-about-indirect-dependency-on-the-net-framework-assembly-due-to-ssis-references), on blogs.msdn.com.  
   
 ## See Also  
  [Persisting Custom Objects](../../integration-services/extending-packages-custom-objects/persisting-custom-objects.md)   

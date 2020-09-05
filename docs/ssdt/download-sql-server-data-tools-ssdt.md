@@ -161,7 +161,7 @@ To download and install SSDT for Visual Studio 2015, or an older version of SSDT
 
 * [SSDT MSDN Forum](https://social.msdn.microsoft.com/Forums/sqlserver/home?forum=ssdt) 
 
-* [SSDT Team Blog](https://blogs.msdn.com/b/ssdt/)
+* [SSDT Team Blog](https://docs.microsoft.com/archive/blogs/ssdt/)
 
 * [DACFx API Reference](https://msdn.microsoft.com/library/dn645454.aspx)
 

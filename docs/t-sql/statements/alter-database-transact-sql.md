@@ -128,6 +128,7 @@ ALTER DATABASE { database_name | CURRENT }
   | <sql_option>
   | <termination>
   | <temporal_history_retention>
+  | <data_retention_policy>
   | <compatibility_level>
       { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 }

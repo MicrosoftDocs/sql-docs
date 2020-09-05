@@ -2,7 +2,7 @@
 description: "ALTER TABLE (Transact-SQL)"
 title: "ALTER TABLE (Transact-SQL) | Microsoft Docs"
 ms.custom: ""
-ms.date: "06/23/2020"
+ms.date: "09/04/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""

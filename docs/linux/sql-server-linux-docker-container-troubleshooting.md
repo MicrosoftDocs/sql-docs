@@ -4,6 +4,7 @@ description: Explore the different troubleshooting techniques that you can use t
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
+ms.custom: contperfq1
 ms.date: 09/04/2020
 ms.topic: conceptual
 ms.prod: sql

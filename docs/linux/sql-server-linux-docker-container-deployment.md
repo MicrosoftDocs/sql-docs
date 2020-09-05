@@ -434,7 +434,7 @@ This updates the SQL Server image for any new containers you create, but it does
 
 - See the [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker) for resources, feedback, and known issues
 
-- [Troubleshooting SQL Server Docker containers](sql-server-linux-docker-containter-troubleshooting.md)
+- [Troubleshooting SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md)
 
 - [Explore high availability for SQL Server containers](sql-server-linux-container-ha-overview.md)
 

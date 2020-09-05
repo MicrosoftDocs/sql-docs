@@ -373,6 +373,6 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_D
 
 - [Deploy and connect to SQL Server Docker containers](sql-server-linux-docker-container-deployment.md)
 
-- [Troubleshooting SQL Server Docker containers](sql-server-linux-docker-containter-troubleshooting.md)
+- [Troubleshooting SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md)
 
 - [Secure SQL Server Docker containers](sql-server-linux-docker-container-security.md)

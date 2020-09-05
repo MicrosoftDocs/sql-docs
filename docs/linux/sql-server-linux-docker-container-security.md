@@ -141,4 +141,4 @@ chown -R 10001:0 <database file dir>
 
 - [Reference additional configuration and customization to Docker containers](sql-server-linux-docker-container-configure.md)
 
-- [Troubleshooting SQL Server Docker containers](sql-server-linux-docker-containter-troubleshooting.md)
+- [Troubleshooting SQL Server Docker containers](sql-server-linux-docker-container-troubleshooting.md)

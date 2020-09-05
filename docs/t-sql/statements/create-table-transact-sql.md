@@ -886,7 +886,10 @@ MIGRATION_STATE = { OUTBOUND | INBOUND | PAUSED }
 
 - Specify `PAUSED` to pause or postpone data migration. For more info, see [Pause and resume data migration -Stretch Database](../../sql-server/stretch-database/pause-and-resume-data-migration-stretch-database.md).
 
-DATA_DELETION = { ON ( FILTER_COLUMN = column_name, RETENTION_PERIOD = retention_period { DAYS | WEEKS | MONTHS | YEARS } ) }    
+DATA_DELETION = { ON ( FILTER_COLUMN = column_name,   
+            RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS
+                  | MONTH | MONTHS | YEAR | YEARS } 
+                  }    
 **Applies to:** Azure SQL Edge *only*
 
 Enables retention policy based cleanup of old or aged data from tables within a database. For more information see [Enable and Disable Data Retention](https://docs.microsoft.com/azure/azure-sql-edge/data-retention-enable-disable). The following parameters must be specified for data retention to be enabled. 
@@ -901,7 +904,7 @@ Specifies the column, that should be used to determine if the rows in the table 
 
 - RETENTION_PERIOD = { INFINITE | number {DAY | DAYS | WEEK | WEEKS
                   | MONTH | MONTHS | YEAR | YEARS }}       
-Specifies the retention period policy for the table. The retention period is specified as a combination of an positive integer value and the date part unit. The following units are allowed DAYS, WEEKS, MONTHS and YEARS.   
+Specifies the retention period policy for the table. The retention period is specified as a combination of an positive integer value and the date part unit.   
 
 MEMORY_OPTIMIZED
 **Applies to**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and later and [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]). Azure SQL Managed Instance does not support memory optimized tables.

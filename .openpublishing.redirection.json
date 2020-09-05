@@ -58904,6 +58904,11 @@
     "source_path": "docs/azure-data-studio/tutorial-create-extension.md",
     "redirect_url": "/sql/azure-data-studio/extensions/keymap-extension",
     "redirect_document_id": false
+    },
+    {
+    "source_path": "docs/linux/sql-server-linux-configure-docker.md",
+    "redirect_url": "/sql/linux/sql-server-linux-docker-container-deployment",
+    "redirect_document_id": true
     }
   ]
 }

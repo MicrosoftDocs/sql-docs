@@ -67,6 +67,6 @@ ms.author: jroth
 
 ## Next steps  
  [SQL Server Always On Team Blog](https://docs.microsoft.com/archive/blogs/sqlalwayson/)   
- [CSS SQL Server Engineers Blogs](https://blogs.msdn.com/b/psssql/)  
+ [CSS SQL Server Engineers Blogs](https://docs.microsoft.com/archive/blogs/psssql/)  
   
   

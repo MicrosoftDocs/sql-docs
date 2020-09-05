@@ -55,7 +55,7 @@ This image consists of SQL Server running on Linux based on Ubuntu 18.04. It can
 any changes to one section should be duplicated in the other-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-## <a id="pullandrun2017"></a> Pull and run the container image
+## <a id="pullandrun2017"></a> Pull and run the 2017 container image
 
 Before starting the following steps, make sure that you have selected your preferred shell (bash, PowerShell, or cmd) at the top of this article.
 
@@ -184,7 +184,7 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 <!--This is the 2019 version of the "Pull and run" section-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-## <a id="pullandrun2019"></a> Pull and run the container image
+## <a id="pullandrun2019"></a> Pull and run the 2019 container image
 
 Before starting the following steps, make sure that you have selected your preferred shell (bash, PowerShell, or cmd) at the top of this article.
 
@@ -286,7 +286,7 @@ Before starting the following steps, make sure that you have selected your prefe
 
    ![Docker ps command output](./media/sql-server-linux-setup-docker/docker-ps-command.png)
 
-4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see [Troubleshooting SQL Server Docker containers]((sql-server-linux-docker-containter-troubleshooting.md)).
+4. If the **STATUS** column shows a status of **Up**, then SQL Server is running in the container and listening on the port specified in the **PORTS** column. If the **STATUS** column for your SQL Server container shows **Exited**, see [Troubleshooting SQL Server Docker containers]((sql-server-linux-docker-container-troubleshooting.md)).
 
 The `-h` (host name) parameter is also useful, but it is not used in this tutorial for simplicity. This changes the internal name of the container to a custom value. This is the name you'll see returned in the following Transact-SQL query:
 
@@ -533,6 +533,6 @@ After you have tried using the SQL Server container image for Docker, you might 
 
 ## Next steps
 
-For a tutorial on how to restore database backup files into a container, see [Restore a SQL Server database in a Linux Docker container](tutorial-restore-backup-in-sql-server-container.md). Explore other scenarios, such as running [multiple containers](sql-server-linux-docker-container-configure.md#multiple), [data persistence](sql-server-linux-docker-container-configure.md#persist), and [troubleshooting]((sql-server-linux-docker-containter-troubleshooting.md)).
+For a tutorial on how to restore database backup files into a container, see [Restore a SQL Server database in a Linux Docker container](tutorial-restore-backup-in-sql-server-container.md). Explore other scenarios, such as running [multiple containers](sql-server-linux-docker-container-deployment.md#multiple), [data persistence](sql-server-linux-docker-container-configure.md#persist), and [troubleshooting]((sql-server-linux-docker-container-troubleshooting.md)).
 
 Also, check out the [mssql-docker GitHub repository](https://github.com/Microsoft/mssql-docker) for resources, feedback, and known issues.

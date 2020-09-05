@@ -248,27 +248,27 @@ You can use this information to set the same environment variable in your Linux 
 ::: zone pivot="cs1-bash"
 ```bash
 sudo docker run -e 'ACCEPT_EULA=Y' -e 'A_PASSWORD=<YourStrong!Passw0rd>' \
-   -p 1433:1433 --name sql1 \
-   -e 'TZ=America/Los_Angeles'\
-   -d mcr.microsoft.com/mssql/server:2017-latest 
+-p 1433:1433 --name sql1 \
+-e 'TZ=America/Los_Angeles'\
+-d mcr.microsoft.com/mssql/server:2017-latest
 ```
 ::: zone-end
 
 ::: zone pivot="cs1-powershell"
 ```PowerShell
 sudo docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
-   -p 1433:1433 --name sql1 `
-   -e "TZ=America/Los_Angeles" `
-   -d mcr.microsoft.com/mssql/server:2017-latest 
+-p 1433:1433 --name sql1 `
+-e "TZ=America/Los_Angeles" `
+-d mcr.microsoft.com/mssql/server:2017-latest 
 ```
 ::: zone-end
 
 ::: zone pivot="cs1-cmd"
 ```cmd
 sudo docker run -e 'ACCEPT_EULA=Y' -e "SA_PASSWORD=<YourStrong!Passw0rd>" `
-   -p 1433:1433 --name sql1 `
-   -e "TZ=America/Los_Angeles" `
-   -d mcr.microsoft.com/mssql/server:2017-latest 
+-p 1433:1433 --name sql1 ^
+-e "TZ=America/Los_Angeles" ^
+-d mcr.microsoft.com/mssql/server:2017-latest 
 ```
 ::: zone-end
 
@@ -360,14 +360,14 @@ docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_D
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-- Get started with SQL Server 2017 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md?view=sql-server-2017).
+- Get started with SQL Server 2017 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md?view=sql-server-2017)
 
 ::: moniker-end
 
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-- Get started with SQL Server 2019 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md?view=sql-server-ver15).
+- Get started with SQL Server 2019 container images on Docker by going through the [quickstart](quickstart-install-connect-docker.md?view=sql-server-ver15)
 
 ::: moniker-end
 

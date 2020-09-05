@@ -43,51 +43,51 @@ If the SQL Server container fails to run, try the following tests:
 
 - If you get an error such as `failed to create endpoint CONTAINER_NAME on network bridge. Error starting proxy: listen tcp 0.0.0.0:1433 bind: address already in use.`, you are attempting to map the container port 1433 to a port that is already in use. This can happen if you're running SQL Server locally on the host machine. It can also happen if you start two SQL Server containers and try to map them both to the same host port. If this happens, use the `-p` parameter to map the container port 1433 to a different host port. For example: 
 
-<!--SQL Server 2017 on Linux -->
-::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
-
-::: zone pivot="cs1-bash"
-```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest`.
-```
-::: zone-end
-
-::: zone pivot="cs1-powershell"
-```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest`.
-```
-::: zone-end
-
-::: zone pivot="cs1-cmd"
-```cmd
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest`.
-```
-::: zone-end
-
-::: moniker-end
-
-<!--SQL Server 2019 on Linux-->
-::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
-
-::: zone pivot="cs1-bash"
-```bash
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-latest`.
-```
-::: zone-end
-
-::: zone pivot="cs1-powershell"
-```PowerShell
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-latest`.
-```
-::: zone-end
-
-::: zone pivot="cs1-cmd"
-```cmd
-docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-latest`.
-```
-::: zone-end
-
-::: moniker-end
+    <!--SQL Server 2017 on Linux -->
+    ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
+    
+    ::: zone pivot="cs1-bash"
+    ```bash
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest`.
+    ```
+    ::: zone-end
+    
+    ::: zone pivot="cs1-powershell"
+    ```PowerShell
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest`.
+    ```
+    ::: zone-end
+    
+    ::: zone pivot="cs1-cmd"
+    ```cmd
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2017-latest`.
+    ```
+    ::: zone-end
+    
+    ::: moniker-end
+    
+    <!--SQL Server 2019 on Linux-->
+    ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
+    
+    ::: zone pivot="cs1-bash"
+    ```bash
+    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-latest`.
+    ```
+    ::: zone-end
+    
+    ::: zone pivot="cs1-powershell"
+    ```PowerShell
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-latest`.
+    ```
+    ::: zone-end
+    
+    ::: zone pivot="cs1-cmd"
+    ```cmd
+    docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1400:1433 -d mcr.microsoft.com/mssql/server:2019-latest`.
+    ```
+    ::: zone-end
+    
+    ::: moniker-end
 
 - If you get an error such as `Got permission denied while trying to connect to the Docker daemon socket at unix:///var/run/docker.sock: Get http://%2Fvar%2Frun%2Fdocker.sock/v1.30tdout=1&tail=all: dial unix /var/run/docker.sock: connect: permission denied` when trying to start a container, then add your user to the docker group in Ubuntu. Then logout and login again as this change will affect new sessions. 
 

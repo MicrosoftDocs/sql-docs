@@ -9965,7 +9965,7 @@
       items:
       - name: Deploy and connect to containers
         href: linux/sql-server-linux-docker-container-deployment.md
-      - name: Configure and customer containers
+      - name: Configure and customize containers
         href: linux/sql-server-linux-docker-container-configure.md
       - name: Container security
         href: linux/sql-server-linux-docker-container-security.md

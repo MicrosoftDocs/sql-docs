@@ -16,7 +16,7 @@ Azure Arc enabled SQL Server is part of the Azure Arc for servers. It extends Az
 
 To enable Azure services, a running SQL Server instance must be registered with Azure Arc using Azure Portal and a registration script. After registration the instance will be represented on Azure as a __SQL Server – Azure Arc__ resource   . The properties of this resource reflect a subset of the SQL Server confutation settings.
 
-The SQL Server can be installed in a virtual or physical machine running Windows or Linux that is connected to Azure Arc via the Connected Machine agent. The agent is installed and machine is and registered automatically as part of the SQL Server instance registration. The Connected Machine agent communicates outbound securely to Azure Arc over TCP port 443. If the machine connects through a firewall or a HTTP proxy server to communicate over the Internet, review the [network configuration requirements for the Connected Machine agent](https://docs.microsoft.com/en-us/azure/azure-arc/servers/agent-overview#prerequisites).
+The SQL Server can be installed in a virtual or physical machine running Windows or Linux that is connected to Azure Arc via the Connected Machine agent. The agent is installed and machine is and registered automatically as part of the SQL Server instance registration. The Connected Machine agent communicates outbound securely to Azure Arc over TCP port 443. If the machine connects through a firewall or a HTTP proxy server to communicate over the Internet, review the [network configuration requirements for the Connected Machine agent](/azure/azure-arc/servers/agent-overview#prerequisites).
 
 The public preview of Azure Arc enabled SQL Server supports a set of solutions that require the Microsoft Monitoring Agent (MMA) server extension to be installed and connected to a Azure Log analytics workspace for data collection and reporting. These solutions include Advanced data security using Azure Security Center and Azure Sentinel, and SQL Environment health checks using On-demand SQL Assessment feature.
 
@@ -42,11 +42,11 @@ To connect the SQL Server instances and the hosting to Azure Arc, you must be a 
 
 ### Azure subscription and service limits
 
-Before configuring your SQL server instances and machines with Azure Arc, review the Azure Resource Manager [subscription limits](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits) and [resource group limits](https://docs.microsoft.com/en-us/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) to plan for the number of machines to be connected.
+Before configuring your SQL server instances and machines with Azure Arc, review the Azure Resource Manager [subscription limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#subscription-limits) and [resource group limits](/azure/azure-resource-manager/management/azure-subscription-service-limits#resource-group-limits) to plan for the number of machines to be connected.
 
 ### Networking configuration and resource providers
 
-Review [networking configuration, transport layer security and resource providers](https://docs.microsoft.com/en-us/azure/azure-arc/servers/agent-overview#prerequisites) required for Connected machine agent.
+Review [networking configuration, transport layer security and resource providers](/azure/azure-arc/servers/agent-overview#prerequisites) required for Connected machine agent.
 
 ### Supported Azure regions
 

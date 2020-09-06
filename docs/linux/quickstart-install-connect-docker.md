@@ -5,7 +5,7 @@ ms.custom: seo-lt-2019, contperfq1
 author: vin-yu 
 ms.author: vinsonyu
 ms.reviewer: vanto
-ms.date: 09/04/2020
+ms.date: 09/07/2020
 ms.topic: quickstart
 ms.prod: sql
 ms.technology: linux

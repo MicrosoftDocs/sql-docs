@@ -5,7 +5,7 @@ author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
 ms.custom: contperfq1
-ms.date: 09/04/2020
+ms.date: 09/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
@@ -52,7 +52,7 @@ You can connect and query SQL Server in a container from either outside the cont
 
 You can connect to the SQL Server instance on your Docker machine from any external Linux, Windows, or macOS tool that supports SQL connections. Some common tools include:
 
-- [Azure Data Studio](/azure-data-studio/quickstart-sql-server)
+- [Azure Data Studio](../azure-data-studio/quickstart-sql-server.md)
 - [sqlcmd](sql-server-linux-setup-tools.md)
 - [Visual Studio Code](sql-server-linux-develop-use-vscode.md)
 - [SQL Server Management Studio (SSMS) on Windows](sql-server-linux-manage-ssms.md)

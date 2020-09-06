@@ -1,11 +1,11 @@
 ---
-title: Configure and Customize SQL Server Docker containers
+title: Configure and customize SQL Server Docker containers
 description: Understand the different ways to customize SQL Server Docker Containers and how you can configure it based on your requirement
 author: vin-yu
 ms.author: vinsonyu
 ms.reviewer: vanto
 ms.custom: contperfq1
-ms.date: 09/04/2020
+ms.date: 09/07/2020
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux

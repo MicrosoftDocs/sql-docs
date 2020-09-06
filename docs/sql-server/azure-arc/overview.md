@@ -14,7 +14,7 @@ ms.prod: sql
 
 Azure Arc enabled SQL Server is part of the Azure Arc for servers. It extends Azure services to SQL Server instances hosted outside of Azure in the customer’s datacenter, on the edge or in a multi-cloud environment.
 
-To enable Azure services, a running SQL Server instance must be registered with Azure Arc using Azure Portal and a registration script. After registration the instance will be represented on Azure as a __SQL Server – Azure Arc__ resource   . The properties of this resource reflect a subset of the SQL Server confutation settings.
+To enable Azure services, a running SQL Server instance must be registered with Azure Arc using the Azure portal and a registration script. After registration the instance will be represented on Azure as a __SQL Server – Azure Arc__ resource   . The properties of this resource reflect a subset of the SQL Server confutation settings.
 
 The SQL Server can be installed in a virtual or physical machine running Windows or Linux that is connected to Azure Arc via the Connected Machine agent. The agent is installed and machine is and registered automatically as part of the SQL Server instance registration. The Connected Machine agent communicates outbound securely to Azure Arc over TCP port 443. If the machine connects through a firewall or a HTTP proxy server to communicate over the Internet, review the [network configuration requirements for the Connected Machine agent](/azure/azure-arc/servers/agent-overview#prerequisites).
 

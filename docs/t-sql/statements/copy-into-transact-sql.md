@@ -29,7 +29,7 @@ This article explains how to use the COPY statement in Azure SQL Data Warehouse 
 - Execute a single T-SQL statement without having to create any additional database objects
 - Properly parse and load CSV files where **delimiters** (string, field, row) **are** **escaped within string delimited columns**
 - Specify a finer permission model without exposing storage account keys using Share Access Signatures (SAS)
-- Use a different storage account for the ERRORFILE location (REJECTED_ROW_LOCATION)
+- Use a different storage account for the ERRORFILE location (REJECTED_ROW_LOCATION) and use ERRORFILE_CREDENTIAL to specify the method to connect to this storage account
 - Customize default values for each target column and specify source data fields to load into specific target columns
 - Specify a custom row terminator for CSV files
 - Leverage SQL Server Date formats for CSV files
@@ -37,6 +37,9 @@ This article explains how to use the COPY statement in Azure SQL Data Warehouse 
 
 > [!NOTE]  
 > The COPY statement is currently in public preview.
+
+> [!NOTE]  
+> In case the switch ERRORFILE_CREDENTIAL is not specified, the copy command will default to use the value specified in CREDENTIAL switch to connect to this storage account
 
 Visit the following documentation for comprehensive examples and quickstarts using the COPY statement:
 

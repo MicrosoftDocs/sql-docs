@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_dropdistributor"
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dropdistributor (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -28,8 +28,8 @@ helpviewer_keywords:
   - "binding rules [SQL Server]"
   - "rules [SQL Server], creating"
 ms.assetid: b016a289-3a74-46b1-befc-a13183be51e4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE RULE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_scan"
 ms.assetid: 46e4294c-97b8-47d6-9ed9-b436a9929353
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_scan (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

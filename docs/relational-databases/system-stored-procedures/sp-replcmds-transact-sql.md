@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_replcmds"
 ms.assetid: 7e932f80-cc6e-4109-8db4-2b7c8828df73
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_replcmds (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

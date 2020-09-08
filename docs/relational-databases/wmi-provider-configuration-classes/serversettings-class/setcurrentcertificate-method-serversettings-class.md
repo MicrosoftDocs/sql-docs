@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetCurrentCertificate method"
 ms.assetid: f9c6e172-11be-42de-b19b-a5b3436e84da
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetCurrentCertificate Method (ServerSettings Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

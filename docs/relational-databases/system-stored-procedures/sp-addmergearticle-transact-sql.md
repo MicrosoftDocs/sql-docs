@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_addmergearticle"
 ms.assetid: 0df654ea-24e2-4c61-a75a-ecaa7a140a6c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addmergearticle (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

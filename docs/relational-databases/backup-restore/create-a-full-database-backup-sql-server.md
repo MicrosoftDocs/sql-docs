@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: 586561fc-dfbb-4842-84f8-204a9100a534
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: carlrab
 ---
 # Create a Full Database Backup
 

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "ALTER RESOURCE POOL"
 ms.assetid: 9c1c4cfb-0e3b-4f01-bf57-3fce94c7d1d4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER RESOURCE POOL (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

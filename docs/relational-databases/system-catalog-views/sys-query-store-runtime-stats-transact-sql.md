@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "query_store_runtime_stats catalog view"
   - "sys.query_store_runtime_stats catalog view"
 ms.assetid: ccf7a57c-314b-450c-bd34-70749a02784a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||= azure-sqldw-latest||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.query_store_runtime_stats (Transact-SQL)

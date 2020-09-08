@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "IHpublishercolumnindexes system table"
 ms.assetid: 95b95a1d-b502-4838-825f-82a456487e25
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # IHpublishercolumnindexes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

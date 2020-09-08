@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.service_contract_usages catalog view"
 ms.assetid: 20af425e-1152-4a46-b1ac-94cff5fc9f02
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.service_contract_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

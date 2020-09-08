@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "FlagValue property"
 ms.assetid: 7af9e5b2-1b99-4eea-8a49-1129c0d46086
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # FlagValue Property (ClientSettingsGeneralFlag Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

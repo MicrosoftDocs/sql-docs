@@ -15,8 +15,8 @@ dev_langs:
 helpviewer_keywords: 
   - "SEQUENCES view"
   - "INFORMATION_SCHEMA.SEQUENCES view"
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SEQUENCES (Transact-SQL)

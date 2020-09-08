@@ -31,8 +31,8 @@ helpviewer_keywords:
   - "starting timers [Service Broker]"
   - "https://schemas.microsoft.com/SQL/ServiceBroker/DialogTimer message"
 ms.assetid: 98e49b3f-a38f-4180-8171-fa9cb30db4cb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # BEGIN CONVERSATION TIMER (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

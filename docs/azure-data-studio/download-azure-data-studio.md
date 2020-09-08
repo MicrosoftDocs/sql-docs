@@ -26,7 +26,7 @@ Download and install the latest release:
 | macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2142136) | September 22, 2020 | 1.22.0 |
 | Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2142214)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2142213)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2142212) | September 22, 2020| 1.22.0 |
 
-For details about the latest release, see the [release notes](./release-notes-azure-data-studio.md?view=sql-server-ver15).
+For details about the latest release, see the [release notes](./release-notes-azure-data-studio.md).
 
 ## Get Azure Data Studio for Windows
 

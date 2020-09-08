@@ -30,7 +30,7 @@ New stable (GA) releases will be published every six months on a regular cadence
 
 | Version | Official Release Date | Latest Patch Version | Patch Release Date | Support Level  | End of Support |
 | -- | -- | -- | -- | -- | -- |
-| 2.0 | August 25, 2020 | 2.0.1 | | Current | |
+| 2.0 | June 16, 2020 | 2.0.1 | August 25, 2020 | Current | |
 | 1.1 | November 20, 2019 | 1.1.3 | May 15, 2020 | LTS | November 21, 2022 |
 | 1.0 | August 28, 2019 | 1.0.19269.1 | September 26, 2019 | Current | February 20, 2020 |
 

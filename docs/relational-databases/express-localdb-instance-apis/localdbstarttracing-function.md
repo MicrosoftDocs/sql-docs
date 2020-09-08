@@ -14,8 +14,8 @@ apilocation:
   - "sqluserinstance.dll"
 apitype: "DLLExport"
 ms.assetid: c7b83833-6d2a-4a06-9cb7-42767bed52c6
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # LocalDBStartTracing Function
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

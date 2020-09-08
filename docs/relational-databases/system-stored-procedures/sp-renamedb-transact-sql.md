@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_renamedb"
 ms.assetid: 7dd9d4ff-20e1-4857-9a8e-a5bff767cf76
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_renamedb (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

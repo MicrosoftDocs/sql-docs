@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "data manipulation language [SQL Server], MERGE statement"
   - "inserting data"
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MERGE (Transact-SQL)
 

@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "search property lists [SQL Server], creating"
   - "CREATE SEARCH PROPERTY LIST statement"
 ms.assetid: 5440cbb8-3403-4d27-a2f9-8e1f5a1bc12b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

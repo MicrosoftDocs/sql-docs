@@ -3,7 +3,7 @@ description: "Execute Method (RDS)"
 title: "Execute Method (RDS) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -43,7 +43,7 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  *lFetchOptions*  
  Indicates the type of asynchronous fetching.  
   
- For more information, see [FetchOptions Property (RDS)](../../../ado/reference/rds-api/fetchoptions-property-rds.md).  
+ For more information, see [FetchOptions Property (RDS)](./fetchoptions-property-rds.md).  
   
  *TableID*  
  A **Variant** of type either VT_EMPTY or VT_BSTR. If this value is of type VT_EMPTY, it is ignored. If it is of type VT_BSTR, the recordset is created by using **adCmdTableDirect** and the value specified here and the *QueryString* parameter is ignored.  
@@ -76,6 +76,4 @@ object.Execute(ConnectionString As String, HandlerString As String, QueryString 
  The *HandlerString* parameter may be null. What happens in this case depends on how the RDS server is configured. A handler string of "MSDFMAP.handler" indicates that the Microsoft supplied handler (Msdfmap.dll) should be used. A handler string of "MASDFMAP.handler,sample.ini" indicates that the Msdfmap.dll handler should be used and that the argument "sample.ini" should be passed to the handler. MSDFMAP.dll will interpret the argument as a direction to use the sample.ini to check the connection and query strings.  
   
 ## Applies To  
- [DataFactory Object (RDSServer)](../../../ado/reference/rds-api/datafactory-object-rdsserver.md)
-
-
+ [DataFactory Object (RDSServer)](./datafactory-object-rdsserver.md)

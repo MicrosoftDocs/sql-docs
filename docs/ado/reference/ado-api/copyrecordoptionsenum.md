@@ -3,7 +3,7 @@ description: "CopyRecordOptionsEnum"
 title: "CopyRecordOptionsEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # CopyRecordOptionsEnum
-Specifies the behavior of the [CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md) method.  
+Specifies the behavior of the [CopyRecord](./copyrecord-method-ado.md) method.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -31,4 +31,4 @@ Specifies the behavior of the [CopyRecord](../../../ado/reference/ado-api/copyre
  These constants do not have ADO/WFC equivalents.  
   
 ## Applies To  
- [CopyRecord Method (ADO)](../../../ado/reference/ado-api/copyrecord-method-ado.md)
+ [CopyRecord Method (ADO)](./copyrecord-method-ado.md)

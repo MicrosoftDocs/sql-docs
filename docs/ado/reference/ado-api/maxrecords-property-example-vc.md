@@ -3,7 +3,7 @@ description: "MaxRecords Property Example (VC++)"
 title: "MaxRecords Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # MaxRecords Property Example (VC++)
-This example uses the [MaxRecords](../../../ado/reference/ado-api/maxrecords-property-ado.md) property to open a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) containing the 10 most expensive titles in the ***Titles*** table.  
+This example uses the [MaxRecords](./maxrecords-property-ado.md) property to open a [Recordset](./recordset-object-ado.md) containing the 10 most expensive titles in the ***Titles*** table.  
   
 ## Example  
   
@@ -172,5 +172,5 @@ void PrintComError(_com_error &e) {
 **Sushi, Anyone? ---   14.99**  
 **Fifty Years in Buckingham Palace Kitchens ---   11.95**   
 ## See Also  
- [MaxRecords Property (ADO)](../../../ado/reference/ado-api/maxrecords-property-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [MaxRecords Property (ADO)](./maxrecords-property-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

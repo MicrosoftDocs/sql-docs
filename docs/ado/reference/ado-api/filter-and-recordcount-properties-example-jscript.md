@@ -3,7 +3,7 @@ description: "Filter and RecordCount Properties Example (JScript)"
 title: "Filter and RecordCount Properties Example (JScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Filter and RecordCount Properties Example (JScript)
-This example opens a **Recordset** on the Companies table of the Northwind database and then uses the [Filter](../../../ado/reference/ado-api/filter-property.md) property to limit the records visible to those where the CompanyName field starts with the letter D. Cut and paste the following code to Notepad or another text editor, and save it as **FilterJS.asp**.  
+This example opens a **Recordset** on the Companies table of the Northwind database and then uses the [Filter](./filter-property.md) property to limit the records visible to those where the CompanyName field starts with the letter D. Cut and paste the following code to Notepad or another text editor, and save it as **FilterJS.asp**.  
   
 ```  
 <!-- BeginFilterJS -->  
@@ -144,6 +144,6 @@ BODY {
 ```  
   
 ## See Also  
- [Filter Property](../../../ado/reference/ado-api/filter-property.md)   
- [RecordCount Property (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Filter Property](./filter-property.md)   
+ [RecordCount Property (ADO)](./recordcount-property-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

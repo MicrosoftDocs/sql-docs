@@ -63,19 +63,19 @@
       - name: Install azdata
         items:
         - name: Install
-          href: big-data-cluster/deploy-install-azdata.md
+          href: azdata/install/deploy-install-azdata.md
         - name: macOS
-          href: big-data-cluster/deploy-install-azdata-macos.md
+          href: azdata/install/deploy-install-azdata-macos.md
         - name: Windows
-          href: big-data-cluster/deploy-install-azdata-installer.md
+          href: azdata/install/deploy-install-azdata-installer.md
         - name: Linux with apt
-          href: big-data-cluster/deploy-install-azdata-linux-package.md
+          href: azdata/install/deploy-install-azdata-linux-package.md
         - name: Linux with yum
-          href: big-data-cluster/deploy-install-azdata-yum.md
+          href: azdata/install/deploy-install-azdata-yum.md
         - name: Linux with zypper
-          href: big-data-cluster/deploy-install-azdata-zypper.md
+          href: azdata/install/deploy-install-azdata-zypper.md
         - name: With pip
-          href: big-data-cluster/deploy-install-azdata-pip.md
+          href: azdata/install/deploy-install-azdata-pip.md
     - name: Deploy
       items:
       - name: Deployment guidance
@@ -132,6 +132,14 @@
       href: big-data-cluster/concept-compute-pool.md
     - name: Security
       href: big-data-cluster/concept-security.md
+    - name: Private cluster
+      items:
+      - name: Deploy
+        href: big-data-cluster/private-deploy.md
+      - name: Manage
+        href: big-data-cluster/private-manage.md
+      - name: Restrict traffic
+        href: big-data-cluster/private-restrict-egress-traffic.md
   - name: How-to guides
     items:
     - name: Configure
@@ -195,23 +203,23 @@
         - name: Python
           items:
           - name: Run Python scripts
-            href: machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json&view=sql-server-ver15
+            href: machine-learning/tutorials/quickstart-python-create-script.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Data structures and objects
-            href: machine-learning/tutorials/quickstart-python-data-structures.md?toc=/sql/toc.json&view=sql-server-ver15
+            href: machine-learning/tutorials/quickstart-python-data-structures.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Python functions
-            href: machine-learning/tutorials/quickstart-python-functions.md?toc=/sql/toc.json&view=sql-server-ver15
+            href: machine-learning/tutorials/quickstart-python-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Train and score a model
-            href: machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15
+            href: machine-learning/tutorials/quickstart-python-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
         - name: R
           items:
           - name: Run R scripts
-            href: machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json&view=sql-server-ver15
+            href: machine-learning/tutorials/quickstart-r-create-script.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Data types and objects
-            href: machine-learning/tutorials/quickstart-r-data-types-and-objects.md?toc=/sql/toc.json&view=sql-server-ver15
+            href: machine-learning/tutorials/quickstart-r-data-types-and-objects.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: R functions
-            href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json&view=sql-server-ver15
+            href: machine-learning/tutorials/quickstart-r-functions.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Train and score a model
-            href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15
+            href: machine-learning/tutorials/quickstart-r-train-score-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
 
       - name: Machine learning tutorials
         items:
@@ -220,88 +228,88 @@
           - name: Ski rental (linear regression)
             items:
             - name: 1 - Introduction
-              href: machine-learning/tutorials/python-ski-rental-linear-regression.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-ski-rental-linear-regression.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 2 - Prepare data
-              href: machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-ski-rental-linear-regression-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 3 - Train model
-              href: machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-ski-rental-linear-regression-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 4 - Deploy model
-              href: machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-ski-rental-linear-regression-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Categorize customers (k-means clustering)
             items:
             - name: 1 - Introduction
-              href: machine-learning/tutorials/python-clustering-model.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-clustering-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 2 - Prepare the data
-              href: machine-learning/tutorials/python-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 3 - Create the model
-              href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 4 - Deploy the model
-              href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: NYC taxi tips (classification)
             items:
             - name: 1 - Introduction
-              href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 2 - Data exploration
-              href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 3 - Feature engineering
-              href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 4 - Train and deploy
-              href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 5 - Predictions
-              href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/python-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
 
         - name: R
           items:
           - name: Ski rental (decision tree)
             items:
             - name: 1 - Introduction
-              href: machine-learning/tutorials/r-predictive-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-predictive-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 2 - Prepare data
-              href: machine-learning/tutorials/r-predictive-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-predictive-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 3 - Train model
-              href: machine-learning/tutorials/r-predictive-model-train.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-predictive-model-train.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 4 - Deploy model
-              href: machine-learning/tutorials/r-predictive-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-predictive-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Categorize customers (k-means clustering)
             items:
             - name: 1 - Introduction
-              href: machine-learning/tutorials/r-clustering-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-clustering-model-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 2 - Prepare the data
-              href: machine-learning/tutorials/r-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-clustering-model-prepare-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 3 - Create the model
-              href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-clustering-model-build.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 4 - Deploy the model
-              href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-clustering-model-deploy.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: NYC taxi tips (classification)
             items:
             - name: 1 - Introduction
-              href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-taxi-classification-introduction.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 2 - Data exploration
-              href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-taxi-classification-explore-data.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 3 - Feature engineering
-              href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-taxi-classification-create-features.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 4 - Train and deploy
-              href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-taxi-classification-train-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
             - name: 5 - Predictions
-              href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15
+              href: machine-learning/tutorials/r-taxi-classification-deploy-model.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
       - name: Manage Python, R packages
         items:
         - name: Python
           items:
           - name: Get Python package information
-            href: machine-learning/package-management/python-package-information.md?toc=/sql/toc.json&view=sql-server-ver15
+            href: machine-learning/package-management/python-package-information.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Install with sqlmlutils
-            href: machine-learning/package-management/install-additional-python-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15
+            href: machine-learning/package-management/install-additional-python-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
         - name: R
           items:
           - name: Get R package information
-            href: machine-learning/package-management/r-package-information.md?toc=/sql/toc.json&view=sql-server-ver15
+            href: machine-learning/package-management/r-package-information.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Install with sqlmlutils
-            href: machine-learning/package-management/install-additional-r-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15
+            href: machine-learning/package-management/install-additional-r-packages-on-sql-server.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Create a miniCRAN repo
-            href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15
+            href: machine-learning/package-management/create-a-local-package-repository-using-minicran.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
           - name: Tips for using R packages
-            href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15
+            href: machine-learning/package-management/tips-for-using-r-packages.md?toc=/sql/toc.json&view=sql-server-ver15&preserve-view=true
 
       - name: Data wrangling using PROSE Code Accelerator
         href: big-data-cluster/use-prose-for-big-data-automation.md
@@ -386,59 +394,59 @@
       - name: azdata
         items:
         - name: azdata
-          href: big-data-cluster/reference-azdata.md
+          href: azdata/reference/reference-azdata.md
         - name: notebook
-          href: big-data-cluster/reference-azdata-notebook.md
+          href: azdata/reference/reference-azdata-notebook.md
         - name: sql
-          href: big-data-cluster/reference-azdata-sql.md
+          href: azdata/reference/reference-azdata-sql.md
       - name: App Deploy
         items:
         - name: app
-          href: big-data-cluster/reference-azdata-app.md
+          href: azdata/reference/reference-azdata-app.md
         - name: app template
-          href: big-data-cluster/reference-azdata-app-template.md
+          href: azdata/reference/reference-azdata-app-template.md
       - name: Cluster
         items:
         - name: bdc
-          href: big-data-cluster/reference-azdata-bdc.md
+          href: azdata/reference/reference-azdata-bdc.md
         - name: bdc app
-          href: big-data-cluster/reference-azdata-bdc-app.md
+          href: azdata/reference/reference-azdata-bdc-app.md
         - name: bdc app status
-          href: big-data-cluster/reference-azdata-bdc-app-status.md
+          href: azdata/reference/reference-azdata-bdc-app-status.md
         - name: bdc config
-          href: big-data-cluster/reference-azdata-bdc-config.md
+          href: azdata/reference/reference-azdata-bdc-config.md
         - name: bdc control
-          href: big-data-cluster/reference-azdata-bdc-control.md
+          href: azdata/reference/reference-azdata-bdc-control.md
         - name: bdc control status
-          href: big-data-cluster/reference-azdata-bdc-control-status.md          
+          href: azdata/reference/reference-azdata-bdc-control-status.md          
         - name: bdc debug
-          href: big-data-cluster/reference-azdata-bdc-debug.md
+          href: azdata/reference/reference-azdata-bdc-debug.md
         - name: bdc endpoint
-          href: big-data-cluster/reference-azdata-bdc-endpoint.md
+          href: azdata/reference/reference-azdata-bdc-endpoint.md
         - name: bdc gateway
-          href: big-data-cluster/reference-azdata-bdc-gateway.md
+          href: azdata/reference/reference-azdata-bdc-gateway.md
         - name: bdc gateway status
-          href: big-data-cluster/reference-azdata-bdc-gateway-status.md
+          href: azdata/reference/reference-azdata-bdc-gateway-status.md
         - name: bdc hdfs
-          href: big-data-cluster/reference-azdata-bdc-hdfs.md
+          href: azdata/reference/reference-azdata-bdc-hdfs.md
         - name: bdc hdfs mount
-          href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
+          href: azdata/reference/reference-azdata-bdc-hdfs-mount.md
         - name: bdc hdfs status
-          href: big-data-cluster/reference-azdata-bdc-hdfs-status.md
+          href: azdata/reference/reference-azdata-bdc-hdfs-status.md
         - name: bdc spark
-          href: big-data-cluster/reference-azdata-bdc-spark.md        
+          href: azdata/reference/reference-azdata-bdc-spark.md        
         - name: bdc spark batch
-          href: big-data-cluster/reference-azdata-bdc-spark-batch.md        
+          href: azdata/reference/reference-azdata-bdc-spark-batch.md        
         - name: bdc spark session
-          href: big-data-cluster/reference-azdata-bdc-spark-session.md        
+          href: azdata/reference/reference-azdata-bdc-spark-session.md        
         - name: bdc spark statement
-          href: big-data-cluster/reference-azdata-bdc-spark-statement.md        
+          href: azdata/reference/reference-azdata-bdc-spark-statement.md        
         - name: bdc spark status
-          href: big-data-cluster/reference-azdata-bdc-spark-status.md        
+          href: azdata/reference/reference-azdata-bdc-spark-status.md        
         - name: bdc sql
-          href: big-data-cluster/reference-azdata-bdc-sql.md
+          href: azdata/reference/reference-azdata-bdc-sql.md
         - name: bdc status
-          href: big-data-cluster/reference-azdata-bdc-status.md
+          href: azdata/reference/reference-azdata-bdc-status.md
 - name: Business continuity
   items:
   - name: Overview
@@ -4444,7 +4452,7 @@
     - name: Supported Version & Edition Upgrades SQL Server 2017
       href: database-engine/install-windows/supported-version-and-edition-upgrades-2017.md
     - name: Supported Version & Edition Upgrades SQL Server 2016
-      href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016
+      href: database-engine/install-windows/supported-version-and-edition-upgrades.md?view=sql-server-2016&preserve-view=true
     - name: Prepare for upgrade by running Data Migration Assistant
       href: database-engine/install-windows/prepare-for-upgrade-by-running-data-migration-assistant.md
     - name: Analysis Services
@@ -6219,6 +6227,8 @@
         items:
         - name: Asymmetric Keys Encryption Strength
           href: relational-databases/policy-based-management/asymmetric-keys-encryption-strength.md
+        - name: Backup Files On Separate Devices from the Database Files
+          href: relational-databases/policy-based-management/backup-files-on-separate-devices-from-database-files.md
         - name: Check Disk Input & Output Subsystem for I/O Delay Problems
           href: relational-databases/policy-based-management/check-disk-input-and-output-subsystem-for-io-delay-problems.md
         - name: Check Disk Input-Output Subsystem for Read Retry Problems
@@ -6227,6 +6237,8 @@
           href: relational-databases/policy-based-management/check-integrity-of-database-with-suspect-pages.md
         - name: Correct Affinity Mask & Affinity Input & Output Mask Overlap
           href: relational-databases/policy-based-management/correct-affinity-mask-and-affinity-input-and-output-mask-overlap.md
+        - name: Database Recovery Model
+          href: relational-databases/policy-based-management/database-recovery-model.md
         - name: Default Trace Log Files Disabled
           href: relational-databases/policy-based-management/default-trace-log-files-disabled.md
         - name: Detect Failed Input & Output Requests
@@ -6261,6 +6273,8 @@
           href: relational-databases/policy-based-management/set-the-auto-close-database-option-to-off.md
         - name: Set the AUTO_SHRINK Database Option to OFF
           href: relational-databases/policy-based-management/set-the-auto-shrink-database-option-to-off.md
+        - name: Set collation of user databases to match master and model databases
+          href: relational-databases/policy-based-management/set-collation-of-user-defined-databases-to-match-master-model-databases.md
         - name: Set the Max Degree of Parallelism Option for Optimal Performance
           href: relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md
         - name: Set the PAGE_VERIFY Database Option to CHECKSUM
@@ -8612,7 +8626,7 @@
           - name: Objects Supported by the Generate Scripts Wizard
             href: ssms/scripting/objects-supported-by-the-generate-scripts-wizard.md
         - name: Query & Text Editors
-          href: ssms/scripting/query-and-text-editors-sql-server-management-studio.md
+          href: https://docs.microsoft.com/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio?view=sql-server-ver15
           items:
           - name: XML Editor
             href: ssms/scripting/xml-editor-sql-server-management-studio.md
@@ -9949,10 +9963,16 @@
         href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
     - name: Containers
       items:
-      - name: Configure Docker containers
-        href: linux/sql-server-linux-configure-docker.md
+      - name: Deploy and connect to containers
+        href: linux/sql-server-linux-docker-container-deployment.md
+      - name: Configure and customize containers
+        href: linux/sql-server-linux-docker-container-configure.md
+      - name: Container security
+        href: linux/sql-server-linux-docker-container-security.md
       - name: Configure Docker for MSDTC
         href: linux/sql-server-linux-configure-msdtc-docker.md
+      - name: Troubleshoot Docker containers
+        href: linux/sql-server-linux-docker-container-troubleshooting.md
     - name: Develop
       href: linux/sql-server-linux-develop-overview.md
       items:

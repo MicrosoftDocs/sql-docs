@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "identity values [SQL Server], explicit values"
   - "identity columns [SQL Server], explicit values"
 ms.assetid: a5dd49f2-45c7-44a8-b182-e0a5e5c373ee
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monkerRange:  "= azuresqldb-current||>= sql-server-2016||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions"
 ---
 # SET IDENTITY_INSERT (Transact-SQL)

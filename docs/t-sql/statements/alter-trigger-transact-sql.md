@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "ALTER TRIGGER statement"
   - "DML triggers, modifying"
 ms.assetid: 2a99c7c1-ac2f-4637-aa7c-3d1bf514e500
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

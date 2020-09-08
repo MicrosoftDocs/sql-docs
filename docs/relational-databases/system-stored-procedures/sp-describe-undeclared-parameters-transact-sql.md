@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_describe_undeclared_parameters"
 ms.assetid: 6f016da6-dfee-4228-8b0d-7cd8e7d5a354
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions"
 ---
 # sp_describe_undeclared_parameters (Transact-SQL)

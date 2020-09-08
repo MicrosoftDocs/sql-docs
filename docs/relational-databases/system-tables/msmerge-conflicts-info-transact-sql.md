@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSmerge_conflicts_info system table"
 ms.assetid: 6b76ae96-737a-4000-a6b6-fcc8772c2af4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSmerge_conflicts_info (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

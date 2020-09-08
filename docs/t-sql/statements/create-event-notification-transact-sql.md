@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "events [SQL Server], notifications"
   - "event notifications [SQL Server], creating"
 ms.assetid: dbbff0e8-9e25-4f12-a1ba-e12221d16ac2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE EVENT NOTIFICATION (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

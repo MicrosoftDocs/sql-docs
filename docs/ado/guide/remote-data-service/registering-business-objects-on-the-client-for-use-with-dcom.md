@@ -3,7 +3,7 @@ description: "Registering Business Objects on the Client for Use with DCOM"
 title: "Registering Business Objects on the Client for Use with DCOM | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""

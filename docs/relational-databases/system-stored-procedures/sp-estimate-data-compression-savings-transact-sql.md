@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "compression [SQL Server], estimating"
   - "sp_estimate_data_compression_savings"
 ms.assetid: 6f6c7150-e788-45e0-9d08-d6c2f4a33729
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_estimate_data_compression_savings (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

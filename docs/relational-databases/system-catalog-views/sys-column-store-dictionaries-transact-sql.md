@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.column_store_dictionaries catalog view"
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

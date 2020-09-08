@@ -41361,6 +41361,181 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "docs/big-data-cluster/deploy-install-azdata-installer.md",
+      "redirect_url": "/sql/azdata/install/deploy-install-azdata-installer",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/deploy-install-azdata-linux-package.md",
+      "redirect_url": "/sql/azdata/install/deploy-install-azdata-linux-package",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/deploy-install-azdata-macos.md",
+      "redirect_url": "/sql/azdata/install/deploy-install-azdata-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/deploy-install-azdata-pip.md",
+      "redirect_url": "/sql/azdata/install/deploy-install-azdata-pip",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/deploy-install-azdata-yum.md",
+      "redirect_url": "/sql/azdata/install/deploy-install-azdata-yum",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/deploy-install-azdata-zypper.md",
+      "redirect_url": "/sql/azdata/install/deploy-install-azdata-zypper",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/deploy-install-azdata.md",
+      "redirect_url": "/sql/azdata/install/deploy-install-azdata",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-app-template.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-app-template",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-app.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-app-status.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-app-status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-app.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-app",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-config.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-config",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-control-status.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-control-status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-control.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-control",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-debug.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-debug",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-endpoint.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-endpoint",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-gateway-status.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-gateway-status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-gateway.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-gateway",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-hdfs-mount.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-hdfs-mount",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-hdfs-status.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-hdfs-status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-hdfs.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-hdfs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-spark-batch.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-spark-batch",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "    docs/big-data-cluster/reference-azdata-bdc-spark-session.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-spark-session",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-spark-statement.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-spark-statement",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-spark-status.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-spark-status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-spark.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-spark",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-sql-status.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-sql-status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-sql.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc-status.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc-status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-bdc.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-bdc",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-context.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-context",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-extension.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-extension",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-notebook.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-notebook",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata-sql.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata-sql",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/big-data-cluster/reference-azdata.md",
+      "redirect_url": "/sql/azdata/reference/reference-azdata",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "docs/big-data-cluster/train-and-create-machinelearning-models-with-spark.md",
       "redirect_url": "/sql/big-data-cluster/spark-create-machine-learning-model",
       "redirect_document_id": false
@@ -58719,6 +58894,21 @@
       "source_path": "docs/visual-studio-code/sql-server-develop-use-vscode.md",
       "redirect_url": "/sql/tools/visual-studio-code/sql-server-develop-use-vscode",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/ssms/scripting/query-and-text-editors-sql-server-management-studio.md",
+      "redirect_url": "/sql/ssms/f1-help/database-engine-query-editor-sql-server-management-studio",
+      "redirect_document_id": false
+    },
+    {
+    "source_path": "docs/azure-data-studio/tutorial-create-extension.md",
+    "redirect_url": "/sql/azure-data-studio/extensions/keymap-extension",
+    "redirect_document_id": false
+    },
+    {
+    "source_path": "docs/linux/sql-server-linux-configure-docker.md",
+    "redirect_url": "/sql/linux/sql-server-linux-docker-container-deployment",
+    "redirect_document_id": true
     }
   ]
 }

@@ -3,7 +3,7 @@ description: "AddNew Method Example (VBScript)"
 title: "AddNew Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,11 +17,11 @@ author: rothja
 ms.author: jroth
 ---
 # AddNew Method Example (VBScript)
-This example uses the [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md) method to create a new record with the specified name.  
+This example uses the [AddNew](./addnew-method-ado.md) method to create a new record with the specified name.  
   
  Use the following example in an Active Server Page (ASP). Use **Find** to locate the file Adovbs.inc and place it in the directory you plan to use. Cut and paste the following code to Notepad or another text editor, and save it as **AddNewVBS.asp**. You can view the result in any client browser.  
   
- To exercise the example, add a new record in the HTML form. Click **Add New**. See the [Delete Method Example](../../../ado/reference/ado-api/delete-method-example-vbscript.md) to remove unwanted records.  
+ To exercise the example, add a new record in the HTML form. Click **Add New**. See the [Delete Method Example](./delete-method-example-vbscript.md) to remove unwanted records.  
   
 ```  
 <!-- BeginAddNewVBS -->  
@@ -208,5 +208,5 @@ End Sub
 ```  
   
 ## See Also  
- [AddNew Method (ADO)](../../../ado/reference/ado-api/addnew-method-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [AddNew Method (ADO)](./addnew-method-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

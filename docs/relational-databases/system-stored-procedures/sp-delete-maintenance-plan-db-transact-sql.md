@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "removing maintenance plan"
   - "disassociating maintenance plan"
 ms.assetid: d1e8afb5-12ee-492b-a770-ba708ed7c8a4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_delete_maintenance_plan_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

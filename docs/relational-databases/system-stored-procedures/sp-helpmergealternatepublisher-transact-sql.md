@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_helpmergealternatepublisher"
 ms.assetid: a96e365f-5967-4580-9d79-5bacf2d12211
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_helpmergealternatepublisher (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

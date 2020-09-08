@@ -3,7 +3,7 @@ description: "GetChildren Method (ADO)"
 title: "GetChildren Method (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,7 +19,7 @@ author: rothja
 ms.author: jroth
 ---
 # GetChildren Method (ADO)
-Returns a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) whose rows represent the children of a collection [Record](../../../ado/reference/ado-api/record-object-ado.md).  
+Returns a [Recordset](./recordset-object-ado.md) whose rows represent the children of a collection [Record](./record-object-ado.md).  
   
 ## Syntax  
   
@@ -38,9 +38,9 @@ Set recordset = record.GetChildren
 
 :::row:::
     :::column:::
-        [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+        [Record Object (ADO)](./record-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
+        [Recordset Object (ADO)](./recordset-object-ado.md)  
     :::column-end:::
 :::row-end:::

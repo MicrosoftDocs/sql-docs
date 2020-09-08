@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSrepl_backup_Isns system table"
 ms.assetid: de06c349-82a8-48c6-b602-b5d6938514f6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSrepl_backup_lsns (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "OLE DB rowsets, fetching"
   - "next fetch position"
   - "rowsets [OLE DB], fetching"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Fetching Rows - Next Fetch Position (OLE DB Driver)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

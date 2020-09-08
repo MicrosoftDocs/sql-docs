@@ -3,7 +3,7 @@ description: "SeekEnum"
 title: "SeekEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # SeekEnum
-Specifies the type of [Seek](../../../ado/reference/ado-api/seek-method.md) to execute.  
+Specifies the type of [Seek](./seek-method.md) to execute.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -42,4 +42,4 @@ Specifies the type of [Seek](../../../ado/reference/ado-api/seek-method.md) to e
 |AdoEnums.Seek.BEFORE|  
   
 ## Applies To  
- [Seek Method](../../../ado/reference/ado-api/seek-method.md)
+ [Seek Method](./seek-method.md)

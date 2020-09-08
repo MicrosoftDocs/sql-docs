@@ -3,7 +3,7 @@ description: "ConvertToString Method Example (VB)"
 title: "ConvertToString Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -94,5 +94,5 @@ End Sub
 ```  
   
 ## See Also  
- [ConvertToString Method (RDS)](../../../ado/reference/rds-api/converttostring-method-rds.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ConvertToString Method (RDS)](../rds-api/converttostring-method-rds.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

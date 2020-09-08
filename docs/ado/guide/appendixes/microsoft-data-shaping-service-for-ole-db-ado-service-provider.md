@@ -3,7 +3,7 @@ description: "Microsoft Data Shaping Service for OLE DB (ADO Service Provider)"
 title: "Microsoft Data Shaping Service for OLE DB (ADO Service Provider) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/08/2018
 ms.reviewer: ""
@@ -19,7 +19,7 @@ ms.author: jroth
 > [!IMPORTANT]
 >  This feature will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Instead, applications should use XML.
 
- The Microsoft Data Shaping Service for OLE DB service provider supports the construction of hierarchical (shaped) [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) objects from a data provider.
+ The Microsoft Data Shaping Service for OLE DB service provider supports the construction of hierarchical (shaped) [Recordset](../../reference/ado-api/recordset-object-ado.md) objects from a data provider.
 
 ## Provider Keyword
  To invoke the Data Shaping Service for OLE DB, specify the following keyword and value in the connection string.
@@ -29,7 +29,7 @@ ms.author: jroth
 ```
 
 ## Dynamic Properties
- When this service provider is invoked, the following dynamic properties are added to the [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) collection of the[Connection](../../../ado/reference/ado-api/connection-object-ado.md) object.
+ When this service provider is invoked, the following dynamic properties are added to the [Properties](../../reference/ado-api/properties-collection-ado.md) collection of the[Connection](../../reference/ado-api/connection-object-ado.md) object.
 
 |Dynamic Property Name|Description|
 |---------------------------|-----------------|
@@ -43,7 +43,7 @@ Dim cn as New ADODB.Connection
 cn.Open "Provider=MSDataShape;Data Provider=MSDASQL"
 ```
 
- You can also set or retrieve a dynamic property by specifying its name as the index to the [Properties](../../../ado/reference/ado-api/properties-collection-ado.md) property. For example, the following code example gets and prints the current value of the **Data Provider** dynamic property, then sets a new value if cn.DataProvider has been set to "MSDataShape" (either directly or indirectly through the connection string) and the connection has not been opened:
+ You can also set or retrieve a dynamic property by specifying its name as the index to the [Properties](../../reference/ado-api/properties-collection-ado.md) property. For example, the following code example gets and prints the current value of the **Data Provider** dynamic property, then sets a new value if cn.DataProvider has been set to "MSDataShape" (either directly or indirectly through the connection string) and the connection has not been opened:
 
 ```vb
 Debug.Print cn.Properties("Data Provider")
@@ -53,7 +53,7 @@ cn.Properties("Data Provider") = "MSDASQL"
 > [!NOTE]
 >  The dynamic property, **Data Provider**, can be set only on an unopened **Connection** object. Once the connection is opened, the **Data Provider** property becomes read-only.
 
- For more information about data shaping, see [Data Shaping](../../../ado/guide/data/data-shaping-overview.md).
+ For more information about data shaping, see [Data Shaping](../data/data-shaping-overview.md).
 
 ## See Also
- [Appendix A: Providers](../../../ado/guide/appendixes/appendix-a-providers.md)
+ [Appendix A: Providers](./appendix-a-providers.md)

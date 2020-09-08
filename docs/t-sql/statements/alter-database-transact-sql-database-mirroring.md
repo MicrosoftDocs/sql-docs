@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "ALTER DATABASE statement, database mirroring"
   - "database mirroring [SQL Server], Transact-SQL"
 ms.assetid: 27a032ef-1cf6-4959-8e67-03d28c4b3465
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER DATABASE (Transact-SQL) Database Mirroring
 

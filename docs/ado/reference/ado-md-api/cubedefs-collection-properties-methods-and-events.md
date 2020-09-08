@@ -3,7 +3,7 @@ description: "CubeDefs Collection Properties, Methods, and Events"
 title: "CubeDefs Collection Properties, Methods, and Events | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -16,15 +16,15 @@ ms.author: jroth
 ---
 # CubeDefs Collection Properties, Methods, and Events
 ## Properties  
- [Count Property](../../../ado/reference/ado-api/count-property-ado.md)  
+ [Count Property](../ado-api/count-property-ado.md)  
   
- [Item Property](../../../ado/reference/ado-api/item-property-ado.md)  
+ [Item Property](../ado-api/item-property-ado.md)  
   
 ## Methods  
- [Refresh Method](../../../ado/reference/ado-api/refresh-method-ado.md)  
+ [Refresh Method](../ado-api/refresh-method-ado.md)  
   
 ## Events  
  None.  
   
 ## See Also  
- [CubeDefs Collection (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)
+ [CubeDefs Collection (ADO MD)](./cubedefs-collection-ado-md.md)

@@ -3,7 +3,7 @@ description: "Minimizing Log File Space Usage"
 title: "Minimizing Log File Space Usage | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -41,6 +41,4 @@ A log file may fill quickly (thus halting the server) if there is a large volume
  For more information about the **Truncate on Checkpoint** feature, see the Microsoft SQL Server documentation.  
   
 ## See Also  
- [RDS Fundamentals](../../../ado/guide/remote-data-service/rds-fundamentals.md)
-
-
+ [RDS Fundamentals](./rds-fundamentals.md)

@@ -3,7 +3,7 @@ description: "Writing Your Own Customized Handler"
 title: "Writing Your Own Customized Handler | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -24,12 +24,12 @@ You may want to write your own handler if you are an IIS server administrator wh
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
 ## IDataFactoryHandler Interface  
- This interface has two methods, **GetRecordset** and **Reconnect**. Both methods require that the [CursorLocation](../../../ado/reference/ado-api/cursorlocation-property-ado.md) property be set to **adUseClient**.  
+ This interface has two methods, **GetRecordset** and **Reconnect**. Both methods require that the [CursorLocation](../../reference/ado-api/cursorlocation-property-ado.md) property be set to **adUseClient**.  
   
  Both methods take arguments that appear after the first comma in the "**Handler=**" keyword. For example, `"Handler=progid,arg1,arg2;"` will pass an argument string of `"arg1,arg2"`, and `"Handler=progid"` will pass a null argument.  
   
 ## GetRecordset Method  
- This method queries the data source and creates a new [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object using the arguments provided. The **Recordset** must be opened with **adLockBatchOptimistic** and must not be opened asynchronously.  
+ This method queries the data source and creates a new [Recordset](../../reference/ado-api/recordset-object-ado.md) object using the arguments provided. The **Recordset** must be opened with **adLockBatchOptimistic** and must not be opened asynchronously.  
   
 ### Arguments  
  ***conn***  The connection string.  
@@ -41,7 +41,7 @@ You may want to write your own handler if you are an IIS server administrator wh
  ***ppRS***  The pointer where the **Recordset** should be returned.  
   
 ## Reconnect Method  
- This method updates the data source. It creates a new [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object and attaches the given **Recordset**.  
+ This method updates the data source. It creates a new [Connection](../../reference/ado-api/connection-object-ado.md) object and attaches the given **Recordset**.  
   
 ### Arguments  
  ***conn***  The connection string.  
@@ -95,12 +95,10 @@ HRESULT _stdcall GetRecordset(
 ```  
   
 ## See Also  
- [Customization File Connect Section](../../../ado/guide/remote-data-service/customization-file-connect-section.md)   
- [Customization File Logs Section](../../../ado/guide/remote-data-service/customization-file-logs-section.md)   
- [Customization File SQL Section](../../../ado/guide/remote-data-service/customization-file-sql-section.md)   
- [Customization File UserList Section](../../../ado/guide/remote-data-service/customization-file-userlist-section.md)   
- [DataFactory Customization](../../../ado/guide/remote-data-service/datafactory-customization.md)   
- [Required Client Settings](../../../ado/guide/remote-data-service/required-client-settings.md)   
- [Understanding the Customization File](../../../ado/guide/remote-data-service/understanding-the-customization-file.md)
-
-
+ [Customization File Connect Section](./customization-file-connect-section.md)   
+ [Customization File Logs Section](./customization-file-logs-section.md)   
+ [Customization File SQL Section](./customization-file-sql-section.md)   
+ [Customization File UserList Section](./customization-file-userlist-section.md)   
+ [DataFactory Customization](./datafactory-customization.md)   
+ [Required Client Settings](./required-client-settings.md)   
+ [Understanding the Customization File](./understanding-the-customization-file.md)

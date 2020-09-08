@@ -3,7 +3,7 @@ description: "GetPermissions and SetPermissions Methods Example (VC++)"
 title: "GetPermissions and SetPermissions Methods Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # GetPermissions and SetPermissions Methods Example (VC++)
-This example demonstrates the [GetPermissions](../../../ado/reference/adox-api/getpermissions-method-adox.md) and [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) methods. The following code gives full access to the Orders table to the Admin user.  
+This example demonstrates the [GetPermissions](./getpermissions-method-adox.md) and [SetPermissions](./setpermissions-method-adox.md) methods. The following code gives full access to the Orders table to the Admin user.  
   
 ```  
 // BeginGrantPermissionCpp.cpp  

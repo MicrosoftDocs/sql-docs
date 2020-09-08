@@ -3,7 +3,7 @@ description: "CreateRecordset Method Example (VBScript)"
 title: "CreateRecordset Method Example (VBScript) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,7 +20,7 @@ ms.author: jroth
 > [!IMPORTANT]
 >  Beginning with Windows 8 and Windows Server 2012, RDS server components are no longer included in the Windows operating system (see Windows 8 and [Windows Server 2012 Compatibility Cookbook](https://www.microsoft.com/download/details.aspx?id=27416) for more detail). RDS client components will be removed in a future version of Windows. Avoid using this feature in new development work, and plan to modify applications that currently use this feature. Applications that use RDS should migrate to [WCF Data Service](https://go.microsoft.com/fwlink/?LinkId=199565).  
   
- This code example creates a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) on the server side. It has two columns with four rows each. Cut and paste the following code to Notepad or another text editor and save it as **CreateRecordsetVBS.asp**.  
+ This code example creates a [Recordset](../ado-api/recordset-object-ado.md) on the server side. It has two columns with four rows each. Cut and paste the following code to Notepad or another text editor and save it as **CreateRecordsetVBS.asp**.  
   
 ```  
 <!-- BeginCreateRecordsetVBS -->  
@@ -163,7 +163,5 @@ End Sub
 ```  
   
 ## See Also  
- [CreateRecordset Method (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
-
-
+ [CreateRecordset Method (RDS)](./createrecordset-method-rds.md)   
+ [Recordset Object (ADO)](../ado-api/recordset-object-ado.md)

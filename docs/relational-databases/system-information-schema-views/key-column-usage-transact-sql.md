@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "INFORMATION_SCHEMA.KEY_COLUMN_USAGE view"
   - "KEY_COLUMN_USAGE view"
 ms.assetid: ec1e18c2-63a1-4d2b-ba9a-c13857403782
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # KEY_COLUMN_USAGE (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

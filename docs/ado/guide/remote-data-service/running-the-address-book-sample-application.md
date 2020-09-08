@@ -3,7 +3,7 @@ description: "Running the Address Book Sample Application"
 title: "Running the Address Book Sample Application | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -37,8 +37,4 @@ ms.author: jroth
 3.  You can then try various scenarios in the Address Book sample application, such as searching for a person based on his or her e-mail name, listing all people with the title "Program Manager," or editing existing records. Click **Find** to fill the data grid with all the available names.  
   
 ## See Also  
- [Address Book Data-Binding Object](../../../ado/guide/remote-data-service/address-book-data-binding-object.md)
-
-
-
-
+ [Address Book Data-Binding Object](./address-book-data-binding-object.md)

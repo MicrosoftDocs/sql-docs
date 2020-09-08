@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdistribution_history system table"
 ms.assetid: 55665bd2-9e1d-4efc-8f60-c63a24f66b28
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSdistribution_history (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "linked servers [SQL Server], catalog views"
   - "catalog views [SQL Server], linked servers"
 ms.assetid: 06d53a67-7804-4f1f-8201-3e42dc48ba79
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Linked Servers Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

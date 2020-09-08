@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "PropertyStrVal property"
 ms.assetid: eeb15b13-4fee-47ac-81c3-cba19d450bd9
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # PropertyStrVal Property (ClientNetworkProtocolProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

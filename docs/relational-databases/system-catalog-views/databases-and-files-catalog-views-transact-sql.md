@@ -16,8 +16,8 @@ helpviewer_keywords:
   - "database catalog views [SQL Server]"
   - "catalog views [SQL Server], files"
 ms.assetid: 60a05111-c542-45b5-a0cb-433ddcf6286a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Databases and Files Catalog Views (Transact-SQL)

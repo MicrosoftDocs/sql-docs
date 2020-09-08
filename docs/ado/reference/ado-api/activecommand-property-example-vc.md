@@ -3,7 +3,7 @@ description: "ActiveCommand Property Example (VC++)"
 title: "ActiveCommand Property Example (VC++) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,9 +17,9 @@ author: rothja
 ms.author: jroth
 ---
 # ActiveCommand Property Example (VC++)
-This example demonstrates the [ActiveCommand](../../../ado/reference/ado-api/activecommand-property-ado.md) property.  
+This example demonstrates the [ActiveCommand](./activecommand-property-ado.md) property.  
   
- A subroutine is given a [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object whose **ActiveCommand** property is used to display the command text and parameter that created the **Recordset**.  
+ A subroutine is given a [Recordset](./recordset-object-ado.md) object whose **ActiveCommand** property is used to display the command text and parameter that created the **Recordset**.  
   
 ## Example  
   
@@ -216,5 +216,5 @@ Name = 'Anne  Ringer'
 ```  
   
 ## See Also  
- [ActiveCommand Property (ADO)](../../../ado/reference/ado-api/activecommand-property-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [ActiveCommand Property (ADO)](./activecommand-property-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

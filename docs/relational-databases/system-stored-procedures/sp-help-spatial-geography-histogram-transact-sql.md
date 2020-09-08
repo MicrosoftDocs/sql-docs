@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_spatial_geography_histogram"
 ms.assetid: 5c5bd319-055d-4cd6-8c5a-06354cc056cc
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_spatial_geography_histogram (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

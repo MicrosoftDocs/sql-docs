@@ -3,7 +3,7 @@ description: "Catalog Object (ADO MD)"
 title: "Catalog Object (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -23,17 +23,17 @@ Contains multidimensional schema information (that is, cubes and underlying dime
 ## Remarks  
  With the collections and properties of a **Catalog** object, you can do the following:  
   
--   Open the catalog by setting the [ActiveConnection](../../../ado/reference/ado-md-api/activeconnection-property-ado-md.md) property to a standard ADO [Connection](../../../ado/reference/ado-api/connection-object-ado.md) object or to a valid connection string.  
+-   Open the catalog by setting the [ActiveConnection](./activeconnection-property-ado-md.md) property to a standard ADO [Connection](../ado-api/connection-object-ado.md) object or to a valid connection string.  
   
--   Identify the **Catalog** with the [Name](../../../ado/reference/ado-md-api/name-property-ado-md.md) property.  
+-   Identify the **Catalog** with the [Name](./name-property-ado-md.md) property.  
   
--   Iterate through the cubes in a catalog using the [CubeDefs](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md) collection.  
+-   Iterate through the cubes in a catalog using the [CubeDefs](./cubedefs-collection-ado-md.md) collection.  
   
  This section contains the following topic.  
   
--   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/catalog-object-properties-methods-and-events-ado-md.md)  
+-   [Properties, Methods, and Events](./catalog-object-properties-methods-and-events-ado-md.md)  
   
 ## See Also  
- [Catalog Example (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [CubeDefs Collection (ADO MD)](../../../ado/reference/ado-md-api/cubedefs-collection-ado-md.md)
+ [Catalog Example (VB)](./catalog-example-vb.md)   
+ [Connection Object (ADO)](../ado-api/connection-object-ado.md)   
+ [CubeDefs Collection (ADO MD)](./cubedefs-collection-ado-md.md)

@@ -3,7 +3,7 @@ description: "Boundaries of a Recordset"
 title: "Boundaries of a Recordset | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -64,4 +64,4 @@ else
   
  This scheme works for all types of cursor and is independent of the underlying providers. If you attempt to determine the emptiness of a **Recordset** object by checking if its **RecordCount** property value is zero (0) or not, you must take precautions to use an appropriate cursor and provider that support returning of the number of records in the result.  
   
- If you delete the last remaining record in the **Recordset** object, the cursor is left in an indeterminate state. The **BOF** and **EOF** properties may remain **False** until you attempt to reposition the current record, depending upon the provider. For more information, see [Deleting Records Using the Delete Method](../../../ado/guide/data/deleting-records-using-the-delete-method.md).
+ If you delete the last remaining record in the **Recordset** object, the cursor is left in an indeterminate state. The **BOF** and **EOF** properties may remain **False** until you attempt to reposition the current record, depending upon the provider. For more information, see [Deleting Records Using the Delete Method](./deleting-records-using-the-delete-method.md).

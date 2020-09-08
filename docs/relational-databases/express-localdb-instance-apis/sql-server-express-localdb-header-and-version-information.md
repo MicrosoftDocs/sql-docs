@@ -11,8 +11,8 @@ ms.topic: "reference"
 apilocation: 
   - "sqluserinstance.dll"
 ms.assetid: 506b5161-b902-4894-b87b-9192d7b1664a
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ms.custom: seo-dt-2019
 ---
 # SQL Server Express LocalDB Header and Version Information

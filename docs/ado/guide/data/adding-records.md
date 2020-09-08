@@ -3,7 +3,7 @@ description: "Adding Records to a Recordset"
 title: "Adding Records | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -26,10 +26,10 @@ Use the **AddNew** method to create and initialize a new record in an existing *
 
  This section contains the following topics.
 
--   [Adding Records Using AddNew](../../../ado/guide/data/adding-records-using-addnew.md)
+-   [Adding Records Using AddNew](./adding-records-using-addnew.md)
 
--   [Adding Multiple Fields](../../../ado/guide/data/adding-multiple-fields.md)
+-   [Adding Multiple Fields](./adding-multiple-fields.md)
 
--   [Determining Edit Mode](../../../ado/guide/data/determining-edit-mode.md)
+-   [Determining Edit Mode](./determining-edit-mode.md)
 
--   [Using AddNew in Immediate and Batch Modes](../../../ado/guide/data/using-addnew-in-immediate-and-batch-modes.md)
+-   [Using AddNew in Immediate and Batch Modes](./using-addnew-in-immediate-and-batch-modes.md)

@@ -4,7 +4,7 @@ description: Learn how to incrementally search a single document or window. As y
 ms.custom: seo-lt-2019
 ms.date: "03/01/2017"
 ms.prod: sql
-ms.technology: scripting
+ms.technology: ssms
 ms.reviewer: ""
 ms.topic: conceptual
 helpviewer_keywords: 

@@ -3,7 +3,7 @@ description: "Resync Method Example (VB)"
 title: "Resync Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Resync Method Example (VB)
-This example demonstrates using the [Resync](../../../ado/reference/ado-api/resync-method.md) method to refresh data in a static recordset.  
+This example demonstrates using the [Resync](./resync-method.md) method to refresh data in a static recordset.  
   
 ```  
 'BeginResyncVB  
@@ -99,5 +99,5 @@ End Sub
 ```  
   
 ## See Also  
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
- [Resync Method](../../../ado/reference/ado-api/resync-method.md)
+ [Recordset Object (ADO)](./recordset-object-ado.md)   
+ [Resync Method](./resync-method.md)

@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sequence number object, altering"
   - "ALTER SEQUENCE statement"
 ms.assetid: decc0760-029e-4baf-96c9-4a64073df1c2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER SEQUENCE (Transact-SQL)
 [!INCLUDE [SQL Server Azure SQL Database ](../../includes/applies-to-version/sql-asdb.md)]

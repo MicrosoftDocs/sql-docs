@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.type_assembly_usages catalog view"
 ms.assetid: 79b8bf25-6e4e-4a07-ae93-7a4e44f65171
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.type_assembly_usages (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

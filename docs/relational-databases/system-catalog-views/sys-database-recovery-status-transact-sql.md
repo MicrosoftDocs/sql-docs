@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.database_recovery_status catalog view"
 ms.assetid: 46fab234-1542-49be-8edf-aa101e728acf
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.database_recovery_status (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

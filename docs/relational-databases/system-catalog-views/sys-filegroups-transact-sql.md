@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.filegroups catalog view"
 ms.assetid: 9e851f72-1f8e-4515-a25d-152ebc12ed56
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.filegroups (Transact-SQL)

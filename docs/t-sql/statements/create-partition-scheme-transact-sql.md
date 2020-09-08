@@ -27,8 +27,8 @@ helpviewer_keywords:
   - "partitioned tables [SQL Server], filegroups"
   - "mapping partitions [SQL Server]"
 ms.assetid: 5b21c53a-b4f4-4988-89a2-801f512126e4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE PARTITION SCHEME (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

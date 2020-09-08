@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_jobschedule"
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_add_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_setdefaultdatatypemapping"
 ms.assetid: 7394e8ca-4ce1-4e99-a784-205007c2c248
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_setdefaultdatatypemapping (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

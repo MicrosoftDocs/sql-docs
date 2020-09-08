@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_category"
 ms.assetid: 098b926a-b078-4122-a5e1-3ef54b979dd4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_update_category (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

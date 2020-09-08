@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_xtp_gc_stats dynamic management view"
 ms.assetid: addef774-318d-46a7-85df-f93168a800cb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "= azuresqldb-current || = azuresqldb-mi-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions"
 ---
 # sys.dm_xtp_gc_queue_stats (Transact-SQL)

@@ -22,7 +22,7 @@ ms.author: chugu
 
   Validate XML documents and get rich error output by enabling the **ValidationDetails** property of the XML Task.  
   
- The following screen shot shows the **XML Task Editor** with the settings required for XML validation with rich error output.  
+ The following screenshot shows the **XML Task Editor** with the settings required for XML validation with rich error output.  
   
  ![XML task properties in the XML Task Editor](../../integration-services/control-flow/media/xmltaskproperties.jpg "XML task properties in the XML Task Editor")  
   

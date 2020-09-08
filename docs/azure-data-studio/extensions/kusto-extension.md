@@ -75,12 +75,17 @@ To set up the Azure Data Explorer cluster you connect to, follow the steps below
 2. Fill in the **Connection Details** information.
     1. For **Connection type**, select *Kusto*.
     2. For **Cluster**, enter in your Azure Data Explorer cluster.
-        1. When entering the cluster name do not enter enter in the "https://" or a trailing "/".
+
+        > [!Note]
+        > When entering the cluster name, don't include the *https://* prefix or a trailing */*.
+
     3. For **Authentication Type**, use the default - *Azure Active Directory - Universal with MFA account*.
     4. For **Account**, use your account information.
     5. For **Database**, use *Default*.
     6. For **Server Group**, use *Default*.
+        1. You can use this field to organize your servers in a specific group.
     7. For **Name (optional)**, leave blank.
+        1. You can use this field to give your server an alias.
 
     :::image type="content" source="media/kusto-extension/kusto-extension-connection-details.png" alt-text="Connection details":::
 
@@ -104,18 +109,10 @@ StormEvents
 | where EventType == "Waterspout"
 ```
 
-## Tips and tricks
-
-There are some added features that come with the new Kusto extension.
-
-For example, from the Object explorer, you can right-click a table and **Select Top 1000** to query the top 100 results in a table.
-
-The Kusto extension also supports intellisense.
-
-Add alias to your connection
+For more information about writing Kusto queries, visit [Write queries for Azure Data Explorer](https://docs.microsoft.com/en-us/azure/data-explorer/write-queries#overview-of-the-query-language)
 
 ## Next steps
 
-- [SQL to Kusto cheat sheet](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [Kqlmagic](../notebooks-kqlmagic.md)
-- Azure Data Explorer
+- [SQL to Kusto cheat sheet](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
+- [What is Azure Data Explorer?](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)

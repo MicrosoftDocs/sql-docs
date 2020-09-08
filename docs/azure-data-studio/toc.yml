@@ -36,7 +36,7 @@
   items:
   - name: Extensions
     items:
-    - name: Extensions
+    - name: Extensions overview
       href: extensions.md
     - name: Azure Arc extension
       href: extensions/azure-arc-extension.md

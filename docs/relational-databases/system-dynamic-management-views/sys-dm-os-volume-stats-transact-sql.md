@@ -47,18 +47,18 @@ sys.dm_os_volume_stats (database_id, file_id)
 |**Column**|**Data type**|**Description**|  
 |**database_id**|**int**|ID of the database. Cannot be null.|  
 |**file_id**|**int**|ID of the file. Cannot be null.|  
-|**volume_mount_point**|**nvarchar(512)**|Mount point at which the volume is rooted. Can return an empty string.|  
-|**volume_id**|**nvarchar(512)**|Operating system volume ID. Can return an empty string|  
-|**logical_volume_name**|**nvarchar(512)**|Logical volume name. Can return an empty string|  
-|**file_system_type**|**nvarchar(512)**|Type of file system volume (for example, NTFS, FAT, RAW). Can return an empty string|  
+|**volume_mount_point**|**nvarchar(512)**|Mount point at which the volume is rooted. Can return an empty string. Returns null on Linux operating system.|  
+|**volume_id**|**nvarchar(512)**|Operating system volume ID. Can return an empty string. Returns null on Linux operating system.|  
+|**logical_volume_name**|**nvarchar(512)**|Logical volume name. Can return an empty string. Returns null on Linux operating system.|  
+|**file_system_type**|**nvarchar(512)**|Type of file system volume (for example, NTFS, FAT, RAW). Can return an empty string. Returns null on Linux operating system.|  
 |**total_bytes**|**bigint**|Total size in bytes of the volume. Cannot be null.|  
 |**available_bytes**|**bigint**|Available free space on the volume. Cannot be null.|  
-|**supports_compression**|**bit**|Indicates if the volume supports operating system compression. Cannot be null.|  
-|**supports_alternate_streams**|**bit**|Indicates if the volume supports alternate streams. Cannot be null.|  
-|**supports_sparse_files**|**bit**|Indicates if the volume supports sparse files.  Cannot be null.|  
-|**is_read_only**|**bit**|Indicates if the volume is currently marked as read only. Cannot be null.|  
-|**is_compressed**|**bit**|Indicates if this volume is currently compressed. Cannot be null.|  
-|**incurs_seek_penalty**|**tinyint**|Indicates the type of storage supporting this volume. Possible values are:<br /><br /> 0: No seek penalty on this volume, typically when the volume is on a PMM or SSD device <br /><br /> 1: Seek penalty on this device, typically when the volume in on a HDD device<br /><br /> NULL: The storage type can't be determined, typically when the volume is on a UNC path or mounted shares<br /><br />**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])|  
+|**supports_compression**|**tinyint**|Indicates if the volume supports operating system compression. Cannot be null on Windows and returns null on Linux operating system.|  
+|**supports_alternate_streams**|**tinyint**|Indicates if the volume supports alternate streams. Cannot be null on Windows and returns null on Linux operating system.|  
+|**supports_sparse_files**|**tinyint**|Indicates if the volume supports sparse files.  Cannot be null on Windows and returns null on Linux operating system.|  
+|**is_read_only**|**tinyint**|Indicates if the volume is currently marked as read only. Cannot be null.|  
+|**is_compressed**|**tinyint**|Indicates if this volume is currently compressed. Cannot be null on Windows and returns null on Linux operating system.|  
+|**incurs_seek_penalty**|**tinyint**|Indicates the type of storage supporting this volume. Possible values are:<br /><br />0: No seek penalty on this volume, typically when the storage device is PMM or SSD<br /><br />1: Seek penalty on this volume, typically when the storage device is HDD<br /><br />2: The storage type can't be determined when the volume is on a UNC path or mounted shares<br /><br />NULL: The storage type can't be determined on Linux operating system<br /><br />**Applies to:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (starting with [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)])|  
   
 ## Security  
   

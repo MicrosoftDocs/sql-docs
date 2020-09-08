@@ -2,7 +2,7 @@
 description: "Validate XML with the XML Task"
 title: "Validate XML with the XML Task | Microsoft Docs"
 ms.custom: ""
-ms.date: "03/14/2017"
+ms.date: "09/08/2020"
 ms.prod: sql
 ms.prod_service: "integration-services"
 ms.reviewer: ""
@@ -115,7 +115,7 @@ ORDER BY 2 DESC, COALESCE(error, 'Z');
   
  Here is the result in [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] of the second sample query shown in the preceding text.  
   
- ![Query to group XML errors in Management Studio](../../integration-services/control-flow/media/queryforxmlerrors.jpg "Query to group XML errors in Management Studio")  
+ ![Query to group XML errors in Management Studio](../../integration-services/control-flow/media/query-for-xml-errors.png "Query to group XML errors in Management Studio")  
   
 ## See Also  
  [XML Task](../../integration-services/control-flow/xml-task.md)   

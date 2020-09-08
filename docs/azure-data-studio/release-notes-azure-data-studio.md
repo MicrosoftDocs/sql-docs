@@ -8,12 +8,31 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 08/12/2020
+ms.date: 09/22/2020
 ---
 
 # Release notes for Azure Data Studio
 
 **[Download and install the latest release!](./download-azure-data-studio.md?view=sql-server-ver15)**
+
+## September 2020
+
+September 22, 2020 &nbsp; / &nbsp; version: 1.22.0
+
+&nbsp;
+
+| Change | Details |
+| :----- | :------ |
+| Added Azure Arc extension | Users can try out Azure Arc public preview through Azure Data Studio. This includes: <br/> &bull; &nbsp; Deploy data controller <br/> &bull; &nbsp; Deploy Postgres <br/> &bull; &nbsp; Deploy Managed Instance for Azure Arc <br/> &bull; &nbsp; Connect to data controller <br/> &bull; &nbsp; Access data service dashboards <br/> &bull; &nbsp; Azure Arc Jupyter Book |
+| Added ability to deploy Azure SQL Edge| |
+| Added SQL Database Projects extension | |
+| Added Kusto (KQL) extension |  |
+| Added ability to deploy Azure SQL DB and Azure SQL VM |  |
+| New notebook features | <br/> &bull; &nbsp; Supports brand new text cell editing experience based on rich text formatting <br/> &bull; &nbsp; Supports Kusto kernel <br/> &bull; &nbsp; Supports pinning of notebooks <br/> &bull; &nbsp; Added support for new version of Jupyter Books <br/> &bull; &nbsp; Improved Jupyter Shortcuts <br/> &bull; &nbsp; Introduced perf loading improvements |
+| Added Initial Setup Wizard | |
+| Added extension generator extension| Provides a notebook to easily setup the tools you need to build your own Azure Data Studio extension |
+| Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2020+Release%22+is%3Aclosed). |
+
 
 ## August 2020
 

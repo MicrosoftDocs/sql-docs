@@ -8,7 +8,7 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 8/12/2020
+ms.date: 9/22/2020
 ---
 
 # Download and install Azure Data Studio
@@ -22,9 +22,9 @@ Download and install the latest release:
 
 |Platform|Download|Release date| Version |
 |:---|:---|:---|:---|
-| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2138608)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2138704)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2138705) | August 12, 2020 | 1.21.0 |
-| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2138609) | August 12, 2020 | 1.21.0 |
-| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2138508)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2138507)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2138706) | August 12, 2020| 1.21.0 |
+| Windows | [User Installer (recommended)](https://go.microsoft.com/fwlink/?linkid=2142210)<br>[System Installer](https://go.microsoft.com/fwlink/?linkid=2142135)<br>[.zip](https://go.microsoft.com/fwlink/?linkid=2142211) | September 22, 2020 | 1.22.0 |
+| macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2142136) | September 22, 2020 | 1.22.0 |
+| Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2142214)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2142213)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2142212) | September 22, 2020| 1.22.0 |
 
 For details about the latest release, see the [release notes](./release-notes-azure-data-studio.md?view=sql-server-ver15).
 
@@ -36,32 +36,32 @@ The *user installer* is recommended because it does not require administrator pr
 
 **User Installer** (recommended)
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2138608).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *user* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2142210).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 **System Installer**
 
-1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2138704).
+1. Download and run the [[!INCLUDE[name-sos](../includes/name-sos-short.md)] *system* installer for Windows](https://go.microsoft.com/fwlink/?linkid=2142135).
 2. Start the [!INCLUDE[name-sos-short](../includes/name-sos-short.md)] app.
 
 **.zip file**
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2138705).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] .zip for Windows](https://go.microsoft.com/fwlink/?linkid=2142211).
 2. Browse to the downloaded file and extract it.
 3. Run `\azuredatastudio-windows\azuredatastudio.exe`
 
 ## Get Azure Data Studio for macOS
 
-1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2138609).
+1. Download [[!INCLUDE[name-sos](../includes/name-sos-short.md)] for macOS](https://go.microsoft.com/fwlink/?linkid=2142136).
 2. To expand the contents of the zip, double-click it.
 3. To make Azure Data Studio available in the *Launchpad*, drag *Azure Data Studio.app* to the *Applications* folder.
 
 ## Get Azure Data Studio for Linux
 
 1. Download [!INCLUDE[name-sos](../includes/name-sos-short.md)] for Linux by using one of the installers or the tar.gz archive:
-    - [.deb](https://go.microsoft.com/fwlink/?linkid=2138508)
-    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2138507)
-    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2138706)
+    - [.deb](https://go.microsoft.com/fwlink/?linkid=2142214)
+    - [.rpm](https://go.microsoft.com/fwlink/?linkid=2142213)
+    - [.tar.gz](https://go.microsoft.com/fwlink/?linkid=2142212)
 1. To extract the file and launch [!INCLUDE[name-sos](../includes/name-sos-short.md)], open a new Terminal window and type the following commands:
 
    **Debian Installation:**

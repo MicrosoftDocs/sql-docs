@@ -38,8 +38,10 @@
     items:
     - name: Extensions
       href: extensions.md
-    - name: Azure-Arc extension
+    - name: Azure Arc extension
       href: extensions/azure-arc-extension.md
+    - name: Data Virtualization extension
+      href: data-virtualization-extension.md
     - name: Machine Learning extension
       items:
       - name: Machine Learning extension overview
@@ -50,10 +52,16 @@
         href: machine-learning-extension-predictions.md
       - name: Import and view models
         href: machine-learning-extension-import-view-models.md
+    - name: Managed Instance extension
+      href: azure-sql-managed-instance-extension.md
     - name: PostgreSQL extension
       href: postgres-extension.md
-    - name: Data Virtualization extension
-      href: data-virtualization-extension.md
+    - name: PowerShell extension
+      href: powershell-extension.md
+    - name: SandDance extension
+      href: sanddance-extension.md
+    - name: Schema Compare extension
+      href: schema-compare-extension.md
     - name: SQL Database Projects extension
       items:
       - name: SQL Database Projects extension overview
@@ -74,14 +82,6 @@
       href: sql-server-import-extension.md
     - name: SQL Server Profiler
       href: sql-server-profiler-extension.md
-    - name: Schema Compare extension
-      href: schema-compare-extension.md        
-    - name: PowerShell extension
-      href: powershell-extension.md        
-    - name: Managed Instance extension
-      href: azure-sql-managed-instance-extension.md        
-    - name: SandDance extension
-      href: sanddance-extension.md
   - name: Extension Authoring
     items:
     - name: Extensibility overview

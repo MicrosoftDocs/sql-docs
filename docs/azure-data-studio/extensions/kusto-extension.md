@@ -104,15 +104,18 @@ StormEvents
 | where EventType == "Waterspout"
 ```
 
-## Productivity Tips
+## Tips and tricks
 
-Object Explorer / intellisense
+There are some added features that come with the new Kusto extension.
+
+For example, from the Object explorer, you can right-click a table and **Select Top 1000** to query the top 100 results in a table.
+
+The Kusto extension also supports intellisense.
 
 Add alias to your connection
-
-Right-click on the object explorer - Select top 1000 on the table & drag + drop.
 
 ## Next steps
 
 - [SQL to Kusto cheat sheet](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [Kqlmagic](../notebooks-kqlmagic.md)
+- Azure Data Explorer

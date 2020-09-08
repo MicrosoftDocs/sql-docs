@@ -80,6 +80,8 @@
       href: azure-sql-managed-instance-extension.md        
     - name: SandDance extension
       href: sanddance-extension.md
+    - name: Kusto extension
+      href: extensions/kusto-extension.md
   - name: Extension Authoring
     items:
     - name: Extensibility overview

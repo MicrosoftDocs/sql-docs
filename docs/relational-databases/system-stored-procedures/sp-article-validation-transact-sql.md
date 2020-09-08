@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_article_validation"
 ms.assetid: 44e7abcd-778c-4728-a03e-7e7e78d3ce22
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_article_validation (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

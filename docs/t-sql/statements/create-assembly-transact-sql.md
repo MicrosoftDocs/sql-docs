@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "CREATE ASSEMBLY statement"
   - "assemblies [CLR integration], creating"
 ms.assetid: d8d1d245-c2c3-4325-be52-4fc1122c2079
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 # CREATE ASSEMBLY (Transact-SQL)

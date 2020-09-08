@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSdistribution_agents system table"
 ms.assetid: 0e8f0653-1351-41d1-95d2-40f6d5a050ca
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSdistribution_agents (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

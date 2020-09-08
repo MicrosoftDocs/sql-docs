@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.column_store_segments catalog view"
 ms.assetid: 1253448c-2ec9-4900-ae9f-461d6b51b2ea
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.column_store_segments (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

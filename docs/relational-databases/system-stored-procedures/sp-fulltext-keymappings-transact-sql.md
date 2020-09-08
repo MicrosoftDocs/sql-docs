@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sp_fulltext_keymappings"
   - "full-text indexes [SQL Server], troubleshooting"
 ms.assetid: 2818fa42-072d-4664-a2f7-7ec363b51d81
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sp_fulltext_keymappings (Transact-SQL)

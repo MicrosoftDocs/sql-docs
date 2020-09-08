@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_attach_db"
 ms.assetid: 59bc993e-7913-4091-89cb-d2871cffda95
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_attach_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

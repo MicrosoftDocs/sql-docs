@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_copysnapshot"
 ms.assetid: a012a32f-6f26-45bf-8046-b51cd7fec455
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_copysnapshot (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

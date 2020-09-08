@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "polybase, alter external data source statement"
   - "ALTER EXTERNAL DATA SOURCE statement"
 ms.assetid: a34b9e90-199d-46d0-817a-a7e69387bf5f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER EXTERNAL DATA SOURCE (Transact-SQL)
 [!INCLUDE [sqlserver2016-asdbmi-asa-pdw](../../includes/applies-to-version/sqlserver2016-asdbmi-asa-pdw.md)]

@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_check_for_sync_trigger"
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_check_for_sync_trigger (Transact-SQL)
 [!INCLUDE [SQL Server SQL MI](../../includes/applies-to-version/sql-asdbmi.md)]

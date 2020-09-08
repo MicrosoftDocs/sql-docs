@@ -2,7 +2,7 @@
 description: "CREATE FUNCTION (SQL Data Warehouse)"
 title: "CREATE FUNCTION (SQL Data Warehouse) | Microsoft Docs"
 ms.custom: ""
-ms.date: "08/31/2020"
+ms.date: "09/08/2020"
 ms.prod: sql
 ms.prod_service: "sql-data-warehouse, pdw"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ monikerRange: ">= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allve
 # CREATE FUNCTION (SQL Data Warehouse)
 [!INCLUDE[applies-to-version/asa-pdw](../../includes/applies-to-version/asa-pdw.md)]
 
-  Creates a user-defined function in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the return value must be a scalar (single) value. In [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], the return value may be either a scalar value or a table. Use this statement to create a reusable routine that can be used in these ways:  
+  Creates a user-defined function in [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]. A user-defined function is a [!INCLUDE[tsql](../../includes/tsql-md.md)] routine that accepts parameters, performs an action, such as a complex calculation, and returns the result of that action as a value. In [!INCLUDE[ssPDW](../../includes/sspdw-md.md)], the return value must be a scalar (single) value. In [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)], the return value may be either a scalar value or a table (Preview). Use this statement to create a reusable routine that can be used in these ways:  
   
 -   In [!INCLUDE[tsql](../../includes/tsql-md.md)] statements such as SELECT  
   
@@ -61,7 +61,7 @@ RETURNS return_data_type
 ```  
 
 ```syntaxsql
--- Transact-SQL Inline Table-Valued Function Syntax (in Azure Synapse Analytics only)
+-- Transact-SQL Inline Table-Valued Function Syntax (Preview in Azure Synapse Analytics only)
 CREATE FUNCTION [ schema_name. ] function_name
 ( [ { @parameter_name [ AS ] parameter_data_type
     [ = default ] }
@@ -115,7 +115,7 @@ RETURNS TABLE
  Specifies the scalar value that the scalar function returns.  
 
  *select_stmt* **APPLIES TO**: Azure Synapse Analytics  
- Is the single SELECT statement that defines the return value of an inline table-valued function (TVF).
+ Is the single SELECT statement that defines the return value of an inline table-valued function (Preview).
   
  **\<function_option>::=** 
   
@@ -207,7 +207,7 @@ SELECT dbo.ConvertInput(15) AS 'ConvertedValue';
 
 ## Examples: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]  
 
-### A. Creating an inline table-valued function
+### A. Creating an inline table-valued function (Preview)
  The following example creates an inline table-valued function to return some key information on modules, filtering by the `objectType` parameter. It includes a default value to return all modules when the function is called with the DEFAULT parameter. This example makes use of some of the system catalog views mentioned in [Metadata](#metadata).
 
 ```sql

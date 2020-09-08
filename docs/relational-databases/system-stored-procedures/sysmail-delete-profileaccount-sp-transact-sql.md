@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sysmail_delete_profileaccount_sp"
 ms.assetid: b58d06f2-d6c9-4c8e-95bd-027c50f4621a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sysmail_delete_profileaccount_sp (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "stopping statement execution"
   - "estimated execution information [SQL Server]"
 ms.assetid: a500b682-bae4-470f-9e00-47de905b851b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SET SHOWPLAN_ALL (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

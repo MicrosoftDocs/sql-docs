@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.schemas catalog view"
 ms.assetid: 29af5ce5-2af7-4103-8f08-3ec92603ba05
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Schemas Catalog Views - sys.schemas

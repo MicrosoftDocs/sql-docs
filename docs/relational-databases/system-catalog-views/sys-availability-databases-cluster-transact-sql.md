@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sys.availability_databases_cluster catalog view"
   - "Availability Groups [SQL Server], databases"
 ms.assetid: 8d9c57e5-7f39-4315-b466-92748231140a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.availability_databases_cluster (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "routes [Service Broker], removing"
   - "removing routes"
 ms.assetid: d8fab0bc-d54a-46ca-9437-552db7477d40
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP ROUTE (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

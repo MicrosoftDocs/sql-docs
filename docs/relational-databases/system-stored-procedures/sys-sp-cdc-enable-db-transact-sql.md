@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "change data capture [SQL Server], enabling databases"
   - "sp_cdc_enable_db"
 ms.assetid: 176d83b3-493d-43cd-800e-aa123c3bdf17
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_enable_db (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

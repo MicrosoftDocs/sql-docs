@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_subscription_cleanup"
 ms.assetid: bdc8aaa0-ff2d-40c2-84b2-4ba513ced279
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_subscription_cleanup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

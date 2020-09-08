@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "StartMode property"
 ms.assetid: c0c2c7f8-d4ae-44f2-ad8e-aecfcb7c2878
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # StartMode Property (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

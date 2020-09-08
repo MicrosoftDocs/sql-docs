@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "cdc.change_tables"
 ms.assetid: 3525a5f5-8d8b-46a8-b334-4b7cd9fb7c21
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # cdc.change_tables (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

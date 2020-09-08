@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "views [SQL Server], removing"
   - "removing views"
 ms.assetid: 03cea355-e39c-46e1-b7db-8832038669dd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # DROP VIEW (Transact-SQL)

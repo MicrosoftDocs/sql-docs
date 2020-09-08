@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "sequence object"
   - "number, sequence"
 ms.assetid: 419f907b-8a72-4d6c-80cb-301df44c24c1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 
 # CREATE SEQUENCE (Transact-SQL)

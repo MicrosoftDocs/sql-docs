@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_db_xtp_checkpoint_stats dynamic management view"
 ms.assetid: 8d0b18ca-db4d-4376-9905-3e4457727c46
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_db_xtp_checkpoint_stats (Transact-SQL)

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_update_jobschedule"
 ms.assetid: 4df02594-4cd1-49a9-8d97-37c44e4d5423
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_update_jobschedule (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

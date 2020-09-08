@@ -15,7 +15,6 @@ helpviewer_keywords:
 ms.assetid: ce4053fb-e37a-4851-b711-8e504059a780
 author: "stevestein"
 ms.author: "sstein"
-ms.reviewer: carlrab
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # tempdb database

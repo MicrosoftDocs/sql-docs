@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "search property lists [SQL Server], associating with full-text indexes"
   - "ALTER FULLTEXT INDEX statement"
 ms.assetid: b6fbe9e6-3033-4d1b-b6bf-1437baeefec3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER FULLTEXT INDEX (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

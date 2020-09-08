@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_help_fulltext_catalog_components"
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_help_fulltext_catalog_components (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

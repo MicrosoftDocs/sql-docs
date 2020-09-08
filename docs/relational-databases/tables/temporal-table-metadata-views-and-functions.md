@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: table-view-index
 ms.topic: conceptual
 ms.assetid: e5d23ec9-7d18-40f6-add4-bea13132d0b9
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Temporal Table Metadata Views and Functions

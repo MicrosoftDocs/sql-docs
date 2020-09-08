@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "sp_dbmmonitorchangealert"
   - "database mirroring [SQL Server], monitoring"
 ms.assetid: 1b29f82b-9cf8-4539-8d5c-9a1024db8a50
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dbmmonitorchangealert (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

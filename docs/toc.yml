@@ -10154,7 +10154,7 @@
     - name: Reddit >>
       href: https://www.reddit.com/r/SQLServer
     - name: Docs navigation tips
-      href: sql-server/sql-docs-navigation-guide
+      href: sql-server/sql-docs-navigation-guide.md
   - name: Blogs  # TODO: Blog websites on MSDN & TechNet are being retired in 2019.
     items:
     - name: SQL Server >>

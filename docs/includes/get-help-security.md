@@ -1,4 +1,4 @@
-##  ![info-tip.png](media/info-tip.png) Get Help
+##  ![Info icon](media/info-tip.png) Get Help
 
 - [UserVoice - Suggestion to improve SQL Server?](https://feedback.azure.com/forums/908035-sql-server)
 - [Microsoft Q & A (SQL Server)](https://docs.microsoft.com/answers/products/sql-server)

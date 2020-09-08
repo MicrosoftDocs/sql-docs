@@ -26,7 +26,7 @@ Download and install the latest release:
 | macOS | [.zip](https://go.microsoft.com/fwlink/?linkid=2142136) | September 22, 2020 | 1.22.0 |
 | Linux | [.deb](https://go.microsoft.com/fwlink/?linkid=2142214)<br>[.rpm](https://go.microsoft.com/fwlink/?linkid=2142213)<br>[.tar.gz](https://go.microsoft.com/fwlink/?linkid=2142212) | September 22, 2020| 1.22.0 |
 
-For details about the latest release, see the [release notes](./release-notes-azure-data-studio.md?view=sql-server-ver15).
+For details about the latest release, see the [release notes](./release-notes-azure-data-studio.md).
 
 ## Get Azure Data Studio for Windows
 
@@ -189,15 +189,15 @@ If you want to move your custom settings, keyboard shortcuts, or code snippets, 
 
 1. Open Settings by clicking the gear on the bottom left and clicking **Settings.**
 
-   ![open-settings](./media/download/open-settings.png)
+   ![edit settings in Azure Data Studio](./media/download/open-settings.png)
 
 2. Right-click the **User Settings** tab on top and click **Reveal in Explorer**
 
-   ![reveal-in-explorer](./media/download/reveal-in-explorer.png)
+   ![launch explorer which will take you to your local file system](./media/download/reveal-in-explorer.png)
 
 3. Copy all files in this folder and save in an easy to find location on your local drive, like your Documents folder.
 
-   ![copy-settings](./media/download/copy-settings.png)
+   ![use the files and copy over to your location](./media/download/copy-settings.png)
 
 4. In your new version of Azure Data Studio, follow steps 1-2, then for step 3 paste the contents you saved into the folder. You can also manually copy over the settings, keybindings, or snippets in their respective locations.
 

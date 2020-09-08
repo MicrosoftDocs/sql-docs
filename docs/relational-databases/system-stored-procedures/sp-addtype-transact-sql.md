@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addtype"
 ms.assetid: ed72cd8e-5ff7-4084-8458-2d8ed279d817
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addtype (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

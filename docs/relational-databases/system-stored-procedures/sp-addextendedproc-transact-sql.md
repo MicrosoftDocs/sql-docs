@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addextendedproc"
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addextendedproc (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

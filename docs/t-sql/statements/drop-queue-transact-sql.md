@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "DROP QUEUE statement"
   - "removing queues"
 ms.assetid: fd866520-ca00-477d-b2e9-0110e9610ed4
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

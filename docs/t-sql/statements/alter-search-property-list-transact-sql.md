@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "search property lists [SQL Server], altering"
   - "ALTER SEARCH PROPERTY LIST statement"
 ms.assetid: 0436e4a8-ca26-4d23-93f1-e31e2a1c8bfb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER SEARCH PROPERTY LIST (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_add_targetservergroup"
 ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_add_targetservergroup (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

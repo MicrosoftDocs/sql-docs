@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_trace_generateevent"
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_trace_generateevent (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

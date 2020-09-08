@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "counting rows"
   - "SET NOCOUNT statement"
 ms.assetid: eb3e6727-cb26-4bc2-84c7-171cbac02029
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET NOCOUNT (Transact-SQL)

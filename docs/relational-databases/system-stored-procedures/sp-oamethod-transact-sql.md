@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_OAMethod"
 ms.assetid: 1dfaebe2-c7cf-4041-a586-5d04faf2e25e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_OAMethod (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

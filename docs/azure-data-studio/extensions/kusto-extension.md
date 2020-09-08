@@ -109,7 +109,7 @@ StormEvents
 | where EventType == "Waterspout"
 ```
 
-For more information about writing Kusto queries, visit [Write queries for Azure Data Explorer](https://docs.microsoft.com/en-us/azure/data-explorer/write-queries#overview-of-the-query-language)
+For more information about writing Kusto queries, visit [Write queries for Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/write-queries#overview-of-the-query-language)
 
 ## Next steps
 

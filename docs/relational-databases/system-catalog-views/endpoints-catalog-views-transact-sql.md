@@ -14,8 +14,8 @@ helpviewer_keywords:
   - "endpoints [SQL Server], catalog views"
   - "catalog views [SQL Server], endpoints"
 ms.assetid: 557bc2f2-135c-4e96-be5a-dfbdfd2ec932
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Endpoints Catalog Views (Transact-SQL)
 [!INCLUDE[sqlserver](../../includes/applies-to-version/sqlserver.md)]

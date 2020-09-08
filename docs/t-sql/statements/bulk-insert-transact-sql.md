@@ -24,8 +24,8 @@ helpviewer_keywords:
   - "bulk importing [SQL Server], BULK INSERT statement"
   - "file importing [SQL Server]"
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # BULK INSERT (Transact-SQL)
 

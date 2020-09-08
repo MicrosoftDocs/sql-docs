@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "event sessions [SQL Server]"
   - "CREATE EVENT SESSION statement"
 ms.assetid: 67683027-2b0f-47aa-b223-604731af8b4d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE EVENT SESSION (Transact-SQL)
 

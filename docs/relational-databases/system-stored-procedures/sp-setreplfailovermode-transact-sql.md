@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_setreplfailovermode"
 ms.assetid: ca98a4c3-bea4-4130-88d7-79e0fd1e85f6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_lookupcustomresolver"
 ms.assetid: 356a7b8a-ae53-4fb5-86ee-fcfddbf23ddd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

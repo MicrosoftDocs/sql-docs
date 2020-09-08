@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.data_spaces catalog view"
 ms.assetid: f39d55fe-2c0f-472d-a77f-cebc6fea95b5
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.data_spaces (Transact-SQL)

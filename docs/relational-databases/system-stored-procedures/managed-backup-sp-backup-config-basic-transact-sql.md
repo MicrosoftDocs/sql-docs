@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "managed_backup.sp_backup_config_basic"
   - "sp_backup_config_basic"
 ms.assetid: 3ad73051-ae9a-4e41-a889-166146e5508f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # managed_backup.sp_backup_config_basic (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

@@ -25,8 +25,8 @@ helpviewer_keywords:
   - "locking [SQL Server], isolation levels"
   - "transactions [SQL Server], isolation levels"
 ms.assetid: 016fb05e-a702-484b-bd2a-a6eabd0d76fd
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET TRANSACTION ISOLATION LEVEL (Transact-SQL)

@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "Availability Groups [SQL Server], WSFC clusters"
   - "sys.dm_hadr_availability_replica_cluster_nodes dynamic management view"
 ms.assetid: dbd7e416-badd-4332-a45c-438aa0145a99
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_hadr_availability_replica_cluster_nodes (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

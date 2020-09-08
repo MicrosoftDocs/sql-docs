@@ -24,8 +24,8 @@ dev_langs:
 helpviewer_keywords: 
   - "CREATE BROKER PRIORITY statement"
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

@@ -40,18 +40,18 @@ This control over upgrades was further improved with [!INCLUDE[ssSQL17](../../in
 Starting with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18, the new **Query Tuning Assistant (QTA)** feature will guide users through the recommended workflow to keep performance stability during upgrades to newer [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] versions, as documented in the section *Keep performance stability during the upgrade to newer SQL Server* of [Query Store Usage Scenarios](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade). However, QTA doesn't roll back to a previously known good plan as seen in the last step of the recommended workflow. Instead, QTA will track any regressions found in the [Query Store **Regressed Queries**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) view, and iterate through possible permutations of applicable optimizer model variations so that a new better plan can be produced.
 
 > [!IMPORTANT]
-> QTA doesn't generate user workload. If running QTA in an environment that isn't used by your applications, ensure that you can still execute representative test workload on the targeted [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] by other means. 
+> QTA doesn't generate user workload. If running QTA in an environment that isn't used by your applications, ensure that you can still execute representative test workload on the targeted [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] by other means.
 
 ## The Query Tuning Assistant workflow
 
 The starting point of QTA assumes that a database from a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is moved (through [CREATE DATABASE ... FOR ATTACH](../..//relational-databases/databases/attach-a-database.md) or [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)) to a newer version of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and the before-upgrade database compatibility level isn't changed immediately. QTA will guide through the following steps:
 
-1.  Configure Query Store according to recommended settings for the workload duration (in days) set by the user. Think about the workload duration that matches your typical business cycle.
-2.  Request to start the required workload, so that Query Store can collect a baseline of workload data (if none available yet).
-3.  Upgrade to the target database compatibility level chosen by the user.
-4.  Request that a second pass of workload data is collected for comparison and regression detection.
-5.  Iterate through any regressions found based on [Query Store **Regressed Queries**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) view, experiment by collecting runtime statistics on possible permutations of applicable optimizer model variations, and measure the outcome. 
-6.  Report on the measured improvements, and optionally allow those changes to be persisted using [plan guides](../../relational-databases/performance/plan-guides.md).
+1. Configure Query Store according to recommended settings for the workload duration (in days) set by the user. Think about the workload duration that matches your typical business cycle.
+2. Request to start the required workload, so that Query Store can collect a baseline of workload data (if none available yet).
+3. Upgrade to the target database compatibility level chosen by the user.
+4. Request that a second pass of workload data is collected for comparison and regression detection.
+5. Iterate through any regressions found based on [Query Store **Regressed Queries**](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) view, experiment by collecting runtime statistics on possible permutations of applicable optimizer model variations, and measure the outcome. 
+6. Report on the measured improvements, and optionally allow those changes to be persisted using [plan guides](../../relational-databases/performance/plan-guides.md).
 
 For more information on attaching a database, see [Database Detach and Attach](../../relational-databases/databases/database-detach-and-attach-sql-server.md#AttachDb).
 
@@ -89,7 +89,7 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 
 3. In the QTA Wizard window, two steps are required to configure a session:
 
-    1. In the **Setup** window, configure Query Store to capture the equivalent of one full business cycle of workload data to analyze and tune. 
+    1. In the **Setup** window, configure Query Store to capture the equivalent of one full business cycle of workload data to analyze and tune.
         - Enter the expected workload duration in days (minimum is 1 day). This will be used to propose recommended Query Store settings to tentatively allow the entire baseline to be collected. Capturing a good baseline is important to ensure any regressed queries found after changing the database compatibility level are able to be analyzed. 
         - Set the intended target database compatibility level that the user database should be at, after the QTA workflow has completed.
         Once complete, select **Next**.
@@ -97,8 +97,8 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
        ![New database upgrade session setup window](../../relational-databases/performance/media/qta-new-session-setup.png "New database upgrade setup window")  
   
     2. In the **Settings** window, two columns show the **Current** state of Query Store in the targeted database, as well as the **Recommended** settings. 
-        - The Recommended settings are selected by default, but selecting the radio button over the Current column accepts current settings, and also allows fine-tuning the current Query Store configuration. 
-        - The proposed *Stale Query Threshold* setting is twice the number of expected workload durations in days. This is because Query Store will need to hold information on the baseline workload and the post-database upgrade workload.
+        - The Recommended settings are selected by default, but selecting the radio button over the Current column accepts current settings, and also allows fine-tuning the current Query Store configuration.
+        - The proposed *Stale Query Threshold* setting is twice the number of expected workload duration in days. This is because Query Store will need to hold information on the baseline workload and the post-database upgrade workload.
         Once complete, select **Next**.
 
        ![New database upgrade settings window](../../relational-databases/performance/media/qta-new-session-settings.png "New database upgrade settings window")
@@ -174,10 +174,10 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
         - **% Change**: Percent change for the selected metric between the before and after database compatibility upgrade state. A negative number represents the amount of measured regression for the query.
         - **Tunable**: *True* or *False* depending on whether the query is eligible for experimentation.
 
-4. **View Analysis** allows selection of which queries to experiment and find optimization opportunities. The **Queries to show** value becomes the scope of eligible queries to experiment on. Once the desired queries are checked, select **Next** to start experimentation.  
+4. **View Analysis** allows selection of which queries to experiment and find optimization opportunities. The **Queries to show** value becomes the scope of eligible queries to experiment on. Once the desired queries are checked, select **Next** to start experimentation.
 
     > [!NOTE]
-    > Queries with Tunable = False cannot be selected for experimentation.   
+    > Queries with Tunable = False cannot be selected for experimentation.
 
     > [!IMPORTANT]
     > A prompt advises that once QTA moves to the experimentation phase, returning to the View Analysis page will not be possible.   
@@ -188,7 +188,7 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 5. **View Findings** allows selection of which queries to deploy the proposed optimization as a plan guide. 
 
     The list contains the following information:
-    - **Query ID** 
+    - **Query ID**
     - **Query Text**: [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that can be expanded by selecting the **...** button.
     - **Status**: Displays the current experimentation state for the query.
     - **Baseline Metric**: The selected metric (Duration or CpuTime) in ms for the query as executed in **Step 2 Substep 3**, representing the regressed query after the database compatibility upgrade.
@@ -212,7 +212,8 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
     > If you delete a session that had deployed plan guides, then you cannot use QTA to rollback.
     > Instead, search for plan guides using the [sys.plan_guides](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md) system table, and delete manually using [sp_control_plan_guide](../../relational-databases/system-stored-procedures/sp-control-plan-guide-transact-sql.md).
   
-## Permissions  
+## Permissions
+
 Requires membership of **db_owner** role.
   
 ## See Also

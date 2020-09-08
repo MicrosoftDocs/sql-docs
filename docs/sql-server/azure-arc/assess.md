@@ -25,7 +25,7 @@ You can enable SQL assessment for your SQL Server instances by following these s
 
 1. Open your SQL Server – Azure Arc resource and select __Environment Health__ in the left menu.
 
-   :::image type="content" source="media/assess/sql-assessment-heading-sql-server-arc.png" alt-text="Enable SQL assessment":::
+   ![SQL Assessment selection](media/assess/sql-assessment-heading-sql-server-arc.png)
 
 1. Specify a working directory on the data collection machine. During collection and analysis, data is temporarily stored under that folder. If the folder doesn't exist, it is created automatically.
 
@@ -44,15 +44,15 @@ You can enable SQL assessment for your SQL Server instances by following these s
 
 The button __View SQL assessment result__ on the _Environment Health_ blade is disabled until the the results are ready in Log Analytics. Once the button is activated, you can click on it to view the results. It could take up to 2 hours to see the results in Log Analytics after the data files are processed on the target machine.
 
-:::image type="content" source="media/assess/sql-assessment-results.png" alt-text="Assessment results":::
+![SQ: assessment results](media/assess/sql-assessment-results.png)
 
 You can see the state of data processing on the collection machine by checking the files in the working folder. After the scheduled task is completed, you should see several files with the _new._ prefix in the working directory:
 
-:::image type="content" source="media/assess/sql-assessment-data-files-ready.png" alt-text="Data files are ready":::
+![Data files ready](media/assess/sql-assessment-data-files-ready.png)
 
 The Microsoft Monitoring Agent scans the working folder every 15 minutes looking for _new.*_ files, and sends the data to the Log analytics workspace. Once the file is uploaded, the prefix will change from _new._ to _processed._:
 
-:::image type="content" source="media/assess/sql-assessment-data-files-processed.png" alt-text="Data files are uploaded":::
+![Data files processed](media/assess/sql-assessment-data-files-processed.png)
 
 ## Next steps
 

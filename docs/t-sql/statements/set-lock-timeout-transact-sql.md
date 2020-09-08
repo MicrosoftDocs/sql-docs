@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "locking [SQL Server], time-outs"
   - "wait time for lock releases [SQL Server]"
 ms.assetid: dd0c389e-956d-435e-bf71-e16624a0a215
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET LOCK_TIMEOUT (Transact-SQL)

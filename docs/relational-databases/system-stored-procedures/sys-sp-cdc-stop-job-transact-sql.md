@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_cdc_stop_job"
 ms.assetid: 421fc21c-c7a4-407c-8b31-359273b68c63
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.sp_cdc_stop_job (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

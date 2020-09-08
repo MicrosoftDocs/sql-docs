@@ -17,8 +17,8 @@ helpviewer_keywords:
   - "backup devices [SQL Server], defining"
   - "sp_addumpdevice"
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addumpdevice (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

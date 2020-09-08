@@ -23,22 +23,22 @@ You can enable advanced data security for your SQL Server instances on premises 
 
 1. Search for __Log Analytics workspaces__ resource type and add a new one through the creation blade.
 
-   :::image type="content" source="media/configure-advanced-data-security/create-new-log-analytics-workspace.png" alt-text="Create new log analytics workspace":::
+   ![Create new workspace](media/configure-advanced-data-security/create-new-log-analytics-workspace.png)
 
    > [!NOTE]
    > You can use a Log Analytics workspace in any region so if you already have one, you can use it. But we recommend creating it in the same region where your __Machine - Azure Arc__ resource is created.
 
 1. Go to the overview page of the Log Analytics workspace resource and select “Windows, Linux and other sources”. Copy the workspace ID and primary key for later use.
 
-   :::image type="content" source="media/configure-advanced-data-security/log-analytics-workspace-blade.png" alt-text="Log analytics workspace blade":::
+   ![Log analytics workspace blade](media/configure-advanced-data-security/log-analytics-workspace-blade.png)
 
 ## Install Microsoft Monitoring Agent (MMA)
 
-The next step installs MMS on the remote machine
+The next step is needed only if you have not yet configured the MMA agent on the remote machine yet.
 
 1. Select the __Machine - Azure Arc__ resource for the virtual or physical server where the SQL Server instance is installed and add the extension __Microsoft Monitoring Agent - Azure Arc__ using the  **Extensions** feature. When asked to configure the Log Analytics workspace, use the workspace ID and primary you saved in the previous step.
 
-   :::image type="content" source="media/configure-advanced-data-security/install-mma-extension.png" alt-text="Install MMA extension":::
+   ![Install MMA](media/configure-advanced-data-security/install-mma-extension.png)
 
 1. After validation succeeds, click **Create** to start the MMA Arc Extension deployment workflow. When deployment completes the status will be updated to **Succeeded**.
 
@@ -54,7 +54,7 @@ Next, you need to enable advanced data security for SQL Server instance.
 
 1. Select **Standard**. Make sure the option for **SQL servers on Machine (Preview)** is enabled.
 
-   :::image type="content" source="media/configure-advanced-data-security/upgrade-log-analytics-workspace.png" alt-text="Upgrade log analytics workspace":::
+   ![Upgrade workspace](media/configure-advanced-data-security/upgrade-log-analytics-workspace.png)
 
 ## Explore
 
@@ -62,19 +62,19 @@ Explore security anomalies and threats in Azure Security Center.
 
 1. Open your SQL Server – Azure Arc resource and select **Security** in the left menu. to see the recommendations and alerts for that instance.
 
-   :::image type="content" source="media/configure-advanced-data-security/security-heading-sql-server-arc.png" alt-text="Security heading":::
+   ![Select security heading](media/configure-advanced-data-security/security-heading-sql-server-arc.png)
 
 1. Click on any of the recommendations to see the vulnerability details in __Security Center__ .
 
-   :::image type="content" source="media/configure-advanced-data-security/vulnerabilities-report.png" alt-text="Vulnerabilities report":::
+   ![Vulnerability report](media/configure-advanced-data-security/vulnerabilities-report.png)
 
 1. Click on any security alert for full details and further explore the attack in [Azure Sentinel](https://docs.microsoft.com/azure/sentinel/overview). The following diagram is an example of the brute force alert.
 
-   :::image type="content" source="media/configure-advanced-data-security/brute-force-alert.png" alt-text="Brute force alert":::
+   ![Brute force alert](media/configure-advanced-data-security/brute-force-alert.png)
 
 1. Click on **Take action** to mitigate the alert.
 
-   :::image type="content" source="media/configure-advanced-data-security/brute-force-alert-mitigation.png" alt-text="Brute force alert mitigation":::
+   ![Alert mitigation](media/configure-advanced-data-security/brute-force-alert-mitigation.png)
 
 > [!NOTE]
 > The general __Security Center__ link at the top of the page does not use the Preview portal URL so your __SQL Server - Azure Arc__ resources will not be visible there. We recommend following the links for the individual recommendations or alerts.

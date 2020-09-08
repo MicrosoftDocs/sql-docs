@@ -17,8 +17,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_server_audit_status dynamic management view"
 ms.assetid: 4aa32d54-2ae1-437e-bbaa-7f1df1404b44
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_server_audit_status (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

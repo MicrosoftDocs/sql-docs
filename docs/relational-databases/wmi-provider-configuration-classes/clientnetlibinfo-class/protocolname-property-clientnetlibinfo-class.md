@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "ProtocolName property"
 ms.assetid: 3af93df3-69df-4a55-82cd-294ad70cc0cb
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # ProtocolName Property (ClientNetLibInfo Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

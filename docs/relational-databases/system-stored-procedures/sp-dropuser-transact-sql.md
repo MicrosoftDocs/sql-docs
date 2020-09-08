@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_dropuser"
 ms.assetid: e28f18f9-7ecf-4568-89f4-fe5c520df386
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_dropuser (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

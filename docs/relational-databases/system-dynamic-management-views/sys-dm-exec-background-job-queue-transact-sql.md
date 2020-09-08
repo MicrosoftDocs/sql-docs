@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.dm_exec_background_job_queue dynamic management function"
 ms.assetid: 05d9884f-b74c-4e3c-a23b-c90c1ea5ef02
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.dm_exec_background_job_queue (Transact-SQL)

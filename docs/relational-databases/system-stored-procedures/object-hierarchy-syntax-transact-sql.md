@@ -13,8 +13,8 @@ dev_langs:
 helpviewer_keywords: 
   - "objects [SQL Server], hierarchy syntax"
 ms.assetid: 7ed8df86-9fd2-4e09-96bc-5381fec85f65
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # Object Hierarchy Syntax (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

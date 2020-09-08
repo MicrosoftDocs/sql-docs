@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "FIPS 127-2 standard"
   - "FIPS_FLAGGER option"
 ms.assetid: e82f6bee-6cf6-4061-be22-9ad2e8e9d3d6
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # SET FIPS_FLAGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

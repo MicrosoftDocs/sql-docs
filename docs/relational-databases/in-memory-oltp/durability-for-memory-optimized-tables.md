@@ -9,8 +9,8 @@ ms.reviewer: ""
 ms.technology: in-memory-oltp
 ms.topic: conceptual
 ms.assetid: d304c94d-3ab4-47b0-905d-3c8c2aba9db6
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # Durability for Memory-Optimized Tables
  [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

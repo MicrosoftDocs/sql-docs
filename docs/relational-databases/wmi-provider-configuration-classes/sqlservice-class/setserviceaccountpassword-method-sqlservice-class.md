@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "SetServiceAccountPassword method"
 ms.assetid: e577a1ac-985c-4799-bb38-9393efc3def2
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # SetServiceAccountPassword Method (SqlService Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -5,7 +5,6 @@ ms.custom: ""
 ms.date: "03/19/2020"
 ms.prod: sql
 ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
-ms.reviewer: carlrab
 ms.technology: table-view-index
 ms.topic: conceptual
 f1_keywords: 

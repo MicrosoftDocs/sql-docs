@@ -7,6 +7,8 @@ ms.prod: sql
 ms.reviewer: ""
 ms.technology: performance
 ms.topic: conceptual
+f1_keywords: 
+  - sql13.swb.querytuning.f1
 helpviewer_keywords: 
   - "query statistics [SQL Server] live query stats"
   - "live query statistics"
@@ -20,7 +22,9 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ---
+
 # Upgrading Databases by using the Query Tuning Assistant
+
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
 When migrating from an older version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] or newer, and [upgrading the database compatibility level](../../relational-databases/databases/view-or-change-the-compatibility-level-of-a-database.md) to the latest available, a workload may be exposed to the risk of performance regression. This is also possible to a lesser degree when upgrading between [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] and any newer version.
@@ -39,6 +43,7 @@ Starting with [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 
 > QTA does not generate user workload. If running QTA in an environment that is not used by your applications, ensure that you can still execute representative test workload on the targeted [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] by other means. 
 
 ## The Query Tuning Assistant workflow
+
 The starting point of QTA assumes that a database from a previous version of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] is moved (through [CREATE DATABASE ... FOR ATTACH](../..//relational-databases/databases/attach-a-database.md) or [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md)) to a newer version of the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)], and the before-upgrade database compatibility level is not changed immediately. QTA will guide through the following steps:
 1.  Configure Query Store according to recommended settings for the workload duration (in days) set by the user. Think about the workload duration that matches your typical business cycle.
 2.  Request to start the required workload, so that Query Store can collect a baseline of workload data (if none available yet).
@@ -54,14 +59,16 @@ See below how QTA essentially only changes the last steps of the recommended wor
 ![Recommended database upgrade workflow using QTA](../../relational-databases/performance/media/qta-usage.png "Recommended database upgrade workflow using QTA")
 
 ### QTA Tuning internal search space
+
 QTA targets only `SELECT` queries that can be executed from Query Store. Parameterized queries are eligible if the compiled parameter is known. Queries that depend on runtime constructs  such as temporary tables or table variables are not eligible at this time. 
 
 QTA targets known possible patterns of query regressions due to changes in [Cardinality Estimator (CE)](../../relational-databases/performance/cardinality-estimation-sql-server.md) versions. For example, when upgrading a database from [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] and database compatibility level 110, to [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] and database compatibility level 140, some queries may regress because they were designed specifically to work with the CE version that existed in [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] (CE 70). This does not mean that reverting from CE 140 to CE 70 is the only option. If only a specific change in the newer version is introducing the regression, then it is possible to hint that query to use just the relevant part of the previous CE version that was working better for the specific query, while still leveraging all other improvements of newer CE versions. And also allow other queries in the workload that have not regressed to benefit from newer CE improvements.
 
-The CE patterns searched by QTA are the following: 
--  **Independence vs. Correlation**: If independence assumption provides better estimations for the specific query, then the query hint `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an execution plan by using minimum selectivity when estimating `AND` predicates for filters to account for correlation. For more information, see [USE HINT query hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint) and [Versions of the CE](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
--  **Simple Containment vs. Base Containment**: If a different join containment provides better estimations for the specific query, then the query hint `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an execution plan by using the Simple Containment assumption instead of the default Base Containment assumption. For more information, see [USE HINT query hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint) and [Versions of the CE](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
--  **Multi-statement table-valued function (MSTVF) fixed cardinality guess** of 100 rows vs. 1 row: If the default fixed estimation for TVFs of 100 rows does not result in a more efficient plan than using the fixed estimation for TVFs of 1 row (corresponding to the default under the query optimizer CE model of [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and earlier versions), then the query hint `QUERYTRACEON 9488` is used to generate an execution plan. For more information on MSTVFs, see [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
+The CE patterns searched by QTA are the following:
+
+- **Independence vs. Correlation**: If independence assumption provides better estimations for the specific query, then the query hint `USE HINT ('ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES')` causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an execution plan by using minimum selectivity when estimating `AND` predicates for filters to account for correlation. For more information, see [USE HINT query hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint) and [Versions of the CE](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
+- **Simple Containment vs. Base Containment**: If a different join containment provides better estimations for the specific query, then the query hint `USE HINT ('ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS')` causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to generate an execution plan by using the Simple Containment assumption instead of the default Base Containment assumption. For more information, see [USE HINT query hints](../../t-sql/queries/hints-transact-sql-query.md#use_hint) and [Versions of the CE](../../relational-databases/performance/cardinality-estimation-sql-server.md#versions-of-the-ce).
+- **Multi-statement table-valued function (MSTVF) fixed cardinality guess** of 100 rows vs. 1 row: If the default fixed estimation for TVFs of 100 rows does not result in a more efficient plan than using the fixed estimation for TVFs of 1 row (corresponding to the default under the query optimizer CE model of [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] and earlier versions), then the query hint `QUERYTRACEON 9488` is used to generate an execution plan. For more information on MSTVFs, see [Create User-defined Functions &#40;Database Engine&#41;](../../relational-databases/user-defined-functions/create-user-defined-functions-database-engine.md#TVF).
 
 > [!NOTE]
 > As a last resort, if the narrow scoped hints are not yielding good enough results for the eligible query patterns, then full use of CE 70 is also considered, by using the query hint `USE HINT ('FORCE_LEGACY_CARDINALITY_ESTIMATION')` to generate an execution plan.
@@ -70,9 +77,11 @@ The CE patterns searched by QTA are the following:
 > Any hint forces certain behaviors that may be addressed in future [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] updates. We recommend you only apply hints when no other option exists, and plan to revisit hinted code with every new upgrade. By forcing behaviors, you may be precluding your workload from benefiting of enhancements introduced in newer versions of [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].
 
 ## Starting Query Tuning Assistant for database upgrades
+
 QTA is a session-based feature that stores session state in the `msqta` schema of the user database where a session is created for the first time. Multiple tuning sessions can be created on a single database over time, but only one active session can exist for any given database.
 
 ### Creating a database upgrade session
+
 1.  In [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] open the Object Explorer and connect to [!INCLUDE[ssDE](../../includes/ssde-md.md)].
 
 2.  For the database that is intended to upgrade the database compatibility level, right-click the database name, select **Tasks**, select **Database Upgrade**, and click on **New Database Upgrade Session**.
@@ -80,22 +89,22 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 3.  In the QTA Wizard window, two steps are required to configure a session:
 
     1.  In the **Setup** window, configure Query Store to capture the equivalent of one full business cycle of workload data to analyze and tune. 
-        -  Enter the expected workload duration in days (minimum is 1 day). This will be used to propose recommended Query Store settings to tentatively allow the entire baseline to be collected. Capturing a good baseline is important to ensure any regressed queries found after changing the database compatibility level are able to be analyzed. 
-        -  Set the intended target database compatibility level that the user database should be at, after the QTA workflow has completed.
+        - Enter the expected workload duration in days (minimum is 1 day). This will be used to propose recommended Query Store settings to tentatively allow the entire baseline to be collected. Capturing a good baseline is important to ensure any regressed queries found after changing the database compatibility level are able to be analyzed. 
+        - Set the intended target database compatibility level that the user database should be at, after the QTA workflow has completed.
         Once complete, click **Next**.
     
        ![New database upgrade session setup window](../../relational-databases/performance/media/qta-new-session-setup.png "New database upgrade setup window")  
   
     2.  In the **Settings** window, two columns show the **Current** state of Query Store in the targeted database, as well as the **Recommended** settings. 
-        -  The Recommended settings are selected by default, but clicking the radio button over the Current column accepts current settings, and also allows fine-tuning the current Query Store configuration. 
-        -  The proposed *Stale Query Threshold* setting is twice the number of expected workload duration in days. This is because Query Store will need to hold information on the baseline workload and the post-database upgrade workload.
+        - The Recommended settings are selected by default, but clicking the radio button over the Current column accepts current settings, and also allows fine-tuning the current Query Store configuration. 
+        - The proposed *Stale Query Threshold* setting is twice the number of expected workload duration in days. This is because Query Store will need to hold information on the baseline workload and the post-database upgrade workload.
         Once complete, click **Next**.
 
        ![New database upgrade settings window](../../relational-databases/performance/media/qta-new-session-settings.png "New database upgrade settings window")
 
        > [!IMPORTANT]
        > The proposed *Max Size* is an arbitrary value that may be suited for a short timed workload.   
-       > However, keep in mind that it may be insufficient to hold information on the baseline and post-database upgrade workloads for very intensive workloads, namely when many different plans may be generated.   
+       > However, keep in mind that it may be insufficient to hold information on the baseline and post-database upgrade workloads for very intensive workloads, namely when many different plans may be generated.
        > If you antecipate this will be the case, enter a higher value that is appropriate.
 
 4.  The **Tuning** window concludes the session configuration, and instructs on next steps to open and proceed with the session. Once complete, click **Finish**.
@@ -114,11 +123,11 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
     > If the current session is not present, click the **Refresh** button.   
     
     The list contains the following information:
-    -  **Session ID**
-    -  **Session Name**: System-generated name comprised of the database name, date and time of session creation.
-    -  **Status**: Status of the session (Active or Closed).
-    -  **Description**: System-generated comprised of the user selected target database compatibility level and number of days for business cycle workload.
-    -  **Time Started**: Date and time of when the session was created.
+    - **Session ID**
+    - **Session Name**: System-generated name comprised of the database name, date and time of session creation.
+    - **Status**: Status of the session (Active or Closed).
+    - **Description**: System-generated comprised of the user selected target database compatibility level and number of days for business cycle workload.
+    - **Time Started**: Date and time of when the session was created.
 
     ![QTA Session Management page](../../relational-databases/performance/media/qta-session-management.png "QTA Session Management page")
 
@@ -155,13 +164,13 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
         ![QTA Step 2 Substep 3](../../relational-databases/performance/media/qta-step2-substep3.png "QTA Step 2 Substep 3")
 
         The list contains the following information:
-        -  **Query ID** 
-        -  **Query Text**: [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that can be expanded by clicking the **...** button.
-        -  **Runs**: Displays the number of executions of that query for the entire workload collection.
-        -  **Baseline Metric**: The selected metric (Duration or CpuTime) in ms for the baseline data collection before the database compatibility upgrade.
-        -  **Observed Metric**: The selected metric (Duration or CpuTime) in ms for the data collection after the database compatibility upgrade.
-        -  **% Change**: Percent change for the selected metric between the before and after database compatibility upgrade state. A negative number represents the amount of measured regression for the query.
-        -  **Tunable**: *True* or *False* depending on whether the query is eligible for experimentation.
+        - **Query ID** 
+        - **Query Text**: [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that can be expanded by clicking the **...** button.
+        - **Runs**: Displays the number of executions of that query for the entire workload collection.
+        - **Baseline Metric**: The selected metric (Duration or CpuTime) in ms for the baseline data collection before the database compatibility upgrade.
+        - **Observed Metric**: The selected metric (Duration or CpuTime) in ms for the data collection after the database compatibility upgrade.
+        - **% Change**: Percent change for the selected metric between the before and after database compatibility upgrade state. A negative number represents the amount of measured regression for the query.
+        - **Tunable**: *True* or *False* depending on whether the query is eligible for experimentation.
 
 4.  **View Analysis** allows selection of which queries to experiment and find optimization opportunities. The **Queries to show** value becomes the scope of eligible queries to experiment on. Once the desired queries are checked, click **Next** to start experimentation.  
 
@@ -177,14 +186,14 @@ QTA is a session-based feature that stores session state in the `msqta` schema o
 5.  **View Findings** allows selection of which queries to deploy the proposed optimization as a plan guide. 
 
     The list contains the following information:
-    -  **Query ID** 
-    -  **Query Text**: [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that can be expanded by clicking the **...** button.
-    -  **Status**: Displays the current experimentation state for the query.
-    -  **Baseline Metric**: The selected metric (Duration or CpuTime) in ms for the query as executed in **Step 2 Substep 3**, representing the regressed query after the database compatibility upgrade.
-    -  **Observed Metric**: The selected metric (Duration or CpuTime) in ms for the query after experimentation, for a good enough proposed optimization.
-    -  **% Change**: Percent change for the selected metric between the before and after experimentation state, representing the amount of measured improvement for the query with the proposed optimization.
-    -  **Query Option**: Link to the proposed hint that improves query execution metric.
-    -  **Can Deploy**: *True* or *False* depending on whether the proposed query optimization can be deployed as a plan guide.
+    - **Query ID** 
+    - **Query Text**: [!INCLUDE[tsql](../../includes/tsql-md.md)] statement that can be expanded by clicking the **...** button.
+    - **Status**: Displays the current experimentation state for the query.
+    - **Baseline Metric**: The selected metric (Duration or CpuTime) in ms for the query as executed in **Step 2 Substep 3**, representing the regressed query after the database compatibility upgrade.
+    - **Observed Metric**: The selected metric (Duration or CpuTime) in ms for the query after experimentation, for a good enough proposed optimization.
+    - **% Change**: Percent change for the selected metric between the before and after experimentation state, representing the amount of measured improvement for the query with the proposed optimization.
+    - **Query Option**: Link to the proposed hint that improves query execution metric.
+    - **Can Deploy**: *True* or *False* depending on whether the proposed query optimization can be deployed as a plan guide.
 
     ![QTA Step 4](../../relational-databases/performance/media/qta-step4.png "QTA Step 4")
 

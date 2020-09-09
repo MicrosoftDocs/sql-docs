@@ -26,4 +26,4 @@ The following article provides reference for the **sql** commands in the **azdat
 
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
-For more information about how to install the **azdata** tool, see [Install azdata](deploy-install-azdata.md).
+For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).

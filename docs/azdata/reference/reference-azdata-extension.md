@@ -121,4 +121,4 @@ Increase logging verbosity. Use --debug for full debug logs.
 
 For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
 
-For more information about how to install the **azdata** tool, see [Install azdata](deploy-install-azdata.md).
+For more information about how to install the **azdata** tool, see [Install azdata](..\install\deploy-install-azdata.md).

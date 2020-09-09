@@ -8,7 +8,7 @@ ms.topic: tutorial
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.custom: ""
-ms.date: 09/08/2020
+ms.date: 09/22/2020
 ---
 
 # Create an Azure SQL Server Virtual Machine (Azure Data Studio)

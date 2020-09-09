@@ -1,7 +1,7 @@
 ---
-title: azdata sql reference
+title: azdata arc resource-kind reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata sql commands.
+description: Reference article for azdata arc resource-kind commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# azdata sql
+# azdata arc resource-kind
 
 Applies to `azdata`
 
@@ -21,17 +21,17 @@ The following article provides reference for the **sql** commands in the **azdat
 
 |Command|Description|
 | --- | --- |
-[azdata sql shell](#azdata-sql-shell) | The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
-[azdata sql query](#azdata-sql-query) | The query command allows execution of a T-SQL query.
-## azdata sql shell
-The SQL DB CLI allows the user to interact with SQL Server via T-SQL.
+[azdata arc resource-kind list](#azdata-arc-resource-kind-list) | Lists the available custom resource kinds for Arc that can be defined and created.
+[azdata arc resource-kind get](#azdata-arc-resource-kind-get) | Gets the Arc resource-kind's template file.
+## azdata arc resource-kind list
+Lists the available custom resource kinds for Arc that can be defined and created. After listing, you can proceed to getting the template file needed to define or create that custom resource.
 ```bash
-azdata sql shell 
+azdata arc resource-kind list 
 ```
 ### Examples
-Example command line to start the interactive experience.
+Example command for listing the available custom resource kinds for Arc.
 ```bash
-azdata sql shell
+azdata arc resource-kind list
 ```
 ### Global Arguments
 #### `--debug`
@@ -44,22 +44,24 @@ Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
-## azdata sql query
-The query command allows execution of a T-SQL query.
+## azdata arc resource-kind get
+Gets the Arc resource-kind's template file.
 ```bash
-azdata sql query --database -d 
-                 -q
+azdata arc resource-kind get --kind -k 
+                             [--dest -d]
 ```
 ### Examples
-Select the list of tables names.  Database defaults to master.
+Example command for getting an Arc resource-kind's CRD template file.
 ```bash
-azdata sql query "SELECT name FROM SYS.TABLES"
+azdata arc resource-kind get --kind sqldb
 ```
 ### Required Parameters
-#### `--database -d`
-Database to run query in.  Default is master.
-#### `-q`
-T-SQL query to execute.
+#### `--kind -k`
+The kind of arc resource you want the template file for.
+### Optional Parameters
+#### `--dest -d`
+The directory where you"d like to place the template files.
+`template`
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

@@ -1,7 +1,7 @@
 ---
-title: azdata bdc app status reference
+title: azdata arc dc status reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc app status commands.
+description: Reference article for azdata arc dc status commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# azdata bdc app status
+# azdata arc dc status
 
 Applies to `azdata`
 
@@ -21,31 +21,21 @@ The following article provides reference for the **sql** commands in the **azdat
 
 |Command|Description|
 | --- | --- |
-[azdata bdc app status show](#azdata-bdc-app-status-show) | App service status.
-## azdata bdc app status show
-App service status.
+[azdata arc dc status show](#azdata-arc-dc-status-show) | Shows the status of the data controller.
+## azdata arc dc status show
+Shows the status of the data controller.
 ```bash
-azdata bdc app status show [--resource -r] 
-                           [--all -a]
+azdata arc dc status show [--namespace -ns] 
+                          
 ```
 ### Examples
-Get status of app service.
+Shows the status of the data controller in a particular namespace.
 ```bash
-azdata bdc app status show
-```
-Get status of app service with all instances.
-```bash
-azdata bdc app status show --all
-```
-Get status of the appproxy resource within the app service.
-```bash
-azdata bdc app status show --resource appproxy
+azdata arc dc status show --namespace <ns>
 ```
 ### Optional Parameters
-#### `--resource -r`
-Get this resource in this service.
-#### `--all -a`
-Show all the instances of each resource within the service.
+#### `--namespace -ns`
+The Kubernetes namespace in which the data controller exists.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

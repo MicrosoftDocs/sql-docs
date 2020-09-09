@@ -45,7 +45,7 @@ If you need to download the installer in a language other than the one detected 
 | :-------- | :------ |
 | Fixed an issue with embedded NUL characters. | Fixed a bug, which resulted in the driver returning an incorrect length of strings with embedded NUL characters. |
 | Fixed a memory leak in the [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) interface. | Fixed a memory leak in the [IBCPSession](ole-db-interfaces/ibcpsession-ole-db.md) interface involving bulk copy operations of `sql_variant` data type. |
-| Fixed bugs, which resulted in `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD` and `SSPROP_MUTUALLYAUTHENTICATED` properties not returning correct values. | Fix bugs, which resulted in incorrect values being returned when attempting to read the values of these properties. Details about these properties can be found [here](ole-db\service-principal-names-spns-in-client-connections-ole-db.md#data-source-properties).|
+| Fixed bugs, which resulted in incorrect values being returned for `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD` and `SSPROP_MUTUALLYAUTHENTICATED` properties. | Previous versions of the driver returned truncated values of the `SSPROP_INTEGRATEDAUTHENTICATIONMETHOD` property. Also, in the `ActiveDirectoryIntegrated` authentication case, the returned value of the `SSPROP_MUTUALLYAUTHENTICATED` property was `VARIANT_FALSE` even when mutual authentication was done.|
 
 ## Previous Releases
 

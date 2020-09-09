@@ -189,9 +189,6 @@ Setting `-h` and `--name` to the same value is a good way to easily identify the
 
 ## <a id="pullandrun2019"></a> Pull and run the 2019 container image
 
-> [!NOTE]
-> The examples shown below use the docker.exe but most of these commands also work with Podman. It provides the CLI similar to Docker container Engine. You can read more about podman [here](http://docs.podman.io/en/latest).
-
 Before starting the following steps, make sure that you have selected your preferred shell (bash, PowerShell, or cmd) at the top of this article.
 
 1. Pull the SQL Server 2019 Linux container image from Microsoft Container Registry.

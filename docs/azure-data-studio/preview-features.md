@@ -13,15 +13,15 @@ ms.date: 09/22/2020
 
 # Preview features in Azure Data Studio
 
-Azure Data Studio releases continuously. Before new features and improvements are made broadly available, they're first released as **Preview features**. While all Preview features are stable to use, the amount of time a feature remains in Preview can vary from feature to feature. By enabling Preview features, you will get full access to Azure Data Studio features and the chance to provide early feedback.
+Azure Data Studio releases continuously. Before new features and improvements are broadly available, they're first released as **Preview features**. While all Preview features are stable, the amount of time a feature remains in Preview can vary from feature to feature. By enabling Preview features, you will get full access to Azure Data Studio features and the chance to provide early feedback.
 
 ## How do I enable Preview features?
 ### On first launch
-The first time you launch Azure Data Studio, you'll be greeted with an **Initial Setup Wizard** that guides you through some simple onboarding tasks. You can configure your Preview settings in the first step of the Wizard.
+The first time you launch Azure Data Studio, you'll be greeted with an **Initial Setup Wizard** that guides you through some simple onboarding tasks. The first step of the Wizard helps you configure your Preview settings.
 
 ![Preview step in Initial Setup Wizard](./media/getting-started/initial-setup-preview-features.png)
 
-To enable preview features in the **Initial Setup Wizard**, make sure you have selected **opt in (recommended)**. It should be selected by default. When you are finished with the Initial Setup Wizard, Preview features will be enabled.
+To enable preview features in the **Initial Setup Wizard**, make sure you've selected **opt in (recommended)**. It should be selected by default. When you're finished with the Initial Setup Wizard, Preview features will be enabled.
 
 ### In Settings
 You can enable or disable Preview features anytime in your Settings.

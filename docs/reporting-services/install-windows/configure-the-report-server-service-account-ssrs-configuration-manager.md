@@ -90,7 +90,7 @@ The following guidelines and links in this section can help you decide on an app
   
 - [Configure Windows Service Accounts and Permissions](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).  
   
-- [The Services and Service Accounts Security Planning Guide](http://usergroup.doubletake.com/file_cabinet/download/0x000021733).  
+- [The Services and Service Accounts Security Planning Guide](https://www.zubairalexander.com/blog/services-and-service-accounts-security-planning-guide/).  
   
 ## Updating an Expired Password
 

@@ -122,8 +122,10 @@
       href: notebooks-kqlmagic.md
   - name: Deployment
     items:
-    - name: Download Azure Data Studio
-      href: download-azure-data-studio.md
+    - name: Deploy Azure SQL Database
+      href: deploy-azure-sql-database.md
+    - name: Deploy Azure SQL Server Virtual Machine
+      href: deploy-azure-sql-server-vm.md
   - name: Dashboards & insight widgets
     href: insight-widgets.md
   - name: Code snippets

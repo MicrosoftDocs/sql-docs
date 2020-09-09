@@ -34,8 +34,7 @@ Azure Arc enabled SQL Server supports SQL Server 2012 or higher running on one o
 - Ubuntu 16.04 and 18.04 (x64)
 - CentOS Linux 7 (x64)
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
-- Red Hat Enterprise Linux (RHEL) 7 (x64)
-- Amazon Linux 2 (x64)
+
 
 ### Required permissions
 

@@ -16,8 +16,10 @@ zone_pivot_groups: cs1-command-shell
 ---
 
 # Quickstart: Run SQL Server container images with Docker
-
 [!INCLUDE [SQL Server - Linux](../includes/applies-to-version/sql-linux.md)]
+
+> [!NOTE]
+> The examples shown below use the docker.exe but most of these commands also work with Podman. It provides the CLI similar to Docker container Engine. You can read more about podman [here](http://docs.podman.io/en/latest).
 
 <!--SQL Server 2017 on Linux-->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -35,9 +37,6 @@ In this quickstart, you use Docker to pull and run the SQL Server 2017 container
 > Starting with SQL Server 2019 CU3, Ubuntu 18.04 is supported.
 
 In this quickstart, you use Docker to pull and run the SQL Server 2019 container image, [mssql-server](https://hub.docker.com/r/microsoft/mssql-server). Then connect with **sqlcmd** to create your first database and run queries.
-
-> [!NOTE]
-> The examples shown below use the docker.exe but most of these commands also work with Podman. It provides the CLI similar to Docker container Engine. You can read more about podman [here](http://docs.podman.io/en/latest).
 
 > [!TIP]
 > This quickstart creates SQL Server 2019 containers. If you prefer to create SQL Server 2017 containers, see the [SQL Server 2017 version of this article](quickstart-install-connect-docker.md?view=sql-server-linux-2017).

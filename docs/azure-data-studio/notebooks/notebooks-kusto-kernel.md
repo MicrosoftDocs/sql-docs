@@ -13,9 +13,9 @@ ms.date: 09/22/2020
 
 # Create and run a Kusto notebook (Preview)
 
-You can use the Kusto extension to create **[Azure Data Studio notebooks](notebooks-guidance.md)** using the Kusto kernel.
+This article shows you how to create and run an **[Azure Data Studio notebook](notebooks-guidance.md)** using the Kusto extension for an Azure Data Explorer cluster.
 
-This article shows you how to create and run a notebook in Azure Data Studio using the Kusto extension for an Azure Data Explorer cluster.
+The Kusto extension allows you to use the Kusto kernel.
 
 The Kusto extension is in preview.
 
@@ -35,11 +35,11 @@ The following steps show how to create a notebook file in Azure Data Studio:
 
 2. Select under the **Connections** in the **Servers** window. Then select **New Notebook**.
 
-   ![Open notebook](notebooks/media/notebook-tutorial/azure-data-studio-open-notebook.png)
+   ![Open notebook](media/notebook-tutorial/azure-data-studio-open-notebook.png)
 
 3. Wait for the **Kernel** and the target context (**Attach to**) to be populated. Confirm that the **Kernel** is set to **SQL**, and set **Attach to** for your SQL Server (in this example it's *localhost*).
 
-   ![Set Kernel and Attach to](notebooks/media/notebook-tutorial/set-kernel-and-attach-to.png)
+   ![Set Kernel and Attach to](media/notebook-tutorial/set-kernel-and-attach-to.png)
 
 You can save the notebook using the **Save** or **Save as...** command from the **File** menu.
 
@@ -51,11 +51,11 @@ To change the Kusto connection for a notebook:
 
 1. Select the **Attach to** menu from the notebook toolbar and then select **Change Connection**.
 
-   ![Select the Attach to menu in the notebook toolbar](./notebooks/media/notebook-tutorial/select-attach-to-1.png)
+   ![Select the Attach to menu in the notebook toolbar](./media/notebook-tutorial/select-attach-to-1.png)
 
 2. Now you can either select a recent connection server or enter new connection details to connect.
 
-   ![Select a server from the Attach to menu](./notebooks/media/notebook-tutorial/select-attach-to-2.png)
+   ![Select a server from the Attach to menu](./media/notebook-tutorial/select-attach-to-2.png)
 
 ## Run a code cell
 
@@ -65,7 +65,7 @@ For example:
 
 1. Add a new code cell by selecting the **+Code** command in the toolbar.
 
-   ![Notebook toolbar](notebooks/media/notebooks-guidance/notebook-toolbar.png)
+   ![Notebook toolbar](media/notebooks-guidance/notebook-toolbar.png)
 
 1. Copy and paste the following example into the cell and click **Run cell**. This example creates a new database.
 
@@ -87,7 +87,7 @@ For example:
    GO
    ```
 
-   ![Run notebook cell](notebooks/media/notebook-tutorial/run-notebook-cell.png)
+   ![Run notebook cell](media/notebook-tutorial/run-notebook-cell.png)
 
 ## Save the result
 
@@ -105,7 +105,7 @@ SELECT PI() AS PI;
 GO
 ```
 
-![Run notebook cell](notebooks/media/notebook-tutorial/run-notebook-cell-2.png)
+![Run notebook cell](media/notebook-tutorial/run-notebook-cell-2.png)
 
 ## Next steps
 

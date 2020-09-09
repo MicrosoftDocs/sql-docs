@@ -42,7 +42,7 @@ You can save the notebook using the **Save** or **Save as...** command from the 
 
 To open a notebook, you can use the **Open file...** command in the **File** menu, select **Open file** on the **Welcome** page, or use the **File: Open** command from the command palette.
 
-## Change the SQL connection
+## Change the Kusto connection
 
 To change the Kusto connection for a notebook:
 

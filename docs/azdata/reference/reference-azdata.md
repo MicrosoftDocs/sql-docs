@@ -11,6 +11,8 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
+# azdata Reference
+
 | Command| Description|
 | --- | --- |
 |[azdata bdc](reference-azdata-bdc.md) | Select, manage, and operate SQL Server Big Data Clusters. |

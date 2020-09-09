@@ -8,12 +8,12 @@ author: hannahqin
 ms.author: hanqin
 ms.reviewer: maghan
 ms.custom: seodec18
-ms.date: 9/12/2020
+ms.date: 09/22/2020
 ---
 
 # Preview features in Azure Data Studio
 
-Azure Data Studio releases continuously. Before new features and improvements are made broadly available, they're first released as **Preview features**. While all Preview features are stable to use, the amount of time a feature remains in Preview can vary from feature to feature. By enabling Preview features, you will get full access to ADS features and the chance to provide early feedback.
+Azure Data Studio releases continuously. Before new features and improvements are made broadly available, they're first released as **Preview features**. While all Preview features are stable to use, the amount of time a feature remains in Preview can vary from feature to feature. By enabling Preview features, you will get full access to Azure Data Studio features and the chance to provide early feedback.
 
 ## How do I enable Preview features?
 ### On first launch

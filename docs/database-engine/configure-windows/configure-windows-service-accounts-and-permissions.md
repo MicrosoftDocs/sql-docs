@@ -258,7 +258,7 @@ Depending on the service configuration, the service account for a service or ser
 
 ### <a name="Windows"></a> Windows Privileges and Rights
 
-The account assigned to start a service needs the **Start, stop and pause permission** for the service. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program automatically assigns this. First install Remote Server Administration Tools (RSAT). See [Remote Server Administration Tools for Windows 7](https://www.microsoft.com/download/details.aspx?id=7887).
+The account assigned to start a service needs the **Start, stop and pause permission** for the service. The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup program automatically assigns this. First install Remote Server Administration Tools (RSAT). See [Remote Server Administration Tools for Windows 7](https://github.com/MicrosoftDocs/sql-docs-pr/blob/live/docs/database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md).
 
 The following table shows permissions that [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Setup requests for the per-service SIDs or local Windows groups used by [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] components.
 

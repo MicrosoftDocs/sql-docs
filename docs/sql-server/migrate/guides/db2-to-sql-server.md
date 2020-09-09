@@ -15,7 +15,7 @@ author: MashaMSFT
 ms.author: mathoma
 ---
 # Migration guide: DB2 to SQL Server
-[!INCLUDE[sqlserver](../../../includes/applies-to-version/sqlserver.md)]
+[!INCLUDE[sqlserver](../../../includes/applies-to-version/sql-asdb-asdbmi.md)]
 
 This migration guide teaches you to migrate your user databases from DB2 to SQL Server using the SQL Server Migration Assistant for DB2. 
 
@@ -32,10 +32,6 @@ To migrate your DB2 database to SQL Server, you need:
 ## Pre-migration
 
 Before you begin your migration, discover the topology of your environment and assess the feasibility of your intended migration.
-
-### Discover
-
-The goal of the Discover phase is to identify existing data sources and details about the features that are being used to get a better understanding of and plan for the migration. This process involves scanning your network to identify all your organization’s DB2 instances together with the version and features in use.
 
 ### Assess and convert
 
@@ -55,16 +51,15 @@ To create an assessment, follow these steps:
    :::image type="content" source="media/db2-to-sql-server/connect-to-db2.png" alt-text="Connect to your DB2 instance":::
 
 
-1. Right-click the DB2 schema you want to migrate, and then choose **Create report**. This will generate an HTML report . 
+1. Right-click the DB2 schema you want to migrate, and then choose **Create report**. This will generate an HTML report. Alternatively, you can choose **Create report** from the navigation bar after selecting the schema. 
 
    :::image type="content" source="media/db2-to-sql-server/create-report.png" alt-text="Right-click the schema and choose create report":::
 
-1. Review the HTML report to identify conversion statistics and any errors or warnings. You can also open the report in Excel to get an inventory of DB2 objects and the effort required to perform schema conversions. The default location for the report is in the report folder within SSMAProjects.
+1. Review the HTML report to understand conversion statistics and any errors or warnings. You can also open the report in Excel to get an inventory of DB2 objects and the effort required to perform schema conversions. The default location for the report is in the report folder within SSMAProjects.
 
    For example: `drive:\<username>\Documents\SSMAProjects\MyDB2Migration\report\report_<date>`. 
 
    :::image type="content" source="media/db2-to-sql-server/report.png" alt-text="Review the report to identify an errors or warnings":::
-
 
 
 ### Validate data types
@@ -83,7 +78,7 @@ Validate the default data type mappings and change them based on requirements if
 
 To convert the schema, follow these steps:
 
-1. Add dynamic or ad-hoc queries to statements. Right-click the node, and then choose **Add statements**. 
+1. (Optional) Add dynamic or ad-hoc queries to statements. Right-click the node, and then choose **Add statements**. 
 1. Select **Connect to SQL Server**. 
     1. Enter connection details to connect to your SQL Server instance. 
     1. Choose an existing database on the target server, or provide a new name to create a new database. 
@@ -92,18 +87,22 @@ To convert the schema, follow these steps:
    :::image type="content" source="media/db2-to-sql-server/connect-to-sql-server.png" alt-text="Fill in details to connect to SQL Server":::
 
 
-1. Right-click the schema and then choose **Convert Schema**. 
+1. Right-click the schema and then choose **Convert Schema**. Alternatively, you can choose **Convert Schema** from the top navigation bar after selecting your schema. 
 
    :::image type="content" source="media/db2-to-sql-server/convert-schema.png" alt-text="Right-click the schema and choose convert schema":::
 
 1. After the conversion completes, compare and review the structure of the schema to identify potential problems and address them based on the recommendations. 
+
+   :::image type="content" source="media/db2-to-sql-server/compare-review-schema-structure.png" alt-text="Compare and review the structure of the schema to identify potential problems and address them based on recommendations.":::
+
 1. Save the project locally for an offline schema remediation exercise. Select **Save Project** from the **File** menu. 
+
 
 ## Migrate
 
 After you have completed assessing your databases and addressing any discrepancies, the next step is to execute the migration process.
 
-To migrate your data, follow these steps:
+To publish your schema and migrate your data, follow these steps:
 
 1. Publish the schema: Right-click the database from the **Databases** node in the **SQL Server Metadata Explorer** and choose **Synchronize with Database**.
 
@@ -138,7 +137,7 @@ The test approach for database migration consists of the following activities:
 1. **Run performance tests**: Run performance test against the source and the target, and then analyze and compare the results.
 
    > [!NOTE]
-   > For assistance developing and running post-migration validation tests, consider the Data Quality Solution available from the partner QuerySurge. 
+   > For assistance developing and running post-migration validation tests, consider the Data Quality Solution available from the partner [QuerySurge](https://www.querysurge.com/company/partners/microsoft). 
 
 ## Migration assets 
 

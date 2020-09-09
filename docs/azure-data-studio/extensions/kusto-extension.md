@@ -115,6 +115,7 @@ The extensions settings look like this:
 
 ## Next steps
 
+- [Create and run a Kusto notebook](../notebooks/notebooks-kusto-kernel.md)
 - [Kqlmagic](../notebooks-kqlmagic.md)
 - [SQL to Kusto cheat sheet](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [What is Azure Data Explorer?](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)

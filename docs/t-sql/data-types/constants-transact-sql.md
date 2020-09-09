@@ -41,6 +41,9 @@ A constant, also known as a literal or a scalar value, is a symbol that represen
   
 ## Character string constants
 Character string constants are enclosed in single quotation marks and include alphanumeric characters (a-z, A-Z, and 0-9) and special characters, such as exclamation point (!), at sign (@), and number sign (#). Character string constants are assigned the default collation of the current database, unless the COLLATE clause is used to specify a collation. Character strings typed by users are evaluated through the code page of the computer and are translated to the database default code page if it is required.
+
+> [NOTE]
+> When a [UTF8-enabled collation](../../relational-databases/collations/collation-and-unicode-support.md#utf8) is specified using the COLLATE clause, the character string behaves like a [Unicode string](#unicode-strings).
   
 If the QUOTED_IDENTIFIER option has been set OFF for a connection, character strings can also be enclosed in double quotation marks, but the Microsoft [OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) and [ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) automatically use `SET QUOTED_IDENTIFIER ON`. We recommend using single quotation marks.
   
@@ -64,12 +67,17 @@ Character string constants support enhanced [collations](../../relational-databa
 > Character constants greater than 8000 bytes are typed as **varchar(max)** data.  
   
 ## Unicode strings
-Unicode strings have a format similar to character strings but are preceded by an N identifier (N stands for National Language in the SQL-92 standard). The N prefix must be uppercase. For example, `'Michél'` is a character constant while `N'Michél'` is a Unicode constant. Unicode constants are interpreted as Unicode data, and are not evaluated by using a code page. Unicode constants do have a collation. This collation primarily controls comparisons and case sensitivity. Unicode constants are assigned the default collation of the current database, unless the COLLATE clause is used to specify a collation. Unicode data uses the variable-width encoding. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).
+Unicode strings have a format similar to character strings but are preceded by an N identifier (N stands for National Language in the SQL-92 standard) or specified through the use of the COLLATE clause with an [UTF8-enabled collation](../../relational-databases/collations/collation-and-unicode-support.md#utf8). 
+
+> [!IMPORTANT]  
+> The N prefix must be uppercase. 
+
+For example, `'Michél'` is a character constant while `N'Michél'` is a Unicode constant. Unicode constants are interpreted as Unicode data, and are not evaluated by using a code page. Unicode constants do have a collation. This collation primarily controls comparisons and case sensitivity. Unicode constants are assigned the default collation of the current database, unless the COLLATE clause is used to specify a collation. Unicode data uses the variable-width encoding. For more information, see [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md#storage_differences).
   
 Unicode string constants support enhanced collations.
   
 > [!NOTE]  
->  Unicode constants greater than 8000 bytes are typed as **nvarchar(max)** data.  
+> Unicode constants greater than 8000 bytes are typed as **nvarchar(max)** data.  
   
 ## Binary constants
 Binary constants have the prefix `0x` and are a string of hexadecimal numbers. They are not enclosed in quotation marks.

@@ -38,8 +38,6 @@
     items:
     - name: Extensions overview
       href: extensions.md
-    - name: Azure Arc extension
-      href: extensions/azure-arc-extension.md
     - name: Data Virtualization extension
       href: data-virtualization-extension.md
     - name: Machine Learning extension

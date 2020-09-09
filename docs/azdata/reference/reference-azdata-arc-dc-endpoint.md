@@ -1,7 +1,7 @@
 ---
-title: azdata bdc status reference
+title: azdata arc dc endpoint reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc status commands.
+description: Reference article for azdata arc dc endpoint commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# azdata bdc status
+# azdata arc dc endpoint
 
 Applies to `azdata`
 
@@ -21,31 +21,21 @@ The following article provides reference for the **sql** commands in the **azdat
 
 |Command|Description|
 | --- | --- |
-[azdata bdc status show](#azdata-bdc-status-show) | Shows the status of the BDC.
-## azdata bdc status show
-Shows the status of the BDC.
+[azdata arc dc endpoint list](#azdata-arc-dc-endpoint-list) | List the data controller endpoint.
+## azdata arc dc endpoint list
+List the data controller endpoint.
 ```bash
-azdata bdc status show [--resource -r] 
-                       [--all -a]
+azdata arc dc endpoint list [--endpoint-name -e] 
+                            
 ```
 ### Examples
-BDC status where the user is logged in.
+Lists the data controller endpoint in a particular namespace.
 ```bash
-azdata bdc status show
-```
-BDC status with all instances of the resources included.
-```bash
-azdata bdc status show --all
-```
-BDC status of the services which include the control resource.
-```bash
-azdata bdc status show --resource control
+azdata arc dc endpoint list --namespace <ns>
 ```
 ### Optional Parameters
-#### `--resource -r`
-Get the services associated with this resource.
-#### `--all -a`
-Show all the instances of each resource within the services.
+#### `--endpoint-name -e`
+Arc data controller endpoint name.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

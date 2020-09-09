@@ -1,10 +1,10 @@
 ---
 title: azdata bdc reference
 titleSuffix: SQL Server big data clusters
-description: Use this reference article to understand SQL commands in the azdata tool, specifically the many bdc commands. 
+description: Reference article for azdata bdc commands.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
+ms.reviewer: seanw
 ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
@@ -13,14 +13,14 @@ ms.technology: big-data-cluster
 
 # azdata bdc
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Applies to `azdata`
 
-The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
-| Command | Description |
+
+|Command|Description|
 | --- | --- |
-[azdata bdc spark](reference-azdata-bdc-spark.md) | The Spark commands allow the user to interact with the Spark system by creating and managing sessions, statements, and batches.
 [azdata bdc create](#azdata-bdc-create) | Create Big Data Cluster.
 [azdata bdc delete](#azdata-bdc-delete) | Delete Big Data Cluster.
 [azdata bdc upgrade](#azdata-bdc-upgrade) | Update the images deployed in each container in the SQL Server Big Data Cluster.
@@ -35,6 +35,7 @@ The following article provides reference for the `sql` commands in the `azdata` 
 [azdata bdc gateway](reference-azdata-bdc-gateway.md) | Gateway service commands.
 [azdata bdc app](reference-azdata-bdc-app.md) | App service commands.
 [azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | The HDFS module provides commands to access an HDFS file system.
+[azdata bdc spark](reference-azdata-bdc-spark.md) | The Spark commands allow the user to interact with the Spark system by creating and managing sessions, statements, and batches.
 ## azdata bdc create
 Create a SQL Server Big Data Cluster - Kubernetes configuration is required on your system along with the following environment variables ['AZDATA_USERNAME', 'AZDATA_PASSWORD'].
 ```bash
@@ -68,7 +69,7 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--name -n`
 Big data cluster name, used for kubernetes namespaces.
 #### `--config-profile -c`
-Big data cluster config profile, used for deploying the cluster: ['openshift-dev-test', 'aro-dev-test-ha', 'aks-dev-test', 'openshift-prod', 'aks-dev-test-ha', 'kubeadm-prod', 'aro-dev-test', 'kubeadm-dev-test']
+Big data cluster config profile, used for deploying the cluster: ['aks-dev-test-ha', 'aro-dev-test-ha', 'kubeadm-prod', 'openshift-prod', 'openshift-dev-test', 'kubeadm-dev-test', 'aro-dev-test', 'aks-dev-test']
 #### `--accept-eula -a`
 Do you accept the license terms? [yes/no]. If you do not want to use this arg, you may set the environment variable ACCEPT_EULA to 'yes'. The license terms for azdata can be viewed at https://aka.ms/eula-azdata-en.
 #### `--node-label -l`
@@ -83,7 +84,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc delete
@@ -111,7 +112,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc upgrade
@@ -163,10 +164,12 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](../install/deploy-install-azdata.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
+
+For more information about how to install the **azdata** tool, see [Install azdata](deploy-install-azdata.md).

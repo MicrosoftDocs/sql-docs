@@ -1,7 +1,7 @@
 ---
-title: azdata bdc status reference
+title: azdata arc postgres server endpoint reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc status commands.
+description: Reference article for azdata arc postgres server endpoint commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# azdata bdc status
+# azdata arc postgres server endpoint
 
 Applies to `azdata`
 
@@ -21,31 +21,24 @@ The following article provides reference for the **sql** commands in the **azdat
 
 |Command|Description|
 | --- | --- |
-[azdata bdc status show](#azdata-bdc-status-show) | Shows the status of the BDC.
-## azdata bdc status show
-Shows the status of the BDC.
+[azdata arc postgres server endpoint list](#azdata-arc-postgres-server-endpoint-list) | List PostgreSQL server group endpoints.
+## azdata arc postgres server endpoint list
+List PostgreSQL server group endpoints.
 ```bash
-azdata bdc status show [--resource -r] 
-                       [--all -a]
+azdata arc postgres server endpoint list --name -n 
+                                         [--engine-version -ev]
 ```
 ### Examples
-BDC status where the user is logged in.
+List PostgreSQL server group endpoints.
 ```bash
-azdata bdc status show
+azdata arc postgres server endpoint list -n postgres01
 ```
-BDC status with all instances of the resources included.
-```bash
-azdata bdc status show --all
-```
-BDC status of the services which include the control resource.
-```bash
-azdata bdc status show --resource control
-```
+### Required Parameters
+#### `--name -n`
+Name of the PostgreSQL server group.
 ### Optional Parameters
-#### `--resource -r`
-Get the services associated with this resource.
-#### `--all -a`
-Show all the instances of each resource within the services.
+#### `--engine-version -ev`
+Must be 11 or 12. It is possible to create multiple PostgreSQL server groups with the same name but different engine version. Engine version will be used in conjunction with name to uniquely identify the PostgreSQL server group in such case. Otherwise engine version can be optional.
 ### Global Arguments
 #### `--debug`
 Increase logging verbosity to show all debug logs.

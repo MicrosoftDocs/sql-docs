@@ -1,7 +1,7 @@
 ---
-title: azdata bdc control reference
+title: azdata arc sql reference
 titleSuffix: SQL Server big data clusters
-description: Reference article for azdata bdc control commands.
+description: Reference article for azdata arc sql commands.
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: seanw
@@ -11,7 +11,7 @@ ms.prod: sql
 ms.technology: big-data-cluster
 ---
 
-# azdata bdc control
+# azdata arc sql
 
 Applies to `azdata`
 
@@ -21,7 +21,7 @@ The following article provides reference for the **sql** commands in the **azdat
 
 |Command|Description|
 | --- | --- |
-[azdata bdc control status](reference-azdata-bdc-control-status.md) | Control service status commands.
+[azdata arc sql mi](reference-azdata-arc-sql-mi.md) | Create, delete, and manage SQL managed instance.
 
 ## Next steps
 

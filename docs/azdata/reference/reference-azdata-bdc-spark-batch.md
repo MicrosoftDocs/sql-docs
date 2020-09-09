@@ -1,10 +1,10 @@
 ---
 title: azdata bdc spark batch reference
 titleSuffix: SQL Server big data clusters
-description: Use this reference article to understand SQL commands in the azdata tool, specifically the bdc spark batch commands. 
+description: Reference article for azdata bdc spark batch commands.
 author: MikeRayMSFT
 ms.author: mikeray
-ms.reviewer: mihaelab
+ms.reviewer: seanw
 ms.date: 06/22/2020
 ms.topic: reference
 ms.prod: sql
@@ -13,12 +13,13 @@ ms.technology: big-data-cluster
 
 # azdata bdc spark batch
 
-[!INCLUDE[SQL Server 2019](../../includes/applies-to-version/sqlserver2019.md)]
+Applies to `azdata`
 
-The following article provides reference for the `sql` commands in the `azdata` tool. For more information about other `azdata` commands, see [azdata reference](reference-azdata.md).
+The following article provides reference for the **sql** commands in the **azdata** tool. For more information about other **azdata** commands, see [azdata reference](reference-azdata.md)
 
 ## Commands
-| Command | Description |
+
+|Command|Description|
 | --- | --- |
 [azdata bdc spark batch create](#azdata-bdc-spark-batch-create) | Create a new Spark batch.
 [azdata bdc spark batch list](#azdata-bdc-spark-batch-list) | List all the batches in Spark.
@@ -103,7 +104,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc spark batch list
@@ -124,7 +125,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc spark batch info
@@ -149,7 +150,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc spark batch log
@@ -174,7 +175,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc spark batch state
@@ -199,7 +200,7 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 ## azdata bdc spark batch delete
@@ -224,10 +225,12 @@ Show this help message and exit.
 #### `--output -o`
 Output format.  Allowed values: json, jsonc, table, tsv.  Default: json.
 #### `--query -q`
-JMESPath query string. See [http://jmespath.org/](http://jmespath.org) for more information and examples.
+JMESPath query string. See [http://jmespath.org/](http://jmespath.org/]) for more information and examples.
 #### `--verbose`
 Increase logging verbosity. Use --debug for full debug logs.
 
 ## Next steps
 
-For more information about other `azdata` commands, see [azdata reference](reference-azdata.md). For more information about how to install the `azdata` tool, see [Install azdata to manage SQL Server 2019 big data clusters](../install/deploy-install-azdata.md).
+For more information about other **azdata** commands, see [azdata reference](reference-azdata.md). 
+
+For more information about how to install the **azdata** tool, see [Install azdata](deploy-install-azdata.md).

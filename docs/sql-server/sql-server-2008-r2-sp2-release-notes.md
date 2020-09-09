@@ -25,7 +25,7 @@ Added the dynamic management view (DMV) **sys.dm_db_stats_properties**. You can 
 ## 2.0 Before You Install  
 For information about how to install [!INCLUDE[ssKilimanjaro](../includes/sskilimanjaro-md.md)] updates, see [SQL Server 2008 R2 Servicing Documentation](https://msdn.microsoft.com/library/dd638062(SQL.105).aspx).  
   
-For general information about how to get started and install SQL Server 2008 R2, see the SQL Server 2008 R2 Readme. The Readme document is available on the installation media. You can also find more information on the [SQL Server Forums](https://social.msdn.microsoft.com/Forums/category/sqlserver/).
+For general information about how to get started and install SQL Server 2008 R2, see the SQL Server 2008 R2 Readme. The Readme document is available on the installation media.
   
 ### 2.1 Choose the Correct File to Download and Install  
 Use the following table to determine which file to download and install. Verify that you have the correct system requirements before installing the service pack. The system requirements are provided on the download pages that are linked to in the table.  

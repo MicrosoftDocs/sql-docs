@@ -1,6 +1,6 @@
 ---
 title: Preview features in Azure Data Studio
-description: 
+description: Preview features provide access to full functionality in Azure Data Studio. Learn more about what they are and how to enable them, and explore a list of features currently in Preview.
 ms.prod: azure-data-studio
 ms.technology: azure-data-studio
 ms.topic: conceptual

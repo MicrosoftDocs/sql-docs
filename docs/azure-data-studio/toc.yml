@@ -38,10 +38,10 @@
     items:
     - name: Extensions overview
       href: extensions.md
-    - name: Azure Arc extension
-      href: extensions/azure-arc-extension.md
     - name: Data Virtualization extension
       href: data-virtualization-extension.md
+    - name: Kusto extension
+      href: extensions/kusto-extension.md
     - name: Machine Learning extension
       items:
       - name: Machine Learning extension overview
@@ -75,7 +75,7 @@
     - name: SQL Server Agent
       href: sql-server-agent-extension.md
     - name: SQL Server Central Management Servers extension
-      href: sql-server-cms-extension.md        
+      href: sql-server-cms-extension.md
     - name: SQL Server dacpac extension
       href: sql-server-dacpac-extension.md
     - name: SQL Server Import

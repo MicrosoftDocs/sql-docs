@@ -48,8 +48,8 @@ The **b**ulk **c**opy **p**rogram utility (**bcp**) bulk copies data between an 
 
 ## Download the latest version of bcp Utility
 
-**[![download](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![download](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![Download bcp for x64](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x64)](https://go.microsoft.com/fwlink/?linkid=2082790)**
+<br>**[![Download bcp for x86](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x86)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
 The command-line tools are General Availability (GA), however they're being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
@@ -760,9 +760,5 @@ bcp.exe MyTable in "D:\data.csv" -T -c -C 65001 -t , ...
 - [sp_configure &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md)
 - [sp_tableoption &#40;Transact-SQL&#41;](../relational-databases/system-stored-procedures/sp-tableoption-transact-sql.md)
 - [Format Files for Importing or Exporting Data &#40;SQL Server&#41;](../relational-databases/import-export/format-files-for-importing-or-exporting-data-sql-server.md)
-
-## Forum Feedback
-
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -42,7 +42,7 @@ A constant, also known as a literal or a scalar value, is a symbol that represen
 ## Character string constants
 Character string constants are enclosed in single quotation marks and include alphanumeric characters (a-z, A-Z, and 0-9) and special characters, such as exclamation point (!), at sign (@), and number sign (#). Character string constants are assigned the default collation of the current database, unless the COLLATE clause is used to specify a collation. Character strings typed by users are evaluated through the code page of the computer and are translated to the database default code page if it is required.
   
-If the QUOTED_IDENTIFIER option has been set OFF for a connection, character strings can also be enclosed in double quotation marks, but the Microsoft [OLE DB Driver for SQL Server](../../sql/connect/oledb/oledb-driver-for-sql-server.md) and [ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) automatically use `SET QUOTED_IDENTIFIER ON`. We recommend using single quotation marks.
+If the QUOTED_IDENTIFIER option has been set OFF for a connection, character strings can also be enclosed in double quotation marks, but the Microsoft [OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) and [ODBC Driver for SQL Server](../../connect/odbc/download-odbc-driver-for-sql-server.md) automatically use `SET QUOTED_IDENTIFIER ON`. We recommend using single quotation marks.
   
 If a character string enclosed in single quotation marks contains an embedded quotation mark, represent the embedded single quotation mark with two single quotation marks. This is not required in strings embedded in double quotation marks.
   

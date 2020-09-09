@@ -40,22 +40,6 @@ To install the Kusto extension in Azure Data Studio, follow the steps below.
 
 :::image type="content" source="media/kusto-extension/kusto-extension-icon.png" alt-text="Kusto extension":::
 
-## Extension settings
-
-To change the settings for the Kusto extension, follow the steps below.
-
-1. Open the extension manager in Azure Data Studio. You can either select the extensions icon or select **Extensions** in the View menu.
-
-2. Find the **Kusto (KQL)** extension.
-
-3. Select the **Manage** icon.
-
-4. Select the **Extension Settings** icon.
-
-The extensions settings look like this:
-
-:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Machine Learning extension settings":::
-
 ## How to connect to an Azure Data Explorer cluster
 
 ### Find your Azure Data Explorer cluster
@@ -112,6 +96,22 @@ StormEvents
 ```
 
 For more information about writing Kusto queries, visit [Write queries for Azure Data Explorer](https://docs.microsoft.com/azure/data-explorer/write-queries#overview-of-the-query-language)
+
+## View extension settings
+
+To change the settings for the Kusto extension, follow the steps below.
+
+1. Open the extension manager in Azure Data Studio. You can either select the extensions icon or select **Extensions** in the View menu.
+
+2. Find the **Kusto (KQL)** extension.
+
+3. Select the **Manage** icon.
+
+4. Select the **Extension Settings** icon.
+
+The extensions settings look like this:
+
+:::image type="content" source="media/kusto-extension/kusto-extension-settings.png" alt-text="Machine Learning extension settings":::
 
 ## Next steps
 

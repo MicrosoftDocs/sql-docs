@@ -145,15 +145,15 @@ The following examples show how the connection properties are used in a connecti
 
 #### Use Managed Identity to authenticate to AKV
 ```
-"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=keyStoreManagedIdentity;"
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultManagedIdentity;"
 ```
 #### Use Managed Identity and the principal ID to authenticate to AKV
 ```
-"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=keyStoreManagedIdentity;keyStorePrincipal=<principalId>"
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultManagedIdentity;keyStorePrincipal=<principalId>"
 ```
 #### Use clientId and clientSecret to authentication to AKV
 ```
-"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=keyStoreSecret;keyStorePrincipalId=<clientId>;keyStoreSecret=<clientSecret>"
+"jdbc:sqlserver://<server>:<port>;columnEncryptionSetting=Enabled;keyStoreAuthentication=KeyVaultClientSecret;keyStorePrincipalId=<clientId>;keyStoreSecret=<clientSecret>"
 ```
 Users are encouraged to use these connection properties to specify the type of authentication used for the Key Stores instead of using the `SQLServerColumnEncryptionAzureKeyVaultProvider`.
 

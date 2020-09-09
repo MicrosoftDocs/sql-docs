@@ -24,7 +24,7 @@ The following prerequisites are also required:
 - [Azure Data Studio installed](../download-azure-data-studio.md).
 - [An Azure Data Explorer cluster and database](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
 
-## Create a  notebook
+## Create a Kusto notebook
 
 The following steps show how to create a notebook file in Azure Data Studio:
 

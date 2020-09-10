@@ -28,13 +28,13 @@ The following diagram illustrates the architecture of Azure Arc enable SQL Serve
 
 ### Supported SQL versions and operating systems
 
-Azure Arc enabled SQL Server supports SQL Server 2012 or higher running on one of the following versions of the Windows and Linux operating system:
+Azure Arc enabled SQL Server supports SQL Server 2012 or higher running on one of the following versions of the Windows or Linux operating system:
+
 - Windows Server 2012 R2 and higher
 - Ubuntu 16.04 and 18.04 (x64)
 - CentOS Linux 7 (x64)
 - SUSE Linux Enterprise Server (SLES) 15 (x64)
-- Red Hat Enterprise Linux (RHEL) 7 (x64)
-- Amazon Linux 2 (x64)
+
 
 ### Required permissions
 
@@ -52,9 +52,13 @@ Review [networking configuration, transport layer security and resource provider
 
 The public preview is available in the following regions:
 - East US
+- East US 2
 - West US 2
+- Australia East
 - Southeast Asia
+- North Europe
 - West Europe
+- UK South
 
 ## Next steps
 

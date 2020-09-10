@@ -46,7 +46,7 @@ To install the Kusto extension in Azure Data Studio, follow the steps below.
 
 Find your Azure Data Explorer cluster in the [Azure portal](https://ms.portal.azure.com/#home), then find the URI for the cluster.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri-03.png" alt-text="URI":::
+:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="URI":::
 
 However, you can get started immediately using the *help.kusto.windows.net* cluster.
 

@@ -31,11 +31,11 @@ The following steps show how to create a notebook file in Azure Data Studio:
 
 2. Navigate to the **Connections** pane and under the **Servers** window , right-click the Kusto database and select *New Notebook*. For this article, we use the help.kusto.windows.net cluster with the Samples database data.
 
-   ![Open notebook](media/notebooks-kusto-kernel/kusto-new-notebook.png)
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-new-notebook.png" alt-text="Open notebook":::
 
 3. Select *Kusto* for the **Kernel**. Confirm that **Attach to** is set to the cluster name and database. For this article, we use the help.kusto.windows.net cluster with the Samples database data.
 
-   ![Set Kernel and Attach to](media/notebooks-kusto-kernel/set-kusto-kernel.png)
+   :::image type="content" source="media/notebooks-kusto-kernel/set-kusto-kernel.png" alt-text="Set Kernel and Attach to":::
 
 You can save the notebook using the **Save** or **Save as...** command from the **File** menu.
 
@@ -47,7 +47,7 @@ To change the Kusto connection for a notebook:
 
 1. Select the **Attach to** menu from the notebook toolbar and then select **Change Connection**.
 
-   ![Select the Attach to menu in the notebook toolbar](media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png)
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png" alt-text="change connections":::
 
     > [!Note]
     > Ensure that the database value is populated. Kusto notebooks require to have the database specified.
@@ -57,7 +57,7 @@ To change the Kusto connection for a notebook:
 
 2. Now you can either select a recent connection server or enter new connection details to connect.
 
-   ![Select a server from the Attach to menu](media/notebooks-kusto-kernel/kusto-change-connection-cluster.png)
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-change-connection-cluster.png" alt-text="Select a different cluster":::
 
 ## Run a code cell
 
@@ -67,7 +67,7 @@ For example:
 
 1. Add a new code cell by selecting the **+Code** command in the toolbar.
 
-   ![Notebook toolbar](media/notebooks-kusto-kernel/kusto-kernel-code.png)
+   :::image type="content" source="media/notebooks-kusto-kernel/kusto-kernel-code.png" alt-text="Kusto kernel code block":::
 
 2. Copy and paste the following example into the cell and select **Run cell**. This example creates a new database.
 
@@ -76,7 +76,7 @@ For example:
     | where EventType == "Waterspout"
    ```
 
-   ![Run cell](media/notebooks-kusto-kernel/run-notebook-cell.png)
+   :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Run cell":::
 
 ## Save the result
 
@@ -93,7 +93,7 @@ If you run a script that returns a result, you can save that result in different
     | limit 10
 ```
 
-![Save result](media/notebooks-kusto-kernel/run-notebook-save-results.png)
+:::image type="content" source="media/notebooks-kusto-kernel/run-notebook-save-results.png" alt-text="Save result":::
 
 ## Next steps
 

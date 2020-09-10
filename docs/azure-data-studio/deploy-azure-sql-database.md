@@ -44,4 +44,4 @@ Next, enter all of the required parameters in the Azure SQL Database wizard.
 
 ## Next steps
 
-[Connect and query]((quickstart-sql-database.md)) your database in Azure Data Studio.
+[Connect and query](quickstart-sql-database.md) your database in Azure Data Studio.

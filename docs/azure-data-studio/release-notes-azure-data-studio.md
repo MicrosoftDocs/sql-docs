@@ -24,12 +24,11 @@ September 22, 2020 &nbsp; / &nbsp; version: 1.22.0
 | Change | Details |
 | :----- | :------ |
 | Added Azure Arc extension | Users can try out Azure Arc public preview through Azure Data Studio. This includes: <br/> &bull; &nbsp; Deploy data controller <br/> &bull; &nbsp; Deploy Postgres <br/> &bull; &nbsp; Deploy Managed Instance for Azure Arc <br/> &bull; &nbsp; Connect to data controller <br/> &bull; &nbsp; Access data service dashboards <br/> &bull; &nbsp; Azure Arc Jupyter Book |
-| Added ability to deploy Azure SQL Edge| |
-| Added SQL Database Projects extension | |
-| Added Kusto (KQL) extension |  |
-| Added ability to deploy Azure SQL DB and Azure SQL VM |  |
-| New notebook features | <br/> &bull; &nbsp; Supports brand new text cell editing experience based on rich text formatting <br/> &bull; &nbsp; Supports Kusto kernel <br/> &bull; &nbsp; Supports pinning of notebooks <br/> &bull; &nbsp; Added support for new version of Jupyter Books <br/> &bull; &nbsp; Improved Jupyter Shortcuts <br/> &bull; &nbsp; Introduced perf loading improvements |
-| Added Initial Setup Wizard | |
+| Added new deployment options | &bull; &nbsp; Azure SQL Database <br/> &bull; &nbsp; Azure SQL Server Virtual Machines <br/> &bull; &nbsp; Azure SQL Database Edge <br/> (Edge will require Azure SQL Edge Deployment Extension) |
+| Added SQL Database Projects extension | The SQL Database Projects extension brings project-based database development to Azure Data Studio. In this preview release, SQL projects can be created and published from Azure Data Studio. |
+| Added Kusto (KQL) extension | Brings native Kusto experiences in Azure Data Studio for data exploration and data analytics against massive amount of real-time streaming data stored in Azure Data Explorer. This preview release supports connecting and browsing Azure Data Explorer clusters, writing KQL queries as well as authoring notebooks with Kusto kernel. |
+| New notebook features | <br/> &bull; &nbsp; Supports brand new text cell editing experience based on rich text formatting and seamless conversion to markdown, also known as WYSIWYG toolbar (What You See Is What You Get) <br/> &bull; &nbsp; Supports Kusto kernel <br/> &bull; &nbsp; Supports pinning of notebooks <br/> &bull; &nbsp; Added support for new version of Jupyter Books <br/> &bull; &nbsp; Improved Jupyter Shortcuts <br/> &bull; &nbsp; Introduced perf loading improvements |
+| Added Initial Setup Wizard | Guides first-time users of ADS through a minimal onboarding experience that helps them configure preview features and sign into Azure. |
 | Added extension generator extension| Provides a notebook to easily setup the tools you need to build your own Azure Data Studio extension |
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2020+Release%22+is%3Aclosed). |
 

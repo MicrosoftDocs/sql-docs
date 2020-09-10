@@ -13,8 +13,7 @@ ms.date: 09/22/2020
 
 # Create and run a Kusto notebook (Preview)
 
-This article shows you how to create and run an **[Azure Data Studio notebook](../notebooks-guidance.md)** using the Kusto extension, connecting to an Azure Data Explorer database. With this preview release of Kusto extension gives you the option to change the notebook kernel to Kusto. 
-
+This article shows you how to create and run an **[Azure Data Studio notebook](../notebooks-guidance.md)** using the Kusto extension, connecting to an Azure Data Explorer database. With the preview release of the Kusto extension, you have the option to change the notebook kernel to Kusto.
 
 ## Prerequisites
 
@@ -30,11 +29,11 @@ The following steps show how to create a notebook file in Azure Data Studio:
 
 1. In Azure Data Studio, connect to your Azure Data Explorer cluster.
 
-2. Navigate to the **Connections** pane and under the **Servers** window select **New Notebook**.
+2. Navigate to the **Connections** pane and under the **Servers** window , right-click the Kusto database and select *New Notebook*. For this article, we use the help.kusto.windows.net cluster with the Samples database data.
 
    ![Open notebook](media/notebooks-kusto-kernel/kusto-new-notebook.png)
 
-3. Wait for the **Kernel** and the target context (**Attach to**) to be populated. Confirm that the **Kernel** is set to *Kusto*, and set the **Attach to** option to your Azure Data Explorer cluster (in this example its *help.kusto.windows.net*).
+3. Select *Kusto* for the **Kernel**. Confirm that **Attach to** is set to the cluster name and database. For this article, we use the help.kusto.windows.net cluster with the Samples database data.
 
    ![Set Kernel and Attach to](media/notebooks-kusto-kernel/set-kusto-kernel.png)
 
@@ -50,12 +49,11 @@ To change the Kusto connection for a notebook:
 
    ![Select the Attach to menu in the notebook toolbar](media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png)
 
+    > [!Note]
+    > Ensure that the database value is populated. Kusto notebooks require to have the database specified.
 
-
-** Tip 1: ** Ensure that the database value is populated. Kusto notebooks require to have the database specified. 
-
-** Tip 2: ** Specify the clustername without the `https://`.
-
+    > [!Note]
+    > Specify the cluster name without the `https://`.
 
 2. Now you can either select a recent connection server or enter new connection details to connect.
 
@@ -88,13 +86,14 @@ If you run a script that returns a result, you can save that result in different
 - Save As Excel
 - Save As JSON
 - Save As XML
-- View Chart ??? 
+- Show Chart
+
 ```kusto
     StormEvents
     | limit 10
 ```
 
-![Run cell 2](media/notebooks-kusto-kernel/run-notebook-cell-2.png)
+![Save result](media/notebooks-kusto-kernel/run-notebook-save-results.png)
 
 ## Next steps
 

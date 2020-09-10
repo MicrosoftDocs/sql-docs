@@ -63,7 +63,7 @@ To set up an Azure Data Explorer cluster to connect to, follow the steps below.
     2. For **Cluster**, enter in your Azure Data Explorer cluster.
 
         > [!Note]
-        > When entering the cluster name, don't include the *https://* prefix or a trailing */*.
+        > When entering the cluster name, don't include the `https://` prefix or a trailing `/`.
 
     3. For **Authentication Type**, use the default - *Azure Active Directory - Universal with MFA account*.
     4. For **Account**, use your account information.

@@ -46,7 +46,7 @@ To install the Kusto extension in Azure Data Studio, follow the steps below.
 
 Find your Azure Data Explorer cluster in the [Azure portal](https://ms.portal.azure.com/#home), then find the URI for the cluster.
 
-:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri-03.png" alt-text="URI":::
+:::image type="content" source="media/kusto-extension/kusto-extension-adx-cluster-uri.png" alt-text="URI":::
 
 However, you can get started immediately using the *help.kusto.windows.net* cluster.
 
@@ -63,7 +63,7 @@ To set up an Azure Data Explorer cluster to connect to, follow the steps below.
     2. For **Cluster**, enter in your Azure Data Explorer cluster.
 
         > [!Note]
-        > When entering the cluster name, don't include the *https://* prefix or a trailing */*.
+        > When entering the cluster name, don't include the `https://` prefix or a trailing `/`.
 
     3. For **Authentication Type**, use the default - *Azure Active Directory - Universal with MFA account*.
     4. For **Account**, use your account information.
@@ -115,6 +115,7 @@ The extensions settings look like this:
 
 ## Next steps
 
+- [Create and run a Kusto notebook](../notebooks/notebooks-kusto-kernel.md)
 - [Kqlmagic](../notebooks-kqlmagic.md)
 - [SQL to Kusto cheat sheet](https://docs.microsoft.com/azure/data-explorer/kusto/query/sqlcheatsheet)
 - [What is Azure Data Explorer?](https://docs.microsoft.com/azure/data-explorer/data-explorer-overview)

@@ -104,6 +104,8 @@
     href: integrated-terminal.md
   - name: Keyboard shortcuts
     href: keyboard-shortcuts.md
+  - name: Preview features
+    href: preview-features.md
   - name: Server groups
     href: server-groups.md
   - name: Source control
@@ -118,12 +120,16 @@
       href: notebooks-tutorial-sql-kernel.md
     - name: Use Python Kernel
       href: notebooks-tutorial-python-kernel.md
+    - name: Use Kusto Kernel
+      href: notebooks/notebooks-kusto-kernel.md
     - name: Kqlmagic extension
       href: notebooks-kqlmagic.md
   - name: Deployment
     items:
-    - name: Download Azure Data Studio
-      href: download-azure-data-studio.md
+    - name: Deploy Azure SQL Database
+      href: deploy-azure-sql-database.md
+    - name: Deploy SQL Server on Azure Virtual Machines
+      href: deploy-azure-sql-server-vm.md
   - name: Dashboards & insight widgets
     href: insight-widgets.md
   - name: Code snippets

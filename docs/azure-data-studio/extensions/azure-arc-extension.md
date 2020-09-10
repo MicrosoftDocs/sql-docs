@@ -11,7 +11,7 @@ author: "yualan"
 ms.author: "alayu"
 ---
 
-# Azure Arc extension for Azure Data Studio
+# Azure Arc extension for Azure Data Studio (Preview)
 
 The [Azure Arc extension (preview)](https://aka.ms/azurearcdata-docs) is an extension for creating and managing Azure Arc data services resources.
 

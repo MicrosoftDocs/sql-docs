@@ -30,15 +30,15 @@ The following steps show how to create a notebook file in Azure Data Studio:
 
 1. In Azure Data Studio, connect to your SQL Server.
 
-1. Select under the **Connections** in the **Servers** window. Then select **New Notebook**.
+2. Select under the **Connections** in the **Servers** window. Then select **New Notebook**.
 
    ![Open notebook](media/notebook-tutorial/azure-data-studio-open-notebook.png)
 
-1. Wait for the **Kernel** and the target context (**Attach to**) to be populated. Confirm that the **Kernel** is set to **SQL**, and set **Attach to** for your SQL Server (in this example it's *localhost*).
+3. Wait for the **Kernel** and the target context (**Attach to**) to be populated. Confirm that the **Kernel** is set to **SQL**, and set **Attach to** for your SQL Server (in this example it's *localhost*).
 
    ![Set Kernel and Attach to](media/notebook-tutorial/set-kernel-and-attach-to.png)
 
-You can save the notebook using the **Save** or **Save as...** command from the **File** menu. 
+You can save the notebook using the **Save** or **Save as...** command from the **File** menu.
 
 To open a notebook, you can use the **Open file...** command in the **File** menu, select **Open file** on the **Welcome** page, or use the **File: Open** command from the command palette.
 
@@ -64,7 +64,7 @@ For example:
 
    ![Notebook toolbar](media/notebooks-guidance/notebook-toolbar.png)
 
-1. Copy and paste the following example into the cell and click **Run cell**. This example creates a new database.
+2. Copy and paste the following example into the cell and click **Run cell**. This example creates a new database.
 
    ```sql
    USE master

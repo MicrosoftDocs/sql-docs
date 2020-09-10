@@ -13,7 +13,7 @@ ms.date: 09/22/2020
 
 # Create and run a Kusto notebook (Preview)
 
-This article shows you how to create and run an **[Azure Data Studio notebook](notebooks-guidance.md)** using the Kusto extension for an Azure Data Explorer cluster.
+This article shows you how to create and run an **[Azure Data Studio notebook](../notebooks-guidance.md)** using the Kusto extension for an Azure Data Explorer cluster.
 
 The Kusto extension allows you to use the Kusto kernel.
 
@@ -74,7 +74,7 @@ For example:
     | where EventType == "Waterspout"
    ```
 
-   ![Run notebook cell](media/notebooks-kusto-kernel/run-notebook-cell.png)
+   ![Run cell](media/notebooks-kusto-kernel/run-notebook-cell.png)
 
 ## Save the result
 
@@ -85,21 +85,19 @@ If you run a script that returns a result, you can save that result in different
 - Save As JSON
 - Save As XML
 
-For example, the following code returns the result of [PI](../t-sql/functions/pi-transact-sql.md).
-
 ```kusto
     StormEvents
     | limit 10
 ```
 
-![Run notebook cell](media/notebooks-kusto-kernel/run-notebook-cell-2.png)
+![Run cell 2](media/notebooks-kusto-kernel/run-notebook-cell-2.png)
 
 ## Next steps
 
 Learn more about notebooks:
 
 - [Kusto extension for Azure Data Studio](notebooks-kusto-kernel.md)
-- [How to use notebooks in Azure Data Studio](notebooks-guidance.md)
-- [Create and run a Python notebook](notebooks-tutorial-python-kernel.md)
+- [How to use notebooks in Azure Data Studio](../notebooks-guidance.md)
+- [Create and run a Python notebook](../notebooks-tutorial-python-kernel.md)
 - [Create and run a SQL Server notebook](../notebooks-tutorial-sql-kernel.md)
 - [Run a sample notebook using Spark](../big-data-cluster/notebooks-tutorial-spark.md)

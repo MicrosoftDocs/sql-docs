@@ -24,7 +24,7 @@ At the end of this process, you will have successfully connected your hybrid mac
 
 ## Create a Service Principal for onboarding at scale
 
-You can use [Azure PowerShell](https://docs.microsoft.com/en-us/powershell/azure/install-az-ps) to create a service principal with the [New-AzADServicePrincipal](https://docs.microsoft.com/en-us/powershell/module/Az.Resources/New-AzADServicePrincipal) cmdlet. Or you can follow the steps listed under [Create a Service Principal using the Azure portal](https://docs.microsoft.com/en-us/azure/active-directory/develop/howto-create-service-principal-portal) to complete this task.
+You can use [Azure PowerShell](/powershell/azure/install-az-ps) to create a service principal with the [New-AzADServicePrincipal](/powershell/module/Az.Resources/New-AzADServicePrincipal) cmdlet. Or you can follow the steps listed under [Create a Service Principal using the Azure portal](/azure/active-directory/develop/howto-create-service-principal-portal) to complete this task.
 
 > [!NOTE]
 > When you create a service principal, your account must be an Owner or User Access Administrator in the subscription that you want to use for onboarding. If you don't have sufficient permissions to create role assignments, the service principal might be created, but it won't be able to onboard machines.
@@ -67,11 +67,11 @@ The values from the following properties are used with parameters passed to the 
 > Make sure to use the service principal **ApplicationId** property, not the **Id** property.
 >
 
-The **Azure Connected Machine Resource Administrator** has the permissions required to onboard a machine and to register SQL Server instance. You can assign the service principal permission to allow its scope to include a resource group or a subscription. To add role assignment, see [Add or remove role assignments using Azure RBAC and the Azure portal](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-portal) or [Add or remove role assignments using Azure RBAC and Azure CLI](https://docs.microsoft.com/en-us/azure/role-based-access-control/role-assignments-cli).
+The **Azure Connected Machine Resource Administrator** has the permissions required to onboard a machine and to register SQL Server instance. You can assign the service principal permission to allow its scope to include a resource group or a subscription. To add role assignment, see [Add or remove role assignments using Azure RBAC and the Azure portal](/azure/role-based-access-control/role-assignments-portal) or [Add or remove role assignments using Azure RBAC and Azure CLI](/azure/role-based-access-control/role-assignments-cli).
 
 ## Install the agent and connect to Azure
 
-To install and configure the Connected Machine agent on your hybrid machines the script template performs similar steps described in the [Connect hybrid machines to Azure from the Azure portal](https://docs.microsoft.com/en-us/azure/azure-arc/servers/onboard-portal) article. The difference is in the final step where you establish the connection to Azure Arc using the `azcmagent` command using the service principal.
+To install and configure the Connected Machine agent on your hybrid machines the script template performs similar steps described in the [Connect hybrid machines to Azure from the Azure portal](/azure/azure-arc/servers/onboard-portal) article. The difference is in the final step where you establish the connection to Azure Arc using the `azcmagent` command using the service principal.
 
 The following are the settings that you configure the `azcmagent` command to use for the service principal.
 
@@ -81,7 +81,7 @@ The following are the settings that you configure the `azcmagent` command to use
 * `location` : See [supported Azure regions](overview.md#supported-azure-regions). This location can be the same or different, as the resource group's location.
 * `resource-name` : (*Optional*) Used for the Azure resource representation of your on-premises machine. If you do not specify this value, the machine hostname is used.
 
-You can learn more about the `azcmagent` command-line tool by reviewing the [Azcmagent Reference](https://docs.microsoft.com/en-us/azure/azure-arc/servers/manage-agent).
+You can learn more about the `azcmagent` command-line tool by reviewing the [Azcmagent Reference](/azure/azure-arc/servers/manage-agent).
 
 ## Register the installed SQL Server instances with Azure Arc
 
@@ -145,9 +145,9 @@ After you install the agent and register SQL Server instances with Azure Arc ena
 
 ## Next steps
 
-- Learn how to manage your machine using [Azure Policy](https://docs.microsoft.com/en-us/azure/governance/policy/overview), for such things as VM [guest configuration](https://docs.microsoft.com/en-us/azure/governance/policy/concepts/guest-configuration), verifying the machine is reporting to the expected Log Analytics workspace, enable monitoring with [Azure Monitor with VMs](https://docs.microsoft.com/en-us/azure/azure-monitor/insights/vminsights-enable-policy), and much more.
+- Learn how to manage your machine using [Azure Policy](/azure/governance/policy/overview), for such things as VM [guest configuration](/azure/governance/policy/concepts/guest-configuration), verifying the machine is reporting to the expected Log Analytics workspace, enable monitoring with [Azure Monitor with VMs](/azure/azure-monitor/insights/vminsights-enable-policy), and much more.
 
-- Learn more about the [Log Analytics agent](https://docs.microsoft.com/en-us/azure/azure-monitor/platform/log-analytics-agent). The Log Analytics agent for Windows and Linux is required when you want to proactively monitor the OS and workloads running on the machine, manage it using Automation runbooks or solutions like Update Management, or use other Azure services like [Azure Security Center](https://docs.microsoft.com/en-us/azure/security-center/security-center-intro).
+- Learn more about the [Log Analytics agent](/azure/azure-monitor/platform/log-analytics-agent). The Log Analytics agent for Windows and Linux is required when you want to proactively monitor the OS and workloads running on the machine, manage it using Automation runbooks or solutions like Update Management, or use other Azure services like [Azure Security Center](/azure/security-center/security-center-intro).
 
 - Learn how to [Configure your SQL Server instance for periodic environment health check using on-demand SQL assessment](assess.md)
 

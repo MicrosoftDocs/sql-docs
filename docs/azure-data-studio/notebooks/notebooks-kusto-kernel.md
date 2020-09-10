@@ -33,7 +33,7 @@ The following steps show how to create a notebook file in Azure Data Studio:
 
 1. In Azure Data Studio, connect to your Azure Data Explorer cluster.
 
-2. Select under the **Connections** in the **Servers** window. Then select **New Notebook**.
+2. Navigate to the **Connections** pane and under the **Servers** window select **New Notebook**.
 
    ![Open notebook](media/notebook-tutorial/azure-data-studio-open-notebook.png)
 

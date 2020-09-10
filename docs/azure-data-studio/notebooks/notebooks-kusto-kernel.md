@@ -37,7 +37,7 @@ The following steps show how to create a notebook file in Azure Data Studio:
 
    ![Open notebook](media/notebooks-kusto-kernel/kusto-new-notebook.png)
 
-3. Wait for the **Kernel** and the target context (**Attach to**) to be populated. Confirm that the **Kernel** is set to **Kusto**, and set **Attach to** to your Azure Data Explorer cluster (in this example it's *help.kusto.windows.net*).
+3. Wait for the **Kernel** and the target context (**Attach to**) to be populated. Confirm that the **Kernel** is set to *Kusto*, and set the **Attach to** option to your Azure Data Explorer cluster (in this example its *help.kusto.windows.net*).
 
    ![Set Kernel and Attach to](media/notebooks-kusto-kernel/set-kusto-kernel.png)
 
@@ -59,7 +59,7 @@ To change the Kusto connection for a notebook:
 
 ## Run a code cell
 
-You can create cells containing SQL code that you can run in place by clicking the **Run cell** button (the round black arrow) to the left of the cell. The results are shown in the notebook after the cell finishes running.
+You can create cells containing SQL code that you can run in place by selecting the **Run cell** button (the round black arrow) to the left of the cell. The results are shown in the notebook after the cell finishes running.
 
 For example:
 
@@ -67,7 +67,7 @@ For example:
 
    ![Notebook toolbar](media/notebooks-kusto-kernel/kusto-kernel-code.png)
 
-2. Copy and paste the following example into the cell and click **Run cell**. This example creates a new database.
+2. Copy and paste the following example into the cell and select **Run cell**. This example creates a new database.
 
    ```kusto
     StormEvents

@@ -120,6 +120,8 @@
       href: notebooks-tutorial-sql-kernel.md
     - name: Use Python Kernel
       href: notebooks-tutorial-python-kernel.md
+    - name: Use Kusto Kernel
+      href: notebooks/notebooks-kusto-kernel.md
     - name: Kqlmagic extension
       href: notebooks-kqlmagic.md
   - name: Deployment

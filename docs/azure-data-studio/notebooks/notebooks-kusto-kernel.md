@@ -78,7 +78,7 @@ For example:
 
    :::image type="content" source="media/notebooks-kusto-kernel/run-kusto-notebook-cell.png" alt-text="Run cell":::
 
-## Save the result
+## Save the result or show chart
 
 If you run a script that returns a result, you can save that result in different formats using the toolbar displayed above the result.
 

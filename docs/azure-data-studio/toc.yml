@@ -130,6 +130,8 @@
     items:
     - name: Deploy Azure SQL Database
       href: deploy-azure-sql-database.md
+      - name: Deploy Azure SQL Edge
+        href: deploy-azure-sql-edge.md
     - name: Deploy SQL Server on Azure Virtual Machines
       href: deploy-azure-sql-server-vm.md
   - name: Dashboards & insight widgets

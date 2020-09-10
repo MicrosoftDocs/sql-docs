@@ -65,7 +65,7 @@ int _tmain(int argc, _TCHAR* argv[])
     IDBProperties* pProperties = nullptr;
     DBPROP rgDBProp[1] = {};
     LPCWSTR lpwszProviderString = L"Server=MyServer;"   // server with SQL Server 2008 (or later)
-       L"Authentication=ActiveDirectoryIntegrated;"
+       L"Trusted_Connection=Yes;"
        L"Encrypt=yes;"
        L"ServerSPN=CP_SPN;";   // customer-provided SPN
 

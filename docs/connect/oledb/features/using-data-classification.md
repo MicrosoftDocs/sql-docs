@@ -24,9 +24,6 @@ manager: kenvh
 
 For more information on how to assign classification to columns, see [SQL Data Discovery and Classification](https://docs.microsoft.com/sql/relational-databases/security/sql-data-discovery-and-classification).
 
-> [!NOTE]  
->  Since the ISSDataClassification interface exposes classification information obtained from the server, obtaining this interface through [in-memory rowsets](..\ole-db-table-valued-parameters\table-valued-parameter-rowset-creation.md#table-valued-parameter-rowset-creation) is not applicable, therefore, not supported.
-
 ## Code samples
 
 The following [!INCLUDE[tsql](../../../includes/tsql-md.md)] queries can be executed in SSMS to set up the prerequisites for the sample C++ application:

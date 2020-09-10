@@ -44,7 +44,7 @@ This extension supports deployment of Azure Arc data controllers, Postgres for A
 1. Follow prompts to create a new Azure Arc resource.
 
 ## Manage a resource
-After deploying an Azure Arc data controller from azdata, Azure Portal, or Azure Data Studio, you can connect to it from Azure Data Studio.
+After deploying an Azure Arc data controller from azdata, Azure portal, or Azure Data Studio, you can connect to it from Azure Data Studio.
 
 1. Open Connections viewlet on the left activity bar.
 1. Expand **Azure Arc controllers**
@@ -53,7 +53,7 @@ After deploying an Azure Arc data controller from azdata, Azure Portal, or Azure
 
 Once connected, you can view the resources deployed on the data controller. You can then right-click and select **Manage** to access the resource dashboard.  
 
-These dashboards will provide additional information about the resource, including option to open in Azure Portal.
+These dashboards will provide additional information about the resource, including option to open in Azure portal.
 
 ## Next steps
 To learn more about Azure Arc data services, [check our documentation.](https://aka.ms/azurearcdata-docs)

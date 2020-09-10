@@ -80,7 +80,7 @@ If you are updating existing [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.m
 
 ## <a id="CU22"></a> CU22 (September 2020)
 
-This is the Cumulative Update 21 (CU21) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3335.7. For information about the fixes and improvements in this release, see <https://support.microsoft.com/help/4557397>.
+This is the Cumulative Update 22 (CU22) release of [!INCLUDE[ssSQL17](../includes/sssql17-md.md)]. The [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] version for this release is 14.0.3356.20. For information about the fixes and improvements in this release, see <https://support.microsoft.com/help/4577467>.
 
 ### Package details
 

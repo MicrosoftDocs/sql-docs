@@ -84,7 +84,7 @@ For example:
    GO
    ```
 
-   ![Run notebook cell](media/notebook-tutorial/run-notebook-cell.png)
+   ![Run cell](media/notebook-tutorial/run-notebook-cell.png)
 
 ## Save the result
 
@@ -102,7 +102,7 @@ SELECT PI() AS PI;
 GO
 ```
 
-![Run notebook cell](media/notebook-tutorial/run-notebook-cell-2.png)
+![Save the result](media/notebook-tutorial/run-notebook-cell-2.png)
 
 ## Next steps
 

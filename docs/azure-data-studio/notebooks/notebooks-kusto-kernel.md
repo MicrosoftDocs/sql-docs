@@ -100,4 +100,3 @@ Learn more about notebooks:
 - [How to use notebooks in Azure Data Studio](../notebooks-guidance.md)
 - [Create and run a Python notebook](../notebooks-tutorial-python-kernel.md)
 - [Create and run a SQL Server notebook](../notebooks-tutorial-sql-kernel.md)
-- [Run a sample notebook using Spark](../big-data-cluster/notebooks-tutorial-spark.md)

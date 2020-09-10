@@ -1,6 +1,6 @@
 ---
-title: Deploy Azure SQL Server Virtual Machine
-description: This tutorial shows how you can create an Azure SQL Server Virtual Machine
+title: Deploy SQL Server on Azure Virtual Machine
+description: This tutorial shows how you can create SQL Server on Azure Virtual Machines
 author: ninarn
 ms.author: ninarn
 ms.reviewer: alayu, markingmyname
@@ -11,9 +11,9 @@ ms.custom: ""
 ms.date: 09/22/2020
 ---
 
-# Create an Azure SQL Server Virtual Machine (Azure Data Studio)
+# Create SQL Server on Azure Virtual Machines (Azure Data Studio)
 
-You can create an Azure SQL Server Virtual Machine (VM) using Azure Data Studio through the deployment wizard and notebooks.
+You can create an SQL virtual machine (VM) using Azure Data Studio through the deployment wizard and notebooks.
 
 ## Pre-requisites
 
@@ -47,8 +47,8 @@ Once the Notebook opens, you can review the content and the code and make change
 
 The last step is to select **Run all** to run all cells in the Notebook. Once this completes you should have a fully created and running:
 
-- A Virtual Machine
-- A SQL Server Virtual Machine
+- An Azure virtual machine
+- A SQL virtual machine
 - A Virtual Network, subnet, and public IP address
 - A network security group and a network interface
 - Access to RDP into the VM
@@ -56,7 +56,7 @@ The last step is to select **Run all** to run all cells in the Notebook. Once th
 
 ## Next steps
 
-To learn more about how to migrate your data to the new SQL Server VM, see the following article.
+To learn more about how to migrate your data to the new SQL VM, see the following article.
 
 > [!div class="nextstepaction"]
 > [Migrate a database to a SQL VM](https://docs.microsoft.com/azure/azure-sql/virtual-machines/windows/migrate-to-vm-from-sql-server)

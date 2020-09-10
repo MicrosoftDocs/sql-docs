@@ -139,7 +139,7 @@ azcmagent connect \
 
 ## Validate successful onboarding
 
-After you install the agent and register SQL Server instances with Azure Arc enabled SQL Server (preview), go to the [Azure portal](https://aka.ms/azureportal) and view the newly created Azure Arc resources.
+After you install the agent and register SQL Server instances with Azure Arc enabled SQL Server (preview), go to the [Azure portal](https://aka.ms/azureportal) and view the newly created Azure Arc resources. You will see a new __Machine - Azure Arc__ for each connected machine and a new __SQL Server - Azure Arc__ resource for each registered SQL Server instance. 
 
 ![A successful onboard](./media/join-at-scale/successful-onboard.png)
 

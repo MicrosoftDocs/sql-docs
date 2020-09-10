@@ -16,7 +16,7 @@ You can connect your SQL Server instance on premises to Azure Arc by following t
 ## Prerequisites
 
 * Your machine has at least one instance of SQL Server installed
-* For Linux machines, you have downloaded AZ CLI and connected your Azure account. Follow the instructions on how to [install Azure CLI](/cli/azure/install-azure-cli-apt?view=azure-cli-latest).
+* For Linux machines, you have downloaded AZ CLI and connected your Azure account. Follow the instructions on how to [install Azure CLI](/cli/azure/install-azure-cli-apt).
 
 ## Generate a registration script for SQL Server
 
@@ -51,7 +51,7 @@ In this step you will take the script you downloaded from Azure portal and execu
 
 ### Linux
 
-1. Follow these [instructions](/cli/azure/install-azure-cli-apt?view=azure-cli-latest) to download AZ CLI and connect your Azure account.
+1. Follow these [instructions](/cli/azure/install-azure-cli-apt) to download AZ CLI and connect your Azure account.
 
 1. Grand the execution permission to the downloaded script and execute it.
 

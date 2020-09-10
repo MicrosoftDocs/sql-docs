@@ -13,17 +13,14 @@ ms.date: 09/22/2020
 
 # Create and run a Kusto notebook (Preview)
 
-This article shows you how to create and run an **[Azure Data Studio notebook](../notebooks-guidance.md)** using the Kusto extension for an Azure Data Explorer cluster.
+This article shows you how to create and run an **[Azure Data Studio notebook](../notebooks-guidance.md)** using the Kusto extension, connecting to an Azure Data Explorer database. With this preview release of Kusto extension gives you the option to change the notebook kernel to Kusto. 
 
-The Kusto extension allows you to use the Kusto kernel.
-
-The Kusto extension is in preview.
 
 ## Prerequisites
 
 If you don't have an Azure subscription, create a [free Azure account](https://azure.microsoft.com/free/) before you begin.
 
-- [An Azure Data Explorer cluster and database](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
+- [An Azure Data Explorer cluster with a database that you can connect to](https://docs.microsoft.com/azure/data-explorer/create-cluster-database-portal).
 - [Azure Data Studio](../download-azure-data-studio.md).
 - [Kusto extension for Azure Data Studio](notebooks-kusto-kernel.md).
 
@@ -52,6 +49,13 @@ To change the Kusto connection for a notebook:
 1. Select the **Attach to** menu from the notebook toolbar and then select **Change Connection**.
 
    ![Select the Attach to menu in the notebook toolbar](media/notebooks-kusto-kernel/kusto-select-attach-to-change-connections.png)
+
+
+
+** Tip 1: ** Ensure that the database value is populated. Kusto notebooks require to have the database specified. 
+
+** Tip 2: ** Specify the clustername without the `https://`.
+
 
 2. Now you can either select a recent connection server or enter new connection details to connect.
 
@@ -84,7 +88,7 @@ If you run a script that returns a result, you can save that result in different
 - Save As Excel
 - Save As JSON
 - Save As XML
-
+- View Chart ??? 
 ```kusto
     StormEvents
     | limit 10

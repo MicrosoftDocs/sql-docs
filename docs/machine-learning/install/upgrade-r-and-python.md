@@ -13,9 +13,12 @@ monikerRange: "=sql-server-2016||=sql-server-2017||=sqlallproducts-allversions"
 [!INCLUDE [SQL Server Windows Only - ASDBMI ](../../includes/applies-to-version/sql-windows-only-asdbmi.md)]
 
 Python and R integration in SQL Server includes open-source and Microsoft-proprietary packages.
-                                                                               
+
+> [!NOTE]
+> The information contained in this article applies to SQL Server 2016 and 2017.
+
 Standard SQL Server servicing:
-                                                                               
+
 - Packages are updated according to the SQL Server release cycle.
 - Bug fixes are applied to existing packages at the current version.
 - No major version upgrades.

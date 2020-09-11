@@ -119,6 +119,8 @@ To publish your schema and migrate your data, follow these steps:
 
 1. Connect to your SQL Server instance by using SQL Server Management Studio and validate the migration by reviewing the data and schema. 
 
+   :::image type="content" source="media/db2-to-sql-server/compare-schema-in-ssms.png" alt-text="Review the data migration report":::
+
 ## Post-migration 
 
 After you have successfully completed the Migration stage, you need to go through a series of post-migration tasks to ensure that everything is functioning as smoothly and efficiently as possible.

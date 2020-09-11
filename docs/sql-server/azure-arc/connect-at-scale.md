@@ -75,7 +75,7 @@ To discover and register the installed SQL Server instances on multiple machines
 
 ### Windows 
 
-Before you run the registration script on a machine, you must install the Azure powershell module with “Install-Module -Name Az -AllowClobber”, and connect the service principal account to Azure with [Connect-AzAccount](https://docs.microsoft.com/en-us/powershell/module/az.accounts/connect-azaccount). Use the following steps to connect SQL Server instances on multiple Windows machines. 
+Before you run the registration script on a machine, you must install the Azure powershell module with “Install-Module -Name Az -AllowClobber”, and connect the service principal account to Azure with [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount). Use the following steps to connect SQL Server instances on multiple Windows machines. 
 
 1. Download the PowerShell script from the Portal as described in the [Connect your SQL Server to Azure Arc](connect.md) article
 
@@ -93,7 +93,7 @@ Before you run the registration script on a machine, you must install the Azure 
 
 ### Linux
 
-Each target machine must have the [Azure CLI installed](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli). On Linux machines the registration script will automatically sign in to azure with the service principal credentials if they’re provided and no other user is already signed in. Use the following steps to connect SQL Server instances on multiple Linux machines.
+Each target machine must have the [Azure CLI installed](/cli/azure/install-azure-cli). On Linux machines the registration script will automatically sign in to azure with the service principal credentials if they’re provided and no other user is already signed in. Use the following steps to connect SQL Server instances on multiple Linux machines.
 
 1. Download the Linux shell script from the Portal as described in the [Connect your SQL Server to Azure Arc](connect.md) article
 

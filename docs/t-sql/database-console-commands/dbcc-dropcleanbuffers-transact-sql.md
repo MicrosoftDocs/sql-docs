@@ -77,7 +77,7 @@ Applies to: SQL Server, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
 
 - Requires membership in the **sysadmin** fixed server role.  
 
-Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull.md)]
+Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]
 
 - Requires membership in the DB_OWNER fixed server role.  
   

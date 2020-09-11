@@ -78,7 +78,7 @@ For [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to load a TLS cert
 
 - The [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Service Account must have the necessary permission to access the TLS certificate.
 
-- The current system time must be after the **Valid from** property of the certificate and before the Valid to property of the certificate.
+- The current system time must be after the **Valid from** property of the certificate and before the **Valid to** property of the certificate.
 
 - The certificate must be meant for server authentication. This requires the **Enhanced Key Usage** property of the certificate to specify **Server Authentication (1.3.6.1.5.5.7.3.1)**.
 

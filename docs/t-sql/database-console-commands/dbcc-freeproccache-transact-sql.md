@@ -44,7 +44,7 @@ Syntax for SQL Server:
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  
 ```  
 
-Syntax for Azure SQL Data Warehouse and Parallel Data Warehouse:
+Syntax for Azure Synapse Analytics and Parallel Data Warehouse:
   
 ```sql
 DBCC FREEPROCCACHE [ ( COMPUTE | ALL ) ] 

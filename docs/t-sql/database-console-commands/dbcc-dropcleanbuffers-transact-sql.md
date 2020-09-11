@@ -77,7 +77,7 @@ Applies to: SQL Server, Parallel Data Warehouse
 
 - Requires membership in the **sysadmin** fixed server role.  
 
-Applies to: Azure SQL Data Warehouse
+Applies to: Azure Synapse Analytics
 
 - Requires membership in the DB_OWNER fixed server role.  
   

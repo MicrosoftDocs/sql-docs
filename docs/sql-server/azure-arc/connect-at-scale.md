@@ -97,7 +97,7 @@ Each target machine must have the [Azure CLI installed](/cli/azure/install-azure
 
 1. Download the Linux shell script from the Portal as described in the [Connect your SQL Server to Azure Arc](connect.md) article
 
-2. Replace the following variables in teh script using the values generated during the service principal provisioning described earlier. These variable are initially empty.
+2. Replace the following variables in the script using the values generated during the service principal provisioning described earlier. These variable are initially empty.
 
     ```bash
     servicePrincipalAppId=“{serviceprincipalAppID}”

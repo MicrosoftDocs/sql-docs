@@ -78,5 +78,6 @@ Optionally, a dacpac file can be zipped in a folder and deployed to the new Azur
 
 ## Next steps
 
+- [Learn more about Azure SQL Edge](https://docs.microsoft.com/azure/azure-sql-edge/)
 - [Create an Azure SQL Database (Azure Data Studio)](deploy-azure-sql-database.md)
 - [Create SQL Server on Azure Virtual Machines (Azure Data Studio)](deploy-azure-sql-server-vm.md)

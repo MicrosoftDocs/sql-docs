@@ -73,11 +73,11 @@ DBCC execution completed. If DBCC printed error messages, contact your system ad
   
 ## Permissions  
 
-Applies to: SQL Server, Parallel Data Warehouse 
+Applies to: SQL Server, [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] 
 
 - Requires membership in the **sysadmin** fixed server role.  
 
-Applies to: Azure Synapse Analytics
+Applies to: [!INCLUDE[ssSDW](../../includes/sssdwfull.md)]
 
 - Requires membership in the DB_OWNER fixed server role.  
   

@@ -5,7 +5,7 @@ description: Configure advanced data security for Azure Arc enabled SQL Server i
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 09/05/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ---

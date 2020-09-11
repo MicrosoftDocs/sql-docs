@@ -5,7 +5,7 @@ description: In this article, you learn how to connect SQL Server instances as A
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 09/06/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -64,82 +64,51 @@ The values from the following properties are used with parameters passed to the 
 * The value from the **password** property is used for the  `--service-principal-secret` parameter used to connect the agent.
 
 > [!NOTE]
-> Make sure to use the service principal **ApplicationId** property, not the **Id** property.
+> Note that Azure Arc for servers doesn’t currently support signing in with a certificate, so the service principal must have a secret to authenticate with.
 >
 
 The **Azure Connected Machine Resource Administrator** has the permissions required to onboard a machine and to register SQL Server instance. You can assign the service principal permission to allow its scope to include a resource group or a subscription. To add role assignment, see [Add or remove role assignments using Azure RBAC and the Azure portal](/azure/role-based-access-control/role-assignments-portal) or [Add or remove role assignments using Azure RBAC and Azure CLI](/azure/role-based-access-control/role-assignments-cli).
 
-## Install the agent and connect to Azure
+## Register the installed SQL Server instances on multiple machines
 
-To install and configure the Connected Machine agent on your hybrid machines the script template performs similar steps described in the [Connect hybrid machines to Azure from the Azure portal](/azure/azure-arc/servers/onboard-portal) article. The difference is in the final step where you establish the connection to Azure Arc using the `azcmagent` command using the service principal.
+To discover and register the installed SQL Server instances on multiple machines, you can use the same script your downloaded from the Portal as described in the [Connect your SQL Server to Azure Arc](connect.md) article with a small change described below. As a result, each machine will be connected and registered as a __Machine - Azure Arc__ resource, and each installed SQL Server instance will be registered as a __SQL Server - Azure Arc__ resource.
 
-The following are the settings that you configure the `azcmagent` command to use for the service principal.
+### Windows 
 
-* `tenant-id` : The unique identifier (GUID) that represents your dedicated instance of Azure AD.
-* `subscription-id` : The subscription ID (GUID) of your Azure subscription that you want the machines in.
-* `resource-group` : The resource group name where you want your connected machines to belong to.
-* `location` : See [supported Azure regions](overview.md#supported-azure-regions). This location can be the same or different, as the resource group's location.
-* `resource-name` : (*Optional*) Used for the Azure resource representation of your on-premises machine. If you do not specify this value, the machine hostname is used.
+Before you run the registration script on a machine, you must install the Azure powershell module with "Install-Module -Name Az -AllowClobber", and connect the service principal account to Azure with [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount). Use the following steps to connect SQL Server instances on multiple Windows machines. 
 
-You can learn more about the `azcmagent` command-line tool by reviewing the [Azcmagent Reference](/azure/azure-arc/servers/manage-agent).
+1. Download the PowerShell script from the Portal as described in the [Connect your SQL Server to Azure Arc](connect.md) article
 
-## Register the installed SQL Server instances with Azure Arc
+2. Open the script in an admin instance of PowerShell ISE and replace the following environment variables using the values generated during the service principal provisioning described earlier. These variable are initially empty.
 
-To discover and register the installed SQL Server instances with Azure ArcThe the template performs similar steps described in the [Connect your SQL Server to Azure Arc](connect.md) article. 
-
-### Windows installation script
-
-The following is an example of the Connected Machine agent for Windows installation script that has been modified to use the service principal to support a fully automated, non-interactive installation of the agent.
-
-```
- # Download the package
-function download() {$ProgressPreference="SilentlyContinue"; Invoke-WebRequest -Uri https://aka.ms/AzureConnectedMachineAgent -OutFile AzureConnectedMachineAgent.msi}
-download
-
-# Install the package
-msiexec /i AzureConnectedMachineAgent.msi /l*v installationlog.txt /qn | Out-String
-
-# Run connect command
-& "$env:ProgramFiles\AzureConnectedMachineAgent\azcmagent.exe" connect `
-  --service-principal-id "{serviceprincipalAppID}" `
-  --service-principal-secret "{serviceprincipalPassword}" `
-  --resource-group "{ResourceGroupName}" `
-  --tenant-id "{tenantID}" `
-  --location "{resourceLocation}" `
-  --subscription-id "{subscriptionID}"
-```
+    ```azurepowershell-interactive
+    $servicePrincipalAppId="{serviceprincipalAppID}"
+    $servicePrincipalSecret="{serviceprincipalPassword}"
+    ```
+3. Execute the script on each target machines
 
 >[!NOTE]
 >The script only supports running from a 64-bit version of Windows PowerShell.
 >
 
-### Linux installation script
+### Linux
 
-The following is an example of the Connected Machine agent for Linux installation script that has been modified to use the service principal to support a fully automated, non-interactive installation of the agent.
+Each target machine must have the [Azure CLI installed](/cli/azure/install-azure-cli). On Linux machines the registration script will automatically sign in to azure with the service principal credentials if they’re provided and no other user is already signed in. Use the following steps to connect SQL Server instances on multiple Linux machines.
 
-```
-# Download the installation package
-wget https://aka.ms/azcmagent -O ~/install_linux_azcmagent.sh
+1. Download the Linux shell script from the Portal as described in the [Connect your SQL Server to Azure Arc](connect.md) article
 
-# Install the hybrid agent
-bash ~/install_linux_azcmagent.sh
+2. Replace the following variables in the script using the values generated during the service principal provisioning described earlier. These variable are initially empty.
 
-# Run connect command
-azcmagent connect \
-  --service-principal-id "{serviceprincipalAppID}" \
-  --service-principal-secret "{serviceprincipalPassword}" \
-  --resource-group "{ResourceGroupName}" \
-  --tenant-id "{tenantID}" \
-  --location "{resourceLocation}" \
-  --subscription-id "{subscriptionID}"
-```
+    ```bash
+    servicePrincipalAppId="{serviceprincipalAppID}"
+    servicePrincipalSecret="{serviceprincipalPassword}"
+    ```
 
->[!NOTE]
->You must have *root* access permissions on Linux machines to run **azcmagent**.
+3. Execute the script on each target machines
 
 ## Validate successful onboarding
 
-After you install the agent and register SQL Server instances with Azure Arc enabled SQL Server (preview), go to the [Azure portal](https://aka.ms/azureportal) and view the newly created Azure Arc resources. You will see a new __Machine - Azure Arc__ for each connected machine and a new __SQL Server - Azure Arc__ resource for each registered SQL Server instance. 
+After you register SQL Server instances with Azure Arc enabled SQL Server (preview), go to the [Azure portal](https://aka.ms/azureportal) and view the newly created Azure Arc resources. You will see a new __Machine - Azure Arc__ for each connected machine and a new __SQL Server - Azure Arc__ resource for each registered SQL Server instance. 
 
 ![A successful onboard](./media/join-at-scale/successful-onboard.png)
 

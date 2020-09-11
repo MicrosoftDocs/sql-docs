@@ -5,7 +5,7 @@ description: Connect an instance of SQL Server to Azure Arc
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 09/05/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ---
@@ -42,7 +42,7 @@ In this step you will take the script you downloaded from Azure portal and execu
 
 ### Windows
 
-1. Open the script in an admin instance of PowerShell ISE
+1. Open the script in an admin instance of PowerShell
 
 1. Execute the script
 

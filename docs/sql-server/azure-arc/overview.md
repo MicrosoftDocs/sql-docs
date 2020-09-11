@@ -5,7 +5,7 @@ description: Manage instances of SQL Server with Azure Arc enabled SQL Server
 author: anosov1960
 ms.author: sashan 
 ms.reviewer: mikeray
-ms.date: 09/06/2020
+ms.date: 09/10/2020
 ms.topic: conceptual
 ms.prod: sql
 ---

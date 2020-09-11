@@ -57,7 +57,7 @@ The command line tools are General Availability (GA), however they are being rel
 **Version Information**
 
 Release number: 15.0.2<br>
-Build number: 15.0.20000.5<br>
+Build number: 15.0.2000.5<br>
 Release date: September 11, 2020
 
 The new version of SQLCMD supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database, SQL Data Warehouse, and Always Encrypted features.

@@ -75,14 +75,14 @@ To discover and register the installed SQL Server instances on multiple machines
 
 ### Windows 
 
-Before you run the registration script on a machine, you must install the Azure powershell module with “Install-Module -Name Az -AllowClobber”, and connect the service principal account to Azure with [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount). Use the following steps to connect SQL Server instances on multiple Windows machines. 
+Before you run the registration script on a machine, you must install the Azure powershell module with "Install-Module -Name Az -AllowClobber", and connect the service principal account to Azure with [Connect-AzAccount](/powershell/module/az.accounts/connect-azaccount). Use the following steps to connect SQL Server instances on multiple Windows machines. 
 
 1. Download the PowerShell script from the Portal as described in the [Connect your SQL Server to Azure Arc](connect.md) article
 
 2. Open the script in an admin instance of PowerShell ISE and replace the following environment variables using the values generated during the service principal provisioning described earlier. These variable are initially empty.
 
     ```azurepowershell-interactive
-    $servicePrincipalAppId=“{serviceprincipalAppID}”
+    $servicePrincipalAppId="{serviceprincipalAppID}"
     $servicePrincipalSecret="{serviceprincipalPassword}"
     ```
 3. Execute the script on each target machines
@@ -100,7 +100,7 @@ Each target machine must have the [Azure CLI installed](/cli/azure/install-azure
 2. Replace the following variables in the script using the values generated during the service principal provisioning described earlier. These variable are initially empty.
 
     ```bash
-    servicePrincipalAppId=“{serviceprincipalAppID}”
+    servicePrincipalAppId="{serviceprincipalAppID}"
     servicePrincipalSecret="{serviceprincipalPassword}"
     ```
 

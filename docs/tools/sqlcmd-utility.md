@@ -26,7 +26,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 08/27/2020
+ms.date: 09/11/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 
@@ -49,16 +49,16 @@ The utility uses ODBC to execute Transact-SQL batches.
 
 ## Download the latest version of sqlcmd Utility
 
-**[![Download sqlcmd for x64](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![Download sqlcmd for x86](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![Download sqlcmd for x64](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2142258)**
+<br>**[![Download sqlcmd for x86](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2142257)**
 
 The command line tools are General Availability (GA), however they are being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
 **Version Information**
 
-Release number: 15.0 <br>
-Build number: 15.0.1300.359<br>
-Release date: March 13, 2019
+Release number: 15.0.2<br>
+Build number: 15.0.20000.5<br>
+Release date: September 11, 2020
 
 The new version of SQLCMD supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database, SQL Data Warehouse, and Always Encrypted features.
 The new BCP supports Azure AD authentication, including Multi-Factor Authentication (MFA) support for SQL Database and SQL Data Warehouse.
@@ -68,7 +68,7 @@ Windows 10 , Windows 7, Windows 8, Windows 8.1, Windows Server 2008 - 2019.
 
 This component requires both [Windows Installer 4.5](https://www.microsoft.com/download/details.aspx?id=8483) and [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql).
  
-To check the SQLCMD version execute `sqlcmd -?` command and confirm that 15.0.1300.359 version or higher is in use.
+To check the SQLCMD version execute `sqlcmd -?` command and confirm that 15.0.2000.5 version or higher is in use.
 
 > [!NOTE]
 > You need version 13.1 or higher to support Always Encrypted (`-g`) and Azure Active Directory authentication (`-G`). (You may have several versions of sqlcmd.exe installed on your computer. Be sure you are using the correct version. To determine the version, execute `sqlcmd -?`.)

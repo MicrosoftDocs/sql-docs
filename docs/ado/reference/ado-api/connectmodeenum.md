@@ -3,7 +3,7 @@ description: "ConnectModeEnum"
 title: "ConnectModeEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # ConnectModeEnum
-Specifies the available permissions for modifying data in a [Connection](../../../ado/reference/ado-api/connection-object-ado.md), opening a [Record](../../../ado/reference/ado-api/record-object-ado.md), or specifying values for the [Mode](../../../ado/reference/ado-api/mode-property-ado.md) property of the **Record** and [Stream](../../../ado/reference/ado-api/stream-object-ado.md) objects.  
+Specifies the available permissions for modifying data in a [Connection](./connection-object-ado.md), opening a [Record](./record-object-ado.md), or specifying values for the [Mode](./mode-property-ado.md) property of the **Record** and [Stream](./stream-object-ado.md) objects.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -51,11 +51,11 @@ Specifies the available permissions for modifying data in a [Connection](../../.
 
 :::row:::
     :::column:::
-        [Mode Property (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)  
-        [Open Method (ADO Record)](../../../ado/reference/ado-api/open-method-ado-record.md)  
+        [Mode Property (ADO)](./mode-property-ado.md)  
+        [Open Method (ADO Record)](./open-method-ado-record.md)  
     :::column-end:::
     :::column:::
-        [Open Method (ADO Stream)](../../../ado/reference/ado-api/open-method-ado-stream.md)  
-        [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Open Method (ADO Stream)](./open-method-ado-stream.md)  
+        [Stream Object (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::

@@ -3,7 +3,7 @@ description: "Address Book Navigation Buttons"
 title: "Address Book Navigation Buttons | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -24,7 +24,7 @@ The Address Book application displays the navigation buttons at the bottom of th
 ## Navigation Sub Procedures  
  The Address Book application contains several procedures that allow users to click the **First**, **Next**, **Previous**, and **Last** buttons to move around the data.  
   
- For example, clicking the **First** button activates the VBScript First_OnClick Sub procedure. The procedure executes a [MoveFirst](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) method, which makes the first row of data the current selection. Clicking the **Last** button activates the Last_OnClick Sub procedure, which invokes the [MoveLast](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) method, making the last row of data the current selection. The remaining navigation buttons work in a similar fashion.  
+ For example, clicking the **First** button activates the VBScript First_OnClick Sub procedure. The procedure executes a [MoveFirst](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) method, which makes the first row of data the current selection. Clicking the **Last** button activates the Last_OnClick Sub procedure, which invokes the [MoveLast](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md) method, making the last row of data the current selection. The remaining navigation buttons work in a similar fashion.  
   
 ```vb
 ' Move to the first record in the bound Recordset.  
@@ -57,8 +57,5 @@ End Sub
 ```  
   
 ## See Also  
- [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
- [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (RDS)](../../../ado/reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)
-
-
-
+ [DataControl Object (RDS)](../../reference/rds-api/datacontrol-object-rds.md)   
+ [MoveFirst, MoveLast, MoveNext, and MovePrevious Methods (RDS)](../../reference/rds-api/movefirst-movelast-movenext-and-moveprevious-methods-rds.md)

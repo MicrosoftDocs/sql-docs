@@ -3,7 +3,7 @@ description: "Command (ADO - WFC Syntax)"
 title: "Command (ADO - WFC Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -65,4 +65,4 @@ public AdoProperties getProperties()
 ```  
   
 ## See Also  
- [Command Object (ADO)](../../../ado/reference/ado-api/command-object-ado.md)
+ [Command Object (ADO)](./command-object-ado.md)

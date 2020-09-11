@@ -26,7 +26,7 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: ""
 ms.custom: seo-lt-2019
-ms.date: 07/22/2020
+ms.date: 08/27/2020
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017"
 ---
 
@@ -34,7 +34,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 
 [!INCLUDE[SQL Server Azure SQL Database Synapse Analytics PDW ](../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
 
-> For SQL Server 2014 and lower, see [sqlcmd Utility](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014).
+> For SQL Server 2014 and lower, see [sqlcmd Utility](/previous-versions/sql/2014/tools/sqlcmd-utility?view=sql-server-2014&preserve-view=true).
 >
 > For using sqlcmd on Linux, see [Install sqlcmd and bcp on Linux](../linux/sql-server-linux-setup-tools.md).
 
@@ -49,8 +49,8 @@ The utility uses ODBC to execute Transact-SQL batches.
 
 ## Download the latest version of sqlcmd Utility
 
-**[![download](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
-<br>**[![download](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
+**[![Download sqlcmd for x64](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x64) (2.6 MB)](https://go.microsoft.com/fwlink/?linkid=2082790)**
+<br>**[![Download sqlcmd for x86](../ssdt/media/download.png) Download Microsoft Command Line Utilities 15 for SQL Server (x86) (2.3 MB)](https://go.microsoft.com/fwlink/?linkid=2082695)**
 
 The command line tools are General Availability (GA), however they are being released with the installer package for [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)].
 
@@ -85,8 +85,8 @@ Currently, **sqlcmd** doesn't require a space between the command-line option an
 
  Other topics: 
 
-- [Start the sqlcmd Utility](../relational-databases/scripting/sqlcmd-start-the-utility.md)   
-- [Use the sqlcmd Utility](../relational-databases/scripting/sqlcmd-use-the-utility.md)   
+- [Start the sqlcmd Utility](../ssms/scripting/sqlcmd-start-the-utility.md)
+- [Use the sqlcmd Utility](../ssms/scripting/sqlcmd-use-the-utility.md)
   
 ## Syntax
 
@@ -166,11 +166,11 @@ The **-E** option ignores possible user name and password environment variable s
 Sets the Column Encryption Setting to `Enabled`. For more information, see [Always Encrypted](../relational-databases/security/encryption/always-encrypted-database-engine.md). Only master keys stored in Windows Certificate Store are supported. The -g switch requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`.
 
 **-G**  
-This switch is used by the client when connecting to SQL Database or SQL Data Warehouse to specify that the user be authenticated using Azure Active Directory authentication. This option sets the **sqlcmd** scripting variable SQLCMDUSEAAD = true. The -G switch requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](https://azure.microsoft.com/documentation/articles/sql-database-aad-authentication/). The -A option is not supported with the -G option.
+This switch is used by the client when connecting to SQL Database or SQL Data Warehouse to specify that the user be authenticated using Azure Active Directory authentication. This option sets the **sqlcmd** scripting variable SQLCMDUSEAAD = true. The -G switch requires at least **sqlcmd** version [13.1](https://go.microsoft.com/fwlink/?LinkID=825643). To determine your version, execute `sqlcmd -?`. For more information, see [Connecting to SQL Database or SQL Data Warehouse By Using Azure Active Directory Authentication](/azure/azure-sql/database/authentication-aad-overview). The -A option is not supported with the -G option.
 
 > [!IMPORTANT]
 > The `-G` option only applies to Azure SQL Database and Azure Data Warehouse.
-> AAD Integrated and Interactive Authentication is not currently supported on Linux or macOS.
+> AAD Interactive Authentication is not currently supported on Linux or macOS. AAD Integrated Authentication requires [Microsoft ODBC Driver 17 for SQL Server](https://aka.ms/downloadmsodbcsql) version 17.6.1 or higher and a properly configured Kerberos environment.
 
 - **Azure Active Directory Username and Password:** 
 
@@ -249,7 +249,7 @@ Prints raw error messages to the screen.
  Declares the application workload type when connecting to a server. The only currently supported value is **ReadOnly**. If **-K** is not specified, the sqlcmd utility will not support connectivity to a secondary replica in an Always On availability group. For more information, see [Active Secondaries: Readable Secondary Replica (Always On Availability Groups)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)  
   
 **-M** _multisubnet_failover_  
- Always specify **-M** when connecting to the availability group listener of a  SQL Server  availability group or a  SQL Server  Failover Cluster Instance. **-M** provides for faster detection of and connection to the (currently) active server. If **-M** is not specified, **-M** is off. For more information about [Listeners, Client Connectivity, Application Failover](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failover Clustering and Always On Availability Groups (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx), and [Active Secondaries: Readable Secondary Replicas(Always On Availability Groups)](https://msdn.microsoft.com/library/ff878253.aspx).
+ Always specify **-M** when connecting to the availability group listener of a  SQL Server  availability group or a  SQL Server  Failover Cluster Instance. **-M** provides for faster detection of and connection to the (currently) active server. If **-M** is not specified, **-M** is off. For more information about [Listeners, Client Connectivity, Application Failover](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md), [Creation and Configuration of Availability Groups &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md), [Failover Clustering and Always On Availability Groups (SQL Server)](../database-engine/availability-groups/windows/failover-clustering-and-always-on-availability-groups-sql-server.md), and [Active Secondaries: Readable Secondary Replicas(Always On Availability Groups)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md).
   
  **-N**  
  This switch is used by the client to request an encrypted connection.  
@@ -926,9 +926,5 @@ Use the following practices to help maximize security and efficiency.
 - [Edit SQLCMD Scripts with Query Editor](~/relational-databases/scripting/edit-sqlcmd-scripts-with-query-editor.md)
 - [Manage Job Steps](~/ssms/agent/manage-job-steps.md)   
 - [Create a CmdExec Job Step](~/ssms/agent/create-a-cmdexec-job-step.md)  
-
-## Forum Feedback
-
-![needhelp_person_icon](../ssms/media/needhelp_person_icon.png) [SQL Client Tools Forum](https://social.msdn.microsoft.com/Forums/home?forum=sqltools)
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

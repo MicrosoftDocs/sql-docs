@@ -19,8 +19,8 @@ helpviewer_keywords:
   - "ALTER SERVICE statement"
   - "services [Service Broker], modifying"
 ms.assetid: 2b4608f7-bb2e-4246-aa29-b52c55995b3a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER SERVICE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "weekdays [SQL Server]"
   - "options [SQL Server], date"
 ms.assetid: 6b0d0e52-8ac1-4f88-b091-f98d6fb8574a
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # SET DATEFIRST (Transact-SQL)

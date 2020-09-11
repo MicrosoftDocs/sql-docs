@@ -3,7 +3,7 @@ description: "Caption Property (ADO MD)"
 title: "Caption Property (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,7 +20,7 @@ author: rothja
 ms.author: jroth
 ---
 # Caption Property (ADO MD)
-Indicates the text caption to use when displaying a [Level](../../../ado/reference/ado-md-api/level-object-ado-md.md) or [Member](../../../ado/reference/ado-md-api/member-object-ado-md.md) object.  
+Indicates the text caption to use when displaying a [Level](./level-object-ado-md.md) or [Member](./member-object-ado-md.md) object.  
   
 ## Return Values  
  Returns a **String** and is read-only.  
@@ -29,13 +29,13 @@ Indicates the text caption to use when displaying a [Level](../../../ado/referen
 
 :::row:::
     :::column:::
-        [Level Object (ADO MD)](../../../ado/reference/ado-md-api/level-object-ado-md.md)  
+        [Level Object (ADO MD)](./level-object-ado-md.md)  
     :::column-end:::
     :::column:::
-        [Member Object (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)  
+        [Member Object (ADO MD)](./member-object-ado-md.md)  
     :::column-end:::
 :::row-end:::
 
 ## See Also  
- [Cellset Example (VB)](../../../ado/reference/ado-md-api/cellset-example-vb.md)   
- [Description Property (ADO MD)](../../../ado/reference/ado-md-api/description-property-ado-md.md)
+ [Cellset Example (VB)](./cellset-example-vb.md)   
+ [Description Property (ADO MD)](./description-property-ado-md.md)

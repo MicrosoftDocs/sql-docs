@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_droplogin"
 ms.assetid: e58684d1-c394-48de-906e-da6ee91100c3
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_droplogin (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

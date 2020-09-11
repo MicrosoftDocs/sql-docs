@@ -3,7 +3,7 @@ description: "Stream (Visual C++ Syntax Index with #import)"
 title: "Stream (Visual C++ Syntax Index with #import) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -87,4 +87,4 @@ __declspec(property(get=GetType,put=PutType)) enum StreamTypeEnum Type;
 ```  
   
 ## See Also  
- [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)
+ [Stream Object (ADO)](./stream-object-ado.md)

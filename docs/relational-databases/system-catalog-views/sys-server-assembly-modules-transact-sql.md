@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.server_assembly_modules catalog view"
 ms.assetid: af799e38-2d16-49b2-bcf5-6f9199af899e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.server_assembly_modules (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

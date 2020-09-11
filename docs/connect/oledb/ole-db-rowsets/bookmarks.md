@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "OLE DB Driver for SQL Server, bookmarks"
   - "rowsets [OLE DB], bookmarks"
   - "OLE DB rowsets, bookmarks"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Bookmarks
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

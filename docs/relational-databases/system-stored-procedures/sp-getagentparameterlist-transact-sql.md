@@ -14,8 +14,8 @@ f1_keywords:
 helpviewer_keywords: 
   - "sp_getagentparameterlist"
 ms.assetid: 50d3d3c1-b9a1-417c-bad4-674089c9c60d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_getagentparameterlist (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

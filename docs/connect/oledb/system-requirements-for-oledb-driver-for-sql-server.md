@@ -13,8 +13,8 @@ helpviewer_keywords:
   - "data access [OLE DB Driver for SQL Server], system requirements"
   - "OLE DB Driver for SQL Server, system requirements"
   - "MSOLEDBSQL, system requirements"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 
 # System requirements for OLE DB Driver for SQL Server

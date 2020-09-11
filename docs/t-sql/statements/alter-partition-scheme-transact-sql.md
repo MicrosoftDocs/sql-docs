@@ -20,8 +20,8 @@ helpviewer_keywords:
   - "adding filegroups"
   - "NEXT USED filegroups"
 ms.assetid: f01d6880-9800-4cfb-8d11-d4be21efc8ca
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER PARTITION SCHEME (Transact-SQL)
 

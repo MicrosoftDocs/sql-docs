@@ -29,8 +29,8 @@ helpviewer_keywords:
   - "encryption [SQL Server], conversations"
   - "starting conversations"
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # BEGIN DIALOG CONVERSATION (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

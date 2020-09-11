@@ -3,7 +3,7 @@ description: "Views Append Method Example (VB)"
 title: "Views Append Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Views Append Method Example (VB)
-The following code demonstrates how to use a [Command](../../../ado/reference/ado-api/command-object-ado.md) object and the [Views](../../../ado/reference/adox-api/views-collection-adox.md) collection [Append](../../../ado/reference/adox-api/append-method-adox-views.md) method to create a new view in the underlying data source.  
+The following code demonstrates how to use a [Command](../ado-api/command-object-ado.md) object and the [Views](./views-collection-adox.md) collection [Append](./append-method-adox-views.md) method to create a new view in the underlying data source.  
   
 ```  
 ' BeginCreateViewVB  
@@ -57,8 +57,8 @@ End Sub
 ```  
   
 ## See Also  
- [ActiveConnection Property (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
- [Append Method (ADOX Views)](../../../ado/reference/adox-api/append-method-adox-views.md)   
- [Catalog Object (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
- [View Object (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)   
- [Views Collection (ADOX)](../../../ado/reference/adox-api/views-collection-adox.md)
+ [ActiveConnection Property (ADOX)](./activeconnection-property-adox.md)   
+ [Append Method (ADOX Views)](./append-method-adox-views.md)   
+ [Catalog Object (ADOX)](./catalog-object-adox.md)   
+ [View Object (ADOX)](./view-object-adox.md)   
+ [Views Collection (ADOX)](./views-collection-adox.md)

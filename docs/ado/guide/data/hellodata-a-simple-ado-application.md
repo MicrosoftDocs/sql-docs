@@ -3,7 +3,7 @@ description: "HelloData: A Simple ADO Application"
 title: "HelloData: A Simple ADO Application | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,7 +20,7 @@ This simple application steps through each of the four major ADO operations: get
   
 ### To run HelloData  
   
-1.  Create a new Standard EXE Visual Basic project that references the ADO library. For more information, see [Referencing the ADO Libraries](../../../ado/guide/referencing-the-ado-libraries.md).  
+1.  Create a new Standard EXE Visual Basic project that references the ADO library. For more information, see [Referencing the ADO Libraries](../referencing-the-ado-libraries.md).  
   
 2.  Create four command buttons at the top of the form, setting the **Name** and **Caption** properties to the values shown in the table at the end of this topic.  
   
@@ -28,12 +28,12 @@ This simple application steps through each of the four major ADO operations: get
   
 4.  Create a **TextBox** on the form below the grid and set its properties as shown in the table. The form should resemble the following figure when you are finished.  
   
-5.  Finally, copy the code listed in [HelloData Code](../../../ado/guide/data/hellodata-code.md), and paste it into the code editor window of the form. Press **F5** to run the code.  
+5.  Finally, copy the code listed in [HelloData Code](./hellodata-code.md), and paste it into the code editor window of the form. Press **F5** to run the code.  
   
 > [!NOTE]
 >  In the following example, and throughout the guide, the user id "MyId" with a password of "123aBc" is used to authenticate against the server. You should substitute these values with valid logon credentials for your server. Also, substitute the "MySQLServer" value with the name of your server.  
   
- For a detailed description of the code, see [Comments on HelloData](../../../ado/guide/data/comments-on-hellodata.md).  
+ For a detailed description of the code, see [Comments on HelloData](./comments-on-hellodata.md).  
   
  ![Shows Form1 for the HelloData VB application](../../../ado/guide/data/media/hellodata.gif "HelloData")  
   

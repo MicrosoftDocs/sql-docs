@@ -15,8 +15,8 @@ helpviewer_keywords:
   - "stored procedures [SQL Server], query store"
   - "query store [SQL Server], stored procedures"
 ms.assetid: 9bddbb74-e67a-43e3-b89e-896c498e53cb
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # Query Store Stored Procedures (Transact-SQL)

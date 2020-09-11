@@ -3,7 +3,7 @@ description: "ActionEnum"
 title: "ActionEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # ActionEnum
-Specifies the type of action to be performed when [SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md) is called.  
+Specifies the type of action to be performed when [SetPermissions](./setpermissions-method-adox.md) is called.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  

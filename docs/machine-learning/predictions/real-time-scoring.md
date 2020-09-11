@@ -3,7 +3,7 @@ title: Real-time scoring using sp_rxPredict
 description: Learn how to perform real-time scoring with the sp_rxPredict system stored procedure in SQL Server for high-performance predictions or scores in forecasting workloads.
 ms.prod: sql
 ms.technology: machine-learning-services
-ms.date: 07/29/2020
+ms.date: 07/31/2020
 ms.topic: how-to
 author: dphansen
 ms.author: davidph
@@ -36,7 +36,7 @@ Real-time scoring is a multi-step process:
 
 + [Enable real-time scoring](#bkmk_enableRtScoring).
 
-+ The model must be trained in advance using one of the supported **rx** algorithms. For R, real-time scoring with `sp_rxPredict` works with [RevoScaleR and MicrosoftML supported algorithms](#bkmk_rt_supported_algos). For Python, see [revoscalepy and microsoftml supported algorithms](#bkmk_py_supported_algos)
++ The model must be trained in advance using one of the supported **rx** algorithms. For R, real-time scoring with `sp_rxPredict` works with [RevoScaleR and MicrosoftML supported algorithms](#bkmk_rt_supported_algos). For Python, see [revoscalepy and microsoftml supported algorithms](#bkmk_py_supported_algos).
 
 + Serialize the model using [rxSerialize](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel) for R, and [rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model) for Python. These serialization functions have been optimized to support fast scoring.
 

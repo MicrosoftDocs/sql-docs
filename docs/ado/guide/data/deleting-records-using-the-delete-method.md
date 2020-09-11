@@ -3,7 +3,7 @@ description: "Deleting Records Using the Delete Method"
 title: "Deleting Records Using the Delete Method | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # Deleting Records Using the Delete Method
-Using the **Delete** method marks the current record or a group of records in a **Recordset** object for deletion. If the **Recordset** object does not allow record deletion, an error occurs. If you are in immediate update mode, deletions occur in the database immediately. If a record cannot be successfully deleted (due to database integrity violations, for example), the record will remain in edit mode after the call to **Update.** This means that you must cancel the update using [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md) before moving off the current record (for example, using [Close](../../../ado/reference/ado-api/close-method-ado.md), [Move](../../../ado/reference/ado-api/move-method-ado.md), or [NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)).  
+Using the **Delete** method marks the current record or a group of records in a **Recordset** object for deletion. If the **Recordset** object does not allow record deletion, an error occurs. If you are in immediate update mode, deletions occur in the database immediately. If a record cannot be successfully deleted (due to database integrity violations, for example), the record will remain in edit mode after the call to **Update.** This means that you must cancel the update using [CancelUpdate](../../reference/ado-api/cancelupdate-method-ado.md) before moving off the current record (for example, using [Close](../../reference/ado-api/close-method-ado.md), [Move](../../reference/ado-api/move-method-ado.md), or [NextRecordset](../../reference/ado-api/nextrecordset-method-ado.md)).  
   
  If you are in batch update mode, the records are marked for deletion from the cache and the actual deletion happens when you call the **UpdateBatch** method. (To view the deleted records, set the **Filter** property to **adFilterAffectedRecords** after **Delete** is called.)  
   

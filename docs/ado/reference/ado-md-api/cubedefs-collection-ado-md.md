@@ -3,7 +3,7 @@ description: "CubeDefs Collection (ADO MD)"
 title: "CubeDefs Collection (ADO MD) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -19,22 +19,22 @@ author: rothja
 ms.author: jroth
 ---
 # CubeDefs Collection (ADO MD)
-Contains the [CubeDef](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md) objects that represent a cube from a multidimensional catalog.  
+Contains the [CubeDef](./cubedef-object-ado-md.md) objects that represent a cube from a multidimensional catalog.  
   
 ## Remarks  
  **CubeDefs** is a standard ADO collection. With the properties and methods of a collection, you can do the following:  
   
--   Obtain the number of objects in the collection with the [Count](../../../ado/reference/ado-api/count-property-ado.md) property.  
+-   Obtain the number of objects in the collection with the [Count](../ado-api/count-property-ado.md) property.  
   
--   Return an object from the collection with the default [Item](../../../ado/reference/ado-api/item-property-ado.md) property.  
+-   Return an object from the collection with the default [Item](../ado-api/item-property-ado.md) property.  
   
--   Update the objects in the collection from the provider with the [Refresh](../../../ado/reference/ado-api/refresh-method-ado.md) method.  
+-   Update the objects in the collection from the provider with the [Refresh](../ado-api/refresh-method-ado.md) method.  
   
  This section contains the following topic.  
   
--   [Properties, Methods, and Events](../../../ado/reference/ado-md-api/cubedefs-collection-properties-methods-and-events.md)  
+-   [Properties, Methods, and Events](./cubedefs-collection-properties-methods-and-events.md)  
   
 ## See Also  
- [Catalog Example (VB)](../../../ado/reference/ado-md-api/catalog-example-vb.md)   
- [Catalog Object (ADO MD)](../../../ado/reference/ado-md-api/catalog-object-ado-md.md)   
- [CubeDef Object (ADO MD)](../../../ado/reference/ado-md-api/cubedef-object-ado-md.md)
+ [Catalog Example (VB)](./catalog-example-vb.md)   
+ [Catalog Object (ADO MD)](./catalog-object-ado-md.md)   
+ [CubeDef Object (ADO MD)](./cubedef-object-ado-md.md)

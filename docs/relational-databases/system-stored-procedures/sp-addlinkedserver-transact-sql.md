@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sp_addlinkedserver"
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sp_addlinkedserver (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

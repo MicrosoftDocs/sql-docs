@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "NumberOfFlags property"
 ms.assetid: b62005f8-9af3-4fc8-9344-a1ccdb713053
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # NumberOfFlags Property (SInstance Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

@@ -3,7 +3,7 @@ description: "RDS API Reference"
 title: "RDS API Reference | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -20,14 +20,12 @@ ms.author: jroth
   
  This section of the ADO documentation contains reference topics for each RDS object, property, method, and event, as well as RDS code samples:  
   
--   [RDS Objects](../../../ado/reference/rds-api/rds-objects.md)  
+-   [RDS Objects](./rds-objects.md)  
   
--   [RDS Properties](../../../ado/reference/rds-api/rds-properties.md)  
+-   [RDS Properties](./rds-properties.md)  
   
--   [RDS Methods](../../../ado/reference/rds-api/rds-methods.md)  
+-   [RDS Methods](./rds-methods.md)  
   
--   [RDS Events](../../../ado/reference/rds-api/rds-events.md)  
+-   [RDS Events](./rds-events.md)  
   
--   [RDS Code Examples](../../../ado/reference/rds-api/rds-code-examples.md)
-
-
+-   [RDS Code Examples](./rds-code-examples.md)

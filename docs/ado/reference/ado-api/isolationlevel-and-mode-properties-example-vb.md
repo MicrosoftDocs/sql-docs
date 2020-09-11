@@ -3,7 +3,7 @@ description: "IsolationLevel and Mode Properties Example (VB)"
 title: "IsolationLevel and Mode Properties Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # IsolationLevel and Mode Properties Example (VB)
-This example uses the [Mode](../../../ado/reference/ado-api/mode-property-ado.md) property to open an exclusive connection, and the [IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md) property to open a transaction that is conducted in isolation of other transactions.  
+This example uses the [Mode](./mode-property-ado.md) property to open an exclusive connection, and the [IsolationLevel](./isolationlevel-property.md) property to open a transaction that is conducted in isolation of other transactions.  
   
 ```  
 'BeginIsolationLevelVB  
@@ -111,6 +111,6 @@ End Sub
 ```  
   
 ## See Also  
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
- [IsolationLevel Property](../../../ado/reference/ado-api/isolationlevel-property.md)   
- [Mode Property (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)
+ [Connection Object (ADO)](./connection-object-ado.md)   
+ [IsolationLevel Property](./isolationlevel-property.md)   
+ [Mode Property (ADO)](./mode-property-ado.md)

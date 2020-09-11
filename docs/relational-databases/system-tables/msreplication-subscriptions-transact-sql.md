@@ -16,8 +16,8 @@ dev_langs:
 helpviewer_keywords: 
   - "MSreplication_subscriptions system table"
 ms.assetid: fd0c5843-4e9b-4448-8bfb-0a4067d1d8d1
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE [SQL Server](../../includes/applies-to-version/sqlserver.md)]

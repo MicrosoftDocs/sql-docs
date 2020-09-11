@@ -23,8 +23,8 @@ helpviewer_keywords:
   - "removing triggers"
   - "DML triggers, removing"
 ms.assetid: 092d0d71-9f1e-4e38-a1c4-2487adfa5b4e
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # DROP TRIGGER (Transact-SQL)
 [!INCLUDE [SQL Server SQL Database](../../includes/applies-to-version/sql-asdb.md)]

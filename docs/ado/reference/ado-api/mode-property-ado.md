@@ -3,7 +3,7 @@ description: "Mode Property (ADO)"
 title: "Mode Property (ADO) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,10 +20,10 @@ author: rothja
 ms.author: jroth
 ---
 # Mode Property (ADO)
-Indicates the available permissions for modifying data in a [Connection](../../../ado/reference/ado-api/connection-object-ado.md), [Record](../../../ado/reference/ado-api/record-object-ado.md), or [Stream](../../../ado/reference/ado-api/stream-object-ado.md) object.  
+Indicates the available permissions for modifying data in a [Connection](./connection-object-ado.md), [Record](./record-object-ado.md), or [Stream](./stream-object-ado.md) object.  
   
 ## Settings and Return Values  
- Sets or returns a [ConnectModeEnum](../../../ado/reference/ado-api/connectmodeenum.md) value. The default value for a **Connection** is **adModeUnknown**. The default value for a **Record** object is **adModeRead**. The default value for a **Stream** associated with an underlying source (opened with a URL as the source, or as the default **Stream** of a **Record**) is **adModeRead**. The default value for a **Stream** not associated with an underlying source (instantiated in memory) is **adModeUnknown**.  
+ Sets or returns a [ConnectModeEnum](./connectmodeenum.md) value. The default value for a **Connection** is **adModeUnknown**. The default value for a **Record** object is **adModeRead**. The default value for a **Stream** associated with an underlying source (opened with a URL as the source, or as the default **Stream** of a **Record**) is **adModeRead**. The default value for a **Stream** not associated with an underlying source (instantiated in memory) is **adModeUnknown**.  
   
 ## Remarks  
  Use the **Mode** property to set or return the access permissions in use by the provider on the current connection. You can set the **Mode** property only when the **Connection** object is closed.  
@@ -39,16 +39,16 @@ Indicates the available permissions for modifying data in a [Connection](../../.
 
 :::row:::
     :::column:::
-        [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
+        [Connection Object (ADO)](./connection-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Record Object (ADO)](../../../ado/reference/ado-api/record-object-ado.md)  
+        [Record Object (ADO)](./record-object-ado.md)  
     :::column-end:::
     :::column:::
-        [Stream Object (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
+        [Stream Object (ADO)](./stream-object-ado.md)  
     :::column-end:::
 :::row-end:::
 
 ## See Also  
- [IsolationLevel and Mode Properties Example (VB)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vb.md)   
- [IsolationLevel and Mode Properties Example (VC++)](../../../ado/reference/ado-api/isolationlevel-and-mode-properties-example-vc.md)   
+ [IsolationLevel and Mode Properties Example (VB)](./isolationlevel-and-mode-properties-example-vb.md)   
+ [IsolationLevel and Mode Properties Example (VC++)](./isolationlevel-and-mode-properties-example-vc.md)

@@ -3,7 +3,7 @@ description: "Address Book Command Buttons"
 title: "Address Book Command Buttons | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: 11/09/2018
 ms.reviewer: ""
@@ -46,7 +46,7 @@ Select FirstName, LastName, Title, Email, Building, Room, Phone from Employee wh
  If the query was successful, all persons with a last name containing the text "Berge" (such as Berge and Berger) and with a title containing the words "Program Manager" (for example, Program Manager, Advanced Technologies) are displayed in the HTML data grid.  
   
 ## Preparing and Sending the Query  
- The last part of the Find_OnClick Sub procedure consists of two statements. The first statement assigns the [SQL](../../../ado/reference/rds-api/sql-property.md) property of the [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object equal to the dynamically built SQL query. The second statement causes the **RDS.DataControl** object (`DC1`) to query the database, and then display the new results of the query in the grid.  
+ The last part of the Find_OnClick Sub procedure consists of two statements. The first statement assigns the [SQL](../../reference/rds-api/sql-property.md) property of the [RDS.DataControl](../../reference/rds-api/datacontrol-object-rds.md) object equal to the dynamically built SQL query. The second statement causes the **RDS.DataControl** object (`DC1`) to query the database, and then display the new results of the query in the grid.  
   
 ```vb
 Sub Find_OnClick  
@@ -57,7 +57,7 @@ End Sub
 ```  
   
 ## Update Profile Button  
- Clicking the **Update Profile** button activates the VBScript Update_OnClick Sub procedure, which executes the [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object's (`DC1`) [SubmitChanges](../../../ado/reference/rds-api/submitchanges-method-rds.md) and [Refresh](../../../ado/reference/rds-api/refresh-method-rds.md) methods.  
+ Clicking the **Update Profile** button activates the VBScript Update_OnClick Sub procedure, which executes the [RDS.DataControl](../../reference/rds-api/datacontrol-object-rds.md) object's (`DC1`) [SubmitChanges](../../reference/rds-api/submitchanges-method-rds.md) and [Refresh](../../reference/rds-api/refresh-method-rds.md) methods.  
   
 ```vb
 Sub Update_OnClick  
@@ -69,7 +69,7 @@ End Sub
  When `DC1.SubmitChanges` executes, the Remote Data Service packages all the update information and sends it to the server via HTTP. The update is all-or-nothing; if a part of the update is unsuccessful, none of the changes is made, and a status message is returned. `DC1.Refresh` isn't necessary after **SubmitChanges** with Remote Data Service, but it ensures fresh data.  
   
 ## Cancel Changes Button  
- Clicking **Cancel Changes** activates the VBScript Cancel_OnClick Sub procedure, which executes the [RDS.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md) object's (`DC1)` [CancelUpdate](../../../ado/reference/rds-api/cancelupdate-method-rds.md) method.  
+ Clicking **Cancel Changes** activates the VBScript Cancel_OnClick Sub procedure, which executes the [RDS.DataControl](../../reference/rds-api/datacontrol-object-rds.md) object's (`DC1)` [CancelUpdate](../../reference/rds-api/cancelupdate-method-rds.md) method.  
   
 ```vb
 Sub Cancel_OnClick  
@@ -80,7 +80,5 @@ End Sub
  When `DC1.CancelUpdate` executes, it discards any edits that a user has made to an employee record on the data grid since the last query or update. It restores the original values.  
   
 ## See Also  
- [Address Book Navigation Buttons](../../../ado/guide/remote-data-service/address-book-navigation-buttons.md)   
- [DataControl Object (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)
-
-
+ [Address Book Navigation Buttons](./address-book-navigation-buttons.md)   
+ [DataControl Object (RDS)](../../reference/rds-api/datacontrol-object-rds.md)

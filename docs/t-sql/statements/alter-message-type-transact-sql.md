@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "modifying message types"
   - "message types [Service Broker], modifying"
 ms.assetid: 98c94176-2bdf-4725-b4bc-d33b6b14817d
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER MESSAGE TYPE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

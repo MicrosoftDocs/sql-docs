@@ -3,7 +3,7 @@ description: "Connection (ADO - WFC Syntax)"
 title: "Connection (ADO - WFC Syntax) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -81,7 +81,7 @@ public com.ms.wfc.data.Errors getErrors()
 ```  
   
 ### Events  
- For more information about ADO/WFC events, see [ADO Event Instantiation by Language](../../../ado/guide/data/ado-event-instantiation-by-language.md).  
+ For more information about ADO/WFC events, see [ADO Event Instantiation by Language](../../guide/data/ado-event-instantiation-by-language.md).  
   
 ```  
 public void addOnBeginTransComplete(ConnectionEventHandler handler)  
@@ -105,4 +105,4 @@ public void removeOnWillExecute(ConnectionEventHandler handler)
 ```  
   
 ## See Also  
- [Connection Object (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)
+ [Connection Object (ADO)](./connection-object-ado.md)

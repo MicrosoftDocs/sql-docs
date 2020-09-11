@@ -10,8 +10,8 @@ ms.technology: connectivity
 ms.topic: "reference"
 helpviewer_keywords: 
   - "IRowsetFind comparability"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Comparability for IRowsetFind
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]

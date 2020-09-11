@@ -8,8 +8,8 @@ ms.prod_service: "database-engine, sql-database, sql-data-warehouse, pdw"
 ms.reviewer: ""
 ms.technology: connectivity
 ms.topic: "reference"
-author: pmasl
-ms.author: pelopes
+author: David-Engel
+ms.author: v-daenge
 ---
 # Accessing Diagnostic Information in the Extended Events Log
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sql-asdb-asdbmi-asa-pdw.md)]
@@ -25,7 +25,7 @@ ms.author: pelopes
 >  This feature is intended only for troubleshooting and diagnostic purposes and may not be suitable for auditing or security purposes.  
   
 ## Remarks  
- For connection operations, OLE DB Driver for SQL Server will send a client connection ID. If the connection fails, you can access the connectivity ring buffer ([Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](https://go.microsoft.com/fwlink/?LinkId=207752)) and find the **ClientConnectionID** field and get diagnostic information about the connection failure. Client connection IDs are logged in the ring buffer only if an error occurs. (If a connection fails before sending the prelogin packet, a client connection ID will not be generated.) The client connection ID is a 16-byte GUID. You can also find the client connection ID in the extended events output target, if the **client_connection_id** action is added to events in an extended events session. You can enable data access tracing and rerun the connection command and observe the **ClientConnectionID** field in the data access trace for a failed operation, if you need further diagnostic assistance.  
+ For connection operations, OLE DB Driver for SQL Server will send a client connection ID. If the connection fails, you can access the connectivity ring buffer ([Connectivity troubleshooting in SQL Server 2008 with the Connectivity Ring Buffer](https://docs.microsoft.com/archive/blogs/sql_protocols/connectivity-troubleshooting-in-sql-server-2008-with-the-connectivity-ring-buffer) and find the **ClientConnectionID** field and get diagnostic information about the connection failure. Client connection IDs are logged in the ring buffer only if an error occurs. (If a connection fails before sending the prelogin packet, a client connection ID will not be generated.) The client connection ID is a 16-byte GUID. You can also find the client connection ID in the extended events output target, if the **client_connection_id** action is added to events in an extended events session. You can enable data access tracing and rerun the connection command and observe the **ClientConnectionID** field in the data access trace for a failed operation, if you need further diagnostic assistance.  
    
   
  OLE DB Driver for SQL Server also sends a thread-specific activity ID. The activity ID is captured in the extended events sessions if the sessions are started with the TRACK_CAUSAILITY option enabled. For performance issues with an active connection, you can get the activity ID from the client's data access trace (**ActivityID** field) and then locate the activity ID in the extended events output. The activity ID in the extended events is a 16-byte GUID (not the same as the GUID for the client connection ID) appended with a four-byte sequence number. The sequence number represents the order of a request within a thread and indicates the relative ordering of batch and RPC statements for the thread. The **ActivityID** is optionally sent for SQL batch statements and RPC requests when data access tracing is enabled on and the 18th bit in the data access tracing configuration word is turned ON.  

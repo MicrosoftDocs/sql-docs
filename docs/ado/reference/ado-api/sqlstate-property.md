@@ -3,7 +3,7 @@ description: "SQLState Property"
 title: "SQLState Property | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -20,7 +20,7 @@ author: rothja
 ms.author: jroth
 ---
 # SQLState Property
-Indicates the SQL state for a given [Error](../../../ado/reference/ado-api/error-object.md) object.  
+Indicates the SQL state for a given [Error](./error-object.md) object.  
   
 ## Return Value  
  Returns a five-character **String** value that follows the ANSI SQL standard and indicates the error code.  
@@ -29,8 +29,8 @@ Indicates the SQL state for a given [Error](../../../ado/reference/ado-api/error
  Use the **SQLState** property to read the five-character error code that the provider returns when an error occurs during the processing of an SQL statement. For example, when using the Microsoft OLE DB Provider for ODBC with a Microsoft SQL Server database, SQL state error codes originate from ODBC, based either on errors specific to ODBC or on errors that originate from Microsoft SQL Server, and are then mapped to ODBC errors. These error codes are documented in the ANSI SQL standard, but may be implemented differently by different data sources.  
   
 ## Applies To  
- [Error Object](../../../ado/reference/ado-api/error-object.md)  
+ [Error Object](./error-object.md)  
   
 ## See Also  
- [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VB)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
- [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VC++)](../../../ado/reference/ado-api/description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)   
+ [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VB)](./description-helpcontext-helpfile-nativeerror-number-source-example-vb.md)   
+ [Description, HelpContext, HelpFile, NativeError, Number, Source, and SQLState Properties Example (VC++)](./description-helpcontext-helpfile-nativeerror-number-source-example-vc.md)

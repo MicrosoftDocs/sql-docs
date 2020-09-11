@@ -2,7 +2,7 @@
 title: Release notes
 description: This article has release notes for Azure Data Studio releases from November, 2017, until now. For many of the summarized issues there are links to additional details.
 ms.prod: azure-data-studio
-ms.technology: 
+ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
@@ -13,7 +13,7 @@ ms.date: 08/12/2020
 
 # Release notes for Azure Data Studio
 
-**[Download and install the latest release!](download.md)**
+**[Download and install the latest release!](./download-azure-data-studio.md?view=sql-server-ver15)**
 
 ## August 2020
 
@@ -71,7 +71,7 @@ June 15, 2020 &nbsp; / &nbsp; version: 1.19.0
 | :----- | :------ |
 | Added Azure Data Studio to Azure portal Integration | Users can now directly launch to Azure portal from an Azure SQL Database connection, Azure Postgres, and more. |
 | New notebook features | &bull; &nbsp; New Notebook toolbar <br/> &bull; &nbsp; New Edit Cell toolbar <br/> &bull; &nbsp; Python dependencies wizard UX updates <br/> &bull; &nbsp; Improved spacing across notebooks |
-| Announcing SQL Assessment API extension | This extension adds SQL Server best-practice assessment in ADS. It exposes SQL Assessment API, which was previously available for use in PowerShell SqlServer module and SMO only, to let you evaluate your SQL Server instances and receive for them recommendations by SQL Server Team. Learn more about SQL Assessment API and what it is capable of [in this article.](https://docs.microsoft.com/sql/sql-assessment-api/sql-assessment-api-overview?view=sql-server-ver15) |
+| Announcing SQL Assessment API extension | This extension adds SQL Server best-practice assessment in ADS. It exposes SQL Assessment API, which was previously available for use in PowerShell SqlServer module and SMO only, to let you evaluate your SQL Server instances and receive for them recommendations by SQL Server Team. Learn more about SQL Assessment API and what it is capable of [in this article.](../tools/sql-assessment-api/sql-assessment-api-overview.md?view=sql-server-ver15) |
 | [Machine Learning Extension improvements](https://go.microsoft.com/fwlink/?linkid=2129918) | Now supports Azure SQL Managed Instance. |
 | Data Virtualization extension improvements | Now supports MongoDB and Teradata |
 | Postgres extension bug fixes | Fixed Azure MFA |
@@ -144,7 +144,7 @@ March 18, 2020 &nbsp; / &nbsp; version: 1.16.0
 | :----- | :------ |
 | Added charting support in SQL Notebooks | When running a SQL query in a code cell, users can now create and save charts. |
 | Added Create Jupyter Book experience | Users can now create their own Jupyter Books using a notebook. |
-| Added AAD support for Postgres extension | |
+| Added Azure AD support for Postgres extension | |
 | Fixed many accessibility bugs | [List of accessibility bugs](https://github.com/microsoft/azuredatastudio/issues?page=1&q=is%3Aissue+is%3Aclosed+milestone%3A%22S360+-+Accessibility%22+label%3AA11y_AzureDataStudio) |
 | VS Code merge to 1.42 | This release includes updates to VS Code from the 3 previous VS Code releases. [Read their release notes](https://code.visualstudio.com/updates/v1_42) to learn more. |
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22March+2020%22+is%3Aclosed). |
@@ -309,7 +309,7 @@ August 15, 2019 &nbsp; / &nbsp; version: 1.10.0
 | Release of SandDance 1.3.1 extension | &bull; &nbsp; Smart chart detection <br/>&bull; &nbsp; 3D Visualizations <br/> &bull; &nbsp; Data filtering |
 | Notebook Improvements | &bull; &nbsp; Add code or text cell in-line <br/>&bull; &nbsp; Added ability to right-click SQL results grid to save result as CSV, JSON, etc. <br/> &bull; &nbsp; Improvement to notebook loading performance for loading JSON faster <br/> &bull; &nbsp; View the full list of improvements [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed) |
 | SQL Server 2019 Support |  This release includes support for additional SQL Server 2019 Big Data Cluster features including: <br/> &bull; &nbsp; Reduced time taken to load table and column information on the object-mapping page. <br/> &bull; &nbsp; Fixed a bug with loading existing database scoped credentials on the connection details page. <br/> &bull; &nbsp; Increased default sample size used for PROSE parsing. | 
-| Dacpac extension now supports AAD | 
+| Dacpac extension now supports Azure AD | 
 | Visual Studio Code July Release Merge 1.37 | Latest improvements can be found [here](https://code.visualstudio.com/updates/v1_37). |
 | Resolved bugs and issues | For a complete list of fixes see [Bugs and issues, on GitHub](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1). |
 | &nbsp; | &nbsp; |
@@ -340,7 +340,7 @@ June 6, 2019 &nbsp; / &nbsp; version: 1.8.0
 
 | Change | Details |
 | :----- | :------ |
-| Release of Central Management Servers (CMS) extension | Central Management Servers store a list of instances of SQL Server that is organized into one or more central management server groups. Users can connect to their own existing CMS servers and manage their servers like adding and removing servers. To learn more, you can read [here](https://docs.microsoft.com/sql/relational-databases/administer-multiple-servers-using-central-management-servers) |
+| Release of Central Management Servers (CMS) extension | Central Management Servers store a list of instances of SQL Server that is organized into one or more central management server groups. Users can connect to their own existing CMS servers and manage their servers like adding and removing servers. To learn more, you can read [here](../relational-databases/administer-multiple-servers-using-central-management-servers.md) |
 | Release of Database Administration Tool Extensions for Windows | This extension launches two of the most used experiences in SQL Server Management Studio from Azure Data Studio. Users can right-click on many different objects (such as Databases, Tables, Columns, Views, and more) and select Properties to view the SSMS Properties Dialog for that object. In addition, users can right-click on a database and select Generate Scripts to launch the well-known SSMS Generate Scripts Wizard. 
 | Schema Compare Improvements | &bull; &nbsp; Added Exclude/Include Options <br/>&bull; &nbsp; Generate Script opens script after being generated <br/>&bull; &nbsp; Removed double scroll bars  <br/>&bull; &nbsp; Formatting and layout improvements <br/>&bull; &nbsp; Complete changes can be found [here](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22June+2019+Release%22+label%3A%22Area%3A+Schema+Compare%22+is%3Aclosed)|
 | Moved Messages section to own tab | When users ran SQL queries, results and messages were on stacked panels. Now they are in separate tabs in one panel like in SSMS. |
@@ -356,7 +356,7 @@ June 6, 2019 &nbsp; / &nbsp; version: 1.8.0
     - Can't launch properties for Azure servers
     - Not all objects have property dialogs
     - Dialogs take a long time to start up
-    - Errors launching servers with some types of connections (such as AAD)
+    - Errors launching servers with some types of connections (such as Azure AD)
 - Notebooks
     - [5838](https://github.com/microsoft/azuredatastudio/issues/5838) Allow users to use system Python for Notebooks
 - Schema Compare
@@ -443,7 +443,7 @@ February 13, 2019 &nbsp; / &nbsp; version: 1.4.5
 
 | Change | Details |
 | :----- | :------ |
-| Added **Admin pack for SQL Server** extension pack. | This makes it easier to install SQL Server admin-related extensions. This includes:<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](https://docs.microsoft.com/sql/azure-data-studio/sql-server-profiler-extension)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
+| Added **Admin pack for SQL Server** extension pack. | This makes it easier to install SQL Server admin-related extensions. This includes:<br/>&bull; &nbsp; [SQL Server Agent](sql-server-agent-extension.md?view=sql-server-2017)<br/>&bull; &nbsp; [SQL Server Profiler](./sql-server-profiler-extension.md)<br/>&bull; &nbsp; [SQL Server Import](sql-server-import-extension.md?view=sql-server-2017) |
 | Added filtering extended event support in Profiler extension. | &nbsp; |
 | Added Save as XML feature that can save T-SQL results as XML. | &nbsp; |
 | Added Data-Tier Application Wizard improvements. | &bull; &nbsp; Added Generate script button<br/>&bull; &nbsp; Added view to give warnings of possible data loss during deployment. |
@@ -495,7 +495,7 @@ November 6, 2018 &nbsp; / &nbsp; version: 1.2.4
 | Introducing High Color queries extension, including SSMS editor theme. | &nbsp; |
 | Fixes in SQL Server Agent, Profiler, and Import extensions. | &nbsp; |
 | Fix .NET Core Socket KeepAlive issue causing dropped inactive connections on macOS. | &nbsp; |
-| Upgrade SQL Tools Service to .NET Core 2.2 Preview 3 (for eventual AAD support). | &nbsp; |
+| Upgrade SQL Tools Service to .NET Core 2.2 Preview 3 (for eventual Azure AD support). | &nbsp; |
 | &nbsp; | &nbsp; |
 
 ### Bug Fixes, November 2018

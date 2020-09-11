@@ -3,7 +3,7 @@ description: "MoveRecordOptionsEnum"
 title: "MoveRecordOptionsEnum | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -18,7 +18,7 @@ author: rothja
 ms.author: jroth
 ---
 # MoveRecordOptionsEnum
-Specifies the behavior of the [Record](../../../ado/reference/ado-api/record-object-ado.md) object [MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md) method.  
+Specifies the behavior of the [Record](./record-object-ado.md) object [MoveRecord](./moverecord-method-ado.md) method.  
   
 |Constant|Value|Description|  
 |--------------|-----------|-----------------|  
@@ -31,4 +31,4 @@ Specifies the behavior of the [Record](../../../ado/reference/ado-api/record-obj
  These constants do not have ADO/WFC equivalents.  
   
 ## Applies To  
- [MoveRecord Method (ADO)](../../../ado/reference/ado-api/moverecord-method-ado.md)
+ [MoveRecord Method (ADO)](./moverecord-method-ado.md)

@@ -3,7 +3,7 @@ description: "Find Method Example (VB)"
 title: "Find Method Example (VB) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -17,7 +17,7 @@ author: rothja
 ms.author: jroth
 ---
 # Find Method Example (VB)
-This example uses the [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) object's [Find](../../../ado/reference/ado-api/find-method-ado.md) method to locate and count the number of business titles in the ***Pubs*** database. The example assumes the underlying provider does not support similar functionality.  
+This example uses the [Recordset](./recordset-object-ado.md) object's [Find](./find-method-ado.md) method to locate and count the number of business titles in the ***Pubs*** database. The example assumes the underlying provider does not support similar functionality.  
   
 ```  
 'BeginFindVB  
@@ -95,5 +95,5 @@ End Sub
 ```  
   
 ## See Also  
- [Find Method (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
- [Recordset Object (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)
+ [Find Method (ADO)](./find-method-ado.md)   
+ [Recordset Object (ADO)](./recordset-object-ado.md)

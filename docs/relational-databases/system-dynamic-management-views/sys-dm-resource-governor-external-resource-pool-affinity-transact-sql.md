@@ -18,8 +18,8 @@ helpviewer_keywords:
   - "sys.dm_resource_governor_external_resource_pool_affinity"
   - "dm_resource_governor_external_resource_pool_affinity"
 ms.assetid: e32fac49-5161-47c0-8540-af3fe730c00c
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # sys.dm_resource_governor_external_resource_pool_affinity (Transact-SQL)
 [!INCLUDE [sqlserver2016](../../includes/applies-to-version/sqlserver2016.md)]

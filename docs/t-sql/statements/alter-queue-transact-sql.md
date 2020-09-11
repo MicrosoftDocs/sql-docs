@@ -22,8 +22,8 @@ helpviewer_keywords:
   - "unavailable queues [SQL Server]"
   - "activation stored procedures [Service Broker]"
 ms.assetid: d54aa325-8761-4cd4-8da7-acf33df12296
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 ---
 # ALTER QUEUE (Transact-SQL)
 [!INCLUDE [SQL Server - ASDBMI](../../includes/applies-to-version/sql-asdbmi.md)]

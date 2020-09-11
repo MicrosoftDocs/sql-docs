@@ -3,7 +3,7 @@ description: "ADOX Enumerated Constants"
 title: "ADOX Enumerated Constants | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -21,17 +21,17 @@ To assist debugging, the ADOX enumerated constants list a value for each constan
   
 |Enumeration|Description|  
 |-----------------|-----------------|  
-|[ActionEnum](../../../ado/reference/adox-api/actionenum.md)|Specifies the type of action to be performed when **SetPermissions** is called.|  
-|[AllowNullsEnum](../../../ado/reference/adox-api/allownullsenum.md)|Specifies whether records with null values are indexed.|  
-|[ColumnAttributesEnum](../../../ado/reference/adox-api/columnattributesenum.md)|Specifies characteristics of a **Column**.|  
-|[DataTypeEnum](../../../ado/reference/ado-api/datatypeenum.md)|Specifies the data type of a **Field**, **Parameter**, or **Property**.|  
-|[InheritTypeEnum](../../../ado/reference/adox-api/inherittypeenum.md)|Specifies how objects will inherit permissions set with **SetPermissions**.|  
-|[KeyTypeEnum](../../../ado/reference/adox-api/keytypeenum.md)|Specifies the type of **Key**: primary, foreign, or unique.|  
-|[ObjectTypeEnum](../../../ado/reference/adox-api/objecttypeenum.md)|Specifies the type of database object for which to set permissions or ownership.|  
-|[RightsEnum](../../../ado/reference/adox-api/rightsenum.md)|Specifies the rights or permissions for a group or user on an object.|  
-|[RuleEnum](../../../ado/reference/adox-api/ruleenum.md)|Specifies the rule to follow when a **Key** is deleted.|  
-|[SortOrderEnum](../../../ado/reference/adox-api/sortorderenum.md)|Specifies the sort sequence for an indexed column.|  
+|[ActionEnum](./actionenum.md)|Specifies the type of action to be performed when **SetPermissions** is called.|  
+|[AllowNullsEnum](./allownullsenum.md)|Specifies whether records with null values are indexed.|  
+|[ColumnAttributesEnum](./columnattributesenum.md)|Specifies characteristics of a **Column**.|  
+|[DataTypeEnum](../ado-api/datatypeenum.md)|Specifies the data type of a **Field**, **Parameter**, or **Property**.|  
+|[InheritTypeEnum](./inherittypeenum.md)|Specifies how objects will inherit permissions set with **SetPermissions**.|  
+|[KeyTypeEnum](./keytypeenum.md)|Specifies the type of **Key**: primary, foreign, or unique.|  
+|[ObjectTypeEnum](./objecttypeenum.md)|Specifies the type of database object for which to set permissions or ownership.|  
+|[RightsEnum](./rightsenum.md)|Specifies the rights or permissions for a group or user on an object.|  
+|[RuleEnum](./ruleenum.md)|Specifies the rule to follow when a **Key** is deleted.|  
+|[SortOrderEnum](./sortorderenum.md)|Specifies the sort sequence for an indexed column.|  
   
 ## See Also  
- [ADOX API Reference](../../../ado/reference/adox-api/adox-api-reference.md)   
- [ADO Extensions for Data Definition Language and Security (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)
+ [ADOX API Reference](./adox-object-model.md?view=sql-server-ver15)   
+ [ADO Extensions for Data Definition Language and Security (ADOX)](../../guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

@@ -3,7 +3,7 @@ description: "Parameter (Visual C++ Syntax Index with #import)"
 title: "Parameter (Visual C++ Syntax Index with #import) | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -65,4 +65,4 @@ __declspec(property(get=GetValue,put=PutValue)) _variant_t Value;
 ```  
   
 ## See Also  
- [Parameter Object](../../../ado/reference/ado-api/parameter-object.md)
+ [Parameter Object](./parameter-object.md)

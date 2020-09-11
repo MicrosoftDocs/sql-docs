@@ -16,8 +16,8 @@ apitype: "MOFDef"
 helpviewer_keywords: 
   - "PropertyStrValue property"
 ms.assetid: 637dd734-c294-4bfd-892d-882bac4708f5
-author: "CarlRabeler"
-ms.author: "carlrab"
+author: markingmyname
+ms.author: maghan
 ---
 # PropertyStrValue Property (SqlServiceAdvancedProperty Class)
 [!INCLUDE [SQL Server](../../../includes/applies-to-version/sqlserver.md)]

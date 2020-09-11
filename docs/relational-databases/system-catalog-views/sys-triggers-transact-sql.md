@@ -18,8 +18,8 @@ dev_langs:
 helpviewer_keywords: 
   - "sys.triggers catalog view"
 ms.assetid: cefa4fc4-b8b9-4cd7-b124-eed5283acbfc
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: "=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.triggers (Transact-SQL)

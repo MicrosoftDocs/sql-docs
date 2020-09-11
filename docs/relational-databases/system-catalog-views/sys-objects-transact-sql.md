@@ -21,8 +21,8 @@ helpviewer_keywords:
   - "user-defined table types [SQL Server]"
   - "table types [SQL Server]"
 ms.assetid: f8d6163a-2474-410c-a794-997639f31b3b
-author: CarlRabeler
-ms.author: carlrab
+author: markingmyname
+ms.author: maghan
 monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current"
 ---
 # sys.objects (Transact-SQL)

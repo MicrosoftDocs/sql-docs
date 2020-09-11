@@ -3,7 +3,7 @@ description: "Filtering for Updated Records"
 title: "Filtering for Updated Records | Microsoft Docs"
 ms.prod: sql
 ms.prod_service: connectivity
-ms.technology: connectivity
+ms.technology: ado
 ms.custom: ""
 ms.date: "01/19/2017"
 ms.reviewer: ""
@@ -50,4 +50,4 @@ Before you call UpdateBatch, you can use the Recordset Filter property to view o
 ```  
   
 ## See Also  
- [Batch Mode](../../../ado/guide/data/batch-mode.md)
+ [Batch Mode](./batch-mode.md)

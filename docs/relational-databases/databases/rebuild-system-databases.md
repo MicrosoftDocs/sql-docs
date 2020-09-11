@@ -197,7 +197,8 @@ If the **tempdb** database is damaged and the database engine fails to start, yo
 
    For a default instance name use MSSQLSERVER, for named instance use MSSQL$<instance_name>. Trace flag 4022 disables execution of startup stored procedures. The -mSQLCMD allows only [sqlcmd.exe](../../ssms/scripting/sqlcmd-use-the-utility.md) to connect to the server (see [Other Startup Options](../../database-engine/configure-windows/database-engine-service-startup-options.md#other-startup-options))
 
-   > [!Note] Make sure that the command prompt window remains open after [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts. Closing the command prompt window terminates the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] process.
+   > [!Note] 
+   > Make sure that the command prompt window remains open after the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] starts. Closing the command prompt window will terminate the process.
 
 1. Connect to the server by using **sqlcmd**, and then use the following stored procedure to reset the status of the tempdb database.
 

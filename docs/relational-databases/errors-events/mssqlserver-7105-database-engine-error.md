@@ -49,7 +49,7 @@ See the Resolution and [More information](#more-information) sections to determi
 1. As the message indicates, the first step you should take is to run `DBCC CHECKDB` against the database or `DBCC CHECKTABLE` against the table where the problem was encountered.
 
     - The database ID is provided in the message.
-    - To find out the exact affected table without running `DBCC CHECKDB`, you will need to find out what tables were accessed by the query that encountered the error. One method is to use SQL Profiler to trace the query. However, in [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] and [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] R2 you may be able to find the query using the system_health Extended Events session. See this link for more information on how to use the system_health session: [Use the system_health Session](/sql/relational-databases/extended-events/use-the-system-health-session?view=sql-server-ver15).
+    - To find out the exact affected table without running `DBCC CHECKDB`, you will need to find out what tables were accessed by the query that encountered the error. One method is to use SQL Profiler to trace the query. However, in [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] and [!INCLUDE[sskatmai](../../includes/sskatmai-md.md)] R2 you may be able to find the query using the system_health Extended Events session. See this link for more information on how to use the system_health session: [Use the system_health Session](/sql/relational-databases/extended-events/use-the-system-health-session).
 
     - As with any database consistency problem, you can resolve these errors by restoring from a known good Backup that does not contain this problem.
 

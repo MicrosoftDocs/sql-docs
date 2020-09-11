@@ -27,7 +27,7 @@ This function returns the approximate number of unique non-null values in a grou
 ## Syntax  
   
 ```sql
--- Syntax for Azure SQL Database, Azure SQL Data Warehouse and Parallel Data Warehouse  
+-- Syntax for Azure SQL Database, Azure Synapse Analytics and Parallel Data Warehouse  
 
 APPROX_COUNT_DISTINCT ( expression )   
 ```  

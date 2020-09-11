@@ -23,7 +23,7 @@ ms.author: ramakoni
 |Product Name|SQL Server|
 |Event ID|17892|
 |Event Source|MSSQLSERVER|
-|Component|SQL SQLEngine|
+|Component|SQLEngine|
 |Symbolic Name|SRV_LOGON_FAILED_BY_TRIGGER|
 |Message Text|Logon failed for login \<Login Name> due to trigger execution.|
 ||

@@ -23,7 +23,7 @@ ms.author: ramakoni
 |Product Name|SQL Server|
 |Event ID|17659|
 |Event Source|MSSQLSERVER|
-|Component|SQL SQLEngine|
+|Component|SQLEngine|
 |Symbolic Name|DEMO_SYSCATUPDATE|
 |Message Text|System table ID \%d has been updated directly in database ID \%d and cache coherence may not have been maintained. <br/> SQL Server should be restarted.|
 ||

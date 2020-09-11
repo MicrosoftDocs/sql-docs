@@ -23,7 +23,7 @@ ms.author: ramakoni
 |Product Name|SQL Server|
 |Event ID|4214|
 |Event Source|MSSQLSERVER|
-|Component|SQL SQLEngine|
+|Component|SQLEngine|
 |Symbolic Name|DMPX_NODBBACKUP|
 |Message Text|BACKUP LOG cannot be performed because there is no current database backup|
 ||

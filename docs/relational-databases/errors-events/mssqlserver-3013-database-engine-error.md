@@ -23,7 +23,7 @@ ms.author: ramakoni
 |Product Name|SQL Server|
 |Event ID|3013|
 |Event Source|MSSQLSERVER|
-|Component|SQL SQLEngine|
+|Component|SQLEngine|
 |Symbolic Name|DMP_ABORT|
 |Message Text|BACKUP DATABASE is terminating abnormally|
 ||

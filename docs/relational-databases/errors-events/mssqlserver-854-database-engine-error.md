@@ -23,7 +23,7 @@ ms.author: ramakoni
 |Product Name|SQL Server|
 |Event ID|854|
 |Event Source|MSSQLSERVER|
-|Component|SQL SQLEngine|
+|Component|SQLEngine|
 |Symbolic Name|HARDWARE_MEMORY_SCRUBBER|
 |Message Text|Machine supports memory error recovery. SQL memory protection is enabled to recover from memory corruption|
 ||
@@ -46,4 +46,4 @@ Check if you are encountering other errors like 855 and 856 and take appropriate
 
 ## More information
 
-You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace flag 849 to keep [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from registering with the operating system for memory error notifications. However, be aware that trace flag 849 will disable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from receiving bad memory notifications from operating system. Therefore, we do not recommend that you use this trace flag under typical circumstances.
+You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace flag 849 to keep [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from registering with the operating system for memory error notifications. However, be aware that enabling trace flag 849 will prevent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from receiving bad memory notifications from operating system. Therefore, we do not recommend that you use this trace flag under typical circumstances.

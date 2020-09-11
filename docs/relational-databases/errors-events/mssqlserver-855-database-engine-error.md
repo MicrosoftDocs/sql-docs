@@ -23,7 +23,7 @@ ms.author: ramakoni
 |Product Name|SQL Server|
 |Event ID|855|
 |Event Source|MSSQLSERVER|
-|Component|SQL SQLEngine|
+|Component|SQLEngine|
 |Symbolic Name|BAD_MEMORY_OUTSIDE_BPOOL|
 |Message Text|Uncorrectable hardware memory corruption detected. Your system may become unstable. Check the Windows event log for more details|
 ||
@@ -34,7 +34,7 @@ This message indicates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 
 ## User action
 
-You should run hardware or system checks to determine if a memory or CPU problems  exists. Ensure all system drivers, Operating system updates, and hardware updates have been applied to your system. Consider running any hardware manufacture diagnostics including memory related tests. Anytime you see this error, consider running DBCC CHECKDB against all databases in this instance.
+You should run hardware or system checks to determine if a memory or CPU problems exists. Ensure all system drivers, Operating system updates, and hardware updates have been applied to your system. Consider running any hardware manufacture diagnostics including memory related tests. Anytime you see this error, consider running `DBCC CHECKDB` against all databases in this instance.
 
 ## More information
 
@@ -62,7 +62,7 @@ If the bad page is used not by the buffer pool but by some other cached object o
 
 If the server is reporting memory errors, you should contact the computer hardware vendor and perform appropriate actions such as performing memory diagnostics, updating BIOS and firmware, and replacing bad memory modules.
 
-You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace flag 849 to keep [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from registering with the operating system for memory error notifications. However, be aware that trace flag 849 will disable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from receiving bad memory notifications from operating system. Therefore, we do not recommend that you use this trace flag under typical circumstances.
+You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace flag 849 to keep [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from registering with the operating system for memory error notifications. However, be aware that enabling trace flag 849 will prevent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from receiving bad memory notifications from operating system. Therefore, we do not recommend that you use this trace flag under typical circumstances.
 
 Also, be aware that, by default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will receive these notifications on supported hardware.
 

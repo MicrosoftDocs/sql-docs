@@ -23,18 +23,18 @@ ms.author: ramakoni
 |Product Name|SQL Server|
 |Event ID|856|
 |Event Source|MSSQLSERVER|
-|Component|SQL SQLEngine|
+|Component|SQLEngine|
 |Symbolic Name|BAD_MEMORY_CLEAN_DATABASE_PAGE|
 |Message Text|SQL Server has detected hardware memory corruption in database '%ls', file ID: %u, page ID; %u, memory address: 0x%I64x and has successfully recovered the page|
 ||
 
 ## Explanation
 
-This message indicates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detected a bad memory page in a cached object outside of the buffer pool. This message is raised on systems that supports the ability to recover from memory errors. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrects these memory errors by discarding the corrupt memory pages that are not modified and logs this error message. If the corrupt memory page had been modified (dirty) then error 824 is raised (link to 824 error page)
+This message indicates [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] detected a bad memory page in a cached object outside of the buffer pool. This message is raised on systems that supports the ability to recover from memory errors. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] corrects these memory errors by discarding the corrupt memory pages that are not modified and logs this error message. If the corrupt memory page had been modified (dirty) then error 824 is raised ([MSSQLSERVER_824](mssqlserver-824-database-engine-error.md))
 
 ## User action
 
-You should run hardware or system checks to determine if a memory or CPU problems  exists. Ensure all system drivers, Operating system updates, and hardware updates have been applied to your system. Consider running any hardware manufacture diagnostics including memory related tests. Anytime you see this error, consider running DBCC CHECKDB against all databases in this instance.
+You should run hardware or system checks to determine if a memory or CPU problems exists. Ensure all system drivers, Operating system updates, and hardware updates have been applied to your system. Consider running any hardware manufacture diagnostics including memory related tests. Anytime you see this error, consider running `DBCC CHECKDB` against all databases in this instance.
 
 ## More information
 
@@ -62,7 +62,7 @@ If the bad page is used not by the buffer pool but by some other cached object o
 
 If the server is reporting memory errors, you should contact the computer hardware vendor and perform appropriate actions such as performing memory diagnostics, updating BIOS and firmware, and replacing bad memory modules.
 
-You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace flag 849 to keep [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from registering with the operating system for memory error notifications. However, be aware that trace flag 849 will disable [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from receiving bad memory notifications from operating system. Therefore, we do not recommend that you use this trace flag under typical circumstances.
+You can use [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] trace flag 849 to keep [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from registering with the operating system for memory error notifications. However, be aware that enabling trace flag 849 will prevent [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] from receiving bad memory notifications from operating system. Therefore, we do not recommend that you use this trace flag under typical circumstances.
 
 Also, be aware that, by default, [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] will receive these notifications on supported hardware.
 

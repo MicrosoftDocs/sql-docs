@@ -23,14 +23,14 @@ ms.author: ramakoni
 |Product Name|SQL Server|
 |Event ID|17112|
 |Event Source|MSSQLSERVER|
-|Component|SQL SQLEngine|
+|Component|SQLEngine|
 |Symbolic Name|INIT_INVCOMMAND|
 |Message Text|An invalid startup option a was supplied, either from the registry or the command prompt. Correct or remove the option.|
 ||
 
 ## Explanation
 
-This error indicates that an invalid startup option (link to Database Engine startup options) was specified. When a startup option is not properly specified, SQL Server either fails to start or may not run as expected. Error 17112 is also raised.
+This error indicates that an invalid startup option ([Database Engine Service Startup Options](/sql/database-engine/configure-windows/database-engine-service-startup-options)) was specified. When a startup option is not properly specified, SQL Server either fails to start or may not run as expected. Error 17112 is also raised.
 
 In some cases, the instance might start, but when you review the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Error log, the startup parameters do not look right:
 

@@ -23,7 +23,7 @@ ms.author: ramakoni
 |Product Name|SQL Server|
 |Event ID|5009|
 |Event Source|MSSQLSERVER|
-|Component|SQL SQLEngine|
+|Component|SQLEngine|
 |Symbolic Name|ALT_BADDISKS|
 |Message Text|One or more files listed in the statement could not be found or could not be initialized|
 ||

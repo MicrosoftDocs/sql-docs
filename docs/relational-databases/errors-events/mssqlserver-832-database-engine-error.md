@@ -23,7 +23,7 @@ ms.author: ramakoni
 |Product Name|SQL Server|
 |Event ID|832|
 |Event Source|MSSQLSERVER|
-|Component|SQL SQLEngine|
+|Component|SQLEngine|
 |Symbolic Name|B_CONSTPAGECHANGED|
 |Message Text|A page that should have been constant has changed (expected checksum: \<expected value>, actual checksum: \<actual value>, database \<dbid>, file \'<filename>', page \<pageno>). This usually indicates a memory failure or other hardware or OS corruption.|
 ||

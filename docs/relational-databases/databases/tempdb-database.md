@@ -260,12 +260,15 @@ This change also requires a restart to take effect, even if memory-optimized tem
   Example:
     
   ```sql
-  BEGIN TRAN
+  BEGIN TRAN;
+  
   SELECT *
-  FROM tempdb.sys.tables  -----> Creates a user in-memory OLTP transaction on tempdb
+  FROM tempdb.sys.tables;  -----> Creates a user in-memory OLTP transaction in tempdb
+  
   INSERT INTO <user database>.<schema>.<mem-optimized table>
-  VALUES (1)  ----> Tries to create user in-memory OLTP transaction but will fail
-   COMMIT TRAN
+  VALUES (1); ----> Tries to create a user in-memory OLTP transaction in the user database but will fail
+  
+  COMMIT TRAN;
   ```
     
 - Queries against memory-optimized tables don't support locking and isolation hints, so queries against memory-optimized `tempdb` catalog views won't honor locking and isolation hints. As with other system catalog views in [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)], all transactions against system views will be in `READ COMMITTED` (or in this case, `READ COMMITTED SNAPSHOT`) isolation.

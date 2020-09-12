@@ -38,6 +38,8 @@ RAND ( [ seed ] )
   
 [!INCLUDE[sql-server-tsql-previous-offline-documentation](../../includes/sql-server-tsql-previous-offline-documentation.md)]
 
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Arguments
  *seed*  
  Is an integer [expression](../../t-sql/language-elements/expressions-transact-sql.md) (**tinyint**, **smallint**, or **int**) that gives the seed value. If *seed* is not specified, the [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] assigns a seed value at random. For a specified seed value, the result returned is always the same.  

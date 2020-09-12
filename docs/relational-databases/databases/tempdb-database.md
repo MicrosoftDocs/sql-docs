@@ -221,15 +221,33 @@ Watch this seven-minute video for an overview of how and when to use memory-opti
 > [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/How-and-When-To-Memory-Optimized-TempDB-Metadata/player?WT.mc_id=dataexposed-c9-niner]
 
 
+### Configuring and using memory-optimized tempdb metadata
+
 To opt in to this new feature, use the following script:
 
 ```sql
-ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON 
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON;
 ```
 
 This configuration change requires a restart of the service to take effect.
 
-This implementation has some limitations:
+You can verify whether or not `tempdb` is memory-optimized by using the following T-SQL command:
+
+```sql
+SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized');
+```
+
+If the server fails to start for any reason after you enable memory-optimized `tempdb` metadata, you can bypass the feature by starting the SQL Server instance with [minimal configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) through the **-f** startup option. You can then disable the feature and restart SQL Server in normal mode.
+
+To protect the server from potential out-of-memory conditions, you can bind `tempdb` to a [resource pool](../in-memory-oltp/bind-a-database-with-memory-optimized-tables-to-a-resource-pool.md). This is done through the [`ALTER SERVER`](../../t-sql/statements/alter-server-configuration-transact-sql.md) command rather than the steps you would normally follow to bind a resource pool to a database.
+
+```sql
+ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON (RESOURCE_POOL = 'pool_name');
+```
+
+This change also requires a restart to take effect, even if memory-optimized tempdb metadata is already enabled.
+
+### Memory-optimized tempdb limitations
 
 - Toggling the feature on and off is not dynamic. Because of the intrinsic changes that need to be made to the structure of `tempdb`, a restart is required to either enable or disable the feature.
 
@@ -258,14 +276,6 @@ This implementation has some limitations:
 
 > [!NOTE] 
 > These limitations apply only when you're referencing `tempdb` system views. You can create a temporary table in the same transaction as you access a memory-optimized table in a user database, if desired.
-
-You can verify whether or not `tempdb` is memory-optimized by using the following T-SQL command:
-
-```
-SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
-```
-
-If the server fails to start for any reason after you enable memory-optimized `tempdb` metadata, you can bypass the feature by starting the SQL Server instance with [minimal configuration](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md) through the **-f** startup option. You can then disable the feature and restart SQL Server in normal mode.
 
 ## Capacity planning for tempdb in SQL Server
 Determining the appropriate size for `tempdb` in a [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] production environment depends on many factors. As described earlier, these factors include the existing workload and the [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] features that are used. We recommend that you analyze the existing workload by performing the following tasks in a SQL Server test environment:

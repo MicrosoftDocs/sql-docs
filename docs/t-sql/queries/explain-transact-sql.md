@@ -90,7 +90,7 @@ Return the query plan with recommendations to optimize the SQL statement perform
   
  The submitted command for this example is:  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 EXPLAIN   

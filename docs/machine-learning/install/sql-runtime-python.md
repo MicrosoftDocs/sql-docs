@@ -8,7 +8,7 @@ ms.topic: how-to
 author: cawrites
 ms.author: chadam
 ms.custom: seo-lt-2019
-monikerRange: ">=sql-server-2019||=sqlallproducts-allversions"
+monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions"
 ---
 # Install runtime for Python 
 
@@ -16,7 +16,7 @@ monikerRange: ">=sql-server-2019||=sqlallproducts-allversions"
 
 >Note! The Python and runtime extension runs on SQL Server 2019 or later.
  
-This article describes how to install the language extensions for running Python scripts with [SQL Server.](../../linux/sql-server-linux-overview.md4)
+This article describes how to install the language extension for running Python scripts with SQL Server. You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](sql-server-linux-setup.md#supportedplatforms).
 
 The runtime can be used with [SQL Server Machine Learning Services](../sql-server-machine-learning-services.md) after completing some additional configuration steps.
 
@@ -28,11 +28,11 @@ The runtime language extension can be used with the following scenarios:
 
 ## <a name="bkmk_prereqs"> </a> Pre-install checklist
 
-+ [SQL Server 2019 of Linux.](../../linux/sql-server-linux-overview.md) 
++ [SQL Server 2019 of Linux.](sql-server-linux-setup.md) 
 
 + [SQL Server Language Extensions on Linux with the extensibility framework.](../../linux/sql-server-linux-setup-language-extensions.md)
 
-+ [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio.](azure-data-studio/download-azure-data-studio.md)
++ [SQL Server Management Studio](../../ssms/download-sql-server-management-studio-ssms.md) or [Azure Data Studio.]((https://docs.microsoft.com/sql/azure-data-studio/download-azure-data-studio)
 
 + [Python3.7](https://www.python.org/)
 
@@ -140,5 +140,5 @@ WITH RESULT SETS ((intCol int, doubleCol real, charCol char(2), logicalCol bit))
 
 ## Next steps
 
-+ [Extensibility framework in SQL Server](extensibility-framework.md)
++ [Extensibility framework in SQL Server](../../concepts/extensibility-framework.md)
 + [Language Extensions Overview](../../language-extensions/language-extensions-overview.md)

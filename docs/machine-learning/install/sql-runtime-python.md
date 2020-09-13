@@ -91,7 +91,8 @@ RECONFIGURE WITH OVERRIDE;
 
 Add PYTHONHOME as an environment variable, and modify the PATH.
 
->[!Note] For SQL Machine Learning Services a new path for the runtime will need to be created. Example
+>[!Note] 
+>For SQL Machine Learning Services a new path for the runtime will need to be created. Example
 
 ## Create external language
 

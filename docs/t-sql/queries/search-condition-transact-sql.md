@@ -204,7 +204,7 @@ monikerRange: ">=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-s
 ### A. Using WHERE with LIKE and ESCAPE syntax  
  The following example searches for the rows in which the `LargePhotoFileName` column has the characters `green_`, and uses the `ESCAPE` option because _ is a wildcard character. Without specifying the `ESCAPE` option, the query would search for any description values that contain the word `green` followed by any single character other than the _ character.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT *   
@@ -215,7 +215,7 @@ WHERE LargePhotoFileName LIKE '%greena_%' ESCAPE 'a' ;
 ### B. Using WHERE and LIKE syntax with Unicode data  
  The following example uses the `WHERE` clause to retrieve the mailing address for any company that is outside the United States (`US`) and in a city whose name starts with `Pa`.  
   
-```  
+```sql  
 USE AdventureWorks2012 ;  
 GO  
 SELECT AddressLine1, AddressLine2, City, PostalCode, CountryRegionCode    
@@ -230,7 +230,7 @@ AND City LIKE N'Pa%' ;
 ### C. Using WHERE with LIKE  
  The following example searches for the rows in which the `LastName` column has the characters `and`.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  
@@ -241,7 +241,7 @@ WHERE LastName LIKE '%and%';
 ### D. Using WHERE and LIKE syntax with Unicode data  
  The following example uses the `WHERE` clause to perform a Unicode search on the `LastName` column.  
   
-```  
+```sql  
 -- Uses AdventureWorks  
   
 SELECT EmployeeKey, LastName  

@@ -38,7 +38,7 @@ Causes [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] to follow the I
 ## Syntax
 
 ```syntaxsql
--- Syntax for SQL Server and Azure SQL Database
+-- Syntax for SQL Server, Azure SQL Database and SQL on-demand (preview)
 
 SET QUOTED_IDENTIFIER { ON | OFF }
 ```

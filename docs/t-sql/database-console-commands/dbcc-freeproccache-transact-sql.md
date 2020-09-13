@@ -38,7 +38,7 @@ Removes all elements from the plan cache, removes a specific plan from the plan 
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
-Syntax for SQL Server:
+Syntax for SQL Server and SQL on-demand (preview):
 
 ```sql
 DBCC FREEPROCCACHE [ ( { plan_handle | sql_handle | pool_name } ) ] [ WITH NO_INFOMSGS ]  

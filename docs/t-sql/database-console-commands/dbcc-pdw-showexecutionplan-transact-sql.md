@@ -26,7 +26,7 @@ Once query performance problems are understood for SMP [!INCLUDE[ssNoVersion](..
 ![Topic link icon](../../database-engine/configure-windows/media/topic-link.gif "Topic link icon") [Transact-SQL Syntax Conventions &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
   
 ## Syntax  
-Syntax for Azure SQL Data Warehouse:
+Syntax for [!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)]:
 
 ```syntaxsql
 DBCC PDW_SHOWEXECUTIONPLAN ( distribution_id, spid )  

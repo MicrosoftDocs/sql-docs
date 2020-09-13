@@ -55,7 +55,7 @@ DBCC CHECKIDENT
 ```  
 
 ```console
--- Syntax for Azure SQL Data Warehouse
+-- Syntax for Azure Synapse Analytics
 DBCC CHECKIDENT   
  (   
     table_name  
@@ -128,7 +128,7 @@ DBCC CHECKIDENT
 
  Caller must own the schema that contains the table, or be a member of the **sysadmin** fixed server role, the **db_owner** fixed database role, or the **db_ddladmin** fixed database role.
 
-Azure SQL Data Warehouse requires **db_owner** permissions.
+[!INCLUDE[ssSDW](../../includes/sssdwfull-md.md)] requires **db_owner** permissions.
   
 ## Examples  
   

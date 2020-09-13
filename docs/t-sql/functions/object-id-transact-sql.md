@@ -75,7 +75,7 @@ OBJECT_ID ( '[ database_name . [ schema_name ] . | schema_name . ]
 ### A. Returning the object ID for a specified object  
  The following example returns the object ID for the `Production.WorkOrder` table in the [!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] database.  
   
-```  
+```sql  
 USE master;  
 GO  
 SELECT OBJECT_ID(N'AdventureWorks2012.Production.WorkOrder') AS 'Object ID';  
@@ -85,7 +85,7 @@ GO
 ### B. Verifying that an object exists  
  The following example checks for the existence of a specified table by verifying that the table has an object ID. If the table exists, it is deleted. If the table does not exist, the `DROP TABLE` statement is not executed.  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 IF OBJECT_ID (N'dbo.AWBuildVersion', N'U') IS NOT NULL  
@@ -99,9 +99,9 @@ GO
 > [!IMPORTANT]  
 >  When you are using the [!INCLUDE[tsql](../../includes/tsql-md.md)] functions DB_ID and OBJECT_ID to return a parameter value, always make sure that a valid ID is returned. If the database or object name cannot be found, such as when they do not exist or are spelled incorrectly, both functions will return NULL. The **sys.dm_db_index_operational_stats** function interprets NULL as a wildcard value that specifies all databases or all objects. Because this can be an unintentional operation, the examples in this section demonstrate the safe way to determine database and object IDs.  
   
-```  
-DECLARE @db_id int;  
-DECLARE @object_id int;  
+```sql  
+DECLARE @db_id INT;  
+DECLARE @object_id INT;  
 SET @db_id = DB_ID(N'AdventureWorks2012');  
 SET @object_id = OBJECT_ID(N'AdventureWorks2012.Person.Address');  
 IF @db_id IS NULL   
@@ -124,7 +124,7 @@ GO
 ### D: Returning the object ID for a specified object  
  The following example returns the object ID for the `FactFinance` table in the [!INCLUDE[ssawPDW](../../includes/ssawpdw-md.md)] database.  
   
-```  
+```sql  
 SELECT OBJECT_ID('AdventureWorksPDW2012.dbo.FactFinance') AS 'Object ID';  
 ```  
   

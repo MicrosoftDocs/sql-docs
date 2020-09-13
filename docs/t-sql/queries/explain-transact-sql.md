@@ -24,6 +24,8 @@ monikerRange: "= azure-sqldw-latest || = sqlallproducts-allversions"
 EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement  
 [;]  
 ```  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
   
 ## Arguments
 

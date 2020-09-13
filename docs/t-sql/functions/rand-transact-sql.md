@@ -30,8 +30,7 @@ monikerRange: "=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sql
   
 ## Syntax  
   
-```  
-  
+```syntaxsql  
 RAND ( [ seed ] )  
 ```  
   

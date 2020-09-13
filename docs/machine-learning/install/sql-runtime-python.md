@@ -14,7 +14,8 @@ monikerRange: ">=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-all
 
 [!INCLUDE [SQL Server 2019 and later](../../includes/applies-to-version/sqlserver2019.md)]
 
->Note! The Python and runtime extension runs on SQL Server 2019 or later.
+>[!Note] 
+>The Python runtime extension runs on SQL Server 2019 or later.
  
 This article describes how to install the language extension for running Python scripts with SQL Server. You can install SQL Server on Red Hat Enterprise Linux (RHEL), SUSE Linux Enterprise Server (SLES), and Ubuntu. For more information, see [the Supported platforms section in the Installation guidance for SQL Server on Linux](../../linux/sql-server-linux-setup.md).
 
@@ -90,14 +91,15 @@ RECONFIGURE WITH OVERRIDE;
 
 Add PYTHONHOME as an environment variable, and modify the PATH.
 
->[NOTE!] For SQL Machine Learning Services a new path for the runtime will need to be created. Example
+>[!Note] For SQL Machine Learning Services a new path for the runtime will need to be created. Example
 
 ## Create external language
 
 Use SQL Server Management Studio or Azure Data Studio to connect to SQL Server.
 Modify the path to reflect the location of the download.
 
->[Note!] Python is a reserved word. It can't be used as a name for the external Python runtime.
+>[!Note] 
+>Python is a reserved word. It can't be used as a name for the external Python runtime.
 
 ```sql
 CREATE EXTERNAL LANGUAGE mypython 

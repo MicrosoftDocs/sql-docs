@@ -31,7 +31,9 @@ Applies to Azure SQL Data Warehouse
 ```syntaxsql
 SET RESULT_SET_CACHING { ON | OFF };
 ```  
-  
+
+[!INCLUDE[synapse-analytics-od-unsupported-syntax](../../includes/synapse-analytics-od-unsupported-syntax.md)]
+
 ## Remarks  
 
 Run this command when connected to the user database where you want to configure the result_set_caching setting for.
